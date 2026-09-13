@@ -14,7 +14,7 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
 
   distributedLimiter = new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(limit, `${windowSeconds} s`),
+    limiter: Ratelimit.slidingWindow(limit, `${windowSeconds} s` as `${number} s`),
     analytics: true,
     prefix: 'slothai:ratelimit',
   });
