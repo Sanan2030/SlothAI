@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { getProvider, UnsupportedProviderError } from '@/lib/llm/provider';
 
 import { checkRateLimit } from '@/lib/rate-limit';
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
@@ -31,22 +32,28 @@ function getClientIdentifier(req: NextRequest): string {
 }
 
 export async function POST(req: NextRequest) {
-  const rate = await checkRateLimit(getClientIdentifier(req));
-  const rateHeaders = {
-    'X-RateLimit-Limit': String(rate.limit),
-    'X-RateLimit-Remaining': String(rate.remaining),
-    'X-RateLimit-Reset': String(rate.reset),
-  };
-
-  if (!rate.success) {
-    return NextResponse.json(
-      { error: 'Sorğu limiti aşılıb. Bir az sonra yenidən cəhd edin.' },
-      { status: 429, headers: rateHeaders },
-    );
-  }
-
+  let rateHeaders: Record<string, string> = { 'Cache-Control': 'no-store' };
   try {
-    const body: unknown = await req.json();
+    getProvider();
+    const rate = await checkRateLimit(getClientIdentifier(req));
+    rateHeaders = {
+      'Cache-Control': 'no-store',
+      'X-RateLimit-Limit': String(rate.limit),
+      'X-RateLimit-Remaining': String(rate.remaining),
+      'X-RateLimit-Reset': String(rate.reset),
+    };
+
+    if (!rate.success) {
+      return NextResponse.json(
+        { error: 'Sorğu limiti aşılıb. Bir az sonra yenidən cəhd edin.' },
+        { status: 429, headers: rateHeaders },
+      );
+    }
+
+    let body: unknown;
+    try { body = await req.json(); } catch {
+      return NextResponse.json({ error: 'Sorğu düzgün JSON formatında deyil.' }, { status: 400, headers: rateHeaders });
+    }
     const data = RequestSchema.parse(body);
     const strategy = getStrategyRegistry().get(data.strategyId);
     const result = await strategy.transform({ text: data.text, options: data.options });
@@ -59,6 +66,11 @@ export async function POST(req: NextRequest) {
       },
     });
   } catch (error) {
+    if (error instanceof UnsupportedProviderError) {
+      return NextResponse.json({ error: error.message, code: error.code }, {
+        status: 400, headers: rateHeaders,
+      });
+    }
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: 'Validasiya xətası.', details: error.issues },

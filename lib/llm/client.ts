@@ -1,14 +1,6 @@
+import { getProvider } from './provider';
+
 type JsonObject = Record<string, unknown>;
-
-type Provider = 'openai' | 'anthropic';
-
-function getProvider(): Provider {
-  const raw = (process.env.LLM_PROVIDER ?? 'openai').toLowerCase();
-  if (raw !== 'openai' && raw !== 'anthropic') {
-    throw new Error(`Unsupported LLM_PROVIDER '${raw}'. Use 'openai' or 'anthropic'.`);
-  }
-  return raw;
-}
 
 function parseJsonPayload(raw: string): JsonObject {
   const cleaned = raw
