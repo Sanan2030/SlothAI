@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { getProvider, UnsupportedProviderError } from '@/lib/llm/provider';
 
 import { checkRateLimit } from '@/lib/rate-limit';
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
@@ -13,15 +12,13 @@ const RequestSchema = z.object({
   strategyId: z.string().trim().min(1).max(64),
   text: z
     .string()
-    .trim()
-    .min(1, 'Mətn boş ola bilməz.')
-    .max(10_000, 'Mətn maksimum 10,000 simvol ola bilər.'),
+    .max(10_000, 'Mətn maksimum 10,000 simvol ola bilər.')
+    .refine(value => value.trim().length > 0, 'Mətn boş ola bilməz.'),
   options: z
     .object({
-      tone: z.enum(['default', 'formal', 'casual']).optional(),
       preserveFormatting: z.boolean().optional(),
-      customRules: z.array(z.string().trim().min(1).max(300)).max(10).optional(),
     })
+    .strict()
     .optional(),
 });
 
@@ -34,7 +31,6 @@ function getClientIdentifier(req: NextRequest): string {
 export async function POST(req: NextRequest) {
   let rateHeaders: Record<string, string> = { 'Cache-Control': 'no-store' };
   try {
-    getProvider();
     const rate = await checkRateLimit(getClientIdentifier(req));
     rateHeaders = {
       'Cache-Control': 'no-store',
@@ -66,11 +62,6 @@ export async function POST(req: NextRequest) {
       },
     });
   } catch (error) {
-    if (error instanceof UnsupportedProviderError) {
-      return NextResponse.json({ error: error.message, code: error.code }, {
-        status: 400, headers: rateHeaders,
-      });
-    }
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: 'Validasiya xətası.', details: error.issues },
@@ -85,9 +76,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.error('POST /api/transform failed:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Daxili server xətası.' },
+      { error: 'Mətn emal edilə bilmədi.' },
       { status: 500, headers: rateHeaders },
     );
   }

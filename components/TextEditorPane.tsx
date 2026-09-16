@@ -31,6 +31,7 @@ export function TextEditorPane({
       </div>
 
       <textarea
+        aria-label="Xam mətn"
         value={value}
         disabled={disabled}
         maxLength={maxLength}
