@@ -1,47 +1,41 @@
-import { Trash2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-
-interface TextEditorPaneProps {
+'use client';
+import { useId, useState } from 'react';
+import { Button } from './ui/button';
+interface Props {
+  label: string;
   value: string;
+  placeholder: string;
+  readOnly?: boolean;
   disabled?: boolean;
   maxLength?: number;
-  onChange: (value: string) => void;
-  onClear: () => void;
+  onChange?: (value: string) => void;
+  onClear?: () => void;
 }
-
-export function TextEditorPane({
-  value,
-  disabled,
-  maxLength = 10_000,
-  onChange,
-  onClear,
-}: TextEditorPaneProps) {
-  return (
-    <section className="flex min-h-[420px] flex-col rounded-3xl border border-slate-200 bg-white p-5 shadow-soft">
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <div>
-          <h2 className="font-semibold text-slate-950">Xam mətn</h2>
-          <p className="mt-1 text-xs text-slate-500">Düzəldilməsini istədiyiniz mətni daxil edin.</p>
-        </div>
-        <Button type="button" variant="ghost" size="sm" onClick={onClear} disabled={!value || disabled}>
-          <Trash2 className="mr-2 h-4 w-4" />
-          Təmizlə
-        </Button>
-      </div>
-
-      <textarea
-        value={value}
-        disabled={disabled}
-        maxLength={maxLength}
-        onChange={(event) => onChange(event.target.value)}
-        placeholder="Məsələn: salam her vaxtiniz xeyir bu metni duzelt..."
-        className="min-h-0 flex-1 resize-none rounded-2xl border border-slate-200 bg-slate-50/60 p-4 text-sm leading-7 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-100 disabled:cursor-not-allowed disabled:opacity-70"
-      />
-
-      <div className="mt-3 flex justify-end text-xs text-slate-400">
-        {value.length.toLocaleString()} / {maxLength.toLocaleString()}
-      </div>
-    </section>
-  );
+export function TextEditorPane({ label, value, placeholder, readOnly = false, disabled = false,
+  maxLength, onChange, onClear }: Props) {
+  const id = useId();
+  const [copyStatus, setCopyStatus] = useState('');
+  async function copy() {
+    try {
+      if (!navigator.clipboard) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(value);
+      setCopyStatus('Mətn kopyalandı.');
+    } catch { setCopyStatus('Kopyalama alınmadı. Mətni seçərək əl ilə kopyalayın.'); }
+  }
+  return <section className="flex min-w-0 flex-col rounded-md border border-border bg-card">
+    <div className="flex min-h-14 items-center justify-between gap-2 border-b border-border px-4">
+      <label htmlFor={id} className="text-sm font-medium">{label}</label>
+      <Button type="button" variant="ghost" size="sm" disabled={!value || disabled}
+        onClick={readOnly ? copy : onClear}>{readOnly ? 'Kopyala' : 'Təmizlə'}</Button>
+    </div>
+    <textarea id={id} value={value} readOnly={readOnly} disabled={disabled}
+      maxLength={maxLength} placeholder={placeholder} spellCheck={false}
+      aria-describedby={`${id}-status`}
+      onChange={event => onChange?.(event.target.value)}
+      className="min-h-[360px] w-full flex-1 resize-y rounded-none bg-transparent p-5 text-base leading-8 placeholder:text-muted-foreground/70 disabled:opacity-60 sm:min-h-[420px]" />
+    <div id={`${id}-status`} className="flex min-h-11 items-center border-t border-border px-4 text-xs text-muted-foreground">
+      {readOnly ? <span role="status">{copyStatus || (value ? 'Kopyalamaq üçün hazırdır.' : 'Düzəldilmiş mətn burada görünəcək.')}</span>
+        : <span className="tabular-nums">{value.length.toLocaleString('az-AZ')} / {maxLength?.toLocaleString('az-AZ')} simvol</span>}
+    </div>
+  </section>;
 }

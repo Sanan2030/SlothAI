@@ -1,186 +1,114 @@
 'use client';
-
-import { AlertCircle, Loader2, WandSparkles } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
+import { Loader2 } from 'lucide-react';
 import { Header } from '@/components/Header';
-import { OutputPane } from '@/components/OutputPane';
 import { StrategySelector } from '@/components/StrategySelector';
 import { TextEditorPane } from '@/components/TextEditorPane';
 import { Button } from '@/components/ui/button';
-import type {
-  StrategyDescriptor,
-  TransformationMetadata,
-  TransformationTone,
-} from '@/lib/strategies/types';
+import type { StrategyDescriptor, TransformationMetadata } from '@/lib/strategies/types';
 
-interface TransformResponse {
-  transformedText: string;
-  metadata: TransformationMetadata;
+const MAX_CHARS = 10_000;
+function errorMessage(data: unknown): string | undefined {
+  if (typeof data !== 'object' || data === null || !('error' in data)) return;
+  const error = data.error;
+  if (typeof error === 'object' && error !== null && 'message' in error && typeof error.message === 'string') return error.message;
 }
-
-const fallbackStrategies: StrategyDescriptor[] = [
-  {
-    id: 'text-corrector',
-    name: 'Mətn Düzəldici',
-    description: 'Azərbaycan dilində diakritikləri, durğu işarələrini, abzasları və siyahıları bərpa edir.',
-    icon: 'FileText',
-  },
-];
-
+function isStrategy(value: unknown): value is StrategyDescriptor {
+  return typeof value === 'object' && value !== null &&
+    ['id', 'name', 'description', 'icon'].every(key => key in value && typeof (value as Record<string, unknown>)[key] === 'string');
+}
 export default function HomePage() {
-  const [strategies, setStrategies] = useState<StrategyDescriptor[]>(fallbackStrategies);
-  const [strategyId, setStrategyId] = useState('text-corrector');
-  const [text, setText] = useState('');
+  const [strategies, setStrategies] = useState<StrategyDescriptor[]>([]);
+  const [selected, setSelected] = useState('text-corrector');
+  const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [metadata, setMetadata] = useState<TransformationMetadata | null>(null);
-  const [tone, setTone] = useState<TransformationTone>('default');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [loadError, setLoadError] = useState('');
   const [error, setError] = useState('');
-
+  const [attempt, setAttempt] = useState(0);
+  const request = useRef<AbortController | null>(null);
+  const inFlight = useRef(false);
   useEffect(() => {
-    let cancelled = false;
-
-    async function loadStrategies() {
+    const controller = new AbortController();
+    async function load() {
       try {
-        const response = await fetch('/api/strategies', { cache: 'no-store' });
-        if (!response.ok) return;
-        const data = (await response.json()) as StrategyDescriptor[];
-        if (!cancelled && Array.isArray(data) && data.length > 0) {
-          setStrategies(data);
-          if (!data.some((strategy) => strategy.id === strategyId)) {
-            setStrategyId(data[0].id);
-          }
+        const response = await fetch('/api/strategies', { signal: controller.signal, cache: 'no-store' });
+        const data = await response.json();
+        if (!response.ok || !Array.isArray(data.strategies) || !data.strategies.length || !data.strategies.every(isStrategy)) {
+          throw new Error('Emal növləri yüklənə bilmədi.');
         }
+        if (controller.signal.aborted) return;
+        const list: StrategyDescriptor[] = data.strategies;
+        setStrategies(list);
+        setSelected(list.some(strategy => strategy.id === 'text-corrector') ? 'text-corrector' : list[0].id);
+        setLoadError('');
       } catch {
-        // Keep the built-in fallback so the UI stays usable.
-      }
+        if (!controller.signal.aborted) setLoadError('Emal növləri yüklənə bilmədi. Yenidən cəhd edin.');
+      } finally { if (!controller.signal.aborted) setLoading(false); }
     }
+    void load();
+    return () => controller.abort();
+  }, [attempt]);
+  useEffect(() => () => request.current?.abort(), []);
 
-    void loadStrategies();
-    return () => {
-      cancelled = true;
-    };
-  }, [strategyId]);
-
-  const selectedStrategy = useMemo(
-    () => strategies.find((strategy) => strategy.id === strategyId),
-    [strategies, strategyId],
-  );
-
+  function invalidate() { setOutput(''); setMetadata(null); setError(''); }
   async function transform() {
-    if (!text.trim() || loading) return;
-
-    setLoading(true);
-    setError('');
-
+    if (inFlight.current || loading || !strategies.length || !input.trim() || input.length > MAX_CHARS) return;
+    inFlight.current = true;
+    const controller = new AbortController();
+    request.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 58_000);
+    setBusy(true); invalidate();
     try {
-      const response = await fetch('/api/transform', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          strategyId,
-          text,
-          options: {
-            tone,
-            preserveFormatting: false,
-          },
-        }),
-      });
-
-      const data = (await response.json()) as TransformResponse & { error?: string };
+      const response = await fetch('/api/transform', { method: 'POST', signal: controller.signal,
+        headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ strategyId: selected, text: input }) });
+      const data = await response.json().catch(() => null);
       if (!response.ok) {
-        throw new Error(data.error || 'Mətn emal edilə bilmədi.');
+        const retry = response.headers.get('Retry-After');
+        throw new Error((errorMessage(data) ?? 'Mətn emal edilə bilmədi.') + (response.status === 429 && retry ? ` ${retry} saniyə sonra cəhd edin.` : ''));
       }
-
+      if (!data || typeof data.transformedText !== 'string' || !data.transformedText.trim()) throw new Error('Serverdən düzgün nəticə alınmadı.');
       setOutput(data.transformedText);
-      setMetadata(data.metadata);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Naməlum xəta baş verdi.');
-    } finally {
-      setLoading(false);
-    }
+      setMetadata(data.metadata ?? null);
+    } catch (cause) {
+      setError(controller.signal.aborted ? 'Sorğunun vaxtı bitdi. Yenidən cəhd edin.' : cause instanceof Error ? cause.message : 'Şəbəkə xətası. Yenidən cəhd edin.');
+    } finally { clearTimeout(timeout); inFlight.current = false; setBusy(false); request.current = null; }
   }
-
-  return (
-    <div className="min-h-screen">
-      <Header />
-
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-        <section className="mb-8 grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-soft md:grid-cols-[1fr_220px] md:items-end">
-          <StrategySelector
-            strategies={strategies}
-            value={strategyId}
-            disabled={loading}
-            onChange={(value) => {
-              setStrategyId(value);
-              setOutput('');
-              setMetadata(null);
-            }}
-          />
-
-          <label className="block">
-            <span className="mb-2 block text-sm font-medium text-slate-700">Ton</span>
-            <select
-              value={tone}
-              disabled={loading}
-              onChange={(event) => setTone(event.target.value as TransformationTone)}
-              className="h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm outline-none focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
-            >
-              <option value="default">Orijinal tonu saxla</option>
-              <option value="formal">Rəsmi</option>
-              <option value="casual">Səmimi</option>
-            </select>
-          </label>
-        </section>
-
-        <div className="grid gap-6 lg:grid-cols-2">
-          <TextEditorPane
-            value={text}
-            disabled={loading}
-            onChange={setText}
-            onClear={() => {
-              setText('');
-              setOutput('');
-              setMetadata(null);
-              setError('');
-            }}
-          />
-          <OutputPane output={output} metadata={metadata} />
-        </div>
-
-        {error && (
-          <div className="mt-6 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-            <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
-            <span>{error}</span>
-          </div>
-        )}
-
-        <div className="mt-6 flex flex-col items-center gap-3">
-          <Button
-            type="button"
-            size="lg"
-            disabled={loading || !text.trim()}
-            onClick={transform}
-            className="min-w-52 shadow-soft"
-          >
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Emal olunur...
-              </>
-            ) : (
-              <>
-                <WandSparkles className="mr-2 h-5 w-5" />
-                Düzəlt
-              </>
-            )}
-          </Button>
-          <p className="text-center text-xs text-slate-400">
-            {selectedStrategy?.name ?? 'SlothAI'} · maksimum 10,000 simvol
-          </p>
-        </div>
-      </main>
-    </div>
-  );
+  return <>
+    <Header />
+    <main id="main" className="mx-auto max-w-6xl px-5 pb-12 pt-12 sm:px-6 sm:pt-16">
+      <div className="mb-10 max-w-2xl">
+        <h1 className="font-serif text-4xl leading-tight tracking-tight sm:text-5xl">Fikirləriniz aydın.<br />Mətniniz səliqəli.</h1>
+        <p className="mt-5 max-w-lg text-base leading-7 text-muted-foreground">Necə düşünürsünüzsə, elə yazın. Hərfləri, durğu işarələrini və abzasları biz səliqəyə salaq.</p>
+      </div>
+      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <StrategySelector strategies={strategies} selectedId={selected} disabled={loading || busy}
+          onSelect={id => { setSelected(id); invalidate(); }} />
+        <Button type="button" size="lg" className="sm:mt-7 sm:min-w-36" onClick={transform}
+          disabled={busy || loading || !strategies.length || !input.trim() || input.length > MAX_CHARS} aria-busy={busy}>
+          {busy && <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin motion-reduce:animate-none" />}
+          {busy ? 'Emal olunur…' : 'Düzəlt'}
+        </Button>
+      </div>
+      {(error || loadError) && <div role="alert" className="mb-5 rounded-md border border-destructive/40 bg-destructive/5 px-4 py-3 text-sm text-destructive">
+        {error || loadError}
+        {loadError && <button type="button" className="ml-3 underline underline-offset-4" disabled={loading}
+          onClick={() => { setLoading(true); setAttempt(value => value + 1); }}>Yenidən yüklə</button>}
+      </div>}
+      <div className="grid gap-5 md:grid-cols-2" aria-busy={busy}>
+        <TextEditorPane label="İlkin mətn" value={input} disabled={busy} maxLength={MAX_CHARS}
+          placeholder="meselen sabah gorusde uc meseleye baxaq birinci layiheni planlasdiraq ikinci vaxti deqiqlesdirek ucuncu isleri bolusdurək"
+          onChange={value => { setInput(value); invalidate(); }} onClear={() => { setInput(''); invalidate(); }} />
+        <TextEditorPane key={output} label="Düzəldilmiş mətn" value={output} readOnly
+          placeholder={busy ? 'Mətniniz üzərində işləyirik…' : 'Fikirlərinizin səliqəli forması burada görünəcək.'} />
+      </div>
+      <div className="mt-4 flex flex-col justify-between gap-2 text-xs leading-5 text-muted-foreground sm:flex-row">
+        <p>Mətn emal üçün Anthropic xidmətinə göndərilir. Nəticəni istifadə etməzdən əvvəl yoxlayın.</p>
+        <p role="status">{busy ? 'Mətn emal olunur.' : metadata ? `Təxmini ${metadata.correctionsMade} düzəliş · ${(metadata.executionTimeMs / 1000).toFixed(1)} san.` : ''}</p>
+      </div>
+    </main>
+    <footer className="mx-auto max-w-6xl border-t border-border px-6 py-6 text-xs text-muted-foreground">lazy.ai — Azərbaycan dilində fikirlərinizə yer var.</footer>
+  </>;
 }

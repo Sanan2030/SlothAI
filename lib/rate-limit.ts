@@ -1,63 +1,32 @@
-import { Ratelimit } from '@upstash/ratelimit';
-import { Redis } from '@upstash/redis';
+// Per-instance sliding window: resets on cold start and is NOT shared across
+// Vercel functions/regions. Swap for Vercel KV / Upstash Redis at scale.
+export class SlidingWindowLimiter {
+  private readonly buckets = new Map<string, number[]>();
+  constructor(private readonly limit = 10, private readonly windowMs = 60_000, private readonly maxKeys = 10_000) {}
 
-const limit = Math.max(1, Number(process.env.RATE_LIMIT_REQUESTS ?? 20));
-const windowSeconds = Math.max(1, Number(process.env.RATE_LIMIT_WINDOW_SECONDS ?? 60));
-
-let distributedLimiter: Ratelimit | null = null;
-
-if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-  const redis = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL,
-    token: process.env.UPSTASH_REDIS_REST_TOKEN,
-  });
-
-  distributedLimiter = new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(limit, `${windowSeconds} s` as `${number} s`),
-    analytics: true,
-    prefix: 'slothai:ratelimit',
-  });
-}
-
-interface LocalBucket {
-  count: number;
-  resetAt: number;
-}
-
-const localBuckets = new Map<string, LocalBucket>();
-
-export interface RateLimitResult {
-  success: boolean;
-  limit: number;
-  remaining: number;
-  reset: number;
-}
-
-export async function checkRateLimit(identifier: string): Promise<RateLimitResult> {
-  if (distributedLimiter) {
-    const result = await distributedLimiter.limit(identifier);
-    return {
-      success: result.success,
-      limit: result.limit,
-      remaining: result.remaining,
-      reset: result.reset,
-    };
+  check(identifier: string, now = Date.now()) {
+    // Bounded memory; remove inactive clients without a serverless background timer.
+    this.buckets.forEach((hits, key) => {
+      if (hits[hits.length - 1] <= now - this.windowMs) this.buckets.delete(key);
+    });
+    const hits = (this.buckets.get(identifier) ?? []).filter(time => time > now - this.windowMs);
+    const capacityReached = !this.buckets.has(identifier) && this.buckets.size >= this.maxKeys;
+    const allowed = !capacityReached && hits.length < this.limit;
+    if (allowed) {
+      hits.push(now);
+      this.buckets.set(identifier, hits);
+    }
+    const reset = (hits[0] ?? now) + this.windowMs;
+    return { allowed, limit: this.limit, remaining: Math.max(0, this.limit - hits.length), reset,
+      retryAfter: Math.max(1, Math.ceil((reset - now) / 1000)) };
   }
+}
+const limiter = new SlidingWindowLimiter();
+export function checkRateLimit(identifier: string) { return limiter.check(identifier); }
 
-  const now = Date.now();
-  const existing = localBuckets.get(identifier);
-  const bucket = !existing || existing.resetAt <= now
-    ? { count: 0, resetAt: now + windowSeconds * 1000 }
-    : existing;
-
-  bucket.count += 1;
-  localBuckets.set(identifier, bucket);
-
-  return {
-    success: bucket.count <= limit,
-    limit,
-    remaining: Math.max(0, limit - bucket.count),
-    reset: bucket.resetAt,
-  };
+export function getClientIdentifier(headers: Headers): string {
+  // On Vercel trust the platform-overwritten header, never arbitrary x-real-ip.
+  // Outside Vercel the proxy must overwrite x-forwarded-for; local requests share a bucket.
+  const header = process.env.VERCEL === '1' ? 'x-vercel-forwarded-for' : 'x-forwarded-for';
+  return headers.get(header)?.split(',')[0]?.trim().slice(0, 128) || 'local';
 }
