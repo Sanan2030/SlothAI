@@ -1,17 +1,20 @@
-import { GmailCorrectorStrategy } from './impl/gmail-corrector';
-import { AzerbaijaniTextCorrectorStrategy } from './impl/text-corrector';
 import { TextTransformationRegistry } from './registry';
 
-const registry = TextTransformationRegistry.getInstance();
+let initialization: Promise<TextTransformationRegistry> | undefined;
 
-if (!registry.has('text-corrector')) {
-  registry.register(new AzerbaijaniTextCorrectorStrategy());
-}
-
-if (!registry.has('gmail-corrector')) {
-  registry.register(new GmailCorrectorStrategy());
-}
-
-export function getStrategyRegistry() {
+async function initialize() {
+  const registry = TextTransformationRegistry.getInstance();
+  // Each route bundle initializes its own complete registry. Literal dynamic imports
+  // let a new implementation require exactly ONE new line in this existing file.
+  registry.register(new (await import('./impl/text-corrector')).AzerbaijaniTextCorrectorStrategy());
+  registry.register(new (await import('./impl/gmail-corrector')).GmailCorrectorStrategy());
   return registry;
+}
+
+export function getRegistry(): Promise<TextTransformationRegistry> {
+  initialization ??= initialize().catch((error: unknown) => {
+    initialization = undefined;
+    throw error;
+  });
+  return initialization;
 }

@@ -1,13 +1,11 @@
 import { NextResponse } from 'next/server';
-
-import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
-
+import { getRegistry } from '@/lib/strategies/bootstrap';
+export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-
 export async function GET() {
-  return NextResponse.json(getStrategyRegistry().listStrategies(), {
-    headers: {
-      'Cache-Control': 'public, max-age=60, stale-while-revalidate=300',
-    },
-  });
+  try {
+    return NextResponse.json({ strategies: (await getRegistry()).listStrategies() }, { headers: { 'Cache-Control': 'no-store' } });
+  } catch {
+    return NextResponse.json({ error: { code: 'REGISTRY_ERROR', message: 'Emal növləri yüklənə bilmədi.' } }, { status: 500 });
+  }
 }
