@@ -83,7 +83,10 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
-  text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, restoreWord);
+  text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, word => {
+    const corrected = restoreWord(word);
+    return corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
+  });
   text = repairPhrases(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];

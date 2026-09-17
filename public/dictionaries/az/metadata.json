@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/mozillaz/spellchecker",
+  "commit": "7f484fc96126919ccdb1f65908558b36a5b43301",
+  "attribution": "Mozilla Azerbaijan; word list provided by azerdict.com",
+  "license": "MPL-2.0",
+  "declaredEntries": 42937,
+  "actualEntries": 42936,
+  "uniqueEntries": 38174,
+  "matchableEntries": 38172,
+  "checksums": {
+    "dictionaries/az.dic": "9d21f073f7cd8a7b67131b4edc165878579f699ac66eea86d9d5459a65dd16bb",
+    "dictionaries/az.aff": "a2a9a85dcdf83f21d463c6da527d90d306d7f7f0f9f3f479618dc6e02e889aae",
+    "LICENSE": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+  }
+}

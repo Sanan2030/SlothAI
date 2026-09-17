@@ -41,6 +41,7 @@ export default function HomePage() {
         Mətni yazın və Düzəlt düyməsinə basın. Yazılış, durğu işarələri, cümlə başlanğıcları və siyahılar
         proqramın öz qaydaları ilə brauzerinizdə emal olunur. Model yükləmək və API açarı lazım deyil.
       </p>
+      <p className="mb-6 text-xs text-slate-500">38 174 söz və ifadəlik açıq lüğət · <a className="underline" href="/dictionaries/az/metadata.json">Mənbə məlumatları</a> · <a className="underline" href="/dictionaries/az/LICENSE">Lisenziya</a></p>
       <section className="mb-6 grid gap-5 rounded-lg border border-slate-200 bg-white p-5 md:grid-cols-2 md:items-center">
         <StrategySelector strategies={strategies} value={strategyId} disabled={loading}
           onChange={value => { setStrategyId(value); invalidate(); }} />

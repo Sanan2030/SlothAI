@@ -1,5 +1,6 @@
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
+import { dictionaryCandidates, foldLetters, chooseSpelling } from './dictionary';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -77,8 +78,7 @@ manatdır Gəncəyə Gəncənin Bakını Bakıdan Türkiyəyə Türkiyənin
 `.trim().split(/\s+/);
 
 export function fold(text: string): string {
-  return text.toLocaleLowerCase('az-AZ').replace(/[əçıöüşğ]/g, letter =>
-    ({ ə: 'e', ç: 'c', ı: 'i', ö: 'o', ü: 'u', ş: 's', ğ: 'g' })[letter]!);
+  return foldLetters(text);
 }
 
 const candidates = new Map<string, Set<string>>();
@@ -107,7 +107,7 @@ const aliases: Record<string, string> = {
   shahmat: 'şahmat', gunortan: 'günorta', yataqa: 'yatağa',
   hemen: 'həmin', dedim: 'dedim', eledi: 'elədi', pointleri: 'pointləri',
 };
-const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira']);
+const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
   'Azərbaycanı', 'Azərbaycana', 'Azərbaycanda', 'Azərbaycanın',
   'Bakıya', 'Bakıda', 'Bakının', 'Bakını', 'Bakıdan',
@@ -121,7 +121,10 @@ export function restoreWord(word: string): string {
   const key = fold(word);
   if (ambiguous.has(key)) return word;
   const values = candidates.get(key);
-  const replacement = aliases[key] ?? (values?.size === 1 ? [...values][0] : undefined);
+  const imported = word.length > 2 ? dictionaryCandidates(word) : undefined;
+  // Reviewed common-word choices keep their established behavior (necə, sən,
+  // üçün). Imported candidates are conservative fallback, not frequency data.
+  const replacement = aliases[key] ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
