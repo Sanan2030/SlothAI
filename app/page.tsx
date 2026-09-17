@@ -1,8 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { isModelReady, loadModel, stopModel, subscribeModelStatus } from '@/lib/local-model/client';
-import { checkModelCache, requestPersistentStorage, type ModelCacheState } from '@/lib/local-model/storage';
+import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { OutputPane } from '@/components/OutputPane';
 import { StrategySelector } from '@/components/StrategySelector';
@@ -11,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 
-// Shared pure strategies run directly in the browser: no source text is sent to a server.
 const registry = getStrategyRegistry();
 const strategies = registry.listStrategies();
 
@@ -23,45 +20,16 @@ export default function HomePage() {
   const [preserveFormatting, setPreserveFormatting] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [engine, setEngine] = useState<'local-model' | 'local-rules'>('local-model');
-  const [modelReady, setModelReady] = useState(false);
-  const [downloading, setDownloading] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [modelStatus, setModelStatus] = useState('');
-  useEffect(() => subscribeModelStatus(setModelStatus), []);
-  const [cacheState, setCacheState] = useState<ModelCacheState>('checking');
-  useEffect(() => {
-    let active = true;
-    let sequence = 0;
-    async function refreshCache() {
-      const current = ++sequence;
-      const state = await checkModelCache();
-      if (active && current === sequence) setCacheState(state);
-    }
-    void refreshCache();
-    window.addEventListener('focus', refreshCache);
-    return () => { active = false; window.removeEventListener('focus', refreshCache); };
-  }, [downloading]);
-  useEffect(() => () => stopModel(), []);
-  async function prepareModel() {
-    void requestPersistentStorage();
-    setError(''); setDownloading(true); setProgress(0);
-    try { await loadModel(setProgress); setModelReady(true); }
-    catch (cause) { setError(cause instanceof Error ? cause.message : 'Model yüklənmədi.'); }
-    finally { setDownloading(false); }
-  }
   function invalidate() { setOutput(''); setMetadata(null); setError(''); }
   async function transform() {
     if (!text.trim() || loading) return;
     setLoading(true);
-    setModelStatus('Mətn hazırlanır…');
     invalidate();
     try {
-      const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting, engine } });
+      const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting } });
       setOutput(result.transformedText);
       setMetadata(result.metadata);
     } catch (cause) {
-      setModelReady(isModelReady());
       setError(cause instanceof Error ? cause.message : 'Mətn emal edilə bilmədi.');
     } finally { setLoading(false); }
   }
@@ -70,31 +38,9 @@ export default function HomePage() {
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
       <h1 className="mb-3 text-3xl font-semibold text-slate-950">Mətninizi səliqəyə salın.</h1>
       <p className="mb-6 max-w-3xl text-sm leading-6 text-slate-600">
-        Mətn brauzerinizdə emal olunur və serverə göndərilmir. Yerli dil modeli cümlələrin mənasına əsasən
-        yazılışı, durğu işarələrini və abzasları düzəltməyə çalışır. Nəticəni yoxlayın: model səhv edə bilər.
+        Mətni yazın və Düzəlt düyməsinə basın. Yazılış, durğu işarələri, cümlə başlanğıcları və siyahılar
+        proqramın öz qaydaları ilə brauzerinizdə emal olunur. Model yükləmək və API açarı lazım deyil.
       </p>
-      <section className="mb-6 rounded-lg border border-slate-200 bg-white p-5">
-        <label className="text-sm font-medium" htmlFor="engine">Emal üsulu</label>
-        <select id="engine" value={engine} disabled={loading || downloading} className="ml-3 rounded border p-2"
-          onChange={event => { setEngine(event.target.value as typeof engine); invalidate(); }}>
-          <option value="local-model">Yerli dil modeli</option>
-          <option value="local-rules">Sadə qaydalar (modelsiz)</option>
-        </select>
-        {engine === 'local-model' ? <div className="mt-3 space-y-3 text-sm text-slate-600">
-          <p>Qwen3 1.7B · Daha az yaddaş tələb edən model. Əvvəlki 4B modelin əvəzinə bir dəfə yüklənir. WebGPU və kifayət qədər GPU yaddaşı tələb olunur;
-            uzun mətnlər daha çox yaddaş istifadə edir. Model bu brauzerin kompüterdəki yerli yaddaşında saxlanılır;
-            bu, Downloads qovluğu deyil. Eyni sayt və brauzerdə saxlanmış fayllar təkrar istifadə edilir.</p>
-          {!modelReady && <Button type="button" variant="secondary" disabled={downloading || cacheState === 'checking'} onClick={prepareModel}>
-            {downloading ? 'Model hazırlanır…' : cacheState === 'checking' ? 'Yaddaş yoxlanılır…' : cacheState === 'cached' ? 'Modeli işə sal' : cacheState === 'unavailable' ? 'Modeli hazırla' : 'Modeli yüklə'}
-          </Button>}
-          <p role="status">{modelReady ? 'Model hazırdır.' : downloading ? `Hazırlanır: ${Math.round(progress * 100)}%` : cacheState === 'cached' ? 'Model faylları bu brauzerdə saxlanıb. İşə salarkən GPU yaddaşına açılır.' : cacheState === 'checking' ? 'Saxlanmış model yoxlanılır…' : cacheState === 'unavailable' ? 'Yerli yaddaşı yoxlamaq mümkün olmadı; hazırlama zamanı fayllar yenidən yüklənə bilər.' : 'Tam saxlanmış model tapılmadı. Yükləmə yalnız düyməyə basdıqda başlayır.'}</p>
-          <p className="text-xs">Sayt məlumatlarını silmək, başqa brauzer və ya başqa sayt ünvanından açmaq yenidən yükləmə tələb edə bilər.</p>
-          {downloading && <progress className="w-full" aria-label="Model yüklənməsi" value={progress} max={1} />}
-          {(modelReady || downloading) && <Button type="button" variant="secondary" onClick={() => { stopModel(); setModelReady(false); }}>
-            {downloading || loading ? 'Dayandır' : 'Modeli yaddaşdan çıxar'}
-          </Button>}
-        </div> : <p className="mt-3 text-sm text-slate-600">Söz bazası və sadə qaydalar işləyir. Konteksti anlamır və bütün səhvləri düzəldə bilmir.</p>}
-      </section>
       <section className="mb-6 grid gap-5 rounded-lg border border-slate-200 bg-white p-5 md:grid-cols-2 md:items-center">
         <StrategySelector strategies={strategies} value={strategyId} disabled={loading}
           onChange={value => { setStrategyId(value); invalidate(); }} />
@@ -110,11 +56,14 @@ export default function HomePage() {
         <OutputPane key={output} output={output} metadata={metadata} />
       </div>
       {error && <div role="alert" className="mt-5 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{error}</div>}
-      {loading && engine === 'local-model' && <p role="status" className="mt-4 text-sm text-slate-600">{modelStatus}</p>}
       <div className="mt-6 flex flex-col items-center gap-3">
-        <Button type="button" size="lg" disabled={loading || downloading || (engine === 'local-model' && !modelReady) || !text.trim() || text.length > 10_000}
+        <Button type="button" size="lg" disabled={loading || !text.trim() || text.length > 10_000}
           onClick={transform} className="min-w-52">{loading ? 'Emal olunur…' : 'Düzəlt'}</Button>
-        <p className="text-xs text-slate-500">Yerli emal · maksimum 10 000 simvol · xarici AI xidməti istifadə edilmir</p>
+        <p className="text-xs text-slate-500">Mətn serverə göndərilmir · maksimum 10 000 simvol</p>
+        <p className="max-w-2xl text-center text-xs leading-5 text-slate-500">
+          Qaydalı redaktor bütün mənaları və qrammatik səhvləri tanımır; qeyri-müəyyən sözləri olduğu kimi saxlayır.
+          Nəticəni nəzərdən keçirin.
+        </p>
       </div>
     </main>
   </div>;

@@ -1,5 +1,4 @@
 export interface TransformationOptions {
-  engine?: 'local-rules' | 'local-model';
   preserveFormatting?: boolean;
 }
 
@@ -9,11 +8,11 @@ export interface TransformationRequest {
 }
 
 export interface TransformationMetadata {
-  correctionsMade: number | null;
+  correctionsMade: number;
   detectedLanguage: string;
   executionTimeMs: number;
   strategyUsed: string;
-  engine: 'local-rules' | 'local-model';
+  engine: 'local-rules';
 }
 
 export interface TransformationResult {

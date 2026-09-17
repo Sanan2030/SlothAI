@@ -1,3 +1,4 @@
+import { regularForms } from './morphology';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -63,6 +64,12 @@ dərkənar hazırlanması hazırlanmasını hazırlanıb aktivləşdirildikdə
 göndərilməsi göndərilməsini qiymətləndirdi dəyərləndirdi qarşılaşdığınız
 vəziyyət vəziyyəti vəziyyətin prosesdə axınında dəyişiklik dəyişikliyi
 göstər göstərir göstərmək göstərilir açmaq açılır açın bağlayın
+gəldim getdim etdim bitdi gözləyirəm gələndə gedəndə məndədir
+harada haraya haradan niyə nədir kimdir kimsən nə vaxt üçünsə
+işlədim işləyirəm işləyirsən işləyirsiniz işləyirlər işlədik
+qayıdıram qayıtdım görüşərik görüşənədək danışarıq danışdıq
+istədim istədik istədiyiniz istəyirdim istəyirdik
+heçnə hərşey birşey zəhmətinizə diqqətinizə təşəkkürümü
 `.trim().split(/\s+/);
 
 export function fold(text: string): string {
@@ -71,7 +78,7 @@ export function fold(text: string): string {
 }
 
 const candidates = new Map<string, Set<string>>();
-for (const word of words) {
+for (const word of [...words, ...regularForms()]) {
   const key = fold(word);
   const bucket = candidates.get(key) ?? new Set<string>();
   bucket.add(word.toLocaleLowerCase('az-AZ'));
@@ -82,6 +89,11 @@ const aliases: Record<string, string> = {
   qelirem: 'gəlirəm', qelir: 'gəlir', qelirsen: 'gəlirsən',
   duzewldim: 'düzəldim', duzeldim: 'düzəldim', komek: 'kömək',
   hemise: 'həmişə', zehmet: 'zəhmət', sehv: 'səhv',
+  tesekkur: 'təşəkkür', tesekur: 'təşəkkür', teshekkur: 'təşəkkür',
+  xais: 'xahiş', xahis: 'xahiş', xayis: 'xahiş',
+  duzlet: 'düzəlt', duzeltmek: 'düzəltmək', duzeld: 'düzəlt',
+  azerbaycan: 'Azərbaycan', azerbeycan: 'Azərbaycan',
+  mellumat: 'məlumat', melmuat: 'məlumat', cumleni: 'cümləni',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',

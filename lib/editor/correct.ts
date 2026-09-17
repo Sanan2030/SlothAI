@@ -1,4 +1,5 @@
 import { restoreWord } from './lexicon';
+import { repairPhrases, sentenceBoundaries } from './context';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -14,8 +15,13 @@ function punctuate(line: string): string {
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
   let result = line.replace(/[\t ]+/g, ' ').trim()
+    .replace(/([,;:!?])\1+/g, '$1')
+    .replace(/([!?])[.,]+/g, '$1')
+    .replace(/\s+\./g, '.')
+    .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
     .replace(/\s+([,;:!?])/g, '$1')
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
+  result = sentenceBoundaries(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -23,7 +29,8 @@ function punctuate(line: string): string {
     .replace(/(^|\s|,)(necəsən|necəsiniz)(?=\s|$)/gi, '$1$2?')
     .replace(/([^,;.!?:\s])\s+(amma|lakin|ancaq|çünki)\s+/gi, '$1, $2 ');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
-    result += /^(?:[^,]+,\s*)?(?:necə|niyə|nə vaxt|harada|hara|hansı)\s/i.test(result) ? '?' : '.';
+    const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
+    result += /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence) ? '?' : '.';
   }
   return capitalize(result);
 }
@@ -31,7 +38,7 @@ function punctuate(line: string): string {
 function enumerate(line: string): string[] {
   // Require explicit numeric markers 1) ... 2) ... or ordinal transition words
   // followed by punctuation. Bare "birinci sinif" is never turned into a list.
-  const numeric = [...line.matchAll(/(?:^|\s)(\d{1,2})\)\s+/g)];
+  const numeric = [...line.matchAll(/(?:^|\s)(\d{1,2})[.)]\s+/g)];
   const ordinals = [...line.matchAll(/(?:^|\s)(birinci|ikinci|üçüncü|dördüncü|beşinci)[:,]\s+/gi)];
   const matches = numeric.length >= 2 ? numeric : ordinals;
   if (matches.length < 2) return [line];
@@ -57,7 +64,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   let marker = '\uE000';
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.:\/-]\d+)+(?:%|\b)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/g, value => {
+  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
       return protect(suffix ? value.slice(0, -suffix.length) : value) + suffix;
@@ -70,6 +77,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
   text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, restoreWord);
+  text = repairPhrases(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
     return enumerate(line);

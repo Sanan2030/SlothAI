@@ -52,7 +52,7 @@ export function OutputPane({ output, metadata }: OutputPaneProps) {
       {metadata && (
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400">
           {metadata.correctionsMade !== null && <span>Təxmini dəyişmiş söz sayı: {metadata.correctionsMade}</span>}
-          <span>{metadata.engine === 'local-model' ? 'Yerli dil modeli' : 'Sadə qaydalar'}</span>
+          <span>Yerli mətn redaktoru</span>
           <span>Dil: {metadata.detectedLanguage}</span>
           <span>Müddət: {metadata.executionTimeMs} ms</span>
         </div>

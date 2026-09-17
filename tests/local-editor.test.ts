@@ -69,3 +69,45 @@ test('both strategies and HTTP routes work with every network request forbidden'
     else process.env.LLM_PROVIDER = provider;
   }
 });
+
+test('reviewed inflections are restored without replacing unknown names', () => {
+  assert.equal(correctText('mekteblerden muellimlere musterilerin senedleri').text,
+    'Məktəblərdən müəllimlərə müştərilərin sənədləri.');
+  assert.equal(correctText('biz dusunuruk siz isleyirsiniz').text, 'Biz düşünürük siz işləyirsiniz.');
+  assert.equal(correctText('Zyphoria ucun').text, 'Zyphoria üçün.');
+});
+
+test('phrase rules, clause boundaries and punctuation work together', () => {
+  const examples = [
+    ['biz gedirem sen gelirem', 'Biz gedirik. Sən gəlirsən.'],
+    ['zehmet olmasa senedleri gonderin tesekur edirem', 'Zəhmət olmasa, sənədləri göndərin. Təşəkkür edirəm.'],
+    ['men dusunurem ki bu yaxsidir', 'Mən düşünürəm ki, bu yaxşıdır.'],
+    ['salam,,, necesen???', 'Salam, necəsən?'],
+    ['niye proqram islemir', 'Niyə proqram işləmir?'],
+    ['hers ey', 'Hers ey.'],
+    ['hecne birsey sagol', 'Heç nə bir şey sağ ol.'],
+  ];
+  for (const [input, expected] of examples) {
+    const actual = correctText(input).text;
+    assert.equal(actual, expected, input);
+    assert.equal(correctText(actual).text, actual, 'Repeated correction: ' + input);
+  }
+});
+
+test('formatting honors explicit lists and preserves requested paragraph layout', () => {
+  assert.equal(correctText('plan 1. metni yaz 2. sehvleri duzelt').text,
+    'Plan:\n1. Mətni yaz.\n2. Səhvləri düzəlt.');
+  const source = 'men gedirem sabah qelirem bundan elave senedleri gonderirem';
+  assert.equal(correctText(source).text, 'Mən gedirəm. Sabah gəlirəm.\n\nBundan əlavə sənədləri göndərirəm.');
+  assert.equal(correctText(source, true).text.includes('\n'), false);
+});
+
+test('model-free editor preserves protected spans and dependent clauses', () => {
+  const source = 'prof. Eli www.example.com user_id 12.50 14:30';
+  const corrected = correctText(source).text;
+  for (const protectedPart of ['prof.', 'www.example.com', 'user_id', '12.50', '14:30']) {
+    assert.ok(corrected.includes(protectedPart));
+  }
+  assert.equal(correctText('mən gələndə sən gedirsən').text, 'Mən gələndə sən gedirsən.');
+  assert.equal(correctText('məndə kitab var').text, 'Məndə kitab var.');
+});
