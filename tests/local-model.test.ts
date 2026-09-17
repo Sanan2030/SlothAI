@@ -1,6 +1,30 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildPrompt, readCompletion } from '../lib/local-model/protocol';
+import { buildPrompt, readCompletion, splitModelInput } from '../lib/local-model/protocol';
+import { createWatchdog } from '../lib/local-model/watchdog';
+
+test('long multilingual text is split without dropping input or exceeding byte budget', () => {
+  const input = 'Salam, dünya! 🙂 Azərbaycan dilində uzun mətn.\n'.repeat(220);
+  const chunks = splitModelInput(input);
+  assert.equal(chunks.join(''), input);
+  assert.ok(chunks.length > 1);
+  for (const chunk of chunks) assert.ok(new TextEncoder().encode(chunk).length <= 1400);
+  assert.throws(() => splitModelInput('a'.repeat(1500)), /uzun/);
+});
+
+test('watchdog stops stalls, caps active jobs and clears completed jobs', context => {
+  context.mock.timers.enable({ apis: ['setTimeout'] });
+  let expired = 0;
+  const idle = createWatchdog(60, 180, () => { expired++; idle.clear(); });
+  context.mock.timers.tick(59); assert.equal(expired, 0);
+  idle.touch(); context.mock.timers.tick(59); assert.equal(expired, 0);
+  context.mock.timers.tick(1); assert.equal(expired, 1);
+  const active = createWatchdog(60, 180, () => { expired++; active.clear(); });
+  for (let i = 0; i < 3; i++) { context.mock.timers.tick(50); active.touch(); }
+  context.mock.timers.tick(30); assert.equal(expired, 2);
+  const completed = createWatchdog(60, 180, () => { expired++; });
+  completed.clear(); context.mock.timers.tick(200); assert.equal(expired, 2);
+});
 import { isModelReady, loadModel, generateLocally, stopModel } from '../lib/local-model/client';
 
 test('prompt preserves intent, formatting and disables reasoning', () => {
@@ -20,7 +44,8 @@ test('only complete nonempty model output is accepted', () => {
   assert.throws(() => readCompletion('Rejected', 'content_filter'));
 });
 
-test('worker loading, inference, cancellation and reload lifecycle', async () => {
+test('worker loading, inference, cancellation and reload lifecycle', async context => {
+  context.mock.timers.enable({ apis: ['setTimeout'] });
   const originals = new Map(['window', 'navigator', 'Worker'].map(key => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
   let active: FakeWorker;
   class FakeWorker {
@@ -63,6 +88,14 @@ test('worker loading, inference, cancellation and reload lifecycle', async () =>
     assert.equal(isModelReady(), false);
     active!.reply('ready'); await recovered;
     assert.equal(isModelReady(), true);
+    const stalled = generateLocally('prompt', 'salam');
+    const timeoutCheck = assert.rejects(stalled, /vaxt həddini/);
+    context.mock.timers.tick(60_000);
+    await timeoutCheck;
+    assert.equal(active!.terminated, true);
+    assert.equal(isModelReady(), false);
+    const afterTimeout = loadModel(() => {});
+    active!.reply('ready'); await afterTimeout;
     stopModel();
   } finally {
     stopModel();

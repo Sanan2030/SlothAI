@@ -1,7 +1,14 @@
+import { createWatchdog } from './watchdog';
+
 let worker: Worker | undefined;
 let ready = false;
 let sequence = 0;
-let pending: { id: number; resolve: (text: string) => void; reject: (error: Error) => void; progress?: (value: number) => void } | undefined;
+let pending: { id: number; resolve: (text: string) => void; reject: (error: Error) => void; progress?: (value: number) => void; watchdog: ReturnType<typeof createWatchdog> } | undefined;
+const listeners = new Set<(status: string) => void>();
+export function subscribeModelStatus(listener: (status: string) => void) {
+  listeners.add(listener);
+  return () => { listeners.delete(listener); };
+}
 
 export function isModelReady() { return ready; }
 
@@ -18,6 +25,7 @@ export function stopModel() {
   ready = false;
   const current = pending;
   pending = undefined;
+  current?.watchdog.clear();
   current?.reject(new Error('Əməliyyat dayandırıldı. Modeli yenidən yükləyə bilərsiniz.'));
 }
 
@@ -25,9 +33,16 @@ function request(action: string, payload: Record<string, string>, progress?: (va
   if (pending) return Promise.reject(new Error('Əvvəlki əməliyyatın bitməsini gözləyin.'));
   return new Promise((resolve, reject) => {
     const id = ++sequence;
-    pending = { id, resolve, reject, progress };
+    const watchdog = createWatchdog(action === 'load' ? 120_000 : 60_000, action === 'load' ? 900_000 : 600_000, () => {
+      if (pending?.id !== id) return;
+      pending = undefined;
+      watchdog.clear();
+      stopModel();
+      reject(new Error('Əməliyyat vaxt həddini aşdı və dayandırıldı. Daha qısa mətnlə yenidən cəhd edin və ya sadə qaydalar rejimini seçin.'));
+    });
+    pending = { id, resolve, reject, progress, watchdog };
     try { worker!.postMessage({ id, action, ...payload }); }
-    catch (cause) { pending = undefined; reject(cause instanceof Error ? cause : new Error('Model sorğusu alınmadı.')); }
+    catch (cause) { watchdog.clear(); pending = undefined; reject(cause instanceof Error ? cause : new Error('Model sorğusu alınmadı.')); }
   });
 }
 
@@ -41,10 +56,13 @@ export async function loadModel(progress: (value: number) => void) {
   const activeWorker = worker;
   worker.onmessage = event => {
     if (worker !== activeWorker || event.data.id !== pending?.id) return;
-    const { progress: value, error, result } = event.data;
+    const { progress: value, error, result, status } = event.data;
+    pending?.watchdog.touch();
+    if (typeof status === 'string') { listeners.forEach(listener => listener(status)); return; }
     if (typeof value === 'number') { pending?.progress?.(Math.min(1, Math.max(0, value))); return; }
     const current = pending!;
     pending = undefined;
+    current.watchdog.clear();
     if (error) {
       // A failed engine may hold disposed GPU objects. Never reuse that worker.
       stopModel();
@@ -55,6 +73,7 @@ export async function loadModel(progress: (value: number) => void) {
     if (worker !== activeWorker) return;
     const current = pending;
     pending = undefined;
+    current?.watchdog.clear();
     stopModel();
     current?.reject(new Error('Model işə düşmədi. GPU yaddaşını və brauzer dəstəyini yoxlayın.'));
   };

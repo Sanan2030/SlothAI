@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { isModelReady, loadModel, stopModel } from '@/lib/local-model/client';
+import { isModelReady, loadModel, stopModel, subscribeModelStatus } from '@/lib/local-model/client';
 import { checkModelCache, requestPersistentStorage, type ModelCacheState } from '@/lib/local-model/storage';
 import { Header } from '@/components/Header';
 import { OutputPane } from '@/components/OutputPane';
@@ -27,6 +27,8 @@ export default function HomePage() {
   const [modelReady, setModelReady] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [modelStatus, setModelStatus] = useState('');
+  useEffect(() => subscribeModelStatus(setModelStatus), []);
   const [cacheState, setCacheState] = useState<ModelCacheState>('checking');
   useEffect(() => {
     let active = true;
@@ -52,6 +54,7 @@ export default function HomePage() {
   async function transform() {
     if (!text.trim() || loading) return;
     setLoading(true);
+    setModelStatus('Mətn hazırlanır…');
     invalidate();
     try {
       const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting, engine } });
@@ -78,7 +81,7 @@ export default function HomePage() {
           <option value="local-rules">Sadə qaydalar (modelsiz)</option>
         </select>
         {engine === 'local-model' ? <div className="mt-3 space-y-3 text-sm text-slate-600">
-          <p>Qwen3 4B · İlk dəfə bir neçə GB model faylı yüklənir. WebGPU və kifayət qədər GPU yaddaşı tələb olunur;
+          <p>Qwen3 1.7B · Daha az yaddaş tələb edən model. Əvvəlki 4B modelin əvəzinə bir dəfə yüklənir. WebGPU və kifayət qədər GPU yaddaşı tələb olunur;
             uzun mətnlər daha çox yaddaş istifadə edir. Model bu brauzerin kompüterdəki yerli yaddaşında saxlanılır;
             bu, Downloads qovluğu deyil. Eyni sayt və brauzerdə saxlanmış fayllar təkrar istifadə edilir.</p>
           {!modelReady && <Button type="button" variant="secondary" disabled={downloading || cacheState === 'checking'} onClick={prepareModel}>
@@ -107,6 +110,7 @@ export default function HomePage() {
         <OutputPane key={output} output={output} metadata={metadata} />
       </div>
       {error && <div role="alert" className="mt-5 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{error}</div>}
+      {loading && engine === 'local-model' && <p role="status" className="mt-4 text-sm text-slate-600">{modelStatus}</p>}
       <div className="mt-6 flex flex-col items-center gap-3">
         <Button type="button" size="lg" disabled={loading || downloading || (engine === 'local-model' && !modelReady) || !text.trim() || text.length > 10_000}
           onClick={transform} className="min-w-52">{loading ? 'Emal olunur…' : 'Düzəlt'}</Button>

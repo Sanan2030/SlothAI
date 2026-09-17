@@ -1,5 +1,5 @@
 import { CreateMLCEngine, type MLCEngine } from '@mlc-ai/web-llm';
-import { MODEL_ID, readCompletion } from './protocol';
+import { MODEL_ID, readCompletion, splitModelInput } from './protocol';
 
 let engine: MLCEngine | undefined;
 globalThis.onmessage = async (event: MessageEvent) => {
@@ -8,19 +8,35 @@ globalThis.onmessage = async (event: MessageEvent) => {
     if (action === 'load') {
       engine = await CreateMLCEngine(MODEL_ID, {
         initProgressCallback: report => globalThis.postMessage({ id, progress: report.progress }),
-      }, { context_window_size: 32768 });
+      }, { context_window_size: 4096 });
       globalThis.postMessage({ id, result: 'ready' });
     } else {
       if (!engine) throw new Error('Əvvəlcə modeli yükləyin.');
-      const response = await engine.chat.completions.create({
-        messages: [{ role: 'system', content: prompt }, { role: 'user', content: text }],
-        extra_body: { enable_thinking: false },
-        temperature: 0.7, top_p: 0.8, max_tokens: 8192,
-      });
-      const choice = response.choices[0];
-      const result = readCompletion(choice?.message.content, choice?.finish_reason ?? null);
-      await engine.resetChat();
-      globalThis.postMessage({ id, result });
+      const chunks = splitModelInput(text);
+      const results: string[] = [];
+      for (let index = 0; index < chunks.length; index++) {
+        globalThis.postMessage({ id, status: `Hissə ${index + 1}/${chunks.length}: emal başlayır…` });
+        const partInstruction = chunks.length > 1
+          ? `\nThis is part ${index + 1} of ${chunks.length} of one document. Correct only this part. If formatting an email, include subject and salutation ONLY in part 1 and sign-off ONLY in the last part. Never summarize omitted parts.` : '';
+        const stream = await engine.chat.completions.create({
+          messages: [{ role: 'system', content: prompt + partInstruction }, { role: 'user', content: chunks[index] }],
+          extra_body: { enable_thinking: false }, stream: true,
+          temperature: 0.7, top_p: 0.8, max_tokens: 1800,
+        });
+        let content = '', reason: string | null = null, lastReport = 0;
+        for await (const response of stream) {
+          const choice = response.choices[0];
+          content += choice?.delta.content ?? '';
+          if (choice?.finish_reason) reason = choice.finish_reason;
+          if (Date.now() - lastReport > 500) {
+            globalThis.postMessage({ id, status: `Hissə ${index + 1}/${chunks.length}: ${content.length} simvol hazırlanıb` });
+            lastReport = Date.now();
+          }
+        }
+        results.push(readCompletion(content, reason));
+        await engine.resetChat();
+      }
+      globalThis.postMessage({ id, result: results.join('\n\n') });
     }
   } catch (cause) {
     // Keep source text out of diagnostics; inference errors happen in the browser,
