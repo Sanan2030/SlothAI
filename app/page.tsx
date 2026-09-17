@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { isModelReady, loadModel, stopModel } from '@/lib/local-model/client';
+import { checkModelCache, requestPersistentStorage, type ModelCacheState } from '@/lib/local-model/storage';
 import { Header } from '@/components/Header';
 import { OutputPane } from '@/components/OutputPane';
 import { StrategySelector } from '@/components/StrategySelector';
@@ -26,8 +27,22 @@ export default function HomePage() {
   const [modelReady, setModelReady] = useState(false);
   const [downloading, setDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [cacheState, setCacheState] = useState<ModelCacheState>('checking');
+  useEffect(() => {
+    let active = true;
+    let sequence = 0;
+    async function refreshCache() {
+      const current = ++sequence;
+      const state = await checkModelCache();
+      if (active && current === sequence) setCacheState(state);
+    }
+    void refreshCache();
+    window.addEventListener('focus', refreshCache);
+    return () => { active = false; window.removeEventListener('focus', refreshCache); };
+  }, [downloading]);
   useEffect(() => () => stopModel(), []);
   async function prepareModel() {
+    void requestPersistentStorage();
     setError(''); setDownloading(true); setProgress(0);
     try { await loadModel(setProgress); setModelReady(true); }
     catch (cause) { setError(cause instanceof Error ? cause.message : 'Model yüklənmədi.'); }
@@ -64,11 +79,13 @@ export default function HomePage() {
         </select>
         {engine === 'local-model' ? <div className="mt-3 space-y-3 text-sm text-slate-600">
           <p>Qwen3 4B · İlk dəfə bir neçə GB model faylı yüklənir. WebGPU və kifayət qədər GPU yaddaşı tələb olunur;
-            uzun mətnlər daha çox yaddaş istifadə edir. Fayllar brauzer keşində saxlanıla bilər. Heç bir AI API açarı lazım deyil.</p>
-          {!modelReady && <Button type="button" variant="secondary" disabled={downloading} onClick={prepareModel}>
-            {downloading ? 'Model yüklənir…' : 'Modeli yüklə'}
+            uzun mətnlər daha çox yaddaş istifadə edir. Model bu brauzerin kompüterdəki yerli yaddaşında saxlanılır;
+            bu, Downloads qovluğu deyil. Eyni sayt və brauzerdə saxlanmış fayllar təkrar istifadə edilir.</p>
+          {!modelReady && <Button type="button" variant="secondary" disabled={downloading || cacheState === 'checking'} onClick={prepareModel}>
+            {downloading ? 'Model hazırlanır…' : cacheState === 'checking' ? 'Yaddaş yoxlanılır…' : cacheState === 'cached' ? 'Modeli işə sal' : cacheState === 'unavailable' ? 'Modeli hazırla' : 'Modeli yüklə'}
           </Button>}
-          <p role="status">{modelReady ? 'Model hazırdır.' : downloading ? `Yüklənir: ${Math.round(progress * 100)}%` : 'Yükləmə yalnız düyməyə basdıqda başlayır.'}</p>
+          <p role="status">{modelReady ? 'Model hazırdır.' : downloading ? `Hazırlanır: ${Math.round(progress * 100)}%` : cacheState === 'cached' ? 'Model faylları bu brauzerdə saxlanıb. İşə salarkən GPU yaddaşına açılır.' : cacheState === 'checking' ? 'Saxlanmış model yoxlanılır…' : cacheState === 'unavailable' ? 'Yerli yaddaşı yoxlamaq mümkün olmadı; hazırlama zamanı fayllar yenidən yüklənə bilər.' : 'Tam saxlanmış model tapılmadı. Yükləmə yalnız düyməyə basdıqda başlayır.'}</p>
+          <p className="text-xs">Sayt məlumatlarını silmək, başqa brauzer və ya başqa sayt ünvanından açmaq yenidən yükləmə tələb edə bilər.</p>
           {downloading && <progress className="w-full" aria-label="Model yüklənməsi" value={progress} max={1} />}
           {(modelReady || downloading) && <Button type="button" variant="secondary" onClick={() => { stopModel(); setModelReady(false); }}>
             {downloading || loading ? 'Dayandır' : 'Modeli yaddaşdan çıxar'}
