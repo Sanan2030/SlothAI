@@ -1,6 +1,16 @@
 # SlothAI — local Azerbaijani text editor
 
-Text correction now runs **directly in the browser**, using a bundled, reviewed word list and explicit formatting rules. There is no AI model, AI API, API key, Redis connection, or text upload in the editor flow. Once the page has loaded, editing and correction work without a network connection. A fresh page load still requires the website; this is not an installable offline PWA.
+Text correction runs **directly in the browser**. The default mode uses Qwen3 4B through WebLLM in a dedicated Web Worker. No cloud inference, API key, Redis connection or source-text upload is involved. A separately selected simple-rules mode needs no model download.
+
+## Local model setup
+
+Select **Yerli dil modeli**, click **Modeli yüklə**, wait for **Model hazırdır**, then enter text and click **Düzəlt**. Model downloads begin only after clicking the load button. The first download is several GB from Hugging Face and MLC's model-library CDN. WebGPU, shader-f16 support and several GB of available GPU memory are required; the 32K context allocation needs more memory than the model's default 4K configuration. Low-memory/mobile devices may fail. Errors are shown inline; choose simple rules explicitly if the device cannot run the model. There is no hidden cloud fallback.
+
+Weights may be reused from browser cache, subject to browser eviction/storage policies. A fresh page load still requires the website; this is not an offline PWA. Stop terminates the worker and frees its active model; retry by loading it again. It does not erase cached weights. Closing the page also terminates processing.
+
+The full input is sent to the local model in one request to retain sentence context. Input is limited to 10,000 UTF-16 code units, with a 32,768-token context and 8,192-token output ceiling. Context/memory errors and incomplete generations are surfaced rather than silently truncating the result. Very long or token-dense text may need manual splitting. Thinking is explicitly disabled. Model instructions preserve meaning, restore diacritics, fix punctuation/capitalization, form paragraphs/lists and format business emails. These are goals, not guarantees: Azerbaijani quality has not been benchmarked here, and names, numbers and facts must be reviewed. Model outputs are escaped text. No invented correction count is displayed for model output.
+
+References: [WebLLM](https://webllm.mlc.ai/docs/user/basic_usage.html), [Qwen3 4B model card and Apache 2.0 license](https://huggingface.co/Qwen/Qwen3-4B), [MLC quantized model](https://huggingface.co/mlc-ai/Qwen3-4B-q4f16_1-MLC).
 
 ## Start
 
@@ -19,7 +29,7 @@ npm run build
 npm start
 ```
 
-## What it does
+## Simple-rules mode
 
 - Restores known Azerbaijani spellings and diacritics, including selected inflected forms, from `lib/editor/lexicon.ts`.
 - Applies explicit conversational rules, conjunction commas, sentence capitalization and ending punctuation.
@@ -42,13 +52,13 @@ Salam, necəsən? Mən də yaxşıyam, amma bu aralar pisəm.
 
 ## Limits
 
-This is a conservative rule-based editor, **not a general grammar checker or language model**. Unknown words remain unchanged. Ambiguous ASCII words such as `yag`, `gul`, `sira`, `et`, and `el` are not guessed. It cannot reliably infer every Azerbaijani suffix, proper name, intended meaning or sentence boundary. Review the output. Tone rewriting and free-form editing instructions have been removed because the local engine cannot honestly fulfill them.
+Simple-rules mode is **not a general grammar checker**. Unknown words remain unchanged. Ambiguous ASCII words such as `yag`, `gul`, `sira`, `et`, and `el` are not guessed. It cannot reliably infer every Azerbaijani suffix, proper name, intended meaning or sentence boundary. Review either engine's output.
 
 The displayed change count estimates the affected span of whitespace-separated words; it is not an exact linguistic error count. `detectedLanguage: az` identifies the configured editing language, not automatic language detection. Both input and API validation limit source text to 10,000 UTF-16 code units.
 
 ## Architecture
 
-The browser imports the same pure Strategy registry used by the optional server routes. `lib/strategies/bootstrap.ts` centrally registers text and email strategies. The transformation functions contain no network or environment access. The page calls `.transform()` directly rather than fetching `/api/transform`; output is rendered as text, not HTML.
+The browser imports the same Strategy registry used by the optional server routes. `lib/strategies/bootstrap.ts` centrally registers text and email strategies. Each strategy delegates to the selected engine; prompts and local worker lifecycle live in `lib/local-model`. The page calls `.transform()` directly rather than fetching `/api/transform`; output is rendered as text, not HTML. Only initial model asset retrieval uses the network in model mode. API routes support rules only; requesting a model engine through HTTP fails strict validation with status 400.
 
 Optional compatibility endpoints:
 
@@ -64,4 +74,4 @@ Add reviewed entries to `lib/editor/lexicon.ts` to improve word coverage; do not
 
 Deploy branch `codex/fix-llm-provider` in Vercel, or merge its PR into your production branch. No secrets are needed. A successful preview build does not automatically replace your `main` production deployment.
 
-Tests cover the reported example, ambiguity preservation, protected spans, explicit lists, paragraph preservation, repeated processing, email formatting, length limits and both API/strategy modes with all `fetch` calls forced to throw. This verifies that transformations do not rely on AI or other network services.
+Tests cover the reported rules example, ambiguity preservation, protected spans, explicit lists, paragraphs, repeated processing, emails, length limits and rules API/strategies with network calls forbidden. Model tests cover prompt construction, incomplete/invalid output rejection and worker lifecycle with a mock worker. Type checking, lint and production build must also pass. Actual GPU inference and Azerbaijani correction quality require verification on a WebGPU-capable device; mocked tests do not establish linguistic accuracy.

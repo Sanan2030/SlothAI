@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { loadModel, stopModel } from '@/lib/local-model/client';
 import { Header } from '@/components/Header';
 import { OutputPane } from '@/components/OutputPane';
 import { StrategySelector } from '@/components/StrategySelector';
@@ -21,13 +22,24 @@ export default function HomePage() {
   const [preserveFormatting, setPreserveFormatting] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [engine, setEngine] = useState<'local-model' | 'local-rules'>('local-model');
+  const [modelReady, setModelReady] = useState(false);
+  const [downloading, setDownloading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => () => stopModel(), []);
+  async function prepareModel() {
+    setError(''); setDownloading(true); setProgress(0);
+    try { await loadModel(setProgress); setModelReady(true); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : 'Model yüklənmədi.'); }
+    finally { setDownloading(false); }
+  }
   function invalidate() { setOutput(''); setMetadata(null); setError(''); }
   async function transform() {
     if (!text.trim() || loading) return;
     setLoading(true);
     invalidate();
     try {
-      const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting } });
+      const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting, engine } });
       setOutput(result.transformedText);
       setMetadata(result.metadata);
     } catch (cause) {
@@ -39,9 +51,29 @@ export default function HomePage() {
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
       <h1 className="mb-3 text-3xl font-semibold text-slate-950">Mətninizi səliqəyə salın.</h1>
       <p className="mb-6 max-w-3xl text-sm leading-6 text-slate-600">
-        Mətn brauzerinizdə emal olunur və serverə göndərilmir. Proqram söz bazası və sadə qaydalar istifadə edir;
-        tanımadığı sözləri saxlayır və bütün qrammatik səhvləri müəyyən edə bilmir. Nəticəni yoxlayın.
+        Mətn brauzerinizdə emal olunur və serverə göndərilmir. Yerli dil modeli cümlələrin mənasına əsasən
+        yazılışı, durğu işarələrini və abzasları düzəltməyə çalışır. Nəticəni yoxlayın: model səhv edə bilər.
       </p>
+      <section className="mb-6 rounded-lg border border-slate-200 bg-white p-5">
+        <label className="text-sm font-medium" htmlFor="engine">Emal üsulu</label>
+        <select id="engine" value={engine} disabled={loading || downloading} className="ml-3 rounded border p-2"
+          onChange={event => { setEngine(event.target.value as typeof engine); invalidate(); }}>
+          <option value="local-model">Yerli dil modeli</option>
+          <option value="local-rules">Sadə qaydalar (modelsiz)</option>
+        </select>
+        {engine === 'local-model' ? <div className="mt-3 space-y-3 text-sm text-slate-600">
+          <p>Qwen3 4B · İlk dəfə bir neçə GB model faylı yüklənir. WebGPU və kifayət qədər GPU yaddaşı tələb olunur;
+            uzun mətnlər daha çox yaddaş istifadə edir. Fayllar brauzer keşində saxlanıla bilər. Heç bir AI API açarı lazım deyil.</p>
+          {!modelReady && <Button type="button" variant="secondary" disabled={downloading} onClick={prepareModel}>
+            {downloading ? 'Model yüklənir…' : 'Modeli yüklə'}
+          </Button>}
+          <p role="status">{modelReady ? 'Model hazırdır.' : downloading ? `Yüklənir: ${Math.round(progress * 100)}%` : 'Yükləmə yalnız düyməyə basdıqda başlayır.'}</p>
+          {downloading && <progress className="w-full" aria-label="Model yüklənməsi" value={progress} max={1} />}
+          {(modelReady || downloading) && <Button type="button" variant="secondary" onClick={() => { stopModel(); setModelReady(false); }}>
+            {downloading || loading ? 'Dayandır' : 'Modeli yaddaşdan çıxar'}
+          </Button>}
+        </div> : <p className="mt-3 text-sm text-slate-600">Söz bazası və sadə qaydalar işləyir. Konteksti anlamır və bütün səhvləri düzəldə bilmir.</p>}
+      </section>
       <section className="mb-6 grid gap-5 rounded-lg border border-slate-200 bg-white p-5 md:grid-cols-2 md:items-center">
         <StrategySelector strategies={strategies} value={strategyId} disabled={loading}
           onChange={value => { setStrategyId(value); invalidate(); }} />
@@ -58,9 +90,9 @@ export default function HomePage() {
       </div>
       {error && <div role="alert" className="mt-5 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{error}</div>}
       <div className="mt-6 flex flex-col items-center gap-3">
-        <Button type="button" size="lg" disabled={loading || !text.trim() || text.length > 10_000}
+        <Button type="button" size="lg" disabled={loading || downloading || (engine === 'local-model' && !modelReady) || !text.trim() || text.length > 10_000}
           onClick={transform} className="min-w-52">{loading ? 'Emal olunur…' : 'Düzəlt'}</Button>
-        <p className="text-xs text-slate-500">Yerli emal · maksimum 10 000 simvol · AI xidməti istifadə edilmir</p>
+        <p className="text-xs text-slate-500">Yerli emal · maksimum 10 000 simvol · xarici AI xidməti istifadə edilmir</p>
       </div>
     </main>
   </div>;
