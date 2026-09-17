@@ -1,5 +1,6 @@
 import { restoreWord } from './lexicon';
 import { repairPhrases, sentenceBoundaries } from './context';
+import { punctuateNarrative, narrativeParagraphs } from './narrative';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -23,6 +24,7 @@ function punctuate(line: string): string {
     .replace(/\s+([,;:!?])/g, '$1')
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
   result = sentenceBoundaries(result);
+  result = punctuateNarrative(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -68,7 +70,8 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   let marker = '\uE000';
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+    if (/^chess comda$/i.test(value)) return protect('Chess.com-da');
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
       return protect(suffix ? value.slice(0, -suffix.length) : value) + suffix;
@@ -95,6 +98,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return list ? list[1] + punctuate(list[2]) : punctuate(line);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
+    text = narrativeParagraphs(text);
     text = text.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n');
   }
   text = text.split(marker).map((part, index) => {

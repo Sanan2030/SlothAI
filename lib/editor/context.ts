@@ -2,7 +2,14 @@
 export function repairPhrases(text: string): string {
   return text
     .replace(/(^|[^\p{L}])bugün(?=$|[^\p{L}])/giu, '$1bu gün')
-    .replace(/(^|[^\p{L}])(mən|sən|biz|siz) +de +(?=(?:gəl|ged|ed|düşün|işlə|bil|istə)[\p{L}]+)/giu, '$1$2 də ')
+    .replace(/(^|[^\p{L}])(mən|sən|biz|siz) +de +(?=(?:gəl|ged|ed|düşün|işlə|bil|istə|keç)[\p{L}]+)/giu, '$1$2 də ')
+    .replace(/(^|[^\p{L}])bir de (?=gecikmə(?:\s|$))/giu, '$1bir də ')
+    .replace(/(^|[^\p{L}])bir birini(?=$|[^\p{L}])/giu, '$1bir-birini')
+    .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
+    .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
+    .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
+    .replace(/(^|[^\p{L}])Nike air max(?=$|[^\p{L}])/giu, '$1Nike Air Max')
+    .replace(/(^|[^\p{L}])Jordan stadium(?=$|[^\p{L}])/giu, '$1Jordan Stadium')
     .replace(/(^|[^\p{L}])hərşey(?=$|[^\p{L}])/giu, '$1hər şey')
     .replace(/(^|[^\p{L}])heçnə(?=$|[^\p{L}])/giu, '$1heç nə')
     .replace(/(^|[^\p{L}])birşey(?=$|[^\p{L}])/giu, '$1bir şey')

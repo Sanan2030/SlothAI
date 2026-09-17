@@ -1,4 +1,5 @@
 import { regularForms } from './morphology';
+import { narrativeWords } from './narrative';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -81,7 +82,7 @@ export function fold(text: string): string {
 }
 
 const candidates = new Map<string, Set<string>>();
-for (const word of [...words, ...regularForms()]) {
+for (const word of [...words, ...regularForms(), ...narrativeWords]) {
   const key = fold(word);
   const bucket = candidates.get(key) ?? new Set<string>();
   bucket.add(word.toLocaleLowerCase('az-AZ'));
@@ -97,6 +98,14 @@ const aliases: Record<string, string> = {
   duzlet: 'düzəlt', duzeltmek: 'düzəltmək', duzeld: 'düzəlt',
   azerbaycan: 'Azərbaycan', azerbeycan: 'Azərbaycan',
   mellumat: 'məlumat', melmuat: 'məlumat', cumleni: 'cümləni',
+  ubuuntu: 'Ubuntu', ubuntu: 'Ubuntu', fastpiai: 'FastAPI', fastapi: 'FastAPI',
+  pydantic: 'Pydantic', linuxda: 'Linuxda', linux: 'Linux',
+  pdf: 'PDF', cv: 'CV', json: 'JSON', llm: 'LLM', srs: 'SRS',
+  nike: 'Nike', jordan: 'Jordan',
+  hamsi: 'hamısı', hamsini: 'hamısını', tevil: 'təhvil',
+  dushdu: 'düşdü', ashagi: 'aşağı', shey: 'şey', yaxshidir: 'yaxşıdır',
+  shahmat: 'şahmat', gunortan: 'günorta', yataqa: 'yatağa',
+  hemen: 'həmin', dedim: 'dedim', eledi: 'elədi', pointleri: 'pointləri',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
