@@ -4,6 +4,8 @@ Text correction runs **directly in the browser**. The default mode uses Qwen3 4B
 
 ## Local model setup
 
+WebLLM is pinned exactly to **0.2.82** because newer releases introduced a reported ShapeTuple disposal regression on integrated GPUs ([upstream issue #844](https://github.com/mlc-ai/web-llm/issues/844)). Do not replace this pin with a caret range without GPU regression testing. Failed workers are terminated and the load button is restored, so disposed engines cannot be reused. If the GPU driver has already hung, fully restart the browser before retrying. Client diagnostics appear in browser DevTools, not Vercel function logs; they omit source text. This mitigation is tested at the worker-protocol level, not on the affected physical GPU.
+
 Select **Yerli dil modeli**, click **Modeli yüklə**, wait for **Model hazırdır**, then enter text and click **Düzəlt**. Model downloads begin only after clicking the load button. The first download is several GB from Hugging Face and MLC's model-library CDN. WebGPU, shader-f16 support and several GB of available GPU memory are required; the 32K context allocation needs more memory than the model's default 4K configuration. Low-memory/mobile devices may fail. Errors are shown inline; choose simple rules explicitly if the device cannot run the model. There is no hidden cloud fallback.
 
 Weights may be reused from browser cache, subject to browser eviction/storage policies. A fresh page load still requires the website; this is not an offline PWA. Stop terminates the worker and frees its active model; retry by loading it again. It does not erase cached weights. Closing the page also terminates processing.

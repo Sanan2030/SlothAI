@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { loadModel, stopModel } from '@/lib/local-model/client';
+import { isModelReady, loadModel, stopModel } from '@/lib/local-model/client';
 import { Header } from '@/components/Header';
 import { OutputPane } from '@/components/OutputPane';
 import { StrategySelector } from '@/components/StrategySelector';
@@ -43,6 +43,7 @@ export default function HomePage() {
       setOutput(result.transformedText);
       setMetadata(result.metadata);
     } catch (cause) {
+      setModelReady(isModelReady());
       setError(cause instanceof Error ? cause.message : 'Mətn emal edilə bilmədi.');
     } finally { setLoading(false); }
   }

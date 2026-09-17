@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { buildPrompt, readCompletion } from '../lib/local-model/protocol';
-import { loadModel, generateLocally, stopModel } from '../lib/local-model/client';
+import { isModelReady, loadModel, generateLocally, stopModel } from '../lib/local-model/client';
 
 test('prompt preserves intent, formatting and disables reasoning', () => {
   const prompt = buildPrompt('Business email', true);
@@ -32,6 +32,7 @@ test('worker loading, inference, cancellation and reload lifecycle', async () =>
     postMessage(message: typeof this.last) { this.last = message; }
     terminate() { this.terminated = true; }
     reply(result: string) { this.onmessage?.({ data: { id: this.last.id, result } }); }
+    fail(error: string) { this.onmessage?.({ data: { id: this.last.id, error } }); }
   }
   try {
     Object.defineProperty(globalThis, 'window', { value: {}, configurable: true });
@@ -48,6 +49,20 @@ test('worker loading, inference, cancellation and reload lifecycle', async () =>
     await assert.rejects(generateLocally('prompt', 'salam'), /yükləyin/);
     const retry = loadModel(() => {});
     active!.reply('ready'); await retry;
+    const brokenWorker = active!;
+    const failed = generateLocally('prompt', 'salam');
+    const failedCheck = assert.rejects(failed, /GPU sessiyası/);
+    brokenWorker.fail('Object has already been disposed');
+    await failedCheck;
+    assert.equal(isModelReady(), false);
+    assert.equal(brokenWorker.terminated, true);
+    await assert.rejects(generateLocally('prompt', 'salam'), /yükləyin/);
+    const recovered = loadModel(() => {});
+    // Late messages from the disposed worker must not complete the new load.
+    brokenWorker.reply('ready');
+    assert.equal(isModelReady(), false);
+    active!.reply('ready'); await recovered;
+    assert.equal(isModelReady(), true);
     stopModel();
   } finally {
     stopModel();

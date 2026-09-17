@@ -3,6 +3,15 @@ let ready = false;
 let sequence = 0;
 let pending: { id: number; resolve: (text: string) => void; reject: (error: Error) => void; progress?: (value: number) => void } | undefined;
 
+export function isModelReady() { return ready; }
+
+function modelError(message: string): Error {
+  if (/disposed|device.*lost|device.*hung|out of memory/i.test(message)) {
+    return new Error('Modelin GPU sessiyası bağlandı. Modeli yenidən yükləyin; xəta təkrarlanarsa brauzeri tam bağlayıb açın və digər GPU proqramlarını bağlayın.');
+  }
+  return new Error(message);
+}
+
 export function stopModel() {
   worker?.terminate();
   worker = undefined;
@@ -36,7 +45,11 @@ export async function loadModel(progress: (value: number) => void) {
     if (typeof value === 'number') { pending?.progress?.(Math.min(1, Math.max(0, value))); return; }
     const current = pending!;
     pending = undefined;
-    if (error) current.reject(new Error(error)); else current.resolve(result);
+    if (error) {
+      // A failed engine may hold disposed GPU objects. Never reuse that worker.
+      stopModel();
+      current.reject(modelError(error));
+    } else current.resolve(result);
   };
   worker.onerror = () => {
     if (worker !== activeWorker) return;
@@ -45,7 +58,11 @@ export async function loadModel(progress: (value: number) => void) {
     stopModel();
     current?.reject(new Error('Model işə düşmədi. GPU yaddaşını və brauzer dəstəyini yoxlayın.'));
   };
-  try { await request('load', {}, progress); ready = true; }
+  try {
+    await request('load', {}, progress);
+    if (worker !== activeWorker) throw new Error('Modelin yüklənməsi dayandırıldı.');
+    ready = true;
+  }
   catch (error) { if (worker === activeWorker) stopModel(); throw error; }
 }
 

@@ -23,6 +23,11 @@ globalThis.onmessage = async (event: MessageEvent) => {
       globalThis.postMessage({ id, result });
     }
   } catch (cause) {
+    // Keep source text out of diagnostics; inference errors happen in the browser,
+    // so these records appear in DevTools rather than Vercel function logs.
+    console.error('[local-model]', { stage: action, name: cause instanceof Error ? cause.name : 'UnknownError',
+      disposed: cause instanceof Error && /disposed|device.*lost/i.test(cause.message) });
+    engine = undefined;
     globalThis.postMessage({ id, error: cause instanceof Error ? cause.message : 'Yerli model xətası.' });
   }
 };
