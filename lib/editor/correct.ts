@@ -5,7 +5,7 @@ export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
 
 function capitalize(text: string): string {
-  return text.replace(/(^|[.!?]\s+|\n(?:\d+[.)]|[-*])\s+)([a-zəçğıöşü])/g,
+  return text.replace(/(^[“«"(]?|[.!?]\s+[“«"(]?|\n(?:\d+[.)]|[-*])\s+)([a-zəçğıöşü])/g,
     (_, prefix: string, letter: string) => prefix + letter.toLocaleUpperCase('az-AZ'));
 }
 
@@ -15,6 +15,7 @@ function punctuate(line: string): string {
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
   let result = line.replace(/[\t ]+/g, ' ').trim()
+    .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
     .replace(/([!?])[.,]+/g, '$1')
     .replace(/\s+\./g, '.')
@@ -26,11 +27,14 @@ function punctuate(line: string): string {
   // boundary before every pronoun or arbitrary verb.
   result = result
     .replace(/^(salam)\s+(?=[a-zəçğıöşü])/i, '$1, ')
-    .replace(/(^|\s|,)(necəsən|necəsiniz)(?=\s|$)/gi, '$1$2?')
+    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?')
     .replace(/([^,;.!?:\s])\s+(amma|lakin|ancaq|çünki)\s+/gi, '$1, $2 ');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
-    result += /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence) ? '?' : '.';
+    const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence);
+    const exclamation = /^nə (?:gözəl|yaxşı|pis|qəribə)\s/i.test(lastSentence);
+    const question = !indirect && !exclamation && /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence);
+    result += question ? '?' : '.';
   }
   return capitalize(result);
 }
@@ -64,7 +68,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   let marker = '\uE000';
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
       return protect(suffix ? value.slice(0, -suffix.length) : value) + suffix;
@@ -85,7 +89,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   text = lines.map(line => {
     if (line.includes(marker) && line.trim().startsWith(marker)) {
       const index = Number(line.trim().slice(marker.length).split('\uE001')[0]);
-      if (protectedText[index]?.startsWith('```') && line.trim() === `${marker}${index}\uE001`) return line;
+      if (protectedText[index]?.startsWith('`') && line.trim() === `${marker}${index}\uE001`) return line;
     }
     const list = line.match(/^(\s*(?:[-*]|\d+[.)])\s+)(.*)$/);
     return list ? list[1] + punctuate(list[2]) : punctuate(line);
@@ -110,6 +114,18 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
 }
 
 export function formatEmail(input: string): LocalCorrection {
+  // Preserve an existing short signature rather than punctuating a person's
+  // name as a prose sentence. Length validation still covers the whole input.
+  if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  const signature = input.match(/(?:^|\n)(?:hörmətlə|hormetle)[,.]?\s*\n([^\n]{1,100})\s*$/iu);
+  if (signature) {
+    const body = input.slice(0, signature.index).trim();
+    if (body) {
+      const result = formatEmail(body);
+      const name = signature[1].trim().replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, restoreWord);
+      return { text: result.text + '\n' + name, corrections: result.corrections };
+    }
+  }
   const result = correctText(input, true);
   const subjectMatch = result.text.match(/^Mövzu:\s*([^\n]+)\n*/i);
   const subject = subjectMatch ? `Mövzu: ${subjectMatch[1]}` : 'Mövzu: Müraciət';

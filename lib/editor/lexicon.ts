@@ -70,6 +70,9 @@ işlədim işləyirəm işləyirsən işləyirsiniz işləyirlər işlədik
 qayıdıram qayıtdım görüşərik görüşənədək danışarıq danışdıq
 istədim istədik istədiyiniz istəyirdim istəyirdik
 heçnə hərşey birşey zəhmətinizə diqqətinizə təşəkkürümü
+hələ göndərilmədi sabahkı vaxtını dəqiqləşdirin hazırlayın hazırla
+gündür işlədiyini yalnız soruşdum gətirirəm getdin görüşdük
+manatdır Gəncəyə Gəncənin Bakını Bakıdan Türkiyəyə Türkiyənin
 `.trim().split(/\s+/);
 
 export function fold(text: string): string {
@@ -97,6 +100,9 @@ const aliases: Record<string, string> = {
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
+  'Azərbaycanı', 'Azərbaycana', 'Azərbaycanda', 'Azərbaycanın',
+  'Bakıya', 'Bakıda', 'Bakının', 'Bakını', 'Bakıdan',
+  'Gəncəyə', 'Gəncədə', 'Gəncənin', 'Türkiyəyə', 'Türkiyədə', 'Türkiyənin',
   'Sənan', 'Xədicə', 'Nərmin', 'Aysel', 'Günel', 'Rəşad'].map(name => [fold(name), name]));
 
 export function restoreWord(word: string): string {
