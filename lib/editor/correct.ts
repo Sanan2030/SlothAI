@@ -1,6 +1,7 @@
 import { restoreWord } from './lexicon';
 import { repairPhrases, sentenceBoundaries } from './context';
 import { punctuateNarrative, narrativeParagraphs } from './narrative';
+import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -25,17 +26,20 @@ function punctuate(line: string): string {
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
   result = sentenceBoundaries(result);
   result = punctuateNarrative(result);
+  result = extendedBoundaries(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
     .replace(/^(salam)\s+(?=[a-zəçğıöşü])/i, '$1, ')
     .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?')
-    .replace(/([^,;.!?:\s])\s+(amma|lakin|ancaq|çünki)\s+/gi, '$1, $2 ');
+    .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki)\s+/gi, '$1, $2 ')
+    .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o)\s)/gi, '$1, $2 ');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
     const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence);
     const exclamation = /^nə (?:gözəl|yaxşı|pis|qəribə)\s/i.test(lastSentence);
-    const question = !indirect && !exclamation && /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence);
+    const discourseMarker = /^nə isə(?:\s|$)/i.test(lastSentence);
+    const question = !indirect && !exclamation && !discourseMarker && /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence);
     result += question ? '?' : '.';
   }
   return capitalize(result);
@@ -70,7 +74,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   let marker = '\uE000';
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
     if (/^chess comda$/i.test(value)) return protect('Chess.com-da');
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
@@ -79,6 +83,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return protect(value);
   });
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
+  text = beforeLexicalCorrection(text);
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
@@ -88,6 +93,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
   });
   text = repairPhrases(text);
+  text = extendedPhrases(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
     return enumerate(line);
