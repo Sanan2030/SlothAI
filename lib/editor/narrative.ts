@@ -35,5 +35,5 @@ export function punctuateNarrative(text: string): string {
 }
 
 export function narrativeParagraphs(text: string): string {
-  return text.replace(/([.!?]) +(?=(?:Günorta|Nə isə günorta|Günün ikinci yarısı|Axşam saat|İdmandan çıxıb|Evə çatanda|Evə girib|Gecə saat|Sabah səhər)(?:\s|$))/g, '$1\n\n');
+  return text.replace(/([.!?]) +(?=(?:Günorta|Günortadan sonra|Nə isə günorta|Günün ikinci yarısı|Axşam saat|İdmandan çıxıb|Evə çatanda|Evə girib|Gecə saat|Sabah səhər|Sabaha olan planları)(?:\s|$))/g, '$1\n\n');
 }

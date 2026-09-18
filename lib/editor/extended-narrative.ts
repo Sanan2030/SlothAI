@@ -29,6 +29,15 @@ işləyirdi fikirləşməkdən mətbəxdən dərmanı günlər arxasında insan�
 işləmək planlarım gəzmək içmək fikirləşirdim gözlərim yumulurdu
 isə edib şey dəri maşınların səsi gəlirdi qabağına xəbərlərdə aşağıda çıxdı
 qışqıracaqdı arxitektura alqoritmi endpointlərin konteynerləri
+şükür saatı yatmışdım hazırlayıb terminalını yüklədim yaradırdılar
+dokumentasiyasını yoxlamağa başladım spesifikasiyası tiplər qarışdırılmışdı
+yazmışdılar alırdım kanalında iclasındayıq öz sənədimi yazmağa istəyirdi
+rəqəmsallaşsın çəkmişdim oxları bağlayırdım mikroservislər bağlansın
+olunmasın etsək yazılmalıdır yeməyi günortadan müəyyənləşdirirdik
+soruşurdu yarandı taskını altıya kodları yoxlasın çantamı toplayıb
+tıxacda təlaşlı küncə gücü etməli planlaması paylanacaqdı
+strukturlaşdırıb yetirmək gecəniz xeyrə fısıldayıb test birinə eləmək
+endpointləri hazırladım hazırlamaq
 `.trim().split(/\s+/);
 
 export const extendedAliases: Record<string, string> = {
@@ -45,6 +54,12 @@ export const extendedAliases: Record<string, string> = {
   ashagida: 'aşağıda', qisqiracakdi: 'qışqıracaqdı',
   arhitektura: 'arxitektura', algoritmi: 'alqoritmi',
   endpointlerin: 'endpointlərin', containerleri: 'konteynerləri',
+  shukur: 'şükür', ama: 'amma', sinitzel: 'şnitsel',
+  kovertasiya: 'konvertasiya', sabahsisi: 'sabahısı',
+  bashlayacaqdi: 'başlayacaqdı', tapiriqlar: 'tapşırıqlar',
+  telesli: 'təlaşlı', asistansan: 'assistentsən',
+  gnu: 'GNU', postman: 'Postman', slack: 'Slack',
+  swaggerde: 'Swagger-də', bpmnde: 'BPMN-də',
   devops: 'DevOps', docker: 'Docker', ram: 'RAM', nvme: 'NVMe', ssd: 'SSD',
   swagger: 'Swagger', openapi: 'OpenAPI', dbml: 'DBML',
   postgresql: 'PostgreSQL', redis: 'Redis', youtube: 'YouTube',
@@ -57,6 +72,7 @@ export function beforeLexicalCorrection(text: string): string {
     .replace(/(^|[^\p{L}])n[eə] is[eə](?=$|[^\p{L}])/giu, '$1nə isə')
     .replace(/(^|[^\p{L}])bir nece(?=$|[^\p{L}])/giu, '$1bir neçə')
     .replace(/(^|[^\p{L}])indi ise(?=$|[^\p{L}])/giu, '$1indi isə')
+    .replace(/(^|[^\p{L}])chantai(?=\s+k[uü]nc[eə](?=$|[^\p{L}]))/giu, '$1çantanı')
     .replace(/(^|[^\p{L}])ise(?=\s+(?:gedir|getmək|getmek|çatdım|catdim)(?=$|[^\p{L}]))/giu, '$1işə')
     .replace(/(^|[^\p{L}])ise(?=\s+(?:yekunlaşdırdım|yekunlasdirdim)(?=$|[^\p{L}]))/giu, '$1işi')
     .replace(/(^|[^\p{L}])er\s+diagram(?=$|[^\p{L}])/giu, '$1ER diaqram');
@@ -66,6 +82,14 @@ export function extendedPhrases(text: string): string {
   return text
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz|sürücü) de(?=\s+(?:dedim|dedin|dedik|dediniz|deyirəm|deyirsən|qışqırırdı|keçdim|oturub|gülümsəyib|daxilən|istəyirdim)(?=$|[^\p{L}]))/giu, '$1$2 də')
     .replace(/(^|[^\p{L}])(həm|hələ) de(?=\s)/giu, '$1$2 də')
+    .replace(/(^|[^\p{L}])mən de(?=\s+(?:Swagger|izah|çay|daxil)(?=$|[^\p{L}]))/giu, '$1mən də')
+    .replace(/(^|[^\p{L}])bir birinə(?=$|[^\p{L}])/giu, '$1bir-birinə')
+    .replace(/(^|[^\p{L}])YouTube da(?=$|[^\p{L}])/giu, '$1YouTube-da')
+    .replace(/(^|[^\p{L}])DOSBox va Lutris(?=$|[^\p{L}])/giu, '$1DOSBox və Lutris')
+    .replace(/(^|[^\p{L}])need for speed(?=$|[^\p{L}])/giu, '$1Need for Speed')
+    .replace(/(^|[^\p{L}])x11(?=$|[^\p{L}\d])/giu, '$1X11')
+    .replace(/(^|[^\p{L}])necə pointdir(?=$|[^\p{L}])/giu, '$1neçə pointdir')
+    .replace(/(^|[^\p{L}])YouTube-da video izlədim emulyatorlar haqqında(?=$|[^\p{L}])/giu, '$1YouTube-da emulyatorlar haqqında video izlədim')
     .replace(/(^|[^\p{L}])bina dan(?=$|[^\p{L}])/giu, '$1binadan')
     .replace(/(^|[^\p{L}])özüdə(?=$|[^\p{L}])/giu, '$1özü də')
     .replace(/(^|[^\p{L}])yavaş yavaş(?=$|[^\p{L}])/giu, '$1yavaş-yavaş')
@@ -82,10 +106,57 @@ const starters = 'səhər|təcili|əslində|deyəsən|nə isə|bir təhər|gəl�
 const boundary = new RegExp(`(^|[^\\p{L}])(${predicates}) +(?=(?:${starters})(?:\\s|$))`, 'giu');
 
 export function extendedBoundaries(text: string): string {
-  return text.replace(boundary, '$1$2. ')
+  return punctuateWorkday(text.replace(boundary, '$1$2. '))
     .replace(/(^|[^\p{L}])(gəldi|deyərsən) +(?=nə isə günorta)/giu, '$1$2. ')
     .replace(/(^|[^\p{L}])(açdım|elədim|başlatdım) +(?=(?:Ubuntu|Swagger|görürəm ki)\s)/giu, '$1$2. ')
     .replace(/(^|[^\p{L}])(idi|verir|qışqıracaqdı|neynirsən) +(?=mən də\s)/giu, '$1$2. ')
     .replace(/(^|[^\p{L}])(göndərir|doldurubmuş|yaranıb) +(?=(?:log rotate|bazaya|mən həmin)\s)/giu, '$1$2. ')
-    .replace(/(baxdım|deyir|deyirlər|dedilər|düşündüm|göndərdim|yazdı|soruşdum|bildim|istəyir|səsləndi) ki +/giu, '$1 ki, ');
+    .replace(/(baxdım|deyir|deyirlər|dedilər|düşündüm|göndərdim|yazdı|soruşdum|bildim|istəyir|səsləndi|deyirdi|deyirəm|istəyirdi|soruşurdu|elədim|oldum|elədi|açdım|şükür) ki +/giu, '$1 ki, ');
+}
+
+// Finite verb + independently reviewed next-clause opening. Infinitives and
+// participles alone are not evidence of a sentence boundary.
+const workdayPredicates = [
+  'oyandım', 'yatmışdım', 'elədim', 'yüklədim', 'yaradırdılar', 'başladım',
+  'idi', 'qarışdırılmışdı', 'yazmışdılar', 'alırdım', 'bilməyəcək',
+  'iclasındayıq', 'baxarıq', 'rəqəmsallaşsın', 'çəkmişdim', 'qururdum',
+  'bağlansın', 'olunmasın', 'olacaq', 'yazılmalıdır', 'verdik', 'qalxdım yuxarı',
+  'başladı', 'müəyyənləşdirirdik', 'yarandı', 'yoxlasın', 'çıxdım', 'qaçdım',
+  'aldım', 'açdım', 'istəyirdim', 'dəyişdim', 'assistentsən', 'oynayaq',
+  'daxil oldum', 'izlədim', 'olar', 'baxırdım', 'işləmir', 'qoydum kənara',
+  'düşündüm', 'idim', 'başlayacaqdı', 'paylanacaqdı',
+].join('|');
+const workdayStarters = [
+  'şükür ki', 'kofe', 'yeni dəyişiklikləri', 'backend tərəfdə', 'ona görə',
+  'Swagger-də', 'bəzi tiplər', 'integer', 'təcili', 'onlar da', 'iclasdan sonra',
+  'mən də', 'Lucidchart', 'REST', 'performans', 'həm də', 'nə isə',
+  'yemək', 'günortadan sonra', 'iclasda', 'scrum master', 'axırda', 'sonra',
+  'tıxacda', 'yolda', 'metroda', 'çantanı', 'bir az resume parser', 'PDF',
+  'dedim', 'yalnız JSON', 'bir neçə oyun', 'Linuxda', 'DOSBox', 'pull request',
+  'köhnə Need for Speed', 'X11', 'axır ki', 'pəncərəni', 'zala', 'yarım saat',
+  'creatin', 'sabahısı gün', 'müxtəlif tapşırıqlar', 'hamısını', 'gecəniz',
+  '\\uE000+\\d+\\uE001 prosesini', '\\uE000+\\d+\\uE001 daxil',
+  '\\uE000+\\d+\\uE001 yerinə',
+].join('|');
+const workdayBoundary = new RegExp(`(^|[^\\p{L}])(${workdayPredicates}) +(?=(?:${workdayStarters})(?:\\s|$))`, 'giu');
+
+function punctuateWorkday(text: string): string {
+  return text.replace(workdayBoundary, '$1$2. ')
+    .replace(/(kompüterin qabağına) +(?=GNU\s+Linux)/giu, '$1. ')
+    .replace(/(keçdim [^.!?\n]{0,60}sənədimi yazmağa) +(?=müştəri\s)/giu, '$1. ')
+    .replace(/(keçdim otağıma) +(?=kompüteri\s)/giu, '$1. ')
+    .replace(/(keçdim telefonla xəbərlərə baxmağa) +(?=YouTube-da\s)/giu, '$1. ')
+    .replace(/(çəkmişdim) +(?=indi\s)/giu, '$1. ')
+    .replace(/(içdim) +(?=pəncərədən\s)/giu, '$1. ')
+    .replace(/(olsun) +(deyirdilər)(?=$|[^\p{L}])/giu, '$1, $2')
+    .replace(/(qurtarmışdı) +(deyirdilər)(?=$|[^\p{L}])/giu, '$1, $2')
+    .replace(/(pointdir) +(?=biri deyirdi\s)/giu, '$1? ')
+    .replace(/(\d+ point) +(?=biri deyirdi\s|mübahisə\s)/giu, '$1. ')
+    .replace(/(biri deyirdi) +(?=\d+ point(?:[^\p{L}]|$))/giu, '$1: ')
+    .replace(/(necə işlətmək olar)\.(?=\s)/giu, '$1?')
+    .replace(/(tez keçdi) +ki +/giu, '$1 ki, ')
+    .replace(/(^|[^\p{L}])(axır ki) +(?=bezdim\s)/giu, '$1$2, ')
+    .replace(/(^|[^\p{L}])gecəniz xeyrə +fısıldayıb(?=$|[^\p{L}])/giu, '$1“Gecəniz xeyrə” fısıldayıb')
+    .replace(/(düzəldin|var|olsun|olmalıdır) +yoxsa +/giu, '$1, yoxsa ')
+    .replace(/(sabaha da iş var) +(?=gərək\s)/giu, '$1, ');
 }

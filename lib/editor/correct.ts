@@ -83,6 +83,9 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return protect(value);
   });
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
+  // Type names are identifiers, not Azerbaijani prose (integer must not become
+  // dotted-capital İnteger at the beginning of a generated sentence).
+  text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
   text = beforeLexicalCorrection(text);
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
