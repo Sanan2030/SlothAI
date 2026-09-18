@@ -120,7 +120,10 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
       if (protectedText[index]?.startsWith('`') && line.trim() === `${marker}${index}\uE001`) return line;
     }
     const list = line.match(/^(\s*(?:[-*]|\d+[.)])\s+)(.*)$/);
-    return list ? list[1] + punctuate(list[2]) : punctuate(line);
+    // A line that explicitly starts with a number is already an unambiguous
+    // list item, including when each item was entered on a separate line.
+    const normalizedPrefix = list?.[1].replace(/^(\s*\d+)[.)]\s+$/, '$1. ');
+    return list ? normalizedPrefix! + punctuate(list[2]) : punctuate(line);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
     text = businessStageLists(text);

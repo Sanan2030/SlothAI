@@ -60,6 +60,13 @@ export const technicalAliases: Record<string, string> = {
   sinaglari: 'sınaqları', kopyasi: 'kopiyası', integrasiyasi: 'inteqrasiyası',
   uzmanlarimiz: 'mütəxəssislərimiz', muesse: 'müəssisə',
   tehsillendirme: 'təlimləndirmə',
+  ofise: 'ofisə', backlogdaki: 'backlogdakı', taskin: 'taskın',
+  yukleyirler: 'yükləyirlər', backendde: 'backenddə', responseun: 'response-un',
+  arasdirdiq: 'araşdırdıq', sorgusunda: 'sorğusunda', etdikden: 'etdikdən',
+  isledi: 'işlədi', elinin: 'Əlinin', gonderdiyi: 'göndərdiyi',
+  requesti: 'request-i', yazisi: 'yazısı', zeyif: 'zəif', catandan: 'çatandan',
+  duzelisi: 'düzəlişi', stagingde: 'stagingdə', planimdir: 'planımdır', planim: 'planım',
+  gorduk: 'gördük',
 };
 
 // Called only after code/URLs have been replaced with protected placeholders.
@@ -84,7 +91,9 @@ export function technicalPhrases(text: string): string {
     .replace(/(^|[^\p{L}])api keys oauth2/giu, '$1API keys və OAuth2')
     .replace(/(^|[^\p{L}])olasi problemləri(?=$|[^\p{L}])/giu, '$1ehtimal olunan problemləri')
     .replace(/(^|[^\p{L}])tespit edib(?=$|[^\p{L}])/giu, '$1müəyyən edib')
-    .replace(/(^|[^\p{L}])saat əsası ilə(?=$|[^\p{L}])/giu, '$1saat əsasında');
+    .replace(/(^|[^\p{L}])saat əsası ilə(?=$|[^\p{L}])/giu, '$1saat əsasında')
+    .replace(/(gördük) +ki +/giu, '$1 ki, ')
+    .replace(/(gecikirdim) +(ona görə)/giu, '$1, $2');
 }
 
 const finite = `salamlayırıq keçirilmişdir başlanılmışdır çıxarmaqdır bölünmüşdür
@@ -94,7 +103,8 @@ alınır alır götürmüşdür gətiriləcəkdir biridir ötürüləcəkdir qor
 qaldırılacaqdır endirir edilmişdir keçiriləcəkdir tutur saxlanılacaq çıxarılacaqdır
 tənzimlənəcəkdir yaradacaqdır izləniləcəkdir göndərəcəkdir verir olacaqdır
 hazırlanmışdır planlaşdırılır tamamlanacaqdır bildiririk olacaq
-cavablandırılacaqdır etdiriləcəkdir`.trim().split(/\s+/).join('|');
+  cavablandırılacaqdır etdiriləcəkdir tələsdim edirdi soruşdum dedi yükləyirlər
+  araşdırdıq gördük yoxdur işlədi yoxladım keçirdi davam etdirdim`.trim().split(/\s+/).join('|');
 const starts = [
   'təqdim etdiyiniz', 'müəyyən olunmuş', 'bu məktubda', 'biznes proseslərinizin',
   'hər bir sprint', 'bu üsul', 'backlog', 'sprint qiymətləndirmə', 'hər sprintin',
@@ -106,7 +116,8 @@ const starts = [
   'köçürülmə prosesindən', 'duplikasiya', 'miqrasiya sınaqları', 'keçid gecə',
   'bu addım', 'inzibatçılar', 'sistemin istifadə', 'təlim keçmiş', 'Prometheus',
   'kritik səviyyədə', 'şirkətiniz üçün', 'texniki dəstək', 'məhsulun ilkin',
-  'yekun məhsulun', 'biz sizinlə', 'əlavə suallarınız',
+  'yekun məhsulun', 'biz sizinlə', 'əlavə suallarınız', 'ofisə', 'mən',
+  'product owner', 'sonra', 'gördük', 'Redis', 'günortadan sonra', 'kodun', 'axşam',
 ].join('|');
 const boundaries = new RegExp(`(^|[^\\p{L}])(${finite}) +(?=(?:${starts})(?:\\s|$))`, 'giu');
 
