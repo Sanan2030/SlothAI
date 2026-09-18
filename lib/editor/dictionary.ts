@@ -19,10 +19,6 @@ export function dictionaryCandidates(word: string): ReadonlySet<string> | undefi
   return index.get(foldLetters(word));
 }
 
-export function dictionaryReplacement(word: string): string | undefined {
-  return chooseSpelling(word, dictionaryCandidates(word));
-}
-
 export function chooseSpelling(word: string, values?: ReadonlySet<string>): string | undefined {
   const lower = word.toLocaleLowerCase('az-AZ');
   // Existing valid spellings win over alternate meanings with missing accents.

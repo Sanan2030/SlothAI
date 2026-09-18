@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-No environment variables are required. Open http://localhost:3000. Old LLM_PROVIDER, OPENAI, ANTHROPIC and UPSTASH settings are ignored.
+No environment variables are required. Open http://localhost:3000.
 
 ```sh
 npm test
@@ -33,6 +33,14 @@ The complete pinned Mozilla Azerbaijan/Azerdict word list is now bundled locally
 The email mode adds a subject, greeting and sign-off without sending email. User text and output remain in page memory; the editor does not persist them or send them to an external service.
 
 ## Implementation
+
+Runtime dependencies are limited to Next.js/React, Lucide icons, `clsx` and
+`tailwind-merge` for button classes, and Zod for the optional HTTP API's request
+validation. There are no LLM SDKs, inference runtimes, model downloads or Redis
+clients. Button variants use typed class maps rather than a separate library.
+Tailwind/PostCSS, TypeScript, ESLint and `tsx` are build or test dependencies.
+The bundled dictionary sources and license are retained for attribution and
+reproducible generation; they are not unused model assets.
 
 - `lib/editor/lexicon.ts`: reviewed words, aliases, ambiguity guard and name handling.
 - `lib/editor/morphology.ts`: constrained vowel-harmony forms for reviewed noun stems and present-tense verbs.

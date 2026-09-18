@@ -3,7 +3,7 @@ import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
 import { expositoryWords, expositoryAliases } from './expository';
 import { businessWords, businessAliases } from './business';
-import { dictionaryCandidates, foldLetters, chooseSpelling } from './dictionary';
+import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -79,10 +79,6 @@ hələ göndərilmədi sabahkı vaxtını dəqiqləşdirin hazırlayın hazırla
 gündür işlədiyini yalnız soruşdum gətirirəm getdin görüşdük
 manatdır Gəncəyə Gəncənin Bakını Bakıdan Türkiyəyə Türkiyənin
 `.trim().split(/\s+/);
-
-export function fold(text: string): string {
-  return foldLetters(text);
-}
 
 const candidates = new Map<string, Set<string>>();
 for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedNarrativeWords, ...expositoryWords, ...businessWords]) {

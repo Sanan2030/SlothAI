@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { correctText } from '../lib/editor/correct';
-import { dictionaryReplacement } from '../lib/editor/dictionary';
+import { chooseSpelling, dictionaryCandidates } from '../lib/editor/dictionary';
 import words from '../lib/editor/generated/az-words.json';
 
 test('full imported dictionary is reproducible from pinned source', () => {
@@ -32,6 +32,7 @@ test('new dictionary vocabulary is used by the real text transformation', () => 
 });
 
 test('ambiguous imported spellings are not guessed and explicit letters are evidence', () => {
+  const dictionaryReplacement = (word: string) => chooseSpelling(word, dictionaryCandidates(word));
   assert.equal(dictionaryReplacement('seher'), undefined);
   assert.equal(dictionaryReplacement('suret'), undefined);
   assert.equal(dictionaryReplacement('sürət'), 'sürət');
