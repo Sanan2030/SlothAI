@@ -3,6 +3,7 @@ import { repairPhrases, sentenceBoundaries } from './context';
 import { punctuateNarrative, narrativeParagraphs } from './narrative';
 import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
 import { expositoryPhrases, punctuateExpository } from './expository';
+import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -17,6 +18,7 @@ function punctuate(line: string): string {
   if (/^salam,$/i.test(line.trim())) return 'Salam,';
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
+  if (/^hörmətli [^.!?]+,$/i.test(line.trim())) return capitalize(line.trim());
   let result = line.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
@@ -29,6 +31,7 @@ function punctuate(line: string): string {
   result = punctuateNarrative(result);
   result = extendedBoundaries(result);
   result = punctuateExpository(result);
+  result = punctuateBusiness(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -100,11 +103,14 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   text = repairPhrases(text);
   text = extendedPhrases(text);
   text = expositoryPhrases(text);
+  text = businessPhrases(text);
+  if (!preserveFormatting) text = businessLayout(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
     return enumerate(line);
   });
-  text = lines.map(line => {
+  text = lines.map((line, index) => {
+    if (index > 0 && /^hörmətlə[,!.]?$/i.test(lines[index - 1].trim())) return capitalize(line.trim());
     if (line.includes(marker) && line.trim().startsWith(marker)) {
       const index = Number(line.trim().slice(marker.length).split('\uE001')[0]);
       if (protectedText[index]?.startsWith('`') && line.trim() === `${marker}${index}\uE001`) return line;
@@ -113,6 +119,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return list ? list[1] + punctuate(list[2]) : punctuate(line);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
+    text = businessStageLists(text);
     text = narrativeParagraphs(text);
     text = text.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n');
   }
