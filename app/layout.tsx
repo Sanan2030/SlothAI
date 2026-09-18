@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'SlothAI — Azərbaycan dili mətn düzəldici',
-  description: 'Azərbaycan dilində diakritik, durğu işarəsi, abzas və mətn strukturunu AI ilə bərpa edin.',
+  description: 'Azərbaycan mətnini brauzerdə, AI və API açarı olmadan qaydalarla düzəldin.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

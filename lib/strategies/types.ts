@@ -1,9 +1,5 @@
-export type TransformationTone = 'default' | 'formal' | 'casual';
-
 export interface TransformationOptions {
-  tone?: TransformationTone;
   preserveFormatting?: boolean;
-  customRules?: string[];
 }
 
 export interface TransformationRequest {
@@ -16,6 +12,7 @@ export interface TransformationMetadata {
   detectedLanguage: string;
   executionTimeMs: number;
   strategyUsed: string;
+  engine: 'local-rules';
 }
 
 export interface TransformationResult {

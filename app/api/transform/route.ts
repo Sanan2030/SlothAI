@@ -12,15 +12,13 @@ const RequestSchema = z.object({
   strategyId: z.string().trim().min(1).max(64),
   text: z
     .string()
-    .trim()
-    .min(1, 'Mətn boş ola bilməz.')
-    .max(10_000, 'Mətn maksimum 10,000 simvol ola bilər.'),
+    .max(10_000, 'Mətn maksimum 10,000 simvol ola bilər.')
+    .refine(value => value.trim().length > 0, 'Mətn boş ola bilməz.'),
   options: z
     .object({
-      tone: z.enum(['default', 'formal', 'casual']).optional(),
       preserveFormatting: z.boolean().optional(),
-      customRules: z.array(z.string().trim().min(1).max(300)).max(10).optional(),
     })
+    .strict()
     .optional(),
 });
 
@@ -31,22 +29,27 @@ function getClientIdentifier(req: NextRequest): string {
 }
 
 export async function POST(req: NextRequest) {
-  const rate = await checkRateLimit(getClientIdentifier(req));
-  const rateHeaders = {
-    'X-RateLimit-Limit': String(rate.limit),
-    'X-RateLimit-Remaining': String(rate.remaining),
-    'X-RateLimit-Reset': String(rate.reset),
-  };
-
-  if (!rate.success) {
-    return NextResponse.json(
-      { error: 'Sorğu limiti aşılıb. Bir az sonra yenidən cəhd edin.' },
-      { status: 429, headers: rateHeaders },
-    );
-  }
-
+  let rateHeaders: Record<string, string> = { 'Cache-Control': 'no-store' };
   try {
-    const body: unknown = await req.json();
+    const rate = await checkRateLimit(getClientIdentifier(req));
+    rateHeaders = {
+      'Cache-Control': 'no-store',
+      'X-RateLimit-Limit': String(rate.limit),
+      'X-RateLimit-Remaining': String(rate.remaining),
+      'X-RateLimit-Reset': String(rate.reset),
+    };
+
+    if (!rate.success) {
+      return NextResponse.json(
+        { error: 'Sorğu limiti aşılıb. Bir az sonra yenidən cəhd edin.' },
+        { status: 429, headers: rateHeaders },
+      );
+    }
+
+    let body: unknown;
+    try { body = await req.json(); } catch {
+      return NextResponse.json({ error: 'Sorğu düzgün JSON formatında deyil.' }, { status: 400, headers: rateHeaders });
+    }
     const data = RequestSchema.parse(body);
     const strategy = getStrategyRegistry().get(data.strategyId);
     const result = await strategy.transform({ text: data.text, options: data.options });
@@ -73,9 +76,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.error('POST /api/transform failed:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Daxili server xətası.' },
+      { error: 'Mətn emal edilə bilmədi.' },
       { status: 500, headers: rateHeaders },
     );
   }

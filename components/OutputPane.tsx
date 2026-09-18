@@ -13,12 +13,17 @@ interface OutputPaneProps {
 
 export function OutputPane({ output, metadata }: OutputPaneProps) {
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState('');
 
   async function copyOutput() {
     if (!output) return;
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setCopyError('');
+    } catch {
+      setCopyError('Kopyalama alınmadı. Mətni seçərək əl ilə kopyalayın.');
+    }
   }
 
   return (
@@ -46,11 +51,13 @@ export function OutputPane({ output, metadata }: OutputPaneProps) {
 
       {metadata && (
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400">
-          <span>Düzəliş: {metadata.correctionsMade}</span>
+          {metadata.correctionsMade !== null && <span>Təxmini dəyişmiş söz sayı: {metadata.correctionsMade}</span>}
+          <span>Yerli mətn redaktoru</span>
           <span>Dil: {metadata.detectedLanguage}</span>
           <span>Müddət: {metadata.executionTimeMs} ms</span>
         </div>
       )}
+      <p role="status" className="mt-2 text-xs text-slate-500">{copyError || (copied ? 'Mətn kopyalandı.' : '')}</p>
     </section>
   );
 }

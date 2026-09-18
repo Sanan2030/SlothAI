@@ -1,0 +1,21 @@
+# İş günü nümunəsi — redaktorun faktiki nəticəsi
+
+Giriş: `tests/fixtures/workday.json`. Aşağıdakı mətn birbaşa `correctText` çıxışıdır, əl ilə cilalanmayıb. Söz formaları, texniki adlar, dialoq durğusu və mövzu keçidləri üçün qaydalar genişləndirilib; 46 test və istehsal build-i keçir.
+
+Redaktor LLM/API istifadə etmir. Qaydalar bütün sərbəst mətnlər üçün qrammatik doğruluğa zəmanət vermir: danışıq üslubu, qeyri-müəyyən vaxt ifadələri və müəllifin texniki iddiaları saxlanılır. `integer`, `string`, `protobuf`, `as is` və `to be` kimi terminlərin yazılışı qorunur.
+
+## Çıxış
+
+Bu gün səhər saat səkkiz yarıda oyandım. Şükür ki, saatı eşitdim, çünki dünən gecə çox gec yatmışdım. Kofe hazırlayıb keçdim kompüterin qabağına. GNU Linux terminalını açıb git pull elədim. Yeni dəyişiklikləri yüklədim. Backend tərəfdə DevOps uşaqlar yeni mühit yaradırdılar. Ona görə mən də Swagger dokumentasiyasını açıb yeni endpointləri yoxlamağa başladım. Swagger-də olan OpenAPI spesifikasiyası xarab idi. Bəzi tiplər qarışdırılmışdı. integer yerinə string yazmışdılar. Ona görə Postman vasitəsilə test göndərəndə validation error alırdım. Təcili Slack kanalında dev komandasına yazdım ki, bunları düzəldin, yoxsa frontend inteqrasiya edə bilməyəcək. Onlar da dedilər ki, indi sprint planning iclasındayıq. İclasdan sonra baxarıq. Mən də keçdim öz SRS sənədimi yazmağa. Müştəri istəyirdi ki, sistemdə icazə xidmətləri tam rəqəmsallaşsın. as is prosesini BPMN-də çəkmişdim. İndi to be prosesini qururdum. Lucidchart proqramında oxları bir-birinə bağlayırdım, amma müştəri deyirdi ki, burda daxili mikroservislər gRPC ilə bağlansın. REST istifadə olunmasın. Performans yüksək olsun, deyirdilər. Mən də izah elədim ki, gRPC istifadə etsək konvertasiya yüklü olacaq. Həm də protobuf faylları əvvəldən yazılmalıdır. Nə isə saat bir oldu.
+
+Günorta yeməyi üçün kafeyə endik uşaqlarla birgə toyuq şnitsel sifariş verdik. Yemək pis deyildi, amma kofe qurtarmışdı, deyirdilər. Mən də çay içib qalxdım yuxarı.
+
+Günortadan sonra iclas başladı. İclasda story pointləri müəyyənləşdirirdik. Scrum master soruşurdu ki, bu task neçə pointdir? Biri deyirdi: 3 point. Biri deyirdi: 8 point. Mübahisə yarandı. Axırda Pydantic validator yazmaq taskını 5 point olaraq qəbul elədik. İclasdan çıxanda başım ağrıyırdı. Keçdim bir az su içdim. Pəncərədən çölə baxdım. Səhər yağış yağmışdı deyə hava çox sərin idi.
+
+Axşam saat altıya yaxın kodları git vasitəsilə reposuna push elədim. Pull request açdım ki, senior dev yoxlasın. Sonra çantamı toplayıb binadan çıxdım. Tıxacda qalmaq istəmirdim deyə metroya tərəf qaçdım. Yolda bir dənə kofe aldım. Metroda çoxlu adam var idi. Hamı təlaşlı idi.
+
+Evə çatanda saat səkkiz idi. Çantanı küncə qoyub əlimi yudum. Axşam yeməyini yeyib keçdim otağıma. Kompüteri açdım. Bir az resume parser layihəsi üzərində işləmək istəyirdim. PDF fayllardan CV məlumatlarını çıxarıb JSON formatına salırdı. LLM modelinə sorğu göndərəndə bəzən düzgün cavab qaytarmırdı. Promptu yenidən tənzimləmək lazım idi. Sistem promptunu dəyişdim. Dedim ki, sən CV parse edən bir assistentsən. Yalnız JSON qaytar, amma yenə də bəzi yerlərdə text əlavə edirdi. Ona görə Pydantic validator yazmalı oldum ki, outputu təmizləsin.
+
+Gecə saat on bir oldu. Dostum zəng elədi ki, gəl bir dənə online şahmat oynayaq. Chess.com-da daxil oldum. Bir neçə oyun oynadıq. Birinci oyunda səhvən vəziri itirdim deyə uduzdum. İkinci oyunda yaxşı mat elədim. Vaxt elə tez keçdi ki, saat uje birin yarısı idi. Sonra düşündüm ki, sabaha da iş var, gərək tez yatım, amma yuxum gəlmirdi. Keçdim telefonla xəbərlərə baxmağa. YouTube-da emulyatorlar haqqında video izlədim. Linuxda köhnə oyunları necə işlətmək olar? DOSBox və Lutris haqqında baxırdım. Köhnə Need for Speed oyununu quraşdırmaq istəyirdim, amma gördüm ki, shadow ayarları düzgün işləmir. X11 ilə Wayland arasında problem var idi. Axır ki, bezdim telefonu qoydum kənara. Pəncərəni açdım. Havanı içəri buraxdım. Yatağa uzandım. Gözlərimi yumdum.
+
+Sabaha olan planları düşündüm. Zala getmək lazım idi. Kardio eləmək lazım idi. Yarım saat qaçış zolağında olmalı idim. Creatin içib gücü bərpa etməli idim. Sabahısı gün sprint planlaması başlayacaqdı. Müxtəlif tapşırıqlar paylanacaqdı. Hamısını strukturlaşdırıb yerinə yetirmək lazım idi. “Gecəniz xeyrə” fısıldayıb dərin yuxuya getdim.
