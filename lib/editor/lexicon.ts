@@ -1,6 +1,7 @@
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
+import { expositoryWords, expositoryAliases } from './expository';
 import { dictionaryCandidates, foldLetters, chooseSpelling } from './dictionary';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
@@ -83,7 +84,7 @@ export function fold(text: string): string {
 }
 
 const candidates = new Map<string, Set<string>>();
-for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedNarrativeWords]) {
+for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedNarrativeWords, ...expositoryWords]) {
   const key = fold(word);
   const bucket = candidates.get(key) ?? new Set<string>();
   bucket.add(word.toLocaleLowerCase('az-AZ'));
@@ -92,6 +93,7 @@ for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedN
 // Known spelling errors that are not simple ASCII transliterations.
 const aliases: Record<string, string> = {
   ...extendedAliases,
+  ...expositoryAliases,
   qelirem: 'gəlirəm', qelir: 'gəlir', qelirsen: 'gəlirsən',
   duzewldim: 'düzəldim', duzeldim: 'düzəldim', komek: 'kömək',
   hemise: 'həmişə', zehmet: 'zəhmət', sehv: 'səhv',

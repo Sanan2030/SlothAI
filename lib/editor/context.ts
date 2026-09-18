@@ -28,11 +28,18 @@ export function sentenceBoundaries(text: string): string {
   // clause. Do not split noun phrases such as "mən gələndə sən ...".
   const finite = '(?:gəlirəm|gedirəm|edirəm|gəlirik|gedirik|edirik|gəldim|getdim|getdin|etdim|gələcəyəm|gedəcəyəm|gözləyirəm|yaxşıyam|yaxşıdır|pisəm|işləyir|işləmir|hazırdır|bitdi)';
   let result = text.replace(new RegExp(`(${finite}) +(?=(?:mən|sən|biz|siz|sabah|dünən|xahiş) +)`, 'giu'), '$1. ');
-  result = result.replace(/([^.!?:;\s]) +(?=(?:bundan əlavə|digər tərəfdən|nəticə olaraq)\s)/giu, '$1. ');
+  result = result.replace(/([^,.!?:;\s]) +(?=(?:bundan əlavə|digər tərəfdən|nəticə olaraq)\s)/giu,
+    (match: string, last: string, offset: number, whole: string) => {
+      const next = whole.slice(offset + match.length);
+      const clause = whole.slice(0, offset).split(/[.!?\n]/).at(-1) ?? '';
+      // Paired contrast belongs to one sentence, not two unrelated paragraphs.
+      if (/^digər tərəfdən\s/iu.test(next) && /bir tərəfdən\s/iu.test(clause)) return last + ', ';
+      return last + '. ';
+    });
   result = result.replace(/(göndərin|yoxlayın|baxın|edin|gəlin) +(?=təşəkkür edirəm(?:\s|$))/giu, '$1. ');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz)\s)/giu, '$1. ');
   result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm) +ki +/giu, '$1 ki, ');
-  result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn)\s+/giu, '$1$2, ')
+  result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn|digər tərəfdən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm)\s+/giu, '$1$2, ');
   return result;
 }

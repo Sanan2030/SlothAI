@@ -2,6 +2,7 @@ import { restoreWord } from './lexicon';
 import { repairPhrases, sentenceBoundaries } from './context';
 import { punctuateNarrative, narrativeParagraphs } from './narrative';
 import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
+import { expositoryPhrases, punctuateExpository } from './expository';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -27,6 +28,7 @@ function punctuate(line: string): string {
   result = sentenceBoundaries(result);
   result = punctuateNarrative(result);
   result = extendedBoundaries(result);
+  result = punctuateExpository(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -97,6 +99,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   });
   text = repairPhrases(text);
   text = extendedPhrases(text);
+  text = expositoryPhrases(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
     return enumerate(line);
