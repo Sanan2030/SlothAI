@@ -4,6 +4,7 @@ import { punctuateNarrative, narrativeParagraphs } from './narrative';
 import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
 import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
+import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -32,6 +33,7 @@ function punctuate(line: string): string {
   result = extendedBoundaries(result);
   result = punctuateExpository(result);
   result = punctuateBusiness(result);
+  result = punctuateTechnical(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -92,6 +94,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
   text = beforeLexicalCorrection(text);
+  text = prepareTechnicalPhrases(text);
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
@@ -104,6 +107,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   text = extendedPhrases(text);
   text = expositoryPhrases(text);
   text = businessPhrases(text);
+  text = technicalPhrases(text);
   if (!preserveFormatting) text = businessLayout(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];

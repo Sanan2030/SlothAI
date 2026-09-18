@@ -127,6 +127,7 @@ export function punctuateBusiness(text: string): string {
 export function businessLayout(text: string): string {
   return text
     .replace(/^(hörmətli müştəri nümayəndəsi) +(?=şirkətimizin\s)/iu, '$1,\n\n')
+    .replace(/^(hörmətli tərəfdaşımız) +(?=şirkətimizin\s)/iu, '$1,\n\n')
     .replace(/(təşəkkür edirik)[.!?]? +hörmətlə +(?=korporativ\s)/giu, '$1.\n\nHörmətlə,\n');
 }
 
