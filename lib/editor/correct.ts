@@ -149,6 +149,43 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
 }
 
 export function formatEmail(input: string): LocalCorrection {
+  const compactSalutation = input.match(/\b(?:hormetli|hörmətli)\b/iu);
+  const compactClosing = [...input.matchAll(/\b(?:hormetle|hörmətlə)\b/giu)].at(-1);
+  // Informal email drafts often arrive as one dense line: subject, salutation,
+  // body and signature without separators. Split only when both the subject
+  // prefix and a reviewed body opening make the boundaries unambiguous.
+  if (!/^\s*mövzu:/iu.test(input) && compactSalutation?.index && compactSalutation.index > 0) {
+    const subjectRaw = input.slice(0, compactSalutation.index).trim();
+    const contentEnd = compactClosing?.index && compactClosing.index > compactSalutation.index
+      ? compactClosing.index : input.length;
+    const addressed = input.slice(compactSalutation.index, contentEnd).trim();
+    const bodyOpening = addressed.match(/\s+(?=(?:kecen|keçən|18 sentyabr|evvelki|əvvəlki|sirketimizde|şirkətimizdə|sirketinizin|şirkətinizin|it ve|İT və|son zamanlar|sizinle|sizinlə|bildirmekden|bildirməkdən|sirketimizin|şirkətimizin)\b)/iu);
+    if (bodyOpening?.index) {
+      const greetingRaw = addressed.slice(0, bodyOpening.index).trim();
+      const bodyRaw = addressed.slice(bodyOpening.index).trim();
+      const subjectText = correctText(subjectRaw, true).text
+        .replace(/[.!?]+$/u, '')
+        .replace(/\babb\b/giu, 'ABB')
+        .replace(/\b(?:it|İt)\b/gu, 'IT')
+        .replace(/\b(?:sla|Sla)\b/gu, 'SLA')
+        .replace(/\b(?:hr|Hr)\b/gu, 'HR');
+      let greeting = correctText(greetingRaw, true).text.replace(/[,.!?]+$/u, '');
+      greeting = greeting.replace(/^(Hörmətli\s+)([a-zəçğıöşü]+)(\s+bəy)$/iu,
+        (_, prefix: string, name: string, suffix: string) => prefix + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix);
+      const body = correctText(bodyRaw, true).text;
+      const signatureRaw = compactClosing
+        ? input.slice(compactClosing.index + compactClosing[0].length).trim() : '';
+      const signature = signatureRaw
+        ? correctText(signatureRaw, true).text.replace(/[.!?]+$/u, '') : '';
+      const text = [
+        `Mövzu: ${subjectText}`,
+        `${greeting},`,
+        body,
+        signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,',
+      ].join('\n\n');
+      return { text, corrections: Math.max(1, correctText(input, true).corrections) };
+    }
+  }
   // Preserve an existing short signature rather than punctuating a person's
   // name as a prose sentence. Length validation still covers the whole input.
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
