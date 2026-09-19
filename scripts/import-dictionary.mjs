@@ -13,7 +13,9 @@ const files = {
 const collected = {};
 for (const [path, digest] of Object.entries(files)) {
   let bytes;
-  if (process.argv[2]) bytes = await readFile(resolve(process.argv[2], path));
+  // A local source directory points at public/dictionaries/az; its files do
+  // not retain the upstream dictionaries/ prefix.
+  if (process.argv[2]) bytes = await readFile(resolve(process.argv[2], path.replace(/^dictionaries\//, '')));
   else {
     const response = await fetch(`https://raw.githubusercontent.com/mozillaz/spellchecker/${commit}/${path}`, { signal: AbortSignal.timeout(30000) });
     if (!response.ok) throw new Error(`Dictionary download failed: ${response.status}`);
@@ -28,15 +30,49 @@ await mkdir(output, { recursive: true });
 for (const [path, bytes] of Object.entries(collected)) await writeFile(resolve(output, path.split('/').at(-1)), bytes);
 const lines = collected['dictionaries/az.dic'].toString('utf8').trim().split(/\r?\n/);
 const declaredEntries = Number(lines.shift());
-const words = [...new Set(lines.map(line => line.split('/')[0].trim().normalize('NFC')))];
+const entries = lines.map(line => {
+  const [word, flags = ''] = line.trim().normalize('NFC').split('/');
+  return { word, flags };
+});
+const baseWords = [...new Set(entries.map(({ word }) => word))];
+
+// Hunspell supplies productive Azerbaijani suffix rules. We apply only SFX
+// rules from the same pinned dictionary and stop at a modest browser-safe
+// 50,000-form corpus. IT roots are expanded first so terminology receives the
+// same coverage as ordinary Azerbaijani nouns.
+const suffixRules = new Map();
+for (const line of collected['dictionaries/az.aff'].toString('utf8').split(/\r?\n/)) {
+  const match = line.match(/^SFX\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/);
+  if (!match) continue;
+  const [, flag, strip, add, condition] = match;
+  const rule = { strip: strip === '0' ? '' : strip, add: add.split('/')[0] === '0' ? '' : add.split('/')[0], condition };
+  suffixRules.set(flag, [...(suffixRules.get(flag) ?? []), rule]);
+}
+const technicalRoot = /(komp|proqram|şəbək|məlumat|sistem|server|verilən|alqoritm|kod|informasiya|texnolog|inteqra|təhlükəsiz|veri|bulud|platform|əməliyyat|sorğu|baza|interfeys|istifadəçi|parametr|konfiqur|protokol|rabit|kiber|rəqəmsal|analitik)/iu;
+const validWord = word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/u.test(word);
+const words = new Set(baseWords);
+for (const entry of [...entries.filter(entry => technicalRoot.test(entry.word)), ...entries]) {
+  if (words.size >= 50_000) break;
+  for (const rule of suffixRules.get(entry.flags) ?? []) {
+    if (words.size >= 50_000) break;
+    if (!new RegExp(`${rule.condition}$`, 'u').test(entry.word)) continue;
+    const stem = rule.strip && entry.word.endsWith(rule.strip)
+      ? entry.word.slice(0, -rule.strip.length) : rule.strip ? null : entry.word;
+    if (!stem) continue;
+    const form = (stem + rule.add).normalize('NFC');
+    if (validWord(form)) words.add(form);
+  }
+}
+const wordList = [...words];
 const metadata = {
   source: 'https://github.com/mozillaz/spellchecker', commit,
   attribution: 'Mozilla Azerbaijan; word list provided by azerdict.com', license: 'MPL-2.0',
-  declaredEntries, actualEntries: lines.length, uniqueEntries: words.length,
-  matchableEntries: words.filter(word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/.test(word)).length,
+  declaredEntries, actualEntries: lines.length, uniqueEntries: baseWords.length,
+  generatedForms: wordList.length - baseWords.length,
+  matchableEntries: wordList.filter(validWord).length,
   checksums: files,
 };
 await mkdir(resolve(root, 'lib/editor/generated'), { recursive: true });
-await writeFile(resolve(root, 'lib/editor/generated/az-words.json'), JSON.stringify(words) + '\n');
+await writeFile(resolve(root, 'lib/editor/generated/az-words.json'), JSON.stringify(wordList) + '\n');
 await writeFile(resolve(output, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n');
 console.log(JSON.stringify(metadata, null, 2));

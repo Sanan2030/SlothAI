@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { correctText } from '../lib/editor/correct';
 import { chooseSpelling, dictionaryCandidates } from '../lib/editor/dictionary';
+import { restoreWord } from '../lib/editor/lexicon';
 import words from '../lib/editor/generated/az-words.json';
 
 test('full imported dictionary is reproducible from pinned source', () => {
@@ -14,9 +15,16 @@ test('full imported dictionary is reproducible from pinned source', () => {
   }
   const entries = readFileSync(new URL('az.dic', root), 'utf8').trim().split(/\r?\n/).slice(1);
   const unique = [...new Set(entries.map(line => line.split('/')[0].trim().normalize('NFC')))];
-  assert.deepEqual(words, unique);
+  assert.deepEqual(words.slice(0, unique.length), unique);
   assert.equal(entries.length, 42936);
-  assert.equal(words.length, 38174);
+  assert.equal(unique.length, 38174);
+});
+
+test('dictionary includes 50,000 reviewed source-derived word forms with technical inflections', () => {
+  assert.ok(words.length >= 50_000);
+  for (const form of ['proqramları', 'kompüterdə', 'şəbəkələrin']) {
+    assert.equal(restoreWord(form.replace(/[əçğıöşü]/g, letter => ({ ə: 'e', ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u' })[letter]!)), form);
+  }
 });
 
 test('new dictionary vocabulary is used by the real text transformation', () => {

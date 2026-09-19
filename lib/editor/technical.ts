@@ -66,7 +66,8 @@ export const technicalAliases: Record<string, string> = {
   isledi: 'işlədi', elinin: 'Əlinin', gonderdiyi: 'göndərdiyi',
   requesti: 'request-i', yazisi: 'yazısı', zeyif: 'zəif', catandan: 'çatandan',
   duzelisi: 'düzəlişi', stagingde: 'stagingdə', planimdir: 'planımdır', planim: 'planım',
-  gorduk: 'gördük',
+  gorduk: 'gördük', saxlayirlar: 'saxlayırlar', serverlerde: 'serverlərdə',
+  edilmelidir: 'edilməlidir',
 };
 
 // Called only after code/URLs have been replaced with protected placeholders.
@@ -93,6 +94,7 @@ export function technicalPhrases(text: string): string {
     .replace(/(^|[^\p{L}])tespit edib(?=$|[^\p{L}])/giu, '$1müəyyən edib')
     .replace(/(^|[^\p{L}])saat əsası ilə(?=$|[^\p{L}])/giu, '$1saat əsasında')
     .replace(/(gördük) +ki +/giu, '$1 ki, ')
+    .replace(/(şəbəkə üzərindən) +oturulur(?=$|[^\p{L}])/giu, '$1 ötürülür')
     .replace(/(gecikirdim) +(ona görə)/giu, '$1, $2');
 }
 
@@ -104,7 +106,8 @@ qaldırılacaqdır endirir edilmişdir keçiriləcəkdir tutur saxlanılacaq ç�
 tənzimlənəcəkdir yaradacaqdır izləniləcəkdir göndərəcəkdir verir olacaqdır
 hazırlanmışdır planlaşdırılır tamamlanacaqdır bildiririk olacaq
   cavablandırılacaqdır etdiriləcəkdir tələsdim edirdi soruşdum dedi yükləyirlər
-  araşdırdıq gördük yoxdur işlədi yoxladım keçirdi davam etdirdim`.trim().split(/\s+/).join('|');
+  araşdırdıq gördük yoxdur işlədi yoxladım keçirdi davam etdirdim saxlayırlar
+  edilməlidir ötürülür`.trim().split(/\s+/).join('|');
 const starts = [
   'təqdim etdiyiniz', 'müəyyən olunmuş', 'bu məktubda', 'biznes proseslərinizin',
   'hər bir sprint', 'bu üsul', 'backlog', 'sprint qiymətləndirmə', 'hər sprintin',
@@ -118,6 +121,7 @@ const starts = [
   'kritik səviyyədə', 'şirkətiniz üçün', 'texniki dəstək', 'məhsulun ilkin',
   'yekun məhsulun', 'biz sizinlə', 'əlavə suallarınız', 'ofisə', 'mən',
   'product owner', 'sonra', 'gördük', 'Redis', 'günortadan sonra', 'kodun', 'axşam',
+  'serverlərdə', 'şifrələnmiş',
 ].join('|');
 const boundaries = new RegExp(`(^|[^\\p{L}])(${finite}) +(?=(?:${starts})(?:\\s|$))`, 'giu');
 
