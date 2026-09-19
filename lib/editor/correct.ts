@@ -16,6 +16,8 @@ function capitalize(text: string): string {
 
 function punctuate(line: string): string {
   if (!line.trim()) return '';
+  // Documentary headings and standalone subtitles are structure, not prose.
+  if (/^===.+===$/u.test(line.trim()) || /^[A-ZƏÇĞIİÖŞÜ\s-]{3,}$/u.test(line.trim()) || (/^\(.+\)$/u.test(line.trim()) && line.trim().length <= 160)) return line.trim();
   if (/^salam,$/i.test(line.trim())) return 'Salam,';
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
