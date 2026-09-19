@@ -19,7 +19,7 @@ function punctuate(line: string): string {
   if (/^salam,$/i.test(line.trim())) return 'Salam,';
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
-  if (/^hörmətli [^.!?]+,$/i.test(line.trim())) return capitalize(line.trim());
+  if (/^hörmətli [^.!?]+[,]?$/i.test(line.trim())) return capitalize(line.trim().replace(/[,.]?$/, ','));
   let result = line.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')

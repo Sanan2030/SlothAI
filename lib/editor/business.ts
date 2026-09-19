@@ -60,6 +60,12 @@ export const businessAliases: Record<string, string> = {
   altiinci: 'altıncı', bazardaki: 'bazardakı',
   deqiqliq: 'dəqiqlik', faleketden: 'fəlakətdən',
   lisenziyalandirilmasi: 'lisenziyalaşdırılması', hesabatliq: 'hesabatlılıq',
+  hormetli: 'hörmətli', musteri: 'müştəri', numayendesi: 'nümayəndəsi',
+  terefdasimiz: 'tərəfdaşımız', istifadeci: 'istifadəçi', xidmet: 'xidmət',
+  sorgunuz: 'sorğunuz', muracietiniz: 'müraciətiniz', telebiniz: 'tələbiniz',
+  qebul: 'qəbul', qeydiyyata: 'qeydiyyata', arasdirilir: 'araşdırılır',
+  tezlikle: 'tezliklə', cavablandirilacaq: 'cavablandırılacaq',
+  zehmet: 'zəhmət', tesekkur: 'təşəkkür', elaqe: 'əlaqə',
 };
 
 export function businessPhrases(text: string): string {
