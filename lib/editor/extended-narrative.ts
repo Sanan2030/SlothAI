@@ -64,7 +64,12 @@ export const extendedAliases: Record<string, string> = {
   swagger: 'Swagger', openapi: 'OpenAPI', dbml: 'DBML',
   postgresql: 'PostgreSQL', redis: 'Redis', youtube: 'YouTube',
   acanda: 'açanda', purrengi: 'pürrəngi', cayxana: 'çayxana',
-  beynin: 'beynin',
+  beynin: 'beynin', zeng: 'zəng', caldi: 'çaldı', sualari: 'şüaları',
+  isiqlandirirdi: 'işıqlandırırdı', quslarin: 'quşların',
+  'cevh-cehi': 'cəh-cəhi', caydan: 'çaydanı', goturdum: 'götürdüm',
+  evden: 'evdən', pillekenlerle: 'pilləkənlərlə', qonsunu: 'qonşunu',
+  salamlasib: 'salamlaşıb', kenarinda: 'kənarında', oyanisini: 'oyanışını',
+  isiqoforlarin: 'işıqforların', agciyerleridir: 'ağciyərləridir',
   dosbox: 'DOSBox', lutris: 'Lutris', wayland: 'Wayland', bpmn: 'BPMN',
   lucidchart: 'Lucidchart', api: 'API',
 };
@@ -100,6 +105,15 @@ export function extendedPhrases(text: string): string {
     .replace(/(^|[^\p{L}])özüdə(?=$|[^\p{L}])/giu, '$1özü də')
     .replace(/(^|[^\p{L}])yavaş yavaş(?=$|[^\p{L}])/giu, '$1yavaş-yavaş')
     .replace(/(^|[^\p{L}])şəhərlər(?=\s+yüngül\s+qaçış)/giu, '$1səhərlər')
+    // The same unaccented form can mean a city or morning. These are reviewed
+    // temporal contexts; the general city meaning remains untouched.
+    .replace(/(^|[^\p{L}])(?:seher|şəhər) havasi(?=$|[^\p{L}])/giu, '$1səhər havası')
+    .replace(/(^|[^\p{L}])(?:seher|şəhər) yeməyi(?=$|[^\p{L}])/giu, '$1səhər yeməyi')
+    .replace(/(^|[^\p{L}])şəhərin sakitliyini(?=$|[^\p{L}])/giu, '$1səhərin sakitliyini')
+    .replace(/(^|[^\p{L}])şəhərin oyanışını(?=$|[^\p{L}])/giu, '$1səhərin oyanışını')
+    .replace(/(^|[^\p{L}])əlaqə qürur(?=$|[^\p{L}])/giu, '$1əlaqə qurur')
+    .replace(/(^|[^\p{L}])meseler planetimizin(?=$|[^\p{L}])/giu, '$1meşələr planetimizin')
+    .replace(/(^|[^\p{L}])biyo kutlenin(?=$|[^\p{L}])/giu, '$1biokütlənin')
     .replace(/(^|[^\p{L}])qəribə qəribə(?=$|[^\p{L}])/giu, '$1qəribə-qəribə')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
     .replace(/(^|[^\p{L}])seher(?=\s+(?:basırıqları|yağış|tez)(?:\s|$))/giu, '$1səhər')
