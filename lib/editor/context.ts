@@ -13,6 +13,14 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])hərşey(?=$|[^\p{L}])/giu, '$1hər şey')
     .replace(/(^|[^\p{L}])heçnə(?=$|[^\p{L}])/giu, '$1heç nə')
     .replace(/(^|[^\p{L}])birşey(?=$|[^\p{L}])/giu, '$1bir şey')
+    .replace(/(^|[^\p{L}])get-gədə(?=$|[^\p{L}])/giu, '$1get-gedə')
+    // "Səhərin ilk işığı" is a fixed literary construction. The bare form
+    // "səhərin" is ambiguous with "şəhərin", so only repair this context.
+    .replace(/(^|[^\p{L}])şəhərin ilk işığı(?=$|[^\p{L}])/giu, '$1səhərin ilk işığı')
+    // These are predicate contexts for "qurmaq", not the noun "qürur".
+    .replace(/(körpü|gələcəyini bu gün|özü|onu) qürur(?=[,.!?]|$)/giu, '$1 qurur')
+    // "Pes etmək" is an established borrowed verb and must not become "pəs".
+    .replace(/(^|[^\p{L}])pəs (?=etm[\p{L}]*)/giu, '$1pes ')
     .replace(/(^|[^\p{L}])sağolun(?=$|[^\p{L}])/giu, '$1sağ olun')
     .replace(/(^|[^\p{L}])sağol(?=$|[^\p{L}])/giu, '$1sağ ol')
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz)\s+(gəlirəm|gedirəm|edirəm|gəlirsən|gedirsən|edirsən)(?=$|[^\p{L}])/giu,

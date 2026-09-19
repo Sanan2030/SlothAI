@@ -60,6 +60,12 @@ export const businessAliases: Record<string, string> = {
   altiinci: 'altıncı', bazardaki: 'bazardakı',
   deqiqliq: 'dəqiqlik', faleketden: 'fəlakətdən',
   lisenziyalandirilmasi: 'lisenziyalaşdırılması', hesabatliq: 'hesabatlılıq',
+  hormetli: 'hörmətli', musteri: 'müştəri', numayendesi: 'nümayəndəsi',
+  terefdasimiz: 'tərəfdaşımız', istifadeci: 'istifadəçi', xidmet: 'xidmət',
+  sorgunuz: 'sorğunuz', muracietiniz: 'müraciətiniz', telebiniz: 'tələbiniz',
+  qebul: 'qəbul', qeydiyyata: 'qeydiyyata', arasdirilir: 'araşdırılır',
+  tezlikle: 'tezliklə', cavablandirilacaq: 'cavablandırılacaq',
+  zehmet: 'zəhmət', tesekkur: 'təşəkkür', elaqe: 'əlaqə',
 };
 
 export function businessPhrases(text: string): string {
@@ -127,6 +133,7 @@ export function punctuateBusiness(text: string): string {
 export function businessLayout(text: string): string {
   return text
     .replace(/^(hörmətli müştəri nümayəndəsi) +(?=şirkətimizin\s)/iu, '$1,\n\n')
+    .replace(/^(hörmətli tərəfdaşımız) +(?=şirkətimizin\s)/iu, '$1,\n\n')
     .replace(/(təşəkkür edirik)[.!?]? +hörmətlə +(?=korporativ\s)/giu, '$1.\n\nHörmətlə,\n');
 }
 

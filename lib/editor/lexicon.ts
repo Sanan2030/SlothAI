@@ -3,6 +3,7 @@ import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
 import { expositoryWords, expositoryAliases } from './expository';
 import { businessWords, businessAliases } from './business';
+import { technicalWords, technicalAliases, technicalSpelling } from './technical';
 import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
@@ -81,7 +82,7 @@ manatdır Gəncəyə Gəncənin Bakını Bakıdan Türkiyəyə Türkiyənin
 `.trim().split(/\s+/);
 
 const candidates = new Map<string, Set<string>>();
-for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedNarrativeWords, ...expositoryWords, ...businessWords]) {
+for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedNarrativeWords, ...expositoryWords, ...businessWords, ...technicalWords]) {
   const key = fold(word);
   const bucket = candidates.get(key) ?? new Set<string>();
   bucket.add(word.toLocaleLowerCase('az-AZ'));
@@ -92,6 +93,7 @@ const aliases: Record<string, string> = {
   ...extendedAliases,
   ...expositoryAliases,
   ...businessAliases,
+  ...technicalAliases,
   qelirem: 'gəlirəm', qelir: 'gəlir', qelirsen: 'gəlirsən',
   duzewldim: 'düzəldim', duzeldim: 'düzəldim', komek: 'kömək',
   hemise: 'həmişə', zehmet: 'zəhmət', sehv: 'səhv',
@@ -117,6 +119,8 @@ const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İ
   'Sənan', 'Xədicə', 'Nərmin', 'Aysel', 'Günel', 'Rəşad'].map(name => [fold(name), name]));
 
 export function restoreWord(word: string): string {
+  const technical = technicalSpelling(word);
+  if (technical !== undefined) return technical;
   // Preserve camelCase identifiers and acronyms. Title case remains editable.
   if (word.length > 1 && word === word.toLocaleUpperCase('az-AZ')) return word;
   if (/[a-zəçğıöşü][A-ZƏÇĞIİÖŞÜ]/.test(word)) return word;
@@ -126,11 +130,12 @@ export function restoreWord(word: string): string {
   const imported = word.length > 2 ? dictionaryCandidates(word) : undefined;
   // Reviewed common-word choices keep their established behavior (necə, sən,
   // üçün). Imported candidates are conservative fallback, not frequency data.
-  const replacement = aliases[key] ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported);
+  const alias = Object.hasOwn(aliases, key) ? aliases[key] : undefined;
+  const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
-  if (!aliases[key] && [...word.toLocaleLowerCase('az-AZ')].some((letter, index) =>
+  if (!alias && [...word.toLocaleLowerCase('az-AZ')].some((letter, index) =>
     /[əçğıöşü]/.test(letter) && replacement[index] !== letter)) return word;
   if (properNames.has(key)) return properNames.get(key)!;
   return /^[A-ZƏÇĞIİÖŞÜ]/.test(word)

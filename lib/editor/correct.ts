@@ -4,6 +4,7 @@ import { punctuateNarrative, narrativeParagraphs } from './narrative';
 import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
 import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
+import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -15,10 +16,12 @@ function capitalize(text: string): string {
 
 function punctuate(line: string): string {
   if (!line.trim()) return '';
+  // Documentary headings and standalone subtitles are structure, not prose.
+  if (/^===.+===$/u.test(line.trim()) || /^[A-ZƏÇĞIİÖŞÜ\s-]{3,}$/u.test(line.trim()) || (/^\(.+\)$/u.test(line.trim()) && line.trim().length <= 160)) return line.trim();
   if (/^salam,$/i.test(line.trim())) return 'Salam,';
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
-  if (/^hörmətli [^.!?]+,$/i.test(line.trim())) return capitalize(line.trim());
+  if (/^hörmətli [^.!?]+[,]?$/i.test(line.trim())) return capitalize(line.trim().replace(/[,.]?$/, ','));
   let result = line.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
@@ -32,6 +35,7 @@ function punctuate(line: string): string {
   result = extendedBoundaries(result);
   result = punctuateExpository(result);
   result = punctuateBusiness(result);
+  result = punctuateTechnical(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -92,6 +96,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
   text = beforeLexicalCorrection(text);
+  text = prepareTechnicalPhrases(text);
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
@@ -104,6 +109,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
   text = extendedPhrases(text);
   text = expositoryPhrases(text);
   text = businessPhrases(text);
+  text = technicalPhrases(text);
   if (!preserveFormatting) text = businessLayout(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
@@ -116,7 +122,10 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
       if (protectedText[index]?.startsWith('`') && line.trim() === `${marker}${index}\uE001`) return line;
     }
     const list = line.match(/^(\s*(?:[-*]|\d+[.)])\s+)(.*)$/);
-    return list ? list[1] + punctuate(list[2]) : punctuate(line);
+    // A line that explicitly starts with a number is already an unambiguous
+    // list item, including when each item was entered on a separate line.
+    const normalizedPrefix = list?.[1].replace(/^(\s*\d+)[.)]\s+$/, '$1. ');
+    return list ? normalizedPrefix! + punctuate(list[2]) : punctuate(line);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
     text = businessStageLists(text);
@@ -140,6 +149,43 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
 }
 
 export function formatEmail(input: string): LocalCorrection {
+  const compactSalutation = input.match(/\b(?:hormetli|hörmətli)\b/iu);
+  const compactClosing = [...input.matchAll(/\b(?:hormetle|hörmətlə)\b/giu)].at(-1);
+  // Informal email drafts often arrive as one dense line: subject, salutation,
+  // body and signature without separators. Split only when both the subject
+  // prefix and a reviewed body opening make the boundaries unambiguous.
+  if (!/^\s*mövzu:/iu.test(input) && compactSalutation?.index && compactSalutation.index > 0) {
+    const subjectRaw = input.slice(0, compactSalutation.index).trim();
+    const contentEnd = compactClosing?.index && compactClosing.index > compactSalutation.index
+      ? compactClosing.index : input.length;
+    const addressed = input.slice(compactSalutation.index, contentEnd).trim();
+    const bodyOpening = addressed.match(/\s+(?=(?:kecen|keçən|18 sentyabr|evvelki|əvvəlki|sirketimizde|şirkətimizdə|sirketinizin|şirkətinizin|it ve|İT və|son zamanlar|sizinle|sizinlə|bildirmekden|bildirməkdən|sirketimizin|şirkətimizin)\b)/iu);
+    if (bodyOpening?.index) {
+      const greetingRaw = addressed.slice(0, bodyOpening.index).trim();
+      const bodyRaw = addressed.slice(bodyOpening.index).trim();
+      const subjectText = correctText(subjectRaw, true).text
+        .replace(/[.!?]+$/u, '')
+        .replace(/\babb\b/giu, 'ABB')
+        .replace(/\b(?:it|İt)\b/gu, 'IT')
+        .replace(/\b(?:sla|Sla)\b/gu, 'SLA')
+        .replace(/\b(?:hr|Hr)\b/gu, 'HR');
+      let greeting = correctText(greetingRaw, true).text.replace(/[,.!?]+$/u, '');
+      greeting = greeting.replace(/^(Hörmətli\s+)([a-zəçğıöşü]+)(\s+bəy)$/iu,
+        (_, prefix: string, name: string, suffix: string) => prefix + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix);
+      const body = correctText(bodyRaw, true).text;
+      const signatureRaw = compactClosing
+        ? input.slice(compactClosing.index + compactClosing[0].length).trim() : '';
+      const signature = signatureRaw
+        ? correctText(signatureRaw, true).text.replace(/[.!?]+$/u, '') : '';
+      const text = [
+        `Mövzu: ${subjectText}`,
+        `${greeting},`,
+        body,
+        signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,',
+      ].join('\n\n');
+      return { text, corrections: Math.max(1, correctText(input, true).corrections) };
+    }
+  }
   // Preserve an existing short signature rather than punctuating a person's
   // name as a prose sentence. Length validation still covers the whole input.
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
