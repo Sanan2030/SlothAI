@@ -8,3 +8,12 @@ test('source-derived technical forms and sentence boundaries work in an IT parag
   assert.equal(correctText(source).text, expected);
   assert.equal(correctText(expected).text, expected);
 });
+
+test('technical phrases preserve their intended terms and do not translate English identifiers', () => {
+  const source = 'backendde database sorgulari optimallasdirilir api keys ve oauth2 ile avtorizasiya edilir ci cd boru xetleri deployment prosesini avtomatlasdirir';
+  const output = correctText(source).text;
+  for (const phrase of ['Backenddə database sorğuları optimallaşdırılır.', 'API keys və OAuth2 ilə avtorizasiya edilir.', 'CI/CD boru xətləri deployment prosesini avtomatlaşdırır.']) {
+    assert.ok(output.includes(phrase), phrase);
+  }
+  assert.equal(correctText(output).text, output);
+});

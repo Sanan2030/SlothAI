@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dictionary:import": "node scripts/import-dictionary.mjs",
+    "predev": "npm run dictionary:import -- public/dictionaries/az",
     "dev": "next dev",
+    "prebuild": "npm run dictionary:import -- public/dictionaries/az",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "pretest": "npm run dictionary:import -- public/dictionaries/az",
     "test": "node --import tsx --test tests/*.test.ts"
   },
   "engines": {

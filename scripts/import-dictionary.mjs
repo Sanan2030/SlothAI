@@ -34,7 +34,7 @@ const entries = lines.map(line => {
   const [word, flags = ''] = line.trim().normalize('NFC').split('/');
   return { word, flags };
 });
-const baseWords = [...new Set(entries.map(({ word }) => word))];
+const rawBaseWords = [...new Set(entries.map(({ word }) => word))];
 
 // Hunspell supplies productive Azerbaijani suffix rules. We apply only SFX
 // rules from the same pinned dictionary and stop at a modest browser-safe
@@ -50,11 +50,13 @@ for (const line of collected['dictionaries/az.aff'].toString('utf8').split(/\r?\
 }
 const technicalRoot = /(komp|proqram|şəbək|məlumat|sistem|server|verilən|alqoritm|kod|informasiya|texnolog|inteqra|təhlükəsiz|veri|bulud|platform|əməliyyat|sorğu|baza|interfeys|istifadəçi|parametr|konfiqur|protokol|rabit|kiber|rəqəmsal|analitik)/iu;
 const validWord = word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/u.test(word);
+const baseWords = rawBaseWords.filter(validWord);
+const targetForms = 100_000;
 const words = new Set(baseWords);
 for (const entry of [...entries.filter(entry => technicalRoot.test(entry.word)), ...entries]) {
-  if (words.size >= 50_000) break;
+  if (words.size >= targetForms) break;
   for (const rule of suffixRules.get(entry.flags) ?? []) {
-    if (words.size >= 50_000) break;
+    if (words.size >= targetForms) break;
     if (!new RegExp(`${rule.condition}$`, 'u').test(entry.word)) continue;
     const stem = rule.strip && entry.word.endsWith(rule.strip)
       ? entry.word.slice(0, -rule.strip.length) : rule.strip ? null : entry.word;
@@ -67,8 +69,10 @@ const wordList = [...words];
 const metadata = {
   source: 'https://github.com/mozillaz/spellchecker', commit,
   attribution: 'Mozilla Azerbaijan; word list provided by azerdict.com', license: 'MPL-2.0',
-  declaredEntries, actualEntries: lines.length, uniqueEntries: baseWords.length,
+  declaredEntries, actualEntries: lines.length, uniqueEntries: rawBaseWords.length,
+  matchableBaseEntries: baseWords.length,
   generatedForms: wordList.length - baseWords.length,
+  targetForms,
   matchableEntries: wordList.filter(validWord).length,
   checksums: files,
 };

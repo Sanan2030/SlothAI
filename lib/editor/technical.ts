@@ -68,6 +68,7 @@ export const technicalAliases: Record<string, string> = {
   duzelisi: 'düzəlişi', stagingde: 'stagingdə', planimdir: 'planımdır', planim: 'planım',
   gorduk: 'gördük', saxlayirlar: 'saxlayırlar', serverlerde: 'serverlərdə',
   edilmelidir: 'edilməlidir',
+  optimallasdirilir: 'optimallaşdırılır', avtomatlasdirir: 'avtomatlaşdırır',
 };
 
 // Called only after code/URLs have been replaced with protected placeholders.
@@ -107,7 +108,7 @@ tənzimlənəcəkdir yaradacaqdır izləniləcəkdir göndərəcəkdir verir ola
 hazırlanmışdır planlaşdırılır tamamlanacaqdır bildiririk olacaq
   cavablandırılacaqdır etdiriləcəkdir tələsdim edirdi soruşdum dedi yükləyirlər
   araşdırdıq gördük yoxdur işlədi yoxladım keçirdi davam etdirdim saxlayırlar
-  edilməlidir ötürülür`.trim().split(/\s+/).join('|');
+  edilməlidir ötürülür optimallaşdırılır edilir avtomatlaşdırır`.trim().split(/\s+/).join('|');
 const starts = [
   'təqdim etdiyiniz', 'müəyyən olunmuş', 'bu məktubda', 'biznes proseslərinizin',
   'hər bir sprint', 'bu üsul', 'backlog', 'sprint qiymətləndirmə', 'hər sprintin',
@@ -122,6 +123,7 @@ const starts = [
   'yekun məhsulun', 'biz sizinlə', 'əlavə suallarınız', 'ofisə', 'mən',
   'product owner', 'sonra', 'gördük', 'Redis', 'günortadan sonra', 'kodun', 'axşam',
   'serverlərdə', 'şifrələnmiş',
+  'API', 'CI/CD',
 ].join('|');
 const boundaries = new RegExp(`(^|[^\\p{L}])(${finite}) +(?=(?:${starts})(?:\\s|$))`, 'giu');
 

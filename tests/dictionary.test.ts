@@ -15,13 +15,16 @@ test('full imported dictionary is reproducible from pinned source', () => {
   }
   const entries = readFileSync(new URL('az.dic', root), 'utf8').trim().split(/\r?\n/).slice(1);
   const unique = [...new Set(entries.map(line => line.split('/')[0].trim().normalize('NFC')))];
-  assert.deepEqual(words.slice(0, unique.length), unique);
+  const matchable = unique.filter(word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/u.test(word));
+  assert.deepEqual(words.slice(0, matchable.length), matchable);
   assert.equal(entries.length, 42936);
   assert.equal(unique.length, 38174);
 });
 
-test('dictionary includes 50,000 reviewed source-derived word forms with technical inflections', () => {
-  assert.ok(words.length >= 50_000);
+test('dictionary includes 100,000 source-derived word forms with technical inflections', () => {
+  assert.ok(words.length >= 100_000);
+  assert.equal(new Set(words).size, words.length);
+  assert.ok(words.every(word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/u.test(word)));
   for (const form of ['proqramları', 'kompüterdə', 'şəbəkələrin']) {
     assert.equal(restoreWord(form.replace(/[əçğıöşü]/g, letter => ({ ə: 'e', ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u' })[letter]!)), form);
   }
