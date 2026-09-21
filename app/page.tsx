@@ -4,12 +4,26 @@ import { Check, Copy, FileText, Mail, Moon, Sun, Trash2 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
+import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
 
 const registry = getStrategyRegistry();
+
+const BRAND_EMOJIS = [
+  '😀','😃','😄','😁','😆','😅','😂','🙂','🙃','😉',
+  '😊','😎','🤓','🧐','🤩','🥳','😺','👻','🤖','👾',
+  '🐱','🐶','🦊','🐼','🐨','🐸','🐵','🦁','🐯','🐧',
+  '🦄','🐝','🦋','🐙','🦖','🐳','🦜','🐢','🦦','🐲',
+  '🍎','🍉','🍓','🍒','🍍','🥝','🍋','🥑','🍕','🍔',
+  '🍟','🍩','🍪','🍫','☕','🧋','🍿','🎂','🍯','🥨',
+  '⚽','🏀','🎾','🎸','🎮','🎲','🧩','🎯','🚀','✈️',
+  '🚗','🚲','🛸','🌍','🌙','☀️','⭐','🌈','⚡','🔥',
+  '💧','❄️','🌊','🌸','🌻','🍀','🌵','🌴','💎','🎁',
+  '🎉','🎵','💡','🧠','❤️','💜','💙','💚','🧡','✨',
+] as const;
 
 const MODULES = {
   text: {
@@ -42,6 +56,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const [brandEmoji, setBrandEmoji] = useState<(typeof BRAND_EMOJIS)[number]>('✨');
 
   useEffect(() => {
     try {
@@ -56,12 +71,39 @@ export default function HomePage() {
     }
   }, []);
 
+  useEffect(() => {
+    const pickNextEmoji = () => {
+      setBrandEmoji((current) => {
+        if (BRAND_EMOJIS.length < 2) return current;
+        let next = current;
+        while (next === current) {
+          next = BRAND_EMOJIS[Math.floor(Math.random() * BRAND_EMOJIS.length)];
+        }
+        return next;
+      });
+    };
+
+    pickNextEmoji();
+    const timer = window.setInterval(pickNextEmoji, 1400);
+    return () => window.clearInterval(timer);
+  }, []);
+
   const config = MODULES[activeModule];
   const inputValue = activeModule === 'text' ? textValue : mailValue;
   const output = activeModule === 'text' ? textOutput : mailOutput;
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
 
   const inputLength = useMemo(() => inputValue.length, [inputValue]);
+  const diffSource = useMemo(() => {
+    if (activeModule !== 'mail' || !mailSubject.trim() || /^\s*mövzu:/iu.test(inputValue)) {
+      return inputValue;
+    }
+    return `Mövzu: ${mailSubject.trim()}\n${inputValue}`;
+  }, [activeModule, inputValue, mailSubject]);
+  const animatedOutput = useMemo(
+    () => buildAnimatedDiff(diffSource, output),
+    [diffSource, output],
+  );
 
   function setInput(value: string) {
     setError('');
@@ -143,7 +185,9 @@ export default function HomePage() {
     <div className="workspace-shell">
       <aside className="workspace-sidebar">
         <div className="workspace-brand">
-          <span className="workspace-brand-mark" aria-hidden="true">ə</span>
+          <span className="workspace-brand-mark" aria-hidden="true">
+            <span key={brandEmoji} className="workspace-brand-emoji">{brandEmoji}</span>
+          </span>
           <span className="workspace-brand-name">lazy.ai</span>
         </div>
 
@@ -302,7 +346,17 @@ export default function HomePage() {
 
                 <div className="workspace-output" aria-live="polite">
                   {output ? (
-                    <pre>{output}</pre>
+                    <pre>
+                      {animatedOutput.map((part, index) => (
+                        <span
+                          key={`${index}-${part.text}`}
+                          className={part.changed ? 'workspace-diff-change' : undefined}
+                          style={part.changed ? { animationDelay: `${Math.min(index, 36) * 18}ms` } : undefined}
+                        >
+                          {part.text}
+                        </span>
+                      ))}
+                    </pre>
                   ) : (
                     <span className="workspace-placeholder">Nəticə burada görünəcək.</span>
                   )}
