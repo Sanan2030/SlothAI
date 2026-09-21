@@ -12,7 +12,10 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "pretest": "npm run dictionary:import -- public/dictionaries/az",
-    "test": "node --import tsx --test tests/*.test.ts"
+    "test": "node --import tsx --test tests/*.test.ts",
+    "benchmark": "node --expose-gc --import tsx scripts/benchmark-editor.ts",
+    "benchmark:check": "node --expose-gc --import tsx scripts/benchmark-editor.ts --enforce",
+    "benchmark:json": "node --expose-gc --import tsx scripts/benchmark-editor.ts --json"
   },
   "engines": {
     "node": ">=20.0.0"
