@@ -1,72 +1,512 @@
-# SlothAI — Azerbaijani text editor without an LLM
+# SlothAI — Ultra-Light Azerbaijani Editor
 
-Text correction runs directly in the browser using the project's own TypeScript code. There is no model download, WebGPU requirement, API key, or text upload in the editor flow. Both text correction and email formatting use the same dynamic strategy registry as the optional HTTP API.
+SlothAI is a lightweight Azerbaijani text correction application designed to run on **Vercel with very low CPU/RAM usage and no external LLM API**.
 
-## Run
+The long-term goal is not to imitate a generative LLM with a huge dictionary. The editor is being evolved into a hybrid language engine built from:
 
-```sh
-npm install
-npm run dev
+**dictionary + morphology + typo candidates + diacritic restoration + statistical context + deterministic grammar rules**
+
+The application remains fully compatible with the existing Next.js frontend and `/api/transform` API.
+
+---
+
+## Current status
+
+The current production engine is still primarily rule-based.
+
+Current capabilities include:
+
+- Azerbaijani diacritic restoration
+- reviewed typo corrections
+- punctuation normalization
+- capitalization
+- sentence-boundary heuristics
+- email formatting
+- basic Azerbaijani morphology
+- protected URLs, email addresses, code and technical terminology
+- text and mail correction modes
+- local processing without an external AI provider
+
+Current dictionary baseline:
+
+- **42,936** source dictionary records
+- **38,174** unique dictionary entries
+- approximately **100,000** generated/matchable forms
+
+The current implementation does **not yet contain the complete future hybrid engine described below**.
+
+---
+
+## Target architecture
+
+The planned runtime pipeline is:
+
+```text
+Input
+  ↓
+Unicode / whitespace normalization
+  ↓
+URL / email / code / technical-term protection
+  ↓
+Tokenizer + sentence segmentation
+  ↓
+Exact dictionary lookup
+  ↓
+Morphological analysis
+  ↓
+Typo + diacritic candidate generation
+  ↓
+Context scoring
+  ↓
+Grammar / punctuation / capitalization rules
+  ↓
+Final reconstruction
+  ↓
+Output
 ```
 
-No environment variables are required. Open http://localhost:3000.
+The target engine must stay:
 
-```sh
-npm test
-npm run typecheck
-npm run lint
-npm run build
+- fast
+- deterministic
+- auditable
+- Vercel-compatible
+- CPU-only
+- small in memory
+- free from runtime model downloads
+- free from OpenAI, Gemini, Claude or other external LLM dependencies
+
+---
+
+## 1. Lemma-based dictionary
+
+Instead of storing millions of pre-generated word forms, SlothAI will move toward a lemma-oriented dictionary.
+
+Target record concept:
+
+```ts
+type LemmaRecord = {
+  lemma: string;
+  pos?: string;
+  morphClass?: string;
+  frequency?: number;
+  flags?: number;
+};
 ```
 
-## Editor pipeline
+Future capacity target:
 
-The complete pinned Mozilla Azerbaijan/Azerdict word list is now bundled locally: **42,936 source records / 38,174 unique words and expressions**. This extends the reviewed vocabulary without any AI calls. See [third-party attribution, limitations and regeneration instructions](THIRD_PARTY_NOTICES.md). The source files, full MPL-2.0 license and checksums are included. Imported homographs are not blindly resolved: for example, unaccented “seher” can mean “səhər” or “şəhər”. This is broad dictionary coverage, not every possible Azerbaijani inflection or a guarantee of contextual grammar accuracy.
+- **200,000–500,000 lemmas/base entries**
+- millions of theoretically valid forms generated or analyzed lazily
+- compact runtime indexes rather than giant JSON word-form lists
 
-1. Validate nonblank input and a maximum of 10,000 UTF-16 code units.
-2. Protect URLs, email addresses, numeric dates/times/decimals, code, identifiers and common abbreviations.
-3. Restore reviewed Azerbaijani spellings and known typos using the lexicon and generated regular noun/verb forms.
-4. Apply explicit phrase and adjacent subject/verb agreement rules.
-5. Normalize spacing and repeated punctuation, add sentence boundaries for reviewed clause patterns, and capitalize sentence beginnings.
-6. Convert explicit consecutive enumerations into Markdown lists and separate named topic transitions into paragraphs, unless preserving layout.
-7. Restore protected content unchanged and estimate the changed word span.
+The runtime must never need to load 5–10 million strings into memory.
 
-The email mode adds a subject, greeting and sign-off without sending email. User text and output remain in page memory; the editor does not persist them or send them to an external service.
+---
 
-## Implementation
+## 2. Azerbaijani morphology
 
-Runtime dependencies are limited to Next.js/React, Lucide icons, `clsx` and
-`tailwind-merge` for button classes, and Zod for the optional HTTP API's request
-validation. There are no LLM SDKs, inference runtimes, model downloads or Redis
-clients. Button variants use typed class maps rather than a separate library.
-Tailwind/PostCSS, TypeScript, ESLint and `tsx` are build or test dependencies.
-The bundled dictionary sources and license are retained for attribution and
-reproducible generation; they are not unused model assets.
+The morphology engine will validate and generate Azerbaijani forms dynamically.
 
-- `lib/editor/lexicon.ts`: reviewed words, aliases, ambiguity guard and name handling.
-- `lib/editor/morphology.ts`: constrained vowel-harmony forms for reviewed noun stems and present-tense verbs.
-- `lib/editor/context.ts`: auditable phrase and sentence rules.
-- `lib/editor/correct.ts`: protection, punctuation, paragraphs, lists and email composition.
-- `lib/strategies/bootstrap.ts`: central strategy registration; the UI discovers registered descriptors.
+Planned coverage includes:
 
-This is a rule-based Azerbaijani editor, not human-level semantic understanding. Unknown or ambiguous words remain unchanged. It cannot guarantee correction of every misspelling, inflection, proper noun, or sentence boundary. Generated morphology is deliberately restricted to reviewed stems. Review output before use. The change count is an estimate, not an exact count of linguistic errors; `detectedLanguage: az` identifies the configured language.
+- plural
+- possessive suffixes
+- grammatical cases
+- personal endings
+- tense
+- negation
+- question particles
+- common derivational suffixes
+- vowel harmony
+- consonant alternation
+- buffer consonants
+- Azerbaijani orthographic rules
+
+Example:
+
+```text
+kitab
+kitablar
+kitabın
+kitaba
+kitabı
+kitabda
+kitabdan
+kitabım
+kitabımız
+```
+
+Target API shape:
+
+```ts
+analyzeWord(word)
+generateForms(lemma, requestedFeatures)
+isValidWordForm(word)
+stripSuffixes(word)
+```
+
+Forms should be generated only when needed.
+
+---
+
+## 3. Typo candidate generation
+
+Unknown words must not be compared against the full dictionary.
+
+Candidate generation will use compact indexes and a bounded search space.
+
+Planned signals:
+
+- Damerau-Levenshtein distance
+- insertion
+- deletion
+- substitution
+- adjacent transposition
+- keyboard-neighbour errors
+- Azerbaijani character restoration
+- word-length buckets
+- folded spelling
+- prefixes
+- morphology compatibility
+
+Example target behavior:
+
+```text
+xyir
+→ xeyir
+```
+
+This correction must come from reusable candidate logic, not from a hardcoded `xyir -> xeyir` sentence-specific rule.
+
+---
+
+## 4. Azerbaijani diacritic restoration
+
+The engine must restore common Azerbaijani characters:
+
+```text
+c → ç
+g → ğ
+i → ı / i
+o → ö
+s → ş
+u → ü
+e → ə
+```
 
 Examples:
 
 ```text
-salam necesen mende yaxsiyam amma bu aralar pisem
-→ Salam, necəsən? Mən də yaxşıyam, amma bu aralar pisəm.
-
-biz gedirem sen gelirem
-→ Biz gedirik. Sən gəlirsən.
-
-zehmet olmasa senedleri gonderin tesekur edirem
-→ Zəhmət olmasa, sənədləri göndərin. Təşəkkür edirəm.
+men   → mən
+cox   → çox
+ucun  → üçün
+gorus → görüş
 ```
 
-## API and deployment
+Ambiguous spellings must not be blindly replaced.
 
-`GET /api/strategies` lists modes. `POST /api/transform` accepts `{ "strategyId": "text-corrector", "text": "salam", "options": { "preserveFormatting": false } }`; it validates requests and uses an in-memory per-instance sliding-window limiter. Browser editing calls the engine directly; only callers explicitly using the HTTP endpoint send text to the server.
+---
 
-Deploy `codex/fix-llm-provider` to Vercel or merge its PR into the production branch. No model service is needed. Existing model caches from older versions are unused; clearing site data removes them. After the page loads, editing works without a network connection; a fresh page load still needs the website.
+## 5. Context scoring
 
-Tests cover reported examples, morphology, contextual rules, idempotence, ambiguous and protected text, layout preservation, full input limits and both API modes with network access prohibited.
+The future engine will rank correction candidates with a compact local language model based on:
+
+- unigram frequencies
+- bigram frequencies
+- trigram frequencies
+- spelling distance
+- morphology compatibility
+- deterministic rule bonuses/penalties
+
+Conceptual score:
+
+```text
+score =
+  unigramLogProbability
+  + bigramLogProbability * W2
+  + trigramLogProbability * W3
+  + morphologyScore
+  + spellingScore
+  + ruleScore
+```
+
+Unseen combinations must use smoothing rather than receiving zero probability.
+
+A word should only be replaced if the best candidate beats the original by a minimum score margin.
+
+If confidence is insufficient, SlothAI should keep the original text.
+
+---
+
+## 6. Compact offline corpus build
+
+Large corpora must be processed **offline/build-time**, never during a user request.
+
+Planned generated resources:
+
+```text
+lemma-frequency
+unigrams
+bigrams
+trigrams
+candidate indexes
+morphology metadata
+```
+
+Only useful high-frequency statistical data should remain in the production bundle.
+
+Rare/noisy n-grams should be discarded.
+
+---
+
+## 7. Grammar and formatting rules
+
+Deterministic rules remain an important part of SlothAI.
+
+Planned modular structure:
+
+```text
+lib/editor/rules/
+  punctuation.ts
+  capitalization.ts
+  spacing.ts
+  grammar.ts
+  email.ts
+```
+
+Rules cover areas such as:
+
+- repeated spaces
+- repeated punctuation
+- sentence capitalization
+- punctuation spacing
+- greetings
+- email formatting
+- lists
+- frequent Azerbaijani constructions
+- suffix-spacing mistakes
+
+No rule should exist only to make one fixture pass.
+
+---
+
+## 8. Technical terminology protection
+
+SlothAI must preserve technical and mixed-language text.
+
+Examples:
+
+```text
+API
+REST
+JSON
+Java
+Python
+Next.js
+Docker
+Vercel
+GitHub
+PostgreSQL
+MySQL
+Spring Boot
+React
+TypeScript
+OAuth
+JWT
+```
+
+Technical terms must not be translated or incorrectly Azerbaijani-ized.
+
+---
+
+## 9. Performance targets
+
+The main deployment target is Vercel.
+
+Expected warm-performance goals:
+
+| Input | Target |
+|---|---:|
+| 20 words | < 50 ms |
+| 100 words | < 100 ms |
+| 500 words | < 300 ms |
+| 1,000 words | < 600 ms |
+| 5,000 words | < 2.5 s |
+
+Primary application target:
+
+**ordinary 50–500 word text should normally be corrected in under 1 second.**
+
+Benchmarks should track:
+
+- total latency
+- dictionary lookup time
+- morphology time
+- candidate-generation time
+- context-scoring time
+- rule-engine time
+- memory usage
+- average candidates per unknown token
+
+No runtime path should perform an O(text × dictionary_size) full scan.
+
+---
+
+## 10. Regression-first development
+
+Every real-world failure should become a regression case.
+
+Required workflow:
+
+```text
+bad input
+→ reproduce failure
+→ record current output
+→ define expected output
+→ identify failing subsystem
+→ fix the general rule/algorithm
+→ add regression test
+→ run full suite
+→ benchmark performance
+→ merge to main
+```
+
+Never solve failures using:
+
+- exact full-sentence mappings
+- test filename detection
+- fixture-specific conditions
+- stored expected responses
+
+The repository contains a seed hybrid regression corpus for this transition.
+
+---
+
+## Project structure
+
+Important current files:
+
+```text
+lib/editor/dictionary.ts
+lib/editor/lexicon.ts
+lib/editor/morphology.ts
+lib/editor/context.ts
+lib/editor/correct.ts
+lib/editor/business.ts
+lib/editor/technical.ts
+lib/editor/expository.ts
+lib/editor/narrative.ts
+lib/strategies/
+tests/
+public/dictionaries/az/
+```
+
+Planned modules:
+
+```text
+lib/editor/tokenizer.ts
+lib/editor/normalization.ts
+lib/editor/lemma-dictionary.ts
+lib/editor/candidates.ts
+lib/editor/ngram.ts
+lib/editor/scoring.ts
+lib/editor/protection.ts
+lib/editor/morphology/
+lib/editor/rules/
+scripts/build-lexicon.mjs
+scripts/build-ngrams.mjs
+```
+
+---
+
+## UI
+
+The current UI contains two primary modules:
+
+- **Mətn Düzəldici**
+- **Mail Düzəldici**
+
+The interface uses a responsive workspace layout with dark/light themes.
+
+The NLP refactor must not unnecessarily break the existing UI or API contract.
+
+---
+
+## API
+
+### GET `/api/strategies`
+
+Returns the registered correction strategies.
+
+### POST `/api/transform`
+
+Example:
+
+```json
+{
+  "strategyId": "text-corrector",
+  "text": "men bu gun mektebe getdim",
+  "options": {
+    "preserveFormatting": false
+  }
+}
+```
+
+Input limit: **10,000 characters**.
+
+The API contract should remain stable throughout the editor-engine refactor.
+
+---
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Validation:
+
+```bash
+npm run typecheck
+npm test
+npm run build
+```
+
+No external LLM API key is required.
+
+---
+
+## Deployment
+
+Production is deployed from:
+
+```text
+main
+```
+
+The final implementation of each completed refactor must land on `main`.
+
+Temporary branches may be used during development, but production documentation and completed work must not remain only on an old feature branch.
+
+---
+
+## Design principle
+
+SlothAI is intentionally **not** becoming a large generative LLM.
+
+The objective is to get as much Azerbaijani correction quality as possible from an ultra-light architecture:
+
+```text
+large lemma vocabulary
++ productive morphology
++ efficient typo search
++ contextual n-gram scoring
++ deterministic grammar rules
+= fast local Azerbaijani editor
+```
+
+Priority order:
+
+**accuracy → speed → memory efficiency → maintainability → Vercel compatibility**
