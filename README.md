@@ -439,7 +439,9 @@ npm run benchmark:check
 npm run benchmark:json
 ```
 
-`benchmark:check` exits with a failure code when p95 latency exceeds the configured target, so it can later be used as a CI performance gate.
+`benchmark:check` exits with a failure code when p95 latency exceeds the configured target.
+
+The repository also contains `.github/workflows/performance.yml`. GitHub Actions automatically runs the performance gate on every **push** and **pull request**, with optional manual execution through `workflow_dispatch`. The workflow rebuilds the local dictionary, runs TypeScript validation, executes the enforced benchmark, publishes a Markdown summary, and uploads `benchmark-results.json` as a 30-day artifact. A p95 threshold failure makes the workflow fail.
 
 Memory measurements are process-level approximations. Compare commits using the same Node version and machine for meaningful regression analysis.
 
