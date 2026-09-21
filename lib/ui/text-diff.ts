@@ -72,78 +72,6 @@ function alignWords(inputWords: string[], outputWords: string[]): Array<number |
   return mapping;
 }
 
-function diffWord(input: string, output: string): DiffPart[] {
-  if (input === output) return [{ text: output, changed: false }];
-
-  const left = Array.from(input);
-  const right = Array.from(output);
-  const rows = left.length + 1;
-  const cols = right.length + 1;
-  const matrix = new Uint16Array(rows * cols);
-  const cell = (i: number, j: number) => i * cols + j;
-
-  for (let i = 1; i < rows; i++) matrix[cell(i, 0)] = i;
-  for (let j = 1; j < cols; j++) matrix[cell(0, j)] = j;
-
-  for (let i = 1; i < rows; i++) {
-    for (let j = 1; j < cols; j++) {
-      const replace = matrix[cell(i - 1, j - 1)] + (left[i - 1] === right[j - 1] ? 0 : 1);
-      const remove = matrix[cell(i - 1, j)] + 1;
-      const insert = matrix[cell(i, j - 1)] + 1;
-      matrix[cell(i, j)] = Math.min(replace, remove, insert);
-    }
-  }
-
-  const reversed: Array<{ char: string; changed: boolean }> = [];
-  let i = left.length;
-  let j = right.length;
-
-  while (i > 0 || j > 0) {
-    if (
-      i > 0 &&
-      j > 0 &&
-      left[i - 1] === right[j - 1] &&
-      matrix[cell(i, j)] === matrix[cell(i - 1, j - 1)]
-    ) {
-      reversed.push({ char: right[j - 1], changed: false });
-      i--;
-      j--;
-      continue;
-    }
-
-    if (
-      i > 0 &&
-      j > 0 &&
-      matrix[cell(i, j)] === matrix[cell(i - 1, j - 1)] + 1
-    ) {
-      reversed.push({ char: right[j - 1], changed: true });
-      i--;
-      j--;
-      continue;
-    }
-
-    if (j > 0 && matrix[cell(i, j)] === matrix[cell(i, j - 1)] + 1) {
-      reversed.push({ char: right[j - 1], changed: true });
-      j--;
-      continue;
-    }
-
-    i--;
-  }
-
-  const chars = reversed.reverse();
-  const parts: DiffPart[] = [];
-  for (const item of chars) {
-    const previous = parts.at(-1);
-    if (previous && previous.changed === item.changed) {
-      previous.text += item.char;
-    } else {
-      parts.push({ text: item.char, changed: item.changed });
-    }
-  }
-  return parts;
-}
-
 export function buildAnimatedDiff(input: string, output: string): DiffPart[] {
   if (!output) return [];
 
@@ -161,11 +89,9 @@ export function buildAnimatedDiff(input: string, output: string): DiffPart[] {
     }
 
     const inputIndex = mapping[outputWordIndex];
-    const wordParts = inputIndex === null
-      ? [{ text: segment, changed: true }]
-      : diffWord(inputWords[inputIndex], segment);
+    const changed = inputIndex === null || inputWords[inputIndex] !== segment;
 
-    parts.push(...wordParts);
+    parts.push({ text: segment, changed });
     outputWordIndex++;
   }
 
