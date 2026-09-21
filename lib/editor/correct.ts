@@ -5,6 +5,7 @@ import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './
 import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
+import { protectKnownTerminology } from './protected-terminology';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -92,6 +93,7 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return protect(value);
   });
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
+  text = protectKnownTerminology(text, protect);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
