@@ -3,24 +3,23 @@ import test from 'node:test';
 
 import { buildAnimatedDiff } from '../lib/ui/text-diff';
 
-test('character diff marks only changed Azerbaijani letters when words align', () => {
+test('word diff highlights the full corrected Azerbaijani words', () => {
   const parts = buildAnimatedDiff('men cox', 'mən çox');
   const changed = parts.filter((part) => part.changed).map((part) => part.text);
-  assert.deepEqual(changed, ['ə', 'ç']);
+  assert.deepEqual(changed, ['mən', 'çox']);
 });
 
-test('character diff marks capitalization without highlighting the whole word', () => {
+test('capitalization change highlights the full word', () => {
   const parts = buildAnimatedDiff('salam', 'Salam.');
   const changed = parts.filter((part) => part.changed).map((part) => part.text);
-  assert.deepEqual(changed, ['S']);
+  assert.deepEqual(changed, ['Salam']);
   assert.equal(parts.map((part) => part.text).join(''), 'Salam.');
 });
 
-test('new output words are highlighted as added content', () => {
+test('new output words are highlighted as whole words', () => {
   const parts = buildAnimatedDiff('salam', 'Salam dünya.');
   const changed = parts.filter((part) => part.changed).map((part) => part.text);
-  assert.ok(changed.includes('S'));
-  assert.ok(changed.includes('dünya'));
+  assert.deepEqual(changed, ['Salam', 'dünya']);
 });
 
 test('unchanged output stays unhighlighted', () => {
