@@ -1,13 +1,15 @@
 {
-  "version": 1,
-  "purpose": "Seed corpus for the planned hybrid Azerbaijani editor. Not yet wired into the current test runner.",
+  "version": 2,
+  "purpose": "Curated realistic regression corpus for the planned hybrid Azerbaijani editor. Covers text, mail, technical, morphology, spelling, punctuation, ambiguity and protected-content cases.",
   "policy": {
     "noFullSentenceHardcoding": true,
     "preserveTechnicalTerms": true,
     "ambiguousCasesPreferNoChange": true,
-    "addProductionFailuresAsRegressionCases": true
+    "addProductionFailuresAsRegressionCases": true,
+    "curatedRealisticExamples": true,
+    "noPersonalOrProductionSecrets": true
   },
-  "count": 65,
+  "count": 240,
   "cases": [
     {
       "id": "informal-001",
@@ -469,6 +471,1251 @@
       "category": "mixed-language",
       "input": "frontend React ile backend ise Spring Boot ile yazilib",
       "expected": "Frontend React ilə, backend isə Spring Boot ilə yazılıb."
+    },
+    {
+      "id": "informal-011",
+      "mode": "text",
+      "category": "informal",
+      "input": "men indi evden cixiram birazdan catacam",
+      "expected": "Mən indi evdən çıxıram. Birazdan çatacağam."
+    },
+    {
+      "id": "informal-012",
+      "mode": "text",
+      "category": "informal",
+      "input": "sen hardasan men catmisam",
+      "expected": "Sən haradasan? Mən çatmışam."
+    },
+    {
+      "id": "informal-013",
+      "mode": "text",
+      "category": "informal",
+      "input": "bu gun isden gec cixacam",
+      "expected": "Bu gün işdən gec çıxacağam."
+    },
+    {
+      "id": "informal-014",
+      "mode": "text",
+      "category": "informal",
+      "input": "sabah gorusek vaxtin olsa yaz",
+      "expected": "Sabah görüşək. Vaxtın olsa, yaz."
+    },
+    {
+      "id": "informal-015",
+      "mode": "text",
+      "category": "informal",
+      "input": "men hele qerar vermemishem",
+      "expected": "Mən hələ qərar verməmişəm."
+    },
+    {
+      "id": "informal-016",
+      "mode": "text",
+      "category": "informal",
+      "input": "cox yorulmusam biraz istirahet edecem",
+      "expected": "Çox yorulmuşam. Bir az istirahət edəcəyəm."
+    },
+    {
+      "id": "informal-017",
+      "mode": "text",
+      "category": "informal",
+      "input": "narahat olma her sey yaxsi olacaq",
+      "expected": "Narahat olma. Hər şey yaxşı olacaq."
+    },
+    {
+      "id": "informal-018",
+      "mode": "text",
+      "category": "informal",
+      "input": "men de sene sonra zeng edecem",
+      "expected": "Mən də sənə sonra zəng edəcəyəm."
+    },
+    {
+      "id": "informal-019",
+      "mode": "text",
+      "category": "informal",
+      "input": "bu movzunu sabah danisariq",
+      "expected": "Bu mövzunu sabah danışarıq."
+    },
+    {
+      "id": "informal-020",
+      "mode": "text",
+      "category": "informal",
+      "input": "indi mesgulam axsam yazaram",
+      "expected": "İndi məşğulam. Axşam yazaram."
+    },
+    {
+      "id": "informal-021",
+      "mode": "text",
+      "category": "informal",
+      "input": "zehmet olmasa mene unvani gonder",
+      "expected": "Zəhmət olmasa, mənə ünvanı göndər."
+    },
+    {
+      "id": "informal-022",
+      "mode": "text",
+      "category": "informal",
+      "input": "hec ne basa dusmedim bir de izah ele",
+      "expected": "Heç nə başa düşmədim. Bir də izah elə."
+    },
+    {
+      "id": "informal-023",
+      "mode": "text",
+      "category": "informal",
+      "input": "men orda olmamisam ona gore bilmirem",
+      "expected": "Mən orada olmamışam, ona görə bilmirəm."
+    },
+    {
+      "id": "informal-024",
+      "mode": "text",
+      "category": "informal",
+      "input": "sence bunu indi edek yoxsa sabah",
+      "expected": "Səncə, bunu indi edək, yoxsa sabah?"
+    },
+    {
+      "id": "informal-025",
+      "mode": "text",
+      "category": "informal",
+      "input": "hava soyuyub pencereni bagla",
+      "expected": "Hava soyuyub. Pəncərəni bağla."
+    },
+    {
+      "id": "informal-026",
+      "mode": "text",
+      "category": "informal",
+      "input": "coxdan gorusmuruk bir gun gorusek",
+      "expected": "Çoxdandır görüşmürük. Bir gün görüşək."
+    },
+    {
+      "id": "informal-027",
+      "mode": "text",
+      "category": "informal",
+      "input": "men bunu evvel de demisdim",
+      "expected": "Mən bunu əvvəl də demişdim."
+    },
+    {
+      "id": "informal-028",
+      "mode": "text",
+      "category": "informal",
+      "input": "yaxsi onda bele edek",
+      "expected": "Yaxşı, onda belə edək."
+    },
+    {
+      "id": "informal-029",
+      "mode": "text",
+      "category": "informal",
+      "input": "biraz gecike bilerem meni gozleme",
+      "expected": "Bir az gecikə bilərəm. Məni gözləmə."
+    },
+    {
+      "id": "informal-030",
+      "mode": "text",
+      "category": "informal",
+      "input": "her sey hazirdir baslaya bilerik",
+      "expected": "Hər şey hazırdır. Başlaya bilərik."
+    },
+    {
+      "id": "email-011",
+      "mode": "email",
+      "category": "business",
+      "input": "salam muracietiniz qeyde alindi netice barede size melumat verilecek",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz qeydə alındı. Nəticə barədə sizə məlumat veriləcək.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-012",
+      "mode": "email",
+      "category": "business",
+      "input": "salam zehmet olmasa elave olunan fayla baxasiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, əlavə olunan fayla baxasınız.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-013",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli kamran bey gonderdiyiniz senedler qebul edildi",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Kamran bəy,\n\nGöndərdiyiniz sənədlər qəbul edildi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-014",
+      "mode": "email",
+      "category": "business",
+      "input": "salam qeyd etdiyiniz problem texniki komandaya yonlendirildi",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeyd etdiyiniz problem texniki komandaya yönləndirildi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-015",
+      "mode": "email",
+      "category": "business",
+      "input": "salam cavab gecikdiyi ucun uzr isteyirik",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nCavab gecikdiyi üçün üzr istəyirik.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-016",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sizin terefden gonderilen melumatlarda uyğunsuzluq askar edildi",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizin tərəfinizdən göndərilən məlumatlarda uyğunsuzluq aşkar edildi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-017",
+      "mode": "email",
+      "category": "business",
+      "input": "salam xahis edirik muraciet nomresini qeyd edesiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nXahiş edirik, müraciət nömrəsini qeyd edəsiniz.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-018",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli leyla xanim gorus sabah saat 11 e teyın olunub",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGörüş sabah saat 11-ə təyin olunub.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-019",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sistemde aparilan yenilenme tamamlanib yeniden yoxlaya bilersiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistemdə aparılan yenilənmə tamamlanıb. Yenidən yoxlaya bilərsiniz.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-020",
+      "mode": "email",
+      "category": "business",
+      "input": "salam melumat ucun qeyd edim ki son tarix 25 sentyabrdır",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat üçün qeyd edim ki, son tarix 25 sentyabrdır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-021",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sorğu uğurla baglanib elave sualiniz olarsa yaza bilersiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSorğu uğurla bağlanıb. Əlavə sualınız olarsa, yaza bilərsiniz.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-022",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli emin bey tesdiq ucun cavabinizi gozleyirik",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Emin bəy,\n\nTəsdiq üçün cavabınızı gözləyirik.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-023",
+      "mode": "email",
+      "category": "business",
+      "input": "salam elave edilen cedvelde son deyisiklikler qeyd olunub",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nƏlavə edilən cədvəldə son dəyişikliklər qeyd olunub.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-024",
+      "mode": "email",
+      "category": "business",
+      "input": "salam bu gun erzinde geri donus etmeye calisacagiq",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nBu gün ərzində geri dönüş etməyə çalışacağıq.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-025",
+      "mode": "email",
+      "category": "business",
+      "input": "salam mesele arashdirilir netice hazir olan kimi yazacagiq",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəsələ araşdırılır. Nəticə hazır olan kimi yazacağıq.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-026",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli narmin xanim tesekkur edirik teklifinizi aldıq",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nTəşəkkür edirik. Təklifinizi aldıq.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-027",
+      "mode": "email",
+      "category": "business",
+      "input": "salam zehmet olmasa imzalanmis versiyani gonderin",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, imzalanmış versiyanı göndərin.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-028",
+      "mode": "email",
+      "category": "business",
+      "input": "salam melumatlar yoxlanildi ve duzgun oldugu tesdiqlendi",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumatlar yoxlanıldı və düzgün olduğu təsdiqləndi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-029",
+      "mode": "email",
+      "category": "business",
+      "input": "salam muracietiniz uzre icra muddeti 3 is gunudur",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz üzrə icra müddəti 3 iş günüdür.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-030",
+      "mode": "email",
+      "category": "business",
+      "input": "salam fayl acilmir zehmet olmasa pdf formatinda yeniden gonderin",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nFayl açılmır. Zəhmət olmasa, PDF formatında yenidən göndərin.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-031",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli orxan bey bugunku gorus ucun tesekkur edirik",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Orxan bəy,\n\nBugünkü görüş üçün təşəkkür edirik.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-032",
+      "mode": "email",
+      "category": "business",
+      "input": "salam hesabata son duzelisler edilib baxa bilersiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHesabata son düzəlişlər edilib. Baxa bilərsiniz.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-033",
+      "mode": "email",
+      "category": "business",
+      "input": "salam qeydiyyat ugurla tamamlandi",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeydiyyat uğurla tamamlandı.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-034",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sizinle telefonla elaqe saxlamağa calisdıq cavab ala bilmedik",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizinlə telefonla əlaqə saxlamağa çalışdıq, cavab ala bilmədik.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-035",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli gunel xanim muracietinize baxilmasi davam edir",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Günel xanım,\n\nMüraciətinizə baxılması davam edir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-036",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sistem xetasi aradan qaldirilib",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistem xətası aradan qaldırılıb.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-037",
+      "mode": "email",
+      "category": "business",
+      "input": "salam gonderdiyiniz ekran goruntusu ucun tesekkur edirik",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nGöndərdiyiniz ekran görüntüsü üçün təşəkkür edirik.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-038",
+      "mode": "email",
+      "category": "business",
+      "input": "salam neticenin yoxlanilmasi ucun elave vaxta ehtiyac var",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nNəticənin yoxlanılması üçün əlavə vaxta ehtiyac var.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-039",
+      "mode": "email",
+      "category": "business",
+      "input": "hormetli anar bey razilasmaya uygun olaraq fayl elave olunur",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Anar bəy,\n\nRazılaşmaya uyğun olaraq fayl əlavə olunur.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-040",
+      "mode": "email",
+      "category": "business",
+      "input": "salam sualiniz olarsa bizimle elaqe saxlaya bilersiniz",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSualınız olarsa, bizimlə əlaqə saxlaya bilərsiniz.\n\nHörmətlə,"
+    },
+    {
+      "id": "technical-011",
+      "mode": "text",
+      "category": "technical",
+      "input": "vercel build zamani typescript error cixir",
+      "expected": "Vercel build zamanı TypeScript error çıxır."
+    },
+    {
+      "id": "technical-012",
+      "mode": "text",
+      "category": "technical",
+      "input": "api endpoint 400 status code qaytarir",
+      "expected": "API endpoint 400 status code qaytarır."
+    },
+    {
+      "id": "technical-013",
+      "mode": "text",
+      "category": "technical",
+      "input": "next.js route server terefde isleyir",
+      "expected": "Next.js route server tərəfdə işləyir."
+    },
+    {
+      "id": "technical-014",
+      "mode": "text",
+      "category": "technical",
+      "input": "github action testleri ugurla tamamlayib",
+      "expected": "GitHub Action testləri uğurla tamamlayıb."
+    },
+    {
+      "id": "technical-015",
+      "mode": "text",
+      "category": "technical",
+      "input": "redis cache deaktiv edilib",
+      "expected": "Redis cache deaktiv edilib."
+    },
+    {
+      "id": "technical-016",
+      "mode": "text",
+      "category": "technical",
+      "input": "mysql connection pool limiti asilib",
+      "expected": "MySQL connection pool limiti aşılıb."
+    },
+    {
+      "id": "technical-017",
+      "mode": "text",
+      "category": "technical",
+      "input": "jwt tokenin muddeti bitib",
+      "expected": "JWT tokenin müddəti bitib."
+    },
+    {
+      "id": "technical-018",
+      "mode": "text",
+      "category": "technical",
+      "input": "react component yeniden render olunur",
+      "expected": "React component yenidən render olunur."
+    },
+    {
+      "id": "technical-019",
+      "mode": "text",
+      "category": "technical",
+      "input": "typescript interface yeni field ile genislendirilib",
+      "expected": "TypeScript interface yeni field ilə genişləndirilib."
+    },
+    {
+      "id": "technical-020",
+      "mode": "text",
+      "category": "technical",
+      "input": "docker image build olunmadan deploy etmek isteyirik",
+      "expected": "Docker image build olunmadan deploy etmək istəyirik."
+    },
+    {
+      "id": "technical-021",
+      "mode": "text",
+      "category": "technical",
+      "input": "postman request body duzgun deyil",
+      "expected": "Postman request body düzgün deyil."
+    },
+    {
+      "id": "technical-022",
+      "mode": "text",
+      "category": "technical",
+      "input": "spring boot service database ile elaqe qura bilmir",
+      "expected": "Spring Boot service database ilə əlaqə qura bilmir."
+    },
+    {
+      "id": "technical-023",
+      "mode": "text",
+      "category": "technical",
+      "input": "fastapi endpoint multipart form data qebul edir",
+      "expected": "FastAPI endpoint multipart/form-data qəbul edir."
+    },
+    {
+      "id": "technical-024",
+      "mode": "text",
+      "category": "technical",
+      "input": "mongodb query cox gec cavab verir",
+      "expected": "MongoDB query çox gec cavab verir."
+    },
+    {
+      "id": "technical-025",
+      "mode": "text",
+      "category": "technical",
+      "input": "github main branch productiona baglanib",
+      "expected": "GitHub main branch production-a bağlanıb."
+    },
+    {
+      "id": "technical-026",
+      "mode": "text",
+      "category": "technical",
+      "input": "vercel function cold start vaxtini azaltmaq lazimdir",
+      "expected": "Vercel Function cold start vaxtını azaltmaq lazımdır."
+    },
+    {
+      "id": "technical-027",
+      "mode": "text",
+      "category": "technical",
+      "input": "json payload daxilinde null value gelir",
+      "expected": "JSON payload daxilində null value gəlir."
+    },
+    {
+      "id": "technical-028",
+      "mode": "text",
+      "category": "technical",
+      "input": "oauth callback url sehv qeyd olunub",
+      "expected": "OAuth callback URL səhv qeyd olunub."
+    },
+    {
+      "id": "technical-029",
+      "mode": "text",
+      "category": "technical",
+      "input": "npm run build lokaldaki kimi vercelde de kecmelidir",
+      "expected": "npm run build lokaldakı kimi Vercel-də də keçməlidir."
+    },
+    {
+      "id": "technical-030",
+      "mode": "text",
+      "category": "technical",
+      "input": "api response cache olunmamalidir",
+      "expected": "API response cache olunmamalıdır."
+    },
+    {
+      "id": "spelling-001",
+      "mode": "text",
+      "category": "spelling",
+      "input": "xyir necesen",
+      "expected": "Xeyir, necəsən?"
+    },
+    {
+      "id": "spelling-002",
+      "mode": "text",
+      "category": "spelling",
+      "input": "saglamliq her seyden vacibdir",
+      "expected": "Sağlamlıq hər şeydən vacibdir."
+    },
+    {
+      "id": "spelling-003",
+      "mode": "text",
+      "category": "spelling",
+      "input": "zehmet olmasa gozle",
+      "expected": "Zəhmət olmasa, gözlə."
+    },
+    {
+      "id": "spelling-004",
+      "mode": "text",
+      "category": "spelling",
+      "input": "tesekur edirem komeyin ucun",
+      "expected": "Təşəkkür edirəm köməyin üçün."
+    },
+    {
+      "id": "spelling-005",
+      "mode": "text",
+      "category": "spelling",
+      "input": "muraciyet qebul olundu",
+      "expected": "Müraciət qəbul olundu."
+    },
+    {
+      "id": "spelling-006",
+      "mode": "text",
+      "category": "spelling",
+      "input": "melumat duzgun deyil",
+      "expected": "Məlumat düzgün deyil."
+    },
+    {
+      "id": "spelling-007",
+      "mode": "text",
+      "category": "spelling",
+      "input": "sualinizi basa dusdum",
+      "expected": "Sualınızı başa düşdüm."
+    },
+    {
+      "id": "spelling-008",
+      "mode": "text",
+      "category": "spelling",
+      "input": "gorush sabah olacaq",
+      "expected": "Görüş sabah olacaq."
+    },
+    {
+      "id": "spelling-009",
+      "mode": "text",
+      "category": "spelling",
+      "input": "gondereceyiniz fayli gozleyirik",
+      "expected": "Göndərəcəyiniz faylı gözləyirik."
+    },
+    {
+      "id": "spelling-010",
+      "mode": "text",
+      "category": "spelling",
+      "input": "yoxlama ugurla bitdi",
+      "expected": "Yoxlama uğurla bitdi."
+    },
+    {
+      "id": "spelling-011",
+      "mode": "text",
+      "category": "spelling",
+      "input": "arashdirma davam edir",
+      "expected": "Araşdırma davam edir."
+    },
+    {
+      "id": "spelling-012",
+      "mode": "text",
+      "category": "spelling",
+      "input": "qebul olunmush senedler yoxlanilir",
+      "expected": "Qəbul olunmuş sənədlər yoxlanılır."
+    },
+    {
+      "id": "spelling-013",
+      "mode": "text",
+      "category": "spelling",
+      "input": "muellim telebelere tapsiriq verdi",
+      "expected": "Müəllim tələbələrə tapşırıq verdi."
+    },
+    {
+      "id": "spelling-014",
+      "mode": "text",
+      "category": "spelling",
+      "input": "sehifeni yeniden ac",
+      "expected": "Səhifəni yenidən aç."
+    },
+    {
+      "id": "spelling-015",
+      "mode": "text",
+      "category": "spelling",
+      "input": "hell yolu tapildi",
+      "expected": "Həll yolu tapıldı."
+    },
+    {
+      "id": "spelling-016",
+      "mode": "text",
+      "category": "spelling",
+      "input": "proses ugurla tamamlanib",
+      "expected": "Proses uğurla tamamlanıb."
+    },
+    {
+      "id": "spelling-017",
+      "mode": "text",
+      "category": "spelling",
+      "input": "bildiris ekranda gorunur",
+      "expected": "Bildiriş ekranda görünür."
+    },
+    {
+      "id": "spelling-018",
+      "mode": "text",
+      "category": "spelling",
+      "input": "istifadeci melumatlari yenileyib",
+      "expected": "İstifadəçi məlumatları yeniləyib."
+    },
+    {
+      "id": "spelling-019",
+      "mode": "text",
+      "category": "spelling",
+      "input": "qeydiyyat melumatlari saxlanildi",
+      "expected": "Qeydiyyat məlumatları saxlanıldı."
+    },
+    {
+      "id": "spelling-020",
+      "mode": "text",
+      "category": "spelling",
+      "input": "mueyyen muddet gozlemek lazimdir",
+      "expected": "Müəyyən müddət gözləmək lazımdır."
+    },
+    {
+      "id": "morph-011",
+      "mode": "text",
+      "category": "morphology",
+      "input": "kitablarimizi kitabxanaya apardiq",
+      "expected": "Kitablarımızı kitabxanaya apardıq."
+    },
+    {
+      "id": "morph-012",
+      "mode": "text",
+      "category": "morphology",
+      "input": "dostlarinizla goruse bilersiniz",
+      "expected": "Dostlarınızla görüşə bilərsiniz."
+    },
+    {
+      "id": "morph-013",
+      "mode": "text",
+      "category": "morphology",
+      "input": "sorgularimizin cavablari hazirdir",
+      "expected": "Sorğularımızın cavabları hazırdır."
+    },
+    {
+      "id": "morph-014",
+      "mode": "text",
+      "category": "morphology",
+      "input": "istifadecilerimizin melumatlari qorunur",
+      "expected": "İstifadəçilərimizin məlumatları qorunur."
+    },
+    {
+      "id": "morph-015",
+      "mode": "text",
+      "category": "morphology",
+      "input": "layihelerinizden biri tamamlanib",
+      "expected": "Layihələrinizdən biri tamamlanıb."
+    },
+    {
+      "id": "morph-016",
+      "mode": "text",
+      "category": "morphology",
+      "input": "fayllarimizin hamisi serverdedir",
+      "expected": "Fayllarımızın hamısı serverdədir."
+    },
+    {
+      "id": "morph-017",
+      "mode": "text",
+      "category": "morphology",
+      "input": "senedlerinizi sabah gondereceyik",
+      "expected": "Sənədlərinizi sabah göndərəcəyik."
+    },
+    {
+      "id": "morph-018",
+      "mode": "text",
+      "category": "morphology",
+      "input": "melumatlariniz sistemden silinmeyib",
+      "expected": "Məlumatlarınız sistemdən silinməyib."
+    },
+    {
+      "id": "morph-019",
+      "mode": "text",
+      "category": "morphology",
+      "input": "gorushlerimiz gelecek hefte davam edecek",
+      "expected": "Görüşlərimiz gələcək həftə davam edəcək."
+    },
+    {
+      "id": "morph-020",
+      "mode": "text",
+      "category": "morphology",
+      "input": "hesablariniz bloklanmayib",
+      "expected": "Hesablarınız bloklanmayıb."
+    },
+    {
+      "id": "morph-021",
+      "mode": "text",
+      "category": "morphology",
+      "input": "yoxlamalarin neticeleri gonderildi",
+      "expected": "Yoxlamaların nəticələri göndərildi."
+    },
+    {
+      "id": "morph-022",
+      "mode": "text",
+      "category": "morphology",
+      "input": "istifadecilerden tesdiq gozlenilir",
+      "expected": "İstifadəçilərdən təsdiq gözlənilir."
+    },
+    {
+      "id": "morph-023",
+      "mode": "text",
+      "category": "morphology",
+      "input": "sistemimize yeni funksiya elave olunub",
+      "expected": "Sistemimizə yeni funksiya əlavə olunub."
+    },
+    {
+      "id": "morph-024",
+      "mode": "text",
+      "category": "morphology",
+      "input": "emeliyyatlariniz ugurla icra edilib",
+      "expected": "Əməliyyatlarınız uğurla icra edilib."
+    },
+    {
+      "id": "morph-025",
+      "mode": "text",
+      "category": "morphology",
+      "input": "muracietlerinize bir bir baxilacaq",
+      "expected": "Müraciətlərinizə bir-bir baxılacaq."
+    },
+    {
+      "id": "morph-026",
+      "mode": "text",
+      "category": "morphology",
+      "input": "fayllardan biri acilmir",
+      "expected": "Fayllardan biri açılmır."
+    },
+    {
+      "id": "morph-027",
+      "mode": "text",
+      "category": "morphology",
+      "input": "neticelerimizi sizinle boluseceyik",
+      "expected": "Nəticələrimizi sizinlə bölüşəcəyik."
+    },
+    {
+      "id": "morph-028",
+      "mode": "text",
+      "category": "morphology",
+      "input": "hesabatlarinizda uyğunsuzluq var",
+      "expected": "Hesabatlarınızda uyğunsuzluq var."
+    },
+    {
+      "id": "morph-029",
+      "mode": "text",
+      "category": "morphology",
+      "input": "melumatlarimizin tehlukesizliyi qorunur",
+      "expected": "Məlumatlarımızın təhlükəsizliyi qorunur."
+    },
+    {
+      "id": "morph-030",
+      "mode": "text",
+      "category": "morphology",
+      "input": "sorgulardan ikisi baglanib",
+      "expected": "Sorğulardan ikisi bağlanıb."
+    },
+    {
+      "id": "punct-011",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "salam necəsiniz men size bir sual vermek isteyirem",
+      "expected": "Salam, necəsiniz? Mən sizə bir sual vermək istəyirəm."
+    },
+    {
+      "id": "punct-012",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "bu duzgundur lakin bir problem var",
+      "expected": "Bu düzgündür, lakin bir problem var."
+    },
+    {
+      "id": "punct-013",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "men geldim amma o hele gelmeyib",
+      "expected": "Mən gəldim, amma o hələ gəlməyib."
+    },
+    {
+      "id": "punct-014",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "niye sistem acilmir",
+      "expected": "Niyə sistem açılmır?"
+    },
+    {
+      "id": "punct-015",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "kim bu fayli deyisib",
+      "expected": "Kim bu faylı dəyişib?"
+    },
+    {
+      "id": "punct-016",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "ne vaxt cavab gelecek",
+      "expected": "Nə vaxt cavab gələcək?"
+    },
+    {
+      "id": "punct-017",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "melumat hazirdir gondere bilerik",
+      "expected": "Məlumat hazırdır. Göndərə bilərik."
+    },
+    {
+      "id": "punct-018",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "proses bitdi indi neticeni yoxlayaq",
+      "expected": "Proses bitdi. İndi nəticəni yoxlayaq."
+    },
+    {
+      "id": "punct-019",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "salam!! her vaxtiniz xeyir..",
+      "expected": "Salam! Hər vaxtınız xeyir."
+    },
+    {
+      "id": "punct-020",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "men baxdim,amma problem qalir",
+      "expected": "Mən baxdım, amma problem qalır."
+    },
+    {
+      "id": "punct-021",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "bu testdir;netice sonra gelecek",
+      "expected": "Bu testdir; nəticə sonra gələcək."
+    },
+    {
+      "id": "punct-022",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "fayl hazirdir?gondere bilim",
+      "expected": "Fayl hazırdır? Göndərə bilim."
+    },
+    {
+      "id": "punct-023",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "men raziyam bes sen",
+      "expected": "Mən razıyam. Bəs sən?"
+    },
+    {
+      "id": "punct-024",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "sabah gorus olacaq duzdur",
+      "expected": "Sabah görüş olacaq, düzdür?"
+    },
+    {
+      "id": "punct-025",
+      "mode": "text",
+      "category": "punctuation",
+      "input": "birinci: login ikinci: dashboard ucuncu: report",
+      "expected": "1. Login.\n2. Dashboard.\n3. Report."
+    },
+    {
+      "id": "ambiguity-006",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "səhər şəhərə gedəcəyəm",
+      "expected": "Səhər şəhərə gedəcəyəm.",
+      "notes": "Do not confuse səhər and şəhər."
+    },
+    {
+      "id": "ambiguity-007",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "şəhər səhər sakit olur",
+      "expected": "Şəhər səhər sakit olur.",
+      "notes": "Both valid forms must remain."
+    },
+    {
+      "id": "ambiguity-008",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "mən də orada olacağam",
+      "expected": "Mən də orada olacağam.",
+      "notes": "Keep conjunction də separated."
+    },
+    {
+      "id": "ambiguity-009",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "telefon məndə qalıb",
+      "expected": "Telefon məndə qalıb.",
+      "notes": "Keep locative məndə intact."
+    },
+    {
+      "id": "ambiguity-010",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "o da bizimlə gələcək",
+      "expected": "O da bizimlə gələcək.",
+      "notes": "Keep conjunction da separated."
+    },
+    {
+      "id": "ambiguity-011",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "otaqda heç kim yoxdur",
+      "expected": "Otaqda heç kim yoxdur.",
+      "notes": "Do not split locative suffix -da."
+    },
+    {
+      "id": "ambiguity-012",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "bu da son versiyadir",
+      "expected": "Bu da son versiyadır.",
+      "notes": "Conjunction da is a separate token."
+    },
+    {
+      "id": "ambiguity-013",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "serverdə problem yoxdur",
+      "expected": "Serverdə problem yoxdur.",
+      "notes": "Do not split locative suffix."
+    },
+    {
+      "id": "ambiguity-014",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "as is value deyisdirilmesin",
+      "expected": "as is value dəyişdirilməsin.",
+      "notes": "Preserve exact English phrase."
+    },
+    {
+      "id": "ambiguity-015",
+      "mode": "text",
+      "category": "ambiguity",
+      "input": "to be field oldugu kimi qalsin",
+      "expected": "to be field olduğu kimi qalsın.",
+      "notes": "Preserve exact English phrase."
+    },
+    {
+      "id": "protect-001",
+      "mode": "text",
+      "category": "protection",
+      "input": "test@example.com unvanina mail gonder",
+      "expected": "test@example.com ünvanına mail göndər.",
+      "notes": "Email address must remain exact."
+    },
+    {
+      "id": "protect-002",
+      "mode": "text",
+      "category": "protection",
+      "input": "https://vercel.com sehifesini ac",
+      "expected": "https://vercel.com səhifəsini aç.",
+      "notes": "URL must remain exact."
+    },
+    {
+      "id": "protect-003",
+      "mode": "text",
+      "category": "protection",
+      "input": "`npm run build` emrini islet",
+      "expected": "`npm run build` əmrini işlət.",
+      "notes": "Inline code must remain exact."
+    },
+    {
+      "id": "protect-004",
+      "mode": "text",
+      "category": "protection",
+      "input": "API_KEY value deyisdirilmesin",
+      "expected": "API_KEY value dəyişdirilməsin.",
+      "notes": "Identifier must remain exact."
+    },
+    {
+      "id": "protect-005",
+      "mode": "text",
+      "category": "protection",
+      "input": "user/profile endpointi yoxla",
+      "expected": "user/profile endpoint-i yoxla.",
+      "notes": "Slash identifier must remain intact."
+    },
+    {
+      "id": "protect-006",
+      "mode": "text",
+      "category": "protection",
+      "input": "12:30 da gorus var",
+      "expected": "12:30-da görüş var.",
+      "notes": "Time must remain numeric and formatted."
+    },
+    {
+      "id": "protect-007",
+      "mode": "text",
+      "category": "protection",
+      "input": "2026-09-21 tarixini deyisme",
+      "expected": "2026-09-21 tarixini dəyişmə.",
+      "notes": "ISO date must remain exact."
+    },
+    {
+      "id": "protect-008",
+      "mode": "text",
+      "category": "protection",
+      "input": "version 2.4.1 isleyir",
+      "expected": "Version 2.4.1 işləyir.",
+      "notes": "Version number must remain exact."
+    },
+    {
+      "id": "protect-009",
+      "mode": "text",
+      "category": "protection",
+      "input": "25% endirim tetbiq olunub",
+      "expected": "25% endirim tətbiq olunub.",
+      "notes": "Percentage must remain intact."
+    },
+    {
+      "id": "protect-010",
+      "mode": "text",
+      "category": "protection",
+      "input": "www.example.org linki acilmir",
+      "expected": "www.example.org linki açılmır.",
+      "notes": "Domain must remain exact."
+    },
+    {
+      "id": "narrative-006",
+      "mode": "text",
+      "category": "narrative",
+      "input": "axsam evə qayidanda yagis basladi men avtobus dayanacagina qacdim",
+      "expected": "Axşam evə qayıdanda yağış başladı. Mən avtobus dayanacağına qaçdım."
+    },
+    {
+      "id": "narrative-007",
+      "mode": "text",
+      "category": "narrative",
+      "input": "kucede insanlar telesirdi amma men sakit addimlayirdim",
+      "expected": "Küçədə insanlar tələsirdi, amma mən sakit addımlayırdım."
+    },
+    {
+      "id": "narrative-008",
+      "mode": "text",
+      "category": "narrative",
+      "input": "evə catanda cay hazirladim sonra kitab oxudum",
+      "expected": "Evə çatanda çay hazırladım. Sonra kitab oxudum."
+    },
+    {
+      "id": "narrative-009",
+      "mode": "text",
+      "category": "narrative",
+      "input": "seher telefonun sesine oyandim saat artıq yeddi idi",
+      "expected": "Səhər telefonun səsinə oyandım. Saat artıq yeddi idi."
+    },
+    {
+      "id": "narrative-010",
+      "mode": "text",
+      "category": "narrative",
+      "input": "pencereni acdim hava serin idi",
+      "expected": "Pəncərəni açdım. Hava sərin idi."
+    },
+    {
+      "id": "narrative-011",
+      "mode": "text",
+      "category": "narrative",
+      "input": "yolda kohne tanisima rast geldim biraz sohbet etdik",
+      "expected": "Yolda köhnə tanışıma rast gəldim. Bir az söhbət etdik."
+    },
+    {
+      "id": "narrative-012",
+      "mode": "text",
+      "category": "narrative",
+      "input": "gun boyu cox isledim axsam yorulmusdum",
+      "expected": "Gün boyu çox işlədim. Axşam yorulmuşdum."
+    },
+    {
+      "id": "narrative-013",
+      "mode": "text",
+      "category": "narrative",
+      "input": "qatar stansiyaya catanda hamı ayağa qalxdi",
+      "expected": "Qatar stansiyaya çatanda hamı ayağa qalxdı."
+    },
+    {
+      "id": "narrative-014",
+      "mode": "text",
+      "category": "narrative",
+      "input": "men bileti goturub perrona getdim",
+      "expected": "Mən bileti götürüb perrona getdim."
+    },
+    {
+      "id": "narrative-015",
+      "mode": "text",
+      "category": "narrative",
+      "input": "hava qaralirdi biz ise hele yolda idik",
+      "expected": "Hava qaralırdı, biz isə hələ yolda idik."
+    },
+    {
+      "id": "business-001",
+      "mode": "text",
+      "category": "business",
+      "input": "sorgu biznes analitik terefinden yoxlanilib icraya gonderilib",
+      "expected": "Sorğu biznes analitik tərəfindən yoxlanılıb, icraya göndərilib."
+    },
+    {
+      "id": "business-002",
+      "mode": "text",
+      "category": "business",
+      "input": "prosesde her hansi bir xeta askar edilmeyib",
+      "expected": "Prosesdə hər hansı bir xəta aşkar edilməyib."
+    },
+    {
+      "id": "business-003",
+      "mode": "text",
+      "category": "business",
+      "input": "funksionalliq telebe uygun olaraq isleyir",
+      "expected": "Funksionallıq tələbə uyğun olaraq işləyir."
+    },
+    {
+      "id": "business-004",
+      "mode": "text",
+      "category": "business",
+      "input": "deyisiklik test muhiti uzre yoxlanilacaq",
+      "expected": "Dəyişiklik test mühiti üzrə yoxlanılacaq."
+    },
+    {
+      "id": "business-005",
+      "mode": "text",
+      "category": "business",
+      "input": "teleb aidiyyati komanda ile razilasdirilib",
+      "expected": "Tələb aidiyyəti komanda ilə razılaşdırılıb."
+    },
+    {
+      "id": "business-006",
+      "mode": "text",
+      "category": "business",
+      "input": "icra muddeti biznes gunleri ile hesablanir",
+      "expected": "İcra müddəti biznes günləri ilə hesablanır."
+    },
+    {
+      "id": "business-007",
+      "mode": "text",
+      "category": "business",
+      "input": "sorgunun statusu sistemde yenilenib",
+      "expected": "Sorğunun statusu sistemdə yenilənib."
+    },
+    {
+      "id": "business-008",
+      "mode": "text",
+      "category": "business",
+      "input": "melumat aidiyyati uzre gonderilib",
+      "expected": "Məlumat aidiyyəti üzrə göndərilib."
+    },
+    {
+      "id": "business-009",
+      "mode": "text",
+      "category": "business",
+      "input": "istifadeci selahiyyeti yeniden yoxlanilmalidir",
+      "expected": "İstifadəçi səlahiyyəti yenidən yoxlanılmalıdır."
+    },
+    {
+      "id": "business-010",
+      "mode": "text",
+      "category": "business",
+      "input": "qebul meyarlarinin hamisi test olunub",
+      "expected": "Qəbul meyarlarının hamısı test olunub."
+    },
+    {
+      "id": "numeric-001",
+      "mode": "text",
+      "category": "numbers-dates",
+      "input": "gorus 21 sentyabr saat 15:30 da olacaq",
+      "expected": "Görüş 21 sentyabr saat 15:30-da olacaq."
+    },
+    {
+      "id": "numeric-002",
+      "mode": "text",
+      "category": "numbers-dates",
+      "input": "hesabat 30.09.2026 tarixinədək gonderilmelidir",
+      "expected": "Hesabat 30.09.2026 tarixinədək göndərilməlidir."
+    },
+    {
+      "id": "numeric-003",
+      "mode": "text",
+      "category": "numbers-dates",
+      "input": "netice 98.5% oldu",
+      "expected": "Nəticə 98.5% oldu."
+    },
+    {
+      "id": "numeric-004",
+      "mode": "text",
+      "category": "numbers-dates",
+      "input": "odenis 1250.50 azn olaraq qeyd olunub",
+      "expected": "Ödəniş 1250.50 AZN olaraq qeyd olunub."
+    },
+    {
+      "id": "numeric-005",
+      "mode": "text",
+      "category": "numbers-dates",
+      "input": "versiya 1.2.0 dan 1.3.0 a yenilenib",
+      "expected": "Versiya 1.2.0-dan 1.3.0-a yenilənib."
+    },
+    {
+      "id": "list-001",
+      "mode": "text",
+      "category": "formatting",
+      "input": "1) login yoxla 2) api yoxla 3) database yoxla",
+      "expected": "1. Login yoxla.\n2. API yoxla.\n3. Database yoxla."
+    },
+    {
+      "id": "list-002",
+      "mode": "text",
+      "category": "formatting",
+      "input": "birinci: fayli ac ikinci: melumati yoxla ucuncu: neticeni gonder",
+      "expected": "1. Faylı aç.\n2. Məlumatı yoxla.\n3. Nəticəni göndər."
+    },
+    {
+      "id": "list-003",
+      "mode": "text",
+      "category": "formatting",
+      "input": "- api hazirdir\n- frontend hazirdir\n- test qalib",
+      "expected": "- API hazırdır.\n- Frontend hazırdır.\n- Test qalıb."
+    },
+    {
+      "id": "list-004",
+      "mode": "text",
+      "category": "formatting",
+      "input": "1. muracieti ac\n2. statusu yoxla\n3. cavab yaz",
+      "expected": "1. Müraciəti aç.\n2. Statusu yoxla.\n3. Cavab yaz."
+    },
+    {
+      "id": "list-005",
+      "mode": "text",
+      "category": "formatting",
+      "input": "* birinci bend\n* ikinci bend\n* ucuncu bend",
+      "expected": "* Birinci bənd.\n* İkinci bənd.\n* Üçüncü bənd."
     }
   ]
 }
