@@ -353,7 +353,41 @@ No runtime path should perform an O(text × dictionary_size) full scan.
 
 ---
 
-## 10. Regression-first development
+## 10. Performance benchmark
+
+Run the editor benchmark locally with:
+
+```bash
+npm run benchmark
+```
+
+It measures **20 / 100 / 500 / 1,000 / 5,000-word** logical documents and reports:
+
+- average latency
+- p50 latency
+- p95 latency
+- process RSS baseline/peak/delta
+- heap delta
+- request/chunk count
+- PASS/FAIL against the latency targets above
+
+Because the production editor currently accepts at most **10,000 characters per request**, the 5,000-word benchmark automatically splits the logical document into production-safe chunks and reports the combined latency.
+
+Useful commands:
+
+```bash
+npm run benchmark
+npm run benchmark:check
+npm run benchmark:json
+```
+
+`benchmark:check` exits with a failure code when p95 latency exceeds the configured target, so it can later be used as a CI performance gate.
+
+Memory measurements are process-level approximations. Compare commits using the same Node version and machine for meaningful regression analysis.
+
+---
+
+## 11. Regression-first development
 
 Every real-world failure should become a regression case.
 
