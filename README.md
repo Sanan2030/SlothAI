@@ -413,7 +413,7 @@ Never solve failures using:
 - fixture-specific conditions
 - stored expected responses
 
-The repository contains a seed hybrid regression corpus for this transition.
+The repository contains a curated hybrid regression corpus with **240 text/mail cases** for this transition. `tests/hybrid-regression-corpus.test.ts` protects the corpus count, unique IDs, required fields and core risk-category coverage.
 
 ---
 
