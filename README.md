@@ -291,30 +291,37 @@ No rule should exist only to make one fixture pass.
 
 ---
 
-## 8. Technical terminology protection
+## 8. Protected terminology
 
-SlothAI must preserve technical and mixed-language text.
+SlothAI has a runtime protected-terminology registry in:
+
+```text
+lib/editor/protected-terminology.ts
+```
+
+Protected terms are canonicalized and replaced with internal placeholders before normal lexical correction, then restored unchanged. This prevents the Azerbaijani correction pipeline from translating, respelling or splitting reviewed technical and banking terminology.
+
+Groups include:
+
+- **Programming:** API, REST API, JSON, Java, Python, TypeScript, Next.js, Spring Boot, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, GraphQL and others.
+- **Infrastructure/security:** Docker, Kubernetes, Vercel, GitHub, GitLab, CI/CD, DevOps, OAuth, JWT, TLS, RBAC, Prometheus, Grafana and others.
+- **Banking/FinTech:** IBAN, SWIFT, BIC, ATM, POS, OTP, PIN, CVV, KYC, AML, SEPA, PCI DSS, PSD2, ISO 20022, Open Banking, Core Banking, Visa, Mastercard and others.
+- **Business/product:** CRM, ERP, BPMN, UML, UAT, KPI, Jira, Confluence, Figma, Agile, Scrum and Product Owner.
 
 Examples:
 
 ```text
-API
-REST
-JSON
-Java
-Python
-Next.js
-Docker
-Vercel
-GitHub
-PostgreSQL
-MySQL
-Spring Boot
-React
-TypeScript
-OAuth
-JWT
+api       → API
+github    → GitHub
+vercel    → Vercel
+iban      → IBAN
+swift     → SWIFT
+kyc       → KYC
+pci dss   → PCI DSS
+next.js   → Next.js
 ```
+
+The registry is shared with the lexical technical-spelling layer, so canonical terminology has one source of truth. Tests verify both the registry and full-editor integration.
 
 Technical terms must not be translated or incorrectly Azerbaijani-ized.
 
