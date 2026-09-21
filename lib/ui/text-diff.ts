@@ -5,6 +5,7 @@ export interface DiffPart {
 
 const WORD_RE = /[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*/gu;
 const SEGMENT_RE = /[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*|[^\p{L}\p{N}]+/gu;
+const WORD_SEGMENT_RE = /^[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*$/u;
 
 function fold(value: string): string {
   return value
@@ -154,12 +155,10 @@ export function buildAnimatedDiff(input: string, output: string): DiffPart[] {
   let outputWordIndex = 0;
 
   for (const segment of segments) {
-    if (!WORD_RE.test(segment)) {
-      WORD_RE.lastIndex = 0;
+    if (!WORD_SEGMENT_RE.test(segment)) {
       parts.push({ text: segment, changed: false });
       continue;
     }
-    WORD_RE.lastIndex = 0;
 
     const inputIndex = mapping[outputWordIndex];
     const wordParts = inputIndex === null
