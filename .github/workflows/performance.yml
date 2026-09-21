@@ -1,0 +1,88 @@
+name: Performance Benchmark
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: performance-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    name: Editor performance
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild local dictionary
+        run: npm run dictionary:import -- public/dictionaries/az
+
+      - name: Typecheck benchmark integration
+        run: npm run typecheck
+
+      - name: Run enforced performance benchmark
+        id: benchmark
+        shell: bash
+        run: |
+          set +e
+          npm run benchmark:json -- --enforce > benchmark-results.json
+          status=$?
+          cat benchmark-results.json
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
+
+      - name: Publish benchmark summary
+        if: always()
+        shell: bash
+        run: |
+          if [ ! -f benchmark-results.json ]; then
+            echo "## SlothAI performance benchmark" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Benchmark result file was not produced." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          node <<'NODE'
+          const fs = require('node:fs');
+          const data = JSON.parse(fs.readFileSync('benchmark-results.json', 'utf8'));
+          const lines = [
+            '## SlothAI performance benchmark',
+            '',
+            `Node: ${data.node}`,
+            '',
+            '| Words | Requests | Avg ms | P50 ms | P95 ms | Target ms | RSS peak MB | RSS delta MB | Status |',
+            '|---:|---:|---:|---:|---:|---:|---:|---:|:---:|',
+            ...data.results.map(r =>
+              `| ${r.words} | ${r.requests} | ${r.avgMs} | ${r.p50Ms} | ${r.p95Ms} | ${r.targetMs} | ${r.rssPeakMb} | ${r.rssDeltaMb} | ${r.status} |`
+            ),
+            '',
+            'The CI gate uses warm p95 latency. Memory values are process-level approximations.',
+          ];
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+          NODE
+
+      - name: Upload benchmark artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-benchmark-${{ github.sha }}
+          path: benchmark-results.json
+          if-no-files-found: warn
+          retention-days: 30
