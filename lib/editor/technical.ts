@@ -1,17 +1,16 @@
+import { canonicalProtectedTerm } from './protected-terminology';
+
 // Foreign technical vocabulary must not be interpreted as Azerbaijani homographs.
-// Product/acronym spelling is normalized only for explicitly reviewed names.
-const terms: Record<string, string> = {
-  kubernetes: 'Kubernetes', postgresql: 'PostgreSQL', redis: 'Redis',
-  rabbitmq: 'RabbitMQ', kafka: 'Kafka', prometheus: 'Prometheus', grafana: 'Grafana',
-  grpc: 'gRPC', rest: 'REST', tls: 'TLS', ssl: 'SSL', rbac: 'RBAC', oauth: 'OAuth',
-};
+// Canonical product/acronym spelling is shared with the protected terminology registry.
 const foreign = new Set(`agile scrum sprint backlog demo transactional responsive
 dynamic hashing unit zero downtime deployment retry roll-back framework startup
 database backend frontend deploy commit open data veri beta server optimum`.split(/\s+/));
 
 export function technicalSpelling(word: string): string | undefined {
+  const canonical = canonicalProtectedTerm(word);
+  if (canonical !== undefined) return canonical;
   const lower = word.toLowerCase();
-  return Object.hasOwn(terms, lower) ? terms[lower] : (foreign.has(lower) ? word : undefined);
+  return foreign.has(lower) ? word : undefined;
 }
 
 export const technicalWords = `
