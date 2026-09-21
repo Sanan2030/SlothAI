@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "purpose": "Curated realistic regression corpus for the planned hybrid Azerbaijani editor. Covers text, mail, technical, morphology, spelling, punctuation, ambiguity and protected-content cases.",
   "policy": {
     "noFullSentenceHardcoding": true,
@@ -16,49 +16,56 @@
       "mode": "text",
       "category": "diacritics",
       "input": "men bu gun mektebe getdim",
-      "expected": "Mən bu gün məktəbə getdim."
+      "expected": "Mən bu gün məktəbə getdim.",
+      "errorCategory": "diacritic"
     },
     {
       "id": "informal-002",
       "mode": "text",
       "category": "diacritics",
       "input": "cox sag ol komeyin ucun",
-      "expected": "Çox sağ ol, köməyin üçün."
+      "expected": "Çox sağ ol, köməyin üçün.",
+      "errorCategory": "diacritic"
     },
     {
       "id": "informal-003",
       "mode": "text",
       "category": "punctuation",
       "input": "salam necesen men yaxsiyam",
-      "expected": "Salam, necəsən? Mən yaxşıyam."
+      "expected": "Salam, necəsən? Mən yaxşıyam.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "informal-004",
       "mode": "text",
       "category": "diacritics",
       "input": "bu gun hava cox gozeldir",
-      "expected": "Bu gün hava çox gözəldir."
+      "expected": "Bu gün hava çox gözəldir.",
+      "errorCategory": "diacritic"
     },
     {
       "id": "informal-005",
       "mode": "text",
       "category": "spelling",
       "input": "men sabah gelecem",
-      "expected": "Mən sabah gələcəyəm."
+      "expected": "Mən sabah gələcəyəm.",
+      "errorCategory": "typo"
     },
     {
       "id": "informal-006",
       "mode": "text",
       "category": "punctuation",
       "input": "niye gelmedin men seni gozledim",
-      "expected": "Niyə gəlmədin? Mən səni gözlədim."
+      "expected": "Niyə gəlmədin? Mən səni gözlədim.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "informal-007",
       "mode": "text",
       "category": "diacritics",
       "input": "goruse bilerik",
-      "expected": "Görüşə bilərik."
+      "expected": "Görüşə bilərik.",
+      "errorCategory": "diacritic"
     },
     {
       "id": "informal-008",
@@ -66,336 +73,384 @@
       "category": "diacritics",
       "input": "ucun cox vacibdir",
       "expected": "Üçün çox vacibdir.",
-      "notes": "Synthetic fragment for diacritic restoration; context engine may later require a preceding noun."
+      "notes": "Synthetic fragment for diacritic restoration; context engine may later require a preceding noun.",
+      "errorCategory": "diacritic"
     },
     {
       "id": "informal-009",
       "mode": "text",
       "category": "spacing",
       "input": "men   bu   gun   evdeyem",
-      "expected": "Mən bu gün evdəyəm."
+      "expected": "Mən bu gün evdəyəm.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "informal-010",
       "mode": "text",
       "category": "capitalization",
       "input": "azerbaycan bakida yerlesir",
-      "expected": "Azərbaycan Bakıda yerləşir."
+      "expected": "Azərbaycan Bakıda yerləşir.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "email-001",
       "mode": "email",
       "category": "business",
       "input": "salam her vaxtiniz xeyir sorgunuza baxildi hormetle sanan",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHər vaxtınız xeyir. Sorğunuza baxıldı.\n\nHörmətlə,\nSanan"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHər vaxtınız xeyir. Sorğunuza baxıldı.\n\nHörmətlə,\nSanan",
+      "errorCategory": "context"
     },
     {
       "id": "email-002",
       "mode": "email",
       "category": "business",
       "input": "hormetli elvin bey muracietiniz qebul olundu hormetle sanan",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\nMüraciətiniz qəbul olundu.\n\nHörmətlə,\nSanan"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\nMüraciətiniz qəbul olundu.\n\nHörmətlə,\nSanan",
+      "errorCategory": "context"
     },
     {
       "id": "email-003",
       "mode": "email",
       "category": "business",
       "input": "salam melumat ucun bildirirem ki problem aradan qaldirilib hormetle sanan",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat üçün bildirirəm ki, problem aradan qaldırılıb.\n\nHörmətlə,\nSanan"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat üçün bildirirəm ki, problem aradan qaldırılıb.\n\nHörmətlə,\nSanan",
+      "errorCategory": "context"
     },
     {
       "id": "email-004",
       "mode": "email",
       "category": "business",
       "input": "salam sorgunuz biznes analitiklerimiz terefinden deyerlendirildi problem askar edilmeyib",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSorğunuz biznes analitiklərimiz tərəfindən dəyərləndirildi. Problem aşkar edilməyib.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSorğunuz biznes analitiklərimiz tərəfindən dəyərləndirildi. Problem aşkar edilməyib.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-005",
       "mode": "email",
       "category": "business",
       "input": "movzu: test salam neticeler hazirdir hormetle sanan",
-      "expected": "Mövzu: Test\n\nSalam,\n\nNəticələr hazırdır.\n\nHörmətlə,\nSanan"
+      "expected": "Mövzu: Test\n\nSalam,\n\nNəticələr hazırdır.\n\nHörmətlə,\nSanan",
+      "errorCategory": "context"
     },
     {
       "id": "email-006",
       "mode": "email",
       "category": "business",
       "input": "salam xahis edirem fayli yeniden gonderesiniz hormetle",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nXahiş edirəm, faylı yenidən göndərəsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nXahiş edirəm, faylı yenidən göndərəsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-007",
       "mode": "email",
       "category": "business",
       "input": "hormetli aysel xanim sizinle elaqe saxlaya bilmedik",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nSizinlə əlaqə saxlaya bilmədik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nSizinlə əlaqə saxlaya bilmədik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-008",
       "mode": "email",
       "category": "business",
       "input": "salam tesekkur edirik muracietiniz icraya yonlendirildi",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nTəşəkkür edirik. Müraciətiniz icraya yönləndirildi.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nTəşəkkür edirik. Müraciətiniz icraya yönləndirildi.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-009",
       "mode": "email",
       "category": "business",
       "input": "salam qeyd olunan melumatlari bize gondere bilersiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeyd olunan məlumatları bizə göndərə bilərsiniz?\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeyd olunan məlumatları bizə göndərə bilərsiniz?\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-010",
       "mode": "email",
       "category": "business",
       "input": "salam melumat yenilendi tesekkurler",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat yeniləndi. Təşəkkürlər.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat yeniləndi. Təşəkkürlər.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "technical-001",
       "mode": "text",
       "category": "technical",
       "input": "api request backend terefde 500 error qaytarir",
-      "expected": "API request backend tərəfdə 500 error qaytarır."
+      "expected": "API request backend tərəfdə 500 error qaytarır.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-002",
       "mode": "text",
       "category": "technical",
       "input": "next.js app vercelde deploy olunub",
-      "expected": "Next.js app Vercel-də deploy olunub."
+      "expected": "Next.js app Vercel-də deploy olunub.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-003",
       "mode": "text",
       "category": "technical",
       "input": "github repository main branchda yenilenib",
-      "expected": "GitHub repository main branch-da yenilənib."
+      "expected": "GitHub repository main branch-da yenilənib.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-004",
       "mode": "text",
       "category": "technical",
       "input": "java spring boot api jwt ile qorunur",
-      "expected": "Java Spring Boot API JWT ilə qorunur."
+      "expected": "Java Spring Boot API JWT ilə qorunur.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-005",
       "mode": "text",
       "category": "technical",
       "input": "postgresql database connection ugursuz oldu",
-      "expected": "PostgreSQL database connection uğursuz oldu."
+      "expected": "PostgreSQL database connection uğursuz oldu.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-006",
       "mode": "text",
       "category": "technical",
       "input": "json response frontendde duzgun parse olunmur",
-      "expected": "JSON response frontend-də düzgün parse olunmur."
+      "expected": "JSON response frontend-də düzgün parse olunmur.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-007",
       "mode": "text",
       "category": "technical",
       "input": "docker istifade etmeden vercelde deploy etmek isteyirem",
-      "expected": "Docker istifadə etmədən Vercel-də deploy etmək istəyirəm."
+      "expected": "Docker istifadə etmədən Vercel-də deploy etmək istəyirəm.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-008",
       "mode": "text",
       "category": "technical",
       "input": "typescript typecheck ugurla kecdi",
-      "expected": "TypeScript typecheck uğurla keçdi."
+      "expected": "TypeScript typecheck uğurla keçdi.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-009",
       "mode": "text",
       "category": "technical",
       "input": "oauth token cachede saxlanilmir",
-      "expected": "OAuth token cache-də saxlanılmır."
+      "expected": "OAuth token cache-də saxlanılmır.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-010",
       "mode": "text",
       "category": "technical",
       "input": "rest api endpoint /api/transform cavab vermir",
-      "expected": "REST API endpoint /api/transform cavab vermir."
+      "expected": "REST API endpoint /api/transform cavab vermir.",
+      "errorCategory": "technical"
     },
     {
       "id": "punct-001",
       "mode": "text",
       "category": "punctuation",
       "input": "salam,,, necesen???",
-      "expected": "Salam, necəsən?"
+      "expected": "Salam, necəsən?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-002",
       "mode": "text",
       "category": "punctuation",
       "input": "men geldim.indi baslaya bilerik",
-      "expected": "Mən gəldim. İndi başlaya bilərik."
+      "expected": "Mən gəldim. İndi başlaya bilərik.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-003",
       "mode": "text",
       "category": "punctuation",
       "input": "bu yaxsidir amma daha yaxsi ola biler",
-      "expected": "Bu yaxşıdır, amma daha yaxşı ola bilər."
+      "expected": "Bu yaxşıdır, amma daha yaxşı ola bilər.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-004",
       "mode": "text",
       "category": "punctuation",
       "input": "men getmedim cunki vaxtim yox idi",
-      "expected": "Mən getmədim, çünki vaxtım yox idi."
+      "expected": "Mən getmədim, çünki vaxtım yox idi.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-005",
       "mode": "text",
       "category": "punctuation",
       "input": "nece gedir isler",
-      "expected": "Necə gedir işlər?"
+      "expected": "Necə gedir işlər?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-006",
       "mode": "text",
       "category": "punctuation",
       "input": "birinci: api yoxlanilir ikinci: database yoxlanilir",
-      "expected": "1. API yoxlanılır.\n2. Database yoxlanılır."
+      "expected": "1. API yoxlanılır.\n2. Database yoxlanılır.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-007",
       "mode": "text",
       "category": "punctuation",
       "input": "1) api 2) database 3) frontend",
-      "expected": "1. API.\n2. Database.\n3. Frontend."
+      "expected": "1. API.\n2. Database.\n3. Frontend.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-008",
       "mode": "text",
       "category": "capitalization",
       "input": "salam. men sananam.",
-      "expected": "Salam. Mən Sananam."
+      "expected": "Salam. Mən Sananam.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-009",
       "mode": "text",
       "category": "spacing",
       "input": "salam , necesen ?",
-      "expected": "Salam, necəsən?"
+      "expected": "Salam, necəsən?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-010",
       "mode": "text",
       "category": "punctuation",
       "input": "bu gun geldim!cox gozel idi",
-      "expected": "Bu gün gəldim! Çox gözəl idi."
+      "expected": "Bu gün gəldim! Çox gözəl idi.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "morph-001",
       "mode": "text",
       "category": "morphology",
       "input": "kitablar masanin ustundedir",
-      "expected": "Kitablar masanın üstündədir."
+      "expected": "Kitablar masanın üstündədir.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-002",
       "mode": "text",
       "category": "morphology",
       "input": "kitabimi evde unutmusam",
-      "expected": "Kitabımı evdə unutmuşam."
+      "expected": "Kitabımı evdə unutmuşam.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-003",
       "mode": "text",
       "category": "morphology",
       "input": "mektebden eve gedirem",
-      "expected": "Məktəbdən evə gedirəm."
+      "expected": "Məktəbdən evə gedirəm.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-004",
       "mode": "text",
       "category": "morphology",
       "input": "dostlarimiz sabah gelecek",
-      "expected": "Dostlarımız sabah gələcək."
+      "expected": "Dostlarımız sabah gələcək.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-005",
       "mode": "text",
       "category": "morphology",
       "input": "sorgulariniz yoxlanilir",
-      "expected": "Sorğularınız yoxlanılır."
+      "expected": "Sorğularınız yoxlanılır.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-006",
       "mode": "text",
       "category": "morphology",
       "input": "melumatlarin hamisini gonder",
-      "expected": "Məlumatların hamısını göndər."
+      "expected": "Məlumatların hamısını göndər.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-007",
       "mode": "text",
       "category": "morphology",
       "input": "layihelerimiz tamamlanib",
-      "expected": "Layihələrimiz tamamlanıb."
+      "expected": "Layihələrimiz tamamlanıb.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-008",
       "mode": "text",
       "category": "morphology",
       "input": "istifadeciler sisteme daxil olur",
-      "expected": "İstifadəçilər sistemə daxil olur."
+      "expected": "İstifadəçilər sistemə daxil olur.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-009",
       "mode": "text",
       "category": "morphology",
       "input": "fayllari serverden yukledim",
-      "expected": "Faylları serverdən yüklədim."
+      "expected": "Faylları serverdən yüklədim.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-010",
       "mode": "text",
       "category": "morphology",
       "input": "neticeleriniz sistemde saxlanilir",
-      "expected": "Nəticələriniz sistemdə saxlanılır."
+      "expected": "Nəticələriniz sistemdə saxlanılır.",
+      "errorCategory": "morphology"
     },
     {
       "id": "narrative-001",
       "mode": "text",
       "category": "narrative",
       "input": "dunen seher tezden oyandim pencereni acanda temiz hava iceri doldu",
-      "expected": "Dünən səhər tezdən oyandım. Pəncərəni açanda təmiz hava içəri doldu."
+      "expected": "Dünən səhər tezdən oyandım. Pəncərəni açanda təmiz hava içəri doldu.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-002",
       "mode": "text",
       "category": "narrative",
       "input": "gunes yavas yavas ufuqden qalxirdi kuceler sakit idi",
-      "expected": "Günəş yavaş-yavaş üfüqdən qalxırdı. Küçələr sakit idi."
+      "expected": "Günəş yavaş-yavaş üfüqdən qalxırdı. Küçələr sakit idi.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-003",
       "mode": "text",
       "category": "narrative",
       "input": "cantami goturub evden cixdim sonra avtobusa mindim",
-      "expected": "Çantamı götürüb evdən çıxdım. Sonra avtobusa mindim."
+      "expected": "Çantamı götürüb evdən çıxdım. Sonra avtobusa mindim.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-004",
       "mode": "text",
       "category": "narrative",
       "input": "birdən arxadan ses esitdim donub baxdim",
-      "expected": "Birdən arxadan səs eşitdim. Dönüb baxdım."
+      "expected": "Birdən arxadan səs eşitdim. Dönüb baxdım.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-005",
       "mode": "text",
       "category": "narrative",
       "input": "kohne mekteb dostumu gordum illerdir gorusmurduk",
-      "expected": "Köhnə məktəb dostumu gördüm. İllərdir görüşmürdük."
+      "expected": "Köhnə məktəb dostumu gördüm. İllərdir görüşmürdük.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-001",
@@ -403,7 +458,8 @@
       "category": "ambiguity",
       "input": "kitab məndədir",
       "expected": "Kitab məndədir.",
-      "notes": "Must not change məndə to mən də."
+      "notes": "Must not change məndə to mən də.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-002",
@@ -411,7 +467,8 @@
       "category": "ambiguity",
       "input": "məndə kitab var",
       "expected": "Məndə kitab var.",
-      "notes": "Location/possession form must remain unchanged."
+      "notes": "Location/possession form must remain unchanged.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-003",
@@ -419,7 +476,8 @@
       "category": "ambiguity",
       "input": "mən də yaxşıyam",
       "expected": "Mən də yaxşıyam.",
-      "notes": "Conjunction must remain separated."
+      "notes": "Conjunction must remain separated.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-004",
@@ -427,7 +485,8 @@
       "category": "ambiguity",
       "input": "API response as is qaytarilsin",
       "expected": "API response as is qaytarılsın.",
-      "notes": "Preserve English phrase as is."
+      "notes": "Preserve English phrase as is.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-005",
@@ -435,917 +494,1048 @@
       "category": "ambiguity",
       "input": "https://example.com/test?x=1 linkini deyisme",
       "expected": "https://example.com/test?x=1 linkini dəyişmə.",
-      "notes": "URL must remain byte-identical."
+      "notes": "URL must remain byte-identical.",
+      "errorCategory": "context"
     },
     {
       "id": "format-001",
       "mode": "text",
       "category": "formatting",
       "input": "- birinci bend\n- ikinci bend",
-      "expected": "- Birinci bənd.\n- İkinci bənd."
+      "expected": "- Birinci bənd.\n- İkinci bənd.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "format-002",
       "mode": "text",
       "category": "formatting",
       "input": "1) birinci\n2) ikinci",
-      "expected": "1. Birinci.\n2. İkinci."
+      "expected": "1. Birinci.\n2. İkinci.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "format-003",
       "mode": "text",
       "category": "protection",
       "input": "email test@example.com olaraq qalsin",
-      "expected": "Email test@example.com olaraq qalsın."
+      "expected": "Email test@example.com olaraq qalsın.",
+      "errorCategory": "technical"
     },
     {
       "id": "format-004",
       "mode": "text",
       "category": "protection",
       "input": "`const x = 1` kodunu deyisme",
-      "expected": "`const x = 1` kodunu dəyişmə."
+      "expected": "`const x = 1` kodunu dəyişmə.",
+      "errorCategory": "technical"
     },
     {
       "id": "format-005",
       "mode": "text",
       "category": "mixed-language",
       "input": "frontend React ile backend ise Spring Boot ile yazilib",
-      "expected": "Frontend React ilə, backend isə Spring Boot ilə yazılıb."
+      "expected": "Frontend React ilə, backend isə Spring Boot ilə yazılıb.",
+      "errorCategory": "technical"
     },
     {
       "id": "informal-011",
       "mode": "text",
       "category": "informal",
       "input": "men indi evden cixiram birazdan catacam",
-      "expected": "Mən indi evdən çıxıram. Birazdan çatacağam."
+      "expected": "Mən indi evdən çıxıram. Birazdan çatacağam.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-012",
       "mode": "text",
       "category": "informal",
       "input": "sen hardasan men catmisam",
-      "expected": "Sən haradasan? Mən çatmışam."
+      "expected": "Sən haradasan? Mən çatmışam.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-013",
       "mode": "text",
       "category": "informal",
       "input": "bu gun isden gec cixacam",
-      "expected": "Bu gün işdən gec çıxacağam."
+      "expected": "Bu gün işdən gec çıxacağam.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-014",
       "mode": "text",
       "category": "informal",
       "input": "sabah gorusek vaxtin olsa yaz",
-      "expected": "Sabah görüşək. Vaxtın olsa, yaz."
+      "expected": "Sabah görüşək. Vaxtın olsa, yaz.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-015",
       "mode": "text",
       "category": "informal",
       "input": "men hele qerar vermemishem",
-      "expected": "Mən hələ qərar verməmişəm."
+      "expected": "Mən hələ qərar verməmişəm.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-016",
       "mode": "text",
       "category": "informal",
       "input": "cox yorulmusam biraz istirahet edecem",
-      "expected": "Çox yorulmuşam. Bir az istirahət edəcəyəm."
+      "expected": "Çox yorulmuşam. Bir az istirahət edəcəyəm.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-017",
       "mode": "text",
       "category": "informal",
       "input": "narahat olma her sey yaxsi olacaq",
-      "expected": "Narahat olma. Hər şey yaxşı olacaq."
+      "expected": "Narahat olma. Hər şey yaxşı olacaq.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-018",
       "mode": "text",
       "category": "informal",
       "input": "men de sene sonra zeng edecem",
-      "expected": "Mən də sənə sonra zəng edəcəyəm."
+      "expected": "Mən də sənə sonra zəng edəcəyəm.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-019",
       "mode": "text",
       "category": "informal",
       "input": "bu movzunu sabah danisariq",
-      "expected": "Bu mövzunu sabah danışarıq."
+      "expected": "Bu mövzunu sabah danışarıq.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-020",
       "mode": "text",
       "category": "informal",
       "input": "indi mesgulam axsam yazaram",
-      "expected": "İndi məşğulam. Axşam yazaram."
+      "expected": "İndi məşğulam. Axşam yazaram.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-021",
       "mode": "text",
       "category": "informal",
       "input": "zehmet olmasa mene unvani gonder",
-      "expected": "Zəhmət olmasa, mənə ünvanı göndər."
+      "expected": "Zəhmət olmasa, mənə ünvanı göndər.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-022",
       "mode": "text",
       "category": "informal",
       "input": "hec ne basa dusmedim bir de izah ele",
-      "expected": "Heç nə başa düşmədim. Bir də izah elə."
+      "expected": "Heç nə başa düşmədim. Bir də izah elə.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-023",
       "mode": "text",
       "category": "informal",
       "input": "men orda olmamisam ona gore bilmirem",
-      "expected": "Mən orada olmamışam, ona görə bilmirəm."
+      "expected": "Mən orada olmamışam, ona görə bilmirəm.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-024",
       "mode": "text",
       "category": "informal",
       "input": "sence bunu indi edek yoxsa sabah",
-      "expected": "Səncə, bunu indi edək, yoxsa sabah?"
+      "expected": "Səncə, bunu indi edək, yoxsa sabah?",
+      "errorCategory": "context"
     },
     {
       "id": "informal-025",
       "mode": "text",
       "category": "informal",
       "input": "hava soyuyub pencereni bagla",
-      "expected": "Hava soyuyub. Pəncərəni bağla."
+      "expected": "Hava soyuyub. Pəncərəni bağla.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-026",
       "mode": "text",
       "category": "informal",
       "input": "coxdan gorusmuruk bir gun gorusek",
-      "expected": "Çoxdandır görüşmürük. Bir gün görüşək."
+      "expected": "Çoxdandır görüşmürük. Bir gün görüşək.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-027",
       "mode": "text",
       "category": "informal",
       "input": "men bunu evvel de demisdim",
-      "expected": "Mən bunu əvvəl də demişdim."
+      "expected": "Mən bunu əvvəl də demişdim.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-028",
       "mode": "text",
       "category": "informal",
       "input": "yaxsi onda bele edek",
-      "expected": "Yaxşı, onda belə edək."
+      "expected": "Yaxşı, onda belə edək.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-029",
       "mode": "text",
       "category": "informal",
       "input": "biraz gecike bilerem meni gozleme",
-      "expected": "Bir az gecikə bilərəm. Məni gözləmə."
+      "expected": "Bir az gecikə bilərəm. Məni gözləmə.",
+      "errorCategory": "context"
     },
     {
       "id": "informal-030",
       "mode": "text",
       "category": "informal",
       "input": "her sey hazirdir baslaya bilerik",
-      "expected": "Hər şey hazırdır. Başlaya bilərik."
+      "expected": "Hər şey hazırdır. Başlaya bilərik.",
+      "errorCategory": "context"
     },
     {
       "id": "email-011",
       "mode": "email",
       "category": "business",
       "input": "salam muracietiniz qeyde alindi netice barede size melumat verilecek",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz qeydə alındı. Nəticə barədə sizə məlumat veriləcək.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz qeydə alındı. Nəticə barədə sizə məlumat veriləcək.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-012",
       "mode": "email",
       "category": "business",
       "input": "salam zehmet olmasa elave olunan fayla baxasiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, əlavə olunan fayla baxasınız.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, əlavə olunan fayla baxasınız.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-013",
       "mode": "email",
       "category": "business",
       "input": "hormetli kamran bey gonderdiyiniz senedler qebul edildi",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Kamran bəy,\n\nGöndərdiyiniz sənədlər qəbul edildi.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Kamran bəy,\n\nGöndərdiyiniz sənədlər qəbul edildi.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-014",
       "mode": "email",
       "category": "business",
       "input": "salam qeyd etdiyiniz problem texniki komandaya yonlendirildi",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeyd etdiyiniz problem texniki komandaya yönləndirildi.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeyd etdiyiniz problem texniki komandaya yönləndirildi.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-015",
       "mode": "email",
       "category": "business",
       "input": "salam cavab gecikdiyi ucun uzr isteyirik",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nCavab gecikdiyi üçün üzr istəyirik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nCavab gecikdiyi üçün üzr istəyirik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-016",
       "mode": "email",
       "category": "business",
       "input": "salam sizin terefden gonderilen melumatlarda uyğunsuzluq askar edildi",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizin tərəfinizdən göndərilən məlumatlarda uyğunsuzluq aşkar edildi.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizin tərəfinizdən göndərilən məlumatlarda uyğunsuzluq aşkar edildi.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-017",
       "mode": "email",
       "category": "business",
       "input": "salam xahis edirik muraciet nomresini qeyd edesiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nXahiş edirik, müraciət nömrəsini qeyd edəsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nXahiş edirik, müraciət nömrəsini qeyd edəsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-018",
       "mode": "email",
       "category": "business",
       "input": "hormetli leyla xanim gorus sabah saat 11 e teyın olunub",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGörüş sabah saat 11-ə təyin olunub.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGörüş sabah saat 11-ə təyin olunub.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-019",
       "mode": "email",
       "category": "business",
       "input": "salam sistemde aparilan yenilenme tamamlanib yeniden yoxlaya bilersiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistemdə aparılan yenilənmə tamamlanıb. Yenidən yoxlaya bilərsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistemdə aparılan yenilənmə tamamlanıb. Yenidən yoxlaya bilərsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-020",
       "mode": "email",
       "category": "business",
       "input": "salam melumat ucun qeyd edim ki son tarix 25 sentyabrdır",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat üçün qeyd edim ki, son tarix 25 sentyabrdır.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumat üçün qeyd edim ki, son tarix 25 sentyabrdır.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-021",
       "mode": "email",
       "category": "business",
       "input": "salam sorğu uğurla baglanib elave sualiniz olarsa yaza bilersiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSorğu uğurla bağlanıb. Əlavə sualınız olarsa, yaza bilərsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSorğu uğurla bağlanıb. Əlavə sualınız olarsa, yaza bilərsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-022",
       "mode": "email",
       "category": "business",
       "input": "hormetli emin bey tesdiq ucun cavabinizi gozleyirik",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Emin bəy,\n\nTəsdiq üçün cavabınızı gözləyirik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Emin bəy,\n\nTəsdiq üçün cavabınızı gözləyirik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-023",
       "mode": "email",
       "category": "business",
       "input": "salam elave edilen cedvelde son deyisiklikler qeyd olunub",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nƏlavə edilən cədvəldə son dəyişikliklər qeyd olunub.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nƏlavə edilən cədvəldə son dəyişikliklər qeyd olunub.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-024",
       "mode": "email",
       "category": "business",
       "input": "salam bu gun erzinde geri donus etmeye calisacagiq",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nBu gün ərzində geri dönüş etməyə çalışacağıq.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nBu gün ərzində geri dönüş etməyə çalışacağıq.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-025",
       "mode": "email",
       "category": "business",
       "input": "salam mesele arashdirilir netice hazir olan kimi yazacagiq",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəsələ araşdırılır. Nəticə hazır olan kimi yazacağıq.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəsələ araşdırılır. Nəticə hazır olan kimi yazacağıq.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-026",
       "mode": "email",
       "category": "business",
       "input": "hormetli narmin xanim tesekkur edirik teklifinizi aldıq",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nTəşəkkür edirik. Təklifinizi aldıq.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nTəşəkkür edirik. Təklifinizi aldıq.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-027",
       "mode": "email",
       "category": "business",
       "input": "salam zehmet olmasa imzalanmis versiyani gonderin",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, imzalanmış versiyanı göndərin.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nZəhmət olmasa, imzalanmış versiyanı göndərin.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-028",
       "mode": "email",
       "category": "business",
       "input": "salam melumatlar yoxlanildi ve duzgun oldugu tesdiqlendi",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumatlar yoxlanıldı və düzgün olduğu təsdiqləndi.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMəlumatlar yoxlanıldı və düzgün olduğu təsdiqləndi.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-029",
       "mode": "email",
       "category": "business",
       "input": "salam muracietiniz uzre icra muddeti 3 is gunudur",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz üzrə icra müddəti 3 iş günüdür.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüraciətiniz üzrə icra müddəti 3 iş günüdür.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-030",
       "mode": "email",
       "category": "business",
       "input": "salam fayl acilmir zehmet olmasa pdf formatinda yeniden gonderin",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nFayl açılmır. Zəhmət olmasa, PDF formatında yenidən göndərin.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nFayl açılmır. Zəhmət olmasa, PDF formatında yenidən göndərin.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-031",
       "mode": "email",
       "category": "business",
       "input": "hormetli orxan bey bugunku gorus ucun tesekkur edirik",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Orxan bəy,\n\nBugünkü görüş üçün təşəkkür edirik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Orxan bəy,\n\nBugünkü görüş üçün təşəkkür edirik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-032",
       "mode": "email",
       "category": "business",
       "input": "salam hesabata son duzelisler edilib baxa bilersiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHesabata son düzəlişlər edilib. Baxa bilərsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHesabata son düzəlişlər edilib. Baxa bilərsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-033",
       "mode": "email",
       "category": "business",
       "input": "salam qeydiyyat ugurla tamamlandi",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeydiyyat uğurla tamamlandı.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nQeydiyyat uğurla tamamlandı.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-034",
       "mode": "email",
       "category": "business",
       "input": "salam sizinle telefonla elaqe saxlamağa calisdıq cavab ala bilmedik",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizinlə telefonla əlaqə saxlamağa çalışdıq, cavab ala bilmədik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSizinlə telefonla əlaqə saxlamağa çalışdıq, cavab ala bilmədik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-035",
       "mode": "email",
       "category": "business",
       "input": "hormetli gunel xanim muracietinize baxilmasi davam edir",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Günel xanım,\n\nMüraciətinizə baxılması davam edir.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Günel xanım,\n\nMüraciətinizə baxılması davam edir.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-036",
       "mode": "email",
       "category": "business",
       "input": "salam sistem xetasi aradan qaldirilib",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistem xətası aradan qaldırılıb.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSistem xətası aradan qaldırılıb.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-037",
       "mode": "email",
       "category": "business",
       "input": "salam gonderdiyiniz ekran goruntusu ucun tesekkur edirik",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nGöndərdiyiniz ekran görüntüsü üçün təşəkkür edirik.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nGöndərdiyiniz ekran görüntüsü üçün təşəkkür edirik.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-038",
       "mode": "email",
       "category": "business",
       "input": "salam neticenin yoxlanilmasi ucun elave vaxta ehtiyac var",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nNəticənin yoxlanılması üçün əlavə vaxta ehtiyac var.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nNəticənin yoxlanılması üçün əlavə vaxta ehtiyac var.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-039",
       "mode": "email",
       "category": "business",
       "input": "hormetli anar bey razilasmaya uygun olaraq fayl elave olunur",
-      "expected": "Mövzu: Müraciət\n\nHörmətli Anar bəy,\n\nRazılaşmaya uyğun olaraq fayl əlavə olunur.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nHörmətli Anar bəy,\n\nRazılaşmaya uyğun olaraq fayl əlavə olunur.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "email-040",
       "mode": "email",
       "category": "business",
       "input": "salam sualiniz olarsa bizimle elaqe saxlaya bilersiniz",
-      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSualınız olarsa, bizimlə əlaqə saxlaya bilərsiniz.\n\nHörmətlə,"
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSualınız olarsa, bizimlə əlaqə saxlaya bilərsiniz.\n\nHörmətlə,",
+      "errorCategory": "context"
     },
     {
       "id": "technical-011",
       "mode": "text",
       "category": "technical",
       "input": "vercel build zamani typescript error cixir",
-      "expected": "Vercel build zamanı TypeScript error çıxır."
+      "expected": "Vercel build zamanı TypeScript error çıxır.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-012",
       "mode": "text",
       "category": "technical",
       "input": "api endpoint 400 status code qaytarir",
-      "expected": "API endpoint 400 status code qaytarır."
+      "expected": "API endpoint 400 status code qaytarır.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-013",
       "mode": "text",
       "category": "technical",
       "input": "next.js route server terefde isleyir",
-      "expected": "Next.js route server tərəfdə işləyir."
+      "expected": "Next.js route server tərəfdə işləyir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-014",
       "mode": "text",
       "category": "technical",
       "input": "github action testleri ugurla tamamlayib",
-      "expected": "GitHub Action testləri uğurla tamamlayıb."
+      "expected": "GitHub Action testləri uğurla tamamlayıb.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-015",
       "mode": "text",
       "category": "technical",
       "input": "redis cache deaktiv edilib",
-      "expected": "Redis cache deaktiv edilib."
+      "expected": "Redis cache deaktiv edilib.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-016",
       "mode": "text",
       "category": "technical",
       "input": "mysql connection pool limiti asilib",
-      "expected": "MySQL connection pool limiti aşılıb."
+      "expected": "MySQL connection pool limiti aşılıb.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-017",
       "mode": "text",
       "category": "technical",
       "input": "jwt tokenin muddeti bitib",
-      "expected": "JWT tokenin müddəti bitib."
+      "expected": "JWT tokenin müddəti bitib.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-018",
       "mode": "text",
       "category": "technical",
       "input": "react component yeniden render olunur",
-      "expected": "React component yenidən render olunur."
+      "expected": "React component yenidən render olunur.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-019",
       "mode": "text",
       "category": "technical",
       "input": "typescript interface yeni field ile genislendirilib",
-      "expected": "TypeScript interface yeni field ilə genişləndirilib."
+      "expected": "TypeScript interface yeni field ilə genişləndirilib.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-020",
       "mode": "text",
       "category": "technical",
       "input": "docker image build olunmadan deploy etmek isteyirik",
-      "expected": "Docker image build olunmadan deploy etmək istəyirik."
+      "expected": "Docker image build olunmadan deploy etmək istəyirik.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-021",
       "mode": "text",
       "category": "technical",
       "input": "postman request body duzgun deyil",
-      "expected": "Postman request body düzgün deyil."
+      "expected": "Postman request body düzgün deyil.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-022",
       "mode": "text",
       "category": "technical",
       "input": "spring boot service database ile elaqe qura bilmir",
-      "expected": "Spring Boot service database ilə əlaqə qura bilmir."
+      "expected": "Spring Boot service database ilə əlaqə qura bilmir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-023",
       "mode": "text",
       "category": "technical",
       "input": "fastapi endpoint multipart form data qebul edir",
-      "expected": "FastAPI endpoint multipart/form-data qəbul edir."
+      "expected": "FastAPI endpoint multipart/form-data qəbul edir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-024",
       "mode": "text",
       "category": "technical",
       "input": "mongodb query cox gec cavab verir",
-      "expected": "MongoDB query çox gec cavab verir."
+      "expected": "MongoDB query çox gec cavab verir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-025",
       "mode": "text",
       "category": "technical",
       "input": "github main branch productiona baglanib",
-      "expected": "GitHub main branch production-a bağlanıb."
+      "expected": "GitHub main branch production-a bağlanıb.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-026",
       "mode": "text",
       "category": "technical",
       "input": "vercel function cold start vaxtini azaltmaq lazimdir",
-      "expected": "Vercel Function cold start vaxtını azaltmaq lazımdır."
+      "expected": "Vercel Function cold start vaxtını azaltmaq lazımdır.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-027",
       "mode": "text",
       "category": "technical",
       "input": "json payload daxilinde null value gelir",
-      "expected": "JSON payload daxilində null value gəlir."
+      "expected": "JSON payload daxilində null value gəlir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-028",
       "mode": "text",
       "category": "technical",
       "input": "oauth callback url sehv qeyd olunub",
-      "expected": "OAuth callback URL səhv qeyd olunub."
+      "expected": "OAuth callback URL səhv qeyd olunub.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-029",
       "mode": "text",
       "category": "technical",
       "input": "npm run build lokaldaki kimi vercelde de kecmelidir",
-      "expected": "npm run build lokaldakı kimi Vercel-də də keçməlidir."
+      "expected": "npm run build lokaldakı kimi Vercel-də də keçməlidir.",
+      "errorCategory": "technical"
     },
     {
       "id": "technical-030",
       "mode": "text",
       "category": "technical",
       "input": "api response cache olunmamalidir",
-      "expected": "API response cache olunmamalıdır."
+      "expected": "API response cache olunmamalıdır.",
+      "errorCategory": "technical"
     },
     {
       "id": "spelling-001",
       "mode": "text",
       "category": "spelling",
       "input": "xyir necesen",
-      "expected": "Xeyir, necəsən?"
+      "expected": "Xeyir, necəsən?",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-002",
       "mode": "text",
       "category": "spelling",
       "input": "saglamliq her seyden vacibdir",
-      "expected": "Sağlamlıq hər şeydən vacibdir."
+      "expected": "Sağlamlıq hər şeydən vacibdir.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-003",
       "mode": "text",
       "category": "spelling",
       "input": "zehmet olmasa gozle",
-      "expected": "Zəhmət olmasa, gözlə."
+      "expected": "Zəhmət olmasa, gözlə.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-004",
       "mode": "text",
       "category": "spelling",
       "input": "tesekur edirem komeyin ucun",
-      "expected": "Təşəkkür edirəm köməyin üçün."
+      "expected": "Təşəkkür edirəm köməyin üçün.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-005",
       "mode": "text",
       "category": "spelling",
       "input": "muraciyet qebul olundu",
-      "expected": "Müraciət qəbul olundu."
+      "expected": "Müraciət qəbul olundu.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-006",
       "mode": "text",
       "category": "spelling",
       "input": "melumat duzgun deyil",
-      "expected": "Məlumat düzgün deyil."
+      "expected": "Məlumat düzgün deyil.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-007",
       "mode": "text",
       "category": "spelling",
       "input": "sualinizi basa dusdum",
-      "expected": "Sualınızı başa düşdüm."
+      "expected": "Sualınızı başa düşdüm.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-008",
       "mode": "text",
       "category": "spelling",
       "input": "gorush sabah olacaq",
-      "expected": "Görüş sabah olacaq."
+      "expected": "Görüş sabah olacaq.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-009",
       "mode": "text",
       "category": "spelling",
       "input": "gondereceyiniz fayli gozleyirik",
-      "expected": "Göndərəcəyiniz faylı gözləyirik."
+      "expected": "Göndərəcəyiniz faylı gözləyirik.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-010",
       "mode": "text",
       "category": "spelling",
       "input": "yoxlama ugurla bitdi",
-      "expected": "Yoxlama uğurla bitdi."
+      "expected": "Yoxlama uğurla bitdi.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-011",
       "mode": "text",
       "category": "spelling",
       "input": "arashdirma davam edir",
-      "expected": "Araşdırma davam edir."
+      "expected": "Araşdırma davam edir.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-012",
       "mode": "text",
       "category": "spelling",
       "input": "qebul olunmush senedler yoxlanilir",
-      "expected": "Qəbul olunmuş sənədlər yoxlanılır."
+      "expected": "Qəbul olunmuş sənədlər yoxlanılır.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-013",
       "mode": "text",
       "category": "spelling",
       "input": "muellim telebelere tapsiriq verdi",
-      "expected": "Müəllim tələbələrə tapşırıq verdi."
+      "expected": "Müəllim tələbələrə tapşırıq verdi.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-014",
       "mode": "text",
       "category": "spelling",
       "input": "sehifeni yeniden ac",
-      "expected": "Səhifəni yenidən aç."
+      "expected": "Səhifəni yenidən aç.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-015",
       "mode": "text",
       "category": "spelling",
       "input": "hell yolu tapildi",
-      "expected": "Həll yolu tapıldı."
+      "expected": "Həll yolu tapıldı.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-016",
       "mode": "text",
       "category": "spelling",
       "input": "proses ugurla tamamlanib",
-      "expected": "Proses uğurla tamamlanıb."
+      "expected": "Proses uğurla tamamlanıb.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-017",
       "mode": "text",
       "category": "spelling",
       "input": "bildiris ekranda gorunur",
-      "expected": "Bildiriş ekranda görünür."
+      "expected": "Bildiriş ekranda görünür.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-018",
       "mode": "text",
       "category": "spelling",
       "input": "istifadeci melumatlari yenileyib",
-      "expected": "İstifadəçi məlumatları yeniləyib."
+      "expected": "İstifadəçi məlumatları yeniləyib.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-019",
       "mode": "text",
       "category": "spelling",
       "input": "qeydiyyat melumatlari saxlanildi",
-      "expected": "Qeydiyyat məlumatları saxlanıldı."
+      "expected": "Qeydiyyat məlumatları saxlanıldı.",
+      "errorCategory": "typo"
     },
     {
       "id": "spelling-020",
       "mode": "text",
       "category": "spelling",
       "input": "mueyyen muddet gozlemek lazimdir",
-      "expected": "Müəyyən müddət gözləmək lazımdır."
+      "expected": "Müəyyən müddət gözləmək lazımdır.",
+      "errorCategory": "typo"
     },
     {
       "id": "morph-011",
       "mode": "text",
       "category": "morphology",
       "input": "kitablarimizi kitabxanaya apardiq",
-      "expected": "Kitablarımızı kitabxanaya apardıq."
+      "expected": "Kitablarımızı kitabxanaya apardıq.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-012",
       "mode": "text",
       "category": "morphology",
       "input": "dostlarinizla goruse bilersiniz",
-      "expected": "Dostlarınızla görüşə bilərsiniz."
+      "expected": "Dostlarınızla görüşə bilərsiniz.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-013",
       "mode": "text",
       "category": "morphology",
       "input": "sorgularimizin cavablari hazirdir",
-      "expected": "Sorğularımızın cavabları hazırdır."
+      "expected": "Sorğularımızın cavabları hazırdır.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-014",
       "mode": "text",
       "category": "morphology",
       "input": "istifadecilerimizin melumatlari qorunur",
-      "expected": "İstifadəçilərimizin məlumatları qorunur."
+      "expected": "İstifadəçilərimizin məlumatları qorunur.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-015",
       "mode": "text",
       "category": "morphology",
       "input": "layihelerinizden biri tamamlanib",
-      "expected": "Layihələrinizdən biri tamamlanıb."
+      "expected": "Layihələrinizdən biri tamamlanıb.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-016",
       "mode": "text",
       "category": "morphology",
       "input": "fayllarimizin hamisi serverdedir",
-      "expected": "Fayllarımızın hamısı serverdədir."
+      "expected": "Fayllarımızın hamısı serverdədir.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-017",
       "mode": "text",
       "category": "morphology",
       "input": "senedlerinizi sabah gondereceyik",
-      "expected": "Sənədlərinizi sabah göndərəcəyik."
+      "expected": "Sənədlərinizi sabah göndərəcəyik.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-018",
       "mode": "text",
       "category": "morphology",
       "input": "melumatlariniz sistemden silinmeyib",
-      "expected": "Məlumatlarınız sistemdən silinməyib."
+      "expected": "Məlumatlarınız sistemdən silinməyib.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-019",
       "mode": "text",
       "category": "morphology",
       "input": "gorushlerimiz gelecek hefte davam edecek",
-      "expected": "Görüşlərimiz gələcək həftə davam edəcək."
+      "expected": "Görüşlərimiz gələcək həftə davam edəcək.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-020",
       "mode": "text",
       "category": "morphology",
       "input": "hesablariniz bloklanmayib",
-      "expected": "Hesablarınız bloklanmayıb."
+      "expected": "Hesablarınız bloklanmayıb.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-021",
       "mode": "text",
       "category": "morphology",
       "input": "yoxlamalarin neticeleri gonderildi",
-      "expected": "Yoxlamaların nəticələri göndərildi."
+      "expected": "Yoxlamaların nəticələri göndərildi.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-022",
       "mode": "text",
       "category": "morphology",
       "input": "istifadecilerden tesdiq gozlenilir",
-      "expected": "İstifadəçilərdən təsdiq gözlənilir."
+      "expected": "İstifadəçilərdən təsdiq gözlənilir.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-023",
       "mode": "text",
       "category": "morphology",
       "input": "sistemimize yeni funksiya elave olunub",
-      "expected": "Sistemimizə yeni funksiya əlavə olunub."
+      "expected": "Sistemimizə yeni funksiya əlavə olunub.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-024",
       "mode": "text",
       "category": "morphology",
       "input": "emeliyyatlariniz ugurla icra edilib",
-      "expected": "Əməliyyatlarınız uğurla icra edilib."
+      "expected": "Əməliyyatlarınız uğurla icra edilib.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-025",
       "mode": "text",
       "category": "morphology",
       "input": "muracietlerinize bir bir baxilacaq",
-      "expected": "Müraciətlərinizə bir-bir baxılacaq."
+      "expected": "Müraciətlərinizə bir-bir baxılacaq.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-026",
       "mode": "text",
       "category": "morphology",
       "input": "fayllardan biri acilmir",
-      "expected": "Fayllardan biri açılmır."
+      "expected": "Fayllardan biri açılmır.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-027",
       "mode": "text",
       "category": "morphology",
       "input": "neticelerimizi sizinle boluseceyik",
-      "expected": "Nəticələrimizi sizinlə bölüşəcəyik."
+      "expected": "Nəticələrimizi sizinlə bölüşəcəyik.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-028",
       "mode": "text",
       "category": "morphology",
       "input": "hesabatlarinizda uyğunsuzluq var",
-      "expected": "Hesabatlarınızda uyğunsuzluq var."
+      "expected": "Hesabatlarınızda uyğunsuzluq var.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-029",
       "mode": "text",
       "category": "morphology",
       "input": "melumatlarimizin tehlukesizliyi qorunur",
-      "expected": "Məlumatlarımızın təhlükəsizliyi qorunur."
+      "expected": "Məlumatlarımızın təhlükəsizliyi qorunur.",
+      "errorCategory": "morphology"
     },
     {
       "id": "morph-030",
       "mode": "text",
       "category": "morphology",
       "input": "sorgulardan ikisi baglanib",
-      "expected": "Sorğulardan ikisi bağlanıb."
+      "expected": "Sorğulardan ikisi bağlanıb.",
+      "errorCategory": "morphology"
     },
     {
       "id": "punct-011",
       "mode": "text",
       "category": "punctuation",
       "input": "salam necəsiniz men size bir sual vermek isteyirem",
-      "expected": "Salam, necəsiniz? Mən sizə bir sual vermək istəyirəm."
+      "expected": "Salam, necəsiniz? Mən sizə bir sual vermək istəyirəm.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-012",
       "mode": "text",
       "category": "punctuation",
       "input": "bu duzgundur lakin bir problem var",
-      "expected": "Bu düzgündür, lakin bir problem var."
+      "expected": "Bu düzgündür, lakin bir problem var.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-013",
       "mode": "text",
       "category": "punctuation",
       "input": "men geldim amma o hele gelmeyib",
-      "expected": "Mən gəldim, amma o hələ gəlməyib."
+      "expected": "Mən gəldim, amma o hələ gəlməyib.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-014",
       "mode": "text",
       "category": "punctuation",
       "input": "niye sistem acilmir",
-      "expected": "Niyə sistem açılmır?"
+      "expected": "Niyə sistem açılmır?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-015",
       "mode": "text",
       "category": "punctuation",
       "input": "kim bu fayli deyisib",
-      "expected": "Kim bu faylı dəyişib?"
+      "expected": "Kim bu faylı dəyişib?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-016",
       "mode": "text",
       "category": "punctuation",
       "input": "ne vaxt cavab gelecek",
-      "expected": "Nə vaxt cavab gələcək?"
+      "expected": "Nə vaxt cavab gələcək?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-017",
       "mode": "text",
       "category": "punctuation",
       "input": "melumat hazirdir gondere bilerik",
-      "expected": "Məlumat hazırdır. Göndərə bilərik."
+      "expected": "Məlumat hazırdır. Göndərə bilərik.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-018",
       "mode": "text",
       "category": "punctuation",
       "input": "proses bitdi indi neticeni yoxlayaq",
-      "expected": "Proses bitdi. İndi nəticəni yoxlayaq."
+      "expected": "Proses bitdi. İndi nəticəni yoxlayaq.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-019",
       "mode": "text",
       "category": "punctuation",
       "input": "salam!! her vaxtiniz xeyir..",
-      "expected": "Salam! Hər vaxtınız xeyir."
+      "expected": "Salam! Hər vaxtınız xeyir.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-020",
       "mode": "text",
       "category": "punctuation",
       "input": "men baxdim,amma problem qalir",
-      "expected": "Mən baxdım, amma problem qalır."
+      "expected": "Mən baxdım, amma problem qalır.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-021",
       "mode": "text",
       "category": "punctuation",
       "input": "bu testdir;netice sonra gelecek",
-      "expected": "Bu testdir; nəticə sonra gələcək."
+      "expected": "Bu testdir; nəticə sonra gələcək.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-022",
       "mode": "text",
       "category": "punctuation",
       "input": "fayl hazirdir?gondere bilim",
-      "expected": "Fayl hazırdır? Göndərə bilim."
+      "expected": "Fayl hazırdır? Göndərə bilim.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-023",
       "mode": "text",
       "category": "punctuation",
       "input": "men raziyam bes sen",
-      "expected": "Mən razıyam. Bəs sən?"
+      "expected": "Mən razıyam. Bəs sən?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-024",
       "mode": "text",
       "category": "punctuation",
       "input": "sabah gorus olacaq duzdur",
-      "expected": "Sabah görüş olacaq, düzdür?"
+      "expected": "Sabah görüş olacaq, düzdür?",
+      "errorCategory": "punctuation"
     },
     {
       "id": "punct-025",
       "mode": "text",
       "category": "punctuation",
       "input": "birinci: login ikinci: dashboard ucuncu: report",
-      "expected": "1. Login.\n2. Dashboard.\n3. Report."
+      "expected": "1. Login.\n2. Dashboard.\n3. Report.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "ambiguity-006",
@@ -1353,7 +1543,8 @@
       "category": "ambiguity",
       "input": "səhər şəhərə gedəcəyəm",
       "expected": "Səhər şəhərə gedəcəyəm.",
-      "notes": "Do not confuse səhər and şəhər."
+      "notes": "Do not confuse səhər and şəhər.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-007",
@@ -1361,7 +1552,8 @@
       "category": "ambiguity",
       "input": "şəhər səhər sakit olur",
       "expected": "Şəhər səhər sakit olur.",
-      "notes": "Both valid forms must remain."
+      "notes": "Both valid forms must remain.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-008",
@@ -1369,7 +1561,8 @@
       "category": "ambiguity",
       "input": "mən də orada olacağam",
       "expected": "Mən də orada olacağam.",
-      "notes": "Keep conjunction də separated."
+      "notes": "Keep conjunction də separated.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-009",
@@ -1377,7 +1570,8 @@
       "category": "ambiguity",
       "input": "telefon məndə qalıb",
       "expected": "Telefon məndə qalıb.",
-      "notes": "Keep locative məndə intact."
+      "notes": "Keep locative məndə intact.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-010",
@@ -1385,7 +1579,8 @@
       "category": "ambiguity",
       "input": "o da bizimlə gələcək",
       "expected": "O da bizimlə gələcək.",
-      "notes": "Keep conjunction da separated."
+      "notes": "Keep conjunction da separated.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-011",
@@ -1393,7 +1588,8 @@
       "category": "ambiguity",
       "input": "otaqda heç kim yoxdur",
       "expected": "Otaqda heç kim yoxdur.",
-      "notes": "Do not split locative suffix -da."
+      "notes": "Do not split locative suffix -da.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-012",
@@ -1401,7 +1597,8 @@
       "category": "ambiguity",
       "input": "bu da son versiyadir",
       "expected": "Bu da son versiyadır.",
-      "notes": "Conjunction da is a separate token."
+      "notes": "Conjunction da is a separate token.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-013",
@@ -1409,7 +1606,8 @@
       "category": "ambiguity",
       "input": "serverdə problem yoxdur",
       "expected": "Serverdə problem yoxdur.",
-      "notes": "Do not split locative suffix."
+      "notes": "Do not split locative suffix.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-014",
@@ -1417,7 +1615,8 @@
       "category": "ambiguity",
       "input": "as is value deyisdirilmesin",
       "expected": "as is value dəyişdirilməsin.",
-      "notes": "Preserve exact English phrase."
+      "notes": "Preserve exact English phrase.",
+      "errorCategory": "context"
     },
     {
       "id": "ambiguity-015",
@@ -1425,7 +1624,8 @@
       "category": "ambiguity",
       "input": "to be field oldugu kimi qalsin",
       "expected": "to be field olduğu kimi qalsın.",
-      "notes": "Preserve exact English phrase."
+      "notes": "Preserve exact English phrase.",
+      "errorCategory": "context"
     },
     {
       "id": "protect-001",
@@ -1433,7 +1633,8 @@
       "category": "protection",
       "input": "test@example.com unvanina mail gonder",
       "expected": "test@example.com ünvanına mail göndər.",
-      "notes": "Email address must remain exact."
+      "notes": "Email address must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-002",
@@ -1441,7 +1642,8 @@
       "category": "protection",
       "input": "https://vercel.com sehifesini ac",
       "expected": "https://vercel.com səhifəsini aç.",
-      "notes": "URL must remain exact."
+      "notes": "URL must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-003",
@@ -1449,7 +1651,8 @@
       "category": "protection",
       "input": "`npm run build` emrini islet",
       "expected": "`npm run build` əmrini işlət.",
-      "notes": "Inline code must remain exact."
+      "notes": "Inline code must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-004",
@@ -1457,7 +1660,8 @@
       "category": "protection",
       "input": "API_KEY value deyisdirilmesin",
       "expected": "API_KEY value dəyişdirilməsin.",
-      "notes": "Identifier must remain exact."
+      "notes": "Identifier must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-005",
@@ -1465,7 +1669,8 @@
       "category": "protection",
       "input": "user/profile endpointi yoxla",
       "expected": "user/profile endpoint-i yoxla.",
-      "notes": "Slash identifier must remain intact."
+      "notes": "Slash identifier must remain intact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-006",
@@ -1473,7 +1678,8 @@
       "category": "protection",
       "input": "12:30 da gorus var",
       "expected": "12:30-da görüş var.",
-      "notes": "Time must remain numeric and formatted."
+      "notes": "Time must remain numeric and formatted.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-007",
@@ -1481,7 +1687,8 @@
       "category": "protection",
       "input": "2026-09-21 tarixini deyisme",
       "expected": "2026-09-21 tarixini dəyişmə.",
-      "notes": "ISO date must remain exact."
+      "notes": "ISO date must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-008",
@@ -1489,7 +1696,8 @@
       "category": "protection",
       "input": "version 2.4.1 isleyir",
       "expected": "Version 2.4.1 işləyir.",
-      "notes": "Version number must remain exact."
+      "notes": "Version number must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-009",
@@ -1497,7 +1705,8 @@
       "category": "protection",
       "input": "25% endirim tetbiq olunub",
       "expected": "25% endirim tətbiq olunub.",
-      "notes": "Percentage must remain intact."
+      "notes": "Percentage must remain intact.",
+      "errorCategory": "technical"
     },
     {
       "id": "protect-010",
@@ -1505,217 +1714,264 @@
       "category": "protection",
       "input": "www.example.org linki acilmir",
       "expected": "www.example.org linki açılmır.",
-      "notes": "Domain must remain exact."
+      "notes": "Domain must remain exact.",
+      "errorCategory": "technical"
     },
     {
       "id": "narrative-006",
       "mode": "text",
       "category": "narrative",
       "input": "axsam evə qayidanda yagis basladi men avtobus dayanacagina qacdim",
-      "expected": "Axşam evə qayıdanda yağış başladı. Mən avtobus dayanacağına qaçdım."
+      "expected": "Axşam evə qayıdanda yağış başladı. Mən avtobus dayanacağına qaçdım.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-007",
       "mode": "text",
       "category": "narrative",
       "input": "kucede insanlar telesirdi amma men sakit addimlayirdim",
-      "expected": "Küçədə insanlar tələsirdi, amma mən sakit addımlayırdım."
+      "expected": "Küçədə insanlar tələsirdi, amma mən sakit addımlayırdım.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-008",
       "mode": "text",
       "category": "narrative",
       "input": "evə catanda cay hazirladim sonra kitab oxudum",
-      "expected": "Evə çatanda çay hazırladım. Sonra kitab oxudum."
+      "expected": "Evə çatanda çay hazırladım. Sonra kitab oxudum.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-009",
       "mode": "text",
       "category": "narrative",
       "input": "seher telefonun sesine oyandim saat artıq yeddi idi",
-      "expected": "Səhər telefonun səsinə oyandım. Saat artıq yeddi idi."
+      "expected": "Səhər telefonun səsinə oyandım. Saat artıq yeddi idi.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-010",
       "mode": "text",
       "category": "narrative",
       "input": "pencereni acdim hava serin idi",
-      "expected": "Pəncərəni açdım. Hava sərin idi."
+      "expected": "Pəncərəni açdım. Hava sərin idi.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-011",
       "mode": "text",
       "category": "narrative",
       "input": "yolda kohne tanisima rast geldim biraz sohbet etdik",
-      "expected": "Yolda köhnə tanışıma rast gəldim. Bir az söhbət etdik."
+      "expected": "Yolda köhnə tanışıma rast gəldim. Bir az söhbət etdik.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-012",
       "mode": "text",
       "category": "narrative",
       "input": "gun boyu cox isledim axsam yorulmusdum",
-      "expected": "Gün boyu çox işlədim. Axşam yorulmuşdum."
+      "expected": "Gün boyu çox işlədim. Axşam yorulmuşdum.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-013",
       "mode": "text",
       "category": "narrative",
       "input": "qatar stansiyaya catanda hamı ayağa qalxdi",
-      "expected": "Qatar stansiyaya çatanda hamı ayağa qalxdı."
+      "expected": "Qatar stansiyaya çatanda hamı ayağa qalxdı.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-014",
       "mode": "text",
       "category": "narrative",
       "input": "men bileti goturub perrona getdim",
-      "expected": "Mən bileti götürüb perrona getdim."
+      "expected": "Mən bileti götürüb perrona getdim.",
+      "errorCategory": "context"
     },
     {
       "id": "narrative-015",
       "mode": "text",
       "category": "narrative",
       "input": "hava qaralirdi biz ise hele yolda idik",
-      "expected": "Hava qaralırdı, biz isə hələ yolda idik."
+      "expected": "Hava qaralırdı, biz isə hələ yolda idik.",
+      "errorCategory": "context"
     },
     {
       "id": "business-001",
       "mode": "text",
       "category": "business",
       "input": "sorgu biznes analitik terefinden yoxlanilib icraya gonderilib",
-      "expected": "Sorğu biznes analitik tərəfindən yoxlanılıb, icraya göndərilib."
+      "expected": "Sorğu biznes analitik tərəfindən yoxlanılıb, icraya göndərilib.",
+      "errorCategory": "context"
     },
     {
       "id": "business-002",
       "mode": "text",
       "category": "business",
       "input": "prosesde her hansi bir xeta askar edilmeyib",
-      "expected": "Prosesdə hər hansı bir xəta aşkar edilməyib."
+      "expected": "Prosesdə hər hansı bir xəta aşkar edilməyib.",
+      "errorCategory": "context"
     },
     {
       "id": "business-003",
       "mode": "text",
       "category": "business",
       "input": "funksionalliq telebe uygun olaraq isleyir",
-      "expected": "Funksionallıq tələbə uyğun olaraq işləyir."
+      "expected": "Funksionallıq tələbə uyğun olaraq işləyir.",
+      "errorCategory": "context"
     },
     {
       "id": "business-004",
       "mode": "text",
       "category": "business",
       "input": "deyisiklik test muhiti uzre yoxlanilacaq",
-      "expected": "Dəyişiklik test mühiti üzrə yoxlanılacaq."
+      "expected": "Dəyişiklik test mühiti üzrə yoxlanılacaq.",
+      "errorCategory": "context"
     },
     {
       "id": "business-005",
       "mode": "text",
       "category": "business",
       "input": "teleb aidiyyati komanda ile razilasdirilib",
-      "expected": "Tələb aidiyyəti komanda ilə razılaşdırılıb."
+      "expected": "Tələb aidiyyəti komanda ilə razılaşdırılıb.",
+      "errorCategory": "context"
     },
     {
       "id": "business-006",
       "mode": "text",
       "category": "business",
       "input": "icra muddeti biznes gunleri ile hesablanir",
-      "expected": "İcra müddəti biznes günləri ilə hesablanır."
+      "expected": "İcra müddəti biznes günləri ilə hesablanır.",
+      "errorCategory": "context"
     },
     {
       "id": "business-007",
       "mode": "text",
       "category": "business",
       "input": "sorgunun statusu sistemde yenilenib",
-      "expected": "Sorğunun statusu sistemdə yenilənib."
+      "expected": "Sorğunun statusu sistemdə yenilənib.",
+      "errorCategory": "context"
     },
     {
       "id": "business-008",
       "mode": "text",
       "category": "business",
       "input": "melumat aidiyyati uzre gonderilib",
-      "expected": "Məlumat aidiyyəti üzrə göndərilib."
+      "expected": "Məlumat aidiyyəti üzrə göndərilib.",
+      "errorCategory": "context"
     },
     {
       "id": "business-009",
       "mode": "text",
       "category": "business",
       "input": "istifadeci selahiyyeti yeniden yoxlanilmalidir",
-      "expected": "İstifadəçi səlahiyyəti yenidən yoxlanılmalıdır."
+      "expected": "İstifadəçi səlahiyyəti yenidən yoxlanılmalıdır.",
+      "errorCategory": "context"
     },
     {
       "id": "business-010",
       "mode": "text",
       "category": "business",
       "input": "qebul meyarlarinin hamisi test olunub",
-      "expected": "Qəbul meyarlarının hamısı test olunub."
+      "expected": "Qəbul meyarlarının hamısı test olunub.",
+      "errorCategory": "context"
     },
     {
       "id": "numeric-001",
       "mode": "text",
       "category": "numbers-dates",
       "input": "gorus 21 sentyabr saat 15:30 da olacaq",
-      "expected": "Görüş 21 sentyabr saat 15:30-da olacaq."
+      "expected": "Görüş 21 sentyabr saat 15:30-da olacaq.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "numeric-002",
       "mode": "text",
       "category": "numbers-dates",
       "input": "hesabat 30.09.2026 tarixinədək gonderilmelidir",
-      "expected": "Hesabat 30.09.2026 tarixinədək göndərilməlidir."
+      "expected": "Hesabat 30.09.2026 tarixinədək göndərilməlidir.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "numeric-003",
       "mode": "text",
       "category": "numbers-dates",
       "input": "netice 98.5% oldu",
-      "expected": "Nəticə 98.5% oldu."
+      "expected": "Nəticə 98.5% oldu.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "numeric-004",
       "mode": "text",
       "category": "numbers-dates",
       "input": "odenis 1250.50 azn olaraq qeyd olunub",
-      "expected": "Ödəniş 1250.50 AZN olaraq qeyd olunub."
+      "expected": "Ödəniş 1250.50 AZN olaraq qeyd olunub.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "numeric-005",
       "mode": "text",
       "category": "numbers-dates",
       "input": "versiya 1.2.0 dan 1.3.0 a yenilenib",
-      "expected": "Versiya 1.2.0-dan 1.3.0-a yenilənib."
+      "expected": "Versiya 1.2.0-dan 1.3.0-a yenilənib.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "list-001",
       "mode": "text",
       "category": "formatting",
       "input": "1) login yoxla 2) api yoxla 3) database yoxla",
-      "expected": "1. Login yoxla.\n2. API yoxla.\n3. Database yoxla."
+      "expected": "1. Login yoxla.\n2. API yoxla.\n3. Database yoxla.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "list-002",
       "mode": "text",
       "category": "formatting",
       "input": "birinci: fayli ac ikinci: melumati yoxla ucuncu: neticeni gonder",
-      "expected": "1. Faylı aç.\n2. Məlumatı yoxla.\n3. Nəticəni göndər."
+      "expected": "1. Faylı aç.\n2. Məlumatı yoxla.\n3. Nəticəni göndər.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "list-003",
       "mode": "text",
       "category": "formatting",
       "input": "- api hazirdir\n- frontend hazirdir\n- test qalib",
-      "expected": "- API hazırdır.\n- Frontend hazırdır.\n- Test qalıb."
+      "expected": "- API hazırdır.\n- Frontend hazırdır.\n- Test qalıb.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "list-004",
       "mode": "text",
       "category": "formatting",
       "input": "1. muracieti ac\n2. statusu yoxla\n3. cavab yaz",
-      "expected": "1. Müraciəti aç.\n2. Statusu yoxla.\n3. Cavab yaz."
+      "expected": "1. Müraciəti aç.\n2. Statusu yoxla.\n3. Cavab yaz.",
+      "errorCategory": "punctuation"
     },
     {
       "id": "list-005",
       "mode": "text",
       "category": "formatting",
       "input": "* birinci bend\n* ikinci bend\n* ucuncu bend",
-      "expected": "* Birinci bənd.\n* İkinci bənd.\n* Üçüncü bənd."
+      "expected": "* Birinci bənd.\n* İkinci bənd.\n* Üçüncü bənd.",
+      "errorCategory": "punctuation"
     }
-  ]
+  ],
+  "errorCategories": [
+    "typo",
+    "diacritic",
+    "morphology",
+    "context",
+    "punctuation",
+    "technical"
+  ],
+  "errorCategoryCounts": {
+    "typo": 21,
+    "diacritic": 5,
+    "morphology": 30,
+    "context": 100,
+    "punctuation": 41,
+    "technical": 43
+  }
 }
