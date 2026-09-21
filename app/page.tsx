@@ -1,71 +1,350 @@
 'use client';
 
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { OutputPane } from '@/components/OutputPane';
-import { StrategySelector } from '@/components/StrategySelector';
-import { TextEditorPane } from '@/components/TextEditorPane';
-import { Button } from '@/components/ui/button';
+import { Check, Copy, FileText, Mail, Moon, Sun, Trash2 } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 
+type ModuleId = 'text' | 'mail';
+type Theme = 'dark' | 'light';
+
 const registry = getStrategyRegistry();
-const strategies = registry.listStrategies();
+
+const MODULES = {
+  text: {
+    strategyId: 'text-corrector',
+    title: 'Mətn Düzəldici',
+    description: 'Səliqəsiz yazılmış mətni diakritiklər, durğu işarələri və böyük hərflərlə səliqəyə sal.',
+    inputLabel: 'Xam mətn',
+    placeholder: 'Məsələn: salam her vaxtiniz xeyir bu metni duzelt...',
+  },
+  mail: {
+    strategyId: 'gmail-corrector',
+    title: 'Mail Düzəldici',
+    description: 'Tələsik yazılmış qaralamanı rəsmi məktub formasına sal.',
+    inputLabel: 'Qaralama',
+    placeholder: 'Məsələn: salam sorgunuza baxildi problem askar edilmeyib...',
+  },
+} as const;
 
 export default function HomePage() {
-  const [strategyId, setStrategyId] = useState('text-corrector');
-  const [text, setText] = useState('');
-  const [output, setOutput] = useState('');
-  const [metadata, setMetadata] = useState<TransformationMetadata | null>(null);
+  const [activeModule, setActiveModule] = useState<ModuleId>('text');
+  const [textValue, setTextValue] = useState('');
+  const [mailValue, setMailValue] = useState('');
+  const [mailSubject, setMailSubject] = useState('hesabat haqqında');
+  const [textOutput, setTextOutput] = useState('');
+  const [mailOutput, setMailOutput] = useState('');
+  const [textMetadata, setTextMetadata] = useState<TransformationMetadata | null>(null);
+  const [mailMetadata, setMailMetadata] = useState<TransformationMetadata | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(false);
+  const [theme, setTheme] = useState<Theme>('dark');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  function invalidate() { setOutput(''); setMetadata(null); setError(''); }
-  async function transform() {
-    if (!text.trim() || loading) return;
-    setLoading(true);
-    invalidate();
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
     try {
-      const result = await registry.get(strategyId).transform({ text, options: { preserveFormatting } });
-      setOutput(result.transformedText);
-      setMetadata(result.metadata);
+      const saved = localStorage.getItem('lazyai-theme');
+      const next: Theme = saved === 'light' || saved === 'dark'
+        ? saved
+        : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      setTheme(next);
+      document.documentElement.dataset.theme = next;
+    } catch {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  }, []);
+
+  const config = MODULES[activeModule];
+  const inputValue = activeModule === 'text' ? textValue : mailValue;
+  const output = activeModule === 'text' ? textOutput : mailOutput;
+  const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
+
+  const inputLength = useMemo(() => inputValue.length, [inputValue]);
+
+  function setInput(value: string) {
+    setError('');
+    setCopied(false);
+    if (activeModule === 'text') {
+      setTextValue(value);
+      setTextOutput('');
+      setTextMetadata(null);
+    } else {
+      setMailValue(value);
+      setMailOutput('');
+      setMailMetadata(null);
+    }
+  }
+
+  function clearCurrent() {
+    setInput('');
+  }
+
+  function selectModule(module: ModuleId) {
+    setActiveModule(module);
+    setError('');
+    setCopied(false);
+  }
+
+  function toggleTheme() {
+    const next: Theme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem('lazyai-theme', next);
+    } catch {}
+  }
+
+  async function transform() {
+    if (!inputValue.trim() || loading || inputLength > 10_000) return;
+
+    setLoading(true);
+    setError('');
+    setCopied(false);
+
+    try {
+      let requestText = inputValue;
+      if (activeModule === 'mail' && mailSubject.trim() && !/^\s*mövzu:/iu.test(inputValue)) {
+        requestText = `Mövzu: ${mailSubject.trim()}\n${inputValue}`;
+      }
+
+      const result = await registry.get(config.strategyId).transform({
+        text: requestText,
+        options: activeModule === 'text' ? { preserveFormatting } : undefined,
+      });
+
+      if (activeModule === 'text') {
+        setTextOutput(result.transformedText);
+        setTextMetadata(result.metadata);
+      } else {
+        setMailOutput(result.transformedText);
+        setMailMetadata(result.metadata);
+      }
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : 'Mətn emal edilə bilmədi.');
-    } finally { setLoading(false); }
+    } finally {
+      setLoading(false);
+    }
   }
-  return <div className="min-h-screen">
-    <Header />
-    <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-      <h1 className="mb-3 text-3xl font-semibold text-slate-950">Mətninizi səliqəyə salın.</h1>
-      <p className="mb-6 max-w-3xl text-sm leading-6 text-slate-600">
-        Mətni yazın və Düzəlt düyməsinə basın. Yazılış, durğu işarələri, cümlə başlanğıcları və siyahılar
-        proqramın öz qaydaları ilə brauzerinizdə emal olunur. Model yükləmək və API açarı lazım deyil.
-      </p>
-      <p className="mb-6 text-xs text-slate-500">38 174 söz və ifadəlik açıq lüğət · <a className="underline" href="/dictionaries/az/metadata.json">Mənbə məlumatları</a> · <a className="underline" href="/dictionaries/az/LICENSE">Lisenziya</a></p>
-      <section className="mb-6 grid gap-5 rounded-lg border border-slate-200 bg-white p-5 md:grid-cols-2 md:items-center">
-        <StrategySelector strategies={strategies} value={strategyId} disabled={loading}
-          onChange={value => { setStrategyId(value); invalidate(); }} />
-        <label className="flex items-center gap-3 text-sm text-slate-700">
-          <input type="checkbox" checked={preserveFormatting} disabled={loading || strategyId === 'gmail-corrector'}
-            onChange={event => { setPreserveFormatting(event.target.checked); invalidate(); }} />
-          Mövcud abzas və siyahı quruluşunu saxla
-        </label>
-      </section>
-      <div className="grid gap-6 lg:grid-cols-2">
-        <TextEditorPane value={text} disabled={loading} onChange={value => { setText(value); invalidate(); }}
-          onClear={() => { setText(''); invalidate(); }} />
-        <OutputPane key={output} output={output} metadata={metadata} />
+
+  async function copyOutput() {
+    if (!output) return;
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setError('Kopyalama alınmadı. Mətni seçərək əl ilə kopyalayın.');
+    }
+  }
+
+  return (
+    <div className="workspace-shell">
+      <aside className="workspace-sidebar">
+        <div className="workspace-brand">
+          <span className="workspace-brand-mark" aria-hidden="true">ə</span>
+          <span className="workspace-brand-name">lazy.ai</span>
+        </div>
+
+        <nav className="workspace-nav" aria-label="Modullar">
+          <span
+            className={`workspace-nav-indicator ${activeModule === 'mail' ? 'mail' : ''}`}
+            aria-hidden="true"
+          />
+          <button
+            type="button"
+            className={`workspace-nav-item ${activeModule === 'text' ? 'active' : ''}`}
+            onClick={() => selectModule('text')}
+          >
+            <FileText size={17} strokeWidth={2} />
+            Mətn Düzəldici
+          </button>
+          <button
+            type="button"
+            className={`workspace-nav-item ${activeModule === 'mail' ? 'active' : ''}`}
+            onClick={() => selectModule('mail')}
+          >
+            <Mail size={17} strokeWidth={2} />
+            Mail Düzəldici
+          </button>
+        </nav>
+
+        <div className="workspace-sidebar-meta">
+          <span>Yerli mühərrik</span>
+          <span>API açarı tələb olunmur</span>
+        </div>
+      </aside>
+
+      <div className="workspace-main">
+        <header className="workspace-topbar">
+          <div>
+            <div className="workspace-topbar-title">{config.title}</div>
+            <div className="workspace-topbar-subtitle">Azərbaycan dili üçün yerli mətn redaktoru</div>
+          </div>
+          <button
+            type="button"
+            className="workspace-theme-toggle"
+            aria-label="Açıq/tünd rejimi dəyiş"
+            onClick={toggleTheme}
+          >
+            <span className="workspace-toggle-track">
+              <span className="workspace-toggle-thumb">
+                {theme === 'light' ? <Sun size={13} /> : <Moon size={13} />}
+              </span>
+            </span>
+          </button>
+        </header>
+
+        <main className="workspace-content">
+          <section className="workspace-card">
+            <div className="workspace-card-header">
+              <div>
+                <h1>{config.title}</h1>
+                <p>{config.description}</p>
+              </div>
+              <button
+                type="button"
+                className={`workspace-run-btn ${loading ? 'is-loading' : ''}`}
+                onClick={transform}
+                disabled={loading || !inputValue.trim() || inputLength > 10_000}
+              >
+                <span className="workspace-spinner" aria-hidden="true" />
+                {loading ? 'Emal olunur…' : 'Düzəlt'}
+              </button>
+            </div>
+
+            {activeModule === 'mail' && (
+              <div className="workspace-field-row">
+                <label htmlFor="mail-subject">Mövzu</label>
+                <input
+                  id="mail-subject"
+                  type="text"
+                  value={mailSubject}
+                  disabled={loading}
+                  onChange={(event) => {
+                    setMailSubject(event.target.value);
+                    setMailOutput('');
+                    setMailMetadata(null);
+                  }}
+                />
+              </div>
+            )}
+
+            <div className="workspace-editor-grid">
+              <div className="workspace-editor-column">
+                <div className="workspace-column-head">
+                  <span>{config.inputLabel}</span>
+                  <button
+                    type="button"
+                    className="workspace-icon-btn"
+                    onClick={clearCurrent}
+                    disabled={!inputValue || loading}
+                    aria-label="Mətni təmizlə"
+                  >
+                    <Trash2 size={15} />
+                    Təmizlə
+                  </button>
+                </div>
+
+                <textarea
+                  value={inputValue}
+                  disabled={loading}
+                  maxLength={10_000}
+                  spellCheck={false}
+                  placeholder={config.placeholder}
+                  onChange={(event) => setInput(event.target.value)}
+                  onKeyDown={(event) => {
+                    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+                      event.preventDefault();
+                      void transform();
+                    }
+                  }}
+                />
+
+                <div className="workspace-editor-footer">
+                  {activeModule === 'text' ? (
+                    <label className="workspace-check">
+                      <input
+                        type="checkbox"
+                        checked={preserveFormatting}
+                        disabled={loading}
+                        onChange={(event) => {
+                          setPreserveFormatting(event.target.checked);
+                          setTextOutput('');
+                          setTextMetadata(null);
+                        }}
+                      />
+                      Mövcud formatı saxla
+                    </label>
+                  ) : <span />}
+                  <span className={inputLength > 9_500 ? 'limit-warning' : ''}>
+                    {inputLength.toLocaleString()} / 10 000
+                  </span>
+                </div>
+              </div>
+
+              <div className="workspace-divider" aria-hidden="true" />
+
+              <div className="workspace-editor-column">
+                <div className="workspace-column-head">
+                  <span>Nəticə</span>
+                  <button
+                    type="button"
+                    className="workspace-icon-btn"
+                    onClick={copyOutput}
+                    disabled={!output}
+                  >
+                    {copied ? <Check size={15} /> : <Copy size={15} />}
+                    {copied ? 'Kopyalandı' : 'Kopyala'}
+                  </button>
+                </div>
+
+                <div className="workspace-output" aria-live="polite">
+                  {output ? (
+                    <pre>{output}</pre>
+                  ) : (
+                    <span className="workspace-placeholder">Nəticə burada görünəcək.</span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {error && <div className="workspace-error" role="alert">{error}</div>}
+
+            <div className="workspace-changelog">
+              <div className="workspace-changelog-head">
+                Emal məlumatı
+                <span className="workspace-change-count">
+                  {metadata?.correctionsMade ?? 0} dəyişiklik
+                </span>
+              </div>
+              {metadata ? (
+                <div className="workspace-stats">
+                  <span className="workspace-stat-chip">
+                    <span className="workspace-dot accent" />
+                    <b>{metadata.correctionsMade}</b> düzəliş
+                  </span>
+                  <span className="workspace-stat-chip">
+                    <span className="workspace-dot success" />
+                    <b>{metadata.executionTimeMs}</b> ms
+                  </span>
+                  <span className="workspace-stat-chip">
+                    <span className="workspace-dot muted" />
+                    Dil: <b>{metadata.detectedLanguage.toUpperCase()}</b>
+                  </span>
+                </div>
+              ) : (
+                <span className="workspace-changelog-empty">Hələ emal aparılmayıb.</span>
+              )}
+            </div>
+
+            <div className="workspace-disclaimer">
+              Mətn lokal qayda mühərriki ilə emal olunur. Qeyri-müəyyən sözlər mümkün qədər dəyişdirilmir.
+            </div>
+          </section>
+        </main>
       </div>
-      {error && <div role="alert" className="mt-5 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">{error}</div>}
-      <div className="mt-6 flex flex-col items-center gap-3">
-        <Button type="button" size="lg" disabled={loading || !text.trim() || text.length > 10_000}
-          onClick={transform} className="min-w-52">{loading ? 'Emal olunur…' : 'Düzəlt'}</Button>
-        <p className="text-xs text-slate-500">Mətn serverə göndərilmir · maksimum 10 000 simvol</p>
-        <p className="max-w-2xl text-center text-xs leading-5 text-slate-500">
-          Qaydalı redaktor bütün mənaları və qrammatik səhvləri tanımır; qeyri-müəyyən sözləri olduğu kimi saxlayır.
-          Nəticəni nəzərdən keçirin.
-        </p>
-      </div>
-    </main>
-  </div>;
+    </div>
+  );
 }
