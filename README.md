@@ -150,7 +150,58 @@ Forms should be generated only when needed.
 
 ---
 
-## 3. Typo candidate generation
+## 3. Stable lemma/morphology contracts
+
+Before the productive morphology refactor, SlothAI defines stable TypeScript contracts for the future language engine:
+
+```text
+lib/editor/contracts/lemma.ts
+lib/editor/contracts/morphology.ts
+lib/editor/adapters/legacy-language.ts
+lib/editor/language-services.ts
+```
+
+The public service seam is:
+
+```ts
+lemmaDictionary: LemmaDictionary
+morphologyEngine: MorphologyEngine
+```
+
+Future implementations must be swapped behind `lib/editor/language-services.ts` instead of rewriting the UI, API routes or `correctText()` contract.
+
+The lemma contract provides:
+
+```ts
+getByLemma(lemma)
+findByFoldedForm(word)
+hasSurfaceForm(word)
+```
+
+The morphology contract provides:
+
+```ts
+analyzeWord(word)
+generateForms(request)
+isValidWordForm(word)
+stripSuffixes(word)
+```
+
+The current implementation is a conservative legacy adapter around the existing generated dictionary and reviewed morphology forms. It intentionally does not fake a true lemma/suffix analysis where the current engine has no such information.
+
+Migration rule for Astra/new engines:
+
+1. implement `LemmaDictionary` and/or `MorphologyEngine`;
+2. keep the method signatures stable;
+3. switch the implementation in `language-services.ts`;
+4. do not change `/api/transform`, UI payloads or regression fixture formats;
+5. run contract tests, the full regression suite and benchmarks before replacing the legacy adapter.
+
+`tests/language-contracts.test.ts` locks this compatibility boundary.
+
+---
+
+## 4. Typo candidate generation
 
 Unknown words must not be compared against the full dictionary.
 
@@ -181,7 +232,7 @@ This correction must come from reusable candidate logic, not from a hardcoded `x
 
 ---
 
-## 4. Azerbaijani diacritic restoration
+## 5. Azerbaijani diacritic restoration
 
 The engine must restore common Azerbaijani characters:
 
@@ -208,7 +259,7 @@ Ambiguous spellings must not be blindly replaced.
 
 ---
 
-## 5. Context scoring
+## 6. Context scoring
 
 The future engine will rank correction candidates with a compact local language model based on:
 
@@ -239,7 +290,7 @@ If confidence is insufficient, SlothAI should keep the original text.
 
 ---
 
-## 6. Compact offline corpus build
+## 7. Compact offline corpus build
 
 Large corpora must be processed **offline/build-time**, never during a user request.
 
@@ -260,7 +311,7 @@ Rare/noisy n-grams should be discarded.
 
 ---
 
-## 7. Grammar and formatting rules
+## 8. Grammar and formatting rules
 
 Deterministic rules remain an important part of SlothAI.
 
@@ -291,7 +342,7 @@ No rule should exist only to make one fixture pass.
 
 ---
 
-## 8. Protected terminology
+## 9. Protected terminology
 
 SlothAI has a runtime protected-terminology registry in:
 
@@ -327,7 +378,7 @@ Technical terms must not be translated or incorrectly Azerbaijani-ized.
 
 ---
 
-## 9. Performance targets
+## 10. Performance targets
 
 The main deployment target is Vercel.
 
@@ -360,7 +411,7 @@ No runtime path should perform an O(text × dictionary_size) full scan.
 
 ---
 
-## 10. Performance benchmark
+## 11. Performance benchmark
 
 Run the editor benchmark locally with:
 
@@ -394,7 +445,7 @@ Memory measurements are process-level approximations. Compare commits using the 
 
 ---
 
-## 11. Error categories
+## 12. Error categories
 
 Every regression case now has a required primary `errorCategory`.
 
@@ -432,7 +483,7 @@ These categories are intended for future failure reports, benchmark breakdowns a
 
 ---
 
-## 12. Regression-first development
+## 13. Regression-first development
 
 Every real-world failure should become a regression case.
 
