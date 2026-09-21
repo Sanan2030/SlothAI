@@ -387,7 +387,45 @@ Memory measurements are process-level approximations. Compare commits using the 
 
 ---
 
-## 11. Regression-first development
+## 11. Error categories
+
+Every regression case now has a required primary `errorCategory`.
+
+Supported categories:
+
+| Category | Purpose |
+|---|---|
+| `typo` | Missing/extra/substituted/transposed characters and general misspellings |
+| `diacritic` | Azerbaijani character restoration such as `c → ç`, `e → ə`, `u → ü` |
+| `morphology` | Suffixes, inflection, agreement and valid Azerbaijani word forms |
+| `context` | Ambiguity, sentence meaning, email/business structure and context-dependent decisions |
+| `punctuation` | Punctuation, spacing, capitalization, lists and numeric/date formatting |
+| `technical` | Technical vocabulary, URLs, email addresses, code, identifiers and mixed AZ/EN text |
+
+Canonical definitions live in:
+
+```text
+lib/editor/error-categories.ts
+```
+
+The 240-case regression corpus stores both its more specific domain `category` and one primary `errorCategory`. Corpus integrity tests require all six categories and verify the stored category counts.
+
+Current primary-category distribution:
+
+```text
+typo:        21
+diacritic:    5
+morphology:  30
+context:    100
+punctuation: 41
+technical:   43
+```
+
+These categories are intended for future failure reports, benchmark breakdowns and production regression analysis.
+
+---
+
+## 12. Regression-first development
 
 Every real-world failure should become a regression case.
 
