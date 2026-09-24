@@ -4,12 +4,31 @@ import { canonicalProtectedTerm } from './protected-terminology';
 // Canonical product/acronym spelling is shared with the protected terminology registry.
 const foreign = new Set(`agile scrum sprint backlog demo transactional responsive
 dynamic hashing unit zero downtime deployment retry roll-back framework startup
-database backend frontend deploy commit open data veri beta server optimum`.split(/\s+/));
+database backend frontend deploy commit open data veri beta server optimum cache branch production`.split(/\s+/));
+
+const technicalCaseSuffixes = [
+  ['den', '-dən'], ['dan', '-dan'], ['de', '-də'], ['da', '-da'], ['e', '-ə'], ['a', '-a'],
+] as const;
+
+function technicalBase(word: string): string | undefined {
+  return canonicalProtectedTerm(word) ?? (foreign.has(word.toLowerCase()) ? word.toLowerCase() : undefined);
+}
 
 export function technicalSpelling(word: string): string | undefined {
   const canonical = canonicalProtectedTerm(word);
   if (canonical !== undefined) return canonical;
   const lower = word.toLowerCase();
+
+  // Foreign/technical stems take Azerbaijani case suffixes with a hyphen.
+  // Resolve only known technical bases so ordinary Azerbaijani words ending in
+  // -de/-da are never rewritten accidentally.
+  for (const [rawSuffix, canonicalSuffix] of technicalCaseSuffixes) {
+    if (!lower.endsWith(rawSuffix) || lower.length <= rawSuffix.length + 1) continue;
+    const baseRaw = lower.slice(0, -rawSuffix.length);
+    const base = technicalBase(baseRaw);
+    if (base !== undefined) return base + canonicalSuffix;
+  }
+
   return foreign.has(lower) ? word : undefined;
 }
 
@@ -78,7 +97,11 @@ export function prepareTechnicalPhrases(text: string): string {
     .replace(/(^|[^\p{L}\p{N}_])ci cd(?=$|[^\p{L}\p{N}_])/giu, '$1CI/CD')
     .replace(/(^|[^\p{L}\p{N}_])ux ui(?=$|[^\p{L}\p{N}_])/giu, '$1UX/UI')
     .replace(/(^|[^\p{L}\p{N}_])oauth2(?=$|[^\p{L}\p{N}_])/giu, '$1OAuth2')
-    .replace(/(^|[^\p{L}\p{N}_])2fa(?=$|[^\p{L}\p{N}_])/giu, '$12FA');
+    .replace(/(^|[^\p{L}\p{N}_])2fa(?=$|[^\p{L}\p{N}_])/giu, '$12FA')
+    .replace(/(^|[^\p{L}\p{N}_])multipart form data(?=$|[^\p{L}\p{N}_])/giu, '$1multipart/form-data')
+    .replace(/(^|[^\p{L}\p{N}_])github action(?=$|[^\p{L}\p{N}_])/giu, '$1GitHub Action')
+    .replace(/(^|[^\p{L}\p{N}_])vercel function(?=$|[^\p{L}\p{N}_])/giu, '$1Vercel Function')
+    .replace(/(^|[^\p{L}\p{N}_])callback url(?=$|[^\p{L}\p{N}_])/giu, '$1callback URL');
 }
 
 export function technicalPhrases(text: string): string {
