@@ -12,7 +12,8 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])basa +(?=düş[\p{L}]*)/giu, '$1başa ')
     .replace(/(^|[^\p{L}])əvvəl de +(?=demiş[\p{L}]*)/giu, '$1əvvəl də ')
     .replace(/(^|[^\p{L}])çoxdan +(?=görüşmür[\p{L}]*)/giu, '$1çoxdandır ')
-    .replace(/(^|[^\p{L}])mən de +(?=sənə\b)/giu, '$1mən də ')
+    .replace(/(^|[^\p{L}])mən de +(?=sənə(?=$|[^\p{L}]))/giu, '$1mən də ')
+    .replace(/(düşmədim) +bir de +/giu, '$1. bir də ')
     .replace(/\b(test) qalib\b/giu, '$1 qalıb')
     .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
     .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
@@ -78,11 +79,12 @@ export function sentenceBoundaries(text: string): string {
     .replace(/\b(razıyam) +(bəs|beş) +(sən|siz)\b/giu, '$1. bəs $3?')
     .replace(/\b(təşəkkür edirik) +(?=(?:müraciətiniz|təklifinizi)\b)/giu, '$1. ')
     .replace(/\b(yaxşı) +(?=onda\b)/giu, '$1, ')
-    .replace(/\b(çalışdıq) +(?=cavab ala bilmədik\b)/giu, '$1, ')
-    .replace(/\b(olmamışam|gecikirdim) +(ona görə)\b/giu, '$1, $2')
+    .replace(/(^|[^\p{L}])(çalışdıq) +(?=cavab ala bilmədik(?=$|[^\p{L}]))/giu, '$1$2, ')
+    .replace(/(^|[^\p{L}])(olmamışam|gecikirdim) +(ona görə)(?=$|[^\p{L}])/giu, '$1$2, $3')
     .replace(/(^|[.!?]\s+)(xeyir) +(?=necəsən\b)/giu, '$1$2, ')
-    .replace(/\b(olacaq) +(düzdür)(?=$|[.!?\s])/giu, '$1, $2?');
-  result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
+    .replace(/\b(olacaq) +(düzdür)(?=$|[.!?\s])/giu, '$1, $2?')
+    .replace(/(qaralırdı)\. +(biz isə)/giu, '$1, $2');
+  result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)(?:\s|,))/giu, '$1. ');
   result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm|qeyd edim) +ki +/giu, '$1 ki, ');
   result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn|digər tərəfdən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm)\s+/giu, '$1$2, ');
