@@ -37,6 +37,7 @@ function punctuate(line: string): string {
   let result = line.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
+    .replace(/\.{2,}/g, '.')
     .replace(/([!?])[.,]+/g, '$1')
     .replace(/\s+\./g, '.')
     .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
@@ -107,6 +108,11 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   });
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
   text = prepareTechnicalPhrases(text);
+  // Numeric/date/version values take Azerbaijani suffixes with a hyphen.
+  text = text
+    .replace(/(\d{1,2}:\d{2})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
+    .replace(/(\d+(?:\.\d+){1,3})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
+    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə');
   // Keep lexical terminology visible to clause rules. Only punctuation-bearing
   // terms need opaque spans; spelling resolution already protects lexical terms.
   text = protectKnownTerminology(text, canonical => /[.#]/u.test(canonical) ? protect(canonical) : canonical);
@@ -145,7 +151,14 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     // A line that explicitly starts with a number is already an unambiguous
     // list item, including when each item was entered on a separate line.
     const normalizedPrefix = list?.[1].replace(/^(\s*\d+)[.)]\s+$/, '$1. ');
-    return list ? normalizedPrefix! + punctuate(list[2]) : punctuate(line);
+    if (list) {
+      let item = punctuate(list[2]);
+      // All-caps technical list items (for example "API") are headings only
+      // outside lists; inside a list they still need terminal punctuation.
+      if (!/[.!?:;…]["”»)]?$/u.test(item)) item += '.';
+      return normalizedPrefix! + item;
+    }
+    return punctuate(line);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
     text = businessStageLists(text);
