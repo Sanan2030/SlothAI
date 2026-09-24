@@ -10,7 +10,7 @@ export const PROTECTED_TERMINOLOGY = {
     'Docker', 'Kubernetes', 'Vercel', 'GitHub', 'GitLab', 'Linux', 'Ubuntu',
     'CI/CD', 'DevOps', 'TLS', 'SSL', 'RBAC', 'OAuth', 'OAuth2', 'JWT',
     '2FA', 'SLA', 'HTTP', 'HTTPS', 'TCP', 'IP', 'DNS', 'CDN',
-    'Prometheus', 'Grafana',
+    'Prometheus', 'Grafana', 'URL', 'npm',
   ],
   banking: [
     'IBAN', 'SWIFT', 'BIC', 'ATM', 'POS', 'OTP', 'PIN', 'CVV', 'CVC',
