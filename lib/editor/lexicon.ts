@@ -111,6 +111,7 @@ const aliases: Record<string, string> = {
   dushdu: 'düşdü', ashagi: 'aşağı', shey: 'şey', yaxshidir: 'yaxşıdır',
   shahmat: 'şahmat', gunortan: 'günorta', yataqa: 'yatağa',
   hemen: 'həmin', dedim: 'dedim', eledi: 'elədi', pointleri: 'pointləri',
+  xyir: 'xeyir', hardasan: 'haradasan', birazdan: 'birazdan',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
@@ -118,6 +119,107 @@ const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İ
   'Bakıya', 'Bakıda', 'Bakının', 'Bakını', 'Bakıdan',
   'Gəncəyə', 'Gəncədə', 'Gəncənin', 'Türkiyəyə', 'Türkiyədə', 'Türkiyənin',
   'Sənan', 'Xədicə', 'Nərmin', 'Aysel', 'Günel', 'Rəşad'].map(name => [fold(name), name]));
+
+
+function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
+  const values = services
+    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.lemma))
+    : dictionaryCandidates(word);
+  return chooseSpelling(word, values);
+}
+
+function lastVowel(word: string): string | undefined {
+  return word.toLocaleLowerCase('az-AZ').match(/[aıoueəiöü]/gu)?.at(-1);
+}
+
+function harmonyI(stem: string): string {
+  const vowel = lastVowel(stem);
+  if (vowel === 'a' || vowel === 'ı') return 'ı';
+  if (vowel === 'o' || vowel === 'u') return 'u';
+  if (vowel === 'ö' || vowel === 'ü') return 'ü';
+  return 'i';
+}
+
+function harmonyA(stem: string): string {
+  return /[eəiöü]/u.test(lastVowel(stem) ?? '') ? 'ə' : 'a';
+}
+
+type ProductiveSuffixRule = {
+  raw: string;
+  apply: (stem: string) => string | undefined;
+};
+
+const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
+  { raw: 'lerinizden', apply: stem => stem + 'lərinizdən' },
+  { raw: 'larinizdan', apply: stem => stem + 'larınızdan' },
+  { raw: 'lerimizin', apply: stem => stem + 'lərimizin' },
+  { raw: 'larimizin', apply: stem => stem + 'larımızın' },
+  { raw: 'lerinizin', apply: stem => stem + 'lərinizin' },
+  { raw: 'larinizin', apply: stem => stem + 'larınızın' },
+  { raw: 'lerinizi', apply: stem => stem + 'lərinizi' },
+  { raw: 'larinizi', apply: stem => stem + 'larınızı' },
+  { raw: 'lerimiz', apply: stem => stem + 'lərimiz' },
+  { raw: 'larimiz', apply: stem => stem + 'larımız' },
+  { raw: 'leriniz', apply: stem => stem + 'ləriniz' },
+  { raw: 'lariniz', apply: stem => stem + 'larınız' },
+  { raw: 'leri', apply: stem => stem + 'ləri' },
+  { raw: 'lari', apply: stem => stem + 'ları' },
+  { raw: 'deyem', apply: stem => stem + 'd' + harmonyA(stem) + 'y' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'dedir', apply: stem => stem + 'd' + harmonyA(stem) + 'dir' },
+  { raw: 'dadir', apply: stem => stem + 'd' + harmonyA(stem) + 'dır' },
+  { raw: 'den', apply: stem => stem + 'dən' },
+  { raw: 'dan', apply: stem => stem + 'dan' },
+  { raw: 'de', apply: stem => stem + 'də' },
+  { raw: 'da', apply: stem => stem + 'da' },
+  { raw: 'imi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) },
+  { raw: 'nin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'n' : undefined },
+  { raw: 'in', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' },
+  { raw: 'ecek', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcək' : undefined },
+  { raw: 'acaq', apply: stem => harmonyA(stem) === 'a' ? stem + 'acaq' : undefined },
+  { raw: 'ecem', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyəm' : undefined },
+  { raw: 'acam', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağam' : undefined },
+  { raw: 'eceyiniz', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyiniz' : undefined },
+  { raw: 'acaginiz', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağınız' : undefined },
+  { raw: 'irem', apply: stem => stem + harmonyI(stem) + 'r' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'irsen', apply: stem => stem + harmonyI(stem) + 'rs' + (harmonyA(stem) === 'ə' ? 'ən' : 'an') },
+  { raw: 'ir', apply: stem => stem + harmonyI(stem) + 'r' },
+  { raw: 'dim', apply: stem => stem + 'd' + harmonyI(stem) + 'm' },
+  { raw: 'din', apply: stem => stem + 'd' + harmonyI(stem) + 'n' },
+  { raw: 'diq', apply: stem => stem + 'd' + harmonyI(stem) + 'q' },
+];
+
+function restoreProductiveSuffix(word: string, services?: SpellingContext): string | undefined {
+  const lower = word.toLocaleLowerCase('az-AZ');
+  if (!/^[a-zəçğıöşü]+$/u.test(lower) || lower.length < 5) return undefined;
+
+  for (const rule of productiveSuffixRules) {
+    if (!lower.endsWith(rule.raw) || lower.length <= rule.raw.length + 1) continue;
+    const rawStem = lower.slice(0, -rule.raw.length);
+    let stem = uniqueDictionaryCandidate(rawStem, services);
+
+    // Azerbaijani k -> y before a vowel is productive in words such as
+    // "kömək" -> "köməyin". Only use it when the underlying k-stem is a
+    // uniquely recognized dictionary form.
+    if (!stem && rawStem.endsWith('y')) {
+      const underlying = uniqueDictionaryCandidate(rawStem.slice(0, -1) + 'k', services);
+      if (underlying?.endsWith('k')) stem = underlying.slice(0, -1) + 'y';
+    }
+    if (!stem) continue;
+
+    const result = rule.apply(stem);
+    if (result) return result;
+  }
+  return undefined;
+}
+
+function restoreDigraphTransliteration(word: string, services?: SpellingContext): string | undefined {
+  if (!/(?:sh|ch|gh)/i.test(word)) return undefined;
+  const variant = word
+    .replace(/sh/gi, match => match[0] === 'S' ? 'Ş' : 'ş')
+    .replace(/ch/gi, match => match[0] === 'C' ? 'Ç' : 'ç')
+    .replace(/gh/gi, match => match[0] === 'G' ? 'Ğ' : 'ğ');
+  return uniqueDictionaryCandidate(variant, services) ?? restoreProductiveSuffix(variant, services);
+}
 
 export function restoreWord(word: string, services?: SpellingContext): string {
   const technical = technicalSpelling(word);
@@ -136,7 +238,9 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   const alias = Object.hasOwn(aliases, key) ? aliases[key] : undefined;
   const morphologyCandidates = services?.morphology.analyzeWord(word).map(analysis => analysis.surface);
   const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported)
-    ?? chooseSpelling(word, new Set(morphologyCandidates));
+    ?? chooseSpelling(word, new Set(morphologyCandidates))
+    ?? restoreDigraphTransliteration(word, services)
+    ?? restoreProductiveSuffix(word, services);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
