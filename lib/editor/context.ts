@@ -45,8 +45,28 @@ export function sentenceBoundaries(text: string): string {
       return last + '. ';
     });
   result = result.replace(/(göndərin|yoxlayın|baxın|edin|gəlin) +(?=təşəkkür edirəm(?:\s|$))/giu, '$1. ');
-  result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz)\s)/giu, '$1. ');
-  result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm) +ki +/giu, '$1 ki, ');
+
+  // Reviewed finite predicates followed by a clearly independent clause.
+  // This is deliberately bounded to common predicates/starters instead of
+  // guessing a boundary after every verb.
+  const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı)';
+  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni)';
+  result = result.replace(new RegExp(`(${independentPredicate}) +(?=${independentStarter}(?:\\s|$))`, 'giu'), '$1. ');
+
+  // A question clause followed by a new subject gets a question boundary.
+  result = result.replace(/(^|[.!?]\s+)((?:niyə|necə|harada|hara|kim|nə)\b[^.!?]{0,100}?\b(?:gəlmədin|etmədin|olmadı|açılmır|işləmir)) +(?=(?:mən|sən|biz|siz|o)\s)/giu, '$1$2? ');
+  result = result.replace(/\b(haradasan|hardasan) +(?=(?:mən|sən|biz|siz|o)\s)/giu, '$1? ');
+
+  // Common conditional/request punctuation.
+  result = result
+    .replace(/\b(vaxtın olsa|sualınız olarsa|sualin(?:iz)? olarsa) +/giu, '$1, ')
+    .replace(/(^|[.!?]\s+|salam,\s+)(zəhmət olmasa|xahiş edirəm|xahiş edirik) +/giu, '$1$2, ')
+    .replace(/(^|[.!?]\s+)(səncə) +/giu, '$1$2, ')
+    .replace(/ +(?=yoxsa\s)/giu, ', ')
+    .replace(/\b(narahat olma) +(?=hər\s)/giu, '$1. ')
+    .replace(/\b(görüşək) +(?=vaxtın\s)/giu, '$1. ');
+  result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
+  result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm|qeyd edim) +ki +/giu, '$1 ki, ');
   result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn|digər tərəfdən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm)\s+/giu, '$1$2, ');
   return result;
