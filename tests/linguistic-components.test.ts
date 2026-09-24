@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { correctText, formatEmail } from '../lib/editor/correct';
-import { spellingCandidates, boundedEditDistance } from '../lib/editor/spelling-candidates';
+import { spellingCandidates, boundedEditDistance, chooseIndexedTypo } from '../lib/editor/spelling-candidates';
 import { productiveMorphology } from '../lib/editor/productive-morphology';
 import { segmentIndependentClauses } from '../lib/editor/segmentation';
 
@@ -16,6 +16,9 @@ test('indexed candidate repairs an internal omission while preserving exact word
     '`funksionallq` https://example.com/funksionallq.');
   assert.ok(spellingCandidates.candidates('funksionallq', 3).includes('funksionallıq'));
   assert.equal(boundedEditDistance('abc', 'acb', 1), 1);
+  assert.equal(chooseIndexedTypo('sistme'), 'sistem');
+  assert.equal(chooseIndexedTypo('məlumatt'), undefined);
+  assert.equal(chooseIndexedTypo('məktəb'), undefined);
 });
 
 test('nominal and verbal morphology has actual features, bounded generation and reversible lemmas', () => {
@@ -27,6 +30,10 @@ test('nominal and verbal morphology has actual features, bounded generation and 
     assert.ok(productiveMorphology.isValidWordForm(surface), surface);
   }
   assert.equal(productiveMorphology.isValidWordForm('Zyphoria'), false);
+  for (const [surface, lemma] of [['kitablarımızdan', 'kitab'], ['sənədlərimizdən', 'sənəd'],
+    ['müqavilələrimizdən', 'müqavilə'], ['sistemlərimizdən', 'sistem']] as const) {
+    assert.ok(productiveMorphology.analyzeWord(surface).some(analysis => analysis.lemma === lemma && analysis.features.case === 'ablative'), surface);
+  }
 });
 
 test('finite-clause segmentation keeps dependent clauses and participles attached', () => {

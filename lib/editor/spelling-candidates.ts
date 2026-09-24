@@ -1,5 +1,5 @@
 import dictionary from './generated/az-words.json';
-import { foldLetters } from './dictionary';
+import { dictionaryCandidates, foldLetters } from './dictionary';
 import type { SpellingCandidateGenerator } from './contracts/spelling';
 
 const buckets = new Map<string, number[]>();
@@ -84,8 +84,11 @@ export const spellingCandidates: SpellingCandidateGenerator = {
 
 /** Only an unambiguous nearest edit is applied; unknown names stay intact. */
 export function chooseIndexedTypo(word: string): string | undefined {
-  if (!/^[a-zəçğıöşü]{6,17}$/u.test(word)) return undefined;
+  if (!/^[a-zəçğıöşü]{5,17}$/u.test(word)) return undefined;
   if (resolutionCache.has(word)) return resolutionCache.get(word) ?? undefined;
+  // A valid surface form must never be rewritten just because another word is
+  // one edit away. This includes the imported dictionary's inflected forms.
+  if (dictionaryCandidates(word)?.has(word)) return undefined;
   // An insertion is safer than a substitution or deletion without frequency
   // and part-of-speech metadata (olaraq/olacaq and render/rəndə are near ties).
   const alternatives = spellingCandidates.candidates(word, 12).filter(candidate => {
@@ -99,7 +102,22 @@ export function chooseIndexedTypo(word: string): string | undefined {
     return false;
   });
   const sameFold = new Set(alternatives.map(foldLetters));
-  const resolved = sameFold.size === 1 ? alternatives[0] : undefined;
+  let resolved = sameFold.size === 1 ? alternatives[0] : undefined;
+  if (!resolved && word.length >= 6) {
+    // Swapping neighboring keys is a high confidence edit only when the
+    // resulting spelling is unique. Other substitution/deletion candidates
+    // remain suggestions: they can change valid names or grammatical forms.
+    const transpositions = spellingCandidates.candidates(word, 12).filter(candidate => {
+      if (candidate.length !== word.length) return false;
+      const input = foldLetters(word);
+      const target = foldLetters(candidate);
+      for (let at = 2; at < input.length - 1; at++) {
+        if (input[at] !== input[at + 1] && input.slice(0, at) + input[at + 1] + input[at] + input.slice(at + 2) === target) return true;
+      }
+      return false;
+    });
+    if (new Set(transpositions.map(foldLetters)).size === 1) resolved = transpositions[0];
+  }
   if (resolutionCache.size >= 2048) resolutionCache.clear();
   resolutionCache.set(word, resolved ?? null);
   return resolved;

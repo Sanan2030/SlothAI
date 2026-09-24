@@ -425,10 +425,10 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // than accepting such raw forms unchanged.
   const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values)
     ?? restoreDigraphTransliteration(word, services)
+    ?? chooseIndexedTypo(word)
     ?? restoreProductiveSuffix(word, services)
     ?? chooseSpelling(word, imported)
-    ?? chooseSpelling(word, new Set(morphologyCandidates))
-    ?? chooseIndexedTypo(word);
+    ?? chooseSpelling(word, new Set(morphologyCandidates));
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.

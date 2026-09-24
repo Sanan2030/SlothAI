@@ -3,8 +3,10 @@ import type { GenerateFormsRequest, GrammaticalCase, GrammaticalPerson,
   MorphologyEngine } from './contracts/morphology';
 
 const vowels = /[aıoueəiöü]$/u;
-const nouns = 'məktəb müəllim tələbə şəhər kənd küçə otaq sənəd mətn layihə məsələ şirkət müştəri əməkdaş rəhbər görüş sorğu sual cavab dəyişiklik məlumat proqram cümlə səhifə istifadəçi'.split(' ');
-const verbs = 'gəl get düşün gör eşit danış çalış işlə oxu yaz gözlə başla istə bil et göndər düzəlt yoxla'.split(' ');
+// Reviewed stems only: arbitrary dictionary entries cannot safely be passed
+// through every paradigm (irregular stems and loanwords need separate rules).
+const nouns = 'məktəb müəllim tələbə şəhər kənd küçə otaq sənəd mətn layihə məsələ şirkət müştəri əməkdaş rəhbər görüş sorğu sual cavab dəyişiklik məlumat proqram cümlə səhifə istifadəçi kitab qapı dost ailə iş gün gecə vaxt hava yol park bağ çay dağ meşə ölkə dünya tarix elm təhsil sağlamlıq həkim xəstəxana universitet dərs imtahan fikir qərar plan məqsəd nəticə proses sistem server kod fayl xəta test xidmət məhsul bazar sifariş müqavilə məktub xəbər müraciət tələb təklif həll mənbə mərhələ modul komanda əməkdaşlıq vətəndaş insan həyat ürək idman yemək meyvə ağac ulduz planet kosmos sənət musiqi'.split(' ');
+const verbs = 'gəl get düşün gör eşit danış çalış işlə oxu yaz gözlə başla istə bil et göndər düzəlt yoxla araşdır aç bağla yarat hazırla qur seç soruş qoru saxla tap anla paylaş'.split(' ');
 const cases: GrammaticalCase[] = ['nominative', 'genitive', 'dative', 'accusative', 'locative', 'ablative'];
 const lower = (s: string) => s.normalize('NFC').toLocaleLowerCase('az-AZ');
 const vowel = (s: string) => s.match(/[aıoueəiöü]/gu)?.at(-1) ?? 'a';
@@ -20,8 +22,8 @@ function soft(stem: string, beforeVowel: boolean): string {
 
 function possessive(stem: string, person: GrammaticalPerson, plural: boolean): string {
   const v = vowels.test(stem);
-  const suffix = person === 1 ? (plural ? (v ? 'miz' : i(stem) + 'miz') : (v ? 'm' : i(stem) + 'm'))
-    : person === 2 ? (plural ? (v ? 'niz' : i(stem) + 'niz') : (v ? 'n' : i(stem) + 'n'))
+  const suffix = person === 1 ? (plural ? (v ? 'm' : i(stem) + 'm') + i(stem) + 'z' : (v ? 'm' : i(stem) + 'm'))
+    : person === 2 ? (plural ? (v ? 'n' : i(stem) + 'n') + i(stem) + 'z' : (v ? 'n' : i(stem) + 'n'))
       : (v ? 's' : '') + i(stem);
   return soft(stem, /^[aıoueəiöü]/u.test(suffix)) + suffix;
 }
