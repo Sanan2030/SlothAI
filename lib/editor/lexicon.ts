@@ -149,21 +149,105 @@ type ProductiveSuffixRule = {
   apply: (stem: string) => string | undefined;
 };
 
+const reviewedProductiveRoots = new Map<string, string>(Object.entries({
+  gonder: 'göndər',
+  gozle: 'gözlə',
+  gor: 'gör',
+  gorus: 'görüş',
+  bolus: 'bölüş',
+  deyis: 'dəyiş',
+  yenilen: 'yenilən',
+  yerles: 'yerləş',
+  cix: 'çıx',
+  cat: 'çat',
+  calis: 'çalış',
+  baglan: 'bağlan',
+  qaytar: 'qaytar',
+  saxlan: 'saxlan',
+  tamamlan: 'tamamlan',
+  bloklan: 'bloklan',
+  silin: 'silin',
+  yoxlan: 'yoxlan',
+  baxil: 'baxıl',
+  unut: 'unut',
+  apar: 'apar',
+  qalx: 'qalx',
+  acil: 'açıl',
+  ac: 'aç',
+  gel: 'gəl',
+  get: 'get',
+  danis: 'danış',
+  qayit: 'qayıt',
+  yukle: 'yüklə',
+  yenile: 'yenilə',
+  qaldir: 'qaldır',
+  arasdir: 'araşdır',
+  razilasdir: 'razılaşdır',
+  genislendir: 'genişləndir',
+  saxla: 'saxla',
+  tesdiqlen: 'təsdiqlən',
+  qiymetlendir: 'qiymətləndir',
+  teyin: 'təyin',
+  verme: 'vermə',
+}).map(([raw, canonical]) => [fold(raw), canonical]));
+
+function recognizedStem(rawStem: string, services?: SpellingContext): string | undefined {
+  return uniqueDictionaryCandidate(rawStem, services) ?? reviewedProductiveRoots.get(fold(rawStem));
+}
+
 const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'lerinizden', apply: stem => stem + 'lərinizdən' },
   { raw: 'larinizdan', apply: stem => stem + 'larınızdan' },
+  { raw: 'lerinizde', apply: stem => stem + 'lərinizdə' },
+  { raw: 'larinizda', apply: stem => stem + 'larınızda' },
+  { raw: 'lerinizle', apply: stem => stem + 'lərinizlə' },
+  { raw: 'larinizla', apply: stem => stem + 'larınızla' },
   { raw: 'lerimizin', apply: stem => stem + 'lərimizin' },
   { raw: 'larimizin', apply: stem => stem + 'larımızın' },
   { raw: 'lerinizin', apply: stem => stem + 'lərinizin' },
   { raw: 'larinizin', apply: stem => stem + 'larınızın' },
+  { raw: 'lerinize', apply: stem => stem + 'lərinizə' },
+  { raw: 'lariniza', apply: stem => stem + 'larınıza' },
   { raw: 'lerinizi', apply: stem => stem + 'lərinizi' },
   { raw: 'larinizi', apply: stem => stem + 'larınızı' },
   { raw: 'lerimiz', apply: stem => stem + 'lərimiz' },
   { raw: 'larimiz', apply: stem => stem + 'larımız' },
   { raw: 'leriniz', apply: stem => stem + 'ləriniz' },
   { raw: 'lariniz', apply: stem => stem + 'larınız' },
+  { raw: 'lerden', apply: stem => stem + 'lərdən' },
+  { raw: 'lardan', apply: stem => stem + 'lardan' },
+  { raw: 'lerin', apply: stem => stem + 'lərin' },
+  { raw: 'larin', apply: stem => stem + 'ların' },
   { raw: 'leri', apply: stem => stem + 'ləri' },
   { raw: 'lari', apply: stem => stem + 'ları' },
+
+  { raw: 'ilmelidir', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'məlidir' : 'malıdır') },
+  { raw: 'ilmelidir', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'məlidir' : 'malıdır') },
+  { raw: 'ilacaq', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'əcək' : 'acaq') },
+  { raw: 'ilecek', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'əcək' : 'acaq') },
+  { raw: 'ilmeyib', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
+  { raw: 'ilmayib', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
+  { raw: 'ilir', apply: stem => stem + harmonyI(stem) + 'l' + harmonyI(stem) + 'r' },
+  { raw: 'ilib', apply: stem => stem + harmonyI(stem) + 'l' + harmonyI(stem) + 'b' },
+  { raw: 'ildi', apply: stem => stem + harmonyI(stem) + 'ld' + harmonyI(stem) },
+  { raw: 'ilsin', apply: stem => stem + harmonyI(stem) + 'ls' + harmonyI(stem) + 'n' },
+
+  { raw: 'mishem', apply: stem => stem + 'm' + harmonyI(stem) + 'ş' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'misham', apply: stem => stem + 'm' + harmonyI(stem) + 'ş' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'misam', apply: stem => stem + 'm' + harmonyI(stem) + 'ş' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'musam', apply: stem => stem + 'm' + harmonyI(stem) + 'ş' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
+  { raw: 'meyib', apply: stem => stem + 'm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
+  { raw: 'mayib', apply: stem => stem + 'm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
+
+  { raw: 'eceyiniz', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyiniz' : undefined },
+  { raw: 'acaginiz', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağınız' : undefined },
+  { raw: 'eceyik', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyik' : undefined },
+  { raw: 'acagiq', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağıq' : undefined },
+  { raw: 'ecem', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyəm' : undefined },
+  { raw: 'acam', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağam' : undefined },
+  { raw: 'ecek', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcək' : undefined },
+  { raw: 'acaq', apply: stem => harmonyA(stem) === 'a' ? stem + 'acaq' : undefined },
+
   { raw: 'deyem', apply: stem => stem + 'd' + harmonyA(stem) + 'y' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
   { raw: 'dedir', apply: stem => stem + 'd' + harmonyA(stem) + 'dir' },
   { raw: 'dadir', apply: stem => stem + 'd' + harmonyA(stem) + 'dır' },
@@ -171,21 +255,29 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'dan', apply: stem => stem + 'dan' },
   { raw: 'de', apply: stem => stem + 'də' },
   { raw: 'da', apply: stem => stem + 'da' },
+
+  { raw: 'imizi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) + 'z' + harmonyI(stem) },
+  { raw: 'inizi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) + 'z' + harmonyI(stem) },
+  { raw: 'imize', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) + 'z' + harmonyA(stem) },
+  { raw: 'inize', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) + 'z' + harmonyA(stem) },
+  { raw: 'imiz', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'm' + harmonyI(stem) + 'z' : stem + harmonyI(stem) + 'm' + harmonyI(stem) + 'z' },
+  { raw: 'iniz', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'z' : stem + harmonyI(stem) + 'n' + harmonyI(stem) + 'z' },
+  { raw: 'nuza', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'z' + harmonyA(stem) : undefined },
+  { raw: 'niza', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'z' + harmonyA(stem) : undefined },
   { raw: 'imi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) },
   { raw: 'nin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'n' : undefined },
   { raw: 'in', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' },
-  { raw: 'ecek', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcək' : undefined },
-  { raw: 'acaq', apply: stem => harmonyA(stem) === 'a' ? stem + 'acaq' : undefined },
-  { raw: 'ecem', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyəm' : undefined },
-  { raw: 'acam', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağam' : undefined },
-  { raw: 'eceyiniz', apply: stem => harmonyA(stem) === 'ə' ? stem + 'əcəyiniz' : undefined },
-  { raw: 'acaginiz', apply: stem => harmonyA(stem) === 'a' ? stem + 'acağınız' : undefined },
+  { raw: 'i', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) },
+  { raw: 'e', apply: stem => stem + harmonyA(stem) },
+
   { raw: 'irem', apply: stem => stem + harmonyI(stem) + 'r' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
   { raw: 'irsen', apply: stem => stem + harmonyI(stem) + 'rs' + (harmonyA(stem) === 'ə' ? 'ən' : 'an') },
   { raw: 'ir', apply: stem => stem + harmonyI(stem) + 'r' },
+  { raw: 'dir', apply: stem => stem + 'd' + harmonyI(stem) + 'r' },
   { raw: 'dim', apply: stem => stem + 'd' + harmonyI(stem) + 'm' },
   { raw: 'din', apply: stem => stem + 'd' + harmonyI(stem) + 'n' },
   { raw: 'diq', apply: stem => stem + 'd' + harmonyI(stem) + 'q' },
+  { raw: 'ib', apply: stem => stem + harmonyI(stem) + 'b' },
 ];
 
 function restoreProductiveSuffix(word: string, services?: SpellingContext): string | undefined {
@@ -195,13 +287,13 @@ function restoreProductiveSuffix(word: string, services?: SpellingContext): stri
   for (const rule of productiveSuffixRules) {
     if (!lower.endsWith(rule.raw) || lower.length <= rule.raw.length + 1) continue;
     const rawStem = lower.slice(0, -rule.raw.length);
-    let stem = uniqueDictionaryCandidate(rawStem, services);
+    let stem = recognizedStem(rawStem, services);
 
     // Azerbaijani k -> y before a vowel is productive in words such as
     // "kömək" -> "köməyin". Only use it when the underlying k-stem is a
     // uniquely recognized dictionary form.
     if (!stem && rawStem.endsWith('y')) {
-      const underlying = uniqueDictionaryCandidate(rawStem.slice(0, -1) + 'k', services);
+      const underlying = recognizedStem(rawStem.slice(0, -1) + 'k', services);
       if (underlying?.endsWith('k')) stem = underlying.slice(0, -1) + 'y';
     }
     if (!stem) continue;
