@@ -1,29 +1,18 @@
 'use client';
 
+import { BrandEmoji } from '@/components/BrandEmoji';
 import { Check, Copy, FileText, Mail, Moon, Sun, Trash2 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
+import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
 
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
 
 const registry = getStrategyRegistry();
-
-const BRAND_EMOJIS = [
-  '😀','😃','😄','😁','😆','😅','😂','🙂','🙃','😉',
-  '😊','😎','🤓','🧐','🤩','🥳','😺','👻','🤖','👾',
-  '🐱','🐶','🦊','🐼','🐨','🐸','🐵','🦁','🐯','🐧',
-  '🦄','🐝','🦋','🐙','🦖','🐳','🦜','🐢','🦦','🐲',
-  '🍎','🍉','🍓','🍒','🍍','🥝','🍋','🥑','🍕','🍔',
-  '🍟','🍩','🍪','🍫','☕','🧋','🍿','🎂','🍯','🥨',
-  '⚽','🏀','🎾','🎸','🎮','🎲','🧩','🎯','🚀','✈️',
-  '🚗','🚲','🛸','🌍','🌙','☀️','⭐','🌈','⚡','🔥',
-  '💧','❄️','🌊','🌸','🌻','🍀','🌵','🌴','💎','🎁',
-  '🎉','🎵','💡','🧠','❤️','💜','💙','💚','🧡','✨',
-] as const;
 
 const MODULES = {
   text: {
@@ -56,9 +45,9 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
-  const [brandEmoji, setBrandEmoji] = useState<(typeof BRAND_EMOJIS)[number]>('✨');
 
   useEffect(() => {
+    const frame = requestAnimationFrame(() => {
     try {
       const saved = localStorage.getItem('lazyai-theme');
       const next: Theme = saved === 'light' || saved === 'dark'
@@ -69,23 +58,8 @@ export default function HomePage() {
     } catch {
       document.documentElement.dataset.theme = 'dark';
     }
-  }, []);
-
-  useEffect(() => {
-    const pickNextEmoji = () => {
-      setBrandEmoji((current) => {
-        if (BRAND_EMOJIS.length < 2) return current;
-        let next = current;
-        while (next === current) {
-          next = BRAND_EMOJIS[Math.floor(Math.random() * BRAND_EMOJIS.length)];
-        }
-        return next;
-      });
-    };
-
-    pickNextEmoji();
-    const timer = window.setInterval(pickNextEmoji, 1400);
-    return () => window.clearInterval(timer);
+    });
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const config = MODULES[activeModule];
@@ -139,7 +113,7 @@ export default function HomePage() {
   }
 
   async function transform() {
-    if (!inputValue.trim() || loading || inputLength > 10_000) return;
+    if (!inputValue.trim() || loading || diffSource.length > MAX_TEXT_LENGTH) return;
 
     setLoading(true);
     setError('');
@@ -186,9 +160,9 @@ export default function HomePage() {
       <aside className="workspace-sidebar">
         <div className="workspace-brand">
           <span className="workspace-brand-mark" aria-hidden="true">
-            <span key={brandEmoji} className="workspace-brand-emoji">{brandEmoji}</span>
+            <BrandEmoji />
           </span>
-          <span className="workspace-brand-name">lazy.ai</span>
+          <span className="workspace-brand-name">SlothAI</span>
         </div>
 
         <nav className="workspace-nav" aria-label="Modullar">
@@ -251,7 +225,7 @@ export default function HomePage() {
                 type="button"
                 className={`workspace-run-btn ${loading ? 'is-loading' : ''}`}
                 onClick={transform}
-                disabled={loading || !inputValue.trim() || inputLength > 10_000}
+                disabled={loading || !inputValue.trim() || diffSource.length > MAX_TEXT_LENGTH}
               >
                 <span className="workspace-spinner" aria-hidden="true" />
                 {loading ? 'Emal olunur…' : 'Düzəlt'}
@@ -294,7 +268,8 @@ export default function HomePage() {
                 <textarea
                   value={inputValue}
                   disabled={loading}
-                  maxLength={10_000}
+                  maxLength={MAX_TEXT_LENGTH}
+                  aria-label={config.inputLabel}
                   spellCheck={false}
                   placeholder={config.placeholder}
                   onChange={(event) => setInput(event.target.value)}
@@ -323,7 +298,7 @@ export default function HomePage() {
                     </label>
                   ) : <span />}
                   <span className={inputLength > 9_500 ? 'limit-warning' : ''}>
-                    {inputLength.toLocaleString()} / 10 000
+                    {diffSource.length.toLocaleString()} / {MAX_TEXT_LENGTH.toLocaleString()}
                   </span>
                 </div>
               </div>
@@ -377,7 +352,7 @@ export default function HomePage() {
                 <div className="workspace-stats">
                   <span className="workspace-stat-chip">
                     <span className="workspace-dot accent" />
-                    <b>{metadata.correctionsMade}</b> düzəliş
+                    Təxminən <b>{metadata.correctionsMade}</b> dəyişmiş token
                   </span>
                   <span className="workspace-stat-chip">
                     <span className="workspace-dot success" />
@@ -385,7 +360,7 @@ export default function HomePage() {
                   </span>
                   <span className="workspace-stat-chip">
                     <span className="workspace-dot muted" />
-                    Dil: <b>{metadata.detectedLanguage.toUpperCase()}</b>
+                    Emal dili: <b>{(metadata.processingLanguage ?? metadata.detectedLanguage).toUpperCase()}</b>
                   </span>
                 </div>
               ) : (

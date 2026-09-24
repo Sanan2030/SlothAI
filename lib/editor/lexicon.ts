@@ -5,6 +5,7 @@ import { expositoryWords, expositoryAliases } from './expository';
 import { businessWords, businessAliases } from './business';
 import { technicalWords, technicalAliases, technicalSpelling } from './technical';
 import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
+import type { SpellingContext } from './contracts/spelling';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -118,7 +119,7 @@ const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İ
   'Gəncəyə', 'Gəncədə', 'Gəncənin', 'Türkiyəyə', 'Türkiyədə', 'Türkiyənin',
   'Sənan', 'Xədicə', 'Nərmin', 'Aysel', 'Günel', 'Rəşad'].map(name => [fold(name), name]));
 
-export function restoreWord(word: string): string {
+export function restoreWord(word: string, services?: SpellingContext): string {
   const technical = technicalSpelling(word);
   if (technical !== undefined) return technical;
   // Preserve camelCase identifiers and acronyms. Title case remains editable.
@@ -127,11 +128,15 @@ export function restoreWord(word: string): string {
   const key = fold(word);
   if (ambiguous.has(key)) return word;
   const values = candidates.get(key);
-  const imported = word.length > 2 ? dictionaryCandidates(word) : undefined;
+  const imported = word.length > 2 ? (services
+    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.lemma))
+    : dictionaryCandidates(word)) : undefined;
   // Reviewed common-word choices keep their established behavior (necə, sən,
   // üçün). Imported candidates are conservative fallback, not frequency data.
   const alias = Object.hasOwn(aliases, key) ? aliases[key] : undefined;
-  const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported);
+  const morphologyCandidates = services?.morphology.analyzeWord(word).map(analysis => analysis.surface);
+  const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported)
+    ?? chooseSpelling(word, new Set(morphologyCandidates));
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.

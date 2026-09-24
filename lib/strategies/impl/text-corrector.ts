@@ -10,7 +10,7 @@ export class AzerbaijaniTextCorrectorStrategy implements ITextTransformationStra
     const start = Date.now();
     const result = correctText(request.text, request.options?.preserveFormatting);
     return { transformedText: result.text, metadata: {
-      correctionsMade: result.corrections, detectedLanguage: 'az',
+      correctionsMade: result.corrections, detectedLanguage: 'az', processingLanguage: 'az',
       executionTimeMs: Date.now() - start, strategyUsed: this.id, engine: 'local-rules',
     } };
   }

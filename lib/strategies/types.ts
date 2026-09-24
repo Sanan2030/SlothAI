@@ -10,6 +10,8 @@ export interface TransformationRequest {
 export interface TransformationMetadata {
   correctionsMade: number;
   detectedLanguage: string;
+  /** Processing language; detectedLanguage is a deprecated compatibility alias. */
+  processingLanguage?: 'az';
   executionTimeMs: number;
   strategyUsed: string;
   engine: 'local-rules';

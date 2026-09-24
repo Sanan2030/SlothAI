@@ -20,7 +20,7 @@ export function regularForms(): string[] {
         stem + (vowelEnd ? 's' : '') + caseI);
     }
   }
-  for (const present of 'gəlir gedir düşünür görür eşidir danışır çalışır işləyir oxuyur yazır gözləyir başlayır istəyir bilir edir göndərir düzəldir'.split(' ')) {
+  for (const present of 'gəlir gedir düşünür görür eşidir danışır çalışır işləyir oxuyur yazır gözləyir başlayır istəyir bilir edir göndərir düzəldir yoxlanılır'.split(' ')) {
     const last = present.match(/[aıoueəiöü]/g)!.at(-1)!;
     const front = /[eəiöü]/.test(last);
     const i = last === 'ı' ? 'ı' : last === 'u' ? 'u' : last === 'ü' ? 'ü' : 'i';

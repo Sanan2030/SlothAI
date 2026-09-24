@@ -10,7 +10,7 @@ export class GmailCorrectorStrategy implements ITextTransformationStrategy {
     const start = Date.now();
     const result = formatEmail(request.text);
     return { transformedText: result.text, metadata: {
-      correctionsMade: result.corrections, detectedLanguage: 'az',
+      correctionsMade: result.corrections, detectedLanguage: 'az', processingLanguage: 'az',
       executionTimeMs: Date.now() - start, strategyUsed: this.id, engine: 'local-rules',
     } };
   }

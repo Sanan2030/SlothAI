@@ -9,6 +9,9 @@
   "matchableBaseEntries": 38172,
   "generatedForms": 61828,
   "targetForms": 100000,
+  "generationPolicy": "bounded single-step SFX; FLAG long; no continuation, prefix, compound or cross-product rules",
+  "skippedMalformedOrUnsupportedRules": 14,
+  "skippedMalformedFlagEntries": 11,
   "matchableEntries": 100000,
   "checksums": {
     "dictionaries/az.dic": "9d21f073f7cd8a7b67131b4edc165878579f699ac66eea86d9d5459a65dd16bb",

@@ -1,4 +1,4 @@
-name: Performance Benchmark
+name: Production validation
 
 on:
   push:
@@ -14,9 +14,9 @@ concurrency:
 
 jobs:
   benchmark:
-    name: Editor performance
+    name: Typecheck, regressions, build and performance
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -35,14 +35,20 @@ jobs:
         run: npm run dictionary:import -- public/dictionaries/az
 
       - name: Typecheck benchmark integration
-        run: npm run typecheck
+        run: npm run --ignore-scripts typecheck
+
+      - name: Run complete regression suite
+        run: npm run --ignore-scripts test
+
+      - name: Build production application
+        run: npm run --ignore-scripts build
 
       - name: Run enforced performance benchmark
         id: benchmark
         shell: bash
         run: |
           set +e
-          npm run benchmark:json -- --enforce > benchmark-results.json
+          npm run --silent benchmark:json -- --enforce > benchmark-results.json
           status=$?
           cat benchmark-results.json
           echo "exit_code=$status" >> "$GITHUB_OUTPUT"
@@ -74,6 +80,12 @@ jobs:
             ),
             '',
             'The CI gate uses warm p95 latency. Memory values are process-level approximations.',
+            '',
+            '### UI diff',
+            '',
+            '| Words | Scope | Avg ms | P50 ms | P95 ms | Status |',
+            '|---:|---|---:|---:|---:|---|',
+            ...data.diffResults.map(r => `| ${r.words} | ${r.scope} | ${r.avgMs} | ${r.p50Ms} | ${r.p95Ms} | ${r.status} |`),
           ];
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
           NODE

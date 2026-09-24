@@ -1,6 +1,7 @@
 import { performance } from 'node:perf_hooks';
 
 import { correctText, MAX_TEXT_LENGTH } from '../lib/editor/correct';
+import { buildAnimatedDiff } from '../lib/ui/text-diff';
 
 type BenchmarkCase = {
   words: number;
@@ -164,6 +165,26 @@ for (let i = 0; i < 5; i++) executeDocument(warmup);
 
 const results = CASES.map(benchmarkCase);
 const failed = results.filter((result) => result.status === 'FAIL');
+const diffResults = CASES.map(config => {
+  const input = buildDocument(config.words);
+  const chunks = chunkDocument(input);
+  const output = chunks.map(chunk => correctText(chunk).text).join(' ');
+  const timings: number[] = [];
+  const heapBefore = process.memoryUsage().heapUsed;
+  for (let i = 0; i < config.iterations; i++) {
+    const start = performance.now();
+    buildAnimatedDiff(input, output);
+    timings.push(performance.now() - start);
+  }
+  timings.sort((a, b) => a - b);
+  const p95Ms = round(percentile(timings, 0.95));
+  return { words: config.words, requests: chunks.length, chars: input.length,
+    scope: chunks.length > 1 ? 'logical multi-chunk document' : 'single request',
+    avgMs: round(timings.reduce((sum, t) => sum + t, 0) / timings.length),
+    p50Ms: round(percentile(timings, 0.5)), p95Ms, targetMs: config.targetMs,
+    heapDeltaMb: mb(Math.max(0, process.memoryUsage().heapUsed - heapBefore)),
+    status: p95Ms <= config.targetMs ? 'PASS' : 'FAIL' };
+});
 
 if (jsonOnly) {
   console.log(JSON.stringify({
@@ -171,6 +192,7 @@ if (jsonOnly) {
     maxInputChars: MAX_TEXT_LENGTH,
     maxBenchmarkChunkChars: MAX_CHUNK_CHARS,
     results,
+    diffResults,
   }, null, 2));
 } else {
   console.log('\nSlothAI editor benchmark');
@@ -193,13 +215,15 @@ if (jsonOnly) {
   })));
 
   console.log('\nNotes:');
+  console.log('UI diff (separate from engine latency):');
+  console.table(diffResults);
   console.log('- Latency gate uses p95 warm latency.');
   console.log('- RSS/heap values are process-level approximate measurements, useful for before/after regressions.');
   console.log('- Use the same Node version and machine when comparing commits.');
   console.log('- Run with --json for machine-readable output.');
 }
 
-if (enforce && failed.length) {
+if (enforce && (failed.length || diffResults.some(result => result.status === 'FAIL'))) {
   console.error(`\nPerformance gate failed for: ${failed.map((result) => result.words + ' words').join(', ')}`);
   process.exitCode = 1;
 }

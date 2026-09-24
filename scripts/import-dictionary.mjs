@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseSuffixRules, splitLongFlags } from './hunspell.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const commit = '7f484fc96126919ccdb1f65908558b36a5b43301';
@@ -38,16 +39,9 @@ const rawBaseWords = [...new Set(entries.map(({ word }) => word))];
 
 // Hunspell supplies productive Azerbaijani suffix rules. We apply only SFX
 // rules from the same pinned dictionary and stop at a modest browser-safe
-// 50,000-form corpus. IT roots are expanded first so terminology receives the
+// 100,000-form upper bound. IT roots are expanded first so terminology receives the
 // same coverage as ordinary Azerbaijani nouns.
-const suffixRules = new Map();
-for (const line of collected['dictionaries/az.aff'].toString('utf8').split(/\r?\n/)) {
-  const match = line.match(/^SFX\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/);
-  if (!match) continue;
-  const [, flag, strip, add, condition] = match;
-  const rule = { strip: strip === '0' ? '' : strip, add: add.split('/')[0] === '0' ? '' : add.split('/')[0], condition };
-  suffixRules.set(flag, [...(suffixRules.get(flag) ?? []), rule]);
-}
+const { rules: suffixRules, skippedRules } = parseSuffixRules(collected['dictionaries/az.aff'].toString('utf8'));
 const technicalRoot = /(komp|proqram|şəbək|məlumat|sistem|server|verilən|alqoritm|kod|informasiya|texnolog|inteqra|təhlükəsiz|veri|bulud|platform|əməliyyat|sorğu|baza|interfeys|istifadəçi|parametr|konfiqur|protokol|rabit|kiber|rəqəmsal|analitik)/iu;
 const validWord = word => /^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[- ’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*$/u.test(word);
 const baseWords = rawBaseWords.filter(validWord);
@@ -55,7 +49,8 @@ const targetForms = 100_000;
 const words = new Set(baseWords);
 for (const entry of [...entries.filter(entry => technicalRoot.test(entry.word)), ...entries]) {
   if (words.size >= targetForms) break;
-  for (const rule of suffixRules.get(entry.flags) ?? []) {
+  if (entry.flags.length % 2) continue; // Malformed source flags are not guessed.
+  for (const rule of splitLongFlags(entry.flags).flatMap(flag => suffixRules.get(flag) ?? [])) {
     if (words.size >= targetForms) break;
     if (!new RegExp(`${rule.condition}$`, 'u').test(entry.word)) continue;
     const stem = rule.strip && entry.word.endsWith(rule.strip)
@@ -73,6 +68,9 @@ const metadata = {
   matchableBaseEntries: baseWords.length,
   generatedForms: wordList.length - baseWords.length,
   targetForms,
+  generationPolicy: 'bounded single-step SFX; FLAG long; no continuation, prefix, compound or cross-product rules',
+  skippedMalformedOrUnsupportedRules: skippedRules,
+  skippedMalformedFlagEntries: entries.filter(entry => entry.flags.length % 2).length,
   matchableEntries: wordList.filter(validWord).length,
   checksums: files,
 };

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
+import { correctText, formatEmail } from '../lib/editor/correct';
 
 import { ERROR_CATEGORIES, isErrorCategory, type ErrorCategory } from '../lib/editor/error-categories';
 
@@ -25,6 +26,15 @@ type Corpus = {
 const corpus = JSON.parse(
   readFileSync(new URL('./fixtures/hybrid-regression-corpus.json', import.meta.url), 'utf8'),
 ) as Corpus;
+
+for (const item of corpus.cases) {
+  test(`corpus ${item.id} [${item.errorCategory}/${item.category}/${item.mode}]`, () => {
+    const correct = item.mode === 'email' ? formatEmail : correctText;
+    const actual = correct(item.input).text;
+    assert.equal(actual, item.expected, JSON.stringify({ ...item, actual }, null, 2));
+    assert.equal(correct(actual).text, actual, `${item.id}: correction must stabilize`);
+  });
+}
 
 test('hybrid regression corpus contains at least 200 curated cases', () => {
   assert.ok(corpus.count >= 200, `expected >= 200 cases, got ${corpus.count}`);

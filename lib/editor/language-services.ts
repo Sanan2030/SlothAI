@@ -1,5 +1,7 @@
 import type { LemmaDictionary } from './contracts/lemma';
 import type { MorphologyEngine } from './contracts/morphology';
+import type { SpellingResolver, SpellingContext } from './contracts/spelling';
+import { restoreWord } from './lexicon';
 import {
   legacyLemmaDictionary,
   legacyMorphologyEngine,
@@ -13,3 +15,13 @@ import {
  */
 export const lemmaDictionary: LemmaDictionary = legacyLemmaDictionary;
 export const morphologyEngine: MorphologyEngine = legacyMorphologyEngine;
+
+export interface LanguageServices extends SpellingContext {
+  spelling: SpellingResolver;
+}
+
+export const languageServices: LanguageServices = {
+  lemmaDictionary,
+  morphology: morphologyEngine,
+  spelling: { resolve: restoreWord },
+};

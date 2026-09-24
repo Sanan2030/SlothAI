@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { StrategyNotFoundError } from '@/lib/strategies/registry';
+import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -12,7 +13,7 @@ const RequestSchema = z.object({
   strategyId: z.string().trim().min(1).max(64),
   text: z
     .string()
-    .max(10_000, 'Mətn maksimum 10,000 simvol ola bilər.')
+    .max(MAX_TEXT_LENGTH, 'Mətn maksimum 10,000 simvol ola bilər.')
     .refine(value => value.trim().length > 0, 'Mətn boş ola bilməz.'),
   options: z
     .object({

@@ -1,99 +1,45 @@
-export interface DiffPart {
-  text: string;
-  changed: boolean;
-}
+export interface DiffPart { text: string; changed: boolean }
 
-const WORD_RE = /[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*/gu;
-const SEGMENT_RE = /[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*|[^\p{L}\p{N}]+/gu;
-const WORD_SEGMENT_RE = /^[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*$/u;
-
+// Whole words, punctuation and whitespace. Bounded monotone alignment:
+// O(tokens * WINDOW) time and O(tokens) memory, including unrelated documents.
+const SEGMENTS = /[\p{L}\p{N}]+(?:[-’'][\p{L}\p{N}]+)*|\s+|[^\p{L}\p{N}\s]/gu;
+const WINDOW = 32;
 function fold(value: string): string {
-  return value
-    .normalize('NFC')
-    .toLocaleLowerCase('az-AZ')
-    .replace(/[əçıöüşğ]/gu, (letter) =>
-      ({ ə: 'e', ç: 'c', ı: 'i', ö: 'o', ü: 'u', ş: 's', ğ: 'g' } as Record<string, string>)[letter] ?? letter,
-    );
-}
-
-function substitutionCost(left: string, right: string): number {
-  if (left === right) return 0;
-  if (left.toLocaleLowerCase('az-AZ') === right.toLocaleLowerCase('az-AZ')) return 1;
-  if (fold(left) === fold(right)) return 1;
-  return 2;
-}
-
-function alignWords(inputWords: string[], outputWords: string[]): Array<number | null> {
-  const rows = inputWords.length + 1;
-  const cols = outputWords.length + 1;
-  const matrix = new Uint16Array(rows * cols);
-  const cell = (i: number, j: number) => i * cols + j;
-
-  for (let i = 1; i < rows; i++) matrix[cell(i, 0)] = i * 2;
-  for (let j = 1; j < cols; j++) matrix[cell(0, j)] = j * 2;
-
-  for (let i = 1; i < rows; i++) {
-    for (let j = 1; j < cols; j++) {
-      const replace = matrix[cell(i - 1, j - 1)] + substitutionCost(inputWords[i - 1], outputWords[j - 1]);
-      const remove = matrix[cell(i - 1, j)] + 2;
-      const insert = matrix[cell(i, j - 1)] + 2;
-      matrix[cell(i, j)] = Math.min(replace, remove, insert);
-    }
-  }
-
-  const mapping: Array<number | null> = Array(outputWords.length).fill(null);
-  let i = inputWords.length;
-  let j = outputWords.length;
-
-  while (i > 0 || j > 0) {
-    if (i > 0 && j > 0) {
-      const cost = substitutionCost(inputWords[i - 1], outputWords[j - 1]);
-      if (matrix[cell(i, j)] === matrix[cell(i - 1, j - 1)] + cost) {
-        mapping[j - 1] = i - 1;
-        i--;
-        j--;
-        continue;
-      }
-    }
-
-    if (j > 0 && matrix[cell(i, j)] === matrix[cell(i, j - 1)] + 2) {
-      j--;
-      continue;
-    }
-
-    if (i > 0) {
-      i--;
-      continue;
-    }
-
-    j--;
-  }
-
-  return mapping;
+  return value.normalize('NFC').toLocaleLowerCase('az-AZ').replace(/[əçıöüşğ]/gu,
+    letter => ({ ə: 'e', ç: 'c', ı: 'i', ö: 'o', ü: 'u', ş: 's', ğ: 'g' })[letter]!);
 }
 
 export function buildAnimatedDiff(input: string, output: string): DiffPart[] {
-  if (!output) return [];
-
-  const inputWords = input.match(WORD_RE) ?? [];
-  const outputWords = output.match(WORD_RE) ?? [];
-  const mapping = alignWords(inputWords, outputWords);
-  const segments = output.match(SEGMENT_RE) ?? [output];
-  const parts: DiffPart[] = [];
-  let outputWordIndex = 0;
-
-  for (const segment of segments) {
-    if (!WORD_SEGMENT_RE.test(segment)) {
-      parts.push({ text: segment, changed: false });
+  const before = (input.match(SEGMENTS) ?? []).filter(t => !/^\s+$/u.test(t));
+  const segments = output.match(SEGMENTS) ?? [];
+  const after = segments.filter(t => !/^\s+$/u.test(t));
+  const left = before.map(fold);
+  const right = after.map(fold);
+  const changed: boolean[] = [];
+  let i = 0;
+  let j = 0;
+  while (j < after.length) {
+    if (i >= before.length) { changed[j++] = true; continue; }
+    if (left[i] === right[j]) {
+      changed[j] = before[i] !== after[j];
+      i++; j++; continue;
+    }
+    let deletion = 0;
+    let insertion = 0;
+    for (let offset = 1; offset <= WINDOW; offset++) {
+      if (!deletion && left[i + offset] === right[j]) deletion = offset;
+      if (!insertion && right[j + offset] === left[i]) insertion = offset;
+      if (deletion || insertion) break;
+    }
+    if (deletion && (!insertion || deletion <= insertion)) { i += deletion; continue; }
+    if (insertion) {
+      for (let k = 0; k < insertion; k++) changed[j++] = true;
       continue;
     }
-
-    const inputIndex = mapping[outputWordIndex];
-    const changed = inputIndex === null || inputWords[inputIndex] !== segment;
-
-    parts.push({ text: segment, changed });
-    outputWordIndex++;
+    // Distant moves are conservatively displayed as changes.
+    changed[j++] = true;
+    i++;
   }
-
-  return parts;
+  let token = 0;
+  return segments.map(text => ({ text, changed: /^\s+$/u.test(text) ? false : changed[token++] }));
 }

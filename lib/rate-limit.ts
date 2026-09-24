@@ -1,5 +1,7 @@
 // The optional same-origin HTTP endpoint is limited locally. The browser editor
 // never calls it. No Redis/network access or environment variables are needed.
+// Best-effort per-instance protection: resets on cold starts and is not shared
+// across Vercel functions. Use a shared store before offering a public API SLA.
 const requests = new Map<string, number[]>();
 const limit = 30;
 const windowMs = 60_000;

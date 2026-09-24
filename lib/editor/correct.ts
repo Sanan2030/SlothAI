@@ -1,4 +1,4 @@
-import { restoreWord } from './lexicon';
+import { languageServices, type LanguageServices } from './language-services';
 import { repairPhrases, sentenceBoundaries } from './context';
 import { punctuateNarrative, narrativeParagraphs } from './narrative';
 import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './extended-narrative';
@@ -6,9 +6,20 @@ import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
+import { separateEmailSections } from './rules/email';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
+export interface CorrectionEvent {
+  stage: 'spelling';
+  original: string;
+  replacement: string;
+  reason: string;
+}
+export interface CorrectionRuntime {
+  services?: LanguageServices;
+  trace?: (event: CorrectionEvent) => void;
+}
 
 function capitalize(text: string): string {
   return text.replace(/(^[“«"(]?|[.!?]\s+[“«"(]?|\n(?:\d+[.)]|[-*])\s+)([a-zəçğıöşü])/g,
@@ -75,9 +86,11 @@ function enumerate(line: string): string[] {
 }
 
 /** Deterministic, bounded, synchronous editor; no fetch, model or environment access. */
-export function correctText(input: string, preserveFormatting = false): LocalCorrection {
+export function correctText(input: string, preserveFormatting = false, runtime: CorrectionRuntime = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  const services = runtime.services ?? languageServices;
+  const restoreWord = (word: string) => services.spelling.resolve(word, services);
   const protectedText: string[] = [];
   // Reserve an unused delimiter; user-supplied private-use characters cannot
   // accidentally collide with our placeholders.
@@ -93,7 +106,10 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     return protect(value);
   });
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
-  text = protectKnownTerminology(text, protect);
+  text = prepareTechnicalPhrases(text);
+  // Keep lexical terminology visible to clause rules. Only punctuation-bearing
+  // terms need opaque spans; spelling resolution already protects lexical terms.
+  text = protectKnownTerminology(text, canonical => /[.#]/u.test(canonical) ? protect(canonical) : canonical);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
@@ -105,7 +121,9 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
     '$1mən də $3');
   text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, word => {
     const corrected = restoreWord(word);
-    return corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
+    const replacement = corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
+    if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
+    return replacement;
   });
   text = repairPhrases(text);
   text = extendedPhrases(text);
@@ -151,8 +169,11 @@ export function correctText(input: string, preserveFormatting = false): LocalCor
 }
 
 export function formatEmail(input: string): LocalCorrection {
-  const compactSalutation = input.match(/\b(?:hormetli|hörmətli)\b/iu);
-  const compactClosing = [...input.matchAll(/\b(?:hormetle|hörmətlə)\b/giu)].at(-1);
+  if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
+  if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  input = separateEmailSections(input);
+  const compactSalutation = input.match(/(?<!\p{L})(?:hormetli|hörmətli)(?!\p{L})/iu);
+  const compactClosing = [...input.matchAll(/(?<!\p{L})(?:hormetle|hörmətlə)[,]?(?!\p{L})/giu)].at(-1);
   // Informal email drafts often arrive as one dense line: subject, salutation,
   // body and signature without separators. Split only when both the subject
   // prefix and a reviewed body opening make the boundaries unambiguous.
@@ -196,13 +217,13 @@ export function formatEmail(input: string): LocalCorrection {
     const body = input.slice(0, signature.index).trim();
     if (body) {
       const result = formatEmail(body);
-      const name = signature[1].trim().replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, restoreWord);
+      const name = signature[1].trim().replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, word => languageServices.spelling.resolve(word, languageServices));
       return { text: result.text + '\n' + name, corrections: result.corrections };
     }
   }
   const result = correctText(input, true);
   const subjectMatch = result.text.match(/^Mövzu:\s*([^\n]+)\n*/i);
-  const subject = subjectMatch ? `Mövzu: ${subjectMatch[1]}` : 'Mövzu: Müraciət';
+  const subject = subjectMatch ? `Mövzu: ${capitalize(subjectMatch[1])}` : 'Mövzu: Müraciət';
   let body = subjectMatch ? result.text.slice(subjectMatch[0].length).trim() : result.text;
   let greeting = 'Salam,';
   const greetingMatch = body.match(/^(Salam|Hörmətli[^\n.!?]+)[,.]?\s*(?:\n|$)/i);
