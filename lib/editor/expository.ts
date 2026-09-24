@@ -57,7 +57,7 @@ export const expositoryAliases: Record<string, string> = {
   qundelik: 'gündəlik', infromasiyani: 'informasiyanı', oyrenmeq: 'öyrənmək',
   empatiye: 'empatiya', yokuslu: 'yoxuşlu', texnaloji: 'texnoloji',
   duncada: 'dünyada', sahsi: 'şəxsi', ellde: 'əldə',
-  bagliliqa: 'bağlılığa',
+  bagliliqa: 'bağlılığa', inqilabi: 'inqilabi',
   hayatinin: 'həyatının', hayatimizin: 'həyatımızın',
   qararlarimiza: 'qərarlarımıza', istiqamat: 'istiqamət',
   mahiyyeti: 'mahiyyəti', xosbaxtliyin: 'xoşbəxtliyin',
