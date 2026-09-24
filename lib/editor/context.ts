@@ -62,7 +62,7 @@ export function sentenceBoundaries(text: string): string {
     .replace(/\b(vaxtın olsa|sualınız olarsa|sualin(?:iz)? olarsa) +/giu, '$1, ')
     .replace(/(^|[.!?]\s+|salam,\s+)(zəhmət olmasa|xahiş edirəm|xahiş edirik) +/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(səncə) +/giu, '$1$2, ')
-    .replace(/ +(?=yoxsa\s)/giu, ', ')
+    .replace(/([^,;.!?:\s]) +(?=yoxsa\s)/giu, '$1, ')
     .replace(/\b(narahat olma) +(?=hər\s)/giu, '$1. ')
     .replace(/\b(görüşək) +(?=vaxtın\s)/giu, '$1. ');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
