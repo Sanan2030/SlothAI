@@ -17,6 +17,7 @@ test('indexed candidate repairs an internal omission while preserving exact word
   assert.ok(spellingCandidates.candidates('funksionallq', 3).includes('funksionallıq'));
   assert.equal(boundedEditDistance('abc', 'acb', 1), 1);
   assert.equal(chooseIndexedTypo('sistme'), 'sistem');
+  assert.equal(correctText('sistme aktivdir').text, 'Sistem aktivdir.');
   assert.equal(chooseIndexedTypo('məlumatt'), undefined);
   assert.equal(chooseIndexedTypo('məktəb'), undefined);
 });

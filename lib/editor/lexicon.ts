@@ -424,8 +424,8 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // gonderilib, saxlanilir). Reviewed roots + bounded suffix rules are safer
   // than accepting such raw forms unchanged.
   const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values)
-    ?? restoreDigraphTransliteration(word, services)
     ?? chooseIndexedTypo(word)
+    ?? restoreDigraphTransliteration(word, services)
     ?? restoreProductiveSuffix(word, services)
     ?? chooseSpelling(word, imported)
     ?? chooseSpelling(word, new Set(morphologyCandidates));
