@@ -329,10 +329,17 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // üçün). Imported candidates are conservative fallback, not frequency data.
   const alias = Object.hasOwn(aliases, key) ? aliases[key] : undefined;
   const morphologyCandidates = services?.morphology.analyzeWord(word).map(analysis => analysis.surface);
-  const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values) ?? chooseSpelling(word, imported)
-    ?? chooseSpelling(word, new Set(morphologyCandidates))
+  // Prefer reviewed productive Azerbaijani morphology before the imported
+  // dictionary fallback. The Hunspell source may contain ASCII/Turkic surface
+  // forms that are valid dictionary entries but are not the intended
+  // Azerbaijani spelling in informal input (for example qaldirilib,
+  // gonderilib, saxlanilir). Reviewed roots + bounded suffix rules are safer
+  // than accepting such raw forms unchanged.
+  const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values)
     ?? restoreDigraphTransliteration(word, services)
-    ?? restoreProductiveSuffix(word, services);
+    ?? restoreProductiveSuffix(word, services)
+    ?? chooseSpelling(word, imported)
+    ?? chooseSpelling(word, new Set(morphologyCandidates));
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
