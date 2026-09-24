@@ -9,6 +9,9 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])hər seyden(?=$|[^\p{L}])/giu, '$1hər şeydən')
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz|o) +ise(?=$|[^\p{L}])/giu, '$1$2 isə')
     .replace(/(^|[^\p{L}])(səhifəni|faylı|terminalı|pəncərəni|linki|sənədi|müraciəti)(\s+yenidən)? +ac(?=$|[^\p{L}])/giu, '$1$2$3 aç')
+    .replace(/(^|[^\p{L}])basa +(?=düş[\p{L}]*)/giu, '$1başa ')
+    .replace(/(^|[^\p{L}])əvvəl de +(?=demiş[\p{L}]*)/giu, '$1əvvəl də ')
+    .replace(/(^|[^\p{L}])çoxdan +(?=görüşmür[\p{L}]*)/giu, '$1çoxdandır ')
     .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
     .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
@@ -53,8 +56,8 @@ export function sentenceBoundaries(text: string): string {
   // Reviewed finite predicates followed by a clearly independent clause.
   // This is deliberately bounded to common predicates/starters instead of
   // guessing a boundary after every verb.
-  const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı)';
-  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni|başlaya)';
+  const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|dəyərləndirildi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı|qalxırdı|qaralırdı|bilərəm)';
+  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|indi|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni|başlaya|göndərə|dönüb)';
   result = result.replace(new RegExp(`(${independentPredicate}) +(?=${independentStarter}(?:\\s|$))`, 'giu'), '$1. ');
 
   // A question clause followed by a new subject gets a question boundary.
@@ -64,13 +67,16 @@ export function sentenceBoundaries(text: string): string {
   // Common conditional/request punctuation.
   result = result
     .replace(/\b(vaxtın olsa|sualınız olarsa|sualin(?:iz)? olarsa) +/giu, '$1, ')
-    .replace(/(^|[.!?]\s+|salam,\s+)(zəhmət olmasa|xahiş edirəm|xahiş edirik) +/giu, '$1$2, ')
+    .replace(/\b(zəhmət olmasa|xahiş edirəm|xahiş edirik)(?!,) +/giu, '$1, ')
     .replace(/(^|[.!?]\s+)(səncə) +/giu, '$1$2, ')
     .replace(/([^,;.!?:\s]) +(?=yoxsa\s)/giu, '$1, ')
     .replace(/\b(narahat olma) +(?=hər\s)/giu, '$1. ')
     .replace(/\b(görüşək) +(?=vaxtın\s)/giu, '$1. ')
     .replace(/\b(sağ ol) +(?=köməyin\s+üçün\b)/giu, '$1, ')
-    .replace(/\b(razıyam) +(bəs) +(sən|siz)\b/giu, '$1. $2 $3?')
+    .replace(/\b(razıyam) +(bəs|beş) +(sən|siz)\b/giu, '$1. bəs $3?')
+    .replace(/\b(təşəkkür edirik) +(?=(?:müraciətiniz|təklifinizi)\b)/giu, '$1. ')
+    .replace(/\b(yaxşı) +(?=onda\b)/giu, '$1, ')
+    .replace(/\b(çalışdıq) +(?=cavab ala bilmədik\b)/giu, '$1, ')
     .replace(/(^|[.!?]\s+)(xeyir) +(?=necəsən\b)/giu, '$1$2, ')
     .replace(/\b(olacaq) +(düzdür)(?=$|[.!?\s])/giu, '$1, $2?');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
