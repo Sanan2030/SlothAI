@@ -115,7 +115,8 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə');
   // Keep lexical terminology visible to clause rules. Only punctuation-bearing
   // terms need opaque spans; spelling resolution already protects lexical terms.
-  text = protectKnownTerminology(text, canonical => /[.#]/u.test(canonical) ? protect(canonical) : canonical);
+  text = protectKnownTerminology(text, canonical =>
+    /[.#]/u.test(canonical) || canonical === 'npm' ? protect(canonical) : canonical);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
@@ -170,6 +171,12 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     const end = part.indexOf('\uE001');
     return end < 0 ? marker + part : protectedText[Number(part.slice(0, end))] + part.slice(end + 1);
   }).join('');
+  // Numeric values are protected during lexical correction, so attach
+  // Azerbaijani case suffixes only after restoring the protected span.
+  text = text
+    .replace(/(\d{1,2}:\d{2})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
+    .replace(/(\d+(?:\.\d+){1,3})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
+    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə');
   // Word/punctuation change estimate via common prefix/suffix; never advertised
   // as a linguistic error count. This is linear even for 10k-character inputs.
   const before = input.match(/\S+/g) ?? [];
