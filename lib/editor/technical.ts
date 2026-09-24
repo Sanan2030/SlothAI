@@ -120,6 +120,7 @@ export function technicalPhrases(text: string): string {
     .replace(/(^|[^\p{L}])(backend|frontend) ise(?=$|[^\p{L}])/giu, '$1$2 isə')
     .replace(/(React ilə) +(backend isə)/giu, '$1, $2')
     .replace(/(Vercel-də) +de(?=$|[^\p{L}])/giu, '$1 də')
+    .replace(/(limiti) +asılıb(?=$|[^\p{L}])/giu, '$1 aşılıb')
     .replace(/(^|[^\p{L}])proqram koda(?=$|[^\p{L}])/giu, '$1proqram koduna')
     .replace(/(düşməsinin) qarşısına alır/giu, '$1 qarşısını alır')
     .replace(/(^|[^\p{L}])addım addım(?=$|[^\p{L}])/giu, '$1addım-addım')
