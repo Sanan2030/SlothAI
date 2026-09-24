@@ -90,11 +90,12 @@ export const technicalAliases: Record<string, string> = {
   yukleyirler: 'yükləyirlər', backendde: 'backenddə', responseun: 'response-un',
   arasdirdiq: 'araşdırdıq', sorgusunda: 'sorğusunda', etdikden: 'etdikdən',
   isledi: 'işlədi', elinin: 'Əlinin', gonderdiyi: 'göndərdiyi',
-  requesti: 'request-i', yazisi: 'yazısı', zeyif: 'zəif', catandan: 'çatandan',
+  requesti: 'request-i', endpointi: 'endpoint-i', yazisi: 'yazısı', zeyif: 'zəif', catandan: 'çatandan',
   duzelisi: 'düzəlişi', stagingde: 'stagingdə', planimdir: 'planımdır', planim: 'planım',
   gorduk: 'gördük', saxlayirlar: 'saxlayırlar', serverlerde: 'serverlərdə',
   edilmelidir: 'edilməlidir',
   optimallasdirilir: 'optimallaşdırılır', avtomatlasdirir: 'avtomatlaşdırır',
+  lokaldaki: 'lokaldakı',
 };
 
 // Called only after code/URLs have been replaced with protected placeholders.
@@ -116,6 +117,9 @@ export function technicalPhrases(text: string): string {
   return text
     .replace(/(^|[^\p{L}])üçün ise(?=$|[^\p{L}])/giu, '$1üçün isə')
     .replace(/(^|[^\p{L}])verilməsi ise(?=$|[^\p{L}])/giu, '$1verilməsi isə')
+    .replace(/(^|[^\p{L}])(backend|frontend) ise(?=$|[^\p{L}])/giu, '$1$2 isə')
+    .replace(/(React ilə) +(backend isə)/giu, '$1, $2')
+    .replace(/(Vercel-də) +de(?=$|[^\p{L}])/giu, '$1 də')
     .replace(/(^|[^\p{L}])proqram koda(?=$|[^\p{L}])/giu, '$1proqram koduna')
     .replace(/(düşməsinin) qarşısına alır/giu, '$1 qarşısını alır')
     .replace(/(^|[^\p{L}])addım addım(?=$|[^\p{L}])/giu, '$1addım-addım')
