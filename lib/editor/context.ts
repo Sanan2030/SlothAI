@@ -5,6 +5,10 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz) +de +(?=(?:gəl|ged|ed|düşün|işlə|bil|istə|keç)[\p{L}]+)/giu, '$1$2 də ')
     .replace(/(^|[^\p{L}])bir de (?=gecikmə(?:\s|$))/giu, '$1bir də ')
     .replace(/(^|[^\p{L}])bir birini(?=$|[^\p{L}])/giu, '$1bir-birini')
+    .replace(/(^|[^\p{L}])bir bir(?=$|[^\p{L}])/giu, '$1bir-bir')
+    .replace(/(^|[^\p{L}])hər seyden(?=$|[^\p{L}])/giu, '$1hər şeydən')
+    .replace(/(^|[^\p{L}])(mən|sən|biz|siz|o) +ise(?=$|[^\p{L}])/giu, '$1$2 isə')
+    .replace(/(^|[^\p{L}])(səhifəni|faylı|terminalı|pəncərəni|linki|sənədi|müraciəti)(\s+yenidən)? +ac(?=$|[^\p{L}])/giu, '$1$2$3 aç')
     .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
     .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
@@ -50,11 +54,11 @@ export function sentenceBoundaries(text: string): string {
   // This is deliberately bounded to common predicates/starters instead of
   // guessing a boundary after every verb.
   const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı)';
-  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni)';
+  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni|başlaya)';
   result = result.replace(new RegExp(`(${independentPredicate}) +(?=${independentStarter}(?:\\s|$))`, 'giu'), '$1. ');
 
   // A question clause followed by a new subject gets a question boundary.
-  result = result.replace(/(^|[.!?]\s+)((?:niyə|necə|harada|hara|kim|nə)\b[^.!?]{0,100}?\b(?:gəlmədin|etmədin|olmadı|açılmır|işləmir)) +(?=(?:mən|sən|biz|siz|o)\s)/giu, '$1$2? ');
+  result = result.replace(/((?:niyə|necə|harada|hara|kim|nə)\s+[^.!?]{0,100}?(?:gəlmədin|etmədin|olmadı|açılmır|işləmir)) +(?=(?:mən|sən|biz|siz|o)\s)/giu, '$1? ');
   result = result.replace(/\b(haradasan|hardasan) +(?=(?:mən|sən|biz|siz|o)\s)/giu, '$1? ');
 
   // Common conditional/request punctuation.
@@ -64,7 +68,11 @@ export function sentenceBoundaries(text: string): string {
     .replace(/(^|[.!?]\s+)(səncə) +/giu, '$1$2, ')
     .replace(/([^,;.!?:\s]) +(?=yoxsa\s)/giu, '$1, ')
     .replace(/\b(narahat olma) +(?=hər\s)/giu, '$1. ')
-    .replace(/\b(görüşək) +(?=vaxtın\s)/giu, '$1. ');
+    .replace(/\b(görüşək) +(?=vaxtın\s)/giu, '$1. ')
+    .replace(/\b(sağ ol) +(?=köməyin\s+üçün\b)/giu, '$1, ')
+    .replace(/\b(razıyam) +(bəs) +(sən|siz)\b/giu, '$1. $2 $3?')
+    .replace(/(^|[.!?]\s+)(xeyir) +(?=necəsən\b)/giu, '$1$2, ')
+    .replace(/\b(olacaq) +(düzdür)(?=$|[.!?\s])/giu, '$1, $2?');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
   result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm|qeyd edim) +ki +/giu, '$1 ki, ');
   result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn|digər tərəfdən)\s+/giu, '$1$2, ')
