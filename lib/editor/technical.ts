@@ -95,7 +95,7 @@ export const technicalAliases: Record<string, string> = {
   gorduk: 'gördük', saxlayirlar: 'saxlayırlar', serverlerde: 'serverlərdə',
   edilmelidir: 'edilməlidir',
   optimallasdirilir: 'optimallaşdırılır', avtomatlasdirir: 'avtomatlaşdırır',
-  lokaldaki: 'lokaldakı',
+  lokaldaki: 'lokaldakı', olunmamalidir: 'olunmamalıdır',
 };
 
 // Called only after code/URLs have been replaced with protected placeholders.
