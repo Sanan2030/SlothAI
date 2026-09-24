@@ -29,7 +29,6 @@ export function punctuateNarrative(text: string): string {
     .replace(/(zəng (?:elədi|etdi)) +(?=\uE000+\d+\uE001)/giu, '$1. ')
     .replace(/(çörək|süd|pendir|yağ|yumurta) +(çörək|süd|pendir|yağ|yumurta) +(?=(?:aldım|aldıq|aldı)(?:[\s.!?]|$))/giu, '$1, $2 ')
     .replace(/(kompüterin arxasına) +(?=(?:Ubuntu|Linux|Windows)\s)/giu, '$1. ')
-    .replace(/(dedi|dedim|gördüm|yazdım) +ki +/giu, '$1 ki, ')
     .replace(/(dedi|dedim) +(?=bir də gecikmə|hər şey yaxşıdır)/giu, '$1: ')
     .replace(/(niyə gecikmisən)\.(?=\s|$)/giu, '$1?');
 }

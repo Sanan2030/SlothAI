@@ -8,6 +8,8 @@ import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from '.
 import { protectKnownTerminology } from './protected-terminology';
 import { parseEmailSections } from './rules/email';
 import { segmentIndependentClauses } from './segmentation';
+import { detectExclamation, punctuateCommas, terminalPunctuation } from './punctuation';
+import { segmentParagraphs } from './paragraph-segmentation';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -51,13 +53,12 @@ function punctuate(line: string): string {
   result = punctuateBusiness(result);
   result = punctuateTechnical(result);
   result = segmentIndependentClauses(result);
+  result = punctuateCommas(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
     .replace(/^(salam)\s+(?=[a-zəçğıöşü])/i, '$1, ')
-    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?')
-    .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki)\s+/gi, '$1, $2 ')
-    .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o)\s)/gi, '$1, $2 ');
+    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
     const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence);
@@ -67,7 +68,7 @@ function punctuate(line: string): string {
     const alternativeQuestion = /,\s*yoxsa\s+[^.!?]+$/iu.test(lastSentence);
     const tagQuestion = /,\s*düzdür$/iu.test(lastSentence);
     const question = !indirect && !exclamation && !discourseMarker && (explicitQuestion || alternativeQuestion || tagQuestion);
-    result += question ? '?' : '.';
+    result = question && !detectExclamation(result) ? result + '?' : terminalPunctuation(result);
   }
   return capitalize(result);
 }
@@ -127,11 +128,21 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
   text = beforeLexicalCorrection(text);
   text = prepareTechnicalPhrases(text);
+  text = text.replace(/(^|[^\p{L}])bes(?=\s+(?:sen|sən|siz|biz|o)(?=$|[^\p{L}]))/giu, '$1bəs');
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
   text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, word => {
+    const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür))(mı|mi|mu|mü)$/iu);
+    if (attachedQuestion) {
+      const base = restoreWord(attachedQuestion[1]);
+      if (base !== attachedQuestion[1]) {
+        const vowel = [...base.toLocaleLowerCase('az-AZ')].reverse().find(letter => /[aəeıioöuü]/u.test(letter));
+        const harmony: Record<string, string> = { a: 'mı', ı: 'mı', e: 'mi', ə: 'mi', i: 'mi', o: 'mu', u: 'mu', ö: 'mü', ü: 'mü' };
+        return base + (vowel ? harmony[vowel] : attachedQuestion[2]);
+      }
+    }
     const corrected = restoreWord(word);
     const replacement = corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
@@ -170,6 +181,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     text = businessStageLists(text);
     text = narrativeParagraphs(text);
     text = text.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n');
+    if (!/\n\s*\n/u.test(input)) text = segmentParagraphs(text);
   }
   text = text.split(marker).map((part, index) => {
     if (!index) return part;

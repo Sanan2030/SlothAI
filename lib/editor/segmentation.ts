@@ -5,17 +5,33 @@ const copula = /(?:yam|yəm|san|sən|dır|dir|dur|dür|dılar|dilər|durlar|dür
 const dependent = /(?:anda|əndə|arkən|ərkən|dıqda|dikdə|duqda|dükdə|sa|sə|dığı|diyi|duğu|düyü)$/iu;
 const connectors = new Set(['ki', 'çünki', 'amma', 'lakin', 'ancaq', 'isə', 'və', 'ya', 'yoxsa', 'əgər', 'üçün']);
 const subjects = new Set(['mən', 'sən', 'biz', 'siz', 'o', 'onlar', 'biri']);
-const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dünən', 'birdən']);
+const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dünən', 'birdən', 'günortadan']);
+const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 'ilə']);
+
+function independentStart(word: string): boolean {
+  if (subjects.has(word) || timeWords.has(word)) return true;
+  if (connectors.has(word) || dependentStarts.has(word) || word.length < 4) return false;
+  const analyses = productiveMorphology.analyzeWord(word);
+  // Nominative subjects can start a fresh clause. Accusative objects and
+  // subordinate verbal forms alone cannot prove independence.
+  return analyses.some(item => item.pos === 'noun' && item.features.case === 'nominative');
+}
 
 export function isFinitePredicate(word: string): boolean {
   const lower = word.toLocaleLowerCase('az-AZ');
-  if (lower.length < 4 || dependent.test(lower)) return false;
-  const analyses = productiveMorphology.analyzeWord(lower).filter(item => item.pos === 'verb');
+  if (lower.length < 4 || dependent.test(lower) || timeWords.has(lower)) return false;
+  const morphology = productiveMorphology.analyzeWord(lower);
+  const analyses = morphology.filter(item => item.pos === 'verb');
+  if (morphology.length && !analyses.length) return false;
   if (analyses.length && analyses.every(item => item.features.mood === 'participle')) return false;
   if (analyses.some(item => item.features.tense)) return true;
+  // Bare -ıb/-ib endings overlap with common adjectives (vacib, qərib);
+  // demand lexical verbal evidence instead of treating the suffix as finite.
+  if (/(?:ıb|ib|ub|üb)$/iu.test(lower)) return false;
   // Common nouns with a false positive verb-looking suffix should not split.
   if (/(?:məktəbi|kitabı|layihəsi|məlumatı|sistemi)$/iu.test(lower)) return false;
-  return verbs.test(lower) || (lower.length > 5 && copula.test(lower));
+  return verbs.test(lower) || /(?:acağıq|əcəyik|acaqlar|əcəklər)$/iu.test(lower)
+    || (lower.length > 5 && copula.test(lower));
 }
 
 export function segmentIndependentClauses(text: string): string {
@@ -31,11 +47,14 @@ export function segmentIndependentClauses(text: string): string {
     const participleBeforeNoun = /(?:mış|miş|muş|müş|acaq|əcək)$/iu.test(current) && /(?:lar|lər)$/iu.test(next);
     if (!/^\p{L}+$/u.test(current) || !/^ +$/u.test(space)
       || !isFinitePredicate(current) || participleBeforeNoun || connectors.has(next)
-      || !(subjects.has(next) || timeWords.has(next)
+      || !(independentStart(next) || (next === 'daha' && tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') === 'sonra')
         || (/^[\p{L}]{4,}(?:lar|lər)$/u.test(next) && !connectors.has(next)))) {
       output += current;
       continue;
     }
+    const precedingClause = output.slice(Math.max(output.lastIndexOf('.'), output.lastIndexOf('?'),
+      output.lastIndexOf('!'), output.lastIndexOf('\n')) + 1).trim();
+    if (!precedingClause) { output += current; continue; }
     const following = tokens.slice(index + 2, index + 34);
     const secondPredicate = following.some(token => /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0]));
     const boundary = following.findIndex(token => /[.!?\n]/u.test(token[0]));
@@ -43,7 +62,7 @@ export function segmentIndependentClauses(text: string): string {
       /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0])))) {
       const clause = output.split(/[.!?\n]/u).at(-1) ?? '';
       const question = /^(?:necəsən|necəsiniz|haradasan|haradasınız)$/iu.test(current)
-        || /(?:^|\s)(?:necə|neçə|niyə|nə vaxt|harada|kim|hansı)(?:\s|$)/iu.test(clause);
+        || /^(?:necə|neçə|niyə|nə vaxt|harada|kim|hansı)(?!\p{L})/iu.test(clause.trim());
       output += current + (question ? '?' : '.');
       continue;
     }

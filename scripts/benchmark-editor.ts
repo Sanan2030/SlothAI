@@ -5,6 +5,8 @@ import { buildAnimatedDiff } from '../lib/ui/text-diff';
 import { spellingCandidates } from '../lib/editor/spelling-candidates';
 import { productiveMorphology } from '../lib/editor/productive-morphology';
 import { segmentIndependentClauses } from '../lib/editor/segmentation';
+import { analyzeClause, detectQuestion, detectExclamation, punctuateCommas } from '../lib/editor/punctuation';
+import { segmentParagraphs } from '../lib/editor/paragraph-segmentation';
 
 type BenchmarkCase = {
   words: number;
@@ -194,6 +196,11 @@ const componentResults = CASES.flatMap(config => {
   const words = document.match(/\p{L}+/gu) ?? [];
   const components = [
     { name: 'segmentation', run: () => { for (const chunk of chunkDocument(document)) segmentIndependentClauses(chunk); } },
+    { name: 'clause analysis', run: () => { for (const chunk of chunkDocument(document)) analyzeClause(chunk); } },
+    { name: 'question detection', run: () => { for (const chunk of chunkDocument(document)) detectQuestion(chunk); } },
+    { name: 'exclamation detection', run: () => { for (const chunk of chunkDocument(document)) detectExclamation(chunk); } },
+    { name: 'comma processing', run: () => { for (const chunk of chunkDocument(document)) punctuateCommas(chunk); } },
+    { name: 'paragraph segmentation', run: () => { for (const chunk of chunkDocument(document)) segmentParagraphs(chunk); } },
     { name: 'typo candidates', run: () => { for (const word of words) spellingCandidates.candidates(word, 5); } },
     { name: 'morphology', run: () => { for (const word of words) productiveMorphology.analyzeWord(word); } },
   ];
@@ -207,7 +214,9 @@ const componentResults = CASES.flatMap(config => {
     }
     samples.sort((a, b) => a - b);
     const p95Ms = round(percentile(samples, 0.95));
-    return { name: component.name, words: config.words, p95Ms,
+    return { name: component.name, words: config.words,
+      avgMs: round(samples.reduce((sum, value) => sum + value, 0) / samples.length),
+      p50Ms: round(percentile(samples, 0.5)), p95Ms,
       targetMs: config.targetMs, status: p95Ms <= config.targetMs ? 'PASS' : 'FAIL' };
   });
 });

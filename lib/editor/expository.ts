@@ -124,7 +124,6 @@ const boundary = new RegExp(`(^|[^\\p{L}])(${predicates}) +(?=(?:${starters})(?:
 export function punctuateExpository(text: string): string {
   return text.replace(boundary, '$1$2. ')
     .replace(/(intellekt alqoritmləri) +(böyük məlumat bazaları)/giu, '$1, $2')
-    .replace(/(göstərir) ki +/giu, '$1 ki, ')
     .replace(/(məhdudlaşmır) +həm də/giu, '$1, həm də')
     .replace(/(təkan vermiş) +arxitektura/giu, '$1, arxitektura')
     .replace(/(artırılmalı) +ekoloji/giu, '$1, ekoloji')

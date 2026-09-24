@@ -128,8 +128,6 @@ export function punctuateBusiness(text: string): string {
     .replace(/(yoxlanılıb) +(?=icraya\s)/giu, '$1, ')
     .replace(/(bizə göndərə bilərsiniz)\.(?=$)/giu, '$1?')
     .replace(/(bizə göndərə bilərsiniz)(?=$)/giu, '$1?')
-    .replace(/(istəyirik) ki +/giu, '$1 ki, ')
-    .replace(/(^|[.!?]\s+)(beləliklə) +/giu, '$1$2, ')
     .replace(/(həm onlayn) +həm də/giu, '$1, həm də')
     .replace(/(həm lisenziya xərcləri) +həm texniki dəstək +həm də/giu, '$1, həm texniki dəstək, həm də')
     .replace(/(iyirmi dörd saat) +yeddi gün/giu, '$1, yeddi gün');

@@ -1,0 +1,2000 @@
+{
+  "description": "Frozen authored punctuation expectations; independent from engine output",
+  "cases": [
+    {
+      "id": "question-001",
+      "category": "question",
+      "mode": "text",
+      "input": "niyə sistem açılmır",
+      "expected": "Niyə sistem açılmır?"
+    },
+    {
+      "id": "question-002",
+      "category": "question",
+      "mode": "text",
+      "input": "necə sistem işləyir",
+      "expected": "Necə sistem işləyir?"
+    },
+    {
+      "id": "question-003",
+      "category": "question",
+      "mode": "text",
+      "input": "harada sistem işləyir",
+      "expected": "Harada sistem işləyir?"
+    },
+    {
+      "id": "question-004",
+      "category": "question",
+      "mode": "text",
+      "input": "nə vaxt sistem hazır olacaq",
+      "expected": "Nə vaxt sistem hazır olacaq?"
+    },
+    {
+      "id": "question-005",
+      "category": "question",
+      "mode": "text",
+      "input": "hansı sistem hazırdır",
+      "expected": "Hansı sistem hazırdır?"
+    },
+    {
+      "id": "question-006",
+      "category": "question",
+      "mode": "text",
+      "input": "kim sistem yoxlayır",
+      "expected": "Kim sistem yoxlayır?"
+    },
+    {
+      "id": "question-007",
+      "category": "question",
+      "mode": "text",
+      "input": "sistem hazırdırmı",
+      "expected": "Sistem hazırdırmı?"
+    },
+    {
+      "id": "question-008",
+      "category": "question",
+      "mode": "text",
+      "input": "sistem hazır olacaq düzdür",
+      "expected": "Sistem hazır olacaq, düzdür?"
+    },
+    {
+      "id": "question-009",
+      "category": "question",
+      "mode": "text",
+      "input": "sən sistem yoxlayacaqsan yoxsa mən baxım",
+      "expected": "Sən sistem yoxlayacaqsan, yoxsa mən baxım?"
+    },
+    {
+      "id": "question-010",
+      "category": "question",
+      "mode": "text",
+      "input": "bəs sən",
+      "expected": "Bəs sən?"
+    },
+    {
+      "id": "question-011",
+      "category": "question",
+      "mode": "text",
+      "input": "bilmirəm niyə sistem açılmır",
+      "expected": "Bilmirəm niyə sistem açılmır."
+    },
+    {
+      "id": "question-012",
+      "category": "question",
+      "mode": "text",
+      "input": "mən soruşdum nə vaxt sistem hazır olacaq",
+      "expected": "Mən soruşdum nə vaxt sistem hazır olacaq."
+    },
+    {
+      "id": "exclamation-001",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay nə gözəl mənzərədir",
+      "expected": "Vay, nə gözəl mənzərədir!"
+    },
+    {
+      "id": "exclamation-002",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "aman diqqətli ol",
+      "expected": "Aman, diqqətli ol!"
+    },
+    {
+      "id": "exclamation-003",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "afərin bu sistem yaxşıdır",
+      "expected": "Afərin, bu sistem yaxşıdır!"
+    },
+    {
+      "id": "exclamation-004",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu sistem hazırdır",
+      "expected": "Əla, bu sistem hazırdır!"
+    },
+    {
+      "id": "exclamation-005",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "heyif sistem hazır deyil",
+      "expected": "Heyif, sistem hazır deyil!"
+    },
+    {
+      "id": "exclamation-006",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "təəssüf sistem hazır deyil",
+      "expected": "Təəssüf, sistem hazır deyil!"
+    },
+    {
+      "id": "exclamation-007",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu sistem necə gözəldir",
+      "expected": "Vay, bu sistem necə gözəldir!"
+    },
+    {
+      "id": "comma-001",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır amma vaxt azdır",
+      "expected": "Sistem hazırdır, amma vaxt azdır."
+    },
+    {
+      "id": "comma-002",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır lakin vaxt azdır",
+      "expected": "Sistem hazırdır, lakin vaxt azdır."
+    },
+    {
+      "id": "comma-003",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır çünki hamı işlədi",
+      "expected": "Sistem hazırdır, çünki hamı işlədi."
+    },
+    {
+      "id": "comma-004",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır ancaq mən gözləyirəm",
+      "expected": "Sistem hazırdır, ancaq mən gözləyirəm."
+    },
+    {
+      "id": "comma-005",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır yoxsa mən gedim",
+      "expected": "Sistem hazırdır, yoxsa mən gedim?"
+    },
+    {
+      "id": "comma-006",
+      "category": "comma",
+      "mode": "text",
+      "input": "əgər vaxtın olsa sistem yoxla",
+      "expected": "Əgər vaxtın olsa, sistem yoxla."
+    },
+    {
+      "id": "comma-007",
+      "category": "comma",
+      "mode": "text",
+      "input": "düşünürəm ki sistem hazırdır",
+      "expected": "Düşünürəm ki, sistem hazırdır."
+    },
+    {
+      "id": "comma-008",
+      "category": "comma",
+      "mode": "text",
+      "input": "beləliklə sistem hazırdır",
+      "expected": "Beləliklə, sistem hazırdır."
+    },
+    {
+      "id": "comma-009",
+      "category": "comma",
+      "mode": "text",
+      "input": "məsələn sistem hazırdır",
+      "expected": "Məsələn, sistem hazırdır."
+    },
+    {
+      "id": "comma-010",
+      "category": "comma",
+      "mode": "text",
+      "input": "əslində sistem hazırdır",
+      "expected": "Əslində, sistem hazırdır."
+    },
+    {
+      "id": "comma-011",
+      "category": "comma",
+      "mode": "text",
+      "input": "həm sistem həm də komanda hazırdır",
+      "expected": "Həm sistem, həm də komanda hazırdır."
+    },
+    {
+      "id": "comma-012",
+      "category": "comma",
+      "mode": "text",
+      "input": "zəhmət olmasa sistem yoxlayın",
+      "expected": "Zəhmət olmasa, sistem yoxlayın."
+    },
+    {
+      "id": "comma-013",
+      "category": "comma",
+      "mode": "text",
+      "input": "radioda ancaq eyni mahnı oxunurdu",
+      "expected": "Radioda ancaq eyni mahnı oxunurdu."
+    },
+    {
+      "id": "comma-014",
+      "category": "comma",
+      "mode": "text",
+      "input": "mən gələndə sistem hazırdır",
+      "expected": "Mən gələndə sistem hazırdır."
+    },
+    {
+      "id": "comma-015",
+      "category": "comma",
+      "mode": "text",
+      "input": "bu sistem çox yaxşıdır",
+      "expected": "Bu sistem çox yaxşıdır."
+    },
+    {
+      "id": "comma-016",
+      "category": "comma",
+      "mode": "text",
+      "input": "sistem hazırdır",
+      "expected": "Sistem hazırdır."
+    },
+    {
+      "id": "runon-001",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem işlədi istifadəçilər sevindilər",
+      "expected": "Sistem işlədi. İstifadəçilər sevindilər."
+    },
+    {
+      "id": "runon-002",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem dayandı xidmətlər cavab vermədilər",
+      "expected": "Sistem dayandı. Xidmətlər cavab vermədilər."
+    },
+    {
+      "id": "runon-003",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem başladı işçilər qeydlər apardılar",
+      "expected": "Sistem başladı. İşçilər qeydlər apardılar."
+    },
+    {
+      "id": "runon-004",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem açıldı uşaqlar içəri girdilər",
+      "expected": "Sistem açıldı. Uşaqlar içəri girdilər."
+    },
+    {
+      "id": "runon-005",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem hazırdır biz sabah gələcəyik",
+      "expected": "Sistem hazırdır. Biz sabah gələcəyik."
+    },
+    {
+      "id": "runon-006",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem yeniləndi onlar işi yoxladılar",
+      "expected": "Sistem yeniləndi. Onlar işi yoxladılar."
+    },
+    {
+      "id": "runon-007",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem hazırdır mən indi gəlirəm",
+      "expected": "Sistem hazırdır. Mən indi gəlirəm."
+    },
+    {
+      "id": "runon-008",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem işlədi siz sabah gələcəksiniz",
+      "expected": "Sistem işlədi. Siz sabah gələcəksiniz."
+    },
+    {
+      "id": "runon-009",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem bitdi onlar indi gedirlər",
+      "expected": "Sistem bitdi. Onlar indi gedirlər."
+    },
+    {
+      "id": "runon-010",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem bağlandı biz sonra danışacağıq",
+      "expected": "Sistem bağlandı. Biz sonra danışacağıq."
+    },
+    {
+      "id": "runon-011",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem hazırdır sən indi gəlirsən",
+      "expected": "Sistem hazırdır. Sən indi gəlirsən."
+    },
+    {
+      "id": "runon-012",
+      "category": "runon",
+      "mode": "text",
+      "input": "sistem yoxlandı onlar yenidən baxdılar",
+      "expected": "Sistem yoxlandı. Onlar yenidən baxdılar."
+    },
+    {
+      "id": "question-013",
+      "category": "question",
+      "mode": "text",
+      "input": "niyə server açılmır",
+      "expected": "Niyə server açılmır?"
+    },
+    {
+      "id": "question-014",
+      "category": "question",
+      "mode": "text",
+      "input": "necə server işləyir",
+      "expected": "Necə server işləyir?"
+    },
+    {
+      "id": "question-015",
+      "category": "question",
+      "mode": "text",
+      "input": "harada server işləyir",
+      "expected": "Harada server işləyir?"
+    },
+    {
+      "id": "question-016",
+      "category": "question",
+      "mode": "text",
+      "input": "nə vaxt server hazır olacaq",
+      "expected": "Nə vaxt server hazır olacaq?"
+    },
+    {
+      "id": "question-017",
+      "category": "question",
+      "mode": "text",
+      "input": "hansı server hazırdır",
+      "expected": "Hansı server hazırdır?"
+    },
+    {
+      "id": "question-018",
+      "category": "question",
+      "mode": "text",
+      "input": "kim server yoxlayır",
+      "expected": "Kim server yoxlayır?"
+    },
+    {
+      "id": "question-019",
+      "category": "question",
+      "mode": "text",
+      "input": "server hazırdırmı",
+      "expected": "Server hazırdırmı?"
+    },
+    {
+      "id": "question-020",
+      "category": "question",
+      "mode": "text",
+      "input": "server hazır olacaq düzdür",
+      "expected": "Server hazır olacaq, düzdür?"
+    },
+    {
+      "id": "question-021",
+      "category": "question",
+      "mode": "text",
+      "input": "sən server yoxlayacaqsan yoxsa mən baxım",
+      "expected": "Sən server yoxlayacaqsan, yoxsa mən baxım?"
+    },
+    {
+      "id": "question-022",
+      "category": "question",
+      "mode": "text",
+      "input": "bəs sən",
+      "expected": "Bəs sən?"
+    },
+    {
+      "id": "question-023",
+      "category": "question",
+      "mode": "text",
+      "input": "bilmirəm niyə server açılmır",
+      "expected": "Bilmirəm niyə server açılmır."
+    },
+    {
+      "id": "question-024",
+      "category": "question",
+      "mode": "text",
+      "input": "mən soruşdum nə vaxt server hazır olacaq",
+      "expected": "Mən soruşdum nə vaxt server hazır olacaq."
+    },
+    {
+      "id": "exclamation-008",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay nə gözəl mənzərədir",
+      "expected": "Vay, nə gözəl mənzərədir!"
+    },
+    {
+      "id": "exclamation-009",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "aman diqqətli ol",
+      "expected": "Aman, diqqətli ol!"
+    },
+    {
+      "id": "exclamation-010",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "afərin bu server yaxşıdır",
+      "expected": "Afərin, bu server yaxşıdır!"
+    },
+    {
+      "id": "exclamation-011",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu server hazırdır",
+      "expected": "Əla, bu server hazırdır!"
+    },
+    {
+      "id": "exclamation-012",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "heyif server hazır deyil",
+      "expected": "Heyif, server hazır deyil!"
+    },
+    {
+      "id": "exclamation-013",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "təəssüf server hazır deyil",
+      "expected": "Təəssüf, server hazır deyil!"
+    },
+    {
+      "id": "exclamation-014",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu server necə gözəldir",
+      "expected": "Vay, bu server necə gözəldir!"
+    },
+    {
+      "id": "comma-017",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır amma vaxt azdır",
+      "expected": "Server hazırdır, amma vaxt azdır."
+    },
+    {
+      "id": "comma-018",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır lakin vaxt azdır",
+      "expected": "Server hazırdır, lakin vaxt azdır."
+    },
+    {
+      "id": "comma-019",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır çünki hamı işlədi",
+      "expected": "Server hazırdır, çünki hamı işlədi."
+    },
+    {
+      "id": "comma-020",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır ancaq mən gözləyirəm",
+      "expected": "Server hazırdır, ancaq mən gözləyirəm."
+    },
+    {
+      "id": "comma-021",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır yoxsa mən gedim",
+      "expected": "Server hazırdır, yoxsa mən gedim?"
+    },
+    {
+      "id": "comma-022",
+      "category": "comma",
+      "mode": "text",
+      "input": "əgər vaxtın olsa server yoxla",
+      "expected": "Əgər vaxtın olsa, server yoxla."
+    },
+    {
+      "id": "comma-023",
+      "category": "comma",
+      "mode": "text",
+      "input": "düşünürəm ki server hazırdır",
+      "expected": "Düşünürəm ki, server hazırdır."
+    },
+    {
+      "id": "comma-024",
+      "category": "comma",
+      "mode": "text",
+      "input": "beləliklə server hazırdır",
+      "expected": "Beləliklə, server hazırdır."
+    },
+    {
+      "id": "comma-025",
+      "category": "comma",
+      "mode": "text",
+      "input": "məsələn server hazırdır",
+      "expected": "Məsələn, server hazırdır."
+    },
+    {
+      "id": "comma-026",
+      "category": "comma",
+      "mode": "text",
+      "input": "əslində server hazırdır",
+      "expected": "Əslində, server hazırdır."
+    },
+    {
+      "id": "comma-027",
+      "category": "comma",
+      "mode": "text",
+      "input": "həm server həm də komanda hazırdır",
+      "expected": "Həm server, həm də komanda hazırdır."
+    },
+    {
+      "id": "comma-028",
+      "category": "comma",
+      "mode": "text",
+      "input": "zəhmət olmasa server yoxlayın",
+      "expected": "Zəhmət olmasa, server yoxlayın."
+    },
+    {
+      "id": "comma-029",
+      "category": "comma",
+      "mode": "text",
+      "input": "radioda ancaq eyni mahnı oxunurdu",
+      "expected": "Radioda ancaq eyni mahnı oxunurdu."
+    },
+    {
+      "id": "comma-030",
+      "category": "comma",
+      "mode": "text",
+      "input": "mən gələndə server hazırdır",
+      "expected": "Mən gələndə server hazırdır."
+    },
+    {
+      "id": "comma-031",
+      "category": "comma",
+      "mode": "text",
+      "input": "bu server çox yaxşıdır",
+      "expected": "Bu server çox yaxşıdır."
+    },
+    {
+      "id": "comma-032",
+      "category": "comma",
+      "mode": "text",
+      "input": "server hazırdır",
+      "expected": "Server hazırdır."
+    },
+    {
+      "id": "runon-013",
+      "category": "runon",
+      "mode": "text",
+      "input": "server işlədi istifadəçilər sevindilər",
+      "expected": "Server işlədi. İstifadəçilər sevindilər."
+    },
+    {
+      "id": "runon-014",
+      "category": "runon",
+      "mode": "text",
+      "input": "server dayandı xidmətlər cavab vermədilər",
+      "expected": "Server dayandı. Xidmətlər cavab vermədilər."
+    },
+    {
+      "id": "runon-015",
+      "category": "runon",
+      "mode": "text",
+      "input": "server başladı işçilər qeydlər apardılar",
+      "expected": "Server başladı. İşçilər qeydlər apardılar."
+    },
+    {
+      "id": "runon-016",
+      "category": "runon",
+      "mode": "text",
+      "input": "server açıldı uşaqlar içəri girdilər",
+      "expected": "Server açıldı. Uşaqlar içəri girdilər."
+    },
+    {
+      "id": "runon-017",
+      "category": "runon",
+      "mode": "text",
+      "input": "server hazırdır biz sabah gələcəyik",
+      "expected": "Server hazırdır. Biz sabah gələcəyik."
+    },
+    {
+      "id": "runon-018",
+      "category": "runon",
+      "mode": "text",
+      "input": "server yeniləndi onlar işi yoxladılar",
+      "expected": "Server yeniləndi. Onlar işi yoxladılar."
+    },
+    {
+      "id": "runon-019",
+      "category": "runon",
+      "mode": "text",
+      "input": "server hazırdır mən indi gəlirəm",
+      "expected": "Server hazırdır. Mən indi gəlirəm."
+    },
+    {
+      "id": "runon-020",
+      "category": "runon",
+      "mode": "text",
+      "input": "server işlədi siz sabah gələcəksiniz",
+      "expected": "Server işlədi. Siz sabah gələcəksiniz."
+    },
+    {
+      "id": "runon-021",
+      "category": "runon",
+      "mode": "text",
+      "input": "server bitdi onlar indi gedirlər",
+      "expected": "Server bitdi. Onlar indi gedirlər."
+    },
+    {
+      "id": "runon-022",
+      "category": "runon",
+      "mode": "text",
+      "input": "server bağlandı biz sonra danışacağıq",
+      "expected": "Server bağlandı. Biz sonra danışacağıq."
+    },
+    {
+      "id": "runon-023",
+      "category": "runon",
+      "mode": "text",
+      "input": "server hazırdır sən indi gəlirsən",
+      "expected": "Server hazırdır. Sən indi gəlirsən."
+    },
+    {
+      "id": "runon-024",
+      "category": "runon",
+      "mode": "text",
+      "input": "server yoxlandı onlar yenidən baxdılar",
+      "expected": "Server yoxlandı. Onlar yenidən baxdılar."
+    },
+    {
+      "id": "question-025",
+      "category": "question",
+      "mode": "text",
+      "input": "niyə proqram açılmır",
+      "expected": "Niyə proqram açılmır?"
+    },
+    {
+      "id": "question-026",
+      "category": "question",
+      "mode": "text",
+      "input": "necə proqram işləyir",
+      "expected": "Necə proqram işləyir?"
+    },
+    {
+      "id": "question-027",
+      "category": "question",
+      "mode": "text",
+      "input": "harada proqram işləyir",
+      "expected": "Harada proqram işləyir?"
+    },
+    {
+      "id": "question-028",
+      "category": "question",
+      "mode": "text",
+      "input": "nə vaxt proqram hazır olacaq",
+      "expected": "Nə vaxt proqram hazır olacaq?"
+    },
+    {
+      "id": "question-029",
+      "category": "question",
+      "mode": "text",
+      "input": "hansı proqram hazırdır",
+      "expected": "Hansı proqram hazırdır?"
+    },
+    {
+      "id": "question-030",
+      "category": "question",
+      "mode": "text",
+      "input": "kim proqram yoxlayır",
+      "expected": "Kim proqram yoxlayır?"
+    },
+    {
+      "id": "question-031",
+      "category": "question",
+      "mode": "text",
+      "input": "proqram hazırdırmı",
+      "expected": "Proqram hazırdırmı?"
+    },
+    {
+      "id": "question-032",
+      "category": "question",
+      "mode": "text",
+      "input": "proqram hazır olacaq düzdür",
+      "expected": "Proqram hazır olacaq, düzdür?"
+    },
+    {
+      "id": "question-033",
+      "category": "question",
+      "mode": "text",
+      "input": "sən proqram yoxlayacaqsan yoxsa mən baxım",
+      "expected": "Sən proqram yoxlayacaqsan, yoxsa mən baxım?"
+    },
+    {
+      "id": "question-034",
+      "category": "question",
+      "mode": "text",
+      "input": "bəs sən",
+      "expected": "Bəs sən?"
+    },
+    {
+      "id": "question-035",
+      "category": "question",
+      "mode": "text",
+      "input": "bilmirəm niyə proqram açılmır",
+      "expected": "Bilmirəm niyə proqram açılmır."
+    },
+    {
+      "id": "question-036",
+      "category": "question",
+      "mode": "text",
+      "input": "mən soruşdum nə vaxt proqram hazır olacaq",
+      "expected": "Mən soruşdum nə vaxt proqram hazır olacaq."
+    },
+    {
+      "id": "exclamation-015",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay nə gözəl mənzərədir",
+      "expected": "Vay, nə gözəl mənzərədir!"
+    },
+    {
+      "id": "exclamation-016",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "aman diqqətli ol",
+      "expected": "Aman, diqqətli ol!"
+    },
+    {
+      "id": "exclamation-017",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "afərin bu proqram yaxşıdır",
+      "expected": "Afərin, bu proqram yaxşıdır!"
+    },
+    {
+      "id": "exclamation-018",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu proqram hazırdır",
+      "expected": "Əla, bu proqram hazırdır!"
+    },
+    {
+      "id": "exclamation-019",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "heyif proqram hazır deyil",
+      "expected": "Heyif, proqram hazır deyil!"
+    },
+    {
+      "id": "exclamation-020",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "təəssüf proqram hazır deyil",
+      "expected": "Təəssüf, proqram hazır deyil!"
+    },
+    {
+      "id": "exclamation-021",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu proqram necə gözəldir",
+      "expected": "Vay, bu proqram necə gözəldir!"
+    },
+    {
+      "id": "comma-033",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır amma vaxt azdır",
+      "expected": "Proqram hazırdır, amma vaxt azdır."
+    },
+    {
+      "id": "comma-034",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır lakin vaxt azdır",
+      "expected": "Proqram hazırdır, lakin vaxt azdır."
+    },
+    {
+      "id": "comma-035",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır çünki hamı işlədi",
+      "expected": "Proqram hazırdır, çünki hamı işlədi."
+    },
+    {
+      "id": "comma-036",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır ancaq mən gözləyirəm",
+      "expected": "Proqram hazırdır, ancaq mən gözləyirəm."
+    },
+    {
+      "id": "comma-037",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır yoxsa mən gedim",
+      "expected": "Proqram hazırdır, yoxsa mən gedim?"
+    },
+    {
+      "id": "comma-038",
+      "category": "comma",
+      "mode": "text",
+      "input": "əgər vaxtın olsa proqram yoxla",
+      "expected": "Əgər vaxtın olsa, proqram yoxla."
+    },
+    {
+      "id": "comma-039",
+      "category": "comma",
+      "mode": "text",
+      "input": "düşünürəm ki proqram hazırdır",
+      "expected": "Düşünürəm ki, proqram hazırdır."
+    },
+    {
+      "id": "comma-040",
+      "category": "comma",
+      "mode": "text",
+      "input": "beləliklə proqram hazırdır",
+      "expected": "Beləliklə, proqram hazırdır."
+    },
+    {
+      "id": "comma-041",
+      "category": "comma",
+      "mode": "text",
+      "input": "məsələn proqram hazırdır",
+      "expected": "Məsələn, proqram hazırdır."
+    },
+    {
+      "id": "comma-042",
+      "category": "comma",
+      "mode": "text",
+      "input": "əslində proqram hazırdır",
+      "expected": "Əslində, proqram hazırdır."
+    },
+    {
+      "id": "comma-043",
+      "category": "comma",
+      "mode": "text",
+      "input": "həm proqram həm də komanda hazırdır",
+      "expected": "Həm proqram, həm də komanda hazırdır."
+    },
+    {
+      "id": "comma-044",
+      "category": "comma",
+      "mode": "text",
+      "input": "zəhmət olmasa proqram yoxlayın",
+      "expected": "Zəhmət olmasa, proqram yoxlayın."
+    },
+    {
+      "id": "comma-045",
+      "category": "comma",
+      "mode": "text",
+      "input": "radioda ancaq eyni mahnı oxunurdu",
+      "expected": "Radioda ancaq eyni mahnı oxunurdu."
+    },
+    {
+      "id": "comma-046",
+      "category": "comma",
+      "mode": "text",
+      "input": "mən gələndə proqram hazırdır",
+      "expected": "Mən gələndə proqram hazırdır."
+    },
+    {
+      "id": "comma-047",
+      "category": "comma",
+      "mode": "text",
+      "input": "bu proqram çox yaxşıdır",
+      "expected": "Bu proqram çox yaxşıdır."
+    },
+    {
+      "id": "comma-048",
+      "category": "comma",
+      "mode": "text",
+      "input": "proqram hazırdır",
+      "expected": "Proqram hazırdır."
+    },
+    {
+      "id": "runon-025",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram işlədi istifadəçilər sevindilər",
+      "expected": "Proqram işlədi. İstifadəçilər sevindilər."
+    },
+    {
+      "id": "runon-026",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram dayandı xidmətlər cavab vermədilər",
+      "expected": "Proqram dayandı. Xidmətlər cavab vermədilər."
+    },
+    {
+      "id": "runon-027",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram başladı işçilər qeydlər apardılar",
+      "expected": "Proqram başladı. İşçilər qeydlər apardılar."
+    },
+    {
+      "id": "runon-028",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram açıldı uşaqlar içəri girdilər",
+      "expected": "Proqram açıldı. Uşaqlar içəri girdilər."
+    },
+    {
+      "id": "runon-029",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram hazırdır biz sabah gələcəyik",
+      "expected": "Proqram hazırdır. Biz sabah gələcəyik."
+    },
+    {
+      "id": "runon-030",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram yeniləndi onlar işi yoxladılar",
+      "expected": "Proqram yeniləndi. Onlar işi yoxladılar."
+    },
+    {
+      "id": "runon-031",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram hazırdır mən indi gəlirəm",
+      "expected": "Proqram hazırdır. Mən indi gəlirəm."
+    },
+    {
+      "id": "runon-032",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram işlədi siz sabah gələcəksiniz",
+      "expected": "Proqram işlədi. Siz sabah gələcəksiniz."
+    },
+    {
+      "id": "runon-033",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram bitdi onlar indi gedirlər",
+      "expected": "Proqram bitdi. Onlar indi gedirlər."
+    },
+    {
+      "id": "runon-034",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram bağlandı biz sonra danışacağıq",
+      "expected": "Proqram bağlandı. Biz sonra danışacağıq."
+    },
+    {
+      "id": "runon-035",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram hazırdır sən indi gəlirsən",
+      "expected": "Proqram hazırdır. Sən indi gəlirsən."
+    },
+    {
+      "id": "runon-036",
+      "category": "runon",
+      "mode": "text",
+      "input": "proqram yoxlandı onlar yenidən baxdılar",
+      "expected": "Proqram yoxlandı. Onlar yenidən baxdılar."
+    },
+    {
+      "id": "question-037",
+      "category": "question",
+      "mode": "text",
+      "input": "niyə layihə açılmır",
+      "expected": "Niyə layihə açılmır?"
+    },
+    {
+      "id": "question-038",
+      "category": "question",
+      "mode": "text",
+      "input": "necə layihə işləyir",
+      "expected": "Necə layihə işləyir?"
+    },
+    {
+      "id": "question-039",
+      "category": "question",
+      "mode": "text",
+      "input": "harada layihə işləyir",
+      "expected": "Harada layihə işləyir?"
+    },
+    {
+      "id": "question-040",
+      "category": "question",
+      "mode": "text",
+      "input": "nə vaxt layihə hazır olacaq",
+      "expected": "Nə vaxt layihə hazır olacaq?"
+    },
+    {
+      "id": "question-041",
+      "category": "question",
+      "mode": "text",
+      "input": "hansı layihə hazırdır",
+      "expected": "Hansı layihə hazırdır?"
+    },
+    {
+      "id": "question-042",
+      "category": "question",
+      "mode": "text",
+      "input": "kim layihə yoxlayır",
+      "expected": "Kim layihə yoxlayır?"
+    },
+    {
+      "id": "question-043",
+      "category": "question",
+      "mode": "text",
+      "input": "layihə hazırdırmı",
+      "expected": "Layihə hazırdırmı?"
+    },
+    {
+      "id": "question-044",
+      "category": "question",
+      "mode": "text",
+      "input": "layihə hazır olacaq düzdür",
+      "expected": "Layihə hazır olacaq, düzdür?"
+    },
+    {
+      "id": "question-045",
+      "category": "question",
+      "mode": "text",
+      "input": "sən layihə yoxlayacaqsan yoxsa mən baxım",
+      "expected": "Sən layihə yoxlayacaqsan, yoxsa mən baxım?"
+    },
+    {
+      "id": "question-046",
+      "category": "question",
+      "mode": "text",
+      "input": "bəs sən",
+      "expected": "Bəs sən?"
+    },
+    {
+      "id": "question-047",
+      "category": "question",
+      "mode": "text",
+      "input": "bilmirəm niyə layihə açılmır",
+      "expected": "Bilmirəm niyə layihə açılmır."
+    },
+    {
+      "id": "question-048",
+      "category": "question",
+      "mode": "text",
+      "input": "mən soruşdum nə vaxt layihə hazır olacaq",
+      "expected": "Mən soruşdum nə vaxt layihə hazır olacaq."
+    },
+    {
+      "id": "exclamation-022",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay nə gözəl mənzərədir",
+      "expected": "Vay, nə gözəl mənzərədir!"
+    },
+    {
+      "id": "exclamation-023",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "aman diqqətli ol",
+      "expected": "Aman, diqqətli ol!"
+    },
+    {
+      "id": "exclamation-024",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "afərin bu layihə yaxşıdır",
+      "expected": "Afərin, bu layihə yaxşıdır!"
+    },
+    {
+      "id": "exclamation-025",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu layihə hazırdır",
+      "expected": "Əla, bu layihə hazırdır!"
+    },
+    {
+      "id": "exclamation-026",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "heyif layihə hazır deyil",
+      "expected": "Heyif, layihə hazır deyil!"
+    },
+    {
+      "id": "exclamation-027",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "təəssüf layihə hazır deyil",
+      "expected": "Təəssüf, layihə hazır deyil!"
+    },
+    {
+      "id": "exclamation-028",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu layihə necə gözəldir",
+      "expected": "Vay, bu layihə necə gözəldir!"
+    },
+    {
+      "id": "comma-049",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır amma vaxt azdır",
+      "expected": "Layihə hazırdır, amma vaxt azdır."
+    },
+    {
+      "id": "comma-050",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır lakin vaxt azdır",
+      "expected": "Layihə hazırdır, lakin vaxt azdır."
+    },
+    {
+      "id": "comma-051",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır çünki hamı işlədi",
+      "expected": "Layihə hazırdır, çünki hamı işlədi."
+    },
+    {
+      "id": "comma-052",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır ancaq mən gözləyirəm",
+      "expected": "Layihə hazırdır, ancaq mən gözləyirəm."
+    },
+    {
+      "id": "comma-053",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır yoxsa mən gedim",
+      "expected": "Layihə hazırdır, yoxsa mən gedim?"
+    },
+    {
+      "id": "comma-054",
+      "category": "comma",
+      "mode": "text",
+      "input": "əgər vaxtın olsa layihə yoxla",
+      "expected": "Əgər vaxtın olsa, layihə yoxla."
+    },
+    {
+      "id": "comma-055",
+      "category": "comma",
+      "mode": "text",
+      "input": "düşünürəm ki layihə hazırdır",
+      "expected": "Düşünürəm ki, layihə hazırdır."
+    },
+    {
+      "id": "comma-056",
+      "category": "comma",
+      "mode": "text",
+      "input": "beləliklə layihə hazırdır",
+      "expected": "Beləliklə, layihə hazırdır."
+    },
+    {
+      "id": "comma-057",
+      "category": "comma",
+      "mode": "text",
+      "input": "məsələn layihə hazırdır",
+      "expected": "Məsələn, layihə hazırdır."
+    },
+    {
+      "id": "comma-058",
+      "category": "comma",
+      "mode": "text",
+      "input": "əslində layihə hazırdır",
+      "expected": "Əslində, layihə hazırdır."
+    },
+    {
+      "id": "comma-059",
+      "category": "comma",
+      "mode": "text",
+      "input": "həm layihə həm də komanda hazırdır",
+      "expected": "Həm layihə, həm də komanda hazırdır."
+    },
+    {
+      "id": "comma-060",
+      "category": "comma",
+      "mode": "text",
+      "input": "zəhmət olmasa layihə yoxlayın",
+      "expected": "Zəhmət olmasa, layihə yoxlayın."
+    },
+    {
+      "id": "comma-061",
+      "category": "comma",
+      "mode": "text",
+      "input": "radioda ancaq eyni mahnı oxunurdu",
+      "expected": "Radioda ancaq eyni mahnı oxunurdu."
+    },
+    {
+      "id": "comma-062",
+      "category": "comma",
+      "mode": "text",
+      "input": "mən gələndə layihə hazırdır",
+      "expected": "Mən gələndə layihə hazırdır."
+    },
+    {
+      "id": "comma-063",
+      "category": "comma",
+      "mode": "text",
+      "input": "bu layihə çox yaxşıdır",
+      "expected": "Bu layihə çox yaxşıdır."
+    },
+    {
+      "id": "comma-064",
+      "category": "comma",
+      "mode": "text",
+      "input": "layihə hazırdır",
+      "expected": "Layihə hazırdır."
+    },
+    {
+      "id": "runon-037",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə işlədi istifadəçilər sevindilər",
+      "expected": "Layihə işlədi. İstifadəçilər sevindilər."
+    },
+    {
+      "id": "runon-038",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə dayandı xidmətlər cavab vermədilər",
+      "expected": "Layihə dayandı. Xidmətlər cavab vermədilər."
+    },
+    {
+      "id": "runon-039",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə başladı işçilər qeydlər apardılar",
+      "expected": "Layihə başladı. İşçilər qeydlər apardılar."
+    },
+    {
+      "id": "runon-040",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə açıldı uşaqlar içəri girdilər",
+      "expected": "Layihə açıldı. Uşaqlar içəri girdilər."
+    },
+    {
+      "id": "runon-041",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə hazırdır biz sabah gələcəyik",
+      "expected": "Layihə hazırdır. Biz sabah gələcəyik."
+    },
+    {
+      "id": "runon-042",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə yeniləndi onlar işi yoxladılar",
+      "expected": "Layihə yeniləndi. Onlar işi yoxladılar."
+    },
+    {
+      "id": "runon-043",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə hazırdır mən indi gəlirəm",
+      "expected": "Layihə hazırdır. Mən indi gəlirəm."
+    },
+    {
+      "id": "runon-044",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə işlədi siz sabah gələcəksiniz",
+      "expected": "Layihə işlədi. Siz sabah gələcəksiniz."
+    },
+    {
+      "id": "runon-045",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə bitdi onlar indi gedirlər",
+      "expected": "Layihə bitdi. Onlar indi gedirlər."
+    },
+    {
+      "id": "runon-046",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə bağlandı biz sonra danışacağıq",
+      "expected": "Layihə bağlandı. Biz sonra danışacağıq."
+    },
+    {
+      "id": "runon-047",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə hazırdır sən indi gəlirsən",
+      "expected": "Layihə hazırdır. Sən indi gəlirsən."
+    },
+    {
+      "id": "runon-048",
+      "category": "runon",
+      "mode": "text",
+      "input": "layihə yoxlandı onlar yenidən baxdılar",
+      "expected": "Layihə yoxlandı. Onlar yenidən baxdılar."
+    },
+    {
+      "id": "question-049",
+      "category": "question",
+      "mode": "text",
+      "input": "niyə hesabat açılmır",
+      "expected": "Niyə hesabat açılmır?"
+    },
+    {
+      "id": "question-050",
+      "category": "question",
+      "mode": "text",
+      "input": "necə hesabat işləyir",
+      "expected": "Necə hesabat işləyir?"
+    },
+    {
+      "id": "question-051",
+      "category": "question",
+      "mode": "text",
+      "input": "harada hesabat işləyir",
+      "expected": "Harada hesabat işləyir?"
+    },
+    {
+      "id": "question-052",
+      "category": "question",
+      "mode": "text",
+      "input": "nə vaxt hesabat hazır olacaq",
+      "expected": "Nə vaxt hesabat hazır olacaq?"
+    },
+    {
+      "id": "question-053",
+      "category": "question",
+      "mode": "text",
+      "input": "hansı hesabat hazırdır",
+      "expected": "Hansı hesabat hazırdır?"
+    },
+    {
+      "id": "question-054",
+      "category": "question",
+      "mode": "text",
+      "input": "kim hesabat yoxlayır",
+      "expected": "Kim hesabat yoxlayır?"
+    },
+    {
+      "id": "question-055",
+      "category": "question",
+      "mode": "text",
+      "input": "hesabat hazırdırmı",
+      "expected": "Hesabat hazırdırmı?"
+    },
+    {
+      "id": "question-056",
+      "category": "question",
+      "mode": "text",
+      "input": "hesabat hazır olacaq düzdür",
+      "expected": "Hesabat hazır olacaq, düzdür?"
+    },
+    {
+      "id": "question-057",
+      "category": "question",
+      "mode": "text",
+      "input": "sən hesabat yoxlayacaqsan yoxsa mən baxım",
+      "expected": "Sən hesabat yoxlayacaqsan, yoxsa mən baxım?"
+    },
+    {
+      "id": "question-058",
+      "category": "question",
+      "mode": "text",
+      "input": "bəs sən",
+      "expected": "Bəs sən?"
+    },
+    {
+      "id": "question-059",
+      "category": "question",
+      "mode": "text",
+      "input": "bilmirəm niyə hesabat açılmır",
+      "expected": "Bilmirəm niyə hesabat açılmır."
+    },
+    {
+      "id": "question-060",
+      "category": "question",
+      "mode": "text",
+      "input": "mən soruşdum nə vaxt hesabat hazır olacaq",
+      "expected": "Mən soruşdum nə vaxt hesabat hazır olacaq."
+    },
+    {
+      "id": "exclamation-029",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay nə gözəl mənzərədir",
+      "expected": "Vay, nə gözəl mənzərədir!"
+    },
+    {
+      "id": "exclamation-030",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "aman diqqətli ol",
+      "expected": "Aman, diqqətli ol!"
+    },
+    {
+      "id": "exclamation-031",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "afərin bu hesabat yaxşıdır",
+      "expected": "Afərin, bu hesabat yaxşıdır!"
+    },
+    {
+      "id": "exclamation-032",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu hesabat hazırdır",
+      "expected": "Əla, bu hesabat hazırdır!"
+    },
+    {
+      "id": "exclamation-033",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "heyif hesabat hazır deyil",
+      "expected": "Heyif, hesabat hazır deyil!"
+    },
+    {
+      "id": "exclamation-034",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "təəssüf hesabat hazır deyil",
+      "expected": "Təəssüf, hesabat hazır deyil!"
+    },
+    {
+      "id": "exclamation-035",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu hesabat necə gözəldir",
+      "expected": "Vay, bu hesabat necə gözəldir!"
+    },
+    {
+      "id": "comma-065",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır amma vaxt azdır",
+      "expected": "Hesabat hazırdır, amma vaxt azdır."
+    },
+    {
+      "id": "comma-066",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır lakin vaxt azdır",
+      "expected": "Hesabat hazırdır, lakin vaxt azdır."
+    },
+    {
+      "id": "comma-067",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır çünki hamı işlədi",
+      "expected": "Hesabat hazırdır, çünki hamı işlədi."
+    },
+    {
+      "id": "comma-068",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır ancaq mən gözləyirəm",
+      "expected": "Hesabat hazırdır, ancaq mən gözləyirəm."
+    },
+    {
+      "id": "comma-069",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır yoxsa mən gedim",
+      "expected": "Hesabat hazırdır, yoxsa mən gedim?"
+    },
+    {
+      "id": "comma-070",
+      "category": "comma",
+      "mode": "text",
+      "input": "əgər vaxtın olsa hesabat yoxla",
+      "expected": "Əgər vaxtın olsa, hesabat yoxla."
+    },
+    {
+      "id": "comma-071",
+      "category": "comma",
+      "mode": "text",
+      "input": "düşünürəm ki hesabat hazırdır",
+      "expected": "Düşünürəm ki, hesabat hazırdır."
+    },
+    {
+      "id": "comma-072",
+      "category": "comma",
+      "mode": "text",
+      "input": "beləliklə hesabat hazırdır",
+      "expected": "Beləliklə, hesabat hazırdır."
+    },
+    {
+      "id": "comma-073",
+      "category": "comma",
+      "mode": "text",
+      "input": "məsələn hesabat hazırdır",
+      "expected": "Məsələn, hesabat hazırdır."
+    },
+    {
+      "id": "comma-074",
+      "category": "comma",
+      "mode": "text",
+      "input": "əslində hesabat hazırdır",
+      "expected": "Əslində, hesabat hazırdır."
+    },
+    {
+      "id": "comma-075",
+      "category": "comma",
+      "mode": "text",
+      "input": "həm hesabat həm də komanda hazırdır",
+      "expected": "Həm hesabat, həm də komanda hazırdır."
+    },
+    {
+      "id": "comma-076",
+      "category": "comma",
+      "mode": "text",
+      "input": "zəhmət olmasa hesabat yoxlayın",
+      "expected": "Zəhmət olmasa, hesabat yoxlayın."
+    },
+    {
+      "id": "comma-077",
+      "category": "comma",
+      "mode": "text",
+      "input": "radioda ancaq eyni mahnı oxunurdu",
+      "expected": "Radioda ancaq eyni mahnı oxunurdu."
+    },
+    {
+      "id": "comma-078",
+      "category": "comma",
+      "mode": "text",
+      "input": "mən gələndə hesabat hazırdır",
+      "expected": "Mən gələndə hesabat hazırdır."
+    },
+    {
+      "id": "comma-079",
+      "category": "comma",
+      "mode": "text",
+      "input": "bu hesabat çox yaxşıdır",
+      "expected": "Bu hesabat çox yaxşıdır."
+    },
+    {
+      "id": "comma-080",
+      "category": "comma",
+      "mode": "text",
+      "input": "hesabat hazırdır",
+      "expected": "Hesabat hazırdır."
+    },
+    {
+      "id": "runon-049",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat işlədi istifadəçilər sevindilər",
+      "expected": "Hesabat işlədi. İstifadəçilər sevindilər."
+    },
+    {
+      "id": "runon-050",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat dayandı xidmətlər cavab vermədilər",
+      "expected": "Hesabat dayandı. Xidmətlər cavab vermədilər."
+    },
+    {
+      "id": "runon-051",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat başladı işçilər qeydlər apardılar",
+      "expected": "Hesabat başladı. İşçilər qeydlər apardılar."
+    },
+    {
+      "id": "runon-052",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat açıldı uşaqlar içəri girdilər",
+      "expected": "Hesabat açıldı. Uşaqlar içəri girdilər."
+    },
+    {
+      "id": "runon-053",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat hazırdır biz sabah gələcəyik",
+      "expected": "Hesabat hazırdır. Biz sabah gələcəyik."
+    },
+    {
+      "id": "runon-054",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat yeniləndi onlar işi yoxladılar",
+      "expected": "Hesabat yeniləndi. Onlar işi yoxladılar."
+    },
+    {
+      "id": "runon-055",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat hazırdır mən indi gəlirəm",
+      "expected": "Hesabat hazırdır. Mən indi gəlirəm."
+    },
+    {
+      "id": "runon-056",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat işlədi siz sabah gələcəksiniz",
+      "expected": "Hesabat işlədi. Siz sabah gələcəksiniz."
+    },
+    {
+      "id": "runon-057",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat bitdi onlar indi gedirlər",
+      "expected": "Hesabat bitdi. Onlar indi gedirlər."
+    },
+    {
+      "id": "runon-058",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat bağlandı biz sonra danışacağıq",
+      "expected": "Hesabat bağlandı. Biz sonra danışacağıq."
+    },
+    {
+      "id": "runon-059",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat hazırdır sən indi gəlirsən",
+      "expected": "Hesabat hazırdır. Sən indi gəlirsən."
+    },
+    {
+      "id": "runon-060",
+      "category": "runon",
+      "mode": "text",
+      "input": "hesabat yoxlandı onlar yenidən baxdılar",
+      "expected": "Hesabat yoxlandı. Onlar yenidən baxdılar."
+    },
+    {
+      "id": "paragraph-001",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem hazır idi. komanda onu yoxladı. nəticələr qeyd edildi. axşam müştəri sənədi göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər sistem hazır idi. Komanda onu yoxladı. Nəticələr qeyd edildi.\n\nAxşam müştəri sənədi göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-002",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server hazır idi. komanda onu yoxladı. nəticələr qeyd edildi. axşam müştəri sənədi göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər server hazır idi. Komanda onu yoxladı. Nəticələr qeyd edildi.\n\nAxşam müştəri sənədi göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-003",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram hazır idi. komanda onu yoxladı. nəticələr qeyd edildi. axşam müştəri sənədi göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər proqram hazır idi. Komanda onu yoxladı. Nəticələr qeyd edildi.\n\nAxşam müştəri sənədi göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-004",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə hazır idi. komanda onu yoxladı. nəticələr qeyd edildi. axşam müştəri sənədi göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər layihə hazır idi. Komanda onu yoxladı. Nəticələr qeyd edildi.\n\nAxşam müştəri sənədi göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-005",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat hazır idi. komanda onu yoxladı. nəticələr qeyd edildi. axşam müştəri sənədi göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər hesabat hazır idi. Komanda onu yoxladı. Nəticələr qeyd edildi.\n\nAxşam müştəri sənədi göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-006",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem işləyirdi. işçilər onu yoxladılar. nəticələr yaxşı idi. axşam müştəri zəng etdi. komanda cavab verdi.",
+      "expected": "Səhər sistem işləyirdi. İşçilər onu yoxladılar. Nəticələr yaxşı idi.\n\nAxşam müştəri zəng etdi. Komanda cavab verdi."
+    },
+    {
+      "id": "paragraph-007",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server işləyirdi. işçilər onu yoxladılar. nəticələr yaxşı idi. axşam müştəri zəng etdi. komanda cavab verdi.",
+      "expected": "Səhər server işləyirdi. İşçilər onu yoxladılar. Nəticələr yaxşı idi.\n\nAxşam müştəri zəng etdi. Komanda cavab verdi."
+    },
+    {
+      "id": "paragraph-008",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram işləyirdi. işçilər onu yoxladılar. nəticələr yaxşı idi. axşam müştəri zəng etdi. komanda cavab verdi.",
+      "expected": "Səhər proqram işləyirdi. İşçilər onu yoxladılar. Nəticələr yaxşı idi.\n\nAxşam müştəri zəng etdi. Komanda cavab verdi."
+    },
+    {
+      "id": "paragraph-009",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə işləyirdi. işçilər onu yoxladılar. nəticələr yaxşı idi. axşam müştəri zəng etdi. komanda cavab verdi.",
+      "expected": "Səhər layihə işləyirdi. İşçilər onu yoxladılar. Nəticələr yaxşı idi.\n\nAxşam müştəri zəng etdi. Komanda cavab verdi."
+    },
+    {
+      "id": "paragraph-010",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat işləyirdi. işçilər onu yoxladılar. nəticələr yaxşı idi. axşam müştəri zəng etdi. komanda cavab verdi.",
+      "expected": "Səhər hesabat işləyirdi. İşçilər onu yoxladılar. Nəticələr yaxşı idi.\n\nAxşam müştəri zəng etdi. Komanda cavab verdi."
+    },
+    {
+      "id": "paragraph-011",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem açıldı. komanda işə başladı. hamı nəticə gözləyirdi. axşam rəhbər məlumat aldı. komanda hesabat hazırladı.",
+      "expected": "Səhər sistem açıldı. Komanda işə başladı. Hamı nəticə gözləyirdi.\n\nAxşam rəhbər məlumat aldı. Komanda hesabat hazırladı."
+    },
+    {
+      "id": "paragraph-012",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server açıldı. komanda işə başladı. hamı nəticə gözləyirdi. axşam rəhbər məlumat aldı. komanda hesabat hazırladı.",
+      "expected": "Səhər server açıldı. Komanda işə başladı. Hamı nəticə gözləyirdi.\n\nAxşam rəhbər məlumat aldı. Komanda hesabat hazırladı."
+    },
+    {
+      "id": "paragraph-013",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram açıldı. komanda işə başladı. hamı nəticə gözləyirdi. axşam rəhbər məlumat aldı. komanda hesabat hazırladı.",
+      "expected": "Səhər proqram açıldı. Komanda işə başladı. Hamı nəticə gözləyirdi.\n\nAxşam rəhbər məlumat aldı. Komanda hesabat hazırladı."
+    },
+    {
+      "id": "paragraph-014",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə açıldı. komanda işə başladı. hamı nəticə gözləyirdi. axşam rəhbər məlumat aldı. komanda hesabat hazırladı.",
+      "expected": "Səhər layihə açıldı. Komanda işə başladı. Hamı nəticə gözləyirdi.\n\nAxşam rəhbər məlumat aldı. Komanda hesabat hazırladı."
+    },
+    {
+      "id": "paragraph-015",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat açıldı. komanda işə başladı. hamı nəticə gözləyirdi. axşam rəhbər məlumat aldı. komanda hesabat hazırladı.",
+      "expected": "Səhər hesabat açıldı. Komanda işə başladı. Hamı nəticə gözləyirdi.\n\nAxşam rəhbər məlumat aldı. Komanda hesabat hazırladı."
+    },
+    {
+      "id": "paragraph-016",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem yeniləndi. işçilər dəyişiklikləri yoxladılar. nəticələr qeyd edildi. gecə müştəri xəbər göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər sistem yeniləndi. İşçilər dəyişiklikləri yoxladılar. Nəticələr qeyd edildi.\n\nGecə müştəri xəbər göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-017",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server yeniləndi. işçilər dəyişiklikləri yoxladılar. nəticələr qeyd edildi. gecə müştəri xəbər göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər server yeniləndi. İşçilər dəyişiklikləri yoxladılar. Nəticələr qeyd edildi.\n\nGecə müştəri xəbər göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-018",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram yeniləndi. işçilər dəyişiklikləri yoxladılar. nəticələr qeyd edildi. gecə müştəri xəbər göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər proqram yeniləndi. İşçilər dəyişiklikləri yoxladılar. Nəticələr qeyd edildi.\n\nGecə müştəri xəbər göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-019",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə yeniləndi. işçilər dəyişiklikləri yoxladılar. nəticələr qeyd edildi. gecə müştəri xəbər göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər layihə yeniləndi. İşçilər dəyişiklikləri yoxladılar. Nəticələr qeyd edildi.\n\nGecə müştəri xəbər göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-020",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat yeniləndi. işçilər dəyişiklikləri yoxladılar. nəticələr qeyd edildi. gecə müştəri xəbər göndərdi. komanda cavab hazırladı.",
+      "expected": "Səhər hesabat yeniləndi. İşçilər dəyişiklikləri yoxladılar. Nəticələr qeyd edildi.\n\nGecə müştəri xəbər göndərdi. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-021",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem hazır idi. hamı işə başladı. komanda nəticələri yoxladı. axşam rəhbər gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər sistem hazır idi. Hamı işə başladı. Komanda nəticələri yoxladı.\n\nAxşam rəhbər gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-022",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server hazır idi. hamı işə başladı. komanda nəticələri yoxladı. axşam rəhbər gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər server hazır idi. Hamı işə başladı. Komanda nəticələri yoxladı.\n\nAxşam rəhbər gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-023",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram hazır idi. hamı işə başladı. komanda nəticələri yoxladı. axşam rəhbər gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər proqram hazır idi. Hamı işə başladı. Komanda nəticələri yoxladı.\n\nAxşam rəhbər gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-024",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə hazır idi. hamı işə başladı. komanda nəticələri yoxladı. axşam rəhbər gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər layihə hazır idi. Hamı işə başladı. Komanda nəticələri yoxladı.\n\nAxşam rəhbər gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-025",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat hazır idi. hamı işə başladı. komanda nəticələri yoxladı. axşam rəhbər gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər hesabat hazır idi. Hamı işə başladı. Komanda nəticələri yoxladı.\n\nAxşam rəhbər gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-026",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem işləyirdi. komanda onu izlədi. nəticələr müzakirə edildi. axşam problem yarandı. komanda cavab hazırladı.",
+      "expected": "Səhər sistem işləyirdi. Komanda onu izlədi. Nəticələr müzakirə edildi.\n\nAxşam problem yarandı. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-027",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server işləyirdi. komanda onu izlədi. nəticələr müzakirə edildi. axşam problem yarandı. komanda cavab hazırladı.",
+      "expected": "Səhər server işləyirdi. Komanda onu izlədi. Nəticələr müzakirə edildi.\n\nAxşam problem yarandı. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-028",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram işləyirdi. komanda onu izlədi. nəticələr müzakirə edildi. axşam problem yarandı. komanda cavab hazırladı.",
+      "expected": "Səhər proqram işləyirdi. Komanda onu izlədi. Nəticələr müzakirə edildi.\n\nAxşam problem yarandı. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-029",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə işləyirdi. komanda onu izlədi. nəticələr müzakirə edildi. axşam problem yarandı. komanda cavab hazırladı.",
+      "expected": "Səhər layihə işləyirdi. Komanda onu izlədi. Nəticələr müzakirə edildi.\n\nAxşam problem yarandı. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-030",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat işləyirdi. komanda onu izlədi. nəticələr müzakirə edildi. axşam problem yarandı. komanda cavab hazırladı.",
+      "expected": "Səhər hesabat işləyirdi. Komanda onu izlədi. Nəticələr müzakirə edildi.\n\nAxşam problem yarandı. Komanda cavab hazırladı."
+    },
+    {
+      "id": "paragraph-031",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem yoxlandı. işçilər sənədi oxudular. nəticələr qeyd edildi. gecə rəhbər zəng etdi. komanda məlumat verdi.",
+      "expected": "Səhər sistem yoxlandı. İşçilər sənədi oxudular. Nəticələr qeyd edildi.\n\nGecə rəhbər zəng etdi. Komanda məlumat verdi."
+    },
+    {
+      "id": "paragraph-032",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server yoxlandı. işçilər sənədi oxudular. nəticələr qeyd edildi. gecə rəhbər zəng etdi. komanda məlumat verdi.",
+      "expected": "Səhər server yoxlandı. İşçilər sənədi oxudular. Nəticələr qeyd edildi.\n\nGecə rəhbər zəng etdi. Komanda məlumat verdi."
+    },
+    {
+      "id": "paragraph-033",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram yoxlandı. işçilər sənədi oxudular. nəticələr qeyd edildi. gecə rəhbər zəng etdi. komanda məlumat verdi.",
+      "expected": "Səhər proqram yoxlandı. İşçilər sənədi oxudular. Nəticələr qeyd edildi.\n\nGecə rəhbər zəng etdi. Komanda məlumat verdi."
+    },
+    {
+      "id": "paragraph-034",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə yoxlandı. işçilər sənədi oxudular. nəticələr qeyd edildi. gecə rəhbər zəng etdi. komanda məlumat verdi.",
+      "expected": "Səhər layihə yoxlandı. İşçilər sənədi oxudular. Nəticələr qeyd edildi.\n\nGecə rəhbər zəng etdi. Komanda məlumat verdi."
+    },
+    {
+      "id": "paragraph-035",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat yoxlandı. işçilər sənədi oxudular. nəticələr qeyd edildi. gecə rəhbər zəng etdi. komanda məlumat verdi.",
+      "expected": "Səhər hesabat yoxlandı. İşçilər sənədi oxudular. Nəticələr qeyd edildi.\n\nGecə rəhbər zəng etdi. Komanda məlumat verdi."
+    },
+    {
+      "id": "paragraph-036",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem hazır idi. müştəri onu yoxladı. nəticələr yaxşı idi. axşam komanda görüşdü. hamı cavab hazırladı.",
+      "expected": "Səhər sistem hazır idi. Müştəri onu yoxladı. Nəticələr yaxşı idi.\n\nAxşam komanda görüşdü. Hamı cavab hazırladı."
+    },
+    {
+      "id": "paragraph-037",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server hazır idi. müştəri onu yoxladı. nəticələr yaxşı idi. axşam komanda görüşdü. hamı cavab hazırladı.",
+      "expected": "Səhər server hazır idi. Müştəri onu yoxladı. Nəticələr yaxşı idi.\n\nAxşam komanda görüşdü. Hamı cavab hazırladı."
+    },
+    {
+      "id": "paragraph-038",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram hazır idi. müştəri onu yoxladı. nəticələr yaxşı idi. axşam komanda görüşdü. hamı cavab hazırladı.",
+      "expected": "Səhər proqram hazır idi. Müştəri onu yoxladı. Nəticələr yaxşı idi.\n\nAxşam komanda görüşdü. Hamı cavab hazırladı."
+    },
+    {
+      "id": "paragraph-039",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə hazır idi. müştəri onu yoxladı. nəticələr yaxşı idi. axşam komanda görüşdü. hamı cavab hazırladı.",
+      "expected": "Səhər layihə hazır idi. Müştəri onu yoxladı. Nəticələr yaxşı idi.\n\nAxşam komanda görüşdü. Hamı cavab hazırladı."
+    },
+    {
+      "id": "paragraph-040",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat hazır idi. müştəri onu yoxladı. nəticələr yaxşı idi. axşam komanda görüşdü. hamı cavab hazırladı.",
+      "expected": "Səhər hesabat hazır idi. Müştəri onu yoxladı. Nəticələr yaxşı idi.\n\nAxşam komanda görüşdü. Hamı cavab hazırladı."
+    },
+    {
+      "id": "paragraph-041",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem işləyirdi. komanda hesabat aldı. rəhbər nəticələri oxudu. axşam müştəri gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər sistem işləyirdi. Komanda hesabat aldı. Rəhbər nəticələri oxudu.\n\nAxşam müştəri gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-042",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server işləyirdi. komanda hesabat aldı. rəhbər nəticələri oxudu. axşam müştəri gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər server işləyirdi. Komanda hesabat aldı. Rəhbər nəticələri oxudu.\n\nAxşam müştəri gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-043",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram işləyirdi. komanda hesabat aldı. rəhbər nəticələri oxudu. axşam müştəri gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər proqram işləyirdi. Komanda hesabat aldı. Rəhbər nəticələri oxudu.\n\nAxşam müştəri gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-044",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə işləyirdi. komanda hesabat aldı. rəhbər nəticələri oxudu. axşam müştəri gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər layihə işləyirdi. Komanda hesabat aldı. Rəhbər nəticələri oxudu.\n\nAxşam müştəri gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-045",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat işləyirdi. komanda hesabat aldı. rəhbər nəticələri oxudu. axşam müştəri gəldi. işçilər məlumat verdilər.",
+      "expected": "Səhər hesabat işləyirdi. Komanda hesabat aldı. Rəhbər nəticələri oxudu.\n\nAxşam müştəri gəldi. İşçilər məlumat verdilər."
+    },
+    {
+      "id": "paragraph-046",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər sistem hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
+      "expected": "Səhər sistem hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    },
+    {
+      "id": "paragraph-047",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər server hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
+      "expected": "Səhər server hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    },
+    {
+      "id": "paragraph-048",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər proqram hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
+      "expected": "Səhər proqram hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    },
+    {
+      "id": "paragraph-049",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər layihə hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
+      "expected": "Səhər layihə hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    },
+    {
+      "id": "paragraph-050",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "səhər hesabat hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
+      "expected": "Səhər hesabat hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    }
+  ]
+}
