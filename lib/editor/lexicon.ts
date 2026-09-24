@@ -119,6 +119,7 @@ const aliases: Record<string, string> = {
   sananam: 'Sananam', acilmir: 'açılmır', dayanacagina: 'dayanacağına',
   tanisima: 'tanışıma', goruntusu: 'görüntüsü', xetasi: 'xətası',
   testdir: 'testdir', teyin: 'təyin', narmin: 'Nərmin', emin: 'Emin',
+  muraciyet: 'müraciət',
   olunmush: 'olunmuş',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
@@ -262,6 +263,8 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'ilecek', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'əcək' : 'acaq') },
   { raw: 'ilmeyib', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
   { raw: 'ilmayib', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
+  { raw: 'ilan', apply: stem => stem + harmonyI(stem) + 'l' + harmonyA(stem) + 'n' },
+  { raw: 'ilen', apply: stem => stem + harmonyI(stem) + 'l' + harmonyA(stem) + 'n' },
   { raw: 'ilmasi', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 's' + harmonyI(stem) },
   { raw: 'ilmesi', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 's' + harmonyI(stem) },
   { raw: 'ilmelidir', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'lidir' },
