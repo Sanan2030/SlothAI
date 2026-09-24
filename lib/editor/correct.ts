@@ -61,7 +61,10 @@ function punctuate(line: string): string {
     const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence);
     const exclamation = /^nə (?:gözəl|yaxşı|pis|qəribə)\s/i.test(lastSentence);
     const discourseMarker = /^nə isə(?:\s|$)/i.test(lastSentence);
-    const question = !indirect && !exclamation && !discourseMarker && /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən)$)/i.test(lastSentence);
+    const explicitQuestion = /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən|necəsən|necəsiniz)$)/i.test(lastSentence);
+    const alternativeQuestion = /,\s*yoxsa\s+[^.!?]+$/iu.test(lastSentence);
+    const tagQuestion = /,\s*düzdür$/iu.test(lastSentence);
+    const question = !indirect && !exclamation && !discourseMarker && (explicitQuestion || alternativeQuestion || tagQuestion);
     result += question ? '?' : '.';
   }
   return capitalize(result);
