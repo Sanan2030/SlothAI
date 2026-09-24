@@ -117,6 +117,7 @@ export function extendedPhrases(text: string): string {
     .replace(/(^|[^\p{L}])qəribə qəribə(?=$|[^\p{L}])/giu, '$1qəribə-qəribə')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
     .replace(/(^|[^\p{L}])seher(?=\s+(?:basırıqları|yağış|tez)(?:\s|$))/giu, '$1səhər')
+    .replace(/(^|[^\p{L}])(?:seher|şəhər)(?=\s+telefonun\s+s[əe]sin[əe])/giu, '$1səhər')
     .replace(/(^|[^\p{L}])ismayilliya(?=$|[^\p{L}])/giu, '$1İsmayıllıya')
     .replace(/(^|[^\p{L}])qəbələyə(?=$|[^\p{L}])/giu, '$1Qəbələyə');
 }
