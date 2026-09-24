@@ -1,48 +1,67 @@
-/** Recognize email sections before prose punctuation; never infer a name. */
-export function separateEmailSections(input: string): string {
-  let text = input.replace(/\r\n?/gu, '\n');
-  // An explicit closing marks the end of prose even in a single-line draft.
-  text = text.replace(/(?:^|\s)(?:hormetle|hörmətlə)[,.]?(?:[ \t]+([^\n]+))?\s*$/iu,
-    (_, signature: string | undefined) => '\n\nHörmətlə,' + (signature ? '\n' + signature.trim().replace(/(^|\s)(\p{L})/gu, (_m, space: string, letter: string) => space + letter.toLocaleUpperCase('az-AZ')) : ''));
-  text = text.replace(/^\s*(?:movzu|mövzu):[ \t]*([^\n]+?)[ \t]+(?=(?:salam|hormetli|hörmətli)(?:\s|,))/iu, 'Mövzu: $1\n\n');
-  text = text.replace(/(^|\n)(?:hormetli|hörmətli)\s+([^\n,.!?]+?\s+(?:bey|bəy|xanim|xanım)|(?:komanda|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|musteri|müştəri))[, \t]+/giu,
-    (_, prefix: string, addressee: string) => prefix + 'Hörmətli ' + addressee.replace(/(^|\s)(\p{L})/u, (_m, space: string, letter: string) => space + letter.toLocaleUpperCase('az-AZ')) + ',\n\n');
-  return text.trim();
-}
-
-export interface EmailSections {
+/** Parse mail structure before passing body prose to the local editor. */
+export interface EmailDocument {
   subject?: string;
-  salutation?: string;
+  salutation?: { type: 'hello' | 'honorific'; addressee?: string };
   body: string;
   closing?: string;
   signature?: string;
 }
 
-/** Parse explicit mail structure before editing prose. A missing addressee is
- * never inferred from the body, and a signature is never fed to punctuation. */
-export function parseEmailSections(input: string): EmailSections {
-  let remaining = separateEmailSections(input);
+// Recipient titles identify the end of a compact salutation. These are
+// addressee nouns, never an inventory of possible body-opening phrases.
+const recipientEnd = /(?:bəy|bey|xanım|xanim|komanda(?:sı|si)?|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|terefdasimiz|tərəfdaşımız|musteri|müştəri|nümayəndəsi|numayendesi|istifadecisi|istifadəçisi|heyəti|heyeti|rəhbərlik|rehberlik|əməkdaşlar|emekdaslar|komitəsi|komitesi|tərəflər|terefler)(?=[,!.\s]|$)/iu;
+
+export function parseEmailSections(input: string): EmailDocument {
+  let remaining = input.replace(/\r\n?/gu, '\n').trim();
   let subject: string | undefined;
-  const heading = remaining.match(/^\s*(?:mövzu|movzu):\s*([^\n]+)(?:\n+|$)/iu);
-  if (heading) {
-    subject = heading[1].trim();
-    remaining = remaining.slice(heading[0].length).trim();
+  const explicit = remaining.match(/^(?:movzu|mövzu):\s*([^\n]*?)(?=\s+(?:salam|hormetli|hörmətli)\b|\n|$)/iu);
+  if (explicit) {
+    subject = explicit[1].trim();
+    remaining = remaining.slice(explicit[0].length).trim();
+  } else {
+    const greetingAt = remaining.match(/\s+(?=(?:salam|hormetli|hörmətli)\b)/iu);
+    if (greetingAt?.index && !remaining.slice(0, greetingAt.index).includes('\n')) {
+      subject = remaining.slice(0, greetingAt.index).trim();
+      remaining = remaining.slice(greetingAt.index).trim();
+    }
   }
-  let signature: string | undefined;
+
   let closing: string | undefined;
-  const farewell = remaining.match(/(?:^|\n+)(?:hörmətlə|hormetle)[,.]?\s*(?:\n([^\n]+))?\s*$/iu);
-  if (farewell && farewell.index !== undefined) {
-    closing = 'Hörmətlə,';
-    signature = farewell[1]?.trim();
-    remaining = remaining.slice(0, farewell.index).trim();
+  let signature: string | undefined;
+  const farewell = [...remaining.matchAll(/(?:^|\s)(?:hörmətlə|hormetle)[,.]?(?=\s|$)/giu)].at(-1);
+  if (farewell?.index !== undefined) {
+    const tail = remaining.slice(farewell.index + farewell[0].length).trim();
+    if (tail.length <= 240) {
+      signature = tail || undefined;
+      closing = 'Hörmətlə,';
+      remaining = remaining.slice(0, farewell.index).trim();
+    }
   }
-  let salutation: string | undefined;
-  const hello = remaining.match(/^\s*(salam)[,!.]?\s*(?:\n+|(?=\p{L}))/iu);
-  const honorific = remaining.match(/^\s*((?:hörmətli|hormetli)\s+.+?\s+(?:xanım|xanim|bəy|bey))[,!.]?\s*(?:\n+|(?=\p{L}))/iu);
-  const greeting = hello ?? honorific;
-  if (greeting) {
-    salutation = greeting[1].trim();
-    remaining = remaining.slice(greeting[0].length).trim();
+
+  let salutation: EmailDocument['salutation'];
+  const hello = remaining.match(/^salam[,!.]?(?=\s|$)/iu);
+  if (hello) {
+    salutation = { type: 'hello' };
+    remaining = remaining.slice(hello[0].length).trim();
+  } else {
+    const honorific = remaining.match(/^(?:hörmətli|hormetli)\s+/iu);
+    if (honorific) {
+      const following = remaining.slice(honorific[0].length);
+      const first = following.split('\n')[0];
+      const titled = first.match(/^(.*?\b(?:bəy|bey|xanım|xanim))[,!.]?(?=\s|$)/iu);
+      const comma = first.match(/^([^,!.]+)[,!.](?=\s|$)/u);
+      const recipient = titled ?? comma ?? (() => {
+        const words = [...first.matchAll(/\p{L}+/gu)];
+        const end = words.findLastIndex((item, index) => index < 9 && recipientEnd.test(item[0]));
+        if (end < 0) return undefined;
+        const span = first.slice(0, words[end].index! + words[end][0].length);
+        return [span, span];
+      })();
+      if (recipient) {
+        salutation = { type: 'honorific', addressee: recipient[1].trim() };
+        remaining = following.slice(recipient[0].length).replace(/^[,!.\s]+/u, '').trim();
+      }
+    }
   }
   return { subject, salutation, body: remaining, closing, signature };
 }

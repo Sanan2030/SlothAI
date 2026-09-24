@@ -6,7 +6,7 @@ import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
-import { separateEmailSections, parseEmailSections } from './rules/email';
+import { parseEmailSections } from './rules/email';
 import { segmentIndependentClauses } from './segmentation';
 
 export const MAX_TEXT_LENGTH = 10_000;
@@ -196,82 +196,25 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
 export function formatEmail(input: string): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
-  const sections = parseEmailSections(input);
-  if (sections.salutation && sections.body && !sections.subject && !/\n/u.test(sections.body)) {
-    const rawSalutation = correctText(sections.salutation, true).text.replace(/[,.!?]+$/u, '');
-    const salutation = rawSalutation.replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
-      (_, title: string, name: string, suffix: string) => title + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix);
-    const body = correctText(sections.body, true).text;
-    const sign = sections.signature?.replace(/(^|\s)(\p{L})/gu,
-      (_match, space: string, letter: string) => space + letter.toLocaleUpperCase('az-AZ'));
-    const text = ['Mövzu: Müraciət', salutation + ',', body,
-      sign ? `Hörmətlə,\n${sign}` : 'Hörmətlə,'].join('\n\n');
-    return { text, corrections: text === input ? 0 : 1 };
-  }
-  input = separateEmailSections(input);
-  const compactSalutation = input.match(/(?<!\p{L})(?:hormetli|hörmətli)(?!\p{L})/iu);
-  const compactClosing = [...input.matchAll(/(?<!\p{L})(?:hormetle|hörmətlə)[,]?(?!\p{L})/giu)].at(-1);
-  // Informal email drafts often arrive as one dense line: subject, salutation,
-  // body and signature without separators. Split only when both the subject
-  // prefix and a reviewed body opening make the boundaries unambiguous.
-  if (!/^\s*mövzu:/iu.test(input) && compactSalutation?.index && compactSalutation.index > 0) {
-    const subjectRaw = input.slice(0, compactSalutation.index).trim();
-    const contentEnd = compactClosing?.index && compactClosing.index > compactSalutation.index
-      ? compactClosing.index : input.length;
-    const addressed = input.slice(compactSalutation.index, contentEnd).trim();
-    const bodyOpening = addressed.match(/\s+(?=(?:kecen|keçən|18 sentyabr|evvelki|əvvəlki|sirketimizde|şirkətimizdə|sirketinizin|şirkətinizin|it ve|İT və|son zamanlar|sizinle|sizinlə|bildirmekden|bildirməkdən|sirketimizin|şirkətimizin)\b)/iu);
-    if (bodyOpening?.index) {
-      const greetingRaw = addressed.slice(0, bodyOpening.index).trim();
-      const bodyRaw = addressed.slice(bodyOpening.index).trim();
-      const subjectText = correctText(subjectRaw, true).text
-        .replace(/[.!?]+$/u, '')
-        .replace(/\babb\b/giu, 'ABB')
-        .replace(/\b(?:it|İt)\b/gu, 'IT')
-        .replace(/\b(?:sla|Sla)\b/gu, 'SLA')
-        .replace(/\b(?:hr|Hr)\b/gu, 'HR');
-      let greeting = correctText(greetingRaw, true).text.replace(/[,.!?]+$/u, '');
-      greeting = greeting.replace(/^(Hörmətli\s+)([a-zəçğıöşü]+)(\s+bəy)$/iu,
-        (_, prefix: string, name: string, suffix: string) => prefix + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix);
-      const body = correctText(bodyRaw, true).text;
-      const signatureRaw = compactClosing
-        ? input.slice(compactClosing.index + compactClosing[0].length).trim() : '';
-      const signature = signatureRaw
-        ? correctText(signatureRaw, true).text.replace(/[.!?]+$/u, '') : '';
-      const text = [
-        `Mövzu: ${subjectText}`,
-        `${greeting},`,
-        body,
-        signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,',
-      ].join('\n\n');
-      return { text, corrections: Math.max(1, correctText(input, true).corrections) };
-    }
-  }
-  // Preserve an existing short signature rather than punctuating a person's
-  // name as a prose sentence. Length validation still covers the whole input.
-  if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
-  const signature = input.match(/(?:^|\n)(?:hörmətlə|hormetle)[,.]?\s*\n([^\n]{1,100})\s*$/iu);
-  if (signature) {
-    const body = input.slice(0, signature.index).trim();
-    if (body) {
-      const result = formatEmail(body);
-      const name = signature[1].trim().replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/g, word => languageServices.spelling.resolve(word, languageServices));
-      return { text: result.text + '\n' + name, corrections: result.corrections };
-    }
-  }
-  const result = correctText(input, true);
-  const subjectMatch = result.text.match(/^Mövzu:\s*([^\n]+)\n*/i);
-  const subject = subjectMatch ? `Mövzu: ${capitalize(subjectMatch[1])}` : 'Mövzu: Müraciət';
-  let body = subjectMatch ? result.text.slice(subjectMatch[0].length).trim() : result.text;
-  let greeting = 'Salam,';
-  const greetingMatch = body.match(/^(Salam|Hörmətli[^\n.!?]+)[,.]?\s*(?:\n|$)/i);
-  if (greetingMatch) {
-    greeting = greetingMatch[1].replace(/[,\s]+$/, '') + ',';
-    body = body.slice(greetingMatch[0].length).trim();
-  } else if (/^Salam,\s+/i.test(body)) {
-    body = body.replace(/^Salam,\s+/i, '');
-  }
-  body = capitalize(body);
-  const hasClosing = /(?:^|\n)Hörmətlə[,.:]?\s*(?:\n[^\n]+)?$/i.test(body);
-  const text = [subject, greeting, body, ...(hasClosing ? [] : ['Hörmətlə,'])].filter(Boolean).join('\n\n');
-  return { text, corrections: result.corrections + (text === result.text ? 0 : 1) };
+  const document = parseEmailSections(input);
+  const subject = document.subject
+    ? correctText(document.subject, true).text.replace(/[.!?]+$/u, '')
+      .replace(/\babb\b/giu, 'ABB').replace(/\b(?:it|İt)\b/gu, 'IT')
+      .replace(/\b(?:sla|Sla)\b/gu, 'SLA').replace(/\b(?:hr|Hr)\b/gu, 'HR')
+    : 'Müraciət';
+  const greeting = document.salutation?.type === 'honorific'
+    ? correctText(`Hörmətli ${document.salutation.addressee}`, true).text
+      .replace(/[,.!?]+$/u, '')
+      .replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
+        (_, title: string, name: string, suffix: string) => title + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix) + ','
+    : 'Salam,';
+  const body = document.body ? correctText(document.body, true).text : '';
+  // Names and job titles are structural signature text, never prose: preserve
+  // their line breaks and never add sentence-ending punctuation to them.
+  const signature = document.signature?.split('\n').map(line => line.trim().replace(/\p{L}+/gu,
+    word => languageServices.spelling.resolve(word, languageServices)).replace(/^(\p{L})/u,
+    letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
+  const text = [`Mövzu: ${subject}`, greeting, body,
+    signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,'].filter(Boolean).join('\n\n');
+  return { text, corrections: text === input ? 0 : 1 };
 }

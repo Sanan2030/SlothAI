@@ -4,8 +4,12 @@ import type { SpellingCandidateGenerator } from './contracts/spelling';
 
 const buckets = new Map<string, number[]>();
 const shortBuckets = new Map<string, number[]>();
+const endingBuckets = new Map<string, number[]>();
 const resolutionCache = new Map<string, string | null>();
 const candidateCache = new Map<string, readonly string[]>();
+const MAX_INSPECTED_CANDIDATES = 360;
+const MAX_RETURNED_CANDIDATES = 24;
+const MAX_CACHE_ENTRIES = 2048;
 
 // An indexed (initial letter, length) neighborhood keeps each lookup bounded;
 // no query may walk the complete dictionary or construct a full edit matrix.
@@ -18,6 +22,10 @@ for (let index = 0; index < dictionary.length; index++) {
   const bucket = buckets.get(key) ?? [];
   bucket.push(index);
   buckets.set(key, bucket);
+  const ending = folded.slice(-2) + ':' + folded.length;
+  const endBucket = endingBuckets.get(ending) ?? [];
+  endBucket.push(index);
+  endingBuckets.set(ending, endBucket);
   if (folded.length <= 6) {
     const shortKey = folded[0] + ':' + folded.length;
     const short = shortBuckets.get(shortKey) ?? [];
@@ -52,31 +60,40 @@ export const spellingCandidates: SpellingCandidateGenerator = {
   candidates(word, limit) {
     const input = word.toLocaleLowerCase('az-AZ');
     if (!/^[a-zəçğıöşü]{4,17}$/u.test(input)) return [];
-    const capped = Math.max(0, Math.min(limit, 12));
+    const capped = Math.max(0, Math.min(limit, MAX_RETURNED_CANDIDATES));
     if (!capped) return [];
     const cached = candidateCache.get(input);
     if (cached) return cached.slice(0, capped);
     const folded = foldLetters(input);
     const found: { value: string; distance: number }[] = [];
-    let inspected = 0;
+    const inspected = new Set<number>();
+    // Reserve a budget for each length and prefix/suffix index. A crowded
+    // exact-length bucket must not starve deletion candidates at length -1.
     for (const length of [folded.length, folded.length + 1, folded.length - 1]) {
-      const neighborhood = folded.length <= 5
+      const neighborhoods = [folded.length <= 5
         ? shortBuckets.get(folded[0] + ':' + length)
-        : buckets.get(folded.slice(0, 2) + ':' + length);
-      for (const reference of neighborhood ?? []) {
-        if (++inspected > 120) break;
+        : buckets.get(folded.slice(0, 2) + ':' + length),
+      endingBuckets.get(folded.slice(-2) + ':' + length)];
+      for (const neighborhood of neighborhoods) {
+        let examined = 0;
+        for (const reference of neighborhood ?? []) {
+          if (++examined > MAX_INSPECTED_CANDIDATES / 6) break;
+          if (inspected.has(reference)) continue;
+          inspected.add(reference);
         const spelling = dictionary[reference].toLocaleLowerCase('az-AZ');
         const candidateFolded = foldLetters(spelling);
-        // Diacritics already present in the input are strong evidence.
-        if ([...input].some(letter => /[əçğıöşü]/u.test(letter) && !spelling.includes(letter))) continue;
+        // Preserve explicitly accented letters that align at the same index;
+        // insertions and deletions may shift subsequent accented positions.
+        if (spelling.length === input.length && [...input].some((letter, at) =>
+          /[əçğıöşü]/u.test(letter) && spelling[at] !== letter)) continue;
         const distance = boundedEditDistance(folded, candidateFolded, 1);
         if (distance === 1) found.push({ value: spelling, distance });
+        }
       }
-      if (inspected > 120) break;
     }
     found.sort((a, b) => a.distance - b.distance || a.value.localeCompare(b.value, 'az'));
-    const values = [...new Set(found.map(item => item.value))].slice(0, 12);
-    if (candidateCache.size >= 2048) candidateCache.clear();
+    const values = [...new Set(found.map(item => item.value))].slice(0, MAX_RETURNED_CANDIDATES);
+    if (candidateCache.size >= MAX_CACHE_ENTRIES) candidateCache.clear();
     candidateCache.set(input, values);
     return values.slice(0, capped);
   },
@@ -91,7 +108,7 @@ export function chooseIndexedTypo(word: string): string | undefined {
   if (dictionaryCandidates(word)?.has(word)) return undefined;
   // An insertion is safer than a substitution or deletion without frequency
   // and part-of-speech metadata (olaraq/olacaq and render/rəndə are near ties).
-  const alternatives = spellingCandidates.candidates(word, 12).filter(candidate => {
+  const alternatives = spellingCandidates.candidates(word, MAX_RETURNED_CANDIDATES).filter(candidate => {
     if (candidate.length !== word.length + 1) return false;
     const folded = foldLetters(candidate);
     const input = foldLetters(word);
@@ -107,18 +124,29 @@ export function chooseIndexedTypo(word: string): string | undefined {
     // Swapping neighboring keys is a high confidence edit only when the
     // resulting spelling is unique. Other substitution/deletion candidates
     // remain suggestions: they can change valid names or grammatical forms.
-    const transpositions = spellingCandidates.candidates(word, 12).filter(candidate => {
+    const transpositions = spellingCandidates.candidates(word, MAX_RETURNED_CANDIDATES).filter(candidate => {
       if (candidate.length !== word.length) return false;
       const input = foldLetters(word);
       const target = foldLetters(candidate);
-      for (let at = 2; at < input.length - 1; at++) {
+      // A final -ram/-rəm is a first-person verb ending. Swapping its last
+      // pair would fabricate an imperative, e.g. yatıram -> yatırma.
+      const end = /(?:ıram|irəm|uram|ürəm)$/u.test(word) ? input.length - 2 : input.length - 1;
+      for (let at = 2; at < end; at++) {
         if (input[at] !== input[at + 1] && input.slice(0, at) + input[at + 1] + input[at] + input.slice(at + 2) === target) return true;
       }
       return false;
     });
     if (new Set(transpositions.map(foldLetters)).size === 1) resolved = transpositions[0];
   }
-  if (resolutionCache.size >= 2048) resolutionCache.clear();
+  if (!resolved && word.length >= 7) {
+    const candidates = spellingCandidates.candidates(word, MAX_RETURNED_CANDIDATES);
+    // Removing a repeated trailing key is stronger evidence than arbitrary
+    // substitution. A conflicting valid one-edit candidate keeps the input.
+    const deduplicated = word.at(-1) === word.at(-2)
+      ? candidates.filter(candidate => candidate === word.slice(0, -1)) : [];
+    if (deduplicated.length === 1 && candidates.length === 1) resolved = deduplicated[0];
+  }
+  if (resolutionCache.size >= MAX_CACHE_ENTRIES) resolutionCache.clear();
   resolutionCache.set(word, resolved ?? null);
   return resolved;
 }

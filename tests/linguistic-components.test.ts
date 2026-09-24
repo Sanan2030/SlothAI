@@ -18,7 +18,11 @@ test('indexed candidate repairs an internal omission while preserving exact word
   assert.equal(boundedEditDistance('abc', 'acb', 1), 1);
   assert.equal(chooseIndexedTypo('sistme'), 'sistem');
   assert.equal(correctText('sistme aktivdir').text, 'Sistem aktivdir.');
-  assert.equal(chooseIndexedTypo('məlumatt'), undefined);
+  assert.equal(chooseIndexedTypo('məlumatt'), 'məlumat');
+  assert.equal(correctText('məlumatt hazırdır').text, 'Məlumat hazırdır.');
+  assert.equal(correctText('Zyphoria Velmora Xadricon Arvenix').text, 'Zyphoria Velmora Xadricon Arvenix.');
+  assert.equal(correctText('Mən hər səhər evdə yatıram.').text, 'Mən hər səhər evdə yatıram.');
+  assert.equal(correctText('Mən həmişə çayın kənarında qaçıram.').text, 'Mən həmişə çayın kənarında qaçıram.');
   assert.equal(chooseIndexedTypo('məktəb'), undefined);
 });
 
@@ -32,8 +36,14 @@ test('nominal and verbal morphology has actual features, bounded generation and 
   }
   assert.equal(productiveMorphology.isValidWordForm('Zyphoria'), false);
   for (const [surface, lemma] of [['kitablarımızdan', 'kitab'], ['sənədlərimizdən', 'sənəd'],
-    ['müqavilələrimizdən', 'müqavilə'], ['sistemlərimizdən', 'sistem']] as const) {
+    ['müqavilələrimizdən', 'müqavilə'], ['sistemlərimizdən', 'sistem'],
+    ['uşağımızdan', 'uşaq'], ['ürəyimizdən', 'ürək'], ['kitablarınızdan', 'kitab']] as const) {
     assert.ok(productiveMorphology.analyzeWord(surface).some(analysis => analysis.lemma === lemma && analysis.features.case === 'ablative'), surface);
+  }
+  for (const [surface, lemma, mood] of [['yazaraq', 'yaz', 'converb'], ['gələrək', 'gəl', 'converb'],
+    ['gəlib', 'gəl', 'converb'], ['qoruyub', 'qoru', 'converb'], ['yazmalı', 'yaz', 'necessity'],
+    ['yazmalıdır', 'yaz', 'necessity']] as const) {
+    assert.ok(productiveMorphology.analyzeWord(surface).some(record => record.lemma === lemma && record.features.mood === mood), surface);
   }
 });
 
@@ -51,4 +61,10 @@ test('mail pipeline does not fabricate names or punctuate a signature as prose',
   assert.equal(formatted, 'Mövzu: İclas haqqında\n\nSalam,\n\nGörüş sabah keçiriləcək.\n\nHörmətlə,\nSanan Nabizada');
   assert.equal(formatEmail(formatted).text, formatted);
   assert.doesNotMatch(formatEmail('salam cavab hazirdir').text, /Nabizada/u);
+  const multiline = 'Mövzu: Server vəziyyəti\nHörmətli Nərmin xanım,\nHesabat hazırdır. Sabah göndərəcəyik.\nHörmətlə,\nSanan Nabizada\nBackend Engineer';
+  const mail = formatEmail(multiline).text;
+  assert.ok(mail.endsWith('Hörmətlə,\nSanan Nabizada\nBackend Engineer'));
+  assert.equal(formatEmail(mail).text, mail);
+  const compact = formatEmail('hesabat hormetli komanda yeni sorğu qəbul edildi hormetle Sənan Nabizada').text;
+  assert.match(compact, /^Mövzu: Hesabat\n\nHörmətli komanda,\n\n/u);
 });

@@ -1,0 +1,52 @@
+{
+  "total": 265,
+  "passed": 265,
+  "failed": 0,
+  "categories": {
+    "chat": {
+      "passed": 2,
+      "failed": 0
+    },
+    "prose": {
+      "passed": 2,
+      "failed": 0
+    },
+    "business": {
+      "passed": 43,
+      "failed": 0
+    },
+    "technical": {
+      "passed": 45,
+      "failed": 0
+    },
+    "email": {
+      "passed": 44,
+      "failed": 0
+    },
+    "narrative": {
+      "passed": 43,
+      "failed": 0
+    },
+    "morphology": {
+      "passed": 1,
+      "failed": 0
+    },
+    "question": {
+      "passed": 1,
+      "failed": 0
+    },
+    "long-prose": {
+      "passed": 1,
+      "failed": 0
+    },
+    "informal": {
+      "passed": 42,
+      "failed": 0
+    },
+    "noisy": {
+      "passed": 41,
+      "failed": 0
+    }
+  },
+  "failures": []
+}

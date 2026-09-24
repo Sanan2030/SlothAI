@@ -424,11 +424,12 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // gonderilib, saxlanilir). Reviewed roots + bounded suffix rules are safer
   // than accepting such raw forms unchanged.
   const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values)
+    ?? chooseSpelling(word, imported)
+    ?? chooseSpelling(word, new Set(morphologyCandidates))
+    ?? ((imported?.size ?? 0) > 1 ? undefined : services?.morphology.findByFoldedForm?.(word))
     ?? chooseIndexedTypo(word)
     ?? restoreDigraphTransliteration(word, services)
-    ?? restoreProductiveSuffix(word, services)
-    ?? chooseSpelling(word, imported)
-    ?? chooseSpelling(word, new Set(morphologyCandidates));
+    ?? restoreProductiveSuffix(word, services);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.

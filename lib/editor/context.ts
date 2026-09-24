@@ -16,6 +16,9 @@ export function repairPhrases(text: string): string {
     .replace(/(düşmədim) +bir de +/giu, '$1. bir də ')
     .replace(/\b(test) qalib\b/giu, '$1 qalıb')
     .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
+    // Before an accusative object and a finite verb this is the time adverb,
+    // while isolated "seher" remains ambiguous (səhər / şəhər).
+    .replace(/(^|[^\p{L}])seher(?=\s+\p{L}{3,22}(?:nı|ni|nu|nü|ı|i|u|ü)\s+\p{L}{4,24}(?:ır|ir|ur|ür|dı|di|du|dü|acaq|əcək)(?=$|[^\p{L}]))/giu, '$1səhər')
     .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
     .replace(/(^|[^\p{L}])Nike air max(?=$|[^\p{L}])/giu, '$1Nike Air Max')

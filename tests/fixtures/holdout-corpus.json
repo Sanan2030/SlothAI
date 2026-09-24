@@ -1,74 +1,1859 @@
 {
   "cases": [
     {
-      "id": "chat-01", "mode": "text", "category": "chat",
+      "id": "chat-01",
+      "mode": "text",
+      "category": "chat",
       "input": "axsam qatara catdim amma biletimi unutmusdum",
       "expected": "Axşam qatara çatdım, amma biletimi unutmuşdum."
     },
     {
-      "id": "chat-02", "mode": "text", "category": "chat",
+      "id": "chat-02",
+      "mode": "text",
+      "category": "chat",
       "input": "Zyphoria ilə görüşdüm.",
       "expected": "Zyphoria ilə görüşdüm."
     },
     {
-      "id": "prose-01", "mode": "text", "category": "prose",
+      "id": "prose-01",
+      "mode": "text",
+      "category": "prose",
       "input": "Qatar gecikirdi sərnişinlər dayanacaqda gözləyirdi",
       "expected": "Qatar gecikirdi. Sərnişinlər dayanacaqda gözləyirdi."
     },
     {
-      "id": "prose-02", "mode": "text", "category": "prose",
+      "id": "prose-02",
+      "mode": "text",
+      "category": "prose",
       "input": "Mən tələsəndə avtobus dayanmışdı.",
       "expected": "Mən tələsəndə avtobus dayanmışdı."
     },
     {
-      "id": "business-01", "mode": "text", "category": "business",
+      "id": "business-01",
+      "mode": "text",
+      "category": "business",
       "input": "Sənədlər hazırdır, lakin təsdiq gözlənilir.",
       "expected": "Sənədlər hazırdır, lakin təsdiq gözlənilir."
     },
     {
-      "id": "technical-01", "mode": "text", "category": "technical",
+      "id": "technical-01",
+      "mode": "text",
+      "category": "technical",
       "input": "API, REST, JSON və GitHub işləyir.",
       "expected": "API, REST, JSON və GitHub işləyir."
     },
     {
-      "id": "technical-02", "mode": "text", "category": "technical",
+      "id": "technical-02",
+      "mode": "text",
+      "category": "technical",
       "input": "`user_id` https://example.com/test 12.4.5",
       "expected": "`user_id` https://example.com/test 12.4.5."
     },
     {
-      "id": "email-01", "mode": "email", "category": "email",
+      "id": "email-01",
+      "mode": "email",
+      "category": "email",
       "input": "salam hesabat hazirdir zehmet olmasa baxin",
       "expected": "Mövzu: Müraciət\n\nSalam,\n\nHesabat hazırdır. Zəhmət olmasa, baxın.\n\nHörmətlə,"
     },
     {
-      "id": "email-02", "mode": "email", "category": "email",
+      "id": "email-02",
+      "mode": "email",
+      "category": "email",
       "input": "hormetli nermin xanim sənədlər sabah hazır olacaq",
       "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nSənədlər sabah hazır olacaq.\n\nHörmətlə,"
     },
     {
-      "id": "narrative-03", "mode": "text", "category": "narrative",
+      "id": "narrative-03",
+      "mode": "text",
+      "category": "narrative",
       "input": "Səhər kitabxanaya getdim. Qapıda köhnə dostumla görüşdüm. Birlikdə dərslər haqqında danışdıq.",
       "expected": "Səhər kitabxanaya getdim. Qapıda köhnə dostumla görüşdüm. Birlikdə dərslər haqqında danışdıq."
     },
     {
-      "id": "morphology-01", "mode": "text", "category": "morphology",
+      "id": "morphology-01",
+      "mode": "text",
+      "category": "morphology",
       "input": "Layihələrimizdən biri bu həftə tamamlanacaq.",
       "expected": "Layihələrimizdən biri bu həftə tamamlanacaq."
     },
     {
-      "id": "technical-03", "mode": "text", "category": "technical",
+      "id": "technical-03",
+      "mode": "text",
+      "category": "technical",
       "input": "GitHub-da dəyişiklikləri gördüm, API hələ işləmir.",
       "expected": "GitHub-da dəyişiklikləri gördüm, API hələ işləmir."
     },
     {
-      "id": "question-01", "mode": "text", "category": "question",
+      "id": "question-01",
+      "mode": "text",
+      "category": "question",
       "input": "Bu işi kim idarə edir?",
       "expected": "Bu işi kim idarə edir?"
     },
     {
-      "id": "long-01", "mode": "text", "category": "long-prose",
+      "id": "long-01",
+      "mode": "text",
+      "category": "long-prose",
       "input": "Kəndin yaxınlığında kiçik kitabxana vardı. Hər şənbə uşaqlar ora toplaşır, birlikdə yeni kitablar seçirdilər. Kitabxanaçı onlara əvvəlcə hekayəni oxuyur, sonra isə qəhrəmanların qərarları haqqında suallar verirdi. Günün sonunda hər kəs öz fikrini bölüşürdü.",
       "expected": "Kəndin yaxınlığında kiçik kitabxana vardı. Hər şənbə uşaqlar ora toplaşır, birlikdə yeni kitablar seçirdilər. Kitabxanaçı onlara əvvəlcə hekayəni oxuyur, sonra isə qəhrəmanların qərarları haqqında suallar verirdi. Günün sonunda hər kəs öz fikrini bölüşürdü."
+    },
+    {
+      "id": "informal-001",
+      "category": "informal",
+      "mode": "text",
+      "input": "Orxan restoranda sevindi.",
+      "expected": "Orxan restoranda sevindi."
+    },
+    {
+      "id": "informal-002",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən hər axşam kafedə fikirləşirəm.",
+      "expected": "Mən hər axşam kafedə fikirləşirəm."
+    },
+    {
+      "id": "informal-003",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran bu gün muzeydə söhbət edir.",
+      "expected": "Kamran bu gün muzeydə söhbət edir."
+    },
+    {
+      "id": "informal-004",
+      "category": "informal",
+      "mode": "text",
+      "input": "Nərmin günorta evdə oturur.",
+      "expected": "Nərmin günorta evdə oturur."
+    },
+    {
+      "id": "informal-005",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran ötən ay qutunu bağladı.",
+      "expected": "Kamran ötən ay qutunu bağladı."
+    },
+    {
+      "id": "informal-006",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən bu gün ünvanı unuduram.",
+      "expected": "Mən bu gün ünvanı unuduram."
+    },
+    {
+      "id": "informal-007",
+      "category": "informal",
+      "mode": "text",
+      "input": "Orxan hər səhər şəhərdə fikirləşir.",
+      "expected": "Orxan hər səhər şəhərdə fikirləşir."
+    },
+    {
+      "id": "informal-008",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həftə sonu küçədə otururam.",
+      "expected": "Mən həftə sonu küçədə otururam."
+    },
+    {
+      "id": "informal-009",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həftə sonu kitabı unuduram.",
+      "expected": "Mən həftə sonu kitabı unuduram."
+    },
+    {
+      "id": "informal-010",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən tez-tez bazarda gözləyirəm.",
+      "expected": "Mən tez-tez bazarda gözləyirəm."
+    },
+    {
+      "id": "informal-011",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən sübh tezdən rəngi dəyişirəm.",
+      "expected": "Mən sübh tezdən rəngi dəyişirəm."
+    },
+    {
+      "id": "informal-012",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran tez-tez evə gəlir.",
+      "expected": "Kamran tez-tez evə gəlir."
+    },
+    {
+      "id": "informal-013",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran bu həftə sonu şəhərə gələcək.",
+      "expected": "Kamran bu həftə sonu şəhərə gələcək."
+    },
+    {
+      "id": "informal-014",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran velosipedi düzəldəcək.",
+      "expected": "Kamran velosipedi düzəldəcək."
+    },
+    {
+      "id": "informal-015",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həftə sonu kitabı gətirirəm.",
+      "expected": "Mən həftə sonu kitabı gətirirəm."
+    },
+    {
+      "id": "informal-016",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən sübh tezdən şəhərdə söhbət edirəm.",
+      "expected": "Mən sübh tezdən şəhərdə söhbət edirəm."
+    },
+    {
+      "id": "informal-017",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran gecə kafeyə qayıdır.",
+      "expected": "Kamran gecə kafeyə qayıdır."
+    },
+    {
+      "id": "informal-018",
+      "category": "informal",
+      "mode": "text",
+      "input": "Orxan tez-tez teatra gəlir.",
+      "expected": "Orxan tez-tez teatra gəlir."
+    },
+    {
+      "id": "informal-019",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən bəzən stadiona gəlirəm.",
+      "expected": "Mən bəzən stadiona gəlirəm."
+    },
+    {
+      "id": "informal-020",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran səhər meşəni qoruyur.",
+      "expected": "Kamran səhər meşəni qoruyur."
+    },
+    {
+      "id": "informal-021",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən hər səhər evdə yatıram.",
+      "expected": "Mən hər səhər evdə yatıram."
+    },
+    {
+      "id": "informal-022",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən günorta parkda üzürəm.",
+      "expected": "Mən günorta parkda üzürəm."
+    },
+    {
+      "id": "informal-023",
+      "category": "informal",
+      "mode": "text",
+      "input": "Anar o zaman meşəyə getdi.",
+      "expected": "Anar o zaman meşəyə getdi."
+    },
+    {
+      "id": "informal-024",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən sübh tezdən həyətdə səyahət edirəm.",
+      "expected": "Mən sübh tezdən həyətdə səyahət edirəm."
+    },
+    {
+      "id": "informal-025",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən gecə açarı xatırlayıram.",
+      "expected": "Mən gecə açarı xatırlayıram."
+    },
+    {
+      "id": "informal-026",
+      "category": "informal",
+      "mode": "text",
+      "input": "Nərmin bu gün mağazanı bağlayır.",
+      "expected": "Nərmin bu gün mağazanı bağlayır."
+    },
+    {
+      "id": "informal-027",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həmişə həyətdə oynayıram.",
+      "expected": "Mən həmişə həyətdə oynayıram."
+    },
+    {
+      "id": "informal-028",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən yay aylarında məktəbdə fikirləşirəm.",
+      "expected": "Mən yay aylarında məktəbdə fikirləşirəm."
+    },
+    {
+      "id": "informal-029",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən günorta filmi izləyirəm.",
+      "expected": "Mən günorta filmi izləyirəm."
+    },
+    {
+      "id": "informal-030",
+      "category": "informal",
+      "mode": "text",
+      "input": "Nərmin sabah çayın kənarında rəqs edəcək.",
+      "expected": "Nərmin sabah çayın kənarında rəqs edəcək."
+    },
+    {
+      "id": "informal-031",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən hər səhər sənədi göndərirəm.",
+      "expected": "Mən hər səhər sənədi göndərirəm."
+    },
+    {
+      "id": "informal-032",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən yay aylarında məktəbdə gəzirəm.",
+      "expected": "Mən yay aylarında məktəbdə gəzirəm."
+    },
+    {
+      "id": "informal-033",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran gələcəkdə meşəyə gedəcək.",
+      "expected": "Kamran gələcəkdə meşəyə gedəcək."
+    },
+    {
+      "id": "informal-034",
+      "category": "informal",
+      "mode": "text",
+      "input": "Orxan işini vaxtında bitirdi və evə getdi.",
+      "expected": "Orxan işini vaxtında bitirdi və evə getdi."
+    },
+    {
+      "id": "informal-035",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran tezliklə sinifdə nahar edəcək.",
+      "expected": "Kamran tezliklə sinifdə nahar edəcək."
+    },
+    {
+      "id": "informal-036",
+      "category": "informal",
+      "mode": "text",
+      "input": "Kamran bu gün kitabı bağlayır.",
+      "expected": "Kamran bu gün kitabı bağlayır."
+    },
+    {
+      "id": "informal-037",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həftə sonu planı dəyişirəm.",
+      "expected": "Mən həftə sonu planı dəyişirəm."
+    },
+    {
+      "id": "informal-038",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həftə sonu çörəyi gətirirəm.",
+      "expected": "Mən həftə sonu çörəyi gətirirəm."
+    },
+    {
+      "id": "informal-039",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən sinifdə fikirləşirəm.",
+      "expected": "Mən sinifdə fikirləşirəm."
+    },
+    {
+      "id": "informal-040",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən həmişə çayın kənarında qaçıram.",
+      "expected": "Mən həmişə çayın kənarında qaçıram."
+    },
+    {
+      "id": "informal-041",
+      "category": "informal",
+      "mode": "text",
+      "input": "Nərmin gələn il restoranda sevinəcək.",
+      "expected": "Nərmin gələn il restoranda sevinəcək."
+    },
+    {
+      "id": "informal-042",
+      "category": "informal",
+      "mode": "text",
+      "input": "Mən hər səhər xəstəxanaya gedirəm.",
+      "expected": "Mən hər səhər xəstəxanaya gedirəm."
+    },
+    {
+      "id": "business-002",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim bu axşam sənədi göndərəcək.",
+      "expected": "Müəllim bu axşam sənədi göndərəcək."
+    },
+    {
+      "id": "business-003",
+      "category": "business",
+      "mode": "text",
+      "input": "Rəşad gecə hesabatı hazırlayır.",
+      "expected": "Rəşad gecə hesabatı hazırlayır."
+    },
+    {
+      "id": "business-004",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən sənədi göndərirəm.",
+      "expected": "Mən sənədi göndərirəm."
+    },
+    {
+      "id": "business-005",
+      "category": "business",
+      "mode": "text",
+      "input": "Kamran həmin gün hesabatı hazırladı.",
+      "expected": "Kamran həmin gün hesabatı hazırladı."
+    },
+    {
+      "id": "business-006",
+      "category": "business",
+      "mode": "text",
+      "input": "Aysel gələn il hesabatı hazırlayacaq.",
+      "expected": "Aysel gələn il hesabatı hazırlayacaq."
+    },
+    {
+      "id": "business-007",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim hər səhər sənədi göndərir.",
+      "expected": "Müəllim hər səhər sənədi göndərir."
+    },
+    {
+      "id": "business-008",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən gecə sənədi aparıram.",
+      "expected": "Mən gecə sənədi aparıram."
+    },
+    {
+      "id": "business-009",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim sənədi göndərir.",
+      "expected": "Müəllim sənədi göndərir."
+    },
+    {
+      "id": "business-010",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən bəzən sənədi göndərirəm.",
+      "expected": "Mən bəzən sənədi göndərirəm."
+    },
+    {
+      "id": "business-011",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən səhər hesabatı hazırlayıram.",
+      "expected": "Mən səhər hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-012",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən yay aylarında hesabatı hazırlayıram.",
+      "expected": "Mən yay aylarında hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-013",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən bazar günü sənədi göndərirəm.",
+      "expected": "Mən bazar günü sənədi göndərirəm."
+    },
+    {
+      "id": "business-014",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim səhər sənədi aparır.",
+      "expected": "Müəllim səhər sənədi aparır."
+    },
+    {
+      "id": "business-015",
+      "category": "business",
+      "mode": "text",
+      "input": "Mühəndis sənədi gətirir.",
+      "expected": "Mühəndis sənədi gətirir."
+    },
+    {
+      "id": "business-016",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən həftə sonu hesabatı hazırlayıram.",
+      "expected": "Mən həftə sonu hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-017",
+      "category": "business",
+      "mode": "text",
+      "input": "Sevinc həmişə sənədi gətirir.",
+      "expected": "Sevinc həmişə sənədi gətirir."
+    },
+    {
+      "id": "business-018",
+      "category": "business",
+      "mode": "text",
+      "input": "Sevinc hesabatı hazırlayır.",
+      "expected": "Sevinc hesabatı hazırlayır."
+    },
+    {
+      "id": "business-019",
+      "category": "business",
+      "mode": "text",
+      "input": "Sevinc sənədi gətirir.",
+      "expected": "Sevinc sənədi gətirir."
+    },
+    {
+      "id": "business-020",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən hər axşam sənədi gətirirəm.",
+      "expected": "Mən hər axşam sənədi gətirirəm."
+    },
+    {
+      "id": "business-021",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən hər səhər hesabatı hazırlayıram.",
+      "expected": "Mən hər səhər hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-022",
+      "category": "business",
+      "mode": "text",
+      "input": "Rəşad sənədi göndərir.",
+      "expected": "Rəşad sənədi göndərir."
+    },
+    {
+      "id": "business-023",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim hesabatı hazırlayır.",
+      "expected": "Müəllim hesabatı hazırlayır."
+    },
+    {
+      "id": "business-024",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən bəzən sənədi gətirirəm.",
+      "expected": "Mən bəzən sənədi gətirirəm."
+    },
+    {
+      "id": "business-025",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən sənədi aparıram.",
+      "expected": "Mən sənədi aparıram."
+    },
+    {
+      "id": "business-026",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən sənədi gətirirəm.",
+      "expected": "Mən sənədi gətirirəm."
+    },
+    {
+      "id": "business-027",
+      "category": "business",
+      "mode": "text",
+      "input": "Aysel sənədi göndərdi.",
+      "expected": "Aysel sənədi göndərdi."
+    },
+    {
+      "id": "business-028",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən bu gün sənədi göndərirəm.",
+      "expected": "Mən bu gün sənədi göndərirəm."
+    },
+    {
+      "id": "business-029",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən səhər sənədi gətirirəm.",
+      "expected": "Mən səhər sənədi gətirirəm."
+    },
+    {
+      "id": "business-030",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən hesabatı hazırlayıram.",
+      "expected": "Mən hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-031",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən tez-tez sənədi göndərirəm.",
+      "expected": "Mən tez-tez sənədi göndərirəm."
+    },
+    {
+      "id": "business-032",
+      "category": "business",
+      "mode": "text",
+      "input": "Rəşad ötən ay sənədi göndərdi.",
+      "expected": "Rəşad ötən ay sənədi göndərdi."
+    },
+    {
+      "id": "business-033",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən hər səhər sənədi aparıram.",
+      "expected": "Mən hər səhər sənədi aparıram."
+    },
+    {
+      "id": "business-034",
+      "category": "business",
+      "mode": "text",
+      "input": "Rəşad əvvəllər hesabatı hazırladı.",
+      "expected": "Rəşad əvvəllər hesabatı hazırladı."
+    },
+    {
+      "id": "business-035",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən günorta sənədi göndərirəm.",
+      "expected": "Mən günorta sənədi göndərirəm."
+    },
+    {
+      "id": "business-036",
+      "category": "business",
+      "mode": "text",
+      "input": "Müəllim sənədi gətirir.",
+      "expected": "Müəllim sənədi gətirir."
+    },
+    {
+      "id": "business-037",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən həftə sonu sənədi aparıram.",
+      "expected": "Mən həftə sonu sənədi aparıram."
+    },
+    {
+      "id": "business-038",
+      "category": "business",
+      "mode": "text",
+      "input": "Aysel keçən bazar günü hesabatı hazırladı.",
+      "expected": "Aysel keçən bazar günü hesabatı hazırladı."
+    },
+    {
+      "id": "business-039",
+      "category": "business",
+      "mode": "text",
+      "input": "Aysel tez-tez sənədi aparır.",
+      "expected": "Aysel tez-tez sənədi aparır."
+    },
+    {
+      "id": "business-040",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən axşam sənədi aparıram.",
+      "expected": "Mən axşam sənədi aparıram."
+    },
+    {
+      "id": "business-041",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən gecə hesabatı hazırlayıram.",
+      "expected": "Mən gecə hesabatı hazırlayıram."
+    },
+    {
+      "id": "business-042",
+      "category": "business",
+      "mode": "text",
+      "input": "Aysel tezliklə sənədi gətirəcək.",
+      "expected": "Aysel tezliklə sənədi gətirəcək."
+    },
+    {
+      "id": "business-043",
+      "category": "business",
+      "mode": "text",
+      "input": "Mən bu gün hesabatı hazırlayıram.",
+      "expected": "Mən bu gün hesabatı hazırlayıram."
+    },
+    {
+      "id": "narrative-002",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, hər iz öz hekayəsini danışır, hər nəsil özündən əvvəlkilərin işini davam etdirir.",
+      "expected": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, hər iz öz hekayəsini danışır, hər nəsil özündən əvvəlkilərin işini davam etdirir."
+    },
+    {
+      "id": "narrative-003",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Köhnə əlyazmaların sətirləri arasında gəzişildikdə, daşlaşmış həqiqətlər zamanla yumşalır, keçmişi anlamadan bu günü izah etmək mümkün olmur.",
+      "expected": "Köhnə əlyazmaların sətirləri arasında gəzişildikdə, daşlaşmış həqiqətlər zamanla yumşalır, keçmişi anlamadan bu günü izah etmək mümkün olmur."
+    },
+    {
+      "id": "narrative-004",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, iz qoyan hər addım yaddaşda həkk olunur, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir.",
+      "expected": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, iz qoyan hər addım yaddaşda həkk olunur, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir."
+    },
+    {
+      "id": "narrative-005",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Xalqın yaddaşı nəsildən-nəslə ötürüldükcə, hər hadisə öz izini gələcək nəsillərə buraxır.",
+      "expected": "Xalqın yaddaşı nəsildən-nəslə ötürüldükcə, hər hadisə öz izini gələcək nəsillərə buraxır."
+    },
+    {
+      "id": "narrative-006",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, iz qoyan hər addım yaddaşda həkk olunur, keçmişə hörmət gələcəyə etibarın rəhnidir.",
+      "expected": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, iz qoyan hər addım yaddaşda həkk olunur, keçmişə hörmət gələcəyə etibarın rəhnidir."
+    },
+    {
+      "id": "narrative-007",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Zamanın çarxı dönə-dönə irəlilədikcə, tarixin təkrarlanmaması üçün yeni məsuliyyət yaranır.",
+      "expected": "Zamanın çarxı dönə-dönə irəlilədikcə, tarixin təkrarlanmaması üçün yeni məsuliyyət yaranır."
+    },
+    {
+      "id": "narrative-008",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Keçmiş nəsillərin təcrübəsi araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, zamanın axarı heç nəyi izsiz qoymur.",
+      "expected": "Keçmiş nəsillərin təcrübəsi araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, zamanın axarı heç nəyi izsiz qoymur."
+    },
+    {
+      "id": "narrative-009",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Zaman içində itib-batan hadisələr xatırlandıqda, kökü dərində olan həqiqətlər üzə çıxır, tarixin səhifələri hələ də yeni oxucusunu gözləyir.",
+      "expected": "Zaman içində itib-batan hadisələr xatırlandıqda, kökü dərində olan həqiqətlər üzə çıxır, tarixin səhifələri hələ də yeni oxucusunu gözləyir."
+    },
+    {
+      "id": "narrative-010",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Tarixi şəxsiyyətlərin həyatı diqqətlə öyrənildikdə, keçmişin sükutu bəzən sözdən daha çox danışır, hər nəsil özündən əvvəlkilərin işini davam etdirir.",
+      "expected": "Tarixi şəxsiyyətlərin həyatı diqqətlə öyrənildikdə, keçmişin sükutu bəzən sözdən daha çox danışır, hər nəsil özündən əvvəlkilərin işini davam etdirir."
+    },
+    {
+      "id": "narrative-011",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Qədim mədəniyyətlərin izləri araşdırıldıqda, unudulmuş səhifələr yenidən dilə gəlir, unudulmuş həqiqətlər yenidən gün üzünə çıxır.",
+      "expected": "Qədim mədəniyyətlərin izləri araşdırıldıqda, unudulmuş səhifələr yenidən dilə gəlir, unudulmuş həqiqətlər yenidən gün üzünə çıxır."
+    },
+    {
+      "id": "narrative-012",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Nəsillər arasındakı körpü araşdırıldıqda, tarixin yaddaşı heç vaxt tam susmur, keçmişin səhvləri bu günün müdrikliyinə çevrilir.",
+      "expected": "Nəsillər arasındakı körpü araşdırıldıqda, tarixin yaddaşı heç vaxt tam susmur, keçmişin səhvləri bu günün müdrikliyinə çevrilir."
+    },
+    {
+      "id": "narrative-013",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Köhnə əlyazmaların sətirləri arasında gəzişildikdə, daşlaşmış həqiqətlər zamanla yumşalır, hər əsr özündən sonrakına bir əmanət qoyur.",
+      "expected": "Köhnə əlyazmaların sətirləri arasında gəzişildikdə, daşlaşmış həqiqətlər zamanla yumşalır, hər əsr özündən sonrakına bir əmanət qoyur."
+    },
+    {
+      "id": "narrative-014",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən əsrlərin dərsləri təhlil edildikdə, hər iz öz hekayəsini danışır, hər xalqın taleyi öz mübarizəsində yazılır.",
+      "expected": "Ötən əsrlərin dərsləri təhlil edildikdə, hər iz öz hekayəsini danışır, hər xalqın taleyi öz mübarizəsində yazılır."
+    },
+    {
+      "id": "narrative-015",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Keçmiş nəsillərin təcrübəsi araşdırıldıqda, əsrlərin sınağı ən doğru meyar olur, hər nəsil özündən əvvəlkilərin işini davam etdirir.",
+      "expected": "Keçmiş nəsillərin təcrübəsi araşdırıldıqda, əsrlərin sınağı ən doğru meyar olur, hər nəsil özündən əvvəlkilərin işini davam etdirir."
+    },
+    {
+      "id": "narrative-016",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən əsrlərin dərsləri təhlil edildikdə, zaman özü ən doğru şahidə çevrilir, hər dövrün öz sınağı, öz qəhrəmanı olur.",
+      "expected": "Ötən əsrlərin dərsləri təhlil edildikdə, zaman özü ən doğru şahidə çevrilir, hər dövrün öz sınağı, öz qəhrəmanı olur."
+    },
+    {
+      "id": "narrative-017",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Qədim daş kitabələr susqunluğunu pozduqda, əsrlərin sınağı ən doğru meyar olur, zaman keçsə də, həqiqət öz yerini tapır.",
+      "expected": "Qədim daş kitabələr susqunluğunu pozduqda, əsrlərin sınağı ən doğru meyar olur, zaman keçsə də, həqiqət öz yerini tapır."
+    },
+    {
+      "id": "narrative-018",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Zamanın sınağından çıxan dəyərlər sadalandıqda, unudulmuş səhifələr yenidən dilə gəlir, keçmişin işığında bu günün mənzərəsi aydınlaşır.",
+      "expected": "Zamanın sınağından çıxan dəyərlər sadalandıqda, unudulmuş səhifələr yenidən dilə gəlir, keçmişin işığında bu günün mənzərəsi aydınlaşır."
+    },
+    {
+      "id": "narrative-019",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Yaddaşlarda yaşayan hadisələr yenidən canlandıqda, hər iz öz hekayəsini danışır, hər xalqın taleyi öz mübarizəsində yazılır.",
+      "expected": "Yaddaşlarda yaşayan hadisələr yenidən canlandıqda, hər iz öz hekayəsini danışır, hər xalqın taleyi öz mübarizəsində yazılır."
+    },
+    {
+      "id": "narrative-020",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Nəsillər arasındakı körpü araşdırıldıqda, keçmişin kölgəsi bu günə də düşür, tarixin səhifələri hələ də yeni oxucusunu gözləyir.",
+      "expected": "Nəsillər arasındakı körpü araşdırıldıqda, keçmişin kölgəsi bu günə də düşür, tarixin səhifələri hələ də yeni oxucusunu gözləyir."
+    },
+    {
+      "id": "narrative-021",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, keçmişin sükutu bəzən sözdən daha çox danışır, keçmişlə bu gün arasında görünməz bir bağ yaranır.",
+      "expected": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, keçmişin sükutu bəzən sözdən daha çox danışır, keçmişlə bu gün arasında görünməz bir bağ yaranır."
+    },
+    {
+      "id": "narrative-022",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Keçmişin izləri bu günə doğru uzandıqca, əsrlərin sınağı ən doğru meyar olur, unudulan hər fakt yeni bir sual doğurur.",
+      "expected": "Keçmişin izləri bu günə doğru uzandıqca, əsrlərin sınağı ən doğru meyar olur, unudulan hər fakt yeni bir sual doğurur."
+    },
+    {
+      "id": "narrative-023",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən əsrlərin dərsləri təhlil edildikdə, daşlaşmış həqiqətlər zamanla yumşalır, zaman keçsə də, həqiqət öz yerini tapır.",
+      "expected": "Ötən əsrlərin dərsləri təhlil edildikdə, daşlaşmış həqiqətlər zamanla yumşalır, zaman keçsə də, həqiqət öz yerini tapır."
+    },
+    {
+      "id": "narrative-024",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, unudulmuş səhifələr yenidən dilə gəlir, tarixin səhifələri hələ də yeni oxucusunu gözləyir.",
+      "expected": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, unudulmuş səhifələr yenidən dilə gəlir, tarixin səhifələri hələ də yeni oxucusunu gözləyir."
+    },
+    {
+      "id": "narrative-025",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Tarixi şəxsiyyətlərin həyatı diqqətlə öyrənildikdə, kökü dərində olan həqiqətlər üzə çıxır, hər xalqın taleyi öz mübarizəsində yazılır.",
+      "expected": "Tarixi şəxsiyyətlərin həyatı diqqətlə öyrənildikdə, kökü dərində olan həqiqətlər üzə çıxır, hər xalqın taleyi öz mübarizəsində yazılır."
+    },
+    {
+      "id": "narrative-026",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Zamanın çarxı dönə-dönə irəlilədikcə, unudulmuş səhifələr yenidən dilə gəlir, unudulan hər fakt yeni bir sual doğurur.",
+      "expected": "Zamanın çarxı dönə-dönə irəlilədikcə, unudulmuş səhifələr yenidən dilə gəlir, unudulan hər fakt yeni bir sual doğurur."
+    },
+    {
+      "id": "narrative-027",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən günlərin sədası bu günə çatdıqda, kökü dərində olan həqiqətlər üzə çıxır, hər xalqın taleyi öz mübarizəsində yazılır.",
+      "expected": "Ötən günlərin sədası bu günə çatdıqda, kökü dərində olan həqiqətlər üzə çıxır, hər xalqın taleyi öz mübarizəsində yazılır."
+    },
+    {
+      "id": "narrative-028",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, iz qoyan hər addım yaddaşda həkk olunur, hər əsr özündən sonrakına bir əmanət qoyur.",
+      "expected": "Əsrlərin sınağından keçən hadisələr yada düşdükcə, iz qoyan hər addım yaddaşda həkk olunur, hər əsr özündən sonrakına bir əmanət qoyur."
+    },
+    {
+      "id": "narrative-029",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən günlərin sədası bu günə çatdıqda, zaman özü ən doğru şahidə çevrilir, zaman keçsə də, həqiqət öz yerini tapır.",
+      "expected": "Ötən günlərin sədası bu günə çatdıqda, zaman özü ən doğru şahidə çevrilir, zaman keçsə də, həqiqət öz yerini tapır."
+    },
+    {
+      "id": "narrative-030",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Tarixi hadisələrin kökünə enildikdə, hər iz öz hekayəsini danışır, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir.",
+      "expected": "Tarixi hadisələrin kökünə enildikdə, hər iz öz hekayəsini danışır, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir."
+    },
+    {
+      "id": "narrative-031",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, kökü dərində olan həqiqətlər üzə çıxır, hər xalq öz kimliyini yenidən kəşf edir.",
+      "expected": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, kökü dərində olan həqiqətlər üzə çıxır, hər xalq öz kimliyini yenidən kəşf edir."
+    },
+    {
+      "id": "narrative-032",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Nəsillər arasındakı körpü araşdırıldıqda, əsrlərin sınağı ən doğru meyar olur, gələcəyə gedən yol daha dəqiq müəyyənləşir.",
+      "expected": "Nəsillər arasındakı körpü araşdırıldıqda, əsrlərin sınağı ən doğru meyar olur, gələcəyə gedən yol daha dəqiq müəyyənləşir."
+    },
+    {
+      "id": "narrative-033",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Xalqın yaddaşı nəsildən-nəslə ötürüldükcə, kökü dərində olan həqiqətlər üzə çıxır, zaman keçsə də, həqiqət öz yerini tapır.",
+      "expected": "Xalqın yaddaşı nəsildən-nəslə ötürüldükcə, kökü dərində olan həqiqətlər üzə çıxır, zaman keçsə də, həqiqət öz yerini tapır."
+    },
+    {
+      "id": "narrative-034",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Qədim mədəniyyətlərin izləri araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, əsrlərin təcrübəsi bu günün qərarlarına işıq salır.",
+      "expected": "Qədim mədəniyyətlərin izləri araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, əsrlərin təcrübəsi bu günün qərarlarına işıq salır."
+    },
+    {
+      "id": "narrative-035",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, kökü dərində olan həqiqətlər üzə çıxır, tarixin təkrarlanmaması üçün yeni məsuliyyət yaranır.",
+      "expected": "Xalqın keçdiyi çətin yol nəzərdən keçirildikdə, kökü dərində olan həqiqətlər üzə çıxır, tarixin təkrarlanmaması üçün yeni məsuliyyət yaranır."
+    },
+    {
+      "id": "narrative-036",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Ötən günlərin sədası bu günə çatdıqda, zaman özü ən doğru şahidə çevrilir, keçmişi anlamadan bu günü izah etmək mümkün olmur.",
+      "expected": "Ötən günlərin sədası bu günə çatdıqda, zaman özü ən doğru şahidə çevrilir, keçmişi anlamadan bu günü izah etmək mümkün olmur."
+    },
+    {
+      "id": "narrative-037",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Zamanın çarxı dönə-dönə irəlilədikcə, əsrlərin sınağı ən doğru meyar olur, bu günün təməli daha aydın görünür.",
+      "expected": "Zamanın çarxı dönə-dönə irəlilədikcə, əsrlərin sınağı ən doğru meyar olur, bu günün təməli daha aydın görünür."
+    },
+    {
+      "id": "narrative-038",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Tarixin gedişinə diqqətlə baxıldıqda, kökü dərində olan həqiqətlər üzə çıxır, bu günün təməli daha aydın görünür.",
+      "expected": "Tarixin gedişinə diqqətlə baxıldıqda, kökü dərində olan həqiqətlər üzə çıxır, bu günün təməli daha aydın görünür."
+    },
+    {
+      "id": "narrative-039",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Keçmişin izləri bu günə doğru uzandıqca, əsrlərin sınağı ən doğru meyar olur, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir.",
+      "expected": "Keçmişin izləri bu günə doğru uzandıqca, əsrlərin sınağı ən doğru meyar olur, tarix yalnız keçmiş deyil, gələcəyin də göstəricisidir."
+    },
+    {
+      "id": "narrative-040",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Tarixi hadisələrin kökünə enildikdə, unudulmuş səhifələr yenidən dilə gəlir, hər dövrün öz sınağı, öz qəhrəmanı olur.",
+      "expected": "Tarixi hadisələrin kökünə enildikdə, unudulmuş səhifələr yenidən dilə gəlir, hər dövrün öz sınağı, öz qəhrəmanı olur."
+    },
+    {
+      "id": "narrative-041",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Qədim mədəniyyətlərin izləri araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, hər əsr özündən sonrakına bir əmanət qoyur.",
+      "expected": "Qədim mədəniyyətlərin izləri araşdırıldıqda, daşlaşmış həqiqətlər zamanla yumşalır, hər əsr özündən sonrakına bir əmanət qoyur."
+    },
+    {
+      "id": "narrative-042",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Keçmişin izləri bu günə doğru uzandıqca, zamanın axarı heç nəyi izsiz qoymur.",
+      "expected": "Keçmişin izləri bu günə doğru uzandıqca, zamanın axarı heç nəyi izsiz qoymur."
+    },
+    {
+      "id": "narrative-043",
+      "category": "narrative",
+      "mode": "text",
+      "input": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, keçmişin kölgəsi bu günə də düşür, əsrlərin təcrübəsi bu günün qərarlarına işıq salır.",
+      "expected": "Böyük dövlətlərin yüksəliş və süqut yolu izləndikdə, keçmişin kölgəsi bu günə də düşür, əsrlərin təcrübəsi bu günün qərarlarına işıq salır."
+    },
+    {
+      "id": "email-003",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim bu axşam sənədi göndərəcək.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim bu axşam sənədi göndərəcək.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-004",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nRəşad gecə hesabatı hazırlayır.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nRəşad gecə hesabatı hazırlayır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-005",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-006",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nKamran həmin gün hesabatı hazırladı.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nKamran həmin gün hesabatı hazırladı.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-007",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nAysel gələn il hesabatı hazırlayacaq.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nAysel gələn il hesabatı hazırlayacaq.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-008",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim hər səhər sənədi göndərir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim hər səhər sənədi göndərir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-009",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən gecə sənədi aparıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən gecə sənədi aparıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-010",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim sənədi göndərir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim sənədi göndərir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-011",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən bəzən sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən bəzən sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-012",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən səhər hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən səhər hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-013",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən yay aylarında hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən yay aylarında hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-014",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən bazar günü sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən bazar günü sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-015",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim səhər sənədi aparır.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim səhər sənədi aparır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-016",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMühəndis sənədi gətirir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMühəndis sənədi gətirir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-017",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən həftə sonu hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən həftə sonu hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-018",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nSevinc həmişə sənədi gətirir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSevinc həmişə sənədi gətirir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-019",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nSevinc hesabatı hazırlayır.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSevinc hesabatı hazırlayır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-020",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nSevinc sənədi gətirir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nSevinc sənədi gətirir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-021",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən hər axşam sənədi gətirirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən hər axşam sənədi gətirirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-022",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən hər səhər hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən hər səhər hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-023",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nRəşad sənədi göndərir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nRəşad sənədi göndərir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-024",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim hesabatı hazırlayır.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim hesabatı hazırlayır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-025",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən bəzən sənədi gətirirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən bəzən sənədi gətirirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-026",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi aparıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi aparıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-027",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi gətirirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən sənədi gətirirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-028",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nAysel sənədi göndərdi.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nAysel sənədi göndərdi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-029",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən bu gün sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən bu gün sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-030",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən səhər sənədi gətirirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən səhər sənədi gətirirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-031",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-032",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən tez-tez sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən tez-tez sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-033",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nRəşad ötən ay sənədi göndərdi.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nRəşad ötən ay sənədi göndərdi.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-034",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən hər səhər sənədi aparıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən hər səhər sənədi aparıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-035",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nRəşad əvvəllər hesabatı hazırladı.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nRəşad əvvəllər hesabatı hazırladı.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-036",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən günorta sənədi göndərirəm.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən günorta sənədi göndərirəm.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-037",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim sənədi gətirir.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMüəllim sənədi gətirir.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-038",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən həftə sonu sənədi aparıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən həftə sonu sənədi aparıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-039",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nAysel keçən bazar günü hesabatı hazırladı.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nAysel keçən bazar günü hesabatı hazırladı.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-040",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nAysel tez-tez sənədi aparır.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nAysel tez-tez sənədi aparır.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-041",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən axşam sənədi aparıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən axşam sənədi aparıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-042",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən gecə hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən gecə hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-043",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nAysel tezliklə sənədi gətirəcək.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nAysel tezliklə sənədi gətirəcək.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-044",
+      "category": "email",
+      "mode": "email",
+      "input": "Mövzu: Müraciət\n\nSalam,\n\nMən bu gün hesabatı hazırlayıram.\n\nHörmətlə,",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nMən bu gün hesabatı hazırlayıram.\n\nHörmətlə,"
+    },
+    {
+      "id": "noisy-001",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men hər axşam kafedə fikirləşirəm.",
+      "expected": "Mən hər axşam kafedə fikirləşirəm."
+    },
+    {
+      "id": "noisy-002",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran bu gun muzeydə söhbət edir.",
+      "expected": "Kamran bu gün muzeydə söhbət edir."
+    },
+    {
+      "id": "noisy-003",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Nermin günorta evdə oturur.",
+      "expected": "Nərmin günorta evdə oturur."
+    },
+    {
+      "id": "noisy-004",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran oten ay qutunu bağladı.",
+      "expected": "Kamran ötən ay qutunu bağladı."
+    },
+    {
+      "id": "noisy-005",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men bu gün ünvanı unuduram.",
+      "expected": "Mən bu gün ünvanı unuduram."
+    },
+    {
+      "id": "noisy-006",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Orxan her səhər şəhərdə fikirləşir.",
+      "expected": "Orxan hər səhər şəhərdə fikirləşir."
+    },
+    {
+      "id": "noisy-007",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həftə sonu küçədə otururam.",
+      "expected": "Mən həftə sonu küçədə otururam."
+    },
+    {
+      "id": "noisy-008",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həftə sonu kitabı unuduram.",
+      "expected": "Mən həftə sonu kitabı unuduram."
+    },
+    {
+      "id": "noisy-009",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men tez-tez bazarda gözləyirəm.",
+      "expected": "Mən tez-tez bazarda gözləyirəm."
+    },
+    {
+      "id": "noisy-010",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men sübh tezdən rəngi dəyişirəm.",
+      "expected": "Mən sübh tezdən rəngi dəyişirəm."
+    },
+    {
+      "id": "noisy-011",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran tez-tez eve gəlir.",
+      "expected": "Kamran tez-tez evə gəlir."
+    },
+    {
+      "id": "noisy-012",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran bu hefte sonu şəhərə gələcək.",
+      "expected": "Kamran bu həftə sonu şəhərə gələcək."
+    },
+    {
+      "id": "noisy-013",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran velosipedi duzeldecek.",
+      "expected": "Kamran velosipedi düzəldəcək."
+    },
+    {
+      "id": "noisy-014",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həftə sonu kitabı gətirirəm.",
+      "expected": "Mən həftə sonu kitabı gətirirəm."
+    },
+    {
+      "id": "noisy-015",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men sübh tezdən şəhərdə söhbət edirəm.",
+      "expected": "Mən sübh tezdən şəhərdə söhbət edirəm."
+    },
+    {
+      "id": "noisy-016",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran gece kafeyə qayıdır.",
+      "expected": "Kamran gecə kafeyə qayıdır."
+    },
+    {
+      "id": "noisy-017",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Orxan tez-tez teatra gelir.",
+      "expected": "Orxan tez-tez teatra gəlir."
+    },
+    {
+      "id": "noisy-018",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men bəzən stadiona gəlirəm.",
+      "expected": "Mən bəzən stadiona gəlirəm."
+    },
+    {
+      "id": "noisy-019",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran seher meşəni qoruyur.",
+      "expected": "Kamran səhər meşəni qoruyur."
+    },
+    {
+      "id": "noisy-020",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men hər səhər evdə yatıram.",
+      "expected": "Mən hər səhər evdə yatıram."
+    },
+    {
+      "id": "noisy-021",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men günorta parkda üzürəm.",
+      "expected": "Mən günorta parkda üzürəm."
+    },
+    {
+      "id": "noisy-022",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Anar o zaman meseye getdi.",
+      "expected": "Anar o zaman meşəyə getdi."
+    },
+    {
+      "id": "noisy-023",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men sübh tezdən həyətdə səyahət edirəm.",
+      "expected": "Mən sübh tezdən həyətdə səyahət edirəm."
+    },
+    {
+      "id": "noisy-024",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men gecə açarı xatırlayıram.",
+      "expected": "Mən gecə açarı xatırlayıram."
+    },
+    {
+      "id": "noisy-025",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Nermin bu gün mağazanı bağlayır.",
+      "expected": "Nərmin bu gün mağazanı bağlayır."
+    },
+    {
+      "id": "noisy-026",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həmişə həyətdə oynayıram.",
+      "expected": "Mən həmişə həyətdə oynayıram."
+    },
+    {
+      "id": "noisy-027",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men yay aylarında məktəbdə fikirləşirəm.",
+      "expected": "Mən yay aylarında məktəbdə fikirləşirəm."
+    },
+    {
+      "id": "noisy-028",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men günorta filmi izləyirəm.",
+      "expected": "Mən günorta filmi izləyirəm."
+    },
+    {
+      "id": "noisy-029",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Nermin sabah çayın kənarında rəqs edəcək.",
+      "expected": "Nərmin sabah çayın kənarında rəqs edəcək."
+    },
+    {
+      "id": "noisy-030",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men hər səhər sənədi göndərirəm.",
+      "expected": "Mən hər səhər sənədi göndərirəm."
+    },
+    {
+      "id": "noisy-031",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men yay aylarında məktəbdə gəzirəm.",
+      "expected": "Mən yay aylarında məktəbdə gəzirəm."
+    },
+    {
+      "id": "noisy-032",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran gelecekde meşəyə gedəcək.",
+      "expected": "Kamran gələcəkdə meşəyə gedəcək."
+    },
+    {
+      "id": "noisy-033",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Orxan isini vaxtında bitirdi və evə getdi.",
+      "expected": "Orxan işini vaxtında bitirdi və evə getdi."
+    },
+    {
+      "id": "noisy-034",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran tezlikle sinifdə nahar edəcək.",
+      "expected": "Kamran tezliklə sinifdə nahar edəcək."
+    },
+    {
+      "id": "noisy-035",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Kamran bu gun kitabı bağlayır.",
+      "expected": "Kamran bu gün kitabı bağlayır."
+    },
+    {
+      "id": "noisy-036",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həftə sonu planı dəyişirəm.",
+      "expected": "Mən həftə sonu planı dəyişirəm."
+    },
+    {
+      "id": "noisy-037",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həftə sonu çörəyi gətirirəm.",
+      "expected": "Mən həftə sonu çörəyi gətirirəm."
+    },
+    {
+      "id": "noisy-038",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men sinifdə fikirləşirəm.",
+      "expected": "Mən sinifdə fikirləşirəm."
+    },
+    {
+      "id": "noisy-039",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men həmişə çayın kənarında qaçıram.",
+      "expected": "Mən həmişə çayın kənarında qaçıram."
+    },
+    {
+      "id": "noisy-040",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Nermin gələn il restoranda sevinəcək.",
+      "expected": "Nərmin gələn il restoranda sevinəcək."
+    },
+    {
+      "id": "noisy-041",
+      "category": "noisy",
+      "mode": "text",
+      "input": "Men hər səhər xəstəxanaya gedirəm.",
+      "expected": "Mən hər səhər xəstəxanaya gedirəm."
+    },
+    {
+      "id": "technical-004",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub-da kod saxlanılır.",
+      "expected": "GitHub-da kod saxlanılır."
+    },
+    {
+      "id": "technical-005",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel-də tətbiq işləyir.",
+      "expected": "Vercel-də tətbiq işləyir."
+    },
+    {
+      "id": "technical-006",
+      "category": "technical",
+      "mode": "text",
+      "input": "API cavab qaytarır.",
+      "expected": "API cavab qaytarır."
+    },
+    {
+      "id": "technical-007",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis keş üçün istifadə olunur.",
+      "expected": "Redis keş üçün istifadə olunur."
+    },
+    {
+      "id": "technical-008",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL verilənləri saxlayır.",
+      "expected": "PostgreSQL verilənləri saxlayır."
+    },
+    {
+      "id": "technical-009",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker konteyneri işə düşdü.",
+      "expected": "Docker konteyneri işə düşdü."
+    },
+    {
+      "id": "technical-010",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js səhifəni göstərir.",
+      "expected": "Next.js səhifəni göstərir."
+    },
+    {
+      "id": "technical-011",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub-da yeni commit yaradıldı.",
+      "expected": "GitHub-da yeni commit yaradıldı."
+    },
+    {
+      "id": "technical-012",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel-də deployment uğurla başa çatdı.",
+      "expected": "Vercel-də deployment uğurla başa çatdı."
+    },
+    {
+      "id": "technical-013",
+      "category": "technical",
+      "mode": "text",
+      "input": "API sorğusu qəbul edildi.",
+      "expected": "API sorğusu qəbul edildi."
+    },
+    {
+      "id": "technical-014",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis serveri yenidən başladıldı.",
+      "expected": "Redis serveri yenidən başladıldı."
+    },
+    {
+      "id": "technical-015",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL bazasına qoşulma yoxlanıldı.",
+      "expected": "PostgreSQL bazasına qoşulma yoxlanıldı."
+    },
+    {
+      "id": "technical-016",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker image hazırdır.",
+      "expected": "Docker image hazırdır."
+    },
+    {
+      "id": "technical-017",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js tətbiqində xəta görünmür.",
+      "expected": "Next.js tətbiqində xəta görünmür."
+    },
+    {
+      "id": "technical-018",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub-da pull request açıldı.",
+      "expected": "GitHub-da pull request açıldı."
+    },
+    {
+      "id": "technical-019",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel layihəsinin statusu yoxlanıldı.",
+      "expected": "Vercel layihəsinin statusu yoxlanıldı."
+    },
+    {
+      "id": "technical-020",
+      "category": "technical",
+      "mode": "text",
+      "input": "API üçün yeni endpoint əlavə edildi.",
+      "expected": "API üçün yeni endpoint əlavə edildi."
+    },
+    {
+      "id": "technical-021",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis bağlantısı bərpa olundu.",
+      "expected": "Redis bağlantısı bərpa olundu."
+    },
+    {
+      "id": "technical-022",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL cədvəlində məlumat var.",
+      "expected": "PostgreSQL cədvəlində məlumat var."
+    },
+    {
+      "id": "technical-023",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker logları təhlil edildi.",
+      "expected": "Docker logları təhlil edildi."
+    },
+    {
+      "id": "technical-024",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js serveri yenidən quruldu.",
+      "expected": "Next.js serveri yenidən quruldu."
+    },
+    {
+      "id": "technical-025",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub Actions testi işlətdi.",
+      "expected": "GitHub Actions testi işlətdi."
+    },
+    {
+      "id": "technical-026",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel build mərhələsini tamamladı.",
+      "expected": "Vercel build mərhələsini tamamladı."
+    },
+    {
+      "id": "technical-027",
+      "category": "technical",
+      "mode": "text",
+      "input": "API ilə məlumat ötürüldü.",
+      "expected": "API ilə məlumat ötürüldü."
+    },
+    {
+      "id": "technical-028",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis keşində köhnə yazı qalmadı.",
+      "expected": "Redis keşində köhnə yazı qalmadı."
+    },
+    {
+      "id": "technical-029",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL sorğusunun nəticəsi düzgündür.",
+      "expected": "PostgreSQL sorğusunun nəticəsi düzgündür."
+    },
+    {
+      "id": "technical-030",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker konteyneri dayandırıldı.",
+      "expected": "Docker konteyneri dayandırıldı."
+    },
+    {
+      "id": "technical-031",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js komponenti yeniləndi.",
+      "expected": "Next.js komponenti yeniləndi."
+    },
+    {
+      "id": "technical-032",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub hesabı təsdiqləndi.",
+      "expected": "GitHub hesabı təsdiqləndi."
+    },
+    {
+      "id": "technical-033",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel domeni işlək vəziyyətdədir.",
+      "expected": "Vercel domeni işlək vəziyyətdədir."
+    },
+    {
+      "id": "technical-034",
+      "category": "technical",
+      "mode": "text",
+      "input": "API açarı qorunmalıdır.",
+      "expected": "API açarı qorunmalıdır."
+    },
+    {
+      "id": "technical-035",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis yaddaşından məlumat silindi.",
+      "expected": "Redis yaddaşından məlumat silindi."
+    },
+    {
+      "id": "technical-036",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL xidməti işə salındı.",
+      "expected": "PostgreSQL xidməti işə salındı."
+    },
+    {
+      "id": "technical-037",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker konfiqurasiyası dəyişdirildi.",
+      "expected": "Docker konfiqurasiyası dəyişdirildi."
+    },
+    {
+      "id": "technical-038",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js səhifəsi telefonda açılır.",
+      "expected": "Next.js səhifəsi telefonda açılır."
+    },
+    {
+      "id": "technical-039",
+      "category": "technical",
+      "mode": "text",
+      "input": "GitHub-dakı dəyişikliklər yoxlanıldı.",
+      "expected": "GitHub-dakı dəyişikliklər yoxlanıldı."
+    },
+    {
+      "id": "technical-040",
+      "category": "technical",
+      "mode": "text",
+      "input": "Vercel funksiyası cavab verdi.",
+      "expected": "Vercel funksiyası cavab verdi."
+    },
+    {
+      "id": "technical-041",
+      "category": "technical",
+      "mode": "text",
+      "input": "API sənədi yeniləndi.",
+      "expected": "API sənədi yeniləndi."
+    },
+    {
+      "id": "technical-042",
+      "category": "technical",
+      "mode": "text",
+      "input": "Redis xidmətinin gecikməsi ölçüldü.",
+      "expected": "Redis xidmətinin gecikməsi ölçüldü."
+    },
+    {
+      "id": "technical-043",
+      "category": "technical",
+      "mode": "text",
+      "input": "PostgreSQL serverində ehtiyat nüsxə var.",
+      "expected": "PostgreSQL serverində ehtiyat nüsxə var."
+    },
+    {
+      "id": "technical-044",
+      "category": "technical",
+      "mode": "text",
+      "input": "Docker üçün yeni konteyner hazırlandı.",
+      "expected": "Docker üçün yeni konteyner hazırlandı."
+    },
+    {
+      "id": "technical-045",
+      "category": "technical",
+      "mode": "text",
+      "input": "Next.js tətbiqi yenidən yayımlandı.",
+      "expected": "Next.js tətbiqi yenidən yayımlandı."
     }
   ]
 }

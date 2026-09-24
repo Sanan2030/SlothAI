@@ -55,6 +55,12 @@ jobs:
         continue-on-error: true
         run: node --import tsx scripts/report-regressions.ts
 
+      - name: Report independent frozen holdout
+        id: holdout
+        if: always()
+        continue-on-error: true
+        run: node --import tsx scripts/report-holdout.ts
+
       - name: Verify dictionary reproduction
         id: dictionary
         continue-on-error: true
@@ -143,10 +149,19 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
+      - name: Upload holdout diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: holdout-diagnostics-${{ github.sha }}
+          path: docs/holdout-results.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Enforce complete validation gate
         if: always()
         env:
-          RESULTS: ${{ steps.typecheck.outcome }} ${{ steps.lint.outcome }} ${{ steps.tests.outcome }} ${{ steps.corpus.outcome }} ${{ steps.dictionary.outcome }} ${{ steps.build.outcome }} ${{ steps.benchmark.outcome }}
+          RESULTS: ${{ steps.typecheck.outcome }} ${{ steps.lint.outcome }} ${{ steps.tests.outcome }} ${{ steps.corpus.outcome }} ${{ steps.holdout.outcome }} ${{ steps.dictionary.outcome }} ${{ steps.build.outcome }} ${{ steps.benchmark.outcome }}
         run: |
           echo "Validation: $RESULTS"
           for result in $RESULTS; do
