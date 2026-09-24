@@ -73,7 +73,8 @@ test('both strategies and HTTP routes work with every network request forbidden'
 test('reviewed inflections are restored without replacing unknown names', () => {
   assert.equal(correctText('mekteblerden muellimlere musterilerin senedleri').text,
     'Məktəblərdən müəllimlərə müştərilərin sənədləri.');
-  assert.equal(correctText('biz dusunuruk siz isleyirsiniz').text, 'Biz düşünürük siz işləyirsiniz.');
+  // Two finite clauses with different subjects need a sentence boundary.
+  assert.equal(correctText('biz dusunuruk siz isleyirsiniz').text, 'Biz düşünürük. Siz işləyirsiniz.');
   assert.equal(correctText('Zyphoria ucun').text, 'Zyphoria üçün.');
 });
 

@@ -15,7 +15,8 @@ test('context protects morning, brain and reviewed narrative spellings', () => {
   assert.match(output, /səhərin sakitliyini/u);
   assert.match(output, /səhərin oyanışını/u);
   assert.match(output, /API vasitəsilə əlaqə qurur/u);
-  assert.match(output, /meşələr planetimizin ağciyərləridir/u);
+  // The independent clause now starts a new sentence and takes a capital M.
+  assert.match(output, /Meşələr planetimizin ağciyərləridir/u);
   assert.match(output, /biokütlənin artması/u);
   assert.doesNotMatch(output, /Şəhərlər yüngül qaçış|bəynin|əlaqə qürur/u);
 });

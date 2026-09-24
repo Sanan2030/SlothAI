@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "id": "chat-01", "mode": "text", "category": "chat",
+      "input": "axsam qatara catdim amma biletimi unutmusdum",
+      "expected": "Axşam qatara çatdım, amma biletimi unutmuşdum."
+    },
+    {
+      "id": "chat-02", "mode": "text", "category": "chat",
+      "input": "Zyphoria ilə görüşdüm.",
+      "expected": "Zyphoria ilə görüşdüm."
+    },
+    {
+      "id": "prose-01", "mode": "text", "category": "prose",
+      "input": "Qatar gecikirdi sərnişinlər dayanacaqda gözləyirdi",
+      "expected": "Qatar gecikirdi. Sərnişinlər dayanacaqda gözləyirdi."
+    },
+    {
+      "id": "prose-02", "mode": "text", "category": "prose",
+      "input": "Mən tələsəndə avtobus dayanmışdı.",
+      "expected": "Mən tələsəndə avtobus dayanmışdı."
+    },
+    {
+      "id": "business-01", "mode": "text", "category": "business",
+      "input": "Sənədlər hazırdır, lakin təsdiq gözlənilir.",
+      "expected": "Sənədlər hazırdır, lakin təsdiq gözlənilir."
+    },
+    {
+      "id": "technical-01", "mode": "text", "category": "technical",
+      "input": "API, REST, JSON və GitHub işləyir.",
+      "expected": "API, REST, JSON və GitHub işləyir."
+    },
+    {
+      "id": "technical-02", "mode": "text", "category": "technical",
+      "input": "`user_id` https://example.com/test 12.4.5",
+      "expected": "`user_id` https://example.com/test 12.4.5."
+    },
+    {
+      "id": "email-01", "mode": "email", "category": "email",
+      "input": "salam hesabat hazirdir zehmet olmasa baxin",
+      "expected": "Mövzu: Müraciət\n\nSalam,\n\nHesabat hazırdır. Zəhmət olmasa, baxın.\n\nHörmətlə,"
+    },
+    {
+      "id": "email-02", "mode": "email", "category": "email",
+      "input": "hormetli nermin xanim sənədlər sabah hazır olacaq",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nSənədlər sabah hazır olacaq.\n\nHörmətlə,"
+    },
+    {
+      "id": "narrative-03", "mode": "text", "category": "narrative",
+      "input": "Səhər kitabxanaya getdim. Qapıda köhnə dostumla görüşdüm. Birlikdə dərslər haqqında danışdıq.",
+      "expected": "Səhər kitabxanaya getdim. Qapıda köhnə dostumla görüşdüm. Birlikdə dərslər haqqında danışdıq."
+    },
+    {
+      "id": "morphology-01", "mode": "text", "category": "morphology",
+      "input": "Layihələrimizdən biri bu həftə tamamlanacaq.",
+      "expected": "Layihələrimizdən biri bu həftə tamamlanacaq."
+    },
+    {
+      "id": "technical-03", "mode": "text", "category": "technical",
+      "input": "GitHub-da dəyişiklikləri gördüm, API hələ işləmir.",
+      "expected": "GitHub-da dəyişiklikləri gördüm, API hələ işləmir."
+    },
+    {
+      "id": "question-01", "mode": "text", "category": "question",
+      "input": "Bu işi kim idarə edir?",
+      "expected": "Bu işi kim idarə edir?"
+    },
+    {
+      "id": "long-01", "mode": "text", "category": "long-prose",
+      "input": "Kəndin yaxınlığında kiçik kitabxana vardı. Hər şənbə uşaqlar ora toplaşır, birlikdə yeni kitablar seçirdilər. Kitabxanaçı onlara əvvəlcə hekayəni oxuyur, sonra isə qəhrəmanların qərarları haqqında suallar verirdi. Günün sonunda hər kəs öz fikrini bölüşürdü.",
+      "expected": "Kəndin yaxınlığında kiçik kitabxana vardı. Hər şənbə uşaqlar ora toplaşır, birlikdə yeni kitablar seçirdilər. Kitabxanaçı onlara əvvəlcə hekayəni oxuyur, sonra isə qəhrəmanların qərarları haqqında suallar verirdi. Günün sonunda hər kəs öz fikrini bölüşürdü."
+    }
+  ]
+}

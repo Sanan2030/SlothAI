@@ -1,119 +1,105 @@
-# Stabilization validation — 2026-09-23
+# Local editor validation — 2026-09-24
 
-## Release decision
+## Git and baseline
 
-**Incomplete; do not promote this branch to production.** The 240-case corpus
-previously validated only metadata, not corrections. The baseline failed 180
-exact comparisons. The executable suite now passes 65 and fails 175, including
-stability checks. The expectations were not rewritten to make tests green.
-All 89 pre-existing tests now pass; 9 new non-corpus tests also pass.
+Work started on the latest verified `codex/stabilize-main` commit
+`0957154e393745f481887a12bbd384735a3faa9f` (the original `main` was
+`e67438f15482060dfa6bdbfeffcc343962ee8a00`). The earlier report from
+2026-09-23 described a superseded build and must not be used as a baseline.
+The initial suite had **338 tests: 337 passed and 1 failed**. The previously
+failing workday case left an independent question without a question mark.
+All 240 executable regression cases passed at baseline, with exact output and
+idempotency checks.
 
-Working branch: `codex/stabilize-main`, based on freshly fetched main
-`e67438f15482060dfa6bdbfeffcc343962ee8a00`. This report does not claim that all
-requirements in the stabilization request have been completed.
+## Changes
 
-## Fixed issues
+- Added a bounded sentence segmenter using finite predicates, dependent-form
+  exclusions, conjunction classes, subject/temporal evidence, and a second
+  predicate check. Participles before a noun remain attached. The workday
+  question and two finite clauses with different subjects now split correctly.
+- Added an indexed spelling candidate generator over the pinned local word
+  list. Each lookup scans at most 120 entries and returns at most 12 candidates;
+  a bounded cache avoids repeated work. Automatic replacement is intentionally
+  limited to an unambiguous missing internal vowel in a lower-case word of at
+  least six letters. Other edits remain suggestions and cannot rewrite unknown
+  names or English technical terms on a nearest-word guess.
+- Added productive, bounded noun and verb analysis, generation and suffix
+  stripping behind the existing MorphologyEngine contract. The reviewed lemma
+  set supports plural, possessive and case combinations as well as common
+  finite verb tenses, person, negation, passives and participles. Analysis now
+  returns an actual lemma and grammatical features for recognized forms.
+- Added a structured email parser for subject, salutation, body, closing and
+  signature. The signature remains outside prose correction. The mail subject
+  field starts empty and offers a placeholder. Existing dense email behavior
+  remains supported.
+- CI reports lint, typecheck, tests, corpus, dictionary reproduction, build and
+  performance independently, uploads diagnostics and applies a final combined
+  gate. Component benchmarks cover segmentation, indexed typo lookup and
+  morphology, alongside the editor and UI diff.
+- Added 14 separately maintained holdout examples and targeted positive,
+  counterexample, name, protected-span, signature and idempotency checks.
+  Existing regression expected outputs were not changed. Two unit assertions
+  were changed because an independent sentence now correctly starts with a
+  capital letter, and a run-on sentence has a boundary.
 
-- Silent npm benchmark invocation produces valid JSON and preserves failure
-  status. CI now runs all tests and build as well as typecheck and benchmarks.
-- Next.js 14.2.35 → 16.3.6, React 18.3.1 → 19.3.0, ESLint 8 → 9.39.5, matching
-  Next ESLint config and React types. Migration through 15.5.26 still retained
-  a vulnerable bundled PostCSS chain, so the supported 16.3.6 release was used.
-  No affected async request APIs, Server Actions, images or middleware were found.
-- Old audit: 4 high + 1 critical (Next, bundled PostCSS, Next lint plugin/glob).
-  New audit: **zero advisories reported**. No forced audit fix or overrides.
-- Vercel installation now uses `npm ci`. Typecheck regenerates dictionary data,
-  fixing the fresh-clone dependency on a local generated artifact.
-- Generated dictionary is excluded from git; preparation reconstructs 100,000
-  forms from pinned, checksummed inputs. Byte-for-byte reproduction passes.
-- FLAG long parsing handles two-character flags; malformed and unsupported SFX
-  lines are skipped and counted. Full Hunspell semantics are not claimed.
-- UI diff no longer allocates a document-size matrix; full words and inserted
-  punctuation are highlighted using bounded lookahead.
-- Production spelling really uses replaceable lemma/morphology/spelling
-  services. Contract tests swap each service on the production path. Optional
-  spelling event tracing requires no allocation when disabled.
-- Email section normalization recognizes inline closings before prose editing.
-  Unicode-aware closing boundaries fix detection of `Hörmətlə`.
-- Technical preparation now precedes protection; lexical terms remain visible
-  to clause rules. This repairs existing OpenAPI and technical-boundary tests.
-- Removed five unused legacy UI components, utility helper, clsx and
-  tailwind-merge. Emoji animation lives in a separate component so its timer
-  does not rerender the complete editor, and it observes reduced-motion changes.
-- Input limits are shared, including mail subject length. Textarea is labelled,
-  brand matches metadata, and metadata no longer claims real language detection
-  or an exact grammatical error count in the UI.
+## Actual validation
 
-## Actual tests
-
-| Check | Result |
-|---|---|
-| npm ci | Pass |
-| dictionary import | Pass |
-| typecheck | Pass |
-| ESLint | Pass |
-| npm test | **163 pass / 175 fail / 338 total** |
-| production build | Pass, Next.js 16.3.6 |
-| benchmark and benchmark:check | Pass |
-| benchmark:json --enforce | Valid JSON, all engine/diff gates pass |
-| deterministic placeholder stress | Pass, 30 collision-like inputs |
-| malformed/blank/oversized API payloads, unknown strategy | Pass |
-| API/direct strategy parity and no-network legacy tests | Pass |
-
-Corpus breakdown:
-
-| Category | Pass | Fail |
+| Check | Baseline | Final local |
 |---|---:|---:|
-| diacritic | 3 | 2 |
-| punctuation | 18 | 23 |
-| typo | 5 | 16 |
-| context | 20 | 80 |
-| technical | 16 | 27 |
-| morphology | 3 | 27 |
+| Tests | 337 / 338 pass | 356 / 356 pass |
+| Regression corpus | 240 / 240 pass | 240 / 240 pass |
+| Holdout corpus | not present | 14 / 14 pass |
+| npm ci | pass | pass |
+| lint | pass | pass |
+| typecheck | pass | pass |
+| build | pass | pass |
+| benchmark:check | pass | pass |
+| dictionary reproduction | pass | pass |
 
-Full input/expected/actual/idempotency diagnostics are recorded in
-`stabilization-regressions.json`. Original expected texts remain unchanged.
-An attempted broad suffix/punctuation implementation was removed after it
-changed valid meanings and introduced regressions; it is not part of this branch.
+Regression categories: diacritic **5/5**, punctuation **41/41**, typo **21/21**,
+context **100/100**, technical **43/43**, morphology **30/30**. The regression
+fixture has no email category; two of the 14 holdout examples are emails,
+supplemented by the compact mail suite and 1,000 generated mail variants.
+All exact outputs and repeat runs are evaluated by the test suite.
 
 ## Performance
 
-Node 24.19.0, warm measurements. Milliseconds; process memory includes Node,
-tsx, runtime and indexes, not browser-only memory.
+Warm p95 in milliseconds on Node 24.19.0; baseline commands ran concurrently
+with other validation, while final measurements were run separately, so the
+comparison is indicative rather than controlled. A 5,000-word document is
+split into five production-sized requests because the API limit is 10,000
+characters per request.
 
-| Words | Engine avg | Engine p50 | Engine p95 | RSS peak MB | Diff avg | Diff p50 | Diff p95 |
-|---:|---:|---:|---:|---:|---:|---:|---:|
-| 20 | 1.63 | 1.59 | 1.93 | 156.36 | 0.24 | 0.11 | 1.56 |
-| 100 | 4.02 | 3.92 | 4.55 | 156.36 | 0.59 | 0.55 | 0.74 |
-| 500 | 13.67 | 12.8 | 17.23 | 156.48 | 2.81 | 2.77 | 2.99 |
-| 1000 | 24.67 | 24.3 | 26.59 | 156.86 | 5.53 | 5.48 | 6.12 |
-| 5000 | 118.27 | 118.33 | 120.3 | 158.61 | 29.5 | 29.82 | 31.52 |
+| Words | Baseline p95 | Final p95 | Final target |
+|---:|---:|---:|---:|
+| 20 | 21.62 | 2.04 | 50 |
+| 100 | 14.60 | 6.94 | 100 |
+| 500 | 45.79 | 23.15 | 300 |
+| 1,000 | 48.98 | 51.54 | 600 |
+| 5,000 | 226.96 | 208.91 | 2,500 |
 
-5000 words are a logical document of 37,528 characters split into **5** engine
-chunks; this is not a single request. A separate 5,000-short-token diff test
-also verifies bounded execution. These timings are measurements, not guarantees.
+All separately measured component and UI diff gates passed. At 5,000 words
+the component p95 values were **61.01 ms** segmentation, **11.78 ms** cached
+typo lookup and **11.18 ms** morphology. Approximate process peak RSS rose
+from **183.65 MB** in the baseline measurement to **234.27 MB** in the new
+measurement; this is a material memory tradeoff for the additional indexes.
+These are Node process readings, not a browser memory profile.
 
-## Production and remaining work
+An actual local production server returned **200** for the health route, page,
+text transform and mail transform; the text route returned
+`Qatar gecikirdi. Sərnişinlər dayanacaqda gözləyirdi.` and the mail route
+returned a structured subject, greeting, corrected body and closing.
+The CLI browser daemon terminated at startup, so interactive UI, mobile view
+and clipboard behavior have **not** been verified in a browser. Vercel preview
+and GitHub Actions results still need checking after the remote commit.
 
-The existing Vercel production deployment was inspected: `READY`,
-`dpl_FTxUvZK9NbvoKSBk8qTmZZoTsqBR`, main commit `e67438f...`,
-https://sloth-ai.vercel.app. It does **not** contain these branch changes.
+## Linguistic limits
 
-Main was unprotected when inspected. CI correctness checks alone cannot stop a
-direct push or force Vercel to wait; repository protection/integration settings
-are still required. No such account setting was changed.
-
-Remaining blockers: 175 corpus mismatches, productive suffix restoration,
-generic typo candidates, contextual ambiguity resolution and general sentence
-segmentation. Broad technical-suffix orthography is also not implemented.
-The new candidate interface is only an extension contract. Linguistic quality
-must be repaired with reusable rules and reviewed sources before promotion.
-
-Browser automation could not start its daemon in this environment; no claim is
-made about a completed visual/mobile/copy/animation end-to-end verification.
-Production server startup with explicit localhost binding reported Ready, but
-the subsequent HTTP request could not connect. HTTP smoke verification therefore
-also remains incomplete.
-
-Security sources reviewed: https://nextjs.org/blog/nextjs-security-update-september-22-2026
-and https://nextjs.org/docs/app/guides/upgrading/version-16 .
+The generator does not safely fix every deletion, transposition, typo or
+context-dependent homograph. Only reviewed lemmas receive productive feature
+analyses; a recognized Hunspell surface form is not automatically assumed to
+have a reliable lemma or part of speech. Clause splitting is deliberately
+conservative when an independent clause cannot be distinguished from a
+dependent phrase. The 14-example holdout is too small to imply general
+Azerbaijani accuracy. Text correction uses local code and no model, API key,
+network request or runtime model download.

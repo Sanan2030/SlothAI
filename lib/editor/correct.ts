@@ -6,7 +6,8 @@ import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
-import { separateEmailSections } from './rules/email';
+import { separateEmailSections, parseEmailSections } from './rules/email';
+import { segmentIndependentClauses } from './segmentation';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -49,6 +50,7 @@ function punctuate(line: string): string {
   result = punctuateExpository(result);
   result = punctuateBusiness(result);
   result = punctuateTechnical(result);
+  result = segmentIndependentClauses(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -194,6 +196,18 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
 export function formatEmail(input: string): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  const sections = parseEmailSections(input);
+  if (sections.salutation && sections.body && !sections.subject && !/\n/u.test(sections.body)) {
+    const rawSalutation = correctText(sections.salutation, true).text.replace(/[,.!?]+$/u, '');
+    const salutation = rawSalutation.replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
+      (_, title: string, name: string, suffix: string) => title + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix);
+    const body = correctText(sections.body, true).text;
+    const sign = sections.signature?.replace(/(^|\s)(\p{L})/gu,
+      (_match, space: string, letter: string) => space + letter.toLocaleUpperCase('az-AZ'));
+    const text = ['Mövzu: Müraciət', salutation + ',', body,
+      sign ? `Hörmətlə,\n${sign}` : 'Hörmətlə,'].join('\n\n');
+    return { text, corrections: text === input ? 0 : 1 };
+  }
   input = separateEmailSections(input);
   const compactSalutation = input.match(/(?<!\p{L})(?:hormetli|hörmətli)(?!\p{L})/iu);
   const compactClosing = [...input.matchAll(/(?<!\p{L})(?:hormetle|hörmətlə)[,]?(?!\p{L})/giu)].at(-1);

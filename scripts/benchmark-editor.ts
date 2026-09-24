@@ -2,6 +2,9 @@ import { performance } from 'node:perf_hooks';
 
 import { correctText, MAX_TEXT_LENGTH } from '../lib/editor/correct';
 import { buildAnimatedDiff } from '../lib/ui/text-diff';
+import { spellingCandidates } from '../lib/editor/spelling-candidates';
+import { productiveMorphology } from '../lib/editor/productive-morphology';
+import { segmentIndependentClauses } from '../lib/editor/segmentation';
 
 type BenchmarkCase = {
   words: number;
@@ -186,6 +189,29 @@ const diffResults = CASES.map(config => {
     status: p95Ms <= config.targetMs ? 'PASS' : 'FAIL' };
 });
 
+const componentResults = CASES.flatMap(config => {
+  const document = buildDocument(config.words);
+  const words = document.match(/\p{L}+/gu) ?? [];
+  const components = [
+    { name: 'segmentation', run: () => { for (const chunk of chunkDocument(document)) segmentIndependentClauses(chunk); } },
+    { name: 'typo candidates', run: () => { for (const word of words) spellingCandidates.candidates(word, 5); } },
+    { name: 'morphology', run: () => { for (const word of words) productiveMorphology.analyzeWord(word); } },
+  ];
+  return components.map(component => {
+    const samples: number[] = [];
+    component.run();
+    for (let repetition = 0; repetition < 3; repetition++) {
+      const start = performance.now();
+      component.run();
+      samples.push(performance.now() - start);
+    }
+    samples.sort((a, b) => a - b);
+    const p95Ms = round(percentile(samples, 0.95));
+    return { name: component.name, words: config.words, p95Ms,
+      targetMs: config.targetMs, status: p95Ms <= config.targetMs ? 'PASS' : 'FAIL' };
+  });
+});
+
 if (jsonOnly) {
   console.log(JSON.stringify({
     node: process.version,
@@ -193,6 +219,7 @@ if (jsonOnly) {
     maxBenchmarkChunkChars: MAX_CHUNK_CHARS,
     results,
     diffResults,
+    componentResults,
   }, null, 2));
 } else {
   console.log('\nSlothAI editor benchmark');
@@ -217,13 +244,15 @@ if (jsonOnly) {
   console.log('\nNotes:');
   console.log('UI diff (separate from engine latency):');
   console.table(diffResults);
+  console.log('Indexed typo lookup, morphological analysis, and sentence segmentation:');
+  console.table(componentResults);
   console.log('- Latency gate uses p95 warm latency.');
   console.log('- RSS/heap values are process-level approximate measurements, useful for before/after regressions.');
   console.log('- Use the same Node version and machine when comparing commits.');
   console.log('- Run with --json for machine-readable output.');
 }
 
-if (enforce && (failed.length || diffResults.some(result => result.status === 'FAIL'))) {
+if (enforce && (failed.length || diffResults.some(result => result.status === 'FAIL') || componentResults.some(result => result.status === 'FAIL'))) {
   console.error(`\nPerformance gate failed for: ${failed.map((result) => result.words + ' words').join(', ')}`);
   process.exitCode = 1;
 }

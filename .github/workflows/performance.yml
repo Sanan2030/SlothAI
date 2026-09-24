@@ -35,16 +35,45 @@ jobs:
         run: npm run dictionary:import -- public/dictionaries/az
 
       - name: Typecheck benchmark integration
+        id: typecheck
+        continue-on-error: true
         run: npm run --ignore-scripts typecheck
 
+      - name: Check lint rules
+        id: lint
+        continue-on-error: true
+        run: npm run --ignore-scripts lint
+
       - name: Run complete regression suite
+        id: tests
+        continue-on-error: true
         run: npm run --ignore-scripts test
 
+      - name: Report regression corpus
+        id: corpus
+        if: always()
+        continue-on-error: true
+        run: node --import tsx scripts/report-regressions.ts
+
+      - name: Verify dictionary reproduction
+        id: dictionary
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -e
+          before=$(sha256sum lib/editor/generated/az-words.json public/dictionaries/az/metadata.json)
+          npm run --silent dictionary:import -- public/dictionaries/az > /dev/null
+          after=$(sha256sum lib/editor/generated/az-words.json public/dictionaries/az/metadata.json)
+          test "$before" = "$after"
+
       - name: Build production application
+        id: build
+        continue-on-error: true
         run: npm run --ignore-scripts build
 
       - name: Run enforced performance benchmark
         id: benchmark
+        continue-on-error: true
         shell: bash
         run: |
           set +e
@@ -86,6 +115,12 @@ jobs:
             '| Words | Scope | Avg ms | P50 ms | P95 ms | Status |',
             '|---:|---|---:|---:|---:|---|',
             ...data.diffResults.map(r => `| ${r.words} | ${r.scope} | ${r.avgMs} | ${r.p50Ms} | ${r.p95Ms} | ${r.status} |`),
+            '',
+            '### Language components',
+            '',
+            '| Component | Words | P95 ms | Target ms | Status |',
+            '|---|---:|---:|---:|:---:|',
+            ...data.componentResults.map(r => `| ${r.name} | ${r.words} | ${r.p95Ms} | ${r.targetMs} | ${r.status} |`),
           ];
           fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
           NODE
@@ -98,3 +133,22 @@ jobs:
           path: benchmark-results.json
           if-no-files-found: warn
           retention-days: 30
+
+      - name: Upload corpus diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-diagnostics-${{ github.sha }}
+          path: docs/stabilization-regressions.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Enforce complete validation gate
+        if: always()
+        env:
+          RESULTS: ${{ steps.typecheck.outcome }} ${{ steps.lint.outcome }} ${{ steps.tests.outcome }} ${{ steps.corpus.outcome }} ${{ steps.dictionary.outcome }} ${{ steps.build.outcome }} ${{ steps.benchmark.outcome }}
+        run: |
+          echo "Validation: $RESULTS"
+          for result in $RESULTS; do
+            if [ "$result" != success ]; then exit 1; fi
+          done

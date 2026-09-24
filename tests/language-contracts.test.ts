@@ -45,7 +45,7 @@ test('legacy lemma adapter exposes exact and folded dictionary lookups', () => {
   assert.equal(lemmaDictionary.hasSurfaceForm('mesuliyyet'), false);
 });
 
-test('legacy morphology adapter recognizes reviewed generated forms conservatively', () => {
+test('productive morphology recovers lemmas and bounded inflections', () => {
   assert.equal(morphologyEngine.isValidWordForm('məktəblər'), true);
   assert.equal(morphologyEngine.isValidWordForm('tamamiləuydurmasöz'), false);
 
@@ -53,15 +53,26 @@ test('legacy morphology adapter recognizes reviewed generated forms conservative
   assert.equal(analyses.length, 1);
   assert.deepEqual(analyses[0], {
     surface: 'məktəblər',
-    lemma: 'məktəblər',
-    features: {},
-    source: 'legacy',
+    lemma: 'məktəb',
+    pos: 'noun',
+    features: { number: 'plural', case: 'nominative' },
+    source: 'rule',
   } satisfies MorphologicalAnalysis);
 
   assert.deepEqual(
     morphologyEngine.stripSuffixes('məktəblər'),
-    [{ stem: 'məktəblər', removedSuffixes: [] }],
+    [{ stem: 'məktəb', removedSuffixes: ['lər'] }],
   );
+  assert.ok(morphologyEngine.analyzeWord('layihələrimizdən').some(record =>
+    record.lemma === 'layihə' && record.features.possessivePerson === 1 && record.features.case === 'ablative'));
+  assert.ok(morphologyEngine.analyzeWord('otağa').some(record => record.lemma === 'otaq' && record.features.case === 'dative'));
+  assert.ok(morphologyEngine.generateForms({ lemma: 'layihə', pos: 'noun',
+    features: { case: 'ablative' } }).includes('layihələrimizdən'));
+  assert.ok(morphologyEngine.analyzeWord('gəlirəm').some(record => record.lemma === 'gəl' && record.features.tense === 'present'));
+  assert.ok(morphologyEngine.analyzeWord('gələcəyəm').some(record => record.lemma === 'gəl' && record.features.tense === 'future'));
+  assert.ok(morphologyEngine.analyzeWord('gəlmir').some(record => record.lemma === 'gəl' && record.features.polarity === 'negative'));
+  assert.ok(morphologyEngine.analyzeWord('yazılır').some(record => record.lemma === 'yaz' && record.features.derivation?.includes('passive')));
+  assert.ok(morphologyEngine.generateForms({ lemma: 'gəl', pos: 'verb', limit: 4 }).length <= 4);
 });
 
 test('new language-service contracts do not change the current correction result', () => {

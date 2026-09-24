@@ -35,7 +35,7 @@ export default function HomePage() {
   const [activeModule, setActiveModule] = useState<ModuleId>('text');
   const [textValue, setTextValue] = useState('');
   const [mailValue, setMailValue] = useState('');
-  const [mailSubject, setMailSubject] = useState('hesabat haqqında');
+  const [mailSubject, setMailSubject] = useState('');
   const [textOutput, setTextOutput] = useState('');
   const [mailOutput, setMailOutput] = useState('');
   const [textMetadata, setTextMetadata] = useState<TransformationMetadata | null>(null);
@@ -239,6 +239,7 @@ export default function HomePage() {
                   id="mail-subject"
                   type="text"
                   value={mailSubject}
+                  placeholder="Məsələn: Layihə haqqında"
                   disabled={loading}
                   onChange={(event) => {
                     setMailSubject(event.target.value);

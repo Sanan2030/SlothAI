@@ -6,6 +6,7 @@ import { businessWords, businessAliases } from './business';
 import { technicalWords, technicalAliases, technicalSpelling } from './technical';
 import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
 import type { SpellingContext } from './contracts/spelling';
+import { chooseIndexedTypo } from './spelling-candidates';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -71,7 +72,7 @@ dərkənar hazırlanması hazırlanmasını hazırlanıb aktivləşdirildikdə
 göndərilməsi göndərilməsini qiymətləndirdi dəyərləndirdi qarşılaşdığınız
 vəziyyət vəziyyəti vəziyyətin prosesdə axınında dəyişiklik dəyişikliyi
 göstər göstərir göstərmək göstərilir açmaq açılır açın bağlayın
-gəldim getdim etdim bitdi gözləyirəm gələndə gedəndə məndədir
+gəldim getdim etdim bitdi gözləyirəm gələndə gedəndə məndədir deyirdi
 harada haraya haradan niyə nədir kimdir kimsən nə vaxt üçünsə
 işlədim işləyirəm işləyirsən işləyirsiniz işləyirlər işlədik
 qayıdıram qayıtdım görüşərik görüşənədək danışarıq danışdıq
@@ -258,7 +259,6 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'lari', apply: stem => stem + 'ları' },
 
   { raw: 'ilmelidir', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'məlidir' : 'malıdır') },
-  { raw: 'ilmelidir', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'məlidir' : 'malıdır') },
   { raw: 'ilacaq', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'əcək' : 'acaq') },
   { raw: 'ilecek', apply: stem => stem + harmonyI(stem) + 'l' + (harmonyA(stem) === 'ə' ? 'əcək' : 'acaq') },
   { raw: 'ilmeyib', apply: stem => stem + harmonyI(stem) + 'lm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
@@ -427,7 +427,8 @@ export function restoreWord(word: string, services?: SpellingContext): string {
     ?? restoreDigraphTransliteration(word, services)
     ?? restoreProductiveSuffix(word, services)
     ?? chooseSpelling(word, imported)
-    ?? chooseSpelling(word, new Set(morphologyCandidates));
+    ?? chooseSpelling(word, new Set(morphologyCandidates))
+    ?? chooseIndexedTypo(word);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.

@@ -2,9 +2,9 @@ import type { LemmaDictionary } from './contracts/lemma';
 import type { MorphologyEngine } from './contracts/morphology';
 import type { SpellingResolver, SpellingContext } from './contracts/spelling';
 import { restoreWord } from './lexicon';
+import { productiveMorphology } from './productive-morphology';
 import {
   legacyLemmaDictionary,
-  legacyMorphologyEngine,
 } from './adapters/legacy-language';
 
 /**
@@ -14,7 +14,7 @@ import {
  * changing correctText(), API routes, UI code, or regression fixtures.
  */
 export const lemmaDictionary: LemmaDictionary = legacyLemmaDictionary;
-export const morphologyEngine: MorphologyEngine = legacyMorphologyEngine;
+export const morphologyEngine: MorphologyEngine = productiveMorphology;
 
 export interface LanguageServices extends SpellingContext {
   spelling: SpellingResolver;
