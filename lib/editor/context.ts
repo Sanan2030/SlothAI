@@ -8,10 +8,12 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])bir bir(?=$|[^\p{L}])/giu, '$1bir-bir')
     .replace(/(^|[^\p{L}])hər seyden(?=$|[^\p{L}])/giu, '$1hər şeydən')
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz|o) +ise(?=$|[^\p{L}])/giu, '$1$2 isə')
-    .replace(/(^|[^\p{L}])(səhifəni|faylı|terminalı|pəncərəni|linki|sənədi|müraciəti)(\s+yenidən)? +ac(?=$|[^\p{L}])/giu, '$1$2$3 aç')
+    .replace(/(^|[^\p{L}])(səhifəni|səhifəsini|faylı|terminalı|pəncərəni|linki|sənədi|müraciəti)(\s+yenidən)? +ac(?=$|[^\p{L}])/giu, '$1$2$3 aç')
     .replace(/(^|[^\p{L}])basa +(?=düş[\p{L}]*)/giu, '$1başa ')
     .replace(/(^|[^\p{L}])əvvəl de +(?=demiş[\p{L}]*)/giu, '$1əvvəl də ')
     .replace(/(^|[^\p{L}])çoxdan +(?=görüşmür[\p{L}]*)/giu, '$1çoxdandır ')
+    .replace(/(^|[^\p{L}])mən de +(?=sənə\b)/giu, '$1mən də ')
+    .replace(/\b(test) qalib\b/giu, '$1 qalıb')
     .replace(/(^|[^\p{L}])seher(?= saat| tezdən| tezədən)/giu, '$1səhər')
     .replace(/(sabah|bu gün) seher(?=$|[^\p{L}])/giu, '$1 səhər')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
@@ -56,8 +58,8 @@ export function sentenceBoundaries(text: string): string {
   // Reviewed finite predicates followed by a clearly independent clause.
   // This is deliberately bounded to common predicates/starters instead of
   // guessing a boundary after every verb.
-  const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|dəyərləndirildi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı|qalxırdı|qaralırdı|bilərəm)';
-  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|indi|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni|başlaya|göndərə|dönüb)';
+  const independentPredicate = '(?:çıxıram|çatmışam|yorulmuşam|məşğulam|görüşmürük|hazırdır|bitdi|tamamlanıb|yeniləndi|dəyərləndirildi|alındı|edilib|yönləndirildi|bağlanıb|araşdırılır|açılmır|soyuyub|gördüm|eşitdim|başladı|hazırladım|oyandım|açdım|gəldim|işlədim|qaldırılıb|baxıldı|qalxırdı|qaralırdı|bilərəm|düşmədim)';
+  const independentStarter = '(?:mən|sən|biz|siz|o|birazdan|bir az|vaxtın|axşam|sabah|sonra|indi|illərdir|nəticə|problem|müraciətiniz|təşəkkürlər|təşəkkür edirik|zəhmət olmasa|yenidən|baxa|əlavə|küçələr|saat|hava|pəncərəni|başlaya|göndərə|dönüb|bir gün|məni)';
   result = result.replace(new RegExp(`(${independentPredicate}) +(?=${independentStarter}(?:\\s|$))`, 'giu'), '$1. ');
 
   // A question clause followed by a new subject gets a question boundary.
@@ -77,6 +79,7 @@ export function sentenceBoundaries(text: string): string {
     .replace(/\b(təşəkkür edirik) +(?=(?:müraciətiniz|təklifinizi)\b)/giu, '$1. ')
     .replace(/\b(yaxşı) +(?=onda\b)/giu, '$1, ')
     .replace(/\b(çalışdıq) +(?=cavab ala bilmədik\b)/giu, '$1, ')
+    .replace(/\b(olmamışam|gecikirdim) +(ona görə)\b/giu, '$1, $2')
     .replace(/(^|[.!?]\s+)(xeyir) +(?=necəsən\b)/giu, '$1$2, ')
     .replace(/\b(olacaq) +(düzdür)(?=$|[.!?\s])/giu, '$1, $2?');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)\s)/giu, '$1. ');
