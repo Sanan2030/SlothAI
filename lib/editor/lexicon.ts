@@ -219,6 +219,9 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   goruntu: 'görüntü',
   dayan: 'dayan',
   ed: 'ed',
+  yorul: 'yorul',
+  ses: 'səs',
+  format: 'format',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
 
 function recognizedStem(rawStem: string, services?: SpellingContext): string | undefined {
@@ -331,6 +334,7 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'ine', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyA(stem) },
   { raw: 'ima', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyA(stem) },
   { raw: 'ini', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) },
+  { raw: 'inda', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) },
   { raw: 'ina', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyA(stem) },
   { raw: 'imi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) },
   { raw: 'nin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'n' : undefined },
