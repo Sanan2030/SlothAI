@@ -6,7 +6,7 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])bir de (?=gecikmə(?:\s|$))/giu, '$1bir də ')
     .replace(/(^|[^\p{L}])bir birini(?=$|[^\p{L}])/giu, '$1bir-birini')
     .replace(/(^|[^\p{L}])bir bir(?=$|[^\p{L}])/giu, '$1bir-bir')
-    .replace(/(^|[^\p{L}])hər seyden(?=$|[^\p{L}])/giu, '$1hər şeydən')
+    .replace(/(^|[^\p{L}])hər (?:seyden|səydən)(?=$|[^\p{L}])/giu, '$1hər şeydən')
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz|o) +ise(?=$|[^\p{L}])/giu, '$1$2 isə')
     .replace(/(^|[^\p{L}])(səhifəni|səhifəsini|faylı|terminalı|pəncərəni|linki|sənədi|müraciəti)(\s+yenidən)? +ac(?=$|[^\p{L}])/giu, '$1$2$3 aç')
     .replace(/(^|[^\p{L}])basa +(?=düş[\p{L}]*)/giu, '$1başa ')
