@@ -10,8 +10,16 @@ const technicalCaseSuffixes = [
   ['den', '-dən'], ['dan', '-dan'], ['de', '-də'], ['da', '-da'], ['e', '-ə'], ['a', '-a'],
 ] as const;
 
+const hyphenatedTechnicalBases = new Map<string, string>([
+  ['vercel', 'Vercel'],
+  ['frontend', 'frontend'],
+  ['cache', 'cache'],
+  ['branch', 'branch'],
+  ['production', 'production'],
+]);
+
 function technicalBase(word: string): string | undefined {
-  return canonicalProtectedTerm(word) ?? (foreign.has(word.toLowerCase()) ? word.toLowerCase() : undefined);
+  return hyphenatedTechnicalBases.get(word.toLowerCase());
 }
 
 export function technicalSpelling(word: string): string | undefined {
