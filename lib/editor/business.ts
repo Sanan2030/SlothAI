@@ -66,6 +66,7 @@ export const businessAliases: Record<string, string> = {
   qebul: 'qəbul', qeydiyyata: 'qeydiyyata', arasdirilir: 'araşdırılır',
   tezlikle: 'tezliklə', cavablandirilacaq: 'cavablandırılacaq',
   zehmet: 'zəhmət', tesekkur: 'təşəkkür', elaqe: 'əlaqə',
+  aidiyyati: 'aidiyyəti', meyarlarinin: 'meyarlarının', gunudur: 'günüdür',
 };
 
 export function businessPhrases(text: string): string {
@@ -89,7 +90,8 @@ export function businessPhrases(text: string): string {
     .replace(/(^|[^\p{L}])video rəhbərlər(?=$|[^\p{L}])/giu, '$1video təlimatlar')
     .replace(/(^|[^\p{L}])video təlimatlar de(?=$|[^\p{L}])/giu, '$1video təlimatlar da')
     .replace(/(^|[^\p{L}])video təlimatlar də(?=$|[^\p{L}])/giu, '$1video təlimatlar da')
-    .replace(/(^|[^\p{L}])proqram təminatı inkişaf etdirilməsi/giu, '$1proqram təminatının inkişaf etdirilməsi');
+    .replace(/(^|[^\p{L}])proqram təminatı inkişaf etdirilməsi/giu, '$1proqram təminatının inkişaf etdirilməsi')
+    .replace(/(^|[^\p{L}])sizin tərəfdən(?=$|[^\p{L}])/giu, '$1sizin tərəfinizdən');
 }
 
 const predicates = [
@@ -123,6 +125,8 @@ const boundary = new RegExp(`(^|[^\\p{L}])(${predicates}) +(?=(?:${starters})(?:
 
 export function punctuateBusiness(text: string): string {
   return text.replace(boundary, '$1$2. ')
+    .replace(/(yoxlanılıb) +(?=icraya\s)/giu, '$1, ')
+    .replace(/(bizə göndərə bilərsiniz)(?=$|[.!?])/giu, '$1?')
     .replace(/(istəyirik) ki +/giu, '$1 ki, ')
     .replace(/(^|[.!?]\s+)(beləliklə) +/giu, '$1$2, ')
     .replace(/(həm onlayn) +həm də/giu, '$1, həm də')
