@@ -1,0 +1,3608 @@
+{
+  "total": 400,
+  "distinctMeanings": 200,
+  "passed": 306,
+  "failed": 94,
+  "results": [
+    {
+      "id": "unseen-ascii-1",
+      "category": "undiacritized",
+      "input": "bu seher deniz sakit idi",
+      "expected": "Bu səhər dəniz sakit idi.",
+      "actual": "Bu seher dəniz sakit idi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-1",
+      "category": "punctuation-capitalization",
+      "input": "bu səhər dəniz sakit idi",
+      "expected": "Bu səhər dəniz sakit idi.",
+      "actual": "Bu səhər dəniz sakit idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-2",
+      "category": "undiacritized",
+      "input": "dunen gece seherde yagis yagdi",
+      "expected": "Dünən gecə şəhərdə yağış yağdı.",
+      "actual": "Dünən gecə şəhərdə yağış yağdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-2",
+      "category": "punctuation-capitalization",
+      "input": "dünən gecə şəhərdə yağış yağdı",
+      "expected": "Dünən gecə şəhərdə yağış yağdı.",
+      "actual": "Dünən gecə şəhərdə yağış yağdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-3",
+      "category": "undiacritized",
+      "input": "dostlarim kohne mektebin qarsisinda gorusduler",
+      "expected": "Dostlarım köhnə məktəbin qarşısında görüşdülər.",
+      "actual": "Dostlarım köhnə məktəbin qarşısında gorusduler.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-3",
+      "category": "punctuation-capitalization",
+      "input": "dostlarım köhnə məktəbin qarşısında görüşdülər",
+      "expected": "Dostlarım köhnə məktəbin qarşısında görüşdülər.",
+      "actual": "Dostlarım köhnə məktəbin qarşısında görüşdülər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-4",
+      "category": "undiacritized",
+      "input": "yasil agaclarin altinda usaqlar oynayirdi",
+      "expected": "Yaşıl ağacların altında uşaqlar oynayırdı.",
+      "actual": "Yaşıl ağacların altında uşaqlar oynayirdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-4",
+      "category": "punctuation-capitalization",
+      "input": "yaşıl ağacların altında uşaqlar oynayırdı",
+      "expected": "Yaşıl ağacların altında uşaqlar oynayırdı.",
+      "actual": "Yaşıl ağacların altında uşaqlar oynayırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-5",
+      "category": "undiacritized",
+      "input": "nenem mene maraqli bir hekaye danisdi",
+      "expected": "Nənəm mənə maraqlı bir hekayə danışdı.",
+      "actual": "Nenem mənə maraqlı bir hekayə danışdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-5",
+      "category": "punctuation-capitalization",
+      "input": "nənəm mənə maraqlı bir hekayə danışdı",
+      "expected": "Nənəm mənə maraqlı bir hekayə danışdı.",
+      "actual": "Nənəm mənə maraqlı bir hekayə danışdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-6",
+      "category": "undiacritized",
+      "input": "kitabxanada nadir elyazmalar saxlanilir",
+      "expected": "Kitabxanada nadir əlyazmalar saxlanılır.",
+      "actual": "Kitabxanada nadir elyazmalar saxlanılır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-6",
+      "category": "punctuation-capitalization",
+      "input": "kitabxanada nadir əlyazmalar saxlanılır",
+      "expected": "Kitabxanada nadir əlyazmalar saxlanılır.",
+      "actual": "Kitabxanada nadir əlyazmalar saxlanılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-7",
+      "category": "undiacritized",
+      "input": "pencereden soyuq kulek iceri doldu",
+      "expected": "Pəncərədən soyuq külək içəri doldu.",
+      "actual": "Pəncərədən soyuq külək içəri doldu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-7",
+      "category": "punctuation-capitalization",
+      "input": "pəncərədən soyuq külək içəri doldu",
+      "expected": "Pəncərədən soyuq külək içəri doldu.",
+      "actual": "Pəncərədən soyuq külək içəri doldu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-8",
+      "category": "undiacritized",
+      "input": "qatar seher saatlarinda stansiyaya catdi",
+      "expected": "Qatar səhər saatlarında stansiyaya çatdı.",
+      "actual": "Qatar səhər saatlarında stansiyaya çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-8",
+      "category": "punctuation-capitalization",
+      "input": "qatar səhər saatlarında stansiyaya çatdı",
+      "expected": "Qatar səhər saatlarında stansiyaya çatdı.",
+      "actual": "Qatar səhər saatlarında stansiyaya çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-9",
+      "category": "undiacritized",
+      "input": "surucu dar kucede masini saxladi",
+      "expected": "Sürücü dar küçədə maşını saxladı.",
+      "actual": "Sürücü dar küçədə maşını saxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-9",
+      "category": "punctuation-capitalization",
+      "input": "sürücü dar küçədə maşını saxladı",
+      "expected": "Sürücü dar küçədə maşını saxladı.",
+      "actual": "Sürücü dar küçədə maşını saxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-10",
+      "category": "undiacritized",
+      "input": "telebeler dersden sonra parkda gezdiler",
+      "expected": "Tələbələr dərsdən sonra parkda gəzdilər.",
+      "actual": "Tələbələr dərsdən sonra parkda gezdiler.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-10",
+      "category": "punctuation-capitalization",
+      "input": "tələbələr dərsdən sonra parkda gəzdilər",
+      "expected": "Tələbələr dərsdən sonra parkda gəzdilər.",
+      "actual": "Tələbələr dərsdən sonra parkda gəzdilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-11",
+      "category": "undiacritized",
+      "input": "mektebin heyetinde yeni agaclar ekildi",
+      "expected": "Məktəbin həyətində yeni ağaclar əkildi.",
+      "actual": "Məktəbin heyetinde yeni ağaclar əkildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-11",
+      "category": "punctuation-capitalization",
+      "input": "məktəbin həyətində yeni ağaclar əkildi",
+      "expected": "Məktəbin həyətində yeni ağaclar əkildi.",
+      "actual": "Məktəbin həyətində yeni ağaclar əkildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-12",
+      "category": "undiacritized",
+      "input": "ressam sergide uc resm teqdim etdi",
+      "expected": "Rəssam sərgidə üç rəsm təqdim etdi.",
+      "actual": "Rəssam sərgidə uc rəsm təqdim etdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-12",
+      "category": "punctuation-capitalization",
+      "input": "rəssam sərgidə üç rəsm təqdim etdi",
+      "expected": "Rəssam sərgidə üç rəsm təqdim etdi.",
+      "actual": "Rəssam sərgidə üç rəsm təqdim etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-13",
+      "category": "undiacritized",
+      "input": "bu gun hava xeyli serin idi",
+      "expected": "Bu gün hava xeyli sərin idi.",
+      "actual": "Bu gün hava xeyli sərin idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-13",
+      "category": "punctuation-capitalization",
+      "input": "bu gün hava xeyli sərin idi",
+      "expected": "Bu gün hava xeyli sərin idi.",
+      "actual": "Bu gün hava xeyli sərin idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-14",
+      "category": "undiacritized",
+      "input": "axsam isiqlar bir-bir yandi",
+      "expected": "Axşam işıqlar bir-bir yandı.",
+      "actual": "Axşam isiqlar bir-bir yandı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-14",
+      "category": "punctuation-capitalization",
+      "input": "axşam işıqlar bir-bir yandı",
+      "expected": "Axşam işıqlar bir-bir yandı.",
+      "actual": "Axşam işıqlar bir-bir yandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-15",
+      "category": "undiacritized",
+      "input": "seher yemeyinden sonra gezintiye cixdiq",
+      "expected": "Səhər yeməyindən sonra gəzintiyə çıxdıq.",
+      "actual": "Seher yeməyindən sonra gezintiye çıxdıq.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-15",
+      "category": "punctuation-capitalization",
+      "input": "səhər yeməyindən sonra gəzintiyə çıxdıq",
+      "expected": "Səhər yeməyindən sonra gəzintiyə çıxdıq.",
+      "actual": "Səhər yeməyindən sonra gəzintiyə çıxdıq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-16",
+      "category": "undiacritized",
+      "input": "o, dostuna uzun bir mektub yazdi",
+      "expected": "O, dostuna uzun bir məktub yazdı.",
+      "actual": "O, dostuna uzun bir məktub yazdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-16",
+      "category": "punctuation-capitalization",
+      "input": "o, dostuna uzun bir məktub yazdı",
+      "expected": "O, dostuna uzun bir məktub yazdı.",
+      "actual": "O, dostuna uzun bir məktub yazdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-17",
+      "category": "undiacritized",
+      "input": "usaqlar kitab oxumagi cox sevirler",
+      "expected": "Uşaqlar kitab oxumağı çox sevirlər.",
+      "actual": "Uşaqlar kitab oxumagi çox sevirler.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-17",
+      "category": "punctuation-capitalization",
+      "input": "uşaqlar kitab oxumağı çox sevirlər",
+      "expected": "Uşaqlar kitab oxumağı çox sevirlər.",
+      "actual": "Uşaqlar kitab oxumağı çox sevirlər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-18",
+      "category": "undiacritized",
+      "input": "sahil boyunca sakitce addimladiq",
+      "expected": "Sahil boyunca sakitcə addımladıq.",
+      "actual": "Sahil boyunca sakitcə addımladıq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-18",
+      "category": "punctuation-capitalization",
+      "input": "sahil boyunca sakitcə addımladıq",
+      "expected": "Sahil boyunca sakitcə addımladıq.",
+      "actual": "Sahil boyunca sakitcə addımladıq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-19",
+      "category": "undiacritized",
+      "input": "iclas vaxtinda basa catdi",
+      "expected": "İclas vaxtında başa çatdı.",
+      "actual": "İclas vaxtında basa çatdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-19",
+      "category": "punctuation-capitalization",
+      "input": "iclas vaxtında başa çatdı",
+      "expected": "İclas vaxtında başa çatdı.",
+      "actual": "İclas vaxtında başa çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-20",
+      "category": "undiacritized",
+      "input": "muellim movzunu aydin izah etdi",
+      "expected": "Müəllim mövzunu aydın izah etdi.",
+      "actual": "Müəllim mövzunu aydın izah etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-20",
+      "category": "punctuation-capitalization",
+      "input": "müəllim mövzunu aydın izah etdi",
+      "expected": "Müəllim mövzunu aydın izah etdi.",
+      "actual": "Müəllim mövzunu aydın izah etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-21",
+      "category": "undiacritized",
+      "input": "yeni server bu gun qurasdirildi",
+      "expected": "Yeni server bu gün quraşdırıldı.",
+      "actual": "Yeni server bu gün quraşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-21",
+      "category": "punctuation-capitalization",
+      "input": "yeni server bu gün quraşdırıldı",
+      "expected": "Yeni server bu gün quraşdırıldı.",
+      "actual": "Yeni server bu gün quraşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-22",
+      "category": "undiacritized",
+      "input": "api sorgulari suretle cavablandirilir",
+      "expected": "API sorğuları sürətlə cavablandırılır.",
+      "actual": "API sorğuları sürətlə cavablandirilir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-22",
+      "category": "punctuation-capitalization",
+      "input": "apı sorğuları sürətlə cavablandırılır",
+      "expected": "API sorğuları sürətlə cavablandırılır.",
+      "actual": "API sorğuları sürətlə cavablandırılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-23",
+      "category": "undiacritized",
+      "input": "komanda layihenin kodunu yoxladi",
+      "expected": "Komanda layihənin kodunu yoxladı.",
+      "actual": "Komanda layihənin kodunu yoxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-23",
+      "category": "punctuation-capitalization",
+      "input": "komanda layihənin kodunu yoxladı",
+      "expected": "Komanda layihənin kodunu yoxladı.",
+      "actual": "Komanda layihənin kodunu yoxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-24",
+      "category": "undiacritized",
+      "input": "backend xidmeti artiq isleyir",
+      "expected": "Backend xidməti artıq işləyir.",
+      "actual": "Backend xidməti artıq işləyir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-24",
+      "category": "punctuation-capitalization",
+      "input": "backend xidməti artıq işləyir",
+      "expected": "Backend xidməti artıq işləyir.",
+      "actual": "Backend xidməti artıq işləyir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-25",
+      "category": "undiacritized",
+      "input": "frontend sehifesi mobil cihazlarda acilir",
+      "expected": "Frontend səhifəsi mobil cihazlarda açılır.",
+      "actual": "Frontend səhifəsi mobil cihazlarda açılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-25",
+      "category": "punctuation-capitalization",
+      "input": "frontend səhifəsi mobil cihazlarda açılır",
+      "expected": "Frontend səhifəsi mobil cihazlarda açılır.",
+      "actual": "Frontend səhifəsi mobil cihazlarda açılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-26",
+      "category": "undiacritized",
+      "input": "git tarixcesinde yeni commit gorunur",
+      "expected": "Git tarixçəsində yeni commit görünür.",
+      "actual": "Git tarixcesinde yeni commit görünür.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-26",
+      "category": "punctuation-capitalization",
+      "input": "git tarixçəsində yeni commit görünür",
+      "expected": "Git tarixçəsində yeni commit görünür.",
+      "actual": "Git tarixçəsində yeni commit görünür.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-27",
+      "category": "undiacritized",
+      "input": "database serverine giris mehdudlasdirildi",
+      "expected": "Database serverinə giriş məhdudlaşdırıldı.",
+      "actual": "Database serverinə giriş məhdudlaşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-27",
+      "category": "punctuation-capitalization",
+      "input": "database serverinə giriş məhdudlaşdırıldı",
+      "expected": "Database serverinə giriş məhdudlaşdırıldı.",
+      "actual": "Database serverinə giriş məhdudlaşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-28",
+      "category": "undiacritized",
+      "input": "deploy merhelesi ugurla basa catdi",
+      "expected": "Deploy mərhələsi uğurla başa çatdı.",
+      "actual": "Deploy mərhələsi uğurla basa çatdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-28",
+      "category": "punctuation-capitalization",
+      "input": "deploy mərhələsi uğurla başa çatdı",
+      "expected": "Deploy mərhələsi uğurla başa çatdı.",
+      "actual": "Deploy mərhələsi uğurla başa çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-29",
+      "category": "undiacritized",
+      "input": "sistem jurnalinda kohne xetalar qaldi",
+      "expected": "Sistem jurnalında köhnə xətalar qaldı.",
+      "actual": "Sistem jurnalında köhnə xətalar qaldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-29",
+      "category": "punctuation-capitalization",
+      "input": "sistem jurnalında köhnə xətalar qaldı",
+      "expected": "Sistem jurnalında köhnə xətalar qaldı.",
+      "actual": "Sistem jurnalında köhnə xətalar qaldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-30",
+      "category": "undiacritized",
+      "input": "sebeke kesildikde proses dayandi",
+      "expected": "Şəbəkə kəsildikdə proses dayandı.",
+      "actual": "Şəbəkə kesildikde proses dayandı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-30",
+      "category": "punctuation-capitalization",
+      "input": "şəbəkə kəsildikdə proses dayandı",
+      "expected": "Şəbəkə kəsildikdə proses dayandı.",
+      "actual": "Şəbəkə kəsildikdə proses dayandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-31",
+      "category": "undiacritized",
+      "input": "proqram istifadeciye aydin xeta gosterdi",
+      "expected": "Proqram istifadəçiyə aydın xəta göstərdi.",
+      "actual": "Proqram istifadəçiyə aydın xəta göstərdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-31",
+      "category": "punctuation-capitalization",
+      "input": "proqram istifadəçiyə aydın xəta göstərdi",
+      "expected": "Proqram istifadəçiyə aydın xəta göstərdi.",
+      "actual": "Proqram istifadəçiyə aydın xəta göstərdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-32",
+      "category": "undiacritized",
+      "input": "test muhitinde ferqli netice alindi",
+      "expected": "Test mühitində fərqli nəticə alındı.",
+      "actual": "Test mühitində fərqli nəticə alındı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-32",
+      "category": "punctuation-capitalization",
+      "input": "test mühitində fərqli nəticə alındı",
+      "expected": "Test mühitində fərqli nəticə alındı.",
+      "actual": "Test mühitində fərqli nəticə alındı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-33",
+      "category": "undiacritized",
+      "input": "kodun keyfiyyeti mutemadi yoxlanilir",
+      "expected": "Kodun keyfiyyəti mütəmadi yoxlanılır.",
+      "actual": "Kodun keyfiyyəti mütəmadi yoxlanılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-33",
+      "category": "punctuation-capitalization",
+      "input": "kodun keyfiyyəti mütəmadi yoxlanılır",
+      "expected": "Kodun keyfiyyəti mütəmadi yoxlanılır.",
+      "actual": "Kodun keyfiyyəti mütəmadi yoxlanılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-34",
+      "category": "undiacritized",
+      "input": "serverin yaddasi axsam doldu",
+      "expected": "Serverin yaddaşı axşam doldu.",
+      "actual": "Serverin yaddaşı axşam doldu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-34",
+      "category": "punctuation-capitalization",
+      "input": "serverin yaddaşı axşam doldu",
+      "expected": "Serverin yaddaşı axşam doldu.",
+      "actual": "Serverin yaddaşı axşam doldu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-35",
+      "category": "undiacritized",
+      "input": "senedin son versiyasi saxlanildi",
+      "expected": "Sənədin son versiyası saxlanıldı.",
+      "actual": "Sənədin son versiyasi saxlanıldı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-35",
+      "category": "punctuation-capitalization",
+      "input": "sənədin son versiyası saxlanıldı",
+      "expected": "Sənədin son versiyası saxlanıldı.",
+      "actual": "Sənədin son versiyası saxlanıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-36",
+      "category": "undiacritized",
+      "input": "melumat bazasi gundelik yenilenir",
+      "expected": "Məlumat bazası gündəlik yenilənir.",
+      "actual": "Məlumat bazası gündəlik yenilənir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-36",
+      "category": "punctuation-capitalization",
+      "input": "məlumat bazası gündəlik yenilənir",
+      "expected": "Məlumat bazası gündəlik yenilənir.",
+      "actual": "Məlumat bazası gündəlik yenilənir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-37",
+      "category": "undiacritized",
+      "input": "faylin olcusu kifayet qeder boyukdur",
+      "expected": "Faylın ölçüsü kifayət qədər böyükdür.",
+      "actual": "Faylın olcusu kifayət qədər boyukdur.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-37",
+      "category": "punctuation-capitalization",
+      "input": "faylın ölçüsü kifayət qədər böyükdür",
+      "expected": "Faylın ölçüsü kifayət qədər böyükdür.",
+      "actual": "Faylın ölçüsü kifayət qədər böyükdür.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-38",
+      "category": "undiacritized",
+      "input": "axtaris sistemi cavabi tez qaytardi",
+      "expected": "Axtarış sistemi cavabı tez qaytardı.",
+      "actual": "Axtarış sistemi cavabı tez qaytardı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-38",
+      "category": "punctuation-capitalization",
+      "input": "axtarış sistemi cavabı tez qaytardı",
+      "expected": "Axtarış sistemi cavabı tez qaytardı.",
+      "actual": "Axtarış sistemi cavabı tez qaytardı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-39",
+      "category": "undiacritized",
+      "input": "yeni modul dunen teqdim edildi",
+      "expected": "Yeni modul dünən təqdim edildi.",
+      "actual": "Yeni modul dünən təqdim edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-39",
+      "category": "punctuation-capitalization",
+      "input": "yeni modul dünən təqdim edildi",
+      "expected": "Yeni modul dünən təqdim edildi.",
+      "actual": "Yeni modul dünən təqdim edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-40",
+      "category": "undiacritized",
+      "input": "texniki qrup problemi arasdirdi",
+      "expected": "Texniki qrup problemi araşdırdı.",
+      "actual": "Texniki qrup problemi araşdırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-40",
+      "category": "punctuation-capitalization",
+      "input": "texniki qrup problemi araşdırdı",
+      "expected": "Texniki qrup problemi araşdırdı.",
+      "actual": "Texniki qrup problemi araşdırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-41",
+      "category": "undiacritized",
+      "input": "teleskop uzaq qalaktikalari musahide edir",
+      "expected": "Teleskop uzaq qalaktikaları müşahidə edir.",
+      "actual": "Teleskop uzaq qalaktikaları müşahidə edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-41",
+      "category": "punctuation-capitalization",
+      "input": "teleskop uzaq qalaktikaları müşahidə edir",
+      "expected": "Teleskop uzaq qalaktikaları müşahidə edir.",
+      "actual": "Teleskop uzaq qalaktikaları müşahidə edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-42",
+      "category": "undiacritized",
+      "input": "kainatda saysiz-hesabsiz ulduz var",
+      "expected": "Kainatda saysız-hesabsız ulduz var.",
+      "actual": "Kainatda saysız-hesabsız ulduz var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-42",
+      "category": "punctuation-capitalization",
+      "input": "kainatda saysız-hesabsız ulduz var",
+      "expected": "Kainatda saysız-hesabsız ulduz var.",
+      "actual": "Kainatda saysız-hesabsız ulduz var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-43",
+      "category": "undiacritized",
+      "input": "gunes isigi yere enerji verir",
+      "expected": "Günəş işığı Yerə enerji verir.",
+      "actual": "Günəş isigi yere enerji verir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-43",
+      "category": "punctuation-capitalization",
+      "input": "günəş işığı yerə enerji verir",
+      "expected": "Günəş işığı Yerə enerji verir.",
+      "actual": "Günəş işığı yerə enerji verir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-44",
+      "category": "undiacritized",
+      "input": "planetlerin hereketi diqqetle izlenilir",
+      "expected": "Planetlərin hərəkəti diqqətlə izlənilir.",
+      "actual": "Planetlərin hərəkəti diqqətlə izlənilir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-44",
+      "category": "punctuation-capitalization",
+      "input": "planetlərin hərəkəti diqqətlə izlənilir",
+      "expected": "Planetlərin hərəkəti diqqətlə izlənilir.",
+      "actual": "Planetlərin hərəkəti diqqətlə izlənilir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-45",
+      "category": "undiacritized",
+      "input": "alimler yeni derman uzerinde isleyirler",
+      "expected": "Alimlər yeni dərman üzərində işləyirlər.",
+      "actual": "Alimlər yeni dərman üzərində işləyirlər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-45",
+      "category": "punctuation-capitalization",
+      "input": "alimlər yeni dərman üzərində işləyirlər",
+      "expected": "Alimlər yeni dərman üzərində işləyirlər.",
+      "actual": "Alimlər yeni dərman üzərində işləyirlər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-46",
+      "category": "undiacritized",
+      "input": "laboratoriyada aparilan sinaq tamamlandi",
+      "expected": "Laboratoriyada aparılan sınaq tamamlandı.",
+      "actual": "Laboratoriyada aparılan sınaq tamamlandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-46",
+      "category": "punctuation-capitalization",
+      "input": "laboratoriyada aparılan sınaq tamamlandı",
+      "expected": "Laboratoriyada aparılan sınaq tamamlandı.",
+      "actual": "Laboratoriyada aparılan sınaq tamamlandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-47",
+      "category": "undiacritized",
+      "input": "meseler tebietin tarazligini qoruyur",
+      "expected": "Meşələr təbiətin tarazlığını qoruyur.",
+      "actual": "Meşələr təbiətin tarazligini qoruyur.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-47",
+      "category": "punctuation-capitalization",
+      "input": "meşələr təbiətin tarazlığını qoruyur",
+      "expected": "Meşələr təbiətin tarazlığını qoruyur.",
+      "actual": "Meşələr təbiətin tarazlığını qoruyur.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-48",
+      "category": "undiacritized",
+      "input": "caylarin suyu yazda artir",
+      "expected": "Çayların suyu yazda artır.",
+      "actual": "Çayların suyu yazda artır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-48",
+      "category": "punctuation-capitalization",
+      "input": "çayların suyu yazda artır",
+      "expected": "Çayların suyu yazda artır.",
+      "actual": "Çayların suyu yazda artır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-49",
+      "category": "undiacritized",
+      "input": "denizin derinliyinde muxtelif canlilar yasayir",
+      "expected": "Dənizin dərinliyində müxtəlif canlılar yaşayır.",
+      "actual": "Dənizin derinliyinde müxtəlif canlilar yasayir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-49",
+      "category": "punctuation-capitalization",
+      "input": "dənizin dərinliyində müxtəlif canlılar yaşayır",
+      "expected": "Dənizin dərinliyində müxtəlif canlılar yaşayır.",
+      "actual": "Dənizin dərinliyində müxtəlif canlılar yaşayır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-50",
+      "category": "undiacritized",
+      "input": "buludlar yavas-yavas dagildi",
+      "expected": "Buludlar yavaş-yavaş dağıldı.",
+      "actual": "Buludlar yavaş-yavaş dağıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-50",
+      "category": "punctuation-capitalization",
+      "input": "buludlar yavaş-yavaş dağıldı",
+      "expected": "Buludlar yavaş-yavaş dağıldı.",
+      "actual": "Buludlar yavaş-yavaş dağıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-51",
+      "category": "undiacritized",
+      "input": "fiziki mesqler saglamliga komek edir",
+      "expected": "Fiziki məşqlər sağlamlığa kömək edir.",
+      "actual": "Fiziki məşqlər sağlamlığa kömək edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-51",
+      "category": "punctuation-capitalization",
+      "input": "fiziki məşqlər sağlamlığa kömək edir",
+      "expected": "Fiziki məşqlər sağlamlığa kömək edir.",
+      "actual": "Fiziki məşqlər sağlamlığa kömək edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-52",
+      "category": "undiacritized",
+      "input": "muntezem yuxu zehni fealiyyeti yaxsilasdirir",
+      "expected": "Müntəzəm yuxu zehni fəaliyyəti yaxşılaşdırır.",
+      "actual": "Müntəzəm yuxu zehni fəaliyyəti yaxşılaşdırır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-52",
+      "category": "punctuation-capitalization",
+      "input": "müntəzəm yuxu zehni fəaliyyəti yaxşılaşdırır",
+      "expected": "Müntəzəm yuxu zehni fəaliyyəti yaxşılaşdırır.",
+      "actual": "Müntəzəm yuxu zehni fəaliyyəti yaxşılaşdırır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-53",
+      "category": "undiacritized",
+      "input": "temiz hava usaqlara faydalidir",
+      "expected": "Təmiz hava uşaqlara faydalıdır.",
+      "actual": "Təmiz hava uşaqlara faydalıdır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-53",
+      "category": "punctuation-capitalization",
+      "input": "təmiz hava uşaqlara faydalıdır",
+      "expected": "Təmiz hava uşaqlara faydalıdır.",
+      "actual": "Təmiz hava uşaqlara faydalıdır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-54",
+      "category": "undiacritized",
+      "input": "torpagin terkibi laboratoriyada olculdu",
+      "expected": "Torpağın tərkibi laboratoriyada ölçüldü.",
+      "actual": "Torpagin tərkibi laboratoriyada ölçüldü.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-54",
+      "category": "punctuation-capitalization",
+      "input": "torpağın tərkibi laboratoriyada ölçüldü",
+      "expected": "Torpağın tərkibi laboratoriyada ölçüldü.",
+      "actual": "Torpağın tərkibi laboratoriyada ölçüldü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-55",
+      "category": "undiacritized",
+      "input": "sagirdler musahide neticelerini yazdilar",
+      "expected": "Şagirdlər müşahidə nəticələrini yazdılar.",
+      "actual": "Sagirdler müşahidə nəticələrini yazdılar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-55",
+      "category": "punctuation-capitalization",
+      "input": "şagirdlər müşahidə nəticələrini yazdılar",
+      "expected": "Şagirdlər müşahidə nəticələrini yazdılar.",
+      "actual": "Şagirdlər müşahidə nəticələrini yazdılar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-56",
+      "category": "undiacritized",
+      "input": "muellim tecrubeni tehlukesiz apardi",
+      "expected": "Müəllim təcrübəni təhlükəsiz apardı.",
+      "actual": "Müəllim təcrübəni təhlükəsiz apardı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-56",
+      "category": "punctuation-capitalization",
+      "input": "müəllim təcrübəni təhlükəsiz apardı",
+      "expected": "Müəllim təcrübəni təhlükəsiz apardı.",
+      "actual": "Müəllim təcrübəni təhlükəsiz apardı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-57",
+      "category": "undiacritized",
+      "input": "tebietsunaslar yeni bitki novu tapdilar",
+      "expected": "Təbiətşünaslar yeni bitki növü tapdılar.",
+      "actual": "Tebietsunaslar yeni bitki novu tapdılar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-57",
+      "category": "punctuation-capitalization",
+      "input": "təbiətşünaslar yeni bitki növü tapdılar",
+      "expected": "Təbiətşünaslar yeni bitki növü tapdılar.",
+      "actual": "Təbiətşünaslar yeni bitki növü tapdılar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-58",
+      "category": "undiacritized",
+      "input": "qaranliq sema ulduzlari daha aydin gosterir",
+      "expected": "Qaranlıq səma ulduzları daha aydın göstərir.",
+      "actual": "Qaranlıq səma ulduzları daha aydın göstərir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-58",
+      "category": "punctuation-capitalization",
+      "input": "qaranlıq səma ulduzları daha aydın göstərir",
+      "expected": "Qaranlıq səma ulduzları daha aydın göstərir.",
+      "actual": "Qaranlıq səma ulduzları daha aydın göstərir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-59",
+      "category": "undiacritized",
+      "input": "dunenki kulek agaclari yelletdi",
+      "expected": "Dünənki külək ağacları yellətdi.",
+      "actual": "Dünənki külək ağacları yellətdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-59",
+      "category": "punctuation-capitalization",
+      "input": "dünənki külək ağacları yellətdi",
+      "expected": "Dünənki külək ağacları yellətdi.",
+      "actual": "Dünənki külək ağacları yellətdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-60",
+      "category": "undiacritized",
+      "input": "arasdirmanin neticeleri jurnalda cap olundu",
+      "expected": "Araşdırmanın nəticələri jurnalda çap olundu.",
+      "actual": "Araşdırmanın nəticələri jurnalda çap olundu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-60",
+      "category": "punctuation-capitalization",
+      "input": "araşdırmanın nəticələri jurnalda çap olundu",
+      "expected": "Araşdırmanın nəticələri jurnalda çap olundu.",
+      "actual": "Araşdırmanın nəticələri jurnalda çap olundu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-61",
+      "category": "undiacritized",
+      "input": "musteri yeni teklifi nezerden kecirdi",
+      "expected": "Müştəri yeni təklifi nəzərdən keçirdi.",
+      "actual": "Müştəri yeni təklifi nəzərdən keçirdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-61",
+      "category": "punctuation-capitalization",
+      "input": "müştəri yeni təklifi nəzərdən keçirdi",
+      "expected": "Müştəri yeni təklifi nəzərdən keçirdi.",
+      "actual": "Müştəri yeni təklifi nəzərdən keçirdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-62",
+      "category": "undiacritized",
+      "input": "muqavilenin sertleri bu gun tesdiqlendi",
+      "expected": "Müqavilənin şərtləri bu gün təsdiqləndi.",
+      "actual": "Müqavilənin şərtləri bu gün təsdiqləndi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-62",
+      "category": "punctuation-capitalization",
+      "input": "müqavilənin şərtləri bu gün təsdiqləndi",
+      "expected": "Müqavilənin şərtləri bu gün təsdiqləndi.",
+      "actual": "Müqavilənin şərtləri bu gün təsdiqləndi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-63",
+      "category": "undiacritized",
+      "input": "rehberlik layiheye elave vaxt ayirdi",
+      "expected": "Rəhbərlik layihəyə əlavə vaxt ayırdı.",
+      "actual": "Rəhbərlik layihəyə əlavə vaxt ayırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-63",
+      "category": "punctuation-capitalization",
+      "input": "rəhbərlik layihəyə əlavə vaxt ayırdı",
+      "expected": "Rəhbərlik layihəyə əlavə vaxt ayırdı.",
+      "actual": "Rəhbərlik layihəyə əlavə vaxt ayırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-64",
+      "category": "undiacritized",
+      "input": "telim proqrami gelen hefte baslayacaq",
+      "expected": "Təlim proqramı gələn həftə başlayacaq.",
+      "actual": "Təlim proqramı gələn həftə başlayacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-64",
+      "category": "punctuation-capitalization",
+      "input": "təlim proqramı gələn həftə başlayacaq",
+      "expected": "Təlim proqramı gələn həftə başlayacaq.",
+      "actual": "Təlim proqramı gələn həftə başlayacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-65",
+      "category": "undiacritized",
+      "input": "komanda yekun hesabati vaxtinda gonderdi",
+      "expected": "Komanda yekun hesabatı vaxtında göndərdi.",
+      "actual": "Komanda yekun hesabatı vaxtında göndərdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-65",
+      "category": "punctuation-capitalization",
+      "input": "komanda yekun hesabatı vaxtında göndərdi",
+      "expected": "Komanda yekun hesabatı vaxtında göndərdi.",
+      "actual": "Komanda yekun hesabatı vaxtında göndərdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-66",
+      "category": "undiacritized",
+      "input": "odenisin tarixi muqavilede gosterilib",
+      "expected": "Ödənişin tarixi müqavilədə göstərilib.",
+      "actual": "Ödənişin tarixi müqavilədə göstərilib.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-66",
+      "category": "punctuation-capitalization",
+      "input": "ödənişin tarixi müqavilədə göstərilib",
+      "expected": "Ödənişin tarixi müqavilədə göstərilib.",
+      "actual": "Ödənişin tarixi müqavilədə göstərilib.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-67",
+      "category": "undiacritized",
+      "input": "yeni isciler bu gun ofise geldiler",
+      "expected": "Yeni işçilər bu gün ofisə gəldilər.",
+      "actual": "Yeni işçilər bu gün ofisə gəldilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-67",
+      "category": "punctuation-capitalization",
+      "input": "yeni işçilər bu gün ofisə gəldilər",
+      "expected": "Yeni işçilər bu gün ofisə gəldilər.",
+      "actual": "Yeni işçilər bu gün ofisə gəldilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-68",
+      "category": "undiacritized",
+      "input": "gorus ucun ayrica otaq ayrildi",
+      "expected": "Görüş üçün ayrıca otaq ayrıldı.",
+      "actual": "Görüş üçün ayrıca otaq ayrıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-68",
+      "category": "punctuation-capitalization",
+      "input": "görüş üçün ayrıca otaq ayrıldı",
+      "expected": "Görüş üçün ayrıca otaq ayrıldı.",
+      "actual": "Görüş üçün ayrıca otaq ayrıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-69",
+      "category": "undiacritized",
+      "input": "senedlerin sureti elektron qaydada gonderildi",
+      "expected": "Sənədlərin surəti elektron qaydada göndərildi.",
+      "actual": "Sənədlərin sürəti elektron qaydada göndərildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-69",
+      "category": "punctuation-capitalization",
+      "input": "sənədlərin surəti elektron qaydada göndərildi",
+      "expected": "Sənədlərin surəti elektron qaydada göndərildi.",
+      "actual": "Sənədlərin sürəti elektron qaydada göndərildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-70",
+      "category": "undiacritized",
+      "input": "sorgu muvafiq sobeye yonlendirildi",
+      "expected": "Sorğu müvafiq şöbəyə yönləndirildi.",
+      "actual": "Sorğu müvafiq sobeye yönləndirildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-70",
+      "category": "punctuation-capitalization",
+      "input": "sorğu müvafiq şöbəyə yönləndirildi",
+      "expected": "Sorğu müvafiq şöbəyə yönləndirildi.",
+      "actual": "Sorğu müvafiq şöbəyə yönləndirildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-71",
+      "category": "undiacritized",
+      "input": "musteri xidmeti her gun fealiyyet gosterir",
+      "expected": "Müştəri xidməti hər gün fəaliyyət göstərir.",
+      "actual": "Müştəri xidməti hər gün fəaliyyət göstərir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-71",
+      "category": "punctuation-capitalization",
+      "input": "müştəri xidməti hər gün fəaliyyət göstərir",
+      "expected": "Müştəri xidməti hər gün fəaliyyət göstərir.",
+      "actual": "Müştəri xidməti hər gün fəaliyyət göstərir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-72",
+      "category": "undiacritized",
+      "input": "layihenin budcesi yeniden hesablandi",
+      "expected": "Layihənin büdcəsi yenidən hesablandı.",
+      "actual": "Layihənin budcesi yenidən hesablandı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-72",
+      "category": "punctuation-capitalization",
+      "input": "layihənin büdcəsi yenidən hesablandı",
+      "expected": "Layihənin büdcəsi yenidən hesablandı.",
+      "actual": "Layihənin büdcəsi yenidən hesablandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-73",
+      "category": "undiacritized",
+      "input": "isciler tehlukesizlik qaydalarini oyrendiler",
+      "expected": "İşçilər təhlükəsizlik qaydalarını öyrəndilər.",
+      "actual": "İşçilər təhlükəsizlik qaydalarını öyrəndilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-73",
+      "category": "punctuation-capitalization",
+      "input": "işçilər təhlükəsizlik qaydalarını öyrəndilər",
+      "expected": "İşçilər təhlükəsizlik qaydalarını öyrəndilər.",
+      "actual": "İşçilər təhlükəsizlik qaydalarını öyrəndilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-74",
+      "category": "undiacritized",
+      "input": "yeni filial payizda acilacaq",
+      "expected": "Yeni filial payızda açılacaq.",
+      "actual": "Yeni filial payızda açılacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-74",
+      "category": "punctuation-capitalization",
+      "input": "yeni filial payızda açılacaq",
+      "expected": "Yeni filial payızda açılacaq.",
+      "actual": "Yeni filial payızda açılacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-75",
+      "category": "undiacritized",
+      "input": "hesabatda esas neticeler qeyd edildi",
+      "expected": "Hesabatda əsas nəticələr qeyd edildi.",
+      "actual": "Hesabatda əsas nəticələr qeyd edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-75",
+      "category": "punctuation-capitalization",
+      "input": "hesabatda əsas nəticələr qeyd edildi",
+      "expected": "Hesabatda əsas nəticələr qeyd edildi.",
+      "actual": "Hesabatda əsas nəticələr qeyd edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-76",
+      "category": "undiacritized",
+      "input": "teklifin detallari sabah muzakire olunacaq",
+      "expected": "Təklifin detalları sabah müzakirə olunacaq.",
+      "actual": "Təklifin detalları sabah müzakirə olunacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-76",
+      "category": "punctuation-capitalization",
+      "input": "təklifin detalları sabah müzakirə olunacaq",
+      "expected": "Təklifin detalları sabah müzakirə olunacaq.",
+      "actual": "Təklifin detalları sabah müzakirə olunacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-77",
+      "category": "undiacritized",
+      "input": "ekspertler texniki telebleri yoxladilar",
+      "expected": "Ekspertlər texniki tələbləri yoxladılar.",
+      "actual": "Ekspertler texniki tələbləri yoxladılar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-77",
+      "category": "punctuation-capitalization",
+      "input": "ekspertlər texniki tələbləri yoxladılar",
+      "expected": "Ekspertlər texniki tələbləri yoxladılar.",
+      "actual": "Ekspertlər texniki tələbləri yoxladılar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-78",
+      "category": "undiacritized",
+      "input": "sirket uzunmuddetli terefdasliq isteyir",
+      "expected": "Şirkət uzunmüddətli tərəfdaşlıq istəyir.",
+      "actual": "Şirkət uzunmüddətli terefdasliq istəyir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-78",
+      "category": "punctuation-capitalization",
+      "input": "şirkət uzunmüddətli tərəfdaşlıq istəyir",
+      "expected": "Şirkət uzunmüddətli tərəfdaşlıq istəyir.",
+      "actual": "Şirkət uzunmüddətli tərəfdaşlıq istəyir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-79",
+      "category": "undiacritized",
+      "input": "idare heyeti layiheni tesdiqledi",
+      "expected": "İdarə heyəti layihəni təsdiqlədi.",
+      "actual": "İdarə heyeti layihəni təsdiqlədi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-79",
+      "category": "punctuation-capitalization",
+      "input": "idarə heyəti layihəni təsdiqlədi",
+      "expected": "İdarə heyəti layihəni təsdiqlədi.",
+      "actual": "İdarə heyəti layihəni təsdiqlədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-80",
+      "category": "undiacritized",
+      "input": "her sobe oz planini hazirladi",
+      "expected": "Hər şöbə öz planını hazırladı.",
+      "actual": "Hər sobe öz planını hazırladı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-80",
+      "category": "punctuation-capitalization",
+      "input": "hər şöbə öz planını hazırladı",
+      "expected": "Hər şöbə öz planını hazırladı.",
+      "actual": "Hər şöbə öz planını hazırladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-81",
+      "category": "undiacritized",
+      "input": "baki bu gun cox sakit gorunurdu",
+      "expected": "Bakı bu gün çox sakit görünürdü.",
+      "actual": "Bakı bu gün çox sakit gorunurdu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-81",
+      "category": "punctuation-capitalization",
+      "input": "bakı bu gün çox sakit görünürdü",
+      "expected": "Bakı bu gün çox sakit görünürdü.",
+      "actual": "Bakı bu gün çox sakit görünürdü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-82",
+      "category": "undiacritized",
+      "input": "genceden gelen dostumla gorusdum",
+      "expected": "Gəncədən gələn dostumla görüşdüm.",
+      "actual": "Gəncədən gələn dostumla gorusdum.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-82",
+      "category": "punctuation-capitalization",
+      "input": "gəncədən gələn dostumla görüşdüm",
+      "expected": "Gəncədən gələn dostumla görüşdüm.",
+      "actual": "Gəncədən gələn dostumla görüşdüm.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-83",
+      "category": "undiacritized",
+      "input": "susa barede yeni kitab oxudum",
+      "expected": "Şuşa barədə yeni kitab oxudum.",
+      "actual": "Şuşa barədə yeni kitab oxudum.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-83",
+      "category": "punctuation-capitalization",
+      "input": "şuşa barədə yeni kitab oxudum",
+      "expected": "Şuşa barədə yeni kitab oxudum.",
+      "actual": "Şuşa barədə yeni kitab oxudum.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-84",
+      "category": "undiacritized",
+      "input": "qebeleye seher tezden yola dusduk",
+      "expected": "Qəbələyə səhər tezdən yola düşdük.",
+      "actual": "Qəbələyə səhər tezdən yola dusduk.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-84",
+      "category": "punctuation-capitalization",
+      "input": "qəbələyə səhər tezdən yola düşdük",
+      "expected": "Qəbələyə səhər tezdən yola düşdük.",
+      "actual": "Qəbələyə səhər tezdən yola düşdük.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-85",
+      "category": "undiacritized",
+      "input": "sumqayitdan axsam qayitdilar",
+      "expected": "Sumqayıtdan axşam qayıtdılar.",
+      "actual": "Sumqayıtdan axşam qayitdilar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-85",
+      "category": "punctuation-capitalization",
+      "input": "sumqayıtdan axşam qayıtdılar",
+      "expected": "Sumqayıtdan axşam qayıtdılar.",
+      "actual": "Sumqayıtdan axşam qayıtdılar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-86",
+      "category": "undiacritized",
+      "input": "naxcivanin tarixi cox qedimdir",
+      "expected": "Naxçıvanın tarixi çox qədimdir.",
+      "actual": "Naxçıvanın tarixi çox qədimdir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-86",
+      "category": "punctuation-capitalization",
+      "input": "naxçıvanın tarixi çox qədimdir",
+      "expected": "Naxçıvanın tarixi çox qədimdir.",
+      "actual": "Naxçıvanın tarixi çox qədimdir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-87",
+      "category": "undiacritized",
+      "input": "azerbaycanin muxtelif bolgeleri var",
+      "expected": "Azərbaycanın müxtəlif bölgələri var.",
+      "actual": "Azərbaycanın müxtəlif bölgələri var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-87",
+      "category": "punctuation-capitalization",
+      "input": "azərbaycanın müxtəlif bölgələri var",
+      "expected": "Azərbaycanın müxtəlif bölgələri var.",
+      "actual": "Azərbaycanın müxtəlif bölgələri var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-88",
+      "category": "undiacritized",
+      "input": "lacinda hava bu gun serin idi",
+      "expected": "Laçında hava bu gün sərin idi.",
+      "actual": "Laçında hava bu gün sərin idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-88",
+      "category": "punctuation-capitalization",
+      "input": "laçında hava bu gün sərin idi",
+      "expected": "Laçında hava bu gün sərin idi.",
+      "actual": "Laçında hava bu gün sərin idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-89",
+      "category": "undiacritized",
+      "input": "turkiyeye sefer planlasdirildi",
+      "expected": "Türkiyəyə səfər planlaşdırıldı.",
+      "actual": "Türkiyəyə səfər planlaşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-89",
+      "category": "punctuation-capitalization",
+      "input": "türkiyəyə səfər planlaşdırıldı",
+      "expected": "Türkiyəyə səfər planlaşdırıldı.",
+      "actual": "Türkiyəyə səfər planlaşdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-90",
+      "category": "undiacritized",
+      "input": "qubanin meseleri yazda gozeldir",
+      "expected": "Qubanın meşələri yazda gözəldir.",
+      "actual": "Qubanın meşələri yazda gözəldir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-90",
+      "category": "punctuation-capitalization",
+      "input": "qubanın meşələri yazda gözəldir",
+      "expected": "Qubanın meşələri yazda gözəldir.",
+      "actual": "Qubanın meşələri yazda gözəldir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-91",
+      "category": "undiacritized",
+      "input": "eli muellim sinfe daxil oldu",
+      "expected": "Əli müəllim sinfə daxil oldu.",
+      "actual": "Əli müəllim sinfe daxil oldu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-91",
+      "category": "punctuation-capitalization",
+      "input": "əli müəllim sinfə daxil oldu",
+      "expected": "Əli müəllim sinfə daxil oldu.",
+      "actual": "Əli müəllim sinfə daxil oldu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-92",
+      "category": "undiacritized",
+      "input": "fidan xanim hesabati teqdim etdi",
+      "expected": "Fidan xanım hesabatı təqdim etdi.",
+      "actual": "Fidan xanım hesabatı təqdim etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-92",
+      "category": "punctuation-capitalization",
+      "input": "fidan xanım hesabatı təqdim etdi",
+      "expected": "Fidan xanım hesabatı təqdim etdi.",
+      "actual": "Fidan xanım hesabatı təqdim etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-93",
+      "category": "undiacritized",
+      "input": "resad eliyev tedbire qatildi",
+      "expected": "Rəşad Əliyev tədbirə qatıldı.",
+      "actual": "Rəşad Əliyev tədbirə qatıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-93",
+      "category": "punctuation-capitalization",
+      "input": "rəşad əliyev tədbirə qatıldı",
+      "expected": "Rəşad Əliyev tədbirə qatıldı.",
+      "actual": "Rəşad Əliyev tədbirə qatıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-94",
+      "category": "undiacritized",
+      "input": "men umid edirem ki, her sey yaxsi olacaq",
+      "expected": "Mən ümid edirəm ki, hər şey yaxşı olacaq.",
+      "actual": "Mən ümid edirəm ki, hər şey yaxşı olacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-94",
+      "category": "punctuation-capitalization",
+      "input": "mən ümid edirəm ki, hər şey yaxşı olacaq",
+      "expected": "Mən ümid edirəm ki, hər şey yaxşı olacaq.",
+      "actual": "Mən ümid edirəm ki, hər şey yaxşı olacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-95",
+      "category": "undiacritized",
+      "input": "bagda fidan ekmek faydalidir",
+      "expected": "Bağda fidan əkmək faydalıdır.",
+      "actual": "Bağda fidan əkmək faydalıdır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-95",
+      "category": "punctuation-capitalization",
+      "input": "bağda fidan əkmək faydalıdır",
+      "expected": "Bağda fidan əkmək faydalıdır.",
+      "actual": "Bağda fidan əkmək faydalıdır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-96",
+      "category": "undiacritized",
+      "input": "bu mene ilham verdi",
+      "expected": "Bu mənə ilham verdi.",
+      "actual": "Bu mənə ilham verdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-96",
+      "category": "punctuation-capitalization",
+      "input": "bu mənə ilham verdi",
+      "expected": "Bu mənə ilham verdi.",
+      "actual": "Bu mənə ilham verdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-97",
+      "category": "undiacritized",
+      "input": "sadiq dost hemise komek edir",
+      "expected": "Sadiq dost həmişə kömək edir.",
+      "actual": "Sadiq dost həmişə kömək edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-97",
+      "category": "punctuation-capitalization",
+      "input": "sadiq dost həmişə kömək edir",
+      "expected": "Sadiq dost həmişə kömək edir.",
+      "actual": "Sadiq dost həmişə kömək edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-98",
+      "category": "undiacritized",
+      "input": "deniz bu seher sakitdir",
+      "expected": "Dəniz bu səhər sakitdir.",
+      "actual": "Dəniz bu seher sakitdir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-98",
+      "category": "punctuation-capitalization",
+      "input": "dəniz bu səhər sakitdir",
+      "expected": "Dəniz bu səhər sakitdir.",
+      "actual": "Dəniz bu səhər sakitdir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-99",
+      "category": "undiacritized",
+      "input": "muzakire sona catdi",
+      "expected": "Müzakirə sona çatdı.",
+      "actual": "Müzakirə sona çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-99",
+      "category": "punctuation-capitalization",
+      "input": "müzakirə sona çatdı",
+      "expected": "Müzakirə sona çatdı.",
+      "actual": "Müzakirə sona çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-100",
+      "category": "undiacritized",
+      "input": "lale bagda acdi",
+      "expected": "Lalə bağda açdı.",
+      "actual": "Lalə bağda açdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-100",
+      "category": "punctuation-capitalization",
+      "input": "lalə bağda açdı",
+      "expected": "Lalə bağda açdı.",
+      "actual": "Lalə bağda açdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-101",
+      "category": "undiacritized",
+      "input": "seher muellim yeni movzunu izah etdi",
+      "expected": "Səhər müəllim yeni mövzunu izah etdi.",
+      "actual": "Seher müəllim yeni mövzunu izah etdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-101",
+      "category": "punctuation-capitalization",
+      "input": "səhər müəllim yeni mövzunu izah etdi",
+      "expected": "Səhər müəllim yeni mövzunu izah etdi.",
+      "actual": "Səhər müəllim yeni mövzunu izah etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-102",
+      "category": "undiacritized",
+      "input": "kendin yaxinliginda kohne korpu var",
+      "expected": "Kəndin yaxınlığında köhnə körpü var.",
+      "actual": "Kəndin yaxınlığında köhnə körpü var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-102",
+      "category": "punctuation-capitalization",
+      "input": "kəndin yaxınlığında köhnə körpü var",
+      "expected": "Kəndin yaxınlığında köhnə körpü var.",
+      "actual": "Kəndin yaxınlığında köhnə körpü var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-103",
+      "category": "undiacritized",
+      "input": "balaca it qapinin onunde oturdu",
+      "expected": "Balaca it qapının önündə oturdu.",
+      "actual": "Balaca it qapının onundə oturdu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-103",
+      "category": "punctuation-capitalization",
+      "input": "balaca it qapının önündə oturdu",
+      "expected": "Balaca it qapının önündə oturdu.",
+      "actual": "Balaca it qapının önündə oturdu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-104",
+      "category": "undiacritized",
+      "input": "payizda bagdaki yarpaqlar saralir",
+      "expected": "Payızda bağdakı yarpaqlar saralır.",
+      "actual": "Payızda bagdaki yarpaqlar saralır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-104",
+      "category": "punctuation-capitalization",
+      "input": "payızda bağdakı yarpaqlar saralır",
+      "expected": "Payızda bağdakı yarpaqlar saralır.",
+      "actual": "Payızda bağdakı yarpaqlar saralır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-105",
+      "category": "undiacritized",
+      "input": "otaqda boyuk bir xerite asilib",
+      "expected": "Otaqda böyük bir xəritə asılıb.",
+      "actual": "Otaqda böyük bir xəritə asılıb.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-105",
+      "category": "punctuation-capitalization",
+      "input": "otaqda böyük bir xəritə asılıb",
+      "expected": "Otaqda böyük bir xəritə asılıb.",
+      "actual": "Otaqda böyük bir xəritə asılıb.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-106",
+      "category": "undiacritized",
+      "input": "teyyare gunortadan sonra hava limanina endi",
+      "expected": "Təyyarə günortadan sonra hava limanına endi.",
+      "actual": "Təyyarə günortadan sonra hava limanına endi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-106",
+      "category": "punctuation-capitalization",
+      "input": "təyyarə günortadan sonra hava limanına endi",
+      "expected": "Təyyarə günortadan sonra hava limanına endi.",
+      "actual": "Təyyarə günortadan sonra hava limanına endi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-107",
+      "category": "undiacritized",
+      "input": "qonsular heyetde birlikde islediler",
+      "expected": "Qonşular həyətdə birlikdə işlədilər.",
+      "actual": "Qonşular heyetde birlikdə işlədilər.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-107",
+      "category": "punctuation-capitalization",
+      "input": "qonşular həyətdə birlikdə işlədilər",
+      "expected": "Qonşular həyətdə birlikdə işlədilər.",
+      "actual": "Qonşular həyətdə birlikdə işlədilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-108",
+      "category": "undiacritized",
+      "input": "dostum mene yeni kitab hediyye etdi",
+      "expected": "Dostum mənə yeni kitab hədiyyə etdi.",
+      "actual": "Dostum mənə yeni kitab hədiyyə etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-108",
+      "category": "punctuation-capitalization",
+      "input": "dostum mənə yeni kitab hədiyyə etdi",
+      "expected": "Dostum mənə yeni kitab hədiyyə etdi.",
+      "actual": "Dostum mənə yeni kitab hədiyyə etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-109",
+      "category": "undiacritized",
+      "input": "imtahan neticeleri sabah aciqlanacaq",
+      "expected": "İmtahan nəticələri sabah açıqlanacaq.",
+      "actual": "İmtahan nəticələri sabah acıqlanacaq.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-109",
+      "category": "punctuation-capitalization",
+      "input": "imtahan nəticələri sabah açıqlanacaq",
+      "expected": "İmtahan nəticələri sabah açıqlanacaq.",
+      "actual": "İmtahan nəticələri sabah açıqlanacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-110",
+      "category": "undiacritized",
+      "input": "her kes oz novbesini sakitce gozledi",
+      "expected": "Hər kəs öz növbəsini sakitcə gözlədi.",
+      "actual": "Hər kes öz növbəsini sakitcə gözlədi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-110",
+      "category": "punctuation-capitalization",
+      "input": "hər kəs öz növbəsini sakitcə gözlədi",
+      "expected": "Hər kəs öz növbəsini sakitcə gözlədi.",
+      "actual": "Hər kəs öz növbəsini sakitcə gözlədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-111",
+      "category": "undiacritized",
+      "input": "qis axsamlari kend daha sakit olur",
+      "expected": "Qış axşamları kənd daha sakit olur.",
+      "actual": "Qis axşamları kənd daha sakit olur.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-111",
+      "category": "punctuation-capitalization",
+      "input": "qış axşamları kənd daha sakit olur",
+      "expected": "Qış axşamları kənd daha sakit olur.",
+      "actual": "Qış axşamları kənd daha sakit olur.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-112",
+      "category": "undiacritized",
+      "input": "dunenki tamasa haminin xosuna geldi",
+      "expected": "Dünənki tamaşa hamının xoşuna gəldi.",
+      "actual": "Dünənki tamasa haminin xosuna gəldi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-112",
+      "category": "punctuation-capitalization",
+      "input": "dünənki tamaşa hamının xoşuna gəldi",
+      "expected": "Dünənki tamaşa hamının xoşuna gəldi.",
+      "actual": "Dünənki tamaşa hamının xoşuna gəldi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-113",
+      "category": "undiacritized",
+      "input": "usaq bagcada rengli sekiller cekdi",
+      "expected": "Uşaq bağçada rəngli şəkillər çəkdi.",
+      "actual": "Uşaq bağçada rəngli şəkillər çəkdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-113",
+      "category": "punctuation-capitalization",
+      "input": "uşaq bağçada rəngli şəkillər çəkdi",
+      "expected": "Uşaq bağçada rəngli şəkillər çəkdi.",
+      "actual": "Uşaq bağçada rəngli şəkillər çəkdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-114",
+      "category": "undiacritized",
+      "input": "kohne fotosekillere baxib xatireleri yada saldiq",
+      "expected": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
+      "actual": "Köhnə fotosekillere baxıb xatirələri yada şadlıq.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-114",
+      "category": "punctuation-capitalization",
+      "input": "köhnə fotoşəkillərə baxıb xatirələri yada saldıq",
+      "expected": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
+      "actual": "Köhnə fotoşəkillərə baxıb xatirələri yada şadlıq.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-115",
+      "category": "undiacritized",
+      "input": "idmancilar yarisdan evvel isinme hereketleri etdiler",
+      "expected": "İdmançılar yarışdan əvvəl isinmə hərəkətləri etdilər.",
+      "actual": "İdmançılar yarışdan əvvəl isinmə hərəkətləri etdilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-115",
+      "category": "punctuation-capitalization",
+      "input": "idmançılar yarışdan əvvəl isinmə hərəkətləri etdilər",
+      "expected": "İdmançılar yarışdan əvvəl isinmə hərəkətləri etdilər.",
+      "actual": "İdmançılar yarışdan əvvəl isinmə hərəkətləri etdilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-116",
+      "category": "undiacritized",
+      "input": "deniz sahilinde kicik bir mayak var",
+      "expected": "Dəniz sahilində kiçik bir mayak var.",
+      "actual": "Dəniz sahilinde kiçik bir mayak var.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-116",
+      "category": "punctuation-capitalization",
+      "input": "dəniz sahilində kiçik bir mayak var",
+      "expected": "Dəniz sahilində kiçik bir mayak var.",
+      "actual": "Dəniz sahilində kiçik bir mayak var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-117",
+      "category": "undiacritized",
+      "input": "seher bazarinda teze terevez satilirdi",
+      "expected": "Səhər bazarında təzə tərəvəz satılırdı.",
+      "actual": "Seher bazarında təzə tərəvəz satılırdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-117",
+      "category": "punctuation-capitalization",
+      "input": "səhər bazarında təzə tərəvəz satılırdı",
+      "expected": "Səhər bazarında təzə tərəvəz satılırdı.",
+      "actual": "Səhər bazarında təzə tərəvəz satılırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-118",
+      "category": "undiacritized",
+      "input": "musiqiciler konserte uzun muddet hazirlasdilar",
+      "expected": "Musiqiçilər konsertə uzun müddət hazırlaşdılar.",
+      "actual": "Musiqiciler konsertə uzun müddət hazirlasdilar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-118",
+      "category": "punctuation-capitalization",
+      "input": "musiqiçilər konsertə uzun müddət hazırlaşdılar",
+      "expected": "Musiqiçilər konsertə uzun müddət hazırlaşdılar.",
+      "actual": "Musiqiçilər konsertə uzun müddət hazırlaşdılar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-119",
+      "category": "undiacritized",
+      "input": "brauzer yeni sehifeni problemsiz acdi",
+      "expected": "Brauzer yeni səhifəni problemsiz açdı.",
+      "actual": "Brauzer yeni səhifəni problemsiz açdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-119",
+      "category": "punctuation-capitalization",
+      "input": "brauzer yeni səhifəni problemsiz açdı",
+      "expected": "Brauzer yeni səhifəni problemsiz açdı.",
+      "actual": "Brauzer yeni səhifəni problemsiz açdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-120",
+      "category": "undiacritized",
+      "input": "router bir nece cihazi sebekeye qosdu",
+      "expected": "Router bir neçə cihazı şəbəkəyə qoşdu.",
+      "actual": "Router bir neçə cihazı şəbəkəyə qosdu?",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-120",
+      "category": "punctuation-capitalization",
+      "input": "router bir neçə cihazı şəbəkəyə qoşdu",
+      "expected": "Router bir neçə cihazı şəbəkəyə qoşdu.",
+      "actual": "Router bir neçə cihazı şəbəkəyə qoşdu?",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-121",
+      "category": "undiacritized",
+      "input": "terminalda yeni qovluq yaratdim",
+      "expected": "Terminalda yeni qovluq yaratdım.",
+      "actual": "Terminalda yeni qovluq yaratdım.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-121",
+      "category": "punctuation-capitalization",
+      "input": "terminalda yeni qovluq yaratdım",
+      "expected": "Terminalda yeni qovluq yaratdım.",
+      "actual": "Terminalda yeni qovluq yaratdım.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-122",
+      "category": "undiacritized",
+      "input": "istifadeci sehifeni yeniden yukledi",
+      "expected": "İstifadəçi səhifəni yenidən yüklədi.",
+      "actual": "İstifadəçi səhifəni yenidən yüklədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-122",
+      "category": "punctuation-capitalization",
+      "input": "istifadəçi səhifəni yenidən yüklədi",
+      "expected": "İstifadəçi səhifəni yenidən yüklədi.",
+      "actual": "İstifadəçi səhifəni yenidən yüklədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-123",
+      "category": "undiacritized",
+      "input": "melumatlarin ehtiyat nusxesi gece hazirlandi",
+      "expected": "Məlumatların ehtiyat nüsxəsi gecə hazırlandı.",
+      "actual": "Məlumatların ehtiyat nusxesi gecə hazırlandı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-123",
+      "category": "punctuation-capitalization",
+      "input": "məlumatların ehtiyat nüsxəsi gecə hazırlandı",
+      "expected": "Məlumatların ehtiyat nüsxəsi gecə hazırlandı.",
+      "actual": "Məlumatların ehtiyat nüsxəsi gecə hazırlandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-124",
+      "category": "undiacritized",
+      "input": "sistem eyni sorgunu iki defe emal etdi",
+      "expected": "Sistem eyni sorğunu iki dəfə emal etdi.",
+      "actual": "Sistem eyni sorğunu iki dəfə emal etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-124",
+      "category": "punctuation-capitalization",
+      "input": "sistem eyni sorğunu iki dəfə emal etdi",
+      "expected": "Sistem eyni sorğunu iki dəfə emal etdi.",
+      "actual": "Sistem eyni sorğunu iki dəfə emal etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-125",
+      "category": "undiacritized",
+      "input": "dizayner duymenin yerini deyisdi",
+      "expected": "Dizayner düymənin yerini dəyişdi.",
+      "actual": "Dizayner düymənin yerini dəyişdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-125",
+      "category": "punctuation-capitalization",
+      "input": "dizayner düymənin yerini dəyişdi",
+      "expected": "Dizayner düymənin yerini dəyişdi.",
+      "actual": "Dizayner düymənin yerini dəyişdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-126",
+      "category": "undiacritized",
+      "input": "inkisaf komandasi xeta hesabatini oxudu",
+      "expected": "İnkişaf komandası xəta hesabatını oxudu.",
+      "actual": "İnkişaf komandası xəta hesabatını oxudu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-126",
+      "category": "punctuation-capitalization",
+      "input": "inkişaf komandası xəta hesabatını oxudu",
+      "expected": "İnkişaf komandası xəta hesabatını oxudu.",
+      "actual": "İnkişaf komandası xəta hesabatını oxudu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-127",
+      "category": "undiacritized",
+      "input": "alqoritm boyuk siyahini suretle cesidledi",
+      "expected": "Alqoritm böyük siyahını sürətlə çeşidlədi.",
+      "actual": "Alqoritm böyük siyahını sürətlə çeşidlədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-127",
+      "category": "punctuation-capitalization",
+      "input": "alqoritm böyük siyahını sürətlə çeşidlədi",
+      "expected": "Alqoritm böyük siyahını sürətlə çeşidlədi.",
+      "actual": "Alqoritm böyük siyahını sürətlə çeşidlədi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-128",
+      "category": "undiacritized",
+      "input": "yeni versiya evvelki melumatlari saxladi",
+      "expected": "Yeni versiya əvvəlki məlumatları saxladı.",
+      "actual": "Yeni versiya əvvəlki məlumatları saxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-128",
+      "category": "punctuation-capitalization",
+      "input": "yeni versiya əvvəlki məlumatları saxladı",
+      "expected": "Yeni versiya əvvəlki məlumatları saxladı.",
+      "actual": "Yeni versiya əvvəlki məlumatları saxladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-129",
+      "category": "undiacritized",
+      "input": "kod redaktoru fayli avtomatik formatladi",
+      "expected": "Kod redaktoru faylı avtomatik formatladı.",
+      "actual": "Kod redaktoru faylı avtomatik formatladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-129",
+      "category": "punctuation-capitalization",
+      "input": "kod redaktoru faylı avtomatik formatladı",
+      "expected": "Kod redaktoru faylı avtomatik formatladı.",
+      "actual": "Kod redaktoru faylı avtomatik formatladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-130",
+      "category": "undiacritized",
+      "input": "interfeysdeki yazilar aydin gorunur",
+      "expected": "İnterfeysdəki yazılar aydın görünür.",
+      "actual": "İnterfeysdeki yazılar aydın görünür.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-130",
+      "category": "punctuation-capitalization",
+      "input": "interfeysdəki yazılar aydın görünür",
+      "expected": "İnterfeysdəki yazılar aydın görünür.",
+      "actual": "İnterfeysdəki yazılar aydın görünür.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-131",
+      "category": "undiacritized",
+      "input": "muhendis serverin temperaturunu olcdu",
+      "expected": "Mühəndis serverin temperaturunu ölçdü.",
+      "actual": "Mühəndis serverin temperaturunu ölçdü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-131",
+      "category": "punctuation-capitalization",
+      "input": "mühəndis serverin temperaturunu ölçdü",
+      "expected": "Mühəndis serverin temperaturunu ölçdü.",
+      "actual": "Mühəndis serverin temperaturunu ölçdü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-132",
+      "category": "undiacritized",
+      "input": "yeni funksiya gozlenilen neticeni verdi",
+      "expected": "Yeni funksiya gözlənilən nəticəni verdi.",
+      "actual": "Yeni funksiya gözlənilən nəticəni verdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-132",
+      "category": "punctuation-capitalization",
+      "input": "yeni funksiya gözlənilən nəticəni verdi",
+      "expected": "Yeni funksiya gözlənilən nəticəni verdi.",
+      "actual": "Yeni funksiya gözlənilən nəticəni verdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-133",
+      "category": "undiacritized",
+      "input": "qurgunun batareyasi gun erzinde bosaldi",
+      "expected": "Qurğunun batareyası gün ərzində boşaldı.",
+      "actual": "Qurgunun batareyası gün ərzində boşaldı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-133",
+      "category": "punctuation-capitalization",
+      "input": "qurğunun batareyası gün ərzində boşaldı",
+      "expected": "Qurğunun batareyası gün ərzində boşaldı.",
+      "actual": "Qurğunun batareyası gün ərzində boşaldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-134",
+      "category": "undiacritized",
+      "input": "melumatlar tehlukesiz sekilde oturuldu",
+      "expected": "Məlumatlar təhlükəsiz şəkildə ötürüldü.",
+      "actual": "Məlumatlar təhlükəsiz şəkildə oturuldu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-134",
+      "category": "punctuation-capitalization",
+      "input": "məlumatlar təhlükəsiz şəkildə ötürüldü",
+      "expected": "Məlumatlar təhlükəsiz şəkildə ötürüldü.",
+      "actual": "Məlumatlar təhlükəsiz şəkildə ötürüldü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-135",
+      "category": "undiacritized",
+      "input": "fayl yuklenerken baglanti kesildi",
+      "expected": "Fayl yüklənərkən bağlantı kəsildi.",
+      "actual": "Fayl yuklenerken bağlantı kəsildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-135",
+      "category": "punctuation-capitalization",
+      "input": "fayl yüklənərkən bağlantı kəsildi",
+      "expected": "Fayl yüklənərkən bağlantı kəsildi.",
+      "actual": "Fayl yüklənərkən bağlantı kəsildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-136",
+      "category": "undiacritized",
+      "input": "istifadecinin secimi yadda saxlanildi",
+      "expected": "İstifadəçinin seçimi yadda saxlanıldı.",
+      "actual": "İstifadəçinin seçimi yadda saxlanıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-136",
+      "category": "punctuation-capitalization",
+      "input": "istifadəçinin seçimi yadda saxlanıldı",
+      "expected": "İstifadəçinin seçimi yadda saxlanıldı.",
+      "actual": "İstifadəçinin seçimi yadda saxlanıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-137",
+      "category": "undiacritized",
+      "input": "komanda sehvleri birlikde tehlil etdi",
+      "expected": "Komanda səhvləri birlikdə təhlil etdi.",
+      "actual": "Komanda səhvləri birlikdə təhlil etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-137",
+      "category": "punctuation-capitalization",
+      "input": "komanda səhvləri birlikdə təhlil etdi",
+      "expected": "Komanda səhvləri birlikdə təhlil etdi.",
+      "actual": "Komanda səhvləri birlikdə təhlil etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-138",
+      "category": "undiacritized",
+      "input": "sistem xetadan sonra yeniden ise dusdu",
+      "expected": "Sistem xətadan sonra yenidən işə düşdü.",
+      "actual": "Sistem xətadan sonra yenidən ise düşdü.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-138",
+      "category": "punctuation-capitalization",
+      "input": "sistem xətadan sonra yenidən işə düşdü",
+      "expected": "Sistem xətadan sonra yenidən işə düşdü.",
+      "actual": "Sistem xətadan sonra yenidən işə düşdü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-139",
+      "category": "undiacritized",
+      "input": "kulek turbinleri elektrik enerjisi istehsal edir",
+      "expected": "Külək turbinləri elektrik enerjisi istehsal edir.",
+      "actual": "Külək turbinləri elektrik enerjisi istehsal edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-139",
+      "category": "punctuation-capitalization",
+      "input": "külək turbinləri elektrik enerjisi istehsal edir",
+      "expected": "Külək turbinləri elektrik enerjisi istehsal edir.",
+      "actual": "Külək turbinləri elektrik enerjisi istehsal edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-140",
+      "category": "undiacritized",
+      "input": "seherin kenarinda yeni park salindi",
+      "expected": "Şəhərin kənarında yeni park salındı.",
+      "actual": "Şəhərin kənarında yeni park salındı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-140",
+      "category": "punctuation-capitalization",
+      "input": "şəhərin kənarında yeni park salındı",
+      "expected": "Şəhərin kənarında yeni park salındı.",
+      "actual": "Şəhərin kənarında yeni park salındı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-141",
+      "category": "undiacritized",
+      "input": "buzlaqlarin erimesi su seviyyesini deyisir",
+      "expected": "Buzlaqların əriməsi su səviyyəsini dəyişir.",
+      "actual": "Buzlaqların erimesi su səviyyəsini dəyişir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-141",
+      "category": "punctuation-capitalization",
+      "input": "buzlaqların əriməsi su səviyyəsini dəyişir",
+      "expected": "Buzlaqların əriməsi su səviyyəsini dəyişir.",
+      "actual": "Buzlaqların əriməsi su səviyyəsini dəyişir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-142",
+      "category": "undiacritized",
+      "input": "qaranquslar yazda geri qayidirlar",
+      "expected": "Qaranquşlar yazda geri qayıdırlar.",
+      "actual": "Qaranquslar yazda geri qayidirlar.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-142",
+      "category": "punctuation-capitalization",
+      "input": "qaranquşlar yazda geri qayıdırlar",
+      "expected": "Qaranquşlar yazda geri qayıdırlar.",
+      "actual": "Qaranquşlar yazda geri qayıdırlar.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-143",
+      "category": "undiacritized",
+      "input": "gece semasinda parlaq ulduz gorundu",
+      "expected": "Gecə səmasında parlaq ulduz göründü.",
+      "actual": "Gecə semasinda parlaq ulduz gorundu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-143",
+      "category": "punctuation-capitalization",
+      "input": "gecə səmasında parlaq ulduz göründü",
+      "expected": "Gecə səmasında parlaq ulduz göründü.",
+      "actual": "Gecə səmasında parlaq ulduz göründü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-144",
+      "category": "undiacritized",
+      "input": "tedqiqatcilar quslarin kocunu izlediler",
+      "expected": "Tədqiqatçılar quşların köçünü izlədilər.",
+      "actual": "Tedqiqatcilar quşların kocunu izlədilər.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-144",
+      "category": "punctuation-capitalization",
+      "input": "tədqiqatçılar quşların köçünü izlədilər",
+      "expected": "Tədqiqatçılar quşların köçünü izlədilər.",
+      "actual": "Tədqiqatçılar quşların köçünü izlədilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-145",
+      "category": "undiacritized",
+      "input": "yagisdan sonra torpaq nem idi",
+      "expected": "Yağışdan sonra torpaq nəm idi.",
+      "actual": "Yağışdan sonra torpaq nəm idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-145",
+      "category": "punctuation-capitalization",
+      "input": "yağışdan sonra torpaq nəm idi",
+      "expected": "Yağışdan sonra torpaq nəm idi.",
+      "actual": "Yağışdan sonra torpaq nəm idi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-146",
+      "category": "undiacritized",
+      "input": "derenin icinden serin cay axir",
+      "expected": "Dərənin içindən sərin çay axır.",
+      "actual": "Dərənin icinden sərin çay axır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-146",
+      "category": "punctuation-capitalization",
+      "input": "dərənin içindən sərin çay axır",
+      "expected": "Dərənin içindən sərin çay axır.",
+      "actual": "Dərənin içindən sərin çay axır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-147",
+      "category": "undiacritized",
+      "input": "alim kohne qeydleri yeniden arasdirdi",
+      "expected": "Alim köhnə qeydləri yenidən araşdırdı.",
+      "actual": "Alim köhnə qeydləri yenidən araşdırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-147",
+      "category": "punctuation-capitalization",
+      "input": "alim köhnə qeydləri yenidən araşdırdı",
+      "expected": "Alim köhnə qeydləri yenidən araşdırdı.",
+      "actual": "Alim köhnə qeydləri yenidən araşdırdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-148",
+      "category": "undiacritized",
+      "input": "golun sahilinde muxtelif bitkiler bitir",
+      "expected": "Gölün sahilində müxtəlif bitkilər bitir.",
+      "actual": "Golun sahilinde müxtəlif bitkiler bitir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-148",
+      "category": "punctuation-capitalization",
+      "input": "gölün sahilində müxtəlif bitkilər bitir",
+      "expected": "Gölün sahilində müxtəlif bitkilər bitir.",
+      "actual": "Gölün sahilində müxtəlif bitkilər bitir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-149",
+      "category": "undiacritized",
+      "input": "yer kuresi gunes etrafinda firlanir",
+      "expected": "Yer kürəsi Günəş ətrafında fırlanır.",
+      "actual": "Yer kuresi günəş ətrafında fırlanır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-149",
+      "category": "punctuation-capitalization",
+      "input": "yer kürəsi günəş ətrafında fırlanır",
+      "expected": "Yer kürəsi Günəş ətrafında fırlanır.",
+      "actual": "Yer kürəsi günəş ətrafında fırlanır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-150",
+      "category": "undiacritized",
+      "input": "mikroskop altinda huceyreler musahide olundu",
+      "expected": "Mikroskop altında hüceyrələr müşahidə olundu.",
+      "actual": "Mikroskop altında huceyreler müşahidə olundu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-150",
+      "category": "punctuation-capitalization",
+      "input": "mikroskop altında hüceyrələr müşahidə olundu",
+      "expected": "Mikroskop altında hüceyrələr müşahidə olundu.",
+      "actual": "Mikroskop altında hüceyrələr müşahidə olundu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-151",
+      "category": "undiacritized",
+      "input": "iqlim gostericileri her il yenilenir",
+      "expected": "İqlim göstəriciləri hər il yenilənir.",
+      "actual": "İqlim göstəriciləri hər il yenilənir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-151",
+      "category": "punctuation-capitalization",
+      "input": "iqlim göstəriciləri hər il yenilənir",
+      "expected": "İqlim göstəriciləri hər il yenilənir.",
+      "actual": "İqlim göstəriciləri hər il yenilənir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-152",
+      "category": "undiacritized",
+      "input": "temiz icmeli su her kes ucun vacibdir",
+      "expected": "Təmiz içməli su hər kəs üçün vacibdir.",
+      "actual": "Təmiz içməli su hər kes üçün vacibdir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-152",
+      "category": "punctuation-capitalization",
+      "input": "təmiz içməli su hər kəs üçün vacibdir",
+      "expected": "Təmiz içməli su hər kəs üçün vacibdir.",
+      "actual": "Təmiz içməli su hər kəs üçün vacibdir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-153",
+      "category": "undiacritized",
+      "input": "daglarda hava tez-tez deyisir",
+      "expected": "Dağlarda hava tez-tez dəyişir.",
+      "actual": "Dağlarda hava tez-tez dəyişir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-153",
+      "category": "punctuation-capitalization",
+      "input": "dağlarda hava tez-tez dəyişir",
+      "expected": "Dağlarda hava tez-tez dəyişir.",
+      "actual": "Dağlarda hava tez-tez dəyişir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-154",
+      "category": "undiacritized",
+      "input": "sagird suyun temperaturunu qeyd etdi",
+      "expected": "Şagird suyun temperaturunu qeyd etdi.",
+      "actual": "Şagird suyun temperaturunu qeyd etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-154",
+      "category": "punctuation-capitalization",
+      "input": "şagird suyun temperaturunu qeyd etdi",
+      "expected": "Şagird suyun temperaturunu qeyd etdi.",
+      "actual": "Şagird suyun temperaturunu qeyd etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-155",
+      "category": "undiacritized",
+      "input": "dermanlar hekimin gosterisi ile qebul olunur",
+      "expected": "Dərmanlar həkimin göstərişi ilə qəbul olunur.",
+      "actual": "Dermanlar həkimin göstərişi ilə qəbul olunur.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-155",
+      "category": "punctuation-capitalization",
+      "input": "dərmanlar həkimin göstərişi ilə qəbul olunur",
+      "expected": "Dərmanlar həkimin göstərişi ilə qəbul olunur.",
+      "actual": "Dərmanlar həkimin göstərişi ilə qəbul olunur.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-156",
+      "category": "undiacritized",
+      "input": "bezi heyvanlar qisda yuxuya gedir",
+      "expected": "Bəzi heyvanlar qışda yuxuya gedir.",
+      "actual": "Bezi heyvanlar qışda yuxuya gedir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-156",
+      "category": "punctuation-capitalization",
+      "input": "bəzi heyvanlar qışda yuxuya gedir",
+      "expected": "Bəzi heyvanlar qışda yuxuya gedir.",
+      "actual": "Bəzi heyvanlar qışda yuxuya gedir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-157",
+      "category": "undiacritized",
+      "input": "bitkinin boyumesi ucun kifayet qeder isiq lazimdir",
+      "expected": "Bitkinin böyüməsi üçün kifayət qədər işıq lazımdır.",
+      "actual": "Bitkinin boyumesi üçün kifayət qədər işıq lazımdır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-157",
+      "category": "punctuation-capitalization",
+      "input": "bitkinin böyüməsi üçün kifayət qədər işıq lazımdır",
+      "expected": "Bitkinin böyüməsi üçün kifayət qədər işıq lazımdır.",
+      "actual": "Bitkinin böyüməsi üçün kifayət qədər işıq lazımdır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-158",
+      "category": "undiacritized",
+      "input": "tecrubenin neticesi muellimi teeccublendirdi",
+      "expected": "Təcrübənin nəticəsi müəllimi təəccübləndirdi.",
+      "actual": "Təcrübənin nəticəsi müəllimi təəccübləndirdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-158",
+      "category": "punctuation-capitalization",
+      "input": "təcrübənin nəticəsi müəllimi təəccübləndirdi",
+      "expected": "Təcrübənin nəticəsi müəllimi təəccübləndirdi.",
+      "actual": "Təcrübənin nəticəsi müəllimi təəccübləndirdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-159",
+      "category": "undiacritized",
+      "input": "is gorusu seher saatlarinda kecirildi",
+      "expected": "İş görüşü səhər saatlarında keçirildi.",
+      "actual": "İş görüşü səhər saatlarında keçirildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-159",
+      "category": "punctuation-capitalization",
+      "input": "iş görüşü səhər saatlarında keçirildi",
+      "expected": "İş görüşü səhər saatlarında keçirildi.",
+      "actual": "İş görüşü səhər saatlarında keçirildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-160",
+      "category": "undiacritized",
+      "input": "musterinin sualina yazili cavab gonderildi",
+      "expected": "Müştərinin sualına yazılı cavab göndərildi.",
+      "actual": "Müştərinin sualına yazılı cavab göndərildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-160",
+      "category": "punctuation-capitalization",
+      "input": "müştərinin sualına yazılı cavab göndərildi",
+      "expected": "Müştərinin sualına yazılı cavab göndərildi.",
+      "actual": "Müştərinin sualına yazılı cavab göndərildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-161",
+      "category": "undiacritized",
+      "input": "emekdaslar yeni qaydalarla tanis oldular",
+      "expected": "Əməkdaşlar yeni qaydalarla tanış oldular.",
+      "actual": "Əməkdaşlar yeni qaydalarla tanış oldular.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-161",
+      "category": "punctuation-capitalization",
+      "input": "əməkdaşlar yeni qaydalarla tanış oldular",
+      "expected": "Əməkdaşlar yeni qaydalarla tanış oldular.",
+      "actual": "Əməkdaşlar yeni qaydalarla tanış oldular.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-162",
+      "category": "undiacritized",
+      "input": "sifarisin catdirilma tarixi deqiqlesdirildi",
+      "expected": "Sifarişin çatdırılma tarixi dəqiqləşdirildi.",
+      "actual": "Sifarişin çatdırılma tarixi dəqiqləşdirildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-162",
+      "category": "punctuation-capitalization",
+      "input": "sifarişin çatdırılma tarixi dəqiqləşdirildi",
+      "expected": "Sifarişin çatdırılma tarixi dəqiqləşdirildi.",
+      "actual": "Sifarişin çatdırılma tarixi dəqiqləşdirildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-163",
+      "category": "undiacritized",
+      "input": "menecer butun hesabatlari bir yere topladi",
+      "expected": "Menecer bütün hesabatları bir yerə topladı.",
+      "actual": "Menecer bütün hesabatları bir yere topladı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-163",
+      "category": "punctuation-capitalization",
+      "input": "menecer bütün hesabatları bir yerə topladı",
+      "expected": "Menecer bütün hesabatları bir yerə topladı.",
+      "actual": "Menecer bütün hesabatları bir yerə topladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-164",
+      "category": "undiacritized",
+      "input": "terefdaslar gelecek layiheleri muzakire etdiler",
+      "expected": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
+      "actual": "Tərəfdaşlar gələcək. Layihələri müzakirə etdilər.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-164",
+      "category": "punctuation-capitalization",
+      "input": "tərəfdaşlar gələcək layihələri müzakirə etdilər",
+      "expected": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
+      "actual": "Tərəfdaşlar gələcək. Layihələri müzakirə etdilər.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-165",
+      "category": "undiacritized",
+      "input": "telimde istirak edenlere sened verildi",
+      "expected": "Təlimdə iştirak edənlərə sənəd verildi.",
+      "actual": "Təlimdə iştirak edenlere sənəd verildi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-165",
+      "category": "punctuation-capitalization",
+      "input": "təlimdə iştirak edənlərə sənəd verildi",
+      "expected": "Təlimdə iştirak edənlərə sənəd verildi.",
+      "actual": "Təlimdə iştirak edənlərə sənəd verildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-166",
+      "category": "undiacritized",
+      "input": "yeni teklif resmi mektubla catdirildi",
+      "expected": "Yeni təklif rəsmi məktubla çatdırıldı.",
+      "actual": "Yeni təklif rəsmi mektubla çatdırıldı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-166",
+      "category": "punctuation-capitalization",
+      "input": "yeni təklif rəsmi məktubla çatdırıldı",
+      "expected": "Yeni təklif rəsmi məktubla çatdırıldı.",
+      "actual": "Yeni təklif rəsmi məktubla çatdırıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-167",
+      "category": "undiacritized",
+      "input": "xidmet haqqi her ay hesablanir",
+      "expected": "Xidmət haqqı hər ay hesablanır.",
+      "actual": "Xidmət haqqı hər ay hesablanır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-167",
+      "category": "punctuation-capitalization",
+      "input": "xidmət haqqı hər ay hesablanır",
+      "expected": "Xidmət haqqı hər ay hesablanır.",
+      "actual": "Xidmət haqqı hər ay hesablanır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-168",
+      "category": "undiacritized",
+      "input": "sobe mudiri is qrafikini paylasdi",
+      "expected": "Şöbə müdiri iş qrafikini paylaşdı.",
+      "actual": "Sobe müdiri iş qrafikini paylaşdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-168",
+      "category": "punctuation-capitalization",
+      "input": "şöbə müdiri iş qrafikini paylaşdı",
+      "expected": "Şöbə müdiri iş qrafikini paylaşdı.",
+      "actual": "Şöbə müdiri iş qrafikini paylaşdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-169",
+      "category": "undiacritized",
+      "input": "tedbirde bir nece xarici qonaq istirak etdi",
+      "expected": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
+      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi?",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-169",
+      "category": "punctuation-capitalization",
+      "input": "tədbirdə bir neçə xarici qonaq iştirak etdi",
+      "expected": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
+      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi?",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-170",
+      "category": "undiacritized",
+      "input": "senedin elaveleri ayrica gonderildi",
+      "expected": "Sənədin əlavələri ayrıca göndərildi.",
+      "actual": "Sənədin əlavələri ayrıca göndərildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-170",
+      "category": "punctuation-capitalization",
+      "input": "sənədin əlavələri ayrıca göndərildi",
+      "expected": "Sənədin əlavələri ayrıca göndərildi.",
+      "actual": "Sənədin əlavələri ayrıca göndərildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-171",
+      "category": "undiacritized",
+      "input": "maliyye plani novbeti rubde yenilenecek",
+      "expected": "Maliyyə planı növbəti rübdə yenilənəcək.",
+      "actual": "Maliyyə planı növbəti rübdə yenilənəcək.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-171",
+      "category": "punctuation-capitalization",
+      "input": "maliyyə planı növbəti rübdə yenilənəcək",
+      "expected": "Maliyyə planı növbəti rübdə yenilənəcək.",
+      "actual": "Maliyyə planı növbəti rübdə yenilənəcək.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-172",
+      "category": "undiacritized",
+      "input": "iscilerin teklifleri diqqetle dinlenildi",
+      "expected": "İşçilərin təklifləri diqqətlə dinlənildi.",
+      "actual": "İşçilərin təklifləri diqqətlə dinlənildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-172",
+      "category": "punctuation-capitalization",
+      "input": "işçilərin təklifləri diqqətlə dinlənildi",
+      "expected": "İşçilərin təklifləri diqqətlə dinlənildi.",
+      "actual": "İşçilərin təklifləri diqqətlə dinlənildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-173",
+      "category": "undiacritized",
+      "input": "sorgunun cavabi qeydiyyat nomresi ile saxlanildi",
+      "expected": "Sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı.",
+      "actual": "Sorğunun cavabı qeydiyyat nomresi ilə saxlanıldı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-173",
+      "category": "punctuation-capitalization",
+      "input": "sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı",
+      "expected": "Sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı.",
+      "actual": "Sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-174",
+      "category": "undiacritized",
+      "input": "rehber yeni tapsiriqlari bolusdurdu",
+      "expected": "Rəhbər yeni tapşırıqları bölüşdürdü.",
+      "actual": "Rəhbər yeni tapşırıqları bolusdurdu.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-174",
+      "category": "punctuation-capitalization",
+      "input": "rəhbər yeni tapşırıqları bölüşdürdü",
+      "expected": "Rəhbər yeni tapşırıqları bölüşdürdü.",
+      "actual": "Rəhbər yeni tapşırıqları bölüşdürdü.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-175",
+      "category": "undiacritized",
+      "input": "illik neticeler umumi iclasda teqdim edildi",
+      "expected": "İllik nəticələr ümumi iclasda təqdim edildi.",
+      "actual": "İllik nəticələr ümumi iclasda təqdim edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-175",
+      "category": "punctuation-capitalization",
+      "input": "illik nəticələr ümumi iclasda təqdim edildi",
+      "expected": "İllik nəticələr ümumi iclasda təqdim edildi.",
+      "actual": "İllik nəticələr ümumi iclasda təqdim edildi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-176",
+      "category": "undiacritized",
+      "input": "musteri muqavileni diqqetle oxudu",
+      "expected": "Müştəri müqaviləni diqqətlə oxudu.",
+      "actual": "Müştəri müqaviləni diqqətlə oxudu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-176",
+      "category": "punctuation-capitalization",
+      "input": "müştəri müqaviləni diqqətlə oxudu",
+      "expected": "Müştəri müqaviləni diqqətlə oxudu.",
+      "actual": "Müştəri müqaviləni diqqətlə oxudu.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-177",
+      "category": "undiacritized",
+      "input": "layihenin esas merhelesi vaxtinda tamamlandi",
+      "expected": "Layihənin əsas mərhələsi vaxtında tamamlandı.",
+      "actual": "Layihənin əsas mərhələsi vaxtında tamamlandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-177",
+      "category": "punctuation-capitalization",
+      "input": "layihənin əsas mərhələsi vaxtında tamamlandı",
+      "expected": "Layihənin əsas mərhələsi vaxtında tamamlandı.",
+      "actual": "Layihənin əsas mərhələsi vaxtında tamamlandı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-178",
+      "category": "undiacritized",
+      "input": "sirketin yeni ofisi seherin merkezindedir",
+      "expected": "Şirkətin yeni ofisi şəhərin mərkəzindədir.",
+      "actual": "Şirkətin yeni ofisi şəhərin merkezindedir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-178",
+      "category": "punctuation-capitalization",
+      "input": "şirkətin yeni ofisi şəhərin mərkəzindədir",
+      "expected": "Şirkətin yeni ofisi şəhərin mərkəzindədir.",
+      "actual": "Şirkətin yeni ofisi şəhərin mərkəzindədir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-179",
+      "category": "undiacritized",
+      "input": "quba rayonunda coxlu meyve baglari var",
+      "expected": "Quba rayonunda çoxlu meyvə bağları var.",
+      "actual": "Quba rayonunda çoxlu meyvə bağları var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-179",
+      "category": "punctuation-capitalization",
+      "input": "quba rayonunda çoxlu meyvə bağları var",
+      "expected": "Quba rayonunda çoxlu meyvə bağları var.",
+      "actual": "Quba rayonunda çoxlu meyvə bağları var.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-180",
+      "category": "undiacritized",
+      "input": "sekide qedim kuceler qorunub saxlanilir",
+      "expected": "Şəkidə qədim küçələr qorunub saxlanılır.",
+      "actual": "Şəkidə qədim. Küçələr qorunub saxlanılır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-180",
+      "category": "punctuation-capitalization",
+      "input": "şəkidə qədim küçələr qorunub saxlanılır",
+      "expected": "Şəkidə qədim küçələr qorunub saxlanılır.",
+      "actual": "Şəkidə qədim. Küçələr qorunub saxlanılır.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-181",
+      "category": "undiacritized",
+      "input": "genceye gelen qonaqlar muzeyi ziyaret etdiler",
+      "expected": "Gəncəyə gələn qonaqlar muzeyi ziyarət etdilər.",
+      "actual": "Gəncəyə gələn qonaqlar muzeyi ziyarət etdilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-181",
+      "category": "punctuation-capitalization",
+      "input": "gəncəyə gələn qonaqlar muzeyi ziyarət etdilər",
+      "expected": "Gəncəyə gələn qonaqlar muzeyi ziyarət etdilər.",
+      "actual": "Gəncəyə gələn qonaqlar muzeyi ziyarət etdilər.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-182",
+      "category": "undiacritized",
+      "input": "samaxinin tebieti yazda deyisir",
+      "expected": "Şamaxının təbiəti yazda dəyişir.",
+      "actual": "Şamaxının təbiəti yazda dəyişir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-182",
+      "category": "punctuation-capitalization",
+      "input": "şamaxının təbiəti yazda dəyişir",
+      "expected": "Şamaxının təbiəti yazda dəyişir.",
+      "actual": "Şamaxının təbiəti yazda dəyişir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-183",
+      "category": "undiacritized",
+      "input": "berdeden gelen mektub bu gun catdi",
+      "expected": "Bərdədən gələn məktub bu gün çatdı.",
+      "actual": "Bərdədən gələn məktub bu gün çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-183",
+      "category": "punctuation-capitalization",
+      "input": "bərdədən gələn məktub bu gün çatdı",
+      "expected": "Bərdədən gələn məktub bu gün çatdı.",
+      "actual": "Bərdədən gələn məktub bu gün çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-184",
+      "category": "undiacritized",
+      "input": "astara yaxinliginda deniz gorunur",
+      "expected": "Astara yaxınlığında dəniz görünür.",
+      "actual": "Astara yaxınlığında dəniz görünür.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-184",
+      "category": "punctuation-capitalization",
+      "input": "astara yaxınlığında dəniz görünür",
+      "expected": "Astara yaxınlığında dəniz görünür.",
+      "actual": "Astara yaxınlığında dəniz görünür.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-185",
+      "category": "undiacritized",
+      "input": "naxcivana qisda sefer etmisdim",
+      "expected": "Naxçıvana qışda səfər etmişdim.",
+      "actual": "Naxçıvana qışda səfər etmişdim.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-185",
+      "category": "punctuation-capitalization",
+      "input": "naxçıvana qışda səfər etmişdim",
+      "expected": "Naxçıvana qışda səfər etmişdim.",
+      "actual": "Naxçıvana qışda səfər etmişdim.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-186",
+      "category": "undiacritized",
+      "input": "qarabag bolgesinin tarixi arasdirilir",
+      "expected": "Qarabağ bölgəsinin tarixi araşdırılır.",
+      "actual": "Qarabağ bölgəsinin tarixi araşdırılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-186",
+      "category": "punctuation-capitalization",
+      "input": "qarabağ bölgəsinin tarixi araşdırılır",
+      "expected": "Qarabağ bölgəsinin tarixi araşdırılır.",
+      "actual": "Qarabağ bölgəsinin tarixi araşdırılır.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-187",
+      "category": "undiacritized",
+      "input": "azerbaycan demir yollari yeni cedvel aciqladi",
+      "expected": "Azərbaycan Dəmir Yolları yeni cədvəl açıqladı.",
+      "actual": "Azərbaycan Dəmir Yolları yeni cədvəl aciqladi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-187",
+      "category": "punctuation-capitalization",
+      "input": "azərbaycan dəmir yolları yeni cədvəl açıqladı",
+      "expected": "Azərbaycan Dəmir Yolları yeni cədvəl açıqladı.",
+      "actual": "Azərbaycan Dəmir Yolları yeni cədvəl açıqladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-188",
+      "category": "undiacritized",
+      "input": "baki dovlet universiteti tedbir teskil etdi",
+      "expected": "Bakı Dövlət Universiteti tədbir təşkil etdi.",
+      "actual": "Bakı Dövlət Universiteti tədbir təşkil etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-188",
+      "category": "punctuation-capitalization",
+      "input": "bakı dövlət universiteti tədbir təşkil etdi",
+      "expected": "Bakı Dövlət Universiteti tədbir təşkil etdi.",
+      "actual": "Bakı Dövlət Universiteti tədbir təşkil etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-189",
+      "category": "undiacritized",
+      "input": "eli eliyev muellimle sohbet etdi",
+      "expected": "Əli Əliyev müəllimlə söhbət etdi.",
+      "actual": "Əli Əliyev muellimle söhbət etdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-189",
+      "category": "punctuation-capitalization",
+      "input": "əli əliyev müəllimlə söhbət etdi",
+      "expected": "Əli Əliyev müəllimlə söhbət etdi.",
+      "actual": "Əli Əliyev müəllimlə söhbət etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-190",
+      "category": "undiacritized",
+      "input": "veli bey iclasda soz aldi",
+      "expected": "Vəli bəy iclasda söz aldı.",
+      "actual": "Vəli bəy iclasda söz aldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-190",
+      "category": "punctuation-capitalization",
+      "input": "vəli bəy iclasda söz aldı",
+      "expected": "Vəli bəy iclasda söz aldı.",
+      "actual": "Vəli bəy iclasda söz aldı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-191",
+      "category": "undiacritized",
+      "input": "aysel xanim yeni senedi imzaladi",
+      "expected": "Aysel xanım yeni sənədi imzaladı.",
+      "actual": "Aysel xanım yeni sənədi imzaladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-191",
+      "category": "punctuation-capitalization",
+      "input": "aysel xanım yeni sənədi imzaladı",
+      "expected": "Aysel xanım yeni sənədi imzaladı.",
+      "actual": "Aysel xanım yeni sənədi imzaladı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-192",
+      "category": "undiacritized",
+      "input": "fidan bagda suvarma isine komek etdi",
+      "expected": "Fidan bağda suvarma işinə kömək etdi.",
+      "actual": "Fidan bağda suvarma işinə kömək etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-192",
+      "category": "punctuation-capitalization",
+      "input": "fidan bağda suvarma işinə kömək etdi",
+      "expected": "Fidan bağda suvarma işinə kömək etdi.",
+      "actual": "Fidan bağda suvarma işinə kömək etdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-193",
+      "category": "undiacritized",
+      "input": "ilham menbeyi gundelik musahidelerdir",
+      "expected": "İlham mənbəyi gündəlik müşahidələrdir.",
+      "actual": "İlham menbeyi gündəlik musahidelerdir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-193",
+      "category": "punctuation-capitalization",
+      "input": "ilham mənbəyi gündəlik müşahidələrdir",
+      "expected": "İlham mənbəyi gündəlik müşahidələrdir.",
+      "actual": "İlham mənbəyi gündəlik müşahidələrdir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-194",
+      "category": "undiacritized",
+      "input": "sona adli telebe yarisda qalib geldi",
+      "expected": "Sona adlı tələbə yarışda qalib gəldi.",
+      "actual": "Sona adlı tələbə yarışda qalib gəldi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-194",
+      "category": "punctuation-capitalization",
+      "input": "sona adlı tələbə yarışda qalib gəldi",
+      "expected": "Sona adlı tələbə yarışda qalib gəldi.",
+      "actual": "Sona adlı tələbə yarışda qalib gəldi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-195",
+      "category": "undiacritized",
+      "input": "deniz sahilinde axsam kulek esdi",
+      "expected": "Dəniz sahilində axşam külək əsdi.",
+      "actual": "Dəniz sahilinde axşam külək esdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-195",
+      "category": "punctuation-capitalization",
+      "input": "dəniz sahilində axşam külək əsdi",
+      "expected": "Dəniz sahilində axşam külək əsdi.",
+      "actual": "Dəniz sahilində axşam külək əsdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-196",
+      "category": "undiacritized",
+      "input": "umid bey sabah yola cixacaq",
+      "expected": "Ümid bəy sabah yola çıxacaq.",
+      "actual": "Ümid bəy sabah yola çıxacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-196",
+      "category": "punctuation-capitalization",
+      "input": "ümid bəy sabah yola çıxacaq",
+      "expected": "Ümid bəy sabah yola çıxacaq.",
+      "actual": "Ümid bəy sabah yola çıxacaq.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-197",
+      "category": "undiacritized",
+      "input": "gul bagda yeni cicekler ekdi",
+      "expected": "Gül bağda yeni çiçəklər əkdi.",
+      "actual": "Gul bağda yeni cicekler ekdi.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-197",
+      "category": "punctuation-capitalization",
+      "input": "gül bağda yeni çiçəklər əkdi",
+      "expected": "Gül bağda yeni çiçəklər əkdi.",
+      "actual": "Gül bağda yeni çiçəklər əkdi.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-198",
+      "category": "undiacritized",
+      "input": "sadiq insan sozune emel edir",
+      "expected": "Sadiq insan sözünə əməl edir.",
+      "actual": "Sadiq insan sozune əməl edir.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-198",
+      "category": "punctuation-capitalization",
+      "input": "sadiq insan sözünə əməl edir",
+      "expected": "Sadiq insan sözünə əməl edir.",
+      "actual": "Sadiq insan sözünə əməl edir.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-199",
+      "category": "undiacritized",
+      "input": "seher avtobusu dayanacaga vaxtinda catdi",
+      "expected": "Səhər avtobusu dayanacağa vaxtında çatdı.",
+      "actual": "Seher avtobusu dayanacağa vaxtında çatdı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-199",
+      "category": "punctuation-capitalization",
+      "input": "səhər avtobusu dayanacağa vaxtında çatdı",
+      "expected": "Səhər avtobusu dayanacağa vaxtında çatdı.",
+      "actual": "Səhər avtobusu dayanacağa vaxtında çatdı.",
+      "passed": true,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-ascii-200",
+      "category": "undiacritized",
+      "input": "yeni muzeyin qapilari ziyaretcilere acildi",
+      "expected": "Yeni muzeyin qapıları ziyarətçilərə açıldı.",
+      "actual": "Yeni muzeyin qapıları ziyaretcilere açıldı.",
+      "passed": false,
+      "idempotent": true
+    },
+    {
+      "id": "unseen-punctuation-200",
+      "category": "punctuation-capitalization",
+      "input": "yeni muzeyin qapıları ziyarətçilərə açıldı",
+      "expected": "Yeni muzeyin qapıları ziyarətçilərə açıldı.",
+      "actual": "Yeni muzeyin qapıları ziyarətçilərə açıldı.",
+      "passed": true,
+      "idempotent": true
+    }
+  ]
+}

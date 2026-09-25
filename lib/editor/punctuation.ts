@@ -15,7 +15,7 @@ const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|ha
 const embedded = /^(?:mən\s+)?(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
 const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
 const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf)(?:\s|[,!]|$)/iu;
-const emphatic = /^nə\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)\s/iu;
+const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
 const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|necəsən|necəsiniz)(?=\s|[,!?.]|$)/iu;
 
@@ -26,9 +26,9 @@ export function detectQuestion(text: string): boolean {
     || /(?:^|[^\p{L}])hər\s+hansı(?=$|[^\p{L}])/iu.test(value)
     || (/(?:bilirik|bilirsiniz|bilirəm|bildim|bilərəm|öyrəndim|izah etdi|dedi)$/iu.test(value)
       && !/(?:^|\s)nə\s+bilirik$/iu.test(value))
-    || /^nə\s+(?:gözəl|pis|qəribə|möhtəşəm)(?!\p{L})/iu.test(value)) return false;
+    || /^(?:nə|necə də)\s+(?:gözəl|pis|qəribə|möhtəşəm)(?!\p{L})/iu.test(value)) return false;
   if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])(?:düzdür|eləmi|deyilmi)$/iu.test(value)) return true;
-  if (particle.test(value)) return true;
+  if (particle.test(value) || /^(?:səncə|görəsən)(?:,?\s+)[^.!?]+$/iu.test(value)) return true;
   if (questionOpeners.test(value) || /(?:^|\s)nə\s+bilirik$/iu.test(value)) return true;
   return questionConstituent.test(value) && !/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
 }
@@ -63,7 +63,7 @@ export function punctuateCommas(text: string): string {
   return text
     .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
-    .replace(/(^|[.!?]\s+)(beləliklə|ümumiyyətlə|əslində|məsələn|əksinə)\s+/giu, '$1$2, ')
+    .replace(/(^|[.!?]\s+)(beləliklə|ümumiyyətlə|əslində|məsələn|əksinə|səncə|görəsən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(vay|aman|afərin|əla|heyif|təəssüf)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm|xahiş edirik)\s+/giu, '$1$2, ')
     .replace(/([^,;.!?:\s])\s+(zəhmət olmasa)\s+/giu, '$1, $2, ')

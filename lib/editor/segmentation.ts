@@ -1,15 +1,19 @@
 /** Conservative, language-wide sentence boundaries for unpunctuated prose. */
 import { productiveMorphology } from './productive-morphology';
+import { givenNames, ambiguousNames } from './entities/person-names';
+import { places } from './entities/geo';
 const verbs = /(?:mış(?:am|san|ıq|sınız|lar)?|miş(?:əm|sən|ik|siniz|lər)?|muş(?:am|san|uq|sunuz|lar)?|müş(?:əm|sən|ük|sünüz|lər)?|dım|dim|dum|düm|dın|din|dun|dün|dıq|dik|duq|dük|dı|di|du|dü|ırdı|irdi|urdu|ürdü|ır|ir|ur|ür|acaq(?:dır|lar)?|əcək(?:dir|lər)?|aram|ərəm|ərsiniz|acaqsınız|əcəksiniz|ılıb|ilib|ulub|ülüb|ıb|ib|ub|üb)$/iu;
 const copula = /(?:yam|yəm|san|sən|dır|dir|dur|dür|dılar|dilər|durlar|dürlər|dı|di|du|dü)$/iu;
 const dependent = /(?:anda|əndə|arkən|ərkən|dıqda|dikdə|duqda|dükdə|sa|sə|dığı|diyi|duğu|düyü)$/iu;
 const connectors = new Set(['ki', 'çünki', 'amma', 'lakin', 'ancaq', 'isə', 'və', 'ya', 'yoxsa', 'əgər', 'üçün']);
+const namedSubjects = new Set([...givenNames.filter(name => !ambiguousNames.has(name)), ...places].map(name => name.toLocaleLowerCase('az-AZ')));
 const subjects = new Set(['mən', 'sən', 'biz', 'siz', 'o', 'onlar', 'biri']);
 const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dünən', 'birdən', 'günortadan']);
 const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 'ilə']);
 
+const lightVerbNouns = new Set(['təsvir', 'təhlil', 'təqdim', 'təklif', 'təmin', 'tətbiq', 'təşkil', 'nadir', 'aydın']);
 function independentStart(word: string): boolean {
-  if (subjects.has(word) || timeWords.has(word)) return true;
+  if (subjects.has(word) || timeWords.has(word) || namedSubjects.has(word)) return true;
   if (connectors.has(word) || dependentStarts.has(word) || word.length < 4) return false;
   const analyses = productiveMorphology.analyzeWord(word);
   // Nominative subjects can start a fresh clause. Accusative objects and
@@ -19,6 +23,7 @@ function independentStart(word: string): boolean {
 
 export function isFinitePredicate(word: string): boolean {
   const lower = word.toLocaleLowerCase('az-AZ');
+  if (lightVerbNouns.has(lower)) return false;
   if (lower.length < 4 || dependent.test(lower) || timeWords.has(lower)) return false;
   const morphology = productiveMorphology.analyzeWord(lower);
   const analyses = morphology.filter(item => item.pos === 'verb');

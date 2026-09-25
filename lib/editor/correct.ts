@@ -7,10 +7,10 @@ import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists 
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
 import { parseEmailSections } from './rules/email';
-import { segmentIndependentClauses } from './segmentation';
+import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
-import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText } from './entities/resolver';
+import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText, resolveEntityWord } from './entities/resolver';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -37,7 +37,7 @@ function punctuate(line: string): string {
   if (/^salam,$/i.test(line.trim())) return 'Salam,';
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
-  if (/^hörmətli [^.!?]+[,]?$/i.test(line.trim())) return capitalize(line.trim().replace(/[,.]?$/, ','));
+  if (/^hörmətli [^.!?]+[,]?$/i.test(line.trim()) && (/^hörmətli\s+\p{L}+(?:\s+(?:xanım|bəy))?[,]?$/iu.test(line.trim()) || !line.split(/\s+/u).some(isFinitePredicate))) return capitalize(line.trim().replace(/[,.]?$/, ','));
   let result = line.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
@@ -228,7 +228,7 @@ export function formatEmail(input: string): LocalCorrection {
   // Names and job titles are structural signature text, never prose: preserve
   // their line breaks and never add sentence-ending punctuation to them.
   const signature = document.signature?.split('\n').map(line => line.trim().replace(/\p{L}+/gu,
-    word => languageServices.spelling.resolve(word, languageServices)).replace(/^(\p{L})/u,
+    word => resolveEntityWord(word, true, false) ?? languageServices.spelling.resolve(word, languageServices)).replace(/^(\p{L})/u,
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
   const text = [`Mövzu: ${subject}`, greeting, body,
     signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,'].filter(Boolean).join('\n\n');

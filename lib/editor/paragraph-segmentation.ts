@@ -26,7 +26,7 @@ export function segmentParagraphs(text: string): string {
   return text.split(/(\n+)/u).map(part => {
     if (!part || part.includes('\n') || /^\s*(?:[-*]|\d+[.)]|#|```|<)/u.test(part)) return part;
     const sentences = part.match(/(?:[^.!?]|\d\.\d|\uE000+\d+\uE001)+[.!?]+(?:[”"»)]|$)?/gu);
-    if (!sentences || sentences.length < 4) return part;
+    if (!sentences || sentences.length < 3) return part;
     let paragraphCount = 0;
     let output = '';
     for (let i = 0; i < sentences.length; i++) {
@@ -40,7 +40,7 @@ export function segmentParagraphs(text: string): string {
       if (differentTopics(previous, sentence)) score += 1;
       if (paragraphCount >= 3) score += 1;
       if (paragraphCount >= 6) score += 1;
-      const boundary = score >= 3;
+      const boundary = score >= 3 && (sentences.length >= 4 || paragraphCount >= 2);
       output += (boundary ? '\n\n' : ' ') + sentence;
       paragraphCount = boundary ? 1 : paragraphCount + 1;
     }
