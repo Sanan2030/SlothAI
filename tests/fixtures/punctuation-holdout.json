@@ -2345,6 +2345,13 @@
       "mode": "text",
       "input": "Sumqayıt haqqında nə bilirik",
       "expected": "Sumqayıt haqqında nə bilirik?"
+    },
+    {
+      "id": "adversarial-051",
+      "category": "runon",
+      "mode": "text",
+      "input": "men sabah naxcivana gedirem elvin bey zehmet olmasa baxin",
+      "expected": "Mən sabah Naxçıvana gedirəm. Elvin bəy, zəhmət olmasa, baxın."
     }
   ]
 }

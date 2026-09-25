@@ -1,4 +1,5 @@
 // Explicit, auditable language rules. Ambiguous phrases remain unchanged.
+import { isFinitePredicate } from './segmentation';
 export function repairPhrases(text: string): string {
   return text
     .replace(/(^|[^\p{L}])bugün(?=$|[^\p{L}])/giu, '$1bu gün')
@@ -49,6 +50,10 @@ export function sentenceBoundaries(text: string): string {
   // clause. Do not split noun phrases such as "mən gələndə sən ...".
   const finite = '(?:gəlirəm|gedirəm|edirəm|gəlirik|gedirik|edirik|gəldim|getdim|getdin|etdim|gələcəyəm|gedəcəyəm|gözləyirəm|yaxşıyam|yaxşıdır|pisəm|işləyir|işləmir|hazırdır|bitdi)';
   let result = text.replace(new RegExp(`(${finite}) +(?=(?:mən|sən|biz|siz|sabah|dünən|xahiş) +)`, 'giu'), '$1. ');
+  // A named addressee followed by a request starts a new sentence after a
+  // finite predicate, even when the source omitted both terminal and comma.
+  result = result.replace(/([\p{L}]+) +([\p{Lu}][\p{L}]+\s+(?:bəy|xanım)\s+(?:zəhmət olmasa|xahiş edirəm|baxın|yazın|göndərin))/gu,
+    (original, verb: string, request: string) => isFinitePredicate(verb) ? `${verb}. ${request}` : original);
   result = result.replace(/([^,.!?:;\s]) +(?=(?:bundan əlavə|digər tərəfdən|nəticə olaraq)\s)/giu,
     (match: string, last: string, offset: number, whole: string) => {
       const next = whole.slice(offset + match.length);
