@@ -127,11 +127,14 @@ const patterns = multiword.sort((a, b) => b.canonical.length - a.canonical.lengt
     if (/[ıiuü]$/iu.test(last)) {
       const vowel = last.at(-1)!.toLocaleLowerCase('az-AZ');
       const low = 'ıu'.includes(vowel) ? 'a' : 'ə';
-      suffixes.set(fold('nda'), 'nd' + low);
-      suffixes.set(fold('ndan'), 'nd' + low + 'n');
-      suffixes.set(fold('na'), 'n' + low);
-      suffixes.set(fold('nın'), 'n' + vowel + 'n');
-      suffixes.set(fold('nı'), 'n' + vowel);
+      // The generic word in an official name is already possessive:
+      // Universiteti -> Universitetinə, Respublikası -> Respublikasında.
+      // Accept both ASCII vowels in the user's ending; restore vowel harmony.
+      for (const raw of ['nda', 'nde']) suffixes.set(raw, 'nd' + low);
+      for (const raw of ['ndan', 'nden']) suffixes.set(raw, 'nd' + low + 'n');
+      for (const raw of ['na', 'ne']) suffixes.set(raw, 'n' + low);
+      for (const raw of ['nın', 'nin', 'nun', 'nün']) suffixes.set(fold(raw), 'n' + vowel + 'n');
+      for (const raw of ['nı', 'ni', 'nu', 'nü']) suffixes.set(fold(raw), 'n' + vowel);
     }
   }
   const tail = [...suffixes.keys()].sort((a, b) => b.length - a.length).map(s =>

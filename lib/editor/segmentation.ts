@@ -60,6 +60,13 @@ export function segmentIndependentClauses(text: string): string {
     const precedingClause = output.slice(Math.max(output.lastIndexOf('.'), output.lastIndexOf('?'),
       output.lastIndexOf('!'), output.lastIndexOf('\n')) + 1).trim();
     if (!precedingClause) { output += current; continue; }
+    // An indirect question is the object of the reporting verb, not a new sentence.
+    if (/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim)$/iu.test(current)
+      && /^(?:o\s+)?(?:nə vaxt|niyə|necə|hara|harada|kim|hansı|nə)\b/iu.test(
+        tokens.slice(index + 2, index + 12).map(token => token[0]).join(''))) {
+      output += current;
+      continue;
+    }
     const following = tokens.slice(index + 2, index + 34);
     const secondPredicate = following.some(token => /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0]));
     const boundary = following.findIndex(token => /[.!?\n]/u.test(token[0]));

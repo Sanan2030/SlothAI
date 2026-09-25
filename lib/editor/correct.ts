@@ -106,7 +106,8 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   let marker = '\uE000';
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  // Attribute values (including ?id=7) are markup, not sentence punctuation.
+  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|<\/?[A-Za-z][^<>\n]*?>|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
     if (/^chess comda$/i.test(value)) return protect('Chess.com-da');
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
@@ -192,6 +193,8 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     const end = part.indexOf('\uE001');
     return end < 0 ? marker + part : protectedText[Number(part.slice(0, end))] + part.slice(end + 1);
   }).join('');
+  // "gul" is otherwise ambiguous; a flower laid at the martyrs' memorial is unambiguous.
+  text = text.replace(/(Şəhidlər xiyabanında\s+)gul(?=\s+qoyduq(?:$|[^\p{L}]))/giu, '$1gül');
   // Numeric values are protected during lexical correction, so attach
   // Azerbaijani case suffixes only after restoring the protected span.
   text = text

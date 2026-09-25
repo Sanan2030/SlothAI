@@ -13,7 +13,7 @@ export interface ClauseAnalysis {
 
 const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|kimsən|necəsən|necəsiniz|haradasan|haradasınız))(?!\p{L})/iu;
 const embedded = /^(?:mən\s+)?(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
-const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
+const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ırsan|irsən|ursan|ürsən)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
 const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf)(?:\s|[,!]|$)/iu;
 const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
@@ -29,6 +29,7 @@ export function detectQuestion(text: string): boolean {
     || /^(?:nə|necə də)\s+(?:gözəl|pis|qəribə|möhtəşəm)(?!\p{L})/iu.test(value)) return false;
   if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])(?:düzdür|eləmi|deyilmi)$/iu.test(value)) return true;
   if (particle.test(value) || /^(?:səncə|görəsən)(?:,?\s+)[^.!?]+$/iu.test(value)) return true;
+  if (/^bəlkə\s+[^.!?]+(?<!c)(?:aq|ək)$/iu.test(value)) return true;
   if (questionOpeners.test(value) || /(?:^|\s)nə\s+bilirik$/iu.test(value)) return true;
   return questionConstituent.test(value) && !/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
 }
@@ -70,8 +71,8 @@ export function punctuateCommas(text: string): string {
     .replace(/\b(həm\s+[^,;.!?]{1,70}?)\s+(həm də)\s+/giu, '$1, $2 ')
     .replace(/\b(nə\s+[^,;.!?]{1,70}?)\s+(nə də)\s+/giu, '$1, $2 ')
     .replace(/\b(ya\s+[^,;.!?]{1,70}?)\s+(ya da)\s+/giu, '$1, $2 ')
-    .replace(/\b(əgər\s+[^,;.!?]{1,100}?\b(?:olsa|olarsan|olarsa|etsə|gəlsə|bitirsə))\s+(?=\p{L})/giu, '$1, ')
-    .replace(/\b((?:düşünürəm|bilirəm|bildirirəm|görürəm|gördüm|yazdım|göstərir|istəyirik|qeyd edim|dedi|dedim)\s+ki)\s+(?!,)/giu, '$1, ')
+    .replace(/(?<!\p{L})(əgər\s+[^,;.!?]{1,100}?(?<!\p{L})(?:olsa|olarsan|olarsa|etsə|gəlsə|bitirsə|varsa))\s+(?=\p{L})/giu, '$1, ')
+    .replace(/\b((?:düşünürəm|bilirəm|bildirirəm|görürəm|gördüm|yazdım|göstərir|istəyirik|arzu edirəm|qeyd edim|dedi|dedim)\s+ki)\s+(?!,)/giu, '$1, ')
     .replace(/(^|[.!?]\s+)([\p{Lu}][\p{L}]+\s+(?:xanım|bəy))\s+(?=(?:zəhmət|xahiş|baxın|gəlin|yazın|göndərin|deyin)\b)/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)([\p{Lu}][\p{Ll}]{2,})\s+(zəhmət olmasa)\b/gu, '$1$2, $3');
 }

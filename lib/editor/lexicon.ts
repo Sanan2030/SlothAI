@@ -201,6 +201,8 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   verme: 'vermə',
   deyisdir: 'dəyişdir',
   et: 'et',
+  ed: 'ed',
+  sobe: 'şöbə',
   server: 'server',
   unvan: 'ünvan',
   sehife: 'səhifə',
@@ -220,7 +222,6 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   movzu: 'mövzu',
   goruntu: 'görüntü',
   dayan: 'dayan',
-  ed: 'ed',
   yorul: 'yorul',
   ses: 'səs',
   format: 'format',
@@ -231,6 +232,10 @@ function recognizedStem(rawStem: string, services?: SpellingContext): string | u
 }
 
 const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
+  { raw: 'enden', apply: stem => stem === 'ed' ? 'edəndən' : undefined },
+  { raw: 'yirdilar', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') : undefined },
+  { raw: 'dilar', apply: stem => stem + 'd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') },
+  { raw: 'diler', apply: stem => stem + 'd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') },
   { raw: 'lerinizden', apply: stem => stem + 'lərinizdən' },
   { raw: 'larinizdan', apply: stem => stem + 'larınızdan' },
   { raw: 'lerinizde', apply: stem => stem + 'lərinizdə' },
@@ -343,6 +348,8 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'nin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'n' + harmonyI(stem) + 'n' : undefined },
   { raw: 'in', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' },
   { raw: 'i', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) },
+  { raw: 'si', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 's' + harmonyI(stem) : undefined },
+  { raw: 'ye', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyA(stem) : undefined },
   { raw: 'e', apply: stem => stem + harmonyA(stem) },
 
   { raw: 'yirdim', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + 'm' : undefined },
@@ -383,6 +390,10 @@ function restoreProductiveSuffix(word: string, services?: SpellingContext): stri
     if (!stem && rawStem.endsWith('y')) {
       const underlying = recognizedStem(rawStem.slice(0, -1) + 'k', services);
       if (underlying?.endsWith('k')) stem = underlying.slice(0, -1) + 'y';
+    }
+    if (!stem && rawStem.endsWith('g')) {
+      const underlying = recognizedStem(rawStem.slice(0, -1) + 'q', services);
+      if (underlying?.endsWith('q')) stem = underlying.slice(0, -1) + 'ğ';
     }
     if (!stem) continue;
 
