@@ -1995,6 +1995,356 @@
       "mode": "text",
       "input": "səhər hesabat hazır idi. komanda sənədi göndərdi. müştəri nəticələri yoxladı. gecə rəhbər məlumat aldı. hamı cavab gözlədi.",
       "expected": "Səhər hesabat hazır idi. Komanda sənədi göndərdi. Müştəri nəticələri yoxladı.\n\nGecə rəhbər məlumat aldı. Hamı cavab gözlədi."
+    },
+    {
+      "id": "adversarial-001",
+      "category": "question",
+      "mode": "text",
+      "input": "Sən niyə gəlmədin",
+      "expected": "Sən niyə gəlmədin?"
+    },
+    {
+      "id": "adversarial-002",
+      "category": "question",
+      "mode": "text",
+      "input": "Sən necə gəlmədin",
+      "expected": "Sən necə gəlmədin?"
+    },
+    {
+      "id": "adversarial-003",
+      "category": "question",
+      "mode": "text",
+      "input": "Siz niyə yazmadınız",
+      "expected": "Siz niyə yazmadınız?"
+    },
+    {
+      "id": "adversarial-004",
+      "category": "question",
+      "mode": "text",
+      "input": "Siz necə yazmadınız",
+      "expected": "Siz necə yazmadınız?"
+    },
+    {
+      "id": "adversarial-005",
+      "category": "question",
+      "mode": "text",
+      "input": "Onlar niyə getmədilər",
+      "expected": "Onlar niyə getmədilər?"
+    },
+    {
+      "id": "adversarial-006",
+      "category": "question",
+      "mode": "text",
+      "input": "Onlar necə getmədilər",
+      "expected": "Onlar necə getmədilər?"
+    },
+    {
+      "id": "adversarial-007",
+      "category": "question",
+      "mode": "text",
+      "input": "Biz niyə gecikdik",
+      "expected": "Biz niyə gecikdik?"
+    },
+    {
+      "id": "adversarial-008",
+      "category": "question",
+      "mode": "text",
+      "input": "Biz necə gecikdik",
+      "expected": "Biz necə gecikdik?"
+    },
+    {
+      "id": "adversarial-009",
+      "category": "question",
+      "mode": "text",
+      "input": "O niyə işləmir",
+      "expected": "O niyə işləmir?"
+    },
+    {
+      "id": "adversarial-010",
+      "category": "question",
+      "mode": "text",
+      "input": "O necə işləmir",
+      "expected": "O necə işləmir?"
+    },
+    {
+      "id": "adversarial-011",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu mənzərə gözəldir",
+      "expected": "Vay, bu mənzərə gözəldir!"
+    },
+    {
+      "id": "adversarial-012",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu mənzərə yaxşıdır",
+      "expected": "Əla, bu mənzərə yaxşıdır!"
+    },
+    {
+      "id": "adversarial-013",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu şəhər gözəldir",
+      "expected": "Vay, bu şəhər gözəldir!"
+    },
+    {
+      "id": "adversarial-014",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu şəhər yaxşıdır",
+      "expected": "Əla, bu şəhər yaxşıdır!"
+    },
+    {
+      "id": "adversarial-015",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu gün gözəldir",
+      "expected": "Vay, bu gün gözəldir!"
+    },
+    {
+      "id": "adversarial-016",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu gün yaxşıdır",
+      "expected": "Əla, bu gün yaxşıdır!"
+    },
+    {
+      "id": "adversarial-017",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu nəticə gözəldir",
+      "expected": "Vay, bu nəticə gözəldir!"
+    },
+    {
+      "id": "adversarial-018",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu nəticə yaxşıdır",
+      "expected": "Əla, bu nəticə yaxşıdır!"
+    },
+    {
+      "id": "adversarial-019",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "vay bu səhnə gözəldir",
+      "expected": "Vay, bu səhnə gözəldir!"
+    },
+    {
+      "id": "adversarial-020",
+      "category": "exclamation",
+      "mode": "text",
+      "input": "əla bu səhnə yaxşıdır",
+      "expected": "Əla, bu səhnə yaxşıdır!"
+    },
+    {
+      "id": "adversarial-021",
+      "category": "comma",
+      "mode": "text",
+      "input": "Mən gəlmədim çünki vaxtım yox idi",
+      "expected": "Mən gəlmədim, çünki vaxtım yox idi."
+    },
+    {
+      "id": "adversarial-022",
+      "category": "comma",
+      "mode": "text",
+      "input": "Mən gəlmədim amma vaxtım yox idi",
+      "expected": "Mən gəlmədim, amma vaxtım yox idi."
+    },
+    {
+      "id": "adversarial-023",
+      "category": "comma",
+      "mode": "text",
+      "input": "Biz gəlmədik çünki yağış yağırdı",
+      "expected": "Biz gəlmədik, çünki yağış yağırdı."
+    },
+    {
+      "id": "adversarial-024",
+      "category": "comma",
+      "mode": "text",
+      "input": "Biz gəlmədik amma yağış yağırdı",
+      "expected": "Biz gəlmədik, amma yağış yağırdı."
+    },
+    {
+      "id": "adversarial-025",
+      "category": "comma",
+      "mode": "text",
+      "input": "Sən gəlmədin çünki yol bağlı idi",
+      "expected": "Sən gəlmədin, çünki yol bağlı idi."
+    },
+    {
+      "id": "adversarial-026",
+      "category": "comma",
+      "mode": "text",
+      "input": "Sən gəlmədin amma yol bağlı idi",
+      "expected": "Sən gəlmədin, amma yol bağlı idi."
+    },
+    {
+      "id": "adversarial-027",
+      "category": "comma",
+      "mode": "text",
+      "input": "O gəlmədi çünki hava soyuq idi",
+      "expected": "O gəlmədi, çünki hava soyuq idi."
+    },
+    {
+      "id": "adversarial-028",
+      "category": "comma",
+      "mode": "text",
+      "input": "O gəlmədi amma hava soyuq idi",
+      "expected": "O gəlmədi, amma hava soyuq idi."
+    },
+    {
+      "id": "adversarial-029",
+      "category": "comma",
+      "mode": "text",
+      "input": "Onlar gəlmədilər çünki iş başa çatmadı",
+      "expected": "Onlar gəlmədilər, çünki iş başa çatmadı."
+    },
+    {
+      "id": "adversarial-030",
+      "category": "comma",
+      "mode": "text",
+      "input": "Onlar gəlmədilər amma iş başa çatmadı",
+      "expected": "Onlar gəlmədilər, amma iş başa çatmadı."
+    },
+    {
+      "id": "adversarial-031",
+      "category": "comma",
+      "mode": "text",
+      "input": "Elvin bəy zəhmət olmasa baxın",
+      "expected": "Elvin bəy, zəhmət olmasa, baxın."
+    },
+    {
+      "id": "adversarial-032",
+      "category": "runon",
+      "mode": "text",
+      "input": "Elvin bəy mənə yazdı",
+      "expected": "Elvin bəy mənə yazdı."
+    },
+    {
+      "id": "adversarial-033",
+      "category": "comma",
+      "mode": "text",
+      "input": "Leyla xanım zəhmət olmasa baxın",
+      "expected": "Leyla xanım, zəhmət olmasa, baxın."
+    },
+    {
+      "id": "adversarial-034",
+      "category": "runon",
+      "mode": "text",
+      "input": "Leyla xanım mənə yazdı",
+      "expected": "Leyla xanım mənə yazdı."
+    },
+    {
+      "id": "adversarial-035",
+      "category": "comma",
+      "mode": "text",
+      "input": "Əli bəy zəhmət olmasa baxın",
+      "expected": "Əli bəy, zəhmət olmasa, baxın."
+    },
+    {
+      "id": "adversarial-036",
+      "category": "runon",
+      "mode": "text",
+      "input": "Əli bəy mənə yazdı",
+      "expected": "Əli bəy mənə yazdı."
+    },
+    {
+      "id": "adversarial-037",
+      "category": "comma",
+      "mode": "text",
+      "input": "Nigar xanım zəhmət olmasa baxın",
+      "expected": "Nigar xanım, zəhmət olmasa, baxın."
+    },
+    {
+      "id": "adversarial-038",
+      "category": "runon",
+      "mode": "text",
+      "input": "Nigar xanım mənə yazdı",
+      "expected": "Nigar xanım mənə yazdı."
+    },
+    {
+      "id": "adversarial-039",
+      "category": "comma",
+      "mode": "text",
+      "input": "Kamran bəy zəhmət olmasa baxın",
+      "expected": "Kamran bəy, zəhmət olmasa, baxın."
+    },
+    {
+      "id": "adversarial-040",
+      "category": "runon",
+      "mode": "text",
+      "input": "Kamran bəy mənə yazdı",
+      "expected": "Kamran bəy mənə yazdı."
+    },
+    {
+      "id": "adversarial-041",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "Bakı haqqında məlumat var. Bu məlumat vacibdir. Yol hazırdır. Daha sonra iş başladı.",
+      "expected": "Bakı haqqında məlumat var. Bu məlumat vacibdir. Yol hazırdır.\n\nDaha sonra iş başladı."
+    },
+    {
+      "id": "adversarial-042",
+      "category": "question",
+      "mode": "text",
+      "input": "Bakı haqqında nə bilirik",
+      "expected": "Bakı haqqında nə bilirik?"
+    },
+    {
+      "id": "adversarial-043",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "Şuşa haqqında məlumat var. Bu məlumat vacibdir. Sənəd hazırdır. Daha sonra iş başladı.",
+      "expected": "Şuşa haqqında məlumat var. Bu məlumat vacibdir. Sənəd hazırdır.\n\nDaha sonra iş başladı."
+    },
+    {
+      "id": "adversarial-044",
+      "category": "question",
+      "mode": "text",
+      "input": "Şuşa haqqında nə bilirik",
+      "expected": "Şuşa haqqında nə bilirik?"
+    },
+    {
+      "id": "adversarial-045",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "Gəncə haqqında məlumat var. Bu məlumat vacibdir. Kod hazırdır. Daha sonra iş başladı.",
+      "expected": "Gəncə haqqında məlumat var. Bu məlumat vacibdir. Kod hazırdır.\n\nDaha sonra iş başladı."
+    },
+    {
+      "id": "adversarial-046",
+      "category": "question",
+      "mode": "text",
+      "input": "Gəncə haqqında nə bilirik",
+      "expected": "Gəncə haqqında nə bilirik?"
+    },
+    {
+      "id": "adversarial-047",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "Qəbələ haqqında məlumat var. Bu məlumat vacibdir. Mətn hazırdır. Daha sonra iş başladı.",
+      "expected": "Qəbələ haqqında məlumat var. Bu məlumat vacibdir. Mətn hazırdır.\n\nDaha sonra iş başladı."
+    },
+    {
+      "id": "adversarial-048",
+      "category": "question",
+      "mode": "text",
+      "input": "Qəbələ haqqında nə bilirik",
+      "expected": "Qəbələ haqqında nə bilirik?"
+    },
+    {
+      "id": "adversarial-049",
+      "category": "paragraph",
+      "mode": "text",
+      "input": "Sumqayıt haqqında məlumat var. Bu məlumat vacibdir. Plan hazırdır. Daha sonra iş başladı.",
+      "expected": "Sumqayıt haqqında məlumat var. Bu məlumat vacibdir. Plan hazırdır.\n\nDaha sonra iş başladı."
+    },
+    {
+      "id": "adversarial-050",
+      "category": "question",
+      "mode": "text",
+      "input": "Sumqayıt haqqında nə bilirik",
+      "expected": "Sumqayıt haqqında nə bilirik?"
     }
   ]
 }

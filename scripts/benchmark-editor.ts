@@ -7,6 +7,7 @@ import { productiveMorphology } from '../lib/editor/productive-morphology';
 import { segmentIndependentClauses } from '../lib/editor/segmentation';
 import { analyzeClause, detectQuestion, detectExclamation, punctuateCommas } from '../lib/editor/punctuation';
 import { segmentParagraphs } from '../lib/editor/paragraph-segmentation';
+import { resolveEntitiesInText, resolveEntityTypo, resolveEntityWord } from '../lib/editor/entities/resolver';
 
 type BenchmarkCase = {
   words: number;
@@ -203,6 +204,9 @@ const componentResults = CASES.flatMap(config => {
     { name: 'paragraph segmentation', run: () => { for (const chunk of chunkDocument(document)) segmentParagraphs(chunk); } },
     { name: 'typo candidates', run: () => { for (const word of words) spellingCandidates.candidates(word, 5); } },
     { name: 'morphology', run: () => { for (const word of words) productiveMorphology.analyzeWord(word); } },
+    { name: 'entity lookup', run: () => { for (const word of words) resolveEntityWord(word, false, false); } },
+    { name: 'entity typo lookup', run: () => { for (const word of words) resolveEntityTypo(word); } },
+    { name: 'entity suffix and context', run: () => { for (const chunk of chunkDocument(document)) resolveEntitiesInText(chunk); } },
   ];
   return components.map(component => {
     const samples: number[] = [];

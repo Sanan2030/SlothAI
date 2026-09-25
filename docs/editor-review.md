@@ -4,7 +4,7 @@ Yeni gündəlik, işgüzar, texniki və uzun mətnlər redaktordan keçirildi; a
 
 | Giriş | Əvvəlki problem | Yeni nəticə |
 | --- | --- | --- |
-| `ne gozel gundur` | Xəbər cümləsi səhvən sualla bitirdi, diakritika çatışmırdı | `Nə gözəl gündür.` |
+| `ne gozel gundur` | Nida cümləsi səhvən sualla bitirdi, diakritika çatışmırdı | `Nə gözəl gündür!` |
 | `nece islediyini bilirem` | Dolayı sual sual cümləsi sayılırdı | `Necə işlədiyini bilirəm.` |
 | `bugun bakida hava yaxsidir sabah genceye gedeceyem` | Xüsusi adlar, “bu gün” və cümlə sərhədi | `Bu gün Bakıda hava yaxşıdır. Sabah Gəncəyə gedəcəyəm.` |
 | `men geldim sen getdin biz gorusduk` | İkinci cümlənin sərhədi və söz bərpası çatışmırdı | `Mən gəldim. Sən getdin. Biz görüşdük.` |

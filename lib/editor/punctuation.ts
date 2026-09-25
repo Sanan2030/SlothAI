@@ -15,17 +15,22 @@ const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|ha
 const embedded = /^(?:mən\s+)?(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
 const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
 const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf)(?:\s|[,!]|$)/iu;
-const emphatic = /^nə\s+(?:pis|qəribə|möhtəşəm)\s/iu;
+const emphatic = /^nə\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)\s/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
+const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|necəsən|necəsiniz)(?=\s|[,!?.]|$)/iu;
 
 export function detectQuestion(text: string): boolean {
   const value = text.trim().replace(/[.!?]+$/u, '');
   if (embedded.test(value) || /^nə\s+isə(?!\p{L})/iu.test(value)
-    || /(?:bilirik|bilirsiniz|bilirəm|bildim|bilərəm|öyrəndim|izah etdi|dedi)$/iu.test(value)
+    || /(?:^|[^\p{L}])heç\s+kim(?=$|[^\p{L}])/iu.test(value)
+    || /(?:^|[^\p{L}])hər\s+hansı(?=$|[^\p{L}])/iu.test(value)
+    || (/(?:bilirik|bilirsiniz|bilirəm|bildim|bilərəm|öyrəndim|izah etdi|dedi)$/iu.test(value)
+      && !/(?:^|\s)nə\s+bilirik$/iu.test(value))
     || /^nə\s+(?:gözəl|pis|qəribə|möhtəşəm)(?!\p{L})/iu.test(value)) return false;
-  if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])düzdür$/iu.test(value)) return true;
+  if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])(?:düzdür|eləmi|deyilmi)$/iu.test(value)) return true;
   if (particle.test(value)) return true;
-  return questionOpeners.test(value);
+  if (questionOpeners.test(value) || /(?:^|\s)nə\s+bilirik$/iu.test(value)) return true;
+  return questionConstituent.test(value) && !/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
 }
 
 export function detectExclamation(text: string): boolean {
@@ -67,7 +72,7 @@ export function punctuateCommas(text: string): string {
     .replace(/\b(ya\s+[^,;.!?]{1,70}?)\s+(ya da)\s+/giu, '$1, $2 ')
     .replace(/\b(əgər\s+[^,;.!?]{1,100}?\b(?:olsa|olarsan|olarsa|etsə|gəlsə|bitirsə))\s+(?=\p{L})/giu, '$1, ')
     .replace(/\b((?:düşünürəm|bilirəm|bildirirəm|görürəm|gördüm|yazdım|göstərir|istəyirik|qeyd edim|dedi|dedim)\s+ki)\s+(?!,)/giu, '$1, ')
-    .replace(/(^|[.!?]\s+)([\p{Lu}][\p{L}]+\s+(?:xanım|bəy))\s+(?=\p{L})/gu, '$1$2, ')
+    .replace(/(^|[.!?]\s+)([\p{Lu}][\p{L}]+\s+(?:xanım|bəy))\s+(?=(?:zəhmət|xahiş|baxın|gəlin|yazın|göndərin|deyin)\b)/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)([\p{Lu}][\p{Ll}]{2,})\s+(zəhmət olmasa)\b/gu, '$1$2, $3');
 }
 

@@ -1,0 +1,2597 @@
+{
+  "source": "Independent hand-authored case templates with curated names and manual expected spellings, frozen before evaluation",
+  "cases": [
+    {
+      "id": "geography-001",
+      "category": "geography",
+      "input": "azerbaycan haqqında məlumat var",
+      "expected": "Azərbaycan haqqında məlumat var."
+    },
+    {
+      "id": "geography-002",
+      "category": "geography",
+      "input": "men azerbaycan haqqında yazdım",
+      "expected": "Mən Azərbaycan haqqında yazdım."
+    },
+    {
+      "id": "geography-003",
+      "category": "geography",
+      "input": "baki haqqında məlumat var",
+      "expected": "Bakı haqqında məlumat var."
+    },
+    {
+      "id": "geography-004",
+      "category": "geography",
+      "input": "men baki haqqında yazdım",
+      "expected": "Mən Bakı haqqında yazdım."
+    },
+    {
+      "id": "geography-005",
+      "category": "geography",
+      "input": "gence haqqında məlumat var",
+      "expected": "Gəncə haqqında məlumat var."
+    },
+    {
+      "id": "geography-006",
+      "category": "geography",
+      "input": "men gence haqqında yazdım",
+      "expected": "Mən Gəncə haqqında yazdım."
+    },
+    {
+      "id": "geography-007",
+      "category": "geography",
+      "input": "sumqayit haqqında məlumat var",
+      "expected": "Sumqayıt haqqında məlumat var."
+    },
+    {
+      "id": "geography-008",
+      "category": "geography",
+      "input": "men sumqayit haqqında yazdım",
+      "expected": "Mən Sumqayıt haqqında yazdım."
+    },
+    {
+      "id": "geography-009",
+      "category": "geography",
+      "input": "naxcivan haqqında məlumat var",
+      "expected": "Naxçıvan haqqında məlumat var."
+    },
+    {
+      "id": "geography-010",
+      "category": "geography",
+      "input": "men naxcivan haqqında yazdım",
+      "expected": "Mən Naxçıvan haqqında yazdım."
+    },
+    {
+      "id": "geography-011",
+      "category": "geography",
+      "input": "susa haqqında məlumat var",
+      "expected": "Şuşa haqqında məlumat var."
+    },
+    {
+      "id": "geography-012",
+      "category": "geography",
+      "input": "men susa haqqında yazdım",
+      "expected": "Mən Şuşa haqqında yazdım."
+    },
+    {
+      "id": "geography-013",
+      "category": "geography",
+      "input": "xankendi haqqında məlumat var",
+      "expected": "Xankəndi haqqında məlumat var."
+    },
+    {
+      "id": "geography-014",
+      "category": "geography",
+      "input": "men xankendi haqqında yazdım",
+      "expected": "Mən Xankəndi haqqında yazdım."
+    },
+    {
+      "id": "geography-015",
+      "category": "geography",
+      "input": "qarabag haqqında məlumat var",
+      "expected": "Qarabağ haqqında məlumat var."
+    },
+    {
+      "id": "geography-016",
+      "category": "geography",
+      "input": "men qarabag haqqında yazdım",
+      "expected": "Mən Qarabağ haqqında yazdım."
+    },
+    {
+      "id": "geography-017",
+      "category": "geography",
+      "input": "lacin haqqında məlumat var",
+      "expected": "Laçın haqqında məlumat var."
+    },
+    {
+      "id": "geography-018",
+      "category": "geography",
+      "input": "men lacin haqqında yazdım",
+      "expected": "Mən Laçın haqqında yazdım."
+    },
+    {
+      "id": "geography-019",
+      "category": "geography",
+      "input": "kelbecer haqqında məlumat var",
+      "expected": "Kəlbəcər haqqında məlumat var."
+    },
+    {
+      "id": "geography-020",
+      "category": "geography",
+      "input": "men kelbecer haqqında yazdım",
+      "expected": "Mən Kəlbəcər haqqında yazdım."
+    },
+    {
+      "id": "geography-021",
+      "category": "geography",
+      "input": "agdam haqqında məlumat var",
+      "expected": "Ağdam haqqında məlumat var."
+    },
+    {
+      "id": "geography-022",
+      "category": "geography",
+      "input": "men agdam haqqında yazdım",
+      "expected": "Mən Ağdam haqqında yazdım."
+    },
+    {
+      "id": "geography-023",
+      "category": "geography",
+      "input": "fuzuli haqqında məlumat var",
+      "expected": "Füzuli haqqında məlumat var."
+    },
+    {
+      "id": "geography-024",
+      "category": "geography",
+      "input": "men fuzuli haqqında yazdım",
+      "expected": "Mən Füzuli haqqında yazdım."
+    },
+    {
+      "id": "geography-025",
+      "category": "geography",
+      "input": "cebrayil haqqında məlumat var",
+      "expected": "Cəbrayıl haqqında məlumat var."
+    },
+    {
+      "id": "geography-026",
+      "category": "geography",
+      "input": "men cebrayil haqqında yazdım",
+      "expected": "Mən Cəbrayıl haqqında yazdım."
+    },
+    {
+      "id": "geography-027",
+      "category": "geography",
+      "input": "zengilan haqqında məlumat var",
+      "expected": "Zəngilan haqqında məlumat var."
+    },
+    {
+      "id": "geography-028",
+      "category": "geography",
+      "input": "men zengilan haqqında yazdım",
+      "expected": "Mən Zəngilan haqqında yazdım."
+    },
+    {
+      "id": "geography-029",
+      "category": "geography",
+      "input": "qubadli haqqında məlumat var",
+      "expected": "Qubadlı haqqında məlumat var."
+    },
+    {
+      "id": "geography-030",
+      "category": "geography",
+      "input": "men qubadli haqqında yazdım",
+      "expected": "Mən Qubadlı haqqında yazdım."
+    },
+    {
+      "id": "geography-031",
+      "category": "geography",
+      "input": "xocali haqqında məlumat var",
+      "expected": "Xocalı haqqında məlumat var."
+    },
+    {
+      "id": "geography-032",
+      "category": "geography",
+      "input": "men xocali haqqında yazdım",
+      "expected": "Mən Xocalı haqqında yazdım."
+    },
+    {
+      "id": "geography-033",
+      "category": "geography",
+      "input": "xocavend haqqında məlumat var",
+      "expected": "Xocavənd haqqında məlumat var."
+    },
+    {
+      "id": "geography-034",
+      "category": "geography",
+      "input": "men xocavend haqqında yazdım",
+      "expected": "Mən Xocavənd haqqında yazdım."
+    },
+    {
+      "id": "geography-035",
+      "category": "geography",
+      "input": "agdere haqqında məlumat var",
+      "expected": "Ağdərə haqqında məlumat var."
+    },
+    {
+      "id": "geography-036",
+      "category": "geography",
+      "input": "men agdere haqqında yazdım",
+      "expected": "Mən Ağdərə haqqında yazdım."
+    },
+    {
+      "id": "geography-037",
+      "category": "geography",
+      "input": "qebele haqqında məlumat var",
+      "expected": "Qəbələ haqqında məlumat var."
+    },
+    {
+      "id": "geography-038",
+      "category": "geography",
+      "input": "men qebele haqqında yazdım",
+      "expected": "Mən Qəbələ haqqında yazdım."
+    },
+    {
+      "id": "geography-039",
+      "category": "geography",
+      "input": "seki haqqında məlumat var",
+      "expected": "Şəki haqqında məlumat var."
+    },
+    {
+      "id": "geography-040",
+      "category": "geography",
+      "input": "men seki haqqında yazdım",
+      "expected": "Mən Şəki haqqında yazdım."
+    },
+    {
+      "id": "geography-041",
+      "category": "geography",
+      "input": "quba haqqında məlumat var",
+      "expected": "Quba haqqında məlumat var."
+    },
+    {
+      "id": "geography-042",
+      "category": "geography",
+      "input": "men quba haqqında yazdım",
+      "expected": "Mən Quba haqqında yazdım."
+    },
+    {
+      "id": "geography-043",
+      "category": "geography",
+      "input": "qusar haqqında məlumat var",
+      "expected": "Qusar haqqında məlumat var."
+    },
+    {
+      "id": "geography-044",
+      "category": "geography",
+      "input": "men qusar haqqında yazdım",
+      "expected": "Mən Qusar haqqında yazdım."
+    },
+    {
+      "id": "geography-045",
+      "category": "geography",
+      "input": "xacmaz haqqında məlumat var",
+      "expected": "Xaçmaz haqqında məlumat var."
+    },
+    {
+      "id": "geography-046",
+      "category": "geography",
+      "input": "men xacmaz haqqında yazdım",
+      "expected": "Mən Xaçmaz haqqında yazdım."
+    },
+    {
+      "id": "geography-047",
+      "category": "geography",
+      "input": "lenkeran haqqında məlumat var",
+      "expected": "Lənkəran haqqında məlumat var."
+    },
+    {
+      "id": "geography-048",
+      "category": "geography",
+      "input": "men lenkeran haqqında yazdım",
+      "expected": "Mən Lənkəran haqqında yazdım."
+    },
+    {
+      "id": "geography-049",
+      "category": "geography",
+      "input": "astara haqqında məlumat var",
+      "expected": "Astara haqqında məlumat var."
+    },
+    {
+      "id": "geography-050",
+      "category": "geography",
+      "input": "men astara haqqında yazdım",
+      "expected": "Mən Astara haqqında yazdım."
+    },
+    {
+      "id": "geography-051",
+      "category": "geography",
+      "input": "masalli haqqında məlumat var",
+      "expected": "Masallı haqqında məlumat var."
+    },
+    {
+      "id": "geography-052",
+      "category": "geography",
+      "input": "men masalli haqqında yazdım",
+      "expected": "Mən Masallı haqqında yazdım."
+    },
+    {
+      "id": "geography-053",
+      "category": "geography",
+      "input": "celilabad haqqında məlumat var",
+      "expected": "Cəlilabad haqqında məlumat var."
+    },
+    {
+      "id": "geography-054",
+      "category": "geography",
+      "input": "men celilabad haqqında yazdım",
+      "expected": "Mən Cəlilabad haqqında yazdım."
+    },
+    {
+      "id": "geography-055",
+      "category": "geography",
+      "input": "bilesuvar haqqında məlumat var",
+      "expected": "Biləsuvar haqqında məlumat var."
+    },
+    {
+      "id": "geography-056",
+      "category": "geography",
+      "input": "men bilesuvar haqqında yazdım",
+      "expected": "Mən Biləsuvar haqqında yazdım."
+    },
+    {
+      "id": "geography-057",
+      "category": "geography",
+      "input": "salyan haqqında məlumat var",
+      "expected": "Salyan haqqında məlumat var."
+    },
+    {
+      "id": "geography-058",
+      "category": "geography",
+      "input": "men salyan haqqında yazdım",
+      "expected": "Mən Salyan haqqında yazdım."
+    },
+    {
+      "id": "geography-059",
+      "category": "geography",
+      "input": "neftcala haqqında məlumat var",
+      "expected": "Neftçala haqqında məlumat var."
+    },
+    {
+      "id": "geography-060",
+      "category": "geography",
+      "input": "men neftcala haqqında yazdım",
+      "expected": "Mən Neftçala haqqında yazdım."
+    },
+    {
+      "id": "geography-061",
+      "category": "geography",
+      "input": "sirvan haqqında məlumat var",
+      "expected": "Şirvan haqqında məlumat var."
+    },
+    {
+      "id": "geography-062",
+      "category": "geography",
+      "input": "men sirvan haqqında yazdım",
+      "expected": "Mən Şirvan haqqında yazdım."
+    },
+    {
+      "id": "geography-063",
+      "category": "geography",
+      "input": "haciqabul haqqında məlumat var",
+      "expected": "Hacıqabul haqqında məlumat var."
+    },
+    {
+      "id": "geography-064",
+      "category": "geography",
+      "input": "men haciqabul haqqında yazdım",
+      "expected": "Mən Hacıqabul haqqında yazdım."
+    },
+    {
+      "id": "geography-065",
+      "category": "geography",
+      "input": "saatli haqqında məlumat var",
+      "expected": "Saatlı haqqında məlumat var."
+    },
+    {
+      "id": "geography-066",
+      "category": "geography",
+      "input": "men saatli haqqında yazdım",
+      "expected": "Mən Saatlı haqqında yazdım."
+    },
+    {
+      "id": "geography-067",
+      "category": "geography",
+      "input": "sabirabad haqqında məlumat var",
+      "expected": "Sabirabad haqqında məlumat var."
+    },
+    {
+      "id": "geography-068",
+      "category": "geography",
+      "input": "men sabirabad haqqında yazdım",
+      "expected": "Mən Sabirabad haqqında yazdım."
+    },
+    {
+      "id": "geography-069",
+      "category": "geography",
+      "input": "imisli haqqında məlumat var",
+      "expected": "İmişli haqqında məlumat var."
+    },
+    {
+      "id": "geography-070",
+      "category": "geography",
+      "input": "men imisli haqqında yazdım",
+      "expected": "Mən İmişli haqqında yazdım."
+    },
+    {
+      "id": "geography-071",
+      "category": "geography",
+      "input": "beyleqan haqqında məlumat var",
+      "expected": "Beyləqan haqqında məlumat var."
+    },
+    {
+      "id": "geography-072",
+      "category": "geography",
+      "input": "men beyleqan haqqında yazdım",
+      "expected": "Mən Beyləqan haqqında yazdım."
+    },
+    {
+      "id": "geography-073",
+      "category": "geography",
+      "input": "agcabedi haqqında məlumat var",
+      "expected": "Ağcabədi haqqında məlumat var."
+    },
+    {
+      "id": "geography-074",
+      "category": "geography",
+      "input": "men agcabedi haqqında yazdım",
+      "expected": "Mən Ağcabədi haqqında yazdım."
+    },
+    {
+      "id": "geography-075",
+      "category": "geography",
+      "input": "berde haqqında məlumat var",
+      "expected": "Bərdə haqqında məlumat var."
+    },
+    {
+      "id": "geography-076",
+      "category": "geography",
+      "input": "men berde haqqında yazdım",
+      "expected": "Mən Bərdə haqqında yazdım."
+    },
+    {
+      "id": "geography-077",
+      "category": "geography",
+      "input": "terter haqqında məlumat var",
+      "expected": "Tərtər haqqında məlumat var."
+    },
+    {
+      "id": "geography-078",
+      "category": "geography",
+      "input": "men terter haqqında yazdım",
+      "expected": "Mən Tərtər haqqında yazdım."
+    },
+    {
+      "id": "geography-079",
+      "category": "geography",
+      "input": "yevlax haqqında məlumat var",
+      "expected": "Yevlax haqqında məlumat var."
+    },
+    {
+      "id": "geography-080",
+      "category": "geography",
+      "input": "men yevlax haqqında yazdım",
+      "expected": "Mən Yevlax haqqında yazdım."
+    },
+    {
+      "id": "geography-081",
+      "category": "geography",
+      "input": "mingecevir haqqında məlumat var",
+      "expected": "Mingəçevir haqqında məlumat var."
+    },
+    {
+      "id": "geography-082",
+      "category": "geography",
+      "input": "men mingecevir haqqında yazdım",
+      "expected": "Mən Mingəçevir haqqında yazdım."
+    },
+    {
+      "id": "geography-083",
+      "category": "geography",
+      "input": "goycay haqqında məlumat var",
+      "expected": "Göyçay haqqında məlumat var."
+    },
+    {
+      "id": "geography-084",
+      "category": "geography",
+      "input": "men goycay haqqında yazdım",
+      "expected": "Mən Göyçay haqqında yazdım."
+    },
+    {
+      "id": "geography-085",
+      "category": "geography",
+      "input": "ucar haqqında məlumat var",
+      "expected": "Ucar haqqında məlumat var."
+    },
+    {
+      "id": "geography-086",
+      "category": "geography",
+      "input": "men ucar haqqında yazdım",
+      "expected": "Mən Ucar haqqında yazdım."
+    },
+    {
+      "id": "geography-087",
+      "category": "geography",
+      "input": "kurdemir haqqında məlumat var",
+      "expected": "Kürdəmir haqqında məlumat var."
+    },
+    {
+      "id": "geography-088",
+      "category": "geography",
+      "input": "men kurdemir haqqında yazdım",
+      "expected": "Mən Kürdəmir haqqında yazdım."
+    },
+    {
+      "id": "geography-089",
+      "category": "geography",
+      "input": "agsu haqqında məlumat var",
+      "expected": "Ağsu haqqında məlumat var."
+    },
+    {
+      "id": "geography-090",
+      "category": "geography",
+      "input": "men agsu haqqında yazdım",
+      "expected": "Mən Ağsu haqqında yazdım."
+    },
+    {
+      "id": "geography-091",
+      "category": "geography",
+      "input": "samaxi haqqında məlumat var",
+      "expected": "Şamaxı haqqında məlumat var."
+    },
+    {
+      "id": "geography-092",
+      "category": "geography",
+      "input": "men samaxi haqqında yazdım",
+      "expected": "Mən Şamaxı haqqında yazdım."
+    },
+    {
+      "id": "geography-093",
+      "category": "geography",
+      "input": "ismayilli haqqında məlumat var",
+      "expected": "İsmayıllı haqqında məlumat var."
+    },
+    {
+      "id": "geography-094",
+      "category": "geography",
+      "input": "men ismayilli haqqında yazdım",
+      "expected": "Mən İsmayıllı haqqında yazdım."
+    },
+    {
+      "id": "geography-095",
+      "category": "geography",
+      "input": "oguz haqqında məlumat var",
+      "expected": "Oğuz haqqında məlumat var."
+    },
+    {
+      "id": "geography-096",
+      "category": "geography",
+      "input": "men oguz haqqında yazdım",
+      "expected": "Mən Oğuz haqqında yazdım."
+    },
+    {
+      "id": "geography-097",
+      "category": "geography",
+      "input": "qax haqqında məlumat var",
+      "expected": "Qax haqqında məlumat var."
+    },
+    {
+      "id": "geography-098",
+      "category": "geography",
+      "input": "men qax haqqında yazdım",
+      "expected": "Mən Qax haqqında yazdım."
+    },
+    {
+      "id": "geography-099",
+      "category": "geography",
+      "input": "zaqatala haqqında məlumat var",
+      "expected": "Zaqatala haqqında məlumat var."
+    },
+    {
+      "id": "geography-100",
+      "category": "geography",
+      "input": "men zaqatala haqqında yazdım",
+      "expected": "Mən Zaqatala haqqında yazdım."
+    },
+    {
+      "id": "geography-101",
+      "category": "geography",
+      "input": "balaken haqqında məlumat var",
+      "expected": "Balakən haqqında məlumat var."
+    },
+    {
+      "id": "geography-102",
+      "category": "geography",
+      "input": "men balaken haqqında yazdım",
+      "expected": "Mən Balakən haqqında yazdım."
+    },
+    {
+      "id": "geography-103",
+      "category": "geography",
+      "input": "qazax haqqında məlumat var",
+      "expected": "Qazax haqqında məlumat var."
+    },
+    {
+      "id": "geography-104",
+      "category": "geography",
+      "input": "men qazax haqqında yazdım",
+      "expected": "Mən Qazax haqqında yazdım."
+    },
+    {
+      "id": "geography-105",
+      "category": "geography",
+      "input": "agstafa haqqında məlumat var",
+      "expected": "Ağstafa haqqında məlumat var."
+    },
+    {
+      "id": "geography-106",
+      "category": "geography",
+      "input": "men agstafa haqqında yazdım",
+      "expected": "Mən Ağstafa haqqında yazdım."
+    },
+    {
+      "id": "geography-107",
+      "category": "geography",
+      "input": "tovuz haqqında məlumat var",
+      "expected": "Tovuz haqqında məlumat var."
+    },
+    {
+      "id": "geography-108",
+      "category": "geography",
+      "input": "men tovuz haqqında yazdım",
+      "expected": "Mən Tovuz haqqında yazdım."
+    },
+    {
+      "id": "geography-109",
+      "category": "geography",
+      "input": "semkir haqqında məlumat var",
+      "expected": "Şəmkir haqqında məlumat var."
+    },
+    {
+      "id": "geography-110",
+      "category": "geography",
+      "input": "men semkir haqqında yazdım",
+      "expected": "Mən Şəmkir haqqında yazdım."
+    },
+    {
+      "id": "geography-111",
+      "category": "geography",
+      "input": "gedebey haqqında məlumat var",
+      "expected": "Gədəbəy haqqında məlumat var."
+    },
+    {
+      "id": "geography-112",
+      "category": "geography",
+      "input": "men gedebey haqqında yazdım",
+      "expected": "Mən Gədəbəy haqqında yazdım."
+    },
+    {
+      "id": "geography-113",
+      "category": "geography",
+      "input": "daskesen haqqında məlumat var",
+      "expected": "Daşkəsən haqqında məlumat var."
+    },
+    {
+      "id": "geography-114",
+      "category": "geography",
+      "input": "men daskesen haqqında yazdım",
+      "expected": "Mən Daşkəsən haqqında yazdım."
+    },
+    {
+      "id": "geography-115",
+      "category": "geography",
+      "input": "goygol haqqında məlumat var",
+      "expected": "Göygöl haqqında məlumat var."
+    },
+    {
+      "id": "geography-116",
+      "category": "geography",
+      "input": "men goygol haqqında yazdım",
+      "expected": "Mən Göygöl haqqında yazdım."
+    },
+    {
+      "id": "geography-117",
+      "category": "geography",
+      "input": "samux haqqında məlumat var",
+      "expected": "Samux haqqında məlumat var."
+    },
+    {
+      "id": "geography-118",
+      "category": "geography",
+      "input": "men samux haqqında yazdım",
+      "expected": "Mən Samux haqqında yazdım."
+    },
+    {
+      "id": "geography-119",
+      "category": "geography",
+      "input": "goranboy haqqında məlumat var",
+      "expected": "Goranboy haqqında məlumat var."
+    },
+    {
+      "id": "geography-120",
+      "category": "geography",
+      "input": "men goranboy haqqında yazdım",
+      "expected": "Mən Goranboy haqqında yazdım."
+    },
+    {
+      "id": "geography-121",
+      "category": "geography",
+      "input": "naftalan haqqında məlumat var",
+      "expected": "Naftalan haqqında məlumat var."
+    },
+    {
+      "id": "geography-122",
+      "category": "geography",
+      "input": "men naftalan haqqında yazdım",
+      "expected": "Mən Naftalan haqqında yazdım."
+    },
+    {
+      "id": "geography-123",
+      "category": "geography",
+      "input": "abseron haqqında məlumat var",
+      "expected": "Abşeron haqqında məlumat var."
+    },
+    {
+      "id": "geography-124",
+      "category": "geography",
+      "input": "men abseron haqqında yazdım",
+      "expected": "Mən Abşeron haqqında yazdım."
+    },
+    {
+      "id": "geography-125",
+      "category": "geography",
+      "input": "xizi haqqında məlumat var",
+      "expected": "Xızı haqqında məlumat var."
+    },
+    {
+      "id": "geography-126",
+      "category": "geography",
+      "input": "men xizi haqqında yazdım",
+      "expected": "Mən Xızı haqqında yazdım."
+    },
+    {
+      "id": "geography-127",
+      "category": "geography",
+      "input": "siyezen haqqında məlumat var",
+      "expected": "Siyəzən haqqında məlumat var."
+    },
+    {
+      "id": "geography-128",
+      "category": "geography",
+      "input": "men siyezen haqqında yazdım",
+      "expected": "Mən Siyəzən haqqında yazdım."
+    },
+    {
+      "id": "geography-129",
+      "category": "geography",
+      "input": "sabran haqqında məlumat var",
+      "expected": "Şabran haqqında məlumat var."
+    },
+    {
+      "id": "geography-130",
+      "category": "geography",
+      "input": "men sabran haqqında yazdım",
+      "expected": "Mən Şabran haqqında yazdım."
+    },
+    {
+      "id": "geography-131",
+      "category": "geography",
+      "input": "qobustan haqqında məlumat var",
+      "expected": "Qobustan haqqında məlumat var."
+    },
+    {
+      "id": "geography-132",
+      "category": "geography",
+      "input": "men qobustan haqqında yazdım",
+      "expected": "Mən Qobustan haqqında yazdım."
+    },
+    {
+      "id": "geography-133",
+      "category": "geography",
+      "input": "ordubad haqqında məlumat var",
+      "expected": "Ordubad haqqında məlumat var."
+    },
+    {
+      "id": "geography-134",
+      "category": "geography",
+      "input": "men ordubad haqqında yazdım",
+      "expected": "Mən Ordubad haqqında yazdım."
+    },
+    {
+      "id": "geography-135",
+      "category": "geography",
+      "input": "culfa haqqında məlumat var",
+      "expected": "Culfa haqqında məlumat var."
+    },
+    {
+      "id": "geography-136",
+      "category": "geography",
+      "input": "men culfa haqqında yazdım",
+      "expected": "Mən Culfa haqqında yazdım."
+    },
+    {
+      "id": "geography-137",
+      "category": "geography",
+      "input": "serur haqqında məlumat var",
+      "expected": "Şərur haqqında məlumat var."
+    },
+    {
+      "id": "geography-138",
+      "category": "geography",
+      "input": "men serur haqqında yazdım",
+      "expected": "Mən Şərur haqqında yazdım."
+    },
+    {
+      "id": "geography-139",
+      "category": "geography",
+      "input": "babek haqqında məlumat var",
+      "expected": "Babək haqqında məlumat var."
+    },
+    {
+      "id": "geography-140",
+      "category": "geography",
+      "input": "men babek haqqında yazdım",
+      "expected": "Mən Babək haqqında yazdım."
+    },
+    {
+      "id": "geography-141",
+      "category": "geography",
+      "input": "sederek haqqında məlumat var",
+      "expected": "Sədərək haqqında məlumat var."
+    },
+    {
+      "id": "geography-142",
+      "category": "geography",
+      "input": "men sederek haqqında yazdım",
+      "expected": "Mən Sədərək haqqında yazdım."
+    },
+    {
+      "id": "geography-143",
+      "category": "geography",
+      "input": "kengerli haqqında məlumat var",
+      "expected": "Kəngərli haqqında məlumat var."
+    },
+    {
+      "id": "geography-144",
+      "category": "geography",
+      "input": "men kengerli haqqında yazdım",
+      "expected": "Mən Kəngərli haqqında yazdım."
+    },
+    {
+      "id": "geography-145",
+      "category": "geography",
+      "input": "sahbuz haqqında məlumat var",
+      "expected": "Şahbuz haqqında məlumat var."
+    },
+    {
+      "id": "geography-146",
+      "category": "geography",
+      "input": "men sahbuz haqqında yazdım",
+      "expected": "Mən Şahbuz haqqında yazdım."
+    },
+    {
+      "id": "geography-147",
+      "category": "geography",
+      "input": "turkiye haqqında məlumat var",
+      "expected": "Türkiyə haqqında məlumat var."
+    },
+    {
+      "id": "geography-148",
+      "category": "geography",
+      "input": "men turkiye haqqında yazdım",
+      "expected": "Mən Türkiyə haqqında yazdım."
+    },
+    {
+      "id": "geography-149",
+      "category": "geography",
+      "input": "gurcustan haqqında məlumat var",
+      "expected": "Gürcüstan haqqında məlumat var."
+    },
+    {
+      "id": "geography-150",
+      "category": "geography",
+      "input": "men gurcustan haqqında yazdım",
+      "expected": "Mən Gürcüstan haqqında yazdım."
+    },
+    {
+      "id": "geography-151",
+      "category": "geography",
+      "input": "rusiya haqqında məlumat var",
+      "expected": "Rusiya haqqında məlumat var."
+    },
+    {
+      "id": "geography-152",
+      "category": "geography",
+      "input": "men rusiya haqqında yazdım",
+      "expected": "Mən Rusiya haqqında yazdım."
+    },
+    {
+      "id": "geography-153",
+      "category": "geography",
+      "input": "iran haqqında məlumat var",
+      "expected": "İran haqqında məlumat var."
+    },
+    {
+      "id": "geography-154",
+      "category": "geography",
+      "input": "men iran haqqında yazdım",
+      "expected": "Mən İran haqqında yazdım."
+    },
+    {
+      "id": "geography-155",
+      "category": "geography",
+      "input": "almaniya haqqında məlumat var",
+      "expected": "Almaniya haqqında məlumat var."
+    },
+    {
+      "id": "geography-156",
+      "category": "geography",
+      "input": "men almaniya haqqında yazdım",
+      "expected": "Mən Almaniya haqqında yazdım."
+    },
+    {
+      "id": "geography-157",
+      "category": "geography",
+      "input": "fransa haqqında məlumat var",
+      "expected": "Fransa haqqında məlumat var."
+    },
+    {
+      "id": "geography-158",
+      "category": "geography",
+      "input": "men fransa haqqında yazdım",
+      "expected": "Mən Fransa haqqında yazdım."
+    },
+    {
+      "id": "geography-159",
+      "category": "geography",
+      "input": "italiya haqqında məlumat var",
+      "expected": "İtaliya haqqında məlumat var."
+    },
+    {
+      "id": "geography-160",
+      "category": "geography",
+      "input": "men italiya haqqında yazdım",
+      "expected": "Mən İtaliya haqqında yazdım."
+    },
+    {
+      "id": "geography-161",
+      "category": "geography",
+      "input": "ispaniya haqqında məlumat var",
+      "expected": "İspaniya haqqında məlumat var."
+    },
+    {
+      "id": "geography-162",
+      "category": "geography",
+      "input": "men ispaniya haqqında yazdım",
+      "expected": "Mən İspaniya haqqında yazdım."
+    },
+    {
+      "id": "geography-163",
+      "category": "geography",
+      "input": "abs haqqında məlumat var",
+      "expected": "ABŞ haqqında məlumat var."
+    },
+    {
+      "id": "geography-164",
+      "category": "geography",
+      "input": "men abs haqqında yazdım",
+      "expected": "Mən ABŞ haqqında yazdım."
+    },
+    {
+      "id": "geography-165",
+      "category": "geography",
+      "input": "avropa haqqında məlumat var",
+      "expected": "Avropa haqqında məlumat var."
+    },
+    {
+      "id": "geography-166",
+      "category": "geography",
+      "input": "men avropa haqqında yazdım",
+      "expected": "Mən Avropa haqqında yazdım."
+    },
+    {
+      "id": "geography-167",
+      "category": "geography",
+      "input": "asiya haqqında məlumat var",
+      "expected": "Asiya haqqında məlumat var."
+    },
+    {
+      "id": "geography-168",
+      "category": "geography",
+      "input": "men asiya haqqında yazdım",
+      "expected": "Mən Asiya haqqında yazdım."
+    },
+    {
+      "id": "geography-169",
+      "category": "geography",
+      "input": "afrika haqqında məlumat var",
+      "expected": "Afrika haqqında məlumat var."
+    },
+    {
+      "id": "geography-170",
+      "category": "geography",
+      "input": "men afrika haqqında yazdım",
+      "expected": "Mən Afrika haqqında yazdım."
+    },
+    {
+      "id": "geography-171",
+      "category": "geography",
+      "input": "xezer haqqında məlumat var",
+      "expected": "Xəzər haqqında məlumat var."
+    },
+    {
+      "id": "geography-172",
+      "category": "geography",
+      "input": "men xezer haqqında yazdım",
+      "expected": "Mən Xəzər haqqında yazdım."
+    },
+    {
+      "id": "inflection-001",
+      "category": "inflection",
+      "input": "azerbaycandan xeber geldi",
+      "expected": "Azərbaycandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-002",
+      "category": "inflection",
+      "input": "sumqayitdan xeber geldi",
+      "expected": "Sumqayıtdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-003",
+      "category": "inflection",
+      "input": "naxcivandan xeber geldi",
+      "expected": "Naxçıvandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-004",
+      "category": "inflection",
+      "input": "xankendiden xeber geldi",
+      "expected": "Xankəndidən xəbər gəldi."
+    },
+    {
+      "id": "inflection-005",
+      "category": "inflection",
+      "input": "qarabagdan xeber geldi",
+      "expected": "Qarabağdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-006",
+      "category": "inflection",
+      "input": "kelbecerden xeber geldi",
+      "expected": "Kəlbəcərdən xəbər gəldi."
+    },
+    {
+      "id": "inflection-007",
+      "category": "inflection",
+      "input": "fuzuliden xeber geldi",
+      "expected": "Füzulidən xəbər gəldi."
+    },
+    {
+      "id": "inflection-008",
+      "category": "inflection",
+      "input": "cebrayildan xeber geldi",
+      "expected": "Cəbrayıldan xəbər gəldi."
+    },
+    {
+      "id": "inflection-009",
+      "category": "inflection",
+      "input": "zengilandan xeber geldi",
+      "expected": "Zəngilandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-010",
+      "category": "inflection",
+      "input": "qubadlidan xeber geldi",
+      "expected": "Qubadlıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-011",
+      "category": "inflection",
+      "input": "xocalidan xeber geldi",
+      "expected": "Xocalıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-012",
+      "category": "inflection",
+      "input": "xocavendden xeber geldi",
+      "expected": "Xocavənddən xəbər gəldi."
+    },
+    {
+      "id": "inflection-013",
+      "category": "inflection",
+      "input": "agdereden xeber geldi",
+      "expected": "Ağdərədən xəbər gəldi."
+    },
+    {
+      "id": "inflection-014",
+      "category": "inflection",
+      "input": "qebeleden xeber geldi",
+      "expected": "Qəbələdən xəbər gəldi."
+    },
+    {
+      "id": "inflection-015",
+      "category": "inflection",
+      "input": "xacmazdan xeber geldi",
+      "expected": "Xaçmazdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-016",
+      "category": "inflection",
+      "input": "lenkerandan xeber geldi",
+      "expected": "Lənkərandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-017",
+      "category": "inflection",
+      "input": "astaradan xeber geldi",
+      "expected": "Astaradan xəbər gəldi."
+    },
+    {
+      "id": "inflection-018",
+      "category": "inflection",
+      "input": "masallidan xeber geldi",
+      "expected": "Masallıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-019",
+      "category": "inflection",
+      "input": "celilabaddan xeber geldi",
+      "expected": "Cəlilabaddan xəbər gəldi."
+    },
+    {
+      "id": "inflection-020",
+      "category": "inflection",
+      "input": "bilesuvardan xeber geldi",
+      "expected": "Biləsuvardan xəbər gəldi."
+    },
+    {
+      "id": "inflection-021",
+      "category": "inflection",
+      "input": "salyandan xeber geldi",
+      "expected": "Salyandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-022",
+      "category": "inflection",
+      "input": "neftcaladan xeber geldi",
+      "expected": "Neftçaladan xəbər gəldi."
+    },
+    {
+      "id": "inflection-023",
+      "category": "inflection",
+      "input": "sirvandan xeber geldi",
+      "expected": "Şirvandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-024",
+      "category": "inflection",
+      "input": "haciqabuldan xeber geldi",
+      "expected": "Hacıqabuldan xəbər gəldi."
+    },
+    {
+      "id": "inflection-025",
+      "category": "inflection",
+      "input": "saatlidan xeber geldi",
+      "expected": "Saatlıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-026",
+      "category": "inflection",
+      "input": "sabirabaddan xeber geldi",
+      "expected": "Sabirabaddan xəbər gəldi."
+    },
+    {
+      "id": "inflection-027",
+      "category": "inflection",
+      "input": "imisliden xeber geldi",
+      "expected": "İmişlidən xəbər gəldi."
+    },
+    {
+      "id": "inflection-028",
+      "category": "inflection",
+      "input": "beyleqandan xeber geldi",
+      "expected": "Beyləqandan xəbər gəldi."
+    },
+    {
+      "id": "inflection-029",
+      "category": "inflection",
+      "input": "agcabediden xeber geldi",
+      "expected": "Ağcabədidən xəbər gəldi."
+    },
+    {
+      "id": "inflection-030",
+      "category": "inflection",
+      "input": "terterden xeber geldi",
+      "expected": "Tərtərdən xəbər gəldi."
+    },
+    {
+      "id": "inflection-031",
+      "category": "inflection",
+      "input": "yevlaxdan xeber geldi",
+      "expected": "Yevlaxdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-032",
+      "category": "inflection",
+      "input": "mingecevirden xeber geldi",
+      "expected": "Mingəçevirdən xəbər gəldi."
+    },
+    {
+      "id": "inflection-033",
+      "category": "inflection",
+      "input": "goycaydan xeber geldi",
+      "expected": "Göyçaydan xəbər gəldi."
+    },
+    {
+      "id": "inflection-034",
+      "category": "inflection",
+      "input": "kurdemirden xeber geldi",
+      "expected": "Kürdəmirdən xəbər gəldi."
+    },
+    {
+      "id": "inflection-035",
+      "category": "inflection",
+      "input": "samaxidan xeber geldi",
+      "expected": "Şamaxıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-036",
+      "category": "inflection",
+      "input": "ismayillidan xeber geldi",
+      "expected": "İsmayıllıdan xəbər gəldi."
+    },
+    {
+      "id": "inflection-037",
+      "category": "inflection",
+      "input": "zaqataladan xeber geldi",
+      "expected": "Zaqataladan xəbər gəldi."
+    },
+    {
+      "id": "inflection-038",
+      "category": "inflection",
+      "input": "balakenden xeber geldi",
+      "expected": "Balakəndən xəbər gəldi."
+    },
+    {
+      "id": "inflection-039",
+      "category": "inflection",
+      "input": "agstafadan xeber geldi",
+      "expected": "Ağstafadan xəbər gəldi."
+    },
+    {
+      "id": "inflection-040",
+      "category": "inflection",
+      "input": "semkirden xeber geldi",
+      "expected": "Şəmkirdən xəbər gəldi."
+    },
+    {
+      "id": "person-001",
+      "category": "person",
+      "input": "eli bey geldi",
+      "expected": "Əli bəy gəldi."
+    },
+    {
+      "id": "person-002",
+      "category": "person",
+      "input": "men eli beyi gordum",
+      "expected": "Mən Əli bəyi gördüm."
+    },
+    {
+      "id": "person-003",
+      "category": "person",
+      "input": "veli bey geldi",
+      "expected": "Vəli bəy gəldi."
+    },
+    {
+      "id": "person-004",
+      "category": "person",
+      "input": "men veli beyi gordum",
+      "expected": "Mən Vəli bəyi gördüm."
+    },
+    {
+      "id": "person-005",
+      "category": "person",
+      "input": "hesen bey geldi",
+      "expected": "Həsən bəy gəldi."
+    },
+    {
+      "id": "person-006",
+      "category": "person",
+      "input": "men hesen beyi gordum",
+      "expected": "Mən Həsən bəyi gördüm."
+    },
+    {
+      "id": "person-007",
+      "category": "person",
+      "input": "huseyn bey geldi",
+      "expected": "Hüseyn bəy gəldi."
+    },
+    {
+      "id": "person-008",
+      "category": "person",
+      "input": "men huseyn beyi gordum",
+      "expected": "Mən Hüseyn bəyi gördüm."
+    },
+    {
+      "id": "person-009",
+      "category": "person",
+      "input": "mehemmed bey geldi",
+      "expected": "Məhəmməd bəy gəldi."
+    },
+    {
+      "id": "person-010",
+      "category": "person",
+      "input": "men mehemmed beyi gordum",
+      "expected": "Mən Məhəmməd bəyi gördüm."
+    },
+    {
+      "id": "person-011",
+      "category": "person",
+      "input": "mehemmedeli bey geldi",
+      "expected": "Məhəmmədəli bəy gəldi."
+    },
+    {
+      "id": "person-012",
+      "category": "person",
+      "input": "men mehemmedeli beyi gordum",
+      "expected": "Mən Məhəmmədəli bəyi gördüm."
+    },
+    {
+      "id": "person-013",
+      "category": "person",
+      "input": "ehmed bey geldi",
+      "expected": "Əhməd bəy gəldi."
+    },
+    {
+      "id": "person-014",
+      "category": "person",
+      "input": "men ehmed beyi gordum",
+      "expected": "Mən Əhməd bəyi gördüm."
+    },
+    {
+      "id": "person-015",
+      "category": "person",
+      "input": "memmed bey geldi",
+      "expected": "Məmməd bəy gəldi."
+    },
+    {
+      "id": "person-016",
+      "category": "person",
+      "input": "men memmed beyi gordum",
+      "expected": "Mən Məmməd bəyi gördüm."
+    },
+    {
+      "id": "person-017",
+      "category": "person",
+      "input": "resad bey geldi",
+      "expected": "Rəşad bəy gəldi."
+    },
+    {
+      "id": "person-018",
+      "category": "person",
+      "input": "men resad beyi gordum",
+      "expected": "Mən Rəşad bəyi gördüm."
+    },
+    {
+      "id": "person-019",
+      "category": "person",
+      "input": "elvin bey geldi",
+      "expected": "Elvin bəy gəldi."
+    },
+    {
+      "id": "person-020",
+      "category": "person",
+      "input": "men elvin beyi gordum",
+      "expected": "Mən Elvin bəyi gördüm."
+    },
+    {
+      "id": "person-021",
+      "category": "person",
+      "input": "emin bey geldi",
+      "expected": "Emin bəy gəldi."
+    },
+    {
+      "id": "person-022",
+      "category": "person",
+      "input": "men emin beyi gordum",
+      "expected": "Mən Emin bəyi gördüm."
+    },
+    {
+      "id": "person-023",
+      "category": "person",
+      "input": "elnur bey geldi",
+      "expected": "Elnur bəy gəldi."
+    },
+    {
+      "id": "person-024",
+      "category": "person",
+      "input": "men elnur beyi gordum",
+      "expected": "Mən Elnur bəyi gördüm."
+    },
+    {
+      "id": "person-025",
+      "category": "person",
+      "input": "eldar bey geldi",
+      "expected": "Eldar bəy gəldi."
+    },
+    {
+      "id": "person-026",
+      "category": "person",
+      "input": "men eldar beyi gordum",
+      "expected": "Mən Eldar bəyi gördüm."
+    },
+    {
+      "id": "person-027",
+      "category": "person",
+      "input": "orxan bey geldi",
+      "expected": "Orxan bəy gəldi."
+    },
+    {
+      "id": "person-028",
+      "category": "person",
+      "input": "men orxan beyi gordum",
+      "expected": "Mən Orxan bəyi gördüm."
+    },
+    {
+      "id": "person-029",
+      "category": "person",
+      "input": "murad bey geldi",
+      "expected": "Murad bəy gəldi."
+    },
+    {
+      "id": "person-030",
+      "category": "person",
+      "input": "men murad beyi gordum",
+      "expected": "Mən Murad bəyi gördüm."
+    },
+    {
+      "id": "person-031",
+      "category": "person",
+      "input": "kamran bey geldi",
+      "expected": "Kamran bəy gəldi."
+    },
+    {
+      "id": "person-032",
+      "category": "person",
+      "input": "men kamran beyi gordum",
+      "expected": "Mən Kamran bəyi gördüm."
+    },
+    {
+      "id": "person-033",
+      "category": "person",
+      "input": "tural bey geldi",
+      "expected": "Tural bəy gəldi."
+    },
+    {
+      "id": "person-034",
+      "category": "person",
+      "input": "men tural beyi gordum",
+      "expected": "Mən Tural bəyi gördüm."
+    },
+    {
+      "id": "person-035",
+      "category": "person",
+      "input": "samir bey geldi",
+      "expected": "Samir bəy gəldi."
+    },
+    {
+      "id": "person-036",
+      "category": "person",
+      "input": "men samir beyi gordum",
+      "expected": "Mən Samir bəyi gördüm."
+    },
+    {
+      "id": "person-037",
+      "category": "person",
+      "input": "ramil bey geldi",
+      "expected": "Ramil bəy gəldi."
+    },
+    {
+      "id": "person-038",
+      "category": "person",
+      "input": "men ramil beyi gordum",
+      "expected": "Mən Ramil bəyi gördüm."
+    },
+    {
+      "id": "person-039",
+      "category": "person",
+      "input": "ramin bey geldi",
+      "expected": "Ramin bəy gəldi."
+    },
+    {
+      "id": "person-040",
+      "category": "person",
+      "input": "men ramin beyi gordum",
+      "expected": "Mən Ramin bəyi gördüm."
+    },
+    {
+      "id": "person-041",
+      "category": "person",
+      "input": "aydin bey geldi",
+      "expected": "Aydın bəy gəldi."
+    },
+    {
+      "id": "person-042",
+      "category": "person",
+      "input": "men aydin beyi gordum",
+      "expected": "Mən Aydın bəyi gördüm."
+    },
+    {
+      "id": "person-043",
+      "category": "person",
+      "input": "ferid bey geldi",
+      "expected": "Fərid bəy gəldi."
+    },
+    {
+      "id": "person-044",
+      "category": "person",
+      "input": "men ferid beyi gordum",
+      "expected": "Mən Fərid bəyi gördüm."
+    },
+    {
+      "id": "person-045",
+      "category": "person",
+      "input": "ferhad bey geldi",
+      "expected": "Fərhad bəy gəldi."
+    },
+    {
+      "id": "person-046",
+      "category": "person",
+      "input": "men ferhad beyi gordum",
+      "expected": "Mən Fərhad bəyi gördüm."
+    },
+    {
+      "id": "person-047",
+      "category": "person",
+      "input": "nicat bey geldi",
+      "expected": "Nicat bəy gəldi."
+    },
+    {
+      "id": "person-048",
+      "category": "person",
+      "input": "men nicat beyi gordum",
+      "expected": "Mən Nicat bəyi gördüm."
+    },
+    {
+      "id": "person-049",
+      "category": "person",
+      "input": "tebriz bey geldi",
+      "expected": "Təbriz bəy gəldi."
+    },
+    {
+      "id": "person-050",
+      "category": "person",
+      "input": "men tebriz beyi gordum",
+      "expected": "Mən Təbriz bəyi gördüm."
+    },
+    {
+      "id": "person-051",
+      "category": "person",
+      "input": "cavid bey geldi",
+      "expected": "Cavid bəy gəldi."
+    },
+    {
+      "id": "person-052",
+      "category": "person",
+      "input": "men cavid beyi gordum",
+      "expected": "Mən Cavid bəyi gördüm."
+    },
+    {
+      "id": "person-053",
+      "category": "person",
+      "input": "cavidan bey geldi",
+      "expected": "Cavidan bəy gəldi."
+    },
+    {
+      "id": "person-054",
+      "category": "person",
+      "input": "men cavidan beyi gordum",
+      "expected": "Mən Cavidan bəyi gördüm."
+    },
+    {
+      "id": "person-055",
+      "category": "person",
+      "input": "fuad bey geldi",
+      "expected": "Fuad bəy gəldi."
+    },
+    {
+      "id": "person-056",
+      "category": "person",
+      "input": "men fuad beyi gordum",
+      "expected": "Mən Fuad bəyi gördüm."
+    },
+    {
+      "id": "person-057",
+      "category": "person",
+      "input": "fikret bey geldi",
+      "expected": "Fikrət bəy gəldi."
+    },
+    {
+      "id": "person-058",
+      "category": "person",
+      "input": "men fikret beyi gordum",
+      "expected": "Mən Fikrət bəyi gördüm."
+    },
+    {
+      "id": "person-059",
+      "category": "person",
+      "input": "sebuhi bey geldi",
+      "expected": "Səbuhi bəy gəldi."
+    },
+    {
+      "id": "person-060",
+      "category": "person",
+      "input": "men sebuhi beyi gordum",
+      "expected": "Mən Səbuhi bəyi gördüm."
+    },
+    {
+      "id": "person-061",
+      "category": "person",
+      "input": "suleyman bey geldi",
+      "expected": "Süleyman bəy gəldi."
+    },
+    {
+      "id": "person-062",
+      "category": "person",
+      "input": "men suleyman beyi gordum",
+      "expected": "Mən Süleyman bəyi gördüm."
+    },
+    {
+      "id": "person-063",
+      "category": "person",
+      "input": "ibrahim bey geldi",
+      "expected": "İbrahim bəy gəldi."
+    },
+    {
+      "id": "person-064",
+      "category": "person",
+      "input": "men ibrahim beyi gordum",
+      "expected": "Mən İbrahim bəyi gördüm."
+    },
+    {
+      "id": "person-065",
+      "category": "person",
+      "input": "ismayil bey geldi",
+      "expected": "İsmayıl bəy gəldi."
+    },
+    {
+      "id": "person-066",
+      "category": "person",
+      "input": "men ismayil beyi gordum",
+      "expected": "Mən İsmayıl bəyi gördüm."
+    },
+    {
+      "id": "person-067",
+      "category": "person",
+      "input": "yusif bey geldi",
+      "expected": "Yusif bəy gəldi."
+    },
+    {
+      "id": "person-068",
+      "category": "person",
+      "input": "men yusif beyi gordum",
+      "expected": "Mən Yusif bəyi gördüm."
+    },
+    {
+      "id": "person-069",
+      "category": "person",
+      "input": "yaqub bey geldi",
+      "expected": "Yaqub bəy gəldi."
+    },
+    {
+      "id": "person-070",
+      "category": "person",
+      "input": "men yaqub beyi gordum",
+      "expected": "Mən Yaqub bəyi gördüm."
+    },
+    {
+      "id": "person-071",
+      "category": "person",
+      "input": "ilqar bey geldi",
+      "expected": "İlqar bəy gəldi."
+    },
+    {
+      "id": "person-072",
+      "category": "person",
+      "input": "men ilqar beyi gordum",
+      "expected": "Mən İlqar bəyi gördüm."
+    },
+    {
+      "id": "person-073",
+      "category": "person",
+      "input": "ilham bey geldi",
+      "expected": "İlham bəy gəldi."
+    },
+    {
+      "id": "person-074",
+      "category": "person",
+      "input": "men ilham beyi gordum",
+      "expected": "Mən İlham bəyi gördüm."
+    },
+    {
+      "id": "person-075",
+      "category": "person",
+      "input": "ilkin bey geldi",
+      "expected": "İlkin bəy gəldi."
+    },
+    {
+      "id": "person-076",
+      "category": "person",
+      "input": "men ilkin beyi gordum",
+      "expected": "Mən İlkin bəyi gördüm."
+    },
+    {
+      "id": "person-077",
+      "category": "person",
+      "input": "intiqam bey geldi",
+      "expected": "İntiqam bəy gəldi."
+    },
+    {
+      "id": "person-078",
+      "category": "person",
+      "input": "men intiqam beyi gordum",
+      "expected": "Mən İntiqam bəyi gördüm."
+    },
+    {
+      "id": "person-079",
+      "category": "person",
+      "input": "natiq bey geldi",
+      "expected": "Natiq bəy gəldi."
+    },
+    {
+      "id": "person-080",
+      "category": "person",
+      "input": "men natiq beyi gordum",
+      "expected": "Mən Natiq bəyi gördüm."
+    },
+    {
+      "id": "person-081",
+      "category": "person",
+      "input": "nebi bey geldi",
+      "expected": "Nəbi bəy gəldi."
+    },
+    {
+      "id": "person-082",
+      "category": "person",
+      "input": "men nebi beyi gordum",
+      "expected": "Mən Nəbi bəyi gördüm."
+    },
+    {
+      "id": "person-083",
+      "category": "person",
+      "input": "rauf bey geldi",
+      "expected": "Rauf bəy gəldi."
+    },
+    {
+      "id": "person-084",
+      "category": "person",
+      "input": "men rauf beyi gordum",
+      "expected": "Mən Rauf bəyi gördüm."
+    },
+    {
+      "id": "person-085",
+      "category": "person",
+      "input": "rovsen bey geldi",
+      "expected": "Rövşən bəy gəldi."
+    },
+    {
+      "id": "person-086",
+      "category": "person",
+      "input": "men rovsen beyi gordum",
+      "expected": "Mən Rövşən bəyi gördüm."
+    },
+    {
+      "id": "person-087",
+      "category": "person",
+      "input": "rufet bey geldi",
+      "expected": "Rüfət bəy gəldi."
+    },
+    {
+      "id": "person-088",
+      "category": "person",
+      "input": "men rufet beyi gordum",
+      "expected": "Mən Rüfət bəyi gördüm."
+    },
+    {
+      "id": "person-089",
+      "category": "person",
+      "input": "rehim bey geldi",
+      "expected": "Rəhim bəy gəldi."
+    },
+    {
+      "id": "person-090",
+      "category": "person",
+      "input": "men rehim beyi gordum",
+      "expected": "Mən Rəhim bəyi gördüm."
+    },
+    {
+      "id": "person-091",
+      "category": "person",
+      "input": "revan bey geldi",
+      "expected": "Rəvan bəy gəldi."
+    },
+    {
+      "id": "person-092",
+      "category": "person",
+      "input": "men revan beyi gordum",
+      "expected": "Mən Rəvan bəyi gördüm."
+    },
+    {
+      "id": "person-093",
+      "category": "person",
+      "input": "ruslan bey geldi",
+      "expected": "Ruslan bəy gəldi."
+    },
+    {
+      "id": "person-094",
+      "category": "person",
+      "input": "men ruslan beyi gordum",
+      "expected": "Mən Ruslan bəyi gördüm."
+    },
+    {
+      "id": "person-095",
+      "category": "person",
+      "input": "sadiq bey geldi",
+      "expected": "Sadiq bəy gəldi."
+    },
+    {
+      "id": "person-096",
+      "category": "person",
+      "input": "men sadiq beyi gordum",
+      "expected": "Mən Sadiq bəyi gördüm."
+    },
+    {
+      "id": "person-097",
+      "category": "person",
+      "input": "saleh bey geldi",
+      "expected": "Saleh bəy gəldi."
+    },
+    {
+      "id": "person-098",
+      "category": "person",
+      "input": "men saleh beyi gordum",
+      "expected": "Mən Saleh bəyi gördüm."
+    },
+    {
+      "id": "person-099",
+      "category": "person",
+      "input": "senan bey geldi",
+      "expected": "Sənan bəy gəldi."
+    },
+    {
+      "id": "person-100",
+      "category": "person",
+      "input": "men senan beyi gordum",
+      "expected": "Mən Sənan bəyi gördüm."
+    },
+    {
+      "id": "person-101",
+      "category": "person",
+      "input": "serxan bey geldi",
+      "expected": "Sərxan bəy gəldi."
+    },
+    {
+      "id": "person-102",
+      "category": "person",
+      "input": "men serxan beyi gordum",
+      "expected": "Mən Sərxan bəyi gördüm."
+    },
+    {
+      "id": "person-103",
+      "category": "person",
+      "input": "seymur bey geldi",
+      "expected": "Seymur bəy gəldi."
+    },
+    {
+      "id": "person-104",
+      "category": "person",
+      "input": "men seymur beyi gordum",
+      "expected": "Mən Seymur bəyi gördüm."
+    },
+    {
+      "id": "person-105",
+      "category": "person",
+      "input": "sahin bey geldi",
+      "expected": "Şahin bəy gəldi."
+    },
+    {
+      "id": "person-106",
+      "category": "person",
+      "input": "men sahin beyi gordum",
+      "expected": "Mən Şahin bəyi gördüm."
+    },
+    {
+      "id": "person-107",
+      "category": "person",
+      "input": "samil bey geldi",
+      "expected": "Şamil bəy gəldi."
+    },
+    {
+      "id": "person-108",
+      "category": "person",
+      "input": "men samil beyi gordum",
+      "expected": "Mən Şamil bəyi gördüm."
+    },
+    {
+      "id": "person-109",
+      "category": "person",
+      "input": "tahir bey geldi",
+      "expected": "Tahir bəy gəldi."
+    },
+    {
+      "id": "person-110",
+      "category": "person",
+      "input": "men tahir beyi gordum",
+      "expected": "Mən Tahir bəyi gördüm."
+    },
+    {
+      "id": "person-111",
+      "category": "person",
+      "input": "tofiq bey geldi",
+      "expected": "Tofiq bəy gəldi."
+    },
+    {
+      "id": "person-112",
+      "category": "person",
+      "input": "men tofiq beyi gordum",
+      "expected": "Mən Tofiq bəyi gördüm."
+    },
+    {
+      "id": "person-113",
+      "category": "person",
+      "input": "vusal bey geldi",
+      "expected": "Vüsal bəy gəldi."
+    },
+    {
+      "id": "person-114",
+      "category": "person",
+      "input": "men vusal beyi gordum",
+      "expected": "Mən Vüsal bəyi gördüm."
+    },
+    {
+      "id": "person-115",
+      "category": "person",
+      "input": "xeyal bey geldi",
+      "expected": "Xəyal bəy gəldi."
+    },
+    {
+      "id": "person-116",
+      "category": "person",
+      "input": "men xeyal beyi gordum",
+      "expected": "Mən Xəyal bəyi gördüm."
+    },
+    {
+      "id": "person-117",
+      "category": "person",
+      "input": "xeqani bey geldi",
+      "expected": "Xəqani bəy gəldi."
+    },
+    {
+      "id": "person-118",
+      "category": "person",
+      "input": "men xeqani beyi gordum",
+      "expected": "Mən Xəqani bəyi gördüm."
+    },
+    {
+      "id": "person-119",
+      "category": "person",
+      "input": "zaur bey geldi",
+      "expected": "Zaur bəy gəldi."
+    },
+    {
+      "id": "person-120",
+      "category": "person",
+      "input": "men zaur beyi gordum",
+      "expected": "Mən Zaur bəyi gördüm."
+    },
+    {
+      "id": "person-121",
+      "category": "person",
+      "input": "ziya bey geldi",
+      "expected": "Ziya bəy gəldi."
+    },
+    {
+      "id": "person-122",
+      "category": "person",
+      "input": "men ziya beyi gordum",
+      "expected": "Mən Ziya bəyi gördüm."
+    },
+    {
+      "id": "person-123",
+      "category": "person",
+      "input": "zakir bey geldi",
+      "expected": "Zakir bəy gəldi."
+    },
+    {
+      "id": "person-124",
+      "category": "person",
+      "input": "men zakir beyi gordum",
+      "expected": "Mən Zakir bəyi gördüm."
+    },
+    {
+      "id": "person-125",
+      "category": "person",
+      "input": "zamin bey geldi",
+      "expected": "Zamin bəy gəldi."
+    },
+    {
+      "id": "person-126",
+      "category": "person",
+      "input": "men zamin beyi gordum",
+      "expected": "Mən Zamin bəyi gördüm."
+    },
+    {
+      "id": "person-127",
+      "category": "person",
+      "input": "zaur bey geldi",
+      "expected": "Zaur bəy gəldi."
+    },
+    {
+      "id": "person-128",
+      "category": "person",
+      "input": "men zaur beyi gordum",
+      "expected": "Mən Zaur bəyi gördüm."
+    },
+    {
+      "id": "person-129",
+      "category": "person",
+      "input": "zefer bey geldi",
+      "expected": "Zəfər bəy gəldi."
+    },
+    {
+      "id": "person-130",
+      "category": "person",
+      "input": "men zefer beyi gordum",
+      "expected": "Mən Zəfər bəyi gördüm."
+    },
+    {
+      "id": "person-131",
+      "category": "person",
+      "input": "aytac xanim geldi",
+      "expected": "Aytac xanım gəldi."
+    },
+    {
+      "id": "person-132",
+      "category": "person",
+      "input": "men aytac xanimi gordum",
+      "expected": "Mən Aytac xanımı gördüm."
+    },
+    {
+      "id": "person-133",
+      "category": "person",
+      "input": "aysel xanim geldi",
+      "expected": "Aysel xanım gəldi."
+    },
+    {
+      "id": "person-134",
+      "category": "person",
+      "input": "men aysel xanimi gordum",
+      "expected": "Mən Aysel xanımı gördüm."
+    },
+    {
+      "id": "person-135",
+      "category": "person",
+      "input": "aygun xanim geldi",
+      "expected": "Aygün xanım gəldi."
+    },
+    {
+      "id": "person-136",
+      "category": "person",
+      "input": "men aygun xanimi gordum",
+      "expected": "Mən Aygün xanımı gördüm."
+    },
+    {
+      "id": "person-137",
+      "category": "person",
+      "input": "aynur xanim geldi",
+      "expected": "Aynur xanım gəldi."
+    },
+    {
+      "id": "person-138",
+      "category": "person",
+      "input": "men aynur xanimi gordum",
+      "expected": "Mən Aynur xanımı gördüm."
+    },
+    {
+      "id": "person-139",
+      "category": "person",
+      "input": "aylin xanim geldi",
+      "expected": "Aylin xanım gəldi."
+    },
+    {
+      "id": "person-140",
+      "category": "person",
+      "input": "men aylin xanimi gordum",
+      "expected": "Mən Aylin xanımı gördüm."
+    },
+    {
+      "id": "person-141",
+      "category": "person",
+      "input": "aysen xanim geldi",
+      "expected": "Ayşən xanım gəldi."
+    },
+    {
+      "id": "person-142",
+      "category": "person",
+      "input": "men aysen xanimi gordum",
+      "expected": "Mən Ayşən xanımı gördüm."
+    },
+    {
+      "id": "person-143",
+      "category": "person",
+      "input": "afaq xanim geldi",
+      "expected": "Afaq xanım gəldi."
+    },
+    {
+      "id": "person-144",
+      "category": "person",
+      "input": "men afaq xanimi gordum",
+      "expected": "Mən Afaq xanımı gördüm."
+    },
+    {
+      "id": "person-145",
+      "category": "person",
+      "input": "afet xanim geldi",
+      "expected": "Afət xanım gəldi."
+    },
+    {
+      "id": "person-146",
+      "category": "person",
+      "input": "men afet xanimi gordum",
+      "expected": "Mən Afət xanımı gördüm."
+    },
+    {
+      "id": "person-147",
+      "category": "person",
+      "input": "arzu xanim geldi",
+      "expected": "Arzu xanım gəldi."
+    },
+    {
+      "id": "person-148",
+      "category": "person",
+      "input": "men arzu xanimi gordum",
+      "expected": "Mən Arzu xanımı gördüm."
+    },
+    {
+      "id": "person-149",
+      "category": "person",
+      "input": "bahara xanim geldi",
+      "expected": "Bahara xanım gəldi."
+    },
+    {
+      "id": "person-150",
+      "category": "person",
+      "input": "men bahara xanimi gordum",
+      "expected": "Mən Bahara xanımı gördüm."
+    },
+    {
+      "id": "person-151",
+      "category": "person",
+      "input": "bahar xanim geldi",
+      "expected": "Bahar xanım gəldi."
+    },
+    {
+      "id": "person-152",
+      "category": "person",
+      "input": "men bahar xanimi gordum",
+      "expected": "Mən Bahar xanımı gördüm."
+    },
+    {
+      "id": "person-153",
+      "category": "person",
+      "input": "benovse xanim geldi",
+      "expected": "Bənövşə xanım gəldi."
+    },
+    {
+      "id": "person-154",
+      "category": "person",
+      "input": "men benovse xanimi gordum",
+      "expected": "Mən Bənövşə xanımı gördüm."
+    },
+    {
+      "id": "person-155",
+      "category": "person",
+      "input": "dilare xanim geldi",
+      "expected": "Dilarə xanım gəldi."
+    },
+    {
+      "id": "person-156",
+      "category": "person",
+      "input": "men dilare xanimi gordum",
+      "expected": "Mən Dilarə xanımı gördüm."
+    },
+    {
+      "id": "person-157",
+      "category": "person",
+      "input": "diana xanim geldi",
+      "expected": "Diana xanım gəldi."
+    },
+    {
+      "id": "person-158",
+      "category": "person",
+      "input": "men diana xanimi gordum",
+      "expected": "Mən Diana xanımı gördüm."
+    },
+    {
+      "id": "person-159",
+      "category": "person",
+      "input": "esmira xanim geldi",
+      "expected": "Esmira xanım gəldi."
+    },
+    {
+      "id": "person-160",
+      "category": "person",
+      "input": "men esmira xanimi gordum",
+      "expected": "Mən Esmira xanımı gördüm."
+    },
+    {
+      "id": "person-161",
+      "category": "person",
+      "input": "elnare xanim geldi",
+      "expected": "Elnarə xanım gəldi."
+    },
+    {
+      "id": "person-162",
+      "category": "person",
+      "input": "men elnare xanimi gordum",
+      "expected": "Mən Elnarə xanımı gördüm."
+    },
+    {
+      "id": "person-163",
+      "category": "person",
+      "input": "elmira xanim geldi",
+      "expected": "Elmira xanım gəldi."
+    },
+    {
+      "id": "person-164",
+      "category": "person",
+      "input": "men elmira xanimi gordum",
+      "expected": "Mən Elmira xanımı gördüm."
+    },
+    {
+      "id": "person-165",
+      "category": "person",
+      "input": "fidan xanim geldi",
+      "expected": "Fidan xanım gəldi."
+    },
+    {
+      "id": "person-166",
+      "category": "person",
+      "input": "men fidan xanimi gordum",
+      "expected": "Mən Fidan xanımı gördüm."
+    },
+    {
+      "id": "person-167",
+      "category": "person",
+      "input": "ferqane xanim geldi",
+      "expected": "Fərqanə xanım gəldi."
+    },
+    {
+      "id": "person-168",
+      "category": "person",
+      "input": "men ferqane xanimi gordum",
+      "expected": "Mən Fərqanə xanımı gördüm."
+    },
+    {
+      "id": "person-169",
+      "category": "person",
+      "input": "gunay xanim geldi",
+      "expected": "Günay xanım gəldi."
+    },
+    {
+      "id": "person-170",
+      "category": "person",
+      "input": "men gunay xanimi gordum",
+      "expected": "Mən Günay xanımı gördüm."
+    },
+    {
+      "id": "person-171",
+      "category": "person",
+      "input": "gunel xanim geldi",
+      "expected": "Günel xanım gəldi."
+    },
+    {
+      "id": "person-172",
+      "category": "person",
+      "input": "men gunel xanimi gordum",
+      "expected": "Mən Günel xanımı gördüm."
+    },
+    {
+      "id": "person-173",
+      "category": "person",
+      "input": "guler xanim geldi",
+      "expected": "Gülər xanım gəldi."
+    },
+    {
+      "id": "person-174",
+      "category": "person",
+      "input": "men guler xanimi gordum",
+      "expected": "Mən Gülər xanımı gördüm."
+    },
+    {
+      "id": "person-175",
+      "category": "person",
+      "input": "gulnar xanim geldi",
+      "expected": "Gülnar xanım gəldi."
+    },
+    {
+      "id": "person-176",
+      "category": "person",
+      "input": "men gulnar xanimi gordum",
+      "expected": "Mən Gülnar xanımı gördüm."
+    },
+    {
+      "id": "person-177",
+      "category": "person",
+      "input": "gulsen xanim geldi",
+      "expected": "Gülşən xanım gəldi."
+    },
+    {
+      "id": "person-178",
+      "category": "person",
+      "input": "men gulsen xanimi gordum",
+      "expected": "Mən Gülşən xanımı gördüm."
+    },
+    {
+      "id": "person-179",
+      "category": "person",
+      "input": "hecer xanim geldi",
+      "expected": "Həcər xanım gəldi."
+    },
+    {
+      "id": "person-180",
+      "category": "person",
+      "input": "men hecer xanimi gordum",
+      "expected": "Mən Həcər xanımı gördüm."
+    },
+    {
+      "id": "adversarial-001",
+      "category": "adversarial",
+      "input": "men saatı yoxladım",
+      "expected": "Mən saatı yoxladım."
+    },
+    {
+      "id": "adversarial-002",
+      "category": "adversarial",
+      "input": "sekilde kitab var",
+      "expected": "Şəkildə kitab var."
+    },
+    {
+      "id": "adversarial-003",
+      "category": "adversarial",
+      "input": "men umid edirem",
+      "expected": "Mən ümid edirəm."
+    },
+    {
+      "id": "adversarial-004",
+      "category": "adversarial",
+      "input": "bu gunun temeli daha aydın gorunur",
+      "expected": "Bu günün təməli daha aydın görünür."
+    },
+    {
+      "id": "adversarial-005",
+      "category": "adversarial",
+      "input": "insan gelecek haqqinda xeyal edir",
+      "expected": "İnsan gələcək haqqında xəyal edir."
+    },
+    {
+      "id": "adversarial-006",
+      "category": "adversarial",
+      "input": "naxcivan muxtar respublikasi haqqinda yazdim",
+      "expected": "Naxçıvan Muxtar Respublikası haqqında yazdım."
+    },
+    {
+      "id": "adversarial-007",
+      "category": "adversarial",
+      "input": "qebeleye gedirik",
+      "expected": "Qəbələyə gedirik."
+    },
+    {
+      "id": "adversarial-008",
+      "category": "adversarial",
+      "input": "anxcivan haqqinda yazdim",
+      "expected": "Naxçıvan haqqında yazdım."
+    },
+    {
+      "id": "typo-001",
+      "category": "typo",
+      "input": "nxacivan haqqında məlumat var",
+      "expected": "Naxçıvan haqqında məlumat var."
+    },
+    {
+      "id": "typo-002",
+      "category": "typo",
+      "input": "smuqayit haqqında məlumat var",
+      "expected": "Sumqayıt haqqında məlumat var."
+    },
+    {
+      "id": "typo-003",
+      "category": "typo",
+      "input": "imsayilli haqqında məlumat var",
+      "expected": "İsmayıllı haqqında məlumat var."
+    },
+    {
+      "id": "typo-004",
+      "category": "typo",
+      "input": "znegilan haqqında məlumat var",
+      "expected": "Zəngilan haqqında məlumat var."
+    },
+    {
+      "id": "typo-005",
+      "category": "typo",
+      "input": "qbeele haqqında məlumat var",
+      "expected": "Qəbələ haqqında məlumat var."
+    },
+    {
+      "id": "typo-006",
+      "category": "typo",
+      "input": "lnekeran haqqında məlumat var",
+      "expected": "Lənkəran haqqında məlumat var."
+    },
+    {
+      "id": "typo-007",
+      "category": "typo",
+      "input": "mnigecevir haqqında məlumat var",
+      "expected": "Mingəçevir haqqında məlumat var."
+    },
+    {
+      "id": "typo-008",
+      "category": "typo",
+      "input": "qraabag haqqında məlumat var",
+      "expected": "Qarabağ haqqında məlumat var."
+    },
+    {
+      "id": "typo-009",
+      "category": "typo",
+      "input": "aezrbaycan haqqında məlumat var",
+      "expected": "Azərbaycan haqqında məlumat var."
+    },
+    {
+      "id": "typo-010",
+      "category": "typo",
+      "input": "grucustan haqqında məlumat var",
+      "expected": "Gürcüstan haqqında məlumat var."
+    },
+    {
+      "id": "typo-011",
+      "category": "typo",
+      "input": "smaaxi haqqında məlumat var",
+      "expected": "Şamaxı haqqında məlumat var."
+    },
+    {
+      "id": "typo-012",
+      "category": "typo",
+      "input": "sbaran haqqında məlumat var",
+      "expected": "Şabran haqqında məlumat var."
+    },
+    {
+      "id": "organization-001",
+      "category": "organization",
+      "input": "azerbaycan demir yollari haqqında məlumat var",
+      "expected": "Azərbaycan Dəmir Yolları haqqında məlumat var."
+    },
+    {
+      "id": "organization-002",
+      "category": "organization",
+      "input": "mən azerbaycan demir yollari haqqında yazdım",
+      "expected": "Mən Azərbaycan Dəmir Yolları haqqında yazdım."
+    },
+    {
+      "id": "organization-003",
+      "category": "organization",
+      "input": "azerbaycan respublikasinin merkezi banki haqqında məlumat var",
+      "expected": "Azərbaycan Respublikasının Mərkəzi Bankı haqqında məlumat var."
+    },
+    {
+      "id": "organization-004",
+      "category": "organization",
+      "input": "mən azerbaycan respublikasinin merkezi banki haqqında yazdım",
+      "expected": "Mən Azərbaycan Respublikasının Mərkəzi Bankı haqqında yazdım."
+    },
+    {
+      "id": "organization-005",
+      "category": "organization",
+      "input": "baki dovlet universiteti haqqında məlumat var",
+      "expected": "Bakı Dövlət Universiteti haqqında məlumat var."
+    },
+    {
+      "id": "organization-006",
+      "category": "organization",
+      "input": "mən baki dovlet universiteti haqqında yazdım",
+      "expected": "Mən Bakı Dövlət Universiteti haqqında yazdım."
+    },
+    {
+      "id": "organization-007",
+      "category": "organization",
+      "input": "azerbaycan milli elmler akademiyasi haqqında məlumat var",
+      "expected": "Azərbaycan Milli Elmlər Akademiyası haqqında məlumat var."
+    },
+    {
+      "id": "organization-008",
+      "category": "organization",
+      "input": "mən azerbaycan milli elmler akademiyasi haqqında yazdım",
+      "expected": "Mən Azərbaycan Milli Elmlər Akademiyası haqqında yazdım."
+    },
+    {
+      "id": "organization-009",
+      "category": "organization",
+      "input": "dovlet imtahan merkezi haqqında məlumat var",
+      "expected": "Dövlət İmtahan Mərkəzi haqqında məlumat var."
+    },
+    {
+      "id": "organization-010",
+      "category": "organization",
+      "input": "mən dovlet imtahan merkezi haqqında yazdım",
+      "expected": "Mən Dövlət İmtahan Mərkəzi haqqında yazdım."
+    },
+    {
+      "id": "negative-001",
+      "category": "negative",
+      "input": "men umid edirem",
+      "expected": "Mən ümid edirəm."
+    },
+    {
+      "id": "negative-002",
+      "category": "negative",
+      "input": "dəniz sakitdir",
+      "expected": "Dəniz sakitdir."
+    },
+    {
+      "id": "negative-003",
+      "category": "negative",
+      "input": "arzu edirem",
+      "expected": "Arzu edirəm."
+    },
+    {
+      "id": "negative-004",
+      "category": "negative",
+      "input": "güllər açdı",
+      "expected": "Güllər açdı."
+    },
+    {
+      "id": "negative-005",
+      "category": "negative",
+      "input": "xeyal edirem",
+      "expected": "Xəyal edirəm."
+    },
+    {
+      "id": "negative-006",
+      "category": "negative",
+      "input": "bu fikir aydindir",
+      "expected": "Bu fikir aydındır."
+    },
+    {
+      "id": "negative-007",
+      "category": "negative",
+      "input": "mən sevincliyəm",
+      "expected": "Mən sevincliyəm."
+    },
+    {
+      "id": "negative-008",
+      "category": "negative",
+      "input": "biz vefa gosteririk",
+      "expected": "Biz vəfa göstəririk."
+    },
+    {
+      "id": "negative-009",
+      "category": "negative",
+      "input": "men bahari sevirəm",
+      "expected": "Mən baharı sevirəm."
+    },
+    {
+      "id": "negative-010",
+      "category": "negative",
+      "input": "baki haqqinda danisdiq",
+      "expected": "Bakı haqqında danışdıq."
+    }
+  ]
+}

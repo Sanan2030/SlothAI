@@ -8,8 +8,9 @@ import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from '.
 import { protectKnownTerminology } from './protected-terminology';
 import { parseEmailSections } from './rules/email';
 import { segmentIndependentClauses } from './segmentation';
-import { detectExclamation, punctuateCommas, terminalPunctuation } from './punctuation';
+import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
+import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText } from './entities/resolver';
 
 export const MAX_TEXT_LENGTH = 10_000;
 export interface LocalCorrection { text: string; corrections: number }
@@ -61,13 +62,14 @@ function punctuate(line: string): string {
     .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
-    const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence);
+    const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence)
+      && !/(?:^|\s)nə\s+bilirik$/iu.test(lastSentence);
     const exclamation = /^nə (?:gözəl|yaxşı|pis|qəribə)\s/i.test(lastSentence);
     const discourseMarker = /^nə isə(?:\s|$)/i.test(lastSentence);
     const explicitQuestion = /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən|necəsən|necəsiniz)$)/i.test(lastSentence);
     const alternativeQuestion = /,\s*yoxsa\s+[^.!?]+$/iu.test(lastSentence);
     const tagQuestion = /,\s*düzdür$/iu.test(lastSentence);
-    const question = !indirect && !exclamation && !discourseMarker && (explicitQuestion || alternativeQuestion || tagQuestion);
+    const question = !indirect && !exclamation && !discourseMarker && (explicitQuestion || alternativeQuestion || tagQuestion || detectQuestion(lastSentence));
     result = question && !detectExclamation(result) ? result + '?' : terminalPunctuation(result);
   }
   return capitalize(result);
@@ -97,7 +99,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   const services = runtime.services ?? languageServices;
-  const restoreWord = (word: string) => services.spelling.resolve(word, services);
+  const restoreWord = (word: string) => isCanonicalEntity(word) || /^eləmi$/iu.test(word) ? word : services.spelling.resolve(word, services);
   const protectedText: string[] = [];
   // Reserve an unused delimiter; user-supplied private-use characters cannot
   // accidentally collide with our placeholders.
@@ -123,6 +125,8 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   // terms need opaque spans; spelling resolution already protects lexical terms.
   text = protectKnownTerminology(text, canonical =>
     /[.#]/u.test(canonical) || canonical === 'npm' ? protect(canonical) : canonical);
+  text = protectMultiwordEntities(text, protect);
+  text = resolveEntitiesInText(text);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);

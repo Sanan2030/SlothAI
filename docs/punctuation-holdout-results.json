@@ -1,27 +1,27 @@
 {
-  "total": 285,
-  "passed": 285,
+  "total": 335,
+  "passed": 335,
   "failed": 0,
   "categories": {
     "question": {
-      "passed": 60,
-      "total": 60
+      "passed": 75,
+      "total": 75
     },
     "exclamation": {
-      "passed": 35,
-      "total": 35
+      "passed": 45,
+      "total": 45
     },
     "comma": {
-      "passed": 80,
-      "total": 80
+      "passed": 95,
+      "total": 95
     },
     "runon": {
-      "passed": 60,
-      "total": 60
+      "passed": 65,
+      "total": 65
     },
     "paragraph": {
-      "passed": 50,
-      "total": 50
+      "passed": 55,
+      "total": 55
     }
   },
   "failures": []

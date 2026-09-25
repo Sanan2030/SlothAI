@@ -5,7 +5,7 @@ import { correctText, formatEmail } from '../lib/editor/correct';
 const examples = [
   ['İşgüzar müraciət', 'salam her vaxtiniz xeyir zehmet olmasa sabahki gorusun vaxtini deqiqlesdirin', 'Salam, hər vaxtınız xeyir. Zəhmət olmasa, sabahkı görüşün vaxtını dəqiqləşdirin.'],
   ['Mürəkkəb cümlə', 'men bilirem ki senedler hazirdir amma hele gonderilmedi', 'Mən bilirəm ki, sənədlər hazırdır, amma hələ göndərilmədi.'],
-  ['Xəbər cümləsi', 'ne gozel gundur', 'Nə gözəl gündür.'],
+  ['Nida cümləsi', 'ne gozel gundur', 'Nə gözəl gündür!'],
   ['Dolayı sual', 'nece islediyini bilirem', 'Necə işlədiyini bilirəm.'],
   ['Müstəqil sual', 'nece isleyir', 'Necə işləyir?'],
   ['Siyahı', 'plan: 1) senedi hazirla 2) yoxla 3) gonder', 'Plan:\n1. Sənədi hazırla.\n2. Yoxla.\n3. Göndər.'],
