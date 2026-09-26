@@ -122,3 +122,6 @@ const report = { total: results.length, distinctMeanings: originals.length, pass
 writeFileSync(new URL('../docs/unseen-evaluation-results.json', import.meta.url), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify({ total: report.total, distinctMeanings: report.distinctMeanings, passed, failed: report.failed,
   failures: results.filter(item => !item.passed).slice(0, 25) }, null, 2));
+if (report.failed !== 0 || results.some(item => !item.idempotent)) {
+  process.exitCode = 1;
+}

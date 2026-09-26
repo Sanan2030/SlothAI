@@ -456,6 +456,53 @@ input:focus-visible {
   opacity: 0.7;
 }
 
+.workspace-rich-editor { min-width: 0; }
+.workspace-rich-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 7px;
+}
+.workspace-rich-toolbar button {
+  min-width: 32px;
+  padding: 5px 8px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.workspace-rich-toolbar button:hover, .workspace-rich-toolbar button:focus-visible {
+  border-color: var(--accent);
+}
+.workspace-rich-toolbar button:disabled { opacity: 0.4; cursor: default; }
+.workspace-rich-surface {
+  min-height: 260px;
+  max-height: 520px;
+  overflow: auto;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.workspace-rich-surface:focus { border-color: var(--accent); }
+.workspace-rich-surface[data-empty="true"]::before {
+  content: attr(data-placeholder);
+  color: var(--text-soft);
+  pointer-events: none;
+}
+.workspace-rich-surface p { margin: 0 0 0.45em; }
+.workspace-rich-surface ul, .workspace-rich-surface ol { padding-left: 1.6em; margin: 0 0 0.45em; }
+.workspace-rich-surface code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.workspace-rich-surface q { quotes: none; }
+.workspace-output .workspace-rich-surface { min-height: 200px; }
+
 .workspace-output {
   min-height: 260px;
   max-height: 520px;
@@ -706,6 +753,7 @@ input:focus-visible {
   }
 
   .workspace-editor-column textarea,
+  .workspace-rich-surface,
   .workspace-output {
     min-height: 220px;
   }

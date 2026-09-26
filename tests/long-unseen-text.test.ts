@@ -24,7 +24,7 @@ test('long unseen technical diary uses reviewed spelling, boundaries and list fo
     'Günortadan sonra Əlinin göndərdiyi pull request-i yoxladım.',
     'TODO retry logic yazısı var idi, amma testlər keçirdi.',
     'Axşam isə Bakı metrosunda internet zəif idi deyə deploy prosesini evə çatandan sonra davam etdirdim.',
-    'Sabah üçün planım:', '1. Logları yoxlamaq.', '2. Xətanı təkrar etmək.', '3. Düzəlişi stagingdə test etmək.',
+    'Sabah üçün planım:', '1. Logları yoxlamaq.', '2. Xətanı təkrar etmək.', '3. Düzəlişi staging-də test etmək.',
   ]) assert.ok(output.includes(expected), expected);
   assert.equal(correctText(output).text, output);
 });

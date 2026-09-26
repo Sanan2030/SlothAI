@@ -13,7 +13,7 @@ export interface ClauseAnalysis {
 
 const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|kimsən|necəsən|necəsiniz|haradasan|haradasınız))(?!\p{L})/iu;
 const embedded = /^(?:mən\s+)?(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
-const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ırsan|irsən|ursan|ürsən)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
+const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
 const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf)(?:\s|[,!]|$)/iu;
 const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
@@ -22,6 +22,7 @@ const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|
 export function detectQuestion(text: string): boolean {
   const value = text.trim().replace(/[.!?]+$/u, '');
   if (embedded.test(value) || /^nə\s+isə(?!\p{L})/iu.test(value)
+    || /(?:^|\s)bir\s+neçə(?=\s|$)/iu.test(value)
     || /(?:^|[^\p{L}])heç\s+kim(?=$|[^\p{L}])/iu.test(value)
     || /(?:^|[^\p{L}])hər\s+hansı(?=$|[^\p{L}])/iu.test(value)
     || (/(?:bilirik|bilirsiniz|bilirəm|bildim|bilərəm|öyrəndim|izah etdi|dedi)$/iu.test(value)
@@ -62,6 +63,7 @@ export function terminalPunctuation(text: string): string {
 /** Commas only at grammatical boundaries, with existing commas left intact. */
 export function punctuateCommas(text: string): string {
   return text
+    .replace(/\b([A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}(?:ı|i|u|ü))\s+(?=[A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}\s+və\s+[A-ZƏÇĞIİÖŞÜ]{2,6}\b)/gu, '$1, ')
     .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
     .replace(/(^|[.!?]\s+)(beləliklə|ümumiyyətlə|əslində|məsələn|əksinə|səncə|görəsən)\s+/giu, '$1$2, ')

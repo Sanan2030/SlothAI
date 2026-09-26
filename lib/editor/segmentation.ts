@@ -7,7 +7,7 @@ const copula = /(?:yam|yəm|san|sən|dır|dir|dur|dür|dılar|dilər|durlar|dür
 const dependent = /(?:anda|əndə|arkən|ərkən|dıqda|dikdə|duqda|dükdə|sa|sə|dığı|diyi|duğu|düyü)$/iu;
 const connectors = new Set(['ki', 'çünki', 'amma', 'lakin', 'ancaq', 'isə', 'və', 'ya', 'yoxsa', 'əgər', 'üçün']);
 const namedSubjects = new Set([...givenNames.filter(name => !ambiguousNames.has(name)), ...places].map(name => name.toLocaleLowerCase('az-AZ')));
-const subjects = new Set(['mən', 'sən', 'biz', 'siz', 'o', 'onlar', 'biri']);
+const subjects = new Set(['mən', 'sən', 'biz', 'siz', 'o', 'onlar', 'biri', 'icraçı']);
 const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dünən', 'birdən', 'günortadan']);
 const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 'ilə']);
 
@@ -23,6 +23,9 @@ function independentStart(word: string): boolean {
 
 export function isFinitePredicate(word: string): boolean {
   const lower = word.toLocaleLowerCase('az-AZ');
+  // Participles and adjectives modify the following noun; their endings can
+  // resemble finite predicates when the dictionary has no inflection entry.
+  if (/^(?:gələcək|qədim)$/iu.test(lower)) return false;
   if (lightVerbNouns.has(lower)) return false;
   if (lower.length < 4 || dependent.test(lower) || timeWords.has(lower)) return false;
   const morphology = productiveMorphology.analyzeWord(lower);

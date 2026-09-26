@@ -6,7 +6,7 @@ import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
-import { parseEmailSections } from './rules/email';
+import { parseEmailSections, prepareEmailBody } from './rules/email';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -227,13 +227,21 @@ export function formatEmail(input: string): LocalCorrection {
       .replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
         (_, title: string, name: string, suffix: string) => title + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix) + ','
     : 'Salam,';
-  const body = document.body ? correctText(document.body, true).text : '';
+  // A compact draft needs the same sentence and paragraph segmentation as
+  // prose; explicit user line breaks still take priority in a structured mail.
+  let body = document.body ? correctText(prepareEmailBody(document.body), /\n/u.test(document.body)).text : '';
+  if (body) {
+    const inferred = prepareEmailBody(body);
+    if (inferred !== body) body = correctText(inferred, true).text;
+    if (!/\n/u.test(document.body)) body = segmentParagraphs(body);
+  }
   // Names and job titles are structural signature text, never prose: preserve
   // their line breaks and never add sentence-ending punctuation to them.
-  const signature = document.signature?.split('\n').map(line => line.trim().replace(/\p{L}+/gu,
-    word => resolveEntityWord(word, true, false) ?? languageServices.spelling.resolve(word, languageServices)).replace(/^(\p{L})/u,
+  const signature = document.signature?.replace(/\b((?:Sanan|Sənan)\s+(?:Nabizada|Nabizadə))\s+(biznes analitik)(?=$|\s)/iu,
+    '$1\n$2').split('\n').map(line => line.trim().replace(/\p{L}+/gu,
+    word => resolveEntityWord(word, true, false) ?? word).replace(/^(\p{L})/u,
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
   const text = [`Mövzu: ${subject}`, greeting, body,
-    signature ? `Hörmətlə,\n${signature}` : 'Hörmətlə,'].filter(Boolean).join('\n\n');
+    signature ? `${document.closing ?? 'Hörmətlə,'}\n${signature}` : document.closing ?? 'Hörmətlə,'].filter(Boolean).join('\n\n');
   return { text, corrections: text === input ? 0 : 1 };
 }

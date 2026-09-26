@@ -16,6 +16,8 @@ const hyphenatedTechnicalBases = new Map<string, string>([
   ['cache', 'cache'],
   ['branch', 'branch'],
   ['production', 'production'],
+  ['workflow', 'workflow'],
+  ['staging', 'staging'],
 ]);
 
 function technicalBase(word: string): string | undefined {
@@ -86,7 +88,7 @@ export const technicalAliases: Record<string, string> = {
   sinaglari: 'sınaqları', kopyasi: 'kopiyası', integrasiyasi: 'inteqrasiyası',
   uzmanlarimiz: 'mütəxəssislərimiz', muesse: 'müəssisə',
   tehsillendirme: 'təlimləndirmə',
-  ofise: 'ofisə', backlogdaki: 'backlogdakı', taskin: 'taskın',
+  ofise: 'ofisə', backlogdaki: 'backlogdakı', taskin: 'taskın', taski: 'taskı',
   yukleyirler: 'yükləyirlər', backendde: 'backenddə', responseun: 'response-un',
   arasdirdiq: 'araşdırdıq', sorgusunda: 'sorğusunda', etdikden: 'etdikdən',
   isledi: 'işlədi', elinin: 'Əlinin', gonderdiyi: 'göndərdiyi',
@@ -101,6 +103,9 @@ export const technicalAliases: Record<string, string> = {
 // Called only after code/URLs have been replaced with protected placeholders.
 export function prepareTechnicalPhrases(text: string): string {
   return text
+    .replace(/(?<!\p{L})(rsd|srs|api)\s+(de|də|da)(?=\s+(?:sənəd|sened|qeydiyyat|müraciət|muraciet|istifadəçi|istifadeci|funksiya|xəta|xeta|yeni|\p{L}+(?:in|ın|un|ün|i|ı|u|ü|lər|lar))(?=$|[^\p{L}]))/giu,
+      (_, acronym: string, suffix: string) => acronym.toUpperCase() + '-' + (suffix === 'da' ? 'da' : 'də'))
+    .replace(/(?<!\p{L})workflow\s+(dan|dən)(?!\p{L})/giu, 'workflow-dan')
     .replace(/(^|[^\p{L}\p{N}_])open api(?=$|[^\p{L}\p{N}_])/giu, '$1OpenAPI')
     .replace(/(^|[^\p{L}\p{N}_])no sql(?=$|[^\p{L}\p{N}_])/giu, '$1NoSQL')
     .replace(/(^|[^\p{L}\p{N}_])ci cd(?=$|[^\p{L}\p{N}_])/giu, '$1CI/CD')

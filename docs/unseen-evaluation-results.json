@@ -1,16 +1,16 @@
 {
   "total": 400,
   "distinctMeanings": 200,
-  "passed": 306,
-  "failed": 94,
+  "passed": 400,
+  "failed": 0,
   "results": [
     {
       "id": "unseen-ascii-1",
       "category": "undiacritized",
       "input": "bu seher deniz sakit idi",
       "expected": "Bu səhər dəniz sakit idi.",
-      "actual": "Bu seher dəniz sakit idi.",
-      "passed": false,
+      "actual": "Bu səhər dəniz sakit idi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -45,8 +45,8 @@
       "category": "undiacritized",
       "input": "dostlarim kohne mektebin qarsisinda gorusduler",
       "expected": "Dostlarım köhnə məktəbin qarşısında görüşdülər.",
-      "actual": "Dostlarım köhnə məktəbin qarşısında gorusduler.",
-      "passed": false,
+      "actual": "Dostlarım köhnə məktəbin qarşısında görüşdülər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -63,8 +63,8 @@
       "category": "undiacritized",
       "input": "yasil agaclarin altinda usaqlar oynayirdi",
       "expected": "Yaşıl ağacların altında uşaqlar oynayırdı.",
-      "actual": "Yaşıl ağacların altında uşaqlar oynayirdi.",
-      "passed": false,
+      "actual": "Yaşıl ağacların altında uşaqlar oynayırdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -81,8 +81,8 @@
       "category": "undiacritized",
       "input": "nenem mene maraqli bir hekaye danisdi",
       "expected": "Nənəm mənə maraqlı bir hekayə danışdı.",
-      "actual": "Nenem mənə maraqlı bir hekayə danışdı.",
-      "passed": false,
+      "actual": "Nənəm mənə maraqlı bir hekayə danışdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -99,8 +99,8 @@
       "category": "undiacritized",
       "input": "kitabxanada nadir elyazmalar saxlanilir",
       "expected": "Kitabxanada nadir əlyazmalar saxlanılır.",
-      "actual": "Kitabxanada nadir elyazmalar saxlanılır.",
-      "passed": false,
+      "actual": "Kitabxanada nadir əlyazmalar saxlanılır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -171,8 +171,8 @@
       "category": "undiacritized",
       "input": "telebeler dersden sonra parkda gezdiler",
       "expected": "Tələbələr dərsdən sonra parkda gəzdilər.",
-      "actual": "Tələbələr dərsdən sonra parkda gezdiler.",
-      "passed": false,
+      "actual": "Tələbələr dərsdən sonra parkda gəzdilər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -189,8 +189,8 @@
       "category": "undiacritized",
       "input": "mektebin heyetinde yeni agaclar ekildi",
       "expected": "Məktəbin həyətində yeni ağaclar əkildi.",
-      "actual": "Məktəbin heyetinde yeni ağaclar əkildi.",
-      "passed": false,
+      "actual": "Məktəbin həyətində yeni ağaclar əkildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -207,8 +207,8 @@
       "category": "undiacritized",
       "input": "ressam sergide uc resm teqdim etdi",
       "expected": "Rəssam sərgidə üç rəsm təqdim etdi.",
-      "actual": "Rəssam sərgidə uc rəsm təqdim etdi.",
-      "passed": false,
+      "actual": "Rəssam sərgidə üç rəsm təqdim etdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -243,8 +243,8 @@
       "category": "undiacritized",
       "input": "axsam isiqlar bir-bir yandi",
       "expected": "Axşam işıqlar bir-bir yandı.",
-      "actual": "Axşam isiqlar bir-bir yandı.",
-      "passed": false,
+      "actual": "Axşam işıqlar bir-bir yandı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -261,8 +261,8 @@
       "category": "undiacritized",
       "input": "seher yemeyinden sonra gezintiye cixdiq",
       "expected": "Səhər yeməyindən sonra gəzintiyə çıxdıq.",
-      "actual": "Seher yeməyindən sonra gezintiye çıxdıq.",
-      "passed": false,
+      "actual": "Səhər yeməyindən sonra gəzintiyə çıxdıq.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -297,8 +297,8 @@
       "category": "undiacritized",
       "input": "usaqlar kitab oxumagi cox sevirler",
       "expected": "Uşaqlar kitab oxumağı çox sevirlər.",
-      "actual": "Uşaqlar kitab oxumagi çox sevirler.",
-      "passed": false,
+      "actual": "Uşaqlar kitab oxumağı çox sevirlər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -333,8 +333,8 @@
       "category": "undiacritized",
       "input": "iclas vaxtinda basa catdi",
       "expected": "İclas vaxtında başa çatdı.",
-      "actual": "İclas vaxtında basa çatdı.",
-      "passed": false,
+      "actual": "İclas vaxtında başa çatdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -387,8 +387,8 @@
       "category": "undiacritized",
       "input": "api sorgulari suretle cavablandirilir",
       "expected": "API sorğuları sürətlə cavablandırılır.",
-      "actual": "API sorğuları sürətlə cavablandirilir.",
-      "passed": false,
+      "actual": "API sorğuları sürətlə cavablandırılır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -459,8 +459,8 @@
       "category": "undiacritized",
       "input": "git tarixcesinde yeni commit gorunur",
       "expected": "Git tarixçəsində yeni commit görünür.",
-      "actual": "Git tarixcesinde yeni commit görünür.",
-      "passed": false,
+      "actual": "Git tarixçəsində yeni commit görünür.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -495,8 +495,8 @@
       "category": "undiacritized",
       "input": "deploy merhelesi ugurla basa catdi",
       "expected": "Deploy mərhələsi uğurla başa çatdı.",
-      "actual": "Deploy mərhələsi uğurla basa çatdı.",
-      "passed": false,
+      "actual": "Deploy mərhələsi uğurla başa çatdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -531,8 +531,8 @@
       "category": "undiacritized",
       "input": "sebeke kesildikde proses dayandi",
       "expected": "Şəbəkə kəsildikdə proses dayandı.",
-      "actual": "Şəbəkə kesildikde proses dayandı.",
-      "passed": false,
+      "actual": "Şəbəkə kəsildikdə proses dayandı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -621,8 +621,8 @@
       "category": "undiacritized",
       "input": "senedin son versiyasi saxlanildi",
       "expected": "Sənədin son versiyası saxlanıldı.",
-      "actual": "Sənədin son versiyasi saxlanıldı.",
-      "passed": false,
+      "actual": "Sənədin son versiyası saxlanıldı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -657,8 +657,8 @@
       "category": "undiacritized",
       "input": "faylin olcusu kifayet qeder boyukdur",
       "expected": "Faylın ölçüsü kifayət qədər böyükdür.",
-      "actual": "Faylın olcusu kifayət qədər boyukdur.",
-      "passed": false,
+      "actual": "Faylın ölçüsü kifayət qədər böyükdür.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -765,8 +765,8 @@
       "category": "undiacritized",
       "input": "gunes isigi yere enerji verir",
       "expected": "Günəş işığı Yerə enerji verir.",
-      "actual": "Günəş isigi yere enerji verir.",
-      "passed": false,
+      "actual": "Günəş işığı Yerə enerji verir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -774,8 +774,8 @@
       "category": "punctuation-capitalization",
       "input": "günəş işığı yerə enerji verir",
       "expected": "Günəş işığı Yerə enerji verir.",
-      "actual": "Günəş işığı yerə enerji verir.",
-      "passed": false,
+      "actual": "Günəş işığı Yerə enerji verir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -837,8 +837,8 @@
       "category": "undiacritized",
       "input": "meseler tebietin tarazligini qoruyur",
       "expected": "Meşələr təbiətin tarazlığını qoruyur.",
-      "actual": "Meşələr təbiətin tarazligini qoruyur.",
-      "passed": false,
+      "actual": "Meşələr təbiətin tarazlığını qoruyur.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -873,8 +873,8 @@
       "category": "undiacritized",
       "input": "denizin derinliyinde muxtelif canlilar yasayir",
       "expected": "Dənizin dərinliyində müxtəlif canlılar yaşayır.",
-      "actual": "Dənizin derinliyinde müxtəlif canlilar yasayir.",
-      "passed": false,
+      "actual": "Dənizin dərinliyində müxtəlif canlılar yaşayır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -963,8 +963,8 @@
       "category": "undiacritized",
       "input": "torpagin terkibi laboratoriyada olculdu",
       "expected": "Torpağın tərkibi laboratoriyada ölçüldü.",
-      "actual": "Torpagin tərkibi laboratoriyada ölçüldü.",
-      "passed": false,
+      "actual": "Torpağın tərkibi laboratoriyada ölçüldü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -981,8 +981,8 @@
       "category": "undiacritized",
       "input": "sagirdler musahide neticelerini yazdilar",
       "expected": "Şagirdlər müşahidə nəticələrini yazdılar.",
-      "actual": "Sagirdler müşahidə nəticələrini yazdılar.",
-      "passed": false,
+      "actual": "Şagirdlər müşahidə nəticələrini yazdılar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1017,8 +1017,8 @@
       "category": "undiacritized",
       "input": "tebietsunaslar yeni bitki novu tapdilar",
       "expected": "Təbiətşünaslar yeni bitki növü tapdılar.",
-      "actual": "Tebietsunaslar yeni bitki novu tapdılar.",
-      "passed": false,
+      "actual": "Təbiətşünaslar yeni bitki növü tapdılar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1233,8 +1233,8 @@
       "category": "undiacritized",
       "input": "senedlerin sureti elektron qaydada gonderildi",
       "expected": "Sənədlərin surəti elektron qaydada göndərildi.",
-      "actual": "Sənədlərin sürəti elektron qaydada göndərildi.",
-      "passed": false,
+      "actual": "Sənədlərin surəti elektron qaydada göndərildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1242,8 +1242,8 @@
       "category": "punctuation-capitalization",
       "input": "sənədlərin surəti elektron qaydada göndərildi",
       "expected": "Sənədlərin surəti elektron qaydada göndərildi.",
-      "actual": "Sənədlərin sürəti elektron qaydada göndərildi.",
-      "passed": false,
+      "actual": "Sənədlərin surəti elektron qaydada göndərildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1251,8 +1251,8 @@
       "category": "undiacritized",
       "input": "sorgu muvafiq sobeye yonlendirildi",
       "expected": "Sorğu müvafiq şöbəyə yönləndirildi.",
-      "actual": "Sorğu müvafiq sobeye yönləndirildi.",
-      "passed": false,
+      "actual": "Sorğu müvafiq şöbəyə yönləndirildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1287,8 +1287,8 @@
       "category": "undiacritized",
       "input": "layihenin budcesi yeniden hesablandi",
       "expected": "Layihənin büdcəsi yenidən hesablandı.",
-      "actual": "Layihənin budcesi yenidən hesablandı.",
-      "passed": false,
+      "actual": "Layihənin büdcəsi yenidən hesablandı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1377,8 +1377,8 @@
       "category": "undiacritized",
       "input": "ekspertler texniki telebleri yoxladilar",
       "expected": "Ekspertlər texniki tələbləri yoxladılar.",
-      "actual": "Ekspertler texniki tələbləri yoxladılar.",
-      "passed": false,
+      "actual": "Ekspertlər texniki tələbləri yoxladılar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1395,8 +1395,8 @@
       "category": "undiacritized",
       "input": "sirket uzunmuddetli terefdasliq isteyir",
       "expected": "Şirkət uzunmüddətli tərəfdaşlıq istəyir.",
-      "actual": "Şirkət uzunmüddətli terefdasliq istəyir.",
-      "passed": false,
+      "actual": "Şirkət uzunmüddətli tərəfdaşlıq istəyir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1413,8 +1413,8 @@
       "category": "undiacritized",
       "input": "idare heyeti layiheni tesdiqledi",
       "expected": "İdarə heyəti layihəni təsdiqlədi.",
-      "actual": "İdarə heyeti layihəni təsdiqlədi.",
-      "passed": false,
+      "actual": "İdarə heyəti layihəni təsdiqlədi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1431,8 +1431,8 @@
       "category": "undiacritized",
       "input": "her sobe oz planini hazirladi",
       "expected": "Hər şöbə öz planını hazırladı.",
-      "actual": "Hər sobe öz planını hazırladı.",
-      "passed": false,
+      "actual": "Hər şöbə öz planını hazırladı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1449,8 +1449,8 @@
       "category": "undiacritized",
       "input": "baki bu gun cox sakit gorunurdu",
       "expected": "Bakı bu gün çox sakit görünürdü.",
-      "actual": "Bakı bu gün çox sakit gorunurdu.",
-      "passed": false,
+      "actual": "Bakı bu gün çox sakit görünürdü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1467,8 +1467,8 @@
       "category": "undiacritized",
       "input": "genceden gelen dostumla gorusdum",
       "expected": "Gəncədən gələn dostumla görüşdüm.",
-      "actual": "Gəncədən gələn dostumla gorusdum.",
-      "passed": false,
+      "actual": "Gəncədən gələn dostumla görüşdüm.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1503,8 +1503,8 @@
       "category": "undiacritized",
       "input": "qebeleye seher tezden yola dusduk",
       "expected": "Qəbələyə səhər tezdən yola düşdük.",
-      "actual": "Qəbələyə səhər tezdən yola dusduk.",
-      "passed": false,
+      "actual": "Qəbələyə səhər tezdən yola düşdük.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1521,8 +1521,8 @@
       "category": "undiacritized",
       "input": "sumqayitdan axsam qayitdilar",
       "expected": "Sumqayıtdan axşam qayıtdılar.",
-      "actual": "Sumqayıtdan axşam qayitdilar.",
-      "passed": false,
+      "actual": "Sumqayıtdan axşam qayıtdılar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1629,8 +1629,8 @@
       "category": "undiacritized",
       "input": "eli muellim sinfe daxil oldu",
       "expected": "Əli müəllim sinfə daxil oldu.",
-      "actual": "Əli müəllim sinfe daxil oldu.",
-      "passed": false,
+      "actual": "Əli müəllim sinfə daxil oldu.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1755,8 +1755,8 @@
       "category": "undiacritized",
       "input": "deniz bu seher sakitdir",
       "expected": "Dəniz bu səhər sakitdir.",
-      "actual": "Dəniz bu seher sakitdir.",
-      "passed": false,
+      "actual": "Dəniz bu səhər sakitdir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1809,8 +1809,8 @@
       "category": "undiacritized",
       "input": "seher muellim yeni movzunu izah etdi",
       "expected": "Səhər müəllim yeni mövzunu izah etdi.",
-      "actual": "Seher müəllim yeni mövzunu izah etdi.",
-      "passed": false,
+      "actual": "Səhər müəllim yeni mövzunu izah etdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1845,8 +1845,8 @@
       "category": "undiacritized",
       "input": "balaca it qapinin onunde oturdu",
       "expected": "Balaca it qapının önündə oturdu.",
-      "actual": "Balaca it qapının onundə oturdu.",
-      "passed": false,
+      "actual": "Balaca it qapının önündə oturdu.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1863,8 +1863,8 @@
       "category": "undiacritized",
       "input": "payizda bagdaki yarpaqlar saralir",
       "expected": "Payızda bağdakı yarpaqlar saralır.",
-      "actual": "Payızda bagdaki yarpaqlar saralır.",
-      "passed": false,
+      "actual": "Payızda bağdakı yarpaqlar saralır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1917,8 +1917,8 @@
       "category": "undiacritized",
       "input": "qonsular heyetde birlikde islediler",
       "expected": "Qonşular həyətdə birlikdə işlədilər.",
-      "actual": "Qonşular heyetde birlikdə işlədilər.",
-      "passed": false,
+      "actual": "Qonşular həyətdə birlikdə işlədilər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1953,8 +1953,8 @@
       "category": "undiacritized",
       "input": "imtahan neticeleri sabah aciqlanacaq",
       "expected": "İmtahan nəticələri sabah açıqlanacaq.",
-      "actual": "İmtahan nəticələri sabah acıqlanacaq.",
-      "passed": false,
+      "actual": "İmtahan nəticələri sabah açıqlanacaq.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1971,8 +1971,8 @@
       "category": "undiacritized",
       "input": "her kes oz novbesini sakitce gozledi",
       "expected": "Hər kəs öz növbəsini sakitcə gözlədi.",
-      "actual": "Hər kes öz növbəsini sakitcə gözlədi.",
-      "passed": false,
+      "actual": "Hər kəs öz növbəsini sakitcə gözlədi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -1989,8 +1989,8 @@
       "category": "undiacritized",
       "input": "qis axsamlari kend daha sakit olur",
       "expected": "Qış axşamları kənd daha sakit olur.",
-      "actual": "Qis axşamları kənd daha sakit olur.",
-      "passed": false,
+      "actual": "Qış axşamları kənd daha sakit olur.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2007,8 +2007,8 @@
       "category": "undiacritized",
       "input": "dunenki tamasa haminin xosuna geldi",
       "expected": "Dünənki tamaşa hamının xoşuna gəldi.",
-      "actual": "Dünənki tamasa haminin xosuna gəldi.",
-      "passed": false,
+      "actual": "Dünənki tamaşa hamının xoşuna gəldi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2043,8 +2043,8 @@
       "category": "undiacritized",
       "input": "kohne fotosekillere baxib xatireleri yada saldiq",
       "expected": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
-      "actual": "Köhnə fotosekillere baxıb xatirələri yada şadlıq.",
-      "passed": false,
+      "actual": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2052,8 +2052,8 @@
       "category": "punctuation-capitalization",
       "input": "köhnə fotoşəkillərə baxıb xatirələri yada saldıq",
       "expected": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
-      "actual": "Köhnə fotoşəkillərə baxıb xatirələri yada şadlıq.",
-      "passed": false,
+      "actual": "Köhnə fotoşəkillərə baxıb xatirələri yada saldıq.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2079,8 +2079,8 @@
       "category": "undiacritized",
       "input": "deniz sahilinde kicik bir mayak var",
       "expected": "Dəniz sahilində kiçik bir mayak var.",
-      "actual": "Dəniz sahilinde kiçik bir mayak var.",
-      "passed": false,
+      "actual": "Dəniz sahilində kiçik bir mayak var.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2097,8 +2097,8 @@
       "category": "undiacritized",
       "input": "seher bazarinda teze terevez satilirdi",
       "expected": "Səhər bazarında təzə tərəvəz satılırdı.",
-      "actual": "Seher bazarında təzə tərəvəz satılırdı.",
-      "passed": false,
+      "actual": "Səhər bazarında təzə tərəvəz satılırdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2115,8 +2115,8 @@
       "category": "undiacritized",
       "input": "musiqiciler konserte uzun muddet hazirlasdilar",
       "expected": "Musiqiçilər konsertə uzun müddət hazırlaşdılar.",
-      "actual": "Musiqiciler konsertə uzun müddət hazirlasdilar.",
-      "passed": false,
+      "actual": "Musiqiçilər konsertə uzun müddət hazırlaşdılar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2151,8 +2151,8 @@
       "category": "undiacritized",
       "input": "router bir nece cihazi sebekeye qosdu",
       "expected": "Router bir neçə cihazı şəbəkəyə qoşdu.",
-      "actual": "Router bir neçə cihazı şəbəkəyə qosdu?",
-      "passed": false,
+      "actual": "Router bir neçə cihazı şəbəkəyə qoşdu.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2160,8 +2160,8 @@
       "category": "punctuation-capitalization",
       "input": "router bir neçə cihazı şəbəkəyə qoşdu",
       "expected": "Router bir neçə cihazı şəbəkəyə qoşdu.",
-      "actual": "Router bir neçə cihazı şəbəkəyə qoşdu?",
-      "passed": false,
+      "actual": "Router bir neçə cihazı şəbəkəyə qoşdu.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2205,8 +2205,8 @@
       "category": "undiacritized",
       "input": "melumatlarin ehtiyat nusxesi gece hazirlandi",
       "expected": "Məlumatların ehtiyat nüsxəsi gecə hazırlandı.",
-      "actual": "Məlumatların ehtiyat nusxesi gecə hazırlandı.",
-      "passed": false,
+      "actual": "Məlumatların ehtiyat nüsxəsi gecə hazırlandı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2331,8 +2331,8 @@
       "category": "undiacritized",
       "input": "interfeysdeki yazilar aydin gorunur",
       "expected": "İnterfeysdəki yazılar aydın görünür.",
-      "actual": "İnterfeysdeki yazılar aydın görünür.",
-      "passed": false,
+      "actual": "İnterfeysdəki yazılar aydın görünür.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2385,8 +2385,8 @@
       "category": "undiacritized",
       "input": "qurgunun batareyasi gun erzinde bosaldi",
       "expected": "Qurğunun batareyası gün ərzində boşaldı.",
-      "actual": "Qurgunun batareyası gün ərzində boşaldı.",
-      "passed": false,
+      "actual": "Qurğunun batareyası gün ərzində boşaldı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2403,8 +2403,8 @@
       "category": "undiacritized",
       "input": "melumatlar tehlukesiz sekilde oturuldu",
       "expected": "Məlumatlar təhlükəsiz şəkildə ötürüldü.",
-      "actual": "Məlumatlar təhlükəsiz şəkildə oturuldu.",
-      "passed": false,
+      "actual": "Məlumatlar təhlükəsiz şəkildə ötürüldü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2421,8 +2421,8 @@
       "category": "undiacritized",
       "input": "fayl yuklenerken baglanti kesildi",
       "expected": "Fayl yüklənərkən bağlantı kəsildi.",
-      "actual": "Fayl yuklenerken bağlantı kəsildi.",
-      "passed": false,
+      "actual": "Fayl yüklənərkən bağlantı kəsildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2475,8 +2475,8 @@
       "category": "undiacritized",
       "input": "sistem xetadan sonra yeniden ise dusdu",
       "expected": "Sistem xətadan sonra yenidən işə düşdü.",
-      "actual": "Sistem xətadan sonra yenidən ise düşdü.",
-      "passed": false,
+      "actual": "Sistem xətadan sonra yenidən işə düşdü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2529,8 +2529,8 @@
       "category": "undiacritized",
       "input": "buzlaqlarin erimesi su seviyyesini deyisir",
       "expected": "Buzlaqların əriməsi su səviyyəsini dəyişir.",
-      "actual": "Buzlaqların erimesi su səviyyəsini dəyişir.",
-      "passed": false,
+      "actual": "Buzlaqların əriməsi su səviyyəsini dəyişir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2547,8 +2547,8 @@
       "category": "undiacritized",
       "input": "qaranquslar yazda geri qayidirlar",
       "expected": "Qaranquşlar yazda geri qayıdırlar.",
-      "actual": "Qaranquslar yazda geri qayidirlar.",
-      "passed": false,
+      "actual": "Qaranquşlar yazda geri qayıdırlar.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2565,8 +2565,8 @@
       "category": "undiacritized",
       "input": "gece semasinda parlaq ulduz gorundu",
       "expected": "Gecə səmasında parlaq ulduz göründü.",
-      "actual": "Gecə semasinda parlaq ulduz gorundu.",
-      "passed": false,
+      "actual": "Gecə səmasında parlaq ulduz göründü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2583,8 +2583,8 @@
       "category": "undiacritized",
       "input": "tedqiqatcilar quslarin kocunu izlediler",
       "expected": "Tədqiqatçılar quşların köçünü izlədilər.",
-      "actual": "Tedqiqatcilar quşların kocunu izlədilər.",
-      "passed": false,
+      "actual": "Tədqiqatçılar quşların köçünü izlədilər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2619,8 +2619,8 @@
       "category": "undiacritized",
       "input": "derenin icinden serin cay axir",
       "expected": "Dərənin içindən sərin çay axır.",
-      "actual": "Dərənin icinden sərin çay axır.",
-      "passed": false,
+      "actual": "Dərənin içindən sərin çay axır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2655,8 +2655,8 @@
       "category": "undiacritized",
       "input": "golun sahilinde muxtelif bitkiler bitir",
       "expected": "Gölün sahilində müxtəlif bitkilər bitir.",
-      "actual": "Golun sahilinde müxtəlif bitkiler bitir.",
-      "passed": false,
+      "actual": "Gölün sahilində müxtəlif bitkilər bitir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2673,8 +2673,8 @@
       "category": "undiacritized",
       "input": "yer kuresi gunes etrafinda firlanir",
       "expected": "Yer kürəsi Günəş ətrafında fırlanır.",
-      "actual": "Yer kuresi günəş ətrafında fırlanır.",
-      "passed": false,
+      "actual": "Yer kürəsi Günəş ətrafında fırlanır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2682,8 +2682,8 @@
       "category": "punctuation-capitalization",
       "input": "yer kürəsi günəş ətrafında fırlanır",
       "expected": "Yer kürəsi Günəş ətrafında fırlanır.",
-      "actual": "Yer kürəsi günəş ətrafında fırlanır.",
-      "passed": false,
+      "actual": "Yer kürəsi Günəş ətrafında fırlanır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2691,8 +2691,8 @@
       "category": "undiacritized",
       "input": "mikroskop altinda huceyreler musahide olundu",
       "expected": "Mikroskop altında hüceyrələr müşahidə olundu.",
-      "actual": "Mikroskop altında huceyreler müşahidə olundu.",
-      "passed": false,
+      "actual": "Mikroskop altında hüceyrələr müşahidə olundu.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2727,8 +2727,8 @@
       "category": "undiacritized",
       "input": "temiz icmeli su her kes ucun vacibdir",
       "expected": "Təmiz içməli su hər kəs üçün vacibdir.",
-      "actual": "Təmiz içməli su hər kes üçün vacibdir.",
-      "passed": false,
+      "actual": "Təmiz içməli su hər kəs üçün vacibdir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2781,8 +2781,8 @@
       "category": "undiacritized",
       "input": "dermanlar hekimin gosterisi ile qebul olunur",
       "expected": "Dərmanlar həkimin göstərişi ilə qəbul olunur.",
-      "actual": "Dermanlar həkimin göstərişi ilə qəbul olunur.",
-      "passed": false,
+      "actual": "Dərmanlar həkimin göstərişi ilə qəbul olunur.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2799,8 +2799,8 @@
       "category": "undiacritized",
       "input": "bezi heyvanlar qisda yuxuya gedir",
       "expected": "Bəzi heyvanlar qışda yuxuya gedir.",
-      "actual": "Bezi heyvanlar qışda yuxuya gedir.",
-      "passed": false,
+      "actual": "Bəzi heyvanlar qışda yuxuya gedir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2817,8 +2817,8 @@
       "category": "undiacritized",
       "input": "bitkinin boyumesi ucun kifayet qeder isiq lazimdir",
       "expected": "Bitkinin böyüməsi üçün kifayət qədər işıq lazımdır.",
-      "actual": "Bitkinin boyumesi üçün kifayət qədər işıq lazımdır.",
-      "passed": false,
+      "actual": "Bitkinin böyüməsi üçün kifayət qədər işıq lazımdır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2925,8 +2925,8 @@
       "category": "undiacritized",
       "input": "menecer butun hesabatlari bir yere topladi",
       "expected": "Menecer bütün hesabatları bir yerə topladı.",
-      "actual": "Menecer bütün hesabatları bir yere topladı.",
-      "passed": false,
+      "actual": "Menecer bütün hesabatları bir yerə topladı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2943,8 +2943,8 @@
       "category": "undiacritized",
       "input": "terefdaslar gelecek layiheleri muzakire etdiler",
       "expected": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
-      "actual": "Tərəfdaşlar gələcək. Layihələri müzakirə etdilər.",
-      "passed": false,
+      "actual": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2952,8 +2952,8 @@
       "category": "punctuation-capitalization",
       "input": "tərəfdaşlar gələcək layihələri müzakirə etdilər",
       "expected": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
-      "actual": "Tərəfdaşlar gələcək. Layihələri müzakirə etdilər.",
-      "passed": false,
+      "actual": "Tərəfdaşlar gələcək layihələri müzakirə etdilər.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2961,8 +2961,8 @@
       "category": "undiacritized",
       "input": "telimde istirak edenlere sened verildi",
       "expected": "Təlimdə iştirak edənlərə sənəd verildi.",
-      "actual": "Təlimdə iştirak edenlere sənəd verildi.",
-      "passed": false,
+      "actual": "Təlimdə iştirak edənlərə sənəd verildi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -2979,8 +2979,8 @@
       "category": "undiacritized",
       "input": "yeni teklif resmi mektubla catdirildi",
       "expected": "Yeni təklif rəsmi məktubla çatdırıldı.",
-      "actual": "Yeni təklif rəsmi mektubla çatdırıldı.",
-      "passed": false,
+      "actual": "Yeni təklif rəsmi məktubla çatdırıldı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3015,8 +3015,8 @@
       "category": "undiacritized",
       "input": "sobe mudiri is qrafikini paylasdi",
       "expected": "Şöbə müdiri iş qrafikini paylaşdı.",
-      "actual": "Sobe müdiri iş qrafikini paylaşdı.",
-      "passed": false,
+      "actual": "Şöbə müdiri iş qrafikini paylaşdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3033,8 +3033,8 @@
       "category": "undiacritized",
       "input": "tedbirde bir nece xarici qonaq istirak etdi",
       "expected": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
-      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi?",
-      "passed": false,
+      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3042,8 +3042,8 @@
       "category": "punctuation-capitalization",
       "input": "tədbirdə bir neçə xarici qonaq iştirak etdi",
       "expected": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
-      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi?",
-      "passed": false,
+      "actual": "Tədbirdə bir neçə xarici qonaq iştirak etdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3105,8 +3105,8 @@
       "category": "undiacritized",
       "input": "sorgunun cavabi qeydiyyat nomresi ile saxlanildi",
       "expected": "Sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı.",
-      "actual": "Sorğunun cavabı qeydiyyat nomresi ilə saxlanıldı.",
-      "passed": false,
+      "actual": "Sorğunun cavabı qeydiyyat nömrəsi ilə saxlanıldı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3123,8 +3123,8 @@
       "category": "undiacritized",
       "input": "rehber yeni tapsiriqlari bolusdurdu",
       "expected": "Rəhbər yeni tapşırıqları bölüşdürdü.",
-      "actual": "Rəhbər yeni tapşırıqları bolusdurdu.",
-      "passed": false,
+      "actual": "Rəhbər yeni tapşırıqları bölüşdürdü.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3195,8 +3195,8 @@
       "category": "undiacritized",
       "input": "sirketin yeni ofisi seherin merkezindedir",
       "expected": "Şirkətin yeni ofisi şəhərin mərkəzindədir.",
-      "actual": "Şirkətin yeni ofisi şəhərin merkezindedir.",
-      "passed": false,
+      "actual": "Şirkətin yeni ofisi şəhərin mərkəzindədir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3231,8 +3231,8 @@
       "category": "undiacritized",
       "input": "sekide qedim kuceler qorunub saxlanilir",
       "expected": "Şəkidə qədim küçələr qorunub saxlanılır.",
-      "actual": "Şəkidə qədim. Küçələr qorunub saxlanılır.",
-      "passed": false,
+      "actual": "Şəkidə qədim küçələr qorunub saxlanılır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3240,8 +3240,8 @@
       "category": "punctuation-capitalization",
       "input": "şəkidə qədim küçələr qorunub saxlanılır",
       "expected": "Şəkidə qədim küçələr qorunub saxlanılır.",
-      "actual": "Şəkidə qədim. Küçələr qorunub saxlanılır.",
-      "passed": false,
+      "actual": "Şəkidə qədim küçələr qorunub saxlanılır.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3357,8 +3357,8 @@
       "category": "undiacritized",
       "input": "azerbaycan demir yollari yeni cedvel aciqladi",
       "expected": "Azərbaycan Dəmir Yolları yeni cədvəl açıqladı.",
-      "actual": "Azərbaycan Dəmir Yolları yeni cədvəl aciqladi.",
-      "passed": false,
+      "actual": "Azərbaycan Dəmir Yolları yeni cədvəl açıqladı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3393,8 +3393,8 @@
       "category": "undiacritized",
       "input": "eli eliyev muellimle sohbet etdi",
       "expected": "Əli Əliyev müəllimlə söhbət etdi.",
-      "actual": "Əli Əliyev muellimle söhbət etdi.",
-      "passed": false,
+      "actual": "Əli Əliyev müəllimlə söhbət etdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3465,8 +3465,8 @@
       "category": "undiacritized",
       "input": "ilham menbeyi gundelik musahidelerdir",
       "expected": "İlham mənbəyi gündəlik müşahidələrdir.",
-      "actual": "İlham menbeyi gündəlik musahidelerdir.",
-      "passed": false,
+      "actual": "İlham mənbəyi gündəlik müşahidələrdir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3501,8 +3501,8 @@
       "category": "undiacritized",
       "input": "deniz sahilinde axsam kulek esdi",
       "expected": "Dəniz sahilində axşam külək əsdi.",
-      "actual": "Dəniz sahilinde axşam külək esdi.",
-      "passed": false,
+      "actual": "Dəniz sahilində axşam külək əsdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3537,8 +3537,8 @@
       "category": "undiacritized",
       "input": "gul bagda yeni cicekler ekdi",
       "expected": "Gül bağda yeni çiçəklər əkdi.",
-      "actual": "Gul bağda yeni cicekler ekdi.",
-      "passed": false,
+      "actual": "Gül bağda yeni çiçəklər əkdi.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3555,8 +3555,8 @@
       "category": "undiacritized",
       "input": "sadiq insan sozune emel edir",
       "expected": "Sadiq insan sözünə əməl edir.",
-      "actual": "Sadiq insan sozune əməl edir.",
-      "passed": false,
+      "actual": "Sadiq insan sözünə əməl edir.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3573,8 +3573,8 @@
       "category": "undiacritized",
       "input": "seher avtobusu dayanacaga vaxtinda catdi",
       "expected": "Səhər avtobusu dayanacağa vaxtında çatdı.",
-      "actual": "Seher avtobusu dayanacağa vaxtında çatdı.",
-      "passed": false,
+      "actual": "Səhər avtobusu dayanacağa vaxtında çatdı.",
+      "passed": true,
       "idempotent": true
     },
     {
@@ -3591,8 +3591,8 @@
       "category": "undiacritized",
       "input": "yeni muzeyin qapilari ziyaretcilere acildi",
       "expected": "Yeni muzeyin qapıları ziyarətçilərə açıldı.",
-      "actual": "Yeni muzeyin qapıları ziyaretcilere açıldı.",
-      "passed": false,
+      "actual": "Yeni muzeyin qapıları ziyarətçilərə açıldı.",
+      "passed": true,
       "idempotent": true
     },
     {

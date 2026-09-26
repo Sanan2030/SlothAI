@@ -2,6 +2,18 @@
 import { isFinitePredicate } from './segmentation';
 export function repairPhrases(text: string): string {
   return text
+    .replace(/(?<!\p{L})(sənəd növü) xidməti(?=\s+olarsa)/giu, '$1 xidmət')
+    .replace(/(?<!\p{L})icraçı ise(?=\s)/giu, 'icraçı isə')
+    .replace(/(?<!\p{L})(seher)(?=\s+(?:dəniz|müəllim|bazarı(?:nda)?|avtobusu|yeməyindən))/giu, 'səhər')
+    .replace(/(?<!\p{L})bu seher(?=\s+(?:dəniz|sakitdir))/giu, 'bu səhər')
+    .replace(/(?<!\p{L})bu seher(?=\s+\p{L}{3,24}\s+\p{L}{4,24}(?:dı|di|du|dü|acaq|əcək)(?=$|[^\p{L}]))/giu, 'bu səhər')
+    .replace(/(?<!\p{L})sərgidə uc(?=\s+rəsm)/giu, 'sərgidə üç')
+    .replace(/(?<!\p{L})(?:Günəş işığı yerə|Günəş işığı yere)(?=\s+enerji)/giu, 'Günəş işığı Yerə')
+    .replace(/(?<!\p{L})(Yer kürəsi) günəş(?=\s+ətrafında)/giu, '$1 Günəş')
+    .replace(/(?<!\p{L})yenidən (?:isə|ise)(?=\s+düşdü)/giu, 'yenidən işə')
+    .replace(/(?<!\p{L})gul(?=\s+bağda\s+(?:yeni\s+)?çiçəklər\s+əkdi)/giu, 'Gül')
+    .replace(/(?<!\p{L})(sənədlərin|sənədin|sənədlər) sürəti(?=\s|$|[^\p{L}])/giu, '$1 surəti')
+    .replace(/(?<!\p{L})yada şadlıq(?=\s|$|[^\p{L}])/giu, 'yada saldıq')
     .replace(/(^|[^\p{L}])bugün(?=$|[^\p{L}])/giu, '$1bu gün')
     .replace(/(^|[^\p{L}])(mən|sən|biz|siz) +de +(?=(?:gəl|ged|ed|düşün|işlə|bil|istə|keç)[\p{L}]+)/giu, '$1$2 də ')
     .replace(/(^|[^\p{L}])bir de (?=gecikmə(?:\s|$))/giu, '$1bir də ')

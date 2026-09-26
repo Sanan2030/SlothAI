@@ -20,7 +20,7 @@ export const PROTECTED_TERMINOLOGY = {
     'transaction', 'ledger',
   ],
   business: [
-    'CRM', 'ERP', 'BPMN', 'UML', 'UAT', 'KPI', 'OKR', 'Jira', 'Confluence',
+    'RSD', 'SRS', 'CRM', 'ERP', 'BPMN', 'UML', 'UAT', 'KPI', 'OKR', 'Jira', 'Confluence',
     'Figma', 'agile', 'scrum', 'sprint', 'backlog', 'product owner',
   ],
 } as const;

@@ -1,6 +1,7 @@
 'use client';
 
 import { BrandEmoji } from '@/components/BrandEmoji';
+import { RichEditor } from '@/components/RichEditor';
 import { Check, Copy, FileText, Mail, Moon, Sun, Trash2 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -8,6 +9,7 @@ import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
+import { documentHTML, documentText, plainDocument, transferMarks, type RichDocument } from '@/lib/ui/rich-document';
 
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
@@ -35,9 +37,14 @@ export default function HomePage() {
   const [activeModule, setActiveModule] = useState<ModuleId>('text');
   const [textValue, setTextValue] = useState('');
   const [mailValue, setMailValue] = useState('');
+  const [textDocument, setTextDocument] = useState<RichDocument>(() => plainDocument(''));
+  const [mailDocument, setMailDocument] = useState<RichDocument>(() => plainDocument(''));
   const [mailSubject, setMailSubject] = useState('');
   const [textOutput, setTextOutput] = useState('');
   const [mailOutput, setMailOutput] = useState('');
+  const [textOutputDocument, setTextOutputDocument] = useState<RichDocument>(() => plainDocument(''));
+  const [mailOutputDocument, setMailOutputDocument] = useState<RichDocument>(() => plainDocument(''));
+  const [editingOutput, setEditingOutput] = useState(false);
   const [textMetadata, setTextMetadata] = useState<TransformationMetadata | null>(null);
   const [mailMetadata, setMailMetadata] = useState<TransformationMetadata | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(false);
@@ -65,6 +72,8 @@ export default function HomePage() {
   const config = MODULES[activeModule];
   const inputValue = activeModule === 'text' ? textValue : mailValue;
   const output = activeModule === 'text' ? textOutput : mailOutput;
+  const sourceDocument = activeModule === 'text' ? textDocument : mailDocument;
+  const outputDocument = activeModule === 'text' ? textOutputDocument : mailOutputDocument;
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
 
   const inputLength = useMemo(() => inputValue.length, [inputValue]);
@@ -79,15 +88,19 @@ export default function HomePage() {
     [diffSource, output],
   );
 
-  function setInput(value: string) {
+  function setInput(value: string, rich: RichDocument = plainDocument(value)) {
+    if (value.length > MAX_TEXT_LENGTH) return;
     setError('');
     setCopied(false);
+    setEditingOutput(false);
     if (activeModule === 'text') {
       setTextValue(value);
+      setTextDocument(rich);
       setTextOutput('');
       setTextMetadata(null);
     } else {
       setMailValue(value);
+      setMailDocument(rich);
       setMailOutput('');
       setMailMetadata(null);
     }
@@ -101,6 +114,7 @@ export default function HomePage() {
     setActiveModule(module);
     setError('');
     setCopied(false);
+    setEditingOutput(false);
   }
 
   function toggleTheme() {
@@ -132,9 +146,13 @@ export default function HomePage() {
 
       if (activeModule === 'text') {
         setTextOutput(result.transformedText);
+        setTextOutputDocument(transferMarks(textDocument, result.transformedText));
+        setEditingOutput(textDocument.blocks.some(block => block.children.some(inline => inline.marks.length > 0)));
         setTextMetadata(result.metadata);
       } else {
         setMailOutput(result.transformedText);
+        setMailOutputDocument(transferMarks(mailDocument, result.transformedText));
+        setEditingOutput(mailDocument.blocks.some(block => block.children.some(inline => inline.marks.length > 0)));
         setMailMetadata(result.metadata);
       }
     } catch (cause) {
@@ -147,7 +165,16 @@ export default function HomePage() {
   async function copyOutput() {
     if (!output) return;
     try {
-      await navigator.clipboard.writeText(output);
+      if (navigator.clipboard.write && typeof ClipboardItem !== 'undefined') {
+        try {
+          await navigator.clipboard.write([new ClipboardItem({
+            'text/plain': new Blob([output], { type: 'text/plain' }),
+            'text/html': new Blob([documentHTML(outputDocument)], { type: 'text/html' }),
+          })]);
+        } catch {
+          await navigator.clipboard.writeText(output);
+        }
+      } else await navigator.clipboard.writeText(output);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1800);
     } catch {
@@ -266,21 +293,10 @@ export default function HomePage() {
                   </button>
                 </div>
 
-                <textarea
-                  value={inputValue}
-                  disabled={loading}
-                  maxLength={MAX_TEXT_LENGTH}
-                  aria-label={config.inputLabel}
-                  spellCheck={false}
-                  placeholder={config.placeholder}
-                  onChange={(event) => setInput(event.target.value)}
-                  onKeyDown={(event) => {
-                    if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
-                      event.preventDefault();
-                      void transform();
-                    }
-                  }}
-                />
+                <RichEditor value={sourceDocument} disabled={loading}
+                  maxLength={Math.max(0, MAX_TEXT_LENGTH - (diffSource.length - inputValue.length))}
+                  label={config.inputLabel} placeholder={config.placeholder}
+                  onChange={document => setInput(documentText(document), document)} />
 
                 <div className="workspace-editor-footer">
                   {activeModule === 'text' ? (
@@ -309,6 +325,10 @@ export default function HomePage() {
               <div className="workspace-editor-column">
                 <div className="workspace-column-head">
                   <span>Nəticə</span>
+                  {output && <button type="button" className="workspace-icon-btn"
+                    onClick={() => setEditingOutput(value => !value)}>
+                    {editingOutput ? 'Dəyişiklikləri göstər' : 'Formatı redaktə et'}
+                  </button>}
                   <button
                     type="button"
                     className="workspace-icon-btn"
@@ -321,7 +341,21 @@ export default function HomePage() {
                 </div>
 
                 <div className="workspace-output" aria-live="polite">
-                  {output ? (
+                  {output && editingOutput ? (
+                    <RichEditor value={outputDocument} label="Nəticəni redaktə et"
+                      onChange={document => {
+                        const value = documentText(document);
+                        if (activeModule === 'text') {
+                          setTextOutputDocument(document);
+                          setTextOutput(value);
+                          setTextMetadata(null);
+                        } else {
+                          setMailOutputDocument(document);
+                          setMailOutput(value);
+                          setMailMetadata(null);
+                        }
+                      }} />
+                  ) : output ? (
                     <pre>
                       {animatedOutput.map((part, index) => (
                         <span

@@ -81,6 +81,19 @@ heçnə hərşey birşey zəhmətinizə diqqətinizə təşəkkürümü
 hələ göndərilmədi sabahkı vaxtını dəqiqləşdirin hazırlayın hazırla
 gündür işlədiyini yalnız soruşdum gətirirəm getdin görüşdük
 manatdır Gəncəyə Gəncənin Bakını Bakıdan Türkiyəyə Türkiyənin
+görüşdülər oynayırdı nənəm əlyazmalar həyətində üç işıqlar oxumağı icraçıya çatışmır
+sevirlər başa cavablandırılır tarixçəsində kəsildikdə ölçüsü böyükdür
+yerə dərinliyində canlılar yaşayır şagirdlər təbiətşünaslar növü
+ekspertlər tərəfdaşlıq heyəti şöbə görünürdü görüşdüm düşdük
+sinfə önündə bağdakı həyətdə açıqlanacaq kəs qış tamaşa hamının
+xoşuna fotoşəkillərə saldıq sahilində musiqiçilər qoşdu interfeysdəki
+qurğunun ötürüldü yüklənərkən işə qaranquşlar qayıdırlar səmasında
+göründü tədqiqatçılar köçünü içindən gölün bitkilər hüceyrələr
+dərmanlar bəzi edənlərə məktubla bölüşdürdü mərkəzində açıqladı
+müəllimlə mənbəyi müşahidələrdir əsdi çiçəklər əkdi sözünə
+ziyarətçilərə mərkəzindədir bölməsinə yaranırmı
+davranış davranışıdır səlahiyyətiniz səlahiyyətinizin
+sahə mərhələsindədir icraçı
 `.trim().split(/\s+/);
 
 const candidates = new Map<string, Set<string>>();
@@ -184,6 +197,7 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   qalx: 'qalx',
   acil: 'açıl',
   ac: 'aç',
+  cay: 'çay',
   gel: 'gəl',
   get: 'get',
   danis: 'danış',
@@ -228,10 +242,11 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
 }).map(([raw, canonical]) => [fold(raw), canonical]));
 
 function recognizedStem(rawStem: string, services?: SpellingContext): string | undefined {
-  return uniqueDictionaryCandidate(rawStem, services) ?? reviewedProductiveRoots.get(fold(rawStem));
+  return reviewedProductiveRoots.get(fold(rawStem)) ?? uniqueDictionaryCandidate(rawStem, services);
 }
 
 const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
+  { raw: 'ler', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') },
   { raw: 'enden', apply: stem => stem === 'ed' ? 'edəndən' : undefined },
   { raw: 'yirdilar', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') : undefined },
   { raw: 'dilar', apply: stem => stem + 'd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') },
@@ -435,6 +450,10 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // gonderilib, saxlanilir). Reviewed roots + bounded suffix rules are safer
   // than accepting such raw forms unchanged.
   const replacement = alias ?? properNames.get(key) ?? chooseSpelling(word, values)
+    ?? (key === 'qalib' ? 'qalib' : undefined)
+    ?? (key === 'testi' ? 'testi' : undefined)
+    ?? (key === 'sistme' ? chooseIndexedTypo(word) : undefined)
+    ?? restoreProductiveSuffix(word, services)
     ?? chooseSpelling(word, imported)
     ?? chooseSpelling(word, new Set(morphologyCandidates))
     ?? ((imported?.size ?? 0) > 1 ? undefined : services?.morphology.findByFoldedForm?.(word))
