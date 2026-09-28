@@ -12,7 +12,7 @@ export function prepareEmailBody(body: string): string {
   return body.split('\n').map(line => line
     .replace(/(?<![.!?])\b(deyil|mümkün deyil|mümkündür|hazırdır|olunub|olmalıdır|göndərildi|göndərin|baxıldı|aparıldı|təsdiqləndi|tesdiqlendi)\s+(?=(?:bu|növbəti|əlavə|lakin|bununla|əgər|sənəd|sened|müraciət|muraciet|sistem|komanda|iş|is)\s)/giu, '$1. ')
     .replace(/(?<![.!?])\b(göndəriləcək|gonderilecek|göndərildi|göndərdik|gonderdik|yaradıldı|yaradildi|işləyir|isleyir|yoxladıq|yoxladiq|edilmir|baxılmalıdır|baxilmalidir|yoxlanılmalıdır|yoxlanilmalidir|lazımdır|lazimdir|edilir|başlayır|baslayir|etdik|çatışmır|catismir|bilmirik|məlumdur|melumdur|deyil)\s+(?=(?:qeydiyyat|müştəri|musteri|biz|api|API|səbəbi|sebebi|səbəbin|sebebin|uat|UAT|zəhmət|zehmet|xahiş|xahis|bu gün|bugun|birinci|ikinci|üçüncü|ucuncu)\b)/giu, '$1. ')
-    .replace(/(?<![.!?])\b(qalıb|dəyişməyib|görünmür|olunub|gördük|işləyir|qaytarır|yenilənib|əlavə olunub|bilmir|yaranır|çatıb|tamamlanıb|qəbul olunub|alınıb)\s+(?=(?:xahiş|zəhmət|problem|səbəb|nəticə|loglar|icazə|BPMN|UAT|staging|müştəri|sənəd|sorğu)\b)/giu, '$1. ')
+    .replace(/(?<![.!?])\b(qalıb|dəyişməyib|görünmür|olunub|gördük|işləyir|qaytarır|yenilənib|əlavə olunub|bilmir|deyil|yaranır|çatıb|tamamlanıb|qəbul olunub|alınıb)\s+(?=(?:xahiş|zəhmət|problem|səbəb|nəticə|loglar|icazə|BPMN|UAT|staging|müştəri|sənəd|sorğu)\b)/giu, '$1. ')
     .replace(/(?<![.!?])\b(qaytarır|işləyir|gördük|olunub|yenilənib)\s+(?=(?:staging|logları|səbəbi|nəticə|BPMN|UAT)\b)/giu, '$1. ')
     .replace(/(?<![,;.!?])\b(varsa|olsa)\s+(?=(?:müraciət|muraciet|sənəd|sened|bizimlə|bizimle|xahiş|xahis)\b)/giu, '$1, ')
   ).join('\n');
