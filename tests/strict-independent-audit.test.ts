@@ -71,7 +71,7 @@ const textCases = [
   ['diqqet productionda kritik xeta var', 'Diqqət! Production-da kritik xəta var.'],
   ['server dayandi Elvin problemi arasdirdi', 'Server dayandı. Elvin problemi araşdırdı.'],
   ['iclas bitdi Leyla senedleri topladi', 'İclas bitdi. Leyla sənədləri topladı.'],
-  ['sistem stabildir api cavablari normaldir musteri ise yeni muqavile gonderdi', 'Sistem stabildir. API cavabları normaldır.\n\nMüştəri isə yeni müqavilə göndərdi.'],
+  ['sistem stabildir api cavablari normaldir musteri ise yeni muqavile gonderdi', 'Sistem stabildir. API cavabları normaldır. Müştəri isə yeni müqavilə göndərdi.'],
   ['bu gun sema buludludur', 'Bu gün səma buludludur.'],
   ['bagda fidan ekdik', 'Bağda fidan əkdik.'],
   ['bu mene ilham verdi', 'Bu mənə ilham verdi.'],
@@ -92,7 +92,7 @@ for (const [input, expected] of textCases) {
 const mailCases = [
   [
     'movzu rsd status problemi hormetli rsd komandasi muraciet tesdiqlenib amma status icrada qalib xahis edirem is axinini yoxlayin hormetle sanan nabizada biznes analitik',
-    'Mövzu: RSD status problemi\n\nHörmətli RSD komandası,\n\nMüraciət təsdiqlənib, amma status icrada qalıb. Xahiş edirəm, iş axınını yoxlayın.\n\nHörmətlə,\nSənan Nabizadə\nBiznes analitik',
+    'Mövzu: RSD status problemi\n\nHörmətli RSD komandası,\n\nMüraciət təsdiqlənib, amma status icrada qalıb. Xahiş edirəm, iş axınını yoxlayın.\n\nHörmətlə,\nSanan Nabizada\nBiznes analitik',
   ],
   [
     'movzu api xetasi hormetli backend komandasi productionda POST /api/documents 500 qaytarir stagingde ise eyni request isleyir loglari yoxlayin hormetle elvin memmedov backend engineer',
@@ -104,11 +104,11 @@ const mailCases = [
   ],
   [
     'hormetli texniki komanda bu gun productionda bir nece 500 xetasi gorduk sebebi hele melum deyil loglari toplayib ayrica gondereceyik hormetle sanan',
-    'Mövzu: Müraciət\n\nHörmətli texniki komanda,\n\nBu gün production-da bir neçə 500 xətası gördük. Səbəbi hələ məlum deyil. Logları toplayıb ayrıca göndərəcəyik.\n\nHörmətlə,\nSənan',
+    'Mövzu: Müraciət\n\nHörmətli texniki komanda,\n\nBu gün production-da bir neçə 500 xətası gördük. Səbəbi hələ məlum deyil. Logları toplayıb ayrıca göndərəcəyik.\n\nHörmətlə,\nSanan',
   ],
   [
     'movzu derkenar hormetli Nermin xanim derkenar imzalanib amma icra statusu deyismeyib zehmet olmasa yoxlayin hormetle sanan',
-    'Mövzu: Dərkənar\n\nHörmətli Nərmin xanım,\n\nDərkənar imzalanıb, amma icra statusu dəyişməyib. Zəhmət olmasa, yoxlayın.\n\nHörmətlə,\nSənan',
+    'Mövzu: Dərkənar\n\nHörmətli Nərmin xanım,\n\nDərkənar imzalanıb, amma icra statusu dəyişməyib. Zəhmət olmasa, yoxlayın.\n\nHörmətlə,\nSanan',
   ],
   [
     'movzu qeydiyyat hormetli operatorlar qeydiyyat nomresi yaranir amma sened kartinda gorunmur problemi arasdirin hormetle layihə komandasi',
