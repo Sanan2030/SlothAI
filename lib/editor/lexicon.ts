@@ -91,7 +91,7 @@ qurğunun ötürüldü yüklənərkən işə qaranquşlar qayıdırlar səmasın
 göründü tədqiqatçılar köçünü içindən gölün bitkilər hüceyrələr
 dərmanlar bəzi edənlərə məktubla bölüşdürdü mərkəzində açıqladı
 müəllimlə mənbəyi müşahidələrdir əsdi çiçəklər əkdi sözünə
-ziyarətçilərə mərkəzindədir bölməsinə yaranırmı
+ziyarətçilərə mərkəzindədir bölməsinə yaranırmı əlavələrini nömrəsinin növünü növünün növlərdir növlərinə növündə növün hüquqi VÖEN üstündəki aşkarlananda yaradılmır yönləndiriləndə görünmür düşmür növbəsindəki yazdığı müddətlə məzuniyyətdəki loglarını meyarlarını məncə deyəsən əhsən diqqət əkdik
 davranış davranışıdır səlahiyyətiniz səlahiyyətinizin
 sahə mərhələsindədir icraçı
 `.trim().split(/\s+/);
@@ -135,6 +135,16 @@ const aliases: Record<string, string> = {
   testdir: 'testdir', teyin: 'təyin', narmin: 'Nərmin', emin: 'Emin',
   muraciyet: 'müraciət',
   olunmush: 'olunmuş',
+  huquqi: 'hüquqi',
+  voen: 'VÖEN',
+  mence: 'məncə',
+  deyesen: 'deyəsən',
+  ehsen: 'əhsən',
+  diqqet: 'diqqət',
+  destek: 'dəstək',
+  sanan: 'Sənan',
+  nabizada: 'Nabizadə',
+  yazdigi: 'yazdığı',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
@@ -239,6 +249,17 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   yorul: 'yorul',
   ses: 'səs',
   format: 'format',
+  kart: 'kart',
+  elave: 'əlavə',
+  nomre: 'nömrə',
+  nov: 'növ',
+  ust: 'üst',
+  askarlan: 'aşkarlan',
+  yonlendir: 'yönləndir',
+  mezuniyyet: 'məzuniyyət',
+  log: 'log',
+  meyar: 'meyar',
+  yarat: 'yarat',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
 
 function recognizedStem(rawStem: string, services?: SpellingContext): string | undefined {
@@ -246,6 +267,30 @@ function recognizedStem(rawStem: string, services?: SpellingContext): string | u
 }
 
 const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
+  { raw: 'indaki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
+  { raw: 'undaki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
+  { raw: 'indeki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
+  { raw: 'undeki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
+  { raw: 'lerini', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərini' : 'larını') },
+  { raw: 'larini', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərini' : 'larını') },
+  { raw: 'lerine', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərinə' : 'larına') },
+  { raw: 'larina', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərinə' : 'larına') },
+  { raw: 'sinin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 's' + harmonyI(stem) + 'n' + harmonyI(stem) + 'n' : undefined },
+  { raw: 'unun', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) + 'n' },
+  { raw: 'inin', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) + 'n' },
+  { raw: 'unde', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) },
+  { raw: 'inde', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) },
+  { raw: 'unu', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) },
+  { raw: 'inu', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) },
+  { raw: 'un', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' },
+  { raw: 'anda', apply: stem => stem + harmonyA(stem) + 'nda' },
+  { raw: 'ende', apply: stem => stem + harmonyA(stem) + 'ndə' },
+  { raw: 'ilende', apply: stem => stem + harmonyI(stem) + 'l' + harmonyA(stem) + 'ndə' },
+  { raw: 'ilanda', apply: stem => stem + harmonyI(stem) + 'l' + harmonyA(stem) + 'nda' },
+  { raw: 'ilsa', apply: stem => stem + harmonyI(stem) + 'ls' + harmonyA(stem) },
+  { raw: 'ilse', apply: stem => stem + harmonyI(stem) + 'ls' + harmonyA(stem) },
+  { raw: 'lerdir', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərdir' : 'lardır') },
+  { raw: 'lardir', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lərdir' : 'lardır') },
   { raw: 'ler', apply: stem => stem + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') },
   { raw: 'enden', apply: stem => stem === 'ed' ? 'edəndən' : undefined },
   { raw: 'yirdilar', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + (harmonyA(stem) === 'ə' ? 'lər' : 'lar') : undefined },
@@ -366,6 +411,7 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'si', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 's' + harmonyI(stem) : undefined },
   { raw: 'ye', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyA(stem) : undefined },
   { raw: 'e', apply: stem => stem + harmonyA(stem) },
+  { raw: 'a', apply: stem => stem + harmonyA(stem) },
 
   { raw: 'yirdim', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + 'm' : undefined },
   { raw: 'irdim', apply: stem => stem + harmonyI(stem) + 'rd' + harmonyI(stem) + 'm' },
@@ -409,6 +455,10 @@ function restoreProductiveSuffix(word: string, services?: SpellingContext): stri
     if (!stem && rawStem.endsWith('g')) {
       const underlying = recognizedStem(rawStem.slice(0, -1) + 'q', services);
       if (underlying?.endsWith('q')) stem = underlying.slice(0, -1) + 'ğ';
+    }
+    if (!stem && rawStem.endsWith('d')) {
+      const underlying = recognizedStem(rawStem.slice(0, -1) + 't', services);
+      if (underlying?.endsWith('t')) stem = underlying.slice(0, -1) + 'd';
     }
     if (!stem) continue;
 
@@ -458,8 +508,7 @@ export function restoreWord(word: string, services?: SpellingContext): string {
     ?? chooseSpelling(word, new Set(morphologyCandidates))
     ?? ((imported?.size ?? 0) > 1 ? undefined : services?.morphology.findByFoldedForm?.(word))
     ?? chooseIndexedTypo(word)
-    ?? restoreDigraphTransliteration(word, services)
-    ?? restoreProductiveSuffix(word, services);
+    ?? restoreDigraphTransliteration(word, services);
   if (!replacement) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
