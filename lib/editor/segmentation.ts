@@ -52,7 +52,9 @@ export function segmentIndependentClauses(text: string): string {
     const current = tokens[index][0];
     const space = tokens[index + 1]?.[0] ?? '';
     const next = tokens[index + 2]?.[0]?.toLocaleLowerCase('az-AZ') ?? '';
-    const participleBeforeNoun = /(?:mış|miş|muş|müş|acaq|əcək)$/iu.test(current) && /(?:lar|lər)$/iu.test(next);
+    const participleBeforeNoun = /(?:mış|miş|muş|müş|acaq|əcək)$/iu.test(current)
+      && (/(?:lar|lər)$/iu.test(next)
+        || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'));
     if (!/^\p{L}+$/u.test(current) || !/^ +$/u.test(space)
       || !isFinitePredicate(current) || participleBeforeNoun || connectors.has(next)
       || !(independentStart(next) || (next === 'daha' && tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') === 'sonra')
@@ -64,7 +66,7 @@ export function segmentIndependentClauses(text: string): string {
       output.lastIndexOf('!'), output.lastIndexOf('\n')) + 1).trim();
     if (!precedingClause) { output += current; continue; }
     // An indirect question is the object of the reporting verb, not a new sentence.
-    if (/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim)$/iu.test(current)
+    if (/(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim)$/iu.test(current)
       && /^(?:o\s+)?(?:nə vaxt|niyə|necə|hara|harada|kim|hansı|nə)\b/iu.test(
         tokens.slice(index + 2, index + 12).map(token => token[0]).join(''))) {
       output += current;
