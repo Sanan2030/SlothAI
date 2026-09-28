@@ -10,13 +10,9 @@ function contentWords(sentence: string): Set<string> {
   return new Set(words.filter(word => !stopwords.has(word)).map(word => word.replace(/(?:ların|lərin|ları|ləri|lardan|lərdən|lardan|lərdən|ının|inin|unun|ünün|lar|lər|dan|dən|nın|nin|nə|na|da|də)$/u, '')));
 }
 
-function strongDomainShift(a: string, b: string): boolean {
-  return (technical.test(a) && business.test(b) && !technical.test(b))
-    || (business.test(a) && technical.test(b) && !business.test(b));
-}
-
 function differentTopics(a: string, b: string): boolean {
-  if (strongDomainShift(a, b)) return true;
+  if ((technical.test(a) && business.test(b) && !technical.test(b)) ||
+    (business.test(a) && technical.test(b) && !business.test(b))) return true;
   const first = contentWords(a);
   const second = contentWords(b);
   if (first.size < 3 || second.size < 3) return false;
@@ -41,8 +37,7 @@ export function segmentParagraphs(text: string): string {
       let score = 0;
       if (temporal.test(sentence)) score += 2;
       if (isDiscourseTransition(sentence)) score += 2;
-      if (strongDomainShift(previous, sentence)) score += 3;
-      else if (differentTopics(previous, sentence)) score += 1;
+      if (differentTopics(previous, sentence)) score += 1;
       if (paragraphCount >= 3) score += 1;
       if (paragraphCount >= 6) score += 1;
       const boundary = score >= 3 && (sentences.length >= 4 || paragraphCount >= 2);
