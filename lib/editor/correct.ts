@@ -125,7 +125,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   // Keep lexical terminology visible to clause rules. Only punctuation-bearing
   // terms need opaque spans; spelling resolution already protects lexical terms.
   text = protectKnownTerminology(text, canonical =>
-    /[.#]/u.test(canonical) || canonical === 'npm' ? protect(canonical) : canonical);
+    /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
   // Type names are identifiers, not Azerbaijani prose (integer must not become

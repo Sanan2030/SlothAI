@@ -1,0 +1,2722 @@
+[
+  {
+    "id": "mail-001",
+    "domain": "qeydiyyat",
+    "audience": "müştəri",
+    "subject": "Yeni müraciət",
+    "anchor": "qəbul",
+    "input": "movzu Yeni müraciət salam müştəri qəbul etdiyimiz müraciətin izləmə kodu sabah şəxsi kabinetinizdə görünəcək hormetle senan"
+  },
+  {
+    "id": "mail-002",
+    "domain": "qeydiyyat",
+    "audience": "operatorlar",
+    "subject": "Səhv qeyd",
+    "anchor": "dünən",
+    "input": "Mövzu: Səhv qeyd\nHörmətli operatorlar,\ndünən daxil olan sənəd yanlış tarixlə qeydə alınıb zəhmət olmasa kartını yeniləyin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-003",
+    "domain": "qeydiyyat",
+    "audience": "Aysel xanım",
+    "subject": "Əlavə fayl",
+    "anchor": "göndərdiyiniz",
+    "input": "hormetli Aysel xanım göndərdiyiniz ərizənin əlavəsi görünmür onu bir daha yollamağınızı xahiş edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-004",
+    "domain": "qeydiyyat",
+    "audience": "Elvin bəy",
+    "subject": "Qeydiyyat cavabı",
+    "anchor": "rəsmi",
+    "input": "movzu Qeydiyyat cavabı salam Elvin bəy rəsmi məktubunuz qəbul edildi nəticə hazır olanda sizə ayrıca məlumat verəcəyik hormetle senan"
+  },
+  {
+    "id": "mail-005",
+    "domain": "qeydiyyat",
+    "audience": "katiblik",
+    "subject": "Gələn poçt",
+    "anchor": "kağız",
+    "input": "Mövzu: Gələn poçt\nHörmətli katiblik,\nkağız məktubun əsli çatıb elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-006",
+    "domain": "qeydiyyat",
+    "audience": "filial rəhbəri",
+    "subject": "Günlük say",
+    "anchor": "bu",
+    "input": "hormetli filial rəhbəri bu gün qəbul edilən ərizələrin sayı dünənkindən çoxdur axşam yekun siyahını paylaşacağıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-007",
+    "domain": "qeydiyyat",
+    "audience": "müraciətçi",
+    "subject": "Yanlış ünvan",
+    "anchor": "müraciətinizdəki",
+    "input": "movzu Yanlış ünvan salam müraciətçi müraciətinizdəki çatdırılma ünvanını dəqiqləşdirməyinizə ehtiyac var hormetle senan"
+  },
+  {
+    "id": "mail-008",
+    "domain": "qeydiyyat",
+    "audience": "arxiv qrupu",
+    "subject": "Qeydiyyat surəti",
+    "anchor": "imzalı",
+    "input": "Mövzu: Qeydiyyat surəti\nHörmətli arxiv qrupu,\nimzalı sənədin surəti sizə göndərilib əsli isə sabah təhvil veriləcək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-009",
+    "domain": "qeydiyyat",
+    "audience": "komanda",
+    "subject": "Təkrar sənəd",
+    "anchor": "eyni",
+    "input": "hormetli komanda eyni nömrə ilə iki sənəd daxil olub lütfən yalnız yeni olanı emal edin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-010",
+    "domain": "qeydiyyat",
+    "audience": "sənəd sahibi",
+    "subject": "Təsdiq gözlənilir",
+    "anchor": "ərizəniz",
+    "input": "movzu Təsdiq gözlənilir salam sənəd sahibi ərizəniz hələ təsdiq mərhələsindədir tamamlandıqdan sonra bildiriş alacaqsınız hormetle senan"
+  },
+  {
+    "id": "mail-011",
+    "domain": "qeydiyyat",
+    "audience": "Nigar xanım",
+    "subject": "Geri qaytarılan forma",
+    "anchor": "formadakı",
+    "input": "Mövzu: Geri qaytarılan forma\nHörmətli Nigar xanım,\nformadakı əlaqə nömrəsi natamamdır yenilənmiş variantı göndərə bilərsinizmi\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-012",
+    "domain": "qeydiyyat",
+    "audience": "dəstək heyəti",
+    "subject": "Yanlış kateqoriya",
+    "anchor": "müraciət",
+    "input": "hormetli dəstək heyəti müraciət səhv kateqoriyaya düşüb onu aidiyyəti növə keçirməyinizi xahiş edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-013",
+    "domain": "qeydiyyat",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Çatdırılma sübutu",
+    "anchor": "poçtla",
+    "input": "movzu Çatdırılma sübutu salam müştəri nümayəndəsi poçtla göndərilən məktubun çatdırılma qəbzini aldıq və sənədə əlavə etdik hormetle senan"
+  },
+  {
+    "id": "mail-014",
+    "domain": "qeydiyyat",
+    "audience": "qeydiyyat şöbəsi",
+    "subject": "Tarix uyğunsuzluğu",
+    "anchor": "ərizə",
+    "input": "Mövzu: Tarix uyğunsuzluğu\nHörmətli qeydiyyat şöbəsi,\nərizə üzərində yazılan tarix sistem vaxtından bir gün geridədir bunu yoxlayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-015",
+    "domain": "qeydiyyat",
+    "audience": "təmsilçi",
+    "subject": "Ərizə nömrəsi",
+    "anchor": "sizə",
+    "input": "hormetli təmsilçi sizə verilən qəbzdəki nömrəni gələcək yazışmalarda qeyd etməyinizi xahiş edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-016",
+    "domain": "qeydiyyat",
+    "audience": "admin qrupu",
+    "subject": "Yeni forma",
+    "anchor": "müraciət",
+    "input": "movzu Yeni forma salam admin qrupu müraciət forması yenilənib köhnə keçid artıq yeni səhifəyə yönləndirilir hormetle senan"
+  },
+  {
+    "id": "mail-017",
+    "domain": "qeydiyyat",
+    "audience": "qarşı tərəf",
+    "subject": "İtmiş fayl",
+    "anchor": "göndərişdə",
+    "input": "Mövzu: İtmiş fayl\nHörmətli qarşı tərəf,\ngöndərişdə əsas sənəd yoxdur əlavələri ayrıca almışıq lakin ərizəni görmürük\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-018",
+    "domain": "qeydiyyat",
+    "audience": "məsul əməkdaşlar",
+    "subject": "Qəbul pəncərəsi",
+    "anchor": "bu",
+    "input": "hormetli məsul əməkdaşlar bu həftə fiziki sənədlər saat beşə qədər qəbul olunacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-019",
+    "domain": "qeydiyyat",
+    "audience": "müştəri",
+    "subject": "Tamamlanan qeydiyyat",
+    "anchor": "tələb",
+    "input": "movzu Tamamlanan qeydiyyat salam müştəri tələb etdiyiniz dəyişiklik sistemə işlənib onu şəxsi kabinetinizdə görə bilərsiniz hormetle senan"
+  },
+  {
+    "id": "mail-020",
+    "domain": "qeydiyyat",
+    "audience": "növbətçi qrup",
+    "subject": "Sıra artımı",
+    "anchor": "qəbul",
+    "input": "Mövzu: Sıra artımı\nHörmətli növbətçi qrup,\nqəbul bölməsində gözləyən müraciətlər çoxalıb əlavə operator ayrılmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-021",
+    "domain": "derkenar",
+    "audience": "rəhbər",
+    "subject": "Dərkənar layihəsi",
+    "anchor": "göndərdiyimiz",
+    "input": "hormetli rəhbər göndərdiyimiz layihənin icra məqsədini dəqiqləşdirməyinizi xahiş edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-022",
+    "domain": "derkenar",
+    "audience": "icraçılar",
+    "subject": "Yeni tapşırıq",
+    "anchor": "rəhbərin",
+    "input": "movzu Yeni tapşırıq salam icraçılar rəhbərin dərkənarı sizə həvalə olunub icra müddəti cümə günü başa çatır hormetle senan"
+  },
+  {
+    "id": "mail-023",
+    "domain": "derkenar",
+    "audience": "katiblik",
+    "subject": "Səhv təyinat",
+    "anchor": "dərkənar",
+    "input": "Mövzu: Səhv təyinat\nHörmətli katiblik,\ndərkənar yanlış icraçıya düşüb aidiyyəti əməkdaşa qaytarın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-024",
+    "domain": "derkenar",
+    "audience": "Leyla xanım",
+    "subject": "İmza gözlənilir",
+    "anchor": "hazırladığınız",
+    "input": "hormetli Leyla xanım hazırladığınız sənəd dərkənar təsdiqlənən kimi icraya ötürüləcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-025",
+    "domain": "derkenar",
+    "audience": "hüquq qrupu",
+    "subject": "Əlavə rəy",
+    "anchor": "dərkənardakı",
+    "input": "movzu Əlavə rəy salam hüquq qrupu dərkənardakı hüquqi qeydə dair qısa rəyinizi sabaha qədər göndərin hormetle senan"
+  },
+  {
+    "id": "mail-026",
+    "domain": "derkenar",
+    "audience": "tərəfdaş",
+    "subject": "İcra statusu",
+    "anchor": "dərkənar",
+    "input": "Mövzu: İcra statusu\nHörmətli tərəfdaş,\ndərkənar imzalanıb lakin icra hələ başlanmayıb bunun səbəbini araşdırırıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-027",
+    "domain": "derkenar",
+    "audience": "sənəd hazırlayanlar",
+    "subject": "Qeyd redaktəsi",
+    "anchor": "imzadan",
+    "input": "hormetli sənəd hazırlayanlar imzadan sonra dərkənarın məzmunu dəyişməməlidir düzəlişi əvvəl edin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-028",
+    "domain": "derkenar",
+    "audience": "Araz bəy",
+    "subject": "Yenidən baxış",
+    "anchor": "əvvəlki",
+    "input": "movzu Yenidən baxış salam Araz bəy əvvəlki dərkənarın məqsədi düzgün seçilməyib yeni layihəni təsdiqinizə təqdim edirik hormetle senan"
+  },
+  {
+    "id": "mail-029",
+    "domain": "derkenar",
+    "audience": "inzibatçı",
+    "subject": "Bildirilməyən qərar",
+    "anchor": "dərkənar",
+    "input": "Mövzu: Bildirilməyən qərar\nHörmətli inzibatçı,\ndərkənar icraçıya ötürülüb amma hesabına bildiriş çatmayıb\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-030",
+    "domain": "derkenar",
+    "audience": "nəzarət şöbəsi",
+    "subject": "İcra müddəti",
+    "anchor": "müddətin",
+    "input": "hormetli nəzarət şöbəsi müddətin uzadılması üçün rəhbərin yazılı qərarı lazımdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-031",
+    "domain": "derkenar",
+    "audience": "komanda",
+    "subject": "Paralel icra",
+    "anchor": "iki",
+    "input": "movzu Paralel icra salam komanda iki icraçı eyni dərkənarı alıb hər biri öz hissəsini ayrıca qeyd etməlidir hormetle senan"
+  },
+  {
+    "id": "mail-032",
+    "domain": "derkenar",
+    "audience": "məsul şəxs",
+    "subject": "Bağlanan dərkənar",
+    "anchor": "icra",
+    "input": "Mövzu: Bağlanan dərkənar\nHörmətli məsul şəxs,\nicra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-033",
+    "domain": "derkenar",
+    "audience": "Rəşad bəy",
+    "subject": "Geri çağırma",
+    "anchor": "yanlış",
+    "input": "hormetli Rəşad bəy yanlış ünvanlanan dərkənar geri çağırılıb yeni variantı sizə göndərəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-034",
+    "domain": "derkenar",
+    "audience": "audit qrupu",
+    "subject": "İmza tarixçəsi",
+    "anchor": "dərkənarın",
+    "input": "movzu İmza tarixçəsi salam audit qrupu dərkənarın tarixçəsində ikinci imza görünmür jurnalı yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-035",
+    "domain": "derkenar",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Rəhbər qeydi",
+    "anchor": "müraciətinizə",
+    "input": "Mövzu: Rəhbər qeydi\nHörmətli müştəri nümayəndəsi,\nmüraciətinizə baxılır rəhbərin qeydi daxil olanda növbəti addımı bildirəcəyik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-036",
+    "domain": "derkenar",
+    "audience": "texniki dəstək",
+    "subject": "Açılmayan əlavə",
+    "anchor": "dərkənara",
+    "input": "hormetli texniki dəstək dərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır nümunəni göndərdik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-037",
+    "domain": "derkenar",
+    "audience": "icraçı",
+    "subject": "Nəzarət üçün məlumat",
+    "anchor": "tapşırıq",
+    "input": "movzu Nəzarət üçün məlumat salam icraçı tapşırıq üzrə görülən işi bu gün yekun qeydə yazmağınızı xahiş edirik hormetle senan"
+  },
+  {
+    "id": "mail-038",
+    "domain": "derkenar",
+    "audience": "filial meneceri",
+    "subject": "Müvəqqəti əvəzləmə",
+    "anchor": "əsas",
+    "input": "Mövzu: Müvəqqəti əvəzləmə\nHörmətli filial meneceri,\nəsas imzaçı ezamiyyətdədir dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-039",
+    "domain": "derkenar",
+    "audience": "Nərmin xanım",
+    "subject": "Təsdiq xətası",
+    "anchor": "dərkənarı",
+    "input": "hormetli Nərmin xanım dərkənarı imzalayanda səhv mesajı çıxır ekran görüntüsünü əlavə etmişəm hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-040",
+    "domain": "derkenar",
+    "audience": "layihə qrupu",
+    "subject": "Təkrar yoxlama",
+    "anchor": "gələn",
+    "input": "movzu Təkrar yoxlama salam layihə qrupu gələn cavaba əsasən dərkənarın icra mərhələsini bir daha yoxlamalıyıq hormetle senan"
+  },
+  {
+    "id": "mail-041",
+    "domain": "api",
+    "audience": "backend qrupu",
+    "subject": "GET xətası",
+    "anchor": "GET",
+    "input": "Mövzu: GET xətası\nHörmətli backend qrupu,\nGET /api/v1/documents endpointi səhər saatlarından 500 qaytarır logları əlavə etdim\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-042",
+    "domain": "api",
+    "audience": "frontend qrupu",
+    "subject": "Form cavabı",
+    "anchor": "yeni",
+    "input": "hormetli frontend qrupu yeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-043",
+    "domain": "api",
+    "audience": "inteqrasiya komandası",
+    "subject": "Callback ünvanı",
+    "anchor": "tərəfdaşın",
+    "input": "movzu Callback ünvanı salam inteqrasiya komandası tərəfdaşın callback URL-i dəyişib yenisini test mühitinə yazmağımız lazımdır hormetle senan"
+  },
+  {
+    "id": "mail-044",
+    "domain": "api",
+    "audience": "Emil bəy",
+    "subject": "Swagger sxemi",
+    "anchor": "Swagger",
+    "input": "Mövzu: Swagger sxemi\nHörmətli Emil bəy,\nSwagger sənədində amount tipi string göstərilib halbuki müqavilədə number tələb olunur\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-045",
+    "domain": "api",
+    "audience": "məhsul sahibi",
+    "subject": "API dəyişiklikləri",
+    "anchor": "v2",
+    "input": "hormetli məhsul sahibi v2 endpoint üçün geriyə uyğunluq testi sabah tamamlanacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-046",
+    "domain": "api",
+    "audience": "müştəri",
+    "subject": "Gecikən cavab",
+    "anchor": "sorğunuz",
+    "input": "movzu Gecikən cavab salam müştəri sorğunuz serverə çatıb lakin cavab gecikir nəticəni aldıqdan sonra paylaşacağıq hormetle senan"
+  },
+  {
+    "id": "mail-047",
+    "domain": "api",
+    "audience": "DevOps komandası",
+    "subject": "429 cavabı",
+    "anchor": "rate",
+    "input": "Mövzu: 429 cavabı\nHörmətli DevOps komandası,\nrate limit həddini keçən sorğular üçün 429 qaytarılmasını yoxladıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-048",
+    "domain": "api",
+    "audience": "təhlükəsizlik qrupu",
+    "subject": "Token icazəsi",
+    "anchor": "müddəti",
+    "input": "hormetli təhlükəsizlik qrupu müddəti bitmiş tokenlə sorğu göndərə bilirik bu davranış araşdırılmalıdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-049",
+    "domain": "api",
+    "audience": "analitiklər",
+    "subject": "API contract",
+    "anchor": "yeni",
+    "input": "movzu API contract salam analitiklər yeni response schema qəbul meyarlarından fərqlənir rəyinizi bildirin hormetle senan"
+  },
+  {
+    "id": "mail-050",
+    "domain": "api",
+    "audience": "Kamran bəy",
+    "subject": "Webhook təkrarı",
+    "anchor": "eyni",
+    "input": "Mövzu: Webhook təkrarı\nHörmətli Kamran bəy,\neyni hadisənin iki dəfə çatdığı görünür idempotency key yoxlanmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-051",
+    "domain": "api",
+    "audience": "test komandası",
+    "subject": "Pagination sınağı",
+    "anchor": "son",
+    "input": "hormetli test komandası son səhifənin cursor dəyəri boş gəlir əlavə test yazdıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-052",
+    "domain": "api",
+    "audience": "platforma qrupu",
+    "subject": "Timeout təklifi",
+    "anchor": "böyük",
+    "input": "movzu Timeout təklifi salam platforma qrupu böyük fayl sorğularında timeout artırılsa da performans ayrıca ölçülməlidir hormetle senan"
+  },
+  {
+    "id": "mail-053",
+    "domain": "api",
+    "audience": "vendor komandası",
+    "subject": "Authorization header",
+    "anchor": "sorğularınızda",
+    "input": "Mövzu: Authorization header\nHörmətli vendor komandası,\nsorğularınızda Authorization header yoxdur ona görə xidmət 401 cavabı verir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-054",
+    "domain": "api",
+    "audience": "Aysel xanım",
+    "subject": "OpenAPI dəqiqləşdirməsi",
+    "anchor": "göndərdiyiniz",
+    "input": "hormetli Aysel xanım göndərdiyiniz OpenAPI sənədində üç response kodu qeyd edilməyib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-055",
+    "domain": "api",
+    "audience": "servis sahibləri",
+    "subject": "Gateway marşrutu",
+    "anchor": "gateway",
+    "input": "movzu Gateway marşrutu salam servis sahibləri gateway yeni ünvanı köhnə backend servisinə yönləndirir düzəlişi planladıq hormetle senan"
+  },
+  {
+    "id": "mail-056",
+    "domain": "api",
+    "audience": "Nihat bəy",
+    "subject": "gRPC əlaqəsi",
+    "anchor": "gRPC",
+    "input": "Mövzu: gRPC əlaqəsi\nHörmətli Nihat bəy,\ngRPC müştərisi yeni protobuf faylı ilə işləməyəndə hansı xəta görünür\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-057",
+    "domain": "api",
+    "audience": "mobil komanda",
+    "subject": "Payload ölçüsü",
+    "anchor": "mobil",
+    "input": "hormetli mobil komanda mobil tətbiqdən gələn payload limiti keçib fayl yükünü bölmək lazımdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-058",
+    "domain": "api",
+    "audience": "operatorlar",
+    "subject": "Təkrar cəhd",
+    "anchor": "xəta",
+    "input": "movzu Təkrar cəhd salam operatorlar xəta cavabı alan sorğunu avtomatik yenidən göndərərkən əməliyyat təkrarlana bilər hormetle senan"
+  },
+  {
+    "id": "mail-059",
+    "domain": "api",
+    "audience": "tərəfdaş",
+    "subject": "Sertifikat yenilənməsi",
+    "anchor": "API",
+    "input": "Mövzu: Sertifikat yenilənməsi\nHörmətli tərəfdaş,\nAPI sertifikatı dəyişdirilib yeni public key sənədini sizə göndəririk\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-060",
+    "domain": "api",
+    "audience": "monitorinq qrupu",
+    "subject": "Status kodları",
+    "anchor": "bir",
+    "input": "hormetli monitorinq qrupu bir neçə daxili xəta 200 kimi görünür xəritəni birlikdə yoxlayaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-061",
+    "domain": "security",
+    "audience": "təhlükəsizlik komandası",
+    "subject": "Şübhəli giriş",
+    "anchor": "bu",
+    "input": "movzu Şübhəli giriş salam təhlükəsizlik komandası bu gecə bir hesabdan fərqli IP ünvanları ilə giriş cəhdləri qeydə alınıb hormetle senan"
+  },
+  {
+    "id": "mail-062",
+    "domain": "security",
+    "audience": "müştərilər",
+    "subject": "Şifrə yenilənməsi",
+    "anchor": "hesabınıza",
+    "input": "Mövzu: Şifrə yenilənməsi\nHörmətli müştərilər,\nhesabınıza aid şifrəni yeniləmək üçün gələn keçiddən yalnız bir dəfə istifadə edin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-063",
+    "domain": "security",
+    "audience": "audit qrupu",
+    "subject": "İcazə siyahısı",
+    "anchor": "gizli",
+    "input": "hormetli audit qrupu gizli sənədlərə baxış hüququ olan şəxslərin siyahısını göndəririk hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-064",
+    "domain": "security",
+    "audience": "Elçin bəy",
+    "subject": "Sertifikat bitməsi",
+    "anchor": "TLS",
+    "input": "movzu Sertifikat bitməsi salam Elçin bəy TLS sertifikatının vaxtı bazar günü bitir yenilənməni əvvəlcədən planlaşdıraq hormetle senan"
+  },
+  {
+    "id": "mail-065",
+    "domain": "security",
+    "audience": "admin heyəti",
+    "subject": "Yeni rol qaydası",
+    "anchor": "müvəqqəti",
+    "input": "Mövzu: Yeni rol qaydası\nHörmətli admin heyəti,\nmüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur bunun üçün yoxlama lazımdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-066",
+    "domain": "security",
+    "audience": "məhsul komandası",
+    "subject": "İki faktorlu giriş",
+    "anchor": "yeni",
+    "input": "hormetli məhsul komandası yeni 2FA addımı mobil tətbiqdə də sınaqdan keçirilməlidir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-067",
+    "domain": "security",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Məxfi məlumat",
+    "anchor": "göndərdiyiniz",
+    "input": "movzu Məxfi məlumat salam müştəri nümayəndəsi göndərdiyiniz ekran görüntüsündə şəxsi məlumat görünür onu maskalanmış formada paylaşın hormetle senan"
+  },
+  {
+    "id": "mail-068",
+    "domain": "security",
+    "audience": "texniki tərəfdaş",
+    "subject": "Webhook imzası",
+    "anchor": "mesajları",
+    "input": "Mövzu: Webhook imzası\nHörmətli texniki tərəfdaş,\nmesajları imzasız qəbul etdiyimiz üçün endpoint müvəqqəti bağlanıb\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-069",
+    "domain": "security",
+    "audience": "rəhbərlik",
+    "subject": "Penetrasiya testi",
+    "anchor": "test",
+    "input": "hormetli rəhbərlik test zamanı iki orta riskli problem aşkarlanıb düzəliş tarixlərini təqdim edəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-070",
+    "domain": "security",
+    "audience": "tərtibatçılar",
+    "subject": "Gizli açar",
+    "anchor": "repo",
+    "input": "movzu Gizli açar salam tərtibatçılar repo tarixində təsadüfən qalan açar ləğv edilib yenisi təhlükəsiz kanalla paylaşılacaq hormetle senan"
+  },
+  {
+    "id": "mail-071",
+    "domain": "security",
+    "audience": "filial əməkdaşları",
+    "subject": "Sessiya müddəti",
+    "anchor": "istifadəçi",
+    "input": "Mövzu: Sessiya müddəti\nHörmətli filial əməkdaşları,\nistifadəçi uzun müddət fəaliyyətsiz qaldıqda hesabdan çıxış edilməlidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-072",
+    "domain": "security",
+    "audience": "şəbəkə qrupu",
+    "subject": "Firewall dəyişikliyi",
+    "anchor": "yeni",
+    "input": "hormetli şəbəkə qrupu yeni qayda imza xidmətinə girişi bloklayıb ünvanları dəqiqləşdirin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-073",
+    "domain": "security",
+    "audience": "Səbinə xanım",
+    "subject": "Fayla icazə",
+    "anchor": "bu",
+    "input": "movzu Fayla icazə salam Səbinə xanım bu linki yalnız sənədin aid olduğu şöbənin əməkdaşları aça bilərlər hormetle senan"
+  },
+  {
+    "id": "mail-074",
+    "domain": "security",
+    "audience": "monitorinq qrupu",
+    "subject": "Şifrə sızması",
+    "anchor": "test",
+    "input": "Mövzu: Şifrə sızması\nHörmətli monitorinq qrupu,\ntest jurnalında yanlışlıqla yazılan şifrə silinib hadisə ayrıca qeydə alınıb\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-075",
+    "domain": "security",
+    "audience": "layihə meneceri",
+    "subject": "Təhlükəsizlik rəyi",
+    "anchor": "buraxılışdan",
+    "input": "hormetli layihə meneceri buraxılışdan əvvəl zəifliklərin aradan qaldırıldığını təsdiqləyən hesabat istəyirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-076",
+    "domain": "security",
+    "audience": "servis komandası",
+    "subject": "CSRF yoxlaması",
+    "anchor": "form",
+    "input": "movzu CSRF yoxlaması salam servis komandası form göndərərkən tokenin yoxlanmadığı köhnə route aşkar edilib hormetle senan"
+  },
+  {
+    "id": "mail-077",
+    "domain": "security",
+    "audience": "müştəri",
+    "subject": "Giriş məhdudiyyəti",
+    "anchor": "səhv",
+    "input": "Mövzu: Giriş məhdudiyyəti\nHörmətli müştəri,\nsəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb dəstəyə müraciət edin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-078",
+    "domain": "security",
+    "audience": "Nigar xanım",
+    "subject": "Paylaşım keçidi",
+    "anchor": "sənəd",
+    "input": "hormetli Nigar xanım sənəd keçidinin etibarlılıq müddəti bitib sizə yenisini göndərə bilərik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-079",
+    "domain": "security",
+    "audience": "hüquq komandası",
+    "subject": "Məlumat saxlanması",
+    "anchor": "saxlanma",
+    "input": "movzu Məlumat saxlanması salam hüquq komandası saxlanma müddətinin yeni qayda ilə uyğunluğu barədə rəy lazımdır hormetle senan"
+  },
+  {
+    "id": "mail-080",
+    "domain": "security",
+    "audience": "sistem administratoru",
+    "subject": "Backup icazəsi",
+    "anchor": "ehtiyat",
+    "input": "Mövzu: Backup icazəsi\nHörmətli sistem administratoru,\nehtiyat nüsxəyə çıxış yalnız ayrıca səlahiyyətlə verilməlidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-081",
+    "domain": "data",
+    "audience": "analitiklər",
+    "subject": "Hesabat fərqi",
+    "anchor": "iki",
+    "input": "hormetli analitiklər iki paneldə eyni göstəricinin fərqli çıxmasının səbəbini araşdırırıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-082",
+    "domain": "data",
+    "audience": "maliyyə şöbəsi",
+    "subject": "Ödəniş çıxarışı",
+    "anchor": "aylıq",
+    "input": "movzu Ödəniş çıxarışı salam maliyyə şöbəsi aylıq çıxarışdakı üç əməliyyatın qəbzi əlavə edilməyib hormetle senan"
+  },
+  {
+    "id": "mail-083",
+    "domain": "data",
+    "audience": "DBA komandası",
+    "subject": "İndeks planı",
+    "anchor": "axtarış",
+    "input": "Mövzu: İndeks planı\nHörmətli DBA komandası,\naxtarış yavaşladığı üçün qeydiyyat nömrəsinə ayrıca indeks təklif edirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-084",
+    "domain": "data",
+    "audience": "Araz bəy",
+    "subject": "Köçürülən qeyd",
+    "anchor": "köhnə",
+    "input": "hormetli Araz bəy köhnə bazadan gətirilən məlumatda bir tarix sahəsi boş görünür hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-085",
+    "domain": "data",
+    "audience": "məhsul sahibi",
+    "subject": "Miqrasiya yekunu",
+    "anchor": "ilkin",
+    "input": "movzu Miqrasiya yekunu salam məhsul sahibi ilkin köçürmə bitib lakin sayların tutuşdurulması hələ davam edir hormetle senan"
+  },
+  {
+    "id": "mail-086",
+    "domain": "data",
+    "audience": "rəhbərlik",
+    "subject": "Analitika paneli",
+    "anchor": "gündəlik",
+    "input": "Mövzu: Analitika paneli\nHörmətli rəhbərlik,\ngündəlik müraciət sayı real vaxtda yenilənmir səbəbi cache müddətidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-087",
+    "domain": "data",
+    "audience": "test komandası",
+    "subject": "Təkrar yazı",
+    "anchor": "miqrasiya",
+    "input": "hormetli test komandası miqrasiya skripti təkrar işlədiləndə ikinci nüsxə yaratmamalıdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-088",
+    "domain": "data",
+    "audience": "Elvin bəy",
+    "subject": "SQL sorğusu",
+    "anchor": "hesabat",
+    "input": "movzu SQL sorğusu salam Elvin bəy hesabat sorğusunda son ay üzrə filtr düzgün tətbiq olunmur hormetle senan"
+  },
+  {
+    "id": "mail-089",
+    "domain": "data",
+    "audience": "operatorlar",
+    "subject": "Boş məlumat",
+    "anchor": "telefon",
+    "input": "Mövzu: Boş məlumat\nHörmətli operatorlar,\ntelefon nömrəsi olmayan şəxslərə SMS göndərməzdən əvvəl seçim yoxlanmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-090",
+    "domain": "data",
+    "audience": "vendor",
+    "subject": "Fayl bütövlüyü",
+    "anchor": "köçürülmüş",
+    "input": "hormetli vendor köçürülmüş faylların hash dəyərləri mənbə ilə uyğun gəlir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-091",
+    "domain": "data",
+    "audience": "komanda",
+    "subject": "CSV kodlaması",
+    "anchor": "ixrac",
+    "input": "movzu CSV kodlaması salam komanda ixrac olunan CSV-də Azərbaycan hərfləri səhv göstərilir hormetle senan"
+  },
+  {
+    "id": "mail-092",
+    "domain": "data",
+    "audience": "müştəri",
+    "subject": "Məlumat düzəlişi",
+    "anchor": "profilinizdəki",
+    "input": "Mövzu: Məlumat düzəlişi\nHörmətli müştəri,\nprofilinizdəki soyadın yeni yazılışını aldıq yoxlamadan sonra yeniləyəcəyik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-093",
+    "domain": "data",
+    "audience": "arxiv qrupu",
+    "subject": "Saxlanma müddəti",
+    "anchor": "müddəti",
+    "input": "hormetli arxiv qrupu müddəti bitən sənədlər üçün avtomatik silmə hələ aktiv deyil hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-094",
+    "domain": "data",
+    "audience": "filial rəhbəri",
+    "subject": "İllik göstərici",
+    "anchor": "hesabatın",
+    "input": "movzu İllik göstərici salam filial rəhbəri hesabatın son versiyasında iki filialın rəqəmləri yer dəyişib hormetle senan"
+  },
+  {
+    "id": "mail-095",
+    "domain": "data",
+    "audience": "admin heyəti",
+    "subject": "Redis cache",
+    "anchor": "Redis",
+    "input": "Mövzu: Redis cache\nHörmətli admin heyəti,\nRedis açarları yenilənməyəndə köhnə istifadəçi rolu göstərilə bilər\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-096",
+    "domain": "data",
+    "audience": "məhsul analitikləri",
+    "subject": "Tarix zonası",
+    "anchor": "səhər",
+    "input": "hormetli məhsul analitikləri səhər əməliyyatlarının bir hissəsi UTC vaxtına görə dünənə düşüb hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-097",
+    "domain": "data",
+    "audience": "təhlükəsizlik qrupu",
+    "subject": "Maskalanma testi",
+    "anchor": "ixrac",
+    "input": "movzu Maskalanma testi salam təhlükəsizlik qrupu ixrac faylında şəxsi nömrə görünməməlidir nümunəni yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-098",
+    "domain": "data",
+    "audience": "Rəna xanım",
+    "subject": "Excel əlavəsi",
+    "anchor": "göndərdiyiniz",
+    "input": "Mövzu: Excel əlavəsi\nHörmətli Rəna xanım,\ngöndərdiyiniz Excel cədvəlində ikinci vərəq boş çıxır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-099",
+    "domain": "data",
+    "audience": "mühəndislər",
+    "subject": "DB bağlantısı",
+    "anchor": "bağlantı",
+    "input": "hormetli mühəndislər bağlantı hovuzu dolduğu üçün bəzi sorğular növbədə gözləyir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-100",
+    "domain": "data",
+    "audience": "müşahidə qrupu",
+    "subject": "Audit yazıları",
+    "anchor": "bu",
+    "input": "movzu Audit yazıları salam müşahidə qrupu bu gecə yaranan qeydlərin sayı hesablanan göstəricidən azdır hormetle senan"
+  },
+  {
+    "id": "mail-101",
+    "domain": "devops",
+    "audience": "platforma komandası",
+    "subject": "Production deploy",
+    "anchor": "yeni",
+    "input": "Mövzu: Production deploy\nHörmətli platforma komandası,\nyeni versiya production mühitinə çıxıb health check nəticəsi normaldır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-102",
+    "domain": "devops",
+    "audience": "rəhbərlik",
+    "subject": "Buraxılış vaxtı",
+    "anchor": "növbəti",
+    "input": "hormetli rəhbərlik növbəti release cümə axşamı saat altıda nəzərdə tutulub hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-103",
+    "domain": "devops",
+    "audience": "müştəri",
+    "subject": "Planlı fasilə",
+    "anchor": "sistemə",
+    "input": "movzu Planlı fasilə salam müştəri sistemə texniki xidmət zamanı girişdə qısa gecikmə ola bilər hormetle senan"
+  },
+  {
+    "id": "mail-104",
+    "domain": "devops",
+    "audience": "Nicat bəy",
+    "subject": "Build xətası",
+    "anchor": "CI",
+    "input": "Mövzu: Build xətası\nHörmətli Nicat bəy,\nCI pipeline içində typecheck mərhələsi uğursuzdur logun son hissəsini göndərirəm\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-105",
+    "domain": "devops",
+    "audience": "mühəndislər",
+    "subject": "Rollback sınağı",
+    "anchor": "geri",
+    "input": "hormetli mühəndislər geri dönüş addımının ehtiyat mühitdə işlədiyini təsdiqləməliyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-106",
+    "domain": "devops",
+    "audience": "monitorinq qrupu",
+    "subject": "CPU artımı",
+    "anchor": "dünən",
+    "input": "movzu CPU artımı salam monitorinq qrupu dünən gecə CPU istifadəsi artsa da xidmət dayanmayıb hormetle senan"
+  },
+  {
+    "id": "mail-107",
+    "domain": "devops",
+    "audience": "layihə komandası",
+    "subject": "Feature flag",
+    "anchor": "yeni",
+    "input": "Mövzu: Feature flag\nHörmətli layihə komandası,\nyeni funksiya yalnız test istifadəçiləri üçün açıq olacaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-108",
+    "domain": "devops",
+    "audience": "DevOps qrupu",
+    "subject": "Kubernetes pod",
+    "anchor": "pod",
+    "input": "hormetli DevOps qrupu pod restart dövrünə düşüb yaddaş limitini ayrıca ölçün hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-109",
+    "domain": "devops",
+    "audience": "servis sahibləri",
+    "subject": "DNS yenilənməsi",
+    "anchor": "yeni",
+    "input": "movzu DNS yenilənməsi salam servis sahibləri yeni domen qaydası bütün regionlara yayılmayıb bir az gözləyək hormetle senan"
+  },
+  {
+    "id": "mail-110",
+    "domain": "devops",
+    "audience": "müştəri meneceri",
+    "subject": "Staging nəticəsi",
+    "anchor": "staging",
+    "input": "Mövzu: Staging nəticəsi\nHörmətli müştəri meneceri,\nstaging mühitində sınaqlar keçib production üçün təsdiq gözləyirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-111",
+    "domain": "devops",
+    "audience": "operatorlar",
+    "subject": "Yüklənmə həddi",
+    "anchor": "gündəlik",
+    "input": "hormetli operatorlar gündəlik pik vaxtlarda cavab müddəti uzanır əlavə resurs ayrılacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-112",
+    "domain": "devops",
+    "audience": "infrastruktur qrupu",
+    "subject": "Sertifikat yoxlaması",
+    "anchor": "yenilənən",
+    "input": "movzu Sertifikat yoxlaması salam infrastruktur qrupu yenilənən sertifikat köhnə container daxilində görünmür hormetle senan"
+  },
+  {
+    "id": "mail-113",
+    "domain": "devops",
+    "audience": "Aysel xanım",
+    "subject": "Deploy planı",
+    "anchor": "mövcud",
+    "input": "Mövzu: Deploy planı\nHörmətli Aysel xanım,\nmövcud versiya ehtiyatda qalacaq dəyişiklik tamamlananda sizə yazacağıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-114",
+    "domain": "devops",
+    "audience": "sınaq qrupu",
+    "subject": "Test mühiti",
+    "anchor": "yeni",
+    "input": "hormetli sınaq qrupu yeni environment dəyişənləri yalnız sınaq serverinə yazılıb hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-115",
+    "domain": "devops",
+    "audience": "vendor dəstəyi",
+    "subject": "Regional gecikmə",
+    "anchor": "bəzi",
+    "input": "movzu Regional gecikmə salam vendor dəstəyi bəzi sorğular fra1 regionunda daha gec cavablanır hormetle senan"
+  },
+  {
+    "id": "mail-116",
+    "domain": "devops",
+    "audience": "texniki komanda",
+    "subject": "Disk dolması",
+    "anchor": "serverdə",
+    "input": "Mövzu: Disk dolması\nHörmətli texniki komanda,\nserverdə boş yer azalıb jurnal fayllarını təhlükəsiz qaydada dövr etdirək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-117",
+    "domain": "devops",
+    "audience": "məhsul sahibi",
+    "subject": "Canlı tarix",
+    "anchor": "planlanan",
+    "input": "hormetli məhsul sahibi planlanan tarixdən əvvəl yeni versiya avtomatik buraxılmasın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-118",
+    "domain": "devops",
+    "audience": "Elçin bəy",
+    "subject": "GitHub əlaqəsi",
+    "anchor": "main",
+    "input": "movzu GitHub əlaqəsi salam Elçin bəy main branch-dəki son commit Vercel build ilə eynidirmi bunu yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-119",
+    "domain": "devops",
+    "audience": "gözləmə növbəsi",
+    "subject": "Müdaxilə qeydi",
+    "anchor": "nasazlıq",
+    "input": "Mövzu: Müdaxilə qeydi\nHörmətli gözləmə növbəsi,\nnasazlıq zamanı növbətçi heyətə birbaşa xəbər göndərilsin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-120",
+    "domain": "devops",
+    "audience": "rəhbər heyət",
+    "subject": "Performans nəticəsi",
+    "anchor": "bu",
+    "input": "hormetli rəhbər heyət bu həftəki yük sınağının p95 cavab müddətini hesabata əlavə etdik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-121",
+    "domain": "testing",
+    "audience": "QA komandası",
+    "subject": "UAT meyarları",
+    "anchor": "son",
+    "input": "movzu UAT meyarları salam QA komandası son test planında təsdiq meyarının bir bəndi yoxdur hormetle senan"
+  },
+  {
+    "id": "mail-122",
+    "domain": "testing",
+    "audience": "məhsul sahibi",
+    "subject": "Demo nəticəsi",
+    "anchor": "nümayişdə",
+    "input": "Mövzu: Demo nəticəsi\nHörmətli məhsul sahibi,\nnümayişdə görünən xətanı ayrıca ticket kimi qeydə aldıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-123",
+    "domain": "testing",
+    "audience": "Aysel xanım",
+    "subject": "Test faylı",
+    "anchor": "dünən",
+    "input": "hormetli Aysel xanım dünən paylaşdığınız PDF sınaqda açılır amma imza yoxlaması uğursuzdur hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-124",
+    "domain": "testing",
+    "audience": "tərtibatçılar",
+    "subject": "Regressiya",
+    "anchor": "köhnə",
+    "input": "movzu Regressiya salam tərtibatçılar köhnə davranış yeni dəyişiklikdən sonra pozulub nümunəni əlavə etdim hormetle senan"
+  },
+  {
+    "id": "mail-125",
+    "domain": "testing",
+    "audience": "müştəri",
+    "subject": "Yenidən sınaq",
+    "anchor": "bildirdiyiniz",
+    "input": "Mövzu: Yenidən sınaq\nHörmətli müştəri,\nbildirdiyiniz problemə düzəliş edilib onu test mühitində yoxlaya bilərsiniz\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-126",
+    "domain": "testing",
+    "audience": "analitik qrupu",
+    "subject": "Kənar hal",
+    "anchor": "boş",
+    "input": "hormetli analitik qrupu boş siyahı ilə təsdiq düyməsinin davranışı tələblərdə göstərilməyib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-127",
+    "domain": "testing",
+    "audience": "Rauf bəy",
+    "subject": "Yük sınağı",
+    "anchor": "min",
+    "input": "movzu Yük sınağı salam Rauf bəy min paralel istifadəçi ilə sınaqda cavab vaxtı artır hormetle senan"
+  },
+  {
+    "id": "mail-128",
+    "domain": "testing",
+    "audience": "menecer",
+    "subject": "Buraxılışa hazırlıq",
+    "anchor": "iki",
+    "input": "Mövzu: Buraxılışa hazırlıq\nHörmətli menecer,\niki kritik xəta hələ açıqdır buraxılış qərarını sonraya saxlayaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-129",
+    "domain": "testing",
+    "audience": "sənəd müəllifləri",
+    "subject": "Nümunə kart",
+    "anchor": "test",
+    "input": "hormetli sənəd müəllifləri test sənədində həqiqi şəxsin məlumatı olmamalıdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-130",
+    "domain": "testing",
+    "audience": "əlaqə qrupu",
+    "subject": "Sınaq dəvəti",
+    "anchor": "gələn",
+    "input": "movzu Sınaq dəvəti salam əlaqə qrupu gələn çərşənbə qəbul testini birlikdə keçirəcəyik hormetle senan"
+  },
+  {
+    "id": "mail-131",
+    "domain": "testing",
+    "audience": "komanda",
+    "subject": "Retry sınağı",
+    "anchor": "eyni",
+    "input": "Mövzu: Retry sınağı\nHörmətli komanda,\neyni bildiriş iki dəfə gələndə yalnız bir tapşırıq yaranmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-132",
+    "domain": "testing",
+    "audience": "Səma xanım",
+    "subject": "Mobil test",
+    "anchor": "kiçik",
+    "input": "hormetli Səma xanım kiçik ekranda təsdiq pəncərəsinin son düyməsi görünmür hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-133",
+    "domain": "testing",
+    "audience": "frontend qrupu",
+    "subject": "Əlçatanlıq",
+    "anchor": "klaviatura",
+    "input": "movzu Əlçatanlıq salam frontend qrupu klaviatura ilə forma səhvlərinə keçid tam işləməyib hormetle senan"
+  },
+  {
+    "id": "mail-134",
+    "domain": "testing",
+    "audience": "backend qrupu",
+    "subject": "Kontrakt testi",
+    "anchor": "yeni",
+    "input": "Mövzu: Kontrakt testi\nHörmətli backend qrupu,\nyeni API cavabında əvvəl məcburi olan sahə artıq yoxdur\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-135",
+    "domain": "testing",
+    "audience": "monitorinq qrupu",
+    "subject": "Uzun sorğu",
+    "anchor": "sınaq",
+    "input": "hormetli monitorinq qrupu sınaq zamanı beş saniyədən uzun çəkən sorğular ayrıca qeydə alınıb hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-136",
+    "domain": "testing",
+    "audience": "filial operatorları",
+    "subject": "Pilot mərhələ",
+    "anchor": "pilot",
+    "input": "movzu Pilot mərhələ salam filial operatorları pilot qrupda yaranan sualları ümumi siyahıya əlavə edin hormetle senan"
+  },
+  {
+    "id": "mail-137",
+    "domain": "testing",
+    "audience": "Elvin bəy",
+    "subject": "Ekran görüntüsü",
+    "anchor": "problemi",
+    "input": "Mövzu: Ekran görüntüsü\nHörmətli Elvin bəy,\nproblemi təkrarlamaq üçün göndərdiyiniz addımların üçüncüsü aydın deyil\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-138",
+    "domain": "testing",
+    "audience": "layihə sahibi",
+    "subject": "Yekun protokol",
+    "anchor": "bütün",
+    "input": "hormetli layihə sahibi bütün test nəticələrini protokolda təsdiq etməzdən əvvəl yoxlayacağıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-139",
+    "domain": "testing",
+    "audience": "texniki dəstək",
+    "subject": "Xəta nümunəsi",
+    "anchor": "status",
+    "input": "movzu Xəta nümunəsi salam texniki dəstək status dəyişməyən müraciət nümunəsini ayrıca paylaşdıq hormetle senan"
+  },
+  {
+    "id": "mail-140",
+    "domain": "testing",
+    "audience": "vendor qrupu",
+    "subject": "Sandbox token",
+    "anchor": "göndərdiyiniz",
+    "input": "Mövzu: Sandbox token\nHörmətli vendor qrupu,\ngöndərdiyiniz sandbox tokenin vaxtı bitib yenisini rica edirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-141",
+    "domain": "workflow",
+    "audience": "icraçılar",
+    "subject": "Yeni marşrut",
+    "anchor": "yeni",
+    "input": "hormetli icraçılar yeni sənəd növü artıq başqa təsdiq marşrutuna yönləndirilir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-142",
+    "domain": "workflow",
+    "audience": "rəhbər",
+    "subject": "Paralel razılaşdırma",
+    "anchor": "iki",
+    "input": "movzu Paralel razılaşdırma salam rəhbər iki şöbənin rəyi eyni vaxtda toplanacaq qərarı sonra verəcəyik hormetle senan"
+  },
+  {
+    "id": "mail-143",
+    "domain": "workflow",
+    "audience": "katiblik",
+    "subject": "İcraçı dəyişməsi",
+    "anchor": "əvvəlki",
+    "input": "Mövzu: İcraçı dəyişməsi\nHörmətli katiblik,\nəvvəlki icraçı məzuniyyətə çıxıb sənədi əvəzediciyə göndərin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-144",
+    "domain": "workflow",
+    "audience": "müştəri",
+    "subject": "Müraciətin mərhələsi",
+    "anchor": "müraciətiniz",
+    "input": "hormetli müştəri müraciətiniz baxışdadır yekun qərar hazır olanda xəbər verəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-145",
+    "domain": "workflow",
+    "audience": "sənəd qrupu",
+    "subject": "Təsdiq sırası",
+    "anchor": "imza",
+    "input": "movzu Təsdiq sırası salam sənəd qrupu imza addımı razılaşdırmadan sonra gəlməlidir cari qaydanı yeniləyin hormetle senan"
+  },
+  {
+    "id": "mail-146",
+    "domain": "workflow",
+    "audience": "admin heyəti",
+    "subject": "Eskalasiya vaxtı",
+    "anchor": "gecikən",
+    "input": "Mövzu: Eskalasiya vaxtı\nHörmətli admin heyəti,\ngecikən tapşırıqlar üçün xatırlatma yalnız iş günlərində göndərilsin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-147",
+    "domain": "workflow",
+    "audience": "Nigar xanım",
+    "subject": "Geri qaytarılan sənəd",
+    "anchor": "sənəd",
+    "input": "hormetli Nigar xanım sənəd düzəliş üçün sizə qaytarılıb qeyddə çatışmayan sahələr yazılıb hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-148",
+    "domain": "workflow",
+    "audience": "menecer",
+    "subject": "İş axını",
+    "anchor": "yekun",
+    "input": "movzu İş axını salam menecer yekun addımda sənəd arxivə düşmür və açıq statusda qalır hormetle senan"
+  },
+  {
+    "id": "mail-149",
+    "domain": "workflow",
+    "audience": "əlaqəli şöbələr",
+    "subject": "Yeni təsdiq",
+    "anchor": "birgə",
+    "input": "Mövzu: Yeni təsdiq\nHörmətli əlaqəli şöbələr,\nbirgə icra qaydasını təsdiqləmədən sənədi növbəti mərhələyə göndərməyin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-150",
+    "domain": "workflow",
+    "audience": "audit komandası",
+    "subject": "Marşrut tarixçəsi",
+    "anchor": "qaytarılan",
+    "input": "hormetli audit komandası qaytarılan sənədin əvvəlki icraçıları tarixçədə görünməlidir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-151",
+    "domain": "workflow",
+    "audience": "Araz bəy",
+    "subject": "Təyinat sualı",
+    "anchor": "bu",
+    "input": "movzu Təyinat sualı salam Araz bəy bu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin hormetle senan"
+  },
+  {
+    "id": "mail-152",
+    "domain": "workflow",
+    "audience": "texniki komanda",
+    "subject": "Bağlı düymə",
+    "anchor": "təsdiq",
+    "input": "Mövzu: Bağlı düymə\nHörmətli texniki komanda,\ntəsdiq düyməsi yalnız ikinci mərhələdə səhvən bağlı qalır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-153",
+    "domain": "workflow",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Gözləmə statusu",
+    "anchor": "əlavə",
+    "input": "hormetli müştəri nümayəndəsi əlavə sənəd çatmadığından müraciətiniz gözləməyə keçirilib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-154",
+    "domain": "workflow",
+    "audience": "icra rəhbəri",
+    "subject": "Prioritet artımı",
+    "anchor": "bu",
+    "input": "movzu Prioritet artımı salam icra rəhbəri bu müraciətə bu gün cavab verilməlidir onu üst sıraya keçirin hormetle senan"
+  },
+  {
+    "id": "mail-155",
+    "domain": "workflow",
+    "audience": "proses sahibi",
+    "subject": "Yeni şərt",
+    "anchor": "maliyyə",
+    "input": "Mövzu: Yeni şərt\nHörmətli proses sahibi,\nmaliyyə razılığı tələb olunan hallarda əlavə addım açılsın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-156",
+    "domain": "workflow",
+    "audience": "Rəna xanım",
+    "subject": "Yanlış bildiriş",
+    "anchor": "iş",
+    "input": "hormetli Rəna xanım iş sizə aid olmasa da hər səhər xatırlatma alırsınız bunu araşdırırıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-157",
+    "domain": "workflow",
+    "audience": "filial nümayəndəsi",
+    "subject": "Müddət sorğusu",
+    "anchor": "tapşırığın",
+    "input": "movzu Müddət sorğusu salam filial nümayəndəsi tapşırığın icra müddəti nə vaxt başlayır açıqlamanızı gözləyirik hormetle senan"
+  },
+  {
+    "id": "mail-158",
+    "domain": "workflow",
+    "audience": "məhsul analitikləri",
+    "subject": "Workflow versiyası",
+    "anchor": "köhnə",
+    "input": "Mövzu: Workflow versiyası\nHörmətli məhsul analitikləri,\nköhnə sənədlər yeni marşruta avtomatik keçirilməməlidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-159",
+    "domain": "workflow",
+    "audience": "operator heyəti",
+    "subject": "Əlavə mərhələ",
+    "anchor": "yeni",
+    "input": "hormetli operator heyəti yeni sənəd növündə reyestr yoxlaması imzadan əvvəl aparılacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-160",
+    "domain": "workflow",
+    "audience": "məsul şəxs",
+    "subject": "Tapşırıq bağlanması",
+    "anchor": "nəticə",
+    "input": "movzu Tapşırıq bağlanması salam məsul şəxs nəticə faylını əlavə etdikdən sonra işi yekunlaşdıra bilərsiniz hormetle senan"
+  },
+  {
+    "id": "mail-161",
+    "domain": "archive",
+    "audience": "arxiv qrupu",
+    "subject": "Köhnə sənəd",
+    "anchor": "soruşduğunuz",
+    "input": "Mövzu: Köhnə sənəd\nHörmətli arxiv qrupu,\nsoruşduğunuz məktub rəqəmsal arxivdə var kağız əsli isə anbardadır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-162",
+    "domain": "archive",
+    "audience": "Aysel xanım",
+    "subject": "Arxiv çıxarışı",
+    "anchor": "keçən",
+    "input": "hormetli Aysel xanım keçən ilin protokolundan çıxarış istəmisiniz onu hazırlayıb göndərəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-163",
+    "domain": "archive",
+    "audience": "audit komandası",
+    "subject": "Saxlanma qaydası",
+    "anchor": "bu",
+    "input": "movzu Saxlanma qaydası salam audit komandası bu kateqoriya sənədləri hələ silmək olmaz saxlanma müddəti davam edir hormetle senan"
+  },
+  {
+    "id": "mail-164",
+    "domain": "archive",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Surət sorğusu",
+    "anchor": "imzalı",
+    "input": "Mövzu: Surət sorğusu\nHörmətli müştəri nümayəndəsi,\nimzalı sənədin elektron surətini bu gün təqdim edə bilərik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-165",
+    "domain": "archive",
+    "audience": "filial şöbəsi",
+    "subject": "Köçürülən fayllar",
+    "anchor": "köhnə",
+    "input": "hormetli filial şöbəsi köhnə sistemdən gələn faylların sayı ilkin siyahı ilə uyğun gəlmir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-166",
+    "domain": "archive",
+    "audience": "katiblik",
+    "subject": "Səhv metadata",
+    "anchor": "arxivdə",
+    "input": "movzu Səhv metadata salam katiblik arxivdə olan sənədin tarixi yanlış yazılıb yoxlama üçün əslini istəyirik hormetle senan"
+  },
+  {
+    "id": "mail-167",
+    "domain": "archive",
+    "audience": "operatorlar",
+    "subject": "Axtarış qaydası",
+    "anchor": "arxivdə",
+    "input": "Mövzu: Axtarış qaydası\nHörmətli operatorlar,\narxivdə sənədi tapmaq üçün tam qeydiyyat nömrəsini daxil edin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-168",
+    "domain": "archive",
+    "audience": "Nərmin xanım",
+    "subject": "Qorunan sənəd",
+    "anchor": "bu",
+    "input": "hormetli Nərmin xanım bu faylın saxlanma müddəti uzadılıb onu siyahıdan silməyin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-169",
+    "domain": "archive",
+    "audience": "texniki dəstək",
+    "subject": "Açılmayan PDF",
+    "anchor": "köhnə",
+    "input": "movzu Açılmayan PDF salam texniki dəstək köhnə PDF faylının bəzi səhifələri düzgün açılmır alternativ surət axtarırıq hormetle senan"
+  },
+  {
+    "id": "mail-170",
+    "domain": "archive",
+    "audience": "rəhbərlik",
+    "subject": "Aylıq arxiv",
+    "anchor": "bu",
+    "input": "Mövzu: Aylıq arxiv\nHörmətli rəhbərlik,\nbu ay arxivə göndərilən sənədlərin sayını hesabata əlavə etdik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-171",
+    "domain": "archive",
+    "audience": "müştəri",
+    "subject": "Sənədinizin surəti",
+    "anchor": "istədiyiniz",
+    "input": "hormetli müştəri istədiyiniz sənədin surəti hazırdır şəxsi kabinetinizdən yükləyə bilərsiniz hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-172",
+    "domain": "archive",
+    "audience": "proses sahibi",
+    "subject": "Təhvil protokolu",
+    "anchor": "kağız",
+    "input": "movzu Təhvil protokolu salam proses sahibi kağız sənədləri arxivə təhvil verəndə siyahını da imzalamaq lazımdır hormetle senan"
+  },
+  {
+    "id": "mail-173",
+    "domain": "archive",
+    "audience": "sənəd işçiləri",
+    "subject": "İndeks yenilənməsi",
+    "anchor": "axtarış",
+    "input": "Mövzu: İndeks yenilənməsi\nHörmətli sənəd işçiləri,\naxtarış nəticəsində yeni sənəd görünmür indeksin yenilənməsini gözləyirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-174",
+    "domain": "archive",
+    "audience": "İlqar bəy",
+    "subject": "Silinmə sorğusu",
+    "anchor": "müraciətin",
+    "input": "hormetli İlqar bəy müraciətin silinməsi mümkün deyil çünki onun qanuni saxlanma müddəti bitməyib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-175",
+    "domain": "archive",
+    "audience": "mühasibat",
+    "subject": "Qəbz arxivi",
+    "anchor": "müqavilə",
+    "input": "movzu Qəbz arxivi salam mühasibat müqavilə qəbzlərinin elektron surətlərini ayrıca qovluqda saxladıq hormetle senan"
+  },
+  {
+    "id": "mail-176",
+    "domain": "archive",
+    "audience": "məsul əməkdaşlar",
+    "subject": "Arxiv icazəsi",
+    "anchor": "yalnız",
+    "input": "Mövzu: Arxiv icazəsi\nHörmətli məsul əməkdaşlar,\nyalnız təsdiq edilmiş rolu olan şəxs gizli qovluğa girə bilər\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-177",
+    "domain": "archive",
+    "audience": "layihə qrupu",
+    "subject": "Fayl bütövlüyü",
+    "anchor": "köçürülən",
+    "input": "hormetli layihə qrupu köçürülən sənədlərin hash yoxlamasını yekun protokola əlavə edin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-178",
+    "domain": "archive",
+    "audience": "təhlükəsizlik şöbəsi",
+    "subject": "Giriş jurnalı",
+    "anchor": "arxivdən",
+    "input": "movzu Giriş jurnalı salam təhlükəsizlik şöbəsi arxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır hormetle senan"
+  },
+  {
+    "id": "mail-179",
+    "domain": "archive",
+    "audience": "Rauf bəy",
+    "subject": "Arxiv cavabı",
+    "anchor": "axtardığınız",
+    "input": "Mövzu: Arxiv cavabı\nHörmətli Rauf bəy,\naxtardığınız sənəd bu qovluqda yoxdur qeydiyyat tarixini bir daha dəqiqləşdirin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-180",
+    "domain": "archive",
+    "audience": "komanda",
+    "subject": "Yekun saxlanma",
+    "anchor": "bağlanan",
+    "input": "hormetli komanda bağlanan işlərin əlavələri ayrıca saxlanca köçürülüb hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-181",
+    "domain": "payments",
+    "audience": "müştəri",
+    "subject": "Ödəniş qəbzi",
+    "anchor": "ödənişiniz",
+    "input": "movzu Ödəniş qəbzi salam müştəri ödənişiniz uğurla qəbul olunub qəbzi şəxsi kabinetinizdə görə bilərsiniz hormetle senan"
+  },
+  {
+    "id": "mail-182",
+    "domain": "payments",
+    "audience": "maliyyə qrupu",
+    "subject": "İkiqat məbləğ",
+    "anchor": "eyni",
+    "input": "Mövzu: İkiqat məbləğ\nHörmətli maliyyə qrupu,\neyni hesab üzrə iki əməliyyat görünür bank cavabını gözləyirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-183",
+    "domain": "payments",
+    "audience": "Araz bəy",
+    "subject": "Hesab faktura",
+    "anchor": "yenilənmiş",
+    "input": "hormetli Araz bəy yenilənmiş hesab fakturanı təsdiq üçün göndəririk zəhmət olmasa baxın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-184",
+    "domain": "payments",
+    "audience": "bank tərəfdaşı",
+    "subject": "Geri qaytarma",
+    "anchor": "qaytarılma",
+    "input": "movzu Geri qaytarma salam bank tərəfdaşı qaytarılma sorğusu yaradılıb nəticə üçün transaction kodunu izləyirik hormetle senan"
+  },
+  {
+    "id": "mail-185",
+    "domain": "payments",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Abunə yenilənməsi",
+    "anchor": "illik",
+    "input": "Mövzu: Abunə yenilənməsi\nHörmətli müştəri nümayəndəsi,\nillik abunə bitməzdən əvvəl sizə ayrıca xəbərdarlıq ediləcək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-186",
+    "domain": "payments",
+    "audience": "mühasibat",
+    "subject": "Valyuta fərqi",
+    "anchor": "göndərilən",
+    "input": "hormetli mühasibat göndərilən qəbzdə məbləğ AZN əvəzinə USD kimi göstərilib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-187",
+    "domain": "payments",
+    "audience": "Nicat bəy",
+    "subject": "Kart limiti",
+    "anchor": "əməliyyatınız",
+    "input": "movzu Kart limiti salam Nicat bəy əməliyyatınız bank tərəfindən rədd edilib kart limitinizi yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-188",
+    "domain": "payments",
+    "audience": "satış qrupu",
+    "subject": "Güzəşt tələbi",
+    "anchor": "müştərinin",
+    "input": "Mövzu: Güzəşt tələbi\nHörmətli satış qrupu,\nmüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib təklif hazırlayaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-189",
+    "domain": "payments",
+    "audience": "müştəri",
+    "subject": "Natamam ödəniş",
+    "anchor": "ödədiyiniz",
+    "input": "hormetli müştəri ödədiyiniz məbləğ hesabın hamısını bağlamır qalıq şəxsi kabinetdə görünür hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-190",
+    "domain": "payments",
+    "audience": "maliyyə rəhbəri",
+    "subject": "Gün sonu çıxarışı",
+    "anchor": "bu",
+    "input": "movzu Gün sonu çıxarışı salam maliyyə rəhbəri bu günün ödənişləri ilə bank çıxarışı arasında fərq var hormetle senan"
+  },
+  {
+    "id": "mail-191",
+    "domain": "payments",
+    "audience": "texniki komanda",
+    "subject": "Gateway cavabı",
+    "anchor": "gateway",
+    "input": "Mövzu: Gateway cavabı\nHörmətli texniki komanda,\ngateway 502 göstərdi lakin bank əməliyyatı təsdiqlədi təkrar çəkməyin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-192",
+    "domain": "payments",
+    "audience": "Leyla xanım",
+    "subject": "Vergi kodu",
+    "anchor": "göndərdiyiniz",
+    "input": "hormetli Leyla xanım göndərdiyiniz hesab fakturada vergi kodu natamamdır yenisini rica edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-193",
+    "domain": "payments",
+    "audience": "müştəri",
+    "subject": "İllik plan",
+    "anchor": "illik",
+    "input": "movzu İllik plan salam müştəri illik plana keçmək istəyirsinizsə cari ayın sonuna qədər seçim edə bilərsiniz hormetle senan"
+  },
+  {
+    "id": "mail-194",
+    "domain": "payments",
+    "audience": "daxili audit",
+    "subject": "İtən qəbz",
+    "anchor": "mart",
+    "input": "Mövzu: İtən qəbz\nHörmətli daxili audit,\nmart ayına aid iki qəbz elektron qovluqda yoxdur onları axtarırıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-195",
+    "domain": "payments",
+    "audience": "ödəniş qrupu",
+    "subject": "Callback imzası",
+    "anchor": "bank",
+    "input": "hormetli ödəniş qrupu bank callback mesajlarının imzasını yoxlamaq üçün yeni açar almışıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-196",
+    "domain": "payments",
+    "audience": "Aysel xanım",
+    "subject": "Büdcə təsdiqi",
+    "anchor": "əlavə",
+    "input": "movzu Büdcə təsdiqi salam Aysel xanım əlavə resurs xərci hələ təsdiqlənməyib icraya başlamayaq hormetle senan"
+  },
+  {
+    "id": "mail-197",
+    "domain": "payments",
+    "audience": "filial mühasibləri",
+    "subject": "Tarif siyahısı",
+    "anchor": "yenilənmiş",
+    "input": "Mövzu: Tarif siyahısı\nHörmətli filial mühasibləri,\nyenilənmiş xidmət tarifləri gələn aydan qüvvədə olacaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-198",
+    "domain": "payments",
+    "audience": "müştəri",
+    "subject": "Refund müddəti",
+    "anchor": "geri",
+    "input": "hormetli müştəri geri qaytarma sorğunuz baxışdadır vaxtı dəqiqləşəndə məlumat verəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-199",
+    "domain": "payments",
+    "audience": "İlham bəy",
+    "subject": "Sifariş kodu",
+    "anchor": "ödənişi",
+    "input": "movzu Sifariş kodu salam İlham bəy ödənişi tutuşdurmaq üçün sifariş nömrəsini bizə göndərin hormetle senan"
+  },
+  {
+    "id": "mail-200",
+    "domain": "payments",
+    "audience": "biznes qrupu",
+    "subject": "Ödəniş meyarı",
+    "anchor": "qismən",
+    "input": "Mövzu: Ödəniş meyarı\nHörmətli biznes qrupu,\nqismən ödənişə icazə verilməsini müqavilə ilə tutuşduraq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-201",
+    "domain": "documents",
+    "audience": "məhsul qrupu",
+    "subject": "Şablon dəyişikliyi",
+    "anchor": "rəsmi",
+    "input": "hormetli məhsul qrupu rəsmi məktub şablonunda loqo aşağı sürüşüb son versiyanı yoxlayın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-202",
+    "domain": "documents",
+    "audience": "Aysel xanım",
+    "subject": "İmza görünmür",
+    "anchor": "əlavə",
+    "input": "movzu İmza görünmür salam Aysel xanım əlavə etdiyiniz PDF-də imza bölməsi boş görünür əsl faylı göndərə bilərsinizmi hormetle senan"
+  },
+  {
+    "id": "mail-203",
+    "domain": "documents",
+    "audience": "operatorlar",
+    "subject": "OCR nəticəsi",
+    "anchor": "skan",
+    "input": "Mövzu: OCR nəticəsi\nHörmətli operatorlar,\nskan edilmiş sənədin mətnində iki ad səhv oxunub düzəlişi əl ilə yoxlayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-204",
+    "domain": "documents",
+    "audience": "arxiv komandası",
+    "subject": "DOCX versiyası",
+    "anchor": "köhnə",
+    "input": "hormetli arxiv komandası köhnə DOCX faylı açılarkən cədvəl sərhədləri itir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-205",
+    "domain": "documents",
+    "audience": "müştəri",
+    "subject": "Yeni sənəd",
+    "anchor": "istədiyimiz",
+    "input": "movzu Yeni sənəd salam müştəri istədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik baxışa başlayırıq hormetle senan"
+  },
+  {
+    "id": "mail-206",
+    "domain": "documents",
+    "audience": "hüquq şöbəsi",
+    "subject": "Müqavilə bəndi",
+    "anchor": "dördüncü",
+    "input": "Mövzu: Müqavilə bəndi\nHörmətli hüquq şöbəsi,\ndördüncü bənddəki tarix əvvəlki razılaşma ilə uyğun gəlmir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-207",
+    "domain": "documents",
+    "audience": "rəhbərlik",
+    "subject": "Hesabat əlavəsi",
+    "anchor": "aylıq",
+    "input": "hormetli rəhbərlik aylıq hesabatın qrafikləri əlavədədir yekun mətn sabah göndəriləcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-208",
+    "domain": "documents",
+    "audience": "tərtibatçılar",
+    "subject": "Siyahı formatı",
+    "anchor": "Word-dən",
+    "input": "movzu Siyahı formatı salam tərtibatçılar Word-dən köçürülən nömrəli siyahının sırası pozulub hormetle senan"
+  },
+  {
+    "id": "mail-209",
+    "domain": "documents",
+    "audience": "filial operatorları",
+    "subject": "QR kod",
+    "anchor": "sənədin",
+    "input": "Mövzu: QR kod\nHörmətli filial operatorları,\nsənədin ikinci səhifəsindəki QR kod oxunmur yenisini çap edin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-210",
+    "domain": "documents",
+    "audience": "Rəna xanım",
+    "subject": "Sənəd surəti",
+    "anchor": "sizə",
+    "input": "hormetli Rəna xanım sizə lazım olan imzalı surəti bu gün e-poçtla göndərəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-211",
+    "domain": "documents",
+    "audience": "təhlükəsizlik komandası",
+    "subject": "HTML əlavə",
+    "anchor": "sənəd",
+    "input": "movzu HTML əlavə salam təhlükəsizlik komandası sənəd təsvirinə yapışdırılan HTML kodunda script var saxlamayın hormetle senan"
+  },
+  {
+    "id": "mail-212",
+    "domain": "documents",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Əlavə siyahısı",
+    "anchor": "məktubda",
+    "input": "Mövzu: Əlavə siyahısı\nHörmətli müştəri nümayəndəsi,\nməktubda üç əlavə yazılıb lakin sizdən yalnız ikisini almışıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-213",
+    "domain": "documents",
+    "audience": "komanda",
+    "subject": "Fayl adı",
+    "anchor": "uzun",
+    "input": "hormetli komanda uzun fayl adı yükləməni dayandırır sənədi qısa adla yenidən sınayın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-214",
+    "domain": "documents",
+    "audience": "Nigar xanım",
+    "subject": "Açılmayan qovluq",
+    "anchor": "paylaşdığınız",
+    "input": "movzu Açılmayan qovluq salam Nigar xanım paylaşdığınız ZIP arxivinə giriş şifrəsi göndərilməyib hormetle senan"
+  },
+  {
+    "id": "mail-215",
+    "domain": "documents",
+    "audience": "müqavilə qrupu",
+    "subject": "Versiya müqayisəsi",
+    "anchor": "əvvəlki",
+    "input": "Mövzu: Versiya müqayisəsi\nHörmətli müqavilə qrupu,\nəvvəlki variantdan dəyişən bəndləri ayrıca rənglə işarələyin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-216",
+    "domain": "documents",
+    "audience": "texniki dəstək",
+    "subject": "Səhifə sırası",
+    "anchor": "birləşdirilmiş",
+    "input": "hormetli texniki dəstək birləşdirilmiş faylda üçüncü səhifə ən sona keçib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-217",
+    "domain": "documents",
+    "audience": "Səbinə xanım",
+    "subject": "Düzəliş üçün qaytarma",
+    "anchor": "sənədin",
+    "input": "movzu Düzəliş üçün qaytarma salam Səbinə xanım sənədin ünvan hissəsi natamamdır tamamlayıb yenidən yollayın hormetle senan"
+  },
+  {
+    "id": "mail-218",
+    "domain": "documents",
+    "audience": "kargüzarlıq",
+    "subject": "Təsdiqli nüsxə",
+    "anchor": "möhürlü",
+    "input": "Mövzu: Təsdiqli nüsxə\nHörmətli kargüzarlıq,\nmöhürlü nüsxə hazırdır təhvil vaxtını dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-219",
+    "domain": "documents",
+    "audience": "vendor qrupu",
+    "subject": "Fayl limiti",
+    "anchor": "xidmət",
+    "input": "hormetli vendor qrupu xidmət on meqabaytdan böyük faylı qəbul etmir alternativi müzakirə edək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-220",
+    "domain": "documents",
+    "audience": "şöbə müdiri",
+    "subject": "Qeydiyyat kodu",
+    "anchor": "son",
+    "input": "movzu Qeydiyyat kodu salam şöbə müdiri son səhifədəki qeydiyyat kodu köhnə sənədə aiddir hormetle senan"
+  },
+  {
+    "id": "mail-221",
+    "domain": "support",
+    "audience": "müştəri",
+    "subject": "Müraciətinizə baxış",
+    "anchor": "bildirdiyiniz",
+    "input": "Mövzu: Müraciətinizə baxış\nHörmətli müştəri,\nbildirdiyiniz xəta qeydə alınıb texniki qrup nəticəni sizə paylaşacaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-222",
+    "domain": "support",
+    "audience": "növbətçi mühəndis",
+    "subject": "Təcili hadisə",
+    "anchor": "xidmətin",
+    "input": "hormetli növbətçi mühəndis xidmətin dayanması barədə iki filialdan xəbər almışıq logları yoxlayın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-223",
+    "domain": "support",
+    "audience": "Aysel xanım",
+    "subject": "Problem nümunəsi",
+    "anchor": "bu",
+    "input": "movzu Problem nümunəsi salam Aysel xanım bu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin hormetle senan"
+  },
+  {
+    "id": "mail-224",
+    "domain": "support",
+    "audience": "texniki dəstək",
+    "subject": "Biletin yenidən açılması",
+    "anchor": "bağlanan",
+    "input": "Mövzu: Biletin yenidən açılması\nHörmətli texniki dəstək,\nbağlanan biletə eyni xətaya görə yeni qeyd yazılıb onu yenidən açın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-225",
+    "domain": "support",
+    "audience": "filial rəhbəri",
+    "subject": "Cavab müddəti",
+    "anchor": "kritik",
+    "input": "hormetli filial rəhbəri kritik müraciətlərə ilkin cavab on beş dəqiqə ərzində verilməlidir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-226",
+    "domain": "support",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "İşləməyən keçid",
+    "anchor": "sizə",
+    "input": "movzu İşləməyən keçid salam müştəri nümayəndəsi sizə göndərdiyimiz link səhv açılır yeni keçid hazır olanda paylaşacağıq hormetle senan"
+  },
+  {
+    "id": "mail-227",
+    "domain": "support",
+    "audience": "komanda",
+    "subject": "Növbətçi siyahısı",
+    "anchor": "bu",
+    "input": "Mövzu: Növbətçi siyahısı\nHörmətli komanda,\nbu həftə gecə növbəsində iki mühəndis olacaq əlaqə nömrələri əlavədədir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-228",
+    "domain": "support",
+    "audience": "Elvin bəy",
+    "subject": "Xəta kodu",
+    "anchor": "500",
+    "input": "hormetli Elvin bəy 500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-229",
+    "domain": "support",
+    "audience": "rəhbər heyət",
+    "subject": "Həftəlik icmal",
+    "anchor": "bu",
+    "input": "movzu Həftəlik icmal salam rəhbər heyət bu həftə daxil olan texniki sorğuların əksəriyyəti giriş icazəsi ilə bağlıdır hormetle senan"
+  },
+  {
+    "id": "mail-230",
+    "domain": "support",
+    "audience": "operatorlar",
+    "subject": "Yanlış kateqoriya",
+    "anchor": "bank",
+    "input": "Mövzu: Yanlış kateqoriya\nHörmətli operatorlar,\nbank əməliyyatı ilə bağlı sualı texniki nasazlıq kimi qeydə almayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-231",
+    "domain": "support",
+    "audience": "müştəri",
+    "subject": "Nəticə barədə məlumat",
+    "anchor": "problemin",
+    "input": "hormetli müştəri problemin səbəbi hələ müəyyən edilməyib təhlil bitəndə xəbər verəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-232",
+    "domain": "support",
+    "audience": "Nərmin xanım",
+    "subject": "Yeni ekran görüntüsü",
+    "anchor": "göndərdiyiniz",
+    "input": "movzu Yeni ekran görüntüsü salam Nərmin xanım göndərdiyiniz görüntüdə xəta mesajı kəsilib tam şəkli rica edirik hormetle senan"
+  },
+  {
+    "id": "mail-233",
+    "domain": "support",
+    "audience": "əlaqə mərkəzi",
+    "subject": "Telefon müraciəti",
+    "anchor": "zəng",
+    "input": "Mövzu: Telefon müraciəti\nHörmətli əlaqə mərkəzi,\nzəng zamanı deyilən qeyd ticket tarixçəsində də olmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-234",
+    "domain": "support",
+    "audience": "əsas komanda",
+    "subject": "Eskalasiya",
+    "anchor": "birinci",
+    "input": "hormetli əsas komanda birinci səviyyə məsələni həll edə bilməyib onu məhsul mühəndisinə ötürürük hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-235",
+    "domain": "support",
+    "audience": "test qrupu",
+    "subject": "Düzəliş sınağı",
+    "anchor": "müştəridə",
+    "input": "movzu Düzəliş sınağı salam test qrupu müştəridə görünən xəta testdə təkrarlanmır fərqli hesabla yoxlayaq hormetle senan"
+  },
+  {
+    "id": "mail-236",
+    "domain": "support",
+    "audience": "Kamran bəy",
+    "subject": "İcra vaxtı",
+    "anchor": "bilet",
+    "input": "Mövzu: İcra vaxtı\nHörmətli Kamran bəy,\nbilet üzrə yekun həll tarixini indi deyə bilmirik ilkin nəticəni sabah paylaşacağıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-237",
+    "domain": "support",
+    "audience": "müştəri",
+    "subject": "Planlı işlər",
+    "anchor": "şənbə",
+    "input": "hormetli müştəri şənbə günü keçiriləcək iş zamanı bəzi sorğular gec cavablana bilər hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-238",
+    "domain": "support",
+    "audience": "filial komandası",
+    "subject": "Yerində dəstək",
+    "anchor": "mühəndisimiz",
+    "input": "movzu Yerində dəstək salam filial komandası mühəndisimiz sabah ofisinizdə cihazın bağlantısını yoxlayacaq hormetle senan"
+  },
+  {
+    "id": "mail-239",
+    "domain": "support",
+    "audience": "layihə qrupu",
+    "subject": "Bilik bazası",
+    "anchor": "tez-tez",
+    "input": "Mövzu: Bilik bazası\nHörmətli layihə qrupu,\ntez-tez verilən bu sual üçün yeni izah məqaləsi hazırlayaq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-240",
+    "domain": "support",
+    "audience": "Rauf bəy",
+    "subject": "Təkrar əlaqə",
+    "anchor": "bu",
+    "input": "hormetli Rauf bəy bu gün əlaqə saxlaya bilmədik sizə uyğun vaxtı yazmağınızı xahiş edirik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-241",
+    "domain": "planning",
+    "audience": "müştəri",
+    "subject": "Yeni tələblər",
+    "anchor": "son",
+    "input": "movzu Yeni tələblər salam müştəri son görüşdə dediyiniz funksiyaları SRS sənədinə əlavə edib təsdiqə göndərəcəyik hormetle senan"
+  },
+  {
+    "id": "mail-242",
+    "domain": "planning",
+    "audience": "analitiklər",
+    "subject": "BPMN fərqi",
+    "anchor": "diaqramdakı",
+    "input": "Mövzu: BPMN fərqi\nHörmətli analitiklər,\ndiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil onu dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-243",
+    "domain": "planning",
+    "audience": "rəhbərlik",
+    "subject": "Sprint nəticəsi",
+    "anchor": "iki",
+    "input": "hormetli rəhbərlik iki tapşırıq tamamlanıb üçüncüsü isə məlumat gözlədiyi üçün açıq qalır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-244",
+    "domain": "planning",
+    "audience": "Elvin bəy",
+    "subject": "Görüş vaxtı",
+    "anchor": "texniki",
+    "input": "movzu Görüş vaxtı salam Elvin bəy texniki şərtləri müzakirə etmək üçün gələn çərşənbə sizə uyğundurmu hormetle senan"
+  },
+  {
+    "id": "mail-245",
+    "domain": "planning",
+    "audience": "məhsul sahibi",
+    "subject": "Backlog prioriteti",
+    "anchor": "müştərinin",
+    "input": "Mövzu: Backlog prioriteti\nHörmətli məhsul sahibi,\nmüştərinin yeni istəyi əvvəlki buraxılış planını dəyişə bilər\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-246",
+    "domain": "planning",
+    "audience": "test komandası",
+    "subject": "UAT cədvəli",
+    "anchor": "qəbul",
+    "input": "hormetli test komandası qəbul sınağının iştirakçıları və tarixləri sənəddə yeniləndi hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-247",
+    "domain": "planning",
+    "audience": "hüquq qrupu",
+    "subject": "Razılaşma maddəsi",
+    "anchor": "məxfilik",
+    "input": "movzu Razılaşma maddəsi salam hüquq qrupu məxfilik bəndinə əlavə edilən şərti nəzərdən keçirməyinizi xahiş edirik hormetle senan"
+  },
+  {
+    "id": "mail-248",
+    "domain": "planning",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Demo dəvəti",
+    "anchor": "yeni",
+    "input": "Mövzu: Demo dəvəti\nHörmətli müştəri nümayəndəsi,\nyeni ekranların nümayişini cümə günü onlayn keçirəcəyik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-249",
+    "domain": "planning",
+    "audience": "layihə komandası",
+    "subject": "Qərar protokolu",
+    "anchor": "dünkü",
+    "input": "hormetli layihə komandası dünkü görüşdə razılaşdırılan üç qərarı protokola yazdıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-250",
+    "domain": "planning",
+    "audience": "Səma xanım",
+    "subject": "İnteqrasiya sualı",
+    "anchor": "xarici",
+    "input": "movzu İnteqrasiya sualı salam Səma xanım xarici xidmətin test məlumatlarını kim təqdim edəcək bunu dəqiqləşdirin hormetle senan"
+  },
+  {
+    "id": "mail-251",
+    "domain": "planning",
+    "audience": "rəhbər",
+    "subject": "Resurs planı",
+    "anchor": "əlavə",
+    "input": "Mövzu: Resurs planı\nHörmətli rəhbər,\nəlavə tester ayrılmasa hazırkı qrafikdə gecikmə ola bilər\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-252",
+    "domain": "planning",
+    "audience": "komanda",
+    "subject": "Sənəd təsdiqi",
+    "anchor": "SRS-in",
+    "input": "hormetli komanda SRS-in son variantına rəy vermək üçün bu gün son gündür hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-253",
+    "domain": "planning",
+    "audience": "Araz bəy",
+    "subject": "Risk qeydiyyatı",
+    "anchor": "vendor",
+    "input": "movzu Risk qeydiyyatı salam Araz bəy vendor cavabının gecikməsi risklər siyahısına əlavə olunub hormetle senan"
+  },
+  {
+    "id": "mail-254",
+    "domain": "planning",
+    "audience": "müştəri",
+    "subject": "İcra mərhələləri",
+    "anchor": "layihənin",
+    "input": "Mövzu: İcra mərhələləri\nHörmətli müştəri,\nlayihənin əsas addımlarını ayrıca cədvəldə sizə göndərmişik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-255",
+    "domain": "planning",
+    "audience": "dizayn qrupu",
+    "subject": "Prototip rəyi",
+    "anchor": "yeni",
+    "input": "hormetli dizayn qrupu yeni ekranın rəng kontrastı ilə bağlı fikrinizi paylaşın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-256",
+    "domain": "planning",
+    "audience": "maliyyə şöbəsi",
+    "subject": "Büdcə dəyişməsi",
+    "anchor": "əlavə",
+    "input": "movzu Büdcə dəyişməsi salam maliyyə şöbəsi əlavə istək üçün lazım olan xərci hesablayıb təqdim edəcəyik hormetle senan"
+  },
+  {
+    "id": "mail-257",
+    "domain": "planning",
+    "audience": "filial koordinatorları",
+    "subject": "Təlim tarixləri",
+    "anchor": "pilot",
+    "input": "Mövzu: Təlim tarixləri\nHörmətli filial koordinatorları,\npilot filiallarda təlim gələn həftənin ilk günündə başlayır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-258",
+    "domain": "planning",
+    "audience": "Nicat bəy",
+    "subject": "Jira tapşırığı",
+    "anchor": "gördüyümüz",
+    "input": "hormetli Nicat bəy gördüyümüz xətanı Jira-da ayrıca task kimi qeyd etmişəm hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-259",
+    "domain": "planning",
+    "audience": "məhsul komandası",
+    "subject": "Son qərar",
+    "anchor": "dəyişiklik",
+    "input": "movzu Son qərar salam məhsul komandası dəyişiklik təsdiqlənməyənədək production mühitinə çıxarılmayacaq hormetle senan"
+  },
+  {
+    "id": "mail-260",
+    "domain": "planning",
+    "audience": "rəhbərlik",
+    "subject": "Mərhələ hesabatı",
+    "anchor": "bu",
+    "input": "Mövzu: Mərhələ hesabatı\nHörmətli rəhbərlik,\nbu rübdə tamamlanan işlərin siyahısı hesabatın əlavəsindədir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-261",
+    "domain": "notifications",
+    "audience": "istifadəçilər",
+    "subject": "Bildiriş qaydası",
+    "anchor": "sənədin",
+    "input": "hormetli istifadəçilər sənədin statusu dəyişəndə hesabınıza avtomatik xəbər gələcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-262",
+    "domain": "notifications",
+    "audience": "mobil komanda",
+    "subject": "Push gecikməsi",
+    "anchor": "göndərilən",
+    "input": "movzu Push gecikməsi salam mobil komanda göndərilən push mesajı bəzi cihazlarda yalnız tətbiq açıldıqdan sonra görünür hormetle senan"
+  },
+  {
+    "id": "mail-263",
+    "domain": "notifications",
+    "audience": "operatorlar",
+    "subject": "Təkrar xəbər",
+    "anchor": "eyni",
+    "input": "Mövzu: Təkrar xəbər\nHörmətli operatorlar,\neyni hadisə üçün müştəriyə iki SMS getməməlidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-264",
+    "domain": "notifications",
+    "audience": "Aysel xanım",
+    "subject": "Yanlış ünvan",
+    "anchor": "bildirişlər",
+    "input": "hormetli Aysel xanım bildirişlər köhnə e-poçt ünvanınıza gedir yenisini təsdiqləyin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-265",
+    "domain": "notifications",
+    "audience": "məhsul sahibi",
+    "subject": "Mesaj mətni",
+    "anchor": "xəta",
+    "input": "movzu Mesaj mətni salam məhsul sahibi xəta bildirişində texniki kod əvəzinə sadə izah göstərilməlidir hormetle senan"
+  },
+  {
+    "id": "mail-266",
+    "domain": "notifications",
+    "audience": "təhlükəsizlik qrupu",
+    "subject": "Razılıq qeydi",
+    "anchor": "reklam",
+    "input": "Mövzu: Razılıq qeydi\nHörmətli təhlükəsizlik qrupu,\nreklam mesajı göndərilməzdən əvvəl istifadəçinin razılığı yoxlanmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-267",
+    "domain": "notifications",
+    "audience": "filial rəhbərləri",
+    "subject": "Gündəlik icmal",
+    "anchor": "hər",
+    "input": "hormetli filial rəhbərləri hər gün saat doqquzda açıq tapşırıqlar barədə qısa icmal göndəriləcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-268",
+    "domain": "notifications",
+    "audience": "müştəri",
+    "subject": "Çatdırılmayan məktub",
+    "anchor": "sizə",
+    "input": "movzu Çatdırılmayan məktub salam müştəri sizə yazdığımız cavab geri qayıdıb e-poçt ünvanınızı yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-269",
+    "domain": "notifications",
+    "audience": "rəhbərlik",
+    "subject": "Kritik xəbərdarlıq",
+    "anchor": "sistem",
+    "input": "Mövzu: Kritik xəbərdarlıq\nHörmətli rəhbərlik,\nsistem dayananda xəbərdarlıq həm SMS həm də e-poçtla çatmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-270",
+    "domain": "notifications",
+    "audience": "Nərmin xanım",
+    "subject": "Abunə seçimi",
+    "anchor": "həftəlik",
+    "input": "hormetli Nərmin xanım həftəlik icmal almaq istəmirsinizsə profilinizdən seçimi bağlaya bilərsiniz hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-271",
+    "domain": "notifications",
+    "audience": "komanda",
+    "subject": "Mesaj şablonu",
+    "anchor": "yeni",
+    "input": "movzu Mesaj şablonu salam komanda yeni şablondakı qeydiyyat nömrəsi boş çıxır dəyişəni yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-272",
+    "domain": "notifications",
+    "audience": "devops qrupu",
+    "subject": "Queue dolması",
+    "anchor": "mesaj",
+    "input": "Mövzu: Queue dolması\nHörmətli devops qrupu,\nmesaj növbəsi dolanda sorğular yığılıb göndəriş dayanır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-273",
+    "domain": "notifications",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Yeni əlaqə",
+    "anchor": "sizin",
+    "input": "hormetli müştəri nümayəndəsi sizin üçün yeni məsul əməkdaş təyin olunub əlaqə məlumatı aşağıdadır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-274",
+    "domain": "notifications",
+    "audience": "analitiklər",
+    "subject": "Bildiriş dili",
+    "anchor": "qeydiyyat",
+    "input": "movzu Bildiriş dili salam analitiklər qeydiyyat ekranı Azərbaycan dilindədir amma xəbərdarlıq ingiliscə görünür hormetle senan"
+  },
+  {
+    "id": "mail-275",
+    "domain": "notifications",
+    "audience": "servis komandası",
+    "subject": "Retry müddəti",
+    "anchor": "çatdırılmayan",
+    "input": "Mövzu: Retry müddəti\nHörmətli servis komandası,\nçatdırılmayan bildiriş üçün ikinci cəhd beş dəqiqə sonra edilsin\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-276",
+    "domain": "notifications",
+    "audience": "müştəri",
+    "subject": "Sorğu nəticəsi",
+    "anchor": "yoxlama",
+    "input": "hormetli müştəri yoxlama tamamlanıb cavab sənədiniz şəxsi kabinetinizə yerləşdirilib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-277",
+    "domain": "notifications",
+    "audience": "Rəşad bəy",
+    "subject": "İtən xəbər",
+    "anchor": "iş",
+    "input": "movzu İtən xəbər salam Rəşad bəy iş sizə göndərilib amma bildiriş almadığınızı yazmısınız jurnalı yoxlayırıq hormetle senan"
+  },
+  {
+    "id": "mail-278",
+    "domain": "notifications",
+    "audience": "keyfiyyət qrupu",
+    "subject": "Bildiriş testi",
+    "anchor": "gecə",
+    "input": "Mövzu: Bildiriş testi\nHörmətli keyfiyyət qrupu,\ngecə gələn mesaj səhər göndərilmiş kimi görünür saat qurşağını yoxlayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-279",
+    "domain": "notifications",
+    "audience": "rəhbər köməkçisi",
+    "subject": "İclas xatırlatması",
+    "anchor": "gələn",
+    "input": "hormetli rəhbər köməkçisi gələn həftənin iclası üçün dəvətlər bu gün paylaşılacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-280",
+    "domain": "notifications",
+    "audience": "operator",
+    "subject": "Müraciət cavabı",
+    "anchor": "müştərinin",
+    "input": "movzu Müraciət cavabı salam operator müştərinin yazdığı e-poçta cavab verəndə qeydiyyat nömrəsini mövzuda saxlayın hormetle senan"
+  },
+  {
+    "id": "mail-281",
+    "domain": "network",
+    "audience": "şəbəkə qrupu",
+    "subject": "VPN kəsintisi",
+    "anchor": "filialın",
+    "input": "Mövzu: VPN kəsintisi\nHörmətli şəbəkə qrupu,\nfilialın VPN bağlantısı gecədən işləməyib şəbəkə qeydini əlavə etdim\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-282",
+    "domain": "network",
+    "audience": "Rəşad bəy",
+    "subject": "DNS yönləndirməsi",
+    "anchor": "yeni",
+    "input": "hormetli Rəşad bəy yeni domen hələ köhnə IP ünvanını göstərir dəyişiklik nə vaxt yayılacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-283",
+    "domain": "network",
+    "audience": "vendor komandası",
+    "subject": "Firewall icazəsi",
+    "anchor": "test",
+    "input": "movzu Firewall icazəsi salam vendor komandası test servisinə çıxış üçün tələb olunan portlar əlavədə göstərilib hormetle senan"
+  },
+  {
+    "id": "mail-284",
+    "domain": "network",
+    "audience": "müştəri",
+    "subject": "Bağlantı çətinliyi",
+    "anchor": "səhifəyə",
+    "input": "Mövzu: Bağlantı çətinliyi\nHörmətli müştəri,\nsəhifəyə daxil olmaqda problem yaşayırsınızsa şəbəkə növünü bizə yazın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-285",
+    "domain": "network",
+    "audience": "texniki dəstək",
+    "subject": "Proxy sertifikatı",
+    "anchor": "şirkət",
+    "input": "hormetli texniki dəstək şirkət proxy-si yenilənən sertifikatı qəbul etmir bunu araşdırın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-286",
+    "domain": "network",
+    "audience": "DevOps qrupu",
+    "subject": "Yük bölgüsü",
+    "anchor": "bir",
+    "input": "movzu Yük bölgüsü salam DevOps qrupu bir server yüklənib digəri boş qalır balancer qaydasına baxaq hormetle senan"
+  },
+  {
+    "id": "mail-287",
+    "domain": "network",
+    "audience": "Nicat bəy",
+    "subject": "Şəbəkə gecikməsi",
+    "anchor": "imza",
+    "input": "Mövzu: Şəbəkə gecikməsi\nHörmətli Nicat bəy,\nimza xidmətinə sorğu göndərəndə daxili şəbəkədə gecikmə artır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-288",
+    "domain": "network",
+    "audience": "təhlükəsizlik komandası",
+    "subject": "Açıq port",
+    "anchor": "yeni",
+    "input": "hormetli təhlükəsizlik komandası yeni açılan portun yalnız təsdiq edilmiş IP siyahısına icazəsi olsun hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-289",
+    "domain": "network",
+    "audience": "filial rəhbəri",
+    "subject": "İnternet kanalı",
+    "anchor": "filialın",
+    "input": "movzu İnternet kanalı salam filial rəhbəri filialın əsas kanalı kəsilib ehtiyat kanalla iş davam edir hormetle senan"
+  },
+  {
+    "id": "mail-290",
+    "domain": "network",
+    "audience": "monitorinq qrupu",
+    "subject": "Paket itkisi",
+    "anchor": "saat",
+    "input": "Mövzu: Paket itkisi\nHörmətli monitorinq qrupu,\nsaat iki radələrində paket itkisi artıb qrafiki əlavə edirəm\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-291",
+    "domain": "network",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Fayl yükləmə",
+    "anchor": "böyük",
+    "input": "hormetli müştəri nümayəndəsi böyük fayllar yüklənərkən əlaqə qopur daha kiçik faylla sınaq edin hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-292",
+    "domain": "network",
+    "audience": "admin heyəti",
+    "subject": "WebSocket kəsilməsi",
+    "anchor": "uzun",
+    "input": "movzu WebSocket kəsilməsi salam admin heyəti uzun sessiyalarda WebSocket bağlanır bildirişlər yenilənmir hormetle senan"
+  },
+  {
+    "id": "mail-293",
+    "domain": "network",
+    "audience": "məhsul qrupu",
+    "subject": "Regional bağlantı",
+    "anchor": "bəzi",
+    "input": "Mövzu: Regional bağlantı\nHörmətli məhsul qrupu,\nbəzi regionlarda servisin cavabı daha gec gəlir ölçmələri paylaşdıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-294",
+    "domain": "network",
+    "audience": "operatorlar",
+    "subject": "Giriş şəbəkəsi",
+    "anchor": "daxili",
+    "input": "hormetli operatorlar daxili panel yalnız şirkət şəbəkəsindən açılmalıdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-295",
+    "domain": "network",
+    "audience": "Aysel xanım",
+    "subject": "Router restartı",
+    "anchor": "router",
+    "input": "movzu Router restartı salam Aysel xanım router yenidən işə düşəndən sonra əlaqə sabitləşibmi bizə yazın hormetle senan"
+  },
+  {
+    "id": "mail-296",
+    "domain": "network",
+    "audience": "server komandası",
+    "subject": "CDN faylı",
+    "anchor": "brauzerə",
+    "input": "Mövzu: CDN faylı\nHörmətli server komandası,\nbrauzerə köhnə skript çatır CDN cache təmizlənməlidir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-297",
+    "domain": "network",
+    "audience": "inteqrasiya qrupu",
+    "subject": "SSL xəbərdarlığı",
+    "anchor": "xarici",
+    "input": "hormetli inteqrasiya qrupu xarici endpoint üçün sertifikat zənciri natamamdır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-298",
+    "domain": "network",
+    "audience": "Rəna xanım",
+    "subject": "Giriş vaxtı",
+    "anchor": "sizdəki",
+    "input": "movzu Giriş vaxtı salam Rəna xanım sizdəki xəta yalnız ofis xaricində yaranırmı bunu dəqiqləşdirin hormetle senan"
+  },
+  {
+    "id": "mail-299",
+    "domain": "network",
+    "audience": "filial texnikləri",
+    "subject": "WiFi sınağı",
+    "anchor": "kabellə",
+    "input": "Mövzu: WiFi sınağı\nHörmətli filial texnikləri,\nkabellə bağlantı işləyir lakin WiFi üzərindən giriş alınmır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-300",
+    "domain": "network",
+    "audience": "şəbəkə rəhbəri",
+    "subject": "Tunel yenilənməsi",
+    "anchor": "ehtiyat",
+    "input": "hormetli şəbəkə rəhbəri ehtiyat tunel qurulub əsas xətt bərpa olunana qədər aktiv qalacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-301",
+    "domain": "frontend",
+    "audience": "dizayn qrupu",
+    "subject": "Yeni forma",
+    "anchor": "mobil",
+    "input": "movzu Yeni forma salam dizayn qrupu mobil ekranda son təsdiq düyməsi görünmür yerləşimi yoxlayın hormetle senan"
+  },
+  {
+    "id": "mail-302",
+    "domain": "frontend",
+    "audience": "istifadəçilər",
+    "subject": "Mətn seçimi",
+    "anchor": "redaktorda",
+    "input": "Mövzu: Mətn seçimi\nHörmətli istifadəçilər,\nredaktorda seçdiyiniz sözləri kursiv edə və dırnağa ala bilərsiniz\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-303",
+    "domain": "frontend",
+    "audience": "Aysel xanım",
+    "subject": "Kopyalama xətası",
+    "anchor": "nəticə",
+    "input": "hormetli Aysel xanım nəticə mətnini kopyalayanda siyahı nömrələri itir bunu yoxlayacağıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-304",
+    "domain": "frontend",
+    "audience": "test komandası",
+    "subject": "Yapışdırılan HTML",
+    "anchor": "xarici",
+    "input": "movzu Yapışdırılan HTML salam test komandası xarici saytdan gələn HTML təhlükəli atributlar olmadan saxlanmalıdır hormetle senan"
+  },
+  {
+    "id": "mail-305",
+    "domain": "frontend",
+    "audience": "məhsul sahibi",
+    "subject": "Yeni dizayn",
+    "anchor": "oxunması",
+    "input": "Mövzu: Yeni dizayn\nHörmətli məhsul sahibi,\noxunması çətin olan köməkçi mətn üçün kontrastı artıracağıq\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-306",
+    "domain": "frontend",
+    "audience": "Rauf bəy",
+    "subject": "Klaviatura keçidi",
+    "anchor": "formadakı",
+    "input": "hormetli Rauf bəy formadakı düymələrə Tab ilə keçid bəzən dayanır hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-307",
+    "domain": "frontend",
+    "audience": "mobil komanda",
+    "subject": "Kiçik ekran",
+    "anchor": "mətn",
+    "input": "movzu Kiçik ekran salam mobil komanda mətn panelinin kənarı telefonda ekranın çölünə çıxır hormetle senan"
+  },
+  {
+    "id": "mail-308",
+    "domain": "frontend",
+    "audience": "operatorlar",
+    "subject": "Aydın xəta",
+    "anchor": "yanlış",
+    "input": "Mövzu: Aydın xəta\nHörmətli operatorlar,\nyanlış formatda fayl seçəndə səbəbi ekranda göstərmək lazımdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-309",
+    "domain": "frontend",
+    "audience": "rəhbərlik",
+    "subject": "İstifadəçi rəyi",
+    "anchor": "son",
+    "input": "hormetli rəhbərlik son sınaqda təmizləmə düyməsinin yerini tapmaq çətin olub hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-310",
+    "domain": "frontend",
+    "audience": "müştəri",
+    "subject": "Yeni imkan",
+    "anchor": "şəxsi",
+    "input": "movzu Yeni imkan salam müştəri şəxsi kabinetdə müraciət tarixçənizi artıq görə bilərsiniz hormetle senan"
+  },
+  {
+    "id": "mail-311",
+    "domain": "frontend",
+    "audience": "Nigar xanım",
+    "subject": "Boş səhifə",
+    "anchor": "səhifəni",
+    "input": "Mövzu: Boş səhifə\nHörmətli Nigar xanım,\nsəhifəni yeniləyəndə seçdiyiniz sənəd növü itir\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-312",
+    "domain": "frontend",
+    "audience": "dizaynerlər",
+    "subject": "Gec yüklənən şrift",
+    "anchor": "xarici",
+    "input": "hormetli dizaynerlər xarici şrift gələnə qədər mətn görünməz qalmasın hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-313",
+    "domain": "frontend",
+    "audience": "frontend komandası",
+    "subject": "Mətn sayğacı",
+    "anchor": "yapışdırmadan",
+    "input": "movzu Mətn sayğacı salam frontend komandası yapışdırmadan sonra simvol sayğacı bir simvol az göstərir hormetle senan"
+  },
+  {
+    "id": "mail-314",
+    "domain": "frontend",
+    "audience": "məhsul analitikləri",
+    "subject": "Sadə menyu",
+    "anchor": "yeni",
+    "input": "Mövzu: Sadə menyu\nHörmətli məhsul analitikləri,\nyeni menyuda əsas əməliyyatları daha yuxarı yerləşdirək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-315",
+    "domain": "frontend",
+    "audience": "əlaqə mərkəzi",
+    "subject": "Oxunmayan bildiriş",
+    "anchor": "telefon",
+    "input": "hormetli əlaqə mərkəzi telefon ekranında xəbərdarlıq mətninin sonu kəsilir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-316",
+    "domain": "frontend",
+    "audience": "Rəşad bəy",
+    "subject": "Geri qaytarma",
+    "anchor": "son",
+    "input": "movzu Geri qaytarma salam Rəşad bəy son redaktəni Undo ilə geri almaq üçün düymə var hormetle senan"
+  },
+  {
+    "id": "mail-317",
+    "domain": "frontend",
+    "audience": "təhlükəsizlik qrupu",
+    "subject": "Yapışdırma yoxlaması",
+    "anchor": "script",
+    "input": "Mövzu: Yapışdırma yoxlaması\nHörmətli təhlükəsizlik qrupu,\nscript daxil olan mətnin səhifədə icra edilmədiyini yoxlayın\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-318",
+    "domain": "frontend",
+    "audience": "sınaq iştirakçıları",
+    "subject": "Formun izahı",
+    "anchor": "hansı",
+    "input": "hormetli sınaq iştirakçıları hansı sahələrin məcburi olduğu aydın görünməlidir hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-319",
+    "domain": "frontend",
+    "audience": "komanda",
+    "subject": "Kopyalama icazəsi",
+    "anchor": "brauzer",
+    "input": "movzu Kopyalama icazəsi salam komanda brauzer icazə vermirsə istifadəçiyə aydın xəbər göstərilməlidir hormetle senan"
+  },
+  {
+    "id": "mail-320",
+    "domain": "frontend",
+    "audience": "Leyla xanım",
+    "subject": "Seçilmiş format",
+    "anchor": "qalın",
+    "input": "Mövzu: Seçilmiş format\nHörmətli Leyla xanım,\nqalın yazılmış cümlə redaktədən sonra da qalın qalmalıdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-321",
+    "domain": "training",
+    "audience": "filial işçiləri",
+    "subject": "Yeni təlim",
+    "anchor": "sənəd",
+    "input": "hormetli filial işçiləri sənəd qeydiyyatı üzrə təlim gələn həftə onlayn keçiriləcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-322",
+    "domain": "training",
+    "audience": "Araz bəy",
+    "subject": "Video yazı",
+    "anchor": "keçən",
+    "input": "movzu Video yazı salam Araz bəy keçən sessiyanın video yazısını paylaşmaq üçün icazə istəyirik hormetle senan"
+  },
+  {
+    "id": "mail-323",
+    "domain": "training",
+    "audience": "müştəri",
+    "subject": "İstifadə qaydası",
+    "anchor": "şəxsi",
+    "input": "Mövzu: İstifadə qaydası\nHörmətli müştəri,\nşəxsi kabinetdən sənəd yükləmək üçün qısa bələdçi əlavə etmişik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-324",
+    "domain": "training",
+    "audience": "inzibatçılar",
+    "subject": "Rol təlimi",
+    "anchor": "yeni",
+    "input": "hormetli inzibatçılar yeni icazə matrisini tətbiq etməzdən əvvəl admin qrupunu təlimləndirək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-325",
+    "domain": "training",
+    "audience": "Nərmin xanım",
+    "subject": "İştirak təsdiqi",
+    "anchor": "çərşənbə",
+    "input": "movzu İştirak təsdiqi salam Nərmin xanım çərşənbə günkü sessiyaya qatıla biləcəyinizi bildirin hormetle senan"
+  },
+  {
+    "id": "mail-326",
+    "domain": "training",
+    "audience": "məhsul komandası",
+    "subject": "Sual siyahısı",
+    "anchor": "ilk",
+    "input": "Mövzu: Sual siyahısı\nHörmətli məhsul komandası,\nilk pilotdan sonra gələn sualları FAQ bölməsinə daxil edək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-327",
+    "domain": "training",
+    "audience": "filial rəhbərləri",
+    "subject": "Təlim cədvəli",
+    "anchor": "birinci",
+    "input": "hormetli filial rəhbərləri birinci qrup səhər ikinci qrup isə günortadan sonra qoşulacaq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-328",
+    "domain": "training",
+    "audience": "operatorlar",
+    "subject": "Sınaq hesabı",
+    "anchor": "təlimdə",
+    "input": "movzu Sınaq hesabı salam operatorlar təlimdə real müştəri hesabından istifadə etməyin test hesabını seçin hormetle senan"
+  },
+  {
+    "id": "mail-329",
+    "domain": "training",
+    "audience": "müştəri nümayəndəsi",
+    "subject": "Bələdçi sənədi",
+    "anchor": "son",
+    "input": "Mövzu: Bələdçi sənədi\nHörmətli müştəri nümayəndəsi,\nson versiyada ekran görüntüləri yenilənib yeni faylı əlavə edirik\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-330",
+    "domain": "training",
+    "audience": "təlimçilər",
+    "subject": "Canlı nümayiş",
+    "anchor": "imza",
+    "input": "hormetli təlimçilər imza və arxiv funksiyalarını ayrı sessiyalarda göstərəcəyik hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-331",
+    "domain": "training",
+    "audience": "Elvin bəy",
+    "subject": "İmtahan nəticəsi",
+    "anchor": "sınaq",
+    "input": "movzu İmtahan nəticəsi salam Elvin bəy sınaq suallarının cavabları yalnız təlimdən sonra paylaşılacaq hormetle senan"
+  },
+  {
+    "id": "mail-332",
+    "domain": "training",
+    "audience": "komanda",
+    "subject": "Yeni başlanğıc",
+    "anchor": "ilk",
+    "input": "Mövzu: Yeni başlanğıc\nHörmətli komanda,\nilk görüşdə layihənin məqsədini və rolları qısa təqdim edək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-333",
+    "domain": "training",
+    "audience": "filial operatorları",
+    "subject": "Təkrar məşq",
+    "anchor": "qeydiyyat",
+    "input": "hormetli filial operatorları qeydiyyat addımında çətinlik yaşayanlar üçün əlavə vaxt ayırdıq hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-334",
+    "domain": "training",
+    "audience": "rəhbərlik",
+    "subject": "Təlim hesabatı",
+    "anchor": "iştirak",
+    "input": "movzu Təlim hesabatı salam rəhbərlik iştirak sayı və rəylər yekun hesabatda ayrıca göstəriləcək hormetle senan"
+  },
+  {
+    "id": "mail-335",
+    "domain": "training",
+    "audience": "müştəri",
+    "subject": "İzah videosu",
+    "anchor": "telefon",
+    "input": "Mövzu: İzah videosu\nHörmətli müştəri,\ntelefon üzərindən müraciət yaratmağı göstərən video hazırdır\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-336",
+    "domain": "training",
+    "audience": "Aysel xanım",
+    "subject": "Test dəvəti",
+    "anchor": "yeni",
+    "input": "hormetli Aysel xanım yeni funksiyanı öyrənmək üçün sınaq hesabınız aktivləşdirilib hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-337",
+    "domain": "training",
+    "audience": "texniki dəstək",
+    "subject": "Operator qeydləri",
+    "anchor": "tez-tez",
+    "input": "movzu Operator qeydləri salam texniki dəstək tez-tez verilən suallar üçün hazır cavab mətnlərini yeniləyək hormetle senan"
+  },
+  {
+    "id": "mail-338",
+    "domain": "training",
+    "audience": "məhsul sahibi",
+    "subject": "Təlim rəyi",
+    "anchor": "istifadəçilər",
+    "input": "Mövzu: Təlim rəyi\nHörmətli məhsul sahibi,\nistifadəçilər arxiv axtarışını çətin hesab edirlər bunu dizayna qeyd edək\n\nHörmətlə,\nLayihə komandası"
+  },
+  {
+    "id": "mail-339",
+    "domain": "training",
+    "audience": "yeni əməkdaşlar",
+    "subject": "Giriş sessiyası",
+    "anchor": "sistemə",
+    "input": "hormetli yeni əməkdaşlar sistemə ilk giriş və şifrə dəyişikliyi ayrı addımlarda göstəriləcək hormetle layihe komandasi"
+  },
+  {
+    "id": "mail-340",
+    "domain": "training",
+    "audience": "Səbinə xanım",
+    "subject": "Təlim materialı",
+    "anchor": "göndərdiyiniz",
+    "input": "movzu Təlim materialı salam Səbinə xanım göndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var onları dəyişək hormetle senan"
+  }
+]

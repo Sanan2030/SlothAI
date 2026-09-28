@@ -37,7 +37,17 @@ export function paragraphEmailBody(body: string): string {
 
 // Recipient titles identify the end of a compact salutation. These are
 // addressee nouns, never an inventory of possible body-opening phrases.
-const recipientEnd = /(?:bəy|bey|xanım|xanim|komanda(?:sı|si)?|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|terefdasimiz|tərəfdaşımız|musteri|müştəri|nümayəndəsi|numayendesi|istifadecisi|istifadəçisi|istifadeciler|istifadəçilər|analitikler|analitiklər|şəxslər|sexsler|heyəti|heyeti|rəhbərlik|rehberlik|əməkdaşlar|emekdaslar|komitəsi|komitesi|tərəflər|terefler)(?=[,!.\s]|$)/iu;
+const recipientEnd = /^(?:bəy|bey|xanım|xanim|komanda(?:sı|si)?|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|terefdasimiz|tərəfdaşımız|musteri|müştəri|müştərilər|müraciətçi|nümayəndəsi|numayendesi|istifadecisi|istifadəçisi|istifadeciler|istifadəçilər|analitikler|analitiklər|analitikləri|şəxslər|sexsler|şəxs|heyəti|heyeti|heyət|rəhbər|rəhbəri|rəhbərləri|rəhbərlik|rehberlik|əməkdaşlar|emekdaslar|komitəsi|komitesi|tərəflər|terefler|qrupu|şöbəsi|sahibləri|sahibi|işçiləri|koordinatorları|mühəndislər|mühəndis|inzibatçılar|tərtibatçılar|operatorlar|operatorları|operator|mühasiblər|mühasibat|menecer|meneceri|təmsilçi|vendor|tərəfdaş|tərəfdaşı|hazırlayanlar|müəllifləri|icraçılar|icraçı|dəstək|dizaynerlər|mərkəzi|təlimçilər|katiblik|müdiri|iştirakçıları)$/iu;
+
+function recipientFromLine(line: string): RegExpMatchArray | undefined {
+  const words = [...line.matchAll(/\p{L}+/gu)];
+  // A recipient may have several qualifiers ("filial texniki dəstək qrupu");
+  // never scan the entire body looking for a convenient recipient noun.
+  const end = words.findLastIndex((item, index) => index < 5 && recipientEnd.test(item[0]));
+  if (end < 0) return undefined;
+  const span = line.slice(0, words[end].index! + words[end][0].length);
+  return [span, span] as unknown as RegExpMatchArray;
+}
 
 export function parseEmailSections(input: string): EmailDocument {
   let remaining = input.replace(/\r\n?/gu, '\n').trim();
@@ -76,6 +86,17 @@ export function parseEmailSections(input: string): EmailDocument {
     if (titled) {
       salutation = { type: 'honorific', addressee: titled[1] };
       remaining = remaining.slice(titled[0].length).trim();
+    } else {
+      const recipient = recipientFromLine(remaining.split('\n')[0]);
+      // "Salam mühəndis sənədi gətirir" is prose about an engineer,
+      // not an address to that engineer. A bare occupational noun needs
+      // explicit comma or an honorific to become a salutation.
+      const ambiguousOccupation = recipient?.[1].toLocaleLowerCase('az-AZ') === 'mühəndis'
+        && !/^[,!]/u.test(remaining.slice(recipient[0].length));
+      if (recipient && !ambiguousOccupation) {
+        salutation = { type: 'honorific', addressee: recipient[1] };
+        remaining = remaining.slice(recipient[0].length).replace(/^[,!.\s]+/u, '').trim();
+      }
     }
   }
   if (!salutation || /^(?:hörmətli|hormetli)\s+/iu.test(remaining)) {
@@ -85,13 +106,7 @@ export function parseEmailSections(input: string): EmailDocument {
       const first = following.split('\n')[0];
       const titled = first.match(/^(.*?\b(?:bəy|bey|xanım|xanim))[,!.]?(?=\s|$)/iu);
       const comma = first.match(/^([^,!.]+)[,!.](?=\s|$)/u);
-      const recipient = titled ?? comma ?? (() => {
-        const words = [...first.matchAll(/\p{L}+/gu)];
-        const end = words.findLastIndex((item, index) => index < 9 && recipientEnd.test(item[0]));
-        if (end < 0) return undefined;
-        const span = first.slice(0, words[end].index! + words[end][0].length);
-        return [span, span];
-      })();
+      const recipient = titled ?? comma ?? recipientFromLine(first);
       if (recipient) {
         salutation = { type: 'honorific', addressee: recipient[1].trim() };
         remaining = following.slice(recipient[0].length).replace(/^[,!.\s]+/u, '').trim();

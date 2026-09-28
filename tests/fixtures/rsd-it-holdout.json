@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "rsd-it-001",
+    "domain": "qeydiyyat",
+    "input": "rsd de yeni muraciet qeydiyyata alinib",
+    "anchor": "müraciət"
+  },
+  {
+    "id": "rsd-it-002",
+    "domain": "qeydiyyat",
+    "input": "sened daxil olanda qeydiyyat nomresi avtomatik verilir",
+    "anchor": "nömrəsi"
+  },
+  {
+    "id": "rsd-it-003",
+    "domain": "qeydiyyat",
+    "input": "eyni muraciet ikinci defe gonderilende sistem xeberdarliq edir",
+    "anchor": "sistem"
+  },
+  {
+    "id": "rsd-it-004",
+    "domain": "qeydiyyat",
+    "input": "gelen mektubun tarixi qeydiyyat jurnalina yazilir",
+    "anchor": "jurnalına"
+  },
+  {
+    "id": "rsd-it-005",
+    "domain": "qeydiyyat",
+    "input": "qeydiyyat kartindaki unvan melumati yanlisdir",
+    "anchor": "ünvan"
+  },
+  {
+    "id": "rsd-it-006",
+    "domain": "qeydiyyat",
+    "input": "operator mektubun elavelerini yoxlayib qeydiyyati tamamlayir",
+    "anchor": "əlavələrini"
+  },
+  {
+    "id": "rsd-it-007",
+    "domain": "qeydiyyat",
+    "input": "qebul olunan senede ilkin status teyin edildi",
+    "anchor": "status"
+  },
+  {
+    "id": "rsd-it-008",
+    "domain": "qeydiyyat",
+    "input": "qeydiyyat nomresinin prefiksi filial uzre ferqlenir",
+    "anchor": "filial"
+  },
+  {
+    "id": "rsd-it-009",
+    "domain": "qeydiyyat",
+    "input": "muracietin daxilolma kanali kartda gosterilmelidir",
+    "anchor": "kanalı"
+  },
+  {
+    "id": "rsd-it-010",
+    "domain": "qeydiyyat",
+    "input": "tekrar sened asgarlananda operatora bildiris gonderilir",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-011",
+    "domain": "qeydiyyat",
+    "input": "fiziki sexsin fin kodu qeydiyyat zamani yoxlanilir",
+    "anchor": "kod"
+  },
+  {
+    "id": "rsd-it-012",
+    "domain": "qeydiyyat",
+    "input": "hüquqi sexsin voen melumati sorgudan qayidir",
+    "anchor": "məlumatı"
+  },
+  {
+    "id": "rsd-it-013",
+    "domain": "qeydiyyat",
+    "input": "qebul tarixi ile senedin ustundeki tarix eyni deyil",
+    "anchor": "tarix"
+  },
+  {
+    "id": "rsd-it-014",
+    "domain": "qeydiyyat",
+    "input": "operator xidmet novunu duzgun secmeyib",
+    "anchor": "xidmət"
+  },
+  {
+    "id": "rsd-it-015",
+    "domain": "qeydiyyat",
+    "input": "gelen post gonderisi icin ayrica qeydiyyat acilir",
+    "anchor": "qeydiyyat"
+  },
+  {
+    "id": "rsd-it-016",
+    "domain": "qeydiyyat",
+    "input": "qeydiyyata alinan faylin olcusu limitden boyukdur",
+    "anchor": "faylın"
+  },
+  {
+    "id": "rsd-it-017",
+    "domain": "qeydiyyat",
+    "input": "mektubun esli kagiz arxivine teqdim olunub",
+    "anchor": "arxivinə"
+  },
+  {
+    "id": "rsd-it-018",
+    "domain": "qeydiyyat",
+    "input": "giris senedinin kodu diger struktur bolmeye aiddir",
+    "anchor": "bölməyə"
+  },
+  {
+    "id": "rsd-it-019",
+    "domain": "qeydiyyat",
+    "input": "qebul formasi bos biraxilanda tesdiq duymesi baglanir",
+    "anchor": "forma"
+  },
+  {
+    "id": "rsd-it-020",
+    "domain": "qeydiyyat",
+    "input": "qeydiyyat tamamlanandan sonra istifadeciye qebz gonderilir",
+    "anchor": "qəbz"
+  },
+  {
+    "id": "rsd-it-021",
+    "domain": "sened_novu",
+    "input": "sened novu secilmeden muraciet yaradilmir",
+    "anchor": "sənəd"
+  },
+  {
+    "id": "rsd-it-022",
+    "domain": "sened_novu",
+    "input": "xidmeti senedler ucun elave saheler acilmalidir",
+    "anchor": "sahələr"
+  },
+  {
+    "id": "rsd-it-023",
+    "domain": "sened_novu",
+    "input": "daxili mektub ile xarici mektub ferqli novlerdir",
+    "anchor": "məktub"
+  },
+  {
+    "id": "rsd-it-024",
+    "domain": "sened_novu",
+    "input": "sened novunun adi siyahida iki defe gorunur",
+    "anchor": "siyahıda"
+  },
+  {
+    "id": "rsd-it-025",
+    "domain": "sened_novu",
+    "input": "istifade olunmayan sened novu deaktiv edilsin",
+    "anchor": "deaktiv"
+  },
+  {
+    "id": "rsd-it-026",
+    "domain": "sened_novu",
+    "input": "yeni nov yaradilanda kateqoriya mutleq secilmelidir",
+    "anchor": "kateqoriya"
+  },
+  {
+    "id": "rsd-it-027",
+    "domain": "sened_novu",
+    "input": "qerar layihesi sened novlerine elave olunub",
+    "anchor": "qərar"
+  },
+  {
+    "id": "rsd-it-028",
+    "domain": "sened_novu",
+    "input": "mukavile novunun saxlanma muddeti on ildir",
+    "anchor": "müqavilə"
+  },
+  {
+    "id": "rsd-it-029",
+    "domain": "sened_novu",
+    "input": "arxiv senedi ayri bolmede gosterilir",
+    "anchor": "arxiv"
+  },
+  {
+    "id": "rsd-it-030",
+    "domain": "sened_novu",
+    "input": "sifaris novu ucun icaze ssenarisi ferqlidir",
+    "anchor": "icazə"
+  },
+  {
+    "id": "rsd-it-031",
+    "domain": "sened_novu",
+    "input": "sistem novun kodunu el ile yazmaga icaze vermir",
+    "anchor": "kodunu"
+  },
+  {
+    "id": "rsd-it-032",
+    "domain": "sened_novu",
+    "input": "sened novune gore vacib saheler deyisir",
+    "anchor": "sahələr"
+  },
+  {
+    "id": "rsd-it-033",
+    "domain": "sened_novu",
+    "input": "elektron akt yeni nov kimi teqdim olunacaq",
+    "anchor": "akt"
+  },
+  {
+    "id": "rsd-it-034",
+    "domain": "sened_novu",
+    "input": "novun tercumesi azerbaycan dilinde natamamdir",
+    "anchor": "tərcüməsi"
+  },
+  {
+    "id": "rsd-it-035",
+    "domain": "sened_novu",
+    "input": "her novun oz qeydiyyat saygaci olmalidir",
+    "anchor": "sayğacı"
+  },
+  {
+    "id": "rsd-it-036",
+    "domain": "sened_novu",
+    "input": "vekaletname novunde etibar eden sexs ayrica secilir",
+    "anchor": "şəxs"
+  },
+  {
+    "id": "rsd-it-037",
+    "domain": "sened_novu",
+    "input": "xidmet arayisi yalniz aidiyyeti qrup terefinden acilir",
+    "anchor": "arayışı"
+  },
+  {
+    "id": "rsd-it-038",
+    "domain": "sened_novu",
+    "input": "protokol novu ucun fayl elavesi mecburidir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-039",
+    "domain": "sened_novu",
+    "input": "hesabat novu siyahinin evvelinde gosterilsin",
+    "anchor": "hesabat"
+  },
+  {
+    "id": "rsd-it-040",
+    "domain": "sened_novu",
+    "input": "qaytarilan senedin novu deyisdirile bilmir",
+    "anchor": "dəyişdirilə"
+  },
+  {
+    "id": "rsd-it-041",
+    "domain": "derkenar",
+    "input": "derkenar layihesi icra edilmek ucun gonderildi",
+    "anchor": "dərkənar"
+  },
+  {
+    "id": "rsd-it-042",
+    "domain": "derkenar",
+    "input": "derkenarin meqsedi secilmeden icraci teyin edilmir",
+    "anchor": "icraçı"
+  },
+  {
+    "id": "rsd-it-043",
+    "domain": "derkenar",
+    "input": "rehber derkenari tesdiqleyib imzaladi",
+    "anchor": "təsdiqləyib"
+  },
+  {
+    "id": "rsd-it-044",
+    "domain": "derkenar",
+    "input": "derkenar uzre son icra tarixi sabaha qoyulub",
+    "anchor": "icra"
+  },
+  {
+    "id": "rsd-it-045",
+    "domain": "derkenar",
+    "input": "layihe qeyde qaytarilanda sebeb gosterilmelidir",
+    "anchor": "səbəb"
+  },
+  {
+    "id": "rsd-it-046",
+    "domain": "derkenar",
+    "input": "eyni senede ikinci derkenar elave olunub",
+    "anchor": "ikinci"
+  },
+  {
+    "id": "rsd-it-047",
+    "domain": "derkenar",
+    "input": "derkenar layihesini kim hazirlayib",
+    "anchor": "hazırlayıb"
+  },
+  {
+    "id": "rsd-it-048",
+    "domain": "derkenar",
+    "input": "icraci derkenarin ustundeki qeydleri gore bilmir",
+    "anchor": "qeydləri"
+  },
+  {
+    "id": "rsd-it-049",
+    "domain": "derkenar",
+    "input": "derkenar imzalandi amma icra statusu deyismedi",
+    "anchor": "statusu"
+  },
+  {
+    "id": "rsd-it-050",
+    "domain": "derkenar",
+    "input": "daxili derkenar ucun muavin raziligi teleb olunur",
+    "anchor": "razılığı"
+  },
+  {
+    "id": "rsd-it-051",
+    "domain": "derkenar",
+    "input": "derkenarin elavesi sened kartinda acilmir",
+    "anchor": "kartında"
+  },
+  {
+    "id": "rsd-it-052",
+    "domain": "derkenar",
+    "input": "imzadan sonra derkenar metni redakte edilmesin",
+    "anchor": "mətn"
+  },
+  {
+    "id": "rsd-it-053",
+    "domain": "derkenar",
+    "input": "derkenar icraya yonlendirilende bildiris dusmedi",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-054",
+    "domain": "derkenar",
+    "input": "tesdiq novbesindeki derkenar geri cekildi",
+    "anchor": "növbəsindəki"
+  },
+  {
+    "id": "rsd-it-055",
+    "domain": "derkenar",
+    "input": "rehberin derkenara yazdigi qeyd saxlanmayib",
+    "anchor": "qeyd"
+  },
+  {
+    "id": "rsd-it-056",
+    "domain": "derkenar",
+    "input": "derkenar uzre mesul sexs mezuniyyetdedir",
+    "anchor": "məsul"
+  },
+  {
+    "id": "rsd-it-057",
+    "domain": "derkenar",
+    "input": "icraci derkenarin muddetini uzatmaq isteyir",
+    "anchor": "müddətini"
+  },
+  {
+    "id": "rsd-it-058",
+    "domain": "derkenar",
+    "input": "derkenar proyekti teqdim edilmeden silinib",
+    "anchor": "silinib"
+  },
+  {
+    "id": "rsd-it-059",
+    "domain": "derkenar",
+    "input": "nezaretci derkenar icrasini yoxlamaq ucun tarixceye baxir",
+    "anchor": "tarixçəyə"
+  },
+  {
+    "id": "rsd-it-060",
+    "domain": "derkenar",
+    "input": "derkenarin cari versiyasi pdf faylinda gorunmelidir",
+    "anchor": "PDF"
+  },
+  {
+    "id": "rsd-it-061",
+    "domain": "marshrut",
+    "input": "sened aidiyyeti uzre yeni icraciya yonlendirildi",
+    "anchor": "icraçıya"
+  },
+  {
+    "id": "rsd-it-062",
+    "domain": "marshrut",
+    "input": "razilasdirma merhelesinde gonderis baglanib",
+    "anchor": "mərhələsində"
+  },
+  {
+    "id": "rsd-it-063",
+    "domain": "marshrut",
+    "input": "muraciet rehbere catmadan evvel katibden kecir",
+    "anchor": "rəhbərə"
+  },
+  {
+    "id": "rsd-it-064",
+    "domain": "marshrut",
+    "input": "marshrutdaki ikinci addim sehv bolmeye baglanib",
+    "anchor": "bölməyə"
+  },
+  {
+    "id": "rsd-it-065",
+    "domain": "marshrut",
+    "input": "qaytarilan sened ilkin icraciya geri donur",
+    "anchor": "geri"
+  },
+  {
+    "id": "rsd-it-066",
+    "domain": "marshrut",
+    "input": "merhele bitende novbeti vezifeli sexse bildiris gedir",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-067",
+    "domain": "marshrut",
+    "input": "paralel icra ucun iki struktur bolme secildi",
+    "anchor": "paralel"
+  },
+  {
+    "id": "rsd-it-068",
+    "domain": "marshrut",
+    "input": "birinci razilasdiran vezifeli sexs ezamiyyetdedir",
+    "anchor": "birinci"
+  },
+  {
+    "id": "rsd-it-069",
+    "domain": "marshrut",
+    "input": "tesdiq zamani marşrutun kohne versiyasi isledi",
+    "anchor": "versiyası"
+  },
+  {
+    "id": "rsd-it-070",
+    "domain": "marshrut",
+    "input": "icra muddeti baslayanda timer ishə dusmelidir",
+    "anchor": "icra"
+  },
+  {
+    "id": "rsd-it-071",
+    "domain": "marshrut",
+    "input": "yeni marşrut yalniz test muhitinde aktivdir",
+    "anchor": "test"
+  },
+  {
+    "id": "rsd-it-072",
+    "domain": "marshrut",
+    "input": "sened yonlendirilende eski icraci siyahidan cixarilir",
+    "anchor": "siyahıdan"
+  },
+  {
+    "id": "rsd-it-073",
+    "domain": "marshrut",
+    "input": "rahatlasdirilmis marşrut uc addimdan ibaretdir",
+    "anchor": "addımdan"
+  },
+  {
+    "id": "rsd-it-074",
+    "domain": "marshrut",
+    "input": "tesdiq eden sexs secilende struktur aidiyyeti yoxlanir",
+    "anchor": "şəxs"
+  },
+  {
+    "id": "rsd-it-075",
+    "domain": "marshrut",
+    "input": "yanlis icraci teyin edilmis sened geri qaytarildi",
+    "anchor": "təyin"
+  },
+  {
+    "id": "rsd-it-076",
+    "domain": "marshrut",
+    "input": "is axininda imza addimi buraxila bilmez",
+    "anchor": "imza"
+  },
+  {
+    "id": "rsd-it-077",
+    "domain": "marshrut",
+    "input": "gizli sened xarici icraciya yonlendirilmesin",
+    "anchor": "sənəd"
+  },
+  {
+    "id": "rsd-it-078",
+    "domain": "marshrut",
+    "input": "yeni workflow komandalar uzre ferqli isleyir",
+    "anchor": "workflow"
+  },
+  {
+    "id": "rsd-it-079",
+    "domain": "marshrut",
+    "input": "gonderisden sonra marşrut tarixcesi silinmemelidir",
+    "anchor": "tarixçəsi"
+  },
+  {
+    "id": "rsd-it-080",
+    "domain": "marshrut",
+    "input": "marşrutun her addiminda icra vaxti yazilsin",
+    "anchor": "vaxtı"
+  },
+  {
+    "id": "rsd-it-081",
+    "domain": "icazeler",
+    "input": "istifadeci senedi yalniz oz bolmesinde gore bilir",
+    "anchor": "bölməsində"
+  },
+  {
+    "id": "rsd-it-082",
+    "domain": "icazeler",
+    "input": "rola esaslanan giris qaydasi yenilendi",
+    "anchor": "giriş"
+  },
+  {
+    "id": "rsd-it-083",
+    "domain": "icazeler",
+    "input": "mesul sexsin imza icazesi muddetle mehdudlasir",
+    "anchor": "imza"
+  },
+  {
+    "id": "rsd-it-084",
+    "domain": "icazeler",
+    "input": "filial operatoru merkezi arxive baxa bilmir",
+    "anchor": "arxivə"
+  },
+  {
+    "id": "rsd-it-085",
+    "domain": "icazeler",
+    "input": "mezuniyyetdeki iscinin selahiyyeti muveqqeti kecirildi",
+    "anchor": "səlahiyyəti"
+  },
+  {
+    "id": "rsd-it-086",
+    "domain": "icazeler",
+    "input": "admin panelinde icaze yoxlamasi aparilir",
+    "anchor": "icazə"
+  },
+  {
+    "id": "rsd-it-087",
+    "domain": "icazeler",
+    "input": "gizli senedin oxunmasina yalniz rehber icaze verir",
+    "anchor": "rəhbər"
+  },
+  {
+    "id": "rsd-it-088",
+    "domain": "icazeler",
+    "input": "icaze matrisi sened novune gore qurulub",
+    "anchor": "matrisi"
+  },
+  {
+    "id": "rsd-it-089",
+    "domain": "icazeler",
+    "input": "api tokeni deaktiv edilende gonderis dayanir",
+    "anchor": "tokeni"
+  },
+  {
+    "id": "rsd-it-090",
+    "domain": "icazeler",
+    "input": "istifadecinin rolu deyisende sessiya yenilensin",
+    "anchor": "rolu"
+  },
+  {
+    "id": "rsd-it-091",
+    "domain": "icazeler",
+    "input": "icaze olmadan endirilen fayl ucun 403 qaytarilir",
+    "anchor": "403"
+  },
+  {
+    "id": "rsd-it-092",
+    "domain": "icazeler",
+    "input": "musteri nümayendesi yalniz oz muracietine baxir",
+    "anchor": "müraciətinə"
+  },
+  {
+    "id": "rsd-it-093",
+    "domain": "icazeler",
+    "input": "icracinin duzelis selahiyyeti bu merhelede yoxdur",
+    "anchor": "səlahiyyəti"
+  },
+  {
+    "id": "rsd-it-094",
+    "domain": "icazeler",
+    "input": "vekalet verilen sexs ucun bitme tarixi qeyd edilib",
+    "anchor": "tarixi"
+  },
+  {
+    "id": "rsd-it-095",
+    "domain": "icazeler",
+    "input": "qrup icazesi silinende ferdi istisna saxlanilir",
+    "anchor": "istisna"
+  },
+  {
+    "id": "rsd-it-096",
+    "domain": "icazeler",
+    "input": "daxili istifadeci diski paylasim linkini acmasin",
+    "anchor": "paylaşım"
+  },
+  {
+    "id": "rsd-it-097",
+    "domain": "icazeler",
+    "input": "audit oxuma icazesi yalnız nezaretcide qalir",
+    "anchor": "audit"
+  },
+  {
+    "id": "rsd-it-098",
+    "domain": "icazeler",
+    "input": "giris meselesini rol yoxlamasi ile tekrarladiq",
+    "anchor": "rol"
+  },
+  {
+    "id": "rsd-it-099",
+    "domain": "icazeler",
+    "input": "ozune menimseme funksiyasi ucun selahiyyet teleb edilir",
+    "anchor": "funksiya"
+  },
+  {
+    "id": "rsd-it-100",
+    "domain": "icazeler",
+    "input": "iki rolun kesismesinde mehdud icaze ustun tutulur",
+    "anchor": "icazə"
+  },
+  {
+    "id": "rsd-it-101",
+    "domain": "imza",
+    "input": "elektron imza ucun sertifikatin vaxti bitib",
+    "anchor": "sertifikatın"
+  },
+  {
+    "id": "rsd-it-102",
+    "domain": "imza",
+    "input": "imzalanmis senedin heşi yoxlanmalidir",
+    "anchor": "sənədin"
+  },
+  {
+    "id": "rsd-it-103",
+    "domain": "imza",
+    "input": "mobil imza prosesinde vaxt asimi bas verdi",
+    "anchor": "imza"
+  },
+  {
+    "id": "rsd-it-104",
+    "domain": "imza",
+    "input": "sistem imza vaxtini audit jurnalina yazir",
+    "anchor": "audit"
+  },
+  {
+    "id": "rsd-it-105",
+    "domain": "imza",
+    "input": "imzalayan sexsin adi sertifikatla eynidir",
+    "anchor": "sertifikatla"
+  },
+  {
+    "id": "rsd-it-106",
+    "domain": "imza",
+    "input": "ikinci imza birinciden sonra teleb olunur",
+    "anchor": "birincidən"
+  },
+  {
+    "id": "rsd-it-107",
+    "domain": "imza",
+    "input": "pdf imzasinin etibarliq statusu ayrica gosterilir",
+    "anchor": "PDF"
+  },
+  {
+    "id": "rsd-it-108",
+    "domain": "imza",
+    "input": "imza duymesi yalniz tesdiq merhelesinde acilir",
+    "anchor": "imza"
+  },
+  {
+    "id": "rsd-it-109",
+    "domain": "imza",
+    "input": "sertifikat yenilenende kohne fayl toxunulmaz qalir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-110",
+    "domain": "imza",
+    "input": "muddeti bitmis token ile sened imzalanmir",
+    "anchor": "token"
+  },
+  {
+    "id": "rsd-it-111",
+    "domain": "imza",
+    "input": "imza sirasi rehberin qerari ile deyisdirildi",
+    "anchor": "qərarı"
+  },
+  {
+    "id": "rsd-it-112",
+    "domain": "imza",
+    "input": "istifadeci bir senedi iki defe imzalamaq isteyib",
+    "anchor": "sənədi"
+  },
+  {
+    "id": "rsd-it-113",
+    "domain": "imza",
+    "input": "imza xidmeti kesilende sorgu novbede saxlanilir",
+    "anchor": "sorğu"
+  },
+  {
+    "id": "rsd-it-114",
+    "domain": "imza",
+    "input": "e imza cavabi ucun otuz saniye gozlenilir",
+    "anchor": "cavabı"
+  },
+  {
+    "id": "rsd-it-115",
+    "domain": "imza",
+    "input": "imza sertifikatinin seriya nomresi metadataya yazilir",
+    "anchor": "nömrəsi"
+  },
+  {
+    "id": "rsd-it-116",
+    "domain": "imza",
+    "input": "ucuncu imzaci teyin olunmadigi ucun proses dayandi",
+    "anchor": "proses"
+  },
+  {
+    "id": "rsd-it-117",
+    "domain": "imza",
+    "input": "hesabat imzalanandan sonra arxive gonderilir",
+    "anchor": "arxivə"
+  },
+  {
+    "id": "rsd-it-118",
+    "domain": "imza",
+    "input": "nezaretci imza tarixcesini fayldan yoxlayir",
+    "anchor": "tarixçəsini"
+  },
+  {
+    "id": "rsd-it-119",
+    "domain": "imza",
+    "input": "imza mueyyen muddetde tesdiq olunmasa xeta verilir",
+    "anchor": "xəta"
+  },
+  {
+    "id": "rsd-it-120",
+    "domain": "imza",
+    "input": "senede eyni vaxtda imza gondermek yarisa sebeb oldu",
+    "anchor": "imza"
+  },
+  {
+    "id": "rsd-it-121",
+    "domain": "arxiv",
+    "input": "sened arxive kocurulende metadata saxlanilsin",
+    "anchor": "metadata"
+  },
+  {
+    "id": "rsd-it-122",
+    "domain": "arxiv",
+    "input": "kohne arxivden getirilen faylin adi deyismeyib",
+    "anchor": "faylın"
+  },
+  {
+    "id": "rsd-it-123",
+    "domain": "arxiv",
+    "input": "arxivdeki muraciet qeydiyyat nomresi ile axtarilir",
+    "anchor": "nömrəsi"
+  },
+  {
+    "id": "rsd-it-124",
+    "domain": "arxiv",
+    "input": "silinmis sened arxivde ayri statusla gosterilir",
+    "anchor": "statusla"
+  },
+  {
+    "id": "rsd-it-125",
+    "domain": "arxiv",
+    "input": "arxiv qaydasina esasen saxlanma muddeti bitib",
+    "anchor": "müddəti"
+  },
+  {
+    "id": "rsd-it-126",
+    "domain": "arxiv",
+    "input": "faylin heşi kocurmeden sonra yeniden yoxlanildi",
+    "anchor": "yoxlanıldı"
+  },
+  {
+    "id": "rsd-it-127",
+    "domain": "arxiv",
+    "input": "arxivde axtaris ucun tarix araligi secin",
+    "anchor": "tarix"
+  },
+  {
+    "id": "rsd-it-128",
+    "domain": "arxiv",
+    "input": "senedin kagiz esli bir hefte sonra catacaq",
+    "anchor": "sənədin"
+  },
+  {
+    "id": "rsd-it-129",
+    "domain": "arxiv",
+    "input": "arxiv servisinde gecikme yaranib",
+    "anchor": "servisində"
+  },
+  {
+    "id": "rsd-it-130",
+    "domain": "arxiv",
+    "input": "elektron nüsxeler ehtiyat saxlanca gonderildi",
+    "anchor": "nüsxələr"
+  },
+  {
+    "id": "rsd-it-131",
+    "domain": "arxiv",
+    "input": "arxiv idaresi baglanmis dosyeni yeniden acdi",
+    "anchor": "yenidən"
+  },
+  {
+    "id": "rsd-it-132",
+    "domain": "arxiv",
+    "input": "kohne senedlerin metadata xetasi hesabatda gorunur",
+    "anchor": "metadata"
+  },
+  {
+    "id": "rsd-it-133",
+    "domain": "arxiv",
+    "input": "arxivden cixarilan mektub qeydiyyat jurnali ile tutusduruldu",
+    "anchor": "jurnalı"
+  },
+  {
+    "id": "rsd-it-134",
+    "domain": "arxiv",
+    "input": "axtaris indeksi yenilenmediyi ucun sened tapilmir",
+    "anchor": "indeksi"
+  },
+  {
+    "id": "rsd-it-135",
+    "domain": "arxiv",
+    "input": "arxiv surətini yuklemek ucun giris icazesi lazimdir",
+    "anchor": "icazəsi"
+  },
+  {
+    "id": "rsd-it-136",
+    "domain": "arxiv",
+    "input": "muhafize muddeti artirilan dosye silinmemelidir",
+    "anchor": "dosye"
+  },
+  {
+    "id": "rsd-it-137",
+    "domain": "arxiv",
+    "input": "pdf fayli arxivde acilir amma sertifikat gosterilmir",
+    "anchor": "PDF"
+  },
+  {
+    "id": "rsd-it-138",
+    "domain": "arxiv",
+    "input": "arxivde sened novune esasen filter isleyir",
+    "anchor": "filter"
+  },
+  {
+    "id": "rsd-it-139",
+    "domain": "arxiv",
+    "input": "istifadeci arxiv qeydini el ile duzelde bilmir",
+    "anchor": "qeydini"
+  },
+  {
+    "id": "rsd-it-140",
+    "domain": "arxiv",
+    "input": "arxiv hesabatinda bu ayin gonderis sayi azdir",
+    "anchor": "hesabatında"
+  },
+  {
+    "id": "rsd-it-141",
+    "domain": "audit",
+    "input": "audit jurnalinda imza tarixi eksikdir",
+    "anchor": "audit"
+  },
+  {
+    "id": "rsd-it-142",
+    "domain": "audit",
+    "input": "kim senedi silib onu tarixcede gore bilirik",
+    "anchor": "tarixçədə"
+  },
+  {
+    "id": "rsd-it-143",
+    "domain": "audit",
+    "input": "qeydiyyat emeliyyati ucun istifadeci id si saxlanildi",
+    "anchor": "istifadəçi"
+  },
+  {
+    "id": "rsd-it-144",
+    "domain": "audit",
+    "input": "audit hadiseleri her gecə ehtiyat bazaya kocurulur",
+    "anchor": "bazaya"
+  },
+  {
+    "id": "rsd-it-145",
+    "domain": "audit",
+    "input": "giris cehdleri tarix ve saat uzre siralanir",
+    "anchor": "giriş"
+  },
+  {
+    "id": "rsd-it-146",
+    "domain": "audit",
+    "input": "gizli fayla baxan sexsin hesabi qeyde alinib",
+    "anchor": "şəxsin"
+  },
+  {
+    "id": "rsd-it-147",
+    "domain": "audit",
+    "input": "log yazisi ip unvanina gore axtarilir",
+    "anchor": "ünvanına"
+  },
+  {
+    "id": "rsd-it-148",
+    "domain": "audit",
+    "input": "audit hesabati muhasib terefinden tesdiq edildi",
+    "anchor": "hesabatı"
+  },
+  {
+    "id": "rsd-it-149",
+    "domain": "audit",
+    "input": "bu emeliyyatin evvelki deyeri jurnal qeydinde var",
+    "anchor": "jurnal"
+  },
+  {
+    "id": "rsd-it-150",
+    "domain": "audit",
+    "input": "mesaj gonderilende correlation id qeyd olunmur",
+    "anchor": "mesaj"
+  },
+  {
+    "id": "rsd-it-151",
+    "domain": "audit",
+    "input": "audit qeydi silinmeye qarsi qorunmalidir",
+    "anchor": "qeydi"
+  },
+  {
+    "id": "rsd-it-152",
+    "domain": "audit",
+    "input": "operatorun el ile etdiyi duzelis ayrica gosterilir",
+    "anchor": "düzəliş"
+  },
+  {
+    "id": "rsd-it-153",
+    "domain": "audit",
+    "input": "hadisenin vaxt zonasi dogru gosterilmelidir",
+    "anchor": "vaxt"
+  },
+  {
+    "id": "rsd-it-154",
+    "domain": "audit",
+    "input": "merhele deyisikliyi jurnala yazilmadigi ucun itdi",
+    "anchor": "mərhələ"
+  },
+  {
+    "id": "rsd-it-155",
+    "domain": "audit",
+    "input": "adminin deyisiklikleri diger emeliyyatlardan ayrilir",
+    "anchor": "dəyişiklikləri"
+  },
+  {
+    "id": "rsd-it-156",
+    "domain": "audit",
+    "input": "audit eksportunda bos setirler coxdur",
+    "anchor": "sətirlər"
+  },
+  {
+    "id": "rsd-it-157",
+    "domain": "audit",
+    "input": "inzibatci audit qeydlerini de redakte ede bilmesin",
+    "anchor": "qeydlərini"
+  },
+  {
+    "id": "rsd-it-158",
+    "domain": "audit",
+    "input": "zaman damgasi ile sorğu nomresi elaqelendirildi",
+    "anchor": "sorğu"
+  },
+  {
+    "id": "rsd-it-159",
+    "domain": "audit",
+    "input": "jurnalin axirinci yazisi bu gun qeyd olunub",
+    "anchor": "jurnalın"
+  },
+  {
+    "id": "rsd-it-160",
+    "domain": "audit",
+    "input": "audit paneli xeta koduna gore susdurulub",
+    "anchor": "xəta"
+  },
+  {
+    "id": "rsd-it-161",
+    "domain": "api",
+    "input": "GET /api/v1/documents endpointi 500 qaytarir",
+    "anchor": "GET /api/v1/documents"
+  },
+  {
+    "id": "rsd-it-162",
+    "domain": "api",
+    "input": "POST /api/v1/requests sorğusunda body bos qalıb",
+    "anchor": "POST /api/v1/requests"
+  },
+  {
+    "id": "rsd-it-163",
+    "domain": "api",
+    "input": "api cavabinda pagination fieldi gosterilmir",
+    "anchor": "pagination"
+  },
+  {
+    "id": "rsd-it-164",
+    "domain": "api",
+    "input": "endpoint ucun authorization headeri teleb olunur",
+    "anchor": "authorization"
+  },
+  {
+    "id": "rsd-it-165",
+    "domain": "api",
+    "input": "openapi spesifikasiyasinda status kodu yanlisdir",
+    "anchor": "status"
+  },
+  {
+    "id": "rsd-it-166",
+    "domain": "api",
+    "input": "swaggerde request schema ile response schema ferqlenir",
+    "anchor": "schema"
+  },
+  {
+    "id": "rsd-it-167",
+    "domain": "api",
+    "input": "webhook eyni hadiseni iki defe gonderib",
+    "anchor": "webhook"
+  },
+  {
+    "id": "rsd-it-168",
+    "domain": "api",
+    "input": "rate limit dolandan sonra server 429 qaytarir",
+    "anchor": "429"
+  },
+  {
+    "id": "rsd-it-169",
+    "domain": "api",
+    "input": "pagination cursorunun muddeti bitib",
+    "anchor": "cursorunun"
+  },
+  {
+    "id": "rsd-it-170",
+    "domain": "api",
+    "input": "api response içində null sahə problem yaradır",
+    "anchor": "null"
+  },
+  {
+    "id": "rsd-it-171",
+    "domain": "api",
+    "input": "GET metodu ile yazma emeliyyati aparilmasin",
+    "anchor": "GET"
+  },
+  {
+    "id": "rsd-it-172",
+    "domain": "api",
+    "input": "REST servisinde yeni parametr mecburidir",
+    "anchor": "REST"
+  },
+  {
+    "id": "rsd-it-173",
+    "domain": "api",
+    "input": "grpc xidmeti protobuf uyğunsuzlugu verir",
+    "anchor": "protobuf"
+  },
+  {
+    "id": "rsd-it-174",
+    "domain": "api",
+    "input": "gateway sorğunu backend servisine yonlendirmir",
+    "anchor": "backend"
+  },
+  {
+    "id": "rsd-it-175",
+    "domain": "api",
+    "input": "callback URL yanlış qeyd olunduğu ucun 404 aliriq",
+    "anchor": "404"
+  },
+  {
+    "id": "rsd-it-176",
+    "domain": "api",
+    "input": "api sertifikati yenilendikten sonra elaqe kesilib",
+    "anchor": "sertifikatı"
+  },
+  {
+    "id": "rsd-it-177",
+    "domain": "api",
+    "input": "v2 endpointi kohne clientlerle geriye uyğundur",
+    "anchor": "endpoint"
+  },
+  {
+    "id": "rsd-it-178",
+    "domain": "api",
+    "input": "sorgunun timeout muddeti yuklenmede artirildi",
+    "anchor": "timeout"
+  },
+  {
+    "id": "rsd-it-179",
+    "domain": "api",
+    "input": "idempotency key tekrar edilen odemeni blokladi",
+    "anchor": "idempotency"
+  },
+  {
+    "id": "rsd-it-180",
+    "domain": "api",
+    "input": "webhook imzasi yoxlanmadan mesaj qebul edilmesin",
+    "anchor": "webhook"
+  },
+  {
+    "id": "rsd-it-181",
+    "domain": "database",
+    "input": "postgresql bazasinda indeks catismir",
+    "anchor": "indeks"
+  },
+  {
+    "id": "rsd-it-182",
+    "domain": "database",
+    "input": "migration skripti yalniz stagingde isleyib",
+    "anchor": "staging"
+  },
+  {
+    "id": "rsd-it-183",
+    "domain": "database",
+    "input": "transaction commit olunmadigi ucun setir gorunmedi",
+    "anchor": "commit"
+  },
+  {
+    "id": "rsd-it-184",
+    "domain": "database",
+    "input": "foreign key qaydasi silinmeni engelledi",
+    "anchor": "foreign"
+  },
+  {
+    "id": "rsd-it-185",
+    "domain": "database",
+    "input": "redis kesinin ttl muddeti bes deqiqedir",
+    "anchor": "Redis"
+  },
+  {
+    "id": "rsd-it-186",
+    "domain": "database",
+    "input": "select sorgusu cox setir qaytaranda lengiyir",
+    "anchor": "sorğu"
+  },
+  {
+    "id": "rsd-it-187",
+    "domain": "database",
+    "input": "bazanin ehtiyat nusxesi gecə tamamlandi",
+    "anchor": "nüsxəsi"
+  },
+  {
+    "id": "rsd-it-188",
+    "domain": "database",
+    "input": "database connection pool limiti asilib",
+    "anchor": "connection"
+  },
+  {
+    "id": "rsd-it-189",
+    "domain": "database",
+    "input": "unique constraint tekrarlanan qeydiyyati bloklayir",
+    "anchor": "unique"
+  },
+  {
+    "id": "rsd-it-190",
+    "domain": "database",
+    "input": "schema deyisikliyi ucun rollback plani hazirlandi",
+    "anchor": "rollback"
+  },
+  {
+    "id": "rsd-it-191",
+    "domain": "database",
+    "input": "partition cədvəli aylar uzre ayrilib",
+    "anchor": "cədvəli"
+  },
+  {
+    "id": "rsd-it-192",
+    "domain": "database",
+    "input": "deadlock zamani iki emeliyyat geri qaytarildi",
+    "anchor": "deadlock"
+  },
+  {
+    "id": "rsd-it-193",
+    "domain": "database",
+    "input": "məlumat bazasinin surəsi restore testinden kecdi",
+    "anchor": "bazası"
+  },
+  {
+    "id": "rsd-it-194",
+    "domain": "database",
+    "input": "orm sorgusundaki eager load artiq yuk yaradir",
+    "anchor": "sorğusundakı"
+  },
+  {
+    "id": "rsd-it-195",
+    "domain": "database",
+    "input": "mysql replika serveri oxuma sorğularini qebul edir",
+    "anchor": "MySQL"
+  },
+  {
+    "id": "rsd-it-196",
+    "domain": "database",
+    "input": "jsonb sahesinde yeni indeks yaradildi",
+    "anchor": "indeks"
+  },
+  {
+    "id": "rsd-it-197",
+    "domain": "database",
+    "input": "verilənler bazasindaki tarixler utc saxlanilsin",
+    "anchor": "UTC"
+  },
+  {
+    "id": "rsd-it-198",
+    "domain": "database",
+    "input": "db sehvlərinin hamisi jurnal qeydine dusmur",
+    "anchor": "jurnal"
+  },
+  {
+    "id": "rsd-it-199",
+    "domain": "database",
+    "input": "istifadeci cedveli ucun saxlanma siyaseti deyisdi",
+    "anchor": "cədvəli"
+  },
+  {
+    "id": "rsd-it-200",
+    "domain": "database",
+    "input": "baza versiyasi deploydan evvel yoxlanilsin",
+    "anchor": "versiyası"
+  },
+  {
+    "id": "rsd-it-201",
+    "domain": "devops",
+    "input": "production deploy sonrasi health check ugurludur",
+    "anchor": "deploy"
+  },
+  {
+    "id": "rsd-it-202",
+    "domain": "devops",
+    "input": "staging muhitinde yeni feature flag aktivdir",
+    "anchor": "staging"
+  },
+  {
+    "id": "rsd-it-203",
+    "domain": "devops",
+    "input": "ci cd pipeline testde dayandi",
+    "anchor": "pipeline"
+  },
+  {
+    "id": "rsd-it-204",
+    "domain": "devops",
+    "input": "docker image tagi son commit sha sına baglanib",
+    "anchor": "Docker"
+  },
+  {
+    "id": "rsd-it-205",
+    "domain": "devops",
+    "input": "kubernetes podu yaddaş limitine catdi",
+    "anchor": "podu"
+  },
+  {
+    "id": "rsd-it-206",
+    "domain": "devops",
+    "input": "roll back ucun kohne build saxlanilib",
+    "anchor": "build"
+  },
+  {
+    "id": "rsd-it-207",
+    "domain": "devops",
+    "input": "vercelde api route cold start sebebinden gecikir",
+    "anchor": "route"
+  },
+  {
+    "id": "rsd-it-208",
+    "domain": "devops",
+    "input": "prometheus alerti novbetci muhendise gonderildi",
+    "anchor": "alerti"
+  },
+  {
+    "id": "rsd-it-209",
+    "domain": "devops",
+    "input": "grafana panelinde cpu pikleri gorunur",
+    "anchor": "CPU"
+  },
+  {
+    "id": "rsd-it-210",
+    "domain": "devops",
+    "input": "load balancer saglam olmayan instansi cixarir",
+    "anchor": "balancer"
+  },
+  {
+    "id": "rsd-it-211",
+    "domain": "devops",
+    "input": "dns deyisikliyinden sonra sertifikat yenilendi",
+    "anchor": "sertifikat"
+  },
+  {
+    "id": "rsd-it-212",
+    "domain": "devops",
+    "input": "secret rotation vaxtinda tamamlanmadi",
+    "anchor": "secret"
+  },
+  {
+    "id": "rsd-it-213",
+    "domain": "devops",
+    "input": "terraform planinda yeni subnet yaradilacaq",
+    "anchor": "subnet"
+  },
+  {
+    "id": "rsd-it-214",
+    "domain": "devops",
+    "input": "blue green deployda trafik yeni versiyaya kecdi",
+    "anchor": "trafik"
+  },
+  {
+    "id": "rsd-it-215",
+    "domain": "devops",
+    "input": "git tagi release qeydine baglandi",
+    "anchor": "Git"
+  },
+  {
+    "id": "rsd-it-216",
+    "domain": "devops",
+    "input": "node serveri signal alanda aciq baglantilari baglayir",
+    "anchor": "server"
+  },
+  {
+    "id": "rsd-it-217",
+    "domain": "devops",
+    "input": "monitorinq esikleri uat ile ferqli hesablanib",
+    "anchor": "monitorinq"
+  },
+  {
+    "id": "rsd-it-218",
+    "domain": "devops",
+    "input": "konteyner restartindan sonra fayl sistemi temizlendi",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-219",
+    "domain": "devops",
+    "input": "yeni muhitin env deyiseni bos qalıb",
+    "anchor": "mühitin"
+  },
+  {
+    "id": "rsd-it-220",
+    "domain": "devops",
+    "input": "deployment tamamlandi amma domen kohne versiyani acir",
+    "anchor": "domen"
+  },
+  {
+    "id": "rsd-it-221",
+    "domain": "security",
+    "input": "oauth2 tokeninin muddeti bitib",
+    "anchor": "tokeninin"
+  },
+  {
+    "id": "rsd-it-222",
+    "domain": "security",
+    "input": "iki faktorlu dogrulama kodu gec catir",
+    "anchor": "kodu"
+  },
+  {
+    "id": "rsd-it-223",
+    "domain": "security",
+    "input": "csrf yoxlamasi form gonderisinde isledi",
+    "anchor": "form"
+  },
+  {
+    "id": "rsd-it-224",
+    "domain": "security",
+    "input": "xss cehdi html atributunda bloklandi",
+    "anchor": "HTML"
+  },
+  {
+    "id": "rsd-it-225",
+    "domain": "security",
+    "input": "sifre sifirlamasi ucun link bir defe islemelidir",
+    "anchor": "link"
+  },
+  {
+    "id": "rsd-it-226",
+    "domain": "security",
+    "input": "selahiyyetsiz istifadeci gizli fayla giris isteyir",
+    "anchor": "fayla"
+  },
+  {
+    "id": "rsd-it-227",
+    "domain": "security",
+    "input": "jwt imzasinda uyğunsuzluq askar olundu",
+    "anchor": "JWT"
+  },
+  {
+    "id": "rsd-it-228",
+    "domain": "security",
+    "input": "tls sertifikatinin vaxti sabah bitir",
+    "anchor": "sertifikatının"
+  },
+  {
+    "id": "rsd-it-229",
+    "domain": "security",
+    "input": "audit ucun sade metn sifre saxlanmasin",
+    "anchor": "şifrə"
+  },
+  {
+    "id": "rsd-it-230",
+    "domain": "security",
+    "input": "hesabin bloklanmasi on ardicil cehdden sonra bas verir",
+    "anchor": "hesabın"
+  },
+  {
+    "id": "rsd-it-231",
+    "domain": "security",
+    "input": "session cookie sinin same site ayari sertdir",
+    "anchor": "cookie"
+  },
+  {
+    "id": "rsd-it-232",
+    "domain": "security",
+    "input": "captcha cavabi secilmis sessiya ile yoxlanilir",
+    "anchor": "sessiya"
+  },
+  {
+    "id": "rsd-it-233",
+    "domain": "security",
+    "input": "ip adresine gore tezlik limiti tətbiq edilir",
+    "anchor": "IP"
+  },
+  {
+    "id": "rsd-it-234",
+    "domain": "security",
+    "input": "login hadiselerine gore qeyri adi davranis secildi",
+    "anchor": "davranış"
+  },
+  {
+    "id": "rsd-it-235",
+    "domain": "security",
+    "input": "rol qaydalarinda privilege escalation riski var",
+    "anchor": "rol"
+  },
+  {
+    "id": "rsd-it-236",
+    "domain": "security",
+    "input": "gizli acar repo daxilinde qalmamalidir",
+    "anchor": "repo"
+  },
+  {
+    "id": "rsd-it-237",
+    "domain": "security",
+    "input": "xarici domenlere istek yalniz allowlist ile icazəlidir",
+    "anchor": "domen"
+  },
+  {
+    "id": "rsd-it-238",
+    "domain": "security",
+    "input": "sifrelenmis faylin backup surəsi de korunur",
+    "anchor": "faylın"
+  },
+  {
+    "id": "rsd-it-239",
+    "domain": "security",
+    "input": "public linkin etibarliliq muddeti qısaldıldı",
+    "anchor": "linkin"
+  },
+  {
+    "id": "rsd-it-240",
+    "domain": "security",
+    "input": "security review neticesi issue kimi qeyd edildi",
+    "anchor": "review"
+  },
+  {
+    "id": "rsd-it-241",
+    "domain": "frontend",
+    "input": "textarea yazisini copy duymesi ile kocururuk",
+    "anchor": "textarea"
+  },
+  {
+    "id": "rsd-it-242",
+    "domain": "frontend",
+    "input": "rich text editor secilen ifadeni qalın edir",
+    "anchor": "editor"
+  },
+  {
+    "id": "rsd-it-243",
+    "domain": "frontend",
+    "input": "klaviatura ile sekmeler arasinda kecid islesin",
+    "anchor": "klaviatura"
+  },
+  {
+    "id": "rsd-it-244",
+    "domain": "frontend",
+    "input": "mobil ekranda duymeler metni ortmesin",
+    "anchor": "mətn"
+  },
+  {
+    "id": "rsd-it-245",
+    "domain": "frontend",
+    "input": "a11y yoxlamasi duymenin labelini tapa bilmedi",
+    "anchor": "labelini"
+  },
+  {
+    "id": "rsd-it-246",
+    "domain": "frontend",
+    "input": "brauzer back duymesi secimi itirmesin",
+    "anchor": "brauzer"
+  },
+  {
+    "id": "rsd-it-247",
+    "domain": "frontend",
+    "input": "form validation yanlis saheye fokus verir",
+    "anchor": "validation"
+  },
+  {
+    "id": "rsd-it-248",
+    "domain": "frontend",
+    "input": "dark mode secimi local storage de qalir",
+    "anchor": "mode"
+  },
+  {
+    "id": "rsd-it-249",
+    "domain": "frontend",
+    "input": "loading spinneri proses tamamlananda dayansin",
+    "anchor": "spinneri"
+  },
+  {
+    "id": "rsd-it-250",
+    "domain": "frontend",
+    "input": "copy clipboard icazesi olmayanda xeta goster",
+    "anchor": "clipboard"
+  },
+  {
+    "id": "rsd-it-251",
+    "domain": "frontend",
+    "input": "css grid kicik ekranlarda bir sutuna dusur",
+    "anchor": "grid"
+  },
+  {
+    "id": "rsd-it-252",
+    "domain": "frontend",
+    "input": "react state deyisende counter gecikir",
+    "anchor": "React"
+  },
+  {
+    "id": "rsd-it-253",
+    "domain": "frontend",
+    "input": "undo emeliyyati son duzelisi geri qaytarir",
+    "anchor": "undo"
+  },
+  {
+    "id": "rsd-it-254",
+    "domain": "frontend",
+    "input": "textarea ucun maksimum simvol sayi gosterilir",
+    "anchor": "simvol"
+  },
+  {
+    "id": "rsd-it-255",
+    "domain": "frontend",
+    "input": "screen reader bildiris metnini seslendirir",
+    "anchor": "reader"
+  },
+  {
+    "id": "rsd-it-256",
+    "domain": "frontend",
+    "input": "formatlanan siyahi html kimi kopyalanir",
+    "anchor": "siyahı"
+  },
+  {
+    "id": "rsd-it-257",
+    "domain": "frontend",
+    "input": "paste ile daxil olan script silinmelidir",
+    "anchor": "script"
+  },
+  {
+    "id": "rsd-it-258",
+    "domain": "frontend",
+    "input": "yeni font yuklenenə kimi fallback yazisi gorunur",
+    "anchor": "font"
+  },
+  {
+    "id": "rsd-it-259",
+    "domain": "frontend",
+    "input": "responsive menyuda secilmis moda adini goster",
+    "anchor": "menyuda"
+  },
+  {
+    "id": "rsd-it-260",
+    "domain": "frontend",
+    "input": "drag drop fayl yuklenmesinde boş content yoxlanir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-261",
+    "domain": "analytics",
+    "input": "hesabat panelinde bu ayin umumilikde otuz muracieti var",
+    "anchor": "hesabat"
+  },
+  {
+    "id": "rsd-it-262",
+    "domain": "analytics",
+    "input": "qrafikde tarix filtrine esasen melumat deyisir",
+    "anchor": "filtrinə"
+  },
+  {
+    "id": "rsd-it-263",
+    "domain": "analytics",
+    "input": "export edilen csv faylinda ayirici verguldur",
+    "anchor": "CSV"
+  },
+  {
+    "id": "rsd-it-264",
+    "domain": "analytics",
+    "input": "gundelik saygac eyni muracieti iki defe sayib",
+    "anchor": "sayğac"
+  },
+  {
+    "id": "rsd-it-265",
+    "domain": "analytics",
+    "input": "dashboard ucun yeni performans gostericisi elave edilib",
+    "anchor": "göstəricisi"
+  },
+  {
+    "id": "rsd-it-266",
+    "domain": "analytics",
+    "input": "power bi modelinde vacib dimension catismir",
+    "anchor": "modelində"
+  },
+  {
+    "id": "rsd-it-267",
+    "domain": "analytics",
+    "input": "sql sorgusu filial uzre nəticəni qruplasdirir",
+    "anchor": "filial"
+  },
+  {
+    "id": "rsd-it-268",
+    "domain": "analytics",
+    "input": "uzun muddetli trend ucun kecmis aylar lazimdir",
+    "anchor": "trend"
+  },
+  {
+    "id": "rsd-it-269",
+    "domain": "analytics",
+    "input": "real vaxt hesabatinda cache muddeti azaldildi",
+    "anchor": "hesabatında"
+  },
+  {
+    "id": "rsd-it-270",
+    "domain": "analytics",
+    "input": "grafikdə sıfır değer bos gosterilmesin",
+    "anchor": "sıfır"
+  },
+  {
+    "id": "rsd-it-271",
+    "domain": "analytics",
+    "input": "excel importunda tarix formatı uyğunsuzdur",
+    "anchor": "Excel"
+  },
+  {
+    "id": "rsd-it-272",
+    "domain": "analytics",
+    "input": "gostericinin mənbəyi hesabatin altinda yazilsin",
+    "anchor": "mənbəyi"
+  },
+  {
+    "id": "rsd-it-273",
+    "domain": "analytics",
+    "input": "audit hesabatinda ferdi melumatlar maskalansin",
+    "anchor": "məlumatlar"
+  },
+  {
+    "id": "rsd-it-274",
+    "domain": "analytics",
+    "input": "chart legendasi mobil ekranda gorunmur",
+    "anchor": "mobil"
+  },
+  {
+    "id": "rsd-it-275",
+    "domain": "analytics",
+    "input": "gorevlerin orta icra muddeti gunle hesablanir",
+    "anchor": "müddəti"
+  },
+  {
+    "id": "rsd-it-276",
+    "domain": "analytics",
+    "input": "aynı sahə iki dashboardda ferqli adla gosterilir",
+    "anchor": "dashboard"
+  },
+  {
+    "id": "rsd-it-277",
+    "domain": "analytics",
+    "input": "hefte uzre filter edende netice sifira dusur",
+    "anchor": "nəticə"
+  },
+  {
+    "id": "rsd-it-278",
+    "domain": "analytics",
+    "input": "statistik hesabatda yubanan senedler qirmizi olsun",
+    "anchor": "sənədlər"
+  },
+  {
+    "id": "rsd-it-279",
+    "domain": "analytics",
+    "input": "vizuallasdirmada bos kateqoriya ucun etiket qoyuldu",
+    "anchor": "kateqoriya"
+  },
+  {
+    "id": "rsd-it-280",
+    "domain": "analytics",
+    "input": "raportun son yenilenme vaxti panelde gorunur",
+    "anchor": "vaxtı"
+  },
+  {
+    "id": "rsd-it-281",
+    "domain": "testing",
+    "input": "uat senarisinde iki addim buraxilib",
+    "anchor": "ssenarisində"
+  },
+  {
+    "id": "rsd-it-282",
+    "domain": "testing",
+    "input": "regression test son versiyada qirildi",
+    "anchor": "test"
+  },
+  {
+    "id": "rsd-it-283",
+    "domain": "testing",
+    "input": "integration testi sandbox tokeni ile kecdi",
+    "anchor": "testi"
+  },
+  {
+    "id": "rsd-it-284",
+    "domain": "testing",
+    "input": "unit test cox uzun cekdiyi ucun timeout oldu",
+    "anchor": "timeout"
+  },
+  {
+    "id": "rsd-it-285",
+    "domain": "testing",
+    "input": "qa komandasi xetani tekrar ede bilmedi",
+    "anchor": "komandası"
+  },
+  {
+    "id": "rsd-it-286",
+    "domain": "testing",
+    "input": "bug report ucun ekran goruntusu elave olunub",
+    "anchor": "report"
+  },
+  {
+    "id": "rsd-it-287",
+    "domain": "testing",
+    "input": "test datasindaki fin kodu heqiqi sexse aid olmasin",
+    "anchor": "kod"
+  },
+  {
+    "id": "rsd-it-288",
+    "domain": "testing",
+    "input": "load testde 1000 paralel sorğu gonderildi",
+    "anchor": "1000"
+  },
+  {
+    "id": "rsd-it-289",
+    "domain": "testing",
+    "input": "e2e ssenarisinde yeni dropdown acilmir",
+    "anchor": "dropdown"
+  },
+  {
+    "id": "rsd-it-290",
+    "domain": "testing",
+    "input": "mock cavabinda null status ucun hal yazilmali",
+    "anchor": "status"
+  },
+  {
+    "id": "rsd-it-291",
+    "domain": "testing",
+    "input": "test coverageda auth modulu eksikdir",
+    "anchor": "modulu"
+  },
+  {
+    "id": "rsd-it-292",
+    "domain": "testing",
+    "input": "snapshot testi stil deyisende yenilendi",
+    "anchor": "testi"
+  },
+  {
+    "id": "rsd-it-293",
+    "domain": "testing",
+    "input": "release candidate uat testinden sonra buraxilacaq",
+    "anchor": "UAT"
+  },
+  {
+    "id": "rsd-it-294",
+    "domain": "testing",
+    "input": "kontrakt testi yeni api schema sini yoxlayir",
+    "anchor": "API"
+  },
+  {
+    "id": "rsd-it-295",
+    "domain": "testing",
+    "input": "qa test planina riskli prosesleri elave edib",
+    "anchor": "test"
+  },
+  {
+    "id": "rsd-it-296",
+    "domain": "testing",
+    "input": "stress testde server response vaxti artdi",
+    "anchor": "server"
+  },
+  {
+    "id": "rsd-it-297",
+    "domain": "testing",
+    "input": "sınaq fayli max simvol limitine çatir",
+    "anchor": "simvol"
+  },
+  {
+    "id": "rsd-it-298",
+    "domain": "testing",
+    "input": "test environmentda vaxt zonasi ferqlidir",
+    "anchor": "vaxt"
+  },
+  {
+    "id": "rsd-it-299",
+    "domain": "testing",
+    "input": "accessibility testi kontrasti olcdu",
+    "anchor": "testi"
+  },
+  {
+    "id": "rsd-it-300",
+    "domain": "testing",
+    "input": "sifaris axini ucun boundary test lazimdir",
+    "anchor": "test"
+  },
+  {
+    "id": "rsd-it-301",
+    "domain": "migration",
+    "input": "kohne sistemden uc min sened kocurulub",
+    "anchor": "sənəd"
+  },
+  {
+    "id": "rsd-it-302",
+    "domain": "migration",
+    "input": "miqrasiya zamani yalniz aktiv istifadeciler secilsin",
+    "anchor": "aktiv"
+  },
+  {
+    "id": "rsd-it-303",
+    "domain": "migration",
+    "input": "etibar edilmeyen tarix deyerleri temizlenmelidir",
+    "anchor": "tarix"
+  },
+  {
+    "id": "rsd-it-304",
+    "domain": "migration",
+    "input": "yeni bazaya fayl elaveleri ayrica yuklenir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-305",
+    "domain": "migration",
+    "input": "kocurulme neticesinde bir qeyd eksikdir",
+    "anchor": "qeyd"
+  },
+  {
+    "id": "rsd-it-306",
+    "domain": "migration",
+    "input": "miqrasiya skripti ikinci defe isleyende eyni yazini yaratmasin",
+    "anchor": "skript"
+  },
+  {
+    "id": "rsd-it-307",
+    "domain": "migration",
+    "input": "musteri kodlari kohne sistemle tutusdurulur",
+    "anchor": "kodları"
+  },
+  {
+    "id": "rsd-it-308",
+    "domain": "migration",
+    "input": "test serverinde köhnə bazanın kopyası saxlanır",
+    "anchor": "bazanın"
+  },
+  {
+    "id": "rsd-it-309",
+    "domain": "migration",
+    "input": "cutover plani gece saat on ikide baslayacaq",
+    "anchor": "planı"
+  },
+  {
+    "id": "rsd-it-310",
+    "domain": "migration",
+    "input": "rollback zamani kohne bazaya yazma acilmasin",
+    "anchor": "bazaya"
+  },
+  {
+    "id": "rsd-it-311",
+    "domain": "migration",
+    "input": "fayl adlarindaki uyğunsuz simvollar temizlendi",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-312",
+    "domain": "migration",
+    "input": "mesaj novbesi bosaldilanda esas kecid edilir",
+    "anchor": "keçid"
+  },
+  {
+    "id": "rsd-it-313",
+    "domain": "migration",
+    "input": "her paket ucun satir sayi ayrica hesablansin",
+    "anchor": "paket"
+  },
+  {
+    "id": "rsd-it-314",
+    "domain": "migration",
+    "input": "kocurulmus datanin butovluyu heşle yoxlanilir",
+    "anchor": "bütövlüyü"
+  },
+  {
+    "id": "rsd-it-315",
+    "domain": "migration",
+    "input": "senedlerin yarisinda bagli icraci tapilmadi",
+    "anchor": "icraçı"
+  },
+  {
+    "id": "rsd-it-316",
+    "domain": "migration",
+    "input": "eski id ile yeni id arasinda xeritə saxlayiriq",
+    "anchor": "xəritə"
+  },
+  {
+    "id": "rsd-it-317",
+    "domain": "migration",
+    "input": "miqrasiya sınağı yeniden aparilmadan canliya cixilmasin",
+    "anchor": "sınağı"
+  },
+  {
+    "id": "rsd-it-318",
+    "domain": "migration",
+    "input": "server saatlari senkron deyilse tarixler səhv gedir",
+    "anchor": "server"
+  },
+  {
+    "id": "rsd-it-319",
+    "domain": "migration",
+    "input": "arxivlesdirme hissesi diger moduldan sonra kocurulecek",
+    "anchor": "arxiv"
+  },
+  {
+    "id": "rsd-it-320",
+    "domain": "migration",
+    "input": "yekun kontrol siyahisi cavabdeh sexse gonderildi",
+    "anchor": "siyahısı"
+  },
+  {
+    "id": "rsd-it-321",
+    "domain": "workflow",
+    "input": "tapşiriq bir icracidan digerine gonderildi",
+    "anchor": "icraçıdan"
+  },
+  {
+    "id": "rsd-it-322",
+    "domain": "workflow",
+    "input": "workflow qaydasi yeni filial ucun acilmadi",
+    "anchor": "workflow"
+  },
+  {
+    "id": "rsd-it-323",
+    "domain": "workflow",
+    "input": "avtomatik eskalasiya muddeti iki gun təyin edildi",
+    "anchor": "müddəti"
+  },
+  {
+    "id": "rsd-it-324",
+    "domain": "workflow",
+    "input": "sənəd geri qaytarilanda status layihə olur",
+    "anchor": "status"
+  },
+  {
+    "id": "rsd-it-325",
+    "domain": "workflow",
+    "input": "icraci qeyd elave edende rehbere bildiris gedir",
+    "anchor": "rəhbərə"
+  },
+  {
+    "id": "rsd-it-326",
+    "domain": "workflow",
+    "input": "gonderis duymesi tamamlanmis isde baglidir",
+    "anchor": "düyməsi"
+  },
+  {
+    "id": "rsd-it-327",
+    "domain": "workflow",
+    "input": "bir nece imzaci paralel seçilə bilmir",
+    "anchor": "imzaçı"
+  },
+  {
+    "id": "rsd-it-328",
+    "domain": "workflow",
+    "input": "mərhələ sirasi idare panelinden deyisir",
+    "anchor": "mərhələ"
+  },
+  {
+    "id": "rsd-it-329",
+    "domain": "workflow",
+    "input": "sistem deadline bitende mesul sexse xatirlatma atir",
+    "anchor": "məsul"
+  },
+  {
+    "id": "rsd-it-330",
+    "domain": "workflow",
+    "input": "workflow versiyasi sened yaradilan anda sabitlenir",
+    "anchor": "versiyası"
+  },
+  {
+    "id": "rsd-it-331",
+    "domain": "workflow",
+    "input": "tesdiq addimi ləgv olunanda icraya kecid dayanir",
+    "anchor": "təsdiq"
+  },
+  {
+    "id": "rsd-it-332",
+    "domain": "workflow",
+    "input": "eski is axinlari her hefte arxivlenir",
+    "anchor": "axınları"
+  },
+  {
+    "id": "rsd-it-333",
+    "domain": "workflow",
+    "input": "sifaris formasi gonderilenden sonra task acilir",
+    "anchor": "task"
+  },
+  {
+    "id": "rsd-it-334",
+    "domain": "workflow",
+    "input": "operator icrani baslatmaq ucun sehife yenilemelidir",
+    "anchor": "səhifə"
+  },
+  {
+    "id": "rsd-it-335",
+    "domain": "workflow",
+    "input": "alt tapşiriq baglananda ana tapşiriq da baglanmasin",
+    "anchor": "tapşırıq"
+  },
+  {
+    "id": "rsd-it-336",
+    "domain": "workflow",
+    "input": "delegasiya edilmis is geri alina bilir",
+    "anchor": "iş"
+  },
+  {
+    "id": "rsd-it-337",
+    "domain": "workflow",
+    "input": "butun approverler razilasanda novbeti addim acilir",
+    "anchor": "addım"
+  },
+  {
+    "id": "rsd-it-338",
+    "domain": "workflow",
+    "input": "musteri sorğusunun prioriteti sonra deyise bilir",
+    "anchor": "prioriteti"
+  },
+  {
+    "id": "rsd-it-339",
+    "domain": "workflow",
+    "input": "icra muddeti yalniz mesul sexs terefinden uzadilir",
+    "anchor": "müddəti"
+  },
+  {
+    "id": "rsd-it-340",
+    "domain": "workflow",
+    "input": "tekrar acilan tapşiriq icin yeni tarix qoyulur",
+    "anchor": "tarix"
+  },
+  {
+    "id": "rsd-it-341",
+    "domain": "network",
+    "input": "vpn baglantisi kesilende sened yuklenmesi yarimciq qaldı",
+    "anchor": "VPN"
+  },
+  {
+    "id": "rsd-it-342",
+    "domain": "network",
+    "input": "dns cavabi kohne ip unvanina gedir",
+    "anchor": "DNS"
+  },
+  {
+    "id": "rsd-it-343",
+    "domain": "network",
+    "input": "firewall yeni porta girisi bloklayib",
+    "anchor": "porta"
+  },
+  {
+    "id": "rsd-it-344",
+    "domain": "network",
+    "input": "proxy vaxti bitmis sertifikati qebul etmir",
+    "anchor": "sertifikatı"
+  },
+  {
+    "id": "rsd-it-345",
+    "domain": "network",
+    "input": "packet loss sebebi ile imza servisi lengiyir",
+    "anchor": "servisi"
+  },
+  {
+    "id": "rsd-it-346",
+    "domain": "network",
+    "input": "filialdaki kanal genisliyi kifayet etmir",
+    "anchor": "filialdakı"
+  },
+  {
+    "id": "rsd-it-347",
+    "domain": "network",
+    "input": "load balancer bir nodu dovriyyeden cixardi",
+    "anchor": "nodu"
+  },
+  {
+    "id": "rsd-it-348",
+    "domain": "network",
+    "input": "websocket baglantisi arxa planda baglanir",
+    "anchor": "bağlantısı"
+  },
+  {
+    "id": "rsd-it-349",
+    "domain": "network",
+    "input": "nat qaydasi xarici api ni yanlis servere yonlendirir",
+    "anchor": "serverə"
+  },
+  {
+    "id": "rsd-it-350",
+    "domain": "network",
+    "input": "tcp timeout on saniyəyə ayarlandi",
+    "anchor": "TCP"
+  },
+  {
+    "id": "rsd-it-351",
+    "domain": "network",
+    "input": "reverse proxy request body ni kesir",
+    "anchor": "request"
+  },
+  {
+    "id": "rsd-it-352",
+    "domain": "network",
+    "input": "http2 ile kocurulme zamani basliq itir",
+    "anchor": "başlıq"
+  },
+  {
+    "id": "rsd-it-353",
+    "domain": "network",
+    "input": "monitorinqde disk latency artimi gorunur",
+    "anchor": "disk"
+  },
+  {
+    "id": "rsd-it-354",
+    "domain": "network",
+    "input": "cdn kesinde kohne js fayli qalib",
+    "anchor": "CDN"
+  },
+  {
+    "id": "rsd-it-355",
+    "domain": "network",
+    "input": "s3 bucket icazesi fayl yuklemeye imkan vermir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-356",
+    "domain": "network",
+    "input": "security group yeni subnetden trafiki buraxmir",
+    "anchor": "trafiki"
+  },
+  {
+    "id": "rsd-it-357",
+    "domain": "network",
+    "input": "health check pathi yanlis verilib",
+    "anchor": "pathi"
+  },
+  {
+    "id": "rsd-it-358",
+    "domain": "network",
+    "input": "network policy podlar arasindaki sorgunu bloklayir",
+    "anchor": "sorğunu"
+  },
+  {
+    "id": "rsd-it-359",
+    "domain": "network",
+    "input": "tunel berpa olunandan sonra sesiya davam etdi",
+    "anchor": "tunel"
+  },
+  {
+    "id": "rsd-it-360",
+    "domain": "network",
+    "input": "sistem diski doldugu ucun baglanti yoxlamasi dayandi",
+    "anchor": "disk"
+  },
+  {
+    "id": "rsd-it-361",
+    "domain": "payments",
+    "input": "odenis emeliyyatina tekrarlanan request gonderilib",
+    "anchor": "ödəniş"
+  },
+  {
+    "id": "rsd-it-362",
+    "domain": "payments",
+    "input": "bank cavabi gecikende sifaris gozlemede qalir",
+    "anchor": "sifariş"
+  },
+  {
+    "id": "rsd-it-363",
+    "domain": "payments",
+    "input": "refund yalniz təsdiqlenmis əməliyyat ucun aciqdir",
+    "anchor": "refund"
+  },
+  {
+    "id": "rsd-it-364",
+    "domain": "payments",
+    "input": "odenis identifikatoru audit ucun saxlanilsin",
+    "anchor": "identifikatoru"
+  },
+  {
+    "id": "rsd-it-365",
+    "domain": "payments",
+    "input": "kart melumatlari server jurnalina dusmemelidir",
+    "anchor": "kart"
+  },
+  {
+    "id": "rsd-it-366",
+    "domain": "payments",
+    "input": "qebz pdf faylina cevrilende vergi kodu itdi",
+    "anchor": "qəbz"
+  },
+  {
+    "id": "rsd-it-367",
+    "domain": "payments",
+    "input": "payment gateway 502 qaytardı amma bank debit etdi",
+    "anchor": "502"
+  },
+  {
+    "id": "rsd-it-368",
+    "domain": "payments",
+    "input": "terminal transaction id sini iki defe istifade etdi",
+    "anchor": "transaction"
+  },
+  {
+    "id": "rsd-it-369",
+    "domain": "payments",
+    "input": "abune avtomatik yenilenmeden evvel xeberdarliq geder",
+    "anchor": "abunə"
+  },
+  {
+    "id": "rsd-it-370",
+    "domain": "payments",
+    "input": "hesab faktura ucun son odenis tarixi qeyd olunub",
+    "anchor": "faktura"
+  },
+  {
+    "id": "rsd-it-371",
+    "domain": "payments",
+    "input": "iki valyuta arasinda cevirme kuru yenilendi",
+    "anchor": "valyuta"
+  },
+  {
+    "id": "rsd-it-372",
+    "domain": "payments",
+    "input": "odenis gecikmesine gore xidmət dayandirilmadi",
+    "anchor": "xidmət"
+  },
+  {
+    "id": "rsd-it-373",
+    "domain": "payments",
+    "input": "gateway callbacki ucun imza yoxlamasi lazimdir",
+    "anchor": "callback"
+  },
+  {
+    "id": "rsd-it-374",
+    "domain": "payments",
+    "input": "test karti production muhitinde bloklanir",
+    "anchor": "kartı"
+  },
+  {
+    "id": "rsd-it-375",
+    "domain": "payments",
+    "input": "maliye hesabatinda tekrarlanan mebleg cixir",
+    "anchor": "məbləğ"
+  },
+  {
+    "id": "rsd-it-376",
+    "domain": "payments",
+    "input": "avtomatik geri odeme isteyi ucun sebeb secilir",
+    "anchor": "səbəb"
+  },
+  {
+    "id": "rsd-it-377",
+    "domain": "payments",
+    "input": "qismən odeme qebul olunanda qaliq yeniden hesablanir",
+    "anchor": "qalıq"
+  },
+  {
+    "id": "rsd-it-378",
+    "domain": "payments",
+    "input": "sifarisin vergisi umumi meblege daxil edilib",
+    "anchor": "vergisi"
+  },
+  {
+    "id": "rsd-it-379",
+    "domain": "payments",
+    "input": "kart limitine catdigi ucun bank imtina etdi",
+    "anchor": "bank"
+  },
+  {
+    "id": "rsd-it-380",
+    "domain": "payments",
+    "input": "emeliyyat neticesi sms ile de gonderilecek",
+    "anchor": "SMS"
+  },
+  {
+    "id": "rsd-it-381",
+    "domain": "notifications",
+    "input": "sms bildirisi sehifede de gosterilir",
+    "anchor": "SMS"
+  },
+  {
+    "id": "rsd-it-382",
+    "domain": "notifications",
+    "input": "email gonderisi ucun kuyruk dolub",
+    "anchor": "email"
+  },
+  {
+    "id": "rsd-it-383",
+    "domain": "notifications",
+    "input": "mobil push icazesi olmayan istifadeci mesaj almadi",
+    "anchor": "push"
+  },
+  {
+    "id": "rsd-it-384",
+    "domain": "notifications",
+    "input": "bildiris dili hesab ayarindan secilir",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-385",
+    "domain": "notifications",
+    "input": "gece gonderilen xatirlatma sabah catdi",
+    "anchor": "xatırlatma"
+  },
+  {
+    "id": "rsd-it-386",
+    "domain": "notifications",
+    "input": "eyni hadiseye uc bildiris yazilib",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-387",
+    "domain": "notifications",
+    "input": "unsubscribe linki ile abunelik legv edildi",
+    "anchor": "linki"
+  },
+  {
+    "id": "rsd-it-388",
+    "domain": "notifications",
+    "input": "bildiris template inde sened nomresi yanlisdir",
+    "anchor": "nömrəsi"
+  },
+  {
+    "id": "rsd-it-389",
+    "domain": "notifications",
+    "input": "musteri cavab verdikde operatora xeber getsin",
+    "anchor": "xəbər"
+  },
+  {
+    "id": "rsd-it-390",
+    "domain": "notifications",
+    "input": "kritik bildiris sessiya aciq olmasa da gosterilir",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-391",
+    "domain": "notifications",
+    "input": "sifaris statusu deyisende sms gonderiləcək",
+    "anchor": "statusu"
+  },
+  {
+    "id": "rsd-it-392",
+    "domain": "notifications",
+    "input": "həftelik xulaseni iki aliciya yolladiq",
+    "anchor": "xülasəni"
+  },
+  {
+    "id": "rsd-it-393",
+    "domain": "notifications",
+    "input": "gonderis xetasi ucun retry sayi ucdur",
+    "anchor": "retry"
+  },
+  {
+    "id": "rsd-it-394",
+    "domain": "notifications",
+    "input": "mesajin adi sadece admin panelinde görünür",
+    "anchor": "mesajın"
+  },
+  {
+    "id": "rsd-it-395",
+    "domain": "notifications",
+    "input": "bildiris gonderilmezden evvel raziliq yoxlanir",
+    "anchor": "razılıq"
+  },
+  {
+    "id": "rsd-it-396",
+    "domain": "notifications",
+    "input": "ekrana cixan mesajin linki kohne sayta gedir",
+    "anchor": "linki"
+  },
+  {
+    "id": "rsd-it-397",
+    "domain": "notifications",
+    "input": "email unvaninin formatini dogrulayın",
+    "anchor": "ünvanının"
+  },
+  {
+    "id": "rsd-it-398",
+    "domain": "notifications",
+    "input": "bildiris merkezi yeni mesajlari yukleyir",
+    "anchor": "mərkəzi"
+  },
+  {
+    "id": "rsd-it-399",
+    "domain": "notifications",
+    "input": "istifadeci eyni bildiris ucun iki kanal secdi",
+    "anchor": "istifadəçi"
+  },
+  {
+    "id": "rsd-it-400",
+    "domain": "notifications",
+    "input": "gonderis logunda yalniz redakte edilen metn qalib",
+    "anchor": "mətn"
+  },
+  {
+    "id": "rsd-it-401",
+    "domain": "documents",
+    "input": "pdf faylinin icindeki imza gorunmur",
+    "anchor": "PDF"
+  },
+  {
+    "id": "rsd-it-402",
+    "domain": "documents",
+    "input": "sənəd şablonunda ad soyad ferqli setirde cixib",
+    "anchor": "şablonunda"
+  },
+  {
+    "id": "rsd-it-403",
+    "domain": "documents",
+    "input": "word faylindan kocurulen siyahi bozulub",
+    "anchor": "Word"
+  },
+  {
+    "id": "rsd-it-404",
+    "domain": "documents",
+    "input": "html ile gelen qeydlerde script teqi silinmelidir",
+    "anchor": "script"
+  },
+  {
+    "id": "rsd-it-405",
+    "domain": "documents",
+    "input": "excel faylinda tarix sutunu metn kimi oxunur",
+    "anchor": "Excel"
+  },
+  {
+    "id": "rsd-it-406",
+    "domain": "documents",
+    "input": "sənədin son sehifesindeki qr kod oxunmur",
+    "anchor": "kod"
+  },
+  {
+    "id": "rsd-it-407",
+    "domain": "documents",
+    "input": "elavelerin sayi kartda uc gosterilir",
+    "anchor": "əlavələrin"
+  },
+  {
+    "id": "rsd-it-408",
+    "domain": "documents",
+    "input": "fayl yuklenende uzanti yoxlamasi aparilir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-409",
+    "domain": "documents",
+    "input": "skan edilmis senedde metn axtarisi islemir",
+    "anchor": "sənəddə"
+  },
+  {
+    "id": "rsd-it-410",
+    "domain": "documents",
+    "input": "ocr neticesi operator terefinden yoxlanilmalidir",
+    "anchor": "OCR"
+  },
+  {
+    "id": "rsd-it-411",
+    "domain": "documents",
+    "input": "sənəd səhifələri birleşdirilende sira deyisib",
+    "anchor": "sıra"
+  },
+  {
+    "id": "rsd-it-412",
+    "domain": "documents",
+    "input": "mektub başlığında qeydiyyat nomresi qirilib",
+    "anchor": "nömrəsi"
+  },
+  {
+    "id": "rsd-it-413",
+    "domain": "documents",
+    "input": "sablondaki mətn yazi tipini saxlamalidir",
+    "anchor": "şablondakı"
+  },
+  {
+    "id": "rsd-it-414",
+    "domain": "documents",
+    "input": "fayl adindaki iki bosluq yuklemeye mane olur",
+    "anchor": "boşluq"
+  },
+  {
+    "id": "rsd-it-415",
+    "domain": "documents",
+    "input": "sənəd formati pdf a cevrilende cədvəl itir",
+    "anchor": "cədvəl"
+  },
+  {
+    "id": "rsd-it-416",
+    "domain": "documents",
+    "input": "qovluqdaki butun fayllar zip arxivine yigilmisdir",
+    "anchor": "ZIP"
+  },
+  {
+    "id": "rsd-it-417",
+    "domain": "documents",
+    "input": "elektron senedin surətini ayni nömrə ilə saxla",
+    "anchor": "nömrə"
+  },
+  {
+    "id": "rsd-it-418",
+    "domain": "documents",
+    "input": "docx faylini redakte edende layout qırılır",
+    "anchor": "DOCX"
+  },
+  {
+    "id": "rsd-it-419",
+    "domain": "documents",
+    "input": "sənədin daxili linki eksportdan sonra islemir",
+    "anchor": "linki"
+  },
+  {
+    "id": "rsd-it-420",
+    "domain": "documents",
+    "input": "metadata saheleri acilanda tarix olmur",
+    "anchor": "metadata"
+  },
+  {
+    "id": "rsd-it-421",
+    "domain": "support",
+    "input": "musterinin sorğusu texniki desteye yonlendirildi",
+    "anchor": "dəstəyə"
+  },
+  {
+    "id": "rsd-it-422",
+    "domain": "support",
+    "input": "bilet baglanmadan evvel musteriden tesdiq alinmalidir",
+    "anchor": "müştəridən"
+  },
+  {
+    "id": "rsd-it-423",
+    "domain": "support",
+    "input": "kritik xeta ucun novbetci muhendis cagirildi",
+    "anchor": "mühəndis"
+  },
+  {
+    "id": "rsd-it-424",
+    "domain": "support",
+    "input": "istifadeci eyni problemi uat muhitinde gorub",
+    "anchor": "UAT"
+  },
+  {
+    "id": "rsd-it-425",
+    "domain": "support",
+    "input": "agent muracietin ekran goruntusunu istədi",
+    "anchor": "müraciətin"
+  },
+  {
+    "id": "rsd-it-426",
+    "domain": "support",
+    "input": "sualin cavabi bilik bazasinda tapilmir",
+    "anchor": "bilik"
+  },
+  {
+    "id": "rsd-it-427",
+    "domain": "support",
+    "input": "bilet prioriteti yanlış seçildiyi ucun sla kecdi",
+    "anchor": "prioriteti"
+  },
+  {
+    "id": "rsd-it-428",
+    "domain": "support",
+    "input": "problem bas verdiyi saat qeyd edilmeyib",
+    "anchor": "saat"
+  },
+  {
+    "id": "rsd-it-429",
+    "domain": "support",
+    "input": "texniki destek operatoru zengden sonra qeyd yazdı",
+    "anchor": "qeyd"
+  },
+  {
+    "id": "rsd-it-430",
+    "domain": "support",
+    "input": "ticket statusu hell olundu olaraq baglandi",
+    "anchor": "statusu"
+  },
+  {
+    "id": "rsd-it-431",
+    "domain": "support",
+    "input": "musteriye cavab ucun yeni şablon lazimdir",
+    "anchor": "müştəriyə"
+  },
+  {
+    "id": "rsd-it-432",
+    "domain": "support",
+    "input": "komanda jurnalda sebeb tapmadan bilet baglamasin",
+    "anchor": "səbəb"
+  },
+  {
+    "id": "rsd-it-433",
+    "domain": "support",
+    "input": "sorgu tekniki yox biznes sualidir",
+    "anchor": "biznes"
+  },
+  {
+    "id": "rsd-it-434",
+    "domain": "support",
+    "input": "escallation gedəndə menecere de bildiris gonderilsin",
+    "anchor": "menecerə"
+  },
+  {
+    "id": "rsd-it-435",
+    "domain": "support",
+    "input": "istifadeci uc gun sonra eyni xetani bildirdi",
+    "anchor": "istifadəçi"
+  },
+  {
+    "id": "rsd-it-436",
+    "domain": "support",
+    "input": "support biletindeki fayl yalniz komanda ucun aciqdir",
+    "anchor": "fayl"
+  },
+  {
+    "id": "rsd-it-437",
+    "domain": "support",
+    "input": "ilk cavab vaxti iki saatdan artiq cekdi",
+    "anchor": "cavab"
+  },
+  {
+    "id": "rsd-it-438",
+    "domain": "support",
+    "input": "planlasdirilmis isler ucun musterilere bildiris geder",
+    "anchor": "bildiriş"
+  },
+  {
+    "id": "rsd-it-439",
+    "domain": "support",
+    "input": "hansi addimda problem yarandigini soruşaq",
+    "anchor": "problem"
+  },
+  {
+    "id": "rsd-it-440",
+    "domain": "support",
+    "input": "tekrar acilan biletin evvelki yazilari saxlanilir",
+    "anchor": "yazıları"
+  },
+  {
+    "id": "rsd-it-441",
+    "domain": "planning",
+    "input": "srs senedindeki funksional telebler hələ təsdiqlənməyib",
+    "anchor": "SRS"
+  },
+  {
+    "id": "rsd-it-442",
+    "domain": "planning",
+    "input": "bpmn diaqraminda ikinci iştirakci çatışmır",
+    "anchor": "BPMN"
+  },
+  {
+    "id": "rsd-it-443",
+    "domain": "planning",
+    "input": "uat qebul meyarini musteriye gonderdik",
+    "anchor": "UAT"
+  },
+  {
+    "id": "rsd-it-444",
+    "domain": "planning",
+    "input": "backlogda eyni task iki sprintde gorunur",
+    "anchor": "backlog"
+  },
+  {
+    "id": "rsd-it-445",
+    "domain": "planning",
+    "input": "story point hesabi komanda terefden deyisdirildi",
+    "anchor": "story"
+  },
+  {
+    "id": "rsd-it-446",
+    "domain": "planning",
+    "input": "acceptance criteria hazir olmadan is baslamasin",
+    "anchor": "criteria"
+  },
+  {
+    "id": "rsd-it-447",
+    "domain": "planning",
+    "input": "product owner yeni scope artimini qebul etmədi",
+    "anchor": "owner"
+  },
+  {
+    "id": "rsd-it-448",
+    "domain": "planning",
+    "input": "planlanan release tarixi risk jurnalinda qeyd olundu",
+    "anchor": "release"
+  },
+  {
+    "id": "rsd-it-449",
+    "domain": "planning",
+    "input": "risk matrisi ucun cavabdeh sexs teyin edildi",
+    "anchor": "risk"
+  },
+  {
+    "id": "rsd-it-450",
+    "domain": "planning",
+    "input": "musteri muqavile maddesine yeni qeyd elave edib",
+    "anchor": "qeyd"
+  },
+  {
+    "id": "rsd-it-451",
+    "domain": "planning",
+    "input": "konsepsiya sənədində inteqrasiya xeritəsi natamamdır",
+    "anchor": "xəritəsi"
+  },
+  {
+    "id": "rsd-it-452",
+    "domain": "planning",
+    "input": "komanda sifaris axinini lucidchartda cekdi",
+    "anchor": "axınını"
+  },
+  {
+    "id": "rsd-it-453",
+    "domain": "planning",
+    "input": "prototipdə istifadeci rolu aydin deyil",
+    "anchor": "istifadəçi"
+  },
+  {
+    "id": "rsd-it-454",
+    "domain": "planning",
+    "input": "toplanti protokolunda yeni qerar eksikdir",
+    "anchor": "qərar"
+  },
+  {
+    "id": "rsd-it-455",
+    "domain": "planning",
+    "input": "change request onaylanana kimi budce artmayacaq",
+    "anchor": "request"
+  },
+  {
+    "id": "rsd-it-456",
+    "domain": "planning",
+    "input": "roadmap ucun texniki borc ferqli rengle gosterilsin",
+    "anchor": "roadmap"
+  },
+  {
+    "id": "rsd-it-457",
+    "domain": "planning",
+    "input": "tapsirigin asılılığı jira ticketinde yazılıb",
+    "anchor": "Jira"
+  },
+  {
+    "id": "rsd-it-458",
+    "domain": "planning",
+    "input": "confluence sehifesinde son kararın sahibi bilinmir",
+    "anchor": "Confluence"
+  },
+  {
+    "id": "rsd-it-459",
+    "domain": "planning",
+    "input": "sprint demo musteriye cersenbe gunu gosterilecek",
+    "anchor": "sprint"
+  },
+  {
+    "id": "rsd-it-460",
+    "domain": "planning",
+    "input": "business requirement ile texniki spesifikasiya uyğunsuzdur",
+    "anchor": "spesifikasiya"
+  }
+]

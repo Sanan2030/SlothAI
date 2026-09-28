@@ -1,0 +1,3252 @@
+{
+  "total": 460,
+  "passed": 460,
+  "failed": 0,
+  "domains": [
+    "qeydiyyat",
+    "sened_novu",
+    "derkenar",
+    "marshrut",
+    "icazeler",
+    "imza",
+    "arxiv",
+    "audit",
+    "api",
+    "database",
+    "devops",
+    "security",
+    "frontend",
+    "analytics",
+    "testing",
+    "migration",
+    "workflow",
+    "network",
+    "payments",
+    "notifications",
+    "documents",
+    "support",
+    "planning"
+  ],
+  "results": [
+    {
+      "id": "rsd-it-001",
+      "domain": "qeydiyyat",
+      "input": "rsd de yeni muraciet qeydiyyata alinib",
+      "actual": "RSD-də yeni müraciət qeydiyyata alınıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-002",
+      "domain": "qeydiyyat",
+      "input": "sened daxil olanda qeydiyyat nomresi avtomatik verilir",
+      "actual": "Sənəd daxil olanda qeydiyyat nömrəsi avtomatik verilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-003",
+      "domain": "qeydiyyat",
+      "input": "eyni muraciet ikinci defe gonderilende sistem xeberdarliq edir",
+      "actual": "Eyni müraciət ikinci dəfə göndəriləndə sistem xəbərdarlıq edir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-004",
+      "domain": "qeydiyyat",
+      "input": "gelen mektubun tarixi qeydiyyat jurnalina yazilir",
+      "actual": "Gələn məktubun tarixi qeydiyyat jurnalına yazılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-005",
+      "domain": "qeydiyyat",
+      "input": "qeydiyyat kartindaki unvan melumati yanlisdir",
+      "actual": "Qeydiyyat kartindaki ünvan məlumatı yanlışdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-006",
+      "domain": "qeydiyyat",
+      "input": "operator mektubun elavelerini yoxlayib qeydiyyati tamamlayir",
+      "actual": "Operator məktubun elavelerini yoxlayıb qeydiyyatı tamamlayır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-007",
+      "domain": "qeydiyyat",
+      "input": "qebul olunan senede ilkin status teyin edildi",
+      "actual": "Qəbul olunan sənədə İlkin status təyin edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-008",
+      "domain": "qeydiyyat",
+      "input": "qeydiyyat nomresinin prefiksi filial uzre ferqlenir",
+      "actual": "Qeydiyyat nomresinin prefiksi filial üzrə fərqlənir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-009",
+      "domain": "qeydiyyat",
+      "input": "muracietin daxilolma kanali kartda gosterilmelidir",
+      "actual": "Müraciətin daxilolma kanalı kartda göstərilməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-010",
+      "domain": "qeydiyyat",
+      "input": "tekrar sened asgarlananda operatora bildiris gonderilir",
+      "actual": "Təkrar sənəd asgarlananda operatora bildiriş göndərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-011",
+      "domain": "qeydiyyat",
+      "input": "fiziki sexsin fin kodu qeydiyyat zamani yoxlanilir",
+      "actual": "Fiziki şəxsin fin kodu qeydiyyat zamanı yoxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-012",
+      "domain": "qeydiyyat",
+      "input": "hüquqi sexsin voen melumati sorgudan qayidir",
+      "actual": "Hüququ şəxsin voen məlumatı sorğudan qayidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-013",
+      "domain": "qeydiyyat",
+      "input": "qebul tarixi ile senedin ustundeki tarix eyni deyil",
+      "actual": "Qəbul tarixi ilə sənədin ustundeki tarix eyni deyil.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-014",
+      "domain": "qeydiyyat",
+      "input": "operator xidmet novunu duzgun secmeyib",
+      "actual": "Operator xidmət novunu düzgün seçməyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-015",
+      "domain": "qeydiyyat",
+      "input": "gelen post gonderisi icin ayrica qeydiyyat acilir",
+      "actual": "Gələn post göndərişi icin ayrıca qeydiyyat açılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-016",
+      "domain": "qeydiyyat",
+      "input": "qeydiyyata alinan faylin olcusu limitden boyukdur",
+      "actual": "Qeydiyyata alinan faylın ölçüsü limitdən böyükdür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-017",
+      "domain": "qeydiyyat",
+      "input": "mektubun esli kagiz arxivine teqdim olunub",
+      "actual": "Məktubun əsli kağız arxivinə təqdim olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-018",
+      "domain": "qeydiyyat",
+      "input": "giris senedinin kodu diger struktur bolmeye aiddir",
+      "actual": "Giriş sənədinin kodu digər struktur bölməyə aiddir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-019",
+      "domain": "qeydiyyat",
+      "input": "qebul formasi bos biraxilanda tesdiq duymesi baglanir",
+      "actual": "Qəbul forması boş biraxilanda təsdiq düyməsi bağlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-020",
+      "domain": "qeydiyyat",
+      "input": "qeydiyyat tamamlanandan sonra istifadeciye qebz gonderilir",
+      "actual": "Qeydiyyat tamamlanandan sonra istifadəçiyə qəbz göndərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-021",
+      "domain": "sened_novu",
+      "input": "sened novu secilmeden muraciet yaradilmir",
+      "actual": "Sənəd növü seçilmədən müraciət yaradilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-022",
+      "domain": "sened_novu",
+      "input": "xidmeti senedler ucun elave saheler acilmalidir",
+      "actual": "Xidməti sənədlər üçün əlavə sahələr açılmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-023",
+      "domain": "sened_novu",
+      "input": "daxili mektub ile xarici mektub ferqli novlerdir",
+      "actual": "Daxili məktub ilə xarici məktub fərqli novlerdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-024",
+      "domain": "sened_novu",
+      "input": "sened novunun adi siyahida iki defe gorunur",
+      "actual": "Sənəd novunun adi siyahıda iki dəfə görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-025",
+      "domain": "sened_novu",
+      "input": "istifade olunmayan sened novu deaktiv edilsin",
+      "actual": "İstifadə olunmayan sənəd növü deaktiv edilsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-026",
+      "domain": "sened_novu",
+      "input": "yeni nov yaradilanda kateqoriya mutleq secilmelidir",
+      "actual": "Yeni növ yaradilanda kateqoriya mütləq seçilməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-027",
+      "domain": "sened_novu",
+      "input": "qerar layihesi sened novlerine elave olunub",
+      "actual": "Qərar layihəsi sənəd novlerine əlavə olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-028",
+      "domain": "sened_novu",
+      "input": "mukavile novunun saxlanma muddeti on ildir",
+      "actual": "Müqavilə novunun saxlanma müddəti on ildir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-029",
+      "domain": "sened_novu",
+      "input": "arxiv senedi ayri bolmede gosterilir",
+      "actual": "Arxiv sənədi ayrı bölmədə göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-030",
+      "domain": "sened_novu",
+      "input": "sifaris novu ucun icaze ssenarisi ferqlidir",
+      "actual": "Sifariş növü üçün icazə ssenarisi fərqlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-031",
+      "domain": "sened_novu",
+      "input": "sistem novun kodunu el ile yazmaga icaze vermir",
+      "actual": "Sistem novun kodunu el ilə yazmağa icazə vermir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-032",
+      "domain": "sened_novu",
+      "input": "sened novune gore vacib saheler deyisir",
+      "actual": "Sənəd novune görə vacib sahələr dəyişir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-033",
+      "domain": "sened_novu",
+      "input": "elektron akt yeni nov kimi teqdim olunacaq",
+      "actual": "Elektron akt yeni növ kimi təqdim olunacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-034",
+      "domain": "sened_novu",
+      "input": "novun tercumesi azerbaycan dilinde natamamdir",
+      "actual": "Novun tərcüməsi Azərbaycan dilinde natamamdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-035",
+      "domain": "sened_novu",
+      "input": "her novun oz qeydiyyat saygaci olmalidir",
+      "actual": "Hər novun öz qeydiyyat sayğacı olmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-036",
+      "domain": "sened_novu",
+      "input": "vekaletname novunde etibar eden sexs ayrica secilir",
+      "actual": "Vəkalətnamə novunde etibar eden şəxs ayrıca seçilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-037",
+      "domain": "sened_novu",
+      "input": "xidmet arayisi yalniz aidiyyeti qrup terefinden acilir",
+      "actual": "Xidmət arayışı yalnız aidiyyəti qrup tərəfindən açılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-038",
+      "domain": "sened_novu",
+      "input": "protokol novu ucun fayl elavesi mecburidir",
+      "actual": "Protokol növü üçün fayl əlavəsi məcburidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-039",
+      "domain": "sened_novu",
+      "input": "hesabat novu siyahinin evvelinde gosterilsin",
+      "actual": "Hesabat növü siyahının əvvəlində göstərilsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-040",
+      "domain": "sened_novu",
+      "input": "qaytarilan senedin novu deyisdirile bilmir",
+      "actual": "Qaytarılan sənədin növü dəyişdirilə bilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-041",
+      "domain": "derkenar",
+      "input": "derkenar layihesi icra edilmek ucun gonderildi",
+      "actual": "Dərkənar layihəsi icra edilmək üçün göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-042",
+      "domain": "derkenar",
+      "input": "derkenarin meqsedi secilmeden icraci teyin edilmir",
+      "actual": "Dərkənarın məqsədi seçilmədən icraçı təyin edilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-043",
+      "domain": "derkenar",
+      "input": "rehber derkenari tesdiqleyib imzaladi",
+      "actual": "Rəhbər dərkənarı təsdiqləyib imzaladı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-044",
+      "domain": "derkenar",
+      "input": "derkenar uzre son icra tarixi sabaha qoyulub",
+      "actual": "Dərkənar üzrə son icra tarixi sabaha qoyulub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-045",
+      "domain": "derkenar",
+      "input": "layihe qeyde qaytarilanda sebeb gosterilmelidir",
+      "actual": "Layihə qeydə qaytarilanda səbəb göstərilməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-046",
+      "domain": "derkenar",
+      "input": "eyni senede ikinci derkenar elave olunub",
+      "actual": "Eyni sənədə ikinci dərkənar əlavə olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-047",
+      "domain": "derkenar",
+      "input": "derkenar layihesini kim hazirlayib",
+      "actual": "Dərkənar layihəsini kim hazırlayıb?",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-048",
+      "domain": "derkenar",
+      "input": "icraci derkenarin ustundeki qeydleri gore bilmir",
+      "actual": "İcraçı dərkənarın ustundeki qeydləri görə bilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-049",
+      "domain": "derkenar",
+      "input": "derkenar imzalandi amma icra statusu deyismedi",
+      "actual": "Dərkənar imzalandı, amma icra statusu dəyişmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-050",
+      "domain": "derkenar",
+      "input": "daxili derkenar ucun muavin raziligi teleb olunur",
+      "actual": "Daxili dərkənar üçün müavin razılığı tələb olunur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-051",
+      "domain": "derkenar",
+      "input": "derkenarin elavesi sened kartinda acilmir",
+      "actual": "Dərkənarın əlavəsi sənəd kartında açılmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-052",
+      "domain": "derkenar",
+      "input": "imzadan sonra derkenar metni redakte edilmesin",
+      "actual": "İmzadan sonra dərkənar mətni redaktə edilməsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-053",
+      "domain": "derkenar",
+      "input": "derkenar icraya yonlendirilende bildiris dusmedi",
+      "actual": "Dərkənar icraya yonlendirilende bildiriş düşmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-054",
+      "domain": "derkenar",
+      "input": "tesdiq novbesindeki derkenar geri cekildi",
+      "actual": "Təsdiq novbesindeki dərkənar geri çəkildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-055",
+      "domain": "derkenar",
+      "input": "rehberin derkenara yazdigi qeyd saxlanmayib",
+      "actual": "Rəhbərin derkenara yazdigi qeyd saxlanmayıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-056",
+      "domain": "derkenar",
+      "input": "derkenar uzre mesul sexs mezuniyyetdedir",
+      "actual": "Dərkənar üzrə məsul şəxs məzuniyyətdədir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-057",
+      "domain": "derkenar",
+      "input": "icraci derkenarin muddetini uzatmaq isteyir",
+      "actual": "İcraçı dərkənarın müddətini uzatmaq istəyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-058",
+      "domain": "derkenar",
+      "input": "derkenar proyekti teqdim edilmeden silinib",
+      "actual": "Dərkənar proyekti təqdim edilmədən silinib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-059",
+      "domain": "derkenar",
+      "input": "nezaretci derkenar icrasini yoxlamaq ucun tarixceye baxir",
+      "actual": "Nəzarətçi dərkənar icrasını yoxlamaq üçün tarixçəyə baxır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-060",
+      "domain": "derkenar",
+      "input": "derkenarin cari versiyasi pdf faylinda gorunmelidir",
+      "actual": "Dərkənarın cari versiyası PDF faylında görünməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-061",
+      "domain": "marshrut",
+      "input": "sened aidiyyeti uzre yeni icraciya yonlendirildi",
+      "actual": "Sənəd aidiyyəti üzrə yeni icraçıya yönləndirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-062",
+      "domain": "marshrut",
+      "input": "razilasdirma merhelesinde gonderis baglanib",
+      "actual": "Razılaşdırma mərhələsində göndəriş bağlanıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-063",
+      "domain": "marshrut",
+      "input": "muraciet rehbere catmadan evvel katibden kecir",
+      "actual": "Müraciət rəhbərə çatmadan əvvəl katibdən keçir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-064",
+      "domain": "marshrut",
+      "input": "marshrutdaki ikinci addim sehv bolmeye baglanib",
+      "actual": "Marshrutdaki ikinci addım səhv bölməyə bağlanıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-065",
+      "domain": "marshrut",
+      "input": "qaytarilan sened ilkin icraciya geri donur",
+      "actual": "Qaytarılan sənəd İlkin icraçıya geri donur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-066",
+      "domain": "marshrut",
+      "input": "merhele bitende novbeti vezifeli sexse bildiris gedir",
+      "actual": "Mərhələ bitende növbəti vəzifəli şəxsə bildiriş gedir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-067",
+      "domain": "marshrut",
+      "input": "paralel icra ucun iki struktur bolme secildi",
+      "actual": "Paralel icra üçün iki struktur bolma seçildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-068",
+      "domain": "marshrut",
+      "input": "birinci razilasdiran vezifeli sexs ezamiyyetdedir",
+      "actual": "Birinci razilasdiran vəzifəli şəxs ezamiyyətdədir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-069",
+      "domain": "marshrut",
+      "input": "tesdiq zamani marşrutun kohne versiyasi isledi",
+      "actual": "Təsdiq zamanı marşrutun köhnə versiyası işlədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-070",
+      "domain": "marshrut",
+      "input": "icra muddeti baslayanda timer ishə dusmelidir",
+      "actual": "İcra müddəti başlayanda timer ishə dusmelidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-071",
+      "domain": "marshrut",
+      "input": "yeni marşrut yalniz test muhitinde aktivdir",
+      "actual": "Yeni marşrut yalnız test mühitində aktivdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-072",
+      "domain": "marshrut",
+      "input": "sened yonlendirilende eski icraci siyahidan cixarilir",
+      "actual": "Sənəd yonlendirilende əski icraçı siyahıdan çıxarılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-073",
+      "domain": "marshrut",
+      "input": "rahatlasdirilmis marşrut uc addimdan ibaretdir",
+      "actual": "Rahatlasdirilmis marşrut uc addımdan ibarətdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-074",
+      "domain": "marshrut",
+      "input": "tesdiq eden sexs secilende struktur aidiyyeti yoxlanir",
+      "actual": "Təsdiq eden şəxs seçiləndə struktur aidiyyəti yoxlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-075",
+      "domain": "marshrut",
+      "input": "yanlis icraci teyin edilmis sened geri qaytarildi",
+      "actual": "Yanlış icraçı təyin edilmiş. Sənəd geri qaytarıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-076",
+      "domain": "marshrut",
+      "input": "is axininda imza addimi buraxila bilmez",
+      "actual": "İş axınında imza addımı buraxila bilmez.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-077",
+      "domain": "marshrut",
+      "input": "gizli sened xarici icraciya yonlendirilmesin",
+      "actual": "Gizli sənəd xarici icraçıya yönləndirilməsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-078",
+      "domain": "marshrut",
+      "input": "yeni workflow komandalar uzre ferqli isleyir",
+      "actual": "Yeni workflow komandalar üzrə fərqli işləyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-079",
+      "domain": "marshrut",
+      "input": "gonderisden sonra marşrut tarixcesi silinmemelidir",
+      "actual": "Göndərişdən sonra marşrut tarixçəsi silinməməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-080",
+      "domain": "marshrut",
+      "input": "marşrutun her addiminda icra vaxti yazilsin",
+      "actual": "Marşrutun hər addımında icra vaxtı yazılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-081",
+      "domain": "icazeler",
+      "input": "istifadeci senedi yalniz oz bolmesinde gore bilir",
+      "actual": "İstifadəçi sənədi yalnız öz bölməsində görə bilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-082",
+      "domain": "icazeler",
+      "input": "rola esaslanan giris qaydasi yenilendi",
+      "actual": "Rola əsaslanan giriş qaydası yeniləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-083",
+      "domain": "icazeler",
+      "input": "mesul sexsin imza icazesi muddetle mehdudlasir",
+      "actual": "Məsul şəxsin imza icazəsi muddetle məhdudlaşır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-084",
+      "domain": "icazeler",
+      "input": "filial operatoru merkezi arxive baxa bilmir",
+      "actual": "Filial operatoru mərkəzi arxivə baxa bilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-085",
+      "domain": "icazeler",
+      "input": "mezuniyyetdeki iscinin selahiyyeti muveqqeti kecirildi",
+      "actual": "Mezuniyyetdeki işçinin səlahiyyəti müvəqqəti keçirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-086",
+      "domain": "icazeler",
+      "input": "admin panelinde icaze yoxlamasi aparilir",
+      "actual": "Admin panelinde icazə yoxlaması aparılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-087",
+      "domain": "icazeler",
+      "input": "gizli senedin oxunmasina yalniz rehber icaze verir",
+      "actual": "Gizli sənədin oxunmasina yalnız rəhbər icazə verir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-088",
+      "domain": "icazeler",
+      "input": "icaze matrisi sened novune gore qurulub",
+      "actual": "İcazə matrisi sənəd novune görə qurulub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-089",
+      "domain": "icazeler",
+      "input": "api tokeni deaktiv edilende gonderis dayanir",
+      "actual": "API tokeni deaktiv edilende göndəriş dayanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-090",
+      "domain": "icazeler",
+      "input": "istifadecinin rolu deyisende sessiya yenilensin",
+      "actual": "İstifadəçinin rolu dəyişəndə sessiya yenilensin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-091",
+      "domain": "icazeler",
+      "input": "icaze olmadan endirilen fayl ucun 403 qaytarilir",
+      "actual": "İcazə olmadan endirilən fayl üçün 403 qaytarılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-092",
+      "domain": "icazeler",
+      "input": "musteri nümayendesi yalniz oz muracietine baxir",
+      "actual": "Müştəri nümayəndəsi yalnız öz müraciətinə baxır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-093",
+      "domain": "icazeler",
+      "input": "icracinin duzelis selahiyyeti bu merhelede yoxdur",
+      "actual": "İcraçının düzəliş səlahiyyəti bu mərhələdə yoxdur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-094",
+      "domain": "icazeler",
+      "input": "vekalet verilen sexs ucun bitme tarixi qeyd edilib",
+      "actual": "Vəkalət verilən şəxs üçün bitmə tarixi qeyd edilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-095",
+      "domain": "icazeler",
+      "input": "qrup icazesi silinende ferdi istisna saxlanilir",
+      "actual": "Qrup icazəsi silinende fərdi istisna saxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-096",
+      "domain": "icazeler",
+      "input": "daxili istifadeci diski paylasim linkini acmasin",
+      "actual": "Daxili istifadəçi diski paylasim linkini acmasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-097",
+      "domain": "icazeler",
+      "input": "audit oxuma icazesi yalnız nezaretcide qalir",
+      "actual": "Audit oxuma icazəsi yalnız nəzarətçidə qalır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-098",
+      "domain": "icazeler",
+      "input": "giris meselesini rol yoxlamasi ile tekrarladiq",
+      "actual": "Giriş məsələsini rol yoxlaması ilə təkrarladıq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-099",
+      "domain": "icazeler",
+      "input": "ozune menimseme funksiyasi ucun selahiyyet teleb edilir",
+      "actual": "Özünə mənimsəmə funksiyası üçün səlahiyyət tələb edilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-100",
+      "domain": "icazeler",
+      "input": "iki rolun kesismesinde mehdud icaze ustun tutulur",
+      "actual": "İki rolun kesismesinde məhdud icazə üstün tutulur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-101",
+      "domain": "imza",
+      "input": "elektron imza ucun sertifikatin vaxti bitib",
+      "actual": "Elektron imza üçün sertifikatın vaxtı bitib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-102",
+      "domain": "imza",
+      "input": "imzalanmis senedin heşi yoxlanmalidir",
+      "actual": "İmzalanmış sənədin heşi yoxlanmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-103",
+      "domain": "imza",
+      "input": "mobil imza prosesinde vaxt asimi bas verdi",
+      "actual": "Mobil imza prosesində vaxt asımı baş verdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-104",
+      "domain": "imza",
+      "input": "sistem imza vaxtini audit jurnalina yazir",
+      "actual": "Sistem imza vaxtını audit jurnalına yazır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-105",
+      "domain": "imza",
+      "input": "imzalayan sexsin adi sertifikatla eynidir",
+      "actual": "İmzalayan şəxsin adi sertifikatla eynidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-106",
+      "domain": "imza",
+      "input": "ikinci imza birinciden sonra teleb olunur",
+      "actual": "İkinci imza birincidən sonra tələb olunur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-107",
+      "domain": "imza",
+      "input": "pdf imzasinin etibarliq statusu ayrica gosterilir",
+      "actual": "PDF imzasinin etibarliq statusu ayrıca göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-108",
+      "domain": "imza",
+      "input": "imza duymesi yalniz tesdiq merhelesinde acilir",
+      "actual": "İmza düyməsi yalnız təsdiq mərhələsində açılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-109",
+      "domain": "imza",
+      "input": "sertifikat yenilenende kohne fayl toxunulmaz qalir",
+      "actual": "Sertifikat yenilənəndə köhnə fayl toxunulmaz qalır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-110",
+      "domain": "imza",
+      "input": "muddeti bitmis token ile sened imzalanmir",
+      "actual": "Müddəti bitmiş token ilə sənəd imzalanmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-111",
+      "domain": "imza",
+      "input": "imza sirasi rehberin qerari ile deyisdirildi",
+      "actual": "İmza sırası rəhbərin qərarı ilə dəyişdirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-112",
+      "domain": "imza",
+      "input": "istifadeci bir senedi iki defe imzalamaq isteyib",
+      "actual": "İstifadəçi bir sənədi iki dəfə imzalamaq istəyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-113",
+      "domain": "imza",
+      "input": "imza xidmeti kesilende sorgu novbede saxlanilir",
+      "actual": "İmza xidməti kəsiləndə sorğu növbədə saxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-114",
+      "domain": "imza",
+      "input": "e imza cavabi ucun otuz saniye gozlenilir",
+      "actual": "E imza cavabı üçün otuz şanıya gözlənilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-115",
+      "domain": "imza",
+      "input": "imza sertifikatinin seriya nomresi metadataya yazilir",
+      "actual": "İmza sertifikatinin seriya nömrəsi metadataya yazılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-116",
+      "domain": "imza",
+      "input": "ucuncu imzaci teyin olunmadigi ucun proses dayandi",
+      "actual": "Üçüncü imzaci təyin olunmadigi üçün proses dayandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-117",
+      "domain": "imza",
+      "input": "hesabat imzalanandan sonra arxive gonderilir",
+      "actual": "Hesabat imzalanandan sonra arxivə göndərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-118",
+      "domain": "imza",
+      "input": "nezaretci imza tarixcesini fayldan yoxlayir",
+      "actual": "Nəzarətçi imza tarixçəsini fayldan yoxlayır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-119",
+      "domain": "imza",
+      "input": "imza mueyyen muddetde tesdiq olunmasa xeta verilir",
+      "actual": "İmza müəyyən müddətdə təsdiq olunmasa xəta verilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-120",
+      "domain": "imza",
+      "input": "senede eyni vaxtda imza gondermek yarisa sebeb oldu",
+      "actual": "Sənədə eyni vaxtda imza göndərmək yarisa səbəb oldu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-121",
+      "domain": "arxiv",
+      "input": "sened arxive kocurulende metadata saxlanilsin",
+      "actual": "Sənəd arxivə kocurulende metadata saxlanılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-122",
+      "domain": "arxiv",
+      "input": "kohne arxivden getirilen faylin adi deyismeyib",
+      "actual": "Köhnə arxivdən gətirilən faylın adi dəyişməyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-123",
+      "domain": "arxiv",
+      "input": "arxivdeki muraciet qeydiyyat nomresi ile axtarilir",
+      "actual": "Arxivdeki müraciət qeydiyyat nömrəsi ilə axtarılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-124",
+      "domain": "arxiv",
+      "input": "silinmis sened arxivde ayri statusla gosterilir",
+      "actual": "Silinmis sənəd arxivdə ayrı statusla göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-125",
+      "domain": "arxiv",
+      "input": "arxiv qaydasina esasen saxlanma muddeti bitib",
+      "actual": "Arxiv qaydasına əsasən saxlanma müddəti bitib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-126",
+      "domain": "arxiv",
+      "input": "faylin heşi kocurmeden sonra yeniden yoxlanildi",
+      "actual": "Faylın heşi köçürmədən sonra yenidən yoxlanıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-127",
+      "domain": "arxiv",
+      "input": "arxivde axtaris ucun tarix araligi secin",
+      "actual": "Arxivdə axtarış üçün tarix aralığı seçin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-128",
+      "domain": "arxiv",
+      "input": "senedin kagiz esli bir hefte sonra catacaq",
+      "actual": "Sənədin kağız əsli bir həftə sonra çatacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-129",
+      "domain": "arxiv",
+      "input": "arxiv servisinde gecikme yaranib",
+      "actual": "Arxiv servisinde gecikmə yaranıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-130",
+      "domain": "arxiv",
+      "input": "elektron nüsxeler ehtiyat saxlanca gonderildi",
+      "actual": "Elektron nüsxələr ehtiyat saxlanca göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-131",
+      "domain": "arxiv",
+      "input": "arxiv idaresi baglanmis dosyeni yeniden acdi",
+      "actual": "Arxiv idarəsi bağlanmış dosyeni yenidən açdı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-132",
+      "domain": "arxiv",
+      "input": "kohne senedlerin metadata xetasi hesabatda gorunur",
+      "actual": "Köhnə sənədlərin metadata xətası hesabatda görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-133",
+      "domain": "arxiv",
+      "input": "arxivden cixarilan mektub qeydiyyat jurnali ile tutusduruldu",
+      "actual": "Arxivdən çıxarılan məktub qeydiyyat jurnalı ilə tutusduruldu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-134",
+      "domain": "arxiv",
+      "input": "axtaris indeksi yenilenmediyi ucun sened tapilmir",
+      "actual": "Axtarış indeksi yenilenmediyi üçün sənəd tapılmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-135",
+      "domain": "arxiv",
+      "input": "arxiv surətini yuklemek ucun giris icazesi lazimdir",
+      "actual": "Arxiv sürətini yükləmək üçün giriş icazəsi lazımdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-136",
+      "domain": "arxiv",
+      "input": "muhafize muddeti artirilan dosye silinmemelidir",
+      "actual": "Mühafizə müddəti artırılan dosye silinməməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-137",
+      "domain": "arxiv",
+      "input": "pdf fayli arxivde acilir amma sertifikat gosterilmir",
+      "actual": "PDF faylı arxivdə açılır, amma sertifikat göstərilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-138",
+      "domain": "arxiv",
+      "input": "arxivde sened novune esasen filter isleyir",
+      "actual": "Arxivdə sənəd novune əsasən filter işləyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-139",
+      "domain": "arxiv",
+      "input": "istifadeci arxiv qeydini el ile duzelde bilmir",
+      "actual": "İstifadəçi arxiv qeydini el ilə düzəldə bilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-140",
+      "domain": "arxiv",
+      "input": "arxiv hesabatinda bu ayin gonderis sayi azdir",
+      "actual": "Arxiv hesabatında bu ayin göndəriş sayı azdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-141",
+      "domain": "audit",
+      "input": "audit jurnalinda imza tarixi eksikdir",
+      "actual": "Audit jurnalında imza tarixi əksikdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-142",
+      "domain": "audit",
+      "input": "kim senedi silib onu tarixcede gore bilirik",
+      "actual": "Kim sənədi silib onu tarixçədə görə bilirik.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-143",
+      "domain": "audit",
+      "input": "qeydiyyat emeliyyati ucun istifadeci id si saxlanildi",
+      "actual": "Qeydiyyat əməliyyatı üçün istifadəçi id si saxlanıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-144",
+      "domain": "audit",
+      "input": "audit hadiseleri her gecə ehtiyat bazaya kocurulur",
+      "actual": "Audit hadisələri hər gecə ehtiyat bazaya kocurulur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-145",
+      "domain": "audit",
+      "input": "giris cehdleri tarix ve saat uzre siralanir",
+      "actual": "Giriş cəhdləri tarix və saat üzrə sıralanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-146",
+      "domain": "audit",
+      "input": "gizli fayla baxan sexsin hesabi qeyde alinib",
+      "actual": "Gizli fayla baxan şəxsin hesabı qeydə alınıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-147",
+      "domain": "audit",
+      "input": "log yazisi ip unvanina gore axtarilir",
+      "actual": "Log yazısı IP ünvanına görə axtarılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-148",
+      "domain": "audit",
+      "input": "audit hesabati muhasib terefinden tesdiq edildi",
+      "actual": "Audit hesabatı mühasib tərəfindən təsdiq edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-149",
+      "domain": "audit",
+      "input": "bu emeliyyatin evvelki deyeri jurnal qeydinde var",
+      "actual": "Bu əməliyyatın əvvəlki dəyəri jurnal qeydinde var.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-150",
+      "domain": "audit",
+      "input": "mesaj gonderilende correlation id qeyd olunmur",
+      "actual": "Mesaj göndəriləndə correlation id qeyd olunmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-151",
+      "domain": "audit",
+      "input": "audit qeydi silinmeye qarsi qorunmalidir",
+      "actual": "Audit qeydi silinməyə qarşı qorunmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-152",
+      "domain": "audit",
+      "input": "operatorun el ile etdiyi duzelis ayrica gosterilir",
+      "actual": "Operatorun el ilə etdiyi düzəliş ayrıca göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-153",
+      "domain": "audit",
+      "input": "hadisenin vaxt zonasi dogru gosterilmelidir",
+      "actual": "Hadisənin vaxt zonası doğru göstərilməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-154",
+      "domain": "audit",
+      "input": "merhele deyisikliyi jurnala yazilmadigi ucun itdi",
+      "actual": "Mərhələ dəyişikliyi jurnala yazilmadigi üçün itdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-155",
+      "domain": "audit",
+      "input": "adminin deyisiklikleri diger emeliyyatlardan ayrilir",
+      "actual": "Adminin dəyişiklikləri digər əməliyyatlardan ayrılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-156",
+      "domain": "audit",
+      "input": "audit eksportunda bos setirler coxdur",
+      "actual": "Audit eksportunda boş sətirlər coxdur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-157",
+      "domain": "audit",
+      "input": "inzibatci audit qeydlerini de redakte ede bilmesin",
+      "actual": "İnzibatçı audit qeydlərini de redaktə edə bilmesin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-158",
+      "domain": "audit",
+      "input": "zaman damgasi ile sorğu nomresi elaqelendirildi",
+      "actual": "Zaman damğası ilə sorğu nömrəsi əlaqələndirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-159",
+      "domain": "audit",
+      "input": "jurnalin axirinci yazisi bu gun qeyd olunub",
+      "actual": "Jurnalın axırıncı yazısı bu gün qeyd olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-160",
+      "domain": "audit",
+      "input": "audit paneli xeta koduna gore susdurulub",
+      "actual": "Audit paneli xəta koduna görə susdurulub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-161",
+      "domain": "api",
+      "input": "GET /api/v1/documents endpointi 500 qaytarir",
+      "actual": "GET /api/v1/documents endpoint-i 500 qaytarır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-162",
+      "domain": "api",
+      "input": "POST /api/v1/requests sorğusunda body bos qalıb",
+      "actual": "POST /api/v1/requests sorğusunda body boş qalıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-163",
+      "domain": "api",
+      "input": "api cavabinda pagination fieldi gosterilmir",
+      "actual": "API cavabında pagination fieldi göstərilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-164",
+      "domain": "api",
+      "input": "endpoint ucun authorization headeri teleb olunur",
+      "actual": "Endpoint üçün authorization headeri tələb olunur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-165",
+      "domain": "api",
+      "input": "openapi spesifikasiyasinda status kodu yanlisdir",
+      "actual": "OpenAPI spesifikasiyasinda status kodu yanlışdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-166",
+      "domain": "api",
+      "input": "swaggerde request schema ile response schema ferqlenir",
+      "actual": "Swagger-də request schema ilə response schema fərqlənir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-167",
+      "domain": "api",
+      "input": "webhook eyni hadiseni iki defe gonderib",
+      "actual": "Webhook eyni hadisəni iki dəfə göndərib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-168",
+      "domain": "api",
+      "input": "rate limit dolandan sonra server 429 qaytarir",
+      "actual": "Rate limit dolandan sonra server 429 qaytarır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-169",
+      "domain": "api",
+      "input": "pagination cursorunun muddeti bitib",
+      "actual": "Pagination cursorunun müddəti bitib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-170",
+      "domain": "api",
+      "input": "api response içində null sahə problem yaradır",
+      "actual": "API response içində null sahə problem yaradır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-171",
+      "domain": "api",
+      "input": "GET metodu ile yazma emeliyyati aparilmasin",
+      "actual": "GET metodu ilə yazma əməliyyatı aparılmasın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-172",
+      "domain": "api",
+      "input": "REST servisinde yeni parametr mecburidir",
+      "actual": "REST servisinde yeni parametr məcburidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-173",
+      "domain": "api",
+      "input": "grpc xidmeti protobuf uyğunsuzlugu verir",
+      "actual": "gRPC xidməti protobuf uyğunsuzlugu verir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-174",
+      "domain": "api",
+      "input": "gateway sorğunu backend servisine yonlendirmir",
+      "actual": "Gateway sorğunu backend servisinə yonlendirmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-175",
+      "domain": "api",
+      "input": "callback URL yanlış qeyd olunduğu ucun 404 aliriq",
+      "actual": "Callback URL yanlış qeyd olunduğu üçün 404 aliriq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-176",
+      "domain": "api",
+      "input": "api sertifikati yenilendikten sonra elaqe kesilib",
+      "actual": "API sertifikatı yenilendikten sonra əlaqə kəsilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-177",
+      "domain": "api",
+      "input": "v2 endpointi kohne clientlerle geriye uyğundur",
+      "actual": "V2 endpoint-i köhnə clientlerle geriyə uyğundur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-178",
+      "domain": "api",
+      "input": "sorgunun timeout muddeti yuklenmede artirildi",
+      "actual": "Sorğunun timeout müddəti yüklənmədə artırıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-179",
+      "domain": "api",
+      "input": "idempotency key tekrar edilen odemeni blokladi",
+      "actual": "İdempotency key təkrar edilən ödəməni blokladı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-180",
+      "domain": "api",
+      "input": "webhook imzasi yoxlanmadan mesaj qebul edilmesin",
+      "actual": "Webhook imzası yoxlanmadan mesaj qəbul edilməsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-181",
+      "domain": "database",
+      "input": "postgresql bazasinda indeks catismir",
+      "actual": "PostgreSQL bazasında indeks çatışmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-182",
+      "domain": "database",
+      "input": "migration skripti yalniz stagingde isleyib",
+      "actual": "Migration skripti yalnız staging-də işləyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-183",
+      "domain": "database",
+      "input": "transaction commit olunmadigi ucun setir gorunmedi",
+      "actual": "Transaction commit olunmadigi üçün sətir görünmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-184",
+      "domain": "database",
+      "input": "foreign key qaydasi silinmeni engelledi",
+      "actual": "Foreign key qaydası silinməni əngəllədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-185",
+      "domain": "database",
+      "input": "redis kesinin ttl muddeti bes deqiqedir",
+      "actual": "Redis kesinin ttl müddəti beş dəqiqədir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-186",
+      "domain": "database",
+      "input": "select sorgusu cox setir qaytaranda lengiyir",
+      "actual": "Select sorğusu çox sətir qaytaranda lengiyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-187",
+      "domain": "database",
+      "input": "bazanin ehtiyat nusxesi gecə tamamlandi",
+      "actual": "Bazanın ehtiyat nüsxəsi gecə tamamlandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-188",
+      "domain": "database",
+      "input": "database connection pool limiti asilib",
+      "actual": "Database connection pool limiti aşılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-189",
+      "domain": "database",
+      "input": "unique constraint tekrarlanan qeydiyyati bloklayir",
+      "actual": "Unique constraint təkrarlanan qeydiyyatı bloklayir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-190",
+      "domain": "database",
+      "input": "schema deyisikliyi ucun rollback plani hazirlandi",
+      "actual": "Schema dəyişikliyi üçün rollback planı hazırlandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-191",
+      "domain": "database",
+      "input": "partition cədvəli aylar uzre ayrilib",
+      "actual": "Partition cədvəli aylar üzrə ayrılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-192",
+      "domain": "database",
+      "input": "deadlock zamani iki emeliyyat geri qaytarildi",
+      "actual": "Deadlock zamanı iki əməliyyat geri qaytarıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-193",
+      "domain": "database",
+      "input": "məlumat bazasinin surəsi restore testinden kecdi",
+      "actual": "Məlumat bazasının müddəti restore testindən keçdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-194",
+      "domain": "database",
+      "input": "orm sorgusundaki eager load artiq yuk yaradir",
+      "actual": "Orm sorgusundaki eager load artıq yük yaradır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-195",
+      "domain": "database",
+      "input": "mysql replika serveri oxuma sorğularini qebul edir",
+      "actual": "MySQL replika serveri oxuma sorğularını qəbul edir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-196",
+      "domain": "database",
+      "input": "jsonb sahesinde yeni indeks yaradildi",
+      "actual": "Jsonb sahəsində yeni indeks yaradıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-197",
+      "domain": "database",
+      "input": "verilənler bazasindaki tarixler utc saxlanilsin",
+      "actual": "Verilənlər bazasindaki tarixlər utc saxlanılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-198",
+      "domain": "database",
+      "input": "db sehvlərinin hamisi jurnal qeydine dusmur",
+      "actual": "Db sehvlərinin hamısı jurnal qeydinə dusmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-199",
+      "domain": "database",
+      "input": "istifadeci cedveli ucun saxlanma siyaseti deyisdi",
+      "actual": "İstifadəçi cədvəli üçün saxlanma siyasəti dəyişdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-200",
+      "domain": "database",
+      "input": "baza versiyasi deploydan evvel yoxlanilsin",
+      "actual": "Baza versiyası deploydan əvvəl yoxlanılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-201",
+      "domain": "devops",
+      "input": "production deploy sonrasi health check ugurludur",
+      "actual": "Production deploy sonrası health check ugurludur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-202",
+      "domain": "devops",
+      "input": "staging muhitinde yeni feature flag aktivdir",
+      "actual": "Staging mühitində yeni feature flag aktivdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-203",
+      "domain": "devops",
+      "input": "ci cd pipeline testde dayandi",
+      "actual": "CI/CD pipeline teştdə dayandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-204",
+      "domain": "devops",
+      "input": "docker image tagi son commit sha sına baglanib",
+      "actual": "Docker image tagi son commit sha sına bağlanıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-205",
+      "domain": "devops",
+      "input": "kubernetes podu yaddaş limitine catdi",
+      "actual": "Kubernetes podu yaddaş limitinə çatdı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-206",
+      "domain": "devops",
+      "input": "roll back ucun kohne build saxlanilib",
+      "actual": "Roll back üçün köhnə build saxlanılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-207",
+      "domain": "devops",
+      "input": "vercelde api route cold start sebebinden gecikir",
+      "actual": "Vercel-də API route cold start sebebinden gecikir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-208",
+      "domain": "devops",
+      "input": "prometheus alerti novbetci muhendise gonderildi",
+      "actual": "Prometheus alerti növbətçi mühəndisə göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-209",
+      "domain": "devops",
+      "input": "grafana panelinde cpu pikleri gorunur",
+      "actual": "Grafana panelinde cpu pikləri görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-210",
+      "domain": "devops",
+      "input": "load balancer saglam olmayan instansi cixarir",
+      "actual": "Load balancer sağlam olmayan instansi çıxarır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-211",
+      "domain": "devops",
+      "input": "dns deyisikliyinden sonra sertifikat yenilendi",
+      "actual": "DNS dəyişikliyindən sonra sertifikat yeniləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-212",
+      "domain": "devops",
+      "input": "secret rotation vaxtinda tamamlanmadi",
+      "actual": "Secret rotation vaxtında tamamlanmadı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-213",
+      "domain": "devops",
+      "input": "terraform planinda yeni subnet yaradilacaq",
+      "actual": "Terraform planında yeni subnet yaradılacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-214",
+      "domain": "devops",
+      "input": "blue green deployda trafik yeni versiyaya kecdi",
+      "actual": "Blue green deployda trafik yeni versiyaya keçdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-215",
+      "domain": "devops",
+      "input": "git tagi release qeydine baglandi",
+      "actual": "Git tagi release qeydinə bağlandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-216",
+      "domain": "devops",
+      "input": "node serveri signal alanda aciq baglantilari baglayir",
+      "actual": "Node serveri signal alanda aciq bağlantıları bağlayır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-217",
+      "domain": "devops",
+      "input": "monitorinq esikleri uat ile ferqli hesablanib",
+      "actual": "Monitorinq eşikləri UAT ilə fərqli hesablanıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-218",
+      "domain": "devops",
+      "input": "konteyner restartindan sonra fayl sistemi temizlendi",
+      "actual": "Konteyner restartindan sonra fayl sistemi təmizləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-219",
+      "domain": "devops",
+      "input": "yeni muhitin env deyiseni bos qalıb",
+      "actual": "Yeni mühitin env dəyişəni boş qalıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-220",
+      "domain": "devops",
+      "input": "deployment tamamlandi amma domen kohne versiyani acir",
+      "actual": "Deployment tamamlandı, amma domen köhnə versiyanı açır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-221",
+      "domain": "security",
+      "input": "oauth2 tokeninin muddeti bitib",
+      "actual": "OAuth2 tokeninin müddəti bitib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-222",
+      "domain": "security",
+      "input": "iki faktorlu dogrulama kodu gec catir",
+      "actual": "İki faktorlu doğrulama kodu gec çatır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-223",
+      "domain": "security",
+      "input": "csrf yoxlamasi form gonderisinde isledi",
+      "actual": "Csrf yoxlaması form gonderisinde işlədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-224",
+      "domain": "security",
+      "input": "xss cehdi html atributunda bloklandi",
+      "actual": "Xss cəhdi HTML atributunda bloklandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-225",
+      "domain": "security",
+      "input": "sifre sifirlamasi ucun link bir defe islemelidir",
+      "actual": "Şifrə sifirlamasi üçün link bir dəfə işləməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-226",
+      "domain": "security",
+      "input": "selahiyyetsiz istifadeci gizli fayla giris isteyir",
+      "actual": "Səlahiyyətsiz istifadəçi gizli fayla giriş istəyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-227",
+      "domain": "security",
+      "input": "jwt imzasinda uyğunsuzluq askar olundu",
+      "actual": "JWT imzasinda uyğunsuzluq aşkar olundu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-228",
+      "domain": "security",
+      "input": "tls sertifikatinin vaxti sabah bitir",
+      "actual": "TLS sertifikatinin vaxtı sabah bitir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-229",
+      "domain": "security",
+      "input": "audit ucun sade metn sifre saxlanmasin",
+      "actual": "Audit üçün sadə mətn şifrə saxlanmasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-230",
+      "domain": "security",
+      "input": "hesabin bloklanmasi on ardicil cehdden sonra bas verir",
+      "actual": "Hesabın bloklanmasi on ardıcıl cəhddən sonra baş verir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-231",
+      "domain": "security",
+      "input": "session cookie sinin same site ayari sertdir",
+      "actual": "Session cookie sinin same site ayarı sertdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-232",
+      "domain": "security",
+      "input": "captcha cavabi secilmis sessiya ile yoxlanilir",
+      "actual": "Captcha cavabı seçilmiş sessiya ilə yoxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-233",
+      "domain": "security",
+      "input": "ip adresine gore tezlik limiti tətbiq edilir",
+      "actual": "IP adresinə görə tezlik limiti tətbiq edilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-234",
+      "domain": "security",
+      "input": "login hadiselerine gore qeyri adi davranis secildi",
+      "actual": "Login hadiselerine görə qeyri adi davranış seçildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-235",
+      "domain": "security",
+      "input": "rol qaydalarinda privilege escalation riski var",
+      "actual": "Rol qaydalarında privilege escalation riski var.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-236",
+      "domain": "security",
+      "input": "gizli acar repo daxilinde qalmamalidir",
+      "actual": "Gizli acar repo daxilində qalmamalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-237",
+      "domain": "security",
+      "input": "xarici domenlere istek yalniz allowlist ile icazəlidir",
+      "actual": "Xarici domenlere istək yalnız allowlist ilə icazəlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-238",
+      "domain": "security",
+      "input": "sifrelenmis faylin backup surəsi de korunur",
+      "actual": "Şifrələnmiş faylın backup müddəti de korunur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-239",
+      "domain": "security",
+      "input": "public linkin etibarliliq muddeti qısaldıldı",
+      "actual": "Public linkin etibarlılıq müddəti qısaldıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-240",
+      "domain": "security",
+      "input": "security review neticesi issue kimi qeyd edildi",
+      "actual": "Security review nəticəsi issue kimi qeyd edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-241",
+      "domain": "frontend",
+      "input": "textarea yazisini copy duymesi ile kocururuk",
+      "actual": "Textarea yazısını copy düyməsi ilə kocururuk.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-242",
+      "domain": "frontend",
+      "input": "rich text editor secilen ifadeni qalın edir",
+      "actual": "Rich text editor seçilən ifadəni qalın edir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-243",
+      "domain": "frontend",
+      "input": "klaviatura ile sekmeler arasinda kecid islesin",
+      "actual": "Klaviatura ilə sekmeler arasında keçid islesin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-244",
+      "domain": "frontend",
+      "input": "mobil ekranda duymeler metni ortmesin",
+      "actual": "Mobil ekranda düymələr mətni ortmesin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-245",
+      "domain": "frontend",
+      "input": "a11y yoxlamasi duymenin labelini tapa bilmedi",
+      "actual": "A11y yoxlaması düymənin labelini tapa bilmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-246",
+      "domain": "frontend",
+      "input": "brauzer back duymesi secimi itirmesin",
+      "actual": "Brauzer back düyməsi seçimi itirmesin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-247",
+      "domain": "frontend",
+      "input": "form validation yanlis saheye fokus verir",
+      "actual": "Form validation yanlış sahəyə fokus verir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-248",
+      "domain": "frontend",
+      "input": "dark mode secimi local storage de qalir",
+      "actual": "Dark mode seçimi local storage de qalır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-249",
+      "domain": "frontend",
+      "input": "loading spinneri proses tamamlananda dayansin",
+      "actual": "Loading spinneri proses tamamlananda dayansin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-250",
+      "domain": "frontend",
+      "input": "copy clipboard icazesi olmayanda xeta goster",
+      "actual": "Copy clipboard icazəsi olmayanda xəta göstər.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-251",
+      "domain": "frontend",
+      "input": "css grid kicik ekranlarda bir sutuna dusur",
+      "actual": "CSS grid kiçik ekranlarda bir sutuna düşür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-252",
+      "domain": "frontend",
+      "input": "react state deyisende counter gecikir",
+      "actual": "React ştata dəyişəndə counter gecikir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-253",
+      "domain": "frontend",
+      "input": "undo emeliyyati son duzelisi geri qaytarir",
+      "actual": "Undo əməliyyatı son düzəlişi geri qaytarır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-254",
+      "domain": "frontend",
+      "input": "textarea ucun maksimum simvol sayi gosterilir",
+      "actual": "Textarea üçün maksimum simvol sayı göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-255",
+      "domain": "frontend",
+      "input": "screen reader bildiris metnini seslendirir",
+      "actual": "Screen reader bildiriş mətnini səsləndirir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-256",
+      "domain": "frontend",
+      "input": "formatlanan siyahi html kimi kopyalanir",
+      "actual": "Formatlanan siyahı HTML kimi kopyalanir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-257",
+      "domain": "frontend",
+      "input": "paste ile daxil olan script silinmelidir",
+      "actual": "Paste ilə daxil olan script silinməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-258",
+      "domain": "frontend",
+      "input": "yeni font yuklenenə kimi fallback yazisi gorunur",
+      "actual": "Yeni font yuklenenə kimi fallback yazısı görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-259",
+      "domain": "frontend",
+      "input": "responsive menyuda secilmis moda adini goster",
+      "actual": "Responsive menyuda seçilmiş moda adini göstər.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-260",
+      "domain": "frontend",
+      "input": "drag drop fayl yuklenmesinde boş content yoxlanir",
+      "actual": "Drag drop fayl yuklenmesinde boş content yoxlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-261",
+      "domain": "analytics",
+      "input": "hesabat panelinde bu ayin umumilikde otuz muracieti var",
+      "actual": "Hesabat panelinde bu ayin ümumilikdə otuz müraciəti var.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-262",
+      "domain": "analytics",
+      "input": "qrafikde tarix filtrine esasen melumat deyisir",
+      "actual": "Qrafikdə tarix filtrinə əsasən. Məlumat dəyişir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-263",
+      "domain": "analytics",
+      "input": "export edilen csv faylinda ayirici verguldur",
+      "actual": "Export edilən csv faylında ayırıcı verguldur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-264",
+      "domain": "analytics",
+      "input": "gundelik saygac eyni muracieti iki defe sayib",
+      "actual": "Gündəlik sayğac eyni müraciəti iki dəfə sayıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-265",
+      "domain": "analytics",
+      "input": "dashboard ucun yeni performans gostericisi elave edilib",
+      "actual": "Dashboard üçün yeni performans göstəricisi əlavə edilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-266",
+      "domain": "analytics",
+      "input": "power bi modelinde vacib dimension catismir",
+      "actual": "Power bi modelinde vacib dimension çatışmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-267",
+      "domain": "analytics",
+      "input": "sql sorgusu filial uzre nəticəni qruplasdirir",
+      "actual": "SQL sorğusu filial üzrə nəticəni qruplaşdırır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-268",
+      "domain": "analytics",
+      "input": "uzun muddetli trend ucun kecmis aylar lazimdir",
+      "actual": "Uzun muddetli trend üçün keçmiş aylar lazımdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-269",
+      "domain": "analytics",
+      "input": "real vaxt hesabatinda cache muddeti azaldildi",
+      "actual": "Real vaxt hesabatında cache müddəti azaldıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-270",
+      "domain": "analytics",
+      "input": "grafikdə sıfır değer bos gosterilmesin",
+      "actual": "Grafikdə sıfır değer boş göstərilməsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-271",
+      "domain": "analytics",
+      "input": "excel importunda tarix formatı uyğunsuzdur",
+      "actual": "Excel importunda tarix formatı uyğunsuzdur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-272",
+      "domain": "analytics",
+      "input": "gostericinin mənbəyi hesabatin altinda yazilsin",
+      "actual": "Göstəricinin mənbəyi hesabatın altında yazılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-273",
+      "domain": "analytics",
+      "input": "audit hesabatinda ferdi melumatlar maskalansin",
+      "actual": "Audit hesabatında fərdi məlumatlar maskalansin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-274",
+      "domain": "analytics",
+      "input": "chart legendasi mobil ekranda gorunmur",
+      "actual": "Chart legendasi mobil ekranda gorunmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-275",
+      "domain": "analytics",
+      "input": "gorevlerin orta icra muddeti gunle hesablanir",
+      "actual": "Gorevlerin orta icra müddəti gunle hesablanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-276",
+      "domain": "analytics",
+      "input": "aynı sahə iki dashboardda ferqli adla gosterilir",
+      "actual": "Aynı sahə iki dashboardda fərqli adla göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-277",
+      "domain": "analytics",
+      "input": "hefte uzre filter edende netice sifira dusur",
+      "actual": "Həftə üzrə filter edende nəticə sıfıra düşür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-278",
+      "domain": "analytics",
+      "input": "statistik hesabatda yubanan senedler qirmizi olsun",
+      "actual": "Statistik hesabatda yubanan sənədlər qırmızı olsun.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-279",
+      "domain": "analytics",
+      "input": "vizuallasdirmada bos kateqoriya ucun etiket qoyuldu",
+      "actual": "Vizuallasdirmada boş kateqoriya üçün etiket qoyuldu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-280",
+      "domain": "analytics",
+      "input": "raportun son yenilenme vaxti panelde gorunur",
+      "actual": "Raportun son yenilənmə vaxtı paneldə görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-281",
+      "domain": "testing",
+      "input": "uat senarisinde iki addim buraxilib",
+      "actual": "UAT ssenarisində iki addım buraxılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-282",
+      "domain": "testing",
+      "input": "regression test son versiyada qirildi",
+      "actual": "Regression test son versiyada qırıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-283",
+      "domain": "testing",
+      "input": "integration testi sandbox tokeni ile kecdi",
+      "actual": "İntegration testi sandbox tokeni ilə keçdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-284",
+      "domain": "testing",
+      "input": "unit test cox uzun cekdiyi ucun timeout oldu",
+      "actual": "Unit test çox uzun cekdiyi üçün timeout oldu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-285",
+      "domain": "testing",
+      "input": "qa komandasi xetani tekrar ede bilmedi",
+      "actual": "Qa komandası xətanı təkrar edə bilmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-286",
+      "domain": "testing",
+      "input": "bug report ucun ekran goruntusu elave olunub",
+      "actual": "Buğ report üçün ekran görüntüsü əlavə olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-287",
+      "domain": "testing",
+      "input": "test datasindaki fin kodu heqiqi sexse aid olmasin",
+      "actual": "Test datasindaki fin kodu həqiqi şəxsə aid olmasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-288",
+      "domain": "testing",
+      "input": "load testde 1000 paralel sorğu gonderildi",
+      "actual": "Load teştdə 1000 paralel sorğu göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-289",
+      "domain": "testing",
+      "input": "e2e ssenarisinde yeni dropdown acilmir",
+      "actual": "E2e ssenarisinde yeni dropdown açılmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-290",
+      "domain": "testing",
+      "input": "mock cavabinda null status ucun hal yazilmali",
+      "actual": "Mock cavabında null status üçün hal yazilmali.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-291",
+      "domain": "testing",
+      "input": "test coverageda auth modulu eksikdir",
+      "actual": "Test coverageda auth modulu əksikdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-292",
+      "domain": "testing",
+      "input": "snapshot testi stil deyisende yenilendi",
+      "actual": "Snapshot testi stil dəyişəndə yeniləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-293",
+      "domain": "testing",
+      "input": "release candidate uat testinden sonra buraxilacaq",
+      "actual": "Release candidate UAT testindən sonra buraxılacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-294",
+      "domain": "testing",
+      "input": "kontrakt testi yeni api schema sini yoxlayir",
+      "actual": "Kontrakt testi yeni API schema sini yoxlayır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-295",
+      "domain": "testing",
+      "input": "qa test planina riskli prosesleri elave edib",
+      "actual": "Qa test planına riskli prosesləri əlavə edib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-296",
+      "domain": "testing",
+      "input": "stress testde server response vaxti artdi",
+      "actual": "Stress teştdə server response vaxtı artdı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-297",
+      "domain": "testing",
+      "input": "sınaq fayli max simvol limitine çatir",
+      "actual": "Sınaq faylı max simvol limitinə çatır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-298",
+      "domain": "testing",
+      "input": "test environmentda vaxt zonasi ferqlidir",
+      "actual": "Test environmentda vaxt zonası fərqlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-299",
+      "domain": "testing",
+      "input": "accessibility testi kontrasti olcdu",
+      "actual": "Accessibility testi kontrastı ölçdü.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-300",
+      "domain": "testing",
+      "input": "sifaris axini ucun boundary test lazimdir",
+      "actual": "Sifariş axını üçün boundary test lazımdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-301",
+      "domain": "migration",
+      "input": "kohne sistemden uc min sened kocurulub",
+      "actual": "Köhnə sistemdən uc min sənəd köçürülüb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-302",
+      "domain": "migration",
+      "input": "miqrasiya zamani yalniz aktiv istifadeciler secilsin",
+      "actual": "Miqrasiya zamanı yalnız aktiv istifadəçilər seçilsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-303",
+      "domain": "migration",
+      "input": "etibar edilmeyen tarix deyerleri temizlenmelidir",
+      "actual": "Etibar edilmeyen tarix dəyərləri təmizlənməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-304",
+      "domain": "migration",
+      "input": "yeni bazaya fayl elaveleri ayrica yuklenir",
+      "actual": "Yeni bazaya fayl əlavələri ayrıca yüklənir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-305",
+      "domain": "migration",
+      "input": "kocurulme neticesinde bir qeyd eksikdir",
+      "actual": "Köçürülmə nəticəsində bir qeyd əksikdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-306",
+      "domain": "migration",
+      "input": "miqrasiya skripti ikinci defe isleyende eyni yazini yaratmasin",
+      "actual": "Miqrasiya skripti ikinci dəfə işləyəndə eyni yazını yaratmasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-307",
+      "domain": "migration",
+      "input": "musteri kodlari kohne sistemle tutusdurulur",
+      "actual": "Müştəri kodları köhnə sistemle tutusdurulur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-308",
+      "domain": "migration",
+      "input": "test serverinde köhnə bazanın kopyası saxlanır",
+      "actual": "Test serverində köhnə bazanın kopiyası saxlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-309",
+      "domain": "migration",
+      "input": "cutover plani gece saat on ikide baslayacaq",
+      "actual": "Cutover planı gecə saat on ikidə başlayacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-310",
+      "domain": "migration",
+      "input": "rollback zamani kohne bazaya yazma acilmasin",
+      "actual": "Rollback zamanı köhnə bazaya yazma açılmasın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-311",
+      "domain": "migration",
+      "input": "fayl adlarindaki uyğunsuz simvollar temizlendi",
+      "actual": "Fayl adlarindaki uyğunsuz simvollar təmizləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-312",
+      "domain": "migration",
+      "input": "mesaj novbesi bosaldilanda esas kecid edilir",
+      "actual": "Mesaj növbəsi bosaldilanda əsas keçid edilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-313",
+      "domain": "migration",
+      "input": "her paket ucun satir sayi ayrica hesablansin",
+      "actual": "Hər paket üçün sətir sayı ayrıca hesablansın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-314",
+      "domain": "migration",
+      "input": "kocurulmus datanin butovluyu heşle yoxlanilir",
+      "actual": "Köçürülmüş datanin butovluyu heşle yoxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-315",
+      "domain": "migration",
+      "input": "senedlerin yarisinda bagli icraci tapilmadi",
+      "actual": "Sənədlərin yarışında bağlı icraçı tapılmadı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-316",
+      "domain": "migration",
+      "input": "eski id ile yeni id arasinda xeritə saxlayiriq",
+      "actual": "Əski id ilə yeni id arasında xəritə saxlayırıq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-317",
+      "domain": "migration",
+      "input": "miqrasiya sınağı yeniden aparilmadan canliya cixilmasin",
+      "actual": "Miqrasiya sınağı yenidən aparılmadan canliya çıxılmasın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-318",
+      "domain": "migration",
+      "input": "server saatlari senkron deyilse tarixler səhv gedir",
+      "actual": "Server saatları senkron deyilse tarixlər səhv gedir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-319",
+      "domain": "migration",
+      "input": "arxivlesdirme hissesi diger moduldan sonra kocurulecek",
+      "actual": "Arxivləşdirmə hissəsi digər moduldan sonra köçürüləcək.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-320",
+      "domain": "migration",
+      "input": "yekun kontrol siyahisi cavabdeh sexse gonderildi",
+      "actual": "Yekun kontrol siyahısı cavabdeh şəxsə göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-321",
+      "domain": "workflow",
+      "input": "tapşiriq bir icracidan digerine gonderildi",
+      "actual": "Tapşırıq bir icraçıdan digərinə göndərildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-322",
+      "domain": "workflow",
+      "input": "workflow qaydasi yeni filial ucun acilmadi",
+      "actual": "Workflow qaydası yeni filial üçün açılmadı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-323",
+      "domain": "workflow",
+      "input": "avtomatik eskalasiya muddeti iki gun təyin edildi",
+      "actual": "Avtomatik eskalasiya müddəti iki gün təyin edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-324",
+      "domain": "workflow",
+      "input": "sənəd geri qaytarilanda status layihə olur",
+      "actual": "Sənəd geri qaytarilanda status layihə olur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-325",
+      "domain": "workflow",
+      "input": "icraci qeyd elave edende rehbere bildiris gedir",
+      "actual": "İcraçı qeyd əlavə edende rəhbərə bildiriş gedir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-326",
+      "domain": "workflow",
+      "input": "gonderis duymesi tamamlanmis isde baglidir",
+      "actual": "Göndəriş düyməsi tamamlanmış işdə bağlıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-327",
+      "domain": "workflow",
+      "input": "bir nece imzaci paralel seçilə bilmir",
+      "actual": "Bir neçə imzaci paralel seçilə bilmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-328",
+      "domain": "workflow",
+      "input": "mərhələ sirasi idare panelinden deyisir",
+      "actual": "Mərhələ sırası idarə panelinden dəyişir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-329",
+      "domain": "workflow",
+      "input": "sistem deadline bitende mesul sexse xatirlatma atir",
+      "actual": "Sistem deadline bitende məsul şəxsə xatırlatma atır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-330",
+      "domain": "workflow",
+      "input": "workflow versiyasi sened yaradilan anda sabitlenir",
+      "actual": "Workflow versiyası sənəd yaradilan anda sabitlenir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-331",
+      "domain": "workflow",
+      "input": "tesdiq addimi ləgv olunanda icraya kecid dayanir",
+      "actual": "Təsdiq addımı ləğv olunanda icraya keçid dayanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-332",
+      "domain": "workflow",
+      "input": "eski is axinlari her hefte arxivlenir",
+      "actual": "Əski iş axınları hər həftə arxivlenir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-333",
+      "domain": "workflow",
+      "input": "sifaris formasi gonderilenden sonra task acilir",
+      "actual": "Sifariş forması göndəriləndən sonra task açılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-334",
+      "domain": "workflow",
+      "input": "operator icrani baslatmaq ucun sehife yenilemelidir",
+      "actual": "Operator icranı baslatmaq üçün səhifə yeniləməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-335",
+      "domain": "workflow",
+      "input": "alt tapşiriq baglananda ana tapşiriq da baglanmasin",
+      "actual": "Alt tapşırıq baglananda ana tapşırıq da baglanmasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-336",
+      "domain": "workflow",
+      "input": "delegasiya edilmis is geri alina bilir",
+      "actual": "Delegasiya edilmiş iş geri alına bilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-337",
+      "domain": "workflow",
+      "input": "butun approverler razilasanda novbeti addim acilir",
+      "actual": "Bütün approverler razılaşanda növbəti addım açılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-338",
+      "domain": "workflow",
+      "input": "musteri sorğusunun prioriteti sonra deyise bilir",
+      "actual": "Müştəri sorğusunun prioriteti sonra dəyişə bilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-339",
+      "domain": "workflow",
+      "input": "icra muddeti yalniz mesul sexs terefinden uzadilir",
+      "actual": "İcra müddəti yalnız məsul şəxs tərəfindən uzadılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-340",
+      "domain": "workflow",
+      "input": "tekrar acilan tapşiriq icin yeni tarix qoyulur",
+      "actual": "Təkrar açılan tapşırıq icin yeni tarix qoyulur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-341",
+      "domain": "network",
+      "input": "vpn baglantisi kesilende sened yuklenmesi yarimciq qaldı",
+      "actual": "Vpn bağlantısı kəsiləndə sənəd yüklənməsi yarımçıq qaldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-342",
+      "domain": "network",
+      "input": "dns cavabi kohne ip unvanina gedir",
+      "actual": "DNS cavabı köhnə IP ünvanına gedir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-343",
+      "domain": "network",
+      "input": "firewall yeni porta girisi bloklayib",
+      "actual": "Firewall yeni porta girişi bloklayıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-344",
+      "domain": "network",
+      "input": "proxy vaxti bitmis sertifikati qebul etmir",
+      "actual": "Proxy vaxtı bitmiş sertifikatı qəbul etmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-345",
+      "domain": "network",
+      "input": "packet loss sebebi ile imza servisi lengiyir",
+      "actual": "Packet loss səbəbi ilə imza servisi lengiyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-346",
+      "domain": "network",
+      "input": "filialdaki kanal genisliyi kifayet etmir",
+      "actual": "Filialdaki kanal genişliyi kifayət etmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-347",
+      "domain": "network",
+      "input": "load balancer bir nodu dovriyyeden cixardi",
+      "actual": "Load balancer bir nodu dövriyyədən çıxardı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-348",
+      "domain": "network",
+      "input": "websocket baglantisi arxa planda baglanir",
+      "actual": "WebSocket bağlantısı arxa planda bağlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-349",
+      "domain": "network",
+      "input": "nat qaydasi xarici api ni yanlis servere yonlendirir",
+      "actual": "Nat qaydası xarici API ni yanlış serverə yönləndirir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-350",
+      "domain": "network",
+      "input": "tcp timeout on saniyəyə ayarlandi",
+      "actual": "TCP timeout on saniyəyə ayarlandi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-351",
+      "domain": "network",
+      "input": "reverse proxy request body ni kesir",
+      "actual": "Reverse proxy request body ni kəsir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-352",
+      "domain": "network",
+      "input": "http2 ile kocurulme zamani basliq itir",
+      "actual": "HTTP2 ilə köçürülmə zamanı başlıq itir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-353",
+      "domain": "network",
+      "input": "monitorinqde disk latency artimi gorunur",
+      "actual": "Monitorinqde disk latency artımı görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-354",
+      "domain": "network",
+      "input": "cdn kesinde kohne js fayli qalib",
+      "actual": "CDN kesinde köhnə js faylı qalib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-355",
+      "domain": "network",
+      "input": "s3 bucket icazesi fayl yuklemeye imkan vermir",
+      "actual": "S3 bucket icazəsi fayl yükləməyə imkan vermir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-356",
+      "domain": "network",
+      "input": "security group yeni subnetden trafiki buraxmir",
+      "actual": "Security group yeni subnetden trafiki buraxmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-357",
+      "domain": "network",
+      "input": "health check pathi yanlis verilib",
+      "actual": "Health check pathi yanlış verilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-358",
+      "domain": "network",
+      "input": "network policy podlar arasindaki sorgunu bloklayir",
+      "actual": "Network policy podlar arasindaki sorğunu bloklayir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-359",
+      "domain": "network",
+      "input": "tunel berpa olunandan sonra sesiya davam etdi",
+      "actual": "Tunel bərpa olunandan sonra sesiya davam etdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-360",
+      "domain": "network",
+      "input": "sistem diski doldugu ucun baglanti yoxlamasi dayandi",
+      "actual": "Sistem diski doldugu üçün bağlantı yoxlaması dayandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-361",
+      "domain": "payments",
+      "input": "odenis emeliyyatina tekrarlanan request gonderilib",
+      "actual": "Ödəniş əməliyyatına təkrarlanan request göndərilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-362",
+      "domain": "payments",
+      "input": "bank cavabi gecikende sifaris gozlemede qalir",
+      "actual": "Bank cavabı gecikəndə sifariş gözləmədə qalır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-363",
+      "domain": "payments",
+      "input": "refund yalniz təsdiqlenmis əməliyyat ucun aciqdir",
+      "actual": "Refund yalnız təsdiqlənmiş əməliyyat üçün acıqadır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-364",
+      "domain": "payments",
+      "input": "odenis identifikatoru audit ucun saxlanilsin",
+      "actual": "Ödəniş identifikatoru audit üçün saxlanılsın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-365",
+      "domain": "payments",
+      "input": "kart melumatlari server jurnalina dusmemelidir",
+      "actual": "Kart məlumatları server jurnalına düşməməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-366",
+      "domain": "payments",
+      "input": "qebz pdf faylina cevrilende vergi kodu itdi",
+      "actual": "Qəbz PDF faylına çevriləndə vergi kodu itdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-367",
+      "domain": "payments",
+      "input": "payment gateway 502 qaytardı amma bank debit etdi",
+      "actual": "Payment gateway 502 qaytardı, amma bank debit etdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-368",
+      "domain": "payments",
+      "input": "terminal transaction id sini iki defe istifade etdi",
+      "actual": "Terminal transaction id sini iki dəfə istifadə etdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-369",
+      "domain": "payments",
+      "input": "abune avtomatik yenilenmeden evvel xeberdarliq geder",
+      "actual": "Abunə avtomatik yenilənmədən əvvəl xəbərdarlıq geder.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-370",
+      "domain": "payments",
+      "input": "hesab faktura ucun son odenis tarixi qeyd olunub",
+      "actual": "Hesab faktura üçün son ödəniş tarixi qeyd olunub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-371",
+      "domain": "payments",
+      "input": "iki valyuta arasinda cevirme kuru yenilendi",
+      "actual": "İki valyuta arasında çevirmə kürü yeniləndi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-372",
+      "domain": "payments",
+      "input": "odenis gecikmesine gore xidmət dayandirilmadi",
+      "actual": "Ödəniş gecikmesine görə xidmət dayandırılmadı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-373",
+      "domain": "payments",
+      "input": "gateway callbacki ucun imza yoxlamasi lazimdir",
+      "actual": "Gateway callbacki üçün imza yoxlaması lazımdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-374",
+      "domain": "payments",
+      "input": "test karti production muhitinde bloklanir",
+      "actual": "Test kartı production mühitində bloklanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-375",
+      "domain": "payments",
+      "input": "maliye hesabatinda tekrarlanan mebleg cixir",
+      "actual": "Maliyə hesabatında təkrarlanan məbləğ çıxır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-376",
+      "domain": "payments",
+      "input": "avtomatik geri odeme isteyi ucun sebeb secilir",
+      "actual": "Avtomatik geri ödəmə istəyi üçün səbəb seçilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-377",
+      "domain": "payments",
+      "input": "qismən odeme qebul olunanda qaliq yeniden hesablanir",
+      "actual": "Qismən ödəmə qəbul olunanda qalıq yenidən hesablanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-378",
+      "domain": "payments",
+      "input": "sifarisin vergisi umumi meblege daxil edilib",
+      "actual": "Sifarişin vergisi ümumi məbləğə daxil edilib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-379",
+      "domain": "payments",
+      "input": "kart limitine catdigi ucun bank imtina etdi",
+      "actual": "Kart limitinə catdigi üçün bank imtina etdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-380",
+      "domain": "payments",
+      "input": "emeliyyat neticesi sms ile de gonderilecek",
+      "actual": "Əməliyyat nəticəsi sms ilə de göndəriləcək.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-381",
+      "domain": "notifications",
+      "input": "sms bildirisi sehifede de gosterilir",
+      "actual": "Sms bildirişi səhifədə de göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-382",
+      "domain": "notifications",
+      "input": "email gonderisi ucun kuyruk dolub",
+      "actual": "Email göndərişi üçün kuyruk dolub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-383",
+      "domain": "notifications",
+      "input": "mobil push icazesi olmayan istifadeci mesaj almadi",
+      "actual": "Mobil push icazəsi olmayan istifadəçi mesaj almadı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-384",
+      "domain": "notifications",
+      "input": "bildiris dili hesab ayarindan secilir",
+      "actual": "Bildiriş dili hesab ayarından seçilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-385",
+      "domain": "notifications",
+      "input": "gece gonderilen xatirlatma sabah catdi",
+      "actual": "Gecə göndərilən xatırlatma sabah çatdı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-386",
+      "domain": "notifications",
+      "input": "eyni hadiseye uc bildiris yazilib",
+      "actual": "Eyni hadisəyə uc bildiriş yazılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-387",
+      "domain": "notifications",
+      "input": "unsubscribe linki ile abunelik legv edildi",
+      "actual": "Unsubscribe linki ilə abunelik ləğv edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-388",
+      "domain": "notifications",
+      "input": "bildiris template inde sened nomresi yanlisdir",
+      "actual": "Bildiriş template inde sənəd nömrəsi yanlışdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-389",
+      "domain": "notifications",
+      "input": "musteri cavab verdikde operatora xeber getsin",
+      "actual": "Müştəri cavab verdikde operatora xəbər getsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-390",
+      "domain": "notifications",
+      "input": "kritik bildiris sessiya aciq olmasa da gosterilir",
+      "actual": "Kritik bildiriş sessiya aciq olmasa da göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-391",
+      "domain": "notifications",
+      "input": "sifaris statusu deyisende sms gonderiləcək",
+      "actual": "Sifariş statusu dəyişəndə sms göndəriləcək.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-392",
+      "domain": "notifications",
+      "input": "həftelik xulaseni iki aliciya yolladiq",
+      "actual": "Həftəlik xülasəni iki alıcıya yolladıq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-393",
+      "domain": "notifications",
+      "input": "gonderis xetasi ucun retry sayi ucdur",
+      "actual": "Göndəriş xətası üçün retry sayı ucdur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-394",
+      "domain": "notifications",
+      "input": "mesajin adi sadece admin panelinde görünür",
+      "actual": "Mesajın adi sadəcə admin panelinde görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-395",
+      "domain": "notifications",
+      "input": "bildiris gonderilmezden evvel raziliq yoxlanir",
+      "actual": "Bildiriş gonderilmezden əvvəl razılıq yoxlanır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-396",
+      "domain": "notifications",
+      "input": "ekrana cixan mesajin linki kohne sayta gedir",
+      "actual": "Ekrana çıxan mesajın linki köhnə sayta gedir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-397",
+      "domain": "notifications",
+      "input": "email unvaninin formatini dogrulayın",
+      "actual": "Email unvaninin formatını dogrulayın.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-398",
+      "domain": "notifications",
+      "input": "bildiris merkezi yeni mesajlari yukleyir",
+      "actual": "Bildiriş mərkəzi yeni mesajları yukleyir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-399",
+      "domain": "notifications",
+      "input": "istifadeci eyni bildiris ucun iki kanal secdi",
+      "actual": "İstifadəçi eyni bildiriş üçün iki kanal seçdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-400",
+      "domain": "notifications",
+      "input": "gonderis logunda yalniz redakte edilen metn qalib",
+      "actual": "Göndəriş logunda yalnız redaktə edilən mətn qalib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-401",
+      "domain": "documents",
+      "input": "pdf faylinin icindeki imza gorunmur",
+      "actual": "PDF faylının içindəki imza gorunmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-402",
+      "domain": "documents",
+      "input": "sənəd şablonunda ad soyad ferqli setirde cixib",
+      "actual": "Sənəd şablonunda ad soyad fərqli sətirdə çıxıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-403",
+      "domain": "documents",
+      "input": "word faylindan kocurulen siyahi bozulub",
+      "actual": "Word faylından kocurulen siyahı bozulub.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-404",
+      "domain": "documents",
+      "input": "html ile gelen qeydlerde script teqi silinmelidir",
+      "actual": "HTML ilə gələn qeydlərdə script teqi silinməlidir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-405",
+      "domain": "documents",
+      "input": "excel faylinda tarix sutunu metn kimi oxunur",
+      "actual": "Excel faylında tarix şütünü mətn kimi oxunur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-406",
+      "domain": "documents",
+      "input": "sənədin son sehifesindeki qr kod oxunmur",
+      "actual": "Sənədin son sehifesindeki qr kod oxunmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-407",
+      "domain": "documents",
+      "input": "elavelerin sayi kartda uc gosterilir",
+      "actual": "Əlavələrin sayı kartda uc göstərilir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-408",
+      "domain": "documents",
+      "input": "fayl yuklenende uzanti yoxlamasi aparilir",
+      "actual": "Fayl yuklenende uzantı yoxlaması aparılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-409",
+      "domain": "documents",
+      "input": "skan edilmis senedde metn axtarisi islemir",
+      "actual": "Skan edilmiş sənəddə mətn axtarışı işləmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-410",
+      "domain": "documents",
+      "input": "ocr neticesi operator terefinden yoxlanilmalidir",
+      "actual": "Ocr nəticəsi operator tərəfindən yoxlanılmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-411",
+      "domain": "documents",
+      "input": "sənəd səhifələri birleşdirilende sira deyisib",
+      "actual": "Sənəd səhifələri birleşdirilende sira dəyişib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-412",
+      "domain": "documents",
+      "input": "mektub başlığında qeydiyyat nomresi qirilib",
+      "actual": "Məktub başlığında qeydiyyat nömrəsi qırılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-413",
+      "domain": "documents",
+      "input": "sablondaki mətn yazi tipini saxlamalidir",
+      "actual": "Sablondaki mətn yazı tipini saxlamalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-414",
+      "domain": "documents",
+      "input": "fayl adindaki iki bosluq yuklemeye mane olur",
+      "actual": "Fayl adindaki iki boşluq yükləməyə manə olur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-415",
+      "domain": "documents",
+      "input": "sənəd formati pdf a cevrilende cədvəl itir",
+      "actual": "Sənəd formatı PDF a çevriləndə cədvəl itir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-416",
+      "domain": "documents",
+      "input": "qovluqdaki butun fayllar zip arxivine yigilmisdir",
+      "actual": "Qovluqdaki bütün fayllar zip arxivinə yığılmışdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-417",
+      "domain": "documents",
+      "input": "elektron senedin surətini ayni nömrə ilə saxla",
+      "actual": "Elektron sənədin sürətini ayni nömrə ilə saxla.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-418",
+      "domain": "documents",
+      "input": "docx faylini redakte edende layout qırılır",
+      "actual": "Docx faylını redaktə edende layout qırılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-419",
+      "domain": "documents",
+      "input": "sənədin daxili linki eksportdan sonra islemir",
+      "actual": "Sənədin daxili linki eksportdan sonra işləmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-420",
+      "domain": "documents",
+      "input": "metadata saheleri acilanda tarix olmur",
+      "actual": "Metadata sahələri açılanda tarix olmur.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-421",
+      "domain": "support",
+      "input": "musterinin sorğusu texniki desteye yonlendirildi",
+      "actual": "Müştərinin sorğusu texniki dəstəyə yönləndirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-422",
+      "domain": "support",
+      "input": "bilet baglanmadan evvel musteriden tesdiq alinmalidir",
+      "actual": "Bilet bağlanmadan əvvəl müştəridən təsdiq alınmalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-423",
+      "domain": "support",
+      "input": "kritik xeta ucun novbetci muhendis cagirildi",
+      "actual": "Kritik xəta üçün növbətçi mühəndis çağırıldı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-424",
+      "domain": "support",
+      "input": "istifadeci eyni problemi uat muhitinde gorub",
+      "actual": "İstifadəçi eyni problemi UAT mühitində görüb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-425",
+      "domain": "support",
+      "input": "agent muracietin ekran goruntusunu istədi",
+      "actual": "Agent müraciətin ekran goruntusunu istədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-426",
+      "domain": "support",
+      "input": "sualin cavabi bilik bazasinda tapilmir",
+      "actual": "Sualın cavabı bilik bazasında tapılmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-427",
+      "domain": "support",
+      "input": "bilet prioriteti yanlış seçildiyi ucun sla kecdi",
+      "actual": "Bilet prioriteti yanlış seçildiyi üçün SLA keçdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-428",
+      "domain": "support",
+      "input": "problem bas verdiyi saat qeyd edilmeyib",
+      "actual": "Problem baş verdiyi saat qeyd edilməyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-429",
+      "domain": "support",
+      "input": "texniki destek operatoru zengden sonra qeyd yazdı",
+      "actual": "Texniki dəstək operatoru zəngdən sonra qeyd yazdı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-430",
+      "domain": "support",
+      "input": "ticket statusu hell olundu olaraq baglandi",
+      "actual": "Ticket statusu həll olundu olaraq bağlandı.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-431",
+      "domain": "support",
+      "input": "musteriye cavab ucun yeni şablon lazimdir",
+      "actual": "Müştəriyə cavab üçün yeni şablon lazımdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-432",
+      "domain": "support",
+      "input": "komanda jurnalda sebeb tapmadan bilet baglamasin",
+      "actual": "Komanda jurnalda səbəb tapmadan bilet baglamasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-433",
+      "domain": "support",
+      "input": "sorgu tekniki yox biznes sualidir",
+      "actual": "Sorğu tekniki yox biznes şüalıdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-434",
+      "domain": "support",
+      "input": "escallation gedəndə menecere de bildiris gonderilsin",
+      "actual": "Escallation gedəndə menecerə de bildiriş göndərilsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-435",
+      "domain": "support",
+      "input": "istifadeci uc gun sonra eyni xetani bildirdi",
+      "actual": "İstifadəçi uc gün sonra eyni xətanı bildirdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-436",
+      "domain": "support",
+      "input": "support biletindeki fayl yalniz komanda ucun aciqdir",
+      "actual": "Support biletindeki fayl yalnız komanda üçün acıqadır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-437",
+      "domain": "support",
+      "input": "ilk cavab vaxti iki saatdan artiq cekdi",
+      "actual": "İlk cavab vaxtı iki saatdan artıq çəkdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-438",
+      "domain": "support",
+      "input": "planlasdirilmis isler ucun musterilere bildiris geder",
+      "actual": "Planlasdirilmis işlər üçün müştərilərə bildiriş geder.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-439",
+      "domain": "support",
+      "input": "hansi addimda problem yarandigini soruşaq",
+      "actual": "Hansı addımda problem yarandigini soruşaq?",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-440",
+      "domain": "support",
+      "input": "tekrar acilan biletin evvelki yazilari saxlanilir",
+      "actual": "Təkrar açılan biletin əvvəlki yazıları saxlanılır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-441",
+      "domain": "planning",
+      "input": "srs senedindeki funksional telebler hələ təsdiqlənməyib",
+      "actual": "SRS senedindeki funksional tələblər hələ təsdiqlənməyib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-442",
+      "domain": "planning",
+      "input": "bpmn diaqraminda ikinci iştirakci çatışmır",
+      "actual": "BPMN diaqramında ikinci iştirakci çatışmır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-443",
+      "domain": "planning",
+      "input": "uat qebul meyarini musteriye gonderdik",
+      "actual": "UAT qəbul meyarını müştəriyə göndərdik.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-444",
+      "domain": "planning",
+      "input": "backlogda eyni task iki sprintde gorunur",
+      "actual": "Backlogda eyni task iki sprintdə görünür.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-445",
+      "domain": "planning",
+      "input": "story point hesabi komanda terefden deyisdirildi",
+      "actual": "Story point hesabı komanda tərəfdən dəyişdirildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-446",
+      "domain": "planning",
+      "input": "acceptance criteria hazir olmadan is baslamasin",
+      "actual": "Acceptance criteria hazır olmadan iş baslamasin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-447",
+      "domain": "planning",
+      "input": "product owner yeni scope artimini qebul etmədi",
+      "actual": "Product owner yeni scope artımını qəbul etmədi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-448",
+      "domain": "planning",
+      "input": "planlanan release tarixi risk jurnalinda qeyd olundu",
+      "actual": "Planlanan release tarixi risk jurnalında qeyd olundu.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-449",
+      "domain": "planning",
+      "input": "risk matrisi ucun cavabdeh sexs teyin edildi",
+      "actual": "Risk matrisi üçün cavabdeh şəxs təyin edildi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-450",
+      "domain": "planning",
+      "input": "musteri muqavile maddesine yeni qeyd elave edib",
+      "actual": "Müştəri müqavilə maddesine yeni qeyd əlavə edib.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-451",
+      "domain": "planning",
+      "input": "konsepsiya sənədində inteqrasiya xeritəsi natamamdır",
+      "actual": "Konsepsiya sənədində inteqrasiya xəritəsi natamamdır.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-452",
+      "domain": "planning",
+      "input": "komanda sifaris axinini lucidchartda cekdi",
+      "actual": "Komanda sifariş axınını lucidchartda çəkdi.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-453",
+      "domain": "planning",
+      "input": "prototipdə istifadeci rolu aydin deyil",
+      "actual": "Prototipdə istifadəçi rolu aydın deyil.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-454",
+      "domain": "planning",
+      "input": "toplanti protokolunda yeni qerar eksikdir",
+      "actual": "Toplantı protokolunda yeni qərar əksikdir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-455",
+      "domain": "planning",
+      "input": "change request onaylanana kimi budce artmayacaq",
+      "actual": "Change request onaylanana kimi büdcə artmayacaq.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-456",
+      "domain": "planning",
+      "input": "roadmap ucun texniki borc ferqli rengle gosterilsin",
+      "actual": "Roadmap üçün texniki borc fərqli rənglə göstərilsin.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-457",
+      "domain": "planning",
+      "input": "tapsirigin asılılığı jira ticketinde yazılıb",
+      "actual": "Tapşırığın asılılığı Jira ticketinde yazılıb.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-458",
+      "domain": "planning",
+      "input": "confluence sehifesinde son kararın sahibi bilinmir",
+      "actual": "Confluence səhifəsində son kararın sahibi bilinmir.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-459",
+      "domain": "planning",
+      "input": "sprint demo musteriye cersenbe gunu gosterilecek",
+      "actual": "Sprint demo müştəriyə çərşənbə günü göstəriləcək.",
+      "failures": []
+    },
+    {
+      "id": "rsd-it-460",
+      "domain": "planning",
+      "input": "business requirement ile texniki spesifikasiya uyğunsuzdur",
+      "actual": "Business requirement ilə texniki spesifikasiya uyğunsuzdur.",
+      "failures": []
+    }
+  ]
+}
