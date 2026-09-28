@@ -285,7 +285,7 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'inde', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) },
   { raw: 'unu', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) },
   { raw: 'inu', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' + harmonyI(stem) },
-  { raw: 'un', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'n' },
+  { raw: 'un', apply: stem => stem === 'növ' ? 'növün' : undefined },
   { raw: 'anda', apply: stem => stem + harmonyA(stem) + 'nda' },
   { raw: 'ende', apply: stem => stem + harmonyA(stem) + 'ndə' },
   { raw: 'ilende', apply: stem => stem + harmonyI(stem) + 'l' + harmonyA(stem) + 'ndə' },
