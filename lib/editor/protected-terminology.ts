@@ -17,7 +17,7 @@ export const PROTECTED_TERMINOLOGY = {
     'KYC', 'AML', 'SEPA', 'PCI DSS', 'PSD2', 'ISO 20022', 'AZN',
     'Visa', 'Mastercard', 'Open Banking', 'Core Banking', 'FinTech',
     'chargeback', 'acquiring', 'issuing', 'settlement', 'merchant',
-    'transaction', 'ledger',
+    'transaction', 'ledger', 'VÖEN',
   ],
   business: [
     'RSD', 'SRS', 'CRM', 'ERP', 'BPMN', 'UML', 'UAT', 'KPI', 'OKR', 'Jira', 'Confluence',
