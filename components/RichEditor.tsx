@@ -183,7 +183,7 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
             act(({ b: 'bold', i: 'italic', u: 'underline' } as const)[event.key.toLowerCase() as 'b' | 'i' | 'u']);
             return;
           }
-          if (onSubmit && event.key === 'Enter' && !event.shiftKey && !event.altKey) {
+          if (onSubmit && shouldSubmitEditorKey({ key: event.key, shiftKey: event.shiftKey, altKey: event.altKey, isComposing: event.nativeEvent.isComposing })) {
             event.preventDefault();
             onSubmit();
           }
