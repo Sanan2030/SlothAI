@@ -7,6 +7,8 @@ export function repairPhrases(text: string): string {
     .replace(/(?<!\p{L})(?:taymer|timer)\s+işə/giu, 'taymer işə')
     .replace(/(?<!\p{L})diqqət\s+(?=production|staging|server|sistem|kritik|xəta|maşın)/giu, 'Diqqət! ')
     .replace(/(?<!\p{L})əhsən\s+(?![,!])/giu, 'Əhsən, ')
+    .replace(/(?<!\p{L})(icrada|açıq|bağlı|gözləmədə) qalib(?=$|[^\p{L}])/giu, '$1 qalıb')
+    .replace(/(?<!\p{L})(müştəri|icraçı|operator|komanda) ise(?=\s)/giu, '$1 isə')
     .replace(/(?<!\p{L})(sənəd növü) xidməti(?=\s+olarsa)/giu, '$1 xidmət')
     .replace(/(?<!\p{L})icraçı ise(?=\s)/giu, 'icraçı isə')
     .replace(/(?<!\p{L})(seher)(?=\s+(?:dəniz|müəllim|bazarı(?:nda)?|avtobusu|yeməyindən))/giu, 'səhər')
@@ -85,6 +87,7 @@ export function sentenceBoundaries(text: string): string {
       return last + '. ';
     });
   result = result.replace(/(göndərin|yoxlayın|baxın|edin|gəlin) +(?=təşəkkür edirəm(?:\s|$))/giu, '$1. ');
+  result = result.replace(/(stabildir) +(?=API\s)/giu, '$1. ');
   result = result.replace(/(qalıb|qalıb|dəyişməyib|görünmür|olunub|gördük|işləyir|qaytarır|yenilənib|əlavə olunub|bilmir|yaranır|yoxladım) +(?=(?:xahiş edirəm|zəhmət olmasa|problem|səbəbi|nəticə|logları|icazə|BPMN|UAT|staging-də|stagingde|Staging-də)(?:\s|$))/giu, '$1. ');
 
   // Reviewed finite predicates followed by a clearly independent clause.
