@@ -123,6 +123,7 @@ export function technicalPhrases(text: string): string {
     .replace(/(^|[^\p{L}])üçün ise(?=$|[^\p{L}])/giu, '$1üçün isə')
     .replace(/(^|[^\p{L}])verilməsi ise(?=$|[^\p{L}])/giu, '$1verilməsi isə')
     .replace(/(^|[^\p{L}])(backend|frontend) ise(?=$|[^\p{L}])/giu, '$1$2 isə')
+    .replace(/(?<!\p{L})(staging-də|production-da|RSD-də) ise(?=$|[^\p{L}])/giu, '$1 isə')
     .replace(/(React ilə) +(backend isə)/giu, '$1, $2')
     .replace(/(Vercel-də) +de(?=$|[^\p{L}])/giu, '$1 də')
     .replace(/(limiti) +asılıb(?=$|[^\p{L}])/giu, '$1 aşılıb')
