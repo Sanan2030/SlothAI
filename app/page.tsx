@@ -296,9 +296,11 @@ export default function HomePage() {
                 <RichEditor value={sourceDocument} disabled={loading}
                   maxLength={Math.max(0, MAX_TEXT_LENGTH - (diffSource.length - inputValue.length))}
                   label={config.inputLabel} placeholder={config.placeholder}
+                  onSubmit={() => { void transform(); }}
                   onChange={document => setInput(documentText(document), document)} />
 
                 <div className="workspace-editor-footer">
+                  <span className="workspace-key-hint">Enter — düzəlt · Shift+Enter — yeni sətir</span>
                   {activeModule === 'text' ? (
                     <label className="workspace-check">
                       <input
