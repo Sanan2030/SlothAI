@@ -256,8 +256,11 @@ export function formatEmail(input: string): LocalCorrection {
     for (const [rawTitle, canonicalTitle] of roleTitles) {
       if (!lower.endsWith(' ' + rawTitle)) continue;
       const name = line.slice(0, -(rawTitle.length + 1)).trim();
-      if (name.split(/\s+/u).length <= 3 && name.split(/\s+/u).every(word => /^\p{Lu}/u.test(word))) {
-        return [name, canonicalTitle];
+      const nameParts = name.split(/\s+/u).filter(Boolean);
+      if (nameParts.length >= 1 && nameParts.length <= 3 && nameParts.every(word => /^\p{L}+(?:[-’']\p{L}+)?$/u.test(word))) {
+        const formattedName = nameParts.map(word =>
+          word[0].toLocaleUpperCase('az-AZ') + word.slice(1)).join(' ');
+        return [formattedName, canonicalTitle];
       }
     }
     return [line];
