@@ -433,43 +433,31 @@ input:focus-visible {
   cursor: default;
 }
 
-.workspace-editor-column textarea {
-  width: 100%;
-  min-height: 260px;
-  resize: vertical;
-  padding: 12px 14px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface-2);
-  color: var(--text);
-  font-size: 0.94rem;
-  line-height: 1.65;
-  outline: none;
-}
-
-.workspace-editor-column textarea:focus {
-  border-color: var(--accent);
-}
-
-.workspace-editor-column textarea::placeholder {
-  color: var(--text-soft);
-  opacity: 0.7;
-}
-
 .workspace-rich-editor { min-width: 0; }
 .workspace-rich-toolbar {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 4px;
-  margin-bottom: 7px;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.workspace-rich-toolbar-label {
+  margin-right: 3px;
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 .workspace-rich-toolbar button {
-  min-width: 32px;
-  padding: 5px 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   color: var(--text);
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 7px;
   cursor: pointer;
 }
 .workspace-rich-toolbar button:hover, .workspace-rich-toolbar button:focus-visible {
@@ -573,6 +561,11 @@ input:focus-visible {
   gap: 14px;
   color: var(--text-soft);
   font-size: 0.72rem;
+}
+
+.workspace-key-hint {
+  flex: 1 1 auto;
+  min-width: 180px;
 }
 
 .workspace-check {
