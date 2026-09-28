@@ -68,7 +68,7 @@ const textCases = [
   ['sen bu senedi ne vaxt gondereceksen', 'Sən bu sənədi nə vaxt göndərəcəksən?'],
   ['nece de rahat interfeysdir', 'Necə də rahat interfeysdir!'],
   ['ehsen problem hell olundu', 'Əhsən, problem həll olundu!'],
-  ['diqqet productionda kritik xeta var', 'Diqqət! Production-da kritik xəta var!'],
+  ['diqqet productionda kritik xeta var', 'Diqqət! Production-da kritik xəta var.'],
   ['server dayandi Elvin problemi arasdirdi', 'Server dayandı. Elvin problemi araşdırdı.'],
   ['iclas bitdi Leyla senedleri topladi', 'İclas bitdi. Leyla sənədləri topladı.'],
   ['sistem stabildir api cavablari normaldir musteri ise yeni muqavile gonderdi', 'Sistem stabildir. API cavabları normaldır.\n\nMüştəri isə yeni müqavilə göndərdi.'],
