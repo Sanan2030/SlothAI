@@ -5,6 +5,7 @@ import { Bold, Code2, Italic, List, ListOrdered, Quote, Underline, type LucideIc
 import {
   documentText, parseRichHTML, renderRichDocument, type RichDocument, type RichMark,
 } from '@/lib/ui/rich-document';
+import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
 
 const tagByMark: Record<RichMark, string> = {
   bold: 'strong', italic: 'em', underline: 'u', quote: 'q', code: 'code',
