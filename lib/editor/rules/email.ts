@@ -11,9 +11,28 @@ export interface EmailDocument {
 export function prepareEmailBody(body: string): string {
   return body.split('\n').map(line => line
     .replace(/(?<![.!?])\b(deyil|mümkün deyil|mümkündür|hazırdır|olunub|olmalıdır|göndərildi|göndərin|baxıldı|aparıldı|təsdiqləndi|tesdiqlendi)\s+(?=(?:bu|növbəti|əlavə|lakin|bununla|əgər|sənəd|sened|müraciət|muraciet|sistem|komanda|iş|is)\s)/giu, '$1. ')
-    .replace(/(?<![.!?])\b(göndəriləcək|gonderilecek|göndərildi|işləyir|isleyir|yoxladıq|yoxladiq|edilmir|baxılmalıdır|baxilmalidir|etdik|çatışmır|catismir|bilmirik|məlumdur|melumdur|deyil)\s+(?=(?:zəhmət|zehmet|xahiş|xahis|bu gün|bugun|səbəbi|sebebi|birinci|ikinci|üçüncü|ucuncu|UAT\s+üçün|uat\s+ucun)\b)/giu, '$1. ')
+    .replace(/(?<![.!?])\b(göndəriləcək|gonderilecek|göndərildi|göndərdik|gonderdik|yaradıldı|yaradildi|işləyir|isleyir|yoxladıq|yoxladiq|edilmir|baxılmalıdır|baxilmalidir|yoxlanılmalıdır|yoxlanilmalidir|lazımdır|lazimdir|edilir|başlayır|baslayir|etdik|çatışmır|catismir|bilmirik|məlumdur|melumdur|deyil)\s+(?=(?:qeydiyyat|müştəri|musteri|biz|api|API|səbəbi|sebebi|səbəbin|sebebin|uat|UAT|zəhmət|zehmet|xahiş|xahis|bu gün|bugun|birinci|ikinci|üçüncü|ucuncu)\b)/giu, '$1. ')
     .replace(/(?<![,;.!?])\b(varsa|olsa)\s+(?=(?:müraciət|muraciet|sənəd|sened|bizimlə|bizimle|xahiş|xahis)\b)/giu, '$1, ')
   ).join('\n');
+}
+
+/** Keep a dense draft readable without replacing paragraphs the author supplied. */
+export function paragraphEmailBody(body: string): string {
+  if (/\n/u.test(body) || body.length < 360) return body;
+  const sentences = body.split(/(?<=[.!?])\s+(?=\p{Lu})/u);
+  if (sentences.length < 4) return body;
+  const groups: string[] = [];
+  let current: string[] = [];
+  for (const sentence of sentences) {
+    const boundary = current.length >= 2 && (
+      current.join(' ').length >= 220
+      || /^(?:Biz|Müştəri|API|UAT|Birinci|İkinci|Üçüncü|Növbəti|Bundan əlavə|Zəhmət)/u.test(sentence)
+    );
+    if (boundary) { groups.push(current.join(' ')); current = []; }
+    current.push(sentence);
+  }
+  if (current.length) groups.push(current.join(' '));
+  return groups.join('\n\n');
 }
 
 // Recipient titles identify the end of a compact salutation. These are

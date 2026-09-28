@@ -6,7 +6,7 @@ import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
-import { parseEmailSections, prepareEmailBody } from './rules/email';
+import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -233,13 +233,15 @@ export function formatEmail(input: string): LocalCorrection {
   if (body) {
     const inferred = prepareEmailBody(body);
     if (inferred !== body) body = correctText(inferred, true).text;
-    if (!/\n/u.test(document.body)) body = segmentParagraphs(body);
+    if (!/\n/u.test(document.body)) body = paragraphEmailBody(segmentParagraphs(body));
   }
   // Names and job titles are structural signature text, never prose: preserve
   // their line breaks and never add sentence-ending punctuation to them.
   const signature = document.signature?.replace(/\b((?:Sanan|Sənan)\s+(?:Nabizada|Nabizadə))\s+(biznes analitik)(?=$|\s)/iu,
-    '$1\n$2').split('\n').map(line => line.trim().replace(/\p{L}+/gu,
-    word => resolveEntityWord(word, true, false) ?? word).replace(/^(\p{L})/u,
+    '$1\n$2').split('\n').map(line => line.trim()
+    .replace(/^layihe(?=\s+komandasi\b)/iu, 'Layihə')
+    .replace(/\p{L}+/gu,
+    word => resolveEntityWord(word, true, false) ?? (/^komandasi$/iu.test(word) ? 'komandası' : word)).replace(/^(\p{L})/u,
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
   const text = [`Mövzu: ${subject}`, greeting, body,
     signature ? `${document.closing ?? 'Hörmətlə,'}\n${signature}` : document.closing ?? 'Hörmətlə,'].filter(Boolean).join('\n\n');

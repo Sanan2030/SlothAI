@@ -123,7 +123,19 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
       ? parseRichHTML(html)
       : { blocks: event.clipboardData.getData('text/plain').replace(/\r\n?/gu, '\n').split('\n')
         .map(line => ({ type: 'paragraph' as const, children: [{ text: line, marks: [] }] })) };
-    const fragment = renderRichDocument(source, root.ownerDocument);
+    // The caret is usually inside a paragraph. Inserting a <p> or <ul>
+    // directly there creates invalid nested blocks; insert safe inline nodes
+    // and line breaks, then publish normalizes them into top-level blocks.
+    const fragment = root.ownerDocument.createDocumentFragment();
+    let ordered = 0;
+    source.blocks.forEach((block, index) => {
+      if (index) fragment.append(root.ownerDocument.createElement('br'));
+      if (block.type === 'bullet') fragment.append(root.ownerDocument.createTextNode('- '));
+      else if (block.type === 'ordered') fragment.append(root.ownerDocument.createTextNode(`${++ordered}. `));
+      else ordered = 0;
+      const wrapper = renderRichDocument({ blocks: [{ type: 'paragraph', children: block.children }] }, root.ownerDocument);
+      fragment.append(...Array.from(wrapper.firstChild?.childNodes ?? []));
+    });
     range.deleteContents();
     range.insertNode(fragment);
     publish();

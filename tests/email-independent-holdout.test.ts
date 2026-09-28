@@ -114,3 +114,16 @@ for (const [index, example] of compactCases.entries()) {
     assert.equal(formatEmail(output).text, output);
   });
 }
+
+test('dense RSD incident email separates topic paragraphs without inventing evidence', () => {
+  const input = `hormetli komanda rsd sisteminde yeni sened novu yaradildi qeydiyyat nomresi avtomatik teyin olunur amma tesdiq merhelesinde muraciet bloklanir musteri sorusur ki bu xeta ne vaxt duzelecek biz jurnallari yoxladiq problemi tekrarladiq ve backend komandasina gonderdik api endpointi productionda 500 qaytarir stagingde isleyir sebebin ne oldugu hele melum deyil uat ssenarileri yeniden yoxlanilmalidir birinci merhelede derkenar meqsedini secmek lazimdir ikinci merhelede aidiyyeti uzre icraci teyin edilir ucuncu merhelede tesdiq verilenden sonra arxivlesdirme baslayir zehmet olmasa bugun cavab gonderin diger qrup ise dokumentasiyanin cari variantina baxir amma hec bir netice qeyd olunmayib yeni endpointin senedlesmesi bitmeden istifadecilere mesaj gonderilmeyecek fayl icazeleri de ayrica yoxlanacaq yoxlamanin neticesi senede yazilacaq son qerar komanda gorusunden sonra qebul edilecek hormetle layihe komandasi`;
+  assert.ok(input.length >= 800);
+  const output = formatEmail(input).text;
+  assert.match(output, /^Mövzu: Müraciət\n\nHörmətli komanda,\n\n/u);
+  assert.match(output, /yaradıldı\. Qeydiyyat/u);
+  assert.match(output, /göndərdik\. API/u);
+  assert.match(output, /\n\nUAT/u);
+  assert.match(output, /Hörmətlə,\nLayihə komandası$/u);
+  assert.doesNotMatch(output, /(?:səbəb müəyyən edildi|problem aradan qaldırıldı|saat \d+)/iu);
+  assert.equal(formatEmail(output).text, output);
+});

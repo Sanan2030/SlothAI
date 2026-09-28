@@ -32,7 +32,7 @@ test('ordered and bullet lists retain plain-text markers and semantic block type
   assert.equal(documentText(source), '1. senedi yoxla\n2. sonra gonder\n- qeyd');
   const output = transferMarks(source, '1. Sənədi yoxla.\n2. Sonra göndər.\n- Qeyd.');
   assert.deepEqual(output.blocks.map(block => block.type), ['ordered', 'ordered', 'bullet']);
-  assert.equal(output.blocks[0].children.find(child => child.text === 'Sənədi')?.marks[0], 'italic');
+  assert.ok(output.blocks[0].children.some(child => child.text.includes('Sənədi') && child.marks.includes('italic')));
 });
 
 test('a generated email subject does not steal a marked word from the body', () => {
@@ -41,7 +41,7 @@ test('a generated email subject does not steal a marked word from the body', () 
   ] }] };
   const output = transferMarks(source, 'Mövzu: Sorğu\nSənəd növü.');
   assert.equal(output.blocks[0].children.some(child => child.marks.length), false);
-  assert.ok(output.blocks[1].children.some(child => child.text === 'Sənəd' && child.marks.includes('italic')));
+  assert.ok(output.blocks[1].children.some(child => child.text.includes('Sənəd') && child.marks.includes('italic')));
 });
 
 test('clipboard HTML only contains semantic tags and escapes untrusted text', () => {
@@ -53,4 +53,15 @@ test('clipboard HTML only contains semantic tags and escapes untrusted text', ()
   assert.equal(html, '<p><em><q>“&lt;img src=x onerror=alert(1)&gt;” &amp; sənəd</q></em></p><ol><li><code>API &quot;x&quot;</code></li></ol>');
   assert.equal(html.includes('<img'), false);
   assert.equal(documentText(rich), '“<img src=x onerror=alert(1)>” & sənəd\n1. API "x"');
+});
+
+test('multiple corrected words remain one semantic quote and italic phrase', () => {
+  const original: RichDocument = { blocks: [{ type: 'paragraph', children: [
+    { text: '“derkenar layihe hazirlanmasi”', marks: ['quote', 'italic'] },
+  ] }] };
+  const output = transferMarks(original, '“Dərkənar layihə hazırlanması”.');
+  const html = documentHTML(output);
+  assert.match(html, /<em><q>Dərkənar layihə hazırlanması<\/q><\/em>/u);
+  assert.equal((html.match(/<q>/gu) ?? []).length, 1);
+  assert.equal(documentText(output), '“Dərkənar layihə hazırlanması”.');
 });

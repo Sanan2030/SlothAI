@@ -184,6 +184,17 @@ export function transferMarks(before: RichDocument, corrected: string): RichDocu
       }
       parts.push({ text: token, marks });
     }
+    // A corrected phrase may contain spaces between individually matched words.
+    // Carry the same semantic marks over those spaces so a selected quote or
+    // italic phrase remains one span in the editor and in clipboard HTML.
+    for (let part = 1; part + 1 < parts.length; part++) {
+      const previous = parts[part - 1];
+      const next = parts[part + 1];
+      if (/^\s+$/u.test(parts[part].text) && previous.marks.length > 0
+        && previous.marks.join(',') === next.marks.join(',')) {
+        parts[part].marks = [...previous.marks];
+      }
+    }
     block.children = merge(parts);
   }
   return output;
