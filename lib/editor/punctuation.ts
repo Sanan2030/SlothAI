@@ -65,6 +65,8 @@ export function punctuateCommas(text: string): string {
   return text
     .replace(/(^|[.!?]\s+)(məncə|deyəsən|əlbəttə|şübhəsiz|görünür|hər halda|doğrudan da|buna baxmayaraq|bununla belə)(?!,)\s+/giu, '$1$2, ')
     .replace(/([^,;.!?:\s])\s+(elə deyil|deyilmi|eləmi|düzdür|doğrudur)(?=$|[.!?])/giu, '$1, $2')
+    .replace(/^(elə|belə),\s+(deyilmi)(?=$|[.!?])/iu, '$1 $2')
+    .replace(/([^,;.!?:\s])\s+(staging-də isə|production-da isə)(?=$|\s)/giu, '$1, $2')
     .replace(/\b([A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}(?:ı|i|u|ü))\s+(?=[A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}\s+və\s+[A-ZƏÇĞIİÖŞÜ]{2,6}\b)/gu, '$1, ')
     .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
@@ -75,6 +77,7 @@ export function punctuateCommas(text: string): string {
     .replace(/\b(həm\s+[^,;.!?]{1,70}?)\s+(həm də)\s+/giu, '$1, $2 ')
     .replace(/\b(nə\s+[^,;.!?]{1,70}?)\s+(nə də)\s+/giu, '$1, $2 ')
     .replace(/\b(ya\s+[^,;.!?]{1,70}?)\s+(ya da)\s+/giu, '$1, $2 ')
+    .replace(/(?<!\p{L})(əgər\s+[^,;.!?]{1,100}?\b\p{L}{3,}(?:sa|sə))\s+(?=\p{L})/giu, '$1, ')
     .replace(/(?<!\p{L})(əgər\s+[^,;.!?]{1,100}?(?<!\p{L})(?:olsa|olarsan|olarsa|etsə|gəlsə|bitirsə|varsa))\s+(?=\p{L})/giu, '$1, ')
     .replace(/\b((?:düşünürəm|bilirəm|bildirirəm|görürəm|gördüm|yazdım|göstərir|istəyirik|arzu edirəm|qeyd edim|dedi|dedim)\s+ki)\s+(?!,)/giu, '$1, ')
     .replace(/(^|[.!?]\s+)([\p{Lu}][\p{L}]+\s+(?:xanım|bəy))\s+(?=(?:zəhmət|xahiş|baxın|gəlin|yazın|göndərin|deyin)\b)/giu, '$1$2, ')
