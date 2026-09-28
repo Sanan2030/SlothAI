@@ -139,7 +139,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
   text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, word => {
-    const attachedQuestion = word.match(/^([\p{L}]{4,}?)(mı|mi|mu|mü)$/iu);
+    const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);
       if (base !== attachedQuestion[1]) {
