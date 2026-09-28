@@ -2,6 +2,11 @@
 import { isFinitePredicate } from './segmentation';
 export function repairPhrases(text: string): string {
   return text
+    .replace(/(?<!\p{L})necə de(?=\s+(?:rahat|gözəl|yaxşı|pis|qəribə|möhtəşəm)\b)/giu, 'necə də')
+    .replace(/(?<!\p{L})ise(?=\s+düş(?:ür|dü|əcək|məlidir|məyib|əndə)?\b)/giu, 'işə')
+    .replace(/(?<!\p{L})(?:taymer|timer)\s+işə/giu, 'taymer işə')
+    .replace(/(?<!\p{L})diqqət\s+(?=production|staging|server|sistem|kritik|xəta|maşın)/giu, 'Diqqət! ')
+    .replace(/(?<!\p{L})əhsən\s+(?![,!])/giu, 'Əhsən, ')
     .replace(/(?<!\p{L})(sənəd növü) xidməti(?=\s+olarsa)/giu, '$1 xidmət')
     .replace(/(?<!\p{L})icraçı ise(?=\s)/giu, 'icraçı isə')
     .replace(/(?<!\p{L})(seher)(?=\s+(?:dəniz|müəllim|bazarı(?:nda)?|avtobusu|yeməyindən))/giu, 'səhər')
@@ -80,6 +85,7 @@ export function sentenceBoundaries(text: string): string {
       return last + '. ';
     });
   result = result.replace(/(göndərin|yoxlayın|baxın|edin|gəlin) +(?=təşəkkür edirəm(?:\s|$))/giu, '$1. ');
+  result = result.replace(/(qalıb|qalıb|dəyişməyib|görünmür|olunub|gördük|işləyir|qaytarır|yenilənib|əlavə olunub|bilmir|yaranır|yoxladım) +(?=(?:xahiş edirəm|zəhmət olmasa|problem|səbəbi|nəticə|logları|icazə|BPMN|UAT|staging-də|stagingde|Staging-də)(?:\s|$))/giu, '$1. ');
 
   // Reviewed finite predicates followed by a clearly independent clause.
   // This is deliberately bounded to common predicates/starters instead of
@@ -111,6 +117,7 @@ export function sentenceBoundaries(text: string): string {
     .replace(/(qaralırdı)\. +(biz isə)/giu, '$1, $2');
   result = result.replace(/(hər vaxtınız xeyir|sabahınız xeyir|axşamınız xeyir) +(?=(?:zəhmət olmasa|xahiş edirəm|sabah|mən|biz|sorğu|sorğunuza|məlumat|problem|müraciət|qeyd|sizin|fayl|məsələ|nəticə)(?:\s|,))/giu, '$1. ');
   result = result.replace(/(düşünürəm|bilirəm|bildirirəm|görürəm|qeyd edim) +ki +/giu, '$1 ki, ');
+  result = result.replace(/(yoxladım) +(?=problem\s)/giu, '$1. ');
   result = result.replace(/(^|[.!?]\s+)(bəli|xeyr|əlbəttə|məsələn|digər tərəfdən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm)\s+/giu, '$1$2, ');
   return result;
