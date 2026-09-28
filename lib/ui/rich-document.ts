@@ -54,9 +54,14 @@ export function parseRichHTML(html: string): RichDocument {
     const next = mark && !marks.includes(mark) ? [...marks, mark] : marks;
     for (const child of element.childNodes) collect(child, next, target);
   };
-  const add = (node: Node, type: RichBlock['type']) => {
+  const add = (nodes: readonly Node[], type: RichBlock['type']) => {
     const children: RichInline[] = [];
-    collect(node, [], children);
+    for (const node of nodes) collect(node, [], children);
+    // A bare <br> is the browser's placeholder for one empty paragraph.
+    if (children.length === 1 && children[0].text === '\n') {
+      blocks.push({ type, children: [] });
+      return;
+    }
     const lines: RichInline[][] = [[]];
     for (const inline of children) {
       const parts = inline.text.split('\n');
@@ -68,21 +73,34 @@ export function parseRichHTML(html: string): RichDocument {
     for (const line of lines) blocks.push({ type, children: merge(line) });
   };
   const walk = (parent: ParentNode, list?: 'bullet' | 'ordered') => {
+    let inline: Node[] = [];
+    const flush = () => {
+      if (inline.some(node => node.textContent?.trim() || (node as Element).tagName === 'BR')) {
+        add(inline, list ?? 'paragraph');
+      }
+      inline = [];
+    };
     for (const child of parent.childNodes) {
       if (child.nodeType !== Node.ELEMENT_NODE) {
-        if (child.textContent?.trim()) add(child, list ?? 'paragraph');
+        inline.push(child);
         continue;
       }
       const element = child as Element;
       if (removed.has(element.tagName)) continue;
       if (element.tagName === 'UL' || element.tagName === 'OL') {
+        flush();
         walk(element, element.tagName === 'UL' ? 'bullet' : 'ordered');
       } else if (element.tagName === 'LI' || ['P', 'DIV', 'BLOCKQUOTE'].includes(element.tagName)) {
-        add(element, list ?? 'paragraph');
-      } else if (!element.children.length || Object.hasOwn(markByTag, element.tagName)) {
-        add(element, list ?? 'paragraph');
-      } else walk(element, list);
+        flush();
+        add([element], list ?? 'paragraph');
+      } else if (!element.querySelector('p,div,ul,ol,li,blockquote')) {
+        inline.push(element);
+      } else {
+        flush();
+        walk(element, list);
+      }
     }
+    flush();
   };
   walk(dom.body);
   return { blocks: blocks.length ? blocks : [{ type: 'paragraph', children: [] }] };
