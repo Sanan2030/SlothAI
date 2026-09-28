@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Bold, Code2, Italic, List, ListOrdered, Quote, Underline, type LucideIcon } from 'lucide-react';
 import {
   documentText, parseRichHTML, renderRichDocument, type RichDocument, type RichMark,
 } from '@/lib/ui/rich-document';
@@ -8,14 +9,14 @@ import {
 const tagByMark: Record<RichMark, string> = {
   bold: 'strong', italic: 'em', underline: 'u', quote: 'q', code: 'code',
 };
-const controls: { action: RichMark | 'bullet' | 'ordered'; title: string; label: string }[] = [
-  { action: 'bold', title: 'Qalın (Ctrl+B)', label: 'B' },
-  { action: 'italic', title: 'Kursiv (Ctrl+I)', label: 'I' },
-  { action: 'underline', title: 'Altıxətli (Ctrl+U)', label: 'U' },
-  { action: 'quote', title: 'Sitat seçilmiş mətni dırnaqlara alır', label: '“”' },
-  { action: 'code', title: 'Kod', label: '</>' },
-  { action: 'bullet', title: 'Markerlənmiş siyahı', label: '•' },
-  { action: 'ordered', title: 'Nömrələnmiş siyahı', label: '1.' },
+const controls: { action: RichMark | 'bullet' | 'ordered'; title: string; icon: LucideIcon }[] = [
+  { action: 'bold', title: 'Qalın (Ctrl+B)', icon: Bold },
+  { action: 'italic', title: 'Kursiv (Ctrl+I)', icon: Italic },
+  { action: 'underline', title: 'Altıxətli (Ctrl+U)', icon: Underline },
+  { action: 'quote', title: 'Sitat — seçilmiş mətni dırnağa al', icon: Quote },
+  { action: 'code', title: 'Kod formatı', icon: Code2 },
+  { action: 'bullet', title: 'Markerlənmiş siyahı', icon: List },
+  { action: 'ordered', title: 'Nömrələnmiş siyahı', icon: ListOrdered },
 ];
 
 function closestTag(node: Node, tag: string, root: HTMLElement): HTMLElement | null {
@@ -46,9 +47,10 @@ export interface RichEditorProps {
   placeholder?: string;
   disabled?: boolean;
   maxLength?: number;
+  onSubmit?: () => void;
 }
 
-export function RichEditor({ value, onChange, label, placeholder, disabled, maxLength }: RichEditorProps) {
+export function RichEditor({ value, onChange, label, placeholder, disabled, maxLength, onSubmit }: RichEditorProps) {
   const editor = useRef<HTMLDivElement>(null);
   const last = useRef(value);
   const initialized = useRef(false);
@@ -156,12 +158,18 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
   return (
     <div className="workspace-rich-editor">
       <div className="workspace-rich-toolbar" role="toolbar" aria-label={`${label} formatı`}>
-        {controls.map(control => (
-          <button key={control.action} type="button" title={control.title}
-            aria-label={control.title} disabled={disabled}
-            onMouseDown={event => event.preventDefault()}
-            onClick={() => act(control.action)}>{control.label}</button>
-        ))}
+        <span className="workspace-rich-toolbar-label">Format</span>
+        {controls.map(control => {
+          const Icon = control.icon;
+          return (
+            <button key={control.action} type="button" title={control.title}
+              aria-label={control.title} disabled={disabled}
+              onMouseDown={event => event.preventDefault()}
+              onClick={() => act(control.action)}>
+              <Icon size={15} strokeWidth={2} aria-hidden="true" />
+            </button>
+          );
+        })}
       </div>
       <div ref={editor} contentEditable={!disabled} suppressContentEditableWarning
         role="textbox" aria-label={label} aria-multiline="true" spellCheck={false}
@@ -169,9 +177,15 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
         className="workspace-rich-surface"
         onInput={publish} onPaste={paste} onDrop={drop}
         onKeyDown={event => {
+          if (event.nativeEvent.isComposing) return;
           if ((event.metaKey || event.ctrlKey) && ['b', 'i', 'u'].includes(event.key.toLowerCase())) {
             event.preventDefault();
             act(({ b: 'bold', i: 'italic', u: 'underline' } as const)[event.key.toLowerCase() as 'b' | 'i' | 'u']);
+            return;
+          }
+          if (onSubmit && event.key === 'Enter' && !event.shiftKey && !event.altKey) {
+            event.preventDefault();
+            onSubmit();
           }
         }} />
     </div>
