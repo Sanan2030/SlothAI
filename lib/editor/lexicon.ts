@@ -142,9 +142,8 @@ const aliases: Record<string, string> = {
   ehsen: 'əhsən',
   diqqet: 'diqqət',
   destek: 'dəstək',
-  sanan: 'Sənan',
-  nabizada: 'Nabizadə',
   yazdigi: 'yazdığı',
+  loglarini: 'loglarını',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
@@ -257,11 +256,9 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   askarlan: 'aşkarlan',
   yonlendir: 'yönləndir',
   mezuniyyet: 'məzuniyyət',
-  log: 'log',
   meyar: 'meyar',
   yarat: 'yarat',
   derkenar: 'dərkənar',
-  al: 'al',
   gorun: 'görün',
   dus: 'düş',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
