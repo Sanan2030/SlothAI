@@ -12,10 +12,10 @@ export interface ClauseAnalysis {
 }
 
 const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|kimsən|necəsən|necəsiniz|haradasan|haradasınız))(?!\p{L})/iu;
-const embedded = /^(?:mən\s+)?(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
+const embedded = /^(?:mən\s+)?(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
 const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
-const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf)(?:\s|[,!]|$)/iu;
-const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
+const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf|əhsən)(?:\s|[,!]|$)/iu;
+const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm|rahat)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
 const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|necəsən|necəsiniz)(?=\s|[,!?.]|$)/iu;
 
@@ -28,11 +28,11 @@ export function detectQuestion(text: string): boolean {
     || (/(?:bilirik|bilirsiniz|bilirəm|bildim|bilərəm|öyrəndim|izah etdi|dedi)$/iu.test(value)
       && !/(?:^|\s)nə\s+bilirik$/iu.test(value))
     || /^(?:nə|necə də)\s+(?:gözəl|pis|qəribə|möhtəşəm)(?!\p{L})/iu.test(value)) return false;
-  if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])(?:düzdür|eləmi|deyilmi)$/iu.test(value)) return true;
+  if (/(?:^|\s)yoxsa\s+[^.!?]+$/iu.test(value) || /(?:^|[,\s])(?:düzdür|eləmi|deyilmi|elə deyil|doğrudur)$/iu.test(value)) return true;
   if (particle.test(value) || /^(?:səncə|görəsən)(?:,?\s+)[^.!?]+$/iu.test(value)) return true;
   if (/^bəlkə\s+[^.!?]+(?<!c)(?:aq|ək)$/iu.test(value)) return true;
   if (questionOpeners.test(value) || /(?:^|\s)nə\s+bilirik$/iu.test(value)) return true;
-  return questionConstituent.test(value) && !/(?:bilmirəm|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
+  return questionConstituent.test(value) && !/(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
 }
 
 export function detectExclamation(text: string): boolean {
@@ -63,6 +63,8 @@ export function terminalPunctuation(text: string): string {
 /** Commas only at grammatical boundaries, with existing commas left intact. */
 export function punctuateCommas(text: string): string {
   return text
+    .replace(/(^|[.!?]\s+)(məncə|deyəsən|əlbəttə|şübhəsiz|görünür|hər halda|doğrudan da|buna baxmayaraq|bununla belə)(?!,)\s+/giu, '$1$2, ')
+    .replace(/([^,;.!?:\s])\s+(elə deyil|deyilmi|eləmi|düzdür|doğrudur)(?=$|[.!?])/giu, '$1, $2')
     .replace(/\b([A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}(?:ı|i|u|ü))\s+(?=[A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}\s+və\s+[A-ZƏÇĞIİÖŞÜ]{2,6}\b)/gu, '$1, ')
     .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
