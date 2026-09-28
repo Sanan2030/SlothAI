@@ -260,6 +260,10 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   log: 'log',
   meyar: 'meyar',
   yarat: 'yarat',
+  derkenar: 'dərkənar',
+  al: 'al',
+  gorun: 'görün',
+  dus: 'düş',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
 
 function recognizedStem(rawStem: string, services?: SpellingContext): string | undefined {
@@ -267,6 +271,8 @@ function recognizedStem(rawStem: string, services?: SpellingContext): string | u
 }
 
 const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
+  { raw: 'deki', apply: stem => stem + 'd' + harmonyA(stem) + 'ki' },
+  { raw: 'daki', apply: stem => stem + 'd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
   { raw: 'indaki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
   { raw: 'undaki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
   { raw: 'indeki', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'nd' + harmonyA(stem) + (harmonyA(stem) === 'ə' ? 'ki' : 'kı') },
@@ -354,6 +360,8 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'mayib', apply: stem => stem + 'm' + harmonyA(stem) + 'y' + harmonyI(stem) + 'b' },
   { raw: 'medik', apply: stem => stem + 'm' + harmonyA(stem) + 'd' + harmonyI(stem) + 'k' },
   { raw: 'madik', apply: stem => stem + 'm' + harmonyA(stem) + 'd' + harmonyI(stem) + 'k' },
+  { raw: 'mir', apply: stem => stem + 'm' + harmonyI(stem) + 'r' },
+  { raw: 'mur', apply: stem => stem + 'm' + harmonyI(stem) + 'r' },
   { raw: 'mirem', apply: stem => stem + 'm' + harmonyI(stem) + 'r' + (harmonyA(stem) === 'ə' ? 'əm' : 'am') },
   { raw: 'mirik', apply: stem => stem + 'm' + harmonyI(stem) + 'r' + harmonyI(stem) + 'k' },
   { raw: 'muruk', apply: stem => stem + 'm' + harmonyI(stem) + 'r' + harmonyI(stem) + 'k' },
