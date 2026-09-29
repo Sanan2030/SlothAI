@@ -143,6 +143,7 @@ const aliases: Record<string, string> = {
   ehsen: 'əhsən',
   diqqet: 'diqqət',
   destek: 'dəstək',
+  derkenara: 'dərkənara',
   yazdigi: 'yazdığı',
   yekunu: 'yekunu',
   qanuni: 'qanuni',
@@ -262,7 +263,6 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   meyar: 'meyar',
   yarat: 'yarat',
   derkenar: 'dərkənar',
-  derkenara: 'dərkənara',
   gorun: 'görün',
   dus: 'düş',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
