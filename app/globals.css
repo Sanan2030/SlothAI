@@ -433,6 +433,56 @@ input:focus-visible {
   cursor: default;
 }
 
+.workspace-raw-input {
+  display: block;
+  width: 100%;
+  min-height: 260px;
+  max-height: 520px;
+  resize: vertical;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  outline: none;
+}
+.workspace-raw-input:focus-visible { border-color: var(--accent); }
+.workspace-raw-input::placeholder { color: var(--text-soft); }
+.workspace-raw-input:disabled { opacity: 0.7; }
+
+.workspace-result-label { display: inline-flex; align-items: center; gap: 5px; }
+.workspace-result-info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+.workspace-result-info-button:hover,
+.workspace-result-info-button:focus-visible {
+  background: var(--surface-2);
+  color: var(--text);
+  outline: 1px solid var(--border);
+}
+.workspace-result-info {
+  margin: 0 0 8px;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
 .workspace-rich-editor { min-width: 0; }
 .workspace-rich-toolbar {
   display: flex;

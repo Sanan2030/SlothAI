@@ -2,14 +2,15 @@
 
 import { BrandEmoji } from '@/components/BrandEmoji';
 import { RichEditor } from '@/components/RichEditor';
-import { Check, Copy, FileText, Mail, Moon, Sun, Trash2 } from 'lucide-react';
+import { Check, Copy, FileText, Info, Mail, Moon, Sun, Trash2 } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
-import { documentHTML, documentText, plainDocument, transferMarks, type RichDocument } from '@/lib/ui/rich-document';
+import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
+import { documentHTML, documentText, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
 
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
@@ -37,8 +38,6 @@ export default function HomePage() {
   const [activeModule, setActiveModule] = useState<ModuleId>('text');
   const [textValue, setTextValue] = useState('');
   const [mailValue, setMailValue] = useState('');
-  const [textDocument, setTextDocument] = useState<RichDocument>(() => plainDocument(''));
-  const [mailDocument, setMailDocument] = useState<RichDocument>(() => plainDocument(''));
   const [mailSubject, setMailSubject] = useState('');
   const [textOutput, setTextOutput] = useState('');
   const [mailOutput, setMailOutput] = useState('');
@@ -52,6 +51,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const [showResultInfo, setShowResultInfo] = useState(false);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -72,7 +72,6 @@ export default function HomePage() {
   const config = MODULES[activeModule];
   const inputValue = activeModule === 'text' ? textValue : mailValue;
   const output = activeModule === 'text' ? textOutput : mailOutput;
-  const sourceDocument = activeModule === 'text' ? textDocument : mailDocument;
   const outputDocument = activeModule === 'text' ? textOutputDocument : mailOutputDocument;
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
 
@@ -88,19 +87,17 @@ export default function HomePage() {
     [diffSource, output],
   );
 
-  function setInput(value: string, rich: RichDocument = plainDocument(value)) {
+  function setInput(value: string) {
     if (value.length > MAX_TEXT_LENGTH) return;
     setError('');
     setCopied(false);
     setEditingOutput(false);
     if (activeModule === 'text') {
       setTextValue(value);
-      setTextDocument(rich);
       setTextOutput('');
       setTextMetadata(null);
     } else {
       setMailValue(value);
-      setMailDocument(rich);
       setMailOutput('');
       setMailMetadata(null);
     }
@@ -146,13 +143,13 @@ export default function HomePage() {
 
       if (activeModule === 'text') {
         setTextOutput(result.transformedText);
-        setTextOutputDocument(transferMarks(textDocument, result.transformedText));
-        setEditingOutput(textDocument.blocks.some(block => block.children.some(inline => inline.marks.length > 0)));
+        setTextOutputDocument(plainDocument(result.transformedText));
+        setEditingOutput(false);
         setTextMetadata(result.metadata);
       } else {
         setMailOutput(result.transformedText);
-        setMailOutputDocument(transferMarks(mailDocument, result.transformedText));
-        setEditingOutput(mailDocument.blocks.some(block => block.children.some(inline => inline.marks.length > 0)));
+        setMailOutputDocument(plainDocument(result.transformedText));
+        setEditingOutput(false);
         setMailMetadata(result.metadata);
       }
     } catch (cause) {
@@ -293,11 +290,22 @@ export default function HomePage() {
                   </button>
                 </div>
 
-                <RichEditor value={sourceDocument} disabled={loading}
+                <textarea
+                  className="workspace-raw-input"
+                  aria-label={config.inputLabel}
+                  placeholder={config.placeholder}
+                  value={inputValue}
+                  disabled={loading}
                   maxLength={Math.max(0, MAX_TEXT_LENGTH - (diffSource.length - inputValue.length))}
-                  label={config.inputLabel} placeholder={config.placeholder}
-                  onSubmit={() => { void transform(); }}
-                  onChange={document => setInput(documentText(document), document)} />
+                  onChange={event => setInput(event.target.value)}
+                  onKeyDown={event => {
+                    if (shouldSubmitEditorKey({ key: event.key, shiftKey: event.shiftKey,
+                      altKey: event.altKey, isComposing: event.nativeEvent.isComposing })) {
+                      event.preventDefault();
+                      void transform();
+                    }
+                  }}
+                />
 
                 <div className="workspace-editor-footer">
                   <span className="workspace-key-hint">Enter — düzəlt · Shift+Enter — yeni sətir</span>
@@ -313,7 +321,7 @@ export default function HomePage() {
                           setTextMetadata(null);
                         }}
                       />
-                      Mövcud formatı saxla
+                      Mövcud abzasları saxla
                     </label>
                   ) : <span />}
                   <span className={inputLength > 9_500 ? 'limit-warning' : ''}>
@@ -326,7 +334,15 @@ export default function HomePage() {
 
               <div className="workspace-editor-column">
                 <div className="workspace-column-head">
-                  <span>Nəticə</span>
+                  <div className="workspace-result-label">
+                    <span>Nəticə</span>
+                    <button type="button" className="workspace-result-info-button"
+                      aria-label="Nəticə haqqında məlumat" aria-expanded={showResultInfo}
+                      aria-controls="workspace-result-info"
+                      onClick={() => setShowResultInfo(value => !value)}>
+                      <Info size={15} aria-hidden="true" />
+                    </button>
+                  </div>
                   {output && <button type="button" className="workspace-icon-btn"
                     onClick={() => setEditingOutput(value => !value)}>
                     {editingOutput ? 'Dəyişiklikləri göstər' : 'Formatı redaktə et'}
@@ -341,6 +357,14 @@ export default function HomePage() {
                     {copied ? 'Kopyalandı' : 'Kopyala'}
                   </button>
                 </div>
+
+                {showResultInfo && (
+                  <p id="workspace-result-info" className="workspace-result-info">
+                    Qırmızı işarələr dəyişən sözləri və əlavə olunan durğu işarələrini göstərir.
+                    Formatı redaktə et düyməsi yalnız nəticəyə tətbiq olunur. Kopyala həm mətn,
+                    həm də seçdiyiniz nəticə formatını mümkün olduqda köçürür.
+                  </p>
+                )}
 
                 <div className="workspace-output" aria-live="polite">
                   {output && editingOutput ? (
