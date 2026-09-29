@@ -134,6 +134,7 @@ const aliases: Record<string, string> = {
   tanisima: 'tanışıma', goruntusu: 'görüntüsü', xetasi: 'xətası',
   testdir: 'testdir', teyin: 'təyin', narmin: 'Nərmin', emin: 'Emin',
   muraciyet: 'müraciət',
+  mukavile: 'müqavilə',
   olunmush: 'olunmuş',
   huquqi: 'hüquqi',
   voen: 'VÖEN',
@@ -143,6 +144,8 @@ const aliases: Record<string, string> = {
   diqqet: 'diqqət',
   destek: 'dəstək',
   yazdigi: 'yazdığı',
+  yekunu: 'yekunu',
+  qanuni: 'qanuni',
   loglarini: 'loglarını',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
@@ -416,7 +419,6 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'si', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 's' + harmonyI(stem) : undefined },
   { raw: 'ye', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyA(stem) : undefined },
   { raw: 'e', apply: stem => stem + harmonyA(stem) },
-  { raw: 'a', apply: stem => stem + harmonyA(stem) },
 
   { raw: 'yirdim', apply: stem => /[aıoueəiöü]$/u.test(stem) ? stem + 'y' + harmonyI(stem) + 'rd' + harmonyI(stem) + 'm' : undefined },
   { raw: 'irdim', apply: stem => stem + harmonyI(stem) + 'rd' + harmonyI(stem) + 'm' },
