@@ -92,15 +92,15 @@ for (const [input, expected] of textCases) {
 const mailCases = [
   [
     'movzu rsd status problemi hormetli rsd komandasi muraciet tesdiqlenib amma status icrada qalib xahis edirem is axinini yoxlayin hormetle sanan nabizada biznes analitik',
-    'Mövzu: RSD status problemi\n\nHörmətli RSD komandası,\n\nMüraciət təsdiqlənib, amma status icrada qalıb. Xahiş edirəm, iş axınını yoxlayın.\n\nHörmətlə,\nSanan Nabizada\nBiznes analitik',
+    'Mövzu: RSD status problemi\n\nHörmətli RSD komandası,\n\nMüraciət təsdiqlənib, amma status icrada qalıb. Xahiş edirəm, iş axınını yoxlayın.\n\nHörmətlə,\nSanan Nabizada biznes analitik',
   ],
   [
     'movzu api xetasi hormetli backend komandasi productionda POST /api/documents 500 qaytarir stagingde ise eyni request isleyir loglari yoxlayin hormetle elvin memmedov backend engineer',
-    'Mövzu: API xətası\n\nHörmətli backend komandası,\n\nProduction-da POST /api/documents 500 qaytarır. Staging-də isə eyni request işləyir. Logları yoxlayın.\n\nHörmətlə,\nElvin Məmmədov\nBackend Engineer',
+    'Mövzu: API xətası\n\nHörmətli backend komandası,\n\nProduction-da POST /api/documents 500 qaytarır. Staging-də isə eyni request işləyir. Logları yoxlayın.\n\nHörmətlə,\nElvin Məmmədov backend engineer',
   ],
   [
     'movzu srs yenilenmesi hormetli layihe komandasi srs senedi yenilenib bpmn diaqraminda yeni tesdiq merhelesi elave olunub uat meyarlarini sabah yoxlayin hormetle aysel memmedova biznes analitik',
-    'Mövzu: SRS yenilənməsi\n\nHörmətli layihə komandası,\n\nSRS sənədi yenilənib. BPMN diaqramında yeni təsdiq mərhələsi əlavə olunub. UAT meyarlarını sabah yoxlayın.\n\nHörmətlə,\nAysel Məmmədova\nBiznes analitik',
+    'Mövzu: SRS yenilənməsi\n\nHörmətli layihə komandası,\n\nSRS sənədi yenilənib. BPMN diaqramında yeni təsdiq mərhələsi əlavə olunub. UAT meyarlarını sabah yoxlayın.\n\nHörmətlə,\nAysel Məmmədova biznes analitik',
   ],
   [
     'hormetli texniki komanda bu gun productionda bir nece 500 xetasi gorduk sebebi hele melum deyil loglari toplayib ayrica gondereceyik hormetle sanan',
