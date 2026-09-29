@@ -237,9 +237,13 @@ export function formatEmail(input: string): LocalCorrection {
   }
   // Names and job titles are structural signature text, never prose: preserve
   // their line breaks and never add sentence-ending punctuation to them.
-  const signature = document.signature?.replace(/\b((?:Sanan|Sənan)\s+(?:Nabizada|Nabizadə))\s+(biznes analitik)(?=$|\s)/iu,
-    '$1\n$2').split('\n').map(line => line.trim()
+  const signature = document.signature?.split('\n').map(line => line.trim()
     .replace(/^layihe(?=\s+komandasi\b)/iu, 'Layihə')
+    .replace(/^destek(?=\s+komandasi\b)/iu, 'Dəstək')
+    .replace(/^(\p{L}+)\s+(\p{L}+)\s+(?=(?:biznes analitik|backend engineer|frontend engineer|software engineer|sistem analitiki|layihə meneceri|məhsul sahibi)\b)/iu,
+      (_, first: string, last: string) =>
+        first[0].toLocaleUpperCase('az-AZ') + first.slice(1) + ' '
+        + last[0].toLocaleUpperCase('az-AZ') + last.slice(1) + ' ')
     .replace(/\p{L}+/gu,
     word => resolveEntityWord(word, true, false) ?? (/^komandasi$/iu.test(word) ? 'komandası' : word)).replace(/^(\p{L})/u,
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
