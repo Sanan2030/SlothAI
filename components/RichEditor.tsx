@@ -49,9 +49,10 @@ export interface RichEditorProps {
   disabled?: boolean;
   maxLength?: number;
   onSubmit?: () => void;
+  onBlur?: () => void;
 }
 
-export function RichEditor({ value, onChange, label, placeholder, disabled, maxLength, onSubmit }: RichEditorProps) {
+export function RichEditor({ value, onChange, label, placeholder, disabled, maxLength, onSubmit, onBlur }: RichEditorProps) {
   const editor = useRef<HTMLDivElement>(null);
   const last = useRef(value);
   const initialized = useRef(false);
@@ -176,7 +177,7 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
         role="textbox" aria-label={label} aria-multiline="true" spellCheck={false}
         data-placeholder={placeholder} data-empty={!documentText(value)}
         className="workspace-rich-surface"
-        onInput={publish} onPaste={paste} onDrop={drop}
+        onInput={publish} onPaste={paste} onDrop={drop} onBlur={onBlur}
         onKeyDown={event => {
           if (event.nativeEvent.isComposing) return;
           if ((event.metaKey || event.ctrlKey) && ['b', 'i', 'u'].includes(event.key.toLowerCase())) {

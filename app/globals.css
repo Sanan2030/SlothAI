@@ -483,6 +483,36 @@ input:focus-visible {
   line-height: 1.5;
 }
 
+.workspace-personal-lexicon {
+  margin-top: 10px;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+}
+.workspace-personal-lexicon summary { cursor: pointer; color: var(--text); }
+.workspace-personal-lexicon p { margin: 8px 0; line-height: 1.5; }
+.workspace-personal-rule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+}
+.workspace-personal-rule span { margin-right: auto; overflow-wrap: anywhere; }
+.workspace-personal-rule button {
+  padding: 4px 7px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+.workspace-personal-rule button:hover,
+.workspace-personal-rule button:focus-visible { border-color: var(--accent); }
+
 .workspace-rich-editor { min-width: 0; }
 .workspace-rich-toolbar {
   display: flex;

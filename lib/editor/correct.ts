@@ -7,6 +7,7 @@ import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists 
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
+import { chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -138,7 +139,18 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
-  text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, word => {
+  const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
+  sentenceEnds.push(text.length);
+  let sentenceStart = 0;
+  let sentenceIndex = 0;
+  let context = sentenceEvidence(text.slice(0, sentenceEnds[0]));
+  text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
+    while (sentenceEnds[sentenceIndex] <= offset && sentenceIndex < sentenceEnds.length - 1) {
+      sentenceStart = sentenceEnds[sentenceIndex++];
+      context = sentenceEvidence(text.slice(sentenceStart, sentenceEnds[sentenceIndex]));
+    }
+    const contextual = chooseBySentence(word, context);
+    if (contextual) return contextual;
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);

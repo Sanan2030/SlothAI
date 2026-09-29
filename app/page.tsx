@@ -3,12 +3,15 @@
 import { BrandEmoji } from '@/components/BrandEmoji';
 import { RichEditor } from '@/components/RichEditor';
 import { Check, Copy, FileText, Info, Mail, Moon, Sun, Trash2 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
+import { applyPersonalLexicon, confirmPersonalCandidate, dismissPersonalCandidate,
+  extractPersonalCandidates, queuePersonalCandidates, readPersonalLexicon,
+  writePersonalLexicon, type PersonalLexicon } from '@/lib/editor/personal-lexicon';
 import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
 import { documentHTML, documentText, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
 
@@ -41,6 +44,8 @@ export default function HomePage() {
   const [mailSubject, setMailSubject] = useState('');
   const [textOutput, setTextOutput] = useState('');
   const [mailOutput, setMailOutput] = useState('');
+  const [textGenerated, setTextGenerated] = useState('');
+  const [mailGenerated, setMailGenerated] = useState('');
   const [textOutputDocument, setTextOutputDocument] = useState<RichDocument>(() => plainDocument(''));
   const [mailOutputDocument, setMailOutputDocument] = useState<RichDocument>(() => plainDocument(''));
   const [editingOutput, setEditingOutput] = useState(false);
@@ -52,6 +57,19 @@ export default function HomePage() {
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
   const [showResultInfo, setShowResultInfo] = useState(false);
+  const [personalLexicon, setPersonalLexicon] = useState<PersonalLexicon>({ pending: [], confirmed: [] });
+  const personalRef = useRef<PersonalLexicon>({ pending: [], confirmed: [] });
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      try {
+        const loaded = readPersonalLexicon(window.localStorage);
+        personalRef.current = loaded;
+        setPersonalLexicon(loaded);
+      } catch { /* Private browsing may disable storage. The editor still works. */ }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -72,6 +90,7 @@ export default function HomePage() {
   const config = MODULES[activeModule];
   const inputValue = activeModule === 'text' ? textValue : mailValue;
   const output = activeModule === 'text' ? textOutput : mailOutput;
+  const generated = activeModule === 'text' ? textGenerated : mailGenerated;
   const outputDocument = activeModule === 'text' ? textOutputDocument : mailOutputDocument;
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
 
@@ -123,6 +142,22 @@ export default function HomePage() {
     } catch {}
   }
 
+  function persistPersonal(next: PersonalLexicon) {
+    personalRef.current = next;
+    setPersonalLexicon(next);
+    let saved = false;
+    try { saved = writePersonalLexicon(window.localStorage, next); } catch { /* Storage blocked. */ }
+    if (!saved) {
+      setError('Şəxsi lüğət bu brauzerdə saxlanmadı. Yaddaş icazəsini yoxlayın.');
+    }
+  }
+
+  function collectSuggestions() {
+    if (!generated || !output || generated === output) return;
+    const candidates = extractPersonalCandidates(generated, output);
+    if (candidates.length) persistPersonal(queuePersonalCandidates(personalRef.current, candidates));
+  }
+
   async function transform() {
     if (!inputValue.trim() || loading || diffSource.length > MAX_TEXT_LENGTH) return;
 
@@ -141,14 +176,17 @@ export default function HomePage() {
         options: activeModule === 'text' ? { preserveFormatting } : undefined,
       });
 
+      const improved = applyPersonalLexicon(result.transformedText, personalRef.current.confirmed);
       if (activeModule === 'text') {
-        setTextOutput(result.transformedText);
-        setTextOutputDocument(plainDocument(result.transformedText));
+        setTextGenerated(improved);
+        setTextOutput(improved);
+        setTextOutputDocument(plainDocument(improved));
         setEditingOutput(false);
         setTextMetadata(result.metadata);
       } else {
-        setMailOutput(result.transformedText);
-        setMailOutputDocument(plainDocument(result.transformedText));
+        setMailGenerated(improved);
+        setMailOutput(improved);
+        setMailOutputDocument(plainDocument(improved));
         setEditingOutput(false);
         setMailMetadata(result.metadata);
       }
@@ -345,7 +383,7 @@ export default function HomePage() {
                   </div>
                   {output && <button type="button" className="workspace-icon-btn"
                     onClick={() => setEditingOutput(value => !value)}>
-                    {editingOutput ? 'Dəyişiklikləri göstər' : 'Formatı redaktə et'}
+                    {editingOutput ? 'Dəyişiklikləri göstər' : 'Nəticəni redaktə et'}
                   </button>}
                   <button
                     type="button"
@@ -361,14 +399,16 @@ export default function HomePage() {
                 {showResultInfo && (
                   <p id="workspace-result-info" className="workspace-result-info">
                     Qırmızı işarələr dəyişən sözləri və əlavə olunan durğu işarələrini göstərir.
-                    Formatı redaktə et düyməsi yalnız nəticəyə tətbiq olunur. Kopyala həm mətn,
-                    həm də seçdiyiniz nəticə formatını mümkün olduqda köçürür.
+                    Nəticəni redaktə et düyməsi yalnız nəticəyə tətbiq olunur. Kopyala həm mətn,
+                    həm də seçdiyiniz nəticə formatını mümkün olduqda köçürür. Nəticədə düzəltdiyiniz
+                    tək sözlər şəxsi lüğətə namizəd olur; yalnız təsdiqləyəndən sonra oxşar kontekstdə işlənir.
                   </p>
                 )}
 
                 <div className="workspace-output" aria-live="polite">
                   {output && editingOutput ? (
                     <RichEditor value={outputDocument} label="Nəticəni redaktə et"
+                      onBlur={collectSuggestions}
                       onChange={document => {
                         const value = documentText(document);
                         if (activeModule === 'text') {
@@ -397,6 +437,31 @@ export default function HomePage() {
                     <span className="workspace-placeholder">Nəticə burada görünəcək.</span>
                   )}
                 </div>
+
+                {(personalLexicon.pending.length > 0 || personalLexicon.confirmed.length > 0) && (
+                  <details className="workspace-personal-lexicon">
+                    <summary>Şəxsi lüğət · {personalLexicon.pending.length} namizəd,
+                      {' '}{personalLexicon.confirmed.length} təsdiqli</summary>
+                    <p>Yalnız bu brauzerdə saxlanır. Yeni sözlər əsas lüğətə avtomatik əlavə olunmur.</p>
+                    {personalLexicon.pending.map((rule, index) => (
+                      <div className="workspace-personal-rule" key={`pending-${index}-${rule.source}-${rule.target}`}>
+                        <span>{rule.source} → {rule.target}</span>
+                        <button type="button" onClick={() => persistPersonal(confirmPersonalCandidate(personalRef.current, rule))}
+                          aria-label={`${rule.source} sözünün ${rule.target} düzəlişini təsdiqlə`}>Təsdiqlə</button>
+                        <button type="button" onClick={() => persistPersonal(dismissPersonalCandidate(personalRef.current, rule))}
+                          aria-label={`${rule.source} namizədini sil`}>Sil</button>
+                      </div>
+                    ))}
+                    {personalLexicon.confirmed.map((rule, index) => (
+                      <div className="workspace-personal-rule" key={`confirmed-${index}-${rule.source}-${rule.target}`}>
+                        <span>{rule.source} → {rule.target}</span>
+                        <button type="button" onClick={() => persistPersonal({ ...personalRef.current,
+                          confirmed: personalRef.current.confirmed.filter(item => item !== rule) })}
+                          aria-label={`${rule.source} təsdiqli düzəlişini sil`}>Sil</button>
+                      </div>
+                    ))}
+                  </details>
+                )}
               </div>
             </div>
 
