@@ -6,6 +6,7 @@ out
 .env.*.local
 .vercel
 *.log
+logs/*.json
 .DS_Store
 coverage
 *.tsbuildinfo

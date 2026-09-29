@@ -8,6 +8,7 @@ import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from '.
 import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
 import { chooseByGrammar, chooseBySentence, sentenceEvidence } from './contextual-choices';
+import { isEmailGreeting } from './email-greetings';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -231,7 +232,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   return { text, corrections: input === text ? 0 : Math.max(1, Math.max(before.length, after.length) - prefix - suffix) };
 }
 
-export function formatEmail(input: string): LocalCorrection {
+export function formatEmail(input: string, options: { greeting?: string; omitSubject?: boolean } = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   const document = parseEmailSections(input);
@@ -240,7 +241,7 @@ export function formatEmail(input: string): LocalCorrection {
       .replace(/\babb\b/giu, 'ABB').replace(/\b(?:it|İt)\b/gu, 'IT')
       .replace(/\b(?:sla|Sla)\b/gu, 'SLA').replace(/\b(?:hr|Hr)\b/gu, 'HR')
     : 'Müraciət';
-  const greeting = document.salutation?.type === 'honorific'
+  const greeting = isEmailGreeting(options.greeting) ? options.greeting : document.salutation?.type === 'honorific'
     ? correctText(`Hörmətli ${document.salutation.addressee}`, true).text
       .replace(/[,.!?]+$/u, '')
       .replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
@@ -266,7 +267,7 @@ export function formatEmail(input: string): LocalCorrection {
     .replace(/\p{L}+/gu,
     word => resolveEntityWord(word, true, false) ?? (/^komandasi$/iu.test(word) ? 'komandası' : word)).replace(/^(\p{L})/u,
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
-  const text = [`Mövzu: ${subject}`, greeting, body,
+  const text = [options.omitSubject ? '' : `Mövzu: ${subject}`, greeting, body,
     signature ? `${document.closing ?? 'Hörmətlə,'}\n${signature}` : document.closing ?? 'Hörmətlə,'].filter(Boolean).join('\n\n');
   return { text, corrections: text === input ? 0 : 1 };
 }

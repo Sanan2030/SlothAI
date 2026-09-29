@@ -4,6 +4,7 @@ export interface ExpectedResult {
   input: string;
   output: string;
   preserveFormatting: boolean;
+  greeting?: string;
 }
 
 export const EXPECTED_RESULTS_KEY = 'slothai-expected-results-v1';
@@ -17,7 +18,8 @@ function valid(value: unknown): value is ExpectedResult {
   return (item.module === 'text' || item.module === 'mail')
     && typeof item.input === 'string' && item.input.length > 0 && item.input.length <= MAX_LENGTH
     && typeof item.output === 'string' && item.output.trim().length > 0 && item.output.length <= MAX_LENGTH
-    && typeof item.preserveFormatting === 'boolean';
+    && typeof item.preserveFormatting === 'boolean'
+    && (item.greeting === undefined || typeof item.greeting === 'string' && item.greeting.length <= 100);
 }
 
 export function readExpectedResults(storage: Pick<Storage, 'getItem'>): ExpectedResult[] {
@@ -29,15 +31,16 @@ export function readExpectedResults(storage: Pick<Storage, 'getItem'>): Expected
   } catch { return []; }
 }
 
-export function findExpectedResult(items: readonly ExpectedResult[], query: Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting'>): ExpectedResult | undefined {
+export function findExpectedResult(items: readonly ExpectedResult[], query: Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'>): ExpectedResult | undefined {
   return [...items].reverse().find(item => item.module === query.module
-    && sameInput(item.input) === sameInput(query.input) && item.preserveFormatting === query.preserveFormatting);
+    && sameInput(item.input) === sameInput(query.input) && item.preserveFormatting === query.preserveFormatting
+    && (item.greeting ?? '') === (query.greeting ?? ''));
 }
 
 export function saveExpectedResult(items: readonly ExpectedResult[], item: ExpectedResult): ExpectedResult[] {
   if (!valid(item)) throw new Error('Nümunədə mətn və ya düzgün nəticə boşdur, yaxud 10 000 simvolu keçir.');
   return [...items.filter(old => old.module !== item.module || sameInput(old.input) !== sameInput(item.input)
-    || old.preserveFormatting !== item.preserveFormatting), item].slice(-MAX_EXAMPLES);
+    || old.preserveFormatting !== item.preserveFormatting || (old.greeting ?? '') !== (item.greeting ?? '')), item].slice(-MAX_EXAMPLES);
 }
 
 export function writeExpectedResults(storage: Pick<Storage, 'setItem'>, items: readonly ExpectedResult[]): boolean {

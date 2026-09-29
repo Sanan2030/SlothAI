@@ -1,5 +1,7 @@
 export interface TransformationOptions {
   preserveFormatting?: boolean;
+  emailGreeting?: string;
+  omitSubject?: boolean;
 }
 
 export interface TransformationRequest {

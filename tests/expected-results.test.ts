@@ -33,6 +33,16 @@ test('example storage is bounded and rejects empty or oversized corrections', ()
   assert.throws(() => saveExpectedResult(examples, { ...item, output: 'a'.repeat(10_001) }));
 });
 
+test('mail examples use the selected greeting as part of their lookup key', () => {
+  const first = { module: 'mail' as const, input: 'salam dostum', output: 'Salam,\n\nDostum.',
+    preserveFormatting: false, greeting: 'Salam,' };
+  const second = { ...first, greeting: 'Hörmətli tərəfdaşlar,', output: 'Hörmətli tərəfdaşlar,\n\nDostum.' };
+  const items = saveExpectedResult(saveExpectedResult([], first), second);
+  assert.equal(items.length, 2);
+  assert.equal(findExpectedResult(items, first)?.output, first.output);
+  assert.equal(findExpectedResult(items, second)?.output, second.output);
+});
+
 test('a saved full correction also teaches a confirmed word edit in its known context', () => {
   const baseline = 'Bu hesabat ugurludur.';
   const expected = 'Bu hesabat uğurludur.';

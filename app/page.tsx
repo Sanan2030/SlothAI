@@ -2,13 +2,15 @@
 
 import { BrandEmoji } from '@/components/BrandEmoji';
 import { RichEditor } from '@/components/RichEditor';
-import { Check, Copy, FileText, Info, Mail, Moon, Sun, Trash2, BookOpen } from 'lucide-react';
+import { Check, Copy, Download, FileText, Info, Mail, Moon, Sun, Trash2, BookOpen } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
 import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
+import { DEFAULT_EMAIL_GREETING, EMAIL_GREETINGS, type EmailGreeting } from '@/lib/editor/email-greetings';
+import { appendTransformLog, exportTransformLog, readTransformLog, type TransformLogEntry } from '@/lib/editor/transform-log';
 import { applyPersonalLexicon, confirmPersonalCandidate, dismissPersonalCandidate,
   extractPersonalCandidates, queuePersonalCandidates, readPersonalLexicon,
   writePersonalLexicon, type PersonalLexicon } from '@/lib/editor/personal-lexicon';
@@ -43,7 +45,8 @@ export default function HomePage() {
   const [activeModule, setActiveModule] = useState<ModuleId>('text');
   const [textValue, setTextValue] = useState('');
   const [mailValue, setMailValue] = useState('');
-  const [mailSubject, setMailSubject] = useState('');
+  const [mailGreeting, setMailGreeting] = useState<EmailGreeting>(DEFAULT_EMAIL_GREETING);
+  const [logCount, setLogCount] = useState(0);
   const [textOutput, setTextOutput] = useState('');
   const [mailOutput, setMailOutput] = useState('');
   const [textGenerated, setTextGenerated] = useState('');
@@ -64,8 +67,8 @@ export default function HomePage() {
   const expectedRef = useRef<ExpectedResult[]>([]);
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [expectedDraft, setExpectedDraft] = useState('');
-  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting'> | null>(null);
-  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting'>>>>({});
+  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'> | null>(null);
+  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'>>>>({});
   const [learnedResult, setLearnedResult] = useState(false);
 
   useEffect(() => {
@@ -75,6 +78,7 @@ export default function HomePage() {
         personalRef.current = loaded;
         setPersonalLexicon(loaded);
         expectedRef.current = readExpectedResults(window.localStorage);
+        setLogCount(readTransformLog(window.localStorage).length);
       } catch { /* Private browsing may disable storage. The editor still works. */ }
     });
     return () => cancelAnimationFrame(frame);
@@ -104,12 +108,7 @@ export default function HomePage() {
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
 
   const inputLength = useMemo(() => inputValue.length, [inputValue]);
-  const diffSource = useMemo(() => {
-    if (activeModule !== 'mail' || !mailSubject.trim() || /^\s*mövzu:/iu.test(inputValue)) {
-      return inputValue;
-    }
-    return `Mövzu: ${mailSubject.trim()}\n${inputValue}`;
-  }, [activeModule, inputValue, mailSubject]);
+  const diffSource = inputValue;
   const animatedOutput = useMemo(
     () => buildAnimatedDiff(diffSource, output),
     [diffSource, output],
@@ -173,6 +172,34 @@ export default function HomePage() {
     if (candidates.length) persistPersonal(queuePersonalCandidates(personalRef.current, candidates));
   }
 
+  function recordTransform(input: string, result: string, source: TransformLogEntry['source']) {
+    try {
+      const count = appendTransformLog(window.localStorage, {
+        id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
+        at: new Date().toISOString(), module: activeModule,
+        input, output: result, ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), source,
+      });
+      setLogCount(count);
+    } catch {
+      setError('Nəticə yaradıldı, lakin günlük brauzerdə saxlanmadı. Yaddaş icazəsini yoxlayın.');
+    }
+  }
+
+  function downloadLog() {
+    try {
+      const contents = exportTransformLog(window.localStorage);
+      const blob = new Blob([contents], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `slothai-log-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch { setError('Günlük yüklənmədi. Brauzer yaddaşını yoxlayın.'); }
+  }
+
   function saveExpected() {
     if (!resultSource || !expectedDraft.trim()) {
       setError('Düzgün nəticəni yazın.');
@@ -189,6 +216,7 @@ export default function HomePage() {
       }
       expectedRef.current = next;
       setError('');
+      recordTransform(resultSource.input, expectedDraft, 'reviewed');
       if (edits.length) {
         let learned = personalRef.current;
         for (const edit of edits) learned = confirmPersonalCandidate(learned, edit);
@@ -219,13 +247,11 @@ export default function HomePage() {
     setCopied(false);
 
     try {
-      let requestText = inputValue;
-      if (activeModule === 'mail' && mailSubject.trim() && !/^\s*mövzu:/iu.test(inputValue)) {
-        requestText = `Mövzu: ${mailSubject.trim()}\n${inputValue}`;
-      }
+      const requestText = inputValue;
 
       const source = { module: activeModule, input: requestText,
-        preserveFormatting: activeModule === 'text' && preserveFormatting };
+        preserveFormatting: activeModule === 'text' && preserveFormatting,
+        ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}) };
       const remembered = findExpectedResult(expectedRef.current, source);
       setResultSource(source);
       sourceRef.current[activeModule] = source;
@@ -233,6 +259,7 @@ export default function HomePage() {
       setLearnedResult(Boolean(remembered));
 
       if (remembered) {
+        recordTransform(requestText, remembered.output, 'remembered');
         if (activeModule === 'text') {
           setTextGenerated(remembered.output);
           setTextOutput(remembered.output);
@@ -250,10 +277,12 @@ export default function HomePage() {
 
       const result = await registry.get(config.strategyId).transform({
         text: requestText,
-        options: activeModule === 'text' ? { preserveFormatting } : undefined,
+        options: activeModule === 'text' ? { preserveFormatting }
+          : { emailGreeting: mailGreeting, omitSubject: true },
       });
 
       const improved = applyPersonalLexicon(result.transformedText, personalRef.current.confirmed);
+      recordTransform(requestText, improved, 'transformed');
       if (activeModule === 'text') {
         setTextGenerated(improved);
         setTextOutput(improved);
@@ -373,22 +402,21 @@ export default function HomePage() {
 
             {activeModule === 'mail' && (
               <div className="workspace-field-row">
-                <label htmlFor="mail-subject">Mövzu</label>
-                <input
-                  id="mail-subject"
-                  type="text"
-                  value={mailSubject}
-                  placeholder="Məsələn: Layihə haqqında"
+                <label htmlFor="mail-greeting">Salamlaşma</label>
+                <select
+                  id="mail-greeting"
+                  value={mailGreeting}
                   disabled={loading}
                   onChange={(event) => {
-                    setMailSubject(event.target.value);
+                    setMailGreeting(event.target.value as EmailGreeting);
                     setMailOutput('');
                     setMailMetadata(null);
                     setFeedbackOpen(false);
                     setResultSource(null);
                     delete sourceRef.current.mail;
-                  }}
-                />
+                  }}>
+                  {EMAIL_GREETINGS.map(greeting => <option key={greeting} value={greeting}>{greeting}</option>)}
+                </select>
               </div>
             )}
 
@@ -598,6 +626,12 @@ export default function HomePage() {
 
             <div className="workspace-disclaimer">
               Mətn lokal qayda mühərriki ilə emal olunur. Qeyri-müəyyən sözlər mümkün qədər dəyişdirilmir.
+            </div>
+            <div className="workspace-log-actions">
+              <span>Bu brauzerdə {logCount} giriş/nəticə qeydi saxlanır.</span>
+              <button type="button" className="workspace-icon-btn" onClick={downloadLog} disabled={!logCount}>
+                <Download size={15} /> Günlüyü yüklə
+              </button>
             </div>
           </section>
         </main>

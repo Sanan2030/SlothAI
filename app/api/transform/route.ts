@@ -5,6 +5,7 @@ import { checkRateLimit } from '@/lib/rate-limit';
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
 import { StrategyNotFoundError } from '@/lib/strategies/registry';
 import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
+import { EMAIL_GREETINGS } from '@/lib/editor/email-greetings';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -18,6 +19,8 @@ const RequestSchema = z.object({
   options: z
     .object({
       preserveFormatting: z.boolean().optional(),
+      emailGreeting: z.enum(EMAIL_GREETINGS).optional(),
+      omitSubject: z.boolean().optional(),
     })
     .strict()
     .optional(),
