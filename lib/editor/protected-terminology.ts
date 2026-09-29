@@ -8,7 +8,7 @@ export const PROTECTED_TERMINOLOGY = {
   ],
   infrastructure: [
     'Docker', 'Kubernetes', 'Vercel', 'GitHub', 'GitLab', 'Linux', 'Ubuntu',
-    'CI/CD', 'DevOps', 'TLS', 'SSL', 'RBAC', 'OAuth', 'OAuth2', 'JWT',
+    'CI/CD', 'DevOps', 'TLS', 'SSL', 'RBAC', 'OAuth', 'OAuth2', 'JWT', 'VPN',
     '2FA', 'SLA', 'HTTP', 'HTTPS', 'TCP', 'IP', 'DNS', 'CDN',
     'Prometheus', 'Grafana', 'URL', 'npm',
   ],

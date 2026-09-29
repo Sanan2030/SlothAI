@@ -232,16 +232,21 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   return { text, corrections: input === text ? 0 : Math.max(1, Math.max(before.length, after.length) - prefix - suffix) };
 }
 
-export function formatEmail(input: string, options: { greeting?: string; omitSubject?: boolean } = {}): LocalCorrection {
+export function formatEmail(input: string, options: { emailGreeting?: string; omitSubject?: boolean } = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
-  const document = parseEmailSections(input);
+  // The dropdown owns the salutation. Remove the same salutation from a pasted
+  // draft so it does not leak into the body as an unpunctuated second greeting.
+  const draft = isEmailGreeting(options.emailGreeting)
+    ? input.replace(/^(?:salam[,!?.]?\s*)?(?:h[eə]r\s+vaxt[iı]n[iı]z\s+xeyir[.!?,]?)(?=\s|$)/iu, '').trim()
+    : input;
+  const document = parseEmailSections(draft);
   const subject = document.subject
     ? correctText(document.subject, true).text.replace(/[.!?]+$/u, '')
       .replace(/\babb\b/giu, 'ABB').replace(/\b(?:it|İt)\b/gu, 'IT')
       .replace(/\b(?:sla|Sla)\b/gu, 'SLA').replace(/\b(?:hr|Hr)\b/gu, 'HR')
     : 'Müraciət';
-  const greeting = isEmailGreeting(options.greeting) ? options.greeting : document.salutation?.type === 'honorific'
+  const greeting = isEmailGreeting(options.emailGreeting) ? options.emailGreeting : document.salutation?.type === 'honorific'
     ? correctText(`Hörmətli ${document.salutation.addressee}`, true).text
       .replace(/[,.!?]+$/u, '')
       .replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
@@ -249,7 +254,10 @@ export function formatEmail(input: string, options: { greeting?: string; omitSub
     : 'Salam,';
   // A compact draft needs the same sentence and paragraph segmentation as
   // prose; explicit user line breaks still take priority in a structured mail.
-  let body = document.body ? correctText(prepareEmailBody(document.body), /\n/u.test(document.body)).text : '';
+  const preparedBody = document.body
+    .replace(/\bolmamisdir\b/giu, 'olmamışdır')
+    .replace(/\b(olmamışdır)\s+(?=tesekkurler\b|təşəkkürlər\b)/giu, '$1. ');
+  let body = preparedBody ? correctText(prepareEmailBody(preparedBody), /\n/u.test(preparedBody)).text : '';
   if (body) {
     const inferred = prepareEmailBody(body);
     if (inferred !== body) body = correctText(inferred, true).text;

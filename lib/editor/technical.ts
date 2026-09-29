@@ -103,6 +103,7 @@ export const technicalAliases: Record<string, string> = {
 // Called only after code/URLs have been replaced with protected placeholders.
 export function prepareTechnicalPhrases(text: string): string {
   return text
+    .replace(/(?<!\p{L})vpn\s+(e|ə)(?=\s|$)/giu, 'VPN-ə')
     .replace(/(?<!\p{L})(rsd|srs|api)\s+(de|də|da)(?=\s+(?:sənəd|sened|qeydiyyat|müraciət|muraciet|istifadəçi|istifadeci|funksiya|xəta|xeta|yeni|\p{L}+(?:in|ın|un|ün|i|ı|u|ü|lər|lar))(?=$|[^\p{L}]))/giu,
       (_, acronym: string, suffix: string) => acronym.toUpperCase() + '-' + (suffix === 'da' ? 'da' : 'də'))
     .replace(/(?<!\p{L})workflow\s+(dan|dən)(?!\p{L})/giu, 'workflow-dan')
