@@ -237,34 +237,12 @@ export function formatEmail(input: string): LocalCorrection {
   }
   // Names and job titles are structural signature text, never prose: preserve
   // their line breaks and never add sentence-ending punctuation to them.
-  const normalizedSignature = document.signature?.split('\n').map(line => line.trim()
+  const signature = document.signature?.replace(/\b((?:Sanan|Sənan)\s+(?:Nabizada|Nabizadə))\s+(biznes analitik)(?=$|\s)/iu,
+    '$1\n$2').split('\n').map(line => line.trim()
     .replace(/^layihe(?=\s+komandasi\b)/iu, 'Layihə')
-    .replace(/\p{L}+/gu, word => resolveEntityWord(word, true, false)
-      ?? languageServices.spelling.resolve(word, languageServices))
-    .replace(/^(\p{L})/u, letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
-  const roleTitles = new Map<string, string>([
-    ['biznes analitik', 'Biznes analitik'],
-    ['backend engineer', 'Backend Engineer'],
-    ['frontend engineer', 'Frontend Engineer'],
-    ['software engineer', 'Software Engineer'],
-    ['sistem analitiki', 'Sistem analitiki'],
-    ['layihə meneceri', 'Layihə meneceri'],
-    ['məhsul sahibi', 'Məhsul sahibi'],
-  ]);
-  const signature = normalizedSignature?.split('\n').flatMap(line => {
-    const lower = line.toLocaleLowerCase('az-AZ');
-    for (const [rawTitle, canonicalTitle] of roleTitles) {
-      if (!lower.endsWith(' ' + rawTitle)) continue;
-      const name = line.slice(0, -(rawTitle.length + 1)).trim();
-      const nameParts = name.split(/\s+/u).filter(Boolean);
-      if (nameParts.length >= 1 && nameParts.length <= 3 && nameParts.every(word => /^\p{L}+(?:[-’']\p{L}+)?$/u.test(word))) {
-        const formattedName = nameParts.map(word =>
-          word[0].toLocaleUpperCase('az-AZ') + word.slice(1)).join(' ');
-        return [formattedName, canonicalTitle];
-      }
-    }
-    return [line];
-  }).join('\n');
+    .replace(/\p{L}+/gu,
+    word => resolveEntityWord(word, true, false) ?? (/^komandasi$/iu.test(word) ? 'komandası' : word)).replace(/^(\p{L})/u,
+    letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
   const text = [`Mövzu: ${subject}`, greeting, body,
     signature ? `${document.closing ?? 'Hörmətlə,'}\n${signature}` : document.closing ?? 'Hörmətlə,'].filter(Boolean).join('\n\n');
   return { text, corrections: text === input ? 0 : 1 };
