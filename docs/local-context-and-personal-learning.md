@@ -24,3 +24,6 @@ Məhdudiyyət: cümlə siqnalları yalnız iki çoxmənalı forma üçün başla
 Bütün Azərbaycan mətnini etibarlı düzəltmək üçün ayrıca yoxlanılmış tam
 çıxışlı korpus, daha geniş morfoloji analiz və ölçülmüş kontekst modeli
 lazımdır. Struktur testində keçmək tam dil doğruluğu demək deyil.
+# Düzgün nəticə nümunəsi
+
+Nəticənin yanındakı “Düzgün nəticəni öyrət” düyməsində bütün ideal cavabı yazıb yadda saxlamaq olar. Bu nümunə yalnız həmin modulda, eyni giriş mətni və eyni format seçimində növbəti dəfə birbaşa qaytarılır. Saxlama brauzerin `localStorage` yaddaşındadır; başqa cihazlara ötürülmür, serverə göndərilmir. Ən son 30 nümunə saxlanır, eyni giriş üçün təkrar saxlama köhnə nümunəni əvəz edir. Brauzerin yaddaşı təmizlənərsə nümunələr də silinir.

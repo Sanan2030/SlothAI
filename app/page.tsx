@@ -2,7 +2,7 @@
 
 import { BrandEmoji } from '@/components/BrandEmoji';
 import { RichEditor } from '@/components/RichEditor';
-import { Check, Copy, FileText, Info, Mail, Moon, Sun, Trash2 } from 'lucide-react';
+import { Check, Copy, FileText, Info, Mail, Moon, Sun, Trash2, BookOpen } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
@@ -13,6 +13,8 @@ import { applyPersonalLexicon, confirmPersonalCandidate, dismissPersonalCandidat
   extractPersonalCandidates, queuePersonalCandidates, readPersonalLexicon,
   writePersonalLexicon, type PersonalLexicon } from '@/lib/editor/personal-lexicon';
 import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
+import { findExpectedResult, readExpectedResults, saveExpectedResult, writeExpectedResults,
+  type ExpectedResult } from '@/lib/editor/expected-results';
 import { documentHTML, documentText, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
 
 type ModuleId = 'text' | 'mail';
@@ -59,6 +61,12 @@ export default function HomePage() {
   const [showResultInfo, setShowResultInfo] = useState(false);
   const [personalLexicon, setPersonalLexicon] = useState<PersonalLexicon>({ pending: [], confirmed: [] });
   const personalRef = useRef<PersonalLexicon>({ pending: [], confirmed: [] });
+  const expectedRef = useRef<ExpectedResult[]>([]);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
+  const [expectedDraft, setExpectedDraft] = useState('');
+  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting'> | null>(null);
+  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting'>>>>({});
+  const [learnedResult, setLearnedResult] = useState(false);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -66,6 +74,7 @@ export default function HomePage() {
         const loaded = readPersonalLexicon(window.localStorage);
         personalRef.current = loaded;
         setPersonalLexicon(loaded);
+        expectedRef.current = readExpectedResults(window.localStorage);
       } catch { /* Private browsing may disable storage. The editor still works. */ }
     });
     return () => cancelAnimationFrame(frame);
@@ -111,6 +120,9 @@ export default function HomePage() {
     setError('');
     setCopied(false);
     setEditingOutput(false);
+    setFeedbackOpen(false);
+    setResultSource(null);
+    delete sourceRef.current[activeModule];
     if (activeModule === 'text') {
       setTextValue(value);
       setTextOutput('');
@@ -131,6 +143,9 @@ export default function HomePage() {
     setError('');
     setCopied(false);
     setEditingOutput(false);
+    setFeedbackOpen(false);
+    setLearnedResult(false);
+    setResultSource(sourceRef.current[module] ?? null);
   }
 
   function toggleTheme() {
@@ -158,6 +173,36 @@ export default function HomePage() {
     if (candidates.length) persistPersonal(queuePersonalCandidates(personalRef.current, candidates));
   }
 
+  function saveExpected() {
+    if (!resultSource || !expectedDraft.trim()) {
+      setError('Düzgün nəticəni yazın.');
+      return;
+    }
+    try {
+      const next = saveExpectedResult(expectedRef.current, { ...resultSource, output: expectedDraft });
+      if (!writeExpectedResults(window.localStorage, next)) {
+        setError('Nümunə saxlanmadı. Brauzer yaddaşını yoxlayın.');
+        return;
+      }
+      expectedRef.current = next;
+      setError('');
+      setFeedbackOpen(false);
+      setLearnedResult(true);
+      if (activeModule === 'text') {
+        setTextOutput(expectedDraft);
+        setTextOutputDocument(plainDocument(expectedDraft));
+        setTextMetadata(null);
+      } else {
+        setMailOutput(expectedDraft);
+        setMailOutputDocument(plainDocument(expectedDraft));
+        setMailMetadata(null);
+      }
+      setEditingOutput(false);
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : 'Nümunə saxlanmadı.');
+    }
+  }
+
   async function transform() {
     if (!inputValue.trim() || loading || diffSource.length > MAX_TEXT_LENGTH) return;
 
@@ -169,6 +214,30 @@ export default function HomePage() {
       let requestText = inputValue;
       if (activeModule === 'mail' && mailSubject.trim() && !/^\s*mövzu:/iu.test(inputValue)) {
         requestText = `Mövzu: ${mailSubject.trim()}\n${inputValue}`;
+      }
+
+      const source = { module: activeModule, input: requestText,
+        preserveFormatting: activeModule === 'text' && preserveFormatting };
+      const remembered = findExpectedResult(expectedRef.current, source);
+      setResultSource(source);
+      sourceRef.current[activeModule] = source;
+      setFeedbackOpen(false);
+      setLearnedResult(Boolean(remembered));
+
+      if (remembered) {
+        if (activeModule === 'text') {
+          setTextGenerated(remembered.output);
+          setTextOutput(remembered.output);
+          setTextOutputDocument(plainDocument(remembered.output));
+          setTextMetadata(null);
+        } else {
+          setMailGenerated(remembered.output);
+          setMailOutput(remembered.output);
+          setMailOutputDocument(plainDocument(remembered.output));
+          setMailMetadata(null);
+        }
+        setEditingOutput(false);
+        return;
       }
 
       const result = await registry.get(config.strategyId).transform({
@@ -307,6 +376,9 @@ export default function HomePage() {
                     setMailSubject(event.target.value);
                     setMailOutput('');
                     setMailMetadata(null);
+                    setFeedbackOpen(false);
+                    setResultSource(null);
+                    delete sourceRef.current.mail;
                   }}
                 />
               </div>
@@ -357,6 +429,9 @@ export default function HomePage() {
                           setPreserveFormatting(event.target.checked);
                           setTextOutput('');
                           setTextMetadata(null);
+                          setFeedbackOpen(false);
+                          setResultSource(null);
+                          delete sourceRef.current.text;
                         }}
                       />
                       Mövcud abzasları saxla
@@ -384,6 +459,14 @@ export default function HomePage() {
                   {output && <button type="button" className="workspace-icon-btn"
                     onClick={() => setEditingOutput(value => !value)}>
                     {editingOutput ? 'Dəyişiklikləri göstər' : 'Nəticəni redaktə et'}
+                  </button>}
+                  {output && <button type="button" className="workspace-icon-btn"
+                    aria-expanded={feedbackOpen} aria-controls="workspace-expected-form"
+                    onClick={() => {
+                      setExpectedDraft(output);
+                      setFeedbackOpen(value => !value);
+                    }}>
+                    <BookOpen size={15} /> Düzgün nəticəni öyrət
                   </button>}
                   <button
                     type="button"
@@ -437,6 +520,17 @@ export default function HomePage() {
                     <span className="workspace-placeholder">Nəticə burada görünəcək.</span>
                   )}
                 </div>
+
+                {learnedResult && output && <p className="workspace-learned-note">Bu nəticə saxladığınız nümunədən götürülüb.</p>}
+                {feedbackOpen && output && (
+                  <div className="workspace-feedback" id="workspace-expected-form">
+                    <label htmlFor="workspace-expected-text">Bu giriş üçün nəticə necə olmalıdır?</label>
+                    <textarea id="workspace-expected-text" value={expectedDraft} maxLength={MAX_TEXT_LENGTH}
+                      onChange={event => setExpectedDraft(event.target.value)} />
+                    <p>Eyni mətn və modul yenidən göndəriləndə bu nəticə istifadə olunacaq. Nümunə yalnız bu brauzerdə saxlanır.</p>
+                    <button type="button" className="workspace-feedback-save" onClick={saveExpected}>Düzgün nəticəni saxla</button>
+                  </div>
+                )}
 
                 {(personalLexicon.pending.length > 0 || personalLexicon.confirmed.length > 0) && (
                   <details className="workspace-personal-lexicon">
