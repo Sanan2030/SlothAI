@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { formatEmail } from '../lib/editor/correct';
+import { correctText, formatEmail } from '../lib/editor/correct';
 import { DEFAULT_EMAIL_GREETING, EMAIL_GREETINGS } from '../lib/editor/email-greetings';
 
 test('selected greeting replaces the subject in the mail editor', () => {
@@ -28,4 +28,11 @@ test('reported browser journal examples retain selection and repair the short ma
   assert.ok(formatEmail(input, { ...options, emailGreeting: 'Hər vaxtınız xeyir.' }).text.startsWith('Hər vaxtınız xeyir.\n\n'));
   const alreadyGreeted = formatEmail(`her vaxtiniz xeyir\n${input}`, options).text;
   assert.equal(alreadyGreeted, output);
+});
+
+test('the general text editor also restores the missed finite verb', () => {
+  assert.equal(correctText('hec bir problem olmamisdir').text, 'Heç bir problem olmamışdır.');
+  assert.equal(correctText('problem olmamisdir', true).text, 'Problem olmamışdır.');
+  assert.equal(correctText('vpn e daxil olmaq barede hec bir problem olmamisdir tesekkurler').text,
+    'VPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.');
 });

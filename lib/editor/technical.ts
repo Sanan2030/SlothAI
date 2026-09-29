@@ -78,6 +78,7 @@ həlləri testlər testlərdən tamamlanmasına standartları başlayacaq növb�
 `.trim().split(/\s+/);
 
 export const technicalAliases: Record<string, string> = {
+  olmamisdir: 'olmamışdır',
   muvite: 'mühitə', gidisatini: 'gedişatını', qiymatlendirmeye: 'qiymətləndirməyə',
   pikey: 'pik', hacmini: 'həcmini', hacmli: 'həcmli', relasiyali: 'relyasiyalı',
   releysnl: 'relational', edileceqdir: 'ediləcəkdir', getirilecekdir: 'gətiriləcəkdir',

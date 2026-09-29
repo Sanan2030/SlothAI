@@ -254,9 +254,7 @@ export function formatEmail(input: string, options: { emailGreeting?: string; om
     : 'Salam,';
   // A compact draft needs the same sentence and paragraph segmentation as
   // prose; explicit user line breaks still take priority in a structured mail.
-  const preparedBody = document.body
-    .replace(/\bolmamisdir\b/giu, 'olmamışdır')
-    .replace(/\b(olmamışdır)\s+(?=tesekkurler\b|təşəkkürlər\b)/giu, '$1. ');
+  const preparedBody = document.body;
   let body = preparedBody ? correctText(prepareEmailBody(preparedBody), /\n/u.test(preparedBody)).text : '';
   if (body) {
     const inferred = prepareEmailBody(body);

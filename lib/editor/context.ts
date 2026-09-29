@@ -90,6 +90,7 @@ export function sentenceBoundaries(text: string): string {
       return last + '. ';
     });
   result = result.replace(/(göndərin|yoxlayın|baxın|edin|gəlin) +(?=təşəkkür edirəm(?:\s|$))/giu, '$1. ');
+  result = result.replace(/\b(olmamışdır) +(?=təşəkkürlər(?:\s|$))/giu, '$1. ');
   result = result.replace(/(stabildir) +(?=API\s)/giu, '$1. ');
   result = result.replace(/(qalıb|dəyişməyib|görünmür|olunub|gördük|işləyir|qaytarır|yenilənib|əlavə olunub|bilmir|deyil|yaranır|yoxladım) +(?=(?:xahiş edirəm|zəhmət olmasa|problem|səbəbi|nəticə|logları|icazə|BPMN|UAT|staging-də|stagingde|Staging-də)(?:\s|$))/giu, '$1. ');
 
