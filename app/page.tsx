@@ -179,6 +179,9 @@ export default function HomePage() {
       return;
     }
     try {
+      const baseline = activeModule === 'text' ? textGenerated : mailGenerated;
+      const edits = baseline ? extractPersonalCandidates(baseline, expectedDraft)
+        .filter(item => item.source.toLocaleLowerCase('az-AZ') !== item.target.toLocaleLowerCase('az-AZ')) : [];
       const next = saveExpectedResult(expectedRef.current, { ...resultSource, output: expectedDraft });
       if (!writeExpectedResults(window.localStorage, next)) {
         setError('Nümunə saxlanmadı. Brauzer yaddaşını yoxlayın.');
@@ -186,6 +189,11 @@ export default function HomePage() {
       }
       expectedRef.current = next;
       setError('');
+      if (edits.length) {
+        let learned = personalRef.current;
+        for (const edit of edits) learned = confirmPersonalCandidate(learned, edit);
+        persistPersonal(learned);
+      }
       setFeedbackOpen(false);
       setLearnedResult(true);
       if (activeModule === 'text') {
@@ -527,7 +535,7 @@ export default function HomePage() {
                     <label htmlFor="workspace-expected-text">Bu giriş üçün nəticə necə olmalıdır?</label>
                     <textarea id="workspace-expected-text" value={expectedDraft} maxLength={MAX_TEXT_LENGTH}
                       onChange={event => setExpectedDraft(event.target.value)} />
-                    <p>Eyni mətn və modul yenidən göndəriləndə bu nəticə istifadə olunacaq. Nümunə yalnız bu brauzerdə saxlanır.</p>
+                    <p>Eyni mətn yenidən göndəriləndə bütün nəticə qaytarılır. Ayrı-ayrı söz düzəlişləri tanınan qonşu sözlərlə başqa mətnlərdə də tətbiq olunur. Nümunə yalnız bu brauzerdə saxlanır.</p>
                     <button type="button" className="workspace-feedback-save" onClick={saveExpected}>Düzgün nəticəni saxla</button>
                   </div>
                 )}

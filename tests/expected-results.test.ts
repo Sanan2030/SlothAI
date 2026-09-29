@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { EXPECTED_RESULTS_KEY, findExpectedResult, readExpectedResults,
   saveExpectedResult, writeExpectedResults } from '../lib/editor/expected-results';
+import { applyPersonalLexicon, confirmPersonalCandidate, extractPersonalCandidates } from '../lib/editor/personal-lexicon';
 
 test('approved example persists and returns only for the same module, input and format option', () => {
   const storage = new Map<string, string>();
@@ -12,6 +13,7 @@ test('approved example persists and returns only for the same module, input and 
   assert.equal(writeExpectedResults(store, updated), true);
   const loaded = readExpectedResults(store);
   assert.equal(findExpectedResult(loaded, item)?.output, item.output);
+  assert.equal(findExpectedResult(loaded, { ...item, input: '  salam   necesen  ' })?.output, item.output);
   assert.equal(findExpectedResult(loaded, { ...item, module: 'mail' }), undefined);
   assert.equal(findExpectedResult(loaded, { ...item, input: 'salam necesen!' }), undefined);
   assert.equal(findExpectedResult(loaded, { ...item, preserveFormatting: true }), undefined);
@@ -29,4 +31,14 @@ test('example storage is bounded and rejects empty or oversized corrections', ()
   assert.equal(findExpectedResult(examples, { ...item, input: '0' }), undefined);
   assert.throws(() => saveExpectedResult(examples, { ...item, output: ' ' }));
   assert.throws(() => saveExpectedResult(examples, { ...item, output: 'a'.repeat(10_001) }));
+});
+
+test('a saved full correction also teaches a confirmed word edit in its known context', () => {
+  const baseline = 'Bu hesabat ugurludur.';
+  const expected = 'Bu hesabat uğurludur.';
+  const edits = extractPersonalCandidates(baseline, expected);
+  assert.equal(edits.length, 1);
+  const state = confirmPersonalCandidate({ pending: [], confirmed: [] }, edits[0]);
+  assert.equal(applyPersonalLexicon('Yeni hesabat ugurludur.', state.confirmed), 'Yeni hesabat uğurludur.');
+  assert.equal(applyPersonalLexicon('Yeni layihə ugurludur.', state.confirmed), 'Yeni layihə ugurludur.');
 });

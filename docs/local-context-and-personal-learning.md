@@ -27,3 +27,6 @@ lazımdır. Struktur testində keçmək tam dil doğruluğu demək deyil.
 # Düzgün nəticə nümunəsi
 
 Nəticənin yanındakı “Düzgün nəticəni öyrət” düyməsində bütün ideal cavabı yazıb yadda saxlamaq olar. Bu nümunə yalnız həmin modulda, eyni giriş mətni və eyni format seçimində növbəti dəfə birbaşa qaytarılır. Saxlama brauzerin `localStorage` yaddaşındadır; başqa cihazlara ötürülmür, serverə göndərilmir. Ən son 30 nümunə saxlanır, eyni giriş üçün təkrar saxlama köhnə nümunəni əvəz edir. Brauzerin yaddaşı təmizlənərsə nümunələr də silinir.
+Girişdə artıq boşluqlar və əvvəl/son boşluqlar nəticənin tapılmasına mane olmur; sözlər və sətir sonları dəyişərsə tam nümunə tətbiq edilmir.
+
+Əgər ideal nəticə mühərrikin nəticəsindən ən çox beş tək söz düzəlişi ilə fərqlənirsə və token sayı eynidirsə, həmin dəyişikliklər istifadəçinin təsdiqlədiyi, qonşu sözlərlə məhdud şəxsi lüğət qaydaları kimi də saxlanır. Sonrakı oxşar mətnlərdə bu söz düzəlişləri tətbiq edilir; bütöv cümlə, durğu işarəsi və abzas başqa mətnə köçürülmür. Uzun yenidən yazmaları kontekst qaydası kimi çıxarmaq etibarlı deyil, onlar yalnız tam uyğun girişdə istifadə olunur.
