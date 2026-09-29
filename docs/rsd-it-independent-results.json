@@ -95,7 +95,7 @@
       "id": "rsd-it-010",
       "domain": "qeydiyyat",
       "input": "tekrar sened asgarlananda operatora bildiris gonderilir",
-      "actual": "Təkrar sənəd asgarlananda operatora bildiriş göndərilir.",
+      "actual": "Təkrar sənəd aşkarlananda operatora bildiriş göndərilir.",
       "failures": []
     },
     {
@@ -879,7 +879,7 @@
       "id": "rsd-it-122",
       "domain": "arxiv",
       "input": "kohne arxivden getirilen faylin adi deyismeyib",
-      "actual": "Köhnə arxivdən gətirilən faylın adi dəyişməyib.",
+      "actual": "Köhnə arxivdən gətirilən faylın adı dəyişməyib.",
       "failures": []
     },
     {
@@ -1432,7 +1432,7 @@
       "id": "rsd-it-201",
       "domain": "devops",
       "input": "production deploy sonrasi health check ugurludur",
-      "actual": "Production deploy sonrası health check ugurludur.",
+      "actual": "Production deploy sonrası health check uğurludur.",
       "failures": []
     },
     {
@@ -2132,7 +2132,7 @@
       "id": "rsd-it-301",
       "domain": "migration",
       "input": "kohne sistemden uc min sened kocurulub",
-      "actual": "Köhnə sistemdən uc min sənəd köçürülüb.",
+      "actual": "Köhnə sistemdən üç min sənəd köçürülüb.",
       "failures": []
     },
     {
@@ -2727,7 +2727,7 @@
       "id": "rsd-it-386",
       "domain": "notifications",
       "input": "eyni hadiseye uc bildiris yazilib",
-      "actual": "Eyni hadisəyə uc bildiriş yazılıb.",
+      "actual": "Eyni hadisəyə üç bildiriş yazılıb.",
       "failures": []
     },
     {
@@ -3070,7 +3070,7 @@
       "id": "rsd-it-435",
       "domain": "support",
       "input": "istifadeci uc gun sonra eyni xetani bildirdi",
-      "actual": "İstifadəçi uc gün sonra eyni xətanı bildirdi.",
+      "actual": "İstifadəçi üç gün sonra eyni xətanı bildirdi.",
       "failures": []
     },
     {

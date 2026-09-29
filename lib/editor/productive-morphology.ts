@@ -6,8 +6,8 @@ import { foldLetters } from './dictionary';
 const vowels = /[aıoueəiöü]$/u;
 // Reviewed stems only: arbitrary dictionary entries cannot safely be passed
 // through every paradigm (irregular stems and loanwords need separate rules).
-const nouns = 'məktəb müəllim tələbə şəhər kənd küçə otaq sənəd mətn layihə məsələ şirkət müştəri əməkdaş rəhbər görüş sorğu sual cavab dəyişiklik məlumat proqram cümlə səhifə istifadəçi kitab qapı dost ailə iş gün gecə vaxt hava yol park bağ çay dağ meşə ölkə dünya tarix elm təhsil sağlamlıq həkim xəstəxana universitet dərs imtahan fikir qərar plan məqsəd nəticə proses sistem server kod fayl xəta test xidmət məhsul bazar sifariş müqavilə məktub xəbər müraciət tələb təklif həll mənbə mərhələ modul komanda əməkdaşlıq vətəndaş insan həyat ürək idman yemək meyvə ağac ulduz planet kosmos sənət musiqi xəritə dəftər qələm masa pəncərə qatar avtobus dayanacaq liman gəmi təyyarə aeroport kitabxana bağça laboratoriya telefon kompüter ekran klaviatura düymə xəstə müəllif oxucu tamaşaçı rəssam müğənni aktyor oyun idmançı meydan stadion qida tərəvəz çörək çanta paltar mühit təbiət iqlim yağış külək bulud günəş uşaq ana ata bacı qardaş qadın kişi səhra çöl nəqliyyat enerji qayda hüquq qanun fikir mütəxəssis təqdimat hesabat nəticəlik resurs təhlükə sınaq texnika məqalə şəkil rəng təcrübə'.split(' ');
-const verbs = 'gəl get düşün gör eşit danış çalış işlə oxu yaz gözlə başla istə bil et göndər düzəlt yoxla araşdır aç bağla yarat hazırla qur seç soruş qoru saxla tap anla paylaş öyrən öyrət göstər dinlə izlə dəyiş bölüş ölç planlaşdır tamamla təmizlə bağışla bildir'.split(' ');
+const nouns = 'məktəb müəllim tələbə şəhər kənd küçə otaq sənəd mətn layihə məsələ şirkət müştəri əməkdaş rəhbər görüş sorğu sual cavab dəyişiklik məlumat proqram cümlə səhifə istifadəçi kitab qapı dost ailə iş gün gecə vaxt hava yol park bağ çay dağ meşə ölkə dünya tarix elm təhsil sağlamlıq həkim xəstəxana universitet dərs imtahan fikir qərar plan məqsəd nəticə proses sistem server kod fayl xəta test xidmət məhsul bazar sifariş müqavilə məktub xəbər müraciət tələb təklif həll mənbə mərhələ modul komanda əməkdaşlıq vətəndaş insan həyat ürək idman yemək meyvə ağac ulduz planet kosmos sənət musiqi xəritə dəftər qələm masa pəncərə qatar avtobus dayanacaq liman gəmi təyyarə aeroport kitabxana bağça laboratoriya telefon kompüter ekran klaviatura düymə xəstə müəllif oxucu tamaşaçı rəssam müğənni aktyor oyun idmançı meydan stadion qida tərəvəz çörək çanta paltar mühit təbiət iqlim yağış külək bulud günəş uşaq ana ata bacı qardaş qadın kişi səhra çöl nəqliyyat enerji qayda hüquq qanun fikir mütəxəssis təqdimat hesabat nəticəlik resurs təhlükə sınaq texnika məqalə şəkil rəng təcrübə adam quş cavab bildiriş qeydiyyat status icra əsl müddət ad'.split(' ');
+const verbs = 'gəl get düşün gör eşit danış çalış işlə oxu yaz gözlə başla istə bil et göndər düzəlt yoxla araşdır aç bağla yarat hazırla qur seç soruş qoru saxla tap anla paylaş öyrən öyrət göstər dinlə izlə dəyiş bölüş ölç planlaşdır tamamla təmizlə bağışla bildir uç qayıt'.split(' ');
 const cases: GrammaticalCase[] = ['nominative', 'genitive', 'dative', 'accusative', 'locative', 'ablative'];
 const lower = (s: string) => s.normalize('NFC').toLocaleLowerCase('az-AZ');
 const vowel = (s: string) => s.match(/[aıoueəiöü]/gu)?.at(-1) ?? 'a';
@@ -41,9 +41,17 @@ function inflectCase(stem: string, grammaticalCase: GrammaticalCase, thirdPosses
 
 type Form = { lemma: string; features: MorphologicalFeatures; pos: 'noun' | 'verb'; suffixes: string[] };
 const index = new Map<string, Form[]>();
+const formsByLemma = new Map<string, Map<string, Form[]>>();
 function add(surface: string, form: Form): void {
   const records = index.get(surface) ?? [];
-  if (!records.some(x => x.lemma === form.lemma && JSON.stringify(x.features) === JSON.stringify(form.features))) records.push(form);
+  if (!records.some(x => x.lemma === form.lemma && JSON.stringify(x.features) === JSON.stringify(form.features))) {
+    records.push(form);
+    const forms = formsByLemma.get(form.lemma) ?? new Map<string, Form[]>();
+    const lemmaRecords = forms.get(surface) ?? [];
+    lemmaRecords.push(form);
+    forms.set(surface, lemmaRecords);
+    formsByLemma.set(form.lemma, forms);
+  }
   index.set(surface, records);
 }
 
@@ -97,6 +105,8 @@ for (const lemma of verbs) {
         }
       }
       if (!passive && !negative) {
+        const infinitive = lemma + 'm' + a(lemma) + (a(lemma) === 'ə' ? 'k' : 'q');
+        add(infinitive, { lemma, pos: 'verb', features: { mood: 'infinitive' }, suffixes: [infinitive.slice(lemma.length)] });
         add(lemma, { lemma, pos: 'verb', features: { mood: 'imperative', person: 2 }, suffixes: [] });
         const linker = v ? 'y' : '';
         const converbA = linker + a(lemma) + 'r' + a(lemma) + (a(lemma) === 'ə' ? 'k' : 'q');
@@ -140,9 +150,8 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
     const limit = Math.max(0, Math.min(request.limit ?? 64, 256));
     if (!limit) return [];
     const output: string[] = [];
-    for (const [surface, records] of index) {
-      if (records.some(record => record.lemma === lemma
-        && (!request.pos || record.pos === request.pos)
+    for (const [surface, records] of formsByLemma.get(lemma) ?? []) {
+      if (records.some(record => (!request.pos || record.pos === request.pos)
         && Object.entries(request.features ?? {}).every(([name, value]) =>
           JSON.stringify(record.features[name as keyof MorphologicalFeatures]) === JSON.stringify(value)))) {
         output.push(surface);

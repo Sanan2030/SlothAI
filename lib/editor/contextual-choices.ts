@@ -1,6 +1,8 @@
 /** Conservative sentence-wide evidence for high-frequency Azerbaijani homographs.
  * Return undefined on weak/conflicting evidence; never guess from a bare word.
  */
+import { dictionaryCandidates } from './dictionary';
+import { productiveMorphology } from './productive-morphology';
 const evidence: Record<string, { alternatives: readonly [string, readonly string[]][] }> = {
   seher: { alternatives: [
     ['səhər', ['oyandım', 'oyandim', 'tezdən', 'tezden', 'saat', 'yeməyi', 'yemeyi', 'günəş', 'gunes', 'hava', 'nahar', 'axşam', 'axsam', 'gecə', 'gece', 'sübh', 'subh']],
@@ -34,4 +36,27 @@ export function chooseBySentence(word: string, surrounding: ReadonlySet<string>)
   const selected = entry.alternatives[winner][0];
   return /^[A-ZƏÇĞIİÖŞÜ]/u.test(word)
     ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
+}
+
+/** Select an ambiguous surface only when its POS fits an independently parsed neighbour. */
+export function chooseByGrammar(word: string, nextWord: string, previousWord = ''): string | undefined {
+  const key = fold(word);
+  if ((key !== 'uc' && key !== 'adi') || /[əıçğöşü]/iu.test(word)) return undefined;
+  const forms = dictionaryCandidates(word);
+  if (key === 'adi') {
+    if (!forms?.has('adi') || !forms.has('adı')) return undefined;
+    const previous = productiveMorphology.analyzeWord(previousWord);
+    // A preceding genitive licenses the possessed noun "adı"; without this
+    // evidence, the already-valid adjective "adi" remains unchanged.
+    if (!previous.some(item => item.pos === 'noun' && item.features.case === 'genitive')) return undefined;
+    return /^[A-ZƏÇĞIİÖŞÜ]/u.test(word) ? 'Adı' : 'adı';
+  }
+  if (!forms?.has('üç') || !forms.has('uç')) return undefined;
+  if (nextWord.toLocaleLowerCase('az-AZ') === 'min') return /^[A-ZƏÇĞIİÖŞÜ]/u.test(word) ? 'Üç' : 'üç';
+  const next = productiveMorphology.analyzeWord(nextWord);
+  // Bare nouns in the nominative can follow a numeral; declined objects and
+  // unknown technical names do not provide sufficient evidence.
+  if (!next.some(item => item.pos === 'noun' && item.features.case === 'nominative'
+    && !item.features.possessivePerson)) return undefined;
+  return /^[A-ZƏÇĞIİÖŞÜ]/u.test(word) ? 'Üç' : 'üç';
 }

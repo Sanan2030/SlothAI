@@ -7,7 +7,7 @@ import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists 
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
-import { chooseBySentence, sentenceEvidence } from './contextual-choices';
+import { chooseByGrammar, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -151,6 +151,13 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     }
     const contextual = chooseBySentence(word, context);
     if (contextual) return contextual;
+    if (/^(?:uc|adi)$/iu.test(word)) {
+      const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';
+      const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
+      const grammatical = chooseByGrammar(word, nextWord ? restoreWord(nextWord) : '',
+        previousWord ? restoreWord(previousWord) : '');
+      if (grammatical) return grammatical;
+    }
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);

@@ -143,6 +143,8 @@ const aliases: Record<string, string> = {
   ehsen: 'əhsən',
   diqqet: 'diqqət',
   destek: 'dəstək',
+  asgarlananda: 'aşkarlananda',
+  ugurludur: 'uğurludur',
   derkenara: 'dərkənara',
   yazdigi: 'yazdığı',
   yekunu: 'yekunu',

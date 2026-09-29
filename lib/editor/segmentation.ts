@@ -10,6 +10,7 @@ const namedSubjects = new Set([...givenNames.filter(name => !ambiguousNames.has(
 const subjects = new Set(['mən', 'sən', 'biz', 'siz', 'o', 'onlar', 'biri', 'icraçı']);
 const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dünən', 'birdən', 'günortadan']);
 const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 'ilə']);
+const objectPronouns = new Set(['onu', 'onları', 'bunu', 'bunları']);
 
 const lightVerbNouns = new Set(['təsvir', 'təhlil', 'təqdim', 'təklif', 'təmin', 'tətbiq', 'təşkil', 'nadir', 'aydın']);
 function independentStart(word: string): boolean {
@@ -55,9 +56,25 @@ export function segmentIndependentClauses(text: string): string {
     const participleBeforeNoun = /(?:mış|miş|muş|müş|acaq|əcək)$/iu.test(current)
       && (/(?:lar|lər)$/iu.test(next)
         || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'));
+    const wordAfterNext = tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') ?? '';
+    const freshObjectClause = (objectPronouns.has(next)
+      || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
+        && item.features.case === 'accusative'))
+      && (timeWords.has(wordAfterNext)
+        || (objectPronouns.has(next) && wordAfterNext === 'bir'
+          && tokens[index + 6]?.[0]?.toLocaleLowerCase('az-AZ') === 'daha'));
+    const temporalClause = /(?:dıqdan|dikdən|duqdan|dükdən|tıqdan|tikdən)$/iu.test(next)
+      && wordAfterNext === 'sonra';
+    const completedConverb = /(?:ıb|ib|ub|üb)$/iu.test(current)
+      && independentStart(next) && !objectPronouns.has(next)
+      && (wordAfterNext === 'isə'
+        || (productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
+          && item.features.case === 'nominative' && !item.features.possessivePerson)
+          && productiveMorphology.analyzeWord(wordAfterNext).some(item => item.pos === 'noun'
+            && item.features.case === 'nominative')));
     if (!/^\p{L}+$/u.test(current) || !/^ +$/u.test(space)
-      || !isFinitePredicate(current) || participleBeforeNoun || connectors.has(next)
-      || !(independentStart(next) || (next === 'daha' && tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') === 'sonra')
+      || !(isFinitePredicate(current) || completedConverb) || participleBeforeNoun || connectors.has(next)
+      || !(independentStart(next) || freshObjectClause || temporalClause || (next === 'daha' && wordAfterNext === 'sonra')
         || (/^[\p{L}]{4,}(?:lar|lər)$/u.test(next) && !connectors.has(next)))) {
       output += current;
       continue;

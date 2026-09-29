@@ -40,7 +40,7 @@
       "id": "mail-003",
       "domain": "qeydiyyat",
       "input": "hormetli Aysel xanım göndərdiyiniz ərizənin əlavəsi görünmür onu bir daha yollamağınızı xahiş edirik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nGöndərdiyiniz ərizənin əlavəsi görünmür onu bir daha yollamağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nGöndərdiyiniz ərizənin əlavəsi görünmür. Onu bir daha yollamağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -75,7 +75,7 @@
       "id": "mail-008",
       "domain": "qeydiyyat",
       "input": "Mövzu: Qeydiyyat surəti\nHörmətli arxiv qrupu,\nimzalı sənədin surəti sizə göndərilib əsli isə sabah təhvil veriləcək\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Qeydiyyat surəti\n\nHörmətli arxiv qrupu,\n\nİmzalı sənədin surəti sizə göndərilib əsli isə sabah təhvil veriləcək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Qeydiyyat surəti\n\nHörmətli arxiv qrupu,\n\nİmzalı sənədin surəti sizə göndərilib. Əsli isə sabah təhvil veriləcək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -89,7 +89,7 @@
       "id": "mail-010",
       "domain": "qeydiyyat",
       "input": "movzu Təsdiq gözlənilir salam sənəd sahibi ərizəniz hələ təsdiq mərhələsindədir tamamlandıqdan sonra bildiriş alacaqsınız hormetle senan",
-      "actual": "Mövzu: Təsdiq gözlənilir\n\nHörmətli sənəd sahibi,\n\nƏrizəniz hələ təsdiq mərhələsindədir tamamlandıqdan sonra bildiriş alacaqsınız.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Təsdiq gözlənilir\n\nHörmətli sənəd sahibi,\n\nƏrizəniz hələ təsdiq mərhələsindədir. Tamamlandıqdan sonra bildiriş alacaqsınız.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -173,7 +173,7 @@
       "id": "mail-022",
       "domain": "derkenar",
       "input": "movzu Yeni tapşırıq salam icraçılar rəhbərin dərkənarı sizə həvalə olunub icra müddəti cümə günü başa çatır hormetle senan",
-      "actual": "Mövzu: Yeni tapşırıq\n\nHörmətli icraçılar,\n\nRəhbərin dərkənarı sizə həvalə olunub icra müddəti cümə günü başa çatır.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yeni tapşırıq\n\nHörmətli icraçılar,\n\nRəhbərin dərkənarı sizə həvalə olunub. İcra müddəti cümə günü başa çatır.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
