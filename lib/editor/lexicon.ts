@@ -262,6 +262,7 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   meyar: 'meyar',
   yarat: 'yarat',
   derkenar: 'dərkənar',
+  derkenara: 'dərkənara',
   gorun: 'görün',
   dus: 'düş',
 }).map(([raw, canonical]) => [fold(raw), canonical]));
