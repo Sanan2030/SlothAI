@@ -1,0 +1,26 @@
+{
+  "algorithm": "context-naive-bayes",
+  "pairCount": 500,
+  "trainPairs": 400,
+  "testPairs": 100,
+  "independentGoldGroups": {
+    "train": 80,
+    "test": 20
+  },
+  "splitPolicy": "all variants of a gold text stay in one split",
+  "source": "100 author-written gold texts; five synthetic variants each; no scraped or user data",
+  "corpusSha256": "faa8233f13a794fd4a4cd4aae436e984549953000cdf01a78e96d9796e65953c",
+  "modelBytes": 4628,
+  "candidateGroups": [
+    "seher",
+    "suret"
+  ],
+  "heldOutAmbiguityDecisions": {
+    "eligible": 40,
+    "accepted": 22,
+    "correct": 22,
+    "wrong": 0,
+    "abstained": 18
+  },
+  "limitations": "This measures a small synthetic corpus; it is not general Azerbaijani accuracy or human semantic understanding."
+}

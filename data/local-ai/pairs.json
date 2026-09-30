@@ -1,0 +1,4505 @@
+{
+  "version": 1,
+  "pairs": [
+    {
+      "id": "local-001-1",
+      "groupId": "gold-1",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher oyananda pencereden gunesin dogmasina baxdim gune sakit basladim",
+      "target": "Səhər oyananda pəncərədən günəşin doğmasına baxdım. Günə sakit başladım."
+    },
+    {
+      "id": "local-001-2",
+      "groupId": "gold-1",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher oyananda pencereden gunesin dogmasina baxdim. gune sakit basladim.",
+      "target": "Səhər oyananda pəncərədən günəşin doğmasına baxdım. Günə sakit başladım."
+    },
+    {
+      "id": "local-001-3",
+      "groupId": "gold-1",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər oyananda pəncərədən günəşin doğmasına baxdım günə sakit başladım",
+      "target": "Səhər oyananda pəncərədən günəşin doğmasına baxdım. Günə sakit başladım."
+    },
+    {
+      "id": "local-001-4",
+      "groupId": "gold-1",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher oyananda penchereden guneshin dogmashina baxdim gune shakit bashladim",
+      "target": "Səhər oyananda pəncərədən günəşin doğmasına baxdım. Günə sakit başladım."
+    },
+    {
+      "id": "local-001-5",
+      "groupId": "gold-1",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher oynanda pencereden gunesin dogmasina baxdim. gune sakit basladim.",
+      "target": "Səhər oyananda pəncərədən günəşin doğmasına baxdım. Günə sakit başladım."
+    },
+    {
+      "id": "local-002-1",
+      "groupId": "gold-2",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yemeyinden sonra usaqlari mektebe apardim sufreni evvelceden hazirlamisdim",
+      "target": "Səhər yeməyindən sonra uşaqları məktəbə apardım. Süfrəni əvvəlcədən hazırlamışdım."
+    },
+    {
+      "id": "local-002-2",
+      "groupId": "gold-2",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yemeyinden sonra usaqlari mektebe apardim. sufreni evvelceden hazirlamisdim.",
+      "target": "Səhər yeməyindən sonra uşaqları məktəbə apardım. Süfrəni əvvəlcədən hazırlamışdım."
+    },
+    {
+      "id": "local-002-3",
+      "groupId": "gold-2",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yeməyindən sonra uşaqları məktəbə apardım süfrəni əvvəlcədən hazırlamışdım",
+      "target": "Səhər yeməyindən sonra uşaqları məktəbə apardım. Süfrəni əvvəlcədən hazırlamışdım."
+    },
+    {
+      "id": "local-002-4",
+      "groupId": "gold-2",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yemeyinden shonra ushaqlari mektebe apardim shufreni evvelcheden hazirlamishdim",
+      "target": "Səhər yeməyindən sonra uşaqları məktəbə apardım. Süfrəni əvvəlcədən hazırlamışdım."
+    },
+    {
+      "id": "local-002-5",
+      "groupId": "gold-2",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yeeyinden sonra usaqlari mektebe apardim. sufreni evvelceden hazirlamisdim.",
+      "target": "Səhər yeməyindən sonra uşaqları məktəbə apardım. Süfrəni əvvəlcədən hazırlamışdım."
+    },
+    {
+      "id": "local-003-1",
+      "groupId": "gold-3",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher zengli saat calanda derhal yataqdan qalxdim ise gecikmek istemirdim",
+      "target": "Səhər zəngli saat çalanda dərhal yataqdan qalxdım. İşə gecikmək istəmirdim."
+    },
+    {
+      "id": "local-003-2",
+      "groupId": "gold-3",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher zengli saat calanda derhal yataqdan qalxdim. ise gecikmek istemirdim.",
+      "target": "Səhər zəngli saat çalanda dərhal yataqdan qalxdım. İşə gecikmək istəmirdim."
+    },
+    {
+      "id": "local-003-3",
+      "groupId": "gold-3",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər zəngli saat çalanda dərhal yataqdan qalxdım işə gecikmək istəmirdim",
+      "target": "Səhər zəngli saat çalanda dərhal yataqdan qalxdım. İşə gecikmək istəmirdim."
+    },
+    {
+      "id": "local-003-4",
+      "groupId": "gold-3",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher zengli shaat chalanda derhal yataqdan qalxdim ishe gechikmek ishtemirdim",
+      "target": "Səhər zəngli saat çalanda dərhal yataqdan qalxdım. İşə gecikmək istəmirdim."
+    },
+    {
+      "id": "local-003-5",
+      "groupId": "gold-3",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher zegli saat calanda derhal yataqdan qalxdim. ise gecikmek istemirdim.",
+      "target": "Səhər zəngli saat çalanda dərhal yataqdan qalxdım. İşə gecikmək istəmirdim."
+    },
+    {
+      "id": "local-004-1",
+      "groupId": "gold-4",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher gunes dogmamis bagdaki gulleri suladim hava hele serin idi",
+      "target": "Səhər günəş doğmamış bağdakı gülləri suladım. Hava hələ sərin idi."
+    },
+    {
+      "id": "local-004-2",
+      "groupId": "gold-4",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher gunes dogmamis bagdaki gulleri suladim. hava hele serin idi.",
+      "target": "Səhər günəş doğmamış bağdakı gülləri suladım. Hava hələ sərin idi."
+    },
+    {
+      "id": "local-004-3",
+      "groupId": "gold-4",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər günəş doğmamış bağdakı gülləri suladım hava hələ sərin idi",
+      "target": "Səhər günəş doğmamış bağdakı gülləri suladım. Hava hələ sərin idi."
+    },
+    {
+      "id": "local-004-4",
+      "groupId": "gold-4",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher gunesh dogmamish bagdaki gulleri shuladim hava hele sherin idi",
+      "target": "Səhər günəş doğmamış bağdakı gülləri suladım. Hava hələ sərin idi."
+    },
+    {
+      "id": "local-004-5",
+      "groupId": "gold-4",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher gunes domamis bagdaki gulleri suladim. hava hele serin idi.",
+      "target": "Səhər günəş doğmamış bağdakı gülləri suladım. Hava hələ sərin idi."
+    },
+    {
+      "id": "local-005-1",
+      "groupId": "gold-5",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher erken oyanib qehve hazirladim sonra gundelik planimi yazdim",
+      "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım."
+    },
+    {
+      "id": "local-005-2",
+      "groupId": "gold-5",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher erken oyanib qehve hazirladim. sonra gundelik planimi yazdim.",
+      "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım."
+    },
+    {
+      "id": "local-005-3",
+      "groupId": "gold-5",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər erkən oyanıb qəhvə hazırladım sonra gündəlik planımı yazdım",
+      "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım."
+    },
+    {
+      "id": "local-005-4",
+      "groupId": "gold-5",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher erken oyanib qehve hazirladim shonra gundelik planimi yazdim",
+      "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım."
+    },
+    {
+      "id": "local-005-5",
+      "groupId": "gold-5",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher erken oynib qehve hazirladim. sonra gundelik planimi yazdim.",
+      "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım."
+    },
+    {
+      "id": "local-006-1",
+      "groupId": "gold-6",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yuxudan qalxanda zengli saati sondurdum bir nece deqiqe sonra geyindim",
+      "target": "Səhər yuxudan qalxanda zəngli saatı söndürdüm. Bir neçə dəqiqə sonra geyindim."
+    },
+    {
+      "id": "local-006-2",
+      "groupId": "gold-6",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yuxudan qalxanda zengli saati sondurdum. bir nece deqiqe sonra geyindim.",
+      "target": "Səhər yuxudan qalxanda zəngli saatı söndürdüm. Bir neçə dəqiqə sonra geyindim."
+    },
+    {
+      "id": "local-006-3",
+      "groupId": "gold-6",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yuxudan qalxanda zəngli saatı söndürdüm bir neçə dəqiqə sonra geyindim",
+      "target": "Səhər yuxudan qalxanda zəngli saatı söndürdüm. Bir neçə dəqiqə sonra geyindim."
+    },
+    {
+      "id": "local-006-4",
+      "groupId": "gold-6",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yuxudan qalxanda zengli shaati shondurdum bir neche deqiqe shonra geyindim",
+      "target": "Səhər yuxudan qalxanda zəngli saatı söndürdüm. Bir neçə dəqiqə sonra geyindim."
+    },
+    {
+      "id": "local-006-5",
+      "groupId": "gold-6",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yuudan qalxanda zengli saati sondurdum. bir nece deqiqe sonra geyindim.",
+      "target": "Səhər yuxudan qalxanda zəngli saatı söndürdüm. Bir neçə dəqiqə sonra geyindim."
+    },
+    {
+      "id": "local-007-1",
+      "groupId": "gold-7",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yemeyi ucun pendir ve yumurta aldim coreyi de sufreye qoydum",
+      "target": "Səhər yeməyi üçün pendir və yumurta aldım. Çörəyi də süfrəyə qoydum."
+    },
+    {
+      "id": "local-007-2",
+      "groupId": "gold-7",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yemeyi ucun pendir ve yumurta aldim. coreyi de sufreye qoydum.",
+      "target": "Səhər yeməyi üçün pendir və yumurta aldım. Çörəyi də süfrəyə qoydum."
+    },
+    {
+      "id": "local-007-3",
+      "groupId": "gold-7",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yeməyi üçün pendir və yumurta aldım çörəyi də süfrəyə qoydum",
+      "target": "Səhər yeməyi üçün pendir və yumurta aldım. Çörəyi də süfrəyə qoydum."
+    },
+    {
+      "id": "local-007-4",
+      "groupId": "gold-7",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yemeyi uchun pendir ve yumurta aldim choreyi de shufreye qoydum",
+      "target": "Səhər yeməyi üçün pendir və yumurta aldım. Çörəyi də süfrəyə qoydum."
+    },
+    {
+      "id": "local-007-5",
+      "groupId": "gold-7",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yeeyi ucun pendir ve yumurta aldim. coreyi de sufreye qoydum.",
+      "target": "Səhər yeməyi üçün pendir və yumurta aldım. Çörəyi də süfrəyə qoydum."
+    },
+    {
+      "id": "local-008-1",
+      "groupId": "gold-8",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher gunes doganda qacisa basladim gune idmanla baslamaq xosuma gelir",
+      "target": "Səhər günəş doğanda qaçışa başladım. Günə idmanla başlamaq xoşuma gəlir."
+    },
+    {
+      "id": "local-008-2",
+      "groupId": "gold-8",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher gunes doganda qacisa basladim. gune idmanla baslamaq xosuma gelir.",
+      "target": "Səhər günəş doğanda qaçışa başladım. Günə idmanla başlamaq xoşuma gəlir."
+    },
+    {
+      "id": "local-008-3",
+      "groupId": "gold-8",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər günəş doğanda qaçışa başladım günə idmanla başlamaq xoşuma gəlir",
+      "target": "Səhər günəş doğanda qaçışa başladım. Günə idmanla başlamaq xoşuma gəlir."
+    },
+    {
+      "id": "local-008-4",
+      "groupId": "gold-8",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher gunesh doganda qachisha bashladim gune idmanla bashlamaq xoshuma gelir",
+      "target": "Səhər günəş doğanda qaçışa başladım. Günə idmanla başlamaq xoşuma gəlir."
+    },
+    {
+      "id": "local-008-5",
+      "groupId": "gold-8",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher gunes doanda qacisa basladim. gune idmanla baslamaq xosuma gelir.",
+      "target": "Səhər günəş doğanda qaçışa başladım. Günə idmanla başlamaq xoşuma gəlir."
+    },
+    {
+      "id": "local-009-1",
+      "groupId": "gold-9",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher oyandiqdan sonra uzumu yudum sonra otagin penceresini acdim",
+      "target": "Səhər oyandıqdan sonra üzümü yudum. Sonra otağın pəncərəsini açdım."
+    },
+    {
+      "id": "local-009-2",
+      "groupId": "gold-9",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher oyandiqdan sonra uzumu yudum. sonra otagin penceresini acdim.",
+      "target": "Səhər oyandıqdan sonra üzümü yudum. Sonra otağın pəncərəsini açdım."
+    },
+    {
+      "id": "local-009-3",
+      "groupId": "gold-9",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər oyandıqdan sonra üzümü yudum sonra otağın pəncərəsini açdım",
+      "target": "Səhər oyandıqdan sonra üzümü yudum. Sonra otağın pəncərəsini açdım."
+    },
+    {
+      "id": "local-009-4",
+      "groupId": "gold-9",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher oyandiqdan shonra uzumu yudum shonra otagin penchereshini achdim",
+      "target": "Səhər oyandıqdan sonra üzümü yudum. Sonra otağın pəncərəsini açdım."
+    },
+    {
+      "id": "local-009-5",
+      "groupId": "gold-9",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher oyndiqdan sonra uzumu yudum. sonra otagin penceresini acdim.",
+      "target": "Səhər oyandıqdan sonra üzümü yudum. Sonra otağın pəncərəsini açdım."
+    },
+    {
+      "id": "local-010-1",
+      "groupId": "gold-10",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher zengli saatin sesine oyandim gece kifayet qeder yatmisdim",
+      "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım."
+    },
+    {
+      "id": "local-010-2",
+      "groupId": "gold-10",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher zengli saatin sesine oyandim. gece kifayet qeder yatmisdim.",
+      "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım."
+    },
+    {
+      "id": "local-010-3",
+      "groupId": "gold-10",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər zəngli saatın səsinə oyandım gecə kifayət qədər yatmışdım",
+      "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım."
+    },
+    {
+      "id": "local-010-4",
+      "groupId": "gold-10",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher zengli shaatin sheshine oyandim geche kifayet qeder yatmishdim",
+      "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım."
+    },
+    {
+      "id": "local-010-5",
+      "groupId": "gold-10",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher zegli saatin sesine oyandim. gece kifayet qeder yatmisdim.",
+      "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım."
+    },
+    {
+      "id": "local-011-1",
+      "groupId": "gold-11",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher sufreye cay ve teze corek qoydum aile uzvlerim yemeye geldiler",
+      "target": "Səhər süfrəyə çay və təzə çörək qoydum. Ailə üzvlərim yeməyə gəldilər."
+    },
+    {
+      "id": "local-011-2",
+      "groupId": "gold-11",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher sufreye cay ve teze corek qoydum. aile uzvlerim yemeye geldiler.",
+      "target": "Səhər süfrəyə çay və təzə çörək qoydum. Ailə üzvlərim yeməyə gəldilər."
+    },
+    {
+      "id": "local-011-3",
+      "groupId": "gold-11",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər süfrəyə çay və təzə çörək qoydum ailə üzvlərim yeməyə gəldilər",
+      "target": "Səhər süfrəyə çay və təzə çörək qoydum. Ailə üzvlərim yeməyə gəldilər."
+    },
+    {
+      "id": "local-011-4",
+      "groupId": "gold-11",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher shufreye chay ve teze chorek qoydum aile uzvlerim yemeye geldiler",
+      "target": "Səhər süfrəyə çay və təzə çörək qoydum. Ailə üzvlərim yeməyə gəldilər."
+    },
+    {
+      "id": "local-011-5",
+      "groupId": "gold-11",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher sureye cay ve teze corek qoydum. aile uzvlerim yemeye geldiler.",
+      "target": "Səhər süfrəyə çay və təzə çörək qoydum. Ailə üzvlərim yeməyə gəldilər."
+    },
+    {
+      "id": "local-012-1",
+      "groupId": "gold-12",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher gunesin dogmasini balkondan izledim sakit hava meni sevindirdi",
+      "target": "Səhər günəşin doğmasını balkondan izlədim. Sakit hava məni sevindirdi."
+    },
+    {
+      "id": "local-012-2",
+      "groupId": "gold-12",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher gunesin dogmasini balkondan izledim. sakit hava meni sevindirdi.",
+      "target": "Səhər günəşin doğmasını balkondan izlədim. Sakit hava məni sevindirdi."
+    },
+    {
+      "id": "local-012-3",
+      "groupId": "gold-12",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər günəşin doğmasını balkondan izlədim sakit hava məni sevindirdi",
+      "target": "Səhər günəşin doğmasını balkondan izlədim. Sakit hava məni sevindirdi."
+    },
+    {
+      "id": "local-012-4",
+      "groupId": "gold-12",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher guneshin dogmashini balkondan izledim shakit hava meni shevindirdi",
+      "target": "Səhər günəşin doğmasını balkondan izlədim. Sakit hava məni sevindirdi."
+    },
+    {
+      "id": "local-012-5",
+      "groupId": "gold-12",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher guesin dogmasini balkondan izledim. sakit hava meni sevindirdi.",
+      "target": "Səhər günəşin doğmasını balkondan izlədim. Sakit hava məni sevindirdi."
+    },
+    {
+      "id": "local-013-1",
+      "groupId": "gold-13",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yuxudan durub qisa mesq etdim gune hazir olmaq ucun dus qebul etdim",
+      "target": "Səhər yuxudan durub qısa məşq etdim. Günə hazır olmaq üçün duş qəbul etdim."
+    },
+    {
+      "id": "local-013-2",
+      "groupId": "gold-13",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yuxudan durub qisa mesq etdim. gune hazir olmaq ucun dus qebul etdim.",
+      "target": "Səhər yuxudan durub qısa məşq etdim. Günə hazır olmaq üçün duş qəbul etdim."
+    },
+    {
+      "id": "local-013-3",
+      "groupId": "gold-13",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yuxudan durub qısa məşq etdim günə hazır olmaq üçün duş qəbul etdim",
+      "target": "Səhər yuxudan durub qısa məşq etdim. Günə hazır olmaq üçün duş qəbul etdim."
+    },
+    {
+      "id": "local-013-4",
+      "groupId": "gold-13",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yuxudan durub qisha meshq etdim gune hazir olmaq uchun dush qebul etdim",
+      "target": "Səhər yuxudan durub qısa məşq etdim. Günə hazır olmaq üçün duş qəbul etdim."
+    },
+    {
+      "id": "local-013-5",
+      "groupId": "gold-13",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yuudan durub qisa mesq etdim. gune hazir olmaq ucun dus qebul etdim.",
+      "target": "Səhər yuxudan durub qısa məşq etdim. Günə hazır olmaq üçün duş qəbul etdim."
+    },
+    {
+      "id": "local-014-1",
+      "groupId": "gold-14",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yemeyine yulaf hazirladim ustune bir qeder meyve elave etdim",
+      "target": "Səhər yeməyinə yulaf hazırladım. Üstünə bir qədər meyvə əlavə etdim."
+    },
+    {
+      "id": "local-014-2",
+      "groupId": "gold-14",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yemeyine yulaf hazirladim. ustune bir qeder meyve elave etdim.",
+      "target": "Səhər yeməyinə yulaf hazırladım. Üstünə bir qədər meyvə əlavə etdim."
+    },
+    {
+      "id": "local-014-3",
+      "groupId": "gold-14",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yeməyinə yulaf hazırladım üstünə bir qədər meyvə əlavə etdim",
+      "target": "Səhər yeməyinə yulaf hazırladım. Üstünə bir qədər meyvə əlavə etdim."
+    },
+    {
+      "id": "local-014-4",
+      "groupId": "gold-14",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yemeyine yulaf hazirladim ushtune bir qeder meyve elave etdim",
+      "target": "Səhər yeməyinə yulaf hazırladım. Üstünə bir qədər meyvə əlavə etdim."
+    },
+    {
+      "id": "local-014-5",
+      "groupId": "gold-14",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yeeyine yulaf hazirladim. ustune bir qeder meyve elave etdim.",
+      "target": "Səhər yeməyinə yulaf hazırladım. Üstünə bir qədər meyvə əlavə etdim."
+    },
+    {
+      "id": "local-015-1",
+      "groupId": "gold-15",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher oyananda zengli saatin islemediyini gordum telefonumun bildirisi meni oyatmisdi",
+      "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı."
+    },
+    {
+      "id": "local-015-2",
+      "groupId": "gold-15",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher oyananda zengli saatin islemediyini gordum. telefonumun bildirisi meni oyatmisdi.",
+      "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı."
+    },
+    {
+      "id": "local-015-3",
+      "groupId": "gold-15",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər oyananda zəngli saatın işləmədiyini gördüm telefonumun bildirişi məni oyatmışdı",
+      "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı."
+    },
+    {
+      "id": "local-015-4",
+      "groupId": "gold-15",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher oyananda zengli shaatin ishlemediyini gordum telefonumun bildirishi meni oyatmishdi",
+      "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı."
+    },
+    {
+      "id": "local-015-5",
+      "groupId": "gold-15",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher oynanda zengli saatin islemediyini gordum. telefonumun bildirisi meni oyatmisdi.",
+      "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı."
+    },
+    {
+      "id": "local-016-1",
+      "groupId": "gold-16",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher gunes dogmamis yola cixdim gece hazirlanmis cantami goturdum",
+      "target": "Səhər günəş doğmamış yola çıxdım. Gecə hazırlanmış çantamı götürdüm."
+    },
+    {
+      "id": "local-016-2",
+      "groupId": "gold-16",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher gunes dogmamis yola cixdim. gece hazirlanmis cantami goturdum.",
+      "target": "Səhər günəş doğmamış yola çıxdım. Gecə hazırlanmış çantamı götürdüm."
+    },
+    {
+      "id": "local-016-3",
+      "groupId": "gold-16",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər günəş doğmamış yola çıxdım gecə hazırlanmış çantamı götürdüm",
+      "target": "Səhər günəş doğmamış yola çıxdım. Gecə hazırlanmış çantamı götürdüm."
+    },
+    {
+      "id": "local-016-4",
+      "groupId": "gold-16",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher gunesh dogmamish yola chixdim geche hazirlanmish chantami goturdum",
+      "target": "Səhər günəş doğmamış yola çıxdım. Gecə hazırlanmış çantamı götürdüm."
+    },
+    {
+      "id": "local-016-5",
+      "groupId": "gold-16",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher gunes domamis yola cixdim. gece hazirlanmis cantami goturdum.",
+      "target": "Səhər günəş doğmamış yola çıxdım. Gecə hazırlanmış çantamı götürdüm."
+    },
+    {
+      "id": "local-017-1",
+      "groupId": "gold-17",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher sufre arxasinda ailemle danisdim yemekden sonra heremiz isimize getdik",
+      "target": "Səhər süfrə arxasında ailəmlə danışdım. Yeməkdən sonra hərəmiz işimizə getdik."
+    },
+    {
+      "id": "local-017-2",
+      "groupId": "gold-17",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher sufre arxasinda ailemle danisdim. yemekden sonra heremiz isimize getdik.",
+      "target": "Səhər süfrə arxasında ailəmlə danışdım. Yeməkdən sonra hərəmiz işimizə getdik."
+    },
+    {
+      "id": "local-017-3",
+      "groupId": "gold-17",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər süfrə arxasında ailəmlə danışdım yeməkdən sonra hərəmiz işimizə getdik",
+      "target": "Səhər süfrə arxasında ailəmlə danışdım. Yeməkdən sonra hərəmiz işimizə getdik."
+    },
+    {
+      "id": "local-017-4",
+      "groupId": "gold-17",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher shufre arxashinda ailemle danishdim yemekden shonra heremiz ishimize getdik",
+      "target": "Səhər süfrə arxasında ailəmlə danışdım. Yeməkdən sonra hərəmiz işimizə getdik."
+    },
+    {
+      "id": "local-017-5",
+      "groupId": "gold-17",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher sufre arasinda ailemle danisdim. yemekden sonra heremiz isimize getdik.",
+      "target": "Səhər süfrə arxasında ailəmlə danışdım. Yeməkdən sonra hərəmiz işimizə getdik."
+    },
+    {
+      "id": "local-018-1",
+      "groupId": "gold-18",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yataqdan qalxib otagi havalandirdim gune temiz hava ile basladim",
+      "target": "Səhər yataqdan qalxıb otağı havalandırdım. Günə təmiz hava ilə başladım."
+    },
+    {
+      "id": "local-018-2",
+      "groupId": "gold-18",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yataqdan qalxib otagi havalandirdim. gune temiz hava ile basladim.",
+      "target": "Səhər yataqdan qalxıb otağı havalandırdım. Günə təmiz hava ilə başladım."
+    },
+    {
+      "id": "local-018-3",
+      "groupId": "gold-18",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yataqdan qalxıb otağı havalandırdım günə təmiz hava ilə başladım",
+      "target": "Səhər yataqdan qalxıb otağı havalandırdım. Günə təmiz hava ilə başladım."
+    },
+    {
+      "id": "local-018-4",
+      "groupId": "gold-18",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yataqdan qalxib otagi havalandirdim gune temiz hava ile bashladim",
+      "target": "Səhər yataqdan qalxıb otağı havalandırdım. Günə təmiz hava ilə başladım."
+    },
+    {
+      "id": "local-018-5",
+      "groupId": "gold-18",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yaaqdan qalxib otagi havalandirdim. gune temiz hava ile basladim.",
+      "target": "Səhər yataqdan qalxıb otağı havalandırdım. Günə təmiz hava ilə başladım."
+    },
+    {
+      "id": "local-019-1",
+      "groupId": "gold-19",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yemeyi zamani qehve icdim sonra avtobus dayanacagina getdim",
+      "target": "Səhər yeməyi zamanı qəhvə içdim. Sonra avtobus dayanacağına getdim."
+    },
+    {
+      "id": "local-019-2",
+      "groupId": "gold-19",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yemeyi zamani qehve icdim. sonra avtobus dayanacagina getdim.",
+      "target": "Səhər yeməyi zamanı qəhvə içdim. Sonra avtobus dayanacağına getdim."
+    },
+    {
+      "id": "local-019-3",
+      "groupId": "gold-19",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yeməyi zamanı qəhvə içdim sonra avtobus dayanacağına getdim",
+      "target": "Səhər yeməyi zamanı qəhvə içdim. Sonra avtobus dayanacağına getdim."
+    },
+    {
+      "id": "local-019-4",
+      "groupId": "gold-19",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yemeyi zamani qehve ichdim shonra avtobush dayanachagina getdim",
+      "target": "Səhər yeməyi zamanı qəhvə içdim. Sonra avtobus dayanacağına getdim."
+    },
+    {
+      "id": "local-019-5",
+      "groupId": "gold-19",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yeeyi zamani qehve icdim. sonra avtobus dayanacagina getdim.",
+      "target": "Səhər yeməyi zamanı qəhvə içdim. Sonra avtobus dayanacağına getdim."
+    },
+    {
+      "id": "local-020-1",
+      "groupId": "gold-20",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher oyanib teqvimime baxdim gunun ilk gorusune hazirlasdim",
+      "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım."
+    },
+    {
+      "id": "local-020-2",
+      "groupId": "gold-20",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher oyanib teqvimime baxdim. gunun ilk gorusune hazirlasdim.",
+      "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım."
+    },
+    {
+      "id": "local-020-3",
+      "groupId": "gold-20",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər oyanıb təqvimimə baxdım günün ilk görüşünə hazırlaşdım",
+      "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım."
+    },
+    {
+      "id": "local-020-4",
+      "groupId": "gold-20",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher oyanib teqvimime baxdim gunun ilk gorushune hazirlashdim",
+      "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım."
+    },
+    {
+      "id": "local-020-5",
+      "groupId": "gold-20",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher oynib teqvimime baxdim. gunun ilk gorusune hazirlasdim.",
+      "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım."
+    },
+    {
+      "id": "local-021-1",
+      "groupId": "gold-21",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher zengli saat calmadan oyandim yuxumu yaxsi almisdim",
+      "target": "Səhər zəngli saat çalmadan oyandım. Yuxumu yaxşı almışdım."
+    },
+    {
+      "id": "local-021-2",
+      "groupId": "gold-21",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher zengli saat calmadan oyandim. yuxumu yaxsi almisdim.",
+      "target": "Səhər zəngli saat çalmadan oyandım. Yuxumu yaxşı almışdım."
+    },
+    {
+      "id": "local-021-3",
+      "groupId": "gold-21",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər zəngli saat çalmadan oyandım yuxumu yaxşı almışdım",
+      "target": "Səhər zəngli saat çalmadan oyandım. Yuxumu yaxşı almışdım."
+    },
+    {
+      "id": "local-021-4",
+      "groupId": "gold-21",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher zengli shaat chalmadan oyandim yuxumu yaxshi almishdim",
+      "target": "Səhər zəngli saat çalmadan oyandım. Yuxumu yaxşı almışdım."
+    },
+    {
+      "id": "local-021-5",
+      "groupId": "gold-21",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher zegli saat calmadan oyandim. yuxumu yaxsi almisdim.",
+      "target": "Səhər zəngli saat çalmadan oyandım. Yuxumu yaxşı almışdım."
+    },
+    {
+      "id": "local-022-1",
+      "groupId": "gold-22",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher gunes doganda perdeni acdim gun isigi otaga doldu",
+      "target": "Səhər günəş doğanda pərdəni açdım. Gün işığı otağa doldu."
+    },
+    {
+      "id": "local-022-2",
+      "groupId": "gold-22",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher gunes doganda perdeni acdim. gun isigi otaga doldu.",
+      "target": "Səhər günəş doğanda pərdəni açdım. Gün işığı otağa doldu."
+    },
+    {
+      "id": "local-022-3",
+      "groupId": "gold-22",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər günəş doğanda pərdəni açdım gün işığı otağa doldu",
+      "target": "Səhər günəş doğanda pərdəni açdım. Gün işığı otağa doldu."
+    },
+    {
+      "id": "local-022-4",
+      "groupId": "gold-22",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher gunesh doganda perdeni achdim gun ishigi otaga doldu",
+      "target": "Səhər günəş doğanda pərdəni açdım. Gün işığı otağa doldu."
+    },
+    {
+      "id": "local-022-5",
+      "groupId": "gold-22",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher gunes doanda perdeni acdim. gun isigi otaga doldu.",
+      "target": "Səhər günəş doğanda pərdəni açdım. Gün işığı otağa doldu."
+    },
+    {
+      "id": "local-023-1",
+      "groupId": "gold-23",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yemeyi ucun isti cay suzdum qonaqlar sufreye yaxinlasdilar",
+      "target": "Səhər yeməyi üçün isti çay süzdüm. Qonaqlar süfrəyə yaxınlaşdılar."
+    },
+    {
+      "id": "local-023-2",
+      "groupId": "gold-23",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yemeyi ucun isti cay suzdum. qonaqlar sufreye yaxinlasdilar.",
+      "target": "Səhər yeməyi üçün isti çay süzdüm. Qonaqlar süfrəyə yaxınlaşdılar."
+    },
+    {
+      "id": "local-023-3",
+      "groupId": "gold-23",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yeməyi üçün isti çay süzdüm qonaqlar süfrəyə yaxınlaşdılar",
+      "target": "Səhər yeməyi üçün isti çay süzdüm. Qonaqlar süfrəyə yaxınlaşdılar."
+    },
+    {
+      "id": "local-023-4",
+      "groupId": "gold-23",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yemeyi uchun ishti chay shuzdum qonaqlar shufreye yaxinlashdilar",
+      "target": "Səhər yeməyi üçün isti çay süzdüm. Qonaqlar süfrəyə yaxınlaşdılar."
+    },
+    {
+      "id": "local-023-5",
+      "groupId": "gold-23",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yeeyi ucun isti cay suzdum. qonaqlar sufreye yaxinlasdilar.",
+      "target": "Səhər yeməyi üçün isti çay süzdüm. Qonaqlar süfrəyə yaxınlaşdılar."
+    },
+    {
+      "id": "local-024-1",
+      "groupId": "gold-24",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher yataqdan qalxanda ozumu gumrah hiss etdim gune hevesle basladim",
+      "target": "Səhər yataqdan qalxanda özümü gümrah hiss etdim. Günə həvəslə başladım."
+    },
+    {
+      "id": "local-024-2",
+      "groupId": "gold-24",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher yataqdan qalxanda ozumu gumrah hiss etdim. gune hevesle basladim.",
+      "target": "Səhər yataqdan qalxanda özümü gümrah hiss etdim. Günə həvəslə başladım."
+    },
+    {
+      "id": "local-024-3",
+      "groupId": "gold-24",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər yataqdan qalxanda özümü gümrah hiss etdim günə həvəslə başladım",
+      "target": "Səhər yataqdan qalxanda özümü gümrah hiss etdim. Günə həvəslə başladım."
+    },
+    {
+      "id": "local-024-4",
+      "groupId": "gold-24",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher yataqdan qalxanda ozumu gumrah hishsh etdim gune heveshle bashladim",
+      "target": "Səhər yataqdan qalxanda özümü gümrah hiss etdim. Günə həvəslə başladım."
+    },
+    {
+      "id": "local-024-5",
+      "groupId": "gold-24",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher yaaqdan qalxanda ozumu gumrah hiss etdim. gune hevesle basladim.",
+      "target": "Səhər yataqdan qalxanda özümü gümrah hiss etdim. Günə həvəslə başladım."
+    },
+    {
+      "id": "local-025-1",
+      "groupId": "gold-25",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher oyanib qehve icmek ucun metbexe kecdim geceden qalan qablari yudum",
+      "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum."
+    },
+    {
+      "id": "local-025-2",
+      "groupId": "gold-25",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher oyanib qehve icmek ucun metbexe kecdim. geceden qalan qablari yudum.",
+      "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum."
+    },
+    {
+      "id": "local-025-3",
+      "groupId": "gold-25",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum",
+      "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum."
+    },
+    {
+      "id": "local-025-4",
+      "groupId": "gold-25",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher oyanib qehve ichmek uchun metbexe kechdim gecheden qalan qablari yudum",
+      "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum."
+    },
+    {
+      "id": "local-025-5",
+      "groupId": "gold-25",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher oynib qehve icmek ucun metbexe kecdim. geceden qalan qablari yudum.",
+      "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum."
+    },
+    {
+      "id": "local-026-1",
+      "groupId": "gold-26",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezinde yeni park salinib kucelerin isiqlandirilmasi da yenilenib",
+      "target": "Şəhər mərkəzində yeni park salınıb. Küçələrin işıqlandırılması da yenilənib."
+    },
+    {
+      "id": "local-026-2",
+      "groupId": "gold-26",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezinde yeni park salinib. kucelerin isiqlandirilmasi da yenilenib.",
+      "target": "Şəhər mərkəzində yeni park salınıb. Küçələrin işıqlandırılması da yenilənib."
+    },
+    {
+      "id": "local-026-3",
+      "groupId": "gold-26",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzində yeni park salınıb küçələrin işıqlandırılması da yenilənib",
+      "target": "Şəhər mərkəzində yeni park salınıb. Küçələrin işıqlandırılması da yenilənib."
+    },
+    {
+      "id": "local-026-4",
+      "groupId": "gold-26",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezinde yeni park shalinib kuchelerin ishiqlandirilmashi da yenilenib",
+      "target": "Şəhər mərkəzində yeni park salınıb. Küçələrin işıqlandırılması da yenilənib."
+    },
+    {
+      "id": "local-026-5",
+      "groupId": "gold-26",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezinde yeni park salinib. kucelerin isiqlandirilmasi da yenilenib.",
+      "target": "Şəhər mərkəzində yeni park salınıb. Küçələrin işıqlandırılması da yenilənib."
+    },
+    {
+      "id": "local-027-1",
+      "groupId": "gold-27",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher ehalisi yeni neqliyyat xettinden istifade edir avtobuslar daha tez gelir",
+      "target": "Şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir. Avtobuslar daha tez gəlir."
+    },
+    {
+      "id": "local-027-2",
+      "groupId": "gold-27",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher ehalisi yeni neqliyyat xettinden istifade edir. avtobuslar daha tez gelir.",
+      "target": "Şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir. Avtobuslar daha tez gəlir."
+    },
+    {
+      "id": "local-027-3",
+      "groupId": "gold-27",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir avtobuslar daha tez gəlir",
+      "target": "Şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir. Avtobuslar daha tez gəlir."
+    },
+    {
+      "id": "local-027-4",
+      "groupId": "gold-27",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher ehalishi yeni neqliyyat xettinden ishtifade edir avtobushlar daha tez gelir",
+      "target": "Şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir. Avtobuslar daha tez gəlir."
+    },
+    {
+      "id": "local-027-5",
+      "groupId": "gold-27",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher ehlisi yeni neqliyyat xettinden istifade edir. avtobuslar daha tez gelir.",
+      "target": "Şəhər əhalisi yeni nəqliyyat xəttindən istifadə edir. Avtobuslar daha tez gəlir."
+    },
+    {
+      "id": "local-028-1",
+      "groupId": "gold-28",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher kucelerinde temir isleri aparilir sakinler alternativ yoldan kecirler",
+      "target": "Şəhər küçələrində təmir işləri aparılır. Sakinlər alternativ yoldan keçirlər."
+    },
+    {
+      "id": "local-028-2",
+      "groupId": "gold-28",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher kucelerinde temir isleri aparilir. sakinler alternativ yoldan kecirler.",
+      "target": "Şəhər küçələrində təmir işləri aparılır. Sakinlər alternativ yoldan keçirlər."
+    },
+    {
+      "id": "local-028-3",
+      "groupId": "gold-28",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər küçələrində təmir işləri aparılır sakinlər alternativ yoldan keçirlər",
+      "target": "Şəhər küçələrində təmir işləri aparılır. Sakinlər alternativ yoldan keçirlər."
+    },
+    {
+      "id": "local-028-4",
+      "groupId": "gold-28",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher kuchelerinde temir ishleri aparilir shakinler alternativ yoldan kechirler",
+      "target": "Şəhər küçələrində təmir işləri aparılır. Sakinlər alternativ yoldan keçirlər."
+    },
+    {
+      "id": "local-028-5",
+      "groupId": "gold-28",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher kuelerinde temir isleri aparilir. sakinler alternativ yoldan kecirler.",
+      "target": "Şəhər küçələrində təmir işləri aparılır. Sakinlər alternativ yoldan keçirlər."
+    },
+    {
+      "id": "local-029-1",
+      "groupId": "gold-29",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi yeni bina layihesini muzakire etdi kuce plani da teqdim olundu",
+      "target": "Şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi. Küçə planı da təqdim olundu."
+    },
+    {
+      "id": "local-029-2",
+      "groupId": "gold-29",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi yeni bina layihesini muzakire etdi. kuce plani da teqdim olundu.",
+      "target": "Şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi. Küçə planı da təqdim olundu."
+    },
+    {
+      "id": "local-029-3",
+      "groupId": "gold-29",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi küçə planı da təqdim olundu",
+      "target": "Şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi. Küçə planı da təqdim olundu."
+    },
+    {
+      "id": "local-029-4",
+      "groupId": "gold-29",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi yeni bina layiheshini muzakire etdi kuche plani da teqdim olundu",
+      "target": "Şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi. Küçə planı da təqdim olundu."
+    },
+    {
+      "id": "local-029-5",
+      "groupId": "gold-29",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi yeni bina layihesini muzakire etdi. kuce plani da teqdim olundu.",
+      "target": "Şəhər bələdiyyəsi yeni bina layihəsini müzakirə etdi. Küçə planı da təqdim olundu."
+    },
+    {
+      "id": "local-030-1",
+      "groupId": "gold-30",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezinde binalar yeniden renglenir meydanin gorunusu deyisib",
+      "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib."
+    },
+    {
+      "id": "local-030-2",
+      "groupId": "gold-30",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezinde binalar yeniden renglenir. meydanin gorunusu deyisib.",
+      "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib."
+    },
+    {
+      "id": "local-030-3",
+      "groupId": "gold-30",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzində binalar yenidən rənglənir meydanın görünüşü dəyişib",
+      "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib."
+    },
+    {
+      "id": "local-030-4",
+      "groupId": "gold-30",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezinde binalar yeniden renglenir meydanin gorunushu deyishib",
+      "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib."
+    },
+    {
+      "id": "local-030-5",
+      "groupId": "gold-30",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezinde binalar yeniden renglenir. meydanin gorunusu deyisib.",
+      "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib."
+    },
+    {
+      "id": "local-031-1",
+      "groupId": "gold-31",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher neqliyyatinin idare edilmesi ucun plan hazirlanib kucelerde sixliq azaldilacaq",
+      "target": "Şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb. Küçələrdə sıxlıq azaldılacaq."
+    },
+    {
+      "id": "local-031-2",
+      "groupId": "gold-31",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher neqliyyatinin idare edilmesi ucun plan hazirlanib. kucelerde sixliq azaldilacaq.",
+      "target": "Şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb. Küçələrdə sıxlıq azaldılacaq."
+    },
+    {
+      "id": "local-031-3",
+      "groupId": "gold-31",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb küçələrdə sıxlıq azaldılacaq",
+      "target": "Şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb. Küçələrdə sıxlıq azaldılacaq."
+    },
+    {
+      "id": "local-031-4",
+      "groupId": "gold-31",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher neqliyyatinin idare edilmeshi uchun plan hazirlanib kuchelerde shixliq azaldilachaq",
+      "target": "Şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb. Küçələrdə sıxlıq azaldılacaq."
+    },
+    {
+      "id": "local-031-5",
+      "groupId": "gold-31",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher neliyyatinin idare edilmesi ucun plan hazirlanib. kucelerde sixliq azaldilacaq.",
+      "target": "Şəhər nəqliyyatının idarə edilməsi üçün plan hazırlanıb. Küçələrdə sıxlıq azaldılacaq."
+    },
+    {
+      "id": "local-032-1",
+      "groupId": "gold-32",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher ehalisi aciq tedbire devet edildi meydanda sehne qurulmusdu",
+      "target": "Şəhər əhalisi açıq tədbirə dəvət edildi. Meydanda səhnə qurulmuşdu."
+    },
+    {
+      "id": "local-032-2",
+      "groupId": "gold-32",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher ehalisi aciq tedbire devet edildi. meydanda sehne qurulmusdu.",
+      "target": "Şəhər əhalisi açıq tədbirə dəvət edildi. Meydanda səhnə qurulmuşdu."
+    },
+    {
+      "id": "local-032-3",
+      "groupId": "gold-32",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər əhalisi açıq tədbirə dəvət edildi meydanda səhnə qurulmuşdu",
+      "target": "Şəhər əhalisi açıq tədbirə dəvət edildi. Meydanda səhnə qurulmuşdu."
+    },
+    {
+      "id": "local-032-4",
+      "groupId": "gold-32",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher ehalishi achiq tedbire devet edildi meydanda shehne qurulmushdu",
+      "target": "Şəhər əhalisi açıq tədbirə dəvət edildi. Meydanda səhnə qurulmuşdu."
+    },
+    {
+      "id": "local-032-5",
+      "groupId": "gold-32",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher ehlisi aciq tedbire devet edildi. meydanda sehne qurulmusdu.",
+      "target": "Şəhər əhalisi açıq tədbirə dəvət edildi. Meydanda səhnə qurulmuşdu."
+    },
+    {
+      "id": "local-033-1",
+      "groupId": "gold-33",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher kucelerini temizleyen iscilere tesekkur etdik parkda da is aparilirdi",
+      "target": "Şəhər küçələrini təmizləyən işçilərə təşəkkür etdik. Parkda da iş aparılırdı."
+    },
+    {
+      "id": "local-033-2",
+      "groupId": "gold-33",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher kucelerini temizleyen iscilere tesekkur etdik. parkda da is aparilirdi.",
+      "target": "Şəhər küçələrini təmizləyən işçilərə təşəkkür etdik. Parkda da iş aparılırdı."
+    },
+    {
+      "id": "local-033-3",
+      "groupId": "gold-33",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər küçələrini təmizləyən işçilərə təşəkkür etdik parkda da iş aparılırdı",
+      "target": "Şəhər küçələrini təmizləyən işçilərə təşəkkür etdik. Parkda da iş aparılırdı."
+    },
+    {
+      "id": "local-033-4",
+      "groupId": "gold-33",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher kuchelerini temizleyen ishchilere teshekkur etdik parkda da ish aparilirdi",
+      "target": "Şəhər küçələrini təmizləyən işçilərə təşəkkür etdik. Parkda da iş aparılırdı."
+    },
+    {
+      "id": "local-033-5",
+      "groupId": "gold-33",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher kuelerini temizleyen iscilere tesekkur etdik. parkda da is aparilirdi.",
+      "target": "Şəhər küçələrini təmizləyən işçilərə təşəkkür etdik. Parkda da iş aparılırdı."
+    },
+    {
+      "id": "local-034-1",
+      "groupId": "gold-34",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezindeki binalarin unvanlari yenilendi xeritede yeni kuceler gosterildi",
+      "target": "Şəhər mərkəzindəki binaların ünvanları yeniləndi. Xəritədə yeni küçələr göstərildi."
+    },
+    {
+      "id": "local-034-2",
+      "groupId": "gold-34",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezindeki binalarin unvanlari yenilendi. xeritede yeni kuceler gosterildi.",
+      "target": "Şəhər mərkəzindəki binaların ünvanları yeniləndi. Xəritədə yeni küçələr göstərildi."
+    },
+    {
+      "id": "local-034-3",
+      "groupId": "gold-34",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzindəki binaların ünvanları yeniləndi xəritədə yeni küçələr göstərildi",
+      "target": "Şəhər mərkəzindəki binaların ünvanları yeniləndi. Xəritədə yeni küçələr göstərildi."
+    },
+    {
+      "id": "local-034-4",
+      "groupId": "gold-34",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezindeki binalarin unvanlari yenilendi xeritede yeni kucheler goshterildi",
+      "target": "Şəhər mərkəzindəki binaların ünvanları yeniləndi. Xəritədə yeni küçələr göstərildi."
+    },
+    {
+      "id": "local-034-5",
+      "groupId": "gold-34",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezindeki binalarin unvanlari yenilendi. xeritede yeni kuceler gosterildi.",
+      "target": "Şəhər mərkəzindəki binaların ünvanları yeniləndi. Xəritədə yeni küçələr göstərildi."
+    },
+    {
+      "id": "local-035-1",
+      "groupId": "gold-35",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher neqliyyatinda kartla odenis tetbiq olunur avtobus dayanacaqlari da deyisib",
+      "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib."
+    },
+    {
+      "id": "local-035-2",
+      "groupId": "gold-35",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher neqliyyatinda kartla odenis tetbiq olunur. avtobus dayanacaqlari da deyisib.",
+      "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib."
+    },
+    {
+      "id": "local-035-3",
+      "groupId": "gold-35",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər nəqliyyatında kartla ödəniş tətbiq olunur avtobus dayanacaqları da dəyişib",
+      "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib."
+    },
+    {
+      "id": "local-035-4",
+      "groupId": "gold-35",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher neqliyyatinda kartla odenish tetbiq olunur avtobush dayanachaqlari da deyishib",
+      "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib."
+    },
+    {
+      "id": "local-035-5",
+      "groupId": "gold-35",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher neliyyatinda kartla odenis tetbiq olunur. avtobus dayanacaqlari da deyisib.",
+      "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib."
+    },
+    {
+      "id": "local-036-1",
+      "groupId": "gold-36",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi sakinlerin muracietlerine baxir yeni kuce temiri planlasdirilir",
+      "target": "Şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır. Yeni küçə təmiri planlaşdırılır."
+    },
+    {
+      "id": "local-036-2",
+      "groupId": "gold-36",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi sakinlerin muracietlerine baxir. yeni kuce temiri planlasdirilir.",
+      "target": "Şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır. Yeni küçə təmiri planlaşdırılır."
+    },
+    {
+      "id": "local-036-3",
+      "groupId": "gold-36",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır yeni küçə təmiri planlaşdırılır",
+      "target": "Şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır. Yeni küçə təmiri planlaşdırılır."
+    },
+    {
+      "id": "local-036-4",
+      "groupId": "gold-36",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi shakinlerin murachietlerine baxir yeni kuche temiri planlashdirilir",
+      "target": "Şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır. Yeni küçə təmiri planlaşdırılır."
+    },
+    {
+      "id": "local-036-5",
+      "groupId": "gold-36",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi sakinlerin muracietlerine baxir. yeni kuce temiri planlasdirilir.",
+      "target": "Şəhər bələdiyyəsi sakinlərin müraciətlərinə baxır. Yeni küçə təmiri planlaşdırılır."
+    },
+    {
+      "id": "local-037-1",
+      "groupId": "gold-37",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher ehalisinin sayi son iller artib yasayis binalarina telebat yukselib",
+      "target": "Şəhər əhalisinin sayı son illər artıb. Yaşayış binalarına tələbat yüksəlib."
+    },
+    {
+      "id": "local-037-2",
+      "groupId": "gold-37",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher ehalisinin sayi son iller artib. yasayis binalarina telebat yukselib.",
+      "target": "Şəhər əhalisinin sayı son illər artıb. Yaşayış binalarına tələbat yüksəlib."
+    },
+    {
+      "id": "local-037-3",
+      "groupId": "gold-37",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər əhalisinin sayı son illər artıb yaşayış binalarına tələbat yüksəlib",
+      "target": "Şəhər əhalisinin sayı son illər artıb. Yaşayış binalarına tələbat yüksəlib."
+    },
+    {
+      "id": "local-037-4",
+      "groupId": "gold-37",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher ehalishinin shayi shon iller artib yashayish binalarina telebat yukshelib",
+      "target": "Şəhər əhalisinin sayı son illər artıb. Yaşayış binalarına tələbat yüksəlib."
+    },
+    {
+      "id": "local-037-5",
+      "groupId": "gold-37",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher ehlisinin sayi son iller artib. yasayis binalarina telebat yukselib.",
+      "target": "Şəhər əhalisinin sayı son illər artıb. Yaşayış binalarına tələbat yüksəlib."
+    },
+    {
+      "id": "local-038-1",
+      "groupId": "gold-38",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezinde piyadalar ucun zona yaradildi kuceler avtomobillerden azad edildi",
+      "target": "Şəhər mərkəzində piyadalar üçün zona yaradıldı. Küçələr avtomobillərdən azad edildi."
+    },
+    {
+      "id": "local-038-2",
+      "groupId": "gold-38",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezinde piyadalar ucun zona yaradildi. kuceler avtomobillerden azad edildi.",
+      "target": "Şəhər mərkəzində piyadalar üçün zona yaradıldı. Küçələr avtomobillərdən azad edildi."
+    },
+    {
+      "id": "local-038-3",
+      "groupId": "gold-38",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzində piyadalar üçün zona yaradıldı küçələr avtomobillərdən azad edildi",
+      "target": "Şəhər mərkəzində piyadalar üçün zona yaradıldı. Küçələr avtomobillərdən azad edildi."
+    },
+    {
+      "id": "local-038-4",
+      "groupId": "gold-38",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezinde piyadalar uchun zona yaradildi kucheler avtomobillerden azad edildi",
+      "target": "Şəhər mərkəzində piyadalar üçün zona yaradıldı. Küçələr avtomobillərdən azad edildi."
+    },
+    {
+      "id": "local-038-5",
+      "groupId": "gold-38",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezinde piyadalar ucun zona yaradildi. kuceler avtomobillerden azad edildi.",
+      "target": "Şəhər mərkəzində piyadalar üçün zona yaradıldı. Küçələr avtomobillərdən azad edildi."
+    },
+    {
+      "id": "local-039-1",
+      "groupId": "gold-39",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher kucelerinin adlari xeritede qeyd olunub binalarin nomreleri de gorunur",
+      "target": "Şəhər küçələrinin adları xəritədə qeyd olunub. Binaların nömrələri də görünür."
+    },
+    {
+      "id": "local-039-2",
+      "groupId": "gold-39",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher kucelerinin adlari xeritede qeyd olunub. binalarin nomreleri de gorunur.",
+      "target": "Şəhər küçələrinin adları xəritədə qeyd olunub. Binaların nömrələri də görünür."
+    },
+    {
+      "id": "local-039-3",
+      "groupId": "gold-39",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər küçələrinin adları xəritədə qeyd olunub binaların nömrələri də görünür",
+      "target": "Şəhər küçələrinin adları xəritədə qeyd olunub. Binaların nömrələri də görünür."
+    },
+    {
+      "id": "local-039-4",
+      "groupId": "gold-39",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher kuchelerinin adlari xeritede qeyd olunub binalarin nomreleri de gorunur",
+      "target": "Şəhər küçələrinin adları xəritədə qeyd olunub. Binaların nömrələri də görünür."
+    },
+    {
+      "id": "local-039-5",
+      "groupId": "gold-39",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher kuelerinin adlari xeritede qeyd olunub. binalarin nomreleri de gorunur.",
+      "target": "Şəhər küçələrinin adları xəritədə qeyd olunub. Binaların nömrələri də görünür."
+    },
+    {
+      "id": "local-040-1",
+      "groupId": "gold-40",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher neqliyyatina yeni avtobuslar elave edildi sakinler xeberi musbet qarsiladilar",
+      "target": "Şəhər nəqliyyatına yeni avtobuslar əlavə edildi. Sakinlər xəbəri müsbət qarşıladılar."
+    },
+    {
+      "id": "local-040-2",
+      "groupId": "gold-40",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher neqliyyatina yeni avtobuslar elave edildi. sakinler xeberi musbet qarsiladilar.",
+      "target": "Şəhər nəqliyyatına yeni avtobuslar əlavə edildi. Sakinlər xəbəri müsbət qarşıladılar."
+    },
+    {
+      "id": "local-040-3",
+      "groupId": "gold-40",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər nəqliyyatına yeni avtobuslar əlavə edildi sakinlər xəbəri müsbət qarşıladılar",
+      "target": "Şəhər nəqliyyatına yeni avtobuslar əlavə edildi. Sakinlər xəbəri müsbət qarşıladılar."
+    },
+    {
+      "id": "local-040-4",
+      "groupId": "gold-40",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher neqliyyatina yeni avtobushlar elave edildi shakinler xeberi mushbet qarshiladilar",
+      "target": "Şəhər nəqliyyatına yeni avtobuslar əlavə edildi. Sakinlər xəbəri müsbət qarşıladılar."
+    },
+    {
+      "id": "local-040-5",
+      "groupId": "gold-40",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher neliyyatina yeni avtobuslar elave edildi. sakinler xeberi musbet qarsiladilar.",
+      "target": "Şəhər nəqliyyatına yeni avtobuslar əlavə edildi. Sakinlər xəbəri müsbət qarşıladılar."
+    },
+    {
+      "id": "local-041-1",
+      "groupId": "gold-41",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesinin binasi meydanin yaninda yerlesir etraf kuceler temiz saxlanilir",
+      "target": "Şəhər bələdiyyəsinin binası meydanın yanında yerləşir. Ətraf küçələr təmiz saxlanılır."
+    },
+    {
+      "id": "local-041-2",
+      "groupId": "gold-41",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesinin binasi meydanin yaninda yerlesir. etraf kuceler temiz saxlanilir.",
+      "target": "Şəhər bələdiyyəsinin binası meydanın yanında yerləşir. Ətraf küçələr təmiz saxlanılır."
+    },
+    {
+      "id": "local-041-3",
+      "groupId": "gold-41",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsinin binası meydanın yanında yerləşir ətraf küçələr təmiz saxlanılır",
+      "target": "Şəhər bələdiyyəsinin binası meydanın yanında yerləşir. Ətraf küçələr təmiz saxlanılır."
+    },
+    {
+      "id": "local-041-4",
+      "groupId": "gold-41",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshinin binashi meydanin yaninda yerleshir etraf kucheler temiz shaxlanilir",
+      "target": "Şəhər bələdiyyəsinin binası meydanın yanında yerləşir. Ətraf küçələr təmiz saxlanılır."
+    },
+    {
+      "id": "local-041-5",
+      "groupId": "gold-41",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesinin binasi meydanin yaninda yerlesir. etraf kuceler temiz saxlanilir.",
+      "target": "Şəhər bələdiyyəsinin binası meydanın yanında yerləşir. Ətraf küçələr təmiz saxlanılır."
+    },
+    {
+      "id": "local-042-1",
+      "groupId": "gold-42",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezinde yeni muzey acildi kohne binanin fasadi berpa edildi",
+      "target": "Şəhər mərkəzində yeni muzey açıldı. Köhnə binanın fasadı bərpa edildi."
+    },
+    {
+      "id": "local-042-2",
+      "groupId": "gold-42",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezinde yeni muzey acildi. kohne binanin fasadi berpa edildi.",
+      "target": "Şəhər mərkəzində yeni muzey açıldı. Köhnə binanın fasadı bərpa edildi."
+    },
+    {
+      "id": "local-042-3",
+      "groupId": "gold-42",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzində yeni muzey açıldı köhnə binanın fasadı bərpa edildi",
+      "target": "Şəhər mərkəzində yeni muzey açıldı. Köhnə binanın fasadı bərpa edildi."
+    },
+    {
+      "id": "local-042-4",
+      "groupId": "gold-42",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezinde yeni muzey achildi kohne binanin fashadi berpa edildi",
+      "target": "Şəhər mərkəzində yeni muzey açıldı. Köhnə binanın fasadı bərpa edildi."
+    },
+    {
+      "id": "local-042-5",
+      "groupId": "gold-42",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezinde yeni muzey acildi. kohne binanin fasadi berpa edildi.",
+      "target": "Şəhər mərkəzində yeni muzey açıldı. Köhnə binanın fasadı bərpa edildi."
+    },
+    {
+      "id": "local-043-1",
+      "groupId": "gold-43",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher ehalisi yeni parkin acilisina geldi kucelerde bayram ehvali-ruhiyyesi vardi",
+      "target": "Şəhər əhalisi yeni parkın açılışına gəldi. Küçələrdə bayram əhvali-ruhiyyəsi vardı."
+    },
+    {
+      "id": "local-043-2",
+      "groupId": "gold-43",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher ehalisi yeni parkin acilisina geldi. kucelerde bayram ehvali-ruhiyyesi vardi.",
+      "target": "Şəhər əhalisi yeni parkın açılışına gəldi. Küçələrdə bayram əhvali-ruhiyyəsi vardı."
+    },
+    {
+      "id": "local-043-3",
+      "groupId": "gold-43",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər əhalisi yeni parkın açılışına gəldi küçələrdə bayram əhvali-ruhiyyəsi vardı",
+      "target": "Şəhər əhalisi yeni parkın açılışına gəldi. Küçələrdə bayram əhvali-ruhiyyəsi vardı."
+    },
+    {
+      "id": "local-043-4",
+      "groupId": "gold-43",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher ehalishi yeni parkin achilishina geldi kuchelerde bayram ehvali-ruhiyyeshi vardi",
+      "target": "Şəhər əhalisi yeni parkın açılışına gəldi. Küçələrdə bayram əhvali-ruhiyyəsi vardı."
+    },
+    {
+      "id": "local-043-5",
+      "groupId": "gold-43",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher ehlisi yeni parkin acilisina geldi. kucelerde bayram ehvali-ruhiyyesi vardi.",
+      "target": "Şəhər əhalisi yeni parkın açılışına gəldi. Küçələrdə bayram əhvali-ruhiyyəsi vardı."
+    },
+    {
+      "id": "local-044-1",
+      "groupId": "gold-44",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher kuceleri axsam isiqlandirilir binalarin qarsisinda agaclar ekilib",
+      "target": "Şəhər küçələri axşam işıqlandırılır. Binaların qarşısında ağaclar əkilib."
+    },
+    {
+      "id": "local-044-2",
+      "groupId": "gold-44",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher kuceleri axsam isiqlandirilir. binalarin qarsisinda agaclar ekilib.",
+      "target": "Şəhər küçələri axşam işıqlandırılır. Binaların qarşısında ağaclar əkilib."
+    },
+    {
+      "id": "local-044-3",
+      "groupId": "gold-44",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər küçələri axşam işıqlandırılır binaların qarşısında ağaclar əkilib",
+      "target": "Şəhər küçələri axşam işıqlandırılır. Binaların qarşısında ağaclar əkilib."
+    },
+    {
+      "id": "local-044-4",
+      "groupId": "gold-44",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher kucheleri axsham ishiqlandirilir binalarin qarshishinda agachlar ekilib",
+      "target": "Şəhər küçələri axşam işıqlandırılır. Binaların qarşısında ağaclar əkilib."
+    },
+    {
+      "id": "local-044-5",
+      "groupId": "gold-44",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher kueleri axsam isiqlandirilir. binalarin qarsisinda agaclar ekilib.",
+      "target": "Şəhər küçələri axşam işıqlandırılır. Binaların qarşısında ağaclar əkilib."
+    },
+    {
+      "id": "local-045-1",
+      "groupId": "gold-45",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher neqliyyatinin xeritesi dayanacaqda yerlesdirilib kuce adlari aydin yazilib",
+      "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb."
+    },
+    {
+      "id": "local-045-2",
+      "groupId": "gold-45",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher neqliyyatinin xeritesi dayanacaqda yerlesdirilib. kuce adlari aydin yazilib.",
+      "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb."
+    },
+    {
+      "id": "local-045-3",
+      "groupId": "gold-45",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib küçə adları aydın yazılıb",
+      "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb."
+    },
+    {
+      "id": "local-045-4",
+      "groupId": "gold-45",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher neqliyyatinin xeriteshi dayanachaqda yerleshdirilib kuche adlari aydin yazilib",
+      "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb."
+    },
+    {
+      "id": "local-045-5",
+      "groupId": "gold-45",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher neliyyatinin xeritesi dayanacaqda yerlesdirilib. kuce adlari aydin yazilib.",
+      "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb."
+    },
+    {
+      "id": "local-046-1",
+      "groupId": "gold-46",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi parklarin veziyyetini yoxladi sakinlerin teklifleri qeyde alindi",
+      "target": "Şəhər bələdiyyəsi parkların vəziyyətini yoxladı. Sakinlərin təklifləri qeydə alındı."
+    },
+    {
+      "id": "local-046-2",
+      "groupId": "gold-46",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi parklarin veziyyetini yoxladi. sakinlerin teklifleri qeyde alindi.",
+      "target": "Şəhər bələdiyyəsi parkların vəziyyətini yoxladı. Sakinlərin təklifləri qeydə alındı."
+    },
+    {
+      "id": "local-046-3",
+      "groupId": "gold-46",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi parkların vəziyyətini yoxladı sakinlərin təklifləri qeydə alındı",
+      "target": "Şəhər bələdiyyəsi parkların vəziyyətini yoxladı. Sakinlərin təklifləri qeydə alındı."
+    },
+    {
+      "id": "local-046-4",
+      "groupId": "gold-46",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi parklarin veziyyetini yoxladi shakinlerin teklifleri qeyde alindi",
+      "target": "Şəhər bələdiyyəsi parkların vəziyyətini yoxladı. Sakinlərin təklifləri qeydə alındı."
+    },
+    {
+      "id": "local-046-5",
+      "groupId": "gold-46",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi parklarin veziyyetini yoxladi. sakinlerin teklifleri qeyde alindi.",
+      "target": "Şəhər bələdiyyəsi parkların vəziyyətini yoxladı. Sakinlərin təklifləri qeydə alındı."
+    },
+    {
+      "id": "local-047-1",
+      "groupId": "gold-47",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezinde yasayis binasi tikilir kucenin bir hissesi baglanib",
+      "target": "Şəhər mərkəzində yaşayış binası tikilir. Küçənin bir hissəsi bağlanıb."
+    },
+    {
+      "id": "local-047-2",
+      "groupId": "gold-47",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezinde yasayis binasi tikilir. kucenin bir hissesi baglanib.",
+      "target": "Şəhər mərkəzində yaşayış binası tikilir. Küçənin bir hissəsi bağlanıb."
+    },
+    {
+      "id": "local-047-3",
+      "groupId": "gold-47",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzində yaşayış binası tikilir küçənin bir hissəsi bağlanıb",
+      "target": "Şəhər mərkəzində yaşayış binası tikilir. Küçənin bir hissəsi bağlanıb."
+    },
+    {
+      "id": "local-047-4",
+      "groupId": "gold-47",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezinde yashayish binashi tikilir kuchenin bir hishsheshi baglanib",
+      "target": "Şəhər mərkəzində yaşayış binası tikilir. Küçənin bir hissəsi bağlanıb."
+    },
+    {
+      "id": "local-047-5",
+      "groupId": "gold-47",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezinde yasayis binasi tikilir. kucenin bir hissesi baglanib.",
+      "target": "Şəhər mərkəzində yaşayış binası tikilir. Küçənin bir hissəsi bağlanıb."
+    },
+    {
+      "id": "local-048-1",
+      "groupId": "gold-48",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher ehalisine yeni xidmet teqdim olundu belediyye muracietleri elektron qebul edir",
+      "target": "Şəhər əhalisinə yeni xidmət təqdim olundu. Bələdiyyə müraciətləri elektron qəbul edir."
+    },
+    {
+      "id": "local-048-2",
+      "groupId": "gold-48",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher ehalisine yeni xidmet teqdim olundu. belediyye muracietleri elektron qebul edir.",
+      "target": "Şəhər əhalisinə yeni xidmət təqdim olundu. Bələdiyyə müraciətləri elektron qəbul edir."
+    },
+    {
+      "id": "local-048-3",
+      "groupId": "gold-48",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər əhalisinə yeni xidmət təqdim olundu bələdiyyə müraciətləri elektron qəbul edir",
+      "target": "Şəhər əhalisinə yeni xidmət təqdim olundu. Bələdiyyə müraciətləri elektron qəbul edir."
+    },
+    {
+      "id": "local-048-4",
+      "groupId": "gold-48",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher ehalishine yeni xidmet teqdim olundu belediyye murachietleri elektron qebul edir",
+      "target": "Şəhər əhalisinə yeni xidmət təqdim olundu. Bələdiyyə müraciətləri elektron qəbul edir."
+    },
+    {
+      "id": "local-048-5",
+      "groupId": "gold-48",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher ehlisine yeni xidmet teqdim olundu. belediyye muracietleri elektron qebul edir.",
+      "target": "Şəhər əhalisinə yeni xidmət təqdim olundu. Bələdiyyə müraciətləri elektron qəbul edir."
+    },
+    {
+      "id": "local-049-1",
+      "groupId": "gold-49",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher kucelerinde neqliyyat axini olculdu yeni yol nisanlari yerlesdirildi",
+      "target": "Şəhər küçələrində nəqliyyat axını ölçüldü. Yeni yol nişanları yerləşdirildi."
+    },
+    {
+      "id": "local-049-2",
+      "groupId": "gold-49",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher kucelerinde neqliyyat axini olculdu. yeni yol nisanlari yerlesdirildi.",
+      "target": "Şəhər küçələrində nəqliyyat axını ölçüldü. Yeni yol nişanları yerləşdirildi."
+    },
+    {
+      "id": "local-049-3",
+      "groupId": "gold-49",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər küçələrində nəqliyyat axını ölçüldü yeni yol nişanları yerləşdirildi",
+      "target": "Şəhər küçələrində nəqliyyat axını ölçüldü. Yeni yol nişanları yerləşdirildi."
+    },
+    {
+      "id": "local-049-4",
+      "groupId": "gold-49",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher kuchelerinde neqliyyat axini olchuldu yeni yol nishanlari yerleshdirildi",
+      "target": "Şəhər küçələrində nəqliyyat axını ölçüldü. Yeni yol nişanları yerləşdirildi."
+    },
+    {
+      "id": "local-049-5",
+      "groupId": "gold-49",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher kuelerinde neqliyyat axini olculdu. yeni yol nisanlari yerlesdirildi.",
+      "target": "Şəhər küçələrində nəqliyyat axını ölçüldü. Yeni yol nişanları yerləşdirildi."
+    },
+    {
+      "id": "local-050-1",
+      "groupId": "gold-50",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher merkezindeki meydanda agaclar ekildi binalarin yaninda oturacaqlar qoyuldu",
+      "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu."
+    },
+    {
+      "id": "local-050-2",
+      "groupId": "gold-50",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher merkezindeki meydanda agaclar ekildi. binalarin yaninda oturacaqlar qoyuldu.",
+      "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu."
+    },
+    {
+      "id": "local-050-3",
+      "groupId": "gold-50",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu",
+      "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu."
+    },
+    {
+      "id": "local-050-4",
+      "groupId": "gold-50",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher merkezindeki meydanda agachlar ekildi binalarin yaninda oturachaqlar qoyuldu",
+      "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu."
+    },
+    {
+      "id": "local-050-5",
+      "groupId": "gold-50",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher mekezindeki meydanda agaclar ekildi. binalarin yaninda oturacaqlar qoyuldu.",
+      "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu."
+    },
+    {
+      "id": "local-051-1",
+      "groupId": "gold-51",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet baglantisinin keyfiyyetine tesir edir sebeke olcmeleri bunu gosterir",
+      "target": "Sürət internet bağlantısının keyfiyyətinə təsir edir. Şəbəkə ölçmələri bunu göstərir."
+    },
+    {
+      "id": "local-051-2",
+      "groupId": "gold-51",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet baglantisinin keyfiyyetine tesir edir. sebeke olcmeleri bunu gosterir.",
+      "target": "Sürət internet bağlantısının keyfiyyətinə təsir edir. Şəbəkə ölçmələri bunu göstərir."
+    },
+    {
+      "id": "local-051-3",
+      "groupId": "gold-51",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet bağlantısının keyfiyyətinə təsir edir şəbəkə ölçmələri bunu göstərir",
+      "target": "Sürət internet bağlantısının keyfiyyətinə təsir edir. Şəbəkə ölçmələri bunu göstərir."
+    },
+    {
+      "id": "local-051-4",
+      "groupId": "gold-51",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet baglantishinin keyfiyyetine teshir edir shebeke olchmeleri bunu goshterir",
+      "target": "Sürət internet bağlantısının keyfiyyətinə təsir edir. Şəbəkə ölçmələri bunu göstərir."
+    },
+    {
+      "id": "local-051-5",
+      "groupId": "gold-51",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet baglantisinin keyfiyyetine tesir edir. sebeke olcmeleri bunu gosterir.",
+      "target": "Sürət internet bağlantısının keyfiyyətinə təsir edir. Şəbəkə ölçmələri bunu göstərir."
+    },
+    {
+      "id": "local-052-1",
+      "groupId": "gold-52",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret testinde internet baglantisi yoxlanildi netice evvelkinden yuksek idi",
+      "target": "Sürət testində internet bağlantısı yoxlanıldı. Nəticə əvvəlkindən yüksək idi."
+    },
+    {
+      "id": "local-052-2",
+      "groupId": "gold-52",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret testinde internet baglantisi yoxlanildi. netice evvelkinden yuksek idi.",
+      "target": "Sürət testində internet bağlantısı yoxlanıldı. Nəticə əvvəlkindən yüksək idi."
+    },
+    {
+      "id": "local-052-3",
+      "groupId": "gold-52",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət testində internet bağlantısı yoxlanıldı nəticə əvvəlkindən yüksək idi",
+      "target": "Sürət testində internet bağlantısı yoxlanıldı. Nəticə əvvəlkindən yüksək idi."
+    },
+    {
+      "id": "local-052-4",
+      "groupId": "gold-52",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret teshtinde internet baglantishi yoxlanildi netiche evvelkinden yukshek idi",
+      "target": "Sürət testində internet bağlantısı yoxlanıldı. Nəticə əvvəlkindən yüksək idi."
+    },
+    {
+      "id": "local-052-5",
+      "groupId": "gold-52",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret tetinde internet baglantisi yoxlanildi. netice evvelkinden yuksek idi.",
+      "target": "Sürət testində internet bağlantısı yoxlanıldı. Nəticə əvvəlkindən yüksək idi."
+    },
+    {
+      "id": "local-053-1",
+      "groupId": "gold-53",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret sebeke yuklenende azalir performans olcmelerini yeniledik",
+      "target": "Sürət şəbəkə yüklənəndə azalır. Performans ölçmələrini yenilədik."
+    },
+    {
+      "id": "local-053-2",
+      "groupId": "gold-53",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret sebeke yuklenende azalir. performans olcmelerini yeniledik.",
+      "target": "Sürət şəbəkə yüklənəndə azalır. Performans ölçmələrini yenilədik."
+    },
+    {
+      "id": "local-053-3",
+      "groupId": "gold-53",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət şəbəkə yüklənəndə azalır performans ölçmələrini yenilədik",
+      "target": "Sürət şəbəkə yüklənəndə azalır. Performans ölçmələrini yenilədik."
+    },
+    {
+      "id": "local-053-4",
+      "groupId": "gold-53",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shebeke yuklenende azalir performansh olchmelerini yeniledik",
+      "target": "Sürət şəbəkə yüklənəndə azalır. Performans ölçmələrini yenilədik."
+    },
+    {
+      "id": "local-053-5",
+      "groupId": "gold-53",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seeke yuklenende azalir. performans olcmelerini yeniledik.",
+      "target": "Sürət şəbəkə yüklənəndə azalır. Performans ölçmələrini yenilədik."
+    },
+    {
+      "id": "local-054-1",
+      "groupId": "gold-54",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret avtomobilin panelinde gosterilir surucu heddi asmamalidir",
+      "target": "Sürət avtomobilin panelində göstərilir. Sürücü həddi aşmamalıdır."
+    },
+    {
+      "id": "local-054-2",
+      "groupId": "gold-54",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret avtomobilin panelinde gosterilir. surucu heddi asmamalidir.",
+      "target": "Sürət avtomobilin panelində göstərilir. Sürücü həddi aşmamalıdır."
+    },
+    {
+      "id": "local-054-3",
+      "groupId": "gold-54",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət avtomobilin panelində göstərilir sürücü həddi aşmamalıdır",
+      "target": "Sürət avtomobilin panelində göstərilir. Sürücü həddi aşmamalıdır."
+    },
+    {
+      "id": "local-054-4",
+      "groupId": "gold-54",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret avtomobilin panelinde goshterilir shuruchu heddi ashmamalidir",
+      "target": "Sürət avtomobilin panelində göstərilir. Sürücü həddi aşmamalıdır."
+    },
+    {
+      "id": "local-054-5",
+      "groupId": "gold-54",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret avomobilin panelinde gosterilir. surucu heddi asmamalidir.",
+      "target": "Sürət avtomobilin panelində göstərilir. Sürücü həddi aşmamalıdır."
+    },
+    {
+      "id": "local-055-1",
+      "groupId": "gold-55",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret olcen cihaz saniye erzinde netice verir avtomobil yoxlamadan kecdi",
+      "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi."
+    },
+    {
+      "id": "local-055-2",
+      "groupId": "gold-55",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret olcen cihaz saniye erzinde netice verir. avtomobil yoxlamadan kecdi.",
+      "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi."
+    },
+    {
+      "id": "local-055-3",
+      "groupId": "gold-55",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət ölçən cihaz saniyə ərzində nəticə verir avtomobil yoxlamadan keçdi",
+      "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi."
+    },
+    {
+      "id": "local-055-4",
+      "groupId": "gold-55",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret olchen chihaz shaniye erzinde netiche verir avtomobil yoxlamadan kechdi",
+      "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi."
+    },
+    {
+      "id": "local-055-5",
+      "groupId": "gold-55",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret olcen cihaz saiye erzinde netice verir. avtomobil yoxlamadan kecdi.",
+      "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi."
+    },
+    {
+      "id": "local-056-1",
+      "groupId": "gold-56",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet paketinden asili olaraq deyisir sebeke operatoru melumat verdi",
+      "target": "Sürət internet paketindən asılı olaraq dəyişir. Şəbəkə operatoru məlumat verdi."
+    },
+    {
+      "id": "local-056-2",
+      "groupId": "gold-56",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet paketinden asili olaraq deyisir. sebeke operatoru melumat verdi.",
+      "target": "Sürət internet paketindən asılı olaraq dəyişir. Şəbəkə operatoru məlumat verdi."
+    },
+    {
+      "id": "local-056-3",
+      "groupId": "gold-56",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet paketindən asılı olaraq dəyişir şəbəkə operatoru məlumat verdi",
+      "target": "Sürət internet paketindən asılı olaraq dəyişir. Şəbəkə operatoru məlumat verdi."
+    },
+    {
+      "id": "local-056-4",
+      "groupId": "gold-56",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet paketinden ashili olaraq deyishir shebeke operatoru melumat verdi",
+      "target": "Sürət internet paketindən asılı olaraq dəyişir. Şəbəkə operatoru məlumat verdi."
+    },
+    {
+      "id": "local-056-5",
+      "groupId": "gold-56",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet paketinden asili olaraq deyisir. sebeke operatoru melumat verdi.",
+      "target": "Sürət internet paketindən asılı olaraq dəyişir. Şəbəkə operatoru məlumat verdi."
+    },
+    {
+      "id": "local-057-1",
+      "groupId": "gold-57",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret testi sebekenin performansini qiymetlendirir hesabatda gecikme de gosterilir",
+      "target": "Sürət testi şəbəkənin performansını qiymətləndirir. Hesabatda gecikmə də göstərilir."
+    },
+    {
+      "id": "local-057-2",
+      "groupId": "gold-57",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret testi sebekenin performansini qiymetlendirir. hesabatda gecikme de gosterilir.",
+      "target": "Sürət testi şəbəkənin performansını qiymətləndirir. Hesabatda gecikmə də göstərilir."
+    },
+    {
+      "id": "local-057-3",
+      "groupId": "gold-57",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət testi şəbəkənin performansını qiymətləndirir hesabatda gecikmə də göstərilir",
+      "target": "Sürət testi şəbəkənin performansını qiymətləndirir. Hesabatda gecikmə də göstərilir."
+    },
+    {
+      "id": "local-057-4",
+      "groupId": "gold-57",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret teshti shebekenin performanshini qiymetlendirir heshabatda gechikme de goshterilir",
+      "target": "Sürət testi şəbəkənin performansını qiymətləndirir. Hesabatda gecikmə də göstərilir."
+    },
+    {
+      "id": "local-057-5",
+      "groupId": "gold-57",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret testi seekenin performansini qiymetlendirir. hesabatda gecikme de gosterilir.",
+      "target": "Sürət testi şəbəkənin performansını qiymətləndirir. Hesabatda gecikmə də göstərilir."
+    },
+    {
+      "id": "local-058-1",
+      "groupId": "gold-58",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret avtomobil sixliqdan cixandan sonra artdi surucu yene qaydalara emel etdi",
+      "target": "Sürət avtomobil sıxlıqdan çıxandan sonra artdı. Sürücü yenə qaydalara əməl etdi."
+    },
+    {
+      "id": "local-058-2",
+      "groupId": "gold-58",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret avtomobil sixliqdan cixandan sonra artdi. surucu yene qaydalara emel etdi.",
+      "target": "Sürət avtomobil sıxlıqdan çıxandan sonra artdı. Sürücü yenə qaydalara əməl etdi."
+    },
+    {
+      "id": "local-058-3",
+      "groupId": "gold-58",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət avtomobil sıxlıqdan çıxandan sonra artdı sürücü yenə qaydalara əməl etdi",
+      "target": "Sürət avtomobil sıxlıqdan çıxandan sonra artdı. Sürücü yenə qaydalara əməl etdi."
+    },
+    {
+      "id": "local-058-4",
+      "groupId": "gold-58",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret avtomobil shixliqdan chixandan shonra artdi shuruchu yene qaydalara emel etdi",
+      "target": "Sürət avtomobil sıxlıqdan çıxandan sonra artdı. Sürücü yenə qaydalara əməl etdi."
+    },
+    {
+      "id": "local-058-5",
+      "groupId": "gold-58",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret avomobil sixliqdan cixandan sonra artdi. surucu yene qaydalara emel etdi.",
+      "target": "Sürət avtomobil sıxlıqdan çıxandan sonra artdı. Sürücü yenə qaydalara əməl etdi."
+    },
+    {
+      "id": "local-059-1",
+      "groupId": "gold-59",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet xettinde sabit qaldi sebeke avadanligi duzgun isleyir",
+      "target": "Sürət internet xəttində sabit qaldı. Şəbəkə avadanlığı düzgün işləyir."
+    },
+    {
+      "id": "local-059-2",
+      "groupId": "gold-59",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet xettinde sabit qaldi. sebeke avadanligi duzgun isleyir.",
+      "target": "Sürət internet xəttində sabit qaldı. Şəbəkə avadanlığı düzgün işləyir."
+    },
+    {
+      "id": "local-059-3",
+      "groupId": "gold-59",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet xəttində sabit qaldı şəbəkə avadanlığı düzgün işləyir",
+      "target": "Sürət internet xəttində sabit qaldı. Şəbəkə avadanlığı düzgün işləyir."
+    },
+    {
+      "id": "local-059-4",
+      "groupId": "gold-59",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet xettinde shabit qaldi shebeke avadanligi duzgun ishleyir",
+      "target": "Sürət internet xəttində sabit qaldı. Şəbəkə avadanlığı düzgün işləyir."
+    },
+    {
+      "id": "local-059-5",
+      "groupId": "gold-59",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet xettinde sabit qaldi. sebeke avadanligi duzgun isleyir.",
+      "target": "Sürət internet xəttində sabit qaldı. Şəbəkə avadanlığı düzgün işləyir."
+    },
+    {
+      "id": "local-060-1",
+      "groupId": "gold-60",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret olcmeleri saniye ile hesablanan muddete esaslanir avtomobilin hereketi izlenir",
+      "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir."
+    },
+    {
+      "id": "local-060-2",
+      "groupId": "gold-60",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret olcmeleri saniye ile hesablanan muddete esaslanir. avtomobilin hereketi izlenir.",
+      "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir."
+    },
+    {
+      "id": "local-060-3",
+      "groupId": "gold-60",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır avtomobilin hərəkəti izlənir",
+      "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir."
+    },
+    {
+      "id": "local-060-4",
+      "groupId": "gold-60",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret olchmeleri shaniye ile heshablanan muddete eshashlanir avtomobilin hereketi izlenir",
+      "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir."
+    },
+    {
+      "id": "local-060-5",
+      "groupId": "gold-60",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret olmeleri saniye ile hesablanan muddete esaslanir. avtomobilin hereketi izlenir.",
+      "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir."
+    },
+    {
+      "id": "local-061-1",
+      "groupId": "gold-61",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret testi internet baglantisinda problem askar etdi operatora muraciet gonderdik",
+      "target": "Sürət testi internet bağlantısında problem aşkar etdi. Operatora müraciət göndərdik."
+    },
+    {
+      "id": "local-061-2",
+      "groupId": "gold-61",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret testi internet baglantisinda problem askar etdi. operatora muraciet gonderdik.",
+      "target": "Sürət testi internet bağlantısında problem aşkar etdi. Operatora müraciət göndərdik."
+    },
+    {
+      "id": "local-061-3",
+      "groupId": "gold-61",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət testi internet bağlantısında problem aşkar etdi operatora müraciət göndərdik",
+      "target": "Sürət testi internet bağlantısında problem aşkar etdi. Operatora müraciət göndərdik."
+    },
+    {
+      "id": "local-061-4",
+      "groupId": "gold-61",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret teshti internet baglantishinda problem ashkar etdi operatora murachiet gonderdik",
+      "target": "Sürət testi internet bağlantısında problem aşkar etdi. Operatora müraciət göndərdik."
+    },
+    {
+      "id": "local-061-5",
+      "groupId": "gold-61",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret testi inernet baglantisinda problem askar etdi. operatora muraciet gonderdik.",
+      "target": "Sürət testi internet bağlantısında problem aşkar etdi. Operatora müraciət göndərdik."
+    },
+    {
+      "id": "local-062-1",
+      "groupId": "gold-62",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret sebeke avadanligi yenilenenden sonra yukseldi performans hesabatini hazirladiq",
+      "target": "Sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi. Performans hesabatını hazırladıq."
+    },
+    {
+      "id": "local-062-2",
+      "groupId": "gold-62",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret sebeke avadanligi yenilenenden sonra yukseldi. performans hesabatini hazirladiq.",
+      "target": "Sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi. Performans hesabatını hazırladıq."
+    },
+    {
+      "id": "local-062-3",
+      "groupId": "gold-62",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi performans hesabatını hazırladıq",
+      "target": "Sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi. Performans hesabatını hazırladıq."
+    },
+    {
+      "id": "local-062-4",
+      "groupId": "gold-62",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shebeke avadanligi yenilenenden shonra yuksheldi performansh heshabatini hazirladiq",
+      "target": "Sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi. Performans hesabatını hazırladıq."
+    },
+    {
+      "id": "local-062-5",
+      "groupId": "gold-62",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seeke avadanligi yenilenenden sonra yukseldi. performans hesabatini hazirladiq.",
+      "target": "Sürət şəbəkə avadanlığı yenilənəndən sonra yüksəldi. Performans hesabatını hazırladıq."
+    },
+    {
+      "id": "local-063-1",
+      "groupId": "gold-63",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret avtomobilin hereket etdiyi yola uygun secilmelidir tehlukesizlik vacibdir",
+      "target": "Sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir. Təhlükəsizlik vacibdir."
+    },
+    {
+      "id": "local-063-2",
+      "groupId": "gold-63",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret avtomobilin hereket etdiyi yola uygun secilmelidir. tehlukesizlik vacibdir.",
+      "target": "Sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir. Təhlükəsizlik vacibdir."
+    },
+    {
+      "id": "local-063-3",
+      "groupId": "gold-63",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir təhlükəsizlik vacibdir",
+      "target": "Sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir. Təhlükəsizlik vacibdir."
+    },
+    {
+      "id": "local-063-4",
+      "groupId": "gold-63",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret avtomobilin hereket etdiyi yola uygun shechilmelidir tehlukeshizlik vachibdir",
+      "target": "Sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir. Təhlükəsizlik vacibdir."
+    },
+    {
+      "id": "local-063-5",
+      "groupId": "gold-63",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret avomobilin hereket etdiyi yola uygun secilmelidir. tehlukesizlik vacibdir.",
+      "target": "Sürət avtomobilin hərəkət etdiyi yola uyğun seçilməlidir. Təhlükəsizlik vacibdir."
+    },
+    {
+      "id": "local-064-1",
+      "groupId": "gold-64",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet xettinin yuklenmesinden asilidir sebekeye cox cihaz qosulmusdu",
+      "target": "Sürət internet xəttinin yüklənməsindən asılıdır. Şəbəkəyə çox cihaz qoşulmuşdu."
+    },
+    {
+      "id": "local-064-2",
+      "groupId": "gold-64",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet xettinin yuklenmesinden asilidir. sebekeye cox cihaz qosulmusdu.",
+      "target": "Sürət internet xəttinin yüklənməsindən asılıdır. Şəbəkəyə çox cihaz qoşulmuşdu."
+    },
+    {
+      "id": "local-064-3",
+      "groupId": "gold-64",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet xəttinin yüklənməsindən asılıdır şəbəkəyə çox cihaz qoşulmuşdu",
+      "target": "Sürət internet xəttinin yüklənməsindən asılıdır. Şəbəkəyə çox cihaz qoşulmuşdu."
+    },
+    {
+      "id": "local-064-4",
+      "groupId": "gold-64",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet xettinin yuklenmeshinden ashilidir shebekeye chox chihaz qoshulmushdu",
+      "target": "Sürət internet xəttinin yüklənməsindən asılıdır. Şəbəkəyə çox cihaz qoşulmuşdu."
+    },
+    {
+      "id": "local-064-5",
+      "groupId": "gold-64",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet xettinin yuklenmesinden asilidir. sebekeye cox cihaz qosulmusdu.",
+      "target": "Sürət internet xəttinin yüklənməsindən asılıdır. Şəbəkəyə çox cihaz qoşulmuşdu."
+    },
+    {
+      "id": "local-065-1",
+      "groupId": "gold-65",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret olcen cihaz avtomobile yaxin yerlesdirildi neticeler hesabatda saxlanildi",
+      "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı."
+    },
+    {
+      "id": "local-065-2",
+      "groupId": "gold-65",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret olcen cihaz avtomobile yaxin yerlesdirildi. neticeler hesabatda saxlanildi.",
+      "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı."
+    },
+    {
+      "id": "local-065-3",
+      "groupId": "gold-65",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət ölçən cihaz avtomobilə yaxın yerləşdirildi nəticələr hesabatda saxlanıldı",
+      "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı."
+    },
+    {
+      "id": "local-065-4",
+      "groupId": "gold-65",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret olchen chihaz avtomobile yaxin yerleshdirildi neticheler heshabatda shaxlanildi",
+      "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı."
+    },
+    {
+      "id": "local-065-5",
+      "groupId": "gold-65",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret olcen cihaz avomobile yaxin yerlesdirildi. neticeler hesabatda saxlanildi.",
+      "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı."
+    },
+    {
+      "id": "local-066-1",
+      "groupId": "gold-66",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret testi saniye erzinde tamamlandi internet baglantisi normal isleyirdi",
+      "target": "Sürət testi saniyə ərzində tamamlandı. İnternet bağlantısı normal işləyirdi."
+    },
+    {
+      "id": "local-066-2",
+      "groupId": "gold-66",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret testi saniye erzinde tamamlandi. internet baglantisi normal isleyirdi.",
+      "target": "Sürət testi saniyə ərzində tamamlandı. İnternet bağlantısı normal işləyirdi."
+    },
+    {
+      "id": "local-066-3",
+      "groupId": "gold-66",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət testi saniyə ərzində tamamlandı internet bağlantısı normal işləyirdi",
+      "target": "Sürət testi saniyə ərzində tamamlandı. İnternet bağlantısı normal işləyirdi."
+    },
+    {
+      "id": "local-066-4",
+      "groupId": "gold-66",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret teshti shaniye erzinde tamamlandi internet baglantishi normal ishleyirdi",
+      "target": "Sürət testi saniyə ərzində tamamlandı. İnternet bağlantısı normal işləyirdi."
+    },
+    {
+      "id": "local-066-5",
+      "groupId": "gold-66",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret testi saiye erzinde tamamlandi. internet baglantisi normal isleyirdi.",
+      "target": "Sürət testi saniyə ərzində tamamlandı. İnternet bağlantısı normal işləyirdi."
+    },
+    {
+      "id": "local-067-1",
+      "groupId": "gold-67",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret sebeke performansinin esas gostericilerinden biridir gecikme ayrica olculur",
+      "target": "Sürət şəbəkə performansının əsas göstəricilərindən biridir. Gecikmə ayrıca ölçülür."
+    },
+    {
+      "id": "local-067-2",
+      "groupId": "gold-67",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret sebeke performansinin esas gostericilerinden biridir. gecikme ayrica olculur.",
+      "target": "Sürət şəbəkə performansının əsas göstəricilərindən biridir. Gecikmə ayrıca ölçülür."
+    },
+    {
+      "id": "local-067-3",
+      "groupId": "gold-67",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət şəbəkə performansının əsas göstəricilərindən biridir gecikmə ayrıca ölçülür",
+      "target": "Sürət şəbəkə performansının əsas göstəricilərindən biridir. Gecikmə ayrıca ölçülür."
+    },
+    {
+      "id": "local-067-4",
+      "groupId": "gold-67",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shebeke performanshinin eshash goshterichilerinden biridir gechikme ayricha olchulur",
+      "target": "Sürət şəbəkə performansının əsas göstəricilərindən biridir. Gecikmə ayrıca ölçülür."
+    },
+    {
+      "id": "local-067-5",
+      "groupId": "gold-67",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seeke performansinin esas gostericilerinden biridir. gecikme ayrica olculur.",
+      "target": "Sürət şəbəkə performansının əsas göstəricilərindən biridir. Gecikmə ayrıca ölçülür."
+    },
+    {
+      "id": "local-068-1",
+      "groupId": "gold-68",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret avtomobil panelinde aydin gorunur surucu gostericini izleyirdi",
+      "target": "Sürət avtomobil panelində aydın görünür. Sürücü göstəricini izləyirdi."
+    },
+    {
+      "id": "local-068-2",
+      "groupId": "gold-68",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret avtomobil panelinde aydin gorunur. surucu gostericini izleyirdi.",
+      "target": "Sürət avtomobil panelində aydın görünür. Sürücü göstəricini izləyirdi."
+    },
+    {
+      "id": "local-068-3",
+      "groupId": "gold-68",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət avtomobil panelində aydın görünür sürücü göstəricini izləyirdi",
+      "target": "Sürət avtomobil panelində aydın görünür. Sürücü göstəricini izləyirdi."
+    },
+    {
+      "id": "local-068-4",
+      "groupId": "gold-68",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret avtomobil panelinde aydin gorunur shuruchu goshterichini izleyirdi",
+      "target": "Sürət avtomobil panelində aydın görünür. Sürücü göstəricini izləyirdi."
+    },
+    {
+      "id": "local-068-5",
+      "groupId": "gold-68",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret avomobil panelinde aydin gorunur. surucu gostericini izleyirdi.",
+      "target": "Sürət avtomobil panelində aydın görünür. Sürücü göstəricini izləyirdi."
+    },
+    {
+      "id": "local-069-1",
+      "groupId": "gold-69",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet baglantisi kesilende olculmedi sebeke berpa olunmalidir",
+      "target": "Sürət internet bağlantısı kəsiləndə ölçülmədi. Şəbəkə bərpa olunmalıdır."
+    },
+    {
+      "id": "local-069-2",
+      "groupId": "gold-69",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet baglantisi kesilende olculmedi. sebeke berpa olunmalidir.",
+      "target": "Sürət internet bağlantısı kəsiləndə ölçülmədi. Şəbəkə bərpa olunmalıdır."
+    },
+    {
+      "id": "local-069-3",
+      "groupId": "gold-69",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet bağlantısı kəsiləndə ölçülmədi şəbəkə bərpa olunmalıdır",
+      "target": "Sürət internet bağlantısı kəsiləndə ölçülmədi. Şəbəkə bərpa olunmalıdır."
+    },
+    {
+      "id": "local-069-4",
+      "groupId": "gold-69",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet baglantishi keshilende olchulmedi shebeke berpa olunmalidir",
+      "target": "Sürət internet bağlantısı kəsiləndə ölçülmədi. Şəbəkə bərpa olunmalıdır."
+    },
+    {
+      "id": "local-069-5",
+      "groupId": "gold-69",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet baglantisi kesilende olculmedi. sebeke berpa olunmalidir.",
+      "target": "Sürət internet bağlantısı kəsiləndə ölçülmədi. Şəbəkə bərpa olunmalıdır."
+    },
+    {
+      "id": "local-070-1",
+      "groupId": "gold-70",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret olcmelerinde saniye deqiqliyi vacibdir test avadanligi evvelceden yoxlanildi",
+      "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı."
+    },
+    {
+      "id": "local-070-2",
+      "groupId": "gold-70",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret olcmelerinde saniye deqiqliyi vacibdir. test avadanligi evvelceden yoxlanildi.",
+      "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı."
+    },
+    {
+      "id": "local-070-3",
+      "groupId": "gold-70",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət ölçmələrində saniyə dəqiqliyi vacibdir test avadanlığı əvvəlcədən yoxlanıldı",
+      "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı."
+    },
+    {
+      "id": "local-070-4",
+      "groupId": "gold-70",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret olchmelerinde shaniye deqiqliyi vachibdir tesht avadanligi evvelcheden yoxlanildi",
+      "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı."
+    },
+    {
+      "id": "local-070-5",
+      "groupId": "gold-70",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret olmelerinde saniye deqiqliyi vacibdir. test avadanligi evvelceden yoxlanildi.",
+      "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı."
+    },
+    {
+      "id": "local-071-1",
+      "groupId": "gold-71",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret testi internet xidmetinin veziyyetini gosterdi sebeke sabit isleyirdi",
+      "target": "Sürət testi internet xidmətinin vəziyyətini göstərdi. Şəbəkə sabit işləyirdi."
+    },
+    {
+      "id": "local-071-2",
+      "groupId": "gold-71",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret testi internet xidmetinin veziyyetini gosterdi. sebeke sabit isleyirdi.",
+      "target": "Sürət testi internet xidmətinin vəziyyətini göstərdi. Şəbəkə sabit işləyirdi."
+    },
+    {
+      "id": "local-071-3",
+      "groupId": "gold-71",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət testi internet xidmətinin vəziyyətini göstərdi şəbəkə sabit işləyirdi",
+      "target": "Sürət testi internet xidmətinin vəziyyətini göstərdi. Şəbəkə sabit işləyirdi."
+    },
+    {
+      "id": "local-071-4",
+      "groupId": "gold-71",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret teshti internet xidmetinin veziyyetini goshterdi shebeke shabit ishleyirdi",
+      "target": "Sürət testi internet xidmətinin vəziyyətini göstərdi. Şəbəkə sabit işləyirdi."
+    },
+    {
+      "id": "local-071-5",
+      "groupId": "gold-71",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret testi inernet xidmetinin veziyyetini gosterdi. sebeke sabit isleyirdi.",
+      "target": "Sürət testi internet xidmətinin vəziyyətini göstərdi. Şəbəkə sabit işləyirdi."
+    },
+    {
+      "id": "local-072-1",
+      "groupId": "gold-72",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret sebeke yuku azalandan sonra artdi performans gostericileri yaxsilasdi",
+      "target": "Sürət şəbəkə yükü azalandan sonra artdı. Performans göstəriciləri yaxşılaşdı."
+    },
+    {
+      "id": "local-072-2",
+      "groupId": "gold-72",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret sebeke yuku azalandan sonra artdi. performans gostericileri yaxsilasdi.",
+      "target": "Sürət şəbəkə yükü azalandan sonra artdı. Performans göstəriciləri yaxşılaşdı."
+    },
+    {
+      "id": "local-072-3",
+      "groupId": "gold-72",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət şəbəkə yükü azalandan sonra artdı performans göstəriciləri yaxşılaşdı",
+      "target": "Sürət şəbəkə yükü azalandan sonra artdı. Performans göstəriciləri yaxşılaşdı."
+    },
+    {
+      "id": "local-072-4",
+      "groupId": "gold-72",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shebeke yuku azalandan shonra artdi performansh goshterichileri yaxshilashdi",
+      "target": "Sürət şəbəkə yükü azalandan sonra artdı. Performans göstəriciləri yaxşılaşdı."
+    },
+    {
+      "id": "local-072-5",
+      "groupId": "gold-72",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seeke yuku azalandan sonra artdi. performans gostericileri yaxsilasdi.",
+      "target": "Sürət şəbəkə yükü azalandan sonra artdı. Performans göstəriciləri yaxşılaşdı."
+    },
+    {
+      "id": "local-073-1",
+      "groupId": "gold-73",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret avtomobil dayananda sifir gosterilir cihaz duzgun isleyir",
+      "target": "Sürət avtomobil dayananda sıfır göstərilir. Cihaz düzgün işləyir."
+    },
+    {
+      "id": "local-073-2",
+      "groupId": "gold-73",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret avtomobil dayananda sifir gosterilir. cihaz duzgun isleyir.",
+      "target": "Sürət avtomobil dayananda sıfır göstərilir. Cihaz düzgün işləyir."
+    },
+    {
+      "id": "local-073-3",
+      "groupId": "gold-73",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət avtomobil dayananda sıfır göstərilir cihaz düzgün işləyir",
+      "target": "Sürət avtomobil dayananda sıfır göstərilir. Cihaz düzgün işləyir."
+    },
+    {
+      "id": "local-073-4",
+      "groupId": "gold-73",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret avtomobil dayananda shifir goshterilir chihaz duzgun ishleyir",
+      "target": "Sürət avtomobil dayananda sıfır göstərilir. Cihaz düzgün işləyir."
+    },
+    {
+      "id": "local-073-5",
+      "groupId": "gold-73",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret avomobil dayananda sifir gosterilir. cihaz duzgun isleyir.",
+      "target": "Sürət avtomobil dayananda sıfır göstərilir. Cihaz düzgün işləyir."
+    },
+    {
+      "id": "local-074-1",
+      "groupId": "gold-74",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret internet xetti deyisdirilenden sonra yukseldi sebeke yeniden yoxlanildi",
+      "target": "Sürət internet xətti dəyişdiriləndən sonra yüksəldi. Şəbəkə yenidən yoxlanıldı."
+    },
+    {
+      "id": "local-074-2",
+      "groupId": "gold-74",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret internet xetti deyisdirilenden sonra yukseldi. sebeke yeniden yoxlanildi.",
+      "target": "Sürət internet xətti dəyişdiriləndən sonra yüksəldi. Şəbəkə yenidən yoxlanıldı."
+    },
+    {
+      "id": "local-074-3",
+      "groupId": "gold-74",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət internet xətti dəyişdiriləndən sonra yüksəldi şəbəkə yenidən yoxlanıldı",
+      "target": "Sürət internet xətti dəyişdiriləndən sonra yüksəldi. Şəbəkə yenidən yoxlanıldı."
+    },
+    {
+      "id": "local-074-4",
+      "groupId": "gold-74",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret internet xetti deyishdirilenden shonra yuksheldi shebeke yeniden yoxlanildi",
+      "target": "Sürət internet xətti dəyişdiriləndən sonra yüksəldi. Şəbəkə yenidən yoxlanıldı."
+    },
+    {
+      "id": "local-074-5",
+      "groupId": "gold-74",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret inernet xetti deyisdirilenden sonra yukseldi. sebeke yeniden yoxlanildi.",
+      "target": "Sürət internet xətti dəyişdiriləndən sonra yüksəldi. Şəbəkə yenidən yoxlanıldı."
+    },
+    {
+      "id": "local-075-1",
+      "groupId": "gold-75",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret olcen cihazin neticesi saniye ile muqayise edildi avtomobil sinagi basa catdi",
+      "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı."
+    },
+    {
+      "id": "local-075-2",
+      "groupId": "gold-75",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret olcen cihazin neticesi saniye ile muqayise edildi. avtomobil sinagi basa catdi.",
+      "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı."
+    },
+    {
+      "id": "local-075-3",
+      "groupId": "gold-75",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi avtomobil sınağı başa çatdı",
+      "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı."
+    },
+    {
+      "id": "local-075-4",
+      "groupId": "gold-75",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret olchen chihazin neticheshi shaniye ile muqayishe edildi avtomobil shinagi basha chatdi",
+      "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı."
+    },
+    {
+      "id": "local-075-5",
+      "groupId": "gold-75",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret olcen ciazin neticesi saniye ile muqayise edildi. avtomobil sinagi basa catdi.",
+      "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı."
+    },
+    {
+      "id": "local-076-1",
+      "groupId": "gold-76",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin esli ile muqayise edildi imza her iki nusxede gorunurdu",
+      "target": "Surət sənədin əsli ilə müqayisə edildi. İmza hər iki nüsxədə görünürdü."
+    },
+    {
+      "id": "local-076-2",
+      "groupId": "gold-76",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin esli ile muqayise edildi. imza her iki nusxede gorunurdu.",
+      "target": "Surət sənədin əsli ilə müqayisə edildi. İmza hər iki nüsxədə görünürdü."
+    },
+    {
+      "id": "local-076-3",
+      "groupId": "gold-76",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin əsli ilə müqayisə edildi imza hər iki nüsxədə görünürdü",
+      "target": "Surət sənədin əsli ilə müqayisə edildi. İmza hər iki nüsxədə görünürdü."
+    },
+    {
+      "id": "local-076-4",
+      "groupId": "gold-76",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin eshli ile muqayishe edildi imza her iki nushxede gorunurdu",
+      "target": "Surət sənədin əsli ilə müqayisə edildi. İmza hər iki nüsxədə görünürdü."
+    },
+    {
+      "id": "local-076-5",
+      "groupId": "gold-76",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin esli ile muqayise edildi. imza her iki nusxede gorunurdu.",
+      "target": "Surət sənədin əsli ilə müqayisə edildi. İmza hər iki nüsxədə görünürdü."
+    },
+    {
+      "id": "local-077-1",
+      "groupId": "gold-77",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret arxiv qovlugunda saxlanilir senedin esli ayrica qorunur",
+      "target": "Surət arxiv qovluğunda saxlanılır. Sənədin əsli ayrıca qorunur."
+    },
+    {
+      "id": "local-077-2",
+      "groupId": "gold-77",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret arxiv qovlugunda saxlanilir. senedin esli ayrica qorunur.",
+      "target": "Surət arxiv qovluğunda saxlanılır. Sənədin əsli ayrıca qorunur."
+    },
+    {
+      "id": "local-077-3",
+      "groupId": "gold-77",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət arxiv qovluğunda saxlanılır sənədin əsli ayrıca qorunur",
+      "target": "Surət arxiv qovluğunda saxlanılır. Sənədin əsli ayrıca qorunur."
+    },
+    {
+      "id": "local-077-4",
+      "groupId": "gold-77",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret arxiv qovlugunda shaxlanilir shenedin eshli ayricha qorunur",
+      "target": "Surət arxiv qovluğunda saxlanılır. Sənədin əsli ayrıca qorunur."
+    },
+    {
+      "id": "local-077-5",
+      "groupId": "gold-77",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret arxiv qolugunda saxlanilir. senedin esli ayrica qorunur.",
+      "target": "Surət arxiv qovluğunda saxlanılır. Sənədin əsli ayrıca qorunur."
+    },
+    {
+      "id": "local-078-1",
+      "groupId": "gold-78",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin imzali nusxesinden cixarildi mektuba elave edildi",
+      "target": "Surət sənədin imzalı nüsxəsindən çıxarıldı. Məktuba əlavə edildi."
+    },
+    {
+      "id": "local-078-2",
+      "groupId": "gold-78",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin imzali nusxesinden cixarildi. mektuba elave edildi.",
+      "target": "Surət sənədin imzalı nüsxəsindən çıxarıldı. Məktuba əlavə edildi."
+    },
+    {
+      "id": "local-078-3",
+      "groupId": "gold-78",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin imzalı nüsxəsindən çıxarıldı məktuba əlavə edildi",
+      "target": "Surət sənədin imzalı nüsxəsindən çıxarıldı. Məktuba əlavə edildi."
+    },
+    {
+      "id": "local-078-4",
+      "groupId": "gold-78",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin imzali nushxeshinden chixarildi mektuba elave edildi",
+      "target": "Surət sənədin imzalı nüsxəsindən çıxarıldı. Məktuba əlavə edildi."
+    },
+    {
+      "id": "local-078-5",
+      "groupId": "gold-78",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin imzali nusxesinden cixarildi. mektuba elave edildi.",
+      "target": "Surət sənədin imzalı nüsxəsindən çıxarıldı. Məktuba əlavə edildi."
+    },
+    {
+      "id": "local-079-1",
+      "groupId": "gold-79",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun yaninda yerlesdirildi sened arxive gonderildi",
+      "target": "Surət məktubun yanında yerləşdirildi. Sənəd arxivə göndərildi."
+    },
+    {
+      "id": "local-079-2",
+      "groupId": "gold-79",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun yaninda yerlesdirildi. sened arxive gonderildi.",
+      "target": "Surət məktubun yanında yerləşdirildi. Sənəd arxivə göndərildi."
+    },
+    {
+      "id": "local-079-3",
+      "groupId": "gold-79",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun yanında yerləşdirildi sənəd arxivə göndərildi",
+      "target": "Surət məktubun yanında yerləşdirildi. Sənəd arxivə göndərildi."
+    },
+    {
+      "id": "local-079-4",
+      "groupId": "gold-79",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun yaninda yerleshdirildi shened arxive gonderildi",
+      "target": "Surət məktubun yanında yerləşdirildi. Sənəd arxivə göndərildi."
+    },
+    {
+      "id": "local-079-5",
+      "groupId": "gold-79",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun yaninda yerlesdirildi. sened arxive gonderildi.",
+      "target": "Surət məktubun yanında yerləşdirildi. Sənəd arxivə göndərildi."
+    },
+    {
+      "id": "local-080-1",
+      "groupId": "gold-80",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin esline uygun hazirlanmalidir nusxenin aydinligi yoxlanilir",
+      "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır."
+    },
+    {
+      "id": "local-080-2",
+      "groupId": "gold-80",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin esline uygun hazirlanmalidir. nusxenin aydinligi yoxlanilir.",
+      "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır."
+    },
+    {
+      "id": "local-080-3",
+      "groupId": "gold-80",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin əslinə uyğun hazırlanmalıdır nüsxənin aydınlığı yoxlanılır",
+      "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır."
+    },
+    {
+      "id": "local-080-4",
+      "groupId": "gold-80",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin eshline uygun hazirlanmalidir nushxenin aydinligi yoxlanilir",
+      "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır."
+    },
+    {
+      "id": "local-080-5",
+      "groupId": "gold-80",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin esline uygun hazirlanmalidir. nusxenin aydinligi yoxlanilir.",
+      "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır."
+    },
+    {
+      "id": "local-081-1",
+      "groupId": "gold-81",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret arxiv emekdasina teqdim edildi imzali sened qebul olundu",
+      "target": "Surət arxiv əməkdaşına təqdim edildi. İmzalı sənəd qəbul olundu."
+    },
+    {
+      "id": "local-081-2",
+      "groupId": "gold-81",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret arxiv emekdasina teqdim edildi. imzali sened qebul olundu.",
+      "target": "Surət arxiv əməkdaşına təqdim edildi. İmzalı sənəd qəbul olundu."
+    },
+    {
+      "id": "local-081-3",
+      "groupId": "gold-81",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət arxiv əməkdaşına təqdim edildi imzalı sənəd qəbul olundu",
+      "target": "Surət arxiv əməkdaşına təqdim edildi. İmzalı sənəd qəbul olundu."
+    },
+    {
+      "id": "local-081-4",
+      "groupId": "gold-81",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret arxiv emekdashina teqdim edildi imzali shened qebul olundu",
+      "target": "Surət arxiv əməkdaşına təqdim edildi. İmzalı sənəd qəbul olundu."
+    },
+    {
+      "id": "local-081-5",
+      "groupId": "gold-81",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret arxiv emkdasina teqdim edildi. imzali sened qebul olundu.",
+      "target": "Surət arxiv əməkdaşına təqdim edildi. İmzalı sənəd qəbul olundu."
+    },
+    {
+      "id": "local-082-1",
+      "groupId": "gold-82",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin butun sehifelerini ehate edir mektubda sehife sayi qeyd edilib",
+      "target": "Surət sənədin bütün səhifələrini əhatə edir. Məktubda səhifə sayı qeyd edilib."
+    },
+    {
+      "id": "local-082-2",
+      "groupId": "gold-82",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin butun sehifelerini ehate edir. mektubda sehife sayi qeyd edilib.",
+      "target": "Surət sənədin bütün səhifələrini əhatə edir. Məktubda səhifə sayı qeyd edilib."
+    },
+    {
+      "id": "local-082-3",
+      "groupId": "gold-82",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin bütün səhifələrini əhatə edir məktubda səhifə sayı qeyd edilib",
+      "target": "Surət sənədin bütün səhifələrini əhatə edir. Məktubda səhifə sayı qeyd edilib."
+    },
+    {
+      "id": "local-082-4",
+      "groupId": "gold-82",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin butun shehifelerini ehate edir mektubda shehife shayi qeyd edilib",
+      "target": "Surət sənədin bütün səhifələrini əhatə edir. Məktubda səhifə sayı qeyd edilib."
+    },
+    {
+      "id": "local-082-5",
+      "groupId": "gold-82",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin butun sehifelerini ehate edir. mektubda sehife sayi qeyd edilib.",
+      "target": "Surət sənədin bütün səhifələrini əhatə edir. Məktubda səhifə sayı qeyd edilib."
+    },
+    {
+      "id": "local-083-1",
+      "groupId": "gold-83",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun imzali nusxesine elave edildi arxiv nomresi deyismedi",
+      "target": "Surət məktubun imzalı nüsxəsinə əlavə edildi. Arxiv nömrəsi dəyişmədi."
+    },
+    {
+      "id": "local-083-2",
+      "groupId": "gold-83",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun imzali nusxesine elave edildi. arxiv nomresi deyismedi.",
+      "target": "Surət məktubun imzalı nüsxəsinə əlavə edildi. Arxiv nömrəsi dəyişmədi."
+    },
+    {
+      "id": "local-083-3",
+      "groupId": "gold-83",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun imzalı nüsxəsinə əlavə edildi arxiv nömrəsi dəyişmədi",
+      "target": "Surət məktubun imzalı nüsxəsinə əlavə edildi. Arxiv nömrəsi dəyişmədi."
+    },
+    {
+      "id": "local-083-4",
+      "groupId": "gold-83",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun imzali nushxeshine elave edildi arxiv nomreshi deyishmedi",
+      "target": "Surət məktubun imzalı nüsxəsinə əlavə edildi. Arxiv nömrəsi dəyişmədi."
+    },
+    {
+      "id": "local-083-5",
+      "groupId": "gold-83",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun imzali nusxesine elave edildi. arxiv nomresi deyismedi.",
+      "target": "Surət məktubun imzalı nüsxəsinə əlavə edildi. Arxiv nömrəsi dəyişmədi."
+    },
+    {
+      "id": "local-084-1",
+      "groupId": "gold-84",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin esli yoxlanildiqdan sonra tesdiqlendi nusxe qovluga qoyuldu",
+      "target": "Surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi. Nüsxə qovluğa qoyuldu."
+    },
+    {
+      "id": "local-084-2",
+      "groupId": "gold-84",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin esli yoxlanildiqdan sonra tesdiqlendi. nusxe qovluga qoyuldu.",
+      "target": "Surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi. Nüsxə qovluğa qoyuldu."
+    },
+    {
+      "id": "local-084-3",
+      "groupId": "gold-84",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi nüsxə qovluğa qoyuldu",
+      "target": "Surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi. Nüsxə qovluğa qoyuldu."
+    },
+    {
+      "id": "local-084-4",
+      "groupId": "gold-84",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin eshli yoxlanildiqdan shonra teshdiqlendi nushxe qovluga qoyuldu",
+      "target": "Surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi. Nüsxə qovluğa qoyuldu."
+    },
+    {
+      "id": "local-084-5",
+      "groupId": "gold-84",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin esli yoxlanildiqdan sonra tesdiqlendi. nusxe qovluga qoyuldu.",
+      "target": "Surət sənədin əsli yoxlanıldıqdan sonra təsdiqləndi. Nüsxə qovluğa qoyuldu."
+    },
+    {
+      "id": "local-085-1",
+      "groupId": "gold-85",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret arxiv ucun ayrica hazirlandi senedin imzasi yoxlanildi",
+      "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı."
+    },
+    {
+      "id": "local-085-2",
+      "groupId": "gold-85",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret arxiv ucun ayrica hazirlandi. senedin imzasi yoxlanildi.",
+      "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı."
+    },
+    {
+      "id": "local-085-3",
+      "groupId": "gold-85",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı",
+      "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı."
+    },
+    {
+      "id": "local-085-4",
+      "groupId": "gold-85",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret arxiv uchun ayricha hazirlandi shenedin imzashi yoxlanildi",
+      "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı."
+    },
+    {
+      "id": "local-085-5",
+      "groupId": "gold-85",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret arxiv ucun ayica hazirlandi. senedin imzasi yoxlanildi.",
+      "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı."
+    },
+    {
+      "id": "local-086-1",
+      "groupId": "gold-86",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin elektron nusxesinden alindi mektubla birlikde gonderildi",
+      "target": "Surət sənədin elektron nüsxəsindən alındı. Məktubla birlikdə göndərildi."
+    },
+    {
+      "id": "local-086-2",
+      "groupId": "gold-86",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin elektron nusxesinden alindi. mektubla birlikde gonderildi.",
+      "target": "Surət sənədin elektron nüsxəsindən alındı. Məktubla birlikdə göndərildi."
+    },
+    {
+      "id": "local-086-3",
+      "groupId": "gold-86",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin elektron nüsxəsindən alındı məktubla birlikdə göndərildi",
+      "target": "Surət sənədin elektron nüsxəsindən alındı. Məktubla birlikdə göndərildi."
+    },
+    {
+      "id": "local-086-4",
+      "groupId": "gold-86",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin elektron nushxeshinden alindi mektubla birlikde gonderildi",
+      "target": "Surət sənədin elektron nüsxəsindən alındı. Məktubla birlikdə göndərildi."
+    },
+    {
+      "id": "local-086-5",
+      "groupId": "gold-86",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin elektron nusxesinden alindi. mektubla birlikde gonderildi.",
+      "target": "Surət sənədin elektron nüsxəsindən alındı. Məktubla birlikdə göndərildi."
+    },
+    {
+      "id": "local-087-1",
+      "groupId": "gold-87",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun esli ile eyni olmalidir imzanin gorunmesi vacibdir",
+      "target": "Surət məktubun əsli ilə eyni olmalıdır. İmzanın görünməsi vacibdir."
+    },
+    {
+      "id": "local-087-2",
+      "groupId": "gold-87",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun esli ile eyni olmalidir. imzanin gorunmesi vacibdir.",
+      "target": "Surət məktubun əsli ilə eyni olmalıdır. İmzanın görünməsi vacibdir."
+    },
+    {
+      "id": "local-087-3",
+      "groupId": "gold-87",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun əsli ilə eyni olmalıdır imzanın görünməsi vacibdir",
+      "target": "Surət məktubun əsli ilə eyni olmalıdır. İmzanın görünməsi vacibdir."
+    },
+    {
+      "id": "local-087-4",
+      "groupId": "gold-87",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun eshli ile eyni olmalidir imzanin gorunmeshi vachibdir",
+      "target": "Surət məktubun əsli ilə eyni olmalıdır. İmzanın görünməsi vacibdir."
+    },
+    {
+      "id": "local-087-5",
+      "groupId": "gold-87",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun esli ile eyni olmalidir. imzanin gorunmesi vacibdir.",
+      "target": "Surət məktubun əsli ilə eyni olmalıdır. İmzanın görünməsi vacibdir."
+    },
+    {
+      "id": "local-088-1",
+      "groupId": "gold-88",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin arxiv nusxesine uygun gelir qovluq yeniden baglandi",
+      "target": "Surət sənədin arxiv nüsxəsinə uyğun gəlir. Qovluq yenidən bağlandı."
+    },
+    {
+      "id": "local-088-2",
+      "groupId": "gold-88",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin arxiv nusxesine uygun gelir. qovluq yeniden baglandi.",
+      "target": "Surət sənədin arxiv nüsxəsinə uyğun gəlir. Qovluq yenidən bağlandı."
+    },
+    {
+      "id": "local-088-3",
+      "groupId": "gold-88",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin arxiv nüsxəsinə uyğun gəlir qovluq yenidən bağlandı",
+      "target": "Surət sənədin arxiv nüsxəsinə uyğun gəlir. Qovluq yenidən bağlandı."
+    },
+    {
+      "id": "local-088-4",
+      "groupId": "gold-88",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin arxiv nushxeshine uygun gelir qovluq yeniden baglandi",
+      "target": "Surət sənədin arxiv nüsxəsinə uyğun gəlir. Qovluq yenidən bağlandı."
+    },
+    {
+      "id": "local-088-5",
+      "groupId": "gold-88",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin arxiv nusxesine uygun gelir. qovluq yeniden baglandi.",
+      "target": "Surət sənədin arxiv nüsxəsinə uyğun gəlir. Qovluq yenidən bağlandı."
+    },
+    {
+      "id": "local-089-1",
+      "groupId": "gold-89",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret imzali senedin yaninda saxlanilir mektubun tarixi de qeyd olunub",
+      "target": "Surət imzalı sənədin yanında saxlanılır. Məktubun tarixi də qeyd olunub."
+    },
+    {
+      "id": "local-089-2",
+      "groupId": "gold-89",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret imzali senedin yaninda saxlanilir. mektubun tarixi de qeyd olunub.",
+      "target": "Surət imzalı sənədin yanında saxlanılır. Məktubun tarixi də qeyd olunub."
+    },
+    {
+      "id": "local-089-3",
+      "groupId": "gold-89",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət imzalı sənədin yanında saxlanılır məktubun tarixi də qeyd olunub",
+      "target": "Surət imzalı sənədin yanında saxlanılır. Məktubun tarixi də qeyd olunub."
+    },
+    {
+      "id": "local-089-4",
+      "groupId": "gold-89",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret imzali shenedin yaninda shaxlanilir mektubun tarixi de qeyd olunub",
+      "target": "Surət imzalı sənədin yanında saxlanılır. Məktubun tarixi də qeyd olunub."
+    },
+    {
+      "id": "local-089-5",
+      "groupId": "gold-89",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret imali senedin yaninda saxlanilir. mektubun tarixi de qeyd olunub.",
+      "target": "Surət imzalı sənədin yanında saxlanılır. Məktubun tarixi də qeyd olunub."
+    },
+    {
+      "id": "local-090-1",
+      "groupId": "gold-90",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin esli esasinda cixarildi arxiv emekdasi onu qebul etdi",
+      "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi."
+    },
+    {
+      "id": "local-090-2",
+      "groupId": "gold-90",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin esli esasinda cixarildi. arxiv emekdasi onu qebul etdi.",
+      "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi."
+    },
+    {
+      "id": "local-090-3",
+      "groupId": "gold-90",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin əsli əsasında çıxarıldı arxiv əməkdaşı onu qəbul etdi",
+      "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi."
+    },
+    {
+      "id": "local-090-4",
+      "groupId": "gold-90",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin eshli eshashinda chixarildi arxiv emekdashi onu qebul etdi",
+      "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi."
+    },
+    {
+      "id": "local-090-5",
+      "groupId": "gold-90",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin esli esasinda cixarildi. arxiv emekdasi onu qebul etdi.",
+      "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi."
+    },
+    {
+      "id": "local-091-1",
+      "groupId": "gold-91",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun butun sehifelerini ehate edir nusxe duzgun hazirlanib",
+      "target": "Surət məktubun bütün səhifələrini əhatə edir. Nüsxə düzgün hazırlanıb."
+    },
+    {
+      "id": "local-091-2",
+      "groupId": "gold-91",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun butun sehifelerini ehate edir. nusxe duzgun hazirlanib.",
+      "target": "Surət məktubun bütün səhifələrini əhatə edir. Nüsxə düzgün hazırlanıb."
+    },
+    {
+      "id": "local-091-3",
+      "groupId": "gold-91",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun bütün səhifələrini əhatə edir nüsxə düzgün hazırlanıb",
+      "target": "Surət məktubun bütün səhifələrini əhatə edir. Nüsxə düzgün hazırlanıb."
+    },
+    {
+      "id": "local-091-4",
+      "groupId": "gold-91",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun butun shehifelerini ehate edir nushxe duzgun hazirlanib",
+      "target": "Surət məktubun bütün səhifələrini əhatə edir. Nüsxə düzgün hazırlanıb."
+    },
+    {
+      "id": "local-091-5",
+      "groupId": "gold-91",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun butun sehifelerini ehate edir. nusxe duzgun hazirlanib.",
+      "target": "Surət məktubun bütün səhifələrini əhatə edir. Nüsxə düzgün hazırlanıb."
+    },
+    {
+      "id": "local-092-1",
+      "groupId": "gold-92",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin imzasini aydin gosterir esl sened ayrica saxlanilir",
+      "target": "Surət sənədin imzasını aydın göstərir. Əsl sənəd ayrıca saxlanılır."
+    },
+    {
+      "id": "local-092-2",
+      "groupId": "gold-92",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin imzasini aydin gosterir. esl sened ayrica saxlanilir.",
+      "target": "Surət sənədin imzasını aydın göstərir. Əsl sənəd ayrıca saxlanılır."
+    },
+    {
+      "id": "local-092-3",
+      "groupId": "gold-92",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin imzasını aydın göstərir əsl sənəd ayrıca saxlanılır",
+      "target": "Surət sənədin imzasını aydın göstərir. Əsl sənəd ayrıca saxlanılır."
+    },
+    {
+      "id": "local-092-4",
+      "groupId": "gold-92",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin imzashini aydin goshterir eshl shened ayricha shaxlanilir",
+      "target": "Surət sənədin imzasını aydın göstərir. Əsl sənəd ayrıca saxlanılır."
+    },
+    {
+      "id": "local-092-5",
+      "groupId": "gold-92",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin imzasini aydin gosterir. esl sened ayrica saxlanilir.",
+      "target": "Surət sənədin imzasını aydın göstərir. Əsl sənəd ayrıca saxlanılır."
+    },
+    {
+      "id": "local-093-1",
+      "groupId": "gold-93",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret arxiv qovluguna yerlesdirildi mektubun nomresi qeyd olundu",
+      "target": "Surət arxiv qovluğuna yerləşdirildi. Məktubun nömrəsi qeyd olundu."
+    },
+    {
+      "id": "local-093-2",
+      "groupId": "gold-93",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret arxiv qovluguna yerlesdirildi. mektubun nomresi qeyd olundu.",
+      "target": "Surət arxiv qovluğuna yerləşdirildi. Məktubun nömrəsi qeyd olundu."
+    },
+    {
+      "id": "local-093-3",
+      "groupId": "gold-93",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət arxiv qovluğuna yerləşdirildi məktubun nömrəsi qeyd olundu",
+      "target": "Surət arxiv qovluğuna yerləşdirildi. Məktubun nömrəsi qeyd olundu."
+    },
+    {
+      "id": "local-093-4",
+      "groupId": "gold-93",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret arxiv qovluguna yerleshdirildi mektubun nomreshi qeyd olundu",
+      "target": "Surət arxiv qovluğuna yerləşdirildi. Məktubun nömrəsi qeyd olundu."
+    },
+    {
+      "id": "local-093-5",
+      "groupId": "gold-93",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret arxiv qoluguna yerlesdirildi. mektubun nomresi qeyd olundu.",
+      "target": "Surət arxiv qovluğuna yerləşdirildi. Məktubun nömrəsi qeyd olundu."
+    },
+    {
+      "id": "local-094-1",
+      "groupId": "gold-94",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin tesdiqlenmis nusxesinden hazirlandi imza yoxlanildi",
+      "target": "Surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı. İmza yoxlanıldı."
+    },
+    {
+      "id": "local-094-2",
+      "groupId": "gold-94",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin tesdiqlenmis nusxesinden hazirlandi. imza yoxlanildi.",
+      "target": "Surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı. İmza yoxlanıldı."
+    },
+    {
+      "id": "local-094-3",
+      "groupId": "gold-94",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı imza yoxlanıldı",
+      "target": "Surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı. İmza yoxlanıldı."
+    },
+    {
+      "id": "local-094-4",
+      "groupId": "gold-94",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin teshdiqlenmish nushxeshinden hazirlandi imza yoxlanildi",
+      "target": "Surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı. İmza yoxlanıldı."
+    },
+    {
+      "id": "local-094-5",
+      "groupId": "gold-94",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin tesdiqlenmis nusxesinden hazirlandi. imza yoxlanildi.",
+      "target": "Surət sənədin təsdiqlənmiş nüsxəsindən hazırlandı. İmza yoxlanıldı."
+    },
+    {
+      "id": "local-095-1",
+      "groupId": "gold-95",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun esli ile tutusduruldu arxiv qeydi yenilendi",
+      "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi."
+    },
+    {
+      "id": "local-095-2",
+      "groupId": "gold-95",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun esli ile tutusduruldu. arxiv qeydi yenilendi.",
+      "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi."
+    },
+    {
+      "id": "local-095-3",
+      "groupId": "gold-95",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun əsli ilə tutuşduruldu arxiv qeydi yeniləndi",
+      "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi."
+    },
+    {
+      "id": "local-095-4",
+      "groupId": "gold-95",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun eshli ile tutushduruldu arxiv qeydi yenilendi",
+      "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi."
+    },
+    {
+      "id": "local-095-5",
+      "groupId": "gold-95",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun esli ile tutusduruldu. arxiv qeydi yenilendi.",
+      "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi."
+    },
+    {
+      "id": "local-096-1",
+      "groupId": "gold-96",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin birinci sehifesinden cixarildi nusxe muraciete elave edildi",
+      "target": "Surət sənədin birinci səhifəsindən çıxarıldı. Nüsxə müraciətə əlavə edildi."
+    },
+    {
+      "id": "local-096-2",
+      "groupId": "gold-96",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin birinci sehifesinden cixarildi. nusxe muraciete elave edildi.",
+      "target": "Surət sənədin birinci səhifəsindən çıxarıldı. Nüsxə müraciətə əlavə edildi."
+    },
+    {
+      "id": "local-096-3",
+      "groupId": "gold-96",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin birinci səhifəsindən çıxarıldı nüsxə müraciətə əlavə edildi",
+      "target": "Surət sənədin birinci səhifəsindən çıxarıldı. Nüsxə müraciətə əlavə edildi."
+    },
+    {
+      "id": "local-096-4",
+      "groupId": "gold-96",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin birinchi shehifeshinden chixarildi nushxe murachiete elave edildi",
+      "target": "Surət sənədin birinci səhifəsindən çıxarıldı. Nüsxə müraciətə əlavə edildi."
+    },
+    {
+      "id": "local-096-5",
+      "groupId": "gold-96",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin birinci sehifesinden cixarildi. nusxe muraciete elave edildi.",
+      "target": "Surət sənədin birinci səhifəsindən çıxarıldı. Nüsxə müraciətə əlavə edildi."
+    },
+    {
+      "id": "local-097-1",
+      "groupId": "gold-97",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret arxiv ucun teleb olunan seneddir mektubla birlikde teqdim olunur",
+      "target": "Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olunur."
+    },
+    {
+      "id": "local-097-2",
+      "groupId": "gold-97",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret arxiv ucun teleb olunan seneddir. mektubla birlikde teqdim olunur.",
+      "target": "Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olunur."
+    },
+    {
+      "id": "local-097-3",
+      "groupId": "gold-97",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət arxiv üçün tələb olunan sənəddir məktubla birlikdə təqdim olunur",
+      "target": "Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olunur."
+    },
+    {
+      "id": "local-097-4",
+      "groupId": "gold-97",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret arxiv uchun teleb olunan sheneddir mektubla birlikde teqdim olunur",
+      "target": "Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olunur."
+    },
+    {
+      "id": "local-097-5",
+      "groupId": "gold-97",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret arxiv ucun teleb olnan seneddir. mektubla birlikde teqdim olunur.",
+      "target": "Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olunur."
+    },
+    {
+      "id": "local-098-1",
+      "groupId": "gold-98",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin imzali sehifesini gosterir esli qovluqda saxlanilir",
+      "target": "Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır."
+    },
+    {
+      "id": "local-098-2",
+      "groupId": "gold-98",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin imzali sehifesini gosterir. esli qovluqda saxlanilir.",
+      "target": "Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır."
+    },
+    {
+      "id": "local-098-3",
+      "groupId": "gold-98",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin imzalı səhifəsini göstərir əsli qovluqda saxlanılır",
+      "target": "Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır."
+    },
+    {
+      "id": "local-098-4",
+      "groupId": "gold-98",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin imzali shehifeshini goshterir eshli qovluqda shaxlanilir",
+      "target": "Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır."
+    },
+    {
+      "id": "local-098-5",
+      "groupId": "gold-98",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin imzali sehifesini gosterir. esli qovluqda saxlanilir.",
+      "target": "Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır."
+    },
+    {
+      "id": "local-099-1",
+      "groupId": "gold-99",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret mektubun elektron nusxesine elave olundu arxiv emekdasi melumatlandirildi",
+      "target": "Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı."
+    },
+    {
+      "id": "local-099-2",
+      "groupId": "gold-99",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret mektubun elektron nusxesine elave olundu. arxiv emekdasi melumatlandirildi.",
+      "target": "Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı."
+    },
+    {
+      "id": "local-099-3",
+      "groupId": "gold-99",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət məktubun elektron nüsxəsinə əlavə olundu arxiv əməkdaşı məlumatlandırıldı",
+      "target": "Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı."
+    },
+    {
+      "id": "local-099-4",
+      "groupId": "gold-99",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret mektubun elektron nushxeshine elave olundu arxiv emekdashi melumatlandirildi",
+      "target": "Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı."
+    },
+    {
+      "id": "local-099-5",
+      "groupId": "gold-99",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret metubun elektron nusxesine elave olundu. arxiv emekdasi melumatlandirildi.",
+      "target": "Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı."
+    },
+    {
+      "id": "local-100-1",
+      "groupId": "gold-100",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "suret senedin esli ile birlikde yoxlanildi imzanin heqiqiliyi tesdiqlendi",
+      "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    },
+    {
+      "id": "local-100-2",
+      "groupId": "gold-100",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "suret senedin esli ile birlikde yoxlanildi. imzanin heqiqiliyi tesdiqlendi.",
+      "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    },
+    {
+      "id": "local-100-3",
+      "groupId": "gold-100",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi",
+      "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    },
+    {
+      "id": "local-100-4",
+      "groupId": "gold-100",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shuret shenedin eshli ile birlikde yoxlanildi imzanin heqiqiliyi teshdiqlendi",
+      "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    },
+    {
+      "id": "local-100-5",
+      "groupId": "gold-100",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "suret seedin esli ile birlikde yoxlanildi. imzanin heqiqiliyi tesdiqlendi.",
+      "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    }
+  ]
+}

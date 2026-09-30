@@ -18,7 +18,9 @@
     "gold:complete": "node --import tsx scripts/audit-independent-gold.ts --require-complete",
     "benchmark": "node --expose-gc --import tsx scripts/benchmark-editor.ts",
     "benchmark:check": "node --expose-gc --import tsx scripts/benchmark-editor.ts --enforce",
-    "benchmark:json": "node --expose-gc --import tsx scripts/benchmark-editor.ts --json"
+    "benchmark:json": "node --expose-gc --import tsx scripts/benchmark-editor.ts --json",
+    "local-ai:train": "node --import tsx scripts/train-local-ai.ts",
+    "local-ai:evaluate": "node --import tsx scripts/evaluate-local-ai.ts"
   },
   "engines": {
     "node": ">=20.9.0"

@@ -9,6 +9,7 @@ import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
 import { chooseByGrammar, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
+import { createLocalPredictor } from './local-ai/predict';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -23,6 +24,8 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Evaluation switch; both application strategies enable the local model by default. */
+  useLocalModel?: boolean;
   services?: LanguageServices;
   trace?: (event: CorrectionEvent) => void;
 }
@@ -141,6 +144,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
   const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
+  const localPrediction = runtime.useLocalModel === false ? undefined : createLocalPredictor(text);
   sentenceEnds.push(text.length);
   let sentenceStart = 0;
   let sentenceIndex = 0;
@@ -150,7 +154,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
       sentenceStart = sentenceEnds[sentenceIndex++];
       context = sentenceEvidence(text.slice(sentenceStart, sentenceEnds[sentenceIndex]));
     }
-    const contextual = chooseBySentence(word, context);
+    const contextual = localPrediction?.(word, offset) ?? chooseBySentence(word, context);
     if (contextual) return contextual;
     if (/^(?:uc|adi)$/iu.test(word)) {
       const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';
