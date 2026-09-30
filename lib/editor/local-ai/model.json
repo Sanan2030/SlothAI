@@ -1387,6 +1387,8433 @@
       "features": {
         "prefix:yenid": 2
       }
+    },
+    "mekteb": {
+      "word": "məktəb",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mektebin": {
+      "word": "məktəbin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "mektebe": {
+      "word": "məktəbə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mektebi": {
+      "word": "məktəbi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "mektebde": {
+      "word": "məktəbdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mektebden": {
+      "word": "məktəbdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mektebler": {
+      "word": "məktəblər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mekteblerin": {
+      "word": "məktəblərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "mekteblere": {
+      "word": "məktəblərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mektebleri": {
+      "word": "məktəbləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "mekteblerde": {
+      "word": "məktəblərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mekteblerden": {
+      "word": "məktəblərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muellim": {
+      "word": "müəllim",
+      "examples": 63,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:dersi": 24,
+        "izah": 24,
+        "edir": 24,
+        "prefix:mektu": 36,
+        "prefix:oxuyu": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "muellimin": {
+      "word": "müəllimin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muellime": {
+      "word": "müəllimə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muellimi": {
+      "word": "müəllimi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muellimde": {
+      "word": "müəllimdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muellimden": {
+      "word": "müəllimdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muellimler": {
+      "word": "müəllimlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "muellimlerin": {
+      "word": "müəllimlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muellimlere": {
+      "word": "müəllimlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muellimleri": {
+      "word": "müəllimləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muellimlerde": {
+      "word": "müəllimlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muellimlerden": {
+      "word": "müəllimlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "telebe": {
+      "word": "tələbə",
+      "examples": 27,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:kitab": 24,
+        "prefix:oxuyu": 24
+      }
+    },
+    "telebenin": {
+      "word": "tələbənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "telebeye": {
+      "word": "tələbəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "telebeni": {
+      "word": "tələbəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "telebede": {
+      "word": "tələbədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "telebeden": {
+      "word": "tələbədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "telebeler": {
+      "word": "tələbələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "telebelerin": {
+      "word": "tələbələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "telebelere": {
+      "word": "tələbələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "telebeleri": {
+      "word": "tələbələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "telebelerde": {
+      "word": "tələbələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "telebelerden": {
+      "word": "tələbələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "seherin": {
+      "word": "şəhərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sehere": {
+      "word": "şəhərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "seheri": {
+      "word": "şəhəri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "seherde": {
+      "word": "şəhərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "seherden": {
+      "word": "şəhərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "seherler": {
+      "word": "şəhərlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "seherlerin": {
+      "word": "şəhərlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "seherlere": {
+      "word": "şəhərlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "seherleri": {
+      "word": "şəhərləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "seherlerde": {
+      "word": "şəhərlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "seherlerden": {
+      "word": "şəhərlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kendin": {
+      "word": "kəndin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kende": {
+      "word": "kəndə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "kendi": {
+      "word": "kəndi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "kendde": {
+      "word": "kənddə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "kendden": {
+      "word": "kənddən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kendler": {
+      "word": "kəndlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "kendlerin": {
+      "word": "kəndlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kendlere": {
+      "word": "kəndlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "kendleri": {
+      "word": "kəndləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "kendlerde": {
+      "word": "kəndlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "kendlerden": {
+      "word": "kəndlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kuce": {
+      "word": "küçə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "kucenin": {
+      "word": "küçənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kuceye": {
+      "word": "küçəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "kuceni": {
+      "word": "küçəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "kucede": {
+      "word": "küçədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "kuceden": {
+      "word": "küçədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kucelerin": {
+      "word": "küçələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kucelere": {
+      "word": "küçələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "kuceleri": {
+      "word": "küçələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "kucelerde": {
+      "word": "küçələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "kucelerden": {
+      "word": "küçələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "otagin": {
+      "word": "otağın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "otaga": {
+      "word": "otağa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "otagi": {
+      "word": "otağı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "otaqlarin": {
+      "word": "otaqların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "otaqlari": {
+      "word": "otaqları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "senede": {
+      "word": "sənədə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "senedi": {
+      "word": "sənədi",
+      "examples": 39,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:opera": 36,
+        "prefix:yoxla": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "senedde": {
+      "word": "sənəddə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "senedden": {
+      "word": "sənəddən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "senedler": {
+      "word": "sənədlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "senedlerin": {
+      "word": "sənədlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "senedlere": {
+      "word": "sənədlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "senedleri": {
+      "word": "sənədləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "senedlerde": {
+      "word": "sənədlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "senedlerden": {
+      "word": "sənədlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "metn": {
+      "word": "mətn",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "metnin": {
+      "word": "mətnin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "metne": {
+      "word": "mətnə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "metni": {
+      "word": "mətni",
+      "examples": 27,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:redak": 24,
+        "prefix:oxuyu": 24
+      }
+    },
+    "metnde": {
+      "word": "mətndə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "metnden": {
+      "word": "mətndən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "metnler": {
+      "word": "mətnlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "metnlerin": {
+      "word": "mətnlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "metnlere": {
+      "word": "mətnlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "metnleri": {
+      "word": "mətnləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "metnlerde": {
+      "word": "mətnlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "metnlerden": {
+      "word": "mətnlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "layihe": {
+      "word": "layihə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "layihenin": {
+      "word": "layihənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "layiheye": {
+      "word": "layihəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "layiheni": {
+      "word": "layihəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "layihede": {
+      "word": "layihədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "layiheden": {
+      "word": "layihədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "layiheler": {
+      "word": "layihələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "layihelerin": {
+      "word": "layihələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "layihelere": {
+      "word": "layihələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "layiheleri": {
+      "word": "layihələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "layihelerde": {
+      "word": "layihələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "layihelerden": {
+      "word": "layihələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mesele": {
+      "word": "məsələ",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meselenin": {
+      "word": "məsələnin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meseleye": {
+      "word": "məsələyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meseleni": {
+      "word": "məsələni",
+      "examples": 39,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:koman": 36,
+        "prefix:arasd": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "meselede": {
+      "word": "məsələdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meseleden": {
+      "word": "məsələdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "meseleler": {
+      "word": "məsələlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meselelerin": {
+      "word": "məsələlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meselelere": {
+      "word": "məsələlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meseleleri": {
+      "word": "məsələləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meselelerde": {
+      "word": "məsələlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meselelerden": {
+      "word": "məsələlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sirket": {
+      "word": "şirkət",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sirketin": {
+      "word": "şirkətin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sirkete": {
+      "word": "şirkətə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sirketi": {
+      "word": "şirkəti",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sirketde": {
+      "word": "şirkətdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sirketden": {
+      "word": "şirkətdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sirketler": {
+      "word": "şirkətlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sirketlerin": {
+      "word": "şirkətlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sirketlere": {
+      "word": "şirkətlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sirketleri": {
+      "word": "şirkətləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sirketlerde": {
+      "word": "şirkətlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sirketlerden": {
+      "word": "şirkətlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "musteri": {
+      "word": "müştəri",
+      "examples": 30,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:netic": 27,
+        "prefix:gozle": 27
+      }
+    },
+    "musterinin": {
+      "word": "müştərinin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "musteriye": {
+      "word": "müştəriyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "musterini": {
+      "word": "müştərini",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "musteride": {
+      "word": "müştəridə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "musteriden": {
+      "word": "müştəridən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "musteriler": {
+      "word": "müştərilər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "musterilerin": {
+      "word": "müştərilərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "musterilere": {
+      "word": "müştərilərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "musterileri": {
+      "word": "müştəriləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "musterilerde": {
+      "word": "müştərilərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "musterilerden": {
+      "word": "müştərilərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "emekdas": {
+      "word": "əməkdaş",
+      "examples": 30,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:mektu": 27,
+        "prefix:hazir": 27
+      }
+    },
+    "emekdasin": {
+      "word": "əməkdaşın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "emekdasa": {
+      "word": "əməkdaşa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "emekdasi": {
+      "word": "əməkdaşı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "emekdasda": {
+      "word": "əməkdaşda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "emekdasdan": {
+      "word": "əməkdaşdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "emekdaslar": {
+      "word": "əməkdaşlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "emekdaslarin": {
+      "word": "əməkdaşların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "emekdaslara": {
+      "word": "əməkdaşlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "emekdaslari": {
+      "word": "əməkdaşları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "emekdaslarda": {
+      "word": "əməkdaşlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "emekdaslardan": {
+      "word": "əməkdaşlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "rehber": {
+      "word": "rəhbər",
+      "examples": 63,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:tapsi": 24,
+        "prefix:tesdi": 24,
+        "prefix:cavab": 36,
+        "prefix:gozle": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "rehberin": {
+      "word": "rəhbərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "rehbere": {
+      "word": "rəhbərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "rehberi": {
+      "word": "rəhbəri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "rehberde": {
+      "word": "rəhbərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "rehberden": {
+      "word": "rəhbərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "rehberler": {
+      "word": "rəhbərlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "rehberlerin": {
+      "word": "rəhbərlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "rehberlere": {
+      "word": "rəhbərlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "rehberleri": {
+      "word": "rəhbərləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "rehberlerde": {
+      "word": "rəhbərlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "rehberlerden": {
+      "word": "rəhbərlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "gorusun": {
+      "word": "görüşün",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "goruse": {
+      "word": "görüşə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "gorusu": {
+      "word": "görüşü",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "gorusde": {
+      "word": "görüşdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "gorusden": {
+      "word": "görüşdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "gorusler": {
+      "word": "görüşlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "goruslerin": {
+      "word": "görüşlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "goruslere": {
+      "word": "görüşlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "gorusleri": {
+      "word": "görüşləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "goruslerde": {
+      "word": "görüşlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "goruslerden": {
+      "word": "görüşlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sorgu": {
+      "word": "sorğu",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sorgunun": {
+      "word": "sorğunun",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sorguya": {
+      "word": "sorğuya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sorgunu": {
+      "word": "sorğunu",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sorguda": {
+      "word": "sorğuda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sorgudan": {
+      "word": "sorğudan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sorgular": {
+      "word": "sorğular",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sorgularin": {
+      "word": "sorğuların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sorgulara": {
+      "word": "sorğulara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sorgulari": {
+      "word": "sorğuları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sorgularda": {
+      "word": "sorğularda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sorgulardan": {
+      "word": "sorğulardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sualin": {
+      "word": "sualın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "suali": {
+      "word": "sualı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "suallarin": {
+      "word": "sualların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "suallari": {
+      "word": "sualları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "cavabin": {
+      "word": "cavabın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "cavabi": {
+      "word": "cavabı",
+      "examples": 60,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:istif": 21,
+        "prefix:yoxla": 21,
+        "prefix:rehbe": 36,
+        "prefix:gozle": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "cavablarin": {
+      "word": "cavabların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "cavablari": {
+      "word": "cavabları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "deyisiklik": {
+      "word": "dəyişiklik",
+      "examples": 438,
+      "features": {
+        "gun": 146,
+        "prefix:mekte": 6,
+        "prefix:mueyy": 435,
+        "prefix:musah": 435,
+        "prefix:edild": 435,
+        "prefix:dunen": 146,
+        "prefix:iclas": 146,
+        "prefix:muell": 6,
+        "prefix:teleb": 12,
+        "prefix:seher": 6,
+        "prefix:kendd": 3,
+        "prefix:kendl": 3,
+        "prefix:kuced": 3,
+        "prefix:kucel": 3,
+        "prefix:sened": 6,
+        "prefix:metnd": 3,
+        "prefix:metnl": 3,
+        "prefix:layih": 6,
+        "prefix:mesel": 9,
+        "prefix:sirke": 6,
+        "prefix:muste": 6,
+        "prefix:emekd": 12,
+        "prefix:rehbe": 6,
+        "prefix:gorus": 6,
+        "prefix:sorgu": 6,
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:deyis": 6,
+        "prefix:melum": 6,
+        "prefix:cumle": 6,
+        "prefix:sehif": 6,
+        "prefix:istif": 6,
+        "prefix:qapid": 3,
+        "prefix:qapil": 3,
+        "prefix:ailed": 3,
+        "prefix:ailel": 3,
+        "isde": 3,
+        "prefix:isler": 3,
+        "prefix:gunde": 3,
+        "prefix:gunle": 3,
+        "prefix:geced": 3,
+        "prefix:gecel": 3,
+        "prefix:bagda": 3,
+        "prefix:bagla": 3,
+        "prefix:cayda": 3,
+        "prefix:cayla": 3,
+        "prefix:dagda": 3,
+        "prefix:dagla": 3,
+        "prefix:mesed": 3,
+        "prefix:olked": 3,
+        "prefix:olkel": 3,
+        "prefix:dunya": 6,
+        "prefix:tarix": 6,
+        "prefix:elmde": 3,
+        "prefix:elmle": 3,
+        "prefix:tehsi": 6,
+        "prefix:sagla": 6,
+        "prefix:hekim": 6,
+        "prefix:xeste": 6,
+        "prefix:unive": 6,
+        "prefix:dersd": 3,
+        "prefix:dersl": 3,
+        "prefix:fikir": 6,
+        "prefix:qerar": 6,
+        "prefix:meqse": 6,
+        "prefix:netic": 6,
+        "prefix:prose": 6,
+        "prefix:siste": 6,
+        "prefix:serve": 6,
+        "prefix:xetad": 3,
+        "prefix:xetal": 3,
+        "prefix:testd": 3,
+        "prefix:testl": 3,
+        "prefix:xidme": 6,
+        "prefix:mehsu": 6,
+        "prefix:sifar": 6,
+        "prefix:muqav": 6,
+        "prefix:mektu": 6,
+        "prefix:xeber": 6,
+        "prefix:murac": 6,
+        "prefix:tekli": 6,
+        "prefix:helld": 3,
+        "prefix:helll": 3,
+        "prefix:menbe": 6,
+        "prefix:merhe": 6,
+        "prefix:veten": 6,
+        "prefix:heyat": 6,
+        "prefix:urekd": 3,
+        "prefix:urekl": 3,
+        "prefix:yemek": 6,
+        "prefix:meyve": 6,
+        "prefix:agacd": 3,
+        "prefix:agacl": 3,
+        "prefix:plane": 6,
+        "prefix:senet": 6,
+        "prefix:musiq": 6,
+        "prefix:xerit": 3,
+        "prefix:defte": 6
+      }
+    },
+    "deyisikliyin": {
+      "word": "dəyişikliyin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "deyisikliye": {
+      "word": "dəyişikliyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "deyisikliyi": {
+      "word": "dəyişikliyi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "deyisiklikde": {
+      "word": "dəyişiklikdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "deyisiklikden": {
+      "word": "dəyişiklikdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "deyisiklikler": {
+      "word": "dəyişikliklər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "deyisikliklerin": {
+      "word": "dəyişikliklərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "deyisikliklere": {
+      "word": "dəyişikliklərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "deyisiklikleri": {
+      "word": "dəyişiklikləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "deyisikliklerde": {
+      "word": "dəyişikliklərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "deyisikliklerden": {
+      "word": "dəyişikliklərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "melumatin": {
+      "word": "məlumatın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "melumata": {
+      "word": "məlumata",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "melumati": {
+      "word": "məlumatı",
+      "examples": 15,
+      "features": {
+        "gun": 5,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 5,
+        "prefix:iclas": 5,
+        "prefix:icrac": 12,
+        "prefix:hazir": 12,
+        "prefix:sonra": 4
+      }
+    },
+    "melumatda": {
+      "word": "məlumatda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "melumatdan": {
+      "word": "məlumatdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "melumatlar": {
+      "word": "məlumatlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "melumatlarin": {
+      "word": "məlumatların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "melumatlara": {
+      "word": "məlumatlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "melumatlari": {
+      "word": "məlumatları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "melumatlarda": {
+      "word": "məlumatlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "melumatlardan": {
+      "word": "məlumatlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "proqramin": {
+      "word": "proqramın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "proqrami": {
+      "word": "proqramı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "proqramlarin": {
+      "word": "proqramların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "proqramlari": {
+      "word": "proqramları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "cumle": {
+      "word": "cümlə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "cumlenin": {
+      "word": "cümlənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "cumleye": {
+      "word": "cümləyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "cumleni": {
+      "word": "cümləni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "cumlede": {
+      "word": "cümlədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "cumleden": {
+      "word": "cümlədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "cumleler": {
+      "word": "cümlələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "cumlelerin": {
+      "word": "cümlələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "cumlelere": {
+      "word": "cümlələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "cumleleri": {
+      "word": "cümlələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "cumlelerde": {
+      "word": "cümlələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "cumlelerden": {
+      "word": "cümlələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sehife": {
+      "word": "səhifə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sehifenin": {
+      "word": "səhifənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sehifeye": {
+      "word": "səhifəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sehifeni": {
+      "word": "səhifəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sehifede": {
+      "word": "səhifədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sehifeden": {
+      "word": "səhifədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sehifeler": {
+      "word": "səhifələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sehifelerin": {
+      "word": "səhifələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sehifelere": {
+      "word": "səhifələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sehifeleri": {
+      "word": "səhifələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sehifelerde": {
+      "word": "səhifələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sehifelerden": {
+      "word": "səhifələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "istifadeci": {
+      "word": "istifadəçi",
+      "examples": 60,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:cavab": 21,
+        "prefix:yoxla": 21,
+        "prefix:fayli": 36,
+        "prefix:gonde": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "istifadecinin": {
+      "word": "istifadəçinin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "istifadeciye": {
+      "word": "istifadəçiyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "istifadecini": {
+      "word": "istifadəçini",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "istifadecide": {
+      "word": "istifadəçidə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "istifadeciden": {
+      "word": "istifadəçidən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "istifadeciler": {
+      "word": "istifadəçilər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "istifadecilerin": {
+      "word": "istifadəçilərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "istifadecilere": {
+      "word": "istifadəçilərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "istifadecileri": {
+      "word": "istifadəçiləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "istifadecilerde": {
+      "word": "istifadəçilərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "istifadecilerden": {
+      "word": "istifadəçilərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kitabin": {
+      "word": "kitabın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kitabi": {
+      "word": "kitabı",
+      "examples": 27,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:teleb": 24,
+        "prefix:oxuyu": 24
+      }
+    },
+    "kitablarin": {
+      "word": "kitabların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kitablari": {
+      "word": "kitabları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "qapi": {
+      "word": "qapı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "qapinin": {
+      "word": "qapının",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "qapiya": {
+      "word": "qapıya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "qapini": {
+      "word": "qapını",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "qapida": {
+      "word": "qapıda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "qapidan": {
+      "word": "qapıdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "qapilar": {
+      "word": "qapılar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "qapilarin": {
+      "word": "qapıların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "qapilara": {
+      "word": "qapılara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "qapilari": {
+      "word": "qapıları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "qapilarda": {
+      "word": "qapılarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "qapilardan": {
+      "word": "qapılardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "dostlarin": {
+      "word": "dostların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "dostlari": {
+      "word": "dostları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "aile": {
+      "word": "ailə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "ailenin": {
+      "word": "ailənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "aileye": {
+      "word": "ailəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "aileni": {
+      "word": "ailəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "ailede": {
+      "word": "ailədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "aileden": {
+      "word": "ailədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "aileler": {
+      "word": "ailələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "ailelerin": {
+      "word": "ailələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "ailelere": {
+      "word": "ailələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "aileleri": {
+      "word": "ailələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "ailelerde": {
+      "word": "ailələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "ailelerden": {
+      "word": "ailələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "ise": {
+      "word": "işə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "isde": {
+      "word": "işdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "isden": {
+      "word": "işdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "isler": {
+      "word": "işlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "islerin": {
+      "word": "işlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "islere": {
+      "word": "işlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "isleri": {
+      "word": "işləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "islerde": {
+      "word": "işlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "islerden": {
+      "word": "işlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "gunun": {
+      "word": "günün",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "gunu": {
+      "word": "günü",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "gunde": {
+      "word": "gündə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "gunden": {
+      "word": "gündən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "gunler": {
+      "word": "günlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "gunlerin": {
+      "word": "günlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "gunlere": {
+      "word": "günlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "gunleri": {
+      "word": "günləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "gunlerde": {
+      "word": "günlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "gunlerden": {
+      "word": "günlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "gece": {
+      "word": "gecə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "gecenin": {
+      "word": "gecənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "geceye": {
+      "word": "gecəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "geceni": {
+      "word": "gecəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "gecede": {
+      "word": "gecədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "geceden": {
+      "word": "gecədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "geceler": {
+      "word": "gecələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "gecelerin": {
+      "word": "gecələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "gecelere": {
+      "word": "gecələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "geceleri": {
+      "word": "gecələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "gecelerde": {
+      "word": "gecələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "gecelerden": {
+      "word": "gecələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "vaxtin": {
+      "word": "vaxtın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "vaxti": {
+      "word": "vaxtı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "vaxtlarin": {
+      "word": "vaxtların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "vaxtlari": {
+      "word": "vaxtları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "havanin": {
+      "word": "havanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "havani": {
+      "word": "havanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "havalarin": {
+      "word": "havaların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "havalari": {
+      "word": "havaları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "yollarin": {
+      "word": "yolların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "yollari": {
+      "word": "yolları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "paryin": {
+      "word": "paryın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "paryi": {
+      "word": "paryı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "bag": {
+      "word": "bağ",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "bagin": {
+      "word": "bağın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "baga": {
+      "word": "bağa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "bagi": {
+      "word": "bağı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "bagda": {
+      "word": "bağda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "bagdan": {
+      "word": "bağdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "baglar": {
+      "word": "bağlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "baglarin": {
+      "word": "bağların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "baglara": {
+      "word": "bağlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "baglari": {
+      "word": "bağları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "baglarda": {
+      "word": "bağlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "baglardan": {
+      "word": "bağlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "cay": {
+      "word": "çay",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "cayin": {
+      "word": "çayın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "caya": {
+      "word": "çaya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "cayi": {
+      "word": "çayı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "cayda": {
+      "word": "çayda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "caydan": {
+      "word": "çaydan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "caylar": {
+      "word": "çaylar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "caylarin": {
+      "word": "çayların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "caylara": {
+      "word": "çaylara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "caylari": {
+      "word": "çayları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "caylarda": {
+      "word": "çaylarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "caylardan": {
+      "word": "çaylardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "dag": {
+      "word": "dağ",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "dagin": {
+      "word": "dağın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "daga": {
+      "word": "dağa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "dagi": {
+      "word": "dağı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "dagda": {
+      "word": "dağda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "dagdan": {
+      "word": "dağdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "daglar": {
+      "word": "dağlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "daglarin": {
+      "word": "dağların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "daglara": {
+      "word": "dağlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "daglari": {
+      "word": "dağları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "daglarda": {
+      "word": "dağlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "daglardan": {
+      "word": "dağlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mese": {
+      "word": "meşə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mesenin": {
+      "word": "meşənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meseye": {
+      "word": "meşəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meseni": {
+      "word": "meşəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "mesede": {
+      "word": "meşədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meseden": {
+      "word": "meşədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "meseler": {
+      "word": "meşələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meselerin": {
+      "word": "meşələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meselere": {
+      "word": "meşələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meseleri": {
+      "word": "meşələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meselerde": {
+      "word": "meşələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meselerden": {
+      "word": "meşələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "olke": {
+      "word": "ölkə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "olkenin": {
+      "word": "ölkənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "olkeye": {
+      "word": "ölkəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "olkeni": {
+      "word": "ölkəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "olkede": {
+      "word": "ölkədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "olkeden": {
+      "word": "ölkədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "olkeler": {
+      "word": "ölkələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "olkelerin": {
+      "word": "ölkələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "olkelere": {
+      "word": "ölkələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "olkeleri": {
+      "word": "ölkələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "olkelerde": {
+      "word": "ölkələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "olkelerden": {
+      "word": "ölkələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "dunya": {
+      "word": "dünya",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "dunyanin": {
+      "word": "dünyanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "dunyaya": {
+      "word": "dünyaya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "dunyani": {
+      "word": "dünyanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "dunyada": {
+      "word": "dünyada",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "dunyadan": {
+      "word": "dünyadan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "dunyalar": {
+      "word": "dünyalar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "dunyalarin": {
+      "word": "dünyaların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "dunyalara": {
+      "word": "dünyalara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "dunyalari": {
+      "word": "dünyaları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "dunyalarda": {
+      "word": "dünyalarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "dunyalardan": {
+      "word": "dünyalardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "tarixe": {
+      "word": "tarixə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "tarixde": {
+      "word": "tarixdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "tarixden": {
+      "word": "tarixdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "tarixler": {
+      "word": "tarixlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "tarixlerin": {
+      "word": "tarixlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "tarixlere": {
+      "word": "tarixlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "tarixleri": {
+      "word": "tarixləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "tarixlerde": {
+      "word": "tarixlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "tarixlerden": {
+      "word": "tarixlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "elme": {
+      "word": "elmə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "elmde": {
+      "word": "elmdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "elmden": {
+      "word": "elmdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "elmler": {
+      "word": "elmlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "elmlerin": {
+      "word": "elmlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "elmlere": {
+      "word": "elmlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "elmleri": {
+      "word": "elmləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "elmlerde": {
+      "word": "elmlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "elmlerden": {
+      "word": "elmlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "tehsil": {
+      "word": "təhsil",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "tehsilin": {
+      "word": "təhsilin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "tehsile": {
+      "word": "təhsilə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "tehsili": {
+      "word": "təhsili",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "tehsilde": {
+      "word": "təhsildə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "tehsilden": {
+      "word": "təhsildən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "tehsiller": {
+      "word": "təhsillər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "tehsillerin": {
+      "word": "təhsillərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "tehsillere": {
+      "word": "təhsillərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "tehsilleri": {
+      "word": "təhsilləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "tehsillerde": {
+      "word": "təhsillərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "tehsillerden": {
+      "word": "təhsillərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "saglamliq": {
+      "word": "sağlamlıq",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "saglamligin": {
+      "word": "sağlamlığın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "saglamliga": {
+      "word": "sağlamlığa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "saglamligi": {
+      "word": "sağlamlığı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "saglamliqda": {
+      "word": "sağlamlıqda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "saglamliqdan": {
+      "word": "sağlamlıqdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "saglamliqlar": {
+      "word": "sağlamlıqlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "saglamliqlarin": {
+      "word": "sağlamlıqların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "saglamliqlara": {
+      "word": "sağlamlıqlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "saglamliqlari": {
+      "word": "sağlamlıqları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "saglamliqlarda": {
+      "word": "sağlamlıqlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "saglamliqlardan": {
+      "word": "sağlamlıqlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "hekim": {
+      "word": "həkim",
+      "examples": 27,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3,
+        "prefix:xeste": 24,
+        "prefix:muayi": 24,
+        "edir": 24
+      }
+    },
+    "hekimin": {
+      "word": "həkimin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "hekime": {
+      "word": "həkimə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "hekimi": {
+      "word": "həkimi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "hekimde": {
+      "word": "həkimdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "hekimden": {
+      "word": "həkimdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "hekimler": {
+      "word": "həkimlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "hekimlerin": {
+      "word": "həkimlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "hekimlere": {
+      "word": "həkimlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "hekimleri": {
+      "word": "həkimləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "hekimlerde": {
+      "word": "həkimlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "hekimlerden": {
+      "word": "həkimlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xestexana": {
+      "word": "xəstəxana",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xestexananin": {
+      "word": "xəstəxananın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xestexanaya": {
+      "word": "xəstəxanaya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xestexanani": {
+      "word": "xəstəxananı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xestexanada": {
+      "word": "xəstəxanada",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xestexanadan": {
+      "word": "xəstəxanadan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xestexanalar": {
+      "word": "xəstəxanalar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xestexanalarin": {
+      "word": "xəstəxanaların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xestexanalara": {
+      "word": "xəstəxanalara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xestexanalari": {
+      "word": "xəstəxanaları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xestexanalarda": {
+      "word": "xəstəxanalarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xestexanalardan": {
+      "word": "xəstəxanalardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "universitete": {
+      "word": "universitetə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "universitetde": {
+      "word": "universitetdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "universitetden": {
+      "word": "universitetdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "universitetler": {
+      "word": "universitetlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "universitetlerin": {
+      "word": "universitetlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "universitetlere": {
+      "word": "universitetlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "universitetleri": {
+      "word": "universitetləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "universitetlerde": {
+      "word": "universitetlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "universitetlerden": {
+      "word": "universitetlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "ders": {
+      "word": "dərs",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "dersin": {
+      "word": "dərsin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "derse": {
+      "word": "dərsə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "dersi": {
+      "word": "dərsi",
+      "examples": 30,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:muell": 27,
+        "izah": 27,
+        "edir": 27
+      }
+    },
+    "dersde": {
+      "word": "dərsdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "dersden": {
+      "word": "dərsdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "dersler": {
+      "word": "dərslər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "derslerin": {
+      "word": "dərslərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "derslere": {
+      "word": "dərslərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "dersleri": {
+      "word": "dərsləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "derslerde": {
+      "word": "dərslərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "derslerden": {
+      "word": "dərslərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "imtahanin": {
+      "word": "imtahanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "imtahani": {
+      "word": "imtahanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "imtahanlarin": {
+      "word": "imtahanların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "imtahanlari": {
+      "word": "imtahanları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "fikire": {
+      "word": "fikirə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "fikirde": {
+      "word": "fikirdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "fikirden": {
+      "word": "fikirdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "fikirler": {
+      "word": "fikirlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "fikirlerin": {
+      "word": "fikirlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "fikirlere": {
+      "word": "fikirlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "fikirleri": {
+      "word": "fikirləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "fikirlerde": {
+      "word": "fikirlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "fikirlerden": {
+      "word": "fikirlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "qerar": {
+      "word": "qərar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "qerarin": {
+      "word": "qərarın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "qerara": {
+      "word": "qərara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "qerari": {
+      "word": "qərarı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "qerarda": {
+      "word": "qərarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "qerardan": {
+      "word": "qərardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "qerarlar": {
+      "word": "qərarlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "qerarlarin": {
+      "word": "qərarların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "qerarlara": {
+      "word": "qərarlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "qerarlari": {
+      "word": "qərarları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "qerarlarda": {
+      "word": "qərarlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "qerarlardan": {
+      "word": "qərarlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "planin": {
+      "word": "planın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "plani": {
+      "word": "planı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "planlarin": {
+      "word": "planların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "planlari": {
+      "word": "planları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meqsed": {
+      "word": "məqsəd",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meqsedin": {
+      "word": "məqsədin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meqsede": {
+      "word": "məqsədə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meqsedi": {
+      "word": "məqsədi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meqsedde": {
+      "word": "məqsəddə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meqsedden": {
+      "word": "məqsəddən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "meqsedler": {
+      "word": "məqsədlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meqsedlerin": {
+      "word": "məqsədlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meqsedlere": {
+      "word": "məqsədlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meqsedleri": {
+      "word": "məqsədləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meqsedlerde": {
+      "word": "məqsədlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meqsedlerden": {
+      "word": "məqsədlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "neticenin": {
+      "word": "nəticənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "neticeye": {
+      "word": "nəticəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "neticeni": {
+      "word": "nəticəni",
+      "examples": 54,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:muste": 27,
+        "prefix:gozle": 27,
+        "prefix:tehlu": 24,
+        "prefix:qrupu": 24,
+        "prefix:arasd": 24
+      }
+    },
+    "neticede": {
+      "word": "nəticədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "neticeden": {
+      "word": "nəticədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "neticeler": {
+      "word": "nəticələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "neticelerin": {
+      "word": "nəticələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "neticelere": {
+      "word": "nəticələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "neticeleri": {
+      "word": "nəticələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "neticelerde": {
+      "word": "nəticələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "neticelerden": {
+      "word": "nəticələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "prosese": {
+      "word": "prosesə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "prosesde": {
+      "word": "prosesdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "prosesden": {
+      "word": "prosesdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "prosesler": {
+      "word": "proseslər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "proseslerin": {
+      "word": "proseslərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "proseslere": {
+      "word": "proseslərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "prosesleri": {
+      "word": "prosesləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "proseslerde": {
+      "word": "proseslərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "proseslerden": {
+      "word": "proseslərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sisteme": {
+      "word": "sistemə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sistemde": {
+      "word": "sistemdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sistemden": {
+      "word": "sistemdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sistemler": {
+      "word": "sistemlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sistemlerin": {
+      "word": "sistemlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sistemlere": {
+      "word": "sistemlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sistemleri": {
+      "word": "sistemləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sistemlerde": {
+      "word": "sistemlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sistemlerden": {
+      "word": "sistemlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "servere": {
+      "word": "serverə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "serverde": {
+      "word": "serverdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "serverden": {
+      "word": "serverdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "serverler": {
+      "word": "serverlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "serverlerin": {
+      "word": "serverlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "serverlere": {
+      "word": "serverlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "serverleri": {
+      "word": "serverləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "serverlerde": {
+      "word": "serverlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "serverlerden": {
+      "word": "serverlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kodlarin": {
+      "word": "kodların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kodlari": {
+      "word": "kodları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "faylin": {
+      "word": "faylın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "fayli": {
+      "word": "faylı",
+      "examples": 39,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:istif": 36,
+        "prefix:gonde": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "fayllarin": {
+      "word": "faylların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "fayllari": {
+      "word": "faylları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xeta": {
+      "word": "xəta",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xetanin": {
+      "word": "xətanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xetaya": {
+      "word": "xətaya",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xetani": {
+      "word": "xətanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xetada": {
+      "word": "xətada",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xetadan": {
+      "word": "xətadan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xetalar": {
+      "word": "xətalar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xetalarin": {
+      "word": "xətaların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xetalara": {
+      "word": "xətalara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xetalari": {
+      "word": "xətaları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xetalarda": {
+      "word": "xətalarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xetalardan": {
+      "word": "xətalardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "teste": {
+      "word": "testə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "testde": {
+      "word": "testdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "testden": {
+      "word": "testdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "testler": {
+      "word": "testlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "testlerin": {
+      "word": "testlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "testlere": {
+      "word": "testlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "testleri": {
+      "word": "testləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "testlerde": {
+      "word": "testlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "testlerden": {
+      "word": "testlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xidmet": {
+      "word": "xidmət",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xidmetin": {
+      "word": "xidmətin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xidmete": {
+      "word": "xidmətə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xidmeti": {
+      "word": "xidməti",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xidmetde": {
+      "word": "xidmətdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xidmetden": {
+      "word": "xidmətdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xidmetler": {
+      "word": "xidmətlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xidmetlerin": {
+      "word": "xidmətlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xidmetlere": {
+      "word": "xidmətlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xidmetleri": {
+      "word": "xidmətləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xidmetlerde": {
+      "word": "xidmətlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xidmetlerden": {
+      "word": "xidmətlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mehsul": {
+      "word": "məhsul",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mehsulun": {
+      "word": "məhsulun",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "mehsula": {
+      "word": "məhsula",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mehsulda": {
+      "word": "məhsulda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mehsuldan": {
+      "word": "məhsuldan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mehsullar": {
+      "word": "məhsullar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mehsullarin": {
+      "word": "məhsulların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "mehsullara": {
+      "word": "məhsullara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mehsullari": {
+      "word": "məhsulları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "mehsullarda": {
+      "word": "məhsullarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mehsullardan": {
+      "word": "məhsullardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "bazarin": {
+      "word": "bazarın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "bazari": {
+      "word": "bazarı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "bazarlarin": {
+      "word": "bazarların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "bazarlari": {
+      "word": "bazarları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sifaris": {
+      "word": "sifariş",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sifarisin": {
+      "word": "sifarişin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sifarise": {
+      "word": "sifarişə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sifarisi": {
+      "word": "sifarişi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sifarisde": {
+      "word": "sifarişdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sifarisden": {
+      "word": "sifarişdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "sifarisler": {
+      "word": "sifarişlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "sifarislerin": {
+      "word": "sifarişlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "sifarislere": {
+      "word": "sifarişlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "sifarisleri": {
+      "word": "sifarişləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "sifarislerde": {
+      "word": "sifarişlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "sifarislerden": {
+      "word": "sifarişlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muqavile": {
+      "word": "müqavilə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "muqavilenin": {
+      "word": "müqavilənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muqavileye": {
+      "word": "müqaviləyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muqavileni": {
+      "word": "müqaviləni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muqavilede": {
+      "word": "müqavilədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muqavileden": {
+      "word": "müqavilədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muqavileler": {
+      "word": "müqavilələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "muqavilelerin": {
+      "word": "müqavilələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muqavilelere": {
+      "word": "müqavilələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muqavileleri": {
+      "word": "müqavilələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muqavilelerde": {
+      "word": "müqavilələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muqavilelerden": {
+      "word": "müqavilələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mektub": {
+      "word": "məktub",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mektuba": {
+      "word": "məktuba",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mektubu": {
+      "word": "məktubu",
+      "examples": 63,
+      "features": {
+        "gun": 13,
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3,
+        "prefix:dunen": 13,
+        "prefix:iclas": 13,
+        "prefix:emekd": 24,
+        "prefix:hazir": 24,
+        "prefix:muell": 36,
+        "prefix:oxuyu": 36,
+        "prefix:sonra": 12
+      }
+    },
+    "mektubda": {
+      "word": "məktubda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mektubdan": {
+      "word": "məktubdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "mektublar": {
+      "word": "məktublar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "mektublarin": {
+      "word": "məktubların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "mektublara": {
+      "word": "məktublara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "mektublari": {
+      "word": "məktubları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "mektublarda": {
+      "word": "məktublarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "mektublardan": {
+      "word": "məktublardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xeber": {
+      "word": "xəbər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xeberin": {
+      "word": "xəbərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xebere": {
+      "word": "xəbərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xeberi": {
+      "word": "xəbəri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xeberde": {
+      "word": "xəbərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xeberden": {
+      "word": "xəbərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xeberler": {
+      "word": "xəbərlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xeberlerin": {
+      "word": "xəbərlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xeberlere": {
+      "word": "xəbərlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xeberleri": {
+      "word": "xəbərləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xeberlerde": {
+      "word": "xəbərlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xeberlerden": {
+      "word": "xəbərlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muracietin": {
+      "word": "müraciətin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muraciete": {
+      "word": "müraciətə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muracieti": {
+      "word": "müraciəti",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muracietde": {
+      "word": "müraciətdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muracietden": {
+      "word": "müraciətdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "muracietler": {
+      "word": "müraciətlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "muracietlerin": {
+      "word": "müraciətlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "muracietlere": {
+      "word": "müraciətlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "muracietleri": {
+      "word": "müraciətləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "muracietlerde": {
+      "word": "müraciətlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "muracietlerden": {
+      "word": "müraciətlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "teleb": {
+      "word": "tələb",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "telebin": {
+      "word": "tələbin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "telebi": {
+      "word": "tələbi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "telebde": {
+      "word": "tələbdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "telebden": {
+      "word": "tələbdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "telebler": {
+      "word": "tələblər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "teleblerin": {
+      "word": "tələblərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "teleblere": {
+      "word": "tələblərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "telebleri": {
+      "word": "tələbləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "teleblerde": {
+      "word": "tələblərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "teleblerden": {
+      "word": "tələblərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "teklif": {
+      "word": "təklif",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "teklifin": {
+      "word": "təklifin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "teklife": {
+      "word": "təklifə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "teklifi": {
+      "word": "təklifi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "teklifde": {
+      "word": "təklifdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "teklifden": {
+      "word": "təklifdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "teklifler": {
+      "word": "təkliflər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "tekliflerin": {
+      "word": "təkliflərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "tekliflere": {
+      "word": "təkliflərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "teklifleri": {
+      "word": "təklifləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "tekliflerde": {
+      "word": "təkliflərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "tekliflerden": {
+      "word": "təkliflərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "hell": {
+      "word": "həll",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "hellin": {
+      "word": "həllin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "helle": {
+      "word": "həllə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "helli": {
+      "word": "həlli",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "hellde": {
+      "word": "həlldə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "hellden": {
+      "word": "həlldən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "helller": {
+      "word": "həlllər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "helllerin": {
+      "word": "həlllərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "helllere": {
+      "word": "həlllərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "hellleri": {
+      "word": "həllləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "helllerde": {
+      "word": "həlllərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "helllerden": {
+      "word": "həlllərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "menbe": {
+      "word": "mənbə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "menbenin": {
+      "word": "mənbənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "menbeye": {
+      "word": "mənbəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "menbeni": {
+      "word": "mənbəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "menbede": {
+      "word": "mənbədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "menbeden": {
+      "word": "mənbədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "menbeler": {
+      "word": "mənbələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "menbelerin": {
+      "word": "mənbələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "menbelere": {
+      "word": "mənbələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "menbeleri": {
+      "word": "mənbələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "menbelerde": {
+      "word": "mənbələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "menbelerden": {
+      "word": "mənbələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "merhele": {
+      "word": "mərhələ",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "merhelenin": {
+      "word": "mərhələnin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "merheleye": {
+      "word": "mərhələyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "merheleni": {
+      "word": "mərhələni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "merhelede": {
+      "word": "mərhələdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "merheleden": {
+      "word": "mərhələdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "merheleler": {
+      "word": "mərhələlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "merhelelerin": {
+      "word": "mərhələlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "merhelelere": {
+      "word": "mərhələlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "merheleleri": {
+      "word": "mərhələləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "merhelelerde": {
+      "word": "mərhələlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "merhelelerden": {
+      "word": "mərhələlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "modullarin": {
+      "word": "modulların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "modullari": {
+      "word": "modulları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "komandanin": {
+      "word": "komandanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "komandani": {
+      "word": "komandanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "komandalarin": {
+      "word": "komandaların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "komandalari": {
+      "word": "komandaları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "emekdasliq": {
+      "word": "əməkdaşlıq",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "emekdasligin": {
+      "word": "əməkdaşlığın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "emekdasliga": {
+      "word": "əməkdaşlığa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "emekdasligi": {
+      "word": "əməkdaşlığı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "emekdasliqda": {
+      "word": "əməkdaşlıqda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "emekdasliqdan": {
+      "word": "əməkdaşlıqdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "emekdasliqlar": {
+      "word": "əməkdaşlıqlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "emekdasliqlarin": {
+      "word": "əməkdaşlıqların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "emekdasliqlara": {
+      "word": "əməkdaşlıqlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "emekdasliqlari": {
+      "word": "əməkdaşlıqları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "emekdasliqlarda": {
+      "word": "əməkdaşlıqlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "emekdasliqlardan": {
+      "word": "əməkdaşlıqlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "vetendas": {
+      "word": "vətəndaş",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "vetendasin": {
+      "word": "vətəndaşın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "vetendasa": {
+      "word": "vətəndaşa",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "vetendasi": {
+      "word": "vətəndaşı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "vetendasda": {
+      "word": "vətəndaşda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "vetendasdan": {
+      "word": "vətəndaşdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "vetendaslar": {
+      "word": "vətəndaşlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "vetendaslarin": {
+      "word": "vətəndaşların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "vetendaslara": {
+      "word": "vətəndaşlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "vetendaslari": {
+      "word": "vətəndaşları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "vetendaslarda": {
+      "word": "vətəndaşlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "vetendaslardan": {
+      "word": "vətəndaşlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "insanin": {
+      "word": "insanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "insani": {
+      "word": "insanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "insanlarin": {
+      "word": "insanların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "insanlari": {
+      "word": "insanları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "heyat": {
+      "word": "həyat",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "heyatin": {
+      "word": "həyatın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "heyata": {
+      "word": "həyata",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "heyati": {
+      "word": "həyatı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "heyatda": {
+      "word": "həyatda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "heyatdan": {
+      "word": "həyatdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "heyatlar": {
+      "word": "həyatlar",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "heyatlarin": {
+      "word": "həyatların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "heyatlara": {
+      "word": "həyatlara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "heyatlari": {
+      "word": "həyatları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "heyatlarda": {
+      "word": "həyatlarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "heyatlardan": {
+      "word": "həyatlardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "urek": {
+      "word": "ürək",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "ureyin": {
+      "word": "ürəyin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "ureye": {
+      "word": "ürəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "ureyi": {
+      "word": "ürəyi",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "urekde": {
+      "word": "ürəkdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "urekden": {
+      "word": "ürəkdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "urekler": {
+      "word": "ürəklər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "ureklerin": {
+      "word": "ürəklərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "ureklere": {
+      "word": "ürəklərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "urekleri": {
+      "word": "ürəkləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "ureklerde": {
+      "word": "ürəklərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "ureklerden": {
+      "word": "ürəklərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "idmanin": {
+      "word": "idmanın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "idmani": {
+      "word": "idmanı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "idmanlarin": {
+      "word": "idmanların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "idmanlari": {
+      "word": "idmanları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "yemek": {
+      "word": "yemək",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "yemeyin": {
+      "word": "yeməyin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "yemeye": {
+      "word": "yeməyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "yemekde": {
+      "word": "yeməkdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "yemekden": {
+      "word": "yeməkdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "yemekler": {
+      "word": "yeməklər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "yemeklerin": {
+      "word": "yeməklərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "yemeklere": {
+      "word": "yeməklərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "yemekleri": {
+      "word": "yeməkləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "yemeklerde": {
+      "word": "yeməklərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "yemeklerden": {
+      "word": "yeməklərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "meyve": {
+      "word": "meyvə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meyvenin": {
+      "word": "meyvənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meyveye": {
+      "word": "meyvəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meyveni": {
+      "word": "meyvəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meyvede": {
+      "word": "meyvədə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meyveden": {
+      "word": "meyvədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "meyveler": {
+      "word": "meyvələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "meyvelerin": {
+      "word": "meyvələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "meyvelere": {
+      "word": "meyvələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "meyveleri": {
+      "word": "meyvələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "meyvelerde": {
+      "word": "meyvələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "meyvelerden": {
+      "word": "meyvələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "agac": {
+      "word": "ağac",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "agacin": {
+      "word": "ağacın",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "agaca": {
+      "word": "ağaca",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "agaci": {
+      "word": "ağacı",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "agacda": {
+      "word": "ağacda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "agacdan": {
+      "word": "ağacdan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "agaclarin": {
+      "word": "ağacların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "agaclara": {
+      "word": "ağaclara",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "agaclari": {
+      "word": "ağacları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "agaclarda": {
+      "word": "ağaclarda",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "agaclardan": {
+      "word": "ağaclardan",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "ulduzlarin": {
+      "word": "ulduzların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "ulduzlari": {
+      "word": "ulduzları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "planete": {
+      "word": "planetə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "planetde": {
+      "word": "planetdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "planetden": {
+      "word": "planetdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "planetler": {
+      "word": "planetlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "planetlerin": {
+      "word": "planetlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "planetlere": {
+      "word": "planetlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "planetleri": {
+      "word": "planetləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "planetlerde": {
+      "word": "planetlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "planetlerden": {
+      "word": "planetlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "kosmoslarin": {
+      "word": "kosmosların",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "kosmoslari": {
+      "word": "kosmosları",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "senet": {
+      "word": "sənət",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "senetin": {
+      "word": "sənətin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "senete": {
+      "word": "sənətə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "seneti": {
+      "word": "sənəti",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "senetde": {
+      "word": "sənətdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "senetden": {
+      "word": "sənətdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "senetler": {
+      "word": "sənətlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "senetlerin": {
+      "word": "sənətlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "senetlere": {
+      "word": "sənətlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "senetleri": {
+      "word": "sənətləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "senetlerde": {
+      "word": "sənətlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "senetlerden": {
+      "word": "sənətlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "musiqiye": {
+      "word": "musiqiyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "musiqide": {
+      "word": "musiqidə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "musiqiden": {
+      "word": "musiqidən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "musiqiler": {
+      "word": "musiqilər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "musiqilerin": {
+      "word": "musiqilərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "musiqilere": {
+      "word": "musiqilərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "musiqileri": {
+      "word": "musiqiləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "musiqilerde": {
+      "word": "musiqilərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "musiqilerden": {
+      "word": "musiqilərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xerite": {
+      "word": "xəritə",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xeritenin": {
+      "word": "xəritənin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xeriteye": {
+      "word": "xəritəyə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xeriteni": {
+      "word": "xəritəni",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xeriteden": {
+      "word": "xəritədən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "xeriteler": {
+      "word": "xəritələr",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "xeritelerin": {
+      "word": "xəritələrin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "xeritelere": {
+      "word": "xəritələrə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "xeriteleri": {
+      "word": "xəritələri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "xeritelerde": {
+      "word": "xəritələrdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "xeritelerden": {
+      "word": "xəritələrdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "defter": {
+      "word": "dəftər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "defterin": {
+      "word": "dəftərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "deftere": {
+      "word": "dəftərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "defteri": {
+      "word": "dəftəri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "defterde": {
+      "word": "dəftərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "defterden": {
+      "word": "dəftərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "defterler": {
+      "word": "dəftərlər",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "defterlerin": {
+      "word": "dəftərlərin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "defterlere": {
+      "word": "dəftərlərə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
+    },
+    "defterleri": {
+      "word": "dəftərləri",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "prefix:nezer": 3,
+        "prefix:kecir": 3
+      }
+    },
+    "defterlerde": {
+      "word": "dəftərlərdə",
+      "examples": 3,
+      "features": {
+        "prefix:mueyy": 3,
+        "prefix:deyis": 3,
+        "prefix:musah": 3,
+        "prefix:edild": 3
+      }
+    },
+    "defterlerden": {
+      "word": "dəftərlərdən",
+      "examples": 3,
+      "features": {
+        "prefix:etraf": 3,
+        "behs": 3,
+        "prefix:etdik": 3
+      }
+    },
+    "qelem": {
+      "word": "qələm",
+      "examples": 3,
+      "features": {
+        "prefix:diqqe": 3,
+        "celb": 3,
+        "etdi": 3
+      }
+    },
+    "qelemin": {
+      "word": "qələmin",
+      "examples": 3,
+      "features": {
+        "prefix:tesvi": 3,
+        "prefix:diqqe": 3,
+        "prefix:arasd": 3
+      }
+    },
+    "qeleme": {
+      "word": "qələmə",
+      "examples": 3,
+      "features": {
+        "prefix:xusus": 3,
+        "prefix:diqqe": 3,
+        "prefix:yetir": 3
+      }
     }
   },
   "boundaries": {
@@ -1425,7 +9852,407 @@
     "enir|meyda": {
       "positive": 3,
       "negative": 0
+    },
+    "ladi|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ladi|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "uyur|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "irir|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "isir|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "eyir|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ldir|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "erdi|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|muell": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|hekim": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|teleb": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|koman": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|opera": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|siste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|istif": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|redak": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ordu|tehlu": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ayir|muste": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ayir|emekd": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ayir|rehbe": {
+      "positive": 3,
+      "negative": 0
+    },
+    "ayir|muell": {
+      "positive": 3,
+      "negative": 0
     }
   },
-  "trainingGroups": 160
+  "trainingGroups": 3160
 }

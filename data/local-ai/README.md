@@ -1,5 +1,13 @@
 # Lokal kontekst modeli — ilkin versiya
 
+## 900 forma və 100 sərhəd genişlənməsi
+
+`expansion.json` 900 əlavə birmənalı isim formasını və 100 əlavə sərhəd nümunəsini saxlayır. Bunlar mövcud məhdud morfologiyadan yaradılmış süni məşqlərdir; insan tərəfindən müstəqil semantik yoxlanmış korpus deyil. Hər nümunə üç müxtəlif təlim cümləsində müşahidə olunur: cəmi 3000 əlavə mətn. Əvvəlki qeyri-müəyyən söz qrupları dəyişdirilmir. Yeni modeldə 993 söz forması və 109 sərhəd var. Bütün formalar yeni qonşu sözlərlə, bütün sərhədlər yeni cümlələrdə, mövcud durğu, natamam davam və tabeli cümlə qoruqları ilə yoxlanılır. Bu templated sınaqlar sərbəst dil dəqiqliyini ölçmür.
+
+`npm run local-ai:expand` genişlənmə mənbəyini təkrarlanabilən şəkildə yaradır; sonra `npm run local-ai:train` artefaktı yeniləyir. `npm run local-ai:fresh` təlimə daxil edilməyən 30 ayrıca müəllif cümləsini həm mətn, həm mail modulunda tam gözlənilən çıxışla müqayisə edir. İlk nəticə: mətn modulunda 26/30 tam uyğunluq, mail gövdəsində 25/30 uyğunluq, bütün 30 salamlaşma qorunur. Adi qayda mühərriki 25/30 nəticə verir. Bu kiçik müəllif korpusu insan tərəfindən müstəqil dil qiymətləndirməsi deyil; qalan xətalar `fresh-report.json` daxilində açıq saxlanılıb. Hesabatı gördükdən sonra bu korpus artıq reqressiya korpusudur, gələcək dəyişikliklər üçün gizli benchmark sayılmır.
+
+Sərhəd tətbiqi indi növbəti hissədə sonlu xəbər də tələb edir: tək öyrənilmiş söz cütü və natamam isim birləşməsi nöqtə qoymaq üçün kifayət etmir. Model təxminən 126 KB kompakt JSON-dur; heç bir Python serveri və ya LLM API-si əlavə olunmayıb.
+
 Bu kiçik, nəzarətli təlimlə öyrədilən statistik modeldir: kontekst üzrə multinomial Naive Bayes. LLM və generativ mətn modeli deyil. API, token ödənişi, Python serveri və əlavə asılılıq tələb etmir. Mətn və mail modulları eyni `correctText()` axınında modeli istifadə edir.
 
 ## Məlumatlar

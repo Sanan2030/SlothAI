@@ -1,0 +1,311 @@
+{
+  "scope": "New author-written full-output probes, excluded from training; not an independent human-reviewed benchmark",
+  "total": 30,
+  "baselineExact": 25,
+  "modelExact": 26,
+  "mailExactBody": 25,
+  "greetingPreserved": 30,
+  "elapsedMs": 284,
+  "rows": [
+    {
+      "input": "musterilerden etrafli behs etdiler",
+      "target": "Müştərilərdən ətraflı bəhs etdilər.",
+      "baseline": "Müştərilərdən ətraflı bəhs etdilər.",
+      "output": "Müştərilərdən ətraflı bəhs etdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMüştərilərdən ətraflı bəhs etdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "muellimlere xususi diqqet yetirdiler",
+      "target": "Müəllimlərə xüsusi diqqət yetirdilər.",
+      "baseline": "Müəllimlərə xüsusi diqqət yetirdilər.",
+      "output": "Müəllimlərə xüsusi diqqət yetirdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMüəllimlərə xüsusi diqqət yetirdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "sirketlerin tesviri diqqetle arasdirildi",
+      "target": "Şirkətlərin təsviri diqqətlə araşdırıldı.",
+      "baseline": "Şirkətlərin təsviri diqqətlə araşdırıldı.",
+      "output": "Şirkətlərin təsviri diqqətlə araşdırıldı.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nŞirkətlərin təsviri diqqətlə araşdırıldı.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "muracietleri diqqetle nezerden kecirdiler",
+      "target": "Müraciətləri diqqətlə nəzərdən keçirdilər.",
+      "baseline": "Müraciətləri diqqətlə nəzərdən keçirdilər.",
+      "output": "Müraciətləri diqqətlə nəzərdən keçirdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMüraciətləri diqqətlə nəzərdən keçirdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "layihelerde mueyyen deyisiklik musahide olundu",
+      "target": "Layihələrdə müəyyən dəyişiklik müşahidə olundu.",
+      "baseline": "Layihələrdə müəyyən dəyişiklik müşahidə olundu.",
+      "output": "Layihələrdə müəyyən dəyişiklik müşahidə olundu.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nLayihələrdə müəyyən dəyişiklik müşahidə olundu.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "mekteblerde mueyyen deyisiklik musahide olundu",
+      "target": "Məktəblərdə müəyyən dəyişiklik müşahidə olundu.",
+      "baseline": "Məktəblərdə müəyyən dəyişiklik müşahidə olundu.",
+      "output": "Məktəblərdə müəyyən dəyişiklik müşahidə olundu.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMəktəblərdə müəyyən dəyişiklik müşahidə olundu.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "kitablardan etrafli behs etdiler",
+      "target": "Kitablardan ətraflı bəhs etdilər.",
+      "baseline": "Kitablardan ətraflı bəhs etdilər.",
+      "output": "Kitablardan ətraflı bəhs etdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nKitablardan ətraflı bəhs etdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "hekimlere xususi diqqet yetirdiler",
+      "target": "Həkimlərə xüsusi diqqət yetirdilər.",
+      "baseline": "Həkimlərə xüsusi diqqət yetirdilər.",
+      "output": "Həkimlərə xüsusi diqqət yetirdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nHəkimlərə xüsusi diqqət yetirdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "komanda bu meseleyi arasdirir musteri neticeni gozleyir",
+      "target": "Komanda bu məsələni araşdırır. Müştəri nəticəni gözləyir.",
+      "baseline": "Komanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.",
+      "output": "Komanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nKomanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.\n\nHörmətlə,",
+      "exact": false,
+      "mailContainsExpectedBody": false,
+      "greetingPreserved": true
+    },
+    {
+      "input": "texnik problemi duzeldir rehber tapsirigi tesdiqleyir",
+      "target": "Texnik problemi düzəldir. Rəhbər tapşırığı təsdiqləyir.",
+      "baseline": "Texnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.",
+      "output": "Texnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nTexnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.\n\nHörmətlə,",
+      "exact": false,
+      "mailContainsExpectedBody": false,
+      "greetingPreserved": true
+    },
+    {
+      "input": "operator senedi yoxladi hekim xesteni muayine edir",
+      "target": "Operator sənədi yoxladı. Həkim xəstəni müayinə edir.",
+      "baseline": "Operator sənədi yoxladı. Həkim xəstəni müayinə edir.",
+      "output": "Operator sənədi yoxladı. Həkim xəstəni müayinə edir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nOperator sənədi yoxladı. Həkim xəstəni müayinə edir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "muellim mektubu oxuyur telebe kitabi oxuyur",
+      "target": "Müəllim məktubu oxuyur. Tələbə kitabı oxuyur.",
+      "baseline": "Müəllim məktubu oxuyur. Tələbə kitabı oxuyur.",
+      "output": "Müəllim məktubu oxuyur. Tələbə kitabı oxuyur.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMüəllim məktubu oxuyur. Tələbə kitabı oxuyur.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "rehber cavabi gozleyir emekdas mektubu hazirlayir",
+      "target": "Rəhbər cavabı gözləyir. Əməkdaş məktubu hazırlayır.",
+      "baseline": "Rəhbər cavabı gözləyir. Əməkdaş məktubu hazırlayır.",
+      "output": "Rəhbər cavabı gözləyir. Əməkdaş məktubu hazırlayır.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nRəhbər cavabı gözləyir. Əməkdaş məktubu hazırlayır.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "salam sorgunuz qeydiyyata alinib",
+      "target": "Salam, sorğunuz qeydiyyata alınıb.",
+      "baseline": "Salam, sorğunuz qeydiyyata alınıb.",
+      "output": "Salam, sorğunuz qeydiyyata alınıb.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nSorğunuz qeydiyyata alınıb.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": false,
+      "greetingPreserved": true
+    },
+    {
+      "input": "backend API ile isleyir",
+      "target": "Backend API ilə işləyir.",
+      "baseline": "Backend API ilə işləyir.",
+      "output": "Backend API ilə işləyir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nBackend API ilə işləyir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "bu gun bakida hava serindir",
+      "target": "Bu gün Bakıda hava sərindir.",
+      "baseline": "Bu gün Bakıda hava sərindir.",
+      "output": "Bu gün Bakıda hava sərindir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nBu gün Bakıda hava sərindir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "eli sabah mektebe gedecek",
+      "target": "Əli sabah məktəbə gedəcək.",
+      "baseline": "Əli sabah məktəbə gedəcək.",
+      "output": "Əli sabah məktəbə gedəcək.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nƏli sabah məktəbə gedəcək.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "dedi ki komanda bu meseleyi arasdirir",
+      "target": "Dedi ki, komanda bu məsələni araşdırır.",
+      "baseline": "Dedi ki, komanda bu meseleyi araşdırır.",
+      "output": "Dedi ki, komanda bu meseleyi araşdırır.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nDedi ki, komanda bu meseleyi araşdırır.\n\nHörmətlə,",
+      "exact": false,
+      "mailContainsExpectedBody": false,
+      "greetingPreserved": true
+    },
+    {
+      "input": "men geldim amma sen getdin",
+      "target": "Mən gəldim, amma sən getdin.",
+      "baseline": "Mən gəldim, amma sən getdin.",
+      "output": "Mən gəldim, amma sən getdin.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nMən gəldim, amma sən getdin.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "bu mektub olmamisdir",
+      "target": "Bu məktub olmamışdır.",
+      "baseline": "Bu məktub olmamışdır.",
+      "output": "Bu məktub olmamışdır.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nBu məktub olmamışdır.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "git pull ve git push emrlerini yoxladim",
+      "target": "Git pull və git push əmrlərini yoxladım.",
+      "baseline": "Git pull və git push əmrlərini yoxladım.",
+      "output": "Git pull və git push əmrlərini yoxladım.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nGit pull və git push əmrlərini yoxladım.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "server cavab verir lakin database islemir",
+      "target": "Server cavab verir, lakin database işləmir.",
+      "baseline": "Server cavab verir, lakin database işləmir.",
+      "output": "Server cavab verir, lakin database işləmir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nServer cavab verir, lakin database işləmir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "API endpoint cavabini Postman ile yoxladim",
+      "target": "API endpoint cavabını Postman ilə yoxladım.",
+      "baseline": "API endpoint cavabını Postman ilə yoxladım.",
+      "output": "API endpoint cavabını Postman ilə yoxladım.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nAPI endpoint cavabını Postman ilə yoxladım.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "tehlukesizlik qaydalarina emel etmek vacibdir",
+      "target": "Təhlükəsizlik qaydalarına əməl etmək vacibdir.",
+      "baseline": "Təhlükəsizlik qaydalarına əməl etmək vacibdir.",
+      "output": "Təhlükəsizlik qaydalarına əməl etmək vacibdir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nTəhlükəsizlik qaydalarına əməl etmək vacibdir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "dusunurem ki bu hell faydalidir",
+      "target": "Düşünürəm ki, bu həll faydalıdır.",
+      "baseline": "Düşünürəm ki, bu həll faydalıdır.",
+      "output": "Düşünürəm ki, bu həll faydalıdır.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nDüşünürəm ki, bu həll faydalıdır.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "senedlerin tesviri diqqetle tehlil edildi",
+      "target": "Sənədlərin təsviri diqqətlə təhlil edildi.",
+      "baseline": "Sənədlərin təsviri diqqətlə təhlil edildi.",
+      "output": "Sənədlərin təsviri diqqətlə təhlil edildi.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nSənədlərin təsviri diqqətlə təhlil edildi.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "sehifelerden etrafli behs etdiler",
+      "target": "Səhifələrdən ətraflı bəhs etdilər.",
+      "baseline": "Səhifələrdən ətraflı bəhs etdilər.",
+      "output": "Səhifələrdən ətraflı bəhs etdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nSəhifələrdən ətraflı bəhs etdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "istifadecilere xususi diqqet yetirdiler",
+      "target": "İstifadəçilərə xüsusi diqqət yetirdilər.",
+      "baseline": "İstifadəçilərə xüsusi diqqət yetirdilər.",
+      "output": "İstifadəçilərə xüsusi diqqət yetirdilər.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nİstifadəçilərə xüsusi diqqət yetirdilər.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    },
+    {
+      "input": "seher zengli saatin sesine oyandim sonra ise getdim",
+      "target": "Səhər zəngli saatın səsinə oyandım. Sonra işə getdim.",
+      "baseline": "Səhər zengli saatın səsinə oyandım. Sonra ise getdim.",
+      "output": "Səhər zəngli saatın səsinə oyandım. Sonra ise getdim.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nSəhər zəngli saatın səsinə oyandım. Sonra ise getdim.\n\nHörmətlə,",
+      "exact": false,
+      "mailContainsExpectedBody": false,
+      "greetingPreserved": true
+    },
+    {
+      "input": "yeni avtomobilin panelinde suret aydin gosterilir",
+      "target": "Yeni avtomobilin panelində sürət aydın göstərilir.",
+      "baseline": "Yeni avtomobilin panelində suret aydın göstərilir.",
+      "output": "Yeni avtomobilin panelində sürət aydın göstərilir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nYeni avtomobilin panelində sürət aydın göstərilir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
+      "greetingPreserved": true
+    }
+  ]
+}

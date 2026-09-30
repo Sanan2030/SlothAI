@@ -5,6 +5,8 @@ import corpus from '../data/local-ai/pairs.json';
 import model from '../lib/editor/local-ai/model.json';
 import { createLocalPredictor, insertLearnedBoundaries } from '../lib/editor/local-ai/predict';
 import { trainContextModel } from '../lib/editor/local-ai/core';
+import { expandContextModel } from '../lib/editor/local-ai/expand';
+import expansion from '../data/local-ai/expansion.json';
 import { correctText, formatEmail } from '../lib/editor/correct';
 
 const cases = [
@@ -32,7 +34,7 @@ test('1000 pairs have disjoint train, validation and test gold groups and a repr
   assert.equal(targets.length, 140);
   const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
   assert.ok(supplemental.every(text => !corpus.pairs.some(pair => pair.target === text)));
-  assert.deepEqual(trainContextModel([...targets, ...supplemental]), model);
+  assert.deepEqual(expandContextModel(trainContextModel([...targets, ...supplemental]), expansion), model);
 });
 
 test('learned context generalizes to fresh sentences without an exact text lookup', () => {

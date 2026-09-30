@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { trainContextModel, fold, tokenize, predictContext } from '../lib/editor/local-ai/core';
+import { expandContextModel, type TrainingExpansion } from '../lib/editor/local-ai/expand';
 
 const seeds = readFileSync('data/local-ai/seeds.txt', 'utf8').trim().split('\n');
 if (seeds.length < 100 || new Set(seeds).size !== seeds.length) throw new Error('Expected at least 100 unique authored gold texts.');
@@ -28,7 +29,8 @@ if (new Set(pairs.map(pair => pair.input)).size !== pairs.length) throw new Erro
 const training = seeds.filter((_, index) => splitFor(index) === 'train');
 const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
 if (new Set(supplemental).size !== supplemental.length || supplemental.some(text => seeds.includes(text))) throw new Error('Supplemental texts must be unique and disjoint from all split groups.');
-const model = trainContextModel([...training, ...supplemental]);
+const expansion = JSON.parse(readFileSync('data/local-ai/expansion.json', 'utf8')) as TrainingExpansion;
+const model = expandContextModel(trainContextModel([...training, ...supplemental]), expansion);
 mkdirSync('data/local-ai', { recursive: true });
 mkdirSync('lib/editor/local-ai', { recursive: true });
 writeFileSync('data/local-ai/pairs.json', JSON.stringify({ version: 1, pairs }, null, 2) + '\n');
@@ -56,6 +58,9 @@ const report = { algorithm: model.algorithm, pairCount: pairs.length,
   source: `${seeds.length} author-written gold texts; five synthetic variants each; no scraped or user data`,
   corpusSha256: createHash('sha256').update(JSON.stringify(pairs)).digest('hex'),
   supplementalTrainingTexts: supplemental.length,
+  expansionWordForms: expansion.forms.length,
+  expansionBoundaryPatterns: expansion.boundaries.length,
+  expansionTrainingTexts: [...expansion.forms, ...expansion.boundaries].flatMap(item => item.texts).length,
   learnedWordForms: Object.keys(model.forms).length,
   learnedBoundaryPatterns: Object.keys(model.boundaries).length,
   modelBytes: Buffer.byteLength(JSON.stringify(model)), candidateGroups: Object.keys(model.groups),

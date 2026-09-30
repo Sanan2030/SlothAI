@@ -35,6 +35,12 @@ export function insertLearnedBoundaries(text: string): string {
     if (/^(?:ki|çünki|amma|ancaq|lakin|və|ya|yoxsa|əgər|üçün|ilə|deyə|isə|olaraq|kimi)$/iu.test(right.word)) continue;
     const preceding = tokens.slice(Math.max(0, index - 8), index + 1).filter(token => token.sentence === left.sentence);
     if (preceding.some(token => /^(?:ki|əgər)$/iu.test(token.word))) continue;
+    // A learned word pair alone cannot prove a new sentence: require a
+    // subsequent finite predicate before existing punctuation or a dependent clause.
+    const following = tokens.slice(index + 1, index + 17).filter(token => token.sentence === right.sentence);
+    const dependentAt = following.findIndex(token => /^(?:ki|əgər)$/iu.test(token.word));
+    const independent = dependentAt < 0 ? following : following.slice(0, dependentAt);
+    if (!independent.some(token => isFinitePredicate(token.word))) continue;
     const evidence = model.boundaries[boundaryKey(left.word, right.word)];
     if (evidence && evidence.positive >= 2 && evidence.negative === 0) positions.push(left.end);
   }
