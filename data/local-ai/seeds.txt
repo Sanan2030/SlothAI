@@ -98,3 +98,103 @@ Surət arxiv üçün tələb olunan sənəddir. Məktubla birlikdə təqdim olun
 Surət sənədin imzalı səhifəsini göstərir. Əsli qovluqda saxlanılır.
 Surət məktubun elektron nüsxəsinə əlavə olundu. Arxiv əməkdaşı məlumatlandırıldı.
 Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.
+Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı.
+Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi.
+Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı.
+İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı.
+Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi.
+Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi.
+Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı.
+Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi.
+Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.
+Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı.
+Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur.
+Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur.
+Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil.
+Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.
+Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil.
+Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir.
+Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır.
+Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb.
+Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.
+Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi.
+Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq.
+Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm.
+Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik.
+Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı.
+Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi.
+Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi.
+Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı.
+Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı.
+Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.
+Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı.
+Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol.
+Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap.
+Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl.
+Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur.
+Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol.
+Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə.
+Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur.
+Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap.
+Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan.
+Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et.
+Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır.
+Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi.
+Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir.
+Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi.
+Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.
+Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu.
+Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir.
+Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır.
+Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.
+Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı.
+El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır.
+El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur.
+El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı.
+El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi.
+El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.
+El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi.
+El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi.
+El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir.
+El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.
+El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı.
+Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı.
+Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır.
+Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu.
+Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.
+Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı.
+Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı.
+Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı.
+Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı.
+Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.
+Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi.
+Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir.
+Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl.
+Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver.
+Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.
+Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla.
+Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir.
+Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir.
+Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır.
+Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.
+Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər.
+Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir.
+Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır.
+Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır.
+Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.
+Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.
+Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir.
+Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir.
+Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib.
+Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi.
+Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.
+Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər.
+Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı.
+Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü.
+Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı.
+Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi.
+Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı.
+Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı.
+Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı.
+Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi.
+Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.

@@ -1,8 +1,9 @@
 /** A small supervised multinomial Naive Bayes model, not a generative LLM. */
-export interface Token { word: string; start: number; end: number }
+import { productiveMorphology } from '../productive-morphology';
+export interface Token { word: string; start: number; end: number; sentence: number }
 export interface ClassCounts { examples: number; total: number; features: Record<string, number> }
 export interface LocalContextModel {
-  version: 1;
+  version: 2;
   algorithm: 'context-naive-bayes';
   groups: Record<string, Record<string, ClassCounts>>;
   trainingGroups: number;
@@ -10,17 +11,37 @@ export interface LocalContextModel {
 export const fold = (value: string) => value.toLocaleLowerCase('az-AZ').replace(/[əıçğöşü]/gu,
   letter => ({ ə: 'e', ı: 'i', ç: 'c', ğ: 'g', ö: 'o', ş: 's', ü: 'u' })[letter]!);
 export function tokenize(text: string): Token[] {
-  return [...text.matchAll(/\p{L}+(?:[-’']\p{L}+)*/gu)].map(item => ({ word: item[0], start: item.index!, end: item.index! + item[0].length }));
+  let end = 0, sentence = 0;
+  return [...text.matchAll(/\p{L}+(?:[-’']\p{L}+)*/gu)].map(item => {
+    if (/[.!?\n]/u.test(text.slice(end, item.index))) sentence++;
+    end = item.index! + item[0].length;
+    return { word: item[0], start: item.index!, end, sentence };
+  });
 }
 export function features(tokens: readonly Token[], index: number): string[] {
   const result = new Set<string>();
   for (let offset = -6; offset <= 6; offset++) {
     const token = tokens[index + offset];
-    if (!offset || !token) continue;
+    if (!offset || !token || token.sentence !== tokens[index].sentence) continue;
     const value = fold(token.word);
     // Bounded subword features share evidence across common inflections without
     // claiming a linguistic lemma; exact word boundaries stay unchanged.
-    if (value.length >= 3) result.add(value.length >= 5 ? `prefix:${value.slice(0, 5)}` : value);
+    if (value.length >= 3) {
+      const lexical = value.length >= 5 ? `prefix:${value.slice(0, 5)}` : value;
+      result.add(lexical);
+      if (Math.abs(offset) === 1) result.add(`${offset < 0 ? 'left' : 'right'}:${lexical}`);
+    }
+    if (Math.abs(offset) <= 2) {
+      const surface = productiveMorphology.findByFoldedForm(token.word) ?? token.word;
+      const analyses = productiveMorphology.analyzeWord(surface);
+      const lemmas = new Set(analyses.map(item => item.lemma));
+      const positions = new Set(analyses.map(item => item.pos));
+      const cases = new Set(analyses.map(item => item.features.case));
+      const side = offset < 0 ? 'left' : 'right';
+      if (lemmas.size === 1) result.add(`lemma:${side}:${fold([...lemmas][0])}`);
+      if (positions.size === 1 && [...positions][0]) result.add(`pos:${side}:${[...positions][0]}`);
+      if (cases.size === 1 && [...cases][0]) result.add(`case:${side}:${[...cases][0]}`);
+    }
   }
   return [...result];
 }
@@ -28,7 +49,7 @@ export function trainContextModel(texts: readonly string[]): LocalContextModel {
   const variants = new Map<string, Set<string>>();
   for (const text of texts) for (const token of tokenize(text)) {
     const key = fold(token.word), canonical = token.word.toLocaleLowerCase('az-AZ');
-    if (key.length < 3) continue;
+    if (key.length < 2) continue;
     const choices = variants.get(key) ?? new Set<string>();
     choices.add(canonical); variants.set(key, choices);
   }
@@ -48,7 +69,7 @@ export function trainContextModel(texts: readonly string[]): LocalContextModel {
       }
     });
   }
-  return { version: 1, algorithm: 'context-naive-bayes', groups, trainingGroups: texts.length };
+  return { version: 2, algorithm: 'context-naive-bayes', groups, trainingGroups: texts.length };
 }
 export interface Prediction { word: string; margin: number; supportingFeatures: number; accepted: boolean }
 export function predictContext(model: LocalContextModel, raw: string, tokens: readonly Token[], index: number): Prediction | undefined {
@@ -65,7 +86,8 @@ export function predictContext(model: LocalContextModel, raw: string, tokens: re
   })).sort((a, b) => b.score - a.score);
   const winner = ranked[0], runner = ranked[1];
   const margin = winner.score - runner.score;
-  const support = observed.filter(feature => (winner.cls.features[feature] ?? 0) >= 2
+  const support = observed.filter(feature => !/^(?:lemma|pos|case|left|right):/u.test(feature)
+    && (winner.cls.features[feature] ?? 0) >= 2
     && (winner.cls.features[feature] ?? 0) > (runner.cls.features[feature] ?? 0)).length;
   return { word: winner.word, margin, supportingFeatures: support,
     // This score is evidence, not calibrated correctness probability.

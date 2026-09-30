@@ -4500,6 +4500,4506 @@
       "variant": 4,
       "input": "suret seedin esli ile birlikde yoxlanildi. imzanin heqiqiliyi tesdiqlendi.",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi."
+    },
+    {
+      "id": "local-101-1",
+      "groupId": "gold-101",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "usagin adi qeydiyyat senedinde yazilib muellim siyahini yoxladi",
+      "target": "Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-101-2",
+      "groupId": "gold-101",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "usagin adi qeydiyyat senedinde yazilib. muellim siyahini yoxladi.",
+      "target": "Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-101-3",
+      "groupId": "gold-101",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uşağın adı qeydiyyat sənədində yazılıb müəllim siyahını yoxladı",
+      "target": "Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-101-4",
+      "groupId": "gold-101",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "ushagin adi qeydiyyat shenedinde yazilib muellim shiyahini yoxladi",
+      "target": "Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-101-5",
+      "groupId": "gold-101",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "usagin adi qediyyat senedinde yazilib. muellim siyahini yoxladi.",
+      "target": "Uşağın adı qeydiyyat sənədində yazılıb. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-102-1",
+      "groupId": "gold-102",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "sagirdin adi sinif siyahisinda gorunur valideyn melumati tesdiqledi",
+      "target": "Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-102-2",
+      "groupId": "gold-102",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "sagirdin adi sinif siyahisinda gorunur. valideyn melumati tesdiqledi.",
+      "target": "Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-102-3",
+      "groupId": "gold-102",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şagirdin adı sinif siyahısında görünür valideyn məlumatı təsdiqlədi",
+      "target": "Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-102-4",
+      "groupId": "gold-102",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "shagirdin adi shinif shiyahishinda gorunur valideyn melumati teshdiqledi",
+      "target": "Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-102-5",
+      "groupId": "gold-102",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "sagirdin adi sinif siahisinda gorunur. valideyn melumati tesdiqledi.",
+      "target": "Şagirdin adı sinif siyahısında görünür. Valideyn məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-103-1",
+      "groupId": "gold-103",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "musterinin adi muqavile senedinde qeyd olunub menecer senedi yoxladi",
+      "target": "Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı."
+    },
+    {
+      "id": "local-103-2",
+      "groupId": "gold-103",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "musterinin adi muqavile senedinde qeyd olunub. menecer senedi yoxladi.",
+      "target": "Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı."
+    },
+    {
+      "id": "local-103-3",
+      "groupId": "gold-103",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "müştərinin adı müqavilə sənədində qeyd olunub menecer sənədi yoxladı",
+      "target": "Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı."
+    },
+    {
+      "id": "local-103-4",
+      "groupId": "gold-103",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "mushterinin adi muqavile shenedinde qeyd olunub menecher shenedi yoxladi",
+      "target": "Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı."
+    },
+    {
+      "id": "local-103-5",
+      "groupId": "gold-103",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "musterinin adi muavile senedinde qeyd olunub. menecer senedi yoxladi.",
+      "target": "Müştərinin adı müqavilə sənədində qeyd olunub. Menecer sənədi yoxladı."
+    },
+    {
+      "id": "local-104-1",
+      "groupId": "gold-104",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "istifadecinin adi hesab melumatlarinda saxlanilir sistem qeydiyyati tamamladi",
+      "target": "İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-104-2",
+      "groupId": "gold-104",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "istifadecinin adi hesab melumatlarinda saxlanilir. sistem qeydiyyati tamamladi.",
+      "target": "İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-104-3",
+      "groupId": "gold-104",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "istifadəçinin adı hesab məlumatlarında saxlanılır sistem qeydiyyatı tamamladı",
+      "target": "İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-104-4",
+      "groupId": "gold-104",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "ishtifadechinin adi heshab melumatlarinda shaxlanilir shishtem qeydiyyati tamamladi",
+      "target": "İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-104-5",
+      "groupId": "gold-104",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "istifadecinin adi hesab meumatlarinda saxlanilir. sistem qeydiyyati tamamladi.",
+      "target": "İstifadəçinin adı hesab məlumatlarında saxlanılır. Sistem qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-105-1",
+      "groupId": "gold-105",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "layihenin adi teqdimat senedinde gosterilib komanda melumati tesdiqledi",
+      "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-105-2",
+      "groupId": "gold-105",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "layihenin adi teqdimat senedinde gosterilib. komanda melumati tesdiqledi.",
+      "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-105-3",
+      "groupId": "gold-105",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "layihənin adı təqdimat sənədində göstərilib komanda məlumatı təsdiqlədi",
+      "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-105-4",
+      "groupId": "gold-105",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "layihenin adi teqdimat shenedinde goshterilib komanda melumati teshdiqledi",
+      "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-105-5",
+      "groupId": "gold-105",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "layihenin adi tedimat senedinde gosterilib. komanda melumati tesdiqledi.",
+      "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi."
+    },
+    {
+      "id": "local-106-1",
+      "groupId": "gold-106",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "kitabin adi kitabxana siyahisina elave edildi oxucu hemin kitabi secdi",
+      "target": "Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi."
+    },
+    {
+      "id": "local-106-2",
+      "groupId": "gold-106",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "kitabin adi kitabxana siyahisina elave edildi. oxucu hemin kitabi secdi.",
+      "target": "Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi."
+    },
+    {
+      "id": "local-106-3",
+      "groupId": "gold-106",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "kitabın adı kitabxana siyahısına əlavə edildi oxucu həmin kitabı seçdi",
+      "target": "Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi."
+    },
+    {
+      "id": "local-106-4",
+      "groupId": "gold-106",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "kitabin adi kitabxana shiyahishina elave edildi oxuchu hemin kitabi shechdi",
+      "target": "Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi."
+    },
+    {
+      "id": "local-106-5",
+      "groupId": "gold-106",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "kitabin adi kiabxana siyahisina elave edildi. oxucu hemin kitabi secdi.",
+      "target": "Kitabın adı kitabxana siyahısına əlavə edildi. Oxucu həmin kitabı seçdi."
+    },
+    {
+      "id": "local-107-1",
+      "groupId": "gold-107",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "emekdasin adi isci siyahisinda yazilib rehber qeydiyyati yoxladi",
+      "target": "Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-107-2",
+      "groupId": "gold-107",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "emekdasin adi isci siyahisinda yazilib. rehber qeydiyyati yoxladi.",
+      "target": "Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-107-3",
+      "groupId": "gold-107",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əməkdaşın adı işçi siyahısında yazılıb rəhbər qeydiyyatı yoxladı",
+      "target": "Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-107-4",
+      "groupId": "gold-107",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "emekdashin adi ishchi shiyahishinda yazilib rehber qeydiyyati yoxladi",
+      "target": "Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-107-5",
+      "groupId": "gold-107",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "emekdasin adi isci siahisinda yazilib. rehber qeydiyyati yoxladi.",
+      "target": "Əməkdaşın adı işçi siyahısında yazılıb. Rəhbər qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-108-1",
+      "groupId": "gold-108",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "qonagin adi tedbir siyahisinda gorunur teskilatci senedi qebul etdi",
+      "target": "Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi."
+    },
+    {
+      "id": "local-108-2",
+      "groupId": "gold-108",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "qonagin adi tedbir siyahisinda gorunur. teskilatci senedi qebul etdi.",
+      "target": "Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi."
+    },
+    {
+      "id": "local-108-3",
+      "groupId": "gold-108",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "qonağın adı tədbir siyahısında görünür təşkilatçı sənədi qəbul etdi",
+      "target": "Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi."
+    },
+    {
+      "id": "local-108-4",
+      "groupId": "gold-108",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "qonagin adi tedbir shiyahishinda gorunur teshkilatchi shenedi qebul etdi",
+      "target": "Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi."
+    },
+    {
+      "id": "local-108-5",
+      "groupId": "gold-108",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "qonagin adi tebir siyahisinda gorunur. teskilatci senedi qebul etdi.",
+      "target": "Qonağın adı tədbir siyahısında görünür. Təşkilatçı sənədi qəbul etdi."
+    },
+    {
+      "id": "local-109-1",
+      "groupId": "gold-109",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "telebenin adi imtahan senedinde qeyd edildi katib melumati yoxladi",
+      "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı."
+    },
+    {
+      "id": "local-109-2",
+      "groupId": "gold-109",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "telebenin adi imtahan senedinde qeyd edildi. katib melumati yoxladi.",
+      "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı."
+    },
+    {
+      "id": "local-109-3",
+      "groupId": "gold-109",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı",
+      "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı."
+    },
+    {
+      "id": "local-109-4",
+      "groupId": "gold-109",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "telebenin adi imtahan shenedinde qeyd edildi katib melumati yoxladi",
+      "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı."
+    },
+    {
+      "id": "local-109-5",
+      "groupId": "gold-109",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "telebenin adi imahan senedinde qeyd edildi. katib melumati yoxladi.",
+      "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı."
+    },
+    {
+      "id": "local-110-1",
+      "groupId": "gold-110",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "proqramin adi sistem melumatlarinda gosterilir istifadeci qeydiyyati tamamladi",
+      "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-110-2",
+      "groupId": "gold-110",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "proqramin adi sistem melumatlarinda gosterilir. istifadeci qeydiyyati tamamladi.",
+      "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-110-3",
+      "groupId": "gold-110",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "proqramın adı sistem məlumatlarında göstərilir istifadəçi qeydiyyatı tamamladı",
+      "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-110-4",
+      "groupId": "gold-110",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "proqramin adi shishtem melumatlarinda goshterilir ishtifadechi qeydiyyati tamamladi",
+      "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-110-5",
+      "groupId": "gold-110",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "proqramin adi sitem melumatlarinda gosterilir. istifadeci qeydiyyati tamamladi.",
+      "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı."
+    },
+    {
+      "id": "local-111-1",
+      "groupId": "gold-111",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi hadise gundelik is zamani bas verib xususi problem yoxdur",
+      "target": "Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur."
+    },
+    {
+      "id": "local-111-2",
+      "groupId": "gold-111",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi hadise gundelik is zamani bas verib. xususi problem yoxdur.",
+      "target": "Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur."
+    },
+    {
+      "id": "local-111-3",
+      "groupId": "gold-111",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi hadisə gündəlik iş zamanı baş verib xüsusi problem yoxdur",
+      "target": "Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur."
+    },
+    {
+      "id": "local-111-4",
+      "groupId": "gold-111",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi hadishe gundelik ish zamani bash verib xushushi problem yoxdur",
+      "target": "Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur."
+    },
+    {
+      "id": "local-111-5",
+      "groupId": "gold-111",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi haise gundelik is zamani bas verib. xususi problem yoxdur.",
+      "target": "Bu adi hadisə gündəlik iş zamanı baş verib. Xüsusi problem yoxdur."
+    },
+    {
+      "id": "local-112-1",
+      "groupId": "gold-112",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi qayda gundelik davranisi tenzimleyir xususi icaze teleb olunmur",
+      "target": "Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur."
+    },
+    {
+      "id": "local-112-2",
+      "groupId": "gold-112",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi qayda gundelik davranisi tenzimleyir. xususi icaze teleb olunmur.",
+      "target": "Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur."
+    },
+    {
+      "id": "local-112-3",
+      "groupId": "gold-112",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi qayda gündəlik davranışı tənzimləyir xüsusi icazə tələb olunmur",
+      "target": "Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur."
+    },
+    {
+      "id": "local-112-4",
+      "groupId": "gold-112",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi qayda gundelik davranishi tenzimleyir xushushi ichaze teleb olunmur",
+      "target": "Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur."
+    },
+    {
+      "id": "local-112-5",
+      "groupId": "gold-112",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi qayda gudelik davranisi tenzimleyir. xususi icaze teleb olunmur.",
+      "target": "Bu adi qayda gündəlik davranışı tənzimləyir. Xüsusi icazə tələb olunmur."
+    },
+    {
+      "id": "local-113-1",
+      "groupId": "gold-113",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi sual gundelik gorusde verildi xususi hazirliq lazim deyil",
+      "target": "Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil."
+    },
+    {
+      "id": "local-113-2",
+      "groupId": "gold-113",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi sual gundelik gorusde verildi. xususi hazirliq lazim deyil.",
+      "target": "Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil."
+    },
+    {
+      "id": "local-113-3",
+      "groupId": "gold-113",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi sual gündəlik görüşdə verildi xüsusi hazırlıq lazım deyil",
+      "target": "Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil."
+    },
+    {
+      "id": "local-113-4",
+      "groupId": "gold-113",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi shual gundelik gorushde verildi xushushi hazirliq lazim deyil",
+      "target": "Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil."
+    },
+    {
+      "id": "local-113-5",
+      "groupId": "gold-113",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi sual gudelik gorusde verildi. xususi hazirliq lazim deyil.",
+      "target": "Bu adi sual gündəlik görüşdə verildi. Xüsusi hazırlıq lazım deyil."
+    },
+    {
+      "id": "local-114-1",
+      "groupId": "gold-114",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi hal gundelik heyatda musahide olunur xususi tedbir gorulmur",
+      "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür."
+    },
+    {
+      "id": "local-114-2",
+      "groupId": "gold-114",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi hal gundelik heyatda musahide olunur. xususi tedbir gorulmur.",
+      "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür."
+    },
+    {
+      "id": "local-114-3",
+      "groupId": "gold-114",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür",
+      "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür."
+    },
+    {
+      "id": "local-114-4",
+      "groupId": "gold-114",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi hal gundelik heyatda mushahide olunur xushushi tedbir gorulmur",
+      "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür."
+    },
+    {
+      "id": "local-114-5",
+      "groupId": "gold-114",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi hal gudelik heyatda musahide olunur. xususi tedbir gorulmur.",
+      "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür."
+    },
+    {
+      "id": "local-115-1",
+      "groupId": "gold-115",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi tapsiriq gundelik is planina daxildir xususi selahiyyet lazim deyil",
+      "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil."
+    },
+    {
+      "id": "local-115-2",
+      "groupId": "gold-115",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi tapsiriq gundelik is planina daxildir. xususi selahiyyet lazim deyil.",
+      "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil."
+    },
+    {
+      "id": "local-115-3",
+      "groupId": "gold-115",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi tapşırıq gündəlik iş planına daxildir xüsusi səlahiyyət lazım deyil",
+      "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil."
+    },
+    {
+      "id": "local-115-4",
+      "groupId": "gold-115",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi tapshiriq gundelik ish planina daxildir xushushi shelahiyyet lazim deyil",
+      "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil."
+    },
+    {
+      "id": "local-115-5",
+      "groupId": "gold-115",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi tasiriq gundelik is planina daxildir. xususi selahiyyet lazim deyil.",
+      "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil."
+    },
+    {
+      "id": "local-116-1",
+      "groupId": "gold-116",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi melumat gundelik hesabatda teqdim olunur xususi sirr teskil etmir",
+      "target": "Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir."
+    },
+    {
+      "id": "local-116-2",
+      "groupId": "gold-116",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi melumat gundelik hesabatda teqdim olunur. xususi sirr teskil etmir.",
+      "target": "Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir."
+    },
+    {
+      "id": "local-116-3",
+      "groupId": "gold-116",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi məlumat gündəlik hesabatda təqdim olunur xüsusi sirr təşkil etmir",
+      "target": "Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir."
+    },
+    {
+      "id": "local-116-4",
+      "groupId": "gold-116",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi melumat gundelik heshabatda teqdim olunur xushushi shirr teshkil etmir",
+      "target": "Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir."
+    },
+    {
+      "id": "local-116-5",
+      "groupId": "gold-116",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi meumat gundelik hesabatda teqdim olunur. xususi sirr teskil etmir.",
+      "target": "Bu adi məlumat gündəlik hesabatda təqdim olunur. Xüsusi sirr təşkil etmir."
+    },
+    {
+      "id": "local-117-1",
+      "groupId": "gold-117",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi gorus gundelik fealiyyetin bir hissesidir xususi muzakire aparilmir",
+      "target": "Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır."
+    },
+    {
+      "id": "local-117-2",
+      "groupId": "gold-117",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi gorus gundelik fealiyyetin bir hissesidir. xususi muzakire aparilmir.",
+      "target": "Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır."
+    },
+    {
+      "id": "local-117-3",
+      "groupId": "gold-117",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi görüş gündəlik fəaliyyətin bir hissəsidir xüsusi müzakirə aparılmır",
+      "target": "Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır."
+    },
+    {
+      "id": "local-117-4",
+      "groupId": "gold-117",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi gorush gundelik fealiyyetin bir hishsheshidir xushushi muzakire aparilmir",
+      "target": "Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır."
+    },
+    {
+      "id": "local-117-5",
+      "groupId": "gold-117",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi gorus gudelik fealiyyetin bir hissesidir. xususi muzakire aparilmir.",
+      "target": "Bu adi görüş gündəlik fəaliyyətin bir hissəsidir. Xüsusi müzakirə aparılmır."
+    },
+    {
+      "id": "local-118-1",
+      "groupId": "gold-118",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi secim gundelik ehtiyaca uygundur xususi sert nezerde tutulmayib",
+      "target": "Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb."
+    },
+    {
+      "id": "local-118-2",
+      "groupId": "gold-118",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi secim gundelik ehtiyaca uygundur. xususi sert nezerde tutulmayib.",
+      "target": "Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb."
+    },
+    {
+      "id": "local-118-3",
+      "groupId": "gold-118",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi seçim gündəlik ehtiyaca uyğundur xüsusi şərt nəzərdə tutulmayıb",
+      "target": "Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb."
+    },
+    {
+      "id": "local-118-4",
+      "groupId": "gold-118",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi shechim gundelik ehtiyacha uygundur xushushi shert nezerde tutulmayib",
+      "target": "Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb."
+    },
+    {
+      "id": "local-118-5",
+      "groupId": "gold-118",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi secim gudelik ehtiyaca uygundur. xususi sert nezerde tutulmayib.",
+      "target": "Bu adi seçim gündəlik ehtiyaca uyğundur. Xüsusi şərt nəzərdə tutulmayıb."
+    },
+    {
+      "id": "local-119-1",
+      "groupId": "gold-119",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi yoxlama gundelik rejimde aparilir xususi avadanliq teleb olunmur",
+      "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur."
+    },
+    {
+      "id": "local-119-2",
+      "groupId": "gold-119",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi yoxlama gundelik rejimde aparilir. xususi avadanliq teleb olunmur.",
+      "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur."
+    },
+    {
+      "id": "local-119-3",
+      "groupId": "gold-119",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur",
+      "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur."
+    },
+    {
+      "id": "local-119-4",
+      "groupId": "gold-119",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi yoxlama gundelik rejimde aparilir xushushi avadanliq teleb olunmur",
+      "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur."
+    },
+    {
+      "id": "local-119-5",
+      "groupId": "gold-119",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi yolama gundelik rejimde aparilir. xususi avadanliq teleb olunmur.",
+      "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur."
+    },
+    {
+      "id": "local-120-1",
+      "groupId": "gold-120",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu adi muraciet gundelik siyahiya daxil edildi xususi status verilmedi",
+      "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi."
+    },
+    {
+      "id": "local-120-2",
+      "groupId": "gold-120",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu adi muraciet gundelik siyahiya daxil edildi. xususi status verilmedi.",
+      "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi."
+    },
+    {
+      "id": "local-120-3",
+      "groupId": "gold-120",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu adi müraciət gündəlik siyahıya daxil edildi xüsusi status verilmədi",
+      "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi."
+    },
+    {
+      "id": "local-120-4",
+      "groupId": "gold-120",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu adi murachiet gundelik shiyahiya daxil edildi xushushi shtatush verilmedi",
+      "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi."
+    },
+    {
+      "id": "local-120-5",
+      "groupId": "gold-120",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu adi muaciet gundelik siyahiya daxil edildi. xususi status verilmedi.",
+      "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi."
+    },
+    {
+      "id": "local-121-1",
+      "groupId": "gold-121",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovluga yerlesdirildi sayi yeniden yoxladiq",
+      "target": "Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq."
+    },
+    {
+      "id": "local-121-2",
+      "groupId": "gold-121",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovluga yerlesdirildi. sayi yeniden yoxladiq.",
+      "target": "Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq."
+    },
+    {
+      "id": "local-121-3",
+      "groupId": "gold-121",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluğa yerləşdirildi sayı yenidən yoxladıq",
+      "target": "Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq."
+    },
+    {
+      "id": "local-121-4",
+      "groupId": "gold-121",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovluga yerleshdirildi shayi yeniden yoxladiq",
+      "target": "Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq."
+    },
+    {
+      "id": "local-121-5",
+      "groupId": "gold-121",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qoluga yerlesdirildi. sayi yeniden yoxladiq.",
+      "target": "Üç sənəd qovluğa yerləşdirildi. Sayı yenidən yoxladıq."
+    },
+    {
+      "id": "local-122-1",
+      "groupId": "gold-122",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab masanin ustune qoyuldu hamisini oxumaq isteyirem",
+      "target": "Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm."
+    },
+    {
+      "id": "local-122-2",
+      "groupId": "gold-122",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab masanin ustune qoyuldu. hamisini oxumaq isteyirem.",
+      "target": "Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm."
+    },
+    {
+      "id": "local-122-3",
+      "groupId": "gold-122",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab masanın üstünə qoyuldu hamısını oxumaq istəyirəm",
+      "target": "Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm."
+    },
+    {
+      "id": "local-122-4",
+      "groupId": "gold-122",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab mashanin ushtune qoyuldu hamishini oxumaq ishteyirem",
+      "target": "Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm."
+    },
+    {
+      "id": "local-122-5",
+      "groupId": "gold-122",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab maanin ustune qoyuldu. hamisini oxumaq isteyirem.",
+      "target": "Üç kitab masanın üstünə qoyuldu. Hamısını oxumaq istəyirəm."
+    },
+    {
+      "id": "local-123-1",
+      "groupId": "gold-123",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc mektub poct qutusuna gonderildi cavablari gozleyirik",
+      "target": "Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik."
+    },
+    {
+      "id": "local-123-2",
+      "groupId": "gold-123",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc mektub poct qutusuna gonderildi. cavablari gozleyirik.",
+      "target": "Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik."
+    },
+    {
+      "id": "local-123-3",
+      "groupId": "gold-123",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç məktub poçt qutusuna göndərildi cavabları gözləyirik",
+      "target": "Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik."
+    },
+    {
+      "id": "local-123-4",
+      "groupId": "gold-123",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch mektub pocht qutushuna gonderildi chavablari gozleyirik",
+      "target": "Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik."
+    },
+    {
+      "id": "local-123-5",
+      "groupId": "gold-123",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc metub poct qutusuna gonderildi. cavablari gozleyirik.",
+      "target": "Üç məktub poçt qutusuna göndərildi. Cavabları gözləyirik."
+    },
+    {
+      "id": "local-124-1",
+      "groupId": "gold-124",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc telebe imtahan otagina daxil oldu muellim siyahini yoxladi",
+      "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-124-2",
+      "groupId": "gold-124",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc telebe imtahan otagina daxil oldu. muellim siyahini yoxladi.",
+      "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-124-3",
+      "groupId": "gold-124",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç tələbə imtahan otağına daxil oldu müəllim siyahını yoxladı",
+      "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-124-4",
+      "groupId": "gold-124",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch telebe imtahan otagina daxil oldu muellim shiyahini yoxladi",
+      "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-124-5",
+      "groupId": "gold-124",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc teebe imtahan otagina daxil oldu. muellim siyahini yoxladi.",
+      "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-125-1",
+      "groupId": "gold-125",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc layihe komandanin is planina daxil edildi rehber plani tesdiqledi",
+      "target": "Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi."
+    },
+    {
+      "id": "local-125-2",
+      "groupId": "gold-125",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc layihe komandanin is planina daxil edildi. rehber plani tesdiqledi.",
+      "target": "Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi."
+    },
+    {
+      "id": "local-125-3",
+      "groupId": "gold-125",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç layihə komandanın iş planına daxil edildi rəhbər planı təsdiqlədi",
+      "target": "Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi."
+    },
+    {
+      "id": "local-125-4",
+      "groupId": "gold-125",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch layihe komandanin ish planina daxil edildi rehber plani teshdiqledi",
+      "target": "Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi."
+    },
+    {
+      "id": "local-125-5",
+      "groupId": "gold-125",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc laihe komandanin is planina daxil edildi. rehber plani tesdiqledi.",
+      "target": "Üç layihə komandanın iş planına daxil edildi. Rəhbər planı təsdiqlədi."
+    },
+    {
+      "id": "local-126-1",
+      "groupId": "gold-126",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc musteri xidmet sobesine muraciet etdi menecer onlari qebul etdi",
+      "target": "Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi."
+    },
+    {
+      "id": "local-126-2",
+      "groupId": "gold-126",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc musteri xidmet sobesine muraciet etdi. menecer onlari qebul etdi.",
+      "target": "Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi."
+    },
+    {
+      "id": "local-126-3",
+      "groupId": "gold-126",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç müştəri xidmət şöbəsinə müraciət etdi menecer onları qəbul etdi",
+      "target": "Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi."
+    },
+    {
+      "id": "local-126-4",
+      "groupId": "gold-126",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch mushteri xidmet shobeshine murachiet etdi menecher onlari qebul etdi",
+      "target": "Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi."
+    },
+    {
+      "id": "local-126-5",
+      "groupId": "gold-126",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc muteri xidmet sobesine muraciet etdi. menecer onlari qebul etdi.",
+      "target": "Üç müştəri xidmət şöbəsinə müraciət etdi. Menecer onları qəbul etdi."
+    },
+    {
+      "id": "local-127-1",
+      "groupId": "gold-127",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc hesabat rehbere teqdim olundu melumatlar ayrica yoxlanildi",
+      "target": "Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı."
+    },
+    {
+      "id": "local-127-2",
+      "groupId": "gold-127",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc hesabat rehbere teqdim olundu. melumatlar ayrica yoxlanildi.",
+      "target": "Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı."
+    },
+    {
+      "id": "local-127-3",
+      "groupId": "gold-127",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç hesabat rəhbərə təqdim olundu məlumatlar ayrıca yoxlanıldı",
+      "target": "Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı."
+    },
+    {
+      "id": "local-127-4",
+      "groupId": "gold-127",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch heshabat rehbere teqdim olundu melumatlar ayricha yoxlanildi",
+      "target": "Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı."
+    },
+    {
+      "id": "local-127-5",
+      "groupId": "gold-127",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc heabat rehbere teqdim olundu. melumatlar ayrica yoxlanildi.",
+      "target": "Üç hesabat rəhbərə təqdim olundu. Məlumatlar ayrıca yoxlanıldı."
+    },
+    {
+      "id": "local-128-1",
+      "groupId": "gold-128",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sual gorus zamani muzakire edildi cavablar senede yazildi",
+      "target": "Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı."
+    },
+    {
+      "id": "local-128-2",
+      "groupId": "gold-128",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sual gorus zamani muzakire edildi. cavablar senede yazildi.",
+      "target": "Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı."
+    },
+    {
+      "id": "local-128-3",
+      "groupId": "gold-128",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sual görüş zamanı müzakirə edildi cavablar sənədə yazıldı",
+      "target": "Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı."
+    },
+    {
+      "id": "local-128-4",
+      "groupId": "gold-128",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shual gorush zamani muzakire edildi chavablar shenede yazildi",
+      "target": "Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı."
+    },
+    {
+      "id": "local-128-5",
+      "groupId": "gold-128",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sual gorus zaani muzakire edildi. cavablar senede yazildi.",
+      "target": "Üç sual görüş zamanı müzakirə edildi. Cavablar sənədə yazıldı."
+    },
+    {
+      "id": "local-129-1",
+      "groupId": "gold-129",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc qonaq tedbir zalina geldi teskilatci onlara yer gosterdi",
+      "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi."
+    },
+    {
+      "id": "local-129-2",
+      "groupId": "gold-129",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc qonaq tedbir zalina geldi. teskilatci onlara yer gosterdi.",
+      "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi."
+    },
+    {
+      "id": "local-129-3",
+      "groupId": "gold-129",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi",
+      "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi."
+    },
+    {
+      "id": "local-129-4",
+      "groupId": "gold-129",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch qonaq tedbir zalina geldi teshkilatchi onlara yer goshterdi",
+      "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi."
+    },
+    {
+      "id": "local-129-5",
+      "groupId": "gold-129",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc qonaq tebir zalina geldi. teskilatci onlara yer gosterdi.",
+      "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi."
+    },
+    {
+      "id": "local-130-1",
+      "groupId": "gold-130",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sekil alboma elave edildi fayllar saxlanildi",
+      "target": "Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı."
+    },
+    {
+      "id": "local-130-2",
+      "groupId": "gold-130",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sekil alboma elave edildi. fayllar saxlanildi.",
+      "target": "Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı."
+    },
+    {
+      "id": "local-130-3",
+      "groupId": "gold-130",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç şəkil alboma əlavə edildi fayllar saxlanıldı",
+      "target": "Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı."
+    },
+    {
+      "id": "local-130-4",
+      "groupId": "gold-130",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shekil alboma elave edildi fayllar shaxlanildi",
+      "target": "Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı."
+    },
+    {
+      "id": "local-130-5",
+      "groupId": "gold-130",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sekil aloma elave edildi. fayllar saxlanildi.",
+      "target": "Üç şəkil alboma əlavə edildi. Fayllar saxlanıldı."
+    },
+    {
+      "id": "local-131-1",
+      "groupId": "gold-131",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc balaca qus qanadlarini ac goy uzunde serbest ol",
+      "target": "Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol."
+    },
+    {
+      "id": "local-131-2",
+      "groupId": "gold-131",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, balaca qus, qanadlarini ac. goy uzunde serbest ol.",
+      "target": "Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol."
+    },
+    {
+      "id": "local-131-3",
+      "groupId": "gold-131",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç balaca quş qanadlarını aç göy üzündə sərbəst ol",
+      "target": "Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol."
+    },
+    {
+      "id": "local-131-4",
+      "groupId": "gold-131",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch balacha qush qanadlarini ach goy uzunde sherbesht ol",
+      "target": "Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol."
+    },
+    {
+      "id": "local-131-5",
+      "groupId": "gold-131",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, baaca qus, qanadlarini ac. goy uzunde serbest ol.",
+      "target": "Uç, balaca quş, qanadlarını aç. Göy üzündə sərbəst ol."
+    },
+    {
+      "id": "local-132-1",
+      "groupId": "gold-132",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc gozel qus qanadlarini cirp goy uzunde yolunu tap",
+      "target": "Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap."
+    },
+    {
+      "id": "local-132-2",
+      "groupId": "gold-132",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, gozel qus, qanadlarini cirp. goy uzunde yolunu tap.",
+      "target": "Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap."
+    },
+    {
+      "id": "local-132-3",
+      "groupId": "gold-132",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç gözəl quş qanadlarını çırp göy üzündə yolunu tap",
+      "target": "Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap."
+    },
+    {
+      "id": "local-132-4",
+      "groupId": "gold-132",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch gozel qush qanadlarini chirp goy uzunde yolunu tap",
+      "target": "Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap."
+    },
+    {
+      "id": "local-132-5",
+      "groupId": "gold-132",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, gozel qus, qaadlarini cirp. goy uzunde yolunu tap.",
+      "target": "Uç, gözəl quş, qanadlarını çırp. Göy üzündə yolunu tap."
+    },
+    {
+      "id": "local-133-1",
+      "groupId": "gold-133",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc azad qus qanadlarini genis ac goy uzunde yuksel",
+      "target": "Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl."
+    },
+    {
+      "id": "local-133-2",
+      "groupId": "gold-133",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, azad qus, qanadlarini genis ac. goy uzunde yuksel.",
+      "target": "Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl."
+    },
+    {
+      "id": "local-133-3",
+      "groupId": "gold-133",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç azad quş qanadlarını geniş aç göy üzündə yüksəl",
+      "target": "Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl."
+    },
+    {
+      "id": "local-133-4",
+      "groupId": "gold-133",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch azad qush qanadlarini genish ach goy uzunde yukshel",
+      "target": "Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl."
+    },
+    {
+      "id": "local-133-5",
+      "groupId": "gold-133",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, azad qus, qaadlarini genis ac. goy uzunde yuksel.",
+      "target": "Uç, azad quş, qanadlarını geniş aç. Göy üzündə yüksəl."
+    },
+    {
+      "id": "local-134-1",
+      "groupId": "gold-134",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc ag qus qanadlarini terpet goy uzunde dovre vur",
+      "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur."
+    },
+    {
+      "id": "local-134-2",
+      "groupId": "gold-134",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, ag qus, qanadlarini terpet. goy uzunde dovre vur.",
+      "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur."
+    },
+    {
+      "id": "local-134-3",
+      "groupId": "gold-134",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç ağ quş qanadlarını tərpət göy üzündə dövrə vur",
+      "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur."
+    },
+    {
+      "id": "local-134-4",
+      "groupId": "gold-134",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch ag qush qanadlarini terpet goy uzunde dovre vur",
+      "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur."
+    },
+    {
+      "id": "local-134-5",
+      "groupId": "gold-134",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, ag qus, qaadlarini terpet. goy uzunde dovre vur.",
+      "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur."
+    },
+    {
+      "id": "local-135-1",
+      "groupId": "gold-135",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc cesur qus qanadlarini yavas cirp goy uzunde rahat ol",
+      "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol."
+    },
+    {
+      "id": "local-135-2",
+      "groupId": "gold-135",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, cesur qus, qanadlarini yavas cirp. goy uzunde rahat ol.",
+      "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol."
+    },
+    {
+      "id": "local-135-3",
+      "groupId": "gold-135",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç cəsur quş qanadlarını yavaş çırp göy üzündə rahat ol",
+      "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol."
+    },
+    {
+      "id": "local-135-4",
+      "groupId": "gold-135",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch cheshur qush qanadlarini yavash chirp goy uzunde rahat ol",
+      "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol."
+    },
+    {
+      "id": "local-135-5",
+      "groupId": "gold-135",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, cesur qus, qaadlarini yavas cirp. goy uzunde rahat ol.",
+      "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol."
+    },
+    {
+      "id": "local-136-1",
+      "groupId": "gold-136",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kicik qus qanadlarini aciq saxla goy uzunde irelile",
+      "target": "Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə."
+    },
+    {
+      "id": "local-136-2",
+      "groupId": "gold-136",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, kicik qus, qanadlarini aciq saxla. goy uzunde irelile.",
+      "target": "Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə."
+    },
+    {
+      "id": "local-136-3",
+      "groupId": "gold-136",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç kiçik quş qanadlarını açıq saxla göy üzündə irəlilə",
+      "target": "Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə."
+    },
+    {
+      "id": "local-136-4",
+      "groupId": "gold-136",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kichik qush qanadlarini achiq shaxla goy uzunde irelile",
+      "target": "Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə."
+    },
+    {
+      "id": "local-136-5",
+      "groupId": "gold-136",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, kicik qus, qaadlarini aciq saxla. goy uzunde irelile.",
+      "target": "Uç, kiçik quş, qanadlarını açıq saxla. Göy üzündə irəlilə."
+    },
+    {
+      "id": "local-137-1",
+      "groupId": "gold-137",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sevimli qus qanadlarini guclu cirp goy uzunde manee yoxdur",
+      "target": "Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur."
+    },
+    {
+      "id": "local-137-2",
+      "groupId": "gold-137",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, sevimli qus, qanadlarini guclu cirp. goy uzunde manee yoxdur.",
+      "target": "Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur."
+    },
+    {
+      "id": "local-137-3",
+      "groupId": "gold-137",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç sevimli quş qanadlarını güclü çırp göy üzündə maneə yoxdur",
+      "target": "Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur."
+    },
+    {
+      "id": "local-137-4",
+      "groupId": "gold-137",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shevimli qush qanadlarini guchlu chirp goy uzunde manee yoxdur",
+      "target": "Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur."
+    },
+    {
+      "id": "local-137-5",
+      "groupId": "gold-137",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, seimli qus, qanadlarini guclu cirp. goy uzunde manee yoxdur.",
+      "target": "Uç, sevimli quş, qanadlarını güclü çırp. Göy üzündə maneə yoxdur."
+    },
+    {
+      "id": "local-138-1",
+      "groupId": "gold-138",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc yorgun qus qanadlarini yeniden ac goy uzunde azadliq tap",
+      "target": "Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap."
+    },
+    {
+      "id": "local-138-2",
+      "groupId": "gold-138",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, yorgun qus, qanadlarini yeniden ac. goy uzunde azadliq tap.",
+      "target": "Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap."
+    },
+    {
+      "id": "local-138-3",
+      "groupId": "gold-138",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç yorğun quş qanadlarını yenidən aç göy üzündə azadlıq tap",
+      "target": "Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap."
+    },
+    {
+      "id": "local-138-4",
+      "groupId": "gold-138",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch yorgun qush qanadlarini yeniden ach goy uzunde azadliq tap",
+      "target": "Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap."
+    },
+    {
+      "id": "local-138-5",
+      "groupId": "gold-138",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, yogun qus, qanadlarini yeniden ac. goy uzunde azadliq tap.",
+      "target": "Uç, yorğun quş, qanadlarını yenidən aç. Göy üzündə azadlıq tap."
+    },
+    {
+      "id": "local-139-1",
+      "groupId": "gold-139",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc cevik qus qanadlarini hereket etdir goy uzunde yukseklik qazan",
+      "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan."
+    },
+    {
+      "id": "local-139-2",
+      "groupId": "gold-139",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, cevik qus, qanadlarini hereket etdir. goy uzunde yukseklik qazan.",
+      "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan."
+    },
+    {
+      "id": "local-139-3",
+      "groupId": "gold-139",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç çevik quş qanadlarını hərəkət etdir göy üzündə yüksəklik qazan",
+      "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan."
+    },
+    {
+      "id": "local-139-4",
+      "groupId": "gold-139",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch chevik qush qanadlarini hereket etdir goy uzunde yuksheklik qazan",
+      "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan."
+    },
+    {
+      "id": "local-139-5",
+      "groupId": "gold-139",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, cevik qus, qaadlarini hereket etdir. goy uzunde yukseklik qazan.",
+      "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan."
+    },
+    {
+      "id": "local-140-1",
+      "groupId": "gold-140",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc rengli qus qanadlarini genislendir goy uzunde serbest hereket et",
+      "target": "Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et."
+    },
+    {
+      "id": "local-140-2",
+      "groupId": "gold-140",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc, rengli qus, qanadlarini genislendir. goy uzunde serbest hereket et.",
+      "target": "Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et."
+    },
+    {
+      "id": "local-140-3",
+      "groupId": "gold-140",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "uç rəngli quş qanadlarını genişləndir göy üzündə sərbəst hərəkət et",
+      "target": "Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et."
+    },
+    {
+      "id": "local-140-4",
+      "groupId": "gold-140",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch rengli qush qanadlarini genishlendir goy uzunde sherbesht hereket et",
+      "target": "Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et."
+    },
+    {
+      "id": "local-140-5",
+      "groupId": "gold-140",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc, regli qus, qanadlarini genislendir. goy uzunde serbest hereket et.",
+      "target": "Uç, rəngli quş, qanadlarını genişləndir. Göy üzündə sərbəst hərəkət et."
+    },
+    {
+      "id": "local-141-1",
+      "groupId": "gold-141",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el barmaqlari soyuq havada usuyur elcek geyinmek lazimdir",
+      "target": "Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır."
+    },
+    {
+      "id": "local-141-2",
+      "groupId": "gold-141",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el barmaqlari soyuq havada usuyur. elcek geyinmek lazimdir.",
+      "target": "Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır."
+    },
+    {
+      "id": "local-141-3",
+      "groupId": "gold-141",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl barmaqları soyuq havada üşüyür əlcək geyinmək lazımdır",
+      "target": "Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır."
+    },
+    {
+      "id": "local-141-4",
+      "groupId": "gold-141",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el barmaqlari shoyuq havada ushuyur elchek geyinmek lazimdir",
+      "target": "Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır."
+    },
+    {
+      "id": "local-141-5",
+      "groupId": "gold-141",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bamaqlari soyuq havada usuyur. elcek geyinmek lazimdir.",
+      "target": "Əl barmaqları soyuq havada üşüyür. Əlcək geyinmək lazımdır."
+    },
+    {
+      "id": "local-142-1",
+      "groupId": "gold-142",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el bileyi mesq zamani zedelendi hekim istirahet tovsiye etdi",
+      "target": "Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi."
+    },
+    {
+      "id": "local-142-2",
+      "groupId": "gold-142",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el bileyi mesq zamani zedelendi. hekim istirahet tovsiye etdi.",
+      "target": "Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi."
+    },
+    {
+      "id": "local-142-3",
+      "groupId": "gold-142",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl biləyi məşq zamanı zədələndi həkim istirahət tövsiyə etdi",
+      "target": "Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi."
+    },
+    {
+      "id": "local-142-4",
+      "groupId": "gold-142",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el bileyi meshq zamani zedelendi hekim ishtirahet tovshiye etdi",
+      "target": "Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi."
+    },
+    {
+      "id": "local-142-5",
+      "groupId": "gold-142",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bieyi mesq zamani zedelendi. hekim istirahet tovsiye etdi.",
+      "target": "Əl biləyi məşq zamanı zədələndi. Həkim istirahət tövsiyə etdi."
+    },
+    {
+      "id": "local-143-1",
+      "groupId": "gold-143",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el derisi soyuq havada quruyur barmaqlari qorumaq vacibdir",
+      "target": "Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir."
+    },
+    {
+      "id": "local-143-2",
+      "groupId": "gold-143",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el derisi soyuq havada quruyur. barmaqlari qorumaq vacibdir.",
+      "target": "Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir."
+    },
+    {
+      "id": "local-143-3",
+      "groupId": "gold-143",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl dərisi soyuq havada quruyur barmaqları qorumaq vacibdir",
+      "target": "Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir."
+    },
+    {
+      "id": "local-143-4",
+      "groupId": "gold-143",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el derishi shoyuq havada quruyur barmaqlari qorumaq vachibdir",
+      "target": "Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir."
+    },
+    {
+      "id": "local-143-5",
+      "groupId": "gold-143",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el deisi soyuq havada quruyur. barmaqlari qorumaq vacibdir.",
+      "target": "Əl dərisi soyuq havada quruyur. Barmaqları qorumaq vacibdir."
+    },
+    {
+      "id": "local-144-1",
+      "groupId": "gold-144",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el barmaqlari kitabin sehifesini tuturdu bilek rahat veziyyetde idi",
+      "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi."
+    },
+    {
+      "id": "local-144-2",
+      "groupId": "gold-144",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el barmaqlari kitabin sehifesini tuturdu. bilek rahat veziyyetde idi.",
+      "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi."
+    },
+    {
+      "id": "local-144-3",
+      "groupId": "gold-144",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl barmaqları kitabın səhifəsini tuturdu bilək rahat vəziyyətdə idi",
+      "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi."
+    },
+    {
+      "id": "local-144-4",
+      "groupId": "gold-144",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el barmaqlari kitabin shehifeshini tuturdu bilek rahat veziyyetde idi",
+      "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi."
+    },
+    {
+      "id": "local-144-5",
+      "groupId": "gold-144",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bamaqlari kitabin sehifesini tuturdu. bilek rahat veziyyetde idi.",
+      "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi."
+    },
+    {
+      "id": "local-145-1",
+      "groupId": "gold-145",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el bileyi agir yuke gore agriyirdi barmaqlar da yorulmusdu",
+      "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu."
+    },
+    {
+      "id": "local-145-2",
+      "groupId": "gold-145",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el bileyi agir yuke gore agriyirdi. barmaqlar da yorulmusdu.",
+      "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu."
+    },
+    {
+      "id": "local-145-3",
+      "groupId": "gold-145",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl biləyi ağır yükə görə ağrıyırdı barmaqlar da yorulmuşdu",
+      "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu."
+    },
+    {
+      "id": "local-145-4",
+      "groupId": "gold-145",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el bileyi agir yuke gore agriyirdi barmaqlar da yorulmushdu",
+      "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu."
+    },
+    {
+      "id": "local-145-5",
+      "groupId": "gold-145",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bieyi agir yuke gore agriyirdi. barmaqlar da yorulmusdu.",
+      "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu."
+    },
+    {
+      "id": "local-146-1",
+      "groupId": "gold-146",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el derisi yuyulduqdan sonra temiz idi barmaqlar quruduldu",
+      "target": "Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu."
+    },
+    {
+      "id": "local-146-2",
+      "groupId": "gold-146",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el derisi yuyulduqdan sonra temiz idi. barmaqlar quruduldu.",
+      "target": "Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu."
+    },
+    {
+      "id": "local-146-3",
+      "groupId": "gold-146",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl dərisi yuyulduqdan sonra təmiz idi barmaqlar quruduldu",
+      "target": "Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu."
+    },
+    {
+      "id": "local-146-4",
+      "groupId": "gold-146",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el derishi yuyulduqdan shonra temiz idi barmaqlar quruduldu",
+      "target": "Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu."
+    },
+    {
+      "id": "local-146-5",
+      "groupId": "gold-146",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el deisi yuyulduqdan sonra temiz idi. barmaqlar quruduldu.",
+      "target": "Əl dərisi yuyulduqdan sonra təmiz idi. Barmaqlar quruduldu."
+    },
+    {
+      "id": "local-147-1",
+      "groupId": "gold-147",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el barmaqlari ince hereketler ede bilir bilek hereketi de vacibdir",
+      "target": "Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir."
+    },
+    {
+      "id": "local-147-2",
+      "groupId": "gold-147",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el barmaqlari ince hereketler ede bilir. bilek hereketi de vacibdir.",
+      "target": "Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir."
+    },
+    {
+      "id": "local-147-3",
+      "groupId": "gold-147",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl barmaqları incə hərəkətlər edə bilir bilək hərəkəti də vacibdir",
+      "target": "Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir."
+    },
+    {
+      "id": "local-147-4",
+      "groupId": "gold-147",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el barmaqlari inche hereketler ede bilir bilek hereketi de vachibdir",
+      "target": "Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir."
+    },
+    {
+      "id": "local-147-5",
+      "groupId": "gold-147",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bamaqlari ince hereketler ede bilir. bilek hereketi de vacibdir.",
+      "target": "Əl barmaqları incə hərəkətlər edə bilir. Bilək hərəkəti də vacibdir."
+    },
+    {
+      "id": "local-148-1",
+      "groupId": "gold-148",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el bileyi mesqden evvel isinmelidir barmaqlari da hereket etdirmek lazimdir",
+      "target": "Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır."
+    },
+    {
+      "id": "local-148-2",
+      "groupId": "gold-148",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el bileyi mesqden evvel isinmelidir. barmaqlari da hereket etdirmek lazimdir.",
+      "target": "Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır."
+    },
+    {
+      "id": "local-148-3",
+      "groupId": "gold-148",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl biləyi məşqdən əvvəl isinməlidir barmaqları da hərəkət etdirmək lazımdır",
+      "target": "Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır."
+    },
+    {
+      "id": "local-148-4",
+      "groupId": "gold-148",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el bileyi meshqden evvel ishinmelidir barmaqlari da hereket etdirmek lazimdir",
+      "target": "Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır."
+    },
+    {
+      "id": "local-148-5",
+      "groupId": "gold-148",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bieyi mesqden evvel isinmelidir. barmaqlari da hereket etdirmek lazimdir.",
+      "target": "Əl biləyi məşqdən əvvəl isinməlidir. Barmaqları da hərəkət etdirmək lazımdır."
+    },
+    {
+      "id": "local-149-1",
+      "groupId": "gold-149",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el derisi guclu gunesden qorunmalidir barmaqlara krem cekildi",
+      "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi."
+    },
+    {
+      "id": "local-149-2",
+      "groupId": "gold-149",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el derisi guclu gunesden qorunmalidir. barmaqlara krem cekildi.",
+      "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi."
+    },
+    {
+      "id": "local-149-3",
+      "groupId": "gold-149",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl dərisi güclü günəşdən qorunmalıdır barmaqlara krem çəkildi",
+      "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi."
+    },
+    {
+      "id": "local-149-4",
+      "groupId": "gold-149",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el derishi guchlu guneshden qorunmalidir barmaqlara krem chekildi",
+      "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi."
+    },
+    {
+      "id": "local-149-5",
+      "groupId": "gold-149",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el deisi guclu gunesden qorunmalidir. barmaqlara krem cekildi.",
+      "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi."
+    },
+    {
+      "id": "local-150-1",
+      "groupId": "gold-150",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el barmaqlari klaviaturada isleyirdi bilek rahat saxlanilirdi",
+      "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı."
+    },
+    {
+      "id": "local-150-2",
+      "groupId": "gold-150",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el barmaqlari klaviaturada isleyirdi. bilek rahat saxlanilirdi.",
+      "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı."
+    },
+    {
+      "id": "local-150-3",
+      "groupId": "gold-150",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "əl barmaqları klaviaturada işləyirdi bilək rahat saxlanılırdı",
+      "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı."
+    },
+    {
+      "id": "local-150-4",
+      "groupId": "gold-150",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el barmaqlari klaviaturada ishleyirdi bilek rahat shaxlanilirdi",
+      "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı."
+    },
+    {
+      "id": "local-150-5",
+      "groupId": "gold-150",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el bamaqlari klaviaturada isleyirdi. bilek rahat saxlanilirdi.",
+      "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı."
+    },
+    {
+      "id": "local-151-1",
+      "groupId": "gold-151",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el birliyi xalqin gucunu artirir kend camaati birlikde calisir",
+      "target": "El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır."
+    },
+    {
+      "id": "local-151-2",
+      "groupId": "gold-151",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el birliyi xalqin gucunu artirir. kend camaati birlikde calisir.",
+      "target": "El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır."
+    },
+    {
+      "id": "local-151-3",
+      "groupId": "gold-151",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el birliyi xalqın gücünü artırır kənd camaatı birlikdə çalışır",
+      "target": "El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır."
+    },
+    {
+      "id": "local-151-4",
+      "groupId": "gold-151",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el birliyi xalqin guchunu artirir kend chamaati birlikde chalishir",
+      "target": "El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır."
+    },
+    {
+      "id": "local-151-5",
+      "groupId": "gold-151",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el biliyi xalqin gucunu artirir. kend camaati birlikde calisir.",
+      "target": "El birliyi xalqın gücünü artırır. Kənd camaatı birlikdə çalışır."
+    },
+    {
+      "id": "local-152-1",
+      "groupId": "gold-152",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el adeti xalqin yaddasinda yasayir kend camaati onu qoruyur",
+      "target": "El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur."
+    },
+    {
+      "id": "local-152-2",
+      "groupId": "gold-152",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el adeti xalqin yaddasinda yasayir. kend camaati onu qoruyur.",
+      "target": "El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur."
+    },
+    {
+      "id": "local-152-3",
+      "groupId": "gold-152",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el adəti xalqın yaddaşında yaşayır kənd camaatı onu qoruyur",
+      "target": "El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur."
+    },
+    {
+      "id": "local-152-4",
+      "groupId": "gold-152",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el adeti xalqin yaddashinda yashayir kend chamaati onu qoruyur",
+      "target": "El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur."
+    },
+    {
+      "id": "local-152-5",
+      "groupId": "gold-152",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el adeti xaqin yaddasinda yasayir. kend camaati onu qoruyur.",
+      "target": "El adəti xalqın yaddaşında yaşayır. Kənd camaatı onu qoruyur."
+    },
+    {
+      "id": "local-153-1",
+      "groupId": "gold-153",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el senliyi xalqin sevincini ifade edir kend camaati meydana toplasdi",
+      "target": "El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı."
+    },
+    {
+      "id": "local-153-2",
+      "groupId": "gold-153",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el senliyi xalqin sevincini ifade edir. kend camaati meydana toplasdi.",
+      "target": "El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı."
+    },
+    {
+      "id": "local-153-3",
+      "groupId": "gold-153",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el şənliyi xalqın sevincini ifadə edir kənd camaatı meydana toplaşdı",
+      "target": "El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı."
+    },
+    {
+      "id": "local-153-4",
+      "groupId": "gold-153",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el shenliyi xalqin shevinchini ifade edir kend chamaati meydana toplashdi",
+      "target": "El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı."
+    },
+    {
+      "id": "local-153-5",
+      "groupId": "gold-153",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el seliyi xalqin sevincini ifade edir. kend camaati meydana toplasdi.",
+      "target": "El şənliyi xalqın sevincini ifadə edir. Kənd camaatı meydana toplaşdı."
+    },
+    {
+      "id": "local-154-1",
+      "groupId": "gold-154",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el birliyi xalqin cetin gunde dayagidir kend camaati komek etdi",
+      "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi."
+    },
+    {
+      "id": "local-154-2",
+      "groupId": "gold-154",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el birliyi xalqin cetin gunde dayagidir. kend camaati komek etdi.",
+      "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi."
+    },
+    {
+      "id": "local-154-3",
+      "groupId": "gold-154",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el birliyi xalqın çətin gündə dayağıdır kənd camaatı kömək etdi",
+      "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi."
+    },
+    {
+      "id": "local-154-4",
+      "groupId": "gold-154",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el birliyi xalqin chetin gunde dayagidir kend chamaati komek etdi",
+      "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi."
+    },
+    {
+      "id": "local-154-5",
+      "groupId": "gold-154",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el biliyi xalqin cetin gunde dayagidir. kend camaati komek etdi.",
+      "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi."
+    },
+    {
+      "id": "local-155-1",
+      "groupId": "gold-155",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el adeti xalqin tarixinden gelir kend camaati bayrama hazirlasir",
+      "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır."
+    },
+    {
+      "id": "local-155-2",
+      "groupId": "gold-155",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el adeti xalqin tarixinden gelir. kend camaati bayrama hazirlasir.",
+      "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır."
+    },
+    {
+      "id": "local-155-3",
+      "groupId": "gold-155",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el adəti xalqın tarixindən gəlir kənd camaatı bayrama hazırlaşır",
+      "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır."
+    },
+    {
+      "id": "local-155-4",
+      "groupId": "gold-155",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el adeti xalqin tarixinden gelir kend chamaati bayrama hazirlashir",
+      "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır."
+    },
+    {
+      "id": "local-155-5",
+      "groupId": "gold-155",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el adeti xaqin tarixinden gelir. kend camaati bayrama hazirlasir.",
+      "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır."
+    },
+    {
+      "id": "local-156-1",
+      "groupId": "gold-156",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el senliyi xalqin medeni irsidir kend camaati musiqi dinledi",
+      "target": "El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi."
+    },
+    {
+      "id": "local-156-2",
+      "groupId": "gold-156",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el senliyi xalqin medeni irsidir. kend camaati musiqi dinledi.",
+      "target": "El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi."
+    },
+    {
+      "id": "local-156-3",
+      "groupId": "gold-156",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el şənliyi xalqın mədəni irsidir kənd camaatı musiqi dinlədi",
+      "target": "El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi."
+    },
+    {
+      "id": "local-156-4",
+      "groupId": "gold-156",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el shenliyi xalqin medeni irshidir kend chamaati mushiqi dinledi",
+      "target": "El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi."
+    },
+    {
+      "id": "local-156-5",
+      "groupId": "gold-156",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el seliyi xalqin medeni irsidir. kend camaati musiqi dinledi.",
+      "target": "El şənliyi xalqın mədəni irsidir. Kənd camaatı musiqi dinlədi."
+    },
+    {
+      "id": "local-157-1",
+      "groupId": "gold-157",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el birliyi xalqin heyatinda vacibdir kend camaati qerari birlikde verdi",
+      "target": "El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi."
+    },
+    {
+      "id": "local-157-2",
+      "groupId": "gold-157",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el birliyi xalqin heyatinda vacibdir. kend camaati qerari birlikde verdi.",
+      "target": "El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi."
+    },
+    {
+      "id": "local-157-3",
+      "groupId": "gold-157",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el birliyi xalqın həyatında vacibdir kənd camaatı qərarı birlikdə verdi",
+      "target": "El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi."
+    },
+    {
+      "id": "local-157-4",
+      "groupId": "gold-157",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el birliyi xalqin heyatinda vachibdir kend chamaati qerari birlikde verdi",
+      "target": "El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi."
+    },
+    {
+      "id": "local-157-5",
+      "groupId": "gold-157",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el biliyi xalqin heyatinda vacibdir. kend camaati qerari birlikde verdi.",
+      "target": "El birliyi xalqın həyatında vacibdir. Kənd camaatı qərarı birlikdə verdi."
+    },
+    {
+      "id": "local-158-1",
+      "groupId": "gold-158",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el adeti xalqin enenesini yasadir kend camaati bunu usaqlara oyredir",
+      "target": "El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir."
+    },
+    {
+      "id": "local-158-2",
+      "groupId": "gold-158",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el adeti xalqin enenesini yasadir. kend camaati bunu usaqlara oyredir.",
+      "target": "El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir."
+    },
+    {
+      "id": "local-158-3",
+      "groupId": "gold-158",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el adəti xalqın ənənəsini yaşadır kənd camaatı bunu uşaqlara öyrədir",
+      "target": "El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir."
+    },
+    {
+      "id": "local-158-4",
+      "groupId": "gold-158",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el adeti xalqin eneneshini yashadir kend chamaati bunu ushaqlara oyredir",
+      "target": "El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir."
+    },
+    {
+      "id": "local-158-5",
+      "groupId": "gold-158",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el adeti xaqin enenesini yasadir. kend camaati bunu usaqlara oyredir.",
+      "target": "El adəti xalqın ənənəsini yaşadır. Kənd camaatı bunu uşaqlara öyrədir."
+    },
+    {
+      "id": "local-159-1",
+      "groupId": "gold-159",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el senliyi xalqin yaddasinda qaldi kend camaati qonaqlari qarsiladi",
+      "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı."
+    },
+    {
+      "id": "local-159-2",
+      "groupId": "gold-159",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el senliyi xalqin yaddasinda qaldi. kend camaati qonaqlari qarsiladi.",
+      "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı."
+    },
+    {
+      "id": "local-159-3",
+      "groupId": "gold-159",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el şənliyi xalqın yaddaşında qaldı kənd camaatı qonaqları qarşıladı",
+      "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı."
+    },
+    {
+      "id": "local-159-4",
+      "groupId": "gold-159",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el shenliyi xalqin yaddashinda qaldi kend chamaati qonaqlari qarshiladi",
+      "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı."
+    },
+    {
+      "id": "local-159-5",
+      "groupId": "gold-159",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el seliyi xalqin yaddasinda qaldi. kend camaati qonaqlari qarsiladi.",
+      "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı."
+    },
+    {
+      "id": "local-160-1",
+      "groupId": "gold-160",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "el birliyi xalqin qarsiliqli yardimina esaslanir kend camaati ise basladi",
+      "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı."
+    },
+    {
+      "id": "local-160-2",
+      "groupId": "gold-160",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "el birliyi xalqin qarsiliqli yardimina esaslanir. kend camaati ise basladi.",
+      "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı."
+    },
+    {
+      "id": "local-160-3",
+      "groupId": "gold-160",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "el birliyi xalqın qarşılıqlı yardımına əsaslanır kənd camaatı işə başladı",
+      "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı."
+    },
+    {
+      "id": "local-160-4",
+      "groupId": "gold-160",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "el birliyi xalqin qarshiliqli yardimina eshashlanir kend chamaati ishe bashladi",
+      "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı."
+    },
+    {
+      "id": "local-160-5",
+      "groupId": "gold-160",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "el biliyi xalqin qarsiliqli yardimina esaslanir. kend camaati ise basladi.",
+      "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı."
+    },
+    {
+      "id": "local-161-1",
+      "groupId": "gold-161",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et yemeyi bisirmek ucun qazana qoyuldu metbexde hazirliq basladi",
+      "target": "Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı."
+    },
+    {
+      "id": "local-161-2",
+      "groupId": "gold-161",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et yemeyi bisirmek ucun qazana qoyuldu. metbexde hazirliq basladi.",
+      "target": "Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı."
+    },
+    {
+      "id": "local-161-3",
+      "groupId": "gold-161",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət yeməyi bişirmək üçün qazana qoyuldu mətbəxdə hazırlıq başladı",
+      "target": "Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı."
+    },
+    {
+      "id": "local-161-4",
+      "groupId": "gold-161",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et yemeyi bishirmek uchun qazana qoyuldu metbexde hazirliq bashladi",
+      "target": "Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı."
+    },
+    {
+      "id": "local-161-5",
+      "groupId": "gold-161",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et yeeyi bisirmek ucun qazana qoyuldu. metbexde hazirliq basladi.",
+      "target": "Ət yeməyi bişirmək üçün qazana qoyuldu. Mətbəxdə hazırlıq başladı."
+    },
+    {
+      "id": "local-162-1",
+      "groupId": "gold-162",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et mehsulu soyuducuda saxlanilmalidir yemeyi vaxtinda hazirlamaq lazimdir",
+      "target": "Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır."
+    },
+    {
+      "id": "local-162-2",
+      "groupId": "gold-162",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et mehsulu soyuducuda saxlanilmalidir. yemeyi vaxtinda hazirlamaq lazimdir.",
+      "target": "Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır."
+    },
+    {
+      "id": "local-162-3",
+      "groupId": "gold-162",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət məhsulu soyuducuda saxlanılmalıdır yeməyi vaxtında hazırlamaq lazımdır",
+      "target": "Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır."
+    },
+    {
+      "id": "local-162-4",
+      "groupId": "gold-162",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et mehshulu shoyuduchuda shaxlanilmalidir yemeyi vaxtinda hazirlamaq lazimdir",
+      "target": "Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır."
+    },
+    {
+      "id": "local-162-5",
+      "groupId": "gold-162",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et mesulu soyuducuda saxlanilmalidir. yemeyi vaxtinda hazirlamaq lazimdir.",
+      "target": "Ət məhsulu soyuducuda saxlanılmalıdır. Yeməyi vaxtında hazırlamaq lazımdır."
+    },
+    {
+      "id": "local-163-1",
+      "groupId": "gold-163",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et yemeyi metbexde bisirilir qazana terevez de elave olundu",
+      "target": "Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu."
+    },
+    {
+      "id": "local-163-2",
+      "groupId": "gold-163",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et yemeyi metbexde bisirilir. qazana terevez de elave olundu.",
+      "target": "Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu."
+    },
+    {
+      "id": "local-163-3",
+      "groupId": "gold-163",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət yeməyi mətbəxdə bişirilir qazana tərəvəz də əlavə olundu",
+      "target": "Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu."
+    },
+    {
+      "id": "local-163-4",
+      "groupId": "gold-163",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et yemeyi metbexde bishirilir qazana terevez de elave olundu",
+      "target": "Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu."
+    },
+    {
+      "id": "local-163-5",
+      "groupId": "gold-163",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et yeeyi metbexde bisirilir. qazana terevez de elave olundu.",
+      "target": "Ət yeməyi mətbəxdə bişirilir. Qazana tərəvəz də əlavə olundu."
+    },
+    {
+      "id": "local-164-1",
+      "groupId": "gold-164",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et mehsulu bazardan teze alindi metbexde soyuducuya qoyuldu",
+      "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu."
+    },
+    {
+      "id": "local-164-2",
+      "groupId": "gold-164",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et mehsulu bazardan teze alindi. metbexde soyuducuya qoyuldu.",
+      "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu."
+    },
+    {
+      "id": "local-164-3",
+      "groupId": "gold-164",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu",
+      "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu."
+    },
+    {
+      "id": "local-164-4",
+      "groupId": "gold-164",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et mehshulu bazardan teze alindi metbexde shoyuduchuya qoyuldu",
+      "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu."
+    },
+    {
+      "id": "local-164-5",
+      "groupId": "gold-164",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et mesulu bazardan teze alindi. metbexde soyuducuya qoyuldu.",
+      "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu."
+    },
+    {
+      "id": "local-165-1",
+      "groupId": "gold-165",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et yemeyi qonaqlar ucun hazirlanir qazanda su qaynayirdi",
+      "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı."
+    },
+    {
+      "id": "local-165-2",
+      "groupId": "gold-165",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et yemeyi qonaqlar ucun hazirlanir. qazanda su qaynayirdi.",
+      "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı."
+    },
+    {
+      "id": "local-165-3",
+      "groupId": "gold-165",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət yeməyi qonaqlar üçün hazırlanır qazanda su qaynayırdı",
+      "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı."
+    },
+    {
+      "id": "local-165-4",
+      "groupId": "gold-165",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et yemeyi qonaqlar uchun hazirlanir qazanda shu qaynayirdi",
+      "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı."
+    },
+    {
+      "id": "local-165-5",
+      "groupId": "gold-165",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et yeeyi qonaqlar ucun hazirlanir. qazanda su qaynayirdi.",
+      "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı."
+    },
+    {
+      "id": "local-166-1",
+      "groupId": "gold-166",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et mehsulu duzgun temperaturda qorunmalidir yemeyi hazirlayan bunu yoxladi",
+      "target": "Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı."
+    },
+    {
+      "id": "local-166-2",
+      "groupId": "gold-166",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et mehsulu duzgun temperaturda qorunmalidir. yemeyi hazirlayan bunu yoxladi.",
+      "target": "Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı."
+    },
+    {
+      "id": "local-166-3",
+      "groupId": "gold-166",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət məhsulu düzgün temperaturda qorunmalıdır yeməyi hazırlayan bunu yoxladı",
+      "target": "Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı."
+    },
+    {
+      "id": "local-166-4",
+      "groupId": "gold-166",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et mehshulu duzgun temperaturda qorunmalidir yemeyi hazirlayan bunu yoxladi",
+      "target": "Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı."
+    },
+    {
+      "id": "local-166-5",
+      "groupId": "gold-166",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et mesulu duzgun temperaturda qorunmalidir. yemeyi hazirlayan bunu yoxladi.",
+      "target": "Ət məhsulu düzgün temperaturda qorunmalıdır. Yeməyi hazırlayan bunu yoxladı."
+    },
+    {
+      "id": "local-167-1",
+      "groupId": "gold-167",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et yemeyi nahar ucun bisirildi metbexde sufre acildi",
+      "target": "Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı."
+    },
+    {
+      "id": "local-167-2",
+      "groupId": "gold-167",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et yemeyi nahar ucun bisirildi. metbexde sufre acildi.",
+      "target": "Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı."
+    },
+    {
+      "id": "local-167-3",
+      "groupId": "gold-167",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət yeməyi nahar üçün bişirildi mətbəxdə süfrə açıldı",
+      "target": "Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı."
+    },
+    {
+      "id": "local-167-4",
+      "groupId": "gold-167",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et yemeyi nahar uchun bishirildi metbexde shufre achildi",
+      "target": "Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı."
+    },
+    {
+      "id": "local-167-5",
+      "groupId": "gold-167",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et yeeyi nahar ucun bisirildi. metbexde sufre acildi.",
+      "target": "Ət yeməyi nahar üçün bişirildi. Mətbəxdə süfrə açıldı."
+    },
+    {
+      "id": "local-168-1",
+      "groupId": "gold-168",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et mehsulu qazana dogranaraq elave edildi yemeyi bisirmek vaxt aldi",
+      "target": "Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı."
+    },
+    {
+      "id": "local-168-2",
+      "groupId": "gold-168",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et mehsulu qazana dogranaraq elave edildi. yemeyi bisirmek vaxt aldi.",
+      "target": "Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı."
+    },
+    {
+      "id": "local-168-3",
+      "groupId": "gold-168",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət məhsulu qazana doğranaraq əlavə edildi yeməyi bişirmək vaxt aldı",
+      "target": "Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı."
+    },
+    {
+      "id": "local-168-4",
+      "groupId": "gold-168",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et mehshulu qazana dogranaraq elave edildi yemeyi bishirmek vaxt aldi",
+      "target": "Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı."
+    },
+    {
+      "id": "local-168-5",
+      "groupId": "gold-168",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et mesulu qazana dogranaraq elave edildi. yemeyi bisirmek vaxt aldi.",
+      "target": "Ət məhsulu qazana doğranaraq əlavə edildi. Yeməyi bişirmək vaxt aldı."
+    },
+    {
+      "id": "local-169-1",
+      "groupId": "gold-169",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et yemeyi terevezle birlikde hazirlanib metbexden xos qoxu gelirdi",
+      "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi."
+    },
+    {
+      "id": "local-169-2",
+      "groupId": "gold-169",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et yemeyi terevezle birlikde hazirlanib. metbexden xos qoxu gelirdi.",
+      "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi."
+    },
+    {
+      "id": "local-169-3",
+      "groupId": "gold-169",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət yeməyi tərəvəzlə birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi",
+      "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi."
+    },
+    {
+      "id": "local-169-4",
+      "groupId": "gold-169",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et yemeyi terevezle birlikde hazirlanib metbexden xosh qoxu gelirdi",
+      "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi."
+    },
+    {
+      "id": "local-169-5",
+      "groupId": "gold-169",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et yeeyi terevezle birlikde hazirlanib. metbexden xos qoxu gelirdi.",
+      "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi."
+    },
+    {
+      "id": "local-170-1",
+      "groupId": "gold-170",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "et mehsulu soyuducudan cixarildi qazana yag elave edildi",
+      "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi."
+    },
+    {
+      "id": "local-170-2",
+      "groupId": "gold-170",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "et mehsulu soyuducudan cixarildi. qazana yag elave edildi.",
+      "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi."
+    },
+    {
+      "id": "local-170-3",
+      "groupId": "gold-170",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "ət məhsulu soyuducudan çıxarıldı qazana yağ əlavə edildi",
+      "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi."
+    },
+    {
+      "id": "local-170-4",
+      "groupId": "gold-170",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "et mehshulu shoyuduchudan chixarildi qazana yag elave edildi",
+      "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi."
+    },
+    {
+      "id": "local-170-5",
+      "groupId": "gold-170",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "et mesulu soyuducudan cixarildi. qazana yag elave edildi.",
+      "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi."
+    },
+    {
+      "id": "local-171-1",
+      "groupId": "gold-171",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu isi diqqetle et tapsirigi vaxtinda tamamla is planina emel etmek vacibdir",
+      "target": "Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir."
+    },
+    {
+      "id": "local-171-2",
+      "groupId": "gold-171",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu isi diqqetle et, tapsirigi vaxtinda tamamla. is planina emel etmek vacibdir.",
+      "target": "Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir."
+    },
+    {
+      "id": "local-171-3",
+      "groupId": "gold-171",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu işi diqqətlə et tapşırığı vaxtında tamamla iş planına əməl etmək vacibdir",
+      "target": "Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir."
+    },
+    {
+      "id": "local-171-4",
+      "groupId": "gold-171",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu ishi diqqetle et tapshirigi vaxtinda tamamla ish planina emel etmek vachibdir",
+      "target": "Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir."
+    },
+    {
+      "id": "local-171-5",
+      "groupId": "gold-171",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu isi diqetle et, tapsirigi vaxtinda tamamla. is planina emel etmek vacibdir.",
+      "target": "Bu işi diqqətlə et, tapşırığı vaxtında tamamla. İş planına əməl etmək vacibdir."
+    },
+    {
+      "id": "local-172-1",
+      "groupId": "gold-172",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "yoxlamani bu gun et tapsirigi sonraya saxlama is vaxtini duzgun bol",
+      "target": "Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl."
+    },
+    {
+      "id": "local-172-2",
+      "groupId": "gold-172",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "yoxlamani bu gun et, tapsirigi sonraya saxlama. is vaxtini duzgun bol.",
+      "target": "Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl."
+    },
+    {
+      "id": "local-172-3",
+      "groupId": "gold-172",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "yoxlamanı bu gün et tapşırığı sonraya saxlama iş vaxtını düzgün böl",
+      "target": "Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl."
+    },
+    {
+      "id": "local-172-4",
+      "groupId": "gold-172",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "yoxlamani bu gun et tapshirigi shonraya shaxlama ish vaxtini duzgun bol",
+      "target": "Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl."
+    },
+    {
+      "id": "local-172-5",
+      "groupId": "gold-172",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "yoxlamani bu gun et, tasirigi sonraya saxlama. is vaxtini duzgun bol.",
+      "target": "Yoxlamanı bu gün et, tapşırığı sonraya saxlama. İş vaxtını düzgün böl."
+    },
+    {
+      "id": "local-173-1",
+      "groupId": "gold-173",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "muracieti qeydiyyata al ve bunu bu gun et tapsirigi tamamlayanda melumat ver",
+      "target": "Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver."
+    },
+    {
+      "id": "local-173-2",
+      "groupId": "gold-173",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "muracieti qeydiyyata al ve bunu bu gun et. tapsirigi tamamlayanda melumat ver.",
+      "target": "Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver."
+    },
+    {
+      "id": "local-173-3",
+      "groupId": "gold-173",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "müraciəti qeydiyyata al və bunu bu gün et tapşırığı tamamlayanda məlumat ver",
+      "target": "Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver."
+    },
+    {
+      "id": "local-173-4",
+      "groupId": "gold-173",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "murachieti qeydiyyata al ve bunu bu gun et tapshirigi tamamlayanda melumat ver",
+      "target": "Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver."
+    },
+    {
+      "id": "local-173-5",
+      "groupId": "gold-173",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "muracieti qediyyata al ve bunu bu gun et. tapsirigi tamamlayanda melumat ver.",
+      "target": "Müraciəti qeydiyyata al və bunu bu gün et. Tapşırığı tamamlayanda məlumat ver."
+    },
+    {
+      "id": "local-174-1",
+      "groupId": "gold-174",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu isi plan uzre et tapsirigi diqqetle oxu is vaxti qaydalara emel olunmalidir",
+      "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır."
+    },
+    {
+      "id": "local-174-2",
+      "groupId": "gold-174",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu isi plan uzre et, tapsirigi diqqetle oxu. is vaxti qaydalara emel olunmalidir.",
+      "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır."
+    },
+    {
+      "id": "local-174-3",
+      "groupId": "gold-174",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalıdır",
+      "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır."
+    },
+    {
+      "id": "local-174-4",
+      "groupId": "gold-174",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu ishi plan uzre et tapshirigi diqqetle oxu ish vaxti qaydalara emel olunmalidir",
+      "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır."
+    },
+    {
+      "id": "local-174-5",
+      "groupId": "gold-174",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu isi plan uzre et, tasirigi diqqetle oxu. is vaxti qaydalara emel olunmalidir.",
+      "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır."
+    },
+    {
+      "id": "local-175-1",
+      "groupId": "gold-175",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "yoxlamani yeniden et tapsirigi duzgun yerine yetir isin neticesini saxla",
+      "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla."
+    },
+    {
+      "id": "local-175-2",
+      "groupId": "gold-175",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "yoxlamani yeniden et, tapsirigi duzgun yerine yetir. isin neticesini saxla.",
+      "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla."
+    },
+    {
+      "id": "local-175-3",
+      "groupId": "gold-175",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "yoxlamanı yenidən et tapşırığı düzgün yerinə yetir işin nəticəsini saxla",
+      "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla."
+    },
+    {
+      "id": "local-175-4",
+      "groupId": "gold-175",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "yoxlamani yeniden et tapshirigi duzgun yerine yetir ishin neticheshini shaxla",
+      "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla."
+    },
+    {
+      "id": "local-175-5",
+      "groupId": "gold-175",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "yoxlamani yeiden et, tapsirigi duzgun yerine yetir. isin neticesini saxla.",
+      "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla."
+    },
+    {
+      "id": "local-176-1",
+      "groupId": "gold-176",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu isi vaxtinda et tapsirigi gecikdirme is planini nezerden kecir",
+      "target": "Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir."
+    },
+    {
+      "id": "local-176-2",
+      "groupId": "gold-176",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu isi vaxtinda et, tapsirigi gecikdirme. is planini nezerden kecir.",
+      "target": "Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir."
+    },
+    {
+      "id": "local-176-3",
+      "groupId": "gold-176",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu işi vaxtında et tapşırığı gecikdirmə iş planını nəzərdən keçir",
+      "target": "Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir."
+    },
+    {
+      "id": "local-176-4",
+      "groupId": "gold-176",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu ishi vaxtinda et tapshirigi gechikdirme ish planini nezerden kechir",
+      "target": "Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir."
+    },
+    {
+      "id": "local-176-5",
+      "groupId": "gold-176",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu isi vatinda et, tapsirigi gecikdirme. is planini nezerden kecir.",
+      "target": "Bu işi vaxtında et, tapşırığı gecikdirmə. İş planını nəzərdən keçir."
+    },
+    {
+      "id": "local-177-1",
+      "groupId": "gold-177",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "yoxlamani diqqetle et tapsirigi bitirende xeber ver isin neticesi vacibdir",
+      "target": "Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir."
+    },
+    {
+      "id": "local-177-2",
+      "groupId": "gold-177",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "yoxlamani diqqetle et, tapsirigi bitirende xeber ver. isin neticesi vacibdir.",
+      "target": "Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir."
+    },
+    {
+      "id": "local-177-3",
+      "groupId": "gold-177",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "yoxlamanı diqqətlə et tapşırığı bitirəndə xəbər ver işin nəticəsi vacibdir",
+      "target": "Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir."
+    },
+    {
+      "id": "local-177-4",
+      "groupId": "gold-177",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "yoxlamani diqqetle et tapshirigi bitirende xeber ver ishin neticheshi vachibdir",
+      "target": "Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir."
+    },
+    {
+      "id": "local-177-5",
+      "groupId": "gold-177",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "yoxlamani diqetle et, tapsirigi bitirende xeber ver. isin neticesi vacibdir.",
+      "target": "Yoxlamanı diqqətlə et, tapşırığı bitirəndə xəbər ver. İşin nəticəsi vacibdir."
+    },
+    {
+      "id": "local-178-1",
+      "groupId": "gold-178",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu isi komanda ile et tapsirigi birlikde tamamla is bolgusunu razilasdir",
+      "target": "Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır."
+    },
+    {
+      "id": "local-178-2",
+      "groupId": "gold-178",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu isi komanda ile et, tapsirigi birlikde tamamla. is bolgusunu razilasdir.",
+      "target": "Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır."
+    },
+    {
+      "id": "local-178-3",
+      "groupId": "gold-178",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu işi komanda ilə et tapşırığı birlikdə tamamla iş bölgüsünü razılaşdır",
+      "target": "Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır."
+    },
+    {
+      "id": "local-178-4",
+      "groupId": "gold-178",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu ishi komanda ile et tapshirigi birlikde tamamla ish bolgushunu razilashdir",
+      "target": "Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır."
+    },
+    {
+      "id": "local-178-5",
+      "groupId": "gold-178",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu isi koanda ile et, tapsirigi birlikde tamamla. is bolgusunu razilasdir.",
+      "target": "Bu işi komanda ilə et, tapşırığı birlikdə tamamla. İş bölgüsünü razılaşdır."
+    },
+    {
+      "id": "local-179-1",
+      "groupId": "gold-179",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "yoxlamani plan uzre et tapsirigi ardicilliqla hazirla is qaydalarini yadda saxla",
+      "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla."
+    },
+    {
+      "id": "local-179-2",
+      "groupId": "gold-179",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "yoxlamani plan uzre et, tapsirigi ardicilliqla hazirla. is qaydalarini yadda saxla.",
+      "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla."
+    },
+    {
+      "id": "local-179-3",
+      "groupId": "gold-179",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla",
+      "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla."
+    },
+    {
+      "id": "local-179-4",
+      "groupId": "gold-179",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "yoxlamani plan uzre et tapshirigi ardichilliqla hazirla ish qaydalarini yadda shaxla",
+      "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla."
+    },
+    {
+      "id": "local-179-5",
+      "groupId": "gold-179",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "yoxlamani plan uzre et, tasirigi ardicilliqla hazirla. is qaydalarini yadda saxla.",
+      "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla."
+    },
+    {
+      "id": "local-180-1",
+      "groupId": "gold-180",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "bu isi yeniden et tapsirigi evvelce yoxla isin keyfiyyetine diqqet goster",
+      "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər."
+    },
+    {
+      "id": "local-180-2",
+      "groupId": "gold-180",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "bu isi yeniden et, tapsirigi evvelce yoxla. isin keyfiyyetine diqqet goster.",
+      "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər."
+    },
+    {
+      "id": "local-180-3",
+      "groupId": "gold-180",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "bu işi yenidən et tapşırığı əvvəlcə yoxla işin keyfiyyətinə diqqət göstər",
+      "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər."
+    },
+    {
+      "id": "local-180-4",
+      "groupId": "gold-180",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "bu ishi yeniden et tapshirigi evvelche yoxla ishin keyfiyyetine diqqet goshter",
+      "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər."
+    },
+    {
+      "id": "local-180-5",
+      "groupId": "gold-180",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "bu isi yeiden et, tapsirigi evvelce yoxla. isin keyfiyyetine diqqet goster.",
+      "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər."
+    },
+    {
+      "id": "local-181-1",
+      "groupId": "gold-181",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi parklari ve binalari temir etdirir sakinlerin reyi dinlenilir",
+      "target": "Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir."
+    },
+    {
+      "id": "local-181-2",
+      "groupId": "gold-181",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi parklari ve binalari temir etdirir. sakinlerin reyi dinlenilir.",
+      "target": "Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir."
+    },
+    {
+      "id": "local-181-3",
+      "groupId": "gold-181",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi parkları və binaları təmir etdirir sakinlərin rəyi dinlənilir",
+      "target": "Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir."
+    },
+    {
+      "id": "local-181-4",
+      "groupId": "gold-181",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi parklari ve binalari temir etdirir shakinlerin reyi dinlenilir",
+      "target": "Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir."
+    },
+    {
+      "id": "local-181-5",
+      "groupId": "gold-181",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi parklari ve binalari temir etdirir. sakinlerin reyi dinlenilir.",
+      "target": "Şəhər bələdiyyəsi parkları və binaları təmir etdirir. Sakinlərin rəyi dinlənilir."
+    },
+    {
+      "id": "local-182-1",
+      "groupId": "gold-182",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher binalari parklarin yaninda yerlesir belediyye erazini yoxlayir",
+      "target": "Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır."
+    },
+    {
+      "id": "local-182-2",
+      "groupId": "gold-182",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher binalari parklarin yaninda yerlesir. belediyye erazini yoxlayir.",
+      "target": "Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır."
+    },
+    {
+      "id": "local-182-3",
+      "groupId": "gold-182",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər binaları parkların yanında yerləşir bələdiyyə ərazini yoxlayır",
+      "target": "Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır."
+    },
+    {
+      "id": "local-182-4",
+      "groupId": "gold-182",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher binalari parklarin yaninda yerleshir belediyye erazini yoxlayir",
+      "target": "Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır."
+    },
+    {
+      "id": "local-182-5",
+      "groupId": "gold-182",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher bialari parklarin yaninda yerlesir. belediyye erazini yoxlayir.",
+      "target": "Şəhər binaları parkların yanında yerləşir. Bələdiyyə ərazini yoxlayır."
+    },
+    {
+      "id": "local-183-1",
+      "groupId": "gold-183",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher parklari belediyyenin diqqet merkezindedir binalarin veziyyeti de arasdirilir",
+      "target": "Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır."
+    },
+    {
+      "id": "local-183-2",
+      "groupId": "gold-183",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher parklari belediyyenin diqqet merkezindedir. binalarin veziyyeti de arasdirilir.",
+      "target": "Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır."
+    },
+    {
+      "id": "local-183-3",
+      "groupId": "gold-183",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər parkları bələdiyyənin diqqət mərkəzindədir binaların vəziyyəti də araşdırılır",
+      "target": "Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır."
+    },
+    {
+      "id": "local-183-4",
+      "groupId": "gold-183",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher parklari belediyyenin diqqet merkezindedir binalarin veziyyeti de arashdirilir",
+      "target": "Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır."
+    },
+    {
+      "id": "local-183-5",
+      "groupId": "gold-183",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher paklari belediyyenin diqqet merkezindedir. binalarin veziyyeti de arasdirilir.",
+      "target": "Şəhər parkları bələdiyyənin diqqət mərkəzindədir. Binaların vəziyyəti də araşdırılır."
+    },
+    {
+      "id": "local-184-1",
+      "groupId": "gold-184",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi parklarin temizliyini yoxladi binalar ucun ayrica plan hazirladi",
+      "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı."
+    },
+    {
+      "id": "local-184-2",
+      "groupId": "gold-184",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi parklarin temizliyini yoxladi. binalar ucun ayrica plan hazirladi.",
+      "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı."
+    },
+    {
+      "id": "local-184-3",
+      "groupId": "gold-184",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi parkların təmizliyini yoxladı binalar üçün ayrıca plan hazırladı",
+      "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı."
+    },
+    {
+      "id": "local-184-4",
+      "groupId": "gold-184",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi parklarin temizliyini yoxladi binalar uchun ayricha plan hazirladi",
+      "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı."
+    },
+    {
+      "id": "local-184-5",
+      "groupId": "gold-184",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi parklarin temizliyini yoxladi. binalar ucun ayrica plan hazirladi.",
+      "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı."
+    },
+    {
+      "id": "local-185-1",
+      "groupId": "gold-185",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher binalari parklarla birlikde xeritede gosterilir belediyye unvanlari deqiqlesdirir",
+      "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir."
+    },
+    {
+      "id": "local-185-2",
+      "groupId": "gold-185",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher binalari parklarla birlikde xeritede gosterilir. belediyye unvanlari deqiqlesdirir.",
+      "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir."
+    },
+    {
+      "id": "local-185-3",
+      "groupId": "gold-185",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir",
+      "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir."
+    },
+    {
+      "id": "local-185-4",
+      "groupId": "gold-185",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher binalari parklarla birlikde xeritede goshterilir belediyye unvanlari deqiqleshdirir",
+      "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir."
+    },
+    {
+      "id": "local-185-5",
+      "groupId": "gold-185",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher bialari parklarla birlikde xeritede gosterilir. belediyye unvanlari deqiqlesdirir.",
+      "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir."
+    },
+    {
+      "id": "local-186-1",
+      "groupId": "gold-186",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher parklarinda binalarin tarixi barede melumat var belediyye lovheleri yenileyir",
+      "target": "Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir."
+    },
+    {
+      "id": "local-186-2",
+      "groupId": "gold-186",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher parklarinda binalarin tarixi barede melumat var. belediyye lovheleri yenileyir.",
+      "target": "Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir."
+    },
+    {
+      "id": "local-186-3",
+      "groupId": "gold-186",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər parklarında binaların tarixi barədə məlumat var bələdiyyə lövhələri yeniləyir",
+      "target": "Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir."
+    },
+    {
+      "id": "local-186-4",
+      "groupId": "gold-186",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher parklarinda binalarin tarixi barede melumat var belediyye lovheleri yenileyir",
+      "target": "Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir."
+    },
+    {
+      "id": "local-186-5",
+      "groupId": "gold-186",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher paklarinda binalarin tarixi barede melumat var. belediyye lovheleri yenileyir.",
+      "target": "Şəhər parklarında binaların tarixi barədə məlumat var. Bələdiyyə lövhələri yeniləyir."
+    },
+    {
+      "id": "local-187-1",
+      "groupId": "gold-187",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi binalarin qarsisindaki parklari qoruyur yeni agaclar ekilir",
+      "target": "Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir."
+    },
+    {
+      "id": "local-187-2",
+      "groupId": "gold-187",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi binalarin qarsisindaki parklari qoruyur. yeni agaclar ekilir.",
+      "target": "Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir."
+    },
+    {
+      "id": "local-187-3",
+      "groupId": "gold-187",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur yeni ağaclar əkilir",
+      "target": "Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir."
+    },
+    {
+      "id": "local-187-4",
+      "groupId": "gold-187",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi binalarin qarshishindaki parklari qoruyur yeni agachlar ekilir",
+      "target": "Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir."
+    },
+    {
+      "id": "local-187-5",
+      "groupId": "gold-187",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi binalarin qarsisindaki parklari qoruyur. yeni agaclar ekilir.",
+      "target": "Şəhər bələdiyyəsi binaların qarşısındakı parkları qoruyur. Yeni ağaclar əkilir."
+    },
+    {
+      "id": "local-188-1",
+      "groupId": "gold-188",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher binalari parklarin gorunusune uygun layihelendirilib belediyye layiheni tesdiqleyib",
+      "target": "Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib."
+    },
+    {
+      "id": "local-188-2",
+      "groupId": "gold-188",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher binalari parklarin gorunusune uygun layihelendirilib. belediyye layiheni tesdiqleyib.",
+      "target": "Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib."
+    },
+    {
+      "id": "local-188-3",
+      "groupId": "gold-188",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər binaları parkların görünüşünə uyğun layihələndirilib bələdiyyə layihəni təsdiqləyib",
+      "target": "Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib."
+    },
+    {
+      "id": "local-188-4",
+      "groupId": "gold-188",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher binalari parklarin gorunushune uygun layihelendirilib belediyye layiheni teshdiqleyib",
+      "target": "Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib."
+    },
+    {
+      "id": "local-188-5",
+      "groupId": "gold-188",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher bialari parklarin gorunusune uygun layihelendirilib. belediyye layiheni tesdiqleyib.",
+      "target": "Şəhər binaları parkların görünüşünə uyğun layihələndirilib. Bələdiyyə layihəni təsdiqləyib."
+    },
+    {
+      "id": "local-189-1",
+      "groupId": "gold-189",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher parklari binalarin arasinda salinib belediyye sakinlere melumat verdi",
+      "target": "Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi."
+    },
+    {
+      "id": "local-189-2",
+      "groupId": "gold-189",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher parklari binalarin arasinda salinib. belediyye sakinlere melumat verdi.",
+      "target": "Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi."
+    },
+    {
+      "id": "local-189-3",
+      "groupId": "gold-189",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər parkları binaların arasında salınıb bələdiyyə sakinlərə məlumat verdi",
+      "target": "Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi."
+    },
+    {
+      "id": "local-189-4",
+      "groupId": "gold-189",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher parklari binalarin arashinda shalinib belediyye shakinlere melumat verdi",
+      "target": "Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi."
+    },
+    {
+      "id": "local-189-5",
+      "groupId": "gold-189",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher paklari binalarin arasinda salinib. belediyye sakinlere melumat verdi.",
+      "target": "Şəhər parkları binaların arasında salınıb. Bələdiyyə sakinlərə məlumat verdi."
+    },
+    {
+      "id": "local-190-1",
+      "groupId": "gold-190",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "seher belediyyesi parklari ve yeni binalari xeriteye elave etdi unvanlar yenilendi",
+      "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi."
+    },
+    {
+      "id": "local-190-2",
+      "groupId": "gold-190",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "seher belediyyesi parklari ve yeni binalari xeriteye elave etdi. unvanlar yenilendi.",
+      "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi."
+    },
+    {
+      "id": "local-190-3",
+      "groupId": "gold-190",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi ünvanlar yeniləndi",
+      "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi."
+    },
+    {
+      "id": "local-190-4",
+      "groupId": "gold-190",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "sheher belediyyeshi parklari ve yeni binalari xeriteye elave etdi unvanlar yenilendi",
+      "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi."
+    },
+    {
+      "id": "local-190-5",
+      "groupId": "gold-190",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "seher beediyyesi parklari ve yeni binalari xeriteye elave etdi. unvanlar yenilendi.",
+      "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi."
+    },
+    {
+      "id": "local-191-1",
+      "groupId": "gold-191",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab kitabxananin masasina qoyuldu oxucular onlari secdiler",
+      "target": "Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər."
+    },
+    {
+      "id": "local-191-2",
+      "groupId": "gold-191",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab kitabxananin masasina qoyuldu. oxucular onlari secdiler.",
+      "target": "Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər."
+    },
+    {
+      "id": "local-191-3",
+      "groupId": "gold-191",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab kitabxananın masasına qoyuldu oxucular onları seçdilər",
+      "target": "Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər."
+    },
+    {
+      "id": "local-191-4",
+      "groupId": "gold-191",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab kitabxananin mashashina qoyuldu oxuchular onlari shechdiler",
+      "target": "Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər."
+    },
+    {
+      "id": "local-191-5",
+      "groupId": "gold-191",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab kiabxananin masasina qoyuldu. oxucular onlari secdiler.",
+      "target": "Üç kitab kitabxananın masasına qoyuldu. Oxucular onları seçdilər."
+    },
+    {
+      "id": "local-192-1",
+      "groupId": "gold-192",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab masada yanasi yerlesdirildi kitabxana emekdasi qeyd apardi",
+      "target": "Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı."
+    },
+    {
+      "id": "local-192-2",
+      "groupId": "gold-192",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab masada yanasi yerlesdirildi. kitabxana emekdasi qeyd apardi.",
+      "target": "Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı."
+    },
+    {
+      "id": "local-192-3",
+      "groupId": "gold-192",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab masada yanaşı yerləşdirildi kitabxana əməkdaşı qeyd apardı",
+      "target": "Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı."
+    },
+    {
+      "id": "local-192-4",
+      "groupId": "gold-192",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab mashada yanashi yerleshdirildi kitabxana emekdashi qeyd apardi",
+      "target": "Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı."
+    },
+    {
+      "id": "local-192-5",
+      "groupId": "gold-192",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab maada yanasi yerlesdirildi. kitabxana emekdasi qeyd apardi.",
+      "target": "Üç kitab masada yanaşı yerləşdirildi. Kitabxana əməkdaşı qeyd apardı."
+    },
+    {
+      "id": "local-193-1",
+      "groupId": "gold-193",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab masanin ustunde qalmisdi oxucu onlari goturdu",
+      "target": "Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü."
+    },
+    {
+      "id": "local-193-2",
+      "groupId": "gold-193",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab masanin ustunde qalmisdi. oxucu onlari goturdu.",
+      "target": "Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü."
+    },
+    {
+      "id": "local-193-3",
+      "groupId": "gold-193",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab masanın üstündə qalmışdı oxucu onları götürdü",
+      "target": "Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü."
+    },
+    {
+      "id": "local-193-4",
+      "groupId": "gold-193",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab mashanin ushtunde qalmishdi oxuchu onlari goturdu",
+      "target": "Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü."
+    },
+    {
+      "id": "local-193-5",
+      "groupId": "gold-193",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab maanin ustunde qalmisdi. oxucu onlari goturdu.",
+      "target": "Üç kitab masanın üstündə qalmışdı. Oxucu onları götürdü."
+    },
+    {
+      "id": "local-194-1",
+      "groupId": "gold-194",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab kitabxana masasina getirildi muellim siyahini yoxladi",
+      "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-194-2",
+      "groupId": "gold-194",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab kitabxana masasina getirildi. muellim siyahini yoxladi.",
+      "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-194-3",
+      "groupId": "gold-194",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab kitabxana masasına gətirildi müəllim siyahını yoxladı",
+      "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-194-4",
+      "groupId": "gold-194",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab kitabxana mashashina getirildi muellim shiyahini yoxladi",
+      "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-194-5",
+      "groupId": "gold-194",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab kiabxana masasina getirildi. muellim siyahini yoxladi.",
+      "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı."
+    },
+    {
+      "id": "local-195-1",
+      "groupId": "gold-195",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc kitab masaya seliqe ile duzuldu kitabxanada sakitlik idi",
+      "target": "Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi."
+    },
+    {
+      "id": "local-195-2",
+      "groupId": "gold-195",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc kitab masaya seliqe ile duzuldu. kitabxanada sakitlik idi.",
+      "target": "Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi."
+    },
+    {
+      "id": "local-195-3",
+      "groupId": "gold-195",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç kitab masaya səliqə ilə düzüldü kitabxanada sakitlik idi",
+      "target": "Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi."
+    },
+    {
+      "id": "local-195-4",
+      "groupId": "gold-195",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch kitab mashaya sheliqe ile duzuldu kitabxanada shakitlik idi",
+      "target": "Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi."
+    },
+    {
+      "id": "local-195-5",
+      "groupId": "gold-195",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc kitab maaya seliqe ile duzuldu. kitabxanada sakitlik idi.",
+      "target": "Üç kitab masaya səliqə ilə düzüldü. Kitabxanada sakitlik idi."
+    },
+    {
+      "id": "local-196-1",
+      "groupId": "gold-196",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovlugun icinde saxlanilir katib qeydiyyati yoxladi",
+      "target": "Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-196-2",
+      "groupId": "gold-196",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovlugun icinde saxlanilir. katib qeydiyyati yoxladi.",
+      "target": "Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-196-3",
+      "groupId": "gold-196",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluğun içində saxlanılır katib qeydiyyatı yoxladı",
+      "target": "Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-196-4",
+      "groupId": "gold-196",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovlugun ichinde shaxlanilir katib qeydiyyati yoxladi",
+      "target": "Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-196-5",
+      "groupId": "gold-196",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qolugun icinde saxlanilir. katib qeydiyyati yoxladi.",
+      "target": "Üç sənəd qovluğun içində saxlanılır. Katib qeydiyyatı yoxladı."
+    },
+    {
+      "id": "local-197-1",
+      "groupId": "gold-197",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovluga yeniden yerlesdirildi katib siyahini tamamladi",
+      "target": "Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı."
+    },
+    {
+      "id": "local-197-2",
+      "groupId": "gold-197",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovluga yeniden yerlesdirildi. katib siyahini tamamladi.",
+      "target": "Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı."
+    },
+    {
+      "id": "local-197-3",
+      "groupId": "gold-197",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluğa yenidən yerləşdirildi katib siyahını tamamladı",
+      "target": "Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı."
+    },
+    {
+      "id": "local-197-4",
+      "groupId": "gold-197",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovluga yeniden yerleshdirildi katib shiyahini tamamladi",
+      "target": "Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı."
+    },
+    {
+      "id": "local-197-5",
+      "groupId": "gold-197",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qoluga yeniden yerlesdirildi. katib siyahini tamamladi.",
+      "target": "Üç sənəd qovluğa yenidən yerləşdirildi. Katib siyahını tamamladı."
+    },
+    {
+      "id": "local-198-1",
+      "groupId": "gold-198",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovlugun uzerine qoyuldu katib imzalari yoxladi",
+      "target": "Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı."
+    },
+    {
+      "id": "local-198-2",
+      "groupId": "gold-198",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovlugun uzerine qoyuldu. katib imzalari yoxladi.",
+      "target": "Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı."
+    },
+    {
+      "id": "local-198-3",
+      "groupId": "gold-198",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluğun üzərinə qoyuldu katib imzaları yoxladı",
+      "target": "Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı."
+    },
+    {
+      "id": "local-198-4",
+      "groupId": "gold-198",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovlugun uzerine qoyuldu katib imzalari yoxladi",
+      "target": "Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı."
+    },
+    {
+      "id": "local-198-5",
+      "groupId": "gold-198",
+      "split": "train",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qolugun uzerine qoyuldu. katib imzalari yoxladi.",
+      "target": "Üç sənəd qovluğun üzərinə qoyuldu. Katib imzaları yoxladı."
+    },
+    {
+      "id": "local-199-1",
+      "groupId": "gold-199",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovluqda ayrica saxlanilmalidir katib bu qaydani izah etdi",
+      "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi."
+    },
+    {
+      "id": "local-199-2",
+      "groupId": "gold-199",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovluqda ayrica saxlanilmalidir. katib bu qaydani izah etdi.",
+      "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi."
+    },
+    {
+      "id": "local-199-3",
+      "groupId": "gold-199",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluqda ayrıca saxlanılmalıdır katib bu qaydanı izah etdi",
+      "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi."
+    },
+    {
+      "id": "local-199-4",
+      "groupId": "gold-199",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovluqda ayricha shaxlanilmalidir katib bu qaydani izah etdi",
+      "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi."
+    },
+    {
+      "id": "local-199-5",
+      "groupId": "gold-199",
+      "split": "validation",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qoluqda ayrica saxlanilmalidir. katib bu qaydani izah etdi.",
+      "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi."
+    },
+    {
+      "id": "local-200-1",
+      "groupId": "gold-200",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 0,
+      "input": "uc sened qovluqla birlikde teqdim olundu katib muracieti qebul etdi",
+      "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi."
+    },
+    {
+      "id": "local-200-2",
+      "groupId": "gold-200",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 1,
+      "input": "uc sened qovluqla birlikde teqdim olundu. katib muracieti qebul etdi.",
+      "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi."
+    },
+    {
+      "id": "local-200-3",
+      "groupId": "gold-200",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 2,
+      "input": "üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi",
+      "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi."
+    },
+    {
+      "id": "local-200-4",
+      "groupId": "gold-200",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 3,
+      "input": "uch shened qovluqla birlikde teqdim olundu katib murachieti qebul etdi",
+      "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi."
+    },
+    {
+      "id": "local-200-5",
+      "groupId": "gold-200",
+      "split": "test",
+      "origin": "authored-gold-with-synthetic-corruption",
+      "variant": 4,
+      "input": "uc sened qoluqla birlikde teqdim olundu. katib muracieti qebul etdi.",
+      "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi."
     }
   ]
 }

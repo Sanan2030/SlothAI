@@ -3,7 +3,9 @@ import { createHash } from 'node:crypto';
 import { trainContextModel, fold, tokenize, predictContext } from '../lib/editor/local-ai/core';
 
 const seeds = readFileSync('data/local-ai/seeds.txt', 'utf8').trim().split('\n');
-if (seeds.length !== 100 || new Set(seeds).size !== 100) throw new Error('Expected 100 unique authored gold texts.');
+if (seeds.length < 100 || new Set(seeds).size !== seeds.length) throw new Error('Expected at least 100 unique authored gold texts.');
+// Keep the original training membership stable; validation uses only newly authored groups.
+const splitFor = (index: number) => index % 5 === 4 ? 'test' : index >= 100 && index % 5 === 3 ? 'validation' : 'train';
 function corrupt(text: string, variant: number): string {
   const ascii = fold(text);
   if (variant === 0) return ascii.replace(/[.,!?]/gu, '');
@@ -18,12 +20,12 @@ function corrupt(text: string, variant: number): string {
 }
 const pairs = seeds.flatMap((target, index) => Array.from({ length: 5 }, (_, variant) => ({
   id: `local-${String(index + 1).padStart(3, '0')}-${variant + 1}`,
-  groupId: `gold-${index + 1}`, split: index % 5 === 4 ? 'test' : 'train',
+  groupId: `gold-${index + 1}`, split: splitFor(index),
   origin: 'authored-gold-with-synthetic-corruption', variant,
   input: corrupt(target, variant), target,
 })));
-if (pairs.length !== 500 || new Set(pairs.map(pair => pair.input)).size !== 500) throw new Error('Pairs are not unique.');
-const training = seeds.filter((_, index) => index % 5 !== 4);
+if (new Set(pairs.map(pair => pair.input)).size !== pairs.length) throw new Error('Pairs are not unique.');
+const training = seeds.filter((_, index) => splitFor(index) === 'train');
 const model = trainContextModel(training);
 mkdirSync('data/local-ai', { recursive: true });
 mkdirSync('lib/editor/local-ai', { recursive: true });
@@ -44,9 +46,12 @@ for (const pair of pairs.filter(item => item.split === 'test')) {
     if (prediction.word === target[index].word.toLocaleLowerCase('az-AZ')) correct++; else wrong++;
   });
 }
-const report = { algorithm: model.algorithm, pairCount: pairs.length, trainPairs: 400, testPairs: 100,
-  independentGoldGroups: { train: 80, test: 20 }, splitPolicy: 'all variants of a gold text stay in one split',
-  source: '100 author-written gold texts; five synthetic variants each; no scraped or user data',
+const report = { algorithm: model.algorithm, pairCount: pairs.length,
+  trainPairs: pairs.filter(pair => pair.split === 'train').length,
+  validationPairs: pairs.filter(pair => pair.split === 'validation').length,
+  testPairs: pairs.filter(pair => pair.split === 'test').length,
+  independentGoldGroups: { train: training.length, validation: seeds.filter((_, index) => splitFor(index) === 'validation').length, test: seeds.filter((_, index) => splitFor(index) === 'test').length }, splitPolicy: 'all variants of a gold text stay in one split',
+  source: `${seeds.length} author-written gold texts; five synthetic variants each; no scraped or user data`,
   corpusSha256: createHash('sha256').update(JSON.stringify(pairs)).digest('hex'),
   modelBytes: Buffer.byteLength(JSON.stringify(model)), candidateGroups: Object.keys(model.groups),
   heldOutAmbiguityDecisions: { eligible, accepted, correct, wrong, abstained: eligible - accepted },
