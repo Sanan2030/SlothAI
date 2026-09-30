@@ -1,0 +1,11 @@
+{
+  "previousCommit": "fb39e5e2c200d688976978a4c5ca6ce7327d4fce",
+  "sameTestPairs": 200,
+  "previousExact": 36,
+  "newExact": 44,
+  "improved": 19,
+  "regressed": 0,
+  "previousWordEditDistance": 422,
+  "newWordEditDistance": 400,
+  "scope": "Previously inspected synthetic regression corpus; not an independent language-quality estimate."
+}

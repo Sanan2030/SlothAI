@@ -3,10 +3,12 @@ import { productiveMorphology } from '../productive-morphology';
 export interface Token { word: string; start: number; end: number; sentence: number }
 export interface ClassCounts { examples: number; total: number; features: Record<string, number> }
 export interface LocalContextModel {
-  version: 2;
+  version: 3;
   algorithm: 'context-naive-bayes';
   groups: Record<string, Record<string, ClassCounts>>;
   trainingGroups: number;
+  forms: Record<string, { word: string; examples: number; features: Record<string, number> }>;
+  boundaries: Record<string, { positive: number; negative: number }>;
 }
 export const fold = (value: string) => value.toLocaleLowerCase('az-AZ').replace(/[əıçğöşü]/gu,
   letter => ({ ə: 'e', ı: 'i', ç: 'c', ğ: 'g', ö: 'o', ş: 's', ü: 'u' })[letter]!);
@@ -69,7 +71,41 @@ export function trainContextModel(texts: readonly string[]): LocalContextModel {
       }
     });
   }
-  return { version: 2, algorithm: 'context-naive-bayes', groups, trainingGroups: texts.length };
+  const forms: LocalContextModel['forms'] = {};
+  const boundaries: LocalContextModel['boundaries'] = {};
+  for (const text of texts) {
+    const tokens = tokenize(text), seen = new Set<string>();
+    tokens.forEach((token, index) => {
+      const key = fold(token.word), word = token.word.toLocaleLowerCase('az-AZ');
+      if (key.length >= 3 && variants.get(key)?.size === 1 && word !== key) {
+        const entry = forms[key] ?? { word, examples: 0, features: {} };
+        if (!seen.has(key)) {
+          entry.examples++; seen.add(key);
+          for (const feature of features(tokens, index).filter(feature => !/^(?:lemma|pos|case|left|right):/u.test(feature))) {
+            entry.features[feature] = (entry.features[feature] ?? 0) + 1;
+          }
+        }
+        forms[key] = entry;
+      }
+      const next = tokens[index + 1];
+      if (!next) return;
+      const keyBoundary = boundaryKey(token.word, next.word);
+      const entry = boundaries[keyBoundary] ?? { positive: 0, negative: 0 };
+      if (/[.!?]/u.test(text.slice(token.end, next.start))) entry.positive++; else entry.negative++;
+      boundaries[keyBoundary] = entry;
+    });
+  }
+  for (const key of Object.keys(forms)) {
+    if (forms[key].examples < 3) { delete forms[key]; continue; }
+    for (const feature of Object.keys(forms[key].features)) if (forms[key].features[feature] < 2) delete forms[key].features[feature];
+  }
+  for (const key of Object.keys(boundaries)) if (boundaries[key].positive < 2) delete boundaries[key];
+  return { version: 3, algorithm: 'context-naive-bayes', groups, forms, boundaries, trainingGroups: texts.length };
+}
+
+/** A learned suffix/start pair generalizes beyond a stored complete sentence. */
+export function boundaryKey(left: string, right: string): string {
+  return `${fold(left).slice(-4)}|${fold(right).slice(0, 5)}`;
 }
 export interface Prediction { word: string; margin: number; supportingFeatures: number; accepted: boolean }
 export function predictContext(model: LocalContextModel, raw: string, tokens: readonly Token[], index: number): Prediction | undefined {

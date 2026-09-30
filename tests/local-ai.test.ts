@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import corpus from '../data/local-ai/pairs.json';
 import model from '../lib/editor/local-ai/model.json';
-import { createLocalPredictor } from '../lib/editor/local-ai/predict';
+import { createLocalPredictor, insertLearnedBoundaries } from '../lib/editor/local-ai/predict';
 import { trainContextModel } from '../lib/editor/local-ai/core';
 import { correctText, formatEmail } from '../lib/editor/correct';
 
@@ -29,7 +30,9 @@ test('1000 pairs have disjoint train, validation and test gold groups and a repr
   assert.ok(validation.every(pair => !trainGroups.has(pair.groupId)));
   const targets = [...new Set(train.map(pair => pair.target))];
   assert.equal(targets.length, 140);
-  assert.deepEqual(trainContextModel(targets), model);
+  const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
+  assert.ok(supplemental.every(text => !corpus.pairs.some(pair => pair.target === text)));
+  assert.deepEqual(trainContextModel([...targets, ...supplemental]), model);
 });
 
 test('learned context generalizes to fresh sentences without an exact text lookup', () => {
@@ -62,4 +65,21 @@ test('new lexical groups use learned context and preserve valid alternative mean
   ]) assert.equal(createLocalPredictor(input)(raw, input.indexOf(raw)), expected);
   assert.equal(createLocalPredictor('seher. belediyye parki ve binalari yoxlayir')('seher', 0), undefined);
   assert.equal(createLocalPredictor('adi hadisə gündəlik iş zamanı')('adi', 0), undefined);
+});
+
+test('corpus-learned word forms require supporting context instead of a global replacement', () => {
+  const input = 'Yeni olcen cihaz saniye erzinde netice verdi';
+  assert.equal(createLocalPredictor(input)('saniye', input.indexOf('saniye')), 'saniyə');
+  assert.equal(createLocalPredictor('saniye')('saniye', 0), undefined);
+  assert.ok(correctText(input).text.includes('saniyə'));
+  assert.ok(formatEmail(input, { emailGreeting: 'Salam,', omitSubject: true }).text.includes('saniyə'));
+});
+
+test('learned sentence boundaries preserve punctuation and dependent-clause guards', () => {
+  const input = 'Bina yenidən rənglənir meydanın görünüşü dəyişir';
+  assert.equal(insertLearnedBoundaries(input), 'Bina yenidən rənglənir. meydanın görünüşü dəyişir');
+  const punctuated = 'Bina yenidən rənglənir. Meydanın görünüşü dəyişir.';
+  assert.equal(insertLearnedBoundaries(punctuated), punctuated);
+  const dependent = 'Dedi ki bina rənglənir meydanın görünüşü dəyişir';
+  assert.equal(insertLearnedBoundaries(dependent), dependent);
 });

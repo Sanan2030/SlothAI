@@ -12,7 +12,10 @@
   "splitPolicy": "all variants of a gold text stay in one split",
   "source": "200 author-written gold texts; five synthetic variants each; no scraped or user data",
   "corpusSha256": "ab61444ae3cef885aede7cabd81ba3ff6cda0088b7a784652ed3b0ca77ace780",
-  "modelBytes": 10119,
+  "supplementalTrainingTexts": 20,
+  "learnedWordForms": 93,
+  "learnedBoundaryPatterns": 9,
+  "modelBytes": 19332,
   "candidateGroups": [
     "seher",
     "suret",

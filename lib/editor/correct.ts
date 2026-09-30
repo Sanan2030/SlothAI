@@ -9,7 +9,7 @@ import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
 import { chooseByGrammar, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
-import { createLocalPredictor } from './local-ai/predict';
+import { createLocalPredictor, insertLearnedBoundaries } from './local-ai/predict';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -35,7 +35,7 @@ function capitalize(text: string): string {
     (_, prefix: string, letter: string) => prefix + letter.toLocaleUpperCase('az-AZ'));
 }
 
-function punctuate(line: string): string {
+function punctuate(line: string, useLocalModel = true): string {
   if (!line.trim()) return '';
   // Documentary headings and standalone subtitles are structure, not prose.
   if (/^===.+===$/u.test(line.trim()) || /^[A-ZƏÇĞIİÖŞÜ\s-]{3,}$/u.test(line.trim()) || (/^\(.+\)$/u.test(line.trim()) && line.trim().length <= 160)) return line.trim();
@@ -52,6 +52,7 @@ function punctuate(line: string): string {
     .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
     .replace(/\s+([,;:!?])/g, '$1')
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
+  if (useLocalModel) result = insertLearnedBoundaries(result);
   result = sentenceBoundaries(result);
   result = punctuateNarrative(result);
   result = extendedBoundaries(result);
@@ -198,13 +199,13 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     // list item, including when each item was entered on a separate line.
     const normalizedPrefix = list?.[1].replace(/^(\s*\d+)[.)]\s+$/, '$1. ');
     if (list) {
-      let item = punctuate(list[2]);
+      let item = punctuate(list[2], runtime.useLocalModel !== false);
       // All-caps technical list items (for example "API") are headings only
       // outside lists; inside a list they still need terminal punctuation.
       if (!/[.!?:;…]["”»)]?$/u.test(item)) item += '.';
       return normalizedPrefix! + item;
     }
-    return punctuate(line);
+    return punctuate(line, runtime.useLocalModel !== false);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
     text = businessStageLists(text);

@@ -26,7 +26,9 @@ const pairs = seeds.flatMap((target, index) => Array.from({ length: 5 }, (_, var
 })));
 if (new Set(pairs.map(pair => pair.input)).size !== pairs.length) throw new Error('Pairs are not unique.');
 const training = seeds.filter((_, index) => splitFor(index) === 'train');
-const model = trainContextModel(training);
+const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
+if (new Set(supplemental).size !== supplemental.length || supplemental.some(text => seeds.includes(text))) throw new Error('Supplemental texts must be unique and disjoint from all split groups.');
+const model = trainContextModel([...training, ...supplemental]);
 mkdirSync('data/local-ai', { recursive: true });
 mkdirSync('lib/editor/local-ai', { recursive: true });
 writeFileSync('data/local-ai/pairs.json', JSON.stringify({ version: 1, pairs }, null, 2) + '\n');
@@ -53,6 +55,9 @@ const report = { algorithm: model.algorithm, pairCount: pairs.length,
   independentGoldGroups: { train: training.length, validation: seeds.filter((_, index) => splitFor(index) === 'validation').length, test: seeds.filter((_, index) => splitFor(index) === 'test').length }, splitPolicy: 'all variants of a gold text stay in one split',
   source: `${seeds.length} author-written gold texts; five synthetic variants each; no scraped or user data`,
   corpusSha256: createHash('sha256').update(JSON.stringify(pairs)).digest('hex'),
+  supplementalTrainingTexts: supplemental.length,
+  learnedWordForms: Object.keys(model.forms).length,
+  learnedBoundaryPatterns: Object.keys(model.boundaries).length,
   modelBytes: Buffer.byteLength(JSON.stringify(model)), candidateGroups: Object.keys(model.groups),
   heldOutAmbiguityDecisions: { eligible, accepted, correct, wrong, abstained: eligible - accepted },
   limitations: 'This measures a small synthetic corpus; it is not general Azerbaijani accuracy or human semantic understanding.' };
