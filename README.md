@@ -164,3 +164,34 @@ The small classifiers are not a transformer or an LLM. See
 
 Historical proposal/corpus-review documents describe earlier iterations; current
 behavior and limitations above take precedence.
+
+## Reviewed examples saved to a file
+
+The feedback action now writes `slothai-reviewed-tests.json`, containing the raw
+input, recorded generated output, user-specified expected output, module,
+formatting/greeting options and review timestamp. It does not train the model,
+confirm personal dictionary rules or replay a saved expected result. Existing
+exact-input browser-memory lookup is no longer used by the application.
+
+On browsers supporting the File System Access save picker, select a file once
+per page session; subsequent saves read its current contents and append/update
+the reviewed example. After reopening the application, select the same file.
+Existing unrelated or invalid JSON is rejected before writing. Write failures
+are shown inline and do not silently switch to another storage method.
+
+Other browsers download the accumulated corpus. Use “Mövcud test faylını aç”
+to load a previous day's JSON before saving additional examples. Downloaded
+copies are managed by the browser; they cannot silently overwrite an arbitrary
+computer file. The corpus is not uploaded to GitHub or another server.
+
+To rerun a saved file against the current engine:
+
+```bash
+npm run review:test -- /path/to/slothai-reviewed-tests.json
+```
+
+This writes a sibling `.results.json` report with input, expected and current
+actual output and exits nonzero if any case differs. Mail evaluations use the
+saved greeting and the application's subject-free mode. No stored target is
+used as a correction lookup. To have this assistant inspect the data later,
+attach the saved JSON file when requesting the review.

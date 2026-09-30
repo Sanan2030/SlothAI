@@ -15,8 +15,10 @@ import { applyPersonalLexicon, confirmPersonalCandidate, dismissPersonalCandidat
   extractPersonalCandidates, queuePersonalCandidates, readPersonalLexicon,
   writePersonalLexicon, type PersonalLexicon } from '@/lib/editor/personal-lexicon';
 import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
-import { findExpectedResult, readExpectedResults, saveExpectedResult, writeExpectedResults,
-  type ExpectedResult } from '@/lib/editor/expected-results';
+import type { ExpectedResult } from '@/lib/editor/expected-results';
+import { appendReviewCase, emptyReviewCorpus, type ReviewCorpus } from '@/lib/editor/review-corpus';
+import { downloadReviewCorpus, pickReviewFile, readReviewFile, saveReviewToFile,
+  type ReviewFileHandle, type ReviewPickerWindow } from '@/lib/ui/review-file';
 import { documentHTML, documentText, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
 
 type ModuleId = 'text' | 'mail';
@@ -64,12 +66,16 @@ export default function HomePage() {
   const [showResultInfo, setShowResultInfo] = useState(false);
   const [personalLexicon, setPersonalLexicon] = useState<PersonalLexicon>({ pending: [], confirmed: [] });
   const personalRef = useRef<PersonalLexicon>({ pending: [], confirmed: [] });
-  const expectedRef = useRef<ExpectedResult[]>([]);
+  const reviewFileRef = useRef<ReviewFileHandle | null>(null);
+  const reviewCorpusRef = useRef<ReviewCorpus>(emptyReviewCorpus());
+  const reviewImportRef = useRef<HTMLInputElement>(null);
+  const savingReviewRef = useRef(false);
+  const [savingReview, setSavingReview] = useState(false);
+  const [reviewNotice, setReviewNotice] = useState('');
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [expectedDraft, setExpectedDraft] = useState('');
   const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'> | null>(null);
   const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'>>>>({});
-  const [learnedResult, setLearnedResult] = useState(false);
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -77,7 +83,6 @@ export default function HomePage() {
         const loaded = readPersonalLexicon(window.localStorage);
         personalRef.current = loaded;
         setPersonalLexicon(loaded);
-        expectedRef.current = readExpectedResults(window.localStorage);
         setLogCount(readTransformLog(window.localStorage).length);
       } catch { /* Private browsing may disable storage. The editor still works. */ }
     });
@@ -143,7 +148,7 @@ export default function HomePage() {
     setCopied(false);
     setEditingOutput(false);
     setFeedbackOpen(false);
-    setLearnedResult(false);
+    setReviewNotice('');
     setResultSource(sourceRef.current[module] ?? null);
   }
 
@@ -200,43 +205,53 @@ export default function HomePage() {
     } catch { setError('Günlük yüklənmədi. Brauzer yaddaşını yoxlayın.'); }
   }
 
-  function saveExpected() {
-    if (!resultSource || !expectedDraft.trim()) {
-      setError('Düzgün nəticəni yazın.');
-      return;
-    }
+  async function importReviewFile(file: File) {
+    if (savingReviewRef.current) return;
+    savingReviewRef.current = true;
+    setSavingReview(true);
     try {
-      const baseline = activeModule === 'text' ? textGenerated : mailGenerated;
-      const edits = baseline ? extractPersonalCandidates(baseline, expectedDraft)
-        .filter(item => item.source.toLocaleLowerCase('az-AZ') !== item.target.toLocaleLowerCase('az-AZ')) : [];
-      const next = saveExpectedResult(expectedRef.current, { ...resultSource, output: expectedDraft });
-      if (!writeExpectedResults(window.localStorage, next)) {
-        setError('Nümunə saxlanmadı. Brauzer yaddaşını yoxlayın.');
-        return;
-      }
-      expectedRef.current = next;
+      const corpus = await readReviewFile(file);
+      reviewCorpusRef.current = corpus;
+      reviewFileRef.current = null;
+      setReviewNotice(`${corpus.cases.length} nümunə açıldı. Növbəti yükləməyə əlavə olunacaq.`);
       setError('');
-      recordTransform(resultSource.input, expectedDraft, 'reviewed');
-      if (edits.length) {
-        let learned = personalRef.current;
-        for (const edit of edits) learned = confirmPersonalCandidate(learned, edit);
-        persistPersonal(learned);
-      }
-      setFeedbackOpen(false);
-      setLearnedResult(true);
-      if (activeModule === 'text') {
-        setTextOutput(expectedDraft);
-        setTextOutputDocument(plainDocument(expectedDraft));
-        setTextMetadata(null);
-      } else {
-        setMailOutput(expectedDraft);
-        setMailOutputDocument(plainDocument(expectedDraft));
-        setMailMetadata(null);
-      }
-      setEditingOutput(false);
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : 'Nümunə saxlanmadı.');
-    }
+      setError(cause instanceof Error ? cause.message : 'Test faylı açılmadı.');
+    } finally { savingReviewRef.current = false; setSavingReview(false); }
+  }
+
+  async function saveExpected() {
+    if (savingReviewRef.current) return;
+    if (!resultSource || !expectedDraft.trim()) { setError('Düzgün nəticəni yazın.'); return; }
+    const row = { ...resultSource,
+      id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
+      actual: activeModule === 'text' ? textGenerated : mailGenerated,
+      expected: expectedDraft, reviewedAt: new Date().toISOString(),
+    };
+    savingReviewRef.current = true;
+    setSavingReview(true);
+    setReviewNotice('');
+    try {
+      // The picker must be called inside the user's click, before asynchronous reads.
+      const selected = reviewFileRef.current ?? await pickReviewFile(window as unknown as ReviewPickerWindow);
+      if (selected) {
+        const corpus = await saveReviewToFile(selected, row, reviewCorpusRef.current);
+        reviewFileRef.current = selected;
+        reviewCorpusRef.current = corpus;
+        setReviewNotice(`${selected.name}: ${corpus.cases.length} nümunə fayla yazıldı.`);
+      } else {
+        const corpus = appendReviewCase(reviewCorpusRef.current, row);
+        downloadReviewCorpus(corpus);
+        reviewCorpusRef.current = corpus;
+        setReviewNotice(`${corpus.cases.length} nümunəli test faylı yükləmə üçün hazırlandı.`);
+      }
+      setError('');
+      setFeedbackOpen(false);
+    } catch (cause) {
+      if (cause instanceof DOMException && cause.name === 'AbortError') return;
+      // Do not silently fall back to a download after a denied/failed disk write.
+      setError(cause instanceof Error ? cause.message : 'Test faylı saxlanmadı.');
+    } finally { savingReviewRef.current = false; setSavingReview(false); }
   }
 
   async function transform() {
@@ -252,28 +267,10 @@ export default function HomePage() {
       const source = { module: activeModule, input: requestText,
         preserveFormatting: activeModule === 'text' && preserveFormatting,
         ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}) };
-      const remembered = findExpectedResult(expectedRef.current, source);
       setResultSource(source);
       sourceRef.current[activeModule] = source;
       setFeedbackOpen(false);
-      setLearnedResult(Boolean(remembered));
-
-      if (remembered) {
-        recordTransform(requestText, remembered.output, 'remembered');
-        if (activeModule === 'text') {
-          setTextGenerated(remembered.output);
-          setTextOutput(remembered.output);
-          setTextOutputDocument(plainDocument(remembered.output));
-          setTextMetadata(null);
-        } else {
-          setMailGenerated(remembered.output);
-          setMailOutput(remembered.output);
-          setMailOutputDocument(plainDocument(remembered.output));
-          setMailMetadata(null);
-        }
-        setEditingOutput(false);
-        return;
-      }
+      setReviewNotice('');
 
       const result = await registry.get(config.strategyId).transform({
         text: requestText,
@@ -502,7 +499,7 @@ export default function HomePage() {
                       setExpectedDraft(output);
                       setFeedbackOpen(value => !value);
                     }}>
-                    <BookOpen size={15} /> Düzgün nəticəni öyrət
+                    <BookOpen size={15} /> Düzgün nəticəni testə əlavə et
                   </button>}
                   <button
                     type="button"
@@ -557,14 +554,17 @@ export default function HomePage() {
                   )}
                 </div>
 
-                {learnedResult && output && <p className="workspace-learned-note">Bu nəticə saxladığınız nümunədən götürülüb.</p>}
+                {reviewNotice && <p className="workspace-learned-note" role="status">{reviewNotice}</p>}
                 {feedbackOpen && output && (
                   <div className="workspace-feedback" id="workspace-expected-form">
                     <label htmlFor="workspace-expected-text">Bu giriş üçün nəticə necə olmalıdır?</label>
                     <textarea id="workspace-expected-text" value={expectedDraft} maxLength={MAX_TEXT_LENGTH}
                       onChange={event => setExpectedDraft(event.target.value)} />
-                    <p>Eyni mətn yenidən göndəriləndə bütün nəticə qaytarılır. Ayrı-ayrı söz düzəlişləri tanınan qonşu sözlərlə başqa mətnlərdə də tətbiq olunur. Nümunə yalnız bu brauzerdə saxlanır.</p>
-                    <button type="button" className="workspace-feedback-save" onClick={saveExpected}>Düzgün nəticəni saxla</button>
+                    <p>Xam mətn, proqramın nəticəsi və düzgün nəticə test üçün JSON faylına yazılır. Bu düymə redaktoru öyrətmir. Fayl seçimi dəstəklənmirsə, fayl yüklənir. Sabah davam etmək üçün eyni faylı seç və ya mövcud faylı aç.</p>
+                    <button type="button" className="workspace-feedback-save" disabled={savingReview} onClick={saveExpected}>{savingReview ? 'Saxlanır…' : 'Düzgün nəticəni fayla saxla'}</button>
+                    <button type="button" disabled={savingReview} onClick={() => reviewImportRef.current?.click()}>Mövcud test faylını aç</button>
+                    <input ref={reviewImportRef} type="file" accept=".json,application/json" hidden
+                      onChange={event => { const file = event.target.files?.[0]; event.target.value = ''; if (file) void importReviewFile(file); }} />
                   </div>
                 )}
 

@@ -27,7 +27,9 @@
     "gold:evaluate": "node --import tsx scripts/evaluate-independent-gold.ts",
     "gold:exact": "node --import tsx scripts/evaluate-independent-gold.ts --require-exact",
     "gold:check": "node --import tsx scripts/evaluate-independent-gold.ts --enforce-baseline",
-    "local-ai:fresh:check": "node --import tsx scripts/evaluate-fresh-ai.ts --enforce"
+    "local-ai:fresh:check": "node --import tsx scripts/evaluate-fresh-ai.ts --enforce",
+    "review:test": "node --import tsx scripts/evaluate-reviewed-file.ts",
+    "prereview:test": "npm run --silent dictionary:import -- public/dictionaries/az"
   },
   "engines": {
     "node": ">=20.9.0"
