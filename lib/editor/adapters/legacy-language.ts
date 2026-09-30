@@ -1,3 +1,4 @@
+import { productiveMorphology } from '../productive-morphology';
 import { dictionaryCandidates, foldLetters } from '../dictionary';
 import { regularForms } from '../morphology';
 import type { LemmaDictionary, LemmaLookupResult, LemmaRecord } from '../contracts/lemma';
@@ -90,3 +91,36 @@ export class LegacyMorphologyEngineAdapter implements MorphologyEngine {
 
 export const legacyLemmaDictionary = new LegacyLemmaDictionaryAdapter();
 export const legacyMorphologyEngine = new LegacyMorphologyEngineAdapter();
+
+/** Reviewed morphology supplies real lemmas/POS while preserving fallback surfaces. */
+export class MorphologicalLemmaDictionary extends LegacyLemmaDictionaryAdapter {
+  private readonly lookups = new Map<string, LemmaLookupResult>();
+  override getByLemma(lemma: string): LemmaRecord | undefined {
+    const analyses = productiveMorphology.analyzeWord(lemma).filter(item => item.lemma === lowerAz(lemma));
+    const positions = new Set(analyses.map(item => item.pos));
+    if (analyses.length) return { lemma: lowerAz(lemma), source: 'curated',
+      ...(positions.size === 1 ? { pos: analyses[0].pos } : {}) };
+    return super.getByLemma(lemma);
+  }
+  override findByFoldedForm(word: string): LemmaLookupResult {
+    const normalized = lowerAz(word);
+    const cached = this.lookups.get(normalized);
+    if (cached) return { ...cached, query: word };
+    const fallback = super.findByFoldedForm(word);
+    const generated = productiveMorphology.findByFoldedForm(word);
+    const surfaces = new Set([...fallback.entries.map(item => item.lemma), ...(generated ? [generated] : [])]);
+    const result = { ...fallback, entries: [...surfaces].flatMap<LemmaRecord>(surface => {
+      const analyses = productiveMorphology.analyzeWord(surface);
+      if (!analyses.length) return [{ lemma: surface, surface, source: 'dictionary' as const }];
+      const unique = new Map(analyses.map(item => [item.lemma + ':' + item.pos,
+        { lemma: item.lemma, surface, pos: item.pos, source: 'curated' as const }]));
+      return [...unique.values()];
+    }) };
+    if (this.lookups.size >= 4096) this.lookups.clear();
+    this.lookups.set(normalized, result);
+    return result;
+  }
+  override hasSurfaceForm(word: string): boolean {
+    return productiveMorphology.isValidWordForm(word) || super.hasSurfaceForm(word);
+  }
+}

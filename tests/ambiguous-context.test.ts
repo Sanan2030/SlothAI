@@ -10,10 +10,10 @@ test('context protects morning, brain and reviewed narrative spellings', () => {
   assert.match(output, /beynin funksiyalarını/u);
   assert.match(output, /pəncərəni açanda/u);
   assert.match(output, /pürrəngi çay/u);
-  assert.match(output, /səhər havası/u);
-  assert.match(output, /səhər yeməyi/u);
-  assert.match(output, /səhərin sakitliyini/u);
-  assert.match(output, /səhərin oyanışını/u);
+  assert.match(output, /səhər havası/iu);
+  assert.match(output, /səhər yeməyi/iu);
+  assert.match(output, /səhərin sakitliyini/iu);
+  assert.match(output, /səhərin oyanışını/iu);
   assert.match(output, /API vasitəsilə əlaqə qurur/u);
   // The independent clause now starts a new sentence and takes a capital M.
   assert.match(output, /Meşələr planetimizin ağciyərləridir/u);

@@ -3,6 +3,9 @@ import { createHash } from 'node:crypto';
 import { trainContextModel, fold, tokenize, predictContext } from '../lib/editor/local-ai/core';
 import { expandContextModel, type TrainingExpansion } from '../lib/editor/local-ai/expand';
 
+import { trainBoundaryModel } from '../lib/editor/local-ai/boundary-model';
+import { trainSequenceRanker } from '../lib/editor/local-ai/sequence';
+
 const seeds = readFileSync('data/local-ai/seeds.txt', 'utf8').trim().split('\n');
 if (seeds.length < 100 || new Set(seeds).size !== seeds.length) throw new Error('Expected at least 100 unique authored gold texts.');
 // Keep the original training membership stable; validation uses only newly authored groups.
@@ -31,6 +34,8 @@ const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'ut
 if (new Set(supplemental).size !== supplemental.length || supplemental.some(text => seeds.includes(text))) throw new Error('Supplemental texts must be unique and disjoint from all split groups.');
 const expansion = JSON.parse(readFileSync('data/local-ai/expansion.json', 'utf8')) as TrainingExpansion;
 const model = expandContextModel(trainContextModel([...training, ...supplemental]), expansion);
+model.sequence = trainSequenceRanker([...training, ...supplemental]);
+model.boundaryClassifier = trainBoundaryModel([...training, ...supplemental, ...expansion.boundaries.flatMap(item => item.texts)]);
 mkdirSync('data/local-ai', { recursive: true });
 mkdirSync('lib/editor/local-ai', { recursive: true });
 writeFileSync('data/local-ai/pairs.json', JSON.stringify({ version: 1, pairs }, null, 2) + '\n');
@@ -61,6 +66,7 @@ const report = { algorithm: model.algorithm, pairCount: pairs.length,
   expansionWordForms: expansion.forms.length,
   expansionBoundaryPatterns: expansion.boundaries.length,
   expansionTrainingTexts: [...expansion.forms, ...expansion.boundaries].flatMap(item => item.texts).length,
+  sequenceAlgorithm: model.sequence.algorithm,
   learnedWordForms: Object.keys(model.forms).length,
   learnedBoundaryPatterns: Object.keys(model.boundaries).length,
   modelBytes: Buffer.byteLength(JSON.stringify(model)), candidateGroups: Object.keys(model.groups),

@@ -80,12 +80,14 @@ export function beforeLexicalCorrection(text: string): string {
     .replace(/(^|[^\p{L}])bir nece(?=$|[^\p{L}])/giu, '$1bir neçə')
     .replace(/(^|[^\p{L}])indi ise(?=$|[^\p{L}])/giu, '$1indi isə')
     .replace(/(^|[^\p{L}])chantai(?=\s+k[uü]nc[eə](?=$|[^\p{L}]))/giu, '$1çantanı')
-    .replace(/(^|[^\p{L}])ise(?=\s+(?:gedir|getmək|getmek|çatdım|catdim)(?=$|[^\p{L}]))/giu, '$1işə')
+    .replace(/(^|[^\p{L}])ise(?=\s+(?:gedir|getmək|getmek|getdim|gedəcəyəm|çatdım|catdim)(?=$|[^\p{L}]))/giu, '$1işə')
     .replace(/(^|[^\p{L}])ise(?=\s+(?:yekunlaşdırdım|yekunlasdirdim)(?=$|[^\p{L}]))/giu, '$1işi')
     // "seherler" can mean cities or mornings. A following exercise phrase
     // proves the temporal meaning and prevents the lexicon from choosing
     // "şəhərlər".
-    .replace(/(^|[^\p{L}])seherler(?=\s+yungul\s+qacis)/giu, '$1səhərlər')
+    .replace(/(^|[^\p{L}])seherler(?=\s+[yuü]ng[uü]l\s+qa[cç][iı]ş|\s+yungul\s+qacis)/giu, '$1səhərlər')
+    // Raw ambiguous forms only: explicit şəhərin/səhərin must never be rewritten.
+    .replace(/(^|[^\p{L}])seherin(?=\s+(?:sakitliyini|oyan[iı][sş][iı]n[iı])(?=$|[^\p{L}]))/giu, '$1səhərin')
     .replace(/(^|[^\p{L}])er\s+diagram(?=$|[^\p{L}])/giu, '$1ER diaqram');
 }
 
@@ -104,20 +106,17 @@ export function extendedPhrases(text: string): string {
     .replace(/(^|[^\p{L}])bina dan(?=$|[^\p{L}])/giu, '$1binadan')
     .replace(/(^|[^\p{L}])özüdə(?=$|[^\p{L}])/giu, '$1özü də')
     .replace(/(^|[^\p{L}])yavaş yavaş(?=$|[^\p{L}])/giu, '$1yavaş-yavaş')
-    .replace(/(^|[^\p{L}])şəhərlər(?=\s+yüngül\s+qaçış)/giu, '$1səhərlər')
     // The same unaccented form can mean a city or morning. These are reviewed
     // temporal contexts; the general city meaning remains untouched.
-    .replace(/(^|[^\p{L}])(?:seher|şəhər) havasi(?=$|[^\p{L}])/giu, '$1səhər havası')
-    .replace(/(^|[^\p{L}])(?:seher|şəhər) yeməyi(?=$|[^\p{L}])/giu, '$1səhər yeməyi')
-    .replace(/(^|[^\p{L}])şəhərin sakitliyini(?=$|[^\p{L}])/giu, '$1səhərin sakitliyini')
-    .replace(/(^|[^\p{L}])şəhərin oyanışını(?=$|[^\p{L}])/giu, '$1səhərin oyanışını')
+    .replace(/(^|[^\p{L}])seher havasi(?=$|[^\p{L}])/giu, '$1səhər havası')
+    .replace(/(^|[^\p{L}])seher yeməyi(?=$|[^\p{L}])/giu, '$1səhər yeməyi')
     .replace(/(^|[^\p{L}])əlaqə qürur(?=$|[^\p{L}])/giu, '$1əlaqə qurur')
     .replace(/(^|[^\p{L}])meseler planetimizin(?=$|[^\p{L}])/giu, '$1meşələr planetimizin')
     .replace(/(^|[^\p{L}])biyo kutlenin(?=$|[^\p{L}])/giu, '$1biokütlənin')
     .replace(/(^|[^\p{L}])qəribə qəribə(?=$|[^\p{L}])/giu, '$1qəribə-qəribə')
     .replace(/(^|[^\p{L}])sistem analitik kimi(?=$|[^\p{L}])/giu, '$1sistem analitiki kimi')
     .replace(/(^|[^\p{L}])seher(?=\s+(?:basırıqları|yağış|tez)(?:\s|$))/giu, '$1səhər')
-    .replace(/(^|[^\p{L}])(?:seher|şəhər)(?=\s+telefonun\s+s[əe]sin[əe])/giu, '$1səhər')
+    .replace(/(^|[^\p{L}])seher(?=\s+telefonun\s+s[əe]sin[əe])/giu, '$1səhər')
     .replace(/(^|[^\p{L}])ismayilliya(?=$|[^\p{L}])/giu, '$1İsmayıllıya')
     .replace(/(^|[^\p{L}])qəbələyə(?=$|[^\p{L}])/giu, '$1Qəbələyə');
 }

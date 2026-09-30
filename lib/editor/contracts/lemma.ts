@@ -16,6 +16,8 @@ export type LemmaSource = 'curated' | 'dictionary' | 'generated' | 'legacy';
 
 export interface LemmaRecord {
   lemma: string;
+  /** Canonical inflected form, distinct from the dictionary headword. */
+  surface?: string;
   pos?: PartOfSpeech;
   morphClass?: string;
   frequency?: number;

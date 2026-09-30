@@ -2,18 +2,18 @@
   "split": "validation",
   "scope": "100 synthetic held-out pairs from 20 separate authored gold groups",
   "exact": {
-    "baseline": 18,
-    "model": 20,
+    "baseline": 19,
+    "model": 21,
     "total": 100
   },
-  "changed": 10,
-  "improved": 8,
+  "changed": 12,
+  "improved": 10,
   "regressed": 0,
   "wordEditDistance": {
-    "baseline": 211,
-    "model": 203
+    "baseline": 206,
+    "model": 194
   },
-  "elapsedMs": 726,
+  "elapsedMs": 1187,
   "rows": [
     {
       "id": "local-104-1",
@@ -933,10 +933,10 @@
       "variant": 0,
       "input": "bu isi plan uzre et tapsirigi diqqetle oxu is vaxti qaydalara emel olunmalidir",
       "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
-      "baseline": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalidir.",
-      "output": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalidir.",
-      "baselineDistance": 4,
-      "distance": 4
+      "baseline": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalıdır.",
+      "output": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalıdır.",
+      "baselineDistance": 3,
+      "distance": 3
     },
     {
       "id": "local-174-2",
@@ -946,10 +946,10 @@
       "variant": 1,
       "input": "bu isi plan uzre et, tapsirigi diqqetle oxu. is vaxti qaydalara emel olunmalidir.",
       "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
-      "baseline": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalidir.",
-      "output": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalidir.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
+      "output": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-174-3",
@@ -972,10 +972,10 @@
       "variant": 3,
       "input": "bu ishi plan uzre et tapshirigi diqqetle oxu ish vaxti qaydalara emel olunmalidir",
       "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
-      "baseline": "Bu ishi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalidir.",
-      "output": "Bu ishi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalidir.",
-      "baselineDistance": 5,
-      "distance": 5
+      "baseline": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalıdır.",
+      "output": "Bu işi plan üzrə et tapşırığı diqqətlə oxu iş vaxtı qaydalara əməl olunmalıdır.",
+      "baselineDistance": 3,
+      "distance": 3
     },
     {
       "id": "local-174-5",
@@ -985,10 +985,10 @@
       "variant": 4,
       "input": "bu isi plan uzre et, tasirigi diqqetle oxu. is vaxti qaydalara emel olunmalidir.",
       "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
-      "baseline": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalidir.",
-      "output": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalidir.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
+      "output": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-179-1",
@@ -999,9 +999,9 @@
       "input": "yoxlamani plan uzre et tapsirigi ardicilliqla hazirla is qaydalarini yadda saxla",
       "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
       "baseline": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla iş qaydalarını yadda saxla.",
-      "output": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla iş qaydalarını yadda saxla.",
+      "output": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla. İş qaydalarını yadda saxla.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 2
     },
     {
       "id": "local-179-2",
@@ -1025,9 +1025,9 @@
       "input": "yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla",
       "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
       "baseline": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla.",
-      "output": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla.",
+      "output": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-179-4",

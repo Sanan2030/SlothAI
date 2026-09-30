@@ -57,7 +57,6 @@ export function repairPhrases(text: string): string {
     .replace(/(^|[^\p{L}])get-gədə(?=$|[^\p{L}])/giu, '$1get-gedə')
     // "Səhərin ilk işığı" is a fixed literary construction. The bare form
     // "səhərin" is ambiguous with "şəhərin", so only repair this context.
-    .replace(/(^|[^\p{L}])şəhərin ilk işığı(?=$|[^\p{L}])/giu, '$1səhərin ilk işığı')
     // These are predicate contexts for "qurmaq", not the noun "qürur".
     .replace(/(körpü|gələcəyini bu gün|özü|onu) qürur(?=[,.!?]|$)/giu, '$1 qurur')
     // "Pes etmək" is an established borrowed verb and must not become "pəs".

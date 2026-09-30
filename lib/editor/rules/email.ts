@@ -39,13 +39,17 @@ export function paragraphEmailBody(body: string): string {
 
 // Recipient titles identify the end of a compact salutation. These are
 // addressee nouns, never an inventory of possible body-opening phrases.
-const recipientEnd = /^(?:bəy|bey|xanım|xanim|komanda(?:sı|si)?|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|terefdasimiz|tərəfdaşımız|musteri|müştəri|müştərilər|müraciətçi|nümayəndəsi|numayendesi|istifadecisi|istifadəçisi|istifadeciler|istifadəçilər|analitikler|analitiklər|analitikləri|şəxslər|sexsler|şəxs|heyəti|heyeti|heyət|rəhbər|rəhbəri|rəhbərləri|rəhbərlik|rehberlik|əməkdaşlar|emekdaslar|komitəsi|komitesi|tərəflər|terefler|qrupu|şöbəsi|sahibləri|sahibi|işçiləri|koordinatorları|mühəndislər|mühəndis|inzibatçılar|tərtibatçılar|operatorlar|operatorları|operator|mühasiblər|mühasibat|menecer|meneceri|təmsilçi|vendor|tərəfdaş|tərəfdaşı|hazırlayanlar|müəllifləri|icraçılar|icraçı|dəstək|dizaynerlər|mərkəzi|təlimçilər|katiblik|müdiri|iştirakçıları)$/iu;
+const recipientEnd = /^(?:bəy|bey|xanım|xanim|komanda(?:sı|si)?|hemkarlar|həmkarlar|terefdaslar|tərəfdaşlar|terefdasimiz|tərəfdaşımız|musteri|müştəri|müştərilər|müraciətçi|nümayəndəsi|numayendesi|istifadecisi|istifadəçisi|istifadeciler|istifadəçilər|analitikler|analitiklər|analitikləri|şəxslər|sexsler|şəxs|heyəti|heyeti|heyət|rəhbər|rəhbəri|rəhbərləri|rəhbərlik|rehberlik|əməkdaşlar|emekdaslar|komitəsi|komitesi|tərəflər|terefler|qrupu|şöbəsi|sahibləri|sahibi|işçiləri|koordinatorları|mühəndislər|mühəndis|inzibatçılar|tərtibatçılar|operatorlar|operatorları|operator|mühasiblər|mühasibat|menecer|meneceri|təmsilçi|vendor|tərəfdaş|tərəfdaşı|hazırlayanlar|müəllifləri|icraçılar|icraçı|dəstək|dizaynerlər|mərkəzi|təlimçilər|köməkçisi|katiblik|müdiri|iştirakçıları)$/iu;
 
 function recipientFromLine(line: string): RegExpMatchArray | undefined {
   const words = [...line.matchAll(/\p{L}+/gu)];
   // A recipient may have several qualifiers ("filial texniki dəstək qrupu");
   // never scan the entire body looking for a convenient recipient noun.
-  const end = words.findLastIndex((item, index) => index < 5 && recipientEnd.test(item[0]));
+  let end = words.findIndex((item, index) => index < 5 && recipientEnd.test(item[0]));
+  // Stop at the first title; only immediately adjacent titles extend it.
+  // Body nouns such as 'qəbul sınağının iştirakçıları' must not become addressees.
+  while (end >= 0 && end + 1 < Math.min(words.length, 5)
+    && recipientEnd.test(words[end + 1][0])) end++;
   if (end < 0) return undefined;
   const span = line.slice(0, words[end].index! + words[end][0].length);
   return [span, span] as unknown as RegExpMatchArray;

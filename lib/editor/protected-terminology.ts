@@ -4,12 +4,14 @@ export const PROTECTED_TERMINOLOGY = {
     'Java', 'Python', 'JavaScript', 'TypeScript', 'C#', 'C++', '.NET',
     'PHP', 'HTML', 'CSS', 'React', 'Next.js', 'Node.js', 'Spring Boot',
     'FastAPI', 'Pydantic', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis',
+    'Integration', 'integration', 'bug', 'state', 'JSONB', 'CSRF', 'XSS', 'E2E', 'QA', 'OCR', 'DOCX', 'ZIP',
     'RabbitMQ', 'Kafka', 'gRPC', 'GraphQL', 'WebSocket', 'OpenAPI',
   ],
   infrastructure: [
     'Docker', 'Kubernetes', 'Vercel', 'GitHub', 'GitLab', 'Linux', 'Ubuntu',
     'CI/CD', 'DevOps', 'TLS', 'SSL', 'RBAC', 'OAuth', 'OAuth2', 'JWT', 'VPN',
     '2FA', 'SLA', 'HTTP', 'HTTPS', 'TCP', 'IP', 'DNS', 'CDN',
+    'TTL', 'CPU', 'UTC', 'ID', 'SHA', 'NAT', 'JS', 'FIN',
     'Prometheus', 'Grafana', 'URL', 'npm',
   ],
   banking: [

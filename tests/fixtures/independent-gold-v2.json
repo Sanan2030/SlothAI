@@ -1,0 +1,4013 @@
+{
+  "version": 1,
+  "review": {
+    "reviewer": "assistant-editor",
+    "method": "All 800 candidate texts inspected; explicit spelling, meaning, punctuation and email-structure decisions applied. Existing 41 frozen expectations preserved. These are assisted editorial targets, not independent human-linguist certification.",
+    "source": "Frozen 460 RSD/IT and 340 mail inputs",
+    "trainingUse": "none; evaluation only",
+    "blindEvaluation": false,
+    "additionalReview": "Corrected acronym ID and mixed-diacritic iştirakci to iştirakçı after differential review; no engine output was used as an automatic target. Added the grammatical conditional comma in rsd-it-119 after editorial review."
+  },
+  "cases": [
+    {
+      "id": "rsd-it-001",
+      "inputSha256": "2cba0b485a7ee840de3229c1ff6f359c6a42b48d6a9c4bce084717bd2b19c75b",
+      "expected": "RSD-də yeni müraciət qeydiyyata alınıb."
+    },
+    {
+      "id": "rsd-it-002",
+      "inputSha256": "96c23fd38511c02c2ef405275fb5dcf469f336539caa79caece215488d1d1744",
+      "expected": "Sənəd daxil olanda qeydiyyat nömrəsi avtomatik verilir."
+    },
+    {
+      "id": "rsd-it-003",
+      "inputSha256": "9bb7f506ff5b6e4c37f12f1c937fdac3d6df98357e417f07a08a367f17cf38e9",
+      "expected": "Eyni müraciət ikinci dəfə göndəriləndə sistem xəbərdarlıq edir."
+    },
+    {
+      "id": "rsd-it-004",
+      "inputSha256": "7947c6b93d8f37b99b7df90e328b5d84895f095a57aea06314a78f013b46a6da",
+      "expected": "Gələn məktubun tarixi qeydiyyat jurnalına yazılır."
+    },
+    {
+      "id": "rsd-it-005",
+      "inputSha256": "3e1a220235671a61383577ec34b9edbaf5dba777709ad89737b42ba7ca146d3d",
+      "expected": "Qeydiyyat kartındakı ünvan məlumatı yanlışdır."
+    },
+    {
+      "id": "rsd-it-006",
+      "inputSha256": "6e615ed223a11665ba235ccba8cdd1cce2a4f535f58999959d10de4144f30b28",
+      "expected": "Operator məktubun əlavələrini yoxlayıb qeydiyyatı tamamlayır."
+    },
+    {
+      "id": "rsd-it-007",
+      "inputSha256": "2a8864221623b86578b309731f73cc5469e9585470b0220fde75020e39405c82",
+      "expected": "Qəbul olunan sənədə ilkin status təyin edildi."
+    },
+    {
+      "id": "rsd-it-008",
+      "inputSha256": "e3c6dc00cbcf4336a428a5e84b17b810080ca3bb6bab8f6d050ca1d761cb632c",
+      "expected": "Qeydiyyat nömrəsinin prefiksi filial üzrə fərqlənir."
+    },
+    {
+      "id": "rsd-it-009",
+      "inputSha256": "20a316b306cd6069122aff84f5c3a85818d37b97a2461c87edba0ccb2ca2c21e",
+      "expected": "Müraciətin daxilolma kanalı kartda göstərilməlidir."
+    },
+    {
+      "id": "rsd-it-010",
+      "inputSha256": "c48009c7697df068ae31689d6a95c284952e7ec9de183a8845528ff9c2771914",
+      "expected": "Təkrar sənəd aşkarlananda operatora bildiriş göndərilir."
+    },
+    {
+      "id": "rsd-it-011",
+      "inputSha256": "6d1bdfacc408388fe148b5594ee089704cd57dd2dd5e2c4f16874752480a14b5",
+      "expected": "Fiziki şəxsin FIN kodu qeydiyyat zamanı yoxlanılır."
+    },
+    {
+      "id": "rsd-it-012",
+      "inputSha256": "b1d7123d4920f83544ffb590e5e6962f6632cea30748011a0a6d79661d44d393",
+      "expected": "Hüquqi şəxsin VÖEN məlumatı sorğudan qayıdır."
+    },
+    {
+      "id": "rsd-it-013",
+      "inputSha256": "2fd15e3df51d62fc7645d7b8649d89f9d9cdd812c78ce6920f9f46c6692bdb6e",
+      "expected": "Qəbul tarixi ilə sənədin üstündəki tarix eyni deyil."
+    },
+    {
+      "id": "rsd-it-014",
+      "inputSha256": "7080931b20cc74608c930c87a2607326e3902f7adbda05143929d7266a793172",
+      "expected": "Operator xidmət növünü düzgün seçməyib."
+    },
+    {
+      "id": "rsd-it-015",
+      "inputSha256": "9c3a5017bf16ed0482d3191bf523bf8d772ebad7e4ac21aada9fadc2d0ac019f",
+      "expected": "Gələn poçt göndərişi üçün ayrıca qeydiyyat açılır."
+    },
+    {
+      "id": "rsd-it-016",
+      "inputSha256": "4dc001900b1bf5a69788fb78582ed2f36a6e7807c977b1d02493ab1c802911b4",
+      "expected": "Qeydiyyata alınan faylın ölçüsü limitdən böyükdür."
+    },
+    {
+      "id": "rsd-it-017",
+      "inputSha256": "abed75b4b7265518b338a5dfc532baa7a7ed162e2516843c54e2fb2e5182dc6c",
+      "expected": "Məktubun əsli kağız arxivinə təqdim olunub."
+    },
+    {
+      "id": "rsd-it-018",
+      "inputSha256": "5f778b3459de66f19f2099f74eba4bcd4da4238af122b34347768a1be1af799f",
+      "expected": "Giriş sənədinin kodu digər struktur bölməyə aiddir."
+    },
+    {
+      "id": "rsd-it-019",
+      "inputSha256": "7e5200d59a62e3f6770479d25a098a5fca7b4f3761c09a78fe524c3e7688a9ea",
+      "expected": "Qəbul forması boş buraxılanda təsdiq düyməsi bağlanır."
+    },
+    {
+      "id": "rsd-it-020",
+      "inputSha256": "109dc6c73b9afab0659f1642eb1a94ebfc5be31e82e472b97632f5848e67e9f5",
+      "expected": "Qeydiyyat tamamlanandan sonra istifadəçiyə qəbz göndərilir."
+    },
+    {
+      "id": "rsd-it-021",
+      "inputSha256": "4de9fc5ce9b6fe0a432e27bfc60d66abd64ca6d6c014fac09f2ae20d9375d43b",
+      "expected": "Sənəd növü seçilmədən müraciət yaradılmır."
+    },
+    {
+      "id": "rsd-it-022",
+      "inputSha256": "f4e5b35ca2b021b843990f7e8275e6f3629b1debb5a309b9ea86bf6a1b95d969",
+      "expected": "Xidməti sənədlər üçün əlavə sahələr açılmalıdır."
+    },
+    {
+      "id": "rsd-it-023",
+      "inputSha256": "fed3c1123699405e0cbd8b08224e6dbb108be1b5f1372c26de26bbb48e519321",
+      "expected": "Daxili məktub ilə xarici məktub fərqli növlərdir."
+    },
+    {
+      "id": "rsd-it-024",
+      "inputSha256": "bb69489bc48c77514aa8d3223b8671c342240f69dc5115b19f4d77f2a94c3747",
+      "expected": "Sənəd növünün adı siyahıda iki dəfə görünür."
+    },
+    {
+      "id": "rsd-it-025",
+      "inputSha256": "ed0a7289745fad2b3b487ef622ab4c80c721002a93612d36dfbd9194cda7f996",
+      "expected": "İstifadə olunmayan sənəd növü deaktiv edilsin."
+    },
+    {
+      "id": "rsd-it-026",
+      "inputSha256": "1df40325fca2e4ddbf682fd4092b03f5554e6680b1b4f72945d69468002fe450",
+      "expected": "Yeni növ yaradılanda kateqoriya mütləq seçilməlidir."
+    },
+    {
+      "id": "rsd-it-027",
+      "inputSha256": "c5f07293c35ed9f24a314e50d2fdab8d5eec98d6d1d9c78a87cf99a437da2764",
+      "expected": "Qərar layihəsi sənəd növlərinə əlavə olunub."
+    },
+    {
+      "id": "rsd-it-028",
+      "inputSha256": "09f50f4faab7f44060dbe8889c2fe84b2a2fa8815c35139b3de32ab41715f0b0",
+      "expected": "Müqavilə növünün saxlanma müddəti on ildir."
+    },
+    {
+      "id": "rsd-it-029",
+      "inputSha256": "05cab5b19e166a85e7329a27c20953180fcb743a6331666e3267b5a775cacd5f",
+      "expected": "Arxiv sənədi ayrı bölmədə göstərilir."
+    },
+    {
+      "id": "rsd-it-030",
+      "inputSha256": "6431acfe02676ec7dd3f3c46212c8ef6f6cf1961bc3321f02935ee56447eaa9b",
+      "expected": "Sifariş növü üçün icazə ssenarisi fərqlidir."
+    },
+    {
+      "id": "rsd-it-031",
+      "inputSha256": "2636bcfa7c4612c8f5be562e1c12c607df8a803f327d5b358408414f41ed4e22",
+      "expected": "Sistem növün kodunu əl ilə yazmağa icazə vermir."
+    },
+    {
+      "id": "rsd-it-032",
+      "inputSha256": "204e49757d39f9492293bc78f790d1fb9715a9f66725afec0593aeda102a0c18",
+      "expected": "Sənəd növünə görə vacib sahələr dəyişir."
+    },
+    {
+      "id": "rsd-it-033",
+      "inputSha256": "1a5b99c4f0335850cb29251c8b1725d9e2f33ef349a259e1336cc935fdd7e3e2",
+      "expected": "Elektron akt yeni növ kimi təqdim olunacaq."
+    },
+    {
+      "id": "rsd-it-034",
+      "inputSha256": "0129a3f1d459f51b29642659834413ac289afc765211fc9db8ced240e31487a2",
+      "expected": "Növün tərcüməsi Azərbaycan dilində natamamdır."
+    },
+    {
+      "id": "rsd-it-035",
+      "inputSha256": "5f27199eb2d5f7fc35de3944e436bdca51605a620eefae98b3fabbeae1181c7e",
+      "expected": "Hər növün öz qeydiyyat sayğacı olmalıdır."
+    },
+    {
+      "id": "rsd-it-036",
+      "inputSha256": "552344f3ecc05d4b2708eeaec9e6cfb816715b07034ffd02276ec319982e6da1",
+      "expected": "Vəkalətnamə növündə etibar edən şəxs ayrıca seçilir."
+    },
+    {
+      "id": "rsd-it-037",
+      "inputSha256": "6297302fb4b3092c8ca654f440cfb05f25dc2e892548e4f51967323c432f98be",
+      "expected": "Xidmət arayışı yalnız aidiyyəti qrup tərəfindən açılır."
+    },
+    {
+      "id": "rsd-it-038",
+      "inputSha256": "11b35bdbe424bc601a06551a767c9ad93347bed23b5d6229e239db309dfb3a2d",
+      "expected": "Protokol növü üçün fayl əlavəsi məcburidir."
+    },
+    {
+      "id": "rsd-it-039",
+      "inputSha256": "4858e593a8fda8409a30af3284b104af75efdeb0c9032f88c0ce4f125aff4d09",
+      "expected": "Hesabat növü siyahının əvvəlində göstərilsin."
+    },
+    {
+      "id": "rsd-it-040",
+      "inputSha256": "069959432c232e5e22fb4524a817013e0489b9d8ca095643c5cf2df303ce0bdc",
+      "expected": "Qaytarılan sənədin növü dəyişdirilə bilmir."
+    },
+    {
+      "id": "rsd-it-041",
+      "inputSha256": "462b4931edb18b087ea663e6ca98aabaafe9618034d6e7b2ff24ed9f5c58ccd7",
+      "expected": "Dərkənar layihəsi icra edilmək üçün göndərildi."
+    },
+    {
+      "id": "rsd-it-042",
+      "inputSha256": "d4519e21d33419c1b9c46156da6abc2f01de9f845f5b92ac75ce7b951385196c",
+      "expected": "Dərkənarın məqsədi seçilmədən icraçı təyin edilmir."
+    },
+    {
+      "id": "rsd-it-043",
+      "inputSha256": "c7b2d9d4d3e57bf1dfdc00d2402944c84f3a4cabfd57b7383bb7eb130448b83a",
+      "expected": "Rəhbər dərkənarı təsdiqləyib imzaladı."
+    },
+    {
+      "id": "rsd-it-044",
+      "inputSha256": "afd1d6dce074188fc5c30ccfb265f1aa477f1b02ed28acb48ec6c59c9a289c5d",
+      "expected": "Dərkənar üzrə son icra tarixi sabaha qoyulub."
+    },
+    {
+      "id": "rsd-it-045",
+      "inputSha256": "853a639591091056c6d516764a8cc20f7d7d9da675962e2773c89faa959654f3",
+      "expected": "Layihə qeydə qaytarılanda səbəb göstərilməlidir."
+    },
+    {
+      "id": "rsd-it-046",
+      "inputSha256": "72183d576bdbd91b51ecd48ac7085c8f234b199b43df2798dfc34325dbb90c37",
+      "expected": "Eyni sənədə ikinci dərkənar əlavə olunub."
+    },
+    {
+      "id": "rsd-it-047",
+      "inputSha256": "d3ca37a891098c467ebdc14f81e6853a75d8ded820ec95b8146ffa043ac8d098",
+      "expected": "Dərkənar layihəsini kim hazırlayıb?"
+    },
+    {
+      "id": "rsd-it-048",
+      "inputSha256": "de7a3bebe9b7c8bd5a56edb3a1435c16363a2f073381759f0c91abae92f2bf23",
+      "expected": "İcraçı dərkənarın üstündəki qeydləri görə bilmir."
+    },
+    {
+      "id": "rsd-it-049",
+      "inputSha256": "a3777edfbd6cc94124ce096fb7a35cd6ac5fc757c66d09e22ae471eebb38b763",
+      "expected": "Dərkənar imzalandı, amma icra statusu dəyişmədi."
+    },
+    {
+      "id": "rsd-it-050",
+      "inputSha256": "d3b64047df9316d6047d9e3f552299a541baa62dfec283d0c91df4144f2e7bb6",
+      "expected": "Daxili dərkənar üçün müavin razılığı tələb olunur."
+    },
+    {
+      "id": "rsd-it-051",
+      "inputSha256": "3933c1fd301b9faa61b4dca96d553dd52ef430873866fc29f8003d645b375c1a",
+      "expected": "Dərkənarın əlavəsi sənəd kartında açılmır."
+    },
+    {
+      "id": "rsd-it-052",
+      "inputSha256": "ef9cc0ade09c3cfcacc3c9741ae26167f2f3885ff8263703e2df8057d1b84543",
+      "expected": "İmzadan sonra dərkənar mətni redaktə edilməsin."
+    },
+    {
+      "id": "rsd-it-053",
+      "inputSha256": "aede76004f6022ac86612f4739eab5fc7ba5fb323152034688531f84df16894e",
+      "expected": "Dərkənar icraya yönləndiriləndə bildiriş düşmədi."
+    },
+    {
+      "id": "rsd-it-054",
+      "inputSha256": "2ba92524b64c0ed68cd43df5725eca12eb96d6366d73cdfd8d984c3f6afc0182",
+      "expected": "Təsdiq növbəsindəki dərkənar geri çəkildi."
+    },
+    {
+      "id": "rsd-it-055",
+      "inputSha256": "fd7702c84ccbddfa95d0ce853eeafdb43e22ea065b92815bc6f259245684920c",
+      "expected": "Rəhbərin dərkənara yazdığı qeyd saxlanmayıb."
+    },
+    {
+      "id": "rsd-it-056",
+      "inputSha256": "e1fe0d8d0fed18edc6996f0952d3858fc1bfc32d226fdb34d316f1cdde814a88",
+      "expected": "Dərkənar üzrə məsul şəxs məzuniyyətdədir."
+    },
+    {
+      "id": "rsd-it-057",
+      "inputSha256": "68349b432338e9aa892405c3a3aed1c4f82eb7999d49c80e822f2e7c845383c5",
+      "expected": "İcraçı dərkənarın müddətini uzatmaq istəyir."
+    },
+    {
+      "id": "rsd-it-058",
+      "inputSha256": "023d1fb30f96688717667d6a848a93ba07fdf5e135d2270554ba23874744f615",
+      "expected": "Dərkənar proyekti təqdim edilmədən silinib."
+    },
+    {
+      "id": "rsd-it-059",
+      "inputSha256": "892a0f246a81d4b58ee45fff1f658cd8b76f13780db14b39b803fb5e81f5cc57",
+      "expected": "Nəzarətçi dərkənar icrasını yoxlamaq üçün tarixçəyə baxır."
+    },
+    {
+      "id": "rsd-it-060",
+      "inputSha256": "8a0d5583ba223a1467aca8142adad08e504e28f3b83c43f82f9f9bbaf8b2f9f2",
+      "expected": "Dərkənarın cari versiyası PDF faylında görünməlidir."
+    },
+    {
+      "id": "rsd-it-061",
+      "inputSha256": "b411a6671fa7ccc4cac3be76a534526b4002a9dbf81a1e4083a2d495fad500c7",
+      "expected": "Sənəd aidiyyəti üzrə yeni icraçıya yönləndirildi."
+    },
+    {
+      "id": "rsd-it-062",
+      "inputSha256": "21e99b961b5a17eaab6c333b8c7980a7a95f85d5281ce208b4b68d5b68c2d442",
+      "expected": "Razılaşdırma mərhələsində göndəriş bağlanıb."
+    },
+    {
+      "id": "rsd-it-063",
+      "inputSha256": "890f1b8b657b157f264ba503535f869bcff49b8cebf2f19dea921933fb0e7fa9",
+      "expected": "Müraciət rəhbərə çatmadan əvvəl katibdən keçir."
+    },
+    {
+      "id": "rsd-it-064",
+      "inputSha256": "0205d1f0eb3336a08e0da19d6f66deab559c337538d67d75213aceeef108083d",
+      "expected": "Marşrutdakı ikinci addım səhv bölməyə bağlanıb."
+    },
+    {
+      "id": "rsd-it-065",
+      "inputSha256": "74bb885c7986d872eaeb6278d302e89c5e39131455231bca6cb4681ee054ae9b",
+      "expected": "Qaytarılan sənəd ilkin icraçıya geri dönür."
+    },
+    {
+      "id": "rsd-it-066",
+      "inputSha256": "c9f89b1a355b4ac8546bebb1bce5578da168810915cd62324da4acb89b943610",
+      "expected": "Mərhələ bitəndə növbəti vəzifəli şəxsə bildiriş gedir."
+    },
+    {
+      "id": "rsd-it-067",
+      "inputSha256": "ee75a29b5a59305ef99b70517fc947bd309318590e26862cee9f1002a0cfb635",
+      "expected": "Paralel icra üçün iki struktur bölmə seçildi."
+    },
+    {
+      "id": "rsd-it-068",
+      "inputSha256": "0af0c258430ea235cde87494e1435e3df4bcec45b4c45e9c607e86da86b1557e",
+      "expected": "Birinci razılaşdıran vəzifəli şəxs ezamiyyətdədir."
+    },
+    {
+      "id": "rsd-it-069",
+      "inputSha256": "8a06046773317974ae7a70332517dadd60ba1b48be5ad77e28e3510be6ff0312",
+      "expected": "Təsdiq zamanı marşrutun köhnə versiyası işlədi."
+    },
+    {
+      "id": "rsd-it-070",
+      "inputSha256": "dd0e608001361a7f53fd8ac4d44d1cef9d1ef773805f268f65ac42126733185f",
+      "expected": "İcra müddəti başlayanda timer işə düşməlidir."
+    },
+    {
+      "id": "rsd-it-071",
+      "inputSha256": "c8039632812e1dbfbdec8fb1b0cdf980dabea801f8a660f9eb0b3c31e98f3683",
+      "expected": "Yeni marşrut yalnız test mühitində aktivdir."
+    },
+    {
+      "id": "rsd-it-072",
+      "inputSha256": "3f091f3d35d62e06342def459ca2517343db866bd846223b2aaecd4054a29767",
+      "expected": "Sənəd yönləndiriləndə əski icraçı siyahıdan çıxarılır."
+    },
+    {
+      "id": "rsd-it-073",
+      "inputSha256": "d1a63ba50c284417f4bc79eb2aa67d843514aed6f049655c192077a9d5ecffe3",
+      "expected": "Rahatlaşdırılmış marşrut üç addımdan ibarətdir."
+    },
+    {
+      "id": "rsd-it-074",
+      "inputSha256": "e89f99268a283c4d01b521a26157e69a7b525309c5fa23381d17fce4d925edb7",
+      "expected": "Təsdiq edən şəxs seçiləndə struktur aidiyyəti yoxlanır."
+    },
+    {
+      "id": "rsd-it-075",
+      "inputSha256": "5a5fdb1c9269d3fce9bf108fcff1646461c94a0bcf81b8edd37131f051fca907",
+      "expected": "Yanlış icraçı təyin edilmiş sənəd geri qaytarıldı."
+    },
+    {
+      "id": "rsd-it-076",
+      "inputSha256": "cd5f3426234e6e77fb78a1528df8ea3069ab9fad2e14921faa595a68546270cf",
+      "expected": "İş axınında imza addımı buraxıla bilməz."
+    },
+    {
+      "id": "rsd-it-077",
+      "inputSha256": "ee782201bc297eafcfbfa9f9a52c24e253ee77fc96ae868d189d6924c4907253",
+      "expected": "Gizli sənəd xarici icraçıya yönləndirilməsin."
+    },
+    {
+      "id": "rsd-it-078",
+      "inputSha256": "98826e8aca996a3d663e930f8330e0025b9066cbf809e0a58f7ed1da1f362d07",
+      "expected": "Yeni workflow komandalar üzrə fərqli işləyir."
+    },
+    {
+      "id": "rsd-it-079",
+      "inputSha256": "773da52bfc843644a05e129e260739269c3a1923289adbd4908fdd530c5a27ed",
+      "expected": "Göndərişdən sonra marşrut tarixçəsi silinməməlidir."
+    },
+    {
+      "id": "rsd-it-080",
+      "inputSha256": "45aab04f133bae20436b491f28b459d4c8b83094f546db40ec90175cd185ebf4",
+      "expected": "Marşrutun hər addımında icra vaxtı yazılsın."
+    },
+    {
+      "id": "rsd-it-081",
+      "inputSha256": "2c3001ae59f6f122d41c47914ba886d4385ce39d0398e56841b307732298cb3b",
+      "expected": "İstifadəçi sənədi yalnız öz bölməsində görə bilir."
+    },
+    {
+      "id": "rsd-it-082",
+      "inputSha256": "c6cbf2b4e45702e87b6e11c0c63551a86dd512404a71d897122be479218ca372",
+      "expected": "Rola əsaslanan giriş qaydası yeniləndi."
+    },
+    {
+      "id": "rsd-it-083",
+      "inputSha256": "2bb2ff17257a2c7db6083cc3d2c4aea14836249696f0489bef9c59dabdc08c44",
+      "expected": "Məsul şəxsin imza icazəsi müddətlə məhdudlaşır."
+    },
+    {
+      "id": "rsd-it-084",
+      "inputSha256": "f52c00fa9a77d543cc2bbe9415094a9c16e6ef7eadf2a398dee5890c778f756c",
+      "expected": "Filial operatoru mərkəzi arxivə baxa bilmir."
+    },
+    {
+      "id": "rsd-it-085",
+      "inputSha256": "980da50d49b6d5ff69efcf793ec4390624b102104b2594bb82838fb42de6fb73",
+      "expected": "Məzuniyyətdəki işçinin səlahiyyəti müvəqqəti keçirildi."
+    },
+    {
+      "id": "rsd-it-086",
+      "inputSha256": "150cb5046264dd263e37d55776040d9a27cf86506f3610b4b4b911460ab75bcc",
+      "expected": "Admin panelində icazə yoxlaması aparılır."
+    },
+    {
+      "id": "rsd-it-087",
+      "inputSha256": "8ce3bd8f16176ac07fe61f81ad55690832447806a669633848f3539e24f00b8c",
+      "expected": "Gizli sənədin oxunmasına yalnız rəhbər icazə verir."
+    },
+    {
+      "id": "rsd-it-088",
+      "inputSha256": "abcb5bbdf19bb93c2533040728b096d2af8f360bf43cb11364b4e21fd8ebf817",
+      "expected": "İcazə matrisi sənəd növünə görə qurulub."
+    },
+    {
+      "id": "rsd-it-089",
+      "inputSha256": "a7405780fdacc0424bfbee9a354b2c356fa0c36aa1ed8015f689ed6ed3685ec9",
+      "expected": "API tokeni deaktiv ediləndə göndəriş dayanır."
+    },
+    {
+      "id": "rsd-it-090",
+      "inputSha256": "4fbf6885e5c5a9e2ba734db8815089dfb5197f00d10c3d0e889da4685bdefc48",
+      "expected": "İstifadəçinin rolu dəyişəndə sessiya yenilənsin."
+    },
+    {
+      "id": "rsd-it-091",
+      "inputSha256": "8b679c550db180bc797bee2a150c6e0d7d8fd34f263beb001f81078656d96d32",
+      "expected": "İcazə olmadan endirilən fayl üçün 403 qaytarılır."
+    },
+    {
+      "id": "rsd-it-092",
+      "inputSha256": "1cf7aeaef83aa8b19e56cb50101de9124be5d6889ce35bdd390c9e8f2f76f798",
+      "expected": "Müştəri nümayəndəsi yalnız öz müraciətinə baxır."
+    },
+    {
+      "id": "rsd-it-093",
+      "inputSha256": "46c3bced50fd36b30d2e51d28ac1d6105e321475a0a45c8a2a86811f5caefdc4",
+      "expected": "İcraçının düzəliş səlahiyyəti bu mərhələdə yoxdur."
+    },
+    {
+      "id": "rsd-it-094",
+      "inputSha256": "3d7e22f24675862ed7d281f7933a82a8ac8f04ef43ad20228742c76e4333c1a3",
+      "expected": "Vəkalət verilən şəxs üçün bitmə tarixi qeyd edilib."
+    },
+    {
+      "id": "rsd-it-095",
+      "inputSha256": "194e55f4b8afa31544c7ad75cbd58af8a625a18d576f7f645a3a9c15d0ba0d54",
+      "expected": "Qrup icazəsi silinəndə fərdi istisna saxlanılır."
+    },
+    {
+      "id": "rsd-it-096",
+      "inputSha256": "c9eb1c5f766ad2766ee8adb7b0b1c513321f9cff1ee9ec89ecd4cdf720f3285f",
+      "expected": "Daxili istifadəçi diski paylaşım linkini açmasın."
+    },
+    {
+      "id": "rsd-it-097",
+      "inputSha256": "dfae7501aba3c5418dd9ac1262b6948f7535a58af814af858504b65a33d9936d",
+      "expected": "Audit oxuma icazəsi yalnız nəzarətçidə qalır."
+    },
+    {
+      "id": "rsd-it-098",
+      "inputSha256": "d4442b9a28ebe48905c129c02938e04ef4ee9801cd51ff70ada5f1c2fb4993ce",
+      "expected": "Giriş məsələsini rol yoxlaması ilə təkrarladıq."
+    },
+    {
+      "id": "rsd-it-099",
+      "inputSha256": "f7feabc436a2a1c0e9aca600ce22765c4a88c3d7cb506a67ec623f7c5cc34d27",
+      "expected": "Özünə mənimsəmə funksiyası üçün səlahiyyət tələb edilir."
+    },
+    {
+      "id": "rsd-it-100",
+      "inputSha256": "d619042c47b8939d8b7f98ed1f0db4539e7be7689fa359a04eceaa324e1c186d",
+      "expected": "İki rolun kəsişməsində məhdud icazə üstün tutulur."
+    },
+    {
+      "id": "rsd-it-101",
+      "inputSha256": "05e392fe7fc07693f930196079ebadfca46eead343dfd38f94ce0765830b9353",
+      "expected": "Elektron imza üçün sertifikatın vaxtı bitib."
+    },
+    {
+      "id": "rsd-it-102",
+      "inputSha256": "e52545500f800270738631208ce0599271b6ccdd0dc593b62e439d6c2b23ec7b",
+      "expected": "İmzalanmış sənədin heşi yoxlanmalıdır."
+    },
+    {
+      "id": "rsd-it-103",
+      "inputSha256": "66d583e3692af11d45c6f437b36eac6b95fab2f3dcf77fdcbc67f149675ad7c9",
+      "expected": "Mobil imza prosesində vaxt asımı baş verdi."
+    },
+    {
+      "id": "rsd-it-104",
+      "inputSha256": "efc5fc558d92cc3ff598e7caf9bac3bff242ea7d98b4fe0d143081cb1daca7e7",
+      "expected": "Sistem imza vaxtını audit jurnalına yazır."
+    },
+    {
+      "id": "rsd-it-105",
+      "inputSha256": "c2e8544b497d264a9b824f098824468073ca59c3128905f9475d96f5fb32a31b",
+      "expected": "İmzalayan şəxsin adı sertifikatla eynidir."
+    },
+    {
+      "id": "rsd-it-106",
+      "inputSha256": "81e73d74774bcac9a3e29c770c5ae614aba9db61c6b16db88053e159f900ae15",
+      "expected": "İkinci imza birincidən sonra tələb olunur."
+    },
+    {
+      "id": "rsd-it-107",
+      "inputSha256": "b22e0b04750002720ebb28371e5a29f98ee26c728ac643a2d947d52f8ec21fa8",
+      "expected": "PDF imzasının etibarlılıq statusu ayrıca göstərilir."
+    },
+    {
+      "id": "rsd-it-108",
+      "inputSha256": "5cd955d94da7676af5d9df0c908a043497a3b106caa59ce88048c6c7c13373e8",
+      "expected": "İmza düyməsi yalnız təsdiq mərhələsində açılır."
+    },
+    {
+      "id": "rsd-it-109",
+      "inputSha256": "5af9023bb750641d4806ac9eafd59467d1767958ac30ad3b59841edbbef777d4",
+      "expected": "Sertifikat yenilənəndə köhnə fayl toxunulmaz qalır."
+    },
+    {
+      "id": "rsd-it-110",
+      "inputSha256": "8d87ffb97a84bd175e801f6dff391480e2e4ff98e0b65dd78ae588f70c4725b9",
+      "expected": "Müddəti bitmiş token ilə sənəd imzalanmır."
+    },
+    {
+      "id": "rsd-it-111",
+      "inputSha256": "1625a330df661565a89ab6f90759e7db845b799505a698367c953b8ff0bdec28",
+      "expected": "İmza sırası rəhbərin qərarı ilə dəyişdirildi."
+    },
+    {
+      "id": "rsd-it-112",
+      "inputSha256": "cfba8039c0b0f025200e0c7ab348c38899de231233a03312a41d6b3f151665cc",
+      "expected": "İstifadəçi bir sənədi iki dəfə imzalamaq istəyib."
+    },
+    {
+      "id": "rsd-it-113",
+      "inputSha256": "2cec661f5120618a9b1f198ac625bc25c10bef19ef5246cd5fa36dcf8bbf1d8c",
+      "expected": "İmza xidməti kəsiləndə sorğu növbədə saxlanılır."
+    },
+    {
+      "id": "rsd-it-114",
+      "inputSha256": "ee01ec8f656833bfa6c10976fd012b9c5f2c844e342804fade8946dc96a130e6",
+      "expected": "E-imza cavabı üçün otuz saniyə gözlənilir."
+    },
+    {
+      "id": "rsd-it-115",
+      "inputSha256": "d6fe86d99b5bc627715ea327287e329dbc3a1f39820e104926c326b86eaa9329",
+      "expected": "İmza sertifikatının seriya nömrəsi metadataya yazılır."
+    },
+    {
+      "id": "rsd-it-116",
+      "inputSha256": "61edafd9c180d6e559a6dd25bc7339957ff189cc3d288e922ff30c9f8b5d88d3",
+      "expected": "Üçüncü imzaçı təyin olunmadığı üçün proses dayandı."
+    },
+    {
+      "id": "rsd-it-117",
+      "inputSha256": "115f101c28b6b65522f6e68fbc9f5378486893581f935c2ec30f588afe1d13dc",
+      "expected": "Hesabat imzalanandan sonra arxivə göndərilir."
+    },
+    {
+      "id": "rsd-it-118",
+      "inputSha256": "f2cd39905907f365d728aab009b43c39ec71421981d9d797f43c87ea26cea88c",
+      "expected": "Nəzarətçi imza tarixçəsini fayldan yoxlayır."
+    },
+    {
+      "id": "rsd-it-119",
+      "inputSha256": "4b84dadda62ccf5db0f92b264296156860ab02dcbd5c7ef01efa6839d5eab4eb",
+      "expected": "İmza müəyyən müddətdə təsdiq olunmasa, xəta verilir."
+    },
+    {
+      "id": "rsd-it-120",
+      "inputSha256": "1915b048737c0222dbf7e7013438978e3b9c9d5447c0487929e8d9ed97828515",
+      "expected": "Sənədə eyni vaxtda imza göndərmək yarışa səbəb oldu."
+    },
+    {
+      "id": "rsd-it-121",
+      "inputSha256": "52061118163781bead9f9fc9261390d6de5a86d957b8485c2a61dcc7f2bb0339",
+      "expected": "Sənəd arxivə köçürüləndə metadata saxlanılsın."
+    },
+    {
+      "id": "rsd-it-122",
+      "inputSha256": "16b23016c5d7b31263a579b1cd5d596943a45021196ff3df5349c4588d3a9e0d",
+      "expected": "Köhnə arxivdən gətirilən faylın adı dəyişməyib."
+    },
+    {
+      "id": "rsd-it-123",
+      "inputSha256": "0ce5e3e6d591adbcb18639e8560ab00840ee7f4c04d92e2d4795c95746b29d15",
+      "expected": "Arxivdəki müraciət qeydiyyat nömrəsi ilə axtarılır."
+    },
+    {
+      "id": "rsd-it-124",
+      "inputSha256": "a2de8d159339e1aa86f5908a7453a6e3ccb8efcc9dd2c2081f7246e58b290a9d",
+      "expected": "Silinmiş sənəd arxivdə ayrı statusla göstərilir."
+    },
+    {
+      "id": "rsd-it-125",
+      "inputSha256": "0e2ecef40e158b7d4635cf1da428e2404ce71794dccf5fd8b86253cbb052b292",
+      "expected": "Arxiv qaydasına əsasən saxlanma müddəti bitib."
+    },
+    {
+      "id": "rsd-it-126",
+      "inputSha256": "ea1d041e85918afbe7dfbf1ef02c9317544ed08d5fc20f6ac6e2a88bd427c259",
+      "expected": "Faylın heşi köçürmədən sonra yenidən yoxlanıldı."
+    },
+    {
+      "id": "rsd-it-127",
+      "inputSha256": "75288d335368d72427807e6d584ce8cbb327e8dc20bd8975baf1c758eea057c1",
+      "expected": "Arxivdə axtarış üçün tarix aralığı seçin."
+    },
+    {
+      "id": "rsd-it-128",
+      "inputSha256": "0cf37a950dec2516215833f0313bfd9ff9e646137635d8086bdf507fc3c64685",
+      "expected": "Sənədin kağız əsli bir həftə sonra çatacaq."
+    },
+    {
+      "id": "rsd-it-129",
+      "inputSha256": "b82646df1d6d5c2b7877d10c0cd59be555c691adc7d0f9fd2aa879b45c685518",
+      "expected": "Arxiv servisində gecikmə yaranıb."
+    },
+    {
+      "id": "rsd-it-130",
+      "inputSha256": "3b2b1f97f471ab453f29263a35df4164562060d442f6a61a4bb17971b0651609",
+      "expected": "Elektron nüsxələr ehtiyat saxlanca göndərildi."
+    },
+    {
+      "id": "rsd-it-131",
+      "inputSha256": "6b7d62acae8f57302ba972f0892acf7b8aa9eb8e1477d00c8a26e5f5748cd5fe",
+      "expected": "Arxiv idarəsi bağlanmış dosyeni yenidən açdı."
+    },
+    {
+      "id": "rsd-it-132",
+      "inputSha256": "f5434bc8e9f40e344fe7b6354ba523da4e49e0287fb8b966272119fc7a44f5b6",
+      "expected": "Köhnə sənədlərin metadata xətası hesabatda görünür."
+    },
+    {
+      "id": "rsd-it-133",
+      "inputSha256": "6fc622d06fc6e82ce08483fa02663b19511844976a99cb63ca61dec56c04381c",
+      "expected": "Arxivdən çıxarılan məktub qeydiyyat jurnalı ilə tutuşduruldu."
+    },
+    {
+      "id": "rsd-it-134",
+      "inputSha256": "6fc6b7a27a1a5551698bf68d66c75df003224b239e3b29f08e73474593588ccc",
+      "expected": "Axtarış indeksi yenilənmədiyi üçün sənəd tapılmır."
+    },
+    {
+      "id": "rsd-it-135",
+      "inputSha256": "6d47b011848466a9325de4e1dca72b26eef7d82689d9ee1bd086ef3742977d1c",
+      "expected": "Arxiv surətini yükləmək üçün giriş icazəsi lazımdır."
+    },
+    {
+      "id": "rsd-it-136",
+      "inputSha256": "18ad4411381b4ff399f542710b7a77e5f80cd8d0264b971f96a9169eb9c8065c",
+      "expected": "Mühafizə müddəti artırılan dosye silinməməlidir."
+    },
+    {
+      "id": "rsd-it-137",
+      "inputSha256": "cfb832455d19834e63f1a8e89857565aec7f468fda43e29d7b1f965472507485",
+      "expected": "PDF faylı arxivdə açılır, amma sertifikat göstərilmir."
+    },
+    {
+      "id": "rsd-it-138",
+      "inputSha256": "c64bd23f809394e34f32f220e014f236bf869ab19c0413defe70cbef7ae3a243",
+      "expected": "Arxivdə sənəd növünə əsasən filter işləyir."
+    },
+    {
+      "id": "rsd-it-139",
+      "inputSha256": "357097d00e26476a16e3e1e64560e228a4635f9205ee6504731bc633a6dc26af",
+      "expected": "İstifadəçi arxiv qeydini əl ilə düzəldə bilmir."
+    },
+    {
+      "id": "rsd-it-140",
+      "inputSha256": "2d2821c9d66ef219b6550c7b79731cde3604129a0d5f5adbe2b2917551afeadb",
+      "expected": "Arxiv hesabatında bu ayın göndəriş sayı azdır."
+    },
+    {
+      "id": "rsd-it-141",
+      "inputSha256": "3fe32640725225f32c1d838e2f25af24256964cfac012c17211f16fcede49e84",
+      "expected": "Audit jurnalında imza tarixi əksikdir."
+    },
+    {
+      "id": "rsd-it-142",
+      "inputSha256": "a23214a83a2f7285773b3f12380311b9392562ff3b095fadb720d8b0a8bfa368",
+      "expected": "Kim sənədi silib, onu tarixçədə görə bilirik."
+    },
+    {
+      "id": "rsd-it-143",
+      "inputSha256": "571f1fe2d4aa49c2b1ed26ec2b3b132521c3ea01808e5b8c48943cfb427eb027",
+      "expected": "Qeydiyyat əməliyyatı üçün istifadəçi ID-si saxlanıldı."
+    },
+    {
+      "id": "rsd-it-144",
+      "inputSha256": "188ac142f17a334df6e60f0143390bc0cbb7ea59eb947b9cb00cdc6aec448ead",
+      "expected": "Audit hadisələri hər gecə ehtiyat bazaya köçürülür."
+    },
+    {
+      "id": "rsd-it-145",
+      "inputSha256": "a46f761588000ca4bf60c0a1f4cd11c48758ee5dad2bda045d5f8903dd0960a7",
+      "expected": "Giriş cəhdləri tarix və saat üzrə sıralanır."
+    },
+    {
+      "id": "rsd-it-146",
+      "inputSha256": "5e3feb396dc65e0f57d599f686711d525d79e318c21afcada141f0c082c92bf7",
+      "expected": "Gizli fayla baxan şəxsin hesabı qeydə alınıb."
+    },
+    {
+      "id": "rsd-it-147",
+      "inputSha256": "6bcc83d74dab24ca332b387f8f489d10c3fdc04099809720336d4c0d56dd7f45",
+      "expected": "Log yazısı IP ünvanına görə axtarılır."
+    },
+    {
+      "id": "rsd-it-148",
+      "inputSha256": "fc0f6863ac863dc84c7a030b7434eab9d999317a834c8d21533b69e49ad84f8e",
+      "expected": "Audit hesabatı mühasib tərəfindən təsdiq edildi."
+    },
+    {
+      "id": "rsd-it-149",
+      "inputSha256": "fa54b78e55b55b61be6cb3ec9c3fd1f9b220ab8b781536684e675452280647a3",
+      "expected": "Bu əməliyyatın əvvəlki dəyəri jurnal qeydində var."
+    },
+    {
+      "id": "rsd-it-150",
+      "inputSha256": "5d1c0e823a74f4c458efa6e13ce0d570dc059cd8f37cd82627cfaa1b4148478d",
+      "expected": "Mesaj göndəriləndə correlation ID qeyd olunmur."
+    },
+    {
+      "id": "rsd-it-151",
+      "inputSha256": "90063ff92075a9e3009dc637c4fcb1b30fa6eeb4aca8972be5d646276e12699d",
+      "expected": "Audit qeydi silinməyə qarşı qorunmalıdır."
+    },
+    {
+      "id": "rsd-it-152",
+      "inputSha256": "f89d620d94ccbd10f5c816cf0d3d9b6c9583a3c6f2ea490b7c3e86848c1419dc",
+      "expected": "Operatorun əl ilə etdiyi düzəliş ayrıca göstərilir."
+    },
+    {
+      "id": "rsd-it-153",
+      "inputSha256": "ff7517572f5bc68e61e2d2727fa71d0e620da52273a53ee4b069d9bf3f837319",
+      "expected": "Hadisənin vaxt zonası doğru göstərilməlidir."
+    },
+    {
+      "id": "rsd-it-154",
+      "inputSha256": "46ec74d895312dc2e16cd91f92aa8adbba7d2c98497de27155d206384ca64eed",
+      "expected": "Mərhələ dəyişikliyi jurnala yazılmadığı üçün itdi."
+    },
+    {
+      "id": "rsd-it-155",
+      "inputSha256": "1f127c4c8c397dab078fda3bf9fcc21934e66d1f85e8bec532003540d9aeea54",
+      "expected": "Adminin dəyişiklikləri digər əməliyyatlardan ayrılır."
+    },
+    {
+      "id": "rsd-it-156",
+      "inputSha256": "fd409a77e8bd3450631bf2800810e8a81ed74095f4143259d6ac13ea34856824",
+      "expected": "Audit eksportunda boş sətirlər çoxdur."
+    },
+    {
+      "id": "rsd-it-157",
+      "inputSha256": "e71b71c84ab6b9adb6031ad8f4e7c12e0d5ace25e7668ba831cc13f5a4e4c8ae",
+      "expected": "İnzibatçı audit qeydlərini də redaktə edə bilməsin."
+    },
+    {
+      "id": "rsd-it-158",
+      "inputSha256": "fae071f5e9445d7c429a9c4085b09caaf9749923164f670250c8725b116e60bd",
+      "expected": "Zaman damğası ilə sorğu nömrəsi əlaqələndirildi."
+    },
+    {
+      "id": "rsd-it-159",
+      "inputSha256": "864edf19bc3ec84af80ebb2444f94343ec701c489fd572cc93ef6bf6e87e7d1e",
+      "expected": "Jurnalın axırıncı yazısı bu gün qeyd olunub."
+    },
+    {
+      "id": "rsd-it-160",
+      "inputSha256": "04b5b041b75687a170d77cc0d3f4ce933884e94a2cc0e4afbeb43017a0b965cd",
+      "expected": "Audit paneli xəta koduna görə susdurulub."
+    },
+    {
+      "id": "rsd-it-161",
+      "inputSha256": "1827358a7ce75a2d87e25484605eb3051870c0629eff152dc1437862990e5a20",
+      "expected": "GET /api/v1/documents endpoint-i 500 qaytarır."
+    },
+    {
+      "id": "rsd-it-162",
+      "inputSha256": "0d6c77f9c2f60b860d2650737ffea4a7254ee0ee97dc46ffc5b1565cdb163720",
+      "expected": "POST /api/v1/requests sorğusunda body boş qalıb."
+    },
+    {
+      "id": "rsd-it-163",
+      "inputSha256": "4e90f67a82d85a721457019041133f5baaf47f0fa8cd0b4d7fcc7ada965f4a07",
+      "expected": "API cavabında pagination fieldi göstərilmir."
+    },
+    {
+      "id": "rsd-it-164",
+      "inputSha256": "43a37f1ba2ec8223624e4e972040e566b4a6484562572ec802a75f08e19e02aa",
+      "expected": "Endpoint üçün authorization headeri tələb olunur."
+    },
+    {
+      "id": "rsd-it-165",
+      "inputSha256": "c847dc90c8388b4da638229c518910aefce6bd59b68361f361f5b3d5671e5088",
+      "expected": "OpenAPI spesifikasiyasında status kodu yanlışdır."
+    },
+    {
+      "id": "rsd-it-166",
+      "inputSha256": "4689c74741aac0ca2b4c954d185848090930fee47804fd104b7a98b61da61de3",
+      "expected": "Swagger-də request schema ilə response schema fərqlənir."
+    },
+    {
+      "id": "rsd-it-167",
+      "inputSha256": "9a4de405c3d3af6e921926203e8a14c3f646be9c182d476f305dfcc7aa2059fb",
+      "expected": "Webhook eyni hadisəni iki dəfə göndərib."
+    },
+    {
+      "id": "rsd-it-168",
+      "inputSha256": "78967af3e1527f703210ebf6270779c23a9d5f347bf8b5aac1ba82687649c48d",
+      "expected": "Rate limit dolandan sonra server 429 qaytarır."
+    },
+    {
+      "id": "rsd-it-169",
+      "inputSha256": "bc1ca5dffac8fdaa47c5d9326ae3ca0e392c56a3c180b7a562c5d1156c37f99c",
+      "expected": "Pagination cursorunun müddəti bitib."
+    },
+    {
+      "id": "rsd-it-170",
+      "inputSha256": "334ac397b1017b7d88646f038d833c51328b2f8791e35933b08ad05f214eea2b",
+      "expected": "API response içində null sahə problem yaradır."
+    },
+    {
+      "id": "rsd-it-171",
+      "inputSha256": "ca60db8abf48226971096ea93c211ba7080d3e116861a6a5c772230f35ddd21f",
+      "expected": "GET metodu ilə yazma əməliyyatı aparılmasın."
+    },
+    {
+      "id": "rsd-it-172",
+      "inputSha256": "eaf769171e5836a986ec70a4b3a7809991aa7be4b23f0378f9f78d88c190f376",
+      "expected": "REST servisində yeni parametr məcburidir."
+    },
+    {
+      "id": "rsd-it-173",
+      "inputSha256": "6419e5a1d9ed991b64070494530b6513c74f015c3b1a00b55b2b9657b2a07c72",
+      "expected": "gRPC xidməti protobuf uyğunsuzluğu verir."
+    },
+    {
+      "id": "rsd-it-174",
+      "inputSha256": "ba3158e1e7a1e9fe4a28f7d7cf9bfc4dc18c4e7d2f14b55ac802e1602110796b",
+      "expected": "Gateway sorğunu backend servisinə yönləndirmir."
+    },
+    {
+      "id": "rsd-it-175",
+      "inputSha256": "df89457e967f70148a76263947e535612298fd892c4dfef0997bb8d5a0e1fce3",
+      "expected": "Callback URL yanlış qeyd olunduğu üçün 404 alırıq."
+    },
+    {
+      "id": "rsd-it-176",
+      "inputSha256": "9b1d7f59290401b3773ae94458fddd551b06e02ceb745bab7fc77cec3a4df635",
+      "expected": "API sertifikatı yeniləndikdən sonra əlaqə kəsilib."
+    },
+    {
+      "id": "rsd-it-177",
+      "inputSha256": "f09a50f257cbe8e242f788871ceb57dbc827ab7602e79925e6f6556c8b07f914",
+      "expected": "V2 endpoint-i köhnə clientlərlə geriyə uyğundur."
+    },
+    {
+      "id": "rsd-it-178",
+      "inputSha256": "3c8549a840cb5e82329fdce0e275282e004fc4cd3321b8e7aeff54864debef20",
+      "expected": "Sorğunun timeout müddəti yüklənmədə artırıldı."
+    },
+    {
+      "id": "rsd-it-179",
+      "inputSha256": "e0103879f67dc0685f2ef56e74975199f05026b60a1a9dc7b6664d38b975cb5a",
+      "expected": "İdempotency key təkrar edilən ödəməni blokladı."
+    },
+    {
+      "id": "rsd-it-180",
+      "inputSha256": "f696a60bdbd28a5a70dba775cfd5e1c712772255f0e303d549fb7f46432ba7be",
+      "expected": "Webhook imzası yoxlanmadan mesaj qəbul edilməsin."
+    },
+    {
+      "id": "rsd-it-181",
+      "inputSha256": "ca6e01aa2f88b7262e6daec2d1334cb5f5bf49ff32f0f33a945d46e7291480bc",
+      "expected": "PostgreSQL bazasında indeks çatışmır."
+    },
+    {
+      "id": "rsd-it-182",
+      "inputSha256": "d8a2c46038dd7f7ae18eed3a91b6ab6b7ae58b0b029850243b6eb70df00de86b",
+      "expected": "Migration skripti yalnız staging-də işləyib."
+    },
+    {
+      "id": "rsd-it-183",
+      "inputSha256": "b2ebefaef3e4e2f6fafb3e211b78cefff0033d087e07352fd0f4906778c59b69",
+      "expected": "Transaction commit olunmadığı üçün sətir görünmədi."
+    },
+    {
+      "id": "rsd-it-184",
+      "inputSha256": "5a0c5e2a2f9a103a6bfc9ad561aedf7557b5723427ccab6445c67586d872483e",
+      "expected": "Foreign key qaydası silinməni əngəllədi."
+    },
+    {
+      "id": "rsd-it-185",
+      "inputSha256": "1a846336724520dd78679b67b1ea78547b389a87fea05257e05319cae03ff698",
+      "expected": "Redis keşinin TTL müddəti beş dəqiqədir."
+    },
+    {
+      "id": "rsd-it-186",
+      "inputSha256": "c7d9fbae98b88bd043e3937864761d69743a094a298bfabfd5153e78c3312c2c",
+      "expected": "Select sorğusu çox sətir qaytaranda ləngiyir."
+    },
+    {
+      "id": "rsd-it-187",
+      "inputSha256": "ebe014bc0ace322714e3572f0f91c5451a5c9d4a98f93baa8ba7c7e660ddebbb",
+      "expected": "Bazanın ehtiyat nüsxəsi gecə tamamlandı."
+    },
+    {
+      "id": "rsd-it-188",
+      "inputSha256": "521dc909a7cf05f66eaebd2cc01a18a2fef4fe69815ef457707180e10884bbfb",
+      "expected": "Database connection pool limiti aşılıb."
+    },
+    {
+      "id": "rsd-it-189",
+      "inputSha256": "bd0cc24803ebe447fc23bc237bd80042f3ccaf05e7bfde8937b0d784900c0ece",
+      "expected": "Unique constraint təkrarlanan qeydiyyatı bloklayır."
+    },
+    {
+      "id": "rsd-it-190",
+      "inputSha256": "e7c9e1c66116e013f18aa01b3cb6b343809ed37c31d0fde9b007bc4503babc48",
+      "expected": "Schema dəyişikliyi üçün rollback planı hazırlandı."
+    },
+    {
+      "id": "rsd-it-191",
+      "inputSha256": "35f8a0766f23858a60766148d2b655100cd7bdec3800981e5a326704f70451a9",
+      "expected": "Partition cədvəli aylar üzrə ayrılıb."
+    },
+    {
+      "id": "rsd-it-192",
+      "inputSha256": "3b51fcb01339254c3d84142d6ef284897d73de5f6619659b76dd39ed4d226327",
+      "expected": "Deadlock zamanı iki əməliyyat geri qaytarıldı."
+    },
+    {
+      "id": "rsd-it-193",
+      "inputSha256": "ea117bab2c59bb5046b7e45fb5dbb35b404d2b3c4000cd424c4895a692f0377a",
+      "expected": "Məlumat bazasının müddəti restore testindən keçdi."
+    },
+    {
+      "id": "rsd-it-194",
+      "inputSha256": "29291f913699d78e9c26bce9257d0a582ece6792310914cf8d6205d8c033cd50",
+      "expected": "ORM sorğusundakı eager load artıq yük yaradır."
+    },
+    {
+      "id": "rsd-it-195",
+      "inputSha256": "86dfbba33bc022ff4689242c13c94b829fd22beb664bb7f2cb5135d589af625d",
+      "expected": "MySQL replika serveri oxuma sorğularını qəbul edir."
+    },
+    {
+      "id": "rsd-it-196",
+      "inputSha256": "54e3eb3cf8b2ae005b38d82918a0055a90e09eda7903f70fdfdc6d8d36865b61",
+      "expected": "JSONB sahəsində yeni indeks yaradıldı."
+    },
+    {
+      "id": "rsd-it-197",
+      "inputSha256": "d9119af19a0b98ce0bddf62ba512766a1550aaaf9cf10a760ef7b5ea2c9493fb",
+      "expected": "Verilənlər bazasındakı tarixlər UTC saxlanılsın."
+    },
+    {
+      "id": "rsd-it-198",
+      "inputSha256": "51a39a46c9842e0d4d3fae8bf1539a1383f456ab2f7642d601feda271ffef8d6",
+      "expected": "DB səhvlərinin hamısı jurnal qeydinə düşmür."
+    },
+    {
+      "id": "rsd-it-199",
+      "inputSha256": "0aa77edaf5b59004e91b2b423f9ab6b1e4d086117d7cb38eed761b34a8681484",
+      "expected": "İstifadəçi cədvəli üçün saxlanma siyasəti dəyişdi."
+    },
+    {
+      "id": "rsd-it-200",
+      "inputSha256": "f976598f1e9bbdb0e3df96a8486d20215eb6cbe28c533c064893cfed98ec6c42",
+      "expected": "Baza versiyası deploydan əvvəl yoxlanılsın."
+    },
+    {
+      "id": "rsd-it-201",
+      "inputSha256": "657528398b6686dedf58815ddbe46c7bc08488f7096f7eb1301306866a14ecae",
+      "expected": "Production deploy sonrası health check uğurludur."
+    },
+    {
+      "id": "rsd-it-202",
+      "inputSha256": "6a9bcb6050acb9c45d5ac20eac49392f29c03da9e9dcd6e5634b0ec63402305c",
+      "expected": "Staging mühitində yeni feature flag aktivdir."
+    },
+    {
+      "id": "rsd-it-203",
+      "inputSha256": "e016e5ff61005d68e0d4eff9b334ea881f5cde663ecf2da3beebe406f4d2309d",
+      "expected": "CI/CD pipeline testdə dayandı."
+    },
+    {
+      "id": "rsd-it-204",
+      "inputSha256": "1a37d2df0d2bfd176d02fc957ba4fb01735973c4d42042e0a77d141829ee160f",
+      "expected": "Docker image tagi son commit SHA-sına bağlanıb."
+    },
+    {
+      "id": "rsd-it-205",
+      "inputSha256": "9d37a675064120902f080a30b8373d557a36208b420f912c51e89fe50374fc2b",
+      "expected": "Kubernetes podu yaddaş limitinə çatdı."
+    },
+    {
+      "id": "rsd-it-206",
+      "inputSha256": "1c78a4cc17fa8020feb8f0a213ad6b21d645a79150d0b6191282e92f2e5aded7",
+      "expected": "Rollback üçün köhnə build saxlanılıb."
+    },
+    {
+      "id": "rsd-it-207",
+      "inputSha256": "ba7c7a7e027130542233500d0e77d303aa5379a13cc88a8bab74fa15b688d923",
+      "expected": "Vercel-də API route cold start səbəbindən gecikir."
+    },
+    {
+      "id": "rsd-it-208",
+      "inputSha256": "c0e3b72d8087d52dc2f6ae0643fc4d1c0c091bf66e29d4ca36e6287b830de2f5",
+      "expected": "Prometheus alerti növbətçi mühəndisə göndərildi."
+    },
+    {
+      "id": "rsd-it-209",
+      "inputSha256": "5351ed78ca377ae5bf56fc77f78b41a30d68445a8e4b4f2a38b3e865c45dabd0",
+      "expected": "Grafana panelində CPU pikləri görünür."
+    },
+    {
+      "id": "rsd-it-210",
+      "inputSha256": "84ab56db9e53a0e053111d6648984121d43003d40e4418d40c027f63d7c87578",
+      "expected": "Load balancer sağlam olmayan instansı çıxarır."
+    },
+    {
+      "id": "rsd-it-211",
+      "inputSha256": "22616122039d3528d263df914cae023e6667ef92524c5103a7c5fde76f35caee",
+      "expected": "DNS dəyişikliyindən sonra sertifikat yeniləndi."
+    },
+    {
+      "id": "rsd-it-212",
+      "inputSha256": "87029e0d73ac39143ef7b417f47a96138d65f7bd2379431b65b474063745be5e",
+      "expected": "Secret rotation vaxtında tamamlanmadı."
+    },
+    {
+      "id": "rsd-it-213",
+      "inputSha256": "0b1911e8c3c5fd741e3ff84f32bf4b84d953205a9eab08fd15fe25cecd9f6835",
+      "expected": "Terraform planında yeni subnet yaradılacaq."
+    },
+    {
+      "id": "rsd-it-214",
+      "inputSha256": "1f84141d8fdee95a6ec116d6eb95c7d56087830ff7b4872f2c9a2f9f61dda3d8",
+      "expected": "Blue green deployda trafik yeni versiyaya keçdi."
+    },
+    {
+      "id": "rsd-it-215",
+      "inputSha256": "950879e618a9a5b4c834d4bc7c8ce36c74040bc056e3ab749ef88f08d92b755c",
+      "expected": "Git tagi release qeydinə bağlandı."
+    },
+    {
+      "id": "rsd-it-216",
+      "inputSha256": "af0228deb46175fbe7282c22a65aa4f3d49a36b353825bc6c2ca20c804ab32e8",
+      "expected": "Node serveri signal alanda açıq bağlantıları bağlayır."
+    },
+    {
+      "id": "rsd-it-217",
+      "inputSha256": "cba5521f52d0456251565062cc519c2c18448235d14f7339163d3a1495189f60",
+      "expected": "Monitorinq eşikləri UAT ilə fərqli hesablanıb."
+    },
+    {
+      "id": "rsd-it-218",
+      "inputSha256": "fc746ae1b96984d64e960c2978d1b859335485b022d6dd3248d16a563024d5a5",
+      "expected": "Konteyner restartından sonra fayl sistemi təmizləndi."
+    },
+    {
+      "id": "rsd-it-219",
+      "inputSha256": "9a2b78abd7f9c4b5b7ac47ae20e02db5fcabf66f63f6679417b7b82703b7a939",
+      "expected": "Yeni mühitin env dəyişəni boş qalıb."
+    },
+    {
+      "id": "rsd-it-220",
+      "inputSha256": "33efb48683f31faa7b44881edb15da16801deb5098bb6b4cec5afc86bfe45d8f",
+      "expected": "Deployment tamamlandı, amma domen köhnə versiyanı açır."
+    },
+    {
+      "id": "rsd-it-221",
+      "inputSha256": "5a424822238d2a78c344add51d4b78754f5213b338753c867c4c316b00997274",
+      "expected": "OAuth2 tokeninin müddəti bitib."
+    },
+    {
+      "id": "rsd-it-222",
+      "inputSha256": "65bd6edf9f8754375227ada9a74b0584f5768ff654d0a401dbf08cad4f6063e7",
+      "expected": "İki faktorlu doğrulama kodu gec çatır."
+    },
+    {
+      "id": "rsd-it-223",
+      "inputSha256": "375205faf26c538c16869c91d8b406d8d9869619267ba84b388b7b69ffa43942",
+      "expected": "CSRF yoxlaması form göndərişində işlədi."
+    },
+    {
+      "id": "rsd-it-224",
+      "inputSha256": "0ae78b48aff4b06d4df22ecfb76e4a17ca2f6d3df3287aaeb5c08fd47f27b393",
+      "expected": "XSS cəhdi HTML atributunda bloklandı."
+    },
+    {
+      "id": "rsd-it-225",
+      "inputSha256": "3b5627c2ecc39279f486936640b740aa1cc72742f92874d9f3f6194c071a20d2",
+      "expected": "Şifrə sıfırlaması üçün link bir dəfə işləməlidir."
+    },
+    {
+      "id": "rsd-it-226",
+      "inputSha256": "4ff67386aafcce5c16428c714da18e384ff195cff5ba60d1d02164de47ea138e",
+      "expected": "Səlahiyyətsiz istifadəçi gizli fayla giriş istəyir."
+    },
+    {
+      "id": "rsd-it-227",
+      "inputSha256": "2244934e2661dad81f72d0873971cd479ca39d2fdc3d3e352d79cd789d650943",
+      "expected": "JWT imzasında uyğunsuzluq aşkar olundu."
+    },
+    {
+      "id": "rsd-it-228",
+      "inputSha256": "cf32b00e01f71e8924ffff41b6e9fe4ddc69d2266b6a3d3b23bfc340c152cf52",
+      "expected": "TLS sertifikatının vaxtı sabah bitir."
+    },
+    {
+      "id": "rsd-it-229",
+      "inputSha256": "53b4feb0b7a14dc49339daaaec5ee2a18fc3cb85e0fdddaefc9cb5cd8a594e73",
+      "expected": "Audit üçün sadə mətn şifrə saxlanmasın."
+    },
+    {
+      "id": "rsd-it-230",
+      "inputSha256": "50fcb17a7071375553a235f31cc8ad69794ea83e9a62fcc78a8c537b28371655",
+      "expected": "Hesabın bloklanması on ardıcıl cəhddən sonra baş verir."
+    },
+    {
+      "id": "rsd-it-231",
+      "inputSha256": "e3223bae5c2a652f6b50f765e51c879bb13014b1f16304b7fb83198f61162f78",
+      "expected": "Session cookie-sinin same site ayarı sərtdir."
+    },
+    {
+      "id": "rsd-it-232",
+      "inputSha256": "9e1ca4b5fc0848376ad5c1af1e4f1e75c7a725c2d84cd9993fc690de6dbb49fd",
+      "expected": "Captcha cavabı seçilmiş sessiya ilə yoxlanılır."
+    },
+    {
+      "id": "rsd-it-233",
+      "inputSha256": "8ae0cb00f2b09ea437f06350679b8c50525178eaf0a66b38c417fc700499bceb",
+      "expected": "IP adresinə görə tezlik limiti tətbiq edilir."
+    },
+    {
+      "id": "rsd-it-234",
+      "inputSha256": "482d87260743076361b68922bbe75f03cfa32f86a2bac09ead9b3955735d842f",
+      "expected": "Login hadisələrinə görə qeyri-adi davranış seçildi."
+    },
+    {
+      "id": "rsd-it-235",
+      "inputSha256": "ac4a31922ffeee42313d05e15fbf066b08e974004e58f66a854eb868693636d9",
+      "expected": "Rol qaydalarında privilege escalation riski var."
+    },
+    {
+      "id": "rsd-it-236",
+      "inputSha256": "d1fee34cdd0890c81e123079a63caee51d646df2e7c4dc720996bac361e4b778",
+      "expected": "Gizli açar repo daxilində qalmamalıdır."
+    },
+    {
+      "id": "rsd-it-237",
+      "inputSha256": "beecd52cd7b44d380d20abdfece706ef2ed4aa5df26950f49820aa912ca7a66f",
+      "expected": "Xarici domenlərə istək yalnız allowlist ilə icazəlidir."
+    },
+    {
+      "id": "rsd-it-238",
+      "inputSha256": "78b232c88e3e4a77a450f12eaad0002e050a42c81c59fd15ddc4da593afeb3a0",
+      "expected": "Şifrələnmiş faylın backup müddəti də qorunur."
+    },
+    {
+      "id": "rsd-it-239",
+      "inputSha256": "dcec038e1b56b309929d0db4abb38c67c3b31c8d33b329ee9bab4efd4a5e1379",
+      "expected": "Public linkin etibarlılıq müddəti qısaldıldı."
+    },
+    {
+      "id": "rsd-it-240",
+      "inputSha256": "e696512092c3e6adadceda424575883bdcdd7faf5502767a2a09d6cb38944d6d",
+      "expected": "Security review nəticəsi issue kimi qeyd edildi."
+    },
+    {
+      "id": "rsd-it-241",
+      "inputSha256": "d0c375147324a581517414ac013cdede59c829d1f88ac220458dbe42770e0fa1",
+      "expected": "Textarea yazısını copy düyməsi ilə köçürürük."
+    },
+    {
+      "id": "rsd-it-242",
+      "inputSha256": "cc9570da39679ee6ea876dc16a54a148f12e5e63804bff9ea84d65fc3468ea91",
+      "expected": "Rich text editor seçilən ifadəni qalın edir."
+    },
+    {
+      "id": "rsd-it-243",
+      "inputSha256": "208ab12106fcaa3fbe25d88bf2776b42646fac517da9b4271a40581691169e3a",
+      "expected": "Klaviatura ilə sekmələr arasında keçid işləsin."
+    },
+    {
+      "id": "rsd-it-244",
+      "inputSha256": "3baf7aa7474c984f67dcec36ddea169cf8663530d31a9c25a0c7ed50513866e2",
+      "expected": "Mobil ekranda düymələr mətni örtməsin."
+    },
+    {
+      "id": "rsd-it-245",
+      "inputSha256": "c6f41d8546acc15c4e7bc181977b489edc3a8a0bbd43269c5875ce9bab910bfe",
+      "expected": "A11y yoxlaması düymənin labelini tapa bilmədi."
+    },
+    {
+      "id": "rsd-it-246",
+      "inputSha256": "2d9b5255a52319b6dc5fca1021138f2b8d5ea914439dd79aea76b0e94522b0fc",
+      "expected": "Brauzer back düyməsi seçimi itirməsin."
+    },
+    {
+      "id": "rsd-it-247",
+      "inputSha256": "e752bc9c91a1e3b7a0b08b82c56d1ecfd919d1418f31e301032f9355f83b63c1",
+      "expected": "Form validation yanlış sahəyə fokus verir."
+    },
+    {
+      "id": "rsd-it-248",
+      "inputSha256": "81f2831e3273b809d17aea2e7f1f1bbe0646d776748ac6de00e6c96a015d6414",
+      "expected": "Dark mode seçimi local storage-də qalır."
+    },
+    {
+      "id": "rsd-it-249",
+      "inputSha256": "c6ffe331a279dcff9022e29f3cb837aa1147c087bbc8a696191839cd25c7989a",
+      "expected": "Loading spinneri proses tamamlananda dayansın."
+    },
+    {
+      "id": "rsd-it-250",
+      "inputSha256": "a3530d3241996e6a54d3b74a3786b5261f83b88c2cc50fbcea893884e90b122d",
+      "expected": "Copy clipboard icazəsi olmayanda xəta göstər."
+    },
+    {
+      "id": "rsd-it-251",
+      "inputSha256": "a85d4a712c008b435fc8f86a986dbdffac1eabd9f4b7d332a9c7f4452961c9e9",
+      "expected": "CSS grid kiçik ekranlarda bir sütuna düşür."
+    },
+    {
+      "id": "rsd-it-252",
+      "inputSha256": "92b05bfa5a6dfb37eecbe612a7ce3545e019b09e68ed506e7dfe4961deafbe7d",
+      "expected": "React state dəyişəndə counter gecikir."
+    },
+    {
+      "id": "rsd-it-253",
+      "inputSha256": "a3277bb67643dd8d5d055bba2bca9f78f18d70f0c0d8d6634d388ece8e21ff9b",
+      "expected": "Undo əməliyyatı son düzəlişi geri qaytarır."
+    },
+    {
+      "id": "rsd-it-254",
+      "inputSha256": "02a2428b2f7704e09102313c7a8f1351b83692433fcc1fe77339d4e9b06718eb",
+      "expected": "Textarea üçün maksimum simvol sayı göstərilir."
+    },
+    {
+      "id": "rsd-it-255",
+      "inputSha256": "c180d8cd2163802efc7f6fb31de76e9694b38bdbcbab99d39cf152c51db559cf",
+      "expected": "Screen reader bildiriş mətnini səsləndirir."
+    },
+    {
+      "id": "rsd-it-256",
+      "inputSha256": "875b47f43ea8641065e15aa109971aa073d5aa458ef885b245493818ae8eb9b5",
+      "expected": "Formatlanan siyahı HTML kimi kopyalanır."
+    },
+    {
+      "id": "rsd-it-257",
+      "inputSha256": "67e0cb805b27a3c80aeb06daf88e30107bf9dd7898a1d05163c7275c98c304fa",
+      "expected": "Paste ilə daxil olan script silinməlidir."
+    },
+    {
+      "id": "rsd-it-258",
+      "inputSha256": "fccdb2926cbe382d868fbe78fa5f2385b93dff64b4be07e0e87ef1043d38751d",
+      "expected": "Yeni font yüklənənə kimi fallback yazısı görünür."
+    },
+    {
+      "id": "rsd-it-259",
+      "inputSha256": "b3cf651d2bd114338aefd48990b4e407f82209046f0c276428682d2314433516",
+      "expected": "Responsive menyuda seçilmiş modun adını göstər."
+    },
+    {
+      "id": "rsd-it-260",
+      "inputSha256": "4eb95fc57a1f031056ca4a25b29c92afc794c1f8e6df35eba2a10fa7cfbf958e",
+      "expected": "Drag drop fayl yüklənməsində boş content yoxlanır."
+    },
+    {
+      "id": "rsd-it-261",
+      "inputSha256": "ead3d87d061069143a5a60d5ca17e4f7f5f81510579d1e7f193c66edd377af0c",
+      "expected": "Hesabat panelində bu ayın ümumilikdə otuz müraciəti var."
+    },
+    {
+      "id": "rsd-it-262",
+      "inputSha256": "e6f4426f9b12e3b18c967555aac0ca37da9081a3ab590af878eb70c991f91674",
+      "expected": "Qrafikdə tarix filtrinə əsasən məlumat dəyişir."
+    },
+    {
+      "id": "rsd-it-263",
+      "inputSha256": "bff6a8bbfcd1fa0bee766adb84812babac08ea39a3772b9dafa23ba82e952927",
+      "expected": "Export edilən csv faylında ayırıcı vergüldür."
+    },
+    {
+      "id": "rsd-it-264",
+      "inputSha256": "f1ae74dfaed0444d0fee83c5f3f2ec94b1b1735dd6078332d08532a44fbc1bdf",
+      "expected": "Gündəlik sayğac eyni müraciəti iki dəfə sayıb."
+    },
+    {
+      "id": "rsd-it-265",
+      "inputSha256": "f92c037d1ccf4012162e8d183ec52d55223a6db08a62e8f9eb4ba07f6d8aec67",
+      "expected": "Dashboard üçün yeni performans göstəricisi əlavə edilib."
+    },
+    {
+      "id": "rsd-it-266",
+      "inputSha256": "ba6ab186b39f80df2afa069d7b6c9e3dbbc582d1b5e1ae8c35be145c818060d1",
+      "expected": "Power BI modelində vacib dimension çatışmır."
+    },
+    {
+      "id": "rsd-it-267",
+      "inputSha256": "c3ae3e8fb05f62709fe982402fc5fc266991ca5b948d7a99d66fb96712c8821a",
+      "expected": "SQL sorğusu filial üzrə nəticəni qruplaşdırır."
+    },
+    {
+      "id": "rsd-it-268",
+      "inputSha256": "2f7eea8a85931ff552a214a7e6d611504ecd52f876bf94ec46bb9cadc37f1560",
+      "expected": "Uzun müddətli trend üçün keçmiş aylar lazımdır."
+    },
+    {
+      "id": "rsd-it-269",
+      "inputSha256": "6f5bc86987c2a58796823fec0557bd933f325f9d16022f668ef61ad7ac9bc064",
+      "expected": "Real vaxt hesabatında cache müddəti azaldıldı."
+    },
+    {
+      "id": "rsd-it-270",
+      "inputSha256": "8382136ae6724a0bbb5dc8f17697adc60b108d0e37627946cf80c68562e9cc49",
+      "expected": "Qrafikdə sıfır dəyər boş göstərilməsin."
+    },
+    {
+      "id": "rsd-it-271",
+      "inputSha256": "280e441a709db0accbb6596ac062fbb590a046f24fd55dd81bec7ae8573737d6",
+      "expected": "Excel importunda tarix formatı uyğunsuzdur."
+    },
+    {
+      "id": "rsd-it-272",
+      "inputSha256": "d4213a64f1a962a99d4b87022e419efde8e0b76965193e5d29b3aa9e0d11788e",
+      "expected": "Göstəricinin mənbəyi hesabatın altında yazılsın."
+    },
+    {
+      "id": "rsd-it-273",
+      "inputSha256": "b45965d9360b79631b952fc5b0eba79dbf779a1f19c617ec702a8111c136cd33",
+      "expected": "Audit hesabatında fərdi məlumatlar maskalansın."
+    },
+    {
+      "id": "rsd-it-274",
+      "inputSha256": "772f9d2b3cf2d8096d15c79ec6cd68e2022ac2c788aeb26f9daaac27bb15e897",
+      "expected": "Chart legendası mobil ekranda görünmür."
+    },
+    {
+      "id": "rsd-it-275",
+      "inputSha256": "2bc72690d208bc6f519d0d3a3a6f6c1bfdec9f12a55bef51983b998ed066f0e3",
+      "expected": "Görəvlərin orta icra müddəti günlə hesablanır."
+    },
+    {
+      "id": "rsd-it-276",
+      "inputSha256": "872e77036d7d643e166d167e4b49aca51d14ae84dd56e34e68d4bee86dbd0d60",
+      "expected": "Eyni sahə iki dashboardda fərqli adla göstərilir."
+    },
+    {
+      "id": "rsd-it-277",
+      "inputSha256": "ef597c9ba3895ce44ed62e6a10e1d0cf63e00bd266dab53fa893d4c914bff910",
+      "expected": "Həftə üzrə filter edəndə nəticə sıfıra düşür."
+    },
+    {
+      "id": "rsd-it-278",
+      "inputSha256": "d87dee62fac8ad1041969959343539e5e0a1c1eef56195aff0e92436b3e9bb86",
+      "expected": "Statistik hesabatda yubanan sənədlər qırmızı olsun."
+    },
+    {
+      "id": "rsd-it-279",
+      "inputSha256": "7df9df7d7eb3dfab5b45e55e168f6b73abc104cb3f3349fd5a0673fd7e4d7de0",
+      "expected": "Vizuallaşdırmada boş kateqoriya üçün etiket qoyuldu."
+    },
+    {
+      "id": "rsd-it-280",
+      "inputSha256": "417d4489f6e114f60cffa32075b1bd9ef975784b09566bd16e23c088faa2aba7",
+      "expected": "Raportun son yenilənmə vaxtı paneldə görünür."
+    },
+    {
+      "id": "rsd-it-281",
+      "inputSha256": "a1061728a02813009f9e4fc8fed859bd23e66912c06b55ddce3a0eced56c914e",
+      "expected": "UAT ssenarisində iki addım buraxılıb."
+    },
+    {
+      "id": "rsd-it-282",
+      "inputSha256": "67cdf8005fe9cc4c0db70df23cca05673518f0f59fdd00e9870863ad9cd86cab",
+      "expected": "Regression test son versiyada qırıldı."
+    },
+    {
+      "id": "rsd-it-283",
+      "inputSha256": "bd10fa915f13c5b5fb2e33c4f83a6eb97784c6a0b053526671f0172574dab14c",
+      "expected": "Integration testi sandbox tokeni ilə keçdi."
+    },
+    {
+      "id": "rsd-it-284",
+      "inputSha256": "be46f7ab82eda66bb897bdf80bed7f9de125132e4421aea9f5911e824b2dc740",
+      "expected": "Unit test çox uzun çəkdiyi üçün timeout oldu."
+    },
+    {
+      "id": "rsd-it-285",
+      "inputSha256": "72dd3719aaafbd8b81811ae7a38bceaedb80c182add7adcc96de662e7cb79e59",
+      "expected": "QA komandası xətanı təkrar edə bilmədi."
+    },
+    {
+      "id": "rsd-it-286",
+      "inputSha256": "d3b227bd457513afd3f911ae9afcc9646a28ffc1f2113af376fce689fde739e5",
+      "expected": "Bug report üçün ekran görüntüsü əlavə olunub."
+    },
+    {
+      "id": "rsd-it-287",
+      "inputSha256": "b7ba51301dc0880cb19bd4e2f24bc2c0305f0599a2d60d98c7b5bb3e200d15d6",
+      "expected": "Test datasındakı FIN kodu həqiqi şəxsə aid olmasın."
+    },
+    {
+      "id": "rsd-it-288",
+      "inputSha256": "72c031bec2ce46e4e7d5878fff7e96df8acf932fd17c084b836b84e2ad583b7f",
+      "expected": "Load testdə 1000 paralel sorğu göndərildi."
+    },
+    {
+      "id": "rsd-it-289",
+      "inputSha256": "7fa78ebf9b7061f6e39a3fcc78c4def7cf86fb8936f3b5e395adb6aaccbfe5fa",
+      "expected": "E2E ssenarisində yeni dropdown açılmır."
+    },
+    {
+      "id": "rsd-it-290",
+      "inputSha256": "0cc62e15c373693174a1106d0b60fcf6286b5dc1ecd58da669b6d3841687278e",
+      "expected": "Mock cavabında null status üçün hal yazılmalı."
+    },
+    {
+      "id": "rsd-it-291",
+      "inputSha256": "ba818d727a47523babb92f749481d7388d55b4d1d7eebad4f282159ca94981a1",
+      "expected": "Test coverageda auth modulu əksikdir."
+    },
+    {
+      "id": "rsd-it-292",
+      "inputSha256": "0262b322b639ae7d05800d08a45fc387b1ff636bb55d881eab5240cfde927fd2",
+      "expected": "Snapshot testi stil dəyişəndə yeniləndi."
+    },
+    {
+      "id": "rsd-it-293",
+      "inputSha256": "11041b973f826d3cbfcd79a76e593a82847400d9a15fae27bb3c88a91b4c6664",
+      "expected": "Release candidate UAT testindən sonra buraxılacaq."
+    },
+    {
+      "id": "rsd-it-294",
+      "inputSha256": "ef6c41eaed096fd71235c98b3fa6549da092a882feaec202e27e914aaba8a227",
+      "expected": "Kontrakt testi yeni API schema-sını yoxlayır."
+    },
+    {
+      "id": "rsd-it-295",
+      "inputSha256": "1995d6f42f2e73740aa64b83d479e4a710e7253200f852d2baf97bab41399830",
+      "expected": "QA test planına riskli prosesləri əlavə edib."
+    },
+    {
+      "id": "rsd-it-296",
+      "inputSha256": "74ae103571218d82e58e20ae385e15db0136817670328fad5326bc6e965539d6",
+      "expected": "Stress testdə server response vaxtı artdı."
+    },
+    {
+      "id": "rsd-it-297",
+      "inputSha256": "c1b08b93d09cb13718983f5f7ea76921d932c61acdd9a7ebb3539bc27c714fdc",
+      "expected": "Sınaq faylı max simvol limitinə çatır."
+    },
+    {
+      "id": "rsd-it-298",
+      "inputSha256": "9dbd62b3fbb7eea10029df769bb8eff2cf4cb00d03f2114273e78eb6d4224abc",
+      "expected": "Test environmentda vaxt zonası fərqlidir."
+    },
+    {
+      "id": "rsd-it-299",
+      "inputSha256": "f52bbb7e934230a5d666461bbe8b6290262e4457e7d697eae5e90890e3d00122",
+      "expected": "Accessibility testi kontrastı ölçdü."
+    },
+    {
+      "id": "rsd-it-300",
+      "inputSha256": "2adb54f93c7a054b8a375187d13547af9812a79a1c2d35775f0d5ceb1cb847c9",
+      "expected": "Sifariş axını üçün boundary test lazımdır."
+    },
+    {
+      "id": "rsd-it-301",
+      "inputSha256": "2d425a8336aec6f54bd8693d612b843b6a241b83e6e29b0e2b8045c64af5376f",
+      "expected": "Köhnə sistemdən üç min sənəd köçürülüb."
+    },
+    {
+      "id": "rsd-it-302",
+      "inputSha256": "156446882180203413cb81a4c20cf061c0beda64f8fdaa4e945589334d1ae648",
+      "expected": "Miqrasiya zamanı yalnız aktiv istifadəçilər seçilsin."
+    },
+    {
+      "id": "rsd-it-303",
+      "inputSha256": "37c6c11167bc37d5cac1330297c8a5b0b3df9669877d4567779d600a5430b20e",
+      "expected": "Etibar edilməyən tarix dəyərləri təmizlənməlidir."
+    },
+    {
+      "id": "rsd-it-304",
+      "inputSha256": "7bea5dc81b291c8106c6c8cec26d12b9a5b2ae296607cd5f456af9af00167cc7",
+      "expected": "Yeni bazaya fayl əlavələri ayrıca yüklənir."
+    },
+    {
+      "id": "rsd-it-305",
+      "inputSha256": "0e886f9a0879b3d27f449a58e94baebb6b33088b59b7cfe19b9f2d3904802b31",
+      "expected": "Köçürülmə nəticəsində bir qeyd əksikdir."
+    },
+    {
+      "id": "rsd-it-306",
+      "inputSha256": "2d5ba0ef6676c2606339e0ecd25a6d7f6620e7dd829ebceff73c455a83a7b8b9",
+      "expected": "Miqrasiya skripti ikinci dəfə işləyəndə eyni yazını yaratmasın."
+    },
+    {
+      "id": "rsd-it-307",
+      "inputSha256": "813360ad8d7e272ce22656c1e77e32fa80aa8a631d6e62b2d2f2d860127f3617",
+      "expected": "Müştəri kodları köhnə sistemlə tutuşdurulur."
+    },
+    {
+      "id": "rsd-it-308",
+      "inputSha256": "0d1d859dcd67922750b45cec441d52ca0e647a851edf1ae1fb16efb1e3edc02e",
+      "expected": "Test serverində köhnə bazanın kopiyası saxlanır."
+    },
+    {
+      "id": "rsd-it-309",
+      "inputSha256": "9404840627534e8e6cda1d2b0de8179c9ebb090a5ffccd532bfaa6719f4abf31",
+      "expected": "Cutover planı gecə saat on ikidə başlayacaq."
+    },
+    {
+      "id": "rsd-it-310",
+      "inputSha256": "bd2917a48869b45f19a7ad85c0133697ad7a82077848b0425872391c72613143",
+      "expected": "Rollback zamanı köhnə bazaya yazma açılmasın."
+    },
+    {
+      "id": "rsd-it-311",
+      "inputSha256": "dbba283369d3dce3a0930169f534f6e6831e58dc291dee103416a0ecd132cc84",
+      "expected": "Fayl adlarındakı uyğunsuz simvollar təmizləndi."
+    },
+    {
+      "id": "rsd-it-312",
+      "inputSha256": "7ae4dc70fc1adebcfd145a3a3a2678a68bdc749ac9aca17dcaa1f732a5040b9d",
+      "expected": "Mesaj növbəsi boşaldılanda əsas keçid edilir."
+    },
+    {
+      "id": "rsd-it-313",
+      "inputSha256": "7e69fff67f94e829339e5dbbe10c493656532471bf45aff9b1e6ee0dc43f3fd9",
+      "expected": "Hər paket üçün sətir sayı ayrıca hesablansın."
+    },
+    {
+      "id": "rsd-it-314",
+      "inputSha256": "6a81f582736db790527c6ecfad8dfe9ebceb7d35c5624319dce305277910f9ab",
+      "expected": "Köçürülmüş datanın bütövlüyü heşlə yoxlanılır."
+    },
+    {
+      "id": "rsd-it-315",
+      "inputSha256": "3e59828003aa3da995cf452dca1e961174464ad9342b82f6e406f17a166a7bc9",
+      "expected": "Sənədlərin yarısında bağlı icraçı tapılmadı."
+    },
+    {
+      "id": "rsd-it-316",
+      "inputSha256": "c193400cf44c393b46e6a4fc17b9f73eee5d8ac904023dba54346464175c93cc",
+      "expected": "Əski ID ilə yeni ID arasında xəritə saxlayırıq."
+    },
+    {
+      "id": "rsd-it-317",
+      "inputSha256": "5f581d960a1dcb4ddea5d8dbf167bd856c3fdcd47706fc70863b30541936d0af",
+      "expected": "Miqrasiya sınağı yenidən aparılmadan canlıya çıxılmasın."
+    },
+    {
+      "id": "rsd-it-318",
+      "inputSha256": "4814534dce143e10ead3b2f1466b5b2ab53c251c44b363b299f1455096524ec1",
+      "expected": "Server saatları sinxron deyilsə tarixlər səhv gedir."
+    },
+    {
+      "id": "rsd-it-319",
+      "inputSha256": "087d761d0f2ee4c3b80299c368f7a08dc3ebfdb146f9e08ab2e76fe630ed89da",
+      "expected": "Arxivləşdirmə hissəsi digər moduldan sonra köçürüləcək."
+    },
+    {
+      "id": "rsd-it-320",
+      "inputSha256": "358884d2145414dd4183d5c72d7e099f0cff37f85e4820f0ca57d9d2d7f6504b",
+      "expected": "Yekun kontrol siyahısı cavabdeh şəxsə göndərildi."
+    },
+    {
+      "id": "rsd-it-321",
+      "inputSha256": "10f9a537ade80110dea27790cfa049a9c495c8bc48e3fa739e784abe5a889e5a",
+      "expected": "Tapşırıq bir icraçıdan digərinə göndərildi."
+    },
+    {
+      "id": "rsd-it-322",
+      "inputSha256": "f02eb1d520427ca8a51c70b7eed2cbfaf84159d31455a7a24863f6c5cc8086b3",
+      "expected": "Workflow qaydası yeni filial üçün açılmadı."
+    },
+    {
+      "id": "rsd-it-323",
+      "inputSha256": "4f60422f72a4867761cf71d37c3828d02bb0855652afadb6fef05dab97183d0d",
+      "expected": "Avtomatik eskalasiya müddəti iki gün təyin edildi."
+    },
+    {
+      "id": "rsd-it-324",
+      "inputSha256": "f3da3526d6bfa9fde5ac7ff089fe117f48f5964ad4f478b7d3a5b99fc37463e6",
+      "expected": "Sənəd geri qaytarılanda status layihə olur."
+    },
+    {
+      "id": "rsd-it-325",
+      "inputSha256": "97e95b2e6c372986684eb295a662402500879d3a12a97d6bf48f2b4521d85985",
+      "expected": "İcraçı qeyd əlavə edəndə rəhbərə bildiriş gedir."
+    },
+    {
+      "id": "rsd-it-326",
+      "inputSha256": "02b33259534d6fc86d10f02c72c9b872a616b76bbcbd4951e09f1afebc59dcfb",
+      "expected": "Göndəriş düyməsi tamamlanmış işdə bağlıdır."
+    },
+    {
+      "id": "rsd-it-327",
+      "inputSha256": "9932f400678b7c805beedd090a20fca47f97306aeb702861aec57841c767ebed",
+      "expected": "Bir neçə imzaçı paralel seçilə bilmir."
+    },
+    {
+      "id": "rsd-it-328",
+      "inputSha256": "9e5650a0562dc90b183337af73230a4db1878780c80fcb1059e792cf5af05b90",
+      "expected": "Mərhələ sırası idarə panelindən dəyişir."
+    },
+    {
+      "id": "rsd-it-329",
+      "inputSha256": "7932fe23e3ba7ab1220f78335f939992a5baeda27dddb935951deaf204cc9ea3",
+      "expected": "Sistem deadline bitəndə məsul şəxsə xatırlatma atır."
+    },
+    {
+      "id": "rsd-it-330",
+      "inputSha256": "309d8b2b22ec6ca3f6ecbb6ce211b5eb24906419831ee5155e9a19c2e028bc1c",
+      "expected": "Workflow versiyası sənəd yaradılan anda sabitlənir."
+    },
+    {
+      "id": "rsd-it-331",
+      "inputSha256": "7b7569649ddc49bd87b58cb263bcec7c6391b20a45c48ac550b0c3914f2e042b",
+      "expected": "Təsdiq addımı ləğv olunanda icraya keçid dayanır."
+    },
+    {
+      "id": "rsd-it-332",
+      "inputSha256": "b34f837e43019d721c8200886706f337194ebc71fb6205457cb731dbef1625cc",
+      "expected": "Əski iş axınları hər həftə arxivlənir."
+    },
+    {
+      "id": "rsd-it-333",
+      "inputSha256": "1426b5231f62dc551e349ab2b0bb3eb6de545f9a3642256640667d0b22491045",
+      "expected": "Sifariş forması göndəriləndən sonra task açılır."
+    },
+    {
+      "id": "rsd-it-334",
+      "inputSha256": "50cd2b68aa04176c74c82c4d905f4e9eb30cc8b7aa126c043f51fe71791d60f9",
+      "expected": "Operator icranı başlatmaq üçün səhifə yeniləməlidir."
+    },
+    {
+      "id": "rsd-it-335",
+      "inputSha256": "fab876c39379097e4dc73302a2854bc7e47125b35b0245a4a03b633fab70f147",
+      "expected": "Alt tapşırıq bağlananda ana tapşırıq da bağlanmasın."
+    },
+    {
+      "id": "rsd-it-336",
+      "inputSha256": "3384dbbdc00478d1af78d98bc85e17d20f14deb74199b9586268568156bb1b13",
+      "expected": "Delegasiya edilmiş iş geri alına bilir."
+    },
+    {
+      "id": "rsd-it-337",
+      "inputSha256": "7c0e6b1ac2afdecdf75e5efee6206aecd13b21047c825ff932982253bf99d7a2",
+      "expected": "Bütün approverlər razılaşanda növbəti addım açılır."
+    },
+    {
+      "id": "rsd-it-338",
+      "inputSha256": "e3ba777353d909dd7facfa933f56e4c111ebc01f5968904214af4a1fc4762803",
+      "expected": "Müştəri sorğusunun prioriteti sonra dəyişə bilir."
+    },
+    {
+      "id": "rsd-it-339",
+      "inputSha256": "8b49d9a29416b0363db15c6a7e27e0af24da296aaa85ce982737d7ff09cb1f3a",
+      "expected": "İcra müddəti yalnız məsul şəxs tərəfindən uzadılır."
+    },
+    {
+      "id": "rsd-it-340",
+      "inputSha256": "965582e0cc4445904f6e67e5b65c44bae2ae8561ef7a8bb28a890b386cf7e9e7",
+      "expected": "Təkrar açılan tapşırıq üçün yeni tarix qoyulur."
+    },
+    {
+      "id": "rsd-it-341",
+      "inputSha256": "7fc8d8350dce915b2b381341c7f81159cab488bb217700a378b8053748441516",
+      "expected": "VPN bağlantısı kəsiləndə sənəd yüklənməsi yarımçıq qaldı."
+    },
+    {
+      "id": "rsd-it-342",
+      "inputSha256": "21954baa361b4f0e7c9aa7aeead8aed77e283d9322d61fc44a3d75c2e7e08606",
+      "expected": "DNS cavabı köhnə IP ünvanına gedir."
+    },
+    {
+      "id": "rsd-it-343",
+      "inputSha256": "e3116e2d0a03ae97667b0fa58526c10f09cda1248263e9ff8655cb57cb2bb2b2",
+      "expected": "Firewall yeni porta girişi bloklayıb."
+    },
+    {
+      "id": "rsd-it-344",
+      "inputSha256": "d3243d509a00e9afc70eb576b7e5a4053196cb671d6889c8e89f667388be5c1c",
+      "expected": "Proxy vaxtı bitmiş sertifikatı qəbul etmir."
+    },
+    {
+      "id": "rsd-it-345",
+      "inputSha256": "0ca78186c6bb48d3704791242b3e393605314c6563807449ff97dd91804c5bbb",
+      "expected": "Packet loss səbəbi ilə imza servisi ləngiyir."
+    },
+    {
+      "id": "rsd-it-346",
+      "inputSha256": "505ab778f6fa3a6b22cb8068a7b0e7e874ce909a5d6cbcbabd6e1360991b4226",
+      "expected": "Filialdakı kanal genişliyi kifayət etmir."
+    },
+    {
+      "id": "rsd-it-347",
+      "inputSha256": "002f00f3833f8291101d8b77ee57cc96111570bd4667cefb6bca0532ad02c3f9",
+      "expected": "Load balancer bir nodu dövriyyədən çıxardı."
+    },
+    {
+      "id": "rsd-it-348",
+      "inputSha256": "5d70c0600eaf354130fcbf9d74f1c1b1cc9d67d5707d4afe859903b14f117055",
+      "expected": "WebSocket bağlantısı arxa planda bağlanır."
+    },
+    {
+      "id": "rsd-it-349",
+      "inputSha256": "7aa4f4a8a65395c3e6cff20b5ff1ebc0bf0f49b81d742936ba5784b3e144b84a",
+      "expected": "NAT qaydası xarici API-ni yanlış serverə yönləndirir."
+    },
+    {
+      "id": "rsd-it-350",
+      "inputSha256": "91b5730e2017c1065eadb764fd59d1bec147fa9eef9841d2cbc90bc21c2d4bee",
+      "expected": "TCP timeout on saniyəyə ayarlandı."
+    },
+    {
+      "id": "rsd-it-351",
+      "inputSha256": "67d028dd61abae38e5dcc64b58a492e0afd2e983bc209709624c872869e9a9c3",
+      "expected": "Reverse proxy request body-ni kəsir."
+    },
+    {
+      "id": "rsd-it-352",
+      "inputSha256": "5dc01ab0fd6ace207ca0f7a6f338a89387518451889147d2a236fd563b1ff486",
+      "expected": "HTTP2 ilə köçürülmə zamanı başlıq itir."
+    },
+    {
+      "id": "rsd-it-353",
+      "inputSha256": "dad6b33ae952550ba4f6250868ebb8ef01c09d53d07d1f60fc62e3fb9517a808",
+      "expected": "Monitorinqdə disk latency artımı görünür."
+    },
+    {
+      "id": "rsd-it-354",
+      "inputSha256": "010af8a0c851f3b53475943e7563a93cfec16cbf28128e1eb066656b7d5159aa",
+      "expected": "CDN keşində köhnə JS faylı qalıb."
+    },
+    {
+      "id": "rsd-it-355",
+      "inputSha256": "fbd563477d5e0d68990c4f3716246bd3e57244d226790ee0ec923427486e1859",
+      "expected": "S3 bucket icazəsi fayl yükləməyə imkan vermir."
+    },
+    {
+      "id": "rsd-it-356",
+      "inputSha256": "f810ffd1706cddeebeaba3a2bf9d873e58c535f44b25f573950bca383d564c03",
+      "expected": "Security group yeni subnetdən trafiki buraxmır."
+    },
+    {
+      "id": "rsd-it-357",
+      "inputSha256": "c2f0c04a9d2cb1c55d43253950811b8ab877b94cb89218a475e3b6d8bf563ca0",
+      "expected": "Health check pathi yanlış verilib."
+    },
+    {
+      "id": "rsd-it-358",
+      "inputSha256": "47e10456f15baf39a2eb2ef0a0c0173ce647911e0577ab059bdd2ebaec8b8edc",
+      "expected": "Network policy podlar arasındakı sorğunu bloklayır."
+    },
+    {
+      "id": "rsd-it-359",
+      "inputSha256": "4c68702ad43df2dceba6092e0e435852307c6f183d7f358a38e7ef109fb65ce0",
+      "expected": "Tunel bərpa olunandan sonra sessiya davam etdi."
+    },
+    {
+      "id": "rsd-it-360",
+      "inputSha256": "6c71c5043911c940e83f474c957f6e23dde53910e40863e7bdf41be0cd42c176",
+      "expected": "Sistem diski dolduğu üçün bağlantı yoxlaması dayandı."
+    },
+    {
+      "id": "rsd-it-361",
+      "inputSha256": "52f7890b9304cbb1ed5ae306c2ed0a7e01340e6b00736b0c81339bb453a8ff29",
+      "expected": "Ödəniş əməliyyatına təkrarlanan request göndərilib."
+    },
+    {
+      "id": "rsd-it-362",
+      "inputSha256": "8175b258fec5870ca673e7860515575b8977d53a3e2a5c395b8b22df3e4da381",
+      "expected": "Bank cavabı gecikəndə sifariş gözləmədə qalır."
+    },
+    {
+      "id": "rsd-it-363",
+      "inputSha256": "57a6024c68343a737d9f5ce27aa6d5da79c58e0ced1d5ecbc4f54eb979e6271e",
+      "expected": "Refund yalnız təsdiqlənmiş əməliyyat üçün açıqdır."
+    },
+    {
+      "id": "rsd-it-364",
+      "inputSha256": "c248df1bcaf900ac64afd7cd14ce1f9d2b7bc7503676915c850a923bacc64a46",
+      "expected": "Ödəniş identifikatoru audit üçün saxlanılsın."
+    },
+    {
+      "id": "rsd-it-365",
+      "inputSha256": "8fe9159849e4ac02237ff4e9f1d6d954fe7be18983e2832a0ea80893564d147f",
+      "expected": "Kart məlumatları server jurnalına düşməməlidir."
+    },
+    {
+      "id": "rsd-it-366",
+      "inputSha256": "0d7a0e71cf57a0bc2fa1e03ef0f411dae4524d8fb87fefd8bb3516b291053a51",
+      "expected": "Qəbz PDF faylına çevriləndə vergi kodu itdi."
+    },
+    {
+      "id": "rsd-it-367",
+      "inputSha256": "fda1734f2be354776bdbd08d9ca50a4f23c202c7f3a4ebd830a5dae7a1ada2a2",
+      "expected": "Payment gateway 502 qaytardı, amma bank debit etdi."
+    },
+    {
+      "id": "rsd-it-368",
+      "inputSha256": "96c8d8efefdd96a89616c0cd2e510d00d568b7cfac2a5e005f7b9c993b1f2045",
+      "expected": "Terminal transaction ID-sini iki dəfə istifadə etdi."
+    },
+    {
+      "id": "rsd-it-369",
+      "inputSha256": "35bf2a0a52a2f067ceb3458adf3adcbff522f1f37e0175512f561cd3e21b52db",
+      "expected": "Abunə avtomatik yenilənmədən əvvəl xəbərdarlıq gedər."
+    },
+    {
+      "id": "rsd-it-370",
+      "inputSha256": "2ea614bc500ab79d4ce5c188047cda1fbbb536db959c609809d20d83a3250b48",
+      "expected": "Hesab-faktura üçün son ödəniş tarixi qeyd olunub."
+    },
+    {
+      "id": "rsd-it-371",
+      "inputSha256": "a468a2b3ebda65c6e4383547af9a4aad213002dea1f32db5664c1ebef8dfaa81",
+      "expected": "İki valyuta arasında çevirmə kursu yeniləndi."
+    },
+    {
+      "id": "rsd-it-372",
+      "inputSha256": "e0a4f1cdb1b9effe8b99a8eddfd41466c0effc989a19d928f0d1a8d990fc19ec",
+      "expected": "Ödəniş gecikməsinə görə xidmət dayandırılmadı."
+    },
+    {
+      "id": "rsd-it-373",
+      "inputSha256": "a2014c9c5ec819aa28f55cfc633da3f83ae8f8ed383c10afdea2f872297345de",
+      "expected": "Gateway callbacki üçün imza yoxlaması lazımdır."
+    },
+    {
+      "id": "rsd-it-374",
+      "inputSha256": "95fc81a94639102c257107a10ddf42067060308f2f9984654cd902c3c77e3056",
+      "expected": "Test kartı production mühitində bloklanır."
+    },
+    {
+      "id": "rsd-it-375",
+      "inputSha256": "1d0cbcc313df6c84f3f6dcadf113e49f3af3eb1d1548457a0c39103c715d5c4e",
+      "expected": "Maliyyə hesabatında təkrarlanan məbləğ çıxır."
+    },
+    {
+      "id": "rsd-it-376",
+      "inputSha256": "40de1ff29b6d18a63aeb55d42ade0106f13e914b93170d6f970cfecd54a6e862",
+      "expected": "Avtomatik geri ödəmə istəyi üçün səbəb seçilir."
+    },
+    {
+      "id": "rsd-it-377",
+      "inputSha256": "59988337c2515c33a25cd8dbe8f2c80282c5b5c842620027b3b30154fa5c2b7c",
+      "expected": "Qismən ödəmə qəbul olunanda qalıq yenidən hesablanır."
+    },
+    {
+      "id": "rsd-it-378",
+      "inputSha256": "bd148181e5d24835172bde2cf8342be95d1cc117199485e2a7746d414687abc1",
+      "expected": "Sifarişin vergisi ümumi məbləğə daxil edilib."
+    },
+    {
+      "id": "rsd-it-379",
+      "inputSha256": "e09e952739f45850c7ef95b2dd3f22597e13642dd9bfd6c941f70a68a0535dd7",
+      "expected": "Kart limitinə çatdığı üçün bank imtina etdi."
+    },
+    {
+      "id": "rsd-it-380",
+      "inputSha256": "daa0140851e93eee4699e3d46df330f3636a740ed430dae98ab417915e5fae85",
+      "expected": "Əməliyyat nəticəsi SMS ilə də göndəriləcək."
+    },
+    {
+      "id": "rsd-it-381",
+      "inputSha256": "68f85018a6056442930592f3ef6054e638b479873df9861cfaddd4c43b9a4011",
+      "expected": "SMS bildirişi səhifədə də göstərilir."
+    },
+    {
+      "id": "rsd-it-382",
+      "inputSha256": "7ef744b6f702fde51e9f5d0819a44464201f119c5abc1e75b50d25cf04a8e31e",
+      "expected": "Email göndərişi üçün kuyruk dolub."
+    },
+    {
+      "id": "rsd-it-383",
+      "inputSha256": "7e02a88ef600c2de4d202ebf22dd4a295ae3a83960dc36a3a72df2aecdf8e34f",
+      "expected": "Mobil push icazəsi olmayan istifadəçi mesaj almadı."
+    },
+    {
+      "id": "rsd-it-384",
+      "inputSha256": "cf0cd3ad3597a5d185ba2222440f5c58ba8f044d7c93248e7a5a1254443cf4c2",
+      "expected": "Bildiriş dili hesab ayarından seçilir."
+    },
+    {
+      "id": "rsd-it-385",
+      "inputSha256": "2edc9a3d9fdffa1d093e0753eb16cc7bf5ea4723411e13d20b1c7bf86879c22f",
+      "expected": "Gecə göndərilən xatırlatma sabah çatdı."
+    },
+    {
+      "id": "rsd-it-386",
+      "inputSha256": "26a9967f94c71b25b38aff9248016e553d99d71152fff7886faa4f33874700ee",
+      "expected": "Eyni hadisəyə üç bildiriş yazılıb."
+    },
+    {
+      "id": "rsd-it-387",
+      "inputSha256": "4ab0d4facd540cabe7b7158585f7710196bab9750843530466ebf87c29c79175",
+      "expected": "Unsubscribe linki ilə abunəlik ləğv edildi."
+    },
+    {
+      "id": "rsd-it-388",
+      "inputSha256": "d4b966a16a3cc6c5133a8df3394e0bb1bc34f2d2df1f5d16e081b5290ea6b997",
+      "expected": "Bildiriş template-ində sənəd nömrəsi yanlışdır."
+    },
+    {
+      "id": "rsd-it-389",
+      "inputSha256": "2659ae37729bed89b16fae2297a9bf06813e3a0802f572ea3c5db382a87cecff",
+      "expected": "Müştəri cavab verdikdə operatora xəbər getsin."
+    },
+    {
+      "id": "rsd-it-390",
+      "inputSha256": "97c1ed570a88369a161a4b485598714440992a89406ecbe730a065d507b65744",
+      "expected": "Kritik bildiriş sessiya açıq olmasa da göstərilir."
+    },
+    {
+      "id": "rsd-it-391",
+      "inputSha256": "f9aa0e054e951dae51f5d9361bf9312c4a6e530276b47957904deb514504cb25",
+      "expected": "Sifariş statusu dəyişəndə SMS göndəriləcək."
+    },
+    {
+      "id": "rsd-it-392",
+      "inputSha256": "f11325647ef0a939a922da65e7d673692ba689e5c672a4121c5192efc6f3fb67",
+      "expected": "Həftəlik xülasəni iki alıcıya yolladıq."
+    },
+    {
+      "id": "rsd-it-393",
+      "inputSha256": "aca72cfe91ab6d84be92ec078efc12aa1b3b5d98ed12769d26c8315b9eeca1c4",
+      "expected": "Göndəriş xətası üçün retry sayı üçdür."
+    },
+    {
+      "id": "rsd-it-394",
+      "inputSha256": "45e3c4d6593aff54e993f2e52d0dc2cfdd5751c9d8cf5a66fbf1933882de86fd",
+      "expected": "Mesajın adı sadəcə admin panelində görünür."
+    },
+    {
+      "id": "rsd-it-395",
+      "inputSha256": "f5a55e1eae8cb4c4d3a32911c96359b1f294ced3686f57193d4e9c0bf7b3cc4e",
+      "expected": "Bildiriş göndərilməzdən əvvəl razılıq yoxlanır."
+    },
+    {
+      "id": "rsd-it-396",
+      "inputSha256": "4f8de4790b1992e9570650167e2af3e7e9e8df5083fc546aed310902f0a2dfdc",
+      "expected": "Ekrana çıxan mesajın linki köhnə sayta gedir."
+    },
+    {
+      "id": "rsd-it-397",
+      "inputSha256": "55e8ff12590421bf84604ceeefc5b0fad31e8cae897d446fee260c1dfa60d308",
+      "expected": "Email ünvanının formatını doğrulayın."
+    },
+    {
+      "id": "rsd-it-398",
+      "inputSha256": "5f6339f7cf78becd78c63ceba20a0d17c4855f51ca87008c8894d591b9123a9c",
+      "expected": "Bildiriş mərkəzi yeni mesajları yükləyir."
+    },
+    {
+      "id": "rsd-it-399",
+      "inputSha256": "80665a046ef4c86db017622746626caefcb6fe88ee5f1f6d382c3da157dcb5d8",
+      "expected": "İstifadəçi eyni bildiriş üçün iki kanal seçdi."
+    },
+    {
+      "id": "rsd-it-400",
+      "inputSha256": "e2833198325cbb6d3e26266eb14b0e4fb227440fada32514e93e4c0dac15d7c2",
+      "expected": "Göndəriş logunda yalnız redaktə edilən mətn qalıb."
+    },
+    {
+      "id": "rsd-it-401",
+      "inputSha256": "4ada47fa3fa6ebc935c09c3dc097e6e58c5224677fe9cae9023bf1ba74d423dc",
+      "expected": "PDF faylının içindəki imza görünmür."
+    },
+    {
+      "id": "rsd-it-402",
+      "inputSha256": "4699743540da6745b43962a223793eeeed67542837dc2d46ab51f097cb5c3d09",
+      "expected": "Sənəd şablonunda ad-soyad fərqli sətirdə çıxıb."
+    },
+    {
+      "id": "rsd-it-403",
+      "inputSha256": "fadb84e1f5b15698686c32eebbf3bf885c891fd349386d9d57b89779d2bb7450",
+      "expected": "Word faylından köçürülən siyahı pozulub."
+    },
+    {
+      "id": "rsd-it-404",
+      "inputSha256": "b8c496e397f9878c68e7a1189838cdcd6394fcb22807608819efa8cbd3a5631c",
+      "expected": "HTML ilə gələn qeydlərdə script teqi silinməlidir."
+    },
+    {
+      "id": "rsd-it-405",
+      "inputSha256": "1a963339525c0d8b39064371436772b51f6744e0ca18f80e73449f9a2f935488",
+      "expected": "Excel faylında tarix sütunu mətn kimi oxunur."
+    },
+    {
+      "id": "rsd-it-406",
+      "inputSha256": "3f68a7e46d2683b9571d57bedc865df92cbf85cd4c920411eb42841e9a08fe7f",
+      "expected": "Sənədin son səhifəsindəki QR kod oxunmur."
+    },
+    {
+      "id": "rsd-it-407",
+      "inputSha256": "78f1dac26243c0bbb7e4fd8d2c13736e5428e97e82d0ab554bd2d708aa10fe7a",
+      "expected": "Əlavələrin sayı kartda üç göstərilir."
+    },
+    {
+      "id": "rsd-it-408",
+      "inputSha256": "185afdf50e057c55ef482c9322e6f753c1ca8136d63056725c4fac8e94b4a14c",
+      "expected": "Fayl yüklənəndə uzantı yoxlaması aparılır."
+    },
+    {
+      "id": "rsd-it-409",
+      "inputSha256": "e7867058c7919f123d43d2acf627251140d602a9ff795e74e1157690d63fc0cd",
+      "expected": "Skan edilmiş sənəddə mətn axtarışı işləmir."
+    },
+    {
+      "id": "rsd-it-410",
+      "inputSha256": "450eb054ccace715f487af62779ef492e141b50c1361565af268b566118dc846",
+      "expected": "OCR nəticəsi operator tərəfindən yoxlanılmalıdır."
+    },
+    {
+      "id": "rsd-it-411",
+      "inputSha256": "3e9b6c77d3f25f7ab114c77de12487f4e1541cde643b0afa2635d9eb049b88c9",
+      "expected": "Sənəd səhifələri birləşdiriləndə sıra dəyişib."
+    },
+    {
+      "id": "rsd-it-412",
+      "inputSha256": "2d8438de2bbb08d81637d93fd521927dab54d8d18f0ef1f459dff90a92c5eb03",
+      "expected": "Məktub başlığında qeydiyyat nömrəsi qırılıb."
+    },
+    {
+      "id": "rsd-it-413",
+      "inputSha256": "64ff63089f21f59189378e763852938694fec2055850c6d8d2fd04fa7c38bd8c",
+      "expected": "Şablondakı mətn yazı tipini saxlamalıdır."
+    },
+    {
+      "id": "rsd-it-414",
+      "inputSha256": "2ffecd216cecb06cf29f61d2f2b3c46fc93aabd93bf5ca5b87e893423bc3e9cf",
+      "expected": "Fayl adındakı iki boşluq yükləməyə mane olur."
+    },
+    {
+      "id": "rsd-it-415",
+      "inputSha256": "d9136cdd277f1686aea19376171ac19d80d3f93e3f0bf31bc0b085a2f58efedc",
+      "expected": "Sənəd formatı PDF-ə çevriləndə cədvəl itir."
+    },
+    {
+      "id": "rsd-it-416",
+      "inputSha256": "f72905afdbf0b579f367f2da251210073b1a899f5b6fb646ee44dc6d17ddaa04",
+      "expected": "Qovluqdakı bütün fayllar ZIP arxivinə yığılmışdır."
+    },
+    {
+      "id": "rsd-it-417",
+      "inputSha256": "72fc203f2e683a9f2b6229c6de3efc736b24d0183d50ec92721255708d41d92f",
+      "expected": "Elektron sənədin surətini eyni nömrə ilə saxla."
+    },
+    {
+      "id": "rsd-it-418",
+      "inputSha256": "16a7e20904789ee6012878fca87b85f8d2ed94367dfb552c686b7314b5461cec",
+      "expected": "DOCX faylını redaktə edəndə layout qırılır."
+    },
+    {
+      "id": "rsd-it-419",
+      "inputSha256": "6bd4de2e64c227898a591f14f85513c31159a86a0a383ebf783a7871fe254027",
+      "expected": "Sənədin daxili linki eksportdan sonra işləmir."
+    },
+    {
+      "id": "rsd-it-420",
+      "inputSha256": "3edb8aa5ec68b00d6b20875d1032b8563476d39a8c5c3d89a2ff25e9e53feeca",
+      "expected": "Metadata sahələri açılanda tarix olmur."
+    },
+    {
+      "id": "rsd-it-421",
+      "inputSha256": "719771b11f161474d6069acb15b90a5f73c1c5ac30632e8a2853897252c95877",
+      "expected": "Müştərinin sorğusu texniki dəstəyə yönləndirildi."
+    },
+    {
+      "id": "rsd-it-422",
+      "inputSha256": "38cbcb0b9157763508cce40e226e52b25c9e49211da82b1ccadd87ea648fcd50",
+      "expected": "Bilet bağlanmadan əvvəl müştəridən təsdiq alınmalıdır."
+    },
+    {
+      "id": "rsd-it-423",
+      "inputSha256": "a36c85a16d5df9701899df4a51074bbeae10b624fb94aa3a26685186c519e518",
+      "expected": "Kritik xəta üçün növbətçi mühəndis çağırıldı."
+    },
+    {
+      "id": "rsd-it-424",
+      "inputSha256": "a671363f70ffb6035001fffa98f301b358d6d47b0d7b9dcbd55a33ebf3c62a10",
+      "expected": "İstifadəçi eyni problemi UAT mühitində görüb."
+    },
+    {
+      "id": "rsd-it-425",
+      "inputSha256": "6db16ca6c0e62e36b7c8a72db62d3401e17fc84e2dd5d8dc4e9ae67a726118f1",
+      "expected": "Agent müraciətin ekran görüntüsünü istədi."
+    },
+    {
+      "id": "rsd-it-426",
+      "inputSha256": "9608b06e82ea4f4997193866be6469b418d41ab21d99eee06b3009f1e5cbeaf5",
+      "expected": "Sualın cavabı bilik bazasında tapılmır."
+    },
+    {
+      "id": "rsd-it-427",
+      "inputSha256": "61e54175a11fd5cb4ef009c4eed399a0ba3466c1ce299feb5e46d7b60892f294",
+      "expected": "Bilet prioriteti yanlış seçildiyi üçün SLA keçdi."
+    },
+    {
+      "id": "rsd-it-428",
+      "inputSha256": "a7514a59ed8730d6f491382071079b9f427d88f6187f39b366ca3b7977d48ed7",
+      "expected": "Problem baş verdiyi saat qeyd edilməyib."
+    },
+    {
+      "id": "rsd-it-429",
+      "inputSha256": "b2b94ab64192644ae8259eb459fa7f665f6980c54e74c818563ecf59b756f396",
+      "expected": "Texniki dəstək operatoru zəngdən sonra qeyd yazdı."
+    },
+    {
+      "id": "rsd-it-430",
+      "inputSha256": "c4c4d7fba1c617c453327dc933cbd6b4dfccda2b555431d3b2167b63f6129f7f",
+      "expected": "Ticket statusu “həll olundu” olaraq bağlandı."
+    },
+    {
+      "id": "rsd-it-431",
+      "inputSha256": "954ea728eabe9d787364d399f2012afa48df4b75836b6d315987768709982de8",
+      "expected": "Müştəriyə cavab üçün yeni şablon lazımdır."
+    },
+    {
+      "id": "rsd-it-432",
+      "inputSha256": "0142f288ea7609b2912a943bb919981cff969f68666967acd00fcd40652cc549",
+      "expected": "Komanda jurnalda səbəb tapmadan bilet bağlamasın."
+    },
+    {
+      "id": "rsd-it-433",
+      "inputSha256": "8cce447ad604311a675c69d3f3e7b4e131681e1012c0d0956f331925fa33d3a8",
+      "expected": "Sorğu texniki yox, biznes sualıdır."
+    },
+    {
+      "id": "rsd-it-434",
+      "inputSha256": "f252c41a9d8136b881ece905d98f32e56248b400e32b73f5fc2b362b17ffd72d",
+      "expected": "Escalation gedəndə menecerə də bildiriş göndərilsin."
+    },
+    {
+      "id": "rsd-it-435",
+      "inputSha256": "d46c0e1df7434e742b84bd0f42aea818a81d37de594808eed031cb112c2687cb",
+      "expected": "İstifadəçi üç gün sonra eyni xətanı bildirdi."
+    },
+    {
+      "id": "rsd-it-436",
+      "inputSha256": "18613c5640a16b9d5394847ec390e5b43eb09338c56dfd0a6b16c8036c3e8353",
+      "expected": "Support biletindəki fayl yalnız komanda üçün açıqdır."
+    },
+    {
+      "id": "rsd-it-437",
+      "inputSha256": "b7ff63be5923d1d558010a7c351794ad5f26dbac92b1c8ddeb5b26ae61a17280",
+      "expected": "İlk cavab vaxtı iki saatdan artıq çəkdi."
+    },
+    {
+      "id": "rsd-it-438",
+      "inputSha256": "c395923702f89979ed2e76e0489544ebed413b3fb2a5609f397ac95125877cd4",
+      "expected": "Planlaşdırılmış işlər üçün müştərilərə bildiriş gedər."
+    },
+    {
+      "id": "rsd-it-439",
+      "inputSha256": "8acec43e1d3c7ff57eefad1b5fd96d35c156ea0df9438bd0c7095dd5039d7090",
+      "expected": "Hansı addımda problem yarandığını soruşaq."
+    },
+    {
+      "id": "rsd-it-440",
+      "inputSha256": "918eeb404711f11980b6c0a3913dbfa7bd8e78641c7bf5303ec6db2ae3f63081",
+      "expected": "Təkrar açılan biletin əvvəlki yazıları saxlanılır."
+    },
+    {
+      "id": "rsd-it-441",
+      "inputSha256": "80536725e7ad54775839226c6c97b319a15ea00e003bd65e152ab7cc8914cd24",
+      "expected": "SRS sənədindəki funksional tələblər hələ təsdiqlənməyib."
+    },
+    {
+      "id": "rsd-it-442",
+      "inputSha256": "2855f81551104db0d6ba999abfd1f921fd8ca1b8d6166be374ed79bdee03f39e",
+      "expected": "BPMN diaqramında ikinci iştirakçı çatışmır."
+    },
+    {
+      "id": "rsd-it-443",
+      "inputSha256": "d6d7ba90bde92073ac0ed3be722661244cd4fb74e05e9abb23d45931d8698807",
+      "expected": "UAT qəbul meyarını müştəriyə göndərdik."
+    },
+    {
+      "id": "rsd-it-444",
+      "inputSha256": "e207530b838feb256c931afeafff6a1f3cef30c8330ce728b98b65b21f318eef",
+      "expected": "Backlogda eyni task iki sprintdə görünür."
+    },
+    {
+      "id": "rsd-it-445",
+      "inputSha256": "a78d87fda9ffcd627ffb48d0b9333ec1d47795a9f30b241693e06edabe765c65",
+      "expected": "Story point hesabı komanda tərəfdən dəyişdirildi."
+    },
+    {
+      "id": "rsd-it-446",
+      "inputSha256": "52ff2c4945484bbe1dc9eee8f96c61608b6966bf61304bdd1299bc005f629d88",
+      "expected": "Acceptance criteria hazır olmadan iş başlamasın."
+    },
+    {
+      "id": "rsd-it-447",
+      "inputSha256": "7ce16f0d6da1256ef3dc4897eb13017f391d82b4088029bc8f6f633eb4cec50c",
+      "expected": "Product owner yeni scope artımını qəbul etmədi."
+    },
+    {
+      "id": "rsd-it-448",
+      "inputSha256": "254118a0b9ee117e89b392007367e498aa9109fd0ab620e9277e72bba0f4b1c6",
+      "expected": "Planlanan release tarixi risk jurnalında qeyd olundu."
+    },
+    {
+      "id": "rsd-it-449",
+      "inputSha256": "1b5fd97df5cdee70276e235de5d25806478e24f4f94a0b7a0d15cafc91fbacbc",
+      "expected": "Risk matrisi üçün cavabdeh şəxs təyin edildi."
+    },
+    {
+      "id": "rsd-it-450",
+      "inputSha256": "64d129e67d04c510a164fc1d152de2a4f9720e850bf7b28eef5aa2ffb3073d96",
+      "expected": "Müştəri müqavilə maddəsinə yeni qeyd əlavə edib."
+    },
+    {
+      "id": "rsd-it-451",
+      "inputSha256": "f0f4347954d08352b26bb1be949825fd42a56348b59d979936cbaf07a6461412",
+      "expected": "Konsepsiya sənədində inteqrasiya xəritəsi natamamdır."
+    },
+    {
+      "id": "rsd-it-452",
+      "inputSha256": "7373be7ed3628ec9e238dca54dd0ed15cf640a8f1981f23c1cd7cda7fdc76e8e",
+      "expected": "Komanda sifariş axınını Lucidchart-da çəkdi."
+    },
+    {
+      "id": "rsd-it-453",
+      "inputSha256": "2abbbdf7e4c28566cb93b30a50db14b00446be5430ac9171c4c1a5c6e426a190",
+      "expected": "Prototipdə istifadəçi rolu aydın deyil."
+    },
+    {
+      "id": "rsd-it-454",
+      "inputSha256": "d81315d04425d2b725c412bcfcd95a5a283ef6f85686722da3822e647445cb21",
+      "expected": "Toplantı protokolunda yeni qərar əksikdir."
+    },
+    {
+      "id": "rsd-it-455",
+      "inputSha256": "c3ff08053ed242f004a79a8600d163464f0b0f317df6533970291fe955ee81e0",
+      "expected": "Change request təsdiqlənənə kimi büdcə artmayacaq."
+    },
+    {
+      "id": "rsd-it-456",
+      "inputSha256": "638a1c5f82c3509b0c572ae2b2b56f6d5d4a158379b2a52ae99adbfd95d9f6f1",
+      "expected": "Roadmap üçün texniki borc fərqli rənglə göstərilsin."
+    },
+    {
+      "id": "rsd-it-457",
+      "inputSha256": "774837efd3c41ef11e4d138125f96a8f3c534494eda84ede078b99d130bef93c",
+      "expected": "Tapşırığın asılılığı Jira ticketində yazılıb."
+    },
+    {
+      "id": "rsd-it-458",
+      "inputSha256": "45e2014f74410adcfd6b41079c6269b27899b00133f0bc51cd4e91f69f546c0c",
+      "expected": "Confluence səhifəsində son qərarın sahibi bilinmir."
+    },
+    {
+      "id": "rsd-it-459",
+      "inputSha256": "52a1d1f6d0574f01b2a799a68a30d4b5fe21b15442a60de3a2eadc3637f35837",
+      "expected": "Sprint demo müştəriyə çərşənbə günü göstəriləcək."
+    },
+    {
+      "id": "rsd-it-460",
+      "inputSha256": "87685caf12e1696e359e940d7930cd07f3113094b6a500e03b0bbb047258252b",
+      "expected": "Business requirement ilə texniki spesifikasiya uyğunsuzdur."
+    },
+    {
+      "id": "mail-001",
+      "inputSha256": "2aef8f3d9f8e41f479fa36cb3c75acbf6ece85821deb087c0018cd6d32392277",
+      "expected": "Mövzu: Yeni müraciət\n\nHörmətli müştəri,\n\nQəbul etdiyimiz müraciətin izləmə kodu sabah şəxsi kabinetinizdə görünəcək.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-002",
+      "inputSha256": "89149cb4075390a2c78f32007df5dc57d4c652021457806f31e8599e8e16949e",
+      "expected": "Mövzu: Səhv qeyd\n\nHörmətli operatorlar,\n\nDünən daxil olan sənəd yanlış tarixlə qeydə alınıb. Zəhmət olmasa, kartını yeniləyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-003",
+      "inputSha256": "f49bab7a7ce7c294ad2ff42b86519b124d278a6f9351f1b665ffc9be8a24031a",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nGöndərdiyiniz ərizənin əlavəsi görünmür. Onu bir daha yollamağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-004",
+      "inputSha256": "ce0a5ffe39e92704671098153f76d1b7c50a6121ca131c465ad3032d147b9f64",
+      "expected": "Mövzu: Qeydiyyat cavabı\n\nHörmətli Elvin bəy,\n\nRəsmi məktubunuz qəbul edildi. Nəticə hazır olanda sizə ayrıca məlumat verəcəyik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-005",
+      "inputSha256": "16c7e4dcef7822b6a7ddb6cbf53dd8945d3d38529eeaa4e4b3db4d5ac0dfc727",
+      "expected": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb. Elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-006",
+      "inputSha256": "b188092452bf886e6d5e07d9c38a6ca73163501fc55774f8dfdebda34636a79e",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial rəhbəri,\n\nBu gün qəbul edilən ərizələrin sayı dünənkindən çoxdur. Axşam yekun siyahını paylaşacağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-007",
+      "inputSha256": "81c8ce380104e61427f73d6e99b1b0a243a03fdd74bdacaa508abe6995767c48",
+      "expected": "Mövzu: Yanlış ünvan\n\nHörmətli müraciətçi,\n\nMüraciətinizdəki çatdırılma ünvanını dəqiqləşdirməyinizə ehtiyac var.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-008",
+      "inputSha256": "e0956afd2beca2b087ce8859b316a511f60e406525d23e28cd721d277a10e2db",
+      "expected": "Mövzu: Qeydiyyat surəti\n\nHörmətli arxiv qrupu,\n\nİmzalı sənədin surəti sizə göndərilib. Əsli isə sabah təhvil veriləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-009",
+      "inputSha256": "2d9780304389d41efd04e4e095c25c0e7f9584fa13ab475f4856423854a56dbf",
+      "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub. Lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-010",
+      "inputSha256": "1c6b622e1a39380a09a34981d0899c2fa5ff5dd41ed1ba9e21c0b46fd0c75805",
+      "expected": "Mövzu: Təsdiq gözlənilir\n\nHörmətli sənəd sahibi,\n\nƏrizəniz hələ təsdiq mərhələsindədir. Tamamlandıqdan sonra bildiriş alacaqsınız.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-011",
+      "inputSha256": "d8bd326e2d7e61cd7cade11a670f537b5343d29337093a30c41d88f820f33c59",
+      "expected": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır. Yenilənmiş variantı göndərə bilərsinizmi?\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-012",
+      "inputSha256": "cfedff44fdd0abf805281a84f23715848643612e003ef0129c8c6be65e90c174",
+      "expected": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb. Onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-013",
+      "inputSha256": "8c4e7c875dddcddfa7804655df9d7430de6e5da31409ef13de26a198f106c93a",
+      "expected": "Mövzu: Çatdırılma sübutu\n\nHörmətli müştəri nümayəndəsi,\n\nPoçtla göndərilən məktubun çatdırılma qəbzini aldıq və sənədə əlavə etdik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-014",
+      "inputSha256": "6381f23d39e2d53bb07411c81594b645242fefb0320221586e3085471197951e",
+      "expected": "Mövzu: Tarix uyğunsuzluğu\n\nHörmətli qeydiyyat şöbəsi,\n\nƏrizə üzərində yazılan tarix sistem vaxtından bir gün geridədir. Bunu yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-015",
+      "inputSha256": "c5329f85a741b8e023ffeff2d6c97b7469289df0bcd56f39e9ed507ffdb42f27",
+      "expected": "Mövzu: Müraciət\n\nHörmətli təmsilçi,\n\nSizə verilən qəbzdəki nömrəni gələcək yazışmalarda qeyd etməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-016",
+      "inputSha256": "a258b6cb14f1c95d454ab648712bbaa43a851db6c33231658615e43521451a67",
+      "expected": "Mövzu: Yeni forma\n\nHörmətli admin qrupu,\n\nMüraciət forması yenilənib. Köhnə keçid artıq yeni səhifəyə yönləndirilir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-017",
+      "inputSha256": "408e805df394c35ee05597f7611cda2607e44b8a5b8525c22273e49f8719d7cc",
+      "expected": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur. Əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-018",
+      "inputSha256": "809581e249f27f83524c882a2a6dd28689fbbf489c9f9f4e861d0e08e7f7867b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məsul əməkdaşlar,\n\nBu həftə fiziki sənədlər saat beşə qədər qəbul olunacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-019",
+      "inputSha256": "0bd856fcd9ddba106570feb09fccc8103d032dc1b4d613e61a56bd2bcf1e6395",
+      "expected": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib. Onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-020",
+      "inputSha256": "8d126ce1fbdca32e726b559a9ae109784d58fc1ae8417bbb22fb73e6a0d46db3",
+      "expected": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb. Əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-021",
+      "inputSha256": "a70569fb9ccefc0e68e6ac12ab7ae02c1d747d80bfacd75489e383356a6e51a0",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbər,\n\nGöndərdiyimiz layihənin icra məqsədini dəqiqləşdirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-022",
+      "inputSha256": "0416c82b02619a14829d3875d09bf98972a8f8b9fa988646290da64f99818135",
+      "expected": "Mövzu: Yeni tapşırıq\n\nHörmətli icraçılar,\n\nRəhbərin dərkənarı sizə həvalə olunub. İcra müddəti cümə günü başa çatır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-023",
+      "inputSha256": "9617a108098e08adbb10889e7e05a6639c105ec9f5e75eef32a7a7639f09d20b",
+      "expected": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb. Aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-024",
+      "inputSha256": "2d5f17a77153a1030b879b517713bb3b45ba57785c71719194073305ff844c02",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nHazırladığınız sənəd dərkənar təsdiqlənən kimi icraya ötürüləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-025",
+      "inputSha256": "7525b4853c87495a1062faddfc7634ffff77201fcd9c183e8b9985d9dcd7c4bb",
+      "expected": "Mövzu: Əlavə rəy\n\nHörmətli hüquq qrupu,\n\nDərkənardakı hüquqi qeydə dair qısa rəyinizi sabaha qədər göndərin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-026",
+      "inputSha256": "e4ca209a976ff11772ec80c6008519640aa0dd11916b4915d100a8f8b1f0b5c1",
+      "expected": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb. Bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-027",
+      "inputSha256": "5bdf81c695ef9a0d72f0cc493c9ada17ba5319cd9551c2a6e5a5ab4a0026f51d",
+      "expected": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir. Düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-028",
+      "inputSha256": "d33e374271b30a9f82ac44ea8fab39b96663eb40271e4700d59477f985cb01e6",
+      "expected": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib. Yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-029",
+      "inputSha256": "172448ddbc842ac43d935b29e6afbce2258c8c4c499a0e78589c0b15b2a69707",
+      "expected": "Mövzu: Bildirilməyən qərar\n\nHörmətli inzibatçı,\n\nDərkənar icraçıya ötürülüb, amma hesabına bildiriş çatmayıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-030",
+      "inputSha256": "c3e24401fc5a0b75794617f14771c8fe2365dd87ae998462b5bf1a6861747c55",
+      "expected": "Mövzu: Müraciət\n\nHörmətli nəzarət şöbəsi,\n\nMüddətin uzadılması üçün rəhbərin yazılı qərarı lazımdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-031",
+      "inputSha256": "5ac71b7d8e865c1cb54a40e557e7ee78705c3613ce5d9f07b55b796ea2ea558a",
+      "expected": "Mövzu: Paralel icra\n\nHörmətli komanda,\n\nİki icraçı eyni dərkənarı alıb. Hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-032",
+      "inputSha256": "7585533fb32e5bce58fb66540375dc0c6f97232bd2001121ee763ec62851876f",
+      "expected": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-033",
+      "inputSha256": "10c5117e81be7e0a1bdeca8bba024f8830bbe5737bc75c13c611bcb91d84fc19",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb. Yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-034",
+      "inputSha256": "5854ddedb8a2c8130c761cb53a3ae54206e16fe00cb51eeba86611b1f61ffbf0",
+      "expected": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür. Jurnalı yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-035",
+      "inputSha256": "fdceb310e6c0e4e631e67b117c9467475e7f0f7f281c18957c682d5f9941600e",
+      "expected": "Mövzu: Rəhbər qeydi\n\nHörmətli müştəri nümayəndəsi,\n\nMüraciətinizə baxılır. Rəhbərin qeydi daxil olanda növbəti addımı bildirəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-036",
+      "inputSha256": "60bc175d774e9ac4949a1876349a81f07c558214e56d2ff8ba6fe0a8a4f47256",
+      "expected": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır. Nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-037",
+      "inputSha256": "5d1afb6031428460bd27c3276b467957648a0e97aed7a589fa8bf5790962f4e5",
+      "expected": "Mövzu: Nəzarət üçün məlumat\n\nHörmətli icraçı,\n\nTapşırıq üzrə görülən işi bu gün yekun qeydə yazmağınızı xahiş edirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-038",
+      "inputSha256": "f802019d32ff1a53829f8337d34933e505a81cc3acf971f48f45e4de1abce568",
+      "expected": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir. Dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-039",
+      "inputSha256": "4ddb9471aca29290baf62915f9181f2eabea476567b0ae953b86407005dc18a5",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nDərkənarı imzalayanda səhv mesajı çıxır. Ekran görüntüsünü əlavə etmişəm.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-040",
+      "inputSha256": "264f9de225ad8d44dfec63f18a6f6c707692c61ee71e4e63bd467fa49a8272b3",
+      "expected": "Mövzu: Təkrar yoxlama\n\nHörmətli layihə qrupu,\n\nGələn cavaba əsasən dərkənarın icra mərhələsini bir daha yoxlamalıyıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-041",
+      "inputSha256": "102c38350dae1b82f510da014f65c497b0c767e70bd2a36baddb5ec451886b17",
+      "expected": "Mövzu: GET xətası\n\nHörmətli backend qrupu,\n\nGET /api/v1/documents endpoint-i səhər saatlarından 500 qaytarır. Logları əlavə etdim.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-042",
+      "inputSha256": "dc1f2a79667af14f7ba397256752c61e739c9f8f4af9eba8a655c963bdf3598b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-043",
+      "inputSha256": "832161a61e18f0cb0e1e62b9edd5e7ed7d467769b44de62b04931a60e0fbb82f",
+      "expected": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib. Yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-044",
+      "inputSha256": "de416a88f54ca044579a3bfc050f2da043cf9ded04930fb0d372adcada121aed",
+      "expected": "Mövzu: Swagger sxemi\n\nHörmətli Emil bəy,\n\nSwagger sənədində amount tipi string göstərilib, halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-045",
+      "inputSha256": "cd416503a654f4aa32e5e4eef21f4412592c2a7187f40161dfc453cd68eed29c",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məhsul sahibi,\n\nV2 endpoint üçün geriyə uyğunluq testi sabah tamamlanacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-046",
+      "inputSha256": "718f46a8f33c19906fd2924e304e6a6f0c281c9d2de4bef1c5aa5d8af85d4b83",
+      "expected": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir. Nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-047",
+      "inputSha256": "d3e09974c4286d2b346163adac70d6e3a010107dd63193b6173cc05835bff6c9",
+      "expected": "Mövzu: 429 cavabı\n\nHörmətli DevOps komandası,\n\nRate limit həddini keçən sorğular üçün 429 qaytarılmasını yoxladıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-048",
+      "inputSha256": "c82b87abedd235c4e292fe19492371dec92ad3493b5ba73f58ca153532e7939b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik. Bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-049",
+      "inputSha256": "f0aff6c6367f87214ff7ce8798b849e2dfd0d7bbaf6bbd77f5503f9ab90e3eea",
+      "expected": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir. Rəyinizi bildirin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-050",
+      "inputSha256": "45bd575fea99df62a25570850ca85a785e1e15b74ec5ff6263c40d067d3144b5",
+      "expected": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür. Idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-051",
+      "inputSha256": "20d574baf3ccade070446d5ed310fcdedb94700ca9eb5ca7a1b52264242bf9b1",
+      "expected": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nSon səhifənin cursor dəyəri boş gəlir. Əlavə test yazdıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-052",
+      "inputSha256": "c723c4da9c376695810f28e3f6c6114fbb39ba14f0d68ec981da383595217edb",
+      "expected": "Mövzu: Timeout təklifi\n\nHörmətli platforma qrupu,\n\nBöyük fayl sorğularında timeout artırılsa da performans ayrıca ölçülməlidir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-053",
+      "inputSha256": "04824c9e62c1b1c76945d85087cd8cf40304bc3f886e164424ab9d3ea86b2c8a",
+      "expected": "Mövzu: Authorization header\n\nHörmətli vendor komandası,\n\nSorğularınızda Authorization header yoxdur. Ona görə xidmət 401 cavabı verir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-054",
+      "inputSha256": "73034356d7292670f305dc43b3483e2b535f64b789f33dc9768c2932cf8155cb",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nGöndərdiyiniz OpenAPI sənədində üç response kodu qeyd edilməyib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-055",
+      "inputSha256": "36070799e07b505cf85536266d41655e151c8f0a04a8fad8b774a2e1707e52f2",
+      "expected": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir. Düzəlişi planladıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-056",
+      "inputSha256": "5144d8cf993afacd9447b857688717bd1f4e7df6de34e106248df0630ed7efd6",
+      "expected": "Mövzu: gRPC əlaqəsi\n\nHörmətli Nihat bəy,\n\ngRPC müştərisi yeni protobuf faylı ilə işləməyəndə hansı xəta görünür?\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-057",
+      "inputSha256": "0dd6ad678fa7b205f2c0bd60e8541c21fcd997de90df1a44e69a799162704b9c",
+      "expected": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib. Fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-058",
+      "inputSha256": "e2b71c777d0c6ac292afa283e47831a630f10557d033dcfc679f0e959e59f729",
+      "expected": "Mövzu: Təkrar cəhd\n\nHörmətli operatorlar,\n\nXəta cavabı alan sorğunu avtomatik yenidən göndərərkən əməliyyat təkrarlana bilər.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-059",
+      "inputSha256": "a64ce3c21052bb4760fea7cea11c7c9d99c73042f800339ff3407f1860431ddc",
+      "expected": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib. Yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-060",
+      "inputSha256": "279ee2e50041bf292d1c62dd845888f689aab41fdefcba3e4304c49ede9ed9ae",
+      "expected": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür. Xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-061",
+      "inputSha256": "fbdf0a2389c7dfbedd62a445e4da2932dc07ba4dc31a30fd8a39e3c806537255",
+      "expected": "Mövzu: Şübhəli giriş\n\nHörmətli təhlükəsizlik komandası,\n\nBu gecə bir hesabdan fərqli IP ünvanları ilə giriş cəhdləri qeydə alınıb.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-062",
+      "inputSha256": "fc00d7942e845443647238b6a8c5a11ac7a2ab9bd7e4b48713f1eb0530961e98",
+      "expected": "Mövzu: Şifrə yenilənməsi\n\nHörmətli müştərilər,\n\nHesabınıza aid şifrəni yeniləmək üçün gələn keçiddən yalnız bir dəfə istifadə edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-063",
+      "inputSha256": "7b141db8ca3f497c12b55edc6385d8e56ff41e2afa4686e90068685526fc4aa1",
+      "expected": "Mövzu: Müraciət\n\nHörmətli audit qrupu,\n\nGizli sənədlərə baxış hüququ olan şəxslərin siyahısını göndəririk.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-064",
+      "inputSha256": "a02a615847a53a0e62029c0263128c6791cb7fc4ce67f2706e5570128689ace6",
+      "expected": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir. Yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-065",
+      "inputSha256": "a017bbb8393c8117368a55506983986e0d797808e9c999790e6142c16532149e",
+      "expected": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur. Bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-066",
+      "inputSha256": "80f27ad0abed93054ba6eab3f993618e5ba12f9c4a17252a0a8a53df3f03ae78",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məhsul komandası,\n\nYeni 2FA addımı mobil tətbiqdə də sınaqdan keçirilməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-067",
+      "inputSha256": "25ece0fb1e5c03f0e84e01a5dd1645d2be0a7029edff24d8b4b7d47cff09dfc2",
+      "expected": "Mövzu: Məxfi məlumat\n\nHörmətli müştəri nümayəndəsi,\n\nGöndərdiyiniz ekran görüntüsündə şəxsi məlumat görünür. Onu maskalanmış formada paylaşın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-068",
+      "inputSha256": "3d4ae173abf1c208c1b0f45d1d2bdac5b2a3317cb2a85387c8afff9025824874",
+      "expected": "Mövzu: Webhook imzası\n\nHörmətli texniki tərəfdaş,\n\nMesajları imzasız qəbul etdiyimiz üçün endpoint müvəqqəti bağlanıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-069",
+      "inputSha256": "e220c824b7b343556c311785bc4164b5884c9e6a8006c8f68e0f98b63778b070",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb. Düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-070",
+      "inputSha256": "5e75f4938e665f752c434b73e28ea4c325f4917f4b817818592d8e789c8dec35",
+      "expected": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib. Yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-071",
+      "inputSha256": "5fd9d8a32f39172db26d578837a2b5b52e6f0db927295bce2d74649fc0ccc482",
+      "expected": "Mövzu: Sessiya müddəti\n\nHörmətli filial əməkdaşları,\n\nİstifadəçi uzun müddət fəaliyyətsiz qaldıqda hesabdan çıxış edilməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-072",
+      "inputSha256": "11bf7b2251dd8d0683aeb8b25916e6e4007fe10f224d02744b225ca34008a0bb",
+      "expected": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb. Ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-073",
+      "inputSha256": "ae4be0413f08193cb82d0e85919a94d8dd25ccba6b8686557086ab0ea10c5d4d",
+      "expected": "Mövzu: Fayla icazə\n\nHörmətli Səbinə xanım,\n\nBu linki yalnız sənədin aid olduğu şöbənin əməkdaşları aça bilərlər.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-074",
+      "inputSha256": "ca96cfb8cb35b02ef088435c7f0cfaaa4e06c134222661b2b1ca98d2cfd6c44d",
+      "expected": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib. Hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-075",
+      "inputSha256": "c324b14e247564dce35ec72a62e09c99312df203ba506e7403118e974a1fd016",
+      "expected": "Mövzu: Müraciət\n\nHörmətli layihə meneceri,\n\nBuraxılışdan əvvəl zəifliklərin aradan qaldırıldığını təsdiqləyən hesabat istəyirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-076",
+      "inputSha256": "a128cc16bc6fa7f75cd9c18e5ff9194d9ae90da4f661570aade7f901531b9688",
+      "expected": "Mövzu: CSRF yoxlaması\n\nHörmətli servis komandası,\n\nForm göndərərkən tokenin yoxlanmadığı köhnə route aşkar edilib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-077",
+      "inputSha256": "9cb6258c09925f3889afcd8814064e5fd0eab6003f128148d136ba3440abe398",
+      "expected": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb. Dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-078",
+      "inputSha256": "78b9c4dad62be80628e6593cc7649057a186d46b869b4f46300735060dc134a6",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib. Sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-079",
+      "inputSha256": "ba3a975adad52c34b48adcfdc5b0b7995c67b50bba02b0f0a88a01e9b9722ad4",
+      "expected": "Mövzu: Məlumat saxlanması\n\nHörmətli hüquq komandası,\n\nSaxlanma müddətinin yeni qayda ilə uyğunluğu barədə rəy lazımdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-080",
+      "inputSha256": "a14885b6ffee68b73a1d187fcad492b06279236e296f676e642f3357e89e17bb",
+      "expected": "Mövzu: Backup icazəsi\n\nHörmətli sistem administratoru,\n\nEhtiyat nüsxəyə çıxış yalnız ayrıca səlahiyyətlə verilməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-081",
+      "inputSha256": "3bdd69b4fc5a8015062e0b11ff2b198844ba6ae7a50dd1999c5ecd1a45bc1205",
+      "expected": "Mövzu: Müraciət\n\nHörmətli analitiklər,\n\nİki paneldə eyni göstəricinin fərqli çıxmasının səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-082",
+      "inputSha256": "07e5a222dd274496692e28e219b25afcca10886521605773c4f00f8a47d1d6c5",
+      "expected": "Mövzu: Ödəniş çıxarışı\n\nHörmətli maliyyə şöbəsi,\n\nAylıq çıxarışdakı üç əməliyyatın qəbzi əlavə edilməyib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-083",
+      "inputSha256": "ec6ba2fe8872f74397ecc258e52715a2f83396b5e09dfd874753dea55ae0a128",
+      "expected": "Mövzu: İndeks planı\n\nHörmətli DBA komandası,\n\nAxtarış yavaşladığı üçün qeydiyyat nömrəsinə ayrıca indeks təklif edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-084",
+      "inputSha256": "a599f683fd0610c81e7e4b0f511854d9c4617730e1a7309688c8f90d340f5283",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nKöhnə bazadan gətirilən məlumatda bir tarix sahəsi boş görünür.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-085",
+      "inputSha256": "0a24cc84f9415d831f61777e2db0790b025fcfa76fd5d18909eaedc821b4e2df",
+      "expected": "Mövzu: Miqrasiya yekunu\n\nHörmətli məhsul sahibi,\n\nİlkin köçürmə bitib, lakin sayların tutuşdurulması hələ davam edir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-086",
+      "inputSha256": "df0d6b27d2262cc8348001aea169dc2f39a7a5ebfe737b7c692fd740bd3603bc",
+      "expected": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir. Səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-087",
+      "inputSha256": "5528ebd8c35c158b8699c4f2271677f915bc553e3a91f76928022b06acc74ffd",
+      "expected": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nMiqrasiya skripti təkrar işlədiləndə ikinci nüsxə yaratmamalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-088",
+      "inputSha256": "1a898e77fbaf85afcbe8f7e95eb43a297e2ed421de9ececc5da310d0a225c0fe",
+      "expected": "Mövzu: SQL sorğusu\n\nHörmətli Elvin bəy,\n\nHesabat sorğusunda son ay üzrə filtr düzgün tətbiq olunmur.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-089",
+      "inputSha256": "98a223f773eb67f4d522be821a5a2604f4b80bf48c4e005fe45dbd9f883f7bd2",
+      "expected": "Mövzu: Boş məlumat\n\nHörmətli operatorlar,\n\nTelefon nömrəsi olmayan şəxslərə SMS göndərməzdən əvvəl seçim yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-090",
+      "inputSha256": "a0901fe0cbb8f3b70c9b3fcd7e4f67ff079a8fd514be7d2963c2f12f7725d5ea",
+      "expected": "Mövzu: Müraciət\n\nHörmətli vendor,\n\nKöçürülmüş faylların hash dəyərləri mənbə ilə uyğun gəlir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-091",
+      "inputSha256": "36bec176e2f27d7e503c0302cef36acc29a61cbd8c1327117033ebec2e9b58ec",
+      "expected": "Mövzu: CSV kodlaması\n\nHörmətli komanda,\n\nİxrac olunan CSV-də Azərbaycan hərfləri səhv göstərilir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-092",
+      "inputSha256": "32f62d8212dcf1d7c05bd4c8f3f1e851eec050ecf41b4500131c72cd87cbed7c",
+      "expected": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın yeni yazılışını aldıq. Yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-093",
+      "inputSha256": "0958735493f6e2fad3813b5b5db716957c84b64265417558a3cf353ba86e14f1",
+      "expected": "Mövzu: Müraciət\n\nHörmətli arxiv qrupu,\n\nMüddəti bitən sənədlər üçün avtomatik silmə hələ aktiv deyil.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-094",
+      "inputSha256": "e16cafc155269bbbf8d17319d5f2127ae44e32e1871087fddf3f75a8d481a7be",
+      "expected": "Mövzu: İllik göstərici\n\nHörmətli filial rəhbəri,\n\nHesabatın son versiyasında iki filialın rəqəmləri yer dəyişib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-095",
+      "inputSha256": "398a952fd6b08ff701de3f4ba58863e86b14ed5313c3f406857fd69b6209c19a",
+      "expected": "Mövzu: Redis cache\n\nHörmətli admin heyəti,\n\nRedis açarları yenilənməyəndə köhnə istifadəçi rolu göstərilə bilər.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-096",
+      "inputSha256": "fe37689c2a6b2a28489ed9c8ea582fca828e828e1299dcb2cce9a7395e3dafb7",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məhsul analitikləri,\n\nSəhər əməliyyatlarının bir hissəsi UTC vaxtına görə dünənə düşüb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-097",
+      "inputSha256": "bd5e20ff8ae4bccdc2ab720971916a78d1e279ffdd8c11cffbed73c067920b09",
+      "expected": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir. Nümunəni yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-098",
+      "inputSha256": "9c3d0a4c3f4553d0e8ef2ed07b932dbf0f235b1b7a36b5c4101d998ea6f1d523",
+      "expected": "Mövzu: Excel əlavəsi\n\nHörmətli Rəna xanım,\n\nGöndərdiyiniz Excel cədvəlində ikinci vərəq boş çıxır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-099",
+      "inputSha256": "99c1de118be5450bd67169857af2c19b53d21d6f2c3d2b6f1eb54d77e9458b40",
+      "expected": "Mövzu: Müraciət\n\nHörmətli mühəndislər,\n\nBağlantı hovuzu dolduğu üçün bəzi sorğular növbədə gözləyir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-100",
+      "inputSha256": "ab6bdfcd241066e5b7003e01b8310d3d3c8870bcc02b7f88983f67fb8b1c65ad",
+      "expected": "Mövzu: Audit yazıları\n\nHörmətli müşahidə qrupu,\n\nBu gecə yaranan qeydlərin sayı hesablanan göstəricidən azdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-101",
+      "inputSha256": "963718701f8b2e3fda12d05a1f582500d0cb35a32bb44177b925b060de8e5809",
+      "expected": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb. Health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-102",
+      "inputSha256": "91beb0cba249aa3f796f6de77093ec0bda4b0160da43226b1dbe8197c76a5faf",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nNövbəti release cümə axşamı saat altıda nəzərdə tutulub.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-103",
+      "inputSha256": "4b4fdb425e7b3fce55e020706a8f191d94dcad5dae7e65b8c625926771a2f0c6",
+      "expected": "Mövzu: Planlı fasilə\n\nHörmətli müştəri,\n\nSistemə texniki xidmət zamanı girişdə qısa gecikmə ola bilər.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-104",
+      "inputSha256": "79b8bd0145e616dda6b9b5b8f523b4e59da7f2591519344b20dc9932af1709c3",
+      "expected": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur. Logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-105",
+      "inputSha256": "2054fb01d0a586b5493b358cea487c4d5d67015df344170e732f27fc5563fe69",
+      "expected": "Mövzu: Müraciət\n\nHörmətli mühəndislər,\n\nGeri dönüş addımının ehtiyat mühitdə işlədiyini təsdiqləməliyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-106",
+      "inputSha256": "673348bf423cc780e6ac25636aeefcc42aa0819ee653df2b1312248f154af3e3",
+      "expected": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artsa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-107",
+      "inputSha256": "da4d5f38e094b0067eb4842cf742d9dc7a17ad1b7982e8ee54bde1382f6eabf7",
+      "expected": "Mövzu: Feature flag\n\nHörmətli layihə komandası,\n\nYeni funksiya yalnız test istifadəçiləri üçün açıq olacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-108",
+      "inputSha256": "400dbad58b8e334ab66a2bcde8013ab0af4fddc6d40b78773eb09256c5c8a1f7",
+      "expected": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb. Yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-109",
+      "inputSha256": "a0504b0a7722e5adf08ad8ec9e063c2370ef8c1f35fc4cd86b6d749fd167f0ac",
+      "expected": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb. Bir az gözləyək.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-110",
+      "inputSha256": "df1c44d3ee2a30393c23636d409c8fa41c51d102a5ec49c8d040de5e63eebe60",
+      "expected": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib. Production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-111",
+      "inputSha256": "4dc7af2a10af4f2043793e9c8447a63752187046cc82b22799e3e437a9d65d17",
+      "expected": "Mövzu: Müraciət\n\nHörmətli operatorlar,\n\nGündəlik pik vaxtlarda cavab müddəti uzanır. Əlavə resurs ayrılacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-112",
+      "inputSha256": "21a18351ce17f0a9d4b6ae99b81c03d32efbb9eb22f99528179d413c2c4edbbc",
+      "expected": "Mövzu: Sertifikat yoxlaması\n\nHörmətli infrastruktur qrupu,\n\nYenilənən sertifikat köhnə container daxilində görünmür.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-113",
+      "inputSha256": "9d8bd96e6e9e2cde2bb24b6e3dad69a092d848b0d4acdab05859c64506cfb0e2",
+      "expected": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq. Dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-114",
+      "inputSha256": "0aa6f956d4739cbc7d462d2c11c37d3cdcd62039609d11d8e408ace89a940e02",
+      "expected": "Mövzu: Müraciət\n\nHörmətli sınaq qrupu,\n\nYeni environment dəyişənləri yalnız sınaq serverinə yazılıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-115",
+      "inputSha256": "32f4cb5700d4ecea2284ed556e36fef9c89043a2dabca0096c62c585416aac2b",
+      "expected": "Mövzu: Regional gecikmə\n\nHörmətli vendor,\n\nDəstəyi bəzi sorğular fra1 regionunda daha gec cavablanır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-116",
+      "inputSha256": "a32cda1c10d72dfaefe34e4ad3f4addb3b838ebad245235af7ca3b0d7f0af454",
+      "expected": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb. Jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-117",
+      "inputSha256": "77c667a7831ff0764e6b79b21488c596e5f0e5dece5cf9560652cfbb149b2598",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məhsul sahibi,\n\nPlanlanan tarixdən əvvəl yeni versiya avtomatik buraxılmasın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-118",
+      "inputSha256": "489c653c2127cbdd481113a7ea068540751293125e58abccf1b68202d36be2e2",
+      "expected": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi? Bunu yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-119",
+      "inputSha256": "9bd63140f70e597c1f70d60b0d646c91a71cbfbf3ca041ec1c757c6b1d3f01fc",
+      "expected": "Mövzu: Müdaxilə qeydi\n\nHörmətli gözləmə növbəsi,\n\nNasazlıq zamanı növbətçi heyətə birbaşa xəbər göndərilsin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-120",
+      "inputSha256": "4025af60de3e4ef96549c451bf4b454885f724b309661fff370aa6b923cea87b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbər heyət,\n\nBu həftəki yük sınağının p95 cavab müddətini hesabata əlavə etdik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-121",
+      "inputSha256": "b522138fd210191e933d1046aa9032d54bbb815cce94f43ac7f8d877fcf3c8d7",
+      "expected": "Mövzu: UAT meyarları\n\nHörmətli QA komandası,\n\nSon test planında təsdiq meyarının bir bəndi yoxdur.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-122",
+      "inputSha256": "29d5d6ae43f7b278ad8290168339e7e3c0c64133e0b671f7b182680d40bd86a5",
+      "expected": "Mövzu: Demo nəticəsi\n\nHörmətli məhsul sahibi,\n\nNümayişdə görünən xətanı ayrıca ticket kimi qeydə aldıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-123",
+      "inputSha256": "c56925618ceae994f32fe87c6d8672d31b5a4262648bbe0d88c415a0fce64a52",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nDünən paylaşdığınız PDF sınaqda açılır, amma imza yoxlaması uğursuzdur.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-124",
+      "inputSha256": "48d749d1a625cc1deff110f27f42d9a2a40ee555e915328c55771d70555b9e74",
+      "expected": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub. Nümunəni əlavə etdim.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-125",
+      "inputSha256": "b86a7de413e659cadddba68a266af9ce594c99b9b9b15e0399161dc2dc473a73",
+      "expected": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib. Onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-126",
+      "inputSha256": "2b0246b7dbed15b99c99c7a49cdab8033bbe8115ea6c5f18b678b682c23cee72",
+      "expected": "Mövzu: Müraciət\n\nHörmətli analitik qrupu,\n\nBoş siyahı ilə təsdiq düyməsinin davranışı tələblərdə göstərilməyib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-127",
+      "inputSha256": "864056b2a0579911ec3798debf426a8b69a7bffb4c3bedee2f6274d01d7379e9",
+      "expected": "Mövzu: Yük sınağı\n\nHörmətli Rauf bəy,\n\nMin paralel istifadəçi ilə sınaqda cavab vaxtı artır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-128",
+      "inputSha256": "e8ef85bbeeba860323ca87de2e8562476933080ce8411b4047f0ce81c1850930",
+      "expected": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır. Buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-129",
+      "inputSha256": "c50b7f3f792af705c8302e98451628f1ca1dd6c23cef5e28f383945d978bb9bc",
+      "expected": "Mövzu: Müraciət\n\nHörmətli sənəd müəllifləri,\n\nTest sənədində həqiqi şəxsin məlumatı olmamalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-130",
+      "inputSha256": "3335a936c82a16f573b4f45f7b8cfe96e843b4e8d39fd6906be46066f1db01bb",
+      "expected": "Mövzu: Sınaq dəvəti\n\nHörmətli əlaqə qrupu,\n\nGələn çərşənbə qəbul testini birlikdə keçirəcəyik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-131",
+      "inputSha256": "42f079886d286449c961ac62bda990fc847fbcec1598c81209e7ad812d563da6",
+      "expected": "Mövzu: Retry sınağı\n\nHörmətli komanda,\n\nEyni bildiriş iki dəfə gələndə yalnız bir tapşırıq yaranmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-132",
+      "inputSha256": "583f3c3eee09af0fe7e1f5e041145c0f70b1030f198929fd08b703d063c54765",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Səma xanım,\n\nKiçik ekranda təsdiq pəncərəsinin son düyməsi görünmür.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-133",
+      "inputSha256": "68da5f2f4287da89a70d7c422dc2f0e64afa471d3618a37cb89bde375844890c",
+      "expected": "Mövzu: Əlçatanlıq\n\nHörmətli frontend qrupu,\n\nKlaviatura ilə forma səhvlərinə keçid tam işləməyib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-134",
+      "inputSha256": "b033864fa6f96b275ee297f432b8dc5b047f96ef8eb3bc5d9facba70a10b8cdb",
+      "expected": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburi olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-135",
+      "inputSha256": "1ab91fad7ac375021dd0eb48a29c7bd62688ccd81015392c2e133a0aba4f9454",
+      "expected": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nSınaq zamanı beş saniyədən uzun çəkən sorğular ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-136",
+      "inputSha256": "dd221473f981abf6df7e76843d0e980c7662a2f646e23cc7a3d1dccf6e81f7d0",
+      "expected": "Mövzu: Pilot mərhələ\n\nHörmətli filial operatorları,\n\nPilot qrupda yaranan sualları ümumi siyahıya əlavə edin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-137",
+      "inputSha256": "d302d86d083688d8af9937660a2fc44cc0543ce44d86bd88b7bbf488f0a2cd09",
+      "expected": "Mövzu: Ekran görüntüsü\n\nHörmətli Elvin bəy,\n\nProblemi təkrarlamaq üçün göndərdiyiniz addımların üçüncüsü aydın deyil.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-138",
+      "inputSha256": "62f15db5a1f26ee26c47756e94cf80864109020df42999d524ad75ba77db84d8",
+      "expected": "Mövzu: Müraciət\n\nHörmətli layihə sahibi,\n\nBütün test nəticələrini protokolda təsdiq etməzdən əvvəl yoxlayacağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-139",
+      "inputSha256": "e18e1571e2e39eb817f0d0e92caaacf08787497e55efdeca8042302ba8a6549c",
+      "expected": "Mövzu: Xəta nümunəsi\n\nHörmətli texniki dəstək,\n\nStatus dəyişməyən müraciət nümunəsini ayrıca paylaşdıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-140",
+      "inputSha256": "378bcb35d9907edff6744f75dbb9717068847cef021b171b3819e82f608ba737",
+      "expected": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-141",
+      "inputSha256": "2845714df0fbbbcfecd68cfe054b88f854fdc5169120f30fce998e0e13e82078",
+      "expected": "Mövzu: Müraciət\n\nHörmətli icraçılar,\n\nYeni sənəd növü artıq başqa təsdiq marşrutuna yönləndirilir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-142",
+      "inputSha256": "3693f85b0310f9ccf989be1e03c34fa3c29a36eee648d9b8cabfb4edfec5a05e",
+      "expected": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq. Qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-143",
+      "inputSha256": "57c8cab956df75631c38744e999f6f8fc7e18169c1a4ca04f6dadc9b665e250a",
+      "expected": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb. Sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-144",
+      "inputSha256": "12e49fa24f33f1b025f36c994ee928d15729892d0c4e143d8f5fe338dcefaea2",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nMüraciətiniz baxışdadır. Yekun qərar hazır olanda xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-145",
+      "inputSha256": "7b3003efbdebbe138dad1f8021378c5ce9a21a986b9818dcce51791bc16448bb",
+      "expected": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir. Cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-146",
+      "inputSha256": "92bc70f484acf3c0012d214248ff247a84e3cd1419c151750e503750f5887aea",
+      "expected": "Mövzu: Eskalasiya vaxtı\n\nHörmətli admin heyəti,\n\nGecikən tapşırıqlar üçün xatırlatma yalnız iş günlərində göndərilsin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-147",
+      "inputSha256": "aee88b379a410bdc3d09daed8fb683a5669eeb56bf30133f85c0ce4f67994af3",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb. Qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-148",
+      "inputSha256": "22a7548faf1f88f8d8ae468ea7a004b1cb4a90aa351f1443bfda7ba11b6742a8",
+      "expected": "Mövzu: İş axını\n\nHörmətli menecer,\n\nYekun addımda sənəd arxivə düşmür və açıq statusda qalır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-149",
+      "inputSha256": "d95ed76569cd2f55547b677dc926f76c1996324c24280aab65579c534a9d10d7",
+      "expected": "Mövzu: Yeni təsdiq\n\nHörmətli əlaqəli şöbələr,\n\nBirgə icra qaydasını təsdiqləmədən sənədi növbəti mərhələyə göndərməyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-150",
+      "inputSha256": "8d7258638c79e7cf0f5ef00d3083a30821e5aeb41b1c9da8a0f34ec4e4fc4acf",
+      "expected": "Mövzu: Müraciət\n\nHörmətli audit komandası,\n\nQaytarılan sənədin əvvəlki icraçıları tarixçədə görünməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-151",
+      "inputSha256": "f10867116804e3bb7ad756ee972b8df5ba81ff5c9ef8544932bf9fa87710b82c",
+      "expected": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-152",
+      "inputSha256": "7c5659e8ff0eaa87e9a2ffb2b158aef14bc88bd171df93a844c82fb6b47917d9",
+      "expected": "Mövzu: Bağlı düymə\n\nHörmətli texniki komanda,\n\nTəsdiq düyməsi yalnız ikinci mərhələdə səhvən bağlı qalır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-153",
+      "inputSha256": "3ab9c5d41edd37d6158de00b90d555160c79669c64ac466d016351b2ffc66d9e",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nƏlavə sənəd çatmadığından müraciətiniz gözləməyə keçirilib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-154",
+      "inputSha256": "f667de8dc0edae9db42061e92325e5b2967013922f33ab8a112e69e196181e13",
+      "expected": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir. Onu üst sıraya keçirin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-155",
+      "inputSha256": "e9749064f3748695e42994a8fc37359fbfecb8262dce4df3393ea7bdb02d6ae6",
+      "expected": "Mövzu: Yeni şərt\n\nHörmətli proses sahibi,\n\nMaliyyə razılığı tələb olunan hallarda əlavə addım açılsın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-156",
+      "inputSha256": "19a17e2506d9063023076859df898fa9ff3a6ddbd9c38023154784261c42c322",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa da hər səhər xatırlatma alırsınız. Bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-157",
+      "inputSha256": "58350631c621b07f6959b5f26fc1be7089096fbda29c47f1559b73268c6ac2a7",
+      "expected": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır? Açıqlamanızı gözləyirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-158",
+      "inputSha256": "e1618a5f655245d16a6c57087f6c9afdb4572b23de73304543d6f7cefdb7b920",
+      "expected": "Mövzu: Workflow versiyası\n\nHörmətli məhsul analitikləri,\n\nKöhnə sənədlər yeni marşruta avtomatik keçirilməməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-159",
+      "inputSha256": "b956ca470a3848d1c7a4d086952096e0eb7554e51f1af91662d65916344a92b6",
+      "expected": "Mövzu: Müraciət\n\nHörmətli operator heyəti,\n\nYeni sənəd növündə reyestr yoxlaması imzadan əvvəl aparılacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-160",
+      "inputSha256": "dda041848cbe9ef025b70c4b60fb3dc507a125f9ef328d9cfacf839c4a1a2d93",
+      "expected": "Mövzu: Tapşırıq bağlanması\n\nHörmətli məsul şəxs,\n\nNəticə faylını əlavə etdikdən sonra işi yekunlaşdıra bilərsiniz.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-161",
+      "inputSha256": "385f90b35053cbc96235ab797215b0fd4d6b6aa12e65187cff8f9617a5fef1ac",
+      "expected": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var. Kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-162",
+      "inputSha256": "f8a4ae906ef13024d15cbf96b720f0e07dde22b57bb2009a7aa37bded35b5351",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmisiniz. Onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-163",
+      "inputSha256": "9016e9d59876d187aef5c610d0df4fbd5a8a8edb17fc8cc8a0d3376f0325dfac",
+      "expected": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz. Saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-164",
+      "inputSha256": "aa1dff08246bd3f6a3716eeaa73cd2a76717f77520bc62143e86cf66019c7815",
+      "expected": "Mövzu: Surət sorğusu\n\nHörmətli müştəri nümayəndəsi,\n\nİmzalı sənədin elektron surətini bu gün təqdim edə bilərik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-165",
+      "inputSha256": "74cfe74d10f2e1a018be876105e5427b4a89a60c66554c23c639e64b57596815",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial şöbəsi,\n\nKöhnə sistemdən gələn faylların sayı ilkin siyahı ilə uyğun gəlmir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-166",
+      "inputSha256": "93ec3ebe7218834eeb2237777a9e6f47c7235f76991019af69326c30f36ad844",
+      "expected": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb. Yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-167",
+      "inputSha256": "3870e16dd8d97fe893280148ef83c9a4c5889f17466bbcc69b25ca2b42c44521",
+      "expected": "Mövzu: Axtarış qaydası\n\nHörmətli operatorlar,\n\nArxivdə sənədi tapmaq üçün tam qeydiyyat nömrəsini daxil edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-168",
+      "inputSha256": "62cc0b380ebf213d10b85069337c9c49d9ffd86261e2d8eadc73da7a78db4fb7",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb. Onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-169",
+      "inputSha256": "3b281f066c095993c85a3c52b4913d3d5f4e7263deeee37a5218fbe6671172cf",
+      "expected": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır. Alternativ surət axtarırıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-170",
+      "inputSha256": "6659e100a2e6a462626efd1bef54eedbd8d9428ef75144e4fc08e9b28ba3a88c",
+      "expected": "Mövzu: Aylıq arxiv\n\nHörmətli rəhbərlik,\n\nBu ay arxivə göndərilən sənədlərin sayını hesabata əlavə etdik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-171",
+      "inputSha256": "48b90d9a01d60f6f814fe18af548c66c6294cd5b592d60b03ad742afb9ef8465",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır. Şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-172",
+      "inputSha256": "13958ae4f376c8251ca8c366fcb47131ae2a8175522c5133410a096628677904",
+      "expected": "Mövzu: Təhvil protokolu\n\nHörmətli proses sahibi,\n\nKağız sənədləri arxivə təhvil verəndə siyahını da imzalamaq lazımdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-173",
+      "inputSha256": "482ef099f1887622ec4cad36a237cfc9191895cc685fe282b96a713cc26d409d",
+      "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. Indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-174",
+      "inputSha256": "c2a11cc000525d9badb2101c3ccf406e158290a33023fd611b9246b88ae10eff",
+      "expected": "Mövzu: Müraciət\n\nHörmətli İlqar bəy,\n\nMüraciətin silinməsi mümkün deyil, çünki onun qanuni saxlanma müddəti bitməyib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-175",
+      "inputSha256": "83450dffa94e38d039e5e9c0cfad0d5497d4024848df28a4841ed7c8a87da654",
+      "expected": "Mövzu: Qəbz arxivi\n\nHörmətli mühasibat,\n\nMüqavilə qəbzlərinin elektron surətlərini ayrıca qovluqda saxladıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-176",
+      "inputSha256": "a6d7783f31dd5847045b7ae5a27152b19f22f01b4e7bdf33c50ab7cdd04e4242",
+      "expected": "Mövzu: Arxiv icazəsi\n\nHörmətli məsul əməkdaşlar,\n\nYalnız təsdiq edilmiş rolu olan şəxs gizli qovluğa girə bilər.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-177",
+      "inputSha256": "fda34380fb11f506d6be5ec3a3101ede449e67c6a37c64411c838d8baa04b3d4",
+      "expected": "Mövzu: Müraciət\n\nHörmətli layihə qrupu,\n\nKöçürülən sənədlərin hash yoxlamasını yekun protokola əlavə edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-178",
+      "inputSha256": "743ad66da8c232877049196a13248e4fd028779fea35e605a8997f612a40f94a",
+      "expected": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-179",
+      "inputSha256": "73850eba89dd4e35ab5d8b8de1520df5d80996785288b38dc0086613a111eeea",
+      "expected": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur. Qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-180",
+      "inputSha256": "1d88639bf226329a690bc2ec3a12e3d7efa5c0acca6825d95fbce1f4b81790cc",
+      "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nBağlanan işlərin əlavələri ayrıca saxlanca köçürülüb.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-181",
+      "inputSha256": "c7811692239221351ee1516eb7ca3e7b0c993ae552c6796acad8dd4e18cd4d64",
+      "expected": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub. Qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-182",
+      "inputSha256": "db053a06820121df5bd3d684bb1311493da9f2a8151737ad79c0ed2a2d63a66f",
+      "expected": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür. Bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-183",
+      "inputSha256": "b3fd36c316a3dcf38a0a5e619d950ffbc3d55a83a2bbf9ceacbd73b3a7949a67",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk. Zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-184",
+      "inputSha256": "f53a43797a1be1afee7cc9b4532d69f21aecf90e1b6f4743faa5fc19af636ff5",
+      "expected": "Mövzu: Geri qaytarma\n\nHörmətli bank tərəfdaşı,\n\nQaytarılma sorğusu yaradılıb. Nəticə üçün transaction kodunu izləyirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-185",
+      "inputSha256": "de2c1fcb40789fc2dcfcd0c17210f07fefdd4c68fe98a0e900c2328697def7f4",
+      "expected": "Mövzu: Abunə yenilənməsi\n\nHörmətli müştəri nümayəndəsi,\n\nİllik abunə bitməzdən əvvəl sizə ayrıca xəbərdarlıq ediləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-186",
+      "inputSha256": "fd3e5594c5f738c83354e05b51a7acd20cd393ccd31f16628784a740410b7c08",
+      "expected": "Mövzu: Müraciət\n\nHörmətli mühasibat,\n\nGöndərilən qəbzdə məbləğ AZN əvəzinə USD kimi göstərilib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-187",
+      "inputSha256": "f96ea820182a64d6de75563cff5e511437f2e707c77b79641f9c1f0e63b766ac",
+      "expected": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib. Kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-188",
+      "inputSha256": "3eb3528295f092963d60a24e5d760f64ce24a84aa85f7ef13fba70555b218d1c",
+      "expected": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib. Təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-189",
+      "inputSha256": "9c751d3c7a16f65cb2ebdf1e57bda294b923628f198489b0303a35a54a9ab8c1",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır. Qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-190",
+      "inputSha256": "4d617a42fac10013a8db826a0407cecfcc1514b07053bfa62e347137a9af3478",
+      "expected": "Mövzu: Gün sonu çıxarışı\n\nHörmətli maliyyə rəhbəri,\n\nBu günün ödənişləri ilə bank çıxarışı arasında fərq var.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-191",
+      "inputSha256": "adfeca8e9dd6c9dee8ae079b249049d97b62e22d60274632d48655d479fc4ac6",
+      "expected": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi. Təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-192",
+      "inputSha256": "7da259bb19a3ccb6e79fae711dbf375cccbb2a9972a312aac11938a3fbb7f26d",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-193",
+      "inputSha256": "7ba39bae1fad3f1e4f84e2aefeda22c34fa919daf14b18b995c504924c748c26",
+      "expected": "Mövzu: İllik plan\n\nHörmətli müştəri,\n\nİllik plana keçmək istəyirsinizsə, cari ayın sonuna qədər seçim edə bilərsiniz.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-194",
+      "inputSha256": "68bde445c78bb66d3a7aff9f04221a07add162a815ffbbab4a3483a5ea329fea",
+      "expected": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur. Onları axtarırıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-195",
+      "inputSha256": "ffbda37f6ef6249f1ce1efbd1bef00e604032d90091665478464fe1b7cc30a19",
+      "expected": "Mövzu: Müraciət\n\nHörmətli ödəniş qrupu,\n\nBank callback mesajlarının imzasını yoxlamaq üçün yeni açar almışıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-196",
+      "inputSha256": "a36e5b636cd7388fa4102f30681d5369c16865fbcc2c8e5ec283229f8a7e57a9",
+      "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. Icraya başlamayaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-197",
+      "inputSha256": "b968032fb7a6cf50fd919dc1789ec0b227d6fae7d154681684dc11121cd3dc3f",
+      "expected": "Mövzu: Tarif siyahısı\n\nHörmətli filial mühasibləri,\n\nYenilənmiş xidmət tarifləri gələn aydan qüvvədə olacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-198",
+      "inputSha256": "315e28b59bf631143d79b7b79f39dbe20d1815730cf9910db5854653fc96da2f",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nGeri qaytarma sorğunuz baxışdadır. Vaxtı dəqiqləşəndə məlumat verəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-199",
+      "inputSha256": "2a0f8e3ad7bf20124ca8aadcee292714ef66669a8224a18def45940eacdd5e70",
+      "expected": "Mövzu: Sifariş kodu\n\nHörmətli İlham bəy,\n\nÖdənişi tutuşdurmaq üçün sifariş nömrəsini bizə göndərin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-200",
+      "inputSha256": "123da53fa741b818fd714f206207c442b0c8ac746350f83a0093c518b4edc871",
+      "expected": "Mövzu: Ödəniş meyarı\n\nHörmətli biznes qrupu,\n\nQismən ödənişə icazə verilməsini müqavilə ilə tutuşduraq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-201",
+      "inputSha256": "cddc864988d30369fb6490cb73e4ddd5be73028f0486e7c97eeab4db3fb4e024",
+      "expected": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb. Son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-202",
+      "inputSha256": "c3b6d976a0ba9ef8ff0db3ca58e2fe032fba47152e2f7648562f675fe7b5e64d",
+      "expected": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür. Əsl faylı göndərə bilərsinizmi?\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-203",
+      "inputSha256": "47edb3eb38cac75da14afa8fa01f82f1dcfd4f6589c1fe2433ef37290490c47d",
+      "expected": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub. Düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-204",
+      "inputSha256": "247f5d99d92ca8ba2d5be7a9766941e3ab137be441bfbc9c936fcfd63bff316e",
+      "expected": "Mövzu: Müraciət\n\nHörmətli arxiv komandası,\n\nKöhnə DOCX faylı açılarkən cədvəl sərhədləri itir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-205",
+      "inputSha256": "b094f3da3c1f66ecd15694446926c4adc7623f72244f8948b74b343bd0cf0991",
+      "expected": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik. Baxışa başlayırıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-206",
+      "inputSha256": "97be28e91418ca01ef5cf411af0e7b08310364a46f6534795edc1bb3b7b7bed3",
+      "expected": "Mövzu: Müqavilə bəndi\n\nHörmətli hüquq şöbəsi,\n\nDördüncü bənddəki tarix əvvəlki razılaşma ilə uyğun gəlmir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-207",
+      "inputSha256": "856de04b3442b4c651af102b200c0c7afbbf4c51946347f2e91980107c3cb63b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nAylıq hesabatın qrafikləri əlavədədir. Yekun mətn sabah göndəriləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-208",
+      "inputSha256": "0e4e6af6372e4595166143b29b080e71ca932b273a476e362c9161131583d6ca",
+      "expected": "Mövzu: Siyahı formatı\n\nHörmətli tərtibatçılar,\n\nWord-dən köçürülən nömrəli siyahının sırası pozulub.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-209",
+      "inputSha256": "6826a4c0be3eb70adca0019da93531b9dd0a60e16380b8300416472fc08c8516",
+      "expected": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur. Yenisini çap edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-210",
+      "inputSha256": "c41d7bc30a9fcaa67730ad90f138d2c79f22844ae8550163dcfbb1386d65c7c8",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nSizə lazım olan imzalı surəti bu gün e-poçtla göndərəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-211",
+      "inputSha256": "0768a200101f1992f1f14b435671c7f287da6e6bd020c98a75f667c508524b8d",
+      "expected": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var. Saxlamayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-212",
+      "inputSha256": "ce80cb96a8170582bf6e3d327d4be231e75a5d11a54b30e5be2df9baa1d10b8b",
+      "expected": "Mövzu: Əlavə siyahısı\n\nHörmətli müştəri nümayəndəsi,\n\nMəktubda üç əlavə yazılıb, lakin sizdən yalnız ikisini almışıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-213",
+      "inputSha256": "25dcc02d2a8ff145b1e957be734420b0ea6564838bce67fd27ae618e39a81f82",
+      "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır. Sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-214",
+      "inputSha256": "fbefec89c7d3e9cfbece4099d3da615f2250cd4f51e6cf8bf74f6f639e40ae2f",
+      "expected": "Mövzu: Açılmayan qovluq\n\nHörmətli Nigar xanım,\n\nPaylaşdığınız ZIP arxivinə giriş şifrəsi göndərilməyib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-215",
+      "inputSha256": "df08cfd7f99bebc9792265ecbaec2a171005ceb98bceee0bcfc157a20b4b20b5",
+      "expected": "Mövzu: Versiya müqayisəsi\n\nHörmətli müqavilə qrupu,\n\nƏvvəlki variantdan dəyişən bəndləri ayrıca rənglə işarələyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-216",
+      "inputSha256": "992e3fb124ef8b573d76070520b96e9ef01416af8a291a603c53aede76e0e56b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nBirləşdirilmiş faylda üçüncü səhifə ən sona keçib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-217",
+      "inputSha256": "def806f363d39cd15e2891d109d8dd34f6fae6a2b066b4287b000d238c38dcd8",
+      "expected": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır. Tamamlayıb yenidən yollayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-218",
+      "inputSha256": "9a21023c14d2a0ca8eb3465f2444dc6470086ac7bb22d5123583f09833402d31",
+      "expected": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır. Təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-219",
+      "inputSha256": "6f332022ad038f88697201b1b33565678dcb9aefbc076980ed4168097fe48b4a",
+      "expected": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir. Alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-220",
+      "inputSha256": "1deea1448ec23d27f8a7dc275fb9f408cd70d81ada0c0e246b7204509e99cb36",
+      "expected": "Mövzu: Qeydiyyat kodu\n\nHörmətli şöbə müdiri,\n\nSon səhifədəki qeydiyyat kodu köhnə sənədə aiddir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-221",
+      "inputSha256": "4cc25f979dbef114cfdfa79179eb8d2a488d95f70ab814c79e676b68ec3ae346",
+      "expected": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb. Texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-222",
+      "inputSha256": "9935d856ffb42394553379730d6a8d790c80f3d14d851280da34f98792b7239b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq. Logları yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-223",
+      "inputSha256": "a3c7f1c62af9a641afb0128869d1e173e18ac24a50590a54f504cab726bd155a",
+      "expected": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-224",
+      "inputSha256": "c5ce897b0db39313c11ced231f08a473b1596d0e45b1df34ab7e71e2702373ec",
+      "expected": "Mövzu: Biletin yenidən açılması\n\nHörmətli texniki dəstək,\n\nBağlanan biletə eyni xətaya görə yeni qeyd yazılıb. Onu yenidən açın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-225",
+      "inputSha256": "0e53c098899bce3deccbc2c8ed26d55355a48eb1f4607917cac9c70e4f38925d",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial rəhbəri,\n\nKritik müraciətlərə ilkin cavab on beş dəqiqə ərzində verilməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-226",
+      "inputSha256": "728d474b92be65d3d777d442fc41db7f8012de4e206f454fd0d2f358a6b5a8cd",
+      "expected": "Mövzu: İşləməyən keçid\n\nHörmətli müştəri nümayəndəsi,\n\nSizə göndərdiyimiz link səhv açılır. Yeni keçid hazır olanda paylaşacağıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-227",
+      "inputSha256": "4542939740649c48f449858ea778dfc74277fc6d7b070b788acae7ee5d239eb6",
+      "expected": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq. Əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-228",
+      "inputSha256": "cefbfaed1e6a3c2fdf2d0bee9afd0e95c9909b8682d4009f073c7b9fe1df026f",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-229",
+      "inputSha256": "99020c60f8b0a95f55e044b6317de490ea316537ce4750c5c75fef23e2d0fcc8",
+      "expected": "Mövzu: Həftəlik icmal\n\nHörmətli rəhbər heyət,\n\nBu həftə daxil olan texniki sorğuların əksəriyyəti giriş icazəsi ilə bağlıdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-230",
+      "inputSha256": "53faff7f707560b9dc598b32cb7c96158d269fcc6e93959a65b13e6761219844",
+      "expected": "Mövzu: Yanlış kateqoriya\n\nHörmətli operatorlar,\n\nBank əməliyyatı ilə bağlı sualı texniki nasazlıq kimi qeydə almayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-231",
+      "inputSha256": "3e57809bb30d9fdc3bf072749bb19819cb3782985292fa793b0b08b7e2e98c9c",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib. Təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-232",
+      "inputSha256": "2ffede04a8716f41e0013fc28c2147c7ac3f905b3587074d7909b3e93b095e53",
+      "expected": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib. Tam şəkli rica edirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-233",
+      "inputSha256": "b060c27e097a62691bd921dac7eea8c43da8fe13214ec81a6aa3fd39917acef1",
+      "expected": "Mövzu: Telefon müraciəti\n\nHörmətli əlaqə mərkəzi,\n\nZəng zamanı deyilən qeyd ticket tarixçəsində də olmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-234",
+      "inputSha256": "f7262aeb395f167a182b600d3533aad162d64c2b82bf8c6be4aa2c5a4e147277",
+      "expected": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib. Onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-235",
+      "inputSha256": "049907669814cce62d37d9f5a383d0e409af1e4280ce30712067d65507e39d36",
+      "expected": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır. Fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-236",
+      "inputSha256": "a7f8937702161b34238fc48b80716b74c3641c6c543daf99de36a569ea14a945",
+      "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. Ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-237",
+      "inputSha256": "b58f0b8b2374ce9c1b1c66189f827905256779d0ca6e2b802c1772dba0327b82",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nŞənbə günü keçiriləcək iş zamanı bəzi sorğular gec cavablana bilər.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-238",
+      "inputSha256": "ed3377ba0a24f97dd3ffe60bc62d98eefab784c349b157c46148b04cbd62ba65",
+      "expected": "Mövzu: Yerində dəstək\n\nHörmətli filial komandası,\n\nMühəndisimiz sabah ofisinizdə cihazın bağlantısını yoxlayacaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-239",
+      "inputSha256": "04ad5e285a1b701fb994a3ca5164c7aaabf0b3c2a964a83e6a1a876da708a536",
+      "expected": "Mövzu: Bilik bazası\n\nHörmətli layihə qrupu,\n\nTez-tez verilən bu sual üçün yeni izah məqaləsi hazırlayaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-240",
+      "inputSha256": "0f27a7663c8b5f0c9b7c5daedd34580763a1c65851b27a2f80903f9641422569",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik. Sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-241",
+      "inputSha256": "6bf765c62e2cea64da0fd995774794ba16dbba668465bd60ded407b005487ee0",
+      "expected": "Mövzu: Yeni tələblər\n\nHörmətli müştəri,\n\nSon görüşdə dediyiniz funksiyaları SRS sənədinə əlavə edib təsdiqə göndərəcəyik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-242",
+      "inputSha256": "2e9e13492bf6f0dae5aec5ee1282a56c60021fbc594cb5c8c92b0ffe51e559b5",
+      "expected": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil. Onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-243",
+      "inputSha256": "be1457cb76b585190315dd8e11f33a3c90ffe03067c0074e96f949f16ddd7973",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb. Üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-244",
+      "inputSha256": "254440d32557cd8e9670d8a078c9aa05e98ee976ddbd7d4e4972b896edfc98e8",
+      "expected": "Mövzu: Görüş vaxtı\n\nHörmətli Elvin bəy,\n\nTexniki şərtləri müzakirə etmək üçün gələn çərşənbə sizə uyğundurmu?\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-245",
+      "inputSha256": "996bf88813b83fd4bb2b7b288ac5be773f328ee83c2bee5e0aa63ceeb0b959ac",
+      "expected": "Mövzu: Backlog prioriteti\n\nHörmətli məhsul sahibi,\n\nMüştərinin yeni istəyi əvvəlki buraxılış planını dəyişə bilər.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-246",
+      "inputSha256": "01aa5a812768ee4677f7da85f10597a62f6ad8c2867e12cf5d289aca0e22a00b",
+      "expected": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nQəbul sınağının iştirakçıları və tarixləri sənəddə yeniləndi.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-247",
+      "inputSha256": "b78c01714104253bad9d7020e3377e3996f0f4f97ff474ec99001871d0af2e3a",
+      "expected": "Mövzu: Razılaşma maddəsi\n\nHörmətli hüquq qrupu,\n\nMəxfilik bəndinə əlavə edilən şərti nəzərdən keçirməyinizi xahiş edirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-248",
+      "inputSha256": "e47498b918b75eaf3f8417b21ef42c9b2feb376e3479dd29c1fab0a00149091a",
+      "expected": "Mövzu: Demo dəvəti\n\nHörmətli müştəri nümayəndəsi,\n\nYeni ekranların nümayişini cümə günü onlayn keçirəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-249",
+      "inputSha256": "d59fe345c8c2579e4ce33f94c28765886e6ef744b990b321f268ab15f90bca9e",
+      "expected": "Mövzu: Müraciət\n\nHörmətli layihə komandası,\n\nDünkü görüşdə razılaşdırılan üç qərarı protokola yazdıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-250",
+      "inputSha256": "b4164622d68b2e0ae06dadd4afa65417d8c90c587d378c12127c4863c4df4b67",
+      "expected": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-251",
+      "inputSha256": "4b4e40613a60f7f37c3bee23b9e233bbec3da31fedc2e9af8efa6b9c73fdb1ac",
+      "expected": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa, hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-252",
+      "inputSha256": "b8623525f595a35928f87bca449571b0743f678c94a0cac3a3edc998270d51a4",
+      "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nSRS-in son variantına rəy vermək üçün bu gün son gündür.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-253",
+      "inputSha256": "1d4ca3c6e309a09ab5b58ce64096ee8ded53fda4b2891f9055f9f7d522acf0ed",
+      "expected": "Mövzu: Risk qeydiyyatı\n\nHörmətli Araz bəy,\n\nVendor cavabının gecikməsi risklər siyahısına əlavə olunub.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-254",
+      "inputSha256": "713fa6e2e61421f57bb329c566238a3ef026609d9cc5dd9316f7ffefb08b4a19",
+      "expected": "Mövzu: İcra mərhələləri\n\nHörmətli müştəri,\n\nLayihənin əsas addımlarını ayrıca cədvəldə sizə göndərmişik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-255",
+      "inputSha256": "e8adfbf1dcb2e5348e36577bbf4b1ea83c0169a64b8813c55489e34dc289dfb6",
+      "expected": "Mövzu: Müraciət\n\nHörmətli dizayn qrupu,\n\nYeni ekranın rəng kontrastı ilə bağlı fikrinizi paylaşın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-256",
+      "inputSha256": "09eba138487ec7879340109f1ab8f71371b3f5143296f0f50e4d1e665310502c",
+      "expected": "Mövzu: Büdcə dəyişməsi\n\nHörmətli maliyyə şöbəsi,\n\nƏlavə istək üçün lazım olan xərci hesablayıb təqdim edəcəyik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-257",
+      "inputSha256": "1ccef166e84c42428dcd4e6c49177b6da05451e843345de485348f391b6d0213",
+      "expected": "Mövzu: Təlim tarixləri\n\nHörmətli filial koordinatorları,\n\nPilot filiallarda təlim gələn həftənin ilk günündə başlayır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-258",
+      "inputSha256": "890246997c7aa333e784080b4b77616811fe41e70abf03e456a5387b9d339226",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nicat bəy,\n\nGördüyümüz xətanı Jira-da ayrıca task kimi qeyd etmişəm.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-259",
+      "inputSha256": "04cef8c82ea9a59918c9b2e7e53a1a2ff5958dade4ba4145d81d7f4e0640ff49",
+      "expected": "Mövzu: Son qərar\n\nHörmətli məhsul komandası,\n\nDəyişiklik təsdiqlənməyənədək production mühitinə çıxarılmayacaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-260",
+      "inputSha256": "f76e151190e06f25739004e848a1bb17106ea1096a50e7936c91f6d071c9cb10",
+      "expected": "Mövzu: Mərhələ hesabatı\n\nHörmətli rəhbərlik,\n\nBu rübdə tamamlanan işlərin siyahısı hesabatın əlavəsindədir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-261",
+      "inputSha256": "693fca65867d4cbdb944bb29ade728815acb1a676c615fffbf53857290546b29",
+      "expected": "Mövzu: Müraciət\n\nHörmətli istifadəçilər,\n\nSənədin statusu dəyişəndə hesabınıza avtomatik xəbər gələcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-262",
+      "inputSha256": "babc052e1befe45b1f27ea2eae059c58dab454757789bce731f5fdddba9396ee",
+      "expected": "Mövzu: Push gecikməsi\n\nHörmətli mobil komanda,\n\nGöndərilən push mesajı bəzi cihazlarda yalnız tətbiq açıldıqdan sonra görünür.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-263",
+      "inputSha256": "588836582526bbc7773ba0c7da0a2cad614e7e8f7fb59ea3afd9cbbf7522b5d4",
+      "expected": "Mövzu: Təkrar xəbər\n\nHörmətli operatorlar,\n\nEyni hadisə üçün müştəriyə iki SMS getməməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-264",
+      "inputSha256": "a79cb75e9df62badcff71d109aeb31ac4d9b52e7ea6396840950f50625d169aa",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir. Yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-265",
+      "inputSha256": "1b5e6591e8004628f39fae17ac9a8f75c6b8a50f61060522173dbb97100c50a1",
+      "expected": "Mövzu: Mesaj mətni\n\nHörmətli məhsul sahibi,\n\nXəta bildirişində texniki kod əvəzinə sadə izah göstərilməlidir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-266",
+      "inputSha256": "ad0bdb63ac647b6130079e629aee627c8f365876e3c4a75924e20dc4c9e22b93",
+      "expected": "Mövzu: Razılıq qeydi\n\nHörmətli təhlükəsizlik qrupu,\n\nReklam mesajı göndərilməzdən əvvəl istifadəçinin razılığı yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-267",
+      "inputSha256": "d2479f2651dad861390b0f00fc2788bc3d88cc6e4ad722cb6895eda64b4e7c70",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nHər gün saat doqquzda açıq tapşırıqlar barədə qısa icmal göndəriləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-268",
+      "inputSha256": "bb8250da186ce8ea77a31904e7b5cb968ad58bca5db9feefcdfbdcc42569caf4",
+      "expected": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb. E-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-269",
+      "inputSha256": "b8b87cb4b96b6aaa45a17441682d0cac11ac350af395a08cd1e87180f84fd0d7",
+      "expected": "Mövzu: Kritik xəbərdarlıq\n\nHörmətli rəhbərlik,\n\nSistem dayananda xəbərdarlıq həm SMS, həm də e-poçtla çatmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-270",
+      "inputSha256": "d43eb16933c1f3886055006cbdf1e17575f1ed6012ebb4b7b5ddffbe1fd58574",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nHəftəlik icmal almaq istəmirsinizsə, profilinizdən seçimi bağlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-271",
+      "inputSha256": "f3f25874fefd35f00c17792e6e46ec82c110240f26edbeffc25d29369a8f95b8",
+      "expected": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır. Dəyişəni yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-272",
+      "inputSha256": "e4792f033fc90b2774dd20e96351d47ecafda87271c1b1e9e48fefeed017ef0f",
+      "expected": "Mövzu: Queue dolması\n\nHörmətli DevOps qrupu,\n\nMesaj növbəsi dolanda sorğular yığılıb göndəriş dayanır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-273",
+      "inputSha256": "74b9052bfdfc1d0057b84d8ecfc35dcd77fb6cce2c42cc07c0a33adb3c8bee18",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub. Əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-274",
+      "inputSha256": "5b655103611c12fa1e79b1c5c2bb984000ea74ce6a0351468daef2c35578d13f",
+      "expected": "Mövzu: Bildiriş dili\n\nHörmətli analitiklər,\n\nQeydiyyat ekranı Azərbaycan dilindədir, amma xəbərdarlıq ingiliscə görünür.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-275",
+      "inputSha256": "7ab64eb5eb8952c5df864b6440f5d1307acbd52d058c6fd09b52e0718805178e",
+      "expected": "Mövzu: Retry müddəti\n\nHörmətli servis komandası,\n\nÇatdırılmayan bildiriş üçün ikinci cəhd beş dəqiqə sonra edilsin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-276",
+      "inputSha256": "caabf88e2fd1f67405c2ac7dc8efc6bb12f42c1b4d2af6781157322c5a010f40",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb. Cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-277",
+      "inputSha256": "f5e2fc65483f460e9eb2056aaa42869b7cad9dfad4f7ce3f9876b5b26628e682",
+      "expected": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız. Jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-278",
+      "inputSha256": "28142c8ccdcef2fe8cdb097cdd7c3c3e6e6e27aa4e4108b0e097e7598171e545",
+      "expected": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür. Saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-279",
+      "inputSha256": "1f434b33a480fd60052d346a49468f9650fc5e70ff6cd2bd40c243369c2dae82",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbər köməkçisi,\n\nGələn həftənin iclası üçün dəvətlər bu gün paylaşılacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-280",
+      "inputSha256": "d037f706a0f69bfe2427d56e3b56806d4b3c1fbf034044b49bd48c983f7f1218",
+      "expected": "Mövzu: Müraciət cavabı\n\nHörmətli operator,\n\nMüştərinin yazdığı e-poçta cavab verəndə qeydiyyat nömrəsini mövzuda saxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-281",
+      "inputSha256": "aba3cf85fc5145ba7e42663d2c9a37e933550aebd1db65c7cd9ecdc9bef1c869",
+      "expected": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib. Şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-282",
+      "inputSha256": "fe5bd838d166bc627fe268f2682b5a01d2e7543ea47b3b41842c0254667a9e22",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYeni domen hələ köhnə IP ünvanını göstərir. Dəyişiklik nə vaxt yayılacaq?\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-283",
+      "inputSha256": "b7f28b16fe16ca87ed316fe83ed7cb098d1e8c7cf4c47418c896d923fed6ee4f",
+      "expected": "Mövzu: Firewall icazəsi\n\nHörmətli vendor komandası,\n\nTest servisinə çıxış üçün tələb olunan portlar əlavədə göstərilib.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-284",
+      "inputSha256": "4ade5f8a62306c4866f5961baccfff49008bbc9ed31e6d011aee270f88edab96",
+      "expected": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa, şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-285",
+      "inputSha256": "cf5bd3b5d51a5b205a6e3218492573b745bf6c8a2b6e77d38ea7051047835bba",
+      "expected": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nŞirkət proxy-si yenilənən sertifikatı qəbul etmir. Bunu araşdırın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-286",
+      "inputSha256": "96b7862a331309b365ebf77d86312796387c8ce35b98cd3d52c8d1bb17c95266",
+      "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-287",
+      "inputSha256": "7d486591a4f4656361349f46ec75eecfcd9523db17867efbc619f30af7522d33",
+      "expected": "Mövzu: Şəbəkə gecikməsi\n\nHörmətli Nicat bəy,\n\nİmza xidmətinə sorğu göndərəndə daxili şəbəkədə gecikmə artır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-288",
+      "inputSha256": "1e0ede0733629520e8f3044758b7cce6548c4234ebbb0ecb924f4c7920b888cc",
+      "expected": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik komandası,\n\nYeni açılan portun yalnız təsdiq edilmiş IP siyahısına icazəsi olsun.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-289",
+      "inputSha256": "90d5b63750e17b2c902565bc93eb24cf87401b2dfde4a520bedecd7637ba76c6",
+      "expected": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib. Ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-290",
+      "inputSha256": "5228479cabd2467be0115a63a03e73394062c8bffa03d18dba01e3d1142e7f30",
+      "expected": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb. Qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-291",
+      "inputSha256": "75de41f6766c3e788f18cdbdd60a3830c5c3f897799c7ecf0f55e8c398c61c10",
+      "expected": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur. Daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-292",
+      "inputSha256": "4d5191dfc5e2e71a61470d89fe7c0e220fff8142b9533b4385d79819d933caee",
+      "expected": "Mövzu: WebSocket kəsilməsi\n\nHörmətli admin heyəti,\n\nUzun sessiyalarda WebSocket bağlanır. Bildirişlər yenilənmir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-293",
+      "inputSha256": "595db412657b2734031d1ffb6e032843171c4653335cc93195ac2c108b16086b",
+      "expected": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir. Ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-294",
+      "inputSha256": "c8b2797d15098999453fe4788332d8331e820c786c60219a5fbee7864a3018d3",
+      "expected": "Mövzu: Müraciət\n\nHörmətli operatorlar,\n\nDaxili panel yalnız şirkət şəbəkəsindən açılmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-295",
+      "inputSha256": "d09c5234fa6ea19e067183f0e8e03276e8c3db626c32fd01e91332c24c5001d2",
+      "expected": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi? Bizə yazın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-296",
+      "inputSha256": "83e155652469327f0493eb630dedf381aa2c37e53975dcdc906845f13d73f678",
+      "expected": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır. CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-297",
+      "inputSha256": "1e4c0a4a1f1092e201385286eb57eb55e99e226d48b181eee427759fa750b000",
+      "expected": "Mövzu: Müraciət\n\nHörmətli inteqrasiya qrupu,\n\nXarici endpoint üçün sertifikat zənciri natamamdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-298",
+      "inputSha256": "fb64e036169e7701ab6fa7919482fb45cef65803447bd64f99921c9f858565e9",
+      "expected": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-299",
+      "inputSha256": "ba0e5b36085b0753661fa03eda0873fa00d4b5a08dff8580f8be68fde9f4bb3a",
+      "expected": "Mövzu: WiFi sınağı\n\nHörmətli filial texnikləri,\n\nKabellə bağlantı işləyir, lakin WiFi üzərindən giriş alınmır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-300",
+      "inputSha256": "ea783cb52e3c2a90bc5c7477e7d716d4a86dcee9adf08101a5b34bf52fbd79c8",
+      "expected": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub. Əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-301",
+      "inputSha256": "4c43c56b623e05d5376a8d0f92f5bdfaa6d48732af9dde6f5f1e80ba9778ed77",
+      "expected": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür. Yerləşimi yoxlayın.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-302",
+      "inputSha256": "9db4cea083071453832c56ef2f6987d2d3d08f13728575f9d01f8bd57f76bc71",
+      "expected": "Mövzu: Mətn seçimi\n\nHörmətli istifadəçilər,\n\nRedaktorda seçdiyiniz sözləri kursiv edə və dırnağa ala bilərsiniz.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-303",
+      "inputSha256": "73e0e47d14e4a1096794796d8903eac314b9253ce93e648b71178ee5d69d1217",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nNəticə mətnini kopyalayanda siyahı nömrələri itir. Bunu yoxlayacağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-304",
+      "inputSha256": "b8a83c20c6a34107137006e79bfe949a83fb2cf82de6978ab624269d05a58f7d",
+      "expected": "Mövzu: Yapışdırılan HTML\n\nHörmətli test komandası,\n\nXarici saytdan gələn HTML təhlükəli atributlar olmadan saxlanmalıdır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-305",
+      "inputSha256": "2f2441bd7f557bde58ea69aa063e10b866c99233b658c3380b722256c60e62f2",
+      "expected": "Mövzu: Yeni dizayn\n\nHörmətli məhsul sahibi,\n\nOxunması çətin olan köməkçi mətn üçün kontrastı artıracağıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-306",
+      "inputSha256": "8e252b0ac83ff55711d764c51246f7277be37caa2405d857960c1251fec8e9d0",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nFormadakı düymələrə Tab ilə keçid bəzən dayanır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-307",
+      "inputSha256": "7475bb23086f3f855f9a52bfd760a2cf62f7ac81221b83202bcb40e8ba31126d",
+      "expected": "Mövzu: Kiçik ekran\n\nHörmətli mobil komanda,\n\nMətn panelinin kənarı telefonda ekranın çölünə çıxır.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-308",
+      "inputSha256": "bf96889dc5382e8f39fcffc5d2b3fcb27020282a360fbff5dda04a1a63113376",
+      "expected": "Mövzu: Aydın xəta\n\nHörmətli operatorlar,\n\nYanlış formatda fayl seçəndə səbəbi ekranda göstərmək lazımdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-309",
+      "inputSha256": "716bb03fdcd81cb88c10170603aea13e9ba35f241d22bfe05597be021a7a4f28",
+      "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nSon sınaqda təmizləmə düyməsinin yerini tapmaq çətin olub.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-310",
+      "inputSha256": "e4761ef8ad108c9a24855d539da2025f9d7b839762c4823868b9f31f315fdc45",
+      "expected": "Mövzu: Yeni imkan\n\nHörmətli müştəri,\n\nŞəxsi kabinetdə müraciət tarixçənizi artıq görə bilərsiniz.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-311",
+      "inputSha256": "9092795134472a3636cea2e635962238eee9a523358588670fb4ab3f370002cc",
+      "expected": "Mövzu: Boş səhifə\n\nHörmətli Nigar xanım,\n\nSəhifəni yeniləyəndə seçdiyiniz sənəd növü itir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-312",
+      "inputSha256": "e4c35d1e2db303d3e201f237a6c84d06200ebdbc8cb11270e1cad504fb15740c",
+      "expected": "Mövzu: Müraciət\n\nHörmətli dizaynerlər,\n\nXarici şrift gələnə qədər mətn görünməz qalmasın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-313",
+      "inputSha256": "0e8d81db545b71b82cb30d7e0e4ef59846d785e505dcaf8113a581a8e0efc4f7",
+      "expected": "Mövzu: Mətn sayğacı\n\nHörmətli frontend komandası,\n\nYapışdırmadan sonra simvol sayğacı bir simvol az göstərir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-314",
+      "inputSha256": "23f3ce0f9c033741334ac70ade22f52b3c08ac94dfaa438c520ab8e25a7e9920",
+      "expected": "Mövzu: Sadə menyu\n\nHörmətli məhsul analitikləri,\n\nYeni menyuda əsas əməliyyatları daha yuxarı yerləşdirək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-315",
+      "inputSha256": "510f9935dbe705abead1ac3dc463a2cea031d1c1a58166ec2c9583950480d08c",
+      "expected": "Mövzu: Müraciət\n\nHörmətli əlaqə mərkəzi,\n\nTelefon ekranında xəbərdarlıq mətninin sonu kəsilir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-316",
+      "inputSha256": "94a84b3f6a46c36a4879cc06f4bbae4a544b97782d777847760fda10ae481f66",
+      "expected": "Mövzu: Geri qaytarma\n\nHörmətli Rəşad bəy,\n\nSon redaktəni Undo ilə geri almaq üçün düymə var.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-317",
+      "inputSha256": "378496c54af1232c6b921d27487947e94735da7778baf4edc49cf12b310aee2e",
+      "expected": "Mövzu: Yapışdırma yoxlaması\n\nHörmətli təhlükəsizlik qrupu,\n\nScript daxil olan mətnin səhifədə icra edilmədiyini yoxlayın.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-318",
+      "inputSha256": "d65f55d2538ce36c716d51ffcab9ce26feab5addd9110e8941a2dc6cdf2c7f96",
+      "expected": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburi olduğu aydın görünməlidir.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-319",
+      "inputSha256": "b3f18d3fc9ad81afbc052b92e9a641f6d07158987913ebeafbf37b6f673a64f5",
+      "expected": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə, istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-320",
+      "inputSha256": "a58a821ac3335160215d40408ebbba83aea7a4d7a03db6bbad40cc63504e4c63",
+      "expected": "Mövzu: Seçilmiş format\n\nHörmətli Leyla xanım,\n\nQalın yazılmış cümlə redaktədən sonra da qalın qalmalıdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-321",
+      "inputSha256": "aefcf9761dd09ea17dbf25fb4d6f52f435469edf4d031c722bbfea626238d780",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial işçiləri,\n\nSənəd qeydiyyatı üzrə təlim gələn həftə onlayn keçiriləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-322",
+      "inputSha256": "eaf62ba1caa56763715d6e3140623ab2c9ab0254982cd3d36e64569268539f00",
+      "expected": "Mövzu: Video yazı\n\nHörmətli Araz bəy,\n\nKeçən sessiyanın video yazısını paylaşmaq üçün icazə istəyirik.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-323",
+      "inputSha256": "db2ca5e8a71c2d0f188fe2f6b5973a314cda9025af0d1bd862d9eea4da778d3e",
+      "expected": "Mövzu: İstifadə qaydası\n\nHörmətli müştəri,\n\nŞəxsi kabinetdən sənəd yükləmək üçün qısa bələdçi əlavə etmişik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-324",
+      "inputSha256": "6d0b68dd3ad4ac774acb4e710c97e4094d9588bd41ef8f3554341f91a3df8b4d",
+      "expected": "Mövzu: Müraciət\n\nHörmətli inzibatçılar,\n\nYeni icazə matrisini tətbiq etməzdən əvvəl admin qrupunu təlimləndirək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-325",
+      "inputSha256": "212294f84cea8156220a2d5eb4967975787d90bf044898f82d3c6409d543a8ac",
+      "expected": "Mövzu: İştirak təsdiqi\n\nHörmətli Nərmin xanım,\n\nÇərşənbə günkü sessiyaya qatıla biləcəyinizi bildirin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-326",
+      "inputSha256": "7d4204fdac8fb5784f3844a559fda22e9b093b40da1e375b171b77c88f14bc9e",
+      "expected": "Mövzu: Sual siyahısı\n\nHörmətli məhsul komandası,\n\nİlk pilotdan sonra gələn sualları FAQ bölməsinə daxil edək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-327",
+      "inputSha256": "9e252222e956f4e0604df79b8824c7acdd21bdc284e15aa10e7ac7e2064059d0",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər, ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-328",
+      "inputSha256": "a5a8d0a7630f7a4abe50cd1283fe63efe4a7d6d64e5ed723feb8943043f16f2c",
+      "expected": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar,\n\nTəlimdə real müştəri hesabından istifadə etməyin. Test hesabını seçin.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-329",
+      "inputSha256": "75b91844de853ad41968c92309a0bbd50ebf6ecb1cb530065e2a4b9be0598e22",
+      "expected": "Mövzu: Bələdçi sənədi\n\nHörmətli müştəri nümayəndəsi,\n\nSon versiyada ekran görüntüləri yenilənib. Yeni faylı əlavə edirik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-330",
+      "inputSha256": "d3730ff61bb3b96f99ee8eaaf4375b45c50e70df17f87e37f0bb9bc928783a88",
+      "expected": "Mövzu: Müraciət\n\nHörmətli təlimçilər,\n\nİmza və arxiv funksiyalarını ayrı sessiyalarda göstərəcəyik.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-331",
+      "inputSha256": "66b9d8f433f2305c78d2ddee98306f5756a7d07c83fce4b5520ce918ed213b71",
+      "expected": "Mövzu: İmtahan nəticəsi\n\nHörmətli Elvin bəy,\n\nSınaq suallarının cavabları yalnız təlimdən sonra paylaşılacaq.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-332",
+      "inputSha256": "202992e2cef13e45f4c9d0e0630b650c8f6c3c8a3347c5eb5b4284626d3e7cfb",
+      "expected": "Mövzu: Yeni başlanğıc\n\nHörmətli komanda,\n\nİlk görüşdə layihənin məqsədini və rolları qısa təqdim edək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-333",
+      "inputSha256": "61c0dd5b0941f059d8912c7fd6c6e065013e0c286e7db00d832b0334c03ad5df",
+      "expected": "Mövzu: Müraciət\n\nHörmətli filial operatorları,\n\nQeydiyyat addımında çətinlik yaşayanlar üçün əlavə vaxt ayırdıq.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-334",
+      "inputSha256": "31c537e6fd531a763932d6a23dfd0b14f203b5dcdf64ecb939913bbedbb0a258",
+      "expected": "Mövzu: Təlim hesabatı\n\nHörmətli rəhbərlik,\n\nİştirak sayı və rəylər yekun hesabatda ayrıca göstəriləcək.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-335",
+      "inputSha256": "6406731aa4ae5b92826c7759ddc4f77c3706ad3d973f8eb181d9bf5256127a8e",
+      "expected": "Mövzu: İzah videosu\n\nHörmətli müştəri,\n\nTelefon üzərindən müraciət yaratmağı göstərən video hazırdır.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-336",
+      "inputSha256": "68afe5b63c2db8e392928ce1dbaa654b1823333fbe75b66ec1de31583c1de679",
+      "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nYeni funksiyanı öyrənmək üçün sınaq hesabınız aktivləşdirilib.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-337",
+      "inputSha256": "35d2a4d7c0c76eaaa69ce831ffa977e7270b827158e111f13eec14e09a5aefe5",
+      "expected": "Mövzu: Operator qeydləri\n\nHörmətli texniki dəstək,\n\nTez-tez verilən suallar üçün hazır cavab mətnlərini yeniləyək.\n\nHörmətlə,\nSənan"
+    },
+    {
+      "id": "mail-338",
+      "inputSha256": "26c5d9aa806a456d6d83ed12a684b00ee0fdadb935b2649914be084913c6812d",
+      "expected": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər. Bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-339",
+      "inputSha256": "3aa7ae2f89b3a9cbce37cbc1a5a3050fcdd1657cf1906007d5a81359df3afba7",
+      "expected": "Mövzu: Müraciət\n\nHörmətli yeni əməkdaşlar,\n\nSistemə ilk giriş və şifrə dəyişikliyi ayrı addımlarda göstəriləcək.\n\nHörmətlə,\nLayihə komandası"
+    },
+    {
+      "id": "mail-340",
+      "inputSha256": "a386201f8f2b4fa5e8a76a10cf8f5164d5eec5805504806a166568f044b8e780",
+      "expected": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var. Onları dəyişək.\n\nHörmətlə,\nSənan"
+    }
+  ]
+}

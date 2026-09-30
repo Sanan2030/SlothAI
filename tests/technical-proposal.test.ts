@@ -25,7 +25,7 @@ const reviewed = [
   'aktiv olacaq. RabbitMQ və ya Kafka', 'retry mexanizmləri',
   'UX/UI', 'responsive dizayn', 'dynamic filtrləmə', 'TLS və SSL',
   'mənfəət məlumatları hashing', 'RBAC', '2FA', 'CI/CD',
-  'unit testlər, inteqrasiya testləri və e2e testlərdən',
+  'unit testlər, inteqrasiya testləri və E2E testlərdən',
   'proqram koduna', 'mühitə düşməsinin qarşısını',
   'zero downtime deployment', 'roll-back', 'Prometheus və Grafana',
   'dörd həftə ərzində', 'on iki həftəlik', 'yüz faiz',

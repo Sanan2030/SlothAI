@@ -362,116 +362,6 @@
       ]
     },
     {
-      "lemma": "şəhər",
-      "word": "şəhərin",
-      "grammaticalCase": "genitive",
-      "texts": [
-        "Bu gün şəhərin təsviri diqqətlə araşdırıldı.",
-        "Dünən şəhərin təsviri diqqətlə araşdırıldı.",
-        "İclasda şəhərin təsviri diqqətlə araşdırıldı."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərə",
-      "grammaticalCase": "dative",
-      "texts": [
-        "Bu gün şəhərə xüsusi diqqət yetirildi.",
-        "Dünən şəhərə xüsusi diqqət yetirildi.",
-        "İclasda şəhərə xüsusi diqqət yetirildi."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhəri",
-      "grammaticalCase": "accusative",
-      "texts": [
-        "Bu gün şəhəri diqqətlə nəzərdən keçirdik.",
-        "Dünən şəhəri diqqətlə nəzərdən keçirdik.",
-        "İclasda şəhəri diqqətlə nəzərdən keçirdik."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərdə",
-      "grammaticalCase": "locative",
-      "texts": [
-        "Bu gün şəhərdə müəyyən dəyişiklik müşahidə edildi.",
-        "Dünən şəhərdə müəyyən dəyişiklik müşahidə edildi.",
-        "İclasda şəhərdə müəyyən dəyişiklik müşahidə edildi."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərdən",
-      "grammaticalCase": "ablative",
-      "texts": [
-        "Bu gün şəhərdən ətraflı bəhs etdik.",
-        "Dünən şəhərdən ətraflı bəhs etdik.",
-        "İclasda şəhərdən ətraflı bəhs etdik."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərlər",
-      "grammaticalCase": "nominative",
-      "texts": [
-        "Bu gün şəhərlər diqqətimizi cəlb etdi.",
-        "Dünən şəhərlər diqqətimizi cəlb etdi.",
-        "İclasda şəhərlər diqqətimizi cəlb etdi."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərlərin",
-      "grammaticalCase": "genitive",
-      "texts": [
-        "Bu gün şəhərlərin təsviri diqqətlə araşdırıldı.",
-        "Dünən şəhərlərin təsviri diqqətlə araşdırıldı.",
-        "İclasda şəhərlərin təsviri diqqətlə araşdırıldı."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərlərə",
-      "grammaticalCase": "dative",
-      "texts": [
-        "Bu gün şəhərlərə xüsusi diqqət yetirildi.",
-        "Dünən şəhərlərə xüsusi diqqət yetirildi.",
-        "İclasda şəhərlərə xüsusi diqqət yetirildi."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərləri",
-      "grammaticalCase": "accusative",
-      "texts": [
-        "Bu gün şəhərləri diqqətlə nəzərdən keçirdik.",
-        "Dünən şəhərləri diqqətlə nəzərdən keçirdik.",
-        "İclasda şəhərləri diqqətlə nəzərdən keçirdik."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərlərdə",
-      "grammaticalCase": "locative",
-      "texts": [
-        "Bu gün şəhərlərdə müəyyən dəyişiklik müşahidə edildi.",
-        "Dünən şəhərlərdə müəyyən dəyişiklik müşahidə edildi.",
-        "İclasda şəhərlərdə müəyyən dəyişiklik müşahidə edildi."
-      ]
-    },
-    {
-      "lemma": "şəhər",
-      "word": "şəhərlərdən",
-      "grammaticalCase": "ablative",
-      "texts": [
-        "Bu gün şəhərlərdən ətraflı bəhs etdik.",
-        "Dünən şəhərlərdən ətraflı bəhs etdik.",
-        "İclasda şəhərlərdən ətraflı bəhs etdik."
-      ]
-    },
-    {
       "lemma": "kənd",
       "word": "kəndin",
       "grammaticalCase": "genitive",
@@ -3333,22 +3223,22 @@
     },
     {
       "lemma": "park",
-      "word": "paryın",
+      "word": "parkın",
       "grammaticalCase": "genitive",
       "texts": [
-        "Bu gün paryın təsviri diqqətlə araşdırıldı.",
-        "Dünən paryın təsviri diqqətlə araşdırıldı.",
-        "İclasda paryın təsviri diqqətlə araşdırıldı."
+        "Bu gün parkın təsviri diqqətlə araşdırıldı.",
+        "Dünən parkın təsviri diqqətlə araşdırıldı.",
+        "İclasda parkın təsviri diqqətlə araşdırıldı."
       ]
     },
     {
       "lemma": "park",
-      "word": "paryı",
+      "word": "parkı",
       "grammaticalCase": "accusative",
       "texts": [
-        "Bu gün paryı diqqətlə nəzərdən keçirdik.",
-        "Dünən paryı diqqətlə nəzərdən keçirdik.",
-        "İclasda paryı diqqətlə nəzərdən keçirdik."
+        "Bu gün parkı diqqətlə nəzərdən keçirdik.",
+        "Dünən parkı diqqətlə nəzərdən keçirdik.",
+        "İclasda parkı diqqətlə nəzərdən keçirdik."
       ]
     },
     {
@@ -8999,6 +8889,116 @@
         "Bu gün qələmə xüsusi diqqət yetirildi.",
         "Dünən qələmə xüsusi diqqət yetirildi.",
         "İclasda qələmə xüsusi diqqət yetirildi."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmi",
+      "grammaticalCase": "accusative",
+      "texts": [
+        "Bu gün qələmi diqqətlə nəzərdən keçirdik.",
+        "Dünən qələmi diqqətlə nəzərdən keçirdik.",
+        "İclasda qələmi diqqətlə nəzərdən keçirdik."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmdə",
+      "grammaticalCase": "locative",
+      "texts": [
+        "Bu gün qələmdə müəyyən dəyişiklik müşahidə edildi.",
+        "Dünən qələmdə müəyyən dəyişiklik müşahidə edildi.",
+        "İclasda qələmdə müəyyən dəyişiklik müşahidə edildi."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmdən",
+      "grammaticalCase": "ablative",
+      "texts": [
+        "Bu gün qələmdən ətraflı bəhs etdik.",
+        "Dünən qələmdən ətraflı bəhs etdik.",
+        "İclasda qələmdən ətraflı bəhs etdik."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmlər",
+      "grammaticalCase": "nominative",
+      "texts": [
+        "Bu gün qələmlər diqqətimizi cəlb etdi.",
+        "Dünən qələmlər diqqətimizi cəlb etdi.",
+        "İclasda qələmlər diqqətimizi cəlb etdi."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmlərin",
+      "grammaticalCase": "genitive",
+      "texts": [
+        "Bu gün qələmlərin təsviri diqqətlə araşdırıldı.",
+        "Dünən qələmlərin təsviri diqqətlə araşdırıldı.",
+        "İclasda qələmlərin təsviri diqqətlə araşdırıldı."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmlərə",
+      "grammaticalCase": "dative",
+      "texts": [
+        "Bu gün qələmlərə xüsusi diqqət yetirildi.",
+        "Dünən qələmlərə xüsusi diqqət yetirildi.",
+        "İclasda qələmlərə xüsusi diqqət yetirildi."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmləri",
+      "grammaticalCase": "accusative",
+      "texts": [
+        "Bu gün qələmləri diqqətlə nəzərdən keçirdik.",
+        "Dünən qələmləri diqqətlə nəzərdən keçirdik.",
+        "İclasda qələmləri diqqətlə nəzərdən keçirdik."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmlərdə",
+      "grammaticalCase": "locative",
+      "texts": [
+        "Bu gün qələmlərdə müəyyən dəyişiklik müşahidə edildi.",
+        "Dünən qələmlərdə müəyyən dəyişiklik müşahidə edildi.",
+        "İclasda qələmlərdə müəyyən dəyişiklik müşahidə edildi."
+      ]
+    },
+    {
+      "lemma": "qələm",
+      "word": "qələmlərdən",
+      "grammaticalCase": "ablative",
+      "texts": [
+        "Bu gün qələmlərdən ətraflı bəhs etdik.",
+        "Dünən qələmlərdən ətraflı bəhs etdik.",
+        "İclasda qələmlərdən ətraflı bəhs etdik."
+      ]
+    },
+    {
+      "lemma": "masa",
+      "word": "masanın",
+      "grammaticalCase": "genitive",
+      "texts": [
+        "Bu gün masanın təsviri diqqətlə araşdırıldı.",
+        "Dünən masanın təsviri diqqətlə araşdırıldı.",
+        "İclasda masanın təsviri diqqətlə araşdırıldı."
+      ]
+    },
+    {
+      "lemma": "masa",
+      "word": "masanı",
+      "grammaticalCase": "accusative",
+      "texts": [
+        "Bu gün masanı diqqətlə nəzərdən keçirdik.",
+        "Dünən masanı diqqətlə nəzərdən keçirdik.",
+        "İclasda masanı diqqətlə nəzərdən keçirdik."
       ]
     }
   ],

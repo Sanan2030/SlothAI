@@ -1,3 +1,6 @@
+import { createBoundaryContext } from './clause-context';
+import { boundaryProbability } from './boundary-model';
+import { predictSequence } from './sequence';
 import artifact from './model.json';
 import { predictContext, tokenize, features, fold, boundaryKey, type LocalContextModel } from './core';
 import { isFinitePredicate } from '../segmentation';
@@ -12,7 +15,8 @@ export function createLocalPredictor(text: string): (word: string, offset: numbe
     const index = positions.get(offset);
     if (index === undefined) return undefined;
     const result = predictContext(model, word, tokens, index);
-    let selected = result?.accepted ? result.word : undefined;
+    let selected = (model.sequence ? predictSequence(model.sequence, tokens, index) : undefined)
+      ?? (result?.accepted ? result.word : undefined);
     if (!selected && !model.groups[fold(word)] && !/[əıçğöşü]/iu.test(word) && !/^[A-Z]{2,}$/u.test(word)) {
       const form = model.forms[fold(word)];
       const support = form && features(tokens, index).filter(feature => !/^(?:lemma|pos|case|left|right):/u.test(feature)
@@ -29,20 +33,14 @@ export function createLocalPredictor(text: string): (word: string, offset: numbe
 export function insertLearnedBoundaries(text: string): string {
   const tokens = tokenize(text);
   const positions: number[] = [];
+  const independent = createBoundaryContext(tokens);
   for (let index = 0; index < tokens.length - 1; index++) {
     const left = tokens[index], right = tokens[index + 1];
     if (!/^ +$/u.test(text.slice(left.end, right.start)) || !isFinitePredicate(left.word)) continue;
-    if (/^(?:ki|çünki|amma|ancaq|lakin|və|ya|yoxsa|əgər|üçün|ilə|deyə|isə|olaraq|kimi)$/iu.test(right.word)) continue;
-    const preceding = tokens.slice(Math.max(0, index - 8), index + 1).filter(token => token.sentence === left.sentence);
-    if (preceding.some(token => /^(?:ki|əgər)$/iu.test(token.word))) continue;
-    // A learned word pair alone cannot prove a new sentence: require a
-    // subsequent finite predicate before existing punctuation or a dependent clause.
-    const following = tokens.slice(index + 1, index + 17).filter(token => token.sentence === right.sentence);
-    const dependentAt = following.findIndex(token => /^(?:ki|əgər)$/iu.test(token.word));
-    const independent = dependentAt < 0 ? following : following.slice(0, dependentAt);
-    if (!independent.some(token => isFinitePredicate(token.word))) continue;
+    if (!independent(index)) continue;
     const evidence = model.boundaries[boundaryKey(left.word, right.word)];
-    if (evidence && evidence.positive >= 2 && evidence.negative === 0) positions.push(left.end);
+    const learned = model.boundaryClassifier && boundaryProbability(model.boundaryClassifier, tokens, index) >= 0.98;
+    if ((evidence && evidence.positive >= 2 && evidence.negative === 0) || learned) positions.push(left.end);
   }
   let output = '', cursor = 0;
   for (const position of positions) { output += text.slice(cursor, position) + '.'; cursor = position; }

@@ -16,9 +16,10 @@
   "expansionWordForms": 900,
   "expansionBoundaryPatterns": 100,
   "expansionTrainingTexts": 3000,
+  "sequenceAlgorithm": "averaged-context-perceptron",
   "learnedWordForms": 993,
   "learnedBoundaryPatterns": 109,
-  "modelBytes": 126425,
+  "modelBytes": 388071,
   "candidateGroups": [
     "seher",
     "suret",

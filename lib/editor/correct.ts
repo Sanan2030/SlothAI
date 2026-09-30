@@ -7,7 +7,7 @@ import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists 
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
-import { chooseByGrammar, chooseBySentence, sentenceEvidence } from './contextual-choices';
+import { chooseByGrammar, chooseInflectedPlace, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
 import { createLocalPredictor, insertLearnedBoundaries } from './local-ai/predict';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
@@ -52,7 +52,6 @@ function punctuate(line: string, useLocalModel = true): string {
     .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
     .replace(/\s+([,;:!?])/g, '$1')
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
-  if (useLocalModel) result = insertLearnedBoundaries(result);
   result = sentenceBoundaries(result);
   result = punctuateNarrative(result);
   result = extendedBoundaries(result);
@@ -60,6 +59,8 @@ function punctuate(line: string, useLocalModel = true): string {
   result = punctuateBusiness(result);
   result = punctuateTechnical(result);
   result = segmentIndependentClauses(result);
+  // Scope-aware learned decisions run after deterministic clauses have been established.
+  if (useLocalModel) result = insertLearnedBoundaries(result);
   result = punctuateCommas(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
@@ -155,7 +156,9 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
       sentenceStart = sentenceEnds[sentenceIndex++];
       context = sentenceEvidence(text.slice(sentenceStart, sentenceEnds[sentenceIndex]));
     }
-    const contextual = localPrediction?.(word, offset) ?? chooseBySentence(word, context);
+    const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
+    const contextual = chooseInflectedPlace(word, previousWord)
+      ?? localPrediction?.(word, offset) ?? chooseBySentence(word, context);
     if (contextual) return contextual;
     if (/^(?:uc|adi)$/iu.test(word)) {
       const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';

@@ -48,6 +48,7 @@ export interface MorphologicalStemCandidate {
 
 export interface MorphologyEngine {
   findByFoldedForm?(word: string): string | undefined;
+  correctMalformedForm?(word: string): string | undefined;
   analyzeWord(word: string): readonly MorphologicalAnalysis[];
   generateForms(request: GenerateFormsRequest): readonly string[];
   isValidWordForm(word: string): boolean;

@@ -4,6 +4,8 @@ import test from 'node:test';
 import corpus from '../data/local-ai/pairs.json';
 import model from '../lib/editor/local-ai/model.json';
 import { createLocalPredictor, insertLearnedBoundaries } from '../lib/editor/local-ai/predict';
+import { trainBoundaryModel } from '../lib/editor/local-ai/boundary-model';
+import { trainSequenceRanker } from '../lib/editor/local-ai/sequence';
 import { trainContextModel } from '../lib/editor/local-ai/core';
 import { expandContextModel } from '../lib/editor/local-ai/expand';
 import expansion from '../data/local-ai/expansion.json';
@@ -34,7 +36,10 @@ test('1000 pairs have disjoint train, validation and test gold groups and a repr
   assert.equal(targets.length, 140);
   const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
   assert.ok(supplemental.every(text => !corpus.pairs.some(pair => pair.target === text)));
-  assert.deepEqual(expandContextModel(trainContextModel([...targets, ...supplemental]), expansion), model);
+  const rebuilt = expandContextModel(trainContextModel([...targets, ...supplemental]), expansion);
+  rebuilt.sequence = trainSequenceRanker([...targets, ...supplemental]);
+  rebuilt.boundaryClassifier = trainBoundaryModel([...targets, ...supplemental, ...expansion.boundaries.flatMap(item => item.texts)]);
+  assert.deepEqual(rebuilt, model);
 });
 
 test('learned context generalizes to fresh sentences without an exact text lookup', () => {

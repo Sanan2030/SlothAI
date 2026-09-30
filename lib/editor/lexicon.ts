@@ -1,3 +1,4 @@
+import { reviewedSpelling } from './reviewed-spelling';
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
@@ -105,6 +106,7 @@ for (const word of [...words, ...regularForms(), ...narrativeWords, ...extendedN
 }
 // Known spelling errors that are not simple ASCII transliterations.
 const aliases: Record<string, string> = {
+  ...reviewedSpelling,
   ...extendedAliases,
   ...expositoryAliases,
   ...businessAliases,
@@ -161,7 +163,7 @@ const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İ
 
 function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
   const values = services
-    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.lemma))
+    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.surface ?? entry.lemma))
     : dictionaryCandidates(word);
   return chooseSpelling(word, values);
 }
@@ -225,6 +227,8 @@ const reviewedProductiveRoots = new Map<string, string>(Object.entries({
   genislendir: 'genişləndir',
   saxla: 'saxla',
   tesdiqlen: 'təsdiqlən',
+  tesdiqle: 'təsdiqlə',
+  dey: 'dey',
   qiymetlendir: 'qiymətləndir',
   teyin: 'təyin',
   verme: 'vermə',
@@ -493,11 +497,13 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // Preserve camelCase identifiers and acronyms. Title case remains editable.
   if (word.length > 1 && word === word.toLocaleUpperCase('az-AZ')) return word;
   if (/[a-zəçğıöşü][A-ZƏÇĞIİÖŞÜ]/.test(word)) return word;
+  // Explicit, morphologically valid diacritics encode the author's chosen meaning.
+  if (/[əçğıöşü]/iu.test(word) && services?.morphology.isValidWordForm(word)) return word;
   const key = fold(word);
   if (ambiguous.has(key)) return word;
   const values = candidates.get(key);
   const imported = word.length > 2 ? (services
-    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.lemma))
+    ? new Set(services.lemmaDictionary.findByFoldedForm(word).entries.map(entry => entry.surface ?? entry.lemma))
     : dictionaryCandidates(word)) : undefined;
   // Reviewed common-word choices keep their established behavior (necə, sən,
   // üçün). Imported candidates are conservative fallback, not frequency data.
@@ -513,6 +519,7 @@ export function restoreWord(word: string, services?: SpellingContext): string {
     ?? (key === 'qalib' ? 'qalib' : undefined)
     ?? (key === 'testi' ? 'testi' : undefined)
     ?? (key === 'sistme' ? chooseIndexedTypo(word) : undefined)
+    ?? services?.morphology.correctMalformedForm?.(word)
     ?? restoreProductiveSuffix(word, services)
     ?? chooseSpelling(word, imported)
     ?? chooseSpelling(word, new Set(morphologyCandidates))

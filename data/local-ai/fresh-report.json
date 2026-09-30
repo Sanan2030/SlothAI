@@ -1,11 +1,11 @@
 {
   "scope": "New author-written full-output probes, excluded from training; not an independent human-reviewed benchmark",
   "total": 30,
-  "baselineExact": 25,
-  "modelExact": 26,
-  "mailExactBody": 25,
+  "baselineExact": 28,
+  "modelExact": 30,
+  "mailExactBody": 30,
   "greetingPreserved": 30,
-  "elapsedMs": 284,
+  "elapsedMs": 577,
   "rows": [
     {
       "input": "musterilerden etrafli behs etdiler",
@@ -90,21 +90,21 @@
     {
       "input": "komanda bu meseleyi arasdirir musteri neticeni gozleyir",
       "target": "Komanda bu məsələni araşdırır. Müştəri nəticəni gözləyir.",
-      "baseline": "Komanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.",
-      "output": "Komanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.",
-      "mail": "Salam, hər vaxtınız xeyir.\n\nKomanda bu meseleyi araşdırır. Müştəri nəticəni gözləyir.\n\nHörmətlə,",
-      "exact": false,
-      "mailContainsExpectedBody": false,
+      "baseline": "Komanda bu məsələni araşdırır. Müştəri nəticəni gözləyir.",
+      "output": "Komanda bu məsələni araşdırır. Müştəri nəticəni gözləyir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nKomanda bu məsələni araşdırır. Müştəri nəticəni gözləyir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
       "greetingPreserved": true
     },
     {
       "input": "texnik problemi duzeldir rehber tapsirigi tesdiqleyir",
       "target": "Texnik problemi düzəldir. Rəhbər tapşırığı təsdiqləyir.",
-      "baseline": "Texnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.",
-      "output": "Texnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.",
-      "mail": "Salam, hər vaxtınız xeyir.\n\nTexnik problemi düzəldir. Rəhbər tapşırığı tesdiqleyir.\n\nHörmətlə,",
-      "exact": false,
-      "mailContainsExpectedBody": false,
+      "baseline": "Texnik problemi düzəldir. Rəhbər tapşırığı təsdiqləyir.",
+      "output": "Texnik problemi düzəldir. Rəhbər tapşırığı təsdiqləyir.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nTexnik problemi düzəldir. Rəhbər tapşırığı təsdiqləyir.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
       "greetingPreserved": true
     },
     {
@@ -140,11 +140,12 @@
     {
       "input": "salam sorgunuz qeydiyyata alinib",
       "target": "Salam, sorğunuz qeydiyyata alınıb.",
+      "mailBodyTarget": "Sorğunuz qeydiyyata alınıb.",
       "baseline": "Salam, sorğunuz qeydiyyata alınıb.",
       "output": "Salam, sorğunuz qeydiyyata alınıb.",
       "mail": "Salam, hər vaxtınız xeyir.\n\nSorğunuz qeydiyyata alınıb.\n\nHörmətlə,",
       "exact": true,
-      "mailContainsExpectedBody": false,
+      "mailContainsExpectedBody": true,
       "greetingPreserved": true
     },
     {
@@ -180,11 +181,11 @@
     {
       "input": "dedi ki komanda bu meseleyi arasdirir",
       "target": "Dedi ki, komanda bu məsələni araşdırır.",
-      "baseline": "Dedi ki, komanda bu meseleyi araşdırır.",
-      "output": "Dedi ki, komanda bu meseleyi araşdırır.",
-      "mail": "Salam, hər vaxtınız xeyir.\n\nDedi ki, komanda bu meseleyi araşdırır.\n\nHörmətlə,",
-      "exact": false,
-      "mailContainsExpectedBody": false,
+      "baseline": "Dedi ki, komanda bu məsələni araşdırır.",
+      "output": "Dedi ki, komanda bu məsələni araşdırır.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nDedi ki, komanda bu məsələni araşdırır.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
       "greetingPreserved": true
     },
     {
@@ -290,11 +291,11 @@
     {
       "input": "seher zengli saatin sesine oyandim sonra ise getdim",
       "target": "Səhər zəngli saatın səsinə oyandım. Sonra işə getdim.",
-      "baseline": "Səhər zengli saatın səsinə oyandım. Sonra ise getdim.",
-      "output": "Səhər zəngli saatın səsinə oyandım. Sonra ise getdim.",
-      "mail": "Salam, hər vaxtınız xeyir.\n\nSəhər zəngli saatın səsinə oyandım. Sonra ise getdim.\n\nHörmətlə,",
-      "exact": false,
-      "mailContainsExpectedBody": false,
+      "baseline": "Səhər zengli saatın səsinə oyandım. Sonra işə getdim.",
+      "output": "Səhər zəngli saatın səsinə oyandım. Sonra işə getdim.",
+      "mail": "Salam, hər vaxtınız xeyir.\n\nSəhər zəngli saatın səsinə oyandım. Sonra işə getdim.\n\nHörmətlə,",
+      "exact": true,
+      "mailContainsExpectedBody": true,
       "greetingPreserved": true
     },
     {

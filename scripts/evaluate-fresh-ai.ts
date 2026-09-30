@@ -17,7 +17,7 @@ const rows = corpus.pairs.map(pair => {
   const output = correctText(pair.input).text;
   const mail = formatEmail(pair.input, { emailGreeting: 'Salam, hər vaxtınız xeyir.', omitSubject: true }).text;
   return { ...pair, baseline, output, mail, exact: output === pair.target,
-    mailContainsExpectedBody: mail.includes(pair.target), greetingPreserved: mail.startsWith('Salam, hər vaxtınız xeyir.') };
+    mailContainsExpectedBody: mail.includes('mailBodyTarget' in pair && typeof pair.mailBodyTarget === 'string' ? pair.mailBodyTarget : pair.target), greetingPreserved: mail.startsWith('Salam, hər vaxtınız xeyir.') };
 });
 const report = { scope: corpus.source, total: rows.length,
   baselineExact: rows.filter(row => row.baseline === row.target).length,
@@ -28,3 +28,6 @@ const report = { scope: corpus.source, total: rows.length,
 writeFileSync('data/local-ai/fresh-report.json', JSON.stringify(report, null, 2) + '\n');
 const { rows: details, ...summary } = report;
 console.log(JSON.stringify({ ...summary, failures: details.filter(row => !row.exact).map(row => ({ input: row.input, expected: row.target, actual: row.output })) }, null, 2));
+
+if (process.argv.includes('--enforce') && (report.modelExact !== report.total
+  || report.mailExactBody !== report.total || report.greetingPreserved !== report.total)) process.exitCode = 1;

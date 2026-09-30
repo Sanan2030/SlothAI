@@ -104,7 +104,8 @@ There is no full-document quadratic matrix.
 `correctionsMade` is an approximate changed-token estimate, not a grammatical
 error count. `processingLanguage: "az"` describes the configured language.
 `detectedLanguage` remains a deprecated compatibility alias; no language
-detection is performed. `engine: "local-rules"` accurately describes execution.
+detection is performed. The compatibility value `engine: "local-rules"` includes
+the deterministic rules and the bundled small local statistical models.
 
 Benchmarks separately report engine and UI diff avg/p50/p95 latency and
 approximate process memory. The logical 5,000-word case is split into safe
@@ -126,13 +127,33 @@ A workflow alone does not enforce GitHub branch protection or make Vercel wait
 for tests. The inspected main branch was unprotected. Required-check settings
 must be configured before calling this a mandatory merge gate.
 
-## Roadmap, not implemented
+## Local language engine (September 2026)
 
-Productive morphology/true lemmas, indexed typo generation, frequency/ngram
-context, general grammatical parsing, arbitrary-text punctuation accuracy,
-general technical suffix orthography, distributed rate limiting and complete
-Markdown/HTML structural parsing remain future work. Candidate-generator
-contracts provide an extension seam, not an implementation claim.
+The editor combines reviewed dictionary entries, productive morphology, true
+lemma/POS analyses for reviewed stems, a conservative ordered-context perceptron,
+and a supervised sentence-gap classifier. Training is offline; inference stays
+in TypeScript with the bundled JSON model. No paid API or Python runtime is
+required in the browser. Ambiguous corrections can abstain instead of guessing.
+Correct explicitly accented words and protected technical terms are preserved.
+
+The frozen independent corpus now has exact editorial targets for all 460 RSD/IT
+and 340 email inputs. These are assistant-reviewed evaluation targets, not
+independent human linguist certification or training data. On these targets,
+main's baseline matched 471/800; this change matches 599/800, preserving every
+previously correct case. 201 cases still differ. Thirty separately authored
+fresh inputs pass both text and email-body expectations; this small set does
+not establish arbitrary-text accuracy.
+
+Run `npm run gold:check` to enforce the frozen-input hashes, target hash and
+baseline cases. `npm run gold:exact` requires all 800 exact and currently fails
+on the remaining 201 cases. `npm run local-ai:fresh:check` enforces the fresh
+checks. CI also rebuilds the model and checks reproducibility.
+
+General semantic understanding, exhaustive Azerbaijani morphology/POS,
+arbitrary-text punctuation, general technical suffix orthography, distributed
+rate limiting and complete Markdown/HTML structural parsing remain future work.
+The small classifiers are not a transformer or an LLM. See
+[the scoped implementation report](docs/priority-fixes-2026-09-30.md).
 
 Historical proposal/corpus-review documents describe earlier iterations; current
 behavior and limitations above take precedence.

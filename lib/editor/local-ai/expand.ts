@@ -1,3 +1,4 @@
+import { productiveMorphology } from '../productive-morphology';
 import { fold, trainContextModel, type LocalContextModel } from './core';
 
 export interface TrainingExpansion {
@@ -12,6 +13,10 @@ export function expandContextModel(base: LocalContextModel, expansion: TrainingE
   const learned = trainContextModel(texts);
   const forms = { ...base.forms }, boundaries = { ...base.boundaries };
   for (const item of expansion.forms) {
+    if (!productiveMorphology.analyzeWord(item.word).some(record => record.lemma === item.lemma
+      && record.features.case === item.grammaticalCase)) {
+      throw new Error(`Invalid morphology training label: ${item.word}`);
+    }
     const key = fold(item.word), evidence = learned.forms[key];
     if (base.groups[key] || forms[key] || !evidence || evidence.word !== item.word || evidence.examples < 3) {
       throw new Error(`Unsafe or duplicate learned form: ${item.word}`);

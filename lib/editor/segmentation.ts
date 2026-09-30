@@ -19,7 +19,8 @@ function independentStart(word: string): boolean {
   const analyses = productiveMorphology.analyzeWord(word);
   // Nominative subjects can start a fresh clause. Accusative objects and
   // subordinate verbal forms alone cannot prove independence.
-  return analyses.some(item => item.pos === 'noun' && item.features.case === 'nominative');
+  return analyses.some(item => (item.pos === 'noun' && item.features.case === 'nominative' && !item.features.possessivePerson)
+    || item.pos === 'adjective');
 }
 
 export function isFinitePredicate(word: string): boolean {
@@ -32,8 +33,8 @@ export function isFinitePredicate(word: string): boolean {
   const morphology = productiveMorphology.analyzeWord(lower);
   const analyses = morphology.filter(item => item.pos === 'verb');
   if (morphology.length && !analyses.length) return false;
-  if (analyses.length && analyses.every(item => item.features.mood === 'participle')) return false;
-  if (analyses.some(item => item.features.tense)) return true;
+  if (analyses.length && analyses.every(item => item.features.mood === 'participle' || item.features.mood === 'conditional')) return false;
+  if (analyses.some(item => item.features.tense || item.features.mood === 'imperative')) return true;
   // Bare -ıb/-ib endings overlap with common adjectives (vacib, qərib);
   // demand lexical verbal evidence instead of treating the suffix as finite.
   if (/(?:ıb|ib|ub|üb)$/iu.test(lower)) return false;
@@ -60,13 +61,23 @@ export function segmentIndependentClauses(text: string): string {
     const freshObjectClause = (objectPronouns.has(next)
       || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
         && item.features.case === 'accusative'))
-      && (timeWords.has(wordAfterNext)
+      && (wordAfterNext === 'isə'
+        || (!/(?:ıb|ib|ub|üb)$/iu.test(current) && isFinitePredicate(wordAfterNext))
+        || timeWords.has(wordAfterNext)
         || (objectPronouns.has(next) && wordAfterNext === 'bir'
           && tokens[index + 6]?.[0]?.toLocaleLowerCase('az-AZ') === 'daha'));
+    const nextAnalysis = productiveMorphology.analyzeWord(next);
+    const afterAnalysis = productiveMorphology.analyzeWord(wordAfterNext);
+    const nominalSubjectClause = (nextAnalysis.some(row => row.pos === 'noun' && row.features.case === 'genitive')
+      && afterAnalysis.some(row => row.pos === 'noun' && row.features.case === 'nominative' && row.features.possessivePerson === 3))
+      || (nextAnalysis.some(row => row.pos === 'noun' && row.features.case === 'nominative' && row.features.possessivePerson === 3)
+        && dependent.test(wordAfterNext));
     const temporalClause = /(?:dıqdan|dikdən|duqdan|dükdən|tıqdan|tikdən)$/iu.test(next)
       && wordAfterNext === 'sonra';
     const completedConverb = /(?:ıb|ib|ub|üb)$/iu.test(current)
-      && independentStart(next) && !objectPronouns.has(next)
+      && (independentStart(next) || (wordAfterNext === 'isə'
+        && productiveMorphology.analyzeWord(next).some(row => row.pos === 'noun')))
+      && !objectPronouns.has(next)
       && (wordAfterNext === 'isə'
         || (productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
           && item.features.case === 'nominative' && !item.features.possessivePerson)
@@ -74,7 +85,7 @@ export function segmentIndependentClauses(text: string): string {
             && item.features.case === 'nominative')));
     if (!/^\p{L}+$/u.test(current) || !/^ +$/u.test(space)
       || !(isFinitePredicate(current) || completedConverb) || participleBeforeNoun || connectors.has(next)
-      || !(independentStart(next) || freshObjectClause || temporalClause || (next === 'daha' && wordAfterNext === 'sonra')
+      || !(independentStart(next) || freshObjectClause || nominalSubjectClause || temporalClause || (next === 'daha' && wordAfterNext === 'sonra')
         || (/^[\p{L}]{4,}(?:lar|lər)$/u.test(next) && !connectors.has(next)))) {
       output += current;
       continue;
@@ -82,6 +93,8 @@ export function segmentIndependentClauses(text: string): string {
     const precedingClause = output.slice(Math.max(output.lastIndexOf('.'), output.lastIndexOf('?'),
       output.lastIndexOf('!'), output.lastIndexOf('\n')) + 1).trim();
     if (!precedingClause) { output += current; continue; }
+    // Do not terminate a still-open reported or conditional clause.
+    if (/(?:^|[\s,])(?:ki|əgər)(?=[\s,]|$)/iu.test(precedingClause)) { output += current; continue; }
     // An indirect question is the object of the reporting verb, not a new sentence.
     if (/(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim)$/iu.test(current)
       && /^(?:o\s+)?(?:nə vaxt|niyə|necə|hara|harada|kim|hansı|nə)\b/iu.test(

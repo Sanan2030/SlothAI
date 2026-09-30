@@ -1,9 +1,13 @@
 /** A small supervised multinomial Naive Bayes model, not a generative LLM. */
+import type { BoundaryModel } from './boundary-model';
+import type { SequenceModel } from './sequence';
 import { productiveMorphology } from '../productive-morphology';
 export interface Token { word: string; start: number; end: number; sentence: number }
 export interface ClassCounts { examples: number; total: number; features: Record<string, number> }
 export interface LocalContextModel {
   version: 3;
+  sequence?: SequenceModel;
+  boundaryClassifier?: BoundaryModel;
   algorithm: 'context-naive-bayes';
   groups: Record<string, Record<string, ClassCounts>>;
   trainingGroups: number;
@@ -20,29 +24,39 @@ export function tokenize(text: string): Token[] {
     return { word: item[0], start: item.index!, end, sentence };
   });
 }
+const tokenCache = new WeakMap<Token, { folded: string; lemma?: string; pos?: string; grammaticalCase?: string }>();
+export function tokenContext(token: Token): { folded: string; lemma?: string; pos?: string; grammaticalCase?: string } {
+  const cached = tokenCache.get(token);
+  if (cached) return cached;
+  const surface = productiveMorphology.findByFoldedForm(token.word) ?? token.word;
+  const analyses = productiveMorphology.analyzeWord(surface);
+  const lemmas = new Set(analyses.map(item => item.lemma));
+  const positions = new Set(analyses.map(item => item.pos));
+  const cases = new Set(analyses.map(item => item.features.case));
+  const result = { folded: fold(token.word),
+    ...(lemmas.size === 1 ? { lemma: fold([...lemmas][0]) } : {}),
+    ...(positions.size === 1 && [...positions][0] ? { pos: [...positions][0] } : {}),
+    ...(cases.size === 1 && [...cases][0] ? { grammaticalCase: [...cases][0] } : {}),
+  };
+  tokenCache.set(token, result);
+  return result;
+}
 export function features(tokens: readonly Token[], index: number): string[] {
   const result = new Set<string>();
   for (let offset = -6; offset <= 6; offset++) {
     const token = tokens[index + offset];
     if (!offset || !token || token.sentence !== tokens[index].sentence) continue;
-    const value = fold(token.word);
-    // Bounded subword features share evidence across common inflections without
-    // claiming a linguistic lemma; exact word boundaries stay unchanged.
+    const context = tokenContext(token), value = context.folded;
     if (value.length >= 3) {
       const lexical = value.length >= 5 ? `prefix:${value.slice(0, 5)}` : value;
       result.add(lexical);
       if (Math.abs(offset) === 1) result.add(`${offset < 0 ? 'left' : 'right'}:${lexical}`);
     }
     if (Math.abs(offset) <= 2) {
-      const surface = productiveMorphology.findByFoldedForm(token.word) ?? token.word;
-      const analyses = productiveMorphology.analyzeWord(surface);
-      const lemmas = new Set(analyses.map(item => item.lemma));
-      const positions = new Set(analyses.map(item => item.pos));
-      const cases = new Set(analyses.map(item => item.features.case));
       const side = offset < 0 ? 'left' : 'right';
-      if (lemmas.size === 1) result.add(`lemma:${side}:${fold([...lemmas][0])}`);
-      if (positions.size === 1 && [...positions][0]) result.add(`pos:${side}:${[...positions][0]}`);
-      if (cases.size === 1 && [...cases][0]) result.add(`case:${side}:${[...cases][0]}`);
+      if (context.lemma) result.add(`lemma:${side}:${context.lemma}`);
+      if (context.pos) result.add(`pos:${side}:${context.pos}`);
+      if (context.grammaticalCase) result.add(`case:${side}:${context.grammaticalCase}`);
     }
   }
   return [...result];

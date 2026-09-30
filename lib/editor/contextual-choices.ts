@@ -1,6 +1,7 @@
 /** Conservative sentence-wide evidence for high-frequency Azerbaijani homographs.
  * Return undefined on weak/conflicting evidence; never guess from a bare word.
  */
+import { places } from './entities/geo';
 import { dictionaryCandidates } from './dictionary';
 import { productiveMorphology } from './productive-morphology';
 const evidence: Record<string, { alternatives: readonly [string, readonly string[]][] }> = {
@@ -59,4 +60,14 @@ export function chooseByGrammar(word: string, nextWord: string, previousWord = '
   if (!next.some(item => item.pos === 'noun' && item.features.case === 'nominative'
     && !item.features.possessivePerson)) return undefined;
   return /^[A-ZƏÇĞIİÖŞÜ]/u.test(word) ? 'Üç' : 'üç';
+}
+
+const placeKeys = new Set(places.map(fold));
+const cityForms = new Map(productiveMorphology.generateForms({ lemma: 'şəhər', pos: 'noun', limit: 256 })
+  .map(surface => [fold(surface), surface]));
+/** Resolve a declined city homograph only after an explicitly recognized place. */
+export function chooseInflectedPlace(word: string, previousWord: string): string | undefined {
+  if (!/^seher/iu.test(word) || /[əçğıöşü]/iu.test(word)
+    || !placeKeys.has(fold(previousWord))) return undefined;
+  return cityForms.get(fold(word));
 }
