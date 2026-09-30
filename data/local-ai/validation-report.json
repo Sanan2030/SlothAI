@@ -6,14 +6,15 @@
     "model": 21,
     "total": 100
   },
-  "changed": 10,
-  "improved": 8,
+  "changed": 13,
+  "improved": 11,
   "regressed": 0,
+  "previousReleaseRegressions": null,
   "wordEditDistance": {
     "baseline": 202,
-    "model": 194
+    "model": 191
   },
-  "elapsedMs": 783,
+  "elapsedMs": 897,
   "rows": [
     {
       "id": "local-104-1",
@@ -804,9 +805,9 @@
       "input": "et mehsulu bazardan teze alindi metbexde soyuducuya qoyuldu",
       "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baseline": "Et məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
-      "output": "Et məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
+      "output": "Ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-164-2",
@@ -869,9 +870,9 @@
       "input": "et yemeyi terevezle birlikde hazirlanib metbexden xos qoxu gelirdi",
       "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
       "baseline": "Et yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
-      "output": "Et yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
+      "output": "Ət yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 3
     },
     {
       "id": "local-169-2",
@@ -908,9 +909,9 @@
       "input": "et yemeyi terevezle birlikde hazirlanib metbexden xosh qoxu gelirdi",
       "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
       "baseline": "Et yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
-      "output": "Et yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
+      "output": "Ət yeməyi terevezle birlikdə hazırlanıb mətbəxdən xoş qoxu gəlirdi.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 3
     },
     {
       "id": "local-169-5",

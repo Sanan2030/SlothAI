@@ -61,6 +61,9 @@ jobs:
           npm run --ignore-scripts gold:check
           npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check
+          npm run --ignore-scripts local-ai:context:check
+          npm run --ignore-scripts local-ai:evaluate
+          npm run --ignore-scripts local-ai:validate
 
       - name: Report regression corpus
         id: corpus
@@ -228,6 +231,7 @@ jobs:
             docs/email-independent-results.json
             docs/independent-gold-v2-results.json
             data/local-ai/fresh-report.json
+            data/local-ai/context-test-report.json
           if-no-files-found: error
           retention-days: 30
 

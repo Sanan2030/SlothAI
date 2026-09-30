@@ -13,13 +13,16 @@
   "source": "200 author-written gold texts; five synthetic variants each; no scraped or user data",
   "corpusSha256": "ab61444ae3cef885aede7cabd81ba3ff6cda0088b7a784652ed3b0ca77ace780",
   "supplementalTrainingTexts": 20,
+  "contextTrainingTexts": 60,
+  "contextCorpusSha256": "0a79612c3c80bfc6760c75a6882b224360e0d561593fcfd76955c3ec06d1629c",
+  "artifactSha256": "251c51f4adbe717c3faf6ff9c137bdb42e99bfcc341e1106b2486f6e229ef3b7",
   "expansionWordForms": 900,
   "expansionBoundaryPatterns": 100,
   "expansionTrainingTexts": 3000,
   "sequenceAlgorithm": "averaged-context-perceptron",
-  "learnedWordForms": 993,
+  "learnedWordForms": 1014,
   "learnedBoundaryPatterns": 109,
-  "modelBytes": 389194,
+  "modelBytes": 426638,
   "candidateGroups": [
     "seher",
     "suret",
@@ -30,10 +33,10 @@
   ],
   "heldOutAmbiguityDecisions": {
     "eligible": 89,
-    "accepted": 43,
-    "correct": 43,
+    "accepted": 49,
+    "correct": 49,
     "wrong": 0,
-    "abstained": 46
+    "abstained": 40
   },
   "limitations": "This measures a small synthetic corpus; it is not general Azerbaijani accuracy or human semantic understanding."
 }

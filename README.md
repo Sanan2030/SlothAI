@@ -195,3 +195,18 @@ actual output and exits nonzero if any case differs. Mail evaluations use the
 saved greeting and the application's subject-free mode. No stored target is
 used as a correction lookup. To have this assistant inspect the data later,
 attach the saved JSON file when requesting the review.
+
+### Context training release
+
+The local classifiers are retrained with 60 additional authored context examples
+from a new 120-example corpus; 24 validation and 36 test examples stay reserved.
+Correct accepted context decisions improve from 15/36 to 28/36 with no wrong
+accepted decisions. Full outputs on those new examples are only 24/36 exact;
+the existing 200 synthetic held-out full outputs improve from 57 to 59 exact.
+This remains a small statistical editor, not a professional general AI.
+
+`npm run local-ai:context:check` enforces the reserved context safety gate, while
+`npm run local-ai:evaluate` also protects previous-release per-pair distances.
+Training writes complete artifacts through atomic file replacement. See
+[the training report](docs/local-ai-training-2026-09-30.md) for data separation,
+results, reproducibility and limitations.

@@ -1,0 +1,373 @@
+{
+  "split": "test",
+  "total": 36,
+  "accepted": 15,
+  "correct": 15,
+  "wrong": 0,
+  "abstained": 21,
+  "precision": 1,
+  "scope": "120 assistant-authored context examples; split before evaluation; not independently linguist-reviewed or a natural-language benchmark",
+  "regressions": 0,
+  "rows": [
+    {
+      "id": "context-008",
+      "split": "test",
+      "word": "şəhər",
+      "text": "Şəhər bələdiyyəsi yeni avtobus dayanacağını açdı.",
+      "input": "seher belediyyesi yeni avtobus dayanacagini acdi",
+      "actual": "şəhər",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-009",
+      "split": "test",
+      "word": "şəhər",
+      "text": "Şəhər nəqliyyatında tramvay xətti yeniləndi.",
+      "input": "seher neqliyyatinda tramvay xetti yenilendi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-010",
+      "split": "test",
+      "word": "şəhər",
+      "text": "Şəhər parkının girişində bina tikilir.",
+      "input": "seher parkinin girisinde bina tikilir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-018",
+      "split": "test",
+      "word": "səhər",
+      "text": "Səhər zəngli saatın səsi yuxumu pozdu.",
+      "input": "seher zengli saatin sesi yuxumu pozdu",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-019",
+      "split": "test",
+      "word": "səhər",
+      "text": "Səhər yuxudan oyanan uşaq çay içdi.",
+      "input": "seher yuxudan oyanan usaq cay icdi",
+      "actual": "səhər",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-020",
+      "split": "test",
+      "word": "səhər",
+      "text": "Səhər günəş doğduqda zəngli saat çaldı.",
+      "input": "seher gunes dogduqda zengli saat caldi",
+      "actual": "səhər",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-028",
+      "split": "test",
+      "word": "sürət",
+      "text": "Sürət avtomobilin panelində sürücü üçün göstərildi.",
+      "input": "suret avtomobilin panelinde surucu ucun gosterildi",
+      "actual": "sürət",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-029",
+      "split": "test",
+      "word": "sürət",
+      "text": "Sürət ölçən cihaz saniyə ərzində məlumat topladı.",
+      "input": "suret olcen cihaz saniye erzinde melumat topladi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-030",
+      "split": "test",
+      "word": "sürət",
+      "text": "Sürət həddi maşının hərəkətinə uyğun seçilməlidir.",
+      "input": "suret heddi masinin hereketine uygun secilmelidir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-038",
+      "split": "test",
+      "word": "surət",
+      "text": "Surət arxivdə məktubun əsli ilə müqayisə olunur.",
+      "input": "suret arxivde mektubun esli ile muqayise olunur",
+      "actual": "surət",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-039",
+      "split": "test",
+      "word": "surət",
+      "text": "Surət sənədin əsli ilə tutuşdurulub qovluğa qoyuldu.",
+      "input": "suret senedin esli ile tutusdurulub qovluga qoyuldu",
+      "actual": "surət",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-040",
+      "split": "test",
+      "word": "surət",
+      "text": "Surət imzalı məktubun əslini əvəz etmir.",
+      "input": "suret imzali mektubun eslini evez etmir",
+      "actual": "surət",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-048",
+      "split": "test",
+      "word": "əl",
+      "text": "Əl barmaqları bilək hərəkətinə uyğun açılır.",
+      "input": "el barmaqlari bilek hereketine uygun acilir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-049",
+      "split": "test",
+      "word": "əl",
+      "text": "Əl dərisinin zədəsi barmaqlarda ağrı yaradır.",
+      "input": "el derisinin zedesi barmaqlarda agri yaradir",
+      "actual": "əl",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-050",
+      "split": "test",
+      "word": "əl",
+      "text": "Əl biləyi və barmaqlar müalicədən sonra sağaldı.",
+      "input": "el bileyi ve barmaqlar mualiceden sonra sagaldi",
+      "actual": "əl",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-058",
+      "split": "test",
+      "word": "el",
+      "text": "El şənliyində xalqın adətləri nümayiş olundu.",
+      "input": "el senliyinde xalqin adetleri numayis olundu",
+      "actual": "el",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-059",
+      "split": "test",
+      "word": "el",
+      "text": "El ağsaqqalı xalqın birliyini təriflədi.",
+      "input": "el agsaqqali xalqin birliyini terifledi",
+      "actual": "el",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-060",
+      "split": "test",
+      "word": "el",
+      "text": "El birliyinin dəyəri xalq mahnılarında əks olunur.",
+      "input": "el birliyinin deyeri xalq mahnilarinda eks olunur",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-068",
+      "split": "test",
+      "word": "ət",
+      "text": "Ət yeməyini mətbəxdə aşpaz bişirdi.",
+      "input": "et yemeyini metbexde aspaz bisirdi",
+      "actual": "ət",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-069",
+      "split": "test",
+      "word": "ət",
+      "text": "Ət qızartması qazanda deyil, tavada hazırlanır.",
+      "input": "et qizartmasi qazanda deyil tavada hazirlanir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-070",
+      "split": "test",
+      "word": "ət",
+      "text": "Ət mətbəxdə bişirilib süfrəyə qoyuldu.",
+      "input": "et metbexde bisirilib sufreye qoyuldu",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-078",
+      "split": "test",
+      "word": "et",
+      "text": "Bu işi diqqətlə et və nəticəni yoxla.",
+      "input": "bu isi diqqetle et ve neticeni yoxla",
+      "actual": "et",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-079",
+      "split": "test",
+      "word": "et",
+      "text": "Tapşırığı qaydaya uyğun və vaxtında et.",
+      "input": "tapsirigi qaydaya uygun ve vaxtinda et",
+      "actual": "et",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-080",
+      "split": "test",
+      "word": "et",
+      "text": "İşi yenidən et və sənədi təsdiq et.",
+      "input": "isi yeniden et ve senedi tesdiq et",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-088",
+      "split": "test",
+      "word": "üç",
+      "text": "Üç kitab tələbəyə hədiyyə edildi.",
+      "input": "uc kitab telebeye hediyye edildi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-089",
+      "split": "test",
+      "word": "üç",
+      "text": "Üç müəllim sənədi imzaladı.",
+      "input": "uc muellim senedi imzaladi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-090",
+      "split": "test",
+      "word": "üç",
+      "text": "Üç tələbə masada kitab oxuyur.",
+      "input": "uc telebe masada kitab oxuyur",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-098",
+      "split": "test",
+      "word": "uc",
+      "text": "Uc hissəsi sivri qələmin sonunda yerləşir.",
+      "input": "uc hissesi sivri qelemin sonunda yerlesir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-099",
+      "split": "test",
+      "word": "uc",
+      "text": "Uc nöqtəsi xəttin sonunda qeyd edildi.",
+      "input": "uc noqtesi xettin sonunda qeyd edildi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-100",
+      "split": "test",
+      "word": "uc",
+      "text": "Uc hissəsinin sivri forması dəyişdirildi.",
+      "input": "uc hissesinin sivri formasi deyisdirildi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-108",
+      "split": "test",
+      "word": "adı",
+      "text": "Adı qeydiyyat formasına sənəddən köçürüldü.",
+      "input": "adi qeydiyyat formasina senedden kocuruldu",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-109",
+      "split": "test",
+      "word": "adı",
+      "text": "Adı şəxsiyyət sənədində başqa cür yazılıb.",
+      "input": "adi sexsiyyet senedinde basqa cur yazilib",
+      "actual": "adı",
+      "accepted": true,
+      "correct": true
+    },
+    {
+      "id": "context-110",
+      "split": "test",
+      "word": "adı",
+      "text": "Adı müraciət siyahısında qeyd edildi.",
+      "input": "adi muraciet siyahisinda qeyd edildi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-118",
+      "split": "test",
+      "word": "adi",
+      "text": "Adi hadisə gündəlik işə mane olmadı.",
+      "input": "adi hadise gundelik ise mane olmadi",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-119",
+      "split": "test",
+      "word": "adi",
+      "text": "Adi qayda gündəlik rejimə uyğun gəlir.",
+      "input": "adi qayda gundelik rejime uygun gelir",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    },
+    {
+      "id": "context-120",
+      "split": "test",
+      "word": "adi",
+      "text": "Adi məsələ gündəlik söhbətin mövzusu oldu.",
+      "input": "adi mesele gundelik sohbetin movzusu oldu",
+      "actual": null,
+      "accepted": false,
+      "correct": false
+    }
+  ]
+}

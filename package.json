@@ -29,7 +29,9 @@
     "gold:check": "node --import tsx scripts/evaluate-independent-gold.ts --enforce-baseline",
     "local-ai:fresh:check": "node --import tsx scripts/evaluate-fresh-ai.ts --enforce",
     "review:test": "node --import tsx scripts/evaluate-reviewed-file.ts",
-    "prereview:test": "npm run --silent dictionary:import -- public/dictionaries/az"
+    "prereview:test": "npm run --silent dictionary:import -- public/dictionaries/az",
+    "local-ai:context": "node --import tsx scripts/evaluate-context-ai.ts",
+    "local-ai:context:check": "node --import tsx scripts/evaluate-context-ai.ts --enforce --baseline=data/local-ai/context-baseline.json"
   },
   "engines": {
     "node": ">=20.9.0"

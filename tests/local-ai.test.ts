@@ -10,6 +10,7 @@ import { trainContextModel } from '../lib/editor/local-ai/core';
 import { expandContextModel } from '../lib/editor/local-ai/expand';
 import expansion from '../data/local-ai/expansion.json';
 import { correctText, formatEmail } from '../lib/editor/correct';
+import { contextTrainingTexts } from '../scripts/context-training';
 
 const cases = [
   ['seher belediyyesi parki ve binalari yoxlayir', 'şəhər'],
@@ -36,9 +37,10 @@ test('1000 pairs have disjoint train, validation and test gold groups and a repr
   assert.equal(targets.length, 140);
   const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
   assert.ok(supplemental.every(text => !corpus.pairs.some(pair => pair.target === text)));
-  const rebuilt = expandContextModel(trainContextModel([...targets, ...supplemental]), expansion);
-  rebuilt.sequence = trainSequenceRanker([...targets, ...supplemental]);
-  rebuilt.boundaryClassifier = trainBoundaryModel([...targets, ...supplemental, ...expansion.boundaries.flatMap(item => item.texts)]);
+  const trainingTexts = [...targets, ...supplemental, ...contextTrainingTexts()];
+  const rebuilt = expandContextModel(trainContextModel(trainingTexts), expansion);
+  rebuilt.sequence = trainSequenceRanker(trainingTexts);
+  rebuilt.boundaryClassifier = trainBoundaryModel([...trainingTexts, ...expansion.boundaries.flatMap(item => item.texts)]);
   assert.deepEqual(rebuilt, model);
 });
 
@@ -71,7 +73,9 @@ test('new lexical groups use learned context and preserve valid alternative mean
     ['el birliyi xalqin gucunu artirir', 'el', 'el'],
   ]) assert.equal(createLocalPredictor(input)(raw, input.indexOf(raw)), expected);
   assert.equal(createLocalPredictor('seher. belediyye parki ve binalari yoxlayir')('seher', 0), undefined);
-  assert.equal(createLocalPredictor('adi hadisə gündəlik iş zamanı')('adi', 0), undefined);
+  assert.equal(createLocalPredictor('adi hadisə gündəlik iş zamanı')('adi', 0), 'adi');
+  assert.equal(correctText('Adi hadisə gündəlik iş zamanı baş verdi.').text,
+    'Adi hadisə gündəlik iş zamanı baş verdi.');
 });
 
 test('corpus-learned word forms require supporting context instead of a global replacement', () => {

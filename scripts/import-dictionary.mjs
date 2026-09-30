@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
+import { atomicWrite } from './atomic-files.mjs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseSuffixRules, splitLongFlags } from './hunspell.mjs';
@@ -28,7 +29,7 @@ for (const [path, digest] of Object.entries(files)) {
 // Every download is verified before writing any source or generated data.
 const output = resolve(root, 'public/dictionaries/az');
 await mkdir(output, { recursive: true });
-for (const [path, bytes] of Object.entries(collected)) await writeFile(resolve(output, path.split('/').at(-1)), bytes);
+for (const [path, bytes] of Object.entries(collected)) await atomicWrite(resolve(output, path.split('/').at(-1)), bytes);
 const lines = collected['dictionaries/az.dic'].toString('utf8').trim().split(/\r?\n/);
 const declaredEntries = Number(lines.shift());
 const entries = lines.map(line => {
@@ -75,6 +76,6 @@ const metadata = {
   checksums: files,
 };
 await mkdir(resolve(root, 'lib/editor/generated'), { recursive: true });
-await writeFile(resolve(root, 'lib/editor/generated/az-words.json'), JSON.stringify(wordList) + '\n');
-await writeFile(resolve(output, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n');
+await atomicWrite(resolve(root, 'lib/editor/generated/az-words.json'), JSON.stringify(wordList) + '\n');
+await atomicWrite(resolve(output, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n');
 console.log(JSON.stringify(metadata, null, 2));

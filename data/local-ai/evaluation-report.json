@@ -3,17 +3,18 @@
   "scope": "200 synthetic held-out pairs from 40 separate authored gold groups",
   "exact": {
     "baseline": 45,
-    "model": 57,
+    "model": 59,
     "total": 200
   },
-  "changed": 37,
-  "improved": 34,
+  "changed": 41,
+  "improved": 38,
   "regressed": 0,
+  "previousReleaseRegressions": 0,
   "wordEditDistance": {
     "baseline": 380,
-    "model": 339
+    "model": 335
   },
-  "elapsedMs": 1438,
+  "elapsedMs": 1652,
   "rows": [
     {
       "id": "local-005-1",
@@ -24,9 +25,9 @@
       "input": "seher erken oyanib qehve hazirladim sonra gundelik planimi yazdim",
       "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baseline": "Seher erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
-      "output": "Seher erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
+      "output": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-005-2",
@@ -37,9 +38,9 @@
       "input": "seher erken oyanib qehve hazirladim. sonra gundelik planimi yazdim.",
       "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baseline": "Seher erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
-      "output": "Seher erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
+      "output": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-005-3",
@@ -596,9 +597,9 @@
       "input": "seher neliyyatinin xeritesi dayanacaqda yerlesdirilib. kuce adlari aydin yazilib.",
       "target": "Şəhər nəqliyyatının xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb.",
       "baseline": "Seher neliyyatinin xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb.",
-      "output": "Seher neliyyatinin xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb.",
+      "output": "Şəhər neliyyatinin xəritəsi dayanacaqda yerləşdirilib. Küçə adları aydın yazılıb.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-050-1",
@@ -2416,9 +2417,9 @@
       "input": "seher bialari parklarla birlikde xeritede gosterilir. belediyye unvanlari deqiqlesdirir.",
       "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baseline": "Seher bialari parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
-      "output": "Seher bialari parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
+      "output": "Şəhər bialari parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-190-1",

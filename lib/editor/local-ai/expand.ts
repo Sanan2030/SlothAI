@@ -18,10 +18,13 @@ export function expandContextModel(base: LocalContextModel, expansion: TrainingE
       throw new Error(`Invalid morphology training label: ${item.word}`);
     }
     const key = fold(item.word), evidence = learned.forms[key];
-    if (base.groups[key] || forms[key] || !evidence || evidence.word !== item.word || evidence.examples < 3) {
+    if (base.groups[key] || forms[key] && forms[key].word !== item.word || !evidence || evidence.word !== item.word || evidence.examples < 3) {
       throw new Error(`Unsafe or duplicate learned form: ${item.word}`);
     }
-    forms[key] = evidence;
+    const previous = forms[key];
+    forms[key] = previous ? { word: evidence.word, examples: previous.examples + evidence.examples,
+      features: Object.fromEntries([...new Set([...Object.keys(previous.features), ...Object.keys(evidence.features)])]
+        .map(feature => [feature, (previous.features[feature] ?? 0) + (evidence.features[feature] ?? 0)])) } : evidence;
   }
   for (const item of expansion.boundaries) {
     const evidence = learned.boundaries[item.key];

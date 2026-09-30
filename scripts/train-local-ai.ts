@@ -1,10 +1,12 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, mkdirSync } from 'node:fs';
+import { atomicWriteSync as writeFileSync } from './atomic-files.mjs';
 import { createHash } from 'node:crypto';
 import { trainContextModel, fold, tokenize, predictContext } from '../lib/editor/local-ai/core';
 import { expandContextModel, type TrainingExpansion } from '../lib/editor/local-ai/expand';
 
 import { trainBoundaryModel } from '../lib/editor/local-ai/boundary-model';
 import { trainSequenceRanker } from '../lib/editor/local-ai/sequence';
+import { contextTrainingTexts } from './context-training';
 
 const seeds = readFileSync('data/local-ai/seeds.txt', 'utf8').trim().split('\n');
 if (seeds.length < 100 || new Set(seeds).size !== seeds.length) throw new Error('Expected at least 100 unique authored gold texts.');
@@ -33,9 +35,11 @@ const training = seeds.filter((_, index) => splitFor(index) === 'train');
 const supplemental = readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n');
 if (new Set(supplemental).size !== supplemental.length || supplemental.some(text => seeds.includes(text))) throw new Error('Supplemental texts must be unique and disjoint from all split groups.');
 const expansion = JSON.parse(readFileSync('data/local-ai/expansion.json', 'utf8')) as TrainingExpansion;
-const model = expandContextModel(trainContextModel([...training, ...supplemental]), expansion);
-model.sequence = trainSequenceRanker([...training, ...supplemental]);
-model.boundaryClassifier = trainBoundaryModel([...training, ...supplemental, ...expansion.boundaries.flatMap(item => item.texts)]);
+const contextTexts = contextTrainingTexts();
+const trainingTexts = [...training, ...supplemental, ...contextTexts];
+const model = expandContextModel(trainContextModel(trainingTexts), expansion);
+model.sequence = trainSequenceRanker(trainingTexts);
+model.boundaryClassifier = trainBoundaryModel([...trainingTexts, ...expansion.boundaries.flatMap(item => item.texts)]);
 mkdirSync('data/local-ai', { recursive: true });
 mkdirSync('lib/editor/local-ai', { recursive: true });
 writeFileSync('data/local-ai/pairs.json', JSON.stringify({ version: 1, pairs }, null, 2) + '\n');
@@ -63,6 +67,9 @@ const report = { algorithm: model.algorithm, pairCount: pairs.length,
   source: `${seeds.length} author-written gold texts; five synthetic variants each; no scraped or user data`,
   corpusSha256: createHash('sha256').update(JSON.stringify(pairs)).digest('hex'),
   supplementalTrainingTexts: supplemental.length,
+  contextTrainingTexts: contextTexts.length,
+  contextCorpusSha256: createHash('sha256').update(readFileSync('data/local-ai/context-corpus.json')).digest('hex'),
+  artifactSha256: createHash('sha256').update(JSON.stringify(model, null, 2) + '\n').digest('hex'),
   expansionWordForms: expansion.forms.length,
   expansionBoundaryPatterns: expansion.boundaries.length,
   expansionTrainingTexts: [...expansion.forms, ...expansion.boundaries].flatMap(item => item.texts).length,

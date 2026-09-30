@@ -1,0 +1,806 @@
+{
+  "sourceCommit": "ff2e268231c215ce96068a443521b4ce5a2c510c",
+  "scope": "Frozen pre-training distances for 200 existing synthetic held-out pairs; not general language accuracy",
+  "rows": [
+    {
+      "id": "local-005-1",
+      "distance": 1
+    },
+    {
+      "id": "local-005-2",
+      "distance": 1
+    },
+    {
+      "id": "local-005-3",
+      "distance": 0
+    },
+    {
+      "id": "local-005-4",
+      "distance": 3
+    },
+    {
+      "id": "local-005-5",
+      "distance": 2
+    },
+    {
+      "id": "local-010-1",
+      "distance": 0
+    },
+    {
+      "id": "local-010-2",
+      "distance": 0
+    },
+    {
+      "id": "local-010-3",
+      "distance": 0
+    },
+    {
+      "id": "local-010-4",
+      "distance": 5
+    },
+    {
+      "id": "local-010-5",
+      "distance": 1
+    },
+    {
+      "id": "local-015-1",
+      "distance": 1
+    },
+    {
+      "id": "local-015-2",
+      "distance": 1
+    },
+    {
+      "id": "local-015-3",
+      "distance": 0
+    },
+    {
+      "id": "local-015-4",
+      "distance": 4
+    },
+    {
+      "id": "local-015-5",
+      "distance": 2
+    },
+    {
+      "id": "local-020-1",
+      "distance": 2
+    },
+    {
+      "id": "local-020-2",
+      "distance": 2
+    },
+    {
+      "id": "local-020-3",
+      "distance": 0
+    },
+    {
+      "id": "local-020-4",
+      "distance": 2
+    },
+    {
+      "id": "local-020-5",
+      "distance": 3
+    },
+    {
+      "id": "local-025-1",
+      "distance": 2
+    },
+    {
+      "id": "local-025-2",
+      "distance": 1
+    },
+    {
+      "id": "local-025-3",
+      "distance": 2
+    },
+    {
+      "id": "local-025-4",
+      "distance": 4
+    },
+    {
+      "id": "local-025-5",
+      "distance": 2
+    },
+    {
+      "id": "local-030-1",
+      "distance": 0
+    },
+    {
+      "id": "local-030-2",
+      "distance": 0
+    },
+    {
+      "id": "local-030-3",
+      "distance": 0
+    },
+    {
+      "id": "local-030-4",
+      "distance": 0
+    },
+    {
+      "id": "local-030-5",
+      "distance": 2
+    },
+    {
+      "id": "local-035-1",
+      "distance": 1
+    },
+    {
+      "id": "local-035-2",
+      "distance": 1
+    },
+    {
+      "id": "local-035-3",
+      "distance": 0
+    },
+    {
+      "id": "local-035-4",
+      "distance": 3
+    },
+    {
+      "id": "local-035-5",
+      "distance": 2
+    },
+    {
+      "id": "local-040-1",
+      "distance": 0
+    },
+    {
+      "id": "local-040-2",
+      "distance": 0
+    },
+    {
+      "id": "local-040-3",
+      "distance": 0
+    },
+    {
+      "id": "local-040-4",
+      "distance": 3
+    },
+    {
+      "id": "local-040-5",
+      "distance": 2
+    },
+    {
+      "id": "local-045-1",
+      "distance": 0
+    },
+    {
+      "id": "local-045-2",
+      "distance": 0
+    },
+    {
+      "id": "local-045-3",
+      "distance": 0
+    },
+    {
+      "id": "local-045-4",
+      "distance": 2
+    },
+    {
+      "id": "local-045-5",
+      "distance": 2
+    },
+    {
+      "id": "local-050-1",
+      "distance": 2
+    },
+    {
+      "id": "local-050-2",
+      "distance": 1
+    },
+    {
+      "id": "local-050-3",
+      "distance": 2
+    },
+    {
+      "id": "local-050-4",
+      "distance": 4
+    },
+    {
+      "id": "local-050-5",
+      "distance": 2
+    },
+    {
+      "id": "local-055-1",
+      "distance": 2
+    },
+    {
+      "id": "local-055-2",
+      "distance": 0
+    },
+    {
+      "id": "local-055-3",
+      "distance": 2
+    },
+    {
+      "id": "local-055-4",
+      "distance": 6
+    },
+    {
+      "id": "local-055-5",
+      "distance": 1
+    },
+    {
+      "id": "local-060-1",
+      "distance": 2
+    },
+    {
+      "id": "local-060-2",
+      "distance": 0
+    },
+    {
+      "id": "local-060-3",
+      "distance": 2
+    },
+    {
+      "id": "local-060-4",
+      "distance": 5
+    },
+    {
+      "id": "local-060-5",
+      "distance": 1
+    },
+    {
+      "id": "local-065-1",
+      "distance": 0
+    },
+    {
+      "id": "local-065-2",
+      "distance": 0
+    },
+    {
+      "id": "local-065-3",
+      "distance": 0
+    },
+    {
+      "id": "local-065-4",
+      "distance": 4
+    },
+    {
+      "id": "local-065-5",
+      "distance": 1
+    },
+    {
+      "id": "local-070-1",
+      "distance": 1
+    },
+    {
+      "id": "local-070-2",
+      "distance": 1
+    },
+    {
+      "id": "local-070-3",
+      "distance": 0
+    },
+    {
+      "id": "local-070-4",
+      "distance": 6
+    },
+    {
+      "id": "local-070-5",
+      "distance": 1
+    },
+    {
+      "id": "local-075-1",
+      "distance": 0
+    },
+    {
+      "id": "local-075-2",
+      "distance": 0
+    },
+    {
+      "id": "local-075-3",
+      "distance": 0
+    },
+    {
+      "id": "local-075-4",
+      "distance": 6
+    },
+    {
+      "id": "local-075-5",
+      "distance": 1
+    },
+    {
+      "id": "local-080-1",
+      "distance": 2
+    },
+    {
+      "id": "local-080-2",
+      "distance": 0
+    },
+    {
+      "id": "local-080-3",
+      "distance": 2
+    },
+    {
+      "id": "local-080-4",
+      "distance": 5
+    },
+    {
+      "id": "local-080-5",
+      "distance": 1
+    },
+    {
+      "id": "local-085-1",
+      "distance": 0
+    },
+    {
+      "id": "local-085-2",
+      "distance": 0
+    },
+    {
+      "id": "local-085-3",
+      "distance": 0
+    },
+    {
+      "id": "local-085-4",
+      "distance": 6
+    },
+    {
+      "id": "local-085-5",
+      "distance": 1
+    },
+    {
+      "id": "local-090-1",
+      "distance": 2
+    },
+    {
+      "id": "local-090-2",
+      "distance": 0
+    },
+    {
+      "id": "local-090-3",
+      "distance": 2
+    },
+    {
+      "id": "local-090-4",
+      "distance": 6
+    },
+    {
+      "id": "local-090-5",
+      "distance": 2
+    },
+    {
+      "id": "local-095-1",
+      "distance": 2
+    },
+    {
+      "id": "local-095-2",
+      "distance": 0
+    },
+    {
+      "id": "local-095-3",
+      "distance": 2
+    },
+    {
+      "id": "local-095-4",
+      "distance": 4
+    },
+    {
+      "id": "local-095-5",
+      "distance": 1
+    },
+    {
+      "id": "local-100-1",
+      "distance": 2
+    },
+    {
+      "id": "local-100-2",
+      "distance": 0
+    },
+    {
+      "id": "local-100-3",
+      "distance": 2
+    },
+    {
+      "id": "local-100-4",
+      "distance": 5
+    },
+    {
+      "id": "local-100-5",
+      "distance": 2
+    },
+    {
+      "id": "local-105-1",
+      "distance": 0
+    },
+    {
+      "id": "local-105-2",
+      "distance": 0
+    },
+    {
+      "id": "local-105-3",
+      "distance": 0
+    },
+    {
+      "id": "local-105-4",
+      "distance": 2
+    },
+    {
+      "id": "local-105-5",
+      "distance": 1
+    },
+    {
+      "id": "local-110-1",
+      "distance": 0
+    },
+    {
+      "id": "local-110-2",
+      "distance": 0
+    },
+    {
+      "id": "local-110-3",
+      "distance": 0
+    },
+    {
+      "id": "local-110-4",
+      "distance": 3
+    },
+    {
+      "id": "local-110-5",
+      "distance": 1
+    },
+    {
+      "id": "local-115-1",
+      "distance": 2
+    },
+    {
+      "id": "local-115-2",
+      "distance": 0
+    },
+    {
+      "id": "local-115-3",
+      "distance": 2
+    },
+    {
+      "id": "local-115-4",
+      "distance": 3
+    },
+    {
+      "id": "local-115-5",
+      "distance": 1
+    },
+    {
+      "id": "local-120-1",
+      "distance": 1
+    },
+    {
+      "id": "local-120-2",
+      "distance": 1
+    },
+    {
+      "id": "local-120-3",
+      "distance": 0
+    },
+    {
+      "id": "local-120-4",
+      "distance": 4
+    },
+    {
+      "id": "local-120-5",
+      "distance": 2
+    },
+    {
+      "id": "local-125-1",
+      "distance": 0
+    },
+    {
+      "id": "local-125-2",
+      "distance": 0
+    },
+    {
+      "id": "local-125-3",
+      "distance": 0
+    },
+    {
+      "id": "local-125-4",
+      "distance": 1
+    },
+    {
+      "id": "local-125-5",
+      "distance": 2
+    },
+    {
+      "id": "local-130-1",
+      "distance": 0
+    },
+    {
+      "id": "local-130-2",
+      "distance": 0
+    },
+    {
+      "id": "local-130-3",
+      "distance": 0
+    },
+    {
+      "id": "local-130-4",
+      "distance": 1
+    },
+    {
+      "id": "local-130-5",
+      "distance": 1
+    },
+    {
+      "id": "local-135-1",
+      "distance": 4
+    },
+    {
+      "id": "local-135-2",
+      "distance": 0
+    },
+    {
+      "id": "local-135-3",
+      "distance": 4
+    },
+    {
+      "id": "local-135-4",
+      "distance": 5
+    },
+    {
+      "id": "local-135-5",
+      "distance": 2
+    },
+    {
+      "id": "local-140-1",
+      "distance": 4
+    },
+    {
+      "id": "local-140-2",
+      "distance": 1
+    },
+    {
+      "id": "local-140-3",
+      "distance": 4
+    },
+    {
+      "id": "local-140-4",
+      "distance": 5
+    },
+    {
+      "id": "local-140-5",
+      "distance": 2
+    },
+    {
+      "id": "local-145-1",
+      "distance": 1
+    },
+    {
+      "id": "local-145-2",
+      "distance": 2
+    },
+    {
+      "id": "local-145-3",
+      "distance": 0
+    },
+    {
+      "id": "local-145-4",
+      "distance": 1
+    },
+    {
+      "id": "local-145-5",
+      "distance": 3
+    },
+    {
+      "id": "local-150-1",
+      "distance": 4
+    },
+    {
+      "id": "local-150-2",
+      "distance": 2
+    },
+    {
+      "id": "local-150-3",
+      "distance": 2
+    },
+    {
+      "id": "local-150-4",
+      "distance": 4
+    },
+    {
+      "id": "local-150-5",
+      "distance": 3
+    },
+    {
+      "id": "local-155-1",
+      "distance": 0
+    },
+    {
+      "id": "local-155-2",
+      "distance": 0
+    },
+    {
+      "id": "local-155-3",
+      "distance": 0
+    },
+    {
+      "id": "local-155-4",
+      "distance": 1
+    },
+    {
+      "id": "local-155-5",
+      "distance": 1
+    },
+    {
+      "id": "local-160-1",
+      "distance": 1
+    },
+    {
+      "id": "local-160-2",
+      "distance": 1
+    },
+    {
+      "id": "local-160-3",
+      "distance": 0
+    },
+    {
+      "id": "local-160-4",
+      "distance": 2
+    },
+    {
+      "id": "local-160-5",
+      "distance": 2
+    },
+    {
+      "id": "local-165-1",
+      "distance": 3
+    },
+    {
+      "id": "local-165-2",
+      "distance": 1
+    },
+    {
+      "id": "local-165-3",
+      "distance": 2
+    },
+    {
+      "id": "local-165-4",
+      "distance": 5
+    },
+    {
+      "id": "local-165-5",
+      "distance": 3
+    },
+    {
+      "id": "local-170-1",
+      "distance": 3
+    },
+    {
+      "id": "local-170-2",
+      "distance": 2
+    },
+    {
+      "id": "local-170-3",
+      "distance": 2
+    },
+    {
+      "id": "local-170-4",
+      "distance": 6
+    },
+    {
+      "id": "local-170-5",
+      "distance": 3
+    },
+    {
+      "id": "local-175-1",
+      "distance": 3
+    },
+    {
+      "id": "local-175-2",
+      "distance": 1
+    },
+    {
+      "id": "local-175-3",
+      "distance": 1
+    },
+    {
+      "id": "local-175-4",
+      "distance": 5
+    },
+    {
+      "id": "local-175-5",
+      "distance": 2
+    },
+    {
+      "id": "local-180-1",
+      "distance": 3
+    },
+    {
+      "id": "local-180-2",
+      "distance": 1
+    },
+    {
+      "id": "local-180-3",
+      "distance": 1
+    },
+    {
+      "id": "local-180-4",
+      "distance": 5
+    },
+    {
+      "id": "local-180-5",
+      "distance": 2
+    },
+    {
+      "id": "local-185-1",
+      "distance": 2
+    },
+    {
+      "id": "local-185-2",
+      "distance": 0
+    },
+    {
+      "id": "local-185-3",
+      "distance": 2
+    },
+    {
+      "id": "local-185-4",
+      "distance": 2
+    },
+    {
+      "id": "local-185-5",
+      "distance": 2
+    },
+    {
+      "id": "local-190-1",
+      "distance": 0
+    },
+    {
+      "id": "local-190-2",
+      "distance": 1
+    },
+    {
+      "id": "local-190-3",
+      "distance": 0
+    },
+    {
+      "id": "local-190-4",
+      "distance": 1
+    },
+    {
+      "id": "local-190-5",
+      "distance": 2
+    },
+    {
+      "id": "local-195-1",
+      "distance": 2
+    },
+    {
+      "id": "local-195-2",
+      "distance": 1
+    },
+    {
+      "id": "local-195-3",
+      "distance": 2
+    },
+    {
+      "id": "local-195-4",
+      "distance": 6
+    },
+    {
+      "id": "local-195-5",
+      "distance": 2
+    },
+    {
+      "id": "local-200-1",
+      "distance": 2
+    },
+    {
+      "id": "local-200-2",
+      "distance": 0
+    },
+    {
+      "id": "local-200-3",
+      "distance": 2
+    },
+    {
+      "id": "local-200-4",
+      "distance": 5
+    },
+    {
+      "id": "local-200-5",
+      "distance": 1
+    }
+  ]
+}

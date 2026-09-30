@@ -4,10 +4,11 @@ import { correctText, formatEmail } from '../lib/editor/correct';
 import { fold } from '../lib/editor/local-ai/core';
 import corpus from '../data/local-ai/fresh-holdout.json';
 import expansion from '../data/local-ai/expansion.json';
+import { contextTrainingTexts } from './context-training';
 
 const training = [...readFileSync('data/local-ai/seeds.txt', 'utf8').trim().split('\n'),
   ...readFileSync('data/local-ai/supplemental-training.txt', 'utf8').trim().split('\n'),
-  ...[...expansion.forms, ...expansion.boundaries].flatMap(item => item.texts)];
+  ...[...expansion.forms, ...expansion.boundaries].flatMap(item => item.texts), ...contextTrainingTexts()];
 const normalize = (text: string) => fold(text).replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 const known = new Set(training.map(normalize));
 for (const pair of corpus.pairs) if (known.has(normalize(pair.input))) throw new Error(`Training overlap: ${pair.input}`);
