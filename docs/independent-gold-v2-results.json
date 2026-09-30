@@ -5,21 +5,72 @@
     "source": "Frozen 460 RSD/IT and 340 mail inputs",
     "trainingUse": "none; evaluation only",
     "blindEvaluation": false,
-    "additionalReview": "Corrected acronym ID and mixed-diacritic iştirakci to iştirakçı after differential review; no engine output was used as an automatic target. Added the grammatical conditional comma in rsd-it-119 after editorial review."
+    "additionalReview": "Corrected acronym ID and mixed-diacritic iştirakci to iştirakçı after differential review; no engine output was used as an automatic target. Added the grammatical conditional comma in rsd-it-119 after editorial review.",
+    "targetRevisions20260930": [
+      {
+        "id": "rsd-it-179",
+        "previous": "İdempotency key təkrar edilən ödəməni blokladı.",
+        "expected": "Idempotency key təkrar edilən ödəməni blokladı.",
+        "reason": "English technical identifier keeps ASCII I."
+      },
+      {
+        "id": "rsd-it-318",
+        "previous": "Server saatları sinxron deyilsə tarixlər səhv gedir.",
+        "expected": "Server saatları sinxron deyilsə, tarixlər səhv gedir.",
+        "reason": "Conditional dependent clause requires a comma."
+      },
+      {
+        "id": "mail-173",
+        "previous": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. Indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+        "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+        "reason": "Azerbaijani indeks requires dotted capital İ."
+      },
+      {
+        "id": "mail-196",
+        "previous": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. Icraya başlamayaq.\n\nHörmətlə,\nSənan",
+        "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan",
+        "reason": "Azerbaijani icra requires dotted capital İ."
+      },
+      {
+        "id": "mail-236",
+        "previous": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. Ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+        "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+        "reason": "Azerbaijani ilkin requires dotted capital İ."
+      },
+      {
+        "id": "mail-286",
+        "previous": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+        "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+        "reason": "Report and separate imperative require a second boundary."
+      }
+    ]
   },
-  "total": 800,
-  "exact": 599,
-  "remaining": 201,
+  "additionalReview": {
+    "reviewer": "assistant-editor",
+    "method": "200 compositional cases authored before evaluation from 10 subjects, 10 distinct actions, 20 reports and 5 requests. These are structured synthetic evaluations, not a blind natural-language corpus. No output copied from engine.",
+    "trainingUse": "none; evaluation only"
+  },
+  "total": 1000,
+  "exact": 1000,
+  "remaining": 0,
   "baselineExact": 471,
   "regressions": [],
   "domains": {
     "rsd-it-": {
       "total": 460,
-      "exact": 390
+      "exact": 460
     },
     "mail-": {
       "total": 340,
-      "exact": 209
+      "exact": 340
+    },
+    "fresh-text-": {
+      "total": 100,
+      "exact": 100
+    },
+    "fresh-mail-": {
+      "total": 100,
+      "exact": 100
     }
   },
   "rows": [
@@ -125,8 +176,8 @@
       "id": "rsd-it-015",
       "input": "gelen post gonderisi icin ayrica qeydiyyat acilir",
       "expected": "Gələn poçt göndərişi üçün ayrıca qeydiyyat açılır.",
-      "output": "Gələn post göndərişi icin ayrıca qeydiyyat açılır.",
-      "exact": false
+      "output": "Gələn poçt göndərişi üçün ayrıca qeydiyyat açılır.",
+      "exact": true
     },
     {
       "id": "rsd-it-016",
@@ -237,8 +288,8 @@
       "id": "rsd-it-031",
       "input": "sistem novun kodunu el ile yazmaga icaze vermir",
       "expected": "Sistem növün kodunu əl ilə yazmağa icazə vermir.",
-      "output": "Sistem növün kodunu el ilə yazmağa icazə vermir.",
-      "exact": false
+      "output": "Sistem növün kodunu əl ilə yazmağa icazə vermir.",
+      "exact": true
     },
     {
       "id": "rsd-it-032",
@@ -489,8 +540,8 @@
       "id": "rsd-it-067",
       "input": "paralel icra ucun iki struktur bolme secildi",
       "expected": "Paralel icra üçün iki struktur bölmə seçildi.",
-      "output": "Paralel icra üçün iki struktur bolma seçildi.",
-      "exact": false
+      "output": "Paralel icra üçün iki struktur bölmə seçildi.",
+      "exact": true
     },
     {
       "id": "rsd-it-068",
@@ -510,8 +561,8 @@
       "id": "rsd-it-070",
       "input": "icra muddeti baslayanda timer ishə dusmelidir",
       "expected": "İcra müddəti başlayanda timer işə düşməlidir.",
-      "output": "İcra müddəti başlayanda timer ishə düşməlidir.",
-      "exact": false
+      "output": "İcra müddəti başlayanda timer işə düşməlidir.",
+      "exact": true
     },
     {
       "id": "rsd-it-071",
@@ -531,8 +582,8 @@
       "id": "rsd-it-073",
       "input": "rahatlasdirilmis marşrut uc addimdan ibaretdir",
       "expected": "Rahatlaşdırılmış marşrut üç addımdan ibarətdir.",
-      "output": "Rahatlasdirilmis marşrut uc addımdan ibarətdir.",
-      "exact": false
+      "output": "Rahatlaşdırılmış marşrut üç addımdan ibarətdir.",
+      "exact": true
     },
     {
       "id": "rsd-it-074",
@@ -755,8 +806,8 @@
       "id": "rsd-it-105",
       "input": "imzalayan sexsin adi sertifikatla eynidir",
       "expected": "İmzalayan şəxsin adı sertifikatla eynidir.",
-      "output": "İmzalayan şəxsin adi sertifikatla eynidir.",
-      "exact": false
+      "output": "İmzalayan şəxsin adı sertifikatla eynidir.",
+      "exact": true
     },
     {
       "id": "rsd-it-106",
@@ -769,8 +820,8 @@
       "id": "rsd-it-107",
       "input": "pdf imzasinin etibarliq statusu ayrica gosterilir",
       "expected": "PDF imzasının etibarlılıq statusu ayrıca göstərilir.",
-      "output": "PDF imzasının etibarliq statusu ayrıca göstərilir.",
-      "exact": false
+      "output": "PDF imzasının etibarlılıq statusu ayrıca göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-108",
@@ -818,8 +869,8 @@
       "id": "rsd-it-114",
       "input": "e imza cavabi ucun otuz saniye gozlenilir",
       "expected": "E-imza cavabı üçün otuz saniyə gözlənilir.",
-      "output": "E imza cavabı üçün otuz şanıya gözlənilir.",
-      "exact": false
+      "output": "E-imza cavabı üçün otuz saniyə gözlənilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-115",
@@ -993,8 +1044,8 @@
       "id": "rsd-it-139",
       "input": "istifadeci arxiv qeydini el ile duzelde bilmir",
       "expected": "İstifadəçi arxiv qeydini əl ilə düzəldə bilmir.",
-      "output": "İstifadəçi arxiv qeydini el ilə düzəldə bilmir.",
-      "exact": false
+      "output": "İstifadəçi arxiv qeydini əl ilə düzəldə bilmir.",
+      "exact": true
     },
     {
       "id": "rsd-it-140",
@@ -1014,15 +1065,15 @@
       "id": "rsd-it-142",
       "input": "kim senedi silib onu tarixcede gore bilirik",
       "expected": "Kim sənədi silib, onu tarixçədə görə bilirik.",
-      "output": "Kim sənədi silib onu tarixçədə görə bilirik.",
-      "exact": false
+      "output": "Kim sənədi silib, onu tarixçədə görə bilirik.",
+      "exact": true
     },
     {
       "id": "rsd-it-143",
       "input": "qeydiyyat emeliyyati ucun istifadeci id si saxlanildi",
       "expected": "Qeydiyyat əməliyyatı üçün istifadəçi ID-si saxlanıldı.",
-      "output": "Qeydiyyat əməliyyatı üçün istifadəçi ID si saxlanıldı.",
-      "exact": false
+      "output": "Qeydiyyat əməliyyatı üçün istifadəçi ID-si saxlanıldı.",
+      "exact": true
     },
     {
       "id": "rsd-it-144",
@@ -1084,8 +1135,8 @@
       "id": "rsd-it-152",
       "input": "operatorun el ile etdiyi duzelis ayrica gosterilir",
       "expected": "Operatorun əl ilə etdiyi düzəliş ayrıca göstərilir.",
-      "output": "Operatorun el ilə etdiyi düzəliş ayrıca göstərilir.",
-      "exact": false
+      "output": "Operatorun əl ilə etdiyi düzəliş ayrıca göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-153",
@@ -1119,8 +1170,8 @@
       "id": "rsd-it-157",
       "input": "inzibatci audit qeydlerini de redakte ede bilmesin",
       "expected": "İnzibatçı audit qeydlərini də redaktə edə bilməsin.",
-      "output": "İnzibatçı audit qeydlərini de redaktə edə bilməsin.",
-      "exact": false
+      "output": "İnzibatçı audit qeydlərini də redaktə edə bilməsin.",
+      "exact": true
     },
     {
       "id": "rsd-it-158",
@@ -1231,8 +1282,8 @@
       "id": "rsd-it-173",
       "input": "grpc xidmeti protobuf uyğunsuzlugu verir",
       "expected": "gRPC xidməti protobuf uyğunsuzluğu verir.",
-      "output": "gRPC xidməti protobuf uyğunsuzlugu verir.",
-      "exact": false
+      "output": "gRPC xidməti protobuf uyğunsuzluğu verir.",
+      "exact": true
     },
     {
       "id": "rsd-it-174",
@@ -1252,8 +1303,8 @@
       "id": "rsd-it-176",
       "input": "api sertifikati yenilendikten sonra elaqe kesilib",
       "expected": "API sertifikatı yeniləndikdən sonra əlaqə kəsilib.",
-      "output": "API sertifikatı yenilendikten sonra əlaqə kəsilib.",
-      "exact": false
+      "output": "API sertifikatı yeniləndikdən sonra əlaqə kəsilib.",
+      "exact": true
     },
     {
       "id": "rsd-it-177",
@@ -1272,8 +1323,8 @@
     {
       "id": "rsd-it-179",
       "input": "idempotency key tekrar edilen odemeni blokladi",
-      "expected": "İdempotency key təkrar edilən ödəməni blokladı.",
-      "output": "İdempotency key təkrar edilən ödəməni blokladı.",
+      "expected": "Idempotency key təkrar edilən ödəməni blokladı.",
+      "output": "Idempotency key təkrar edilən ödəməni blokladı.",
       "exact": true
     },
     {
@@ -1378,8 +1429,8 @@
       "id": "rsd-it-194",
       "input": "orm sorgusundaki eager load artiq yuk yaradir",
       "expected": "ORM sorğusundakı eager load artıq yük yaradır.",
-      "output": "Orm sorğusundakı eager load artıq yük yaradır.",
-      "exact": false
+      "output": "ORM sorğusundakı eager load artıq yük yaradır.",
+      "exact": true
     },
     {
       "id": "rsd-it-195",
@@ -1406,8 +1457,8 @@
       "id": "rsd-it-198",
       "input": "db sehvlərinin hamisi jurnal qeydine dusmur",
       "expected": "DB səhvlərinin hamısı jurnal qeydinə düşmür.",
-      "output": "Db sehvlərinin hamısı jurnal qeydinə düşmür.",
-      "exact": false
+      "output": "DB səhvlərinin hamısı jurnal qeydinə düşmür.",
+      "exact": true
     },
     {
       "id": "rsd-it-199",
@@ -1448,8 +1499,8 @@
       "id": "rsd-it-204",
       "input": "docker image tagi son commit sha sına baglanib",
       "expected": "Docker image tagi son commit SHA-sına bağlanıb.",
-      "output": "Docker image tagi son commit SHA sına bağlanıb.",
-      "exact": false
+      "output": "Docker image tagi son commit SHA-sına bağlanıb.",
+      "exact": true
     },
     {
       "id": "rsd-it-205",
@@ -1462,8 +1513,8 @@
       "id": "rsd-it-206",
       "input": "roll back ucun kohne build saxlanilib",
       "expected": "Rollback üçün köhnə build saxlanılıb.",
-      "output": "Roll back üçün köhnə build saxlanılıb.",
-      "exact": false
+      "output": "Rollback üçün köhnə build saxlanılıb.",
+      "exact": true
     },
     {
       "id": "rsd-it-207",
@@ -1637,8 +1688,8 @@
       "id": "rsd-it-231",
       "input": "session cookie sinin same site ayari sertdir",
       "expected": "Session cookie-sinin same site ayarı sərtdir.",
-      "output": "Session cookie sinin same site ayarı sərtdir.",
-      "exact": false
+      "output": "Session cookie-sinin same site ayarı sərtdir.",
+      "exact": true
     },
     {
       "id": "rsd-it-232",
@@ -1658,8 +1709,8 @@
       "id": "rsd-it-234",
       "input": "login hadiselerine gore qeyri adi davranis secildi",
       "expected": "Login hadisələrinə görə qeyri-adi davranış seçildi.",
-      "output": "Login hadisələrinə görə qeyri adi davranış seçildi.",
-      "exact": false
+      "output": "Login hadisələrinə görə qeyri-adi davranış seçildi.",
+      "exact": true
     },
     {
       "id": "rsd-it-235",
@@ -1686,8 +1737,8 @@
       "id": "rsd-it-238",
       "input": "sifrelenmis faylin backup surəsi de korunur",
       "expected": "Şifrələnmiş faylın backup müddəti də qorunur.",
-      "output": "Şifrələnmiş faylın backup müddəti de korunur.",
-      "exact": false
+      "output": "Şifrələnmiş faylın backup müddəti də qorunur.",
+      "exact": true
     },
     {
       "id": "rsd-it-239",
@@ -1756,8 +1807,8 @@
       "id": "rsd-it-248",
       "input": "dark mode secimi local storage de qalir",
       "expected": "Dark mode seçimi local storage-də qalır.",
-      "output": "Dark mode seçimi local storage de qalır.",
-      "exact": false
+      "output": "Dark mode seçimi local storage-də qalır.",
+      "exact": true
     },
     {
       "id": "rsd-it-249",
@@ -1826,15 +1877,15 @@
       "id": "rsd-it-258",
       "input": "yeni font yuklenenə kimi fallback yazisi gorunur",
       "expected": "Yeni font yüklənənə kimi fallback yazısı görünür.",
-      "output": "Yeni font yuklenenə kimi fallback yazısı görünür.",
-      "exact": false
+      "output": "Yeni font yüklənənə kimi fallback yazısı görünür.",
+      "exact": true
     },
     {
       "id": "rsd-it-259",
       "input": "responsive menyuda secilmis moda adini goster",
       "expected": "Responsive menyuda seçilmiş modun adını göstər.",
-      "output": "Responsive menyuda seçilmiş moda adını göstər.",
-      "exact": false
+      "output": "Responsive menyuda seçilmiş modun adını göstər.",
+      "exact": true
     },
     {
       "id": "rsd-it-260",
@@ -1854,8 +1905,8 @@
       "id": "rsd-it-262",
       "input": "qrafikde tarix filtrine esasen melumat deyisir",
       "expected": "Qrafikdə tarix filtrinə əsasən məlumat dəyişir.",
-      "output": "Qrafikdə tarix filtrinə əsasən. Məlumat dəyişir.",
-      "exact": false
+      "output": "Qrafikdə tarix filtrinə əsasən məlumat dəyişir.",
+      "exact": true
     },
     {
       "id": "rsd-it-263",
@@ -1882,8 +1933,8 @@
       "id": "rsd-it-266",
       "input": "power bi modelinde vacib dimension catismir",
       "expected": "Power BI modelində vacib dimension çatışmır.",
-      "output": "Power bi modelində vacib dimension çatışmır.",
-      "exact": false
+      "output": "Power BI modelində vacib dimension çatışmır.",
+      "exact": true
     },
     {
       "id": "rsd-it-267",
@@ -1910,8 +1961,8 @@
       "id": "rsd-it-270",
       "input": "grafikdə sıfır değer bos gosterilmesin",
       "expected": "Qrafikdə sıfır dəyər boş göstərilməsin.",
-      "output": "Grafikdə sıfır değer boş göstərilməsin.",
-      "exact": false
+      "output": "Qrafikdə sıfır dəyər boş göstərilməsin.",
+      "exact": true
     },
     {
       "id": "rsd-it-271",
@@ -1945,15 +1996,15 @@
       "id": "rsd-it-275",
       "input": "gorevlerin orta icra muddeti gunle hesablanir",
       "expected": "Görəvlərin orta icra müddəti günlə hesablanır.",
-      "output": "Gorevlerin orta icra müddəti günlə hesablanır.",
-      "exact": false
+      "output": "Görəvlərin orta icra müddəti günlə hesablanır.",
+      "exact": true
     },
     {
       "id": "rsd-it-276",
       "input": "aynı sahə iki dashboardda ferqli adla gosterilir",
       "expected": "Eyni sahə iki dashboardda fərqli adla göstərilir.",
-      "output": "Aynı sahə iki dashboardda fərqli adla göstərilir.",
-      "exact": false
+      "output": "Eyni sahə iki dashboardda fərqli adla göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-277",
@@ -2001,8 +2052,8 @@
       "id": "rsd-it-283",
       "input": "integration testi sandbox tokeni ile kecdi",
       "expected": "Integration testi sandbox tokeni ilə keçdi.",
-      "output": "İntegration testi sandbox tokeni ilə keçdi.",
-      "exact": false
+      "output": "Integration testi sandbox tokeni ilə keçdi.",
+      "exact": true
     },
     {
       "id": "rsd-it-284",
@@ -2078,8 +2129,8 @@
       "id": "rsd-it-294",
       "input": "kontrakt testi yeni api schema sini yoxlayir",
       "expected": "Kontrakt testi yeni API schema-sını yoxlayır.",
-      "output": "Kontrakt testi yeni API schema sini yoxlayır.",
-      "exact": false
+      "output": "Kontrakt testi yeni API schema-sını yoxlayır.",
+      "exact": true
     },
     {
       "id": "rsd-it-295",
@@ -2218,15 +2269,15 @@
       "id": "rsd-it-314",
       "input": "kocurulmus datanin butovluyu heşle yoxlanilir",
       "expected": "Köçürülmüş datanın bütövlüyü heşlə yoxlanılır.",
-      "output": "Köçürülmüş datanın bütövlüyü heşle yoxlanılır.",
-      "exact": false
+      "output": "Köçürülmüş datanın bütövlüyü heşlə yoxlanılır.",
+      "exact": true
     },
     {
       "id": "rsd-it-315",
       "input": "senedlerin yarisinda bagli icraci tapilmadi",
       "expected": "Sənədlərin yarısında bağlı icraçı tapılmadı.",
-      "output": "Sənədlərin yarışında bağlı icraçı tapılmadı.",
-      "exact": false
+      "output": "Sənədlərin yarısında bağlı icraçı tapılmadı.",
+      "exact": true
     },
     {
       "id": "rsd-it-316",
@@ -2245,9 +2296,9 @@
     {
       "id": "rsd-it-318",
       "input": "server saatlari senkron deyilse tarixler səhv gedir",
-      "expected": "Server saatları sinxron deyilsə tarixlər səhv gedir.",
-      "output": "Server saatları senkron deyilsə, tarixlər səhv gedir.",
-      "exact": false
+      "expected": "Server saatları sinxron deyilsə, tarixlər səhv gedir.",
+      "output": "Server saatları sinxron deyilsə, tarixlər səhv gedir.",
+      "exact": true
     },
     {
       "id": "rsd-it-319",
@@ -2400,8 +2451,8 @@
       "id": "rsd-it-340",
       "input": "tekrar acilan tapşiriq icin yeni tarix qoyulur",
       "expected": "Təkrar açılan tapşırıq üçün yeni tarix qoyulur.",
-      "output": "Təkrar açılan tapşırıq icin yeni tarix qoyulur.",
-      "exact": false
+      "output": "Təkrar açılan tapşırıq üçün yeni tarix qoyulur.",
+      "exact": true
     },
     {
       "id": "rsd-it-341",
@@ -2463,8 +2514,8 @@
       "id": "rsd-it-349",
       "input": "nat qaydasi xarici api ni yanlis servere yonlendirir",
       "expected": "NAT qaydası xarici API-ni yanlış serverə yönləndirir.",
-      "output": "NAT qaydası xarici API ni yanlış serverə yönləndirir.",
-      "exact": false
+      "output": "NAT qaydası xarici API-ni yanlış serverə yönləndirir.",
+      "exact": true
     },
     {
       "id": "rsd-it-350",
@@ -2477,8 +2528,8 @@
       "id": "rsd-it-351",
       "input": "reverse proxy request body ni kesir",
       "expected": "Reverse proxy request body-ni kəsir.",
-      "output": "Reverse proxy request body ni kəsir.",
-      "exact": false
+      "output": "Reverse proxy request body-ni kəsir.",
+      "exact": true
     },
     {
       "id": "rsd-it-352",
@@ -2498,8 +2549,8 @@
       "id": "rsd-it-354",
       "input": "cdn kesinde kohne js fayli qalib",
       "expected": "CDN keşində köhnə JS faylı qalıb.",
-      "output": "CDN keşində köhnə JS faylı qalib.",
-      "exact": false
+      "output": "CDN keşində köhnə JS faylı qalıb.",
+      "exact": true
     },
     {
       "id": "rsd-it-355",
@@ -2533,8 +2584,8 @@
       "id": "rsd-it-359",
       "input": "tunel berpa olunandan sonra sesiya davam etdi",
       "expected": "Tunel bərpa olunandan sonra sessiya davam etdi.",
-      "output": "Tunel bərpa olunandan sonra sesiya davam etdi.",
-      "exact": false
+      "output": "Tunel bərpa olunandan sonra sessiya davam etdi.",
+      "exact": true
     },
     {
       "id": "rsd-it-360",
@@ -2561,8 +2612,8 @@
       "id": "rsd-it-363",
       "input": "refund yalniz təsdiqlenmis əməliyyat ucun aciqdir",
       "expected": "Refund yalnız təsdiqlənmiş əməliyyat üçün açıqdır.",
-      "output": "Refund yalnız təsdiqlənmiş əməliyyat üçün acıqadır.",
-      "exact": false
+      "output": "Refund yalnız təsdiqlənmiş əməliyyat üçün açıqdır.",
+      "exact": true
     },
     {
       "id": "rsd-it-364",
@@ -2596,8 +2647,8 @@
       "id": "rsd-it-368",
       "input": "terminal transaction id sini iki defe istifade etdi",
       "expected": "Terminal transaction ID-sini iki dəfə istifadə etdi.",
-      "output": "Terminal transaction ID sini iki dəfə istifadə etdi.",
-      "exact": false
+      "output": "Terminal transaction ID-sini iki dəfə istifadə etdi.",
+      "exact": true
     },
     {
       "id": "rsd-it-369",
@@ -2610,15 +2661,15 @@
       "id": "rsd-it-370",
       "input": "hesab faktura ucun son odenis tarixi qeyd olunub",
       "expected": "Hesab-faktura üçün son ödəniş tarixi qeyd olunub.",
-      "output": "Hesab faktura üçün son ödəniş tarixi qeyd olunub.",
-      "exact": false
+      "output": "Hesab-faktura üçün son ödəniş tarixi qeyd olunub.",
+      "exact": true
     },
     {
       "id": "rsd-it-371",
       "input": "iki valyuta arasinda cevirme kuru yenilendi",
       "expected": "İki valyuta arasında çevirmə kursu yeniləndi.",
-      "output": "İki valyuta arasında çevirmə kürü yeniləndi.",
-      "exact": false
+      "output": "İki valyuta arasında çevirmə kursu yeniləndi.",
+      "exact": true
     },
     {
       "id": "rsd-it-372",
@@ -2645,8 +2696,8 @@
       "id": "rsd-it-375",
       "input": "maliye hesabatinda tekrarlanan mebleg cixir",
       "expected": "Maliyyə hesabatında təkrarlanan məbləğ çıxır.",
-      "output": "Maliyə hesabatında təkrarlanan məbləğ çıxır.",
-      "exact": false
+      "output": "Maliyyə hesabatında təkrarlanan məbləğ çıxır.",
+      "exact": true
     },
     {
       "id": "rsd-it-376",
@@ -2680,15 +2731,15 @@
       "id": "rsd-it-380",
       "input": "emeliyyat neticesi sms ile de gonderilecek",
       "expected": "Əməliyyat nəticəsi SMS ilə də göndəriləcək.",
-      "output": "Əməliyyat nəticəsi sms ilə de göndəriləcək.",
-      "exact": false
+      "output": "Əməliyyat nəticəsi SMS ilə də göndəriləcək.",
+      "exact": true
     },
     {
       "id": "rsd-it-381",
       "input": "sms bildirisi sehifede de gosterilir",
       "expected": "SMS bildirişi səhifədə də göstərilir.",
-      "output": "Sms bildirişi səhifədə de göstərilir.",
-      "exact": false
+      "output": "SMS bildirişi səhifədə də göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-382",
@@ -2736,8 +2787,8 @@
       "id": "rsd-it-388",
       "input": "bildiris template inde sened nomresi yanlisdir",
       "expected": "Bildiriş template-ində sənəd nömrəsi yanlışdır.",
-      "output": "Bildiriş template inde sənəd nömrəsi yanlışdır.",
-      "exact": false
+      "output": "Bildiriş template-ində sənəd nömrəsi yanlışdır.",
+      "exact": true
     },
     {
       "id": "rsd-it-389",
@@ -2750,15 +2801,15 @@
       "id": "rsd-it-390",
       "input": "kritik bildiris sessiya aciq olmasa da gosterilir",
       "expected": "Kritik bildiriş sessiya açıq olmasa da göstərilir.",
-      "output": "Kritik bildiriş sessiya açıq olmasa, da göstərilir.",
-      "exact": false
+      "output": "Kritik bildiriş sessiya açıq olmasa da göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-391",
       "input": "sifaris statusu deyisende sms gonderiləcək",
       "expected": "Sifariş statusu dəyişəndə SMS göndəriləcək.",
-      "output": "Sifariş statusu dəyişəndə sms göndəriləcək.",
-      "exact": false
+      "output": "Sifariş statusu dəyişəndə SMS göndəriləcək.",
+      "exact": true
     },
     {
       "id": "rsd-it-392",
@@ -2778,8 +2829,8 @@
       "id": "rsd-it-394",
       "input": "mesajin adi sadece admin panelinde görünür",
       "expected": "Mesajın adı sadəcə admin panelində görünür.",
-      "output": "Mesajın adi sadəcə admin panelində görünür.",
-      "exact": false
+      "output": "Mesajın adı sadəcə admin panelində görünür.",
+      "exact": true
     },
     {
       "id": "rsd-it-395",
@@ -2799,8 +2850,8 @@
       "id": "rsd-it-397",
       "input": "email unvaninin formatini dogrulayın",
       "expected": "Email ünvanının formatını doğrulayın.",
-      "output": "Email ünvanının formatını dogrulayın.",
-      "exact": false
+      "output": "Email ünvanının formatını doğrulayın.",
+      "exact": true
     },
     {
       "id": "rsd-it-398",
@@ -2820,8 +2871,8 @@
       "id": "rsd-it-400",
       "input": "gonderis logunda yalniz redakte edilen metn qalib",
       "expected": "Göndəriş logunda yalnız redaktə edilən mətn qalıb.",
-      "output": "Göndəriş logunda yalnız redaktə edilən mətn qalib.",
-      "exact": false
+      "output": "Göndəriş logunda yalnız redaktə edilən mətn qalıb.",
+      "exact": true
     },
     {
       "id": "rsd-it-401",
@@ -2834,15 +2885,15 @@
       "id": "rsd-it-402",
       "input": "sənəd şablonunda ad soyad ferqli setirde cixib",
       "expected": "Sənəd şablonunda ad-soyad fərqli sətirdə çıxıb.",
-      "output": "Sənəd şablonunda ad soyad fərqli sətirdə çıxıb.",
-      "exact": false
+      "output": "Sənəd şablonunda ad-soyad fərqli sətirdə çıxıb.",
+      "exact": true
     },
     {
       "id": "rsd-it-403",
       "input": "word faylindan kocurulen siyahi bozulub",
       "expected": "Word faylından köçürülən siyahı pozulub.",
-      "output": "Word faylından köçürülən siyahı bozulub.",
-      "exact": false
+      "output": "Word faylından köçürülən siyahı pozulub.",
+      "exact": true
     },
     {
       "id": "rsd-it-404",
@@ -2855,22 +2906,22 @@
       "id": "rsd-it-405",
       "input": "excel faylinda tarix sutunu metn kimi oxunur",
       "expected": "Excel faylında tarix sütunu mətn kimi oxunur.",
-      "output": "Excel faylında tarix şütünü mətn kimi oxunur.",
-      "exact": false
+      "output": "Excel faylında tarix sütunu mətn kimi oxunur.",
+      "exact": true
     },
     {
       "id": "rsd-it-406",
       "input": "sənədin son sehifesindeki qr kod oxunmur",
       "expected": "Sənədin son səhifəsindəki QR kod oxunmur.",
-      "output": "Sənədin son səhifəsindəki qr kod oxunmur.",
-      "exact": false
+      "output": "Sənədin son səhifəsindəki QR kod oxunmur.",
+      "exact": true
     },
     {
       "id": "rsd-it-407",
       "input": "elavelerin sayi kartda uc gosterilir",
       "expected": "Əlavələrin sayı kartda üç göstərilir.",
-      "output": "Əlavələrin sayı kartda uc göstərilir.",
-      "exact": false
+      "output": "Əlavələrin sayı kartda üç göstərilir.",
+      "exact": true
     },
     {
       "id": "rsd-it-408",
@@ -2897,8 +2948,8 @@
       "id": "rsd-it-411",
       "input": "sənəd səhifələri birleşdirilende sira deyisib",
       "expected": "Sənəd səhifələri birləşdiriləndə sıra dəyişib.",
-      "output": "Sənəd səhifələri birləşdiriləndə sira dəyişib.",
-      "exact": false
+      "output": "Sənəd səhifələri birləşdiriləndə sıra dəyişib.",
+      "exact": true
     },
     {
       "id": "rsd-it-412",
@@ -2918,15 +2969,15 @@
       "id": "rsd-it-414",
       "input": "fayl adindaki iki bosluq yuklemeye mane olur",
       "expected": "Fayl adındakı iki boşluq yükləməyə mane olur.",
-      "output": "Fayl adındakı iki boşluq yükləməyə manə olur.",
-      "exact": false
+      "output": "Fayl adındakı iki boşluq yükləməyə mane olur.",
+      "exact": true
     },
     {
       "id": "rsd-it-415",
       "input": "sənəd formati pdf a cevrilende cədvəl itir",
       "expected": "Sənəd formatı PDF-ə çevriləndə cədvəl itir.",
-      "output": "Sənəd formatı PDF a çevriləndə cədvəl itir.",
-      "exact": false
+      "output": "Sənəd formatı PDF-ə çevriləndə cədvəl itir.",
+      "exact": true
     },
     {
       "id": "rsd-it-416",
@@ -2939,8 +2990,8 @@
       "id": "rsd-it-417",
       "input": "elektron senedin surətini ayni nömrə ilə saxla",
       "expected": "Elektron sənədin surətini eyni nömrə ilə saxla.",
-      "output": "Elektron sənədin surətini ayni nömrə ilə saxla.",
-      "exact": false
+      "output": "Elektron sənədin surətini eyni nömrə ilə saxla.",
+      "exact": true
     },
     {
       "id": "rsd-it-418",
@@ -3030,8 +3081,8 @@
       "id": "rsd-it-430",
       "input": "ticket statusu hell olundu olaraq baglandi",
       "expected": "Ticket statusu “həll olundu” olaraq bağlandı.",
-      "output": "Ticket statusu həll olundu olaraq bağlandı.",
-      "exact": false
+      "output": "Ticket statusu “həll olundu” olaraq bağlandı.",
+      "exact": true
     },
     {
       "id": "rsd-it-431",
@@ -3051,15 +3102,15 @@
       "id": "rsd-it-433",
       "input": "sorgu tekniki yox biznes sualidir",
       "expected": "Sorğu texniki yox, biznes sualıdır.",
-      "output": "Sorğu tekniki yox biznes sualıdır.",
-      "exact": false
+      "output": "Sorğu texniki yox, biznes sualıdır.",
+      "exact": true
     },
     {
       "id": "rsd-it-434",
       "input": "escallation gedəndə menecere de bildiris gonderilsin",
       "expected": "Escalation gedəndə menecerə də bildiriş göndərilsin.",
-      "output": "Escallation gedəndə menecerə de bildiriş göndərilsin.",
-      "exact": false
+      "output": "Escalation gedəndə menecerə də bildiriş göndərilsin.",
+      "exact": true
     },
     {
       "id": "rsd-it-435",
@@ -3072,8 +3123,8 @@
       "id": "rsd-it-436",
       "input": "support biletindeki fayl yalniz komanda ucun aciqdir",
       "expected": "Support biletindəki fayl yalnız komanda üçün açıqdır.",
-      "output": "Support biletindəki fayl yalnız komanda üçün acıqadır.",
-      "exact": false
+      "output": "Support biletindəki fayl yalnız komanda üçün açıqdır.",
+      "exact": true
     },
     {
       "id": "rsd-it-437",
@@ -3093,8 +3144,8 @@
       "id": "rsd-it-439",
       "input": "hansi addimda problem yarandigini soruşaq",
       "expected": "Hansı addımda problem yarandığını soruşaq.",
-      "output": "Hansı addımda problem yarandığını soruşaq?",
-      "exact": false
+      "output": "Hansı addımda problem yarandığını soruşaq.",
+      "exact": true
     },
     {
       "id": "rsd-it-440",
@@ -3184,8 +3235,8 @@
       "id": "rsd-it-452",
       "input": "komanda sifaris axinini lucidchartda cekdi",
       "expected": "Komanda sifariş axınını Lucidchart-da çəkdi.",
-      "output": "Komanda sifariş axınını lucidchartda çəkdi.",
-      "exact": false
+      "output": "Komanda sifariş axınını Lucidchart-da çəkdi.",
+      "exact": true
     },
     {
       "id": "rsd-it-453",
@@ -3205,8 +3256,8 @@
       "id": "rsd-it-455",
       "input": "change request onaylanana kimi budce artmayacaq",
       "expected": "Change request təsdiqlənənə kimi büdcə artmayacaq.",
-      "output": "Change request onaylanana kimi büdcə artmayacaq.",
-      "exact": false
+      "output": "Change request təsdiqlənənə kimi büdcə artmayacaq.",
+      "exact": true
     },
     {
       "id": "rsd-it-456",
@@ -3226,8 +3277,8 @@
       "id": "rsd-it-458",
       "input": "confluence sehifesinde son kararın sahibi bilinmir",
       "expected": "Confluence səhifəsində son qərarın sahibi bilinmir.",
-      "output": "Confluence səhifəsində son kararın sahibi bilinmir.",
-      "exact": false
+      "output": "Confluence səhifəsində son qərarın sahibi bilinmir.",
+      "exact": true
     },
     {
       "id": "rsd-it-459",
@@ -3275,8 +3326,8 @@
       "id": "mail-005",
       "input": "Mövzu: Gələn poçt\nHörmətli katiblik,\nkağız məktubun əsli çatıb elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb. Elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb. Elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-006",
@@ -3303,8 +3354,8 @@
       "id": "mail-009",
       "input": "hormetli komanda eyni nömrə ilə iki sənəd daxil olub lütfən yalnız yeni olanı emal edin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub. Lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub. Lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-010",
@@ -3317,15 +3368,15 @@
       "id": "mail-011",
       "input": "Mövzu: Geri qaytarılan forma\nHörmətli Nigar xanım,\nformadakı əlaqə nömrəsi natamamdır yenilənmiş variantı göndərə bilərsinizmi\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır. Yenilənmiş variantı göndərə bilərsinizmi?\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır yenilənmiş variantı göndərə bilərsinizmi.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır. Yenilənmiş variantı göndərə bilərsinizmi?\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-012",
       "input": "hormetli dəstək heyəti müraciət səhv kateqoriyaya düşüb onu aidiyyəti növə keçirməyinizi xahiş edirik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb. Onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb. Onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-013",
@@ -3359,8 +3410,8 @@
       "id": "mail-017",
       "input": "Mövzu: İtmiş fayl\nHörmətli qarşı tərəf,\ngöndərişdə əsas sənəd yoxdur əlavələri ayrıca almışıq lakin ərizəni görmürük\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur. Əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur. Əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-018",
@@ -3373,15 +3424,15 @@
       "id": "mail-019",
       "input": "movzu Tamamlanan qeydiyyat salam müştəri tələb etdiyiniz dəyişiklik sistemə işlənib onu şəxsi kabinetinizdə görə bilərsiniz hormetle senan",
       "expected": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib. Onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib. Onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-020",
       "input": "Mövzu: Sıra artımı\nHörmətli növbətçi qrup,\nqəbul bölməsində gözləyən müraciətlər çoxalıb əlavə operator ayrılmalıdır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb. Əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb. Əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-021",
@@ -3401,8 +3452,8 @@
       "id": "mail-023",
       "input": "Mövzu: Səhv təyinat\nHörmətli katiblik,\ndərkənar yanlış icraçıya düşüb aidiyyəti əməkdaşa qaytarın\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb. Aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb. Aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-024",
@@ -3422,22 +3473,22 @@
       "id": "mail-026",
       "input": "Mövzu: İcra statusu\nHörmətli tərəfdaş,\ndərkənar imzalanıb lakin icra hələ başlanmayıb bunun səbəbini araşdırırıq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb. Bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb. Bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-027",
       "input": "hormetli sənəd hazırlayanlar imzadan sonra dərkənarın məzmunu dəyişməməlidir düzəlişi əvvəl edin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir. Düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir. Düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-028",
       "input": "movzu Yenidən baxış salam Araz bəy əvvəlki dərkənarın məqsədi düzgün seçilməyib yeni layihəni təsdiqinizə təqdim edirik hormetle senan",
       "expected": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib. Yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib. Yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-029",
@@ -3457,29 +3508,29 @@
       "id": "mail-031",
       "input": "movzu Paralel icra salam komanda iki icraçı eyni dərkənarı alıb hər biri öz hissəsini ayrıca qeyd etməlidir hormetle senan",
       "expected": "Mövzu: Paralel icra\n\nHörmətli komanda,\n\nİki icraçı eyni dərkənarı alıb. Hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Paralel icra\n\nHörmətli komanda,\n\nİki icraçı eyni dərkənarı alıb hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Paralel icra\n\nHörmətli komanda,\n\nİki icraçı eyni dərkənarı alıb. Hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-032",
       "input": "Mövzu: Bağlanan dərkənar\nHörmətli məsul şəxs,\nicra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını kareta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-033",
       "input": "hormetli Rəşad bəy yanlış ünvanlanan dərkənar geri çağırılıb yeni variantı sizə göndərəcəyik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb. Yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb. Yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-034",
       "input": "movzu İmza tarixçəsi salam audit qrupu dərkənarın tarixçəsində ikinci imza görünmür jurnalı yoxlayın hormetle senan",
       "expected": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür. Jurnalı yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür jurnalı yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür. Jurnalı yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-035",
@@ -3492,8 +3543,8 @@
       "id": "mail-036",
       "input": "hormetli texniki dəstək dərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır nümunəni göndərdik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır. Nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır. Nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-037",
@@ -3506,8 +3557,8 @@
       "id": "mail-038",
       "input": "Mövzu: Müvəqqəti əvəzləmə\nHörmətli filial meneceri,\nəsas imzaçı ezamiyyətdədir dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir. Dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir. Dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-039",
@@ -3534,22 +3585,22 @@
       "id": "mail-042",
       "input": "hormetli frontend qrupu yeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburu açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-043",
       "input": "movzu Callback ünvanı salam inteqrasiya komandası tərəfdaşın callback URL-i dəyişib yenisini test mühitinə yazmağımız lazımdır hormetle senan",
       "expected": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib. Yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib. Yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-044",
       "input": "Mövzu: Swagger sxemi\nHörmətli Emil bəy,\nSwagger sənədində amount tipi string göstərilib halbuki müqavilədə number tələb olunur\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Swagger sxemi\n\nHörmətli Emil bəy,\n\nSwagger sənədində amount tipi string göstərilib, halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Swagger sxemi\n\nHörmətli Emil bəy,\n\nSwagger sənədində amount tipi string göstərilib halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Swagger sxemi\n\nHörmətli Emil bəy,\n\nSwagger sənədində amount tipi string göstərilib, halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-045",
@@ -3562,8 +3613,8 @@
       "id": "mail-046",
       "input": "movzu Gecikən cavab salam müştəri sorğunuz serverə çatıb lakin cavab gecikir nəticəni aldıqdan sonra paylaşacağıq hormetle senan",
       "expected": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir. Nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir. Nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-047",
@@ -3576,22 +3627,22 @@
       "id": "mail-048",
       "input": "hormetli təhlükəsizlik qrupu müddəti bitmiş tokenlə sorğu göndərə bilirik bu davranış araşdırılmalıdır hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik. Bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik. Bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-049",
       "input": "movzu API contract salam analitiklər yeni response schema qəbul meyarlarından fərqlənir rəyinizi bildirin hormetle senan",
       "expected": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir. Rəyinizi bildirin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir rəyinizi bildirin.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir. Rəyinizi bildirin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-050",
       "input": "Mövzu: Webhook təkrarı\nHörmətli Kamran bəy,\neyni hadisənin iki dəfə çatdığı görünür idempotency key yoxlanmalıdır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür. Idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür. Idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-051",
@@ -3625,8 +3676,8 @@
       "id": "mail-055",
       "input": "movzu Gateway marşrutu salam servis sahibləri gateway yeni ünvanı köhnə backend servisinə yönləndirir düzəlişi planladıq hormetle senan",
       "expected": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir. Düzəlişi planladıq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir düzəlişi planladıq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir. Düzəlişi planladıq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-056",
@@ -3639,8 +3690,8 @@
       "id": "mail-057",
       "input": "hormetli mobil komanda mobil tətbiqdən gələn payload limiti keçib fayl yükünü bölmək lazımdır hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib. Fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib. Fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-058",
@@ -3653,15 +3704,15 @@
       "id": "mail-059",
       "input": "Mövzu: Sertifikat yenilənməsi\nHörmətli tərəfdaş,\nAPI sertifikatı dəyişdirilib yeni public key sənədini sizə göndəririk\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib. Yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib. Yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-060",
       "input": "hormetli monitorinq qrupu bir neçə daxili xəta 200 kimi görünür xəritəni birlikdə yoxlayaq hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür. Xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür. Xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-061",
@@ -3688,15 +3739,15 @@
       "id": "mail-064",
       "input": "movzu Sertifikat bitməsi salam Elçin bəy TLS sertifikatının vaxtı bazar günü bitir yenilənməni əvvəlcədən planlaşdıraq hormetle senan",
       "expected": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir. Yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir. Yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-065",
       "input": "Mövzu: Yeni rol qaydası\nHörmətli admin heyəti,\nmüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur bunun üçün yoxlama lazımdır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur. Bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur. Bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-066",
@@ -3723,15 +3774,15 @@
       "id": "mail-069",
       "input": "hormetli rəhbərlik test zamanı iki orta riskli problem aşkarlanıb düzəliş tarixlərini təqdim edəcəyik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb. Düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb. Düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-070",
       "input": "movzu Gizli açar salam tərtibatçılar repo tarixində təsadüfən qalan açar ləğv edilib yenisi təhlükəsiz kanalla paylaşılacaq hormetle senan",
       "expected": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib. Yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib. Yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-071",
@@ -3744,8 +3795,8 @@
       "id": "mail-072",
       "input": "hormetli şəbəkə qrupu yeni qayda imza xidmətinə girişi bloklayıb ünvanları dəqiqləşdirin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb. Ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb. Ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-073",
@@ -3758,8 +3809,8 @@
       "id": "mail-074",
       "input": "Mövzu: Şifrə sızması\nHörmətli monitorinq qrupu,\ntest jurnalında yanlışlıqla yazılan şifrə silinib hadisə ayrıca qeydə alınıb\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib. Hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib. Hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-075",
@@ -3779,15 +3830,15 @@
       "id": "mail-077",
       "input": "Mövzu: Giriş məhdudiyyəti\nHörmətli müştəri,\nsəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb dəstəyə müraciət edin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb. Dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb. Dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-078",
       "input": "hormetli Nigar xanım sənəd keçidinin etibarlılıq müddəti bitib sizə yenisini göndərə bilərik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib. Sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib. Sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-079",
@@ -3842,8 +3893,8 @@
       "id": "mail-086",
       "input": "Mövzu: Analitika paneli\nHörmətli rəhbərlik,\ngündəlik müraciət sayı real vaxtda yenilənmir səbəbi cache müddətidir\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir. Səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir. Səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-087",
@@ -3884,8 +3935,8 @@
       "id": "mail-092",
       "input": "Mövzu: Məlumat düzəlişi\nHörmətli müştəri,\nprofilinizdəki soyadın yeni yazılışını aldıq yoxlamadan sonra yeniləyəcəyik\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın yeni yazılışını aldıq. Yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın. Yeni yazılışını aldıq yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın yeni yazılışını aldıq. Yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-093",
@@ -3919,8 +3970,8 @@
       "id": "mail-097",
       "input": "movzu Maskalanma testi salam təhlükəsizlik qrupu ixrac faylında şəxsi nömrə görünməməlidir nümunəni yoxlayın hormetle senan",
       "expected": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir. Nümunəni yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir nümunəni yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir. Nümunəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-098",
@@ -3947,8 +3998,8 @@
       "id": "mail-101",
       "input": "Mövzu: Production deploy\nHörmətli platforma komandası,\nyeni versiya production mühitinə çıxıb health check nəticəsi normaldır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb. Health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb. Health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-102",
@@ -3968,8 +4019,8 @@
       "id": "mail-104",
       "input": "Mövzu: Build xətası\nHörmətli Nicat bəy,\nCI pipeline içində typecheck mərhələsi uğursuzdur logun son hissəsini göndərirəm\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur. Logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur. Logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-105",
@@ -3982,8 +4033,8 @@
       "id": "mail-106",
       "input": "movzu CPU artımı salam monitorinq qrupu dünən gecə CPU istifadəsi artsa da xidmət dayanmayıb hormetle senan",
       "expected": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artsa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artışa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artsa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-107",
@@ -3996,22 +4047,22 @@
       "id": "mail-108",
       "input": "hormetli DevOps qrupu pod restart dövrünə düşüb yaddaş limitini ayrıca ölçün hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb. Yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb. Yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-109",
       "input": "movzu DNS yenilənməsi salam servis sahibləri yeni domen qaydası bütün regionlara yayılmayıb bir az gözləyək hormetle senan",
       "expected": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb. Bir az gözləyək.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb bir az gözləyək.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb. Bir az gözləyək.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-110",
       "input": "Mövzu: Staging nəticəsi\nHörmətli müştəri meneceri,\nstaging mühitində sınaqlar keçib production üçün təsdiq gözləyirik\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib. Production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib. Production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-111",
@@ -4031,8 +4082,8 @@
       "id": "mail-113",
       "input": "Mövzu: Deploy planı\nHörmətli Aysel xanım,\nmövcud versiya ehtiyatda qalacaq dəyişiklik tamamlananda sizə yazacağıq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq. Dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq. Dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-114",
@@ -4052,8 +4103,8 @@
       "id": "mail-116",
       "input": "Mövzu: Disk dolması\nHörmətli texniki komanda,\nserverdə boş yer azalıb jurnal fayllarını təhlükəsiz qaydada dövr etdirək\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb. Jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb. Jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-117",
@@ -4066,8 +4117,8 @@
       "id": "mail-118",
       "input": "movzu GitHub əlaqəsi salam Elçin bəy main branch-dəki son commit Vercel build ilə eynidirmi bunu yoxlayın hormetle senan",
       "expected": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi? Bunu yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi bunu yoxlayın?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi? Bunu yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-119",
@@ -4108,15 +4159,15 @@
       "id": "mail-124",
       "input": "movzu Regressiya salam tərtibatçılar köhnə davranış yeni dəyişiklikdən sonra pozulub nümunəni əlavə etdim hormetle senan",
       "expected": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub. Nümunəni əlavə etdim.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub nümunəni əlavə etdim.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub. Nümunəni əlavə etdim.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-125",
       "input": "Mövzu: Yenidən sınaq\nHörmətli müştəri,\nbildirdiyiniz problemə düzəliş edilib onu test mühitində yoxlaya bilərsiniz\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib. Onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib. Onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-126",
@@ -4136,8 +4187,8 @@
       "id": "mail-128",
       "input": "Mövzu: Buraxılışa hazırlıq\nHörmətli menecer,\niki kritik xəta hələ açıqdır buraxılış qərarını sonraya saxlayaq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır. Buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır. Buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-129",
@@ -4178,8 +4229,8 @@
       "id": "mail-134",
       "input": "Mövzu: Kontrakt testi\nHörmətli backend qrupu,\nyeni API cavabında əvvəl məcburi olan sahə artıq yoxdur\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburi olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburu olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburi olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-135",
@@ -4220,8 +4271,8 @@
       "id": "mail-140",
       "input": "Mövzu: Sandbox token\nHörmətli vendor qrupu,\ngöndərdiyiniz sandbox tokenin vaxtı bitib yenisini rica edirik\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-141",
@@ -4234,15 +4285,15 @@
       "id": "mail-142",
       "input": "movzu Paralel razılaşdırma salam rəhbər iki şöbənin rəyi eyni vaxtda toplanacaq qərarı sonra verəcəyik hormetle senan",
       "expected": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq. Qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq. Qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-143",
       "input": "Mövzu: İcraçı dəyişməsi\nHörmətli katiblik,\nəvvəlki icraçı məzuniyyətə çıxıb sənədi əvəzediciyə göndərin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb. Sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb. Sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-144",
@@ -4255,8 +4306,8 @@
       "id": "mail-145",
       "input": "movzu Təsdiq sırası salam sənəd qrupu imza addımı razılaşdırmadan sonra gəlməlidir cari qaydanı yeniləyin hormetle senan",
       "expected": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir. Cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir. Cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-146",
@@ -4269,8 +4320,8 @@
       "id": "mail-147",
       "input": "hormetli Nigar xanım sənəd düzəliş üçün sizə qaytarılıb qeyddə çatışmayan sahələr yazılıb hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb. Qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb. Qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-148",
@@ -4297,8 +4348,8 @@
       "id": "mail-151",
       "input": "movzu Təyinat sualı salam Araz bəy bu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin hormetle senan",
       "expected": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-152",
@@ -4318,8 +4369,8 @@
       "id": "mail-154",
       "input": "movzu Prioritet artımı salam icra rəhbəri bu müraciətə bu gün cavab verilməlidir onu üst sıraya keçirin hormetle senan",
       "expected": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir. Onu üst sıraya keçirin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir onu üst sıraya keçirin.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir. Onu üst sıraya keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-155",
@@ -4332,15 +4383,15 @@
       "id": "mail-156",
       "input": "hormetli Rəna xanım iş sizə aid olmasa da hər səhər xatırlatma alırsınız bunu araşdırırıq hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa da hər səhər xatırlatma alırsınız. Bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa, da hər səhər xatırlatma alırsınız bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa da hər səhər xatırlatma alırsınız. Bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-157",
       "input": "movzu Müddət sorğusu salam filial nümayəndəsi tapşırığın icra müddəti nə vaxt başlayır açıqlamanızı gözləyirik hormetle senan",
       "expected": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır? Açıqlamanızı gözləyirik.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır açıqlamanızı gözləyirik?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır? Açıqlamanızı gözləyirik.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-158",
@@ -4367,22 +4418,22 @@
       "id": "mail-161",
       "input": "Mövzu: Köhnə sənəd\nHörmətli arxiv qrupu,\nsoruşduğunuz məktub rəqəmsal arxivdə var kağız əsli isə anbardadır\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var. Kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var. Kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-162",
       "input": "hormetli Aysel xanım keçən ilin protokolundan çıxarış istəmisiniz onu hazırlayıb göndərəcəyik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmisiniz. Onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmişiniz onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmisiniz. Onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-163",
       "input": "movzu Saxlanma qaydası salam audit komandası bu kateqoriya sənədləri hələ silmək olmaz saxlanma müddəti davam edir hormetle senan",
       "expected": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz. Saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz. Saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-164",
@@ -4402,8 +4453,8 @@
       "id": "mail-166",
       "input": "movzu Səhv metadata salam katiblik arxivdə olan sənədin tarixi yanlış yazılıb yoxlama üçün əslini istəyirik hormetle senan",
       "expected": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb. Yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb. Yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-167",
@@ -4416,15 +4467,15 @@
       "id": "mail-168",
       "input": "hormetli Nərmin xanım bu faylın saxlanma müddəti uzadılıb onu siyahıdan silməyin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb. Onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb. Onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-169",
       "input": "movzu Açılmayan PDF salam texniki dəstək köhnə PDF faylının bəzi səhifələri düzgün açılmır alternativ surət axtarırıq hormetle senan",
       "expected": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır. Alternativ surət axtarırıq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır alternativ surət axtarırıq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır. Alternativ surət axtarırıq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-170",
@@ -4437,8 +4488,8 @@
       "id": "mail-171",
       "input": "hormetli müştəri istədiyiniz sənədin surəti hazırdır şəxsi kabinetinizdən yükləyə bilərsiniz hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır. Şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır. Şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-172",
@@ -4450,9 +4501,9 @@
     {
       "id": "mail-173",
       "input": "Mövzu: İndeks yenilənməsi\nHörmətli sənəd işçiləri,\naxtarış nəticəsində yeni sənəd görünmür indeksin yenilənməsini gözləyirik\n\nHörmətlə,\nLayihə komandası",
-      "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. Indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-174",
@@ -4486,15 +4537,15 @@
       "id": "mail-178",
       "input": "movzu Giriş jurnalı salam təhlükəsizlik şöbəsi arxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır hormetle senan",
       "expected": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-179",
       "input": "Mövzu: Arxiv cavabı\nHörmətli Rauf bəy,\naxtardığınız sənəd bu qovluqda yoxdur qeydiyyat tarixini bir daha dəqiqləşdirin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur. Qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur. Qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-180",
@@ -4507,22 +4558,22 @@
       "id": "mail-181",
       "input": "movzu Ödəniş qəbzi salam müştəri ödənişiniz uğurla qəbul olunub qəbzi şəxsi kabinetinizdə görə bilərsiniz hormetle senan",
       "expected": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub. Qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub. Qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-182",
       "input": "Mövzu: İkiqat məbləğ\nHörmətli maliyyə qrupu,\neyni hesab üzrə iki əməliyyat görünür bank cavabını gözləyirik\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür. Bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür. Bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-183",
       "input": "hormetli Araz bəy yenilənmiş hesab fakturanı təsdiq üçün göndəririk zəhmət olmasa baxın hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk. Zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk. Zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-184",
@@ -4549,22 +4600,22 @@
       "id": "mail-187",
       "input": "movzu Kart limiti salam Nicat bəy əməliyyatınız bank tərəfindən rədd edilib kart limitinizi yoxlayın hormetle senan",
       "expected": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib. Kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib. Kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-188",
       "input": "Mövzu: Güzəşt tələbi\nHörmətli satış qrupu,\nmüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib təklif hazırlayaq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib. Təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib. Təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-189",
       "input": "hormetli müştəri ödədiyiniz məbləğ hesabın hamısını bağlamır qalıq şəxsi kabinetdə görünür hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır. Qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır. Qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-190",
@@ -4577,15 +4628,15 @@
       "id": "mail-191",
       "input": "Mövzu: Gateway cavabı\nHörmətli texniki komanda,\ngateway 502 göstərdi lakin bank əməliyyatı təsdiqlədi təkrar çəkməyin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi. Təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi. Təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-192",
       "input": "hormetli Leyla xanım göndərdiyiniz hesab fakturada vergi kodu natamamdır yenisini rica edirik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-193",
@@ -4598,8 +4649,8 @@
       "id": "mail-194",
       "input": "Mövzu: İtən qəbz\nHörmətli daxili audit,\nmart ayına aid iki qəbz elektron qovluqda yoxdur onları axtarırıq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur. Onları axtarırıq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur onları axtarırıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur. Onları axtarırıq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-195",
@@ -4611,9 +4662,9 @@
     {
       "id": "mail-196",
       "input": "movzu Büdcə təsdiqi salam Aysel xanım əlavə resurs xərci hələ təsdiqlənməyib icraya başlamayaq hormetle senan",
-      "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. Icraya başlamayaq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib icraya başlamayaq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-197",
@@ -4647,22 +4698,22 @@
       "id": "mail-201",
       "input": "hormetli məhsul qrupu rəsmi məktub şablonunda loqo aşağı sürüşüb son versiyanı yoxlayın hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb. Son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb. Son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-202",
       "input": "movzu İmza görünmür salam Aysel xanım əlavə etdiyiniz PDF-də imza bölməsi boş görünür əsl faylı göndərə bilərsinizmi hormetle senan",
       "expected": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür. Əsl faylı göndərə bilərsinizmi?\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür əsl faylı göndərə bilərsinizmi.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür. Əsl faylı göndərə bilərsinizmi?\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-203",
       "input": "Mövzu: OCR nəticəsi\nHörmətli operatorlar,\nskan edilmiş sənədin mətnində iki ad səhv oxunub düzəlişi əl ilə yoxlayın\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub. Düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub. Düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-204",
@@ -4675,8 +4726,8 @@
       "id": "mail-205",
       "input": "movzu Yeni sənəd salam müştəri istədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik baxışa başlayırıq hormetle senan",
       "expected": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik. Baxışa başlayırıq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik baxışa başlayırıq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik. Baxışa başlayırıq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-206",
@@ -4703,8 +4754,8 @@
       "id": "mail-209",
       "input": "Mövzu: QR kod\nHörmətli filial operatorları,\nsənədin ikinci səhifəsindəki QR kod oxunmur yenisini çap edin\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur. Yenisini çap edin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur yenisini çap edin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur. Yenisini çap edin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-210",
@@ -4717,8 +4768,8 @@
       "id": "mail-211",
       "input": "movzu HTML əlavə salam təhlükəsizlik komandası sənəd təsvirinə yapışdırılan HTML kodunda script var saxlamayın hormetle senan",
       "expected": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var. Saxlamayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var saxlamayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var. Saxlamayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-212",
@@ -4731,8 +4782,8 @@
       "id": "mail-213",
       "input": "hormetli komanda uzun fayl adı yükləməni dayandırır sənədi qısa adla yenidən sınayın hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır. Sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır. Sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-214",
@@ -4759,22 +4810,22 @@
       "id": "mail-217",
       "input": "movzu Düzəliş üçün qaytarma salam Səbinə xanım sənədin ünvan hissəsi natamamdır tamamlayıb yenidən yollayın hormetle senan",
       "expected": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır. Tamamlayıb yenidən yollayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır tamamlayıb. Yenidən yollayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır. Tamamlayıb yenidən yollayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-218",
       "input": "Mövzu: Təsdiqli nüsxə\nHörmətli kargüzarlıq,\nmöhürlü nüsxə hazırdır təhvil vaxtını dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır. Təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır. Təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-219",
       "input": "hormetli vendor qrupu xidmət on meqabaytdan böyük faylı qəbul etmir alternativi müzakirə edək hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir. Alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir. Alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-220",
@@ -4787,22 +4838,22 @@
       "id": "mail-221",
       "input": "Mövzu: Müraciətinizə baxış\nHörmətli müştəri,\nbildirdiyiniz xəta qeydə alınıb texniki qrup nəticəni sizə paylaşacaq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb. Texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb. Texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-222",
       "input": "hormetli növbətçi mühəndis xidmətin dayanması barədə iki filialdan xəbər almışıq logları yoxlayın hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq. Logları yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq logları yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq. Logları yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-223",
       "input": "movzu Problem nümunəsi salam Aysel xanım bu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin hormetle senan",
       "expected": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-224",
@@ -4829,15 +4880,15 @@
       "id": "mail-227",
       "input": "Mövzu: Növbətçi siyahısı\nHörmətli komanda,\nbu həftə gecə növbəsində iki mühəndis olacaq əlaqə nömrələri əlavədədir\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq. Əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq. Əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-228",
       "input": "hormetli Elvin bəy 500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın?\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-229",
@@ -4857,15 +4908,15 @@
       "id": "mail-231",
       "input": "hormetli müştəri problemin səbəbi hələ müəyyən edilməyib təhlil bitəndə xəbər verəcəyik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib. Təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib. Təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-232",
       "input": "movzu Yeni ekran görüntüsü salam Nərmin xanım göndərdiyiniz görüntüdə xəta mesajı kəsilib tam şəkli rica edirik hormetle senan",
       "expected": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib. Tam şəkli rica edirik.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib tam şəkli rica edirik.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib. Tam şəkli rica edirik.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-233",
@@ -4878,22 +4929,22 @@
       "id": "mail-234",
       "input": "hormetli əsas komanda birinci səviyyə məsələni həll edə bilməyib onu məhsul mühəndisinə ötürürük hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib. Onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib. Onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-235",
       "input": "movzu Düzəliş sınağı salam test qrupu müştəridə görünən xəta testdə təkrarlanmır fərqli hesabla yoxlayaq hormetle senan",
       "expected": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır. Fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır. Fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-236",
       "input": "Mövzu: İcra vaxtı\nHörmətli Kamran bəy,\nbilet üzrə yekun həll tarixini indi deyə bilmirik ilkin nəticəni sabah paylaşacağıq\n\nHörmətlə,\nLayihə komandası",
-      "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. Ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
       "output": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "exact": true
     },
     {
       "id": "mail-237",
@@ -4920,8 +4971,8 @@
       "id": "mail-240",
       "input": "hormetli Rauf bəy bu gün əlaqə saxlaya bilmədik sizə uyğun vaxtı yazmağınızı xahiş edirik hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik. Sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik. Sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-241",
@@ -4934,15 +4985,15 @@
       "id": "mail-242",
       "input": "Mövzu: BPMN fərqi\nHörmətli analitiklər,\ndiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil onu dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil. Onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil. Onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-243",
       "input": "hormetli rəhbərlik iki tapşırıq tamamlanıb üçüncüsü isə məlumat gözlədiyi üçün açıq qalır hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb. Üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb. Üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-244",
@@ -4990,15 +5041,15 @@
       "id": "mail-250",
       "input": "movzu İnteqrasiya sualı salam Səma xanım xarici xidmətin test məlumatlarını kim təqdim edəcək bunu dəqiqləşdirin hormetle senan",
       "expected": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək bunu dəqiqləşdirin?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-251",
       "input": "Mövzu: Resurs planı\nHörmətli rəhbər,\nəlavə tester ayrılmasa hazırkı qrafikdə gecikmə ola bilər\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa, hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa, hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-252",
@@ -5088,8 +5139,8 @@
       "id": "mail-264",
       "input": "hormetli Aysel xanım bildirişlər köhnə e-poçt ünvanınıza gedir yenisini təsdiqləyin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir. Yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir. Yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-265",
@@ -5116,8 +5167,8 @@
       "id": "mail-268",
       "input": "movzu Çatdırılmayan məktub salam müştəri sizə yazdığımız cavab geri qayıdıb e-poçt ünvanınızı yoxlayın hormetle senan",
       "expected": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb. E-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb e-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb. E-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-269",
@@ -5137,8 +5188,8 @@
       "id": "mail-271",
       "input": "movzu Mesaj şablonu salam komanda yeni şablondakı qeydiyyat nömrəsi boş çıxır dəyişəni yoxlayın hormetle senan",
       "expected": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır. Dəyişəni yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır dəyişəni yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır. Dəyişəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-272",
@@ -5151,8 +5202,8 @@
       "id": "mail-273",
       "input": "hormetli müştəri nümayəndəsi sizin üçün yeni məsul əməkdaş təyin olunub əlaqə məlumatı aşağıdadır hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub. Əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub. Əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-274",
@@ -5172,22 +5223,22 @@
       "id": "mail-276",
       "input": "hormetli müştəri yoxlama tamamlanıb cavab sənədiniz şəxsi kabinetinizə yerləşdirilib hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb. Cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb. Cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-277",
       "input": "movzu İtən xəbər salam Rəşad bəy iş sizə göndərilib amma bildiriş almadığınızı yazmısınız jurnalı yoxlayırıq hormetle senan",
       "expected": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız. Jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız. Jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-278",
       "input": "Mövzu: Bildiriş testi\nHörmətli keyfiyyət qrupu,\ngecə gələn mesaj səhər göndərilmiş kimi görünür saat qurşağını yoxlayın\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür. Saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür. Saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-279",
@@ -5207,8 +5258,8 @@
       "id": "mail-281",
       "input": "Mövzu: VPN kəsintisi\nHörmətli şəbəkə qrupu,\nfilialın VPN bağlantısı gecədən işləməyib şəbəkə qeydini əlavə etdim\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib. Şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib. Şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-282",
@@ -5228,8 +5279,8 @@
       "id": "mail-284",
       "input": "Mövzu: Bağlantı çətinliyi\nHörmətli müştəri,\nsəhifəyə daxil olmaqda problem yaşayırsınızsa şəbəkə növünü bizə yazın\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa, şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa, şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-285",
@@ -5241,9 +5292,9 @@
     {
       "id": "mail-286",
       "input": "movzu Yük bölgüsü salam DevOps qrupu bir server yüklənib digəri boş qalır balancer qaydasına baxaq hormetle senan",
-      "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-287",
@@ -5263,22 +5314,22 @@
       "id": "mail-289",
       "input": "movzu İnternet kanalı salam filial rəhbəri filialın əsas kanalı kəsilib ehtiyat kanalla iş davam edir hormetle senan",
       "expected": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib. Ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib. Ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-290",
       "input": "Mövzu: Paket itkisi\nHörmətli monitorinq qrupu,\nsaat iki radələrində paket itkisi artıb qrafiki əlavə edirəm\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb. Qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb. Qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-291",
       "input": "hormetli müştəri nümayəndəsi böyük fayllar yüklənərkən əlaqə qopur daha kiçik faylla sınaq edin hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur. Daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur. Daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-292",
@@ -5291,8 +5342,8 @@
       "id": "mail-293",
       "input": "Mövzu: Regional bağlantı\nHörmətli məhsul qrupu,\nbəzi regionlarda servisin cavabı daha gec gəlir ölçmələri paylaşdıq\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir. Ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir. Ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-294",
@@ -5305,15 +5356,15 @@
       "id": "mail-295",
       "input": "movzu Router restartı salam Aysel xanım router yenidən işə düşəndən sonra əlaqə sabitləşibmi bizə yazın hormetle senan",
       "expected": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi? Bizə yazın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi bizə yazın?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi? Bizə yazın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-296",
       "input": "Mövzu: CDN faylı\nHörmətli server komandası,\nbrauzerə köhnə skript çatır CDN cache təmizlənməlidir\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır. CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır. CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-297",
@@ -5326,8 +5377,8 @@
       "id": "mail-298",
       "input": "movzu Giriş vaxtı salam Rəna xanım sizdəki xəta yalnız ofis xaricində yaranırmı bunu dəqiqləşdirin hormetle senan",
       "expected": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı bunu dəqiqləşdirin?\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-299",
@@ -5340,15 +5391,15 @@
       "id": "mail-300",
       "input": "hormetli şəbəkə rəhbəri ehtiyat tunel qurulub əsas xətt bərpa olunana qədər aktiv qalacaq hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub. Əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub. Əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-301",
       "input": "movzu Yeni forma salam dizayn qrupu mobil ekranda son təsdiq düyməsi görünmür yerləşimi yoxlayın hormetle senan",
       "expected": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür. Yerləşimi yoxlayın.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür yerləşimi yoxlayın.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür. Yerləşimi yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-302",
@@ -5466,15 +5517,15 @@
       "id": "mail-318",
       "input": "hormetli sınaq iştirakçıları hansı sahələrin məcburi olduğu aydın görünməlidir hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburi olduğu aydın görünməlidir.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburu olduğu aydın görünməlidir?\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburi olduğu aydın görünməlidir.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-319",
       "input": "movzu Kopyalama icazəsi salam komanda brauzer icazə vermirsə istifadəçiyə aydın xəbər göstərilməlidir hormetle senan",
       "expected": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə, istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə, istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-320",
@@ -5529,15 +5580,15 @@
       "id": "mail-327",
       "input": "hormetli filial rəhbərləri birinci qrup səhər ikinci qrup isə günortadan sonra qoşulacaq hormetle layihe komandasi",
       "expected": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər, ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər, ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-328",
       "input": "movzu Sınaq hesabı salam operatorlar təlimdə real müştəri hesabından istifadə etməyin test hesabını seçin hormetle senan",
       "expected": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar,\n\nTəlimdə real müştəri hesabından istifadə etməyin. Test hesabını seçin.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar,\n\nTəlimdə real müştəri hesabından istifadə etməyin test hesabını seçin.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar,\n\nTəlimdə real müştəri hesabından istifadə etməyin. Test hesabını seçin.\n\nHörmətlə,\nSənan",
+      "exact": true
     },
     {
       "id": "mail-329",
@@ -5606,8 +5657,8 @@
       "id": "mail-338",
       "input": "Mövzu: Təlim rəyi\nHörmətli məhsul sahibi,\nistifadəçilər arxiv axtarışını çətin hesab edirlər bunu dizayna qeyd edək\n\nHörmətlə,\nLayihə komandası",
       "expected": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər. Bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası",
-      "output": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası",
-      "exact": false
+      "output": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər. Bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
     },
     {
       "id": "mail-339",
@@ -5620,8 +5671,1408 @@
       "id": "mail-340",
       "input": "movzu Təlim materialı salam Səbinə xanım göndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var onları dəyişək hormetle senan",
       "expected": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var. Onları dəyişək.\n\nHörmətlə,\nSənan",
-      "output": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var onları dəyişək.\n\nHörmətlə,\nSənan",
-      "exact": false
+      "output": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var. Onları dəyişək.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-001",
+      "input": "sened qeydiyyata alinib",
+      "expected": "Sənəd qeydiyyata alınıb.",
+      "output": "Sənəd qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-002",
+      "input": "sened hazirdir",
+      "expected": "Sənəd hazırdır.",
+      "output": "Sənəd hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-003",
+      "input": "sened sabah gonderilecek",
+      "expected": "Sənəd sabah göndəriləcək.",
+      "output": "Sənəd sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-004",
+      "input": "sened yeniden yoxlanilir",
+      "expected": "Sənəd yenidən yoxlanılır.",
+      "output": "Sənəd yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-005",
+      "input": "sened arxivde saxlanilir",
+      "expected": "Sənəd arxivdə saxlanılır.",
+      "output": "Sənəd arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-006",
+      "input": "sened bu gun tesdiqlenib",
+      "expected": "Sənəd bu gün təsdiqlənib.",
+      "output": "Sənəd bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-007",
+      "input": "sened komandaya teqdim olunub",
+      "expected": "Sənəd komandaya təqdim olunub.",
+      "output": "Sənəd komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-008",
+      "input": "sened elavede gosterilir",
+      "expected": "Sənəd əlavədə göstərilir.",
+      "output": "Sənəd əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-009",
+      "input": "sened musteriye gonderilib",
+      "expected": "Sənəd müştəriyə göndərilib.",
+      "output": "Sənəd müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-010",
+      "input": "sened hele tamamlanmayib",
+      "expected": "Sənəd hələ tamamlanmayıb.",
+      "output": "Sənəd hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-011",
+      "input": "mektub qeydiyyata alinib",
+      "expected": "Məktub qeydiyyata alınıb.",
+      "output": "Məktub qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-012",
+      "input": "mektub hazirdir",
+      "expected": "Məktub hazırdır.",
+      "output": "Məktub hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-013",
+      "input": "mektub sabah gonderilecek",
+      "expected": "Məktub sabah göndəriləcək.",
+      "output": "Məktub sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-014",
+      "input": "mektub yeniden yoxlanilir",
+      "expected": "Məktub yenidən yoxlanılır.",
+      "output": "Məktub yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-015",
+      "input": "mektub arxivde saxlanilir",
+      "expected": "Məktub arxivdə saxlanılır.",
+      "output": "Məktub arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-016",
+      "input": "mektub bu gun tesdiqlenib",
+      "expected": "Məktub bu gün təsdiqlənib.",
+      "output": "Məktub bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-017",
+      "input": "mektub komandaya teqdim olunub",
+      "expected": "Məktub komandaya təqdim olunub.",
+      "output": "Məktub komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-018",
+      "input": "mektub elavede gosterilir",
+      "expected": "Məktub əlavədə göstərilir.",
+      "output": "Məktub əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-019",
+      "input": "mektub musteriye gonderilib",
+      "expected": "Məktub müştəriyə göndərilib.",
+      "output": "Məktub müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-020",
+      "input": "mektub hele tamamlanmayib",
+      "expected": "Məktub hələ tamamlanmayıb.",
+      "output": "Məktub hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-021",
+      "input": "sorgu qeydiyyata alinib",
+      "expected": "Sorğu qeydiyyata alınıb.",
+      "output": "Sorğu qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-022",
+      "input": "sorgu hazirdir",
+      "expected": "Sorğu hazırdır.",
+      "output": "Sorğu hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-023",
+      "input": "sorgu sabah gonderilecek",
+      "expected": "Sorğu sabah göndəriləcək.",
+      "output": "Sorğu sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-024",
+      "input": "sorgu yeniden yoxlanilir",
+      "expected": "Sorğu yenidən yoxlanılır.",
+      "output": "Sorğu yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-025",
+      "input": "sorgu arxivde saxlanilir",
+      "expected": "Sorğu arxivdə saxlanılır.",
+      "output": "Sorğu arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-026",
+      "input": "sorgu bu gun tesdiqlenib",
+      "expected": "Sorğu bu gün təsdiqlənib.",
+      "output": "Sorğu bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-027",
+      "input": "sorgu komandaya teqdim olunub",
+      "expected": "Sorğu komandaya təqdim olunub.",
+      "output": "Sorğu komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-028",
+      "input": "sorgu elavede gosterilir",
+      "expected": "Sorğu əlavədə göstərilir.",
+      "output": "Sorğu əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-029",
+      "input": "sorgu musteriye gonderilib",
+      "expected": "Sorğu müştəriyə göndərilib.",
+      "output": "Sorğu müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-030",
+      "input": "sorgu hele tamamlanmayib",
+      "expected": "Sorğu hələ tamamlanmayıb.",
+      "output": "Sorğu hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-031",
+      "input": "hesabat qeydiyyata alinib",
+      "expected": "Hesabat qeydiyyata alınıb.",
+      "output": "Hesabat qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-032",
+      "input": "hesabat hazirdir",
+      "expected": "Hesabat hazırdır.",
+      "output": "Hesabat hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-033",
+      "input": "hesabat sabah gonderilecek",
+      "expected": "Hesabat sabah göndəriləcək.",
+      "output": "Hesabat sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-034",
+      "input": "hesabat yeniden yoxlanilir",
+      "expected": "Hesabat yenidən yoxlanılır.",
+      "output": "Hesabat yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-035",
+      "input": "hesabat arxivde saxlanilir",
+      "expected": "Hesabat arxivdə saxlanılır.",
+      "output": "Hesabat arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-036",
+      "input": "hesabat bu gun tesdiqlenib",
+      "expected": "Hesabat bu gün təsdiqlənib.",
+      "output": "Hesabat bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-037",
+      "input": "hesabat komandaya teqdim olunub",
+      "expected": "Hesabat komandaya təqdim olunub.",
+      "output": "Hesabat komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-038",
+      "input": "hesabat elavede gosterilir",
+      "expected": "Hesabat əlavədə göstərilir.",
+      "output": "Hesabat əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-039",
+      "input": "hesabat musteriye gonderilib",
+      "expected": "Hesabat müştəriyə göndərilib.",
+      "output": "Hesabat müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-040",
+      "input": "hesabat hele tamamlanmayib",
+      "expected": "Hesabat hələ tamamlanmayıb.",
+      "output": "Hesabat hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-041",
+      "input": "muqavile qeydiyyata alinib",
+      "expected": "Müqavilə qeydiyyata alınıb.",
+      "output": "Müqavilə qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-042",
+      "input": "muqavile hazirdir",
+      "expected": "Müqavilə hazırdır.",
+      "output": "Müqavilə hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-043",
+      "input": "muqavile sabah gonderilecek",
+      "expected": "Müqavilə sabah göndəriləcək.",
+      "output": "Müqavilə sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-044",
+      "input": "muqavile yeniden yoxlanilir",
+      "expected": "Müqavilə yenidən yoxlanılır.",
+      "output": "Müqavilə yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-045",
+      "input": "muqavile arxivde saxlanilir",
+      "expected": "Müqavilə arxivdə saxlanılır.",
+      "output": "Müqavilə arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-046",
+      "input": "muqavile bu gun tesdiqlenib",
+      "expected": "Müqavilə bu gün təsdiqlənib.",
+      "output": "Müqavilə bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-047",
+      "input": "muqavile komandaya teqdim olunub",
+      "expected": "Müqavilə komandaya təqdim olunub.",
+      "output": "Müqavilə komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-048",
+      "input": "muqavile elavede gosterilir",
+      "expected": "Müqavilə əlavədə göstərilir.",
+      "output": "Müqavilə əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-049",
+      "input": "muqavile musteriye gonderilib",
+      "expected": "Müqavilə müştəriyə göndərilib.",
+      "output": "Müqavilə müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-050",
+      "input": "muqavile hele tamamlanmayib",
+      "expected": "Müqavilə hələ tamamlanmayıb.",
+      "output": "Müqavilə hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-051",
+      "input": "fayl qeydiyyata alinib",
+      "expected": "Fayl qeydiyyata alınıb.",
+      "output": "Fayl qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-052",
+      "input": "fayl hazirdir",
+      "expected": "Fayl hazırdır.",
+      "output": "Fayl hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-053",
+      "input": "fayl sabah gonderilecek",
+      "expected": "Fayl sabah göndəriləcək.",
+      "output": "Fayl sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-054",
+      "input": "fayl yeniden yoxlanilir",
+      "expected": "Fayl yenidən yoxlanılır.",
+      "output": "Fayl yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-055",
+      "input": "fayl arxivde saxlanilir",
+      "expected": "Fayl arxivdə saxlanılır.",
+      "output": "Fayl arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-056",
+      "input": "fayl bu gun tesdiqlenib",
+      "expected": "Fayl bu gün təsdiqlənib.",
+      "output": "Fayl bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-057",
+      "input": "fayl komandaya teqdim olunub",
+      "expected": "Fayl komandaya təqdim olunub.",
+      "output": "Fayl komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-058",
+      "input": "fayl elavede gosterilir",
+      "expected": "Fayl əlavədə göstərilir.",
+      "output": "Fayl əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-059",
+      "input": "fayl musteriye gonderilib",
+      "expected": "Fayl müştəriyə göndərilib.",
+      "output": "Fayl müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-060",
+      "input": "fayl hele tamamlanmayib",
+      "expected": "Fayl hələ tamamlanmayıb.",
+      "output": "Fayl hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-061",
+      "input": "layihe qeydiyyata alinib",
+      "expected": "Layihə qeydiyyata alınıb.",
+      "output": "Layihə qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-062",
+      "input": "layihe hazirdir",
+      "expected": "Layihə hazırdır.",
+      "output": "Layihə hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-063",
+      "input": "layihe sabah gonderilecek",
+      "expected": "Layihə sabah göndəriləcək.",
+      "output": "Layihə sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-064",
+      "input": "layihe yeniden yoxlanilir",
+      "expected": "Layihə yenidən yoxlanılır.",
+      "output": "Layihə yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-065",
+      "input": "layihe arxivde saxlanilir",
+      "expected": "Layihə arxivdə saxlanılır.",
+      "output": "Layihə arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-066",
+      "input": "layihe bu gun tesdiqlenib",
+      "expected": "Layihə bu gün təsdiqlənib.",
+      "output": "Layihə bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-067",
+      "input": "layihe komandaya teqdim olunub",
+      "expected": "Layihə komandaya təqdim olunub.",
+      "output": "Layihə komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-068",
+      "input": "layihe elavede gosterilir",
+      "expected": "Layihə əlavədə göstərilir.",
+      "output": "Layihə əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-069",
+      "input": "layihe musteriye gonderilib",
+      "expected": "Layihə müştəriyə göndərilib.",
+      "output": "Layihə müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-070",
+      "input": "layihe hele tamamlanmayib",
+      "expected": "Layihə hələ tamamlanmayıb.",
+      "output": "Layihə hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-071",
+      "input": "sifaris qeydiyyata alinib",
+      "expected": "Sifariş qeydiyyata alınıb.",
+      "output": "Sifariş qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-072",
+      "input": "sifaris hazirdir",
+      "expected": "Sifariş hazırdır.",
+      "output": "Sifariş hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-073",
+      "input": "sifaris sabah gonderilecek",
+      "expected": "Sifariş sabah göndəriləcək.",
+      "output": "Sifariş sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-074",
+      "input": "sifaris yeniden yoxlanilir",
+      "expected": "Sifariş yenidən yoxlanılır.",
+      "output": "Sifariş yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-075",
+      "input": "sifaris arxivde saxlanilir",
+      "expected": "Sifariş arxivdə saxlanılır.",
+      "output": "Sifariş arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-076",
+      "input": "sifaris bu gun tesdiqlenib",
+      "expected": "Sifariş bu gün təsdiqlənib.",
+      "output": "Sifariş bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-077",
+      "input": "sifaris komandaya teqdim olunub",
+      "expected": "Sifariş komandaya təqdim olunub.",
+      "output": "Sifariş komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-078",
+      "input": "sifaris elavede gosterilir",
+      "expected": "Sifariş əlavədə göstərilir.",
+      "output": "Sifariş əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-079",
+      "input": "sifaris musteriye gonderilib",
+      "expected": "Sifariş müştəriyə göndərilib.",
+      "output": "Sifariş müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-080",
+      "input": "sifaris hele tamamlanmayib",
+      "expected": "Sifariş hələ tamamlanmayıb.",
+      "output": "Sifariş hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-081",
+      "input": "bildiris qeydiyyata alinib",
+      "expected": "Bildiriş qeydiyyata alınıb.",
+      "output": "Bildiriş qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-082",
+      "input": "bildiris hazirdir",
+      "expected": "Bildiriş hazırdır.",
+      "output": "Bildiriş hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-083",
+      "input": "bildiris sabah gonderilecek",
+      "expected": "Bildiriş sabah göndəriləcək.",
+      "output": "Bildiriş sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-084",
+      "input": "bildiris yeniden yoxlanilir",
+      "expected": "Bildiriş yenidən yoxlanılır.",
+      "output": "Bildiriş yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-085",
+      "input": "bildiris arxivde saxlanilir",
+      "expected": "Bildiriş arxivdə saxlanılır.",
+      "output": "Bildiriş arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-086",
+      "input": "bildiris bu gun tesdiqlenib",
+      "expected": "Bildiriş bu gün təsdiqlənib.",
+      "output": "Bildiriş bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-087",
+      "input": "bildiris komandaya teqdim olunub",
+      "expected": "Bildiriş komandaya təqdim olunub.",
+      "output": "Bildiriş komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-088",
+      "input": "bildiris elavede gosterilir",
+      "expected": "Bildiriş əlavədə göstərilir.",
+      "output": "Bildiriş əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-089",
+      "input": "bildiris musteriye gonderilib",
+      "expected": "Bildiriş müştəriyə göndərilib.",
+      "output": "Bildiriş müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-090",
+      "input": "bildiris hele tamamlanmayib",
+      "expected": "Bildiriş hələ tamamlanmayıb.",
+      "output": "Bildiriş hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-091",
+      "input": "teklif qeydiyyata alinib",
+      "expected": "Təklif qeydiyyata alınıb.",
+      "output": "Təklif qeydiyyata alınıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-092",
+      "input": "teklif hazirdir",
+      "expected": "Təklif hazırdır.",
+      "output": "Təklif hazırdır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-093",
+      "input": "teklif sabah gonderilecek",
+      "expected": "Təklif sabah göndəriləcək.",
+      "output": "Təklif sabah göndəriləcək.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-094",
+      "input": "teklif yeniden yoxlanilir",
+      "expected": "Təklif yenidən yoxlanılır.",
+      "output": "Təklif yenidən yoxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-095",
+      "input": "teklif arxivde saxlanilir",
+      "expected": "Təklif arxivdə saxlanılır.",
+      "output": "Təklif arxivdə saxlanılır.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-096",
+      "input": "teklif bu gun tesdiqlenib",
+      "expected": "Təklif bu gün təsdiqlənib.",
+      "output": "Təklif bu gün təsdiqlənib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-097",
+      "input": "teklif komandaya teqdim olunub",
+      "expected": "Təklif komandaya təqdim olunub.",
+      "output": "Təklif komandaya təqdim olunub.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-098",
+      "input": "teklif elavede gosterilir",
+      "expected": "Təklif əlavədə göstərilir.",
+      "output": "Təklif əlavədə göstərilir.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-099",
+      "input": "teklif musteriye gonderilib",
+      "expected": "Təklif müştəriyə göndərilib.",
+      "output": "Təklif müştəriyə göndərilib.",
+      "exact": true
+    },
+    {
+      "id": "fresh-text-100",
+      "input": "teklif hele tamamlanmayib",
+      "expected": "Təklif hələ tamamlanmayıb.",
+      "output": "Təklif hələ tamamlanmayıb.",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-001",
+      "input": "movzu Yoxlama 1-1 salam komanda yeni sened hazirdir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-1\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 1-1\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-002",
+      "input": "Mövzu: Yoxlama 1-2\nHörmətli komanda,\nyeni sened hazirdir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 1-2\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 1-2\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-003",
+      "input": "movzu Yoxlama 1-3 salam komanda yeni sened hazirdir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-3\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 1-3\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-004",
+      "input": "Mövzu: Yoxlama 1-4\nHörmətli komanda,\nyeni sened hazirdir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 1-4\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 1-4\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-005",
+      "input": "movzu Yoxlama 1-5 salam komanda yeni sened hazirdir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-5\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 1-5\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-006",
+      "input": "movzu Yoxlama 2-1 salam komanda mektub qeydiyyata alinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-1\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 2-1\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-007",
+      "input": "Mövzu: Yoxlama 2-2\nHörmətli komanda,\nmektub qeydiyyata alinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 2-2\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 2-2\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-008",
+      "input": "movzu Yoxlama 2-3 salam komanda mektub qeydiyyata alinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-3\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 2-3\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-009",
+      "input": "Mövzu: Yoxlama 2-4\nHörmətli komanda,\nmektub qeydiyyata alinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 2-4\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 2-4\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-010",
+      "input": "movzu Yoxlama 2-5 salam komanda mektub qeydiyyata alinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-5\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 2-5\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-011",
+      "input": "movzu Yoxlama 3-1 salam komanda sorgu sisteme daxil olub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-1\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 3-1\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-012",
+      "input": "Mövzu: Yoxlama 3-2\nHörmətli komanda,\nsorgu sisteme daxil olub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 3-2\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 3-2\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-013",
+      "input": "movzu Yoxlama 3-3 salam komanda sorgu sisteme daxil olub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-3\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 3-3\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-014",
+      "input": "Mövzu: Yoxlama 3-4\nHörmətli komanda,\nsorgu sisteme daxil olub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 3-4\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 3-4\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-015",
+      "input": "movzu Yoxlama 3-5 salam komanda sorgu sisteme daxil olub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-5\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 3-5\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-016",
+      "input": "movzu Yoxlama 4-1 salam komanda hesabat arxivde saxlanilir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-1\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 4-1\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-017",
+      "input": "Mövzu: Yoxlama 4-2\nHörmətli komanda,\nhesabat arxivde saxlanilir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 4-2\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 4-2\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-018",
+      "input": "movzu Yoxlama 4-3 salam komanda hesabat arxivde saxlanilir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-3\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 4-3\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-019",
+      "input": "Mövzu: Yoxlama 4-4\nHörmətli komanda,\nhesabat arxivde saxlanilir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 4-4\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 4-4\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-020",
+      "input": "movzu Yoxlama 4-5 salam komanda hesabat arxivde saxlanilir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-5\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 4-5\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-021",
+      "input": "movzu Yoxlama 5-1 salam komanda muqavile tesdiqlenib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-1\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 5-1\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-022",
+      "input": "Mövzu: Yoxlama 5-2\nHörmətli komanda,\nmuqavile tesdiqlenib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 5-2\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 5-2\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-023",
+      "input": "movzu Yoxlama 5-3 salam komanda muqavile tesdiqlenib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-3\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 5-3\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-024",
+      "input": "Mövzu: Yoxlama 5-4\nHörmətli komanda,\nmuqavile tesdiqlenib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 5-4\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 5-4\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-025",
+      "input": "movzu Yoxlama 5-5 salam komanda muqavile tesdiqlenib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-5\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 5-5\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-026",
+      "input": "movzu Yoxlama 6-1 salam komanda fayl yeniden yoxlanilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-1\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 6-1\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-027",
+      "input": "Mövzu: Yoxlama 6-2\nHörmətli komanda,\nfayl yeniden yoxlanilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 6-2\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 6-2\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-028",
+      "input": "movzu Yoxlama 6-3 salam komanda fayl yeniden yoxlanilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-3\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 6-3\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-029",
+      "input": "Mövzu: Yoxlama 6-4\nHörmətli komanda,\nfayl yeniden yoxlanilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 6-4\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 6-4\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-030",
+      "input": "movzu Yoxlama 6-5 salam komanda fayl yeniden yoxlanilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-5\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 6-5\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-031",
+      "input": "movzu Yoxlama 7-1 salam komanda layihe komandaya teqdim olunub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-1\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 7-1\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-032",
+      "input": "Mövzu: Yoxlama 7-2\nHörmətli komanda,\nlayihe komandaya teqdim olunub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 7-2\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 7-2\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-033",
+      "input": "movzu Yoxlama 7-3 salam komanda layihe komandaya teqdim olunub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-3\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 7-3\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-034",
+      "input": "Mövzu: Yoxlama 7-4\nHörmətli komanda,\nlayihe komandaya teqdim olunub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 7-4\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 7-4\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-035",
+      "input": "movzu Yoxlama 7-5 salam komanda layihe komandaya teqdim olunub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-5\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 7-5\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-036",
+      "input": "movzu Yoxlama 8-1 salam komanda sifaris qebul olunub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-1\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 8-1\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-037",
+      "input": "Mövzu: Yoxlama 8-2\nHörmətli komanda,\nsifaris qebul olunub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 8-2\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 8-2\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-038",
+      "input": "movzu Yoxlama 8-3 salam komanda sifaris qebul olunub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-3\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 8-3\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-039",
+      "input": "Mövzu: Yoxlama 8-4\nHörmətli komanda,\nsifaris qebul olunub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 8-4\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 8-4\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-040",
+      "input": "movzu Yoxlama 8-5 salam komanda sifaris qebul olunub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-5\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 8-5\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-041",
+      "input": "movzu Yoxlama 9-1 salam komanda bildiris gonderilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-1\n\nHörmətli komanda,\n\nBildiriş göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 9-1\n\nHörmətli komanda,\n\nBildiriş göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-042",
+      "input": "Mövzu: Yoxlama 9-2\nHörmətli komanda,\nbildiris gonderilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 9-2\n\nHörmətli komanda,\n\nBildiriş göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 9-2\n\nHörmətli komanda,\n\nBildiriş göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-043",
+      "input": "movzu Yoxlama 9-3 salam komanda bildiris gonderilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-3\n\nHörmətli komanda,\n\nBildiriş göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 9-3\n\nHörmətli komanda,\n\nBildiriş göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-044",
+      "input": "Mövzu: Yoxlama 9-4\nHörmətli komanda,\nbildiris gonderilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 9-4\n\nHörmətli komanda,\n\nBildiriş göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 9-4\n\nHörmətli komanda,\n\nBildiriş göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-045",
+      "input": "movzu Yoxlama 9-5 salam komanda bildiris gonderilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-5\n\nHörmətli komanda,\n\nBildiriş göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 9-5\n\nHörmətli komanda,\n\nBildiriş göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-046",
+      "input": "movzu Yoxlama 10-1 salam komanda teklif rehberliye teqdim edilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-1\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 10-1\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-047",
+      "input": "Mövzu: Yoxlama 10-2\nHörmətli komanda,\nteklif rehberliye teqdim edilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 10-2\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 10-2\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-048",
+      "input": "movzu Yoxlama 10-3 salam komanda teklif rehberliye teqdim edilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-3\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 10-3\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-049",
+      "input": "Mövzu: Yoxlama 10-4\nHörmətli komanda,\nteklif rehberliye teqdim edilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 10-4\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 10-4\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-050",
+      "input": "movzu Yoxlama 10-5 salam komanda teklif rehberliye teqdim edilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-5\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 10-5\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-051",
+      "input": "movzu Yoxlama 11-1 salam komanda qeydiyyat tamamlanib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-1\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 11-1\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-052",
+      "input": "Mövzu: Yoxlama 11-2\nHörmətli komanda,\nqeydiyyat tamamlanib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 11-2\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 11-2\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-053",
+      "input": "movzu Yoxlama 11-3 salam komanda qeydiyyat tamamlanib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-3\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 11-3\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-054",
+      "input": "Mövzu: Yoxlama 11-4\nHörmətli komanda,\nqeydiyyat tamamlanib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 11-4\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 11-4\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-055",
+      "input": "movzu Yoxlama 11-5 salam komanda qeydiyyat tamamlanib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-5\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 11-5\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-056",
+      "input": "movzu Yoxlama 12-1 salam komanda yoxlama basa catib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-1\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 12-1\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-057",
+      "input": "Mövzu: Yoxlama 12-2\nHörmətli komanda,\nyoxlama basa catib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 12-2\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 12-2\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-058",
+      "input": "movzu Yoxlama 12-3 salam komanda yoxlama basa catib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-3\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 12-3\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-059",
+      "input": "Mövzu: Yoxlama 12-4\nHörmətli komanda,\nyoxlama basa catib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 12-4\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 12-4\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-060",
+      "input": "movzu Yoxlama 12-5 salam komanda yoxlama basa catib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-5\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 12-5\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-061",
+      "input": "movzu Yoxlama 13-1 salam komanda sened musteriye gonderilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-1\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 13-1\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-062",
+      "input": "Mövzu: Yoxlama 13-2\nHörmətli komanda,\nsened musteriye gonderilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 13-2\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 13-2\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-063",
+      "input": "movzu Yoxlama 13-3 salam komanda sened musteriye gonderilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-3\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 13-3\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-064",
+      "input": "Mövzu: Yoxlama 13-4\nHörmətli komanda,\nsened musteriye gonderilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 13-4\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 13-4\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-065",
+      "input": "movzu Yoxlama 13-5 salam komanda sened musteriye gonderilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-5\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 13-5\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-066",
+      "input": "movzu Yoxlama 14-1 salam komanda mektub sexsi kabinetde gorunur neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-1\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 14-1\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-067",
+      "input": "Mövzu: Yoxlama 14-2\nHörmətli komanda,\nmektub sexsi kabinetde gorunur reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 14-2\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 14-2\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-068",
+      "input": "movzu Yoxlama 14-3 salam komanda mektub sexsi kabinetde gorunur cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-3\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 14-3\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-069",
+      "input": "Mövzu: Yoxlama 14-4\nHörmətli komanda,\nmektub sexsi kabinetde gorunur melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 14-4\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 14-4\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-070",
+      "input": "movzu Yoxlama 14-5 salam komanda mektub sexsi kabinetde gorunur senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-5\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 14-5\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-071",
+      "input": "movzu Yoxlama 15-1 salam komanda sorgu icraya yonlendirilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-1\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 15-1\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-072",
+      "input": "Mövzu: Yoxlama 15-2\nHörmətli komanda,\nsorgu icraya yonlendirilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 15-2\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 15-2\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-073",
+      "input": "movzu Yoxlama 15-3 salam komanda sorgu icraya yonlendirilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-3\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 15-3\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-074",
+      "input": "Mövzu: Yoxlama 15-4\nHörmətli komanda,\nsorgu icraya yonlendirilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 15-4\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 15-4\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-075",
+      "input": "movzu Yoxlama 15-5 salam komanda sorgu icraya yonlendirilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-5\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 15-5\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-076",
+      "input": "movzu Yoxlama 16-1 salam komanda hesabatin yeni varianti hazirdir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-1\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 16-1\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-077",
+      "input": "Mövzu: Yoxlama 16-2\nHörmətli komanda,\nhesabatin yeni varianti hazirdir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 16-2\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 16-2\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-078",
+      "input": "movzu Yoxlama 16-3 salam komanda hesabatin yeni varianti hazirdir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-3\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 16-3\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-079",
+      "input": "Mövzu: Yoxlama 16-4\nHörmətli komanda,\nhesabatin yeni varianti hazirdir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 16-4\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 16-4\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-080",
+      "input": "movzu Yoxlama 16-5 salam komanda hesabatin yeni varianti hazirdir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-5\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 16-5\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-081",
+      "input": "movzu Yoxlama 17-1 salam komanda fayl serverde saxlanilir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-1\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 17-1\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-082",
+      "input": "Mövzu: Yoxlama 17-2\nHörmətli komanda,\nfayl serverde saxlanilir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 17-2\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 17-2\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-083",
+      "input": "movzu Yoxlama 17-3 salam komanda fayl serverde saxlanilir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-3\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 17-3\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-084",
+      "input": "Mövzu: Yoxlama 17-4\nHörmətli komanda,\nfayl serverde saxlanilir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 17-4\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 17-4\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-085",
+      "input": "movzu Yoxlama 17-5 salam komanda fayl serverde saxlanilir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-5\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 17-5\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-086",
+      "input": "movzu Yoxlama 18-1 salam komanda muraciet qeyde alinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-1\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 18-1\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-087",
+      "input": "Mövzu: Yoxlama 18-2\nHörmətli komanda,\nmuraciet qeyde alinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 18-2\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 18-2\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-088",
+      "input": "movzu Yoxlama 18-3 salam komanda muraciet qeyde alinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-3\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 18-3\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-089",
+      "input": "Mövzu: Yoxlama 18-4\nHörmətli komanda,\nmuraciet qeyde alinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 18-4\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 18-4\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-090",
+      "input": "movzu Yoxlama 18-5 salam komanda muraciet qeyde alinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-5\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 18-5\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-091",
+      "input": "movzu Yoxlama 19-1 salam komanda test ugurla tamamlanib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-1\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 19-1\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-092",
+      "input": "Mövzu: Yoxlama 19-2\nHörmətli komanda,\ntest ugurla tamamlanib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 19-2\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 19-2\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-093",
+      "input": "movzu Yoxlama 19-3 salam komanda test ugurla tamamlanib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-3\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 19-3\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-094",
+      "input": "Mövzu: Yoxlama 19-4\nHörmətli komanda,\ntest ugurla tamamlanib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 19-4\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 19-4\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-095",
+      "input": "movzu Yoxlama 19-5 salam komanda test ugurla tamamlanib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-5\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 19-5\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-096",
+      "input": "movzu Yoxlama 20-1 salam komanda sistem yeniden ise salinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-1\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 20-1\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-097",
+      "input": "Mövzu: Yoxlama 20-2\nHörmətli komanda,\nsistem yeniden ise salinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 20-2\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 20-2\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-098",
+      "input": "movzu Yoxlama 20-3 salam komanda sistem yeniden ise salinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-3\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 20-3\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-099",
+      "input": "Mövzu: Yoxlama 20-4\nHörmətli komanda,\nsistem yeniden ise salinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 20-4\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "output": "Mövzu: Yoxlama 20-4\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "exact": true
+    },
+    {
+      "id": "fresh-mail-100",
+      "input": "movzu Yoxlama 20-5 salam komanda sistem yeniden ise salinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-5\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "output": "Mövzu: Yoxlama 20-5\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "exact": true
     }
   ]
 }

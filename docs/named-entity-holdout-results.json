@@ -4,11 +4,11 @@
   "failed": 0,
   "inventory": {
     "geography": 87,
-    "givenNames": 131,
+    "givenNames": 132,
     "surnames": 21,
     "organizations": 15,
     "multiword": 58,
-    "typed": 305
+    "typed": 306
   },
   "fixtureSha256": "5664c3a189ea1d797ec883f81e01c4fc55da71ce1124fed55d26db534aa6c8d7",
   "categories": {

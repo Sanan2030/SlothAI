@@ -19,7 +19,7 @@
   "sequenceAlgorithm": "averaged-context-perceptron",
   "learnedWordForms": 993,
   "learnedBoundaryPatterns": 109,
-  "modelBytes": 388071,
+  "modelBytes": 389194,
   "candidateGroups": [
     "seher",
     "suret",

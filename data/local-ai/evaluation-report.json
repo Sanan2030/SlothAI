@@ -2,18 +2,18 @@
   "split": "test",
   "scope": "200 synthetic held-out pairs from 40 separate authored gold groups",
   "exact": {
-    "baseline": 37,
-    "model": 48,
+    "baseline": 45,
+    "model": 57,
     "total": 200
   },
-  "changed": 40,
-  "improved": 35,
+  "changed": 37,
+  "improved": 34,
   "regressed": 0,
   "wordEditDistance": {
-    "baseline": 411,
-    "model": 371
+    "baseline": 380,
+    "model": 339
   },
-  "elapsedMs": 2352,
+  "elapsedMs": 1438,
   "rows": [
     {
       "id": "local-005-1",
@@ -218,10 +218,10 @@
       "variant": 0,
       "input": "seher oyanib teqvimime baxdim gunun ilk gorusune hazirlasdim",
       "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
-      "baseline": "Seher oyanıb teqvimime baxdım günün ilk görüşünə hazırlaşdım.",
-      "output": "Seher oyanıb teqvimime baxdım günün ilk görüşünə hazırlaşdım.",
-      "baselineDistance": 4,
-      "distance": 4
+      "baseline": "Seher oyanıb teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "output": "Seher oyanıb teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-020-2",
@@ -244,10 +244,10 @@
       "variant": 2,
       "input": "səhər oyanıb təqvimimə baxdım günün ilk görüşünə hazırlaşdım",
       "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
-      "baseline": "Səhər oyanıb təqvimimə baxdım günün ilk görüşünə hazırlaşdım.",
-      "output": "Səhər oyanıb təqvimimə baxdım günün ilk görüşünə hazırlaşdım.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "output": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-020-4",
@@ -257,10 +257,10 @@
       "variant": 3,
       "input": "sheher oyanib teqvimime baxdim gunun ilk gorushune hazirlashdim",
       "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
-      "baseline": "Şəhər oyanıb teqvimime baxdım günün ilk görüşünə hazırlaşdım.",
-      "output": "Şəhər oyanıb teqvimime baxdım günün ilk görüşünə hazırlaşdım.",
-      "baselineDistance": 4,
-      "distance": 4
+      "baseline": "Şəhər oyanıb teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "output": "Şəhər oyanıb teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-020-5",
@@ -453,9 +453,9 @@
       "input": "sheher neqliyyatinda kartla odenish tetbiq olunur avtobush dayanachaqlari da deyishib",
       "target": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobus dayanacaqları da dəyişib.",
       "baseline": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur avtobush dayanachaqlari da dəyişib.",
-      "output": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur. Avtobush dayanachaqlari da dəyişib.",
+      "output": "Şəhər nəqliyyatında kartla ödəniş tətbiq olunur avtobush dayanachaqlari da dəyişib.",
       "baselineDistance": 3,
-      "distance": 2
+      "distance": 3
     },
     {
       "id": "local-035-5",
@@ -673,9 +673,9 @@
       "variant": 0,
       "input": "suret olcen cihaz saniye erzinde netice verir avtomobil yoxlamadan kecdi",
       "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "baseline": "Sürət ölçən cihaz şanıya ərzində nəticə verir avtomobil yoxlamadan keçdi.",
+      "baseline": "Sürət ölçən cihaz saniyə ərzində nəticə verir avtomobil yoxlamadan keçdi.",
       "output": "Sürət ölçən cihaz saniyə ərzində nəticə verir avtomobil yoxlamadan keçdi.",
-      "baselineDistance": 3,
+      "baselineDistance": 2,
       "distance": 2
     },
     {
@@ -686,9 +686,9 @@
       "variant": 1,
       "input": "suret olcen cihaz saniye erzinde netice verir. avtomobil yoxlamadan kecdi.",
       "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "baseline": "Sürət ölçən cihaz şanıya ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
+      "baseline": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
       "output": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "baselineDistance": 1,
+      "baselineDistance": 0,
       "distance": 0
     },
     {
@@ -725,10 +725,10 @@
       "variant": 4,
       "input": "suret olcen cihaz saiye erzinde netice verir. avtomobil yoxlamadan kecdi.",
       "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "baseline": "Suret ölçən cihaz saiye ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "output": "Suret ölçən cihaz saiye ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət ölçən cihaz saiye ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
+      "output": "Sürət ölçən cihaz saiye ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-060-1",
@@ -738,10 +738,10 @@
       "variant": 0,
       "input": "suret olcmeleri saniye ile hesablanan muddete esaslanir avtomobilin hereketi izlenir",
       "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "baseline": "Sürət ölçmələri şanıya ilə hesablanan müddətə əsaslanır avtomobilin hərəkəti izlənir.",
-      "output": "Sürət ölçmələri şanıya ilə hesablanan müddətə əsaslanır avtomobilin hərəkəti izlənir.",
-      "baselineDistance": 3,
-      "distance": 3
+      "baseline": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır avtomobilin hərəkəti izlənir.",
+      "output": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır avtomobilin hərəkəti izlənir.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-060-2",
@@ -751,10 +751,10 @@
       "variant": 1,
       "input": "suret olcmeleri saniye ile hesablanan muddete esaslanir. avtomobilin hereketi izlenir.",
       "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "baseline": "Sürət ölçmələri şanıya ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "output": "Sürət ölçmələri şanıya ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
+      "output": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-060-3",
@@ -790,10 +790,10 @@
       "variant": 4,
       "input": "suret olmeleri saniye ile hesablanan muddete esaslanir. avtomobilin hereketi izlenir.",
       "target": "Sürət ölçmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "baseline": "Sürət ölmələri şanıya ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "output": "Sürət ölmələri şanıya ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət ölmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
+      "output": "Sürət ölmələri saniyə ilə hesablanan müddətə əsaslanır. Avtomobilin hərəkəti izlənir.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-065-1",
@@ -803,10 +803,10 @@
       "variant": 0,
       "input": "suret olcen cihaz avtomobile yaxin yerlesdirildi neticeler hesabatda saxlanildi",
       "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baseline": "Suret ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "output": "Suret ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "output": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-065-2",
@@ -816,10 +816,10 @@
       "variant": 1,
       "input": "suret olcen cihaz avtomobile yaxin yerlesdirildi. neticeler hesabatda saxlanildi.",
       "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baseline": "Suret ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "output": "Suret ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "output": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-065-3",
@@ -855,10 +855,10 @@
       "variant": 4,
       "input": "suret olcen cihaz avomobile yaxin yerlesdirildi. neticeler hesabatda saxlanildi.",
       "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baseline": "Suret ölçən cihaz avomobile yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "output": "Suret ölçən cihaz avomobile yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət ölçən cihaz avomobile yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "output": "Sürət ölçən cihaz avomobile yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-070-1",
@@ -868,10 +868,10 @@
       "variant": 0,
       "input": "suret olcmelerinde saniye deqiqliyi vacibdir test avadanligi evvelceden yoxlanildi",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Sürət olcmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "output": "Sürət olcmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "output": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-070-2",
@@ -881,10 +881,10 @@
       "variant": 1,
       "input": "suret olcmelerinde saniye deqiqliyi vacibdir. test avadanligi evvelceden yoxlanildi.",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Sürət olcmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "output": "Sürət olcmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "output": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-070-3",
@@ -920,10 +920,10 @@
       "variant": 4,
       "input": "suret olmelerinde saniye deqiqliyi vacibdir. test avadanligi evvelceden yoxlanildi.",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Sürət olmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "output": "Sürət olmelerinde şanıya dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət olmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "output": "Sürət olmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-075-1",
@@ -933,10 +933,10 @@
       "variant": 0,
       "input": "suret olcen cihazin neticesi saniye ile muqayise edildi avtomobil sinagi basa catdi",
       "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baseline": "Sürət ölçən cihazın nəticəsi şanıya ilə müqayisə edildi avtomobil sınağı başa çatdı.",
-      "output": "Surət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baselineDistance": 3,
-      "distance": 1
+      "baseline": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi avtomobil sınağı başa çatdı.",
+      "output": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
+      "baselineDistance": 2,
+      "distance": 0
     },
     {
       "id": "local-075-2",
@@ -946,10 +946,10 @@
       "variant": 1,
       "input": "suret olcen cihazin neticesi saniye ile muqayise edildi. avtomobil sinagi basa catdi.",
       "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baseline": "Sürət ölçən cihazın nəticəsi şanıya ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "output": "Surət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
+      "output": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-075-3",
@@ -985,10 +985,10 @@
       "variant": 4,
       "input": "suret olcen ciazin neticesi saniye ile muqayise edildi. avtomobil sinagi basa catdi.",
       "target": "Sürət ölçən cihazın nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baseline": "Sürət ölçən ciazin nəticəsi şanıya ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "output": "Surət ölçən ciazin nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Sürət ölçən ciazin nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
+      "output": "Sürət ölçən ciazin nəticəsi saniyə ilə müqayisə edildi. Avtomobil sınağı başa çatdı.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-080-1",
@@ -1063,10 +1063,10 @@
       "variant": 0,
       "input": "suret arxiv ucun ayrica hazirlandi senedin imzasi yoxlanildi",
       "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
-      "baseline": "Surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı.",
-      "output": "Surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
+      "output": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-085-2",
@@ -1089,10 +1089,10 @@
       "variant": 2,
       "input": "surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı",
       "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
-      "baseline": "Surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı.",
-      "output": "Surət arxiv üçün ayrıca hazırlandı sənədin imzası yoxlanıldı.",
-      "baselineDistance": 2,
-      "distance": 2
+      "baseline": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
+      "output": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-085-4",
@@ -1180,10 +1180,10 @@
       "variant": 4,
       "input": "suret seedin esli esasinda cixarildi. arxiv emekdasi onu qebul etdi.",
       "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
-      "baseline": "Surət seedin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
-      "output": "Surət seedin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Surət seedin. Əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
+      "output": "Surət seedin. Əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-095-1",
@@ -1310,10 +1310,10 @@
       "variant": 4,
       "input": "suret seedin esli ile birlikde yoxlanildi. imzanin heqiqiliyi tesdiqlendi.",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
-      "baseline": "Surət seedin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
-      "output": "Surət seedin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Surət seedin. Əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
+      "output": "Surət seedin. Əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-105-1",
@@ -1519,9 +1519,9 @@
       "input": "bu adi muraciet gundelik siyahiya daxil edildi xususi status verilmedi",
       "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi.",
       "baseline": "Bu adi müraciət gündəlik siyahiya daxil edildi xüsusi status verilmədi.",
-      "output": "Bu adi müraciət gündəlik siyahiya daxil edildi xüsusi status verilmədi.",
+      "output": "Bu adi müraciət gündəlik siyahiya daxil edildi. Xüsusi status verilmədi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-120-2",
@@ -1545,9 +1545,9 @@
       "input": "bu adi müraciət gündəlik siyahıya daxil edildi xüsusi status verilmədi",
       "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi.",
       "baseline": "Bu adi müraciət gündəlik siyahıya daxil edildi xüsusi status verilmədi.",
-      "output": "Bu adi müraciət gündəlik siyahıya daxil edildi xüsusi status verilmədi.",
+      "output": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-120-4",
@@ -1843,10 +1843,10 @@
       "variant": 0,
       "input": "el bileyi agir yuke gore agriyirdi barmaqlar da yorulmusdu",
       "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.",
-      "baseline": "El biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "output": "Əl biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "baselineDistance": 3,
-      "distance": 2
+      "baseline": "El biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "output": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "baselineDistance": 2,
+      "distance": 1
     },
     {
       "id": "local-145-2",
@@ -1856,10 +1856,10 @@
       "variant": 1,
       "input": "el bileyi agir yuke gore agriyirdi. barmaqlar da yorulmusdu.",
       "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.",
-      "baseline": "El biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "output": "El biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "baselineDistance": 3,
-      "distance": 3
+      "baseline": "El biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "output": "El biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "baselineDistance": 2,
+      "distance": 2
     },
     {
       "id": "local-145-3",
@@ -1882,10 +1882,10 @@
       "variant": 3,
       "input": "el bileyi agir yuke gore agriyirdi barmaqlar da yorulmushdu",
       "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.",
-      "baseline": "El biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmushdu.",
-      "output": "Əl biləyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmushdu.",
-      "baselineDistance": 3,
-      "distance": 2
+      "baseline": "El biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmushdu.",
+      "output": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmushdu.",
+      "baselineDistance": 2,
+      "distance": 1
     },
     {
       "id": "local-145-5",
@@ -1895,10 +1895,10 @@
       "variant": 4,
       "input": "el bieyi agir yuke gore agriyirdi. barmaqlar da yorulmusdu.",
       "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.",
-      "baseline": "El bieyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "output": "El bieyi ağır yuke görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "baselineDistance": 4,
-      "distance": 4
+      "baseline": "El bieyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "output": "El bieyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "baselineDistance": 3,
+      "distance": 3
     },
     {
       "id": "local-150-1",
@@ -2259,10 +2259,10 @@
       "variant": 2,
       "input": "yoxlamanı yenidən et tapşırığı düzgün yerinə yetir işin nəticəsini saxla",
       "target": "Yoxlamanı yenidən et, tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla.",
-      "baseline": "Yoxlamanı yenidən et tapşırığı düzgün yerinə yetir işin nəticəsini saxla.",
-      "output": "Yoxlamanı yenidən et tapşırığı düzgün yerinə yetir işin nəticəsini saxla.",
-      "baselineDistance": 3,
-      "distance": 3
+      "baseline": "Yoxlamanı yenidən et tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla.",
+      "output": "Yoxlamanı yenidən et tapşırığı düzgün yerinə yetir. İşin nəticəsini saxla.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-175-4",
@@ -2324,10 +2324,10 @@
       "variant": 2,
       "input": "bu işi yenidən et tapşırığı əvvəlcə yoxla işin keyfiyyətinə diqqət göstər",
       "target": "Bu işi yenidən et, tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər.",
-      "baseline": "Bu işi yenidən et tapşırığı əvvəlcə yoxla işin keyfiyyətinə diqqət göstər.",
-      "output": "Bu işi yenidən et tapşırığı əvvəlcə yoxla işin keyfiyyətinə diqqət göstər.",
-      "baselineDistance": 3,
-      "distance": 3
+      "baseline": "Bu işi yenidən et tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər.",
+      "output": "Bu işi yenidən et tapşırığı əvvəlcə yoxla. İşin keyfiyyətinə diqqət göstər.",
+      "baselineDistance": 1,
+      "distance": 1
     },
     {
       "id": "local-180-4",

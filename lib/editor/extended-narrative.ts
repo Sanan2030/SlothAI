@@ -80,7 +80,7 @@ export function beforeLexicalCorrection(text: string): string {
     .replace(/(^|[^\p{L}])bir nece(?=$|[^\p{L}])/giu, '$1bir neçə')
     .replace(/(^|[^\p{L}])indi ise(?=$|[^\p{L}])/giu, '$1indi isə')
     .replace(/(^|[^\p{L}])chantai(?=\s+k[uü]nc[eə](?=$|[^\p{L}]))/giu, '$1çantanı')
-    .replace(/(^|[^\p{L}])ise(?=\s+(?:gedir|getmək|getmek|getdim|gedəcəyəm|çatdım|catdim)(?=$|[^\p{L}]))/giu, '$1işə')
+    .replace(/(^|[^\p{L}])ise(?=\s+(?:gedir|getmək|getmek|getdim|gedəcəyəm|çatdım|catdim|salınıb|salinib)(?=$|[^\p{L}]))/giu, '$1işə')
     .replace(/(^|[^\p{L}])ise(?=\s+(?:yekunlaşdırdım|yekunlasdirdim)(?=$|[^\p{L}]))/giu, '$1işi')
     // "seherler" can mean cities or mornings. A following exercise phrase
     // proves the temporal meaning and prevents the lexicon from choosing

@@ -14,7 +14,7 @@ export interface ClauseAnalysis {
 
 const questionOpeners = /^(?:bəs\s+(?:sən|siz|o|biz)|(?:necə|niyə|kim|nə|hara|harada|nə vaxt|hansı|neçə|nədir|kimdir|kimsən|necəsən|necəsiniz|haradasan|haradasınız))(?!\p{L})/iu;
 const embedded = /^(?:mən\s+)?(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır)\b/iu;
-const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
+const particle = /(?:^|\s)[\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb|siniz|sınız)(?:mı|mi|mu|mü)(?:\s|$)|(?:^|\s)(?:mı|mi|mu|mü)(?:\s|$)/iu;
 const interjection = /^(?:vay|aman|afərin|əla|heyif|təəssüf|əhsən)(?:\s|[,!]|$)/iu;
 const emphatic = /^(?:nə|necə də)\s+(?:gözəl|yaxşı|pis|qəribə|möhtəşəm|rahat)(?:dir|dır|dur|dür)?(?:\s|$)/iu;
 const transition = /^(?:beləliklə|nəticə olaraq|ümumiyyətlə|əslində|məsələn|digər tərəfdən|bundan əlavə|əksinə)(?:\s|,)/iu;
@@ -22,6 +22,11 @@ const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|
 
 export function detectQuestion(text: string): boolean {
   const value = text.trim().replace(/[.!?]+$/u, '');
+  if (/(?:bilərsiniz|eynidir|yaranır|sabitləşib)(?:mi|mı|mu|mü)$/iu.test(value)) return true;
+  // Question words inside a request or relative clause are not direct questions.
+  if (/(?:göndərin|yazın|soruşaq|görünməlidir|bildirin|dəqiqləşdirin)$/iu.test(value)
+    && !particle.test(value)) return false;
+  if (/(?:^|\s)\p{L}+(?:dığını|diyini|duğunu|düyünü|dığı|diyi|duğu|düyü|olduğu|olduğunu)(?:\s|$)/iu.test(value) && !particle.test(value)) return false;
   if (embedded.test(value) || /^nə\s+isə(?!\p{L})/iu.test(value)
     || /(?:^|\s)bir\s+neçə(?=\s|$)/iu.test(value)
     || /(?:^|[^\p{L}])heç\s+kim(?=$|[^\p{L}])/iu.test(value)
@@ -72,7 +77,8 @@ function conditionalCommas(text: string): string {
     const conditional = analyses.some(item => item.pos === 'verb' && item.features.mood === 'conditional');
     const compound = /(?:sa|sə)$/iu.test(word) && productiveMorphology.analyzeWord(word.slice(0, -2))
       .some(item => item.pos === 'verb' && item.features.tense);
-    if (conditional || compound || /^(?:varsa|yoxdursa|bitirsə|olarsa)$/iu.test(word)) positions.push(end);
+    if (/^d[aə]$/iu.test(words[at + 1][0])) continue;
+    if (conditional || compound || /^(?:varsa|yoxdursa|bitirsə|olarsa|ayrılmasa|deyilsə|vermirsə|yaşayırsınızsa)$/iu.test(word)) positions.push(end);
   }
   let output = '', cursor = 0;
   for (const end of positions) { output += text.slice(cursor, end) + ','; cursor = end; }
@@ -82,12 +88,15 @@ function conditionalCommas(text: string): string {
 /** Commas only at grammatical boundaries, with existing commas left intact. */
 export function punctuateCommas(text: string): string {
   return conditionalCommas(text)
+    .replace(/(?<!\p{L})(yox) +(?=biznes\s)/giu, '$1, ')
+    .replace(/(?<!\p{L})(kim\s+[^.!?]+?silib) +(?=onu\s)/giu, '$1, ')
+    .replace(/(?<!\p{L})(birinci\s+qrup\s+səhər) +(?=ikinci\s+qrup)/giu, '$1, ')
     .replace(/(^|[.!?]\s+)(məncə|deyəsən|əlbəttə|şübhəsiz|görünür|hər halda|doğrudan da|buna baxmayaraq|bununla belə)(?!,)\s+/giu, '$1$2, ')
     .replace(/([^,;.!?:\s])\s+(elə deyil|deyilmi|eləmi|düzdür|doğrudur)(?=$|[.!?])/giu, '$1, $2')
     .replace(/^(elə|belə),\s+(deyilmi)(?=$|[.!?])/iu, '$1 $2')
     .replace(/([^,;.!?:\s])\s+(staging-də isə|production-da isə)(?=$|\s)/giu, '$1, $2')
     .replace(/\b([A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}(?:ı|i|u|ü))\s+(?=[A-ZƏÇĞIİÖŞÜ]{2,6}\s+\p{L}{4,}\s+və\s+[A-ZƏÇĞIİÖŞÜ]{2,6}\b)/gu, '$1, ')
-    .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa)\s+/giu, '$1, $2 ')
+    .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa|halbuki)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
     .replace(/(^|[.!?]\s+)(beləliklə|ümumiyyətlə|əslində|məsələn|əksinə|səncə|görəsən)\s+/giu, '$1$2, ')
     .replace(/(^|[.!?]\s+)(vay|aman|afərin|əla|heyif|təəssüf)\s+/giu, '$1$2, ')

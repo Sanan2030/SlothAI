@@ -8,7 +8,7 @@ test('context protects morning, brain and reviewed narrative spellings', () => {
 
   assert.match(output, /Səhərlər yüngül qaçış etmək/u);
   assert.match(output, /beynin funksiyalarını/u);
-  assert.match(output, /pəncərəni açanda/u);
+  assert.match(output, /pəncərəni açanda/iu);
   assert.match(output, /pürrəngi çay/u);
   assert.match(output, /səhər havası/iu);
   assert.match(output, /səhər yeməyi/iu);

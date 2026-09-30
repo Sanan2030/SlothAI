@@ -1,5 +1,12 @@
 /** Individually reviewed orthographic repairs; no sentence lookup or translations. */
 export const reviewedSpelling: Record<string, string> = {
+  ishe: 'işə', bolme: 'bölmə', istemisiniz: 'istəmisiniz', rahatlasdirilmis: 'rahatlaşdırılmış', etibarliq: 'etibarlılıq', saniye: 'saniyə',
+  uygunsuzlugu: 'uyğunsuzluğu', yenilendikten: 'yeniləndikdən', sehvlerinin: 'səhvlərinin',
+  korunur: 'qorunur', yuklenene: 'yüklənənə', grafikde: 'qrafikdə', deger: 'dəyər',
+  gorevlerin: 'görəvlərin', hesle: 'heşlə', senkron: 'sinxron', sesiya: 'sessiya',
+  maliye: 'maliyyə', dogrulayin: 'doğrulayın', bozulub: 'pozulub', sutunu: 'sütunu',
+  mane: 'mane', tekniki: 'texniki', escallation: 'escalation', onaylanana: 'təsdiqlənənə', kararin: 'qərarın',
+
   "fin": "FIN",
   "alinan": "alınan",
   "novune": "növünə",

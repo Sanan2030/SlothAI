@@ -6,7 +6,45 @@
     "source": "Frozen 460 RSD/IT and 340 mail inputs",
     "trainingUse": "none; evaluation only",
     "blindEvaluation": false,
-    "additionalReview": "Corrected acronym ID and mixed-diacritic iştirakci to iştirakçı after differential review; no engine output was used as an automatic target. Added the grammatical conditional comma in rsd-it-119 after editorial review."
+    "additionalReview": "Corrected acronym ID and mixed-diacritic iştirakci to iştirakçı after differential review; no engine output was used as an automatic target. Added the grammatical conditional comma in rsd-it-119 after editorial review.",
+    "targetRevisions20260930": [
+      {
+        "id": "rsd-it-179",
+        "previous": "İdempotency key təkrar edilən ödəməni blokladı.",
+        "expected": "Idempotency key təkrar edilən ödəməni blokladı.",
+        "reason": "English technical identifier keeps ASCII I."
+      },
+      {
+        "id": "rsd-it-318",
+        "previous": "Server saatları sinxron deyilsə tarixlər səhv gedir.",
+        "expected": "Server saatları sinxron deyilsə, tarixlər səhv gedir.",
+        "reason": "Conditional dependent clause requires a comma."
+      },
+      {
+        "id": "mail-173",
+        "previous": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. Indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+        "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+        "reason": "Azerbaijani indeks requires dotted capital İ."
+      },
+      {
+        "id": "mail-196",
+        "previous": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. Icraya başlamayaq.\n\nHörmətlə,\nSənan",
+        "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan",
+        "reason": "Azerbaijani icra requires dotted capital İ."
+      },
+      {
+        "id": "mail-236",
+        "previous": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. Ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+        "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+        "reason": "Azerbaijani ilkin requires dotted capital İ."
+      },
+      {
+        "id": "mail-286",
+        "previous": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+        "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+        "reason": "Report and separate imperative require a second boundary."
+      }
+    ]
   },
   "cases": [
     {
@@ -902,7 +940,7 @@
     {
       "id": "rsd-it-179",
       "inputSha256": "e0103879f67dc0685f2ef56e74975199f05026b60a1a9dc7b6664d38b975cb5a",
-      "expected": "İdempotency key təkrar edilən ödəməni blokladı."
+      "expected": "Idempotency key təkrar edilən ödəməni blokladı."
     },
     {
       "id": "rsd-it-180",
@@ -1597,7 +1635,7 @@
     {
       "id": "rsd-it-318",
       "inputSha256": "4814534dce143e10ead3b2f1466b5b2ab53c251c44b363b299f1455096524ec1",
-      "expected": "Server saatları sinxron deyilsə tarixlər səhv gedir."
+      "expected": "Server saatları sinxron deyilsə, tarixlər səhv gedir."
     },
     {
       "id": "rsd-it-319",
@@ -3172,7 +3210,7 @@
     {
       "id": "mail-173",
       "inputSha256": "482ef099f1887622ec4cad36a237cfc9191895cc685fe282b96a713cc26d409d",
-      "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. Indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası"
+      "expected": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası"
     },
     {
       "id": "mail-174",
@@ -3287,7 +3325,7 @@
     {
       "id": "mail-196",
       "inputSha256": "a36e5b636cd7388fa4102f30681d5369c16865fbcc2c8e5ec283229f8a7e57a9",
-      "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. Icraya başlamayaq.\n\nHörmətlə,\nSənan"
+      "expected": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan"
     },
     {
       "id": "mail-197",
@@ -3487,7 +3525,7 @@
     {
       "id": "mail-236",
       "inputSha256": "a7f8937702161b34238fc48b80716b74c3641c6c543daf99de36a569ea14a945",
-      "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. Ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası"
+      "expected": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası"
     },
     {
       "id": "mail-237",
@@ -3737,7 +3775,7 @@
     {
       "id": "mail-286",
       "inputSha256": "96b7862a331309b365ebf77d86312796387c8ce35b98cd3d52c8d1bb17c95266",
-      "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan"
+      "expected": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan"
     },
     {
       "id": "mail-287",

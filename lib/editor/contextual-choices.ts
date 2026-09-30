@@ -42,7 +42,12 @@ export function chooseBySentence(word: string, surrounding: ReadonlySet<string>)
 /** Select an ambiguous surface only when its POS fits an independently parsed neighbour. */
 export function chooseByGrammar(word: string, nextWord: string, previousWord = ''): string | undefined {
   const key = fold(word);
-  if ((key !== 'uc' && key !== 'adi') || /[əıçğöşü]/iu.test(word)) return undefined;
+  if ((key !== 'uc' && key !== 'adi' && key !== 'suret') || /[əıçğöşü]/iu.test(word)) return undefined;
+  if (key === 'suret') {
+    // A measuring participle selects the speed sense before a statistical guess.
+    if (/^ölç(?:ən|ür|ülən)$/iu.test(nextWord)) return /^\p{Lu}/u.test(word) ? 'Sürət' : 'sürət';
+    return undefined;
+  }
   const forms = dictionaryCandidates(word);
   if (key === 'adi') {
     if (!forms?.has('adi') || !forms.has('adı')) return undefined;

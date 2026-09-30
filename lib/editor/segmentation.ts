@@ -12,7 +12,7 @@ const timeWords = new Set(['indi', 'sonra', 'yenidən', 'axşam', 'sabah', 'dün
 const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 'ilə']);
 const objectPronouns = new Set(['onu', 'onları', 'bunu', 'bunları']);
 
-const lightVerbNouns = new Set(['təsvir', 'təhlil', 'təqdim', 'təklif', 'təmin', 'tətbiq', 'təşkil', 'nadir', 'aydın']);
+const lightVerbNouns = new Set(['təsvir', 'təhlil', 'təqdim', 'təklif', 'təmin', 'tətbiq', 'təşkil', 'nadir', 'aydın', 'əsasən', 'soyadın', 'dair', 'rica', 'təşəkkür', 'hazır', 'keçmiş']);
 function independentStart(word: string): boolean {
   if (subjects.has(word) || timeWords.has(word) || namedSubjects.has(word)) return true;
   if (connectors.has(word) || dependentStarts.has(word) || word.length < 4) return false;
@@ -29,6 +29,7 @@ export function isFinitePredicate(word: string): boolean {
   // resemble finite predicates when the dictionary has no inflection entry.
   if (/^(?:gələcək|qədim)$/iu.test(lower)) return false;
   if (lightVerbNouns.has(lower)) return false;
+  if (/(?:ın|in|un|ün)$/iu.test(lower) && productiveMorphology.analyzeWord(lower).some(row => row.pos === 'noun' && row.features.case === 'genitive')) return false;
   if (lower.length < 4 || dependent.test(lower) || timeWords.has(lower)) return false;
   const morphology = productiveMorphology.analyzeWord(lower);
   const analyses = morphology.filter(item => item.pos === 'verb');
@@ -58,6 +59,7 @@ export function segmentIndependentClauses(text: string): string {
       && (/(?:lar|lər)$/iu.test(next)
         || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'));
     const wordAfterNext = tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') ?? '';
+    if (/^(?:tamamlayıb|hazırlayıb)$/iu.test(current) && next === 'yenidən') { output += current; continue; }
     const freshObjectClause = (objectPronouns.has(next)
       || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
         && item.features.case === 'accusative'))
@@ -74,7 +76,7 @@ export function segmentIndependentClauses(text: string): string {
         && dependent.test(wordAfterNext));
     const temporalClause = /(?:dıqdan|dikdən|duqdan|dükdən|tıqdan|tikdən)$/iu.test(next)
       && wordAfterNext === 'sonra';
-    const completedConverb = /(?:ıb|ib|ub|üb)$/iu.test(current)
+    const completedConverb = productiveMorphology.analyzeWord(current).some(row => row.pos === 'verb') && /(?:ıb|ib|ub|üb)$/iu.test(current)
       && (independentStart(next) || (wordAfterNext === 'isə'
         && productiveMorphology.analyzeWord(next).some(row => row.pos === 'noun')))
       && !objectPronouns.has(next)
@@ -109,7 +111,8 @@ export function segmentIndependentClauses(text: string): string {
       /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0])))) {
       const clause = output.split(/[.!?\n]/u).at(-1) ?? '';
       const question = /^(?:necəsən|necəsiniz|haradasan|haradasınız)$/iu.test(current)
-        || /^(?:necə|neçə|niyə|nə vaxt|harada|kim|hansı)(?!\p{L})/iu.test(clause.trim());
+        || /(?:^|\s)(?:necə|neçə|niyə|nə vaxt|harada|kim|hansı)(?!\p{L})/iu.test(clause.trim())
+          && !/(?:bilmirəm|bilirəm|soruşdum|olduğu|olduğunu|dığını|diyini)/iu.test(clause);
       output += current + (question ? '?' : '.');
       continue;
     }

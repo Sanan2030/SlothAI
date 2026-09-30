@@ -1,3 +1,5 @@
+import { segmentCorrespondence } from './correspondence-boundaries';
+import { prepareReviewedContext } from './reviewed-context';
 import { languageServices, type LanguageServices } from './language-services';
 import { repairPhrases, sentenceBoundaries } from './context';
 import { punctuateNarrative, narrativeParagraphs } from './narrative';
@@ -5,7 +7,7 @@ import { beforeLexicalCorrection, extendedPhrases, extendedBoundaries } from './
 import { expositoryPhrases, punctuateExpository } from './expository';
 import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists } from './business';
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
-import { protectKnownTerminology } from './protected-terminology';
+import { protectKnownTerminology, canonicalProtectedTerm } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
 import { chooseByGrammar, chooseInflectedPlace, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
@@ -31,8 +33,8 @@ export interface CorrectionRuntime {
 }
 
 function capitalize(text: string): string {
-  return text.replace(/(^[“«"(]?|[.!?]\s+[“«"(]?|\n(?:\d+[.)]|[-*])\s+)([a-zəçğıöşü])/g,
-    (_, prefix: string, letter: string) => prefix + letter.toLocaleUpperCase('az-AZ'));
+  return text.replace(/(^[“«"(]?|[.!?]\s+[“«"(]?|\n(?:\d+[.)]|[-*])\s+)([a-zəçğıöşü]\p{L}*)/gu,
+    (_, prefix: string, word: string) => prefix + word[0].toLocaleUpperCase(canonicalProtectedTerm(word) ? 'en-US' : 'az-AZ') + word.slice(1));
 }
 
 function punctuate(line: string, useLocalModel = true): string {
@@ -58,7 +60,7 @@ function punctuate(line: string, useLocalModel = true): string {
   result = punctuateExpository(result);
   result = punctuateBusiness(result);
   result = punctuateTechnical(result);
-  result = segmentIndependentClauses(result);
+  result = segmentCorrespondence(segmentIndependentClauses(result));
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = insertLearnedBoundaries(result);
   result = punctuateCommas(result);
@@ -73,10 +75,9 @@ function punctuate(line: string, useLocalModel = true): string {
       && !/(?:^|\s)nə\s+bilirik$/iu.test(lastSentence);
     const exclamation = /^nə (?:gözəl|yaxşı|pis|qəribə)\s/i.test(lastSentence);
     const discourseMarker = /^nə isə(?:\s|$)/i.test(lastSentence);
-    const explicitQuestion = /^(?:[^,]+,\s*)?(?:(?:necə|niyə|nə vaxt|harada|hara|hansı|kim|nə)\s|(?:nədir|kimdir|kimsən|necəsən|necəsiniz)$)/i.test(lastSentence);
     const alternativeQuestion = /,\s*yoxsa\s+[^.!?]+$/iu.test(lastSentence);
     const tagQuestion = /,\s*düzdür$/iu.test(lastSentence);
-    const question = !indirect && !exclamation && !discourseMarker && (explicitQuestion || alternativeQuestion || tagQuestion || detectQuestion(lastSentence));
+    const question = !indirect && !exclamation && !discourseMarker && (alternativeQuestion || tagQuestion || detectQuestion(lastSentence));
     result = question && !detectExclamation(result) ? result + '?' : terminalPunctuation(result);
   }
   return capitalize(result);
@@ -137,8 +138,8 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   text = resolveEntitiesInText(text);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
-  text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf)(?![\p{L}\p{N}_])/giu, protect);
-  text = beforeLexicalCorrection(text);
+  text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);
+  text = prepareReviewedContext(beforeLexicalCorrection(text));
   text = prepareTechnicalPhrases(text);
   text = text.replace(/(^|[^\p{L}])bes(?=\s+(?:sen|sən|siz|biz|o)(?=$|[^\p{L}]))/giu, '$1bəs');
   // A conjunction versus a location is distinguished only in these explicit
@@ -157,16 +158,17 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
       context = sentenceEvidence(text.slice(sentenceStart, sentenceEnds[sentenceIndex]));
     }
     const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
-    const contextual = chooseInflectedPlace(word, previousWord)
-      ?? localPrediction?.(word, offset) ?? chooseBySentence(word, context);
-    if (contextual) return contextual;
-    if (/^(?:uc|adi)$/iu.test(word)) {
+    if (/^(?:karta|məcburi|artsa|kursu)$/iu.test(word)) return word;
+    if (/^(?:uc|adi|suret)$/iu.test(word)) {
       const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';
       const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
       const grammatical = chooseByGrammar(word, nextWord ? restoreWord(nextWord) : '',
         previousWord ? restoreWord(previousWord) : '');
       if (grammatical) return grammatical;
     }
+    const contextual = chooseInflectedPlace(word, previousWord)
+      ?? localPrediction?.(word, offset) ?? chooseBySentence(word, context);
+    if (contextual) return contextual;
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);
@@ -181,7 +183,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
     return replacement;
   });
-  text = repairPhrases(text);
+  text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);
   text = expositoryPhrases(text);
   text = businessPhrases(text);

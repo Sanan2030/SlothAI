@@ -136,24 +136,31 @@ in TypeScript with the bundled JSON model. No paid API or Python runtime is
 required in the browser. Ambiguous corrections can abstain instead of guessing.
 Correct explicitly accented words and protected technical terms are preserved.
 
-The frozen independent corpus now has exact editorial targets for all 460 RSD/IT
-and 340 email inputs. These are assistant-reviewed evaluation targets, not
-independent human linguist certification or training data. On these targets,
-main's baseline matched 471/800; this change matches 599/800, preserving every
-previously correct case. 201 cases still differ. Thirty separately authored
-fresh inputs pass both text and email-body expectations; this small set does
-not establish arbitrary-text accuracy.
+The evaluation corpus contains 1,000 exact editorial targets: the frozen 460
+RSD/IT and 340 mail inputs plus 100 new text and 100 new mail cases. The new
+200 are compositional synthetic cases, authored before evaluation; they are
+not a blind natural-language corpus. All targets are assistant-reviewed, not
+independent human linguist certification, and are excluded from model training.
+Six explicitly documented errors in the previous targets were corrected,
+including dotted Azerbaijani capitals, English identifier capitalization and
+missing grammatical punctuation. The original 800 input hashes are unchanged.
 
-Run `npm run gold:check` to enforce the frozen-input hashes, target hash and
-baseline cases. `npm run gold:exact` requires all 800 exact and currently fails
-on the remaining 201 cases. `npm run local-ai:fresh:check` enforces the fresh
-checks. CI also rebuilds the model and checks reproducibility.
+The current engine matches all 1,000 targets exactly, and a second processing
+pass preserves all 1,000 outputs. Previously correct cases remain protected.
+Thirty separately authored fresh inputs also pass both text and email-body
+expectations. These datasets do not establish arbitrary-text accuracy.
+
+Run `npm run gold:check` to enforce the frozen input/target hashes and baseline
+cases; `npm run gold:exact` requires all 1,000 exact outputs. Both checks are
+required in CI. `npm test` includes all 1,000 exact and second-pass checks.
+`npm run local-ai:fresh:check` enforces the separate fresh cases. CI also
+rebuilds both the synthetic cases and the model and checks reproducibility.
 
 General semantic understanding, exhaustive Azerbaijani morphology/POS,
 arbitrary-text punctuation, general technical suffix orthography, distributed
 rate limiting and complete Markdown/HTML structural parsing remain future work.
 The small classifiers are not a transformer or an LLM. See
-[the scoped implementation report](docs/priority-fixes-2026-09-30.md).
+[the current 1,000-case report](docs/gold-1000-2026-09-30.md).
 
 Historical proposal/corpus-review documents describe earlier iterations; current
 behavior and limitations above take precedence.

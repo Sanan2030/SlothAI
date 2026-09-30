@@ -4,7 +4,7 @@ export const PROTECTED_TERMINOLOGY = {
     'Java', 'Python', 'JavaScript', 'TypeScript', 'C#', 'C++', '.NET',
     'PHP', 'HTML', 'CSS', 'React', 'Next.js', 'Node.js', 'Spring Boot',
     'FastAPI', 'Pydantic', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis',
-    'Integration', 'integration', 'bug', 'state', 'JSONB', 'CSRF', 'XSS', 'E2E', 'QA', 'OCR', 'DOCX', 'ZIP',
+    'Integration', 'integration', 'Idempotency', 'idempotency', 'timer', 'login', 'bug', 'state', 'JSONB', 'ORM', 'DB', 'BI', 'SMS', 'QR', 'Integration', 'CSRF', 'XSS', 'E2E', 'QA', 'OCR', 'DOCX', 'ZIP',
     'RabbitMQ', 'Kafka', 'gRPC', 'GraphQL', 'WebSocket', 'OpenAPI',
   ],
   infrastructure: [

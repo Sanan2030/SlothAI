@@ -1,0 +1,1609 @@
+{
+  "review": {
+    "reviewer": "assistant-editor",
+    "method": "200 compositional cases authored before evaluation from 10 subjects, 10 distinct actions, 20 reports and 5 requests. These are structured synthetic evaluations, not a blind natural-language corpus. No output copied from engine.",
+    "trainingUse": "none; evaluation only"
+  },
+  "cases": [
+    {
+      "id": "fresh-text-001",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened qeydiyyata alinib",
+      "expected": "Sənəd qeydiyyata alınıb.",
+      "inputSha256": "3407710b60f55a785ecffd0e292db31f74ab40e0b754633182a3eae9e47131b3"
+    },
+    {
+      "id": "fresh-text-002",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened hazirdir",
+      "expected": "Sənəd hazırdır.",
+      "inputSha256": "2b4acd6b0586784384b783e2994487bdf662830e6ffa8a9bfab5609b8fb102f8"
+    },
+    {
+      "id": "fresh-text-003",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened sabah gonderilecek",
+      "expected": "Sənəd sabah göndəriləcək.",
+      "inputSha256": "8c5ee8b4f80cf2c80305235f598edd3f4fa8ebf3b3948ebab97c86c073132e3a"
+    },
+    {
+      "id": "fresh-text-004",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened yeniden yoxlanilir",
+      "expected": "Sənəd yenidən yoxlanılır.",
+      "inputSha256": "6395910fc3deb4123e9aed21d4d0fc3dbd374e583bc58562f7e51dc7e8e81ca4"
+    },
+    {
+      "id": "fresh-text-005",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened arxivde saxlanilir",
+      "expected": "Sənəd arxivdə saxlanılır.",
+      "inputSha256": "f1f8cd43dc40e8887d2c00f6030105c44027656d2023bde00fc02dabb6aba65a"
+    },
+    {
+      "id": "fresh-text-006",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened bu gun tesdiqlenib",
+      "expected": "Sənəd bu gün təsdiqlənib.",
+      "inputSha256": "ac9b24787e7831d5994ed9da3a5b2a711d1d3e6d0bcdb7713d68b552821b5431"
+    },
+    {
+      "id": "fresh-text-007",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened komandaya teqdim olunub",
+      "expected": "Sənəd komandaya təqdim olunub.",
+      "inputSha256": "a69b0d617ecc1345bcdcceaf5230fe8e28b2a89064ff07b8d81eba37959a4e8a"
+    },
+    {
+      "id": "fresh-text-008",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened elavede gosterilir",
+      "expected": "Sənəd əlavədə göstərilir.",
+      "inputSha256": "24ee929878ece140d0bc392bd2ca3960d104551d5b30d228da7d66be72191d5b"
+    },
+    {
+      "id": "fresh-text-009",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened musteriye gonderilib",
+      "expected": "Sənəd müştəriyə göndərilib.",
+      "inputSha256": "2c927f3294bda42398089be861018b1fb8cbd3477534b929902c98dc2c2a79c9"
+    },
+    {
+      "id": "fresh-text-010",
+      "mode": "text",
+      "domain": "qeydiyyat",
+      "input": "sened hele tamamlanmayib",
+      "expected": "Sənəd hələ tamamlanmayıb.",
+      "inputSha256": "344b087b964400b27baf23eb5063ae4c1deee215912fd4ac5d89b5ad2c7748c9"
+    },
+    {
+      "id": "fresh-text-011",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub qeydiyyata alinib",
+      "expected": "Məktub qeydiyyata alınıb.",
+      "inputSha256": "49db4c96fd5195a786619aa7443503c118f918ebf0355886a67c2ec7ab6e9035"
+    },
+    {
+      "id": "fresh-text-012",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub hazirdir",
+      "expected": "Məktub hazırdır.",
+      "inputSha256": "c3fcf2061fcb56b24a5f78edd3d3788eca9c489534fabae6ef959ba507af5d78"
+    },
+    {
+      "id": "fresh-text-013",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub sabah gonderilecek",
+      "expected": "Məktub sabah göndəriləcək.",
+      "inputSha256": "d165261e6934e6458b5293a670cfadd995fdcacc18d5bd144dcae08aee216e08"
+    },
+    {
+      "id": "fresh-text-014",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub yeniden yoxlanilir",
+      "expected": "Məktub yenidən yoxlanılır.",
+      "inputSha256": "95cb89ce7373456c0eac6ffea620f4123c524a02f30029ff489249390b38ae1b"
+    },
+    {
+      "id": "fresh-text-015",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub arxivde saxlanilir",
+      "expected": "Məktub arxivdə saxlanılır.",
+      "inputSha256": "971f82358c1d7d2ffff4f4d99f36b21dfcb2a1a85317787c1addb471695cfa47"
+    },
+    {
+      "id": "fresh-text-016",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub bu gun tesdiqlenib",
+      "expected": "Məktub bu gün təsdiqlənib.",
+      "inputSha256": "8499c7e0d4043d75888592d56de76969d9a36ef2f6577c906ff3f778e36b7149"
+    },
+    {
+      "id": "fresh-text-017",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub komandaya teqdim olunub",
+      "expected": "Məktub komandaya təqdim olunub.",
+      "inputSha256": "6d50752a204ede578a9608038e81c18ff08f92012c7e01953522d6ce2083b198"
+    },
+    {
+      "id": "fresh-text-018",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub elavede gosterilir",
+      "expected": "Məktub əlavədə göstərilir.",
+      "inputSha256": "c5704d6c4815d58372267ab946ac3fd926fb6eb37a762fd1dd82992cd370f594"
+    },
+    {
+      "id": "fresh-text-019",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub musteriye gonderilib",
+      "expected": "Məktub müştəriyə göndərilib.",
+      "inputSha256": "f9e363a00d7d66e20d48c27d703c5423f52c886990ba28a29f72bc73a216681a"
+    },
+    {
+      "id": "fresh-text-020",
+      "mode": "text",
+      "domain": "poçt",
+      "input": "mektub hele tamamlanmayib",
+      "expected": "Məktub hələ tamamlanmayıb.",
+      "inputSha256": "0c2e07899a00adc8bdaf4affe4dbcba1c87d6c1ebc4b541ec347ca8b7df10d33"
+    },
+    {
+      "id": "fresh-text-021",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu qeydiyyata alinib",
+      "expected": "Sorğu qeydiyyata alınıb.",
+      "inputSha256": "967e75cdb91ab72fcc68d75d0cc9dd8844be323074f0496dd4cba3cec52bbce8"
+    },
+    {
+      "id": "fresh-text-022",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu hazirdir",
+      "expected": "Sorğu hazırdır.",
+      "inputSha256": "770c0b371422ca7d6afc04bef847576088b6acc16b77192b47fcfe6efaad8277"
+    },
+    {
+      "id": "fresh-text-023",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu sabah gonderilecek",
+      "expected": "Sorğu sabah göndəriləcək.",
+      "inputSha256": "e11f23f0efba5844dfb8f33094f0cb4f0a20e026fcb5c03bfec3f851e55a36ee"
+    },
+    {
+      "id": "fresh-text-024",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu yeniden yoxlanilir",
+      "expected": "Sorğu yenidən yoxlanılır.",
+      "inputSha256": "3e6751541fe0f47af46e293718f65a0626940cc1b5fd66717f8fc6a106c4864b"
+    },
+    {
+      "id": "fresh-text-025",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu arxivde saxlanilir",
+      "expected": "Sorğu arxivdə saxlanılır.",
+      "inputSha256": "eb43baf4933692a8993c35583662c79c3bb8d18a2cc64262bc9a003acc8ed727"
+    },
+    {
+      "id": "fresh-text-026",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu bu gun tesdiqlenib",
+      "expected": "Sorğu bu gün təsdiqlənib.",
+      "inputSha256": "40b143d5e7fde2c1a38c9141384a81a79560f8ce961c59618c6bbcc3a206f7f6"
+    },
+    {
+      "id": "fresh-text-027",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu komandaya teqdim olunub",
+      "expected": "Sorğu komandaya təqdim olunub.",
+      "inputSha256": "e89532bbc7e9f1682b140e5f8807e855b5fe9a8ce0c36abaab8c3017ccdfb41f"
+    },
+    {
+      "id": "fresh-text-028",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu elavede gosterilir",
+      "expected": "Sorğu əlavədə göstərilir.",
+      "inputSha256": "9c2bf92acd2f599f971e38903941923a4ad035697da816f25a0cb7b754930d13"
+    },
+    {
+      "id": "fresh-text-029",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu musteriye gonderilib",
+      "expected": "Sorğu müştəriyə göndərilib.",
+      "inputSha256": "7570087aa8fe19d051ec416c37bac99e363f4c294e877f9fc9aa8e1c83bda1cc"
+    },
+    {
+      "id": "fresh-text-030",
+      "mode": "text",
+      "domain": "müraciət",
+      "input": "sorgu hele tamamlanmayib",
+      "expected": "Sorğu hələ tamamlanmayıb.",
+      "inputSha256": "5f9a6d9e28944e9c1f2f6987b86b30302d800f3f23fd7d4608aecefa2469740c"
+    },
+    {
+      "id": "fresh-text-031",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat qeydiyyata alinib",
+      "expected": "Hesabat qeydiyyata alınıb.",
+      "inputSha256": "125c98cdd48b7391cba08e04a13bfda9ee8823ac51211ce8e439550648a27ef1"
+    },
+    {
+      "id": "fresh-text-032",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat hazirdir",
+      "expected": "Hesabat hazırdır.",
+      "inputSha256": "150ce2ace67cc0853bfd484f6f065ee9c9e78d5d5aa55999e109c4eda36dc232"
+    },
+    {
+      "id": "fresh-text-033",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat sabah gonderilecek",
+      "expected": "Hesabat sabah göndəriləcək.",
+      "inputSha256": "50251c8d94b77fc91a47ae26502a7b63b0add49ebedb0fddc2f0c7e92f425228"
+    },
+    {
+      "id": "fresh-text-034",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat yeniden yoxlanilir",
+      "expected": "Hesabat yenidən yoxlanılır.",
+      "inputSha256": "c406410cb32ec49725002299a56e80e09b8e5ca1266b5548bf40bd17bfd22b60"
+    },
+    {
+      "id": "fresh-text-035",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat arxivde saxlanilir",
+      "expected": "Hesabat arxivdə saxlanılır.",
+      "inputSha256": "8dce645ac9249df0adc15dcadaa408b6d6e808fde9c388d1e0b8251936bf0076"
+    },
+    {
+      "id": "fresh-text-036",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat bu gun tesdiqlenib",
+      "expected": "Hesabat bu gün təsdiqlənib.",
+      "inputSha256": "b24d397dfe1a696ede1c080b5c5f2e753866a7a88717381c289208907a1226e4"
+    },
+    {
+      "id": "fresh-text-037",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat komandaya teqdim olunub",
+      "expected": "Hesabat komandaya təqdim olunub.",
+      "inputSha256": "15fa00e3e3c81b713d4f46330aa08f38f9733c4a08742143668e1b6da03f8a20"
+    },
+    {
+      "id": "fresh-text-038",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat elavede gosterilir",
+      "expected": "Hesabat əlavədə göstərilir.",
+      "inputSha256": "a0281a69f653984f34f4b8b9a11c90e0dc543c0fff5fdd3b5fc82af18affbbb8"
+    },
+    {
+      "id": "fresh-text-039",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat musteriye gonderilib",
+      "expected": "Hesabat müştəriyə göndərilib.",
+      "inputSha256": "b3c97cb3fea02a766d7182418a523be9931c221108e3eebffaa42699113939bf"
+    },
+    {
+      "id": "fresh-text-040",
+      "mode": "text",
+      "domain": "analitika",
+      "input": "hesabat hele tamamlanmayib",
+      "expected": "Hesabat hələ tamamlanmayıb.",
+      "inputSha256": "ea5f10153d3e6276943abf7d96c6597031de50d6d49bf5b3043dd298f73bf1fe"
+    },
+    {
+      "id": "fresh-text-041",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile qeydiyyata alinib",
+      "expected": "Müqavilə qeydiyyata alınıb.",
+      "inputSha256": "a52a3e1d474192c75463c16f9a65fbd8ccd79a5f1e2870eb4df849e141f173bf"
+    },
+    {
+      "id": "fresh-text-042",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile hazirdir",
+      "expected": "Müqavilə hazırdır.",
+      "inputSha256": "3839dd98a6cd84e36e91f0b1186ed16ac7f53a77010e2e0fba41bb00f717b7e5"
+    },
+    {
+      "id": "fresh-text-043",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile sabah gonderilecek",
+      "expected": "Müqavilə sabah göndəriləcək.",
+      "inputSha256": "b9d56f047376fbbf23c61aedb727374d11bbeeb07322e23984855034f420af15"
+    },
+    {
+      "id": "fresh-text-044",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile yeniden yoxlanilir",
+      "expected": "Müqavilə yenidən yoxlanılır.",
+      "inputSha256": "934076071fc6eba3ec402909369467ed61022a783d327f44d867b5840dd74385"
+    },
+    {
+      "id": "fresh-text-045",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile arxivde saxlanilir",
+      "expected": "Müqavilə arxivdə saxlanılır.",
+      "inputSha256": "8d2d374dee456c787ad86dacc98223a0dd7727a70513ad7917be87bece3e7857"
+    },
+    {
+      "id": "fresh-text-046",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile bu gun tesdiqlenib",
+      "expected": "Müqavilə bu gün təsdiqlənib.",
+      "inputSha256": "1e61220a670df07f8a007aaa2eff8320cbc5be71f342496e4d12fb0cb6d290d9"
+    },
+    {
+      "id": "fresh-text-047",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile komandaya teqdim olunub",
+      "expected": "Müqavilə komandaya təqdim olunub.",
+      "inputSha256": "c8645c34e6becbdb74d0ff8043676f0f75dd79e6af0b9d6b997d5f94d9c90398"
+    },
+    {
+      "id": "fresh-text-048",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile elavede gosterilir",
+      "expected": "Müqavilə əlavədə göstərilir.",
+      "inputSha256": "f8d88af109f55e8e2214bfcc640253c1bcb4564b821d4e2ec4dfceb70a9abcdb"
+    },
+    {
+      "id": "fresh-text-049",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile musteriye gonderilib",
+      "expected": "Müqavilə müştəriyə göndərilib.",
+      "inputSha256": "78da0e329f3e62c02ab002617158976536b28f9aa44619de6f31ac9cf1a793a4"
+    },
+    {
+      "id": "fresh-text-050",
+      "mode": "text",
+      "domain": "hüquq",
+      "input": "muqavile hele tamamlanmayib",
+      "expected": "Müqavilə hələ tamamlanmayıb.",
+      "inputSha256": "12cd1d1007337b4d709dd906d12eca10700ed763d5b808bca38ba310f09d562c"
+    },
+    {
+      "id": "fresh-text-051",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl qeydiyyata alinib",
+      "expected": "Fayl qeydiyyata alınıb.",
+      "inputSha256": "cd5c2dcaad333f8b5742f93564f3823fb33092277b6618f7b1e676c57225db4f"
+    },
+    {
+      "id": "fresh-text-052",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl hazirdir",
+      "expected": "Fayl hazırdır.",
+      "inputSha256": "866d57d0895308729659479868ebef4665c28836f94ec3a84b32dc06396f0fef"
+    },
+    {
+      "id": "fresh-text-053",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl sabah gonderilecek",
+      "expected": "Fayl sabah göndəriləcək.",
+      "inputSha256": "78023eca0105903b948ab6fe37d56445dc41afcbea237a24b953bbd3b824ddcb"
+    },
+    {
+      "id": "fresh-text-054",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl yeniden yoxlanilir",
+      "expected": "Fayl yenidən yoxlanılır.",
+      "inputSha256": "da2e475b5ec31a755a65f0789d94754eb44efc438ef85a75ceb4701808b978f5"
+    },
+    {
+      "id": "fresh-text-055",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl arxivde saxlanilir",
+      "expected": "Fayl arxivdə saxlanılır.",
+      "inputSha256": "b93350e3531f30a0be18371dcdbc4888e26fd374394d4d50bb16dc4258b41c91"
+    },
+    {
+      "id": "fresh-text-056",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl bu gun tesdiqlenib",
+      "expected": "Fayl bu gün təsdiqlənib.",
+      "inputSha256": "a8f85fc4d43f87c3d93740aa65aeb0eea8d0bf212a7f1b6f38b3d1df2c586ac3"
+    },
+    {
+      "id": "fresh-text-057",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl komandaya teqdim olunub",
+      "expected": "Fayl komandaya təqdim olunub.",
+      "inputSha256": "9dc30948d86057e33e05131b9dab2937917e458223f87a73bd383087164f8607"
+    },
+    {
+      "id": "fresh-text-058",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl elavede gosterilir",
+      "expected": "Fayl əlavədə göstərilir.",
+      "inputSha256": "0a43ccc8c2704d2d9ce3e18122fbf543522c5448e257618201975ea2d60f770e"
+    },
+    {
+      "id": "fresh-text-059",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl musteriye gonderilib",
+      "expected": "Fayl müştəriyə göndərilib.",
+      "inputSha256": "de6582dfcbb5ae4c3b5b4ff4752c38bf7c4a7cfaba305d03daf542dce89229e8"
+    },
+    {
+      "id": "fresh-text-060",
+      "mode": "text",
+      "domain": "ixrac",
+      "input": "fayl hele tamamlanmayib",
+      "expected": "Fayl hələ tamamlanmayıb.",
+      "inputSha256": "158bf961118a8b60e78d3ce0d506b1ccead5dc520ad7fbe4c9712eb28e987221"
+    },
+    {
+      "id": "fresh-text-061",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe qeydiyyata alinib",
+      "expected": "Layihə qeydiyyata alınıb.",
+      "inputSha256": "0fdcc896dda304871da3adab8d85bac3d47d5c05333499ff77434740cab991f0"
+    },
+    {
+      "id": "fresh-text-062",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe hazirdir",
+      "expected": "Layihə hazırdır.",
+      "inputSha256": "e1283a8fa3a141088bb057ea94c7d766bcf4b1c003a64ae18eff3997f12a5653"
+    },
+    {
+      "id": "fresh-text-063",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe sabah gonderilecek",
+      "expected": "Layihə sabah göndəriləcək.",
+      "inputSha256": "e5e15a8f564917255d9420e6b69317f0e35744c9bfbdb38e39b5ab0b382515c6"
+    },
+    {
+      "id": "fresh-text-064",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe yeniden yoxlanilir",
+      "expected": "Layihə yenidən yoxlanılır.",
+      "inputSha256": "fd6b79d4376fe8030591ff3f92215294b859cc900d6fc80b3d0d8185a5301d62"
+    },
+    {
+      "id": "fresh-text-065",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe arxivde saxlanilir",
+      "expected": "Layihə arxivdə saxlanılır.",
+      "inputSha256": "4d86427cb6e3dfd212242d1bbc762095a7d0a0ad9c5783f96f7cddf038d4ab22"
+    },
+    {
+      "id": "fresh-text-066",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe bu gun tesdiqlenib",
+      "expected": "Layihə bu gün təsdiqlənib.",
+      "inputSha256": "004a1e0c66d63e0107489ffb761233bc33d3b38c8c675a9fe84bbead90ce6cd5"
+    },
+    {
+      "id": "fresh-text-067",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe komandaya teqdim olunub",
+      "expected": "Layihə komandaya təqdim olunub.",
+      "inputSha256": "b9d51ea8cefa847fa0fd1b1871f500bc4949f9b3dcf2c6b41bdb4718c404e84b"
+    },
+    {
+      "id": "fresh-text-068",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe elavede gosterilir",
+      "expected": "Layihə əlavədə göstərilir.",
+      "inputSha256": "562d844d2d53c4ae15596eeddf959b84418a1434c0d240efdc41ac695ac540c0"
+    },
+    {
+      "id": "fresh-text-069",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe musteriye gonderilib",
+      "expected": "Layihə müştəriyə göndərilib.",
+      "inputSha256": "19679a0bfdd0fe28f1fc5dd9ce5903c942c110d66ff70fff5e70a717c065e1de"
+    },
+    {
+      "id": "fresh-text-070",
+      "mode": "text",
+      "domain": "plan",
+      "input": "layihe hele tamamlanmayib",
+      "expected": "Layihə hələ tamamlanmayıb.",
+      "inputSha256": "bad2b876c64c9c34d9557a568c4bfd3eb47f470ff53d1830f57880af5d60aaea"
+    },
+    {
+      "id": "fresh-text-071",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris qeydiyyata alinib",
+      "expected": "Sifariş qeydiyyata alınıb.",
+      "inputSha256": "b123661af066fd688bab49123794274dcb43cd999bd89ab5382a6a9c67207e3d"
+    },
+    {
+      "id": "fresh-text-072",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris hazirdir",
+      "expected": "Sifariş hazırdır.",
+      "inputSha256": "ac89005ce98e0b3798671e81cc1fbf8fa4924d3650127d78516479e16e2348d8"
+    },
+    {
+      "id": "fresh-text-073",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris sabah gonderilecek",
+      "expected": "Sifariş sabah göndəriləcək.",
+      "inputSha256": "53b4e485e061eef37909ea494b1de5fc38c34037f179fe994bd5833d6d5ede16"
+    },
+    {
+      "id": "fresh-text-074",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris yeniden yoxlanilir",
+      "expected": "Sifariş yenidən yoxlanılır.",
+      "inputSha256": "dd62e72c2e58e58f1bd24a51eeea4ff8819ae2a1a87584042b89508e5c13d741"
+    },
+    {
+      "id": "fresh-text-075",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris arxivde saxlanilir",
+      "expected": "Sifariş arxivdə saxlanılır.",
+      "inputSha256": "c3bb616d7bcd484eecf5c87616d31208aeeccbbe7a538ade1bad5ff02b618cdc"
+    },
+    {
+      "id": "fresh-text-076",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris bu gun tesdiqlenib",
+      "expected": "Sifariş bu gün təsdiqlənib.",
+      "inputSha256": "ca08bca25302193f7ac254bbb2079fe5f4e310bded882cf00a4dffa51beda47f"
+    },
+    {
+      "id": "fresh-text-077",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris komandaya teqdim olunub",
+      "expected": "Sifariş komandaya təqdim olunub.",
+      "inputSha256": "a0262750c62a25bf12906ccd300c36593d94bc857ee2a5063bbe2151fa5355ec"
+    },
+    {
+      "id": "fresh-text-078",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris elavede gosterilir",
+      "expected": "Sifariş əlavədə göstərilir.",
+      "inputSha256": "505c25a79164321e4d525fea0f6640c5060b38f9cec22584214d23292bb48da4"
+    },
+    {
+      "id": "fresh-text-079",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris musteriye gonderilib",
+      "expected": "Sifariş müştəriyə göndərilib.",
+      "inputSha256": "43d16d593909e5d69b3db254da48d2bc0b9057d9efa6abe73beaca4eaf6ff251"
+    },
+    {
+      "id": "fresh-text-080",
+      "mode": "text",
+      "domain": "ödəniş",
+      "input": "sifaris hele tamamlanmayib",
+      "expected": "Sifariş hələ tamamlanmayıb.",
+      "inputSha256": "00dcb9532988b35c6fd572fe8acb22e3272148306ffd7071bab654bd16e4f27c"
+    },
+    {
+      "id": "fresh-text-081",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris qeydiyyata alinib",
+      "expected": "Bildiriş qeydiyyata alınıb.",
+      "inputSha256": "6cd43bb735549b402d89baf0e62633f8a6a32138d0fba2aac1c0d5b7f66c561e"
+    },
+    {
+      "id": "fresh-text-082",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris hazirdir",
+      "expected": "Bildiriş hazırdır.",
+      "inputSha256": "ab8c93b8edbb605220ad2f4cf9cd936596c76a68eadc4fb933352af18bafbb74"
+    },
+    {
+      "id": "fresh-text-083",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris sabah gonderilecek",
+      "expected": "Bildiriş sabah göndəriləcək.",
+      "inputSha256": "066de0f29198602698000cdbbfd6f1af44d1bfb13a4459f26e3f0912f0600e60"
+    },
+    {
+      "id": "fresh-text-084",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris yeniden yoxlanilir",
+      "expected": "Bildiriş yenidən yoxlanılır.",
+      "inputSha256": "e84e6971a1de6b776b9be2b925e6829569359ef9d67608e12209b2544e69c982"
+    },
+    {
+      "id": "fresh-text-085",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris arxivde saxlanilir",
+      "expected": "Bildiriş arxivdə saxlanılır.",
+      "inputSha256": "6ab55c3459eca434d5d8ae27c133ec16251559ff046c74fa2bafc4d3159497d4"
+    },
+    {
+      "id": "fresh-text-086",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris bu gun tesdiqlenib",
+      "expected": "Bildiriş bu gün təsdiqlənib.",
+      "inputSha256": "19e55548b8c018164abdec9e981a8e933f59de5683e10c9483813dc16f45907d"
+    },
+    {
+      "id": "fresh-text-087",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris komandaya teqdim olunub",
+      "expected": "Bildiriş komandaya təqdim olunub.",
+      "inputSha256": "c558286b25fe84fa44cd45d0a949bddf4557b2ed92af056043bfa7ea288056b6"
+    },
+    {
+      "id": "fresh-text-088",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris elavede gosterilir",
+      "expected": "Bildiriş əlavədə göstərilir.",
+      "inputSha256": "5048ba3db927ac0881908ddc4855cbc3eb99f8289573d6c3d8847ea2a88e1ed4"
+    },
+    {
+      "id": "fresh-text-089",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris musteriye gonderilib",
+      "expected": "Bildiriş müştəriyə göndərilib.",
+      "inputSha256": "6e1d087ef5e55fcf9c8ec35ffd5cf58cefffd7743c000fb5b9c3b2b255cbd374"
+    },
+    {
+      "id": "fresh-text-090",
+      "mode": "text",
+      "domain": "xəbər",
+      "input": "bildiris hele tamamlanmayib",
+      "expected": "Bildiriş hələ tamamlanmayıb.",
+      "inputSha256": "bd5d8560d34cdd758a9f2fd22b7636413cf12cec44360f57310c8c5d08e530ed"
+    },
+    {
+      "id": "fresh-text-091",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif qeydiyyata alinib",
+      "expected": "Təklif qeydiyyata alınıb.",
+      "inputSha256": "49f41e3a71aafbbea17e384a5bbe54c2b509b92f00b6a44205b92c414e308730"
+    },
+    {
+      "id": "fresh-text-092",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif hazirdir",
+      "expected": "Təklif hazırdır.",
+      "inputSha256": "31ae2d53952ad54457a3ed0139239e137dfba4c3ebcdfa592ce3adb47470f666"
+    },
+    {
+      "id": "fresh-text-093",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif sabah gonderilecek",
+      "expected": "Təklif sabah göndəriləcək.",
+      "inputSha256": "b100401d8780da91060d03c9f2440172aeba67e689ec68b75edd7c90a8095708"
+    },
+    {
+      "id": "fresh-text-094",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif yeniden yoxlanilir",
+      "expected": "Təklif yenidən yoxlanılır.",
+      "inputSha256": "a77be3072453ae6fe8f262501f866f5005bddc7fef8d88a1607f34283cb77764"
+    },
+    {
+      "id": "fresh-text-095",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif arxivde saxlanilir",
+      "expected": "Təklif arxivdə saxlanılır.",
+      "inputSha256": "065acbee9ec8edc2c755e158baefa1a90187c3dd0f13f4c157e0cbfddcb0010a"
+    },
+    {
+      "id": "fresh-text-096",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif bu gun tesdiqlenib",
+      "expected": "Təklif bu gün təsdiqlənib.",
+      "inputSha256": "21d41393e3944fabe50937fde07681be953683447c9881f71d6a5035470e41f2"
+    },
+    {
+      "id": "fresh-text-097",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif komandaya teqdim olunub",
+      "expected": "Təklif komandaya təqdim olunub.",
+      "inputSha256": "ed3e1dcd141a4b9ff135a8ae58ba07be9655bef92ca240a5b388722a28111b18"
+    },
+    {
+      "id": "fresh-text-098",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif elavede gosterilir",
+      "expected": "Təklif əlavədə göstərilir.",
+      "inputSha256": "92446f9b668246800228bba85ccf80b288043beb865389e15d23e031df21ed89"
+    },
+    {
+      "id": "fresh-text-099",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif musteriye gonderilib",
+      "expected": "Təklif müştəriyə göndərilib.",
+      "inputSha256": "95150f84f9eef5e3762fecc902d7db1363299023a361c569f9c59b71c8c87778"
+    },
+    {
+      "id": "fresh-text-100",
+      "mode": "text",
+      "domain": "biznes",
+      "input": "teklif hele tamamlanmayib",
+      "expected": "Təklif hələ tamamlanmayıb.",
+      "inputSha256": "be8c1dafab5817d900e0052847d901c4244e472adda70c472f26e7e0bf0993fa"
+    },
+    {
+      "id": "fresh-mail-001",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 1-1 salam komanda yeni sened hazirdir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-1\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "e1ea41407de68b995f2695983853ba71fe1e21bd3b760612dcd8662680baa15d"
+    },
+    {
+      "id": "fresh-mail-002",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 1-2\nHörmətli komanda,\nyeni sened hazirdir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 1-2\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "938bbed6e93dfbb05fb6ea1671f579eeba0d6cb117683175ecc5db827cf7fd25"
+    },
+    {
+      "id": "fresh-mail-003",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 1-3 salam komanda yeni sened hazirdir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-3\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "830c82480bea36ab57f6a79fe9dae3b1efa6c28f41dd6d9c18e6ccf9cc07629c"
+    },
+    {
+      "id": "fresh-mail-004",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 1-4\nHörmətli komanda,\nyeni sened hazirdir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 1-4\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "6db4d2df22c2e89602253b829929cb9598ea02d3a7f71180fe3da161406deb4f"
+    },
+    {
+      "id": "fresh-mail-005",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 1-5 salam komanda yeni sened hazirdir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 1-5\n\nHörmətli komanda,\n\nYeni sənəd hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "c470dae7b4f4e6eaef4aec0db4d7dcd6b1f7a57143241d2451a74d9f78a743d6"
+    },
+    {
+      "id": "fresh-mail-006",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 2-1 salam komanda mektub qeydiyyata alinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-1\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "58cb56c002a6a300313b0ee18a6a047400746ab7bee60902ae46ac1739bffc3c"
+    },
+    {
+      "id": "fresh-mail-007",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 2-2\nHörmətli komanda,\nmektub qeydiyyata alinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 2-2\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "3e909787d80a1edd52554df2455a50d031c7249d5b8d129556a46c1ba438c3e9"
+    },
+    {
+      "id": "fresh-mail-008",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 2-3 salam komanda mektub qeydiyyata alinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-3\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "6f7b19066ae85ff67fe6429caa58ac90a9be22c78a60e9770ffb187c676e6c7c"
+    },
+    {
+      "id": "fresh-mail-009",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 2-4\nHörmətli komanda,\nmektub qeydiyyata alinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 2-4\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "67ec77770d54d685ffa34af6a4e235a806fb52a4ba4ff5c887fdb8924ed8d6d2"
+    },
+    {
+      "id": "fresh-mail-010",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 2-5 salam komanda mektub qeydiyyata alinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 2-5\n\nHörmətli komanda,\n\nMəktub qeydiyyata alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "9651b6982553f98d525dd241952d94fc939097d0b3b677070ed10ea4c9132437"
+    },
+    {
+      "id": "fresh-mail-011",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 3-1 salam komanda sorgu sisteme daxil olub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-1\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "de6d2fe3ed0ba54bcfa1aaf5219b5b0125aaf7c7d69f335071945e45ff5637fc"
+    },
+    {
+      "id": "fresh-mail-012",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 3-2\nHörmətli komanda,\nsorgu sisteme daxil olub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 3-2\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "6147f6eafbb3e21b645bb962fff213b45c1794963ae5f0425973062f7a87b85a"
+    },
+    {
+      "id": "fresh-mail-013",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 3-3 salam komanda sorgu sisteme daxil olub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-3\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "966c2e14988b96ac63881131e2d77b79d692684c713172dd716a0f9fa5ce3069"
+    },
+    {
+      "id": "fresh-mail-014",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 3-4\nHörmətli komanda,\nsorgu sisteme daxil olub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 3-4\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "9240cab957694c957c6d0d61f18664a234b18e40e8f2f8c4299ed48cdaf22d6d"
+    },
+    {
+      "id": "fresh-mail-015",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 3-5 salam komanda sorgu sisteme daxil olub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 3-5\n\nHörmətli komanda,\n\nSorğu sistemə daxil olub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "3381d3a7f26b4054f11d58d02940c0b29708973091f4b58be7009400d1349248"
+    },
+    {
+      "id": "fresh-mail-016",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 4-1 salam komanda hesabat arxivde saxlanilir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-1\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "618fe916e37d5fa230b2787fc1f6de416b94225557f4de8f709022c38190d061"
+    },
+    {
+      "id": "fresh-mail-017",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 4-2\nHörmətli komanda,\nhesabat arxivde saxlanilir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 4-2\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "1279d679711d62b07b9ffef3e5afe300712736f27be42f30c9d45de073a5130f"
+    },
+    {
+      "id": "fresh-mail-018",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 4-3 salam komanda hesabat arxivde saxlanilir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-3\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "b138bf5b53fb190d722c72eaa22f12849246c5f451a372bc61336e309dcca81b"
+    },
+    {
+      "id": "fresh-mail-019",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 4-4\nHörmətli komanda,\nhesabat arxivde saxlanilir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 4-4\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "e024f6188fcfec95bd5ad1cab80f7e6230372d3b7f687126d485cd362c275519"
+    },
+    {
+      "id": "fresh-mail-020",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 4-5 salam komanda hesabat arxivde saxlanilir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 4-5\n\nHörmətli komanda,\n\nHesabat arxivdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "ccb8688da18de19b26b17285ae0fbba3da4f357e2d9efe5ab4809e0fdda92b18"
+    },
+    {
+      "id": "fresh-mail-021",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 5-1 salam komanda muqavile tesdiqlenib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-1\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "99c3b84299b45d8f211a078b4fd69fd0288fd2d195d37f83705e00d93de155f6"
+    },
+    {
+      "id": "fresh-mail-022",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 5-2\nHörmətli komanda,\nmuqavile tesdiqlenib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 5-2\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "23f0748b2b1ff1ffb67a5fffb15c4ae8aa37aff6b8961b4c8900aa485d9db13f"
+    },
+    {
+      "id": "fresh-mail-023",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 5-3 salam komanda muqavile tesdiqlenib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-3\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "bfa5154ee9fc39e506782db75f325b59bb97ae3ff0a4d3d5fd82d1b90bed70e3"
+    },
+    {
+      "id": "fresh-mail-024",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 5-4\nHörmətli komanda,\nmuqavile tesdiqlenib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 5-4\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "79ab838d8ca1f6c6deb194a907609bf8c2560048a27dc92b650d0d2ad9c935ab"
+    },
+    {
+      "id": "fresh-mail-025",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 5-5 salam komanda muqavile tesdiqlenib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 5-5\n\nHörmətli komanda,\n\nMüqavilə təsdiqlənib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "3e0dd4cfbe913a3a5882656d31f5db2715c193c1ee0d332a761c74bc9aa5acb5"
+    },
+    {
+      "id": "fresh-mail-026",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 6-1 salam komanda fayl yeniden yoxlanilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-1\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "fd7ae51ab370f852bccb64e40ff24110317445f723bb6c7b6fc03730be13a334"
+    },
+    {
+      "id": "fresh-mail-027",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 6-2\nHörmətli komanda,\nfayl yeniden yoxlanilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 6-2\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "3fca3117f7bb9bd9f52861dd52d6a660e2468fb57d0c9435d3ca2beebc051b84"
+    },
+    {
+      "id": "fresh-mail-028",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 6-3 salam komanda fayl yeniden yoxlanilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-3\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "2c7eb7d2658f7e487bb573060128203bc2b8a79cef640a9066b4be147ec9c6d2"
+    },
+    {
+      "id": "fresh-mail-029",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 6-4\nHörmətli komanda,\nfayl yeniden yoxlanilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 6-4\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "d344a54c8d19e022407d28117841fbac816e0dcefa8c2931cf7241d59207a900"
+    },
+    {
+      "id": "fresh-mail-030",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 6-5 salam komanda fayl yeniden yoxlanilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 6-5\n\nHörmətli komanda,\n\nFayl yenidən yoxlanılıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "36dfb8dc0ea1e0617787af1e79b9cbffc43c45243481f105a8f2209d28b1b89d"
+    },
+    {
+      "id": "fresh-mail-031",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 7-1 salam komanda layihe komandaya teqdim olunub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-1\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "f1bca2c5c469d811e79b8e1ea17ef252fdab8704c21450295cd541e8fb945b20"
+    },
+    {
+      "id": "fresh-mail-032",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 7-2\nHörmətli komanda,\nlayihe komandaya teqdim olunub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 7-2\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "ca5725b02c969c482bf62b450636193b90ff6506a7607b392bf3c7c549574e75"
+    },
+    {
+      "id": "fresh-mail-033",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 7-3 salam komanda layihe komandaya teqdim olunub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-3\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "3bd7c6f315304919a21a0304ba18405da6a16a5877c0b30d80fc424703e79aff"
+    },
+    {
+      "id": "fresh-mail-034",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 7-4\nHörmətli komanda,\nlayihe komandaya teqdim olunub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 7-4\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "e952a3d99831a8673ab94380c11bce7877981fac742b89dae0ab12a43884f016"
+    },
+    {
+      "id": "fresh-mail-035",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 7-5 salam komanda layihe komandaya teqdim olunub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 7-5\n\nHörmətli komanda,\n\nLayihə komandaya təqdim olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "6c04400b447cac1907359c43c970b5d7cd95f26db9cac1d02264aaede0ac37a3"
+    },
+    {
+      "id": "fresh-mail-036",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 8-1 salam komanda sifaris qebul olunub neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-1\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "00eedfa34dceccf446da8c8c9320c1338671f2784f16ebc01b739bf14fd7ac17"
+    },
+    {
+      "id": "fresh-mail-037",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 8-2\nHörmətli komanda,\nsifaris qebul olunub reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 8-2\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "4319ffdd4a1c9798c21668b9291db50b3243639f3d113f2f04b465191a0b83b9"
+    },
+    {
+      "id": "fresh-mail-038",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 8-3 salam komanda sifaris qebul olunub cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-3\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "19783beb4eae88dbbbc0171e5c60090debfd07fcd89567541820ddfb63748dd6"
+    },
+    {
+      "id": "fresh-mail-039",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 8-4\nHörmətli komanda,\nsifaris qebul olunub melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 8-4\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "c7ced8133b59672e4e87000ce06853a864b9de278384b36e3da485981de7c96c"
+    },
+    {
+      "id": "fresh-mail-040",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 8-5 salam komanda sifaris qebul olunub senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 8-5\n\nHörmətli komanda,\n\nSifariş qəbul olunub. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "e8ca7714dc6a242ddb45daed9f276a7e30b3b065222b9ef10e1f69c542c73f3f"
+    },
+    {
+      "id": "fresh-mail-041",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 9-1 salam komanda bildiris gonderilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-1\n\nHörmətli komanda,\n\nBildiriş göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "872ca32af9c074e54188f2140191c8444885927036b316e37543c9b6908b2b77"
+    },
+    {
+      "id": "fresh-mail-042",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 9-2\nHörmətli komanda,\nbildiris gonderilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 9-2\n\nHörmətli komanda,\n\nBildiriş göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "35de10492c56ad59d153195e1bc62fd5ece1d3ee25538fcf1b088487c88072e8"
+    },
+    {
+      "id": "fresh-mail-043",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 9-3 salam komanda bildiris gonderilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-3\n\nHörmətli komanda,\n\nBildiriş göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "dfb3df8a31714ba75e262201000f52c0d11462fffd2b503a601bf077bf43b572"
+    },
+    {
+      "id": "fresh-mail-044",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 9-4\nHörmətli komanda,\nbildiris gonderilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 9-4\n\nHörmətli komanda,\n\nBildiriş göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "a2792b6a14044b68bd762a263a01e5a0c9514208e8aeb57a88250ca998bb6807"
+    },
+    {
+      "id": "fresh-mail-045",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 9-5 salam komanda bildiris gonderilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 9-5\n\nHörmətli komanda,\n\nBildiriş göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "f33b9299dbff1795c8b78d1d0af31a70a588e0cef44ee867909689ad1d23dd7d"
+    },
+    {
+      "id": "fresh-mail-046",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 10-1 salam komanda teklif rehberliye teqdim edilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-1\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "e2dde0bedf22d6e7ed91f770b34b9c25d15f4d16a29afb865fc127537a039898"
+    },
+    {
+      "id": "fresh-mail-047",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 10-2\nHörmətli komanda,\nteklif rehberliye teqdim edilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 10-2\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "0eee001f04a5ab56223109c9bf3fa6d1c96180d3371b72153c77b3a8a81cb791"
+    },
+    {
+      "id": "fresh-mail-048",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 10-3 salam komanda teklif rehberliye teqdim edilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-3\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "c664453397df9e0e05b4ac63d191bf9b0d7d6bb88a6eaf7d80f7609016669dc2"
+    },
+    {
+      "id": "fresh-mail-049",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 10-4\nHörmətli komanda,\nteklif rehberliye teqdim edilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 10-4\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "4c8f4a49e5aeac63b5f7385b971edf0fa85de92d528df597fb42278412748ada"
+    },
+    {
+      "id": "fresh-mail-050",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 10-5 salam komanda teklif rehberliye teqdim edilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 10-5\n\nHörmətli komanda,\n\nTəklif rəhbərliyə təqdim edilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "3d6288ad674dc498c70cda6e6bb95fad906035cb4c60cf125e04c84cbd418df7"
+    },
+    {
+      "id": "fresh-mail-051",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 11-1 salam komanda qeydiyyat tamamlanib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-1\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "c02e70bb8450bf11c9c64b1a11dfd99fac6c16fbd0db8afc0f0b16655b9e4d5a"
+    },
+    {
+      "id": "fresh-mail-052",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 11-2\nHörmətli komanda,\nqeydiyyat tamamlanib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 11-2\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "08d3230c58e3eeb8c8f041f1df8f98f9d8ef3bc8c3830acdfcefc3a1979ea9ee"
+    },
+    {
+      "id": "fresh-mail-053",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 11-3 salam komanda qeydiyyat tamamlanib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-3\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "b91340b59a18ba9527f94ad84811415f7717843aae01a18cd30b84687d5bad0a"
+    },
+    {
+      "id": "fresh-mail-054",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 11-4\nHörmətli komanda,\nqeydiyyat tamamlanib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 11-4\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "31d64d45117421791ab947ea1970621ae6143d448ee6630ded64f4b984c54b4a"
+    },
+    {
+      "id": "fresh-mail-055",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 11-5 salam komanda qeydiyyat tamamlanib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 11-5\n\nHörmətli komanda,\n\nQeydiyyat tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "4fc30680980ce1c346d537664745c48f3e8ab4eb26988f3af3e5d862db701ec7"
+    },
+    {
+      "id": "fresh-mail-056",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 12-1 salam komanda yoxlama basa catib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-1\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "306ea1f5f7b48882e3379d0b2b086a18f5e3695cd65e5be48283f9fe1480c1b1"
+    },
+    {
+      "id": "fresh-mail-057",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 12-2\nHörmətli komanda,\nyoxlama basa catib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 12-2\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "1f64de9dfcc900dc5128e47f1c3de42289deae4c8fc6569f17b878b1d1d76eb5"
+    },
+    {
+      "id": "fresh-mail-058",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 12-3 salam komanda yoxlama basa catib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-3\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "546efc7aba064d532309d684c79144547066264fbb1139cdd2391ee20a1e2b13"
+    },
+    {
+      "id": "fresh-mail-059",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 12-4\nHörmətli komanda,\nyoxlama basa catib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 12-4\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "57c03b6c75c886763f289c7883bb7aa1f5308e8874988a76c9d4c2ba37f75592"
+    },
+    {
+      "id": "fresh-mail-060",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 12-5 salam komanda yoxlama basa catib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 12-5\n\nHörmətli komanda,\n\nYoxlama başa çatıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "6a889baa9c53b53b7b1f080b6063411d60a430cad05def90a5d18e96f32fea25"
+    },
+    {
+      "id": "fresh-mail-061",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 13-1 salam komanda sened musteriye gonderilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-1\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "564643cbde82bc2d8786e61eb98fcc07ffaa21da9d090ff1ac75381bd676d053"
+    },
+    {
+      "id": "fresh-mail-062",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 13-2\nHörmətli komanda,\nsened musteriye gonderilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 13-2\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "161da4b3171ff96be59bb28123a3a7639d4532183b33eff6dd9bd0d58e346ce5"
+    },
+    {
+      "id": "fresh-mail-063",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 13-3 salam komanda sened musteriye gonderilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-3\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "0e648e119bcbf2e421d83704c8ac7ab483ab815e9c417b411ff68cecfaefe481"
+    },
+    {
+      "id": "fresh-mail-064",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 13-4\nHörmətli komanda,\nsened musteriye gonderilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 13-4\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "d3613e25e780715622ccda06b26b2b33b37e7be1a2152e33753dd54fef7d206f"
+    },
+    {
+      "id": "fresh-mail-065",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 13-5 salam komanda sened musteriye gonderilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 13-5\n\nHörmətli komanda,\n\nSənəd müştəriyə göndərilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "cf694ce1bcf845360fb4f63090f2a20c5362e52a43d86aa5899a6e36a9767166"
+    },
+    {
+      "id": "fresh-mail-066",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 14-1 salam komanda mektub sexsi kabinetde gorunur neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-1\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "d062e5e6f24ab8fada92c59a81ca82fd62d1494c0259663ad31602557f5d1f8a"
+    },
+    {
+      "id": "fresh-mail-067",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 14-2\nHörmətli komanda,\nmektub sexsi kabinetde gorunur reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 14-2\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "04332eb6222c85b6e649db1be4bd69c5571353ba768c898e0455e8b46abe7b35"
+    },
+    {
+      "id": "fresh-mail-068",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 14-3 salam komanda mektub sexsi kabinetde gorunur cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-3\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "1ad9a133ae779e1c682f9149f77766692ae6c41f52dabb740fcbc6a8b9e38d1a"
+    },
+    {
+      "id": "fresh-mail-069",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 14-4\nHörmətli komanda,\nmektub sexsi kabinetde gorunur melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 14-4\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "d4cc5473906f3dbb231f5c972c1a80ad37ead125b4d8a83e8f6ffa7292582571"
+    },
+    {
+      "id": "fresh-mail-070",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 14-5 salam komanda mektub sexsi kabinetde gorunur senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 14-5\n\nHörmətli komanda,\n\nMəktub şəxsi kabinetdə görünür. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "6375f83bd1b5a95fccb57d01162eff2f5997e2801160e86fe31a232dc78d063a"
+    },
+    {
+      "id": "fresh-mail-071",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 15-1 salam komanda sorgu icraya yonlendirilib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-1\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "89c90d10f192e4906cad68ee9bc2c9a28ef441779477ae7cea434f004a0567cc"
+    },
+    {
+      "id": "fresh-mail-072",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 15-2\nHörmətli komanda,\nsorgu icraya yonlendirilib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 15-2\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "12bc2eb9a2a37505c98cc5771179692fd8539dd1ac15118e140c8f7ba348ac38"
+    },
+    {
+      "id": "fresh-mail-073",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 15-3 salam komanda sorgu icraya yonlendirilib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-3\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "3145528a6943f02f4778a30e3f868cfa84ad2952a9a36c91a246afc3df866a28"
+    },
+    {
+      "id": "fresh-mail-074",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 15-4\nHörmətli komanda,\nsorgu icraya yonlendirilib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 15-4\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "942f17daec7e4ad19cf8d1111fd29271a10414b6bcda6d8625fc18a9108f2cc4"
+    },
+    {
+      "id": "fresh-mail-075",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 15-5 salam komanda sorgu icraya yonlendirilib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 15-5\n\nHörmətli komanda,\n\nSorğu icraya yönləndirilib. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "87ba4528576e3c969b05387e00b8f5e257d6cb736d08069a94297e34642a11cd"
+    },
+    {
+      "id": "fresh-mail-076",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 16-1 salam komanda hesabatin yeni varianti hazirdir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-1\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "209c8212748a6cf353ee5e3b59d4c3a3b06c641a11596a1cafdb8bbb2f5e59c1"
+    },
+    {
+      "id": "fresh-mail-077",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 16-2\nHörmətli komanda,\nhesabatin yeni varianti hazirdir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 16-2\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "5f402b975ce12264848e5e939fea4880b9ffa0936df544232e2bd8575aaae1db"
+    },
+    {
+      "id": "fresh-mail-078",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 16-3 salam komanda hesabatin yeni varianti hazirdir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-3\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "d8aac9ce6ff86612fd1abd158344dfd24547912278f5a8de7a4bdbf83f157f44"
+    },
+    {
+      "id": "fresh-mail-079",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 16-4\nHörmətli komanda,\nhesabatin yeni varianti hazirdir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 16-4\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "a89e308964f85a941abd86de61ad28227fe163934653d44953e9cdf77cda0150"
+    },
+    {
+      "id": "fresh-mail-080",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 16-5 salam komanda hesabatin yeni varianti hazirdir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 16-5\n\nHörmətli komanda,\n\nHesabatın yeni variantı hazırdır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "23485edf1f229ba5eb19d2ea8d60c57c52083d12b972b9462b08c1f3989d8b7b"
+    },
+    {
+      "id": "fresh-mail-081",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 17-1 salam komanda fayl serverde saxlanilir neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-1\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "923c5bd1748742875dbdf78ed6f217bcd2b89142b4e6d73bcc9439107687ffb0"
+    },
+    {
+      "id": "fresh-mail-082",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 17-2\nHörmətli komanda,\nfayl serverde saxlanilir reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 17-2\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "56b738130e0ac681a16a9b2113af5e78f953a31c68f719116b1877b3495361cb"
+    },
+    {
+      "id": "fresh-mail-083",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 17-3 salam komanda fayl serverde saxlanilir cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-3\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "afe1160e395102a0c0e1a68ddc88efc5e62922b186b0225edd694c5a7d1220fd"
+    },
+    {
+      "id": "fresh-mail-084",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 17-4\nHörmətli komanda,\nfayl serverde saxlanilir melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 17-4\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "c8b5406aae8b462d6a06828664f7501e6e9f7111f71a7b549b4efba8618e365c"
+    },
+    {
+      "id": "fresh-mail-085",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 17-5 salam komanda fayl serverde saxlanilir senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 17-5\n\nHörmətli komanda,\n\nFayl serverdə saxlanılır. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "c743785ee0ae4baaf949729833383e08098929f7160db1895ccd26141216072c"
+    },
+    {
+      "id": "fresh-mail-086",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 18-1 salam komanda muraciet qeyde alinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-1\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "090068cd0036aed46da61f89dbbdd42bb6a469c0138b004da6954768e211572c"
+    },
+    {
+      "id": "fresh-mail-087",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 18-2\nHörmətli komanda,\nmuraciet qeyde alinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 18-2\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "2e7f9a12eb573d0b2e654eb3ef52847eb9ad988859c6e6483d7a677babc5a161"
+    },
+    {
+      "id": "fresh-mail-088",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 18-3 salam komanda muraciet qeyde alinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-3\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "232a2f2e1b48eb9fdf20b3f6b8e05da4725e58e2763d8c8c969c462febd8f130"
+    },
+    {
+      "id": "fresh-mail-089",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 18-4\nHörmətli komanda,\nmuraciet qeyde alinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 18-4\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "723a54e3a3d6b105e9cd0297926b18e6a5503ac95a9e85951fdd11b16d8b89aa"
+    },
+    {
+      "id": "fresh-mail-090",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 18-5 salam komanda muraciet qeyde alinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 18-5\n\nHörmətli komanda,\n\nMüraciət qeydə alınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "21c43d49fd5b7d1dafe8c2f1ddc722707f70ae6f8c5b842b4f7d6b702490692a"
+    },
+    {
+      "id": "fresh-mail-091",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 19-1 salam komanda test ugurla tamamlanib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-1\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "356b8ff01b53f21f022e425bce845ea31f6a35a626dd640f8e87bc94bc028598"
+    },
+    {
+      "id": "fresh-mail-092",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 19-2\nHörmətli komanda,\ntest ugurla tamamlanib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 19-2\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "3fd987a858bbe126cb5bc1951ceb82bb068068c2f08f6e93c34af23636fefc44"
+    },
+    {
+      "id": "fresh-mail-093",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 19-3 salam komanda test ugurla tamamlanib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-3\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "a615fb247188805f13cea4a7c3aeba31d13928683944905776d73b5c70abd79e"
+    },
+    {
+      "id": "fresh-mail-094",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 19-4\nHörmətli komanda,\ntest ugurla tamamlanib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 19-4\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "6ea2598b0938f55f52829c30f4ad509fb2726d775c132c05ee19a27ee029c260"
+    },
+    {
+      "id": "fresh-mail-095",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 19-5 salam komanda test ugurla tamamlanib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 19-5\n\nHörmətli komanda,\n\nTest uğurla tamamlanıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "b5a68b47c82df72bd9e9caf87dcd263b298f936ebf3e31d65d1bd64497d9c1fd"
+    },
+    {
+      "id": "fresh-mail-096",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 20-1 salam komanda sistem yeniden ise salinib neticeni yoxlayin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-1\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Nəticəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "inputSha256": "ac61555f5a39b46f7fb8d9ccb7cbc0064eb3cc54cf3149e844643d6bbc7432c1"
+    },
+    {
+      "id": "fresh-mail-097",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 20-2\nHörmətli komanda,\nsistem yeniden ise salinib reyinizi bildirin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 20-2\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Rəyinizi bildirin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "dc2d48921b7453d178001f338896d80d255f2e83e51daba6b103db2a76d7c521"
+    },
+    {
+      "id": "fresh-mail-098",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 20-3 salam komanda sistem yeniden ise salinib cavabi gonderin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-3\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Cavabı göndərin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "33c686011e01e805219aa6a2cd7ec9bdf378e0d4e34558099d6dbebc4f507ab2"
+    },
+    {
+      "id": "fresh-mail-099",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "Mövzu: Yoxlama 20-4\nHörmətli komanda,\nsistem yeniden ise salinib melumati tesdiqleyin\n\nHörmətlə,\nLayihə komandası",
+      "expected": "Mövzu: Yoxlama 20-4\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Məlumatı təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "inputSha256": "d692c78a9fd955a15e4a7eb42c82f4445fcfcaac065a09e06103ef1b42988825"
+    },
+    {
+      "id": "fresh-mail-100",
+      "mode": "email",
+      "domain": "correspondence",
+      "input": "movzu Yoxlama 20-5 salam komanda sistem yeniden ise salinib senedi nezerden kecirin hormetle senan",
+      "expected": "Mövzu: Yoxlama 20-5\n\nHörmətli komanda,\n\nSistem yenidən işə salınıb. Sənədi nəzərdən keçirin.\n\nHörmətlə,\nSənan",
+      "inputSha256": "9caea4551282294ac31bdfec583fb98689996e4d08ae0e8ca1ead52716133d89"
+    }
+  ]
+}

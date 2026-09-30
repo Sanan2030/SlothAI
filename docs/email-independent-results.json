@@ -54,7 +54,7 @@
       "id": "mail-005",
       "domain": "qeydiyyat",
       "input": "Mövzu: Gələn poçt\nHörmətli katiblik,\nkağız məktubun əsli çatıb elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Gələn poçt\n\nHörmətli katiblik,\n\nKağız məktubun əsli çatıb. Elektron surətin qeydiyyat kodu ilə tutuşdurulması lazımdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -82,7 +82,7 @@
       "id": "mail-009",
       "domain": "qeydiyyat",
       "input": "hormetli komanda eyni nömrə ilə iki sənəd daxil olub lütfən yalnız yeni olanı emal edin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nEyni nömrə ilə iki sənəd daxil olub. Lütfən yalnız yeni olanı emal edin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -96,14 +96,14 @@
       "id": "mail-011",
       "domain": "qeydiyyat",
       "input": "Mövzu: Geri qaytarılan forma\nHörmətli Nigar xanım,\nformadakı əlaqə nömrəsi natamamdır yenilənmiş variantı göndərə bilərsinizmi\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır yenilənmiş variantı göndərə bilərsinizmi.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Geri qaytarılan forma\n\nHörmətli Nigar xanım,\n\nFormadakı əlaqə nömrəsi natamamdır. Yenilənmiş variantı göndərə bilərsinizmi?\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-012",
       "domain": "qeydiyyat",
       "input": "hormetli dəstək heyəti müraciət səhv kateqoriyaya düşüb onu aidiyyəti növə keçirməyinizi xahiş edirik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli dəstək heyəti,\n\nMüraciət səhv kateqoriyaya düşüb. Onu aidiyyəti növə keçirməyinizi xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -117,7 +117,7 @@
       "id": "mail-014",
       "domain": "qeydiyyat",
       "input": "Mövzu: Tarix uyğunsuzluğu\nHörmətli qeydiyyat şöbəsi,\nərizə üzərində yazılan tarix sistem vaxtından bir gün geridədir bunu yoxlayın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Tarix uyğunsuzluğu\n\nHörmətli qeydiyyat şöbəsi,\n\nƏrizə üzərində yazılan tarix sistem vaxtından bir gün geridədir bunu yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Tarix uyğunsuzluğu\n\nHörmətli qeydiyyat şöbəsi,\n\nƏrizə üzərində yazılan tarix sistem vaxtından bir gün geridədir. Bunu yoxlayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -131,14 +131,14 @@
       "id": "mail-016",
       "domain": "qeydiyyat",
       "input": "movzu Yeni forma salam admin qrupu müraciət forması yenilənib köhnə keçid artıq yeni səhifəyə yönləndirilir hormetle senan",
-      "actual": "Mövzu: Yeni forma\n\nHörmətli admin qrupu,\n\nMüraciət forması yenilənib köhnə keçid artıq yeni səhifəyə yönləndirilir.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yeni forma\n\nHörmətli admin qrupu,\n\nMüraciət forması yenilənib. Köhnə keçid artıq yeni səhifəyə yönləndirilir.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-017",
       "domain": "qeydiyyat",
       "input": "Mövzu: İtmiş fayl\nHörmətli qarşı tərəf,\ngöndərişdə əsas sənəd yoxdur əlavələri ayrıca almışıq lakin ərizəni görmürük\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İtmiş fayl\n\nHörmətli qarşı tərəf,\n\nGöndərişdə əsas sənəd yoxdur. Əlavələri ayrıca almışıq, lakin ərizəni görmürük.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -152,14 +152,14 @@
       "id": "mail-019",
       "domain": "qeydiyyat",
       "input": "movzu Tamamlanan qeydiyyat salam müştəri tələb etdiyiniz dəyişiklik sistemə işlənib onu şəxsi kabinetinizdə görə bilərsiniz hormetle senan",
-      "actual": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Tamamlanan qeydiyyat\n\nHörmətli müştəri,\n\nTələb etdiyiniz dəyişiklik sistemə işlənib. Onu şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-020",
       "domain": "qeydiyyat",
       "input": "Mövzu: Sıra artımı\nHörmətli növbətçi qrup,\nqəbul bölməsində gözləyən müraciətlər çoxalıb əlavə operator ayrılmalıdır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Sıra artımı\n\nHörmətli növbətçi qrup,\n\nQəbul bölməsində gözləyən müraciətlər çoxalıb. Əlavə operator ayrılmalıdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -180,7 +180,7 @@
       "id": "mail-023",
       "domain": "derkenar",
       "input": "Mövzu: Səhv təyinat\nHörmətli katiblik,\ndərkənar yanlış icraçıya düşüb aidiyyəti əməkdaşa qaytarın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Səhv təyinat\n\nHörmətli katiblik,\n\nDərkənar yanlış icraçıya düşüb. Aidiyyəti əməkdaşa qaytarın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -201,21 +201,21 @@
       "id": "mail-026",
       "domain": "derkenar",
       "input": "Mövzu: İcra statusu\nHörmətli tərəfdaş,\ndərkənar imzalanıb lakin icra hələ başlanmayıb bunun səbəbini araşdırırıq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İcra statusu\n\nHörmətli tərəfdaş,\n\nDərkənar imzalanıb, lakin icra hələ başlanmayıb. Bunun səbəbini araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-027",
       "domain": "derkenar",
       "input": "hormetli sənəd hazırlayanlar imzadan sonra dərkənarın məzmunu dəyişməməlidir düzəlişi əvvəl edin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli sənəd hazırlayanlar,\n\nİmzadan sonra dərkənarın məzmunu dəyişməməlidir. Düzəlişi əvvəl edin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-028",
       "domain": "derkenar",
       "input": "movzu Yenidən baxış salam Araz bəy əvvəlki dərkənarın məqsədi düzgün seçilməyib yeni layihəni təsdiqinizə təqdim edirik hormetle senan",
-      "actual": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yenidən baxış\n\nHörmətli Araz bəy,\n\nƏvvəlki dərkənarın məqsədi düzgün seçilməyib. Yeni layihəni təsdiqinizə təqdim edirik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -236,28 +236,28 @@
       "id": "mail-031",
       "domain": "derkenar",
       "input": "movzu Paralel icra salam komanda iki icraçı eyni dərkənarı alıb hər biri öz hissəsini ayrıca qeyd etməlidir hormetle senan",
-      "actual": "Mövzu: Paralel icra\n\nHörmətli komanda iki icraçı,\n\nEyni dərkənarı alıb hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Paralel icra\n\nHörmətli komanda,\n\nİki icraçı eyni dərkənarı alıb. Hər biri öz hissəsini ayrıca qeyd etməlidir.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-032",
       "domain": "derkenar",
       "input": "Mövzu: Bağlanan dərkənar\nHörmətli məsul şəxs,\nicra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını kareta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Bağlanan dərkənar\n\nHörmətli məsul şəxs,\n\nİcra tamamlanandan sonra nəticə faylını karta əlavə etməyi unutmayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-033",
       "domain": "derkenar",
       "input": "hormetli Rəşad bəy yanlış ünvanlanan dərkənar geri çağırılıb yeni variantı sizə göndərəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Rəşad bəy,\n\nYanlış ünvanlanan dərkənar geri çağırılıb. Yeni variantı sizə göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-034",
       "domain": "derkenar",
       "input": "movzu İmza tarixçəsi salam audit qrupu dərkənarın tarixçəsində ikinci imza görünmür jurnalı yoxlayın hormetle senan",
-      "actual": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür jurnalı yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İmza tarixçəsi\n\nHörmətli audit qrupu,\n\nDərkənarın tarixçəsində ikinci imza görünmür. Jurnalı yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -271,7 +271,7 @@
       "id": "mail-036",
       "domain": "derkenar",
       "input": "hormetli texniki dəstək dərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır nümunəni göndərdik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nDərkənara əlavə olunmuş fayl bəzi istifadəçilərdə açılmır. Nümunəni göndərdik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -285,7 +285,7 @@
       "id": "mail-038",
       "domain": "derkenar",
       "input": "Mövzu: Müvəqqəti əvəzləmə\nHörmətli filial meneceri,\nəsas imzaçı ezamiyyətdədir dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müvəqqəti əvəzləmə\n\nHörmətli filial meneceri,\n\nƏsas imzaçı ezamiyyətdədir. Dərkənarı müvəqqəti əvəz edən şəxsə yönləndirin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -313,21 +313,21 @@
       "id": "mail-042",
       "domain": "api",
       "input": "hormetli frontend qrupu yeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburu açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli frontend qrupu,\n\nYeni POST sorğusunun body sahəsində bəzi məcburi açarlar yoxdur.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-043",
       "domain": "api",
       "input": "movzu Callback ünvanı salam inteqrasiya komandası tərəfdaşın callback URL-i dəyişib yenisini test mühitinə yazmağımız lazımdır hormetle senan",
-      "actual": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Callback ünvanı\n\nHörmətli inteqrasiya komandası,\n\nTərəfdaşın callback URL-i dəyişib. Yenisini test mühitinə yazmağımız lazımdır.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-044",
       "domain": "api",
       "input": "Mövzu: Swagger sxemi\nHörmətli Emil bəy,\nSwagger sənədində amount tipi string göstərilib halbuki müqavilədə number tələb olunur\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Swagger sxemi\n\nHörmətli Əmil bəy,\n\nSwagger sənədində amount tipi string göstərilib halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Swagger sxemi\n\nHörmətli Emil bəy,\n\nSwagger sənədində amount tipi string göstərilib, halbuki müqavilədə number tələb olunur.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -341,7 +341,7 @@
       "id": "mail-046",
       "domain": "api",
       "input": "movzu Gecikən cavab salam müştəri sorğunuz serverə çatıb lakin cavab gecikir nəticəni aldıqdan sonra paylaşacağıq hormetle senan",
-      "actual": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Gecikən cavab\n\nHörmətli müştəri,\n\nSorğunuz serverə çatıb, lakin cavab gecikir. Nəticəni aldıqdan sonra paylaşacağıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -355,28 +355,28 @@
       "id": "mail-048",
       "domain": "api",
       "input": "hormetli təhlükəsizlik qrupu müddəti bitmiş tokenlə sorğu göndərə bilirik bu davranış araşdırılmalıdır hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli təhlükəsizlik qrupu,\n\nMüddəti bitmiş tokenlə sorğu göndərə bilirik. Bu davranış araşdırılmalıdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-049",
       "domain": "api",
       "input": "movzu API contract salam analitiklər yeni response schema qəbul meyarlarından fərqlənir rəyinizi bildirin hormetle senan",
-      "actual": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir rəyinizi bildirin.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: API contract\n\nHörmətli analitiklər,\n\nYeni response schema qəbul meyarlarından fərqlənir. Rəyinizi bildirin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-050",
       "domain": "api",
       "input": "Mövzu: Webhook təkrarı\nHörmətli Kamran bəy,\neyni hadisənin iki dəfə çatdığı görünür idempotency key yoxlanmalıdır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Webhook təkrarı\n\nHörmətli Kamran bəy,\n\nEyni hadisənin iki dəfə çatdığı görünür. Idempotency key yoxlanmalıdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-051",
       "domain": "api",
       "input": "hormetli test komandası son səhifənin cursor dəyəri boş gəlir əlavə test yazdıq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nSon səhifənin cursor dəyəri boş gəlir əlavə test yazdıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nSon səhifənin cursor dəyəri boş gəlir. Əlavə test yazdıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -404,7 +404,7 @@
       "id": "mail-055",
       "domain": "api",
       "input": "movzu Gateway marşrutu salam servis sahibləri gateway yeni ünvanı köhnə backend servisinə yönləndirir düzəlişi planladıq hormetle senan",
-      "actual": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir düzəlişi planladıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Gateway marşrutu\n\nHörmətli servis sahibləri,\n\nGateway yeni ünvanı köhnə backend servisinə yönləndirir. Düzəlişi planladıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -418,7 +418,7 @@
       "id": "mail-057",
       "domain": "api",
       "input": "hormetli mobil komanda mobil tətbiqdən gələn payload limiti keçib fayl yükünü bölmək lazımdır hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli mobil komanda,\n\nMobil tətbiqdən gələn payload limiti keçib. Fayl yükünü bölmək lazımdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -432,14 +432,14 @@
       "id": "mail-059",
       "domain": "api",
       "input": "Mövzu: Sertifikat yenilənməsi\nHörmətli tərəfdaş,\nAPI sertifikatı dəyişdirilib yeni public key sənədini sizə göndəririk\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Sertifikat yenilənməsi\n\nHörmətli tərəfdaş,\n\nAPI sertifikatı dəyişdirilib. Yeni public key sənədini sizə göndəririk.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-060",
       "domain": "api",
       "input": "hormetli monitorinq qrupu bir neçə daxili xəta 200 kimi görünür xəritəni birlikdə yoxlayaq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli monitorinq qrupu,\n\nBir neçə daxili xəta 200 kimi görünür. Xəritəni birlikdə yoxlayaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -467,14 +467,14 @@
       "id": "mail-064",
       "domain": "security",
       "input": "movzu Sertifikat bitməsi salam Elçin bəy TLS sertifikatının vaxtı bazar günü bitir yenilənməni əvvəlcədən planlaşdıraq hormetle senan",
-      "actual": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Sertifikat bitməsi\n\nHörmətli Elçin bəy,\n\nTLS sertifikatının vaxtı bazar günü bitir. Yenilənməni əvvəlcədən planlaşdıraq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-065",
       "domain": "security",
       "input": "Mövzu: Yeni rol qaydası\nHörmətli admin heyəti,\nmüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur bunun üçün yoxlama lazımdır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Yeni rol qaydası\n\nHörmətli admin heyəti,\n\nMüvəqqəti əvəzləmə icazəsi avtomatik ləğv olunmur. Bunun üçün yoxlama lazımdır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -488,7 +488,7 @@
       "id": "mail-067",
       "domain": "security",
       "input": "movzu Məxfi məlumat salam müştəri nümayəndəsi göndərdiyiniz ekran görüntüsündə şəxsi məlumat görünür onu maskalanmış formada paylaşın hormetle senan",
-      "actual": "Mövzu: Məxfi məlumat\n\nHörmətli müştəri nümayəndəsi,\n\nGöndərdiyiniz ekran görüntüsündə şəxsi məlumat görünür onu maskalanmış formada paylaşın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Məxfi məlumat\n\nHörmətli müştəri nümayəndəsi,\n\nGöndərdiyiniz ekran görüntüsündə şəxsi məlumat görünür. Onu maskalanmış formada paylaşın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -502,14 +502,14 @@
       "id": "mail-069",
       "domain": "security",
       "input": "hormetli rəhbərlik test zamanı iki orta riskli problem aşkarlanıb düzəliş tarixlərini təqdim edəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nTest zamanı iki orta riskli problem aşkarlanıb. Düzəliş tarixlərini təqdim edəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-070",
       "domain": "security",
       "input": "movzu Gizli açar salam tərtibatçılar repo tarixində təsadüfən qalan açar ləğv edilib yenisi təhlükəsiz kanalla paylaşılacaq hormetle senan",
-      "actual": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Gizli açar\n\nHörmətli tərtibatçılar,\n\nRepo tarixində təsadüfən qalan açar ləğv edilib. Yenisi təhlükəsiz kanalla paylaşılacaq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -523,7 +523,7 @@
       "id": "mail-072",
       "domain": "security",
       "input": "hormetli şəbəkə qrupu yeni qayda imza xidmətinə girişi bloklayıb ünvanları dəqiqləşdirin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli şəbəkə qrupu,\n\nYeni qayda imza xidmətinə girişi bloklayıb. Ünvanları dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -537,7 +537,7 @@
       "id": "mail-074",
       "domain": "security",
       "input": "Mövzu: Şifrə sızması\nHörmətli monitorinq qrupu,\ntest jurnalında yanlışlıqla yazılan şifrə silinib hadisə ayrıca qeydə alınıb\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Şifrə sızması\n\nHörmətli monitorinq qrupu,\n\nTest jurnalında yanlışlıqla yazılan şifrə silinib. Hadisə ayrıca qeydə alınıb.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -558,14 +558,14 @@
       "id": "mail-077",
       "domain": "security",
       "input": "Mövzu: Giriş məhdudiyyəti\nHörmətli müştəri,\nsəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb dəstəyə müraciət edin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Giriş məhdudiyyəti\n\nHörmətli müştəri,\n\nSəhv şifrə cəhdlərindən sonra hesabınız müvəqqəti bloklanıb. Dəstəyə müraciət edin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-078",
       "domain": "security",
       "input": "hormetli Nigar xanım sənəd keçidinin etibarlılıq müddəti bitib sizə yenisini göndərə bilərik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd keçidinin etibarlılıq müddəti bitib. Sizə yenisini göndərə bilərik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -621,7 +621,7 @@
       "id": "mail-086",
       "domain": "data",
       "input": "Mövzu: Analitika paneli\nHörmətli rəhbərlik,\ngündəlik müraciət sayı real vaxtda yenilənmir səbəbi cache müddətidir\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Analitika paneli\n\nHörmətli rəhbərlik,\n\nGündəlik müraciət sayı real vaxtda yenilənmir. Səbəbi cache müddətidir.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -663,7 +663,7 @@
       "id": "mail-092",
       "domain": "data",
       "input": "Mövzu: Məlumat düzəlişi\nHörmətli müştəri,\nprofilinizdəki soyadın yeni yazılışını aldıq yoxlamadan sonra yeniləyəcəyik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın yeni yazılışını aldıq yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Məlumat düzəlişi\n\nHörmətli müştəri,\n\nProfilinizdəki soyadın yeni yazılışını aldıq. Yoxlamadan sonra yeniləyəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -698,7 +698,7 @@
       "id": "mail-097",
       "domain": "data",
       "input": "movzu Maskalanma testi salam təhlükəsizlik qrupu ixrac faylında şəxsi nömrə görünməməlidir nümunəni yoxlayın hormetle senan",
-      "actual": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir nümunəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Maskalanma testi\n\nHörmətli təhlükəsizlik qrupu,\n\nİxrac faylında şəxsi nömrə görünməməlidir. Nümunəni yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -726,7 +726,7 @@
       "id": "mail-101",
       "domain": "devops",
       "input": "Mövzu: Production deploy\nHörmətli platforma komandası,\nyeni versiya production mühitinə çıxıb health check nəticəsi normaldır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Production deploy\n\nHörmətli platforma komandası,\n\nYeni versiya production mühitinə çıxıb. Health check nəticəsi normaldır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -747,7 +747,7 @@
       "id": "mail-104",
       "domain": "devops",
       "input": "Mövzu: Build xətası\nHörmətli Nicat bəy,\nCI pipeline içində typecheck mərhələsi uğursuzdur logun son hissəsini göndərirəm\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Build xətası\n\nHörmətli Nicat bəy,\n\nCI pipeline içində typecheck mərhələsi uğursuzdur. Logun son hissəsini göndərirəm.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -761,7 +761,7 @@
       "id": "mail-106",
       "domain": "devops",
       "input": "movzu CPU artımı salam monitorinq qrupu dünən gecə CPU istifadəsi artsa da xidmət dayanmayıb hormetle senan",
-      "actual": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artışa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: CPU artımı\n\nHörmətli monitorinq qrupu,\n\nDünən gecə CPU istifadəsi artsa da xidmət dayanmayıb.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -775,28 +775,28 @@
       "id": "mail-108",
       "domain": "devops",
       "input": "hormetli DevOps qrupu pod restart dövrünə düşüb yaddaş limitini ayrıca ölçün hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli DevOps qrupu,\n\nPod restart dövrünə düşüb. Yaddaş limitini ayrıca ölçün.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-109",
       "domain": "devops",
       "input": "movzu DNS yenilənməsi salam servis sahibləri yeni domen qaydası bütün regionlara yayılmayıb bir az gözləyək hormetle senan",
-      "actual": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb bir az gözləyək.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: DNS yenilənməsi\n\nHörmətli servis sahibləri,\n\nYeni domen qaydası bütün regionlara yayılmayıb. Bir az gözləyək.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-110",
       "domain": "devops",
       "input": "Mövzu: Staging nəticəsi\nHörmətli müştəri meneceri,\nstaging mühitində sınaqlar keçib production üçün təsdiq gözləyirik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Staging nəticəsi\n\nHörmətli müştəri meneceri,\n\nStaging mühitində sınaqlar keçib. Production üçün təsdiq gözləyirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-111",
       "domain": "devops",
       "input": "hormetli operatorlar gündəlik pik vaxtlarda cavab müddəti uzanır əlavə resurs ayrılacaq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli operatorlar,\n\nGündəlik pik vaxtlarda cavab müddəti uzanır əlavə resurs ayrılacaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli operatorlar,\n\nGündəlik pik vaxtlarda cavab müddəti uzanır. Əlavə resurs ayrılacaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -810,7 +810,7 @@
       "id": "mail-113",
       "domain": "devops",
       "input": "Mövzu: Deploy planı\nHörmətli Aysel xanım,\nmövcud versiya ehtiyatda qalacaq dəyişiklik tamamlananda sizə yazacağıq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Deploy planı\n\nHörmətli Aysel xanım,\n\nMövcud versiya ehtiyatda qalacaq. Dəyişiklik tamamlananda sizə yazacağıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -831,7 +831,7 @@
       "id": "mail-116",
       "domain": "devops",
       "input": "Mövzu: Disk dolması\nHörmətli texniki komanda,\nserverdə boş yer azalıb jurnal fayllarını təhlükəsiz qaydada dövr etdirək\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Disk dolması\n\nHörmətli texniki komanda,\n\nServerdə boş yer azalıb. Jurnal fayllarını təhlükəsiz qaydada dövr etdirək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -845,7 +845,7 @@
       "id": "mail-118",
       "domain": "devops",
       "input": "movzu GitHub əlaqəsi salam Elçin bəy main branch-dəki son commit Vercel build ilə eynidirmi bunu yoxlayın hormetle senan",
-      "actual": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi bunu yoxlayın?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: GitHub əlaqəsi\n\nHörmətli Elçin bəy,\n\nMain branch-dəki son commit Vercel build ilə eynidirmi? Bunu yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -887,14 +887,14 @@
       "id": "mail-124",
       "domain": "testing",
       "input": "movzu Regressiya salam tərtibatçılar köhnə davranış yeni dəyişiklikdən sonra pozulub nümunəni əlavə etdim hormetle senan",
-      "actual": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub nümunəni əlavə etdim.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Regressiya\n\nHörmətli tərtibatçılar,\n\nKöhnə davranış yeni dəyişiklikdən sonra pozulub. Nümunəni əlavə etdim.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-125",
       "domain": "testing",
       "input": "Mövzu: Yenidən sınaq\nHörmətli müştəri,\nbildirdiyiniz problemə düzəliş edilib onu test mühitində yoxlaya bilərsiniz\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Yenidən sınaq\n\nHörmətli müştəri,\n\nBildirdiyiniz problemə düzəliş edilib. Onu test mühitində yoxlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -915,7 +915,7 @@
       "id": "mail-128",
       "domain": "testing",
       "input": "Mövzu: Buraxılışa hazırlıq\nHörmətli menecer,\niki kritik xəta hələ açıqdır buraxılış qərarını sonraya saxlayaq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Buraxılışa hazırlıq\n\nHörmətli menecer,\n\nİki kritik xəta hələ açıqdır. Buraxılış qərarını sonraya saxlayaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -929,7 +929,7 @@
       "id": "mail-130",
       "domain": "testing",
       "input": "movzu Sınaq dəvəti salam əlaqə qrupu gələn çərşənbə qəbul testini birlikdə keçirəcəyik hormetle senan",
-      "actual": "Mövzu: Sınaq dəvəti\n\nHörmətli əlaqə qrupu,\n\nGələn çərşənbə qəbul teştini birlikdə keçirəcəyik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Sınaq dəvəti\n\nHörmətli əlaqə qrupu,\n\nGələn çərşənbə qəbul testini birlikdə keçirəcəyik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -957,7 +957,7 @@
       "id": "mail-134",
       "domain": "testing",
       "input": "Mövzu: Kontrakt testi\nHörmətli backend qrupu,\nyeni API cavabında əvvəl məcburi olan sahə artıq yoxdur\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburu olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Kontrakt testi\n\nHörmətli backend qrupu,\n\nYeni API cavabında əvvəl məcburi olan sahə artıq yoxdur.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -999,7 +999,7 @@
       "id": "mail-140",
       "domain": "testing",
       "input": "Mövzu: Sandbox token\nHörmətli vendor qrupu,\ngöndərdiyiniz sandbox tokenin vaxtı bitib yenisini rica edirik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Sandbox token\n\nHörmətli vendor qrupu,\n\nGöndərdiyiniz sandbox tokenin vaxtı bitib. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1013,28 +1013,28 @@
       "id": "mail-142",
       "domain": "workflow",
       "input": "movzu Paralel razılaşdırma salam rəhbər iki şöbənin rəyi eyni vaxtda toplanacaq qərarı sonra verəcəyik hormetle senan",
-      "actual": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Paralel razılaşdırma\n\nHörmətli rəhbər,\n\nİki şöbənin rəyi eyni vaxtda toplanacaq. Qərarı sonra verəcəyik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-143",
       "domain": "workflow",
       "input": "Mövzu: İcraçı dəyişməsi\nHörmətli katiblik,\nəvvəlki icraçı məzuniyyətə çıxıb sənədi əvəzediciyə göndərin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İcraçı dəyişməsi\n\nHörmətli katiblik,\n\nƏvvəlki icraçı məzuniyyətə çıxıb. Sənədi əvəzediciyə göndərin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-144",
       "domain": "workflow",
       "input": "hormetli müştəri müraciətiniz baxışdadır yekun qərar hazır olanda xəbər verəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nMüraciətiniz baxışdadır yekun qərar hazır olanda xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nMüraciətiniz baxışdadır. Yekun qərar hazır olanda xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-145",
       "domain": "workflow",
       "input": "movzu Təsdiq sırası salam sənəd qrupu imza addımı razılaşdırmadan sonra gəlməlidir cari qaydanı yeniləyin hormetle senan",
-      "actual": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Təsdiq sırası\n\nHörmətli sənəd qrupu,\n\nİmza addımı razılaşdırmadan sonra gəlməlidir. Cari qaydanı yeniləyin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1048,7 +1048,7 @@
       "id": "mail-147",
       "domain": "workflow",
       "input": "hormetli Nigar xanım sənəd düzəliş üçün sizə qaytarılıb qeyddə çatışmayan sahələr yazılıb hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Nigar xanım,\n\nSənəd düzəliş üçün sizə qaytarılıb. Qeyddə çatışmayan sahələr yazılıb.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1076,7 +1076,7 @@
       "id": "mail-151",
       "domain": "workflow",
       "input": "movzu Təyinat sualı salam Araz bəy bu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin hormetle senan",
-      "actual": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Təyinat sualı\n\nHörmətli Araz bəy,\n\nBu tapşırığın hansı qrupa aid olduğunu dəqiqləşdirməyə kömək edin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1097,7 +1097,7 @@
       "id": "mail-154",
       "domain": "workflow",
       "input": "movzu Prioritet artımı salam icra rəhbəri bu müraciətə bu gün cavab verilməlidir onu üst sıraya keçirin hormetle senan",
-      "actual": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir onu üst sıraya keçirin.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Prioritet artımı\n\nHörmətli icra rəhbəri,\n\nBu müraciətə bu gün cavab verilməlidir. Onu üst sıraya keçirin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1111,14 +1111,14 @@
       "id": "mail-156",
       "domain": "workflow",
       "input": "hormetli Rəna xanım iş sizə aid olmasa da hər səhər xatırlatma alırsınız bunu araşdırırıq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa da hər səhər xatırlatma alırsınız bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nİş sizə aid olmasa da hər səhər xatırlatma alırsınız. Bunu araşdırırıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-157",
       "domain": "workflow",
       "input": "movzu Müddət sorğusu salam filial nümayəndəsi tapşırığın icra müddəti nə vaxt başlayır açıqlamanızı gözləyirik hormetle senan",
-      "actual": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır açıqlamanızı gözləyirik?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Müddət sorğusu\n\nHörmətli filial nümayəndəsi,\n\nTapşırığın icra müddəti nə vaxt başlayır? Açıqlamanızı gözləyirik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1146,28 +1146,28 @@
       "id": "mail-161",
       "domain": "archive",
       "input": "Mövzu: Köhnə sənəd\nHörmətli arxiv qrupu,\nsoruşduğunuz məktub rəqəmsal arxivdə var kağız əsli isə anbardadır\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Köhnə sənəd\n\nHörmətli arxiv qrupu,\n\nSoruşduğunuz məktub rəqəmsal arxivdə var. Kağız əsli isə anbardadır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-162",
       "domain": "archive",
       "input": "hormetli Aysel xanım keçən ilin protokolundan çıxarış istəmisiniz onu hazırlayıb göndərəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmisiniz onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nKeçən ilin protokolundan çıxarış istəmisiniz. Onu hazırlayıb göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-163",
       "domain": "archive",
       "input": "movzu Saxlanma qaydası salam audit komandası bu kateqoriya sənədləri hələ silmək olmaz saxlanma müddəti davam edir hormetle senan",
-      "actual": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Saxlanma qaydası\n\nHörmətli audit komandası,\n\nBu kateqoriya sənədləri hələ silmək olmaz. Saxlanma müddəti davam edir.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-164",
       "domain": "archive",
       "input": "Mövzu: Surət sorğusu\nHörmətli müştəri nümayəndəsi,\nimzalı sənədin elektron surətini bu gün təqdim edə bilərik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Surət sorğusu\n\nHörmətli müştəri nümayəndəsi,\n\nİmzalı sənədin elektron sürətini bu gün təqdim edə bilərik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Surət sorğusu\n\nHörmətli müştəri nümayəndəsi,\n\nİmzalı sənədin elektron surətini bu gün təqdim edə bilərik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1181,7 +1181,7 @@
       "id": "mail-166",
       "domain": "archive",
       "input": "movzu Səhv metadata salam katiblik arxivdə olan sənədin tarixi yanlış yazılıb yoxlama üçün əslini istəyirik hormetle senan",
-      "actual": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Səhv metadata\n\nHörmətli katiblik,\n\nArxivdə olan sənədin tarixi yanlış yazılıb. Yoxlama üçün əslini istəyirik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1195,14 +1195,14 @@
       "id": "mail-168",
       "domain": "archive",
       "input": "hormetli Nərmin xanım bu faylın saxlanma müddəti uzadılıb onu siyahıdan silməyin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nBu faylın saxlanma müddəti uzadılıb. Onu siyahıdan silməyin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-169",
       "domain": "archive",
       "input": "movzu Açılmayan PDF salam texniki dəstək köhnə PDF faylının bəzi səhifələri düzgün açılmır alternativ surət axtarırıq hormetle senan",
-      "actual": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır alternativ surət axtarırıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Açılmayan PDF\n\nHörmətli texniki dəstək,\n\nKöhnə PDF faylının bəzi səhifələri düzgün açılmır. Alternativ surət axtarırıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1216,7 +1216,7 @@
       "id": "mail-171",
       "domain": "archive",
       "input": "hormetli müştəri istədiyiniz sənədin surəti hazırdır şəxsi kabinetinizdən yükləyə bilərsiniz hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nİstədiyiniz sənədin surəti hazırdır. Şəxsi kabinetinizdən yükləyə bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1230,7 +1230,7 @@
       "id": "mail-173",
       "domain": "archive",
       "input": "Mövzu: İndeks yenilənməsi\nHörmətli sənəd işçiləri,\naxtarış nəticəsində yeni sənəd görünmür indeksin yenilənməsini gözləyirik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür indeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İndeks yenilənməsi\n\nHörmətli sənəd işçiləri,\n\nAxtarış nəticəsində yeni sənəd görünmür. İndeksin yenilənməsini gözləyirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1265,14 +1265,14 @@
       "id": "mail-178",
       "domain": "archive",
       "input": "movzu Giriş jurnalı salam təhlükəsizlik şöbəsi arxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır hormetle senan",
-      "actual": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Giriş jurnalı\n\nHörmətli təhlükəsizlik şöbəsi,\n\nArxivdən çıxarılan sənədlərin kim tərəfindən açıldığını göstərən jurnal lazımdır.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-179",
       "domain": "archive",
       "input": "Mövzu: Arxiv cavabı\nHörmətli Rauf bəy,\naxtardığınız sənəd bu qovluqda yoxdur qeydiyyat tarixini bir daha dəqiqləşdirin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Arxiv cavabı\n\nHörmətli Rauf bəy,\n\nAxtardığınız sənəd bu qovluqda yoxdur. Qeydiyyat tarixini bir daha dəqiqləşdirin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1286,28 +1286,28 @@
       "id": "mail-181",
       "domain": "payments",
       "input": "movzu Ödəniş qəbzi salam müştəri ödənişiniz uğurla qəbul olunub qəbzi şəxsi kabinetinizdə görə bilərsiniz hormetle senan",
-      "actual": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Ödəniş qəbzi\n\nHörmətli müştəri,\n\nÖdənişiniz uğurla qəbul olunub. Qəbzi şəxsi kabinetinizdə görə bilərsiniz.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-182",
       "domain": "payments",
       "input": "Mövzu: İkiqat məbləğ\nHörmətli maliyyə qrupu,\neyni hesab üzrə iki əməliyyat görünür bank cavabını gözləyirik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İkiqat məbləğ\n\nHörmətli maliyyə qrupu,\n\nEyni hesab üzrə iki əməliyyat görünür. Bank cavabını gözləyirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-183",
       "domain": "payments",
       "input": "hormetli Araz bəy yenilənmiş hesab fakturanı təsdiq üçün göndəririk zəhmət olmasa baxın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Araz bəy,\n\nYenilənmiş hesab fakturanı təsdiq üçün göndəririk. Zəhmət olmasa, baxın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-184",
       "domain": "payments",
       "input": "movzu Geri qaytarma salam bank tərəfdaşı qaytarılma sorğusu yaradılıb nəticə üçün transaction kodunu izləyirik hormetle senan",
-      "actual": "Mövzu: Geri qaytarma\n\nHörmətli bank tərəfdaşı,\n\nQaytarılma sorğusu yaradılıb nəticə üçün transaction kodunu izləyirik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Geri qaytarma\n\nHörmətli bank tərəfdaşı,\n\nQaytarılma sorğusu yaradılıb. Nəticə üçün transaction kodunu izləyirik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1328,21 +1328,21 @@
       "id": "mail-187",
       "domain": "payments",
       "input": "movzu Kart limiti salam Nicat bəy əməliyyatınız bank tərəfindən rədd edilib kart limitinizi yoxlayın hormetle senan",
-      "actual": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Kart limiti\n\nHörmətli Nicat bəy,\n\nƏməliyyatınız bank tərəfindən rədd edilib. Kart limitinizi yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-188",
       "domain": "payments",
       "input": "Mövzu: Güzəşt tələbi\nHörmətli satış qrupu,\nmüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib təklif hazırlayaq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Güzəşt tələbi\n\nHörmətli satış qrupu,\n\nMüştərinin tələb etdiyi güzəşt müqavilədə göstərilməyib. Təklif hazırlayaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-189",
       "domain": "payments",
       "input": "hormetli müştəri ödədiyiniz məbləğ hesabın hamısını bağlamır qalıq şəxsi kabinetdə görünür hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nÖdədiyiniz məbləğ hesabın hamısını bağlamır. Qalıq şəxsi kabinetdə görünür.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1356,28 +1356,28 @@
       "id": "mail-191",
       "domain": "payments",
       "input": "Mövzu: Gateway cavabı\nHörmətli texniki komanda,\ngateway 502 göstərdi lakin bank əməliyyatı təsdiqlədi təkrar çəkməyin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Gateway cavabı\n\nHörmətli texniki komanda,\n\nGateway 502 göstərdi, lakin bank əməliyyatı təsdiqlədi. Təkrar çəkməyin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-192",
       "domain": "payments",
       "input": "hormetli Leyla xanım göndərdiyiniz hesab fakturada vergi kodu natamamdır yenisini rica edirik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Leyla xanım,\n\nGöndərdiyiniz hesab fakturada vergi kodu natamamdır. Yenisini rica edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-193",
       "domain": "payments",
       "input": "movzu İllik plan salam müştəri illik plana keçmək istəyirsinizsə cari ayın sonuna qədər seçim edə bilərsiniz hormetle senan",
-      "actual": "Mövzu: İllik plan\n\nHörmətli müştəri,\n\nİllik plana keçmək istəyirsinizsə cari ayın sonuna qədər seçim edə bilərsiniz.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İllik plan\n\nHörmətli müştəri,\n\nİllik plana keçmək istəyirsinizsə, cari ayın sonuna qədər seçim edə bilərsiniz.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-194",
       "domain": "payments",
       "input": "Mövzu: İtən qəbz\nHörmətli daxili audit,\nmart ayına aid iki qəbz elektron qovluqda yoxdur onları axtarırıq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur onları axtarırıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İtən qəbz\n\nHörmətli daxili audit,\n\nMart ayına aid iki qəbz elektron qovluqda yoxdur. Onları axtarırıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1391,7 +1391,7 @@
       "id": "mail-196",
       "domain": "payments",
       "input": "movzu Büdcə təsdiqi salam Aysel xanım əlavə resurs xərci hələ təsdiqlənməyib icraya başlamayaq hormetle senan",
-      "actual": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib icraya başlamayaq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Büdcə təsdiqi\n\nHörmətli Aysel xanım,\n\nƏlavə resurs xərci hələ təsdiqlənməyib. İcraya başlamayaq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1426,21 +1426,21 @@
       "id": "mail-201",
       "domain": "documents",
       "input": "hormetli məhsul qrupu rəsmi məktub şablonunda loqo aşağı sürüşüb son versiyanı yoxlayın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli məhsul qrupu,\n\nRəsmi məktub şablonunda loqo aşağı sürüşüb. Son versiyanı yoxlayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-202",
       "domain": "documents",
       "input": "movzu İmza görünmür salam Aysel xanım əlavə etdiyiniz PDF-də imza bölməsi boş görünür əsl faylı göndərə bilərsinizmi hormetle senan",
-      "actual": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür əsl faylı göndərə bilərsinizmi.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İmza görünmür\n\nHörmətli Aysel xanım,\n\nƏlavə etdiyiniz PDF-də imza bölməsi boş görünür. Əsl faylı göndərə bilərsinizmi?\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-203",
       "domain": "documents",
       "input": "Mövzu: OCR nəticəsi\nHörmətli operatorlar,\nskan edilmiş sənədin mətnində iki ad səhv oxunub düzəlişi əl ilə yoxlayın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: OCR nəticəsi\n\nHörmətli operatorlar,\n\nSkan edilmiş sənədin mətnində iki ad səhv oxunub. Düzəlişi əl ilə yoxlayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1454,7 +1454,7 @@
       "id": "mail-205",
       "domain": "documents",
       "input": "movzu Yeni sənəd salam müştəri istədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik baxışa başlayırıq hormetle senan",
-      "actual": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik baxışa başlayırıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yeni sənəd\n\nHörmətli müştəri,\n\nİstədiyimiz arayışı əlavə etdiyiniz üçün təşəkkür edirik. Baxışa başlayırıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1468,7 +1468,7 @@
       "id": "mail-207",
       "domain": "documents",
       "input": "hormetli rəhbərlik aylıq hesabatın qrafikləri əlavədədir yekun mətn sabah göndəriləcək hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nAylıq hesabatın qrafikləri əlavədədir yekun mətn sabah göndəriləcək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nAylıq hesabatın qrafikləri əlavədədir. Yekun mətn sabah göndəriləcək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1482,21 +1482,21 @@
       "id": "mail-209",
       "domain": "documents",
       "input": "Mövzu: QR kod\nHörmətli filial operatorları,\nsənədin ikinci səhifəsindəki QR kod oxunmur yenisini çap edin\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur yenisini çap edin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: QR kod\n\nHörmətli filial operatorları,\n\nSənədin ikinci səhifəsindəki QR kod oxunmur. Yenisini çap edin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-210",
       "domain": "documents",
       "input": "hormetli Rəna xanım sizə lazım olan imzalı surəti bu gün e-poçtla göndərəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nSizə lazım olan imzalı sürəti bu gün e-poçtla göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Rəna xanım,\n\nSizə lazım olan imzalı surəti bu gün e-poçtla göndərəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-211",
       "domain": "documents",
       "input": "movzu HTML əlavə salam təhlükəsizlik komandası sənəd təsvirinə yapışdırılan HTML kodunda script var saxlamayın hormetle senan",
-      "actual": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var saxlamayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: HTML əlavə\n\nHörmətli təhlükəsizlik komandası,\n\nSənəd təsvirinə yapışdırılan HTML kodunda script var. Saxlamayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1510,7 +1510,7 @@
       "id": "mail-213",
       "domain": "documents",
       "input": "hormetli komanda uzun fayl adı yükləməni dayandırır sənədi qısa adla yenidən sınayın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli komanda,\n\nUzun fayl adı yükləməni dayandırır. Sənədi qısa adla yenidən sınayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1538,21 +1538,21 @@
       "id": "mail-217",
       "domain": "documents",
       "input": "movzu Düzəliş üçün qaytarma salam Səbinə xanım sənədin ünvan hissəsi natamamdır tamamlayıb yenidən yollayın hormetle senan",
-      "actual": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır tamamlayıb yenidən yollayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Düzəliş üçün qaytarma\n\nHörmətli Səbinə xanım,\n\nSənədin ünvan hissəsi natamamdır. Tamamlayıb yenidən yollayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-218",
       "domain": "documents",
       "input": "Mövzu: Təsdiqli nüsxə\nHörmətli kargüzarlıq,\nmöhürlü nüsxə hazırdır təhvil vaxtını dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Təsdiqli nüsxə\n\nHörmətli kargüzarlıq,\n\nMöhürlü nüsxə hazırdır. Təhvil vaxtını dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-219",
       "domain": "documents",
       "input": "hormetli vendor qrupu xidmət on meqabaytdan böyük faylı qəbul etmir alternativi müzakirə edək hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli vendor qrupu,\n\nXidmət on meqabaytdan böyük faylı qəbul etmir. Alternativi müzakirə edək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1566,28 +1566,28 @@
       "id": "mail-221",
       "domain": "support",
       "input": "Mövzu: Müraciətinizə baxış\nHörmətli müştəri,\nbildirdiyiniz xəta qeydə alınıb texniki qrup nəticəni sizə paylaşacaq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciətinizə baxış\n\nHörmətli müştəri,\n\nBildirdiyiniz xəta qeydə alınıb. Texniki qrup nəticəni sizə paylaşacaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-222",
       "domain": "support",
       "input": "hormetli növbətçi mühəndis xidmətin dayanması barədə iki filialdan xəbər almışıq logları yoxlayın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq logları yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli növbətçi mühəndis,\n\nXidmətin dayanması barədə iki filialdan xəbər almışıq. Logları yoxlayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-223",
       "domain": "support",
       "input": "movzu Problem nümunəsi salam Aysel xanım bu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin hormetle senan",
-      "actual": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Problem nümunəsi\n\nHörmətli Aysel xanım,\n\nBu davranışı təkrarlamaq üçün hansı addımları etdiyinizi göndərin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-224",
       "domain": "support",
       "input": "Mövzu: Biletin yenidən açılması\nHörmətli texniki dəstək,\nbağlanan biletə eyni xətaya görə yeni qeyd yazılıb onu yenidən açın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Biletin yenidən açılması\n\nHörmətli texniki dəstək,\n\nBağlanan biletə eyni xətaya görə yeni qeyd yazılıb onu yenidən açın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Biletin yenidən açılması\n\nHörmətli texniki dəstək,\n\nBağlanan biletə eyni xətaya görə yeni qeyd yazılıb. Onu yenidən açın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1601,21 +1601,21 @@
       "id": "mail-226",
       "domain": "support",
       "input": "movzu İşləməyən keçid salam müştəri nümayəndəsi sizə göndərdiyimiz link səhv açılır yeni keçid hazır olanda paylaşacağıq hormetle senan",
-      "actual": "Mövzu: İşləməyən keçid\n\nHörmətli müştəri nümayəndəsi,\n\nSizə göndərdiyimiz link səhv açılır yeni keçid hazır olanda paylaşacağıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İşləməyən keçid\n\nHörmətli müştəri nümayəndəsi,\n\nSizə göndərdiyimiz link səhv açılır. Yeni keçid hazır olanda paylaşacağıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-227",
       "domain": "support",
       "input": "Mövzu: Növbətçi siyahısı\nHörmətli komanda,\nbu həftə gecə növbəsində iki mühəndis olacaq əlaqə nömrələri əlavədədir\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Növbətçi siyahısı\n\nHörmətli komanda,\n\nBu həftə gecə növbəsində iki mühəndis olacaq. Əlaqə nömrələri əlavədədir.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-228",
       "domain": "support",
       "input": "hormetli Elvin bəy 500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın?\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Elvin bəy,\n\n500 xətasının hansı əməliyyatda yarandığını dəqiqləşdirmək üçün vaxtı yazın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1636,14 +1636,14 @@
       "id": "mail-231",
       "domain": "support",
       "input": "hormetli müştəri problemin səbəbi hələ müəyyən edilməyib təhlil bitəndə xəbər verəcəyik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nProblemin səbəbi hələ müəyyən edilməyib. Təhlil bitəndə xəbər verəcəyik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-232",
       "domain": "support",
       "input": "movzu Yeni ekran görüntüsü salam Nərmin xanım göndərdiyiniz görüntüdə xəta mesajı kəsilib tam şəkli rica edirik hormetle senan",
-      "actual": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib tam şəkli rica edirik.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yeni ekran görüntüsü\n\nHörmətli Nərmin xanım,\n\nGöndərdiyiniz görüntüdə xəta mesajı kəsilib. Tam şəkli rica edirik.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1657,21 +1657,21 @@
       "id": "mail-234",
       "domain": "support",
       "input": "hormetli əsas komanda birinci səviyyə məsələni həll edə bilməyib onu məhsul mühəndisinə ötürürük hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli əsas komanda,\n\nBirinci səviyyə məsələni həll edə bilməyib. Onu məhsul mühəndisinə ötürürük.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-235",
       "domain": "support",
       "input": "movzu Düzəliş sınağı salam test qrupu müştəridə görünən xəta testdə təkrarlanmır fərqli hesabla yoxlayaq hormetle senan",
-      "actual": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Düzəliş sınağı\n\nHörmətli test qrupu,\n\nMüştəridə görünən xəta testdə təkrarlanmır. Fərqli hesabla yoxlayaq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-236",
       "domain": "support",
       "input": "Mövzu: İcra vaxtı\nHörmətli Kamran bəy,\nbilet üzrə yekun həll tarixini indi deyə bilmirik ilkin nəticəni sabah paylaşacağıq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik ilkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: İcra vaxtı\n\nHörmətli Kamran bəy,\n\nBilet üzrə yekun həll tarixini indi deyə bilmirik. İlkin nəticəni sabah paylaşacağıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1699,7 +1699,7 @@
       "id": "mail-240",
       "domain": "support",
       "input": "hormetli Rauf bəy bu gün əlaqə saxlaya bilmədik sizə uyğun vaxtı yazmağınızı xahiş edirik hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Rauf bəy,\n\nBu gün əlaqə saxlaya bilmədik. Sizə uyğun vaxtı yazmağınızı xahiş edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1713,14 +1713,14 @@
       "id": "mail-242",
       "domain": "planning",
       "input": "Mövzu: BPMN fərqi\nHörmətli analitiklər,\ndiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil onu dəqiqləşdirək\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: BPMN fərqi\n\nHörmətli analitiklər,\n\nDiaqramdakı təsdiq addımı hazırkı proseslə uyğun deyil. Onu dəqiqləşdirək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-243",
       "domain": "planning",
       "input": "hormetli rəhbərlik iki tapşırıq tamamlanıb üçüncüsü isə məlumat gözlədiyi üçün açıq qalır hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbərlik,\n\nİki tapşırıq tamamlanıb. Üçüncüsü isə məlumat gözlədiyi üçün açıq qalır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1741,7 +1741,7 @@
       "id": "mail-246",
       "domain": "planning",
       "input": "hormetli test komandası qəbul sınağının iştirakçıları və tarixləri sənəddə yeniləndi hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli test komandası qəbul sınağının iştirakçıları,\n\nVə tarixləri sənəddə yeniləndi.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli test komandası,\n\nQəbul sınağının iştirakçıları və tarixləri sənəddə yeniləndi.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1769,14 +1769,14 @@
       "id": "mail-250",
       "domain": "planning",
       "input": "movzu İnteqrasiya sualı salam Səma xanım xarici xidmətin test məlumatlarını kim təqdim edəcək bunu dəqiqləşdirin hormetle senan",
-      "actual": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək bunu dəqiqləşdirin?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İnteqrasiya sualı\n\nHörmətli Səma xanım,\n\nXarici xidmətin test məlumatlarını kim təqdim edəcək? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-251",
       "domain": "planning",
       "input": "Mövzu: Resurs planı\nHörmətli rəhbər,\nəlavə tester ayrılmasa hazırkı qrafikdə gecikmə ola bilər\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Resurs planı\n\nHörmətli rəhbər,\n\nƏlavə tester ayrılmasa, hazırkı qrafikdə gecikmə ola bilər.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1867,7 +1867,7 @@
       "id": "mail-264",
       "domain": "notifications",
       "input": "hormetli Aysel xanım bildirişlər köhnə e-poçt ünvanınıza gedir yenisini təsdiqləyin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nBildirişlər köhnə e-poçt ünvanınıza gedir. Yenisini təsdiqləyin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1895,7 +1895,7 @@
       "id": "mail-268",
       "domain": "notifications",
       "input": "movzu Çatdırılmayan məktub salam müştəri sizə yazdığımız cavab geri qayıdıb e-poçt ünvanınızı yoxlayın hormetle senan",
-      "actual": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb e-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Çatdırılmayan məktub\n\nHörmətli müştəri,\n\nSizə yazdığımız cavab geri qayıdıb. E-poçt ünvanınızı yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1909,14 +1909,14 @@
       "id": "mail-270",
       "domain": "notifications",
       "input": "hormetli Nərmin xanım həftəlik icmal almaq istəmirsinizsə profilinizdən seçimi bağlaya bilərsiniz hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nHəftəlik icmal almaq istəmirsinizsə profilinizdən seçimi bağlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Nərmin xanım,\n\nHəftəlik icmal almaq istəmirsinizsə, profilinizdən seçimi bağlaya bilərsiniz.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-271",
       "domain": "notifications",
       "input": "movzu Mesaj şablonu salam komanda yeni şablondakı qeydiyyat nömrəsi boş çıxır dəyişəni yoxlayın hormetle senan",
-      "actual": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır dəyişəni yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Mesaj şablonu\n\nHörmətli komanda,\n\nYeni şablondakı qeydiyyat nömrəsi boş çıxır. Dəyişəni yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -1930,7 +1930,7 @@
       "id": "mail-273",
       "domain": "notifications",
       "input": "hormetli müştəri nümayəndəsi sizin üçün yeni məsul əməkdaş təyin olunub əlaqə məlumatı aşağıdadır hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nSizin üçün yeni məsul əməkdaş təyin olunub. Əlaqə məlumatı aşağıdadır.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1951,28 +1951,28 @@
       "id": "mail-276",
       "domain": "notifications",
       "input": "hormetli müştəri yoxlama tamamlanıb cavab sənədiniz şəxsi kabinetinizə yerləşdirilib hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri,\n\nYoxlama tamamlanıb. Cavab sənədiniz şəxsi kabinetinizə yerləşdirilib.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-277",
       "domain": "notifications",
       "input": "movzu İtən xəbər salam Rəşad bəy iş sizə göndərilib amma bildiriş almadığınızı yazmısınız jurnalı yoxlayırıq hormetle senan",
-      "actual": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İtən xəbər\n\nHörmətli Rəşad bəy,\n\nİş sizə göndərilib, amma bildiriş almadığınızı yazmısınız. Jurnalı yoxlayırıq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-278",
       "domain": "notifications",
       "input": "Mövzu: Bildiriş testi\nHörmətli keyfiyyət qrupu,\ngecə gələn mesaj səhər göndərilmiş kimi görünür saat qurşağını yoxlayın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Bildiriş testi\n\nHörmətli keyfiyyət qrupu,\n\nGecə gələn mesaj səhər göndərilmiş kimi görünür. Saat qurşağını yoxlayın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-279",
       "domain": "notifications",
       "input": "hormetli rəhbər köməkçisi gələn həftənin iclası üçün dəvətlər bu gün paylaşılacaq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbər,\n\nKöməkçisi gələn həftənin iclası üçün dəvətlər bu gün paylaşılacaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli rəhbər köməkçisi,\n\nGələn həftənin iclası üçün dəvətlər bu gün paylaşılacaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -1986,7 +1986,7 @@
       "id": "mail-281",
       "domain": "network",
       "input": "Mövzu: VPN kəsintisi\nHörmətli şəbəkə qrupu,\nfilialın VPN bağlantısı gecədən işləməyib şəbəkə qeydini əlavə etdim\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: VPN kəsintisi\n\nHörmətli şəbəkə qrupu,\n\nFilialın VPN bağlantısı gecədən işləməyib. Şəbəkə qeydini əlavə etdim.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2007,21 +2007,21 @@
       "id": "mail-284",
       "domain": "network",
       "input": "Mövzu: Bağlantı çətinliyi\nHörmətli müştəri,\nsəhifəyə daxil olmaqda problem yaşayırsınızsa şəbəkə növünü bizə yazın\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Bağlantı çətinliyi\n\nHörmətli müştəri,\n\nSəhifəyə daxil olmaqda problem yaşayırsınızsa, şəbəkə növünü bizə yazın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-285",
       "domain": "network",
       "input": "hormetli texniki dəstək şirkət proxy-si yenilənən sertifikatı qəbul etmir bunu araşdırın hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nŞirkət proxy-si yenilənən sertifikatı qəbul etmir bunu araşdırın.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli texniki dəstək,\n\nŞirkət proxy-si yenilənən sertifikatı qəbul etmir. Bunu araşdırın.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-286",
       "domain": "network",
       "input": "movzu Yük bölgüsü salam DevOps qrupu bir server yüklənib digəri boş qalır balancer qaydasına baxaq hormetle senan",
-      "actual": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib digəri boş qalır balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yük bölgüsü\n\nHörmətli DevOps qrupu,\n\nBir server yüklənib. Digəri boş qalır. Balancer qaydasına baxaq.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -2042,21 +2042,21 @@
       "id": "mail-289",
       "domain": "network",
       "input": "movzu İnternet kanalı salam filial rəhbəri filialın əsas kanalı kəsilib ehtiyat kanalla iş davam edir hormetle senan",
-      "actual": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: İnternet kanalı\n\nHörmətli filial rəhbəri,\n\nFilialın əsas kanalı kəsilib. Ehtiyat kanalla iş davam edir.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-290",
       "domain": "network",
       "input": "Mövzu: Paket itkisi\nHörmətli monitorinq qrupu,\nsaat iki radələrində paket itkisi artıb qrafiki əlavə edirəm\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Paket itkisi\n\nHörmətli monitorinq qrupu,\n\nSaat iki radələrində paket itkisi artıb. Qrafiki əlavə edirəm.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-291",
       "domain": "network",
       "input": "hormetli müştəri nümayəndəsi böyük fayllar yüklənərkən əlaqə qopur daha kiçik faylla sınaq edin hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli müştəri nümayəndəsi,\n\nBöyük fayllar yüklənərkən əlaqə qopur. Daha kiçik faylla sınaq edin.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2070,7 +2070,7 @@
       "id": "mail-293",
       "domain": "network",
       "input": "Mövzu: Regional bağlantı\nHörmətli məhsul qrupu,\nbəzi regionlarda servisin cavabı daha gec gəlir ölçmələri paylaşdıq\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Regional bağlantı\n\nHörmətli məhsul qrupu,\n\nBəzi regionlarda servisin cavabı daha gec gəlir. Ölçmələri paylaşdıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2084,14 +2084,14 @@
       "id": "mail-295",
       "domain": "network",
       "input": "movzu Router restartı salam Aysel xanım router yenidən işə düşəndən sonra əlaqə sabitləşibmi bizə yazın hormetle senan",
-      "actual": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi bizə yazın?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Router restartı\n\nHörmətli Aysel xanım,\n\nRouter yenidən işə düşəndən sonra əlaqə sabitləşibmi? Bizə yazın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-296",
       "domain": "network",
       "input": "Mövzu: CDN faylı\nHörmətli server komandası,\nbrauzerə köhnə skript çatır CDN cache təmizlənməlidir\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: CDN faylı\n\nHörmətli server komandası,\n\nBrauzerə köhnə skript çatır. CDN cache təmizlənməlidir.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2105,7 +2105,7 @@
       "id": "mail-298",
       "domain": "network",
       "input": "movzu Giriş vaxtı salam Rəna xanım sizdəki xəta yalnız ofis xaricində yaranırmı bunu dəqiqləşdirin hormetle senan",
-      "actual": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı bunu dəqiqləşdirin?\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Giriş vaxtı\n\nHörmətli Rəna xanım,\n\nSizdəki xəta yalnız ofis xaricində yaranırmı? Bunu dəqiqləşdirin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -2119,14 +2119,14 @@
       "id": "mail-300",
       "domain": "network",
       "input": "hormetli şəbəkə rəhbəri ehtiyat tunel qurulub əsas xətt bərpa olunana qədər aktiv qalacaq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli şəbəkə rəhbəri,\n\nEhtiyat tunel qurulub. Əsas xətt bərpa olunana qədər aktiv qalacaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-301",
       "domain": "frontend",
       "input": "movzu Yeni forma salam dizayn qrupu mobil ekranda son təsdiq düyməsi görünmür yerləşimi yoxlayın hormetle senan",
-      "actual": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür yerləşimi yoxlayın.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Yeni forma\n\nHörmətli dizayn qrupu,\n\nMobil ekranda son təsdiq düyməsi görünmür. Yerləşimi yoxlayın.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -2140,7 +2140,7 @@
       "id": "mail-303",
       "domain": "frontend",
       "input": "hormetli Aysel xanım nəticə mətnini kopyalayanda siyahı nömrələri itir bunu yoxlayacağıq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nNəticə mətnini kopyalayanda siyahı nömrələri itir bunu yoxlayacağıq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli Aysel xanım,\n\nNəticə mətnini kopyalayanda siyahı nömrələri itir. Bunu yoxlayacağıq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2245,14 +2245,14 @@
       "id": "mail-318",
       "domain": "frontend",
       "input": "hormetli sınaq iştirakçıları hansı sahələrin məcburi olduğu aydın görünməlidir hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburu olduğu aydın görünməlidir?\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli sınaq iştirakçıları,\n\nHansı sahələrin məcburi olduğu aydın görünməlidir.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-319",
       "domain": "frontend",
       "input": "movzu Kopyalama icazəsi salam komanda brauzer icazə vermirsə istifadəçiyə aydın xəbər göstərilməlidir hormetle senan",
-      "actual": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Kopyalama icazəsi\n\nHörmətli komanda,\n\nBrauzer icazə vermirsə, istifadəçiyə aydın xəbər göstərilməlidir.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
@@ -2308,21 +2308,21 @@
       "id": "mail-327",
       "domain": "training",
       "input": "hormetli filial rəhbərləri birinci qrup səhər ikinci qrup isə günortadan sonra qoşulacaq hormetle layihe komandasi",
-      "actual": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Müraciət\n\nHörmətli filial rəhbərləri,\n\nBirinci qrup səhər, ikinci qrup isə günortadan sonra qoşulacaq.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
       "id": "mail-328",
       "domain": "training",
       "input": "movzu Sınaq hesabı salam operatorlar təlimdə real müştəri hesabından istifadə etməyin test hesabını seçin hormetle senan",
-      "actual": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar təlimdə real müştəri,\n\nHesabından istifadə etməyin test hesabını seçin.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Sınaq hesabı\n\nHörmətli operatorlar,\n\nTəlimdə real müştəri hesabından istifadə etməyin. Test hesabını seçin.\n\nHörmətlə,\nSənan",
       "failures": []
     },
     {
       "id": "mail-329",
       "domain": "training",
       "input": "Mövzu: Bələdçi sənədi\nHörmətli müştəri nümayəndəsi,\nson versiyada ekran görüntüləri yenilənib yeni faylı əlavə edirik\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Bələdçi sənədi\n\nHörmətli müştəri nümayəndəsi,\n\nSon versiyada ekran görüntüləri yenilənib yeni faylı əlavə edirik.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Bələdçi sənədi\n\nHörmətli müştəri nümayəndəsi,\n\nSon versiyada ekran görüntüləri yenilənib. Yeni faylı əlavə edirik.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2385,7 +2385,7 @@
       "id": "mail-338",
       "domain": "training",
       "input": "Mövzu: Təlim rəyi\nHörmətli məhsul sahibi,\nistifadəçilər arxiv axtarışını çətin hesab edirlər bunu dizayna qeyd edək\n\nHörmətlə,\nLayihə komandası",
-      "actual": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası",
+      "actual": "Mövzu: Təlim rəyi\n\nHörmətli məhsul sahibi,\n\nİstifadəçilər arxiv axtarışını çətin hesab edirlər. Bunu dizayna qeyd edək.\n\nHörmətlə,\nLayihə komandası",
       "failures": []
     },
     {
@@ -2399,7 +2399,7 @@
       "id": "mail-340",
       "domain": "training",
       "input": "movzu Təlim materialı salam Səbinə xanım göndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var onları dəyişək hormetle senan",
-      "actual": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var onları dəyişək.\n\nHörmətlə,\nSənan",
+      "actual": "Mövzu: Təlim materialı\n\nHörmətli Səbinə xanım,\n\nGöndərdiyiniz təqdimatın iki səhifəsində köhnə ekran var. Onları dəyişək.\n\nHörmətlə,\nSənan",
       "failures": []
     }
   ]

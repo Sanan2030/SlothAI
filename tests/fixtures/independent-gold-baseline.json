@@ -1,6 +1,6 @@
 {
   "sourceCommit": "ae6c91d51a1f9527806ac8ea4181cb942ff9d486",
-  "goldSha256": "2b7363cdca922c9008cbae40e110dda5224d3830f793b9e50e91f60e1175fce2",
+  "goldSha256": "2106d60cdbbce99e3ce6dfe6adc2f4993e0743d21265b5f55f95fbd502838be4",
   "total": 800,
   "exact": 471,
   "protectedIds": [
@@ -476,5 +476,7 @@
     "mail-337",
     "mail-339"
   ],
-  "policy": "Do not lose any previously exact result; new failures remain visible in the full report."
+  "policy": "Do not lose any previously exact result; new failures remain visible in the full report.",
+  "targetReview": "Six explicit editorial corrections documented in gold.review.targetRevisions20260930; protected IDs unchanged.",
+  "additionalGoldSha256": "4ae73a29b3848099dae9e4f7061c2524594e03064e3d0f292aaf2dcad06de88e"
 }

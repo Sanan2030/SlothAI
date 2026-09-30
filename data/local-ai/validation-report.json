@@ -6,14 +6,14 @@
     "model": 21,
     "total": 100
   },
-  "changed": 12,
-  "improved": 10,
+  "changed": 10,
+  "improved": 8,
   "regressed": 0,
   "wordEditDistance": {
-    "baseline": 206,
+    "baseline": 202,
     "model": 194
   },
-  "elapsedMs": 1187,
+  "elapsedMs": 783,
   "rows": [
     {
       "id": "local-104-1",
@@ -998,9 +998,9 @@
       "variant": 0,
       "input": "yoxlamani plan uzre et tapsirigi ardicilliqla hazirla is qaydalarini yadda saxla",
       "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
-      "baseline": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla iş qaydalarını yadda saxla.",
+      "baseline": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla. İş qaydalarını yadda saxla.",
       "output": "Yoxlamanı plan üzrə et tapşırığı ardicilliqla hazırla. İş qaydalarını yadda saxla.",
-      "baselineDistance": 4,
+      "baselineDistance": 2,
       "distance": 2
     },
     {
@@ -1024,9 +1024,9 @@
       "variant": 2,
       "input": "yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla",
       "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
-      "baseline": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla iş qaydalarını yadda saxla.",
+      "baseline": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
       "output": "Yoxlamanı plan üzrə et tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
-      "baselineDistance": 3,
+      "baselineDistance": 1,
       "distance": 1
     },
     {

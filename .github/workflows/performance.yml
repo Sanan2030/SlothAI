@@ -53,10 +53,13 @@ jobs:
         id: languagequality
         continue-on-error: true
         run: |
+          python scripts/build-additional-gold.py
+          git diff --exit-code -- tests/fixtures/additional-gold-200.json
           npm run --ignore-scripts gold:complete
           npm run --ignore-scripts local-ai:train
           git diff --exit-code -- lib/editor/local-ai/model.json data/local-ai/pairs.json data/local-ai/training-report.json
           npm run --ignore-scripts gold:check
+          npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check
 
       - name: Report regression corpus
