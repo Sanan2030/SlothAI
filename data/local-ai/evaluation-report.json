@@ -2,19 +2,19 @@
   "split": "test",
   "scope": "200 synthetic held-out pairs from 40 separate authored gold groups",
   "exact": {
-    "baseline": 45,
-    "model": 59,
+    "baseline": 48,
+    "model": 88,
     "total": 200
   },
-  "changed": 41,
-  "improved": 38,
+  "changed": 81,
+  "improved": 77,
   "regressed": 0,
   "previousReleaseRegressions": 0,
   "wordEditDistance": {
-    "baseline": 380,
-    "model": 335
+    "baseline": 367,
+    "model": 244
   },
-  "elapsedMs": 1652,
+  "elapsedMs": 2307,
   "rows": [
     {
       "id": "local-005-1",
@@ -64,9 +64,9 @@
       "input": "sheher erken oyanib qehve hazirladim shonra gundelik planimi yazdim",
       "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baseline": "Şəhər erkən oyanıb qəhvə hazırladım shonra gündəlik planımı yazdım.",
-      "output": "Şəhər erkən oyanıb qəhvə hazırladım shonra gündəlik planımı yazdım.",
+      "output": "Şəhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-005-5",
@@ -77,9 +77,9 @@
       "input": "seher erken oynib qehve hazirladim. sonra gundelik planimi yazdim.",
       "target": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baseline": "Seher erkən oynib qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
-      "output": "Seher erkən oynib qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
+      "output": "Səhər erkən oyanıb qəhvə hazırladım. Sonra gündəlik planımı yazdım.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-010-1",
@@ -129,9 +129,9 @@
       "input": "sheher zengli shaatin sheshine oyandim geche kifayet qeder yatmishdim",
       "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım.",
       "baseline": "Şəhər zengli shaatin səsinə oyandım geche kifayət qədər yatmışdım.",
-      "output": "Şəhər zengli shaatin səsinə oyandım geche kifayət qədər yatmışdım.",
+      "output": "Şəhər zengli shaatin səsinə oyandım. Geche kifayət qədər yatmışdım.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 4
     },
     {
       "id": "local-010-5",
@@ -142,9 +142,9 @@
       "input": "seher zegli saatin sesine oyandim. gece kifayet qeder yatmisdim.",
       "target": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım.",
       "baseline": "Səhər zegli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım.",
-      "output": "Səhər zegli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım.",
+      "output": "Səhər zəngli saatın səsinə oyandım. Gecə kifayət qədər yatmışdım.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-015-1",
@@ -154,10 +154,10 @@
       "variant": 0,
       "input": "seher oyananda zengli saatin islemediyini gordum telefonumun bildirisi meni oyatmisdi",
       "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
-      "baseline": "Səhər oyananda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "output": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "baselineDistance": 2,
-      "distance": 1
+      "baseline": "Səhər oyananda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "output": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "baselineDistance": 1,
+      "distance": 0
     },
     {
       "id": "local-015-2",
@@ -167,10 +167,10 @@
       "variant": 1,
       "input": "seher oyananda zengli saatin islemediyini gordum. telefonumun bildirisi meni oyatmisdi.",
       "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
-      "baseline": "Səhər oyananda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "output": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "baselineDistance": 2,
-      "distance": 1
+      "baseline": "Səhər oyananda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "output": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "baselineDistance": 1,
+      "distance": 0
     },
     {
       "id": "local-015-3",
@@ -193,10 +193,10 @@
       "variant": 3,
       "input": "sheher oyananda zengli shaatin ishlemediyini gordum telefonumun bildirishi meni oyatmishdi",
       "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
-      "baseline": "Şəhər oyananda zengli shaatin işləmədiyini gördüm. Telefonumun bildirişi məni oyatmishdi.",
-      "output": "Şəhər oyananda zengli shaatin işləmədiyini gördüm. Telefonumun bildirişi məni oyatmishdi.",
-      "baselineDistance": 4,
-      "distance": 4
+      "baseline": "Şəhər oyananda zengli shaatin işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "output": "Şəhər oyananda zengli shaatin işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "baselineDistance": 3,
+      "distance": 3
     },
     {
       "id": "local-015-5",
@@ -206,10 +206,10 @@
       "variant": 4,
       "input": "seher oynanda zengli saatin islemediyini gordum. telefonumun bildirisi meni oyatmisdi.",
       "target": "Səhər oyananda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
-      "baseline": "Səhər oynanda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "output": "Səhər oynanda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmisdi.",
-      "baselineDistance": 3,
-      "distance": 2
+      "baseline": "Səhər oynanda zengli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "output": "Səhər oynanda zəngli saatın işləmədiyini gördüm. Telefonumun bildirişi məni oyatmışdı.",
+      "baselineDistance": 2,
+      "distance": 1
     },
     {
       "id": "local-020-1",
@@ -272,9 +272,9 @@
       "input": "seher oynib teqvimime baxdim. gunun ilk gorusune hazirlasdim.",
       "target": "Səhər oyanıb təqvimimə baxdım. Günün ilk görüşünə hazırlaşdım.",
       "baseline": "Seher oynib teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
-      "output": "Seher oynib teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
+      "output": "Seher oyanıb teqvimime baxdım. Günün ilk görüşünə hazırlaşdım.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-025-1",
@@ -285,9 +285,9 @@
       "input": "seher oyanib qehve icmek ucun metbexe kecdim geceden qalan qablari yudum",
       "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baseline": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum.",
-      "output": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum.",
+      "output": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-025-2",
@@ -311,9 +311,9 @@
       "input": "səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum",
       "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baseline": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum.",
-      "output": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim gecədən qalan qabları yudum.",
+      "output": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-025-4",
@@ -324,9 +324,9 @@
       "input": "sheher oyanib qehve ichmek uchun metbexe kechdim gecheden qalan qablari yudum",
       "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baseline": "Şəhər oyanıb qəhvə içmək uçun mətbəxə keçdim gecheden qalan qabları yudum.",
-      "output": "Şəhər oyanıb qəhvə içmək uçun mətbəxə keçdim gecheden qalan qabları yudum.",
+      "output": "Şəhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecheden qalan qabları yudum.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 2
     },
     {
       "id": "local-025-5",
@@ -337,9 +337,9 @@
       "input": "seher oynib qehve icmek ucun metbexe kecdim. geceden qalan qablari yudum.",
       "target": "Səhər oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baseline": "Seher oynib qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
-      "output": "Seher oynib qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
+      "output": "Seher oyanıb qəhvə içmək üçün mətbəxə keçdim. Gecədən qalan qabları yudum.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-030-1",
@@ -402,9 +402,9 @@
       "input": "seher mekezinde binalar yeniden renglenir. meydanin gorunusu deyisib.",
       "target": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib.",
       "baseline": "Seher mekezinde binalar yenidən rənglənir. Meydanın görünüşü dəyişib.",
-      "output": "Seher mekezinde binalar yenidən rənglənir. Meydanın görünüşü dəyişib.",
+      "output": "Şəhər mərkəzində binalar yenidən rənglənir. Meydanın görünüşü dəyişib.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-035-1",
@@ -610,9 +610,9 @@
       "input": "seher merkezindeki meydanda agaclar ekildi binalarin yaninda oturacaqlar qoyuldu",
       "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu.",
       "baseline": "Şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu.",
-      "output": "Şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu.",
+      "output": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-050-2",
@@ -636,9 +636,9 @@
       "input": "şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu",
       "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu.",
       "baseline": "Şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu.",
-      "output": "Şəhər mərkəzindəki meydanda ağaclar əkildi binaların yanında oturacaqlar qoyuldu.",
+      "output": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-050-4",
@@ -649,9 +649,9 @@
       "input": "sheher merkezindeki meydanda agachlar ekildi binalarin yaninda oturachaqlar qoyuldu",
       "target": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturacaqlar qoyuldu.",
       "baseline": "Şəhər mərkəzindəki meydanda agachlar əkildi binaların yanında oturachaqlar qoyuldu.",
-      "output": "Şəhər mərkəzindəki meydanda agachlar əkildi binaların yanında oturachaqlar qoyuldu.",
+      "output": "Şəhər mərkəzindəki meydanda ağaclar əkildi. Binaların yanında oturachaqlar qoyuldu.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 1
     },
     {
       "id": "local-050-5",
@@ -714,9 +714,9 @@
       "input": "shuret olchen chihaz shaniye erzinde netiche verir avtomobil yoxlamadan kechdi",
       "target": "Sürət ölçən cihaz saniyə ərzində nəticə verir. Avtomobil yoxlamadan keçdi.",
       "baseline": "Shuret ölçən chihaz şanıya ərzində netiche verir avtomobil yoxlamadan keçdi.",
-      "output": "Shuret ölçən chihaz şanıya ərzində netiche verir avtomobil yoxlamadan keçdi.",
+      "output": "Shuret ölçən cihaz şanıya ərzində netiche verir avtomobil yoxlamadan keçdi.",
       "baselineDistance": 6,
-      "distance": 6
+      "distance": 5
     },
     {
       "id": "local-055-5",
@@ -844,9 +844,9 @@
       "input": "shuret olchen chihaz avtomobile yaxin yerleshdirildi neticheler heshabatda shaxlanildi",
       "target": "Sürət ölçən cihaz avtomobilə yaxın yerləşdirildi. Nəticələr hesabatda saxlanıldı.",
       "baseline": "Shuret ölçən chihaz avtomobilə yaxın yerləşdirildi neticheler heshabatda saxlanıldı.",
-      "output": "Shuret ölçən chihaz avtomobilə yaxın yerləşdirildi. Neticheler heshabatda saxlanıldı.",
+      "output": "Shuret ölçən cihaz avtomobilə yaxın yerləşdirildi neticheler hesabatda saxlanıldı.",
       "baselineDistance": 5,
-      "distance": 4
+      "distance": 3
     },
     {
       "id": "local-065-5",
@@ -869,10 +869,10 @@
       "variant": 0,
       "input": "suret olcmelerinde saniye deqiqliyi vacibdir test avadanligi evvelceden yoxlanildi",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "output": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "output": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-070-2",
@@ -882,10 +882,10 @@
       "variant": 1,
       "input": "suret olcmelerinde saniye deqiqliyi vacibdir. test avadanligi evvelceden yoxlanildi.",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "output": "Sürət olcmelerinde saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baselineDistance": 1,
-      "distance": 1
+      "baseline": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "output": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
+      "baselineDistance": 0,
+      "distance": 0
     },
     {
       "id": "local-070-3",
@@ -908,10 +908,10 @@
       "variant": 3,
       "input": "shuret olchmelerinde shaniye deqiqliyi vachibdir tesht avadanligi evvelcheden yoxlanildi",
       "target": "Sürət ölçmələrində saniyə dəqiqliyi vacibdir. Test avadanlığı əvvəlcədən yoxlanıldı.",
-      "baseline": "Shuret olchmelerinde şanıya dəqiqliyi vachibdir teşt avadanlığı evvelcheden yoxlanıldı.",
-      "output": "Shuret olchmelerinde şanıya dəqiqliyi vachibdir teşt avadanlığı evvelcheden yoxlanıldı.",
-      "baselineDistance": 6,
-      "distance": 6
+      "baseline": "Shuret ölçmələrində şanıya dəqiqliyi vachibdir teşt avadanlığı evvelcheden yoxlanıldı.",
+      "output": "Shuret ölçmələrində şanıya dəqiqliyi vacibdir teşt avadanlığı evvelcheden yoxlanıldı.",
+      "baselineDistance": 5,
+      "distance": 5
     },
     {
       "id": "local-070-5",
@@ -1039,9 +1039,9 @@
       "input": "shuret shenedin eshline uygun hazirlanmalidir nushxenin aydinligi yoxlanilir",
       "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır.",
       "baseline": "Shuret shenedin eshline uyğun hazırlanmalıdır nushxenin aydınlığı yoxlanılır.",
-      "output": "Shuret shenedin eshline uyğun hazırlanmalıdır nushxenin aydınlığı yoxlanılır.",
+      "output": "Shuret sənədin eshline uyğun hazırlanmalıdır nushxenin aydınlığı yoxlanılır.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 4
     },
     {
       "id": "local-080-5",
@@ -1052,9 +1052,9 @@
       "input": "suret seedin esline uygun hazirlanmalidir. nusxenin aydinligi yoxlanilir.",
       "target": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır.",
       "baseline": "Surət seedin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır.",
-      "output": "Surət seedin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır.",
+      "output": "Surət sənədin əslinə uyğun hazırlanmalıdır. Nüsxənin aydınlığı yoxlanılır.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-085-1",
@@ -1104,9 +1104,9 @@
       "input": "shuret arxiv uchun ayricha hazirlandi shenedin imzashi yoxlanildi",
       "target": "Surət arxiv üçün ayrıca hazırlandı. Sənədin imzası yoxlanıldı.",
       "baseline": "Shuret arxiv uçun ayricha hazırlandı shenedin imzashi yoxlanıldı.",
-      "output": "Shuret arxiv uçun ayricha hazırlandı shenedin imzashi yoxlanıldı.",
+      "output": "Shuret arxiv üçün ayrıca hazırlandı. Sənədin imzashi yoxlanıldı.",
       "baselineDistance": 6,
-      "distance": 6
+      "distance": 2
     },
     {
       "id": "local-085-5",
@@ -1169,9 +1169,9 @@
       "input": "shuret shenedin eshli eshashinda chixarildi arxiv emekdashi onu qebul etdi",
       "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
       "baseline": "Shuret shenedin eshli eshashinda çıxarıldı arxiv əməkdaşı onu qəbul etdi.",
-      "output": "Shuret shenedin eshli eshashinda çıxarıldı arxiv əməkdaşı onu qəbul etdi.",
+      "output": "Shuret sənədin əsli eshashinda çıxarıldı arxiv əməkdaşı onu qəbul etdi.",
       "baselineDistance": 6,
-      "distance": 6
+      "distance": 4
     },
     {
       "id": "local-090-5",
@@ -1182,9 +1182,9 @@
       "input": "suret seedin esli esasinda cixarildi. arxiv emekdasi onu qebul etdi.",
       "target": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
       "baseline": "Surət seedin. Əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
-      "output": "Surət seedin. Əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
+      "output": "Surət sənədin əsli əsasında çıxarıldı. Arxiv əməkdaşı onu qəbul etdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-095-1",
@@ -1194,7 +1194,7 @@
       "variant": 0,
       "input": "suret mektubun esli ile tutusduruldu arxiv qeydi yenilendi",
       "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baseline": "Surət məktubun əsli ilə tutusduruldu arxiv qeydi yeniləndi.",
+      "baseline": "Surət məktubun əsli ilə tutuşduruldu arxiv qeydi yeniləndi.",
       "output": "Surət məktubun əsli ilə tutuşduruldu arxiv qeydi yeniləndi.",
       "baselineDistance": 2,
       "distance": 2
@@ -1207,9 +1207,9 @@
       "variant": 1,
       "input": "suret mektubun esli ile tutusduruldu. arxiv qeydi yenilendi.",
       "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baseline": "Surət məktubun əsli ilə tutusduruldu. Arxiv qeydi yeniləndi.",
+      "baseline": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
       "output": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baselineDistance": 1,
+      "baselineDistance": 0,
       "distance": 0
     },
     {
@@ -1233,10 +1233,10 @@
       "variant": 3,
       "input": "shuret mektubun eshli ile tutushduruldu arxiv qeydi yenilendi",
       "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baseline": "Shuret məktubun eshli ilə tutushduruldu arxiv qeydi yeniləndi.",
-      "output": "Shuret məktubun eshli ilə tutushduruldu arxiv qeydi yeniləndi.",
+      "baseline": "Shuret məktubun eshli ilə tutuşduruldu arxiv qeydi yeniləndi.",
+      "output": "Shuret məktubun əsli ilə tutuşduruldu arxiv qeydi yeniləndi.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 3
     },
     {
       "id": "local-095-5",
@@ -1246,10 +1246,10 @@
       "variant": 4,
       "input": "suret metubun esli ile tutusduruldu. arxiv qeydi yenilendi.",
       "target": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baseline": "Surət metubun əsli ilə tutusduruldu. Arxiv qeydi yeniləndi.",
-      "output": "Surət metubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
-      "baselineDistance": 2,
-      "distance": 1
+      "baseline": "Surət metubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
+      "output": "Surət məktubun əsli ilə tutuşduruldu. Arxiv qeydi yeniləndi.",
+      "baselineDistance": 1,
+      "distance": 0
     },
     {
       "id": "local-100-1",
@@ -1260,9 +1260,9 @@
       "input": "suret senedin esli ile birlikde yoxlanildi imzanin heqiqiliyi tesdiqlendi",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baseline": "Surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
-      "output": "Surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
+      "output": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-100-2",
@@ -1286,9 +1286,9 @@
       "input": "surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baseline": "Surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
-      "output": "Surət sənədin əsli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
+      "output": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-100-4",
@@ -1299,9 +1299,9 @@
       "input": "shuret shenedin eshli ile birlikde yoxlanildi imzanin heqiqiliyi teshdiqlendi",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baseline": "Shuret shenedin eshli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
-      "output": "Shuret shenedin eshli ilə birlikdə yoxlanıldı imzanın həqiqiliyi təsdiqləndi.",
+      "output": "Shuret sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 1
     },
     {
       "id": "local-100-5",
@@ -1312,9 +1312,9 @@
       "input": "suret seedin esli ile birlikde yoxlanildi. imzanin heqiqiliyi tesdiqlendi.",
       "target": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baseline": "Surət seedin. Əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
-      "output": "Surət seedin. Əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
+      "output": "Surət sənədin əsli ilə birlikdə yoxlanıldı. İmzanın həqiqiliyi təsdiqləndi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-105-1",
@@ -1364,9 +1364,9 @@
       "input": "layihenin adi teqdimat shenedinde goshterilib komanda melumati teshdiqledi",
       "target": "Layihənin adı təqdimat sənədində göstərilib. Komanda məlumatı təsdiqlədi.",
       "baseline": "Layihənin adı təqdimat shenedinde goshterilib. Komanda məlumatı təsdiqlədi.",
-      "output": "Layihənin adı təqdimat shenedinde goshterilib. Komanda məlumatı təsdiqlədi.",
+      "output": "Layihənin adı təqdimat sənədində goshterilib. Komanda məlumatı təsdiqlədi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-105-5",
@@ -1429,9 +1429,9 @@
       "input": "proqramin adi shishtem melumatlarinda goshterilir ishtifadechi qeydiyyati tamamladi",
       "target": "Proqramın adı sistem məlumatlarında göstərilir. İstifadəçi qeydiyyatı tamamladı.",
       "baseline": "Proqramın adı shishtem məlumatlarında goshterilir ishtifadechi qeydiyyatı tamamladı.",
-      "output": "Proqramın adı shishtem məlumatlarında goshterilir ishtifadechi qeydiyyatı tamamladı.",
+      "output": "Proqramın adı shishtem məlumatlarında göstərilir. İshtifadechi qeydiyyatı tamamladı.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-110-5",
@@ -1494,7 +1494,7 @@
       "input": "bu adi tapshiriq gundelik ish planina daxildir xushushi shelahiyyet lazim deyil",
       "target": "Bu adi tapşırıq gündəlik iş planına daxildir. Xüsusi səlahiyyət lazım deyil.",
       "baseline": "Bu adi tapşırıq gündəlik iş planına daxildir xushushi shelahiyyet lazım deyil.",
-      "output": "Bu adi tapşırıq gündəlik iş planına daxildir xushushi shelahiyyet lazım deyil.",
+      "output": "Bu adi tapşırıq gündəlik iş planına daxildir xüsusi shelahiyyet lazım deyil.",
       "baselineDistance": 3,
       "distance": 3
     },
@@ -1559,9 +1559,9 @@
       "input": "bu adi murachiet gundelik shiyahiya daxil edildi xushushi shtatush verilmedi",
       "target": "Bu adi müraciət gündəlik siyahıya daxil edildi. Xüsusi status verilmədi.",
       "baseline": "Bu adi murachiet gündəlik shiyahiya daxil edildi xushushi shtatush verilmədi.",
-      "output": "Bu adi murachiet gündəlik shiyahiya daxil edildi. Xushushi shtatush verilmədi.",
+      "output": "Bu adi müraciət gündəlik shiyahiya daxil edildi. Xüsusi shtatush verilmədi.",
       "baselineDistance": 5,
-      "distance": 4
+      "distance": 2
     },
     {
       "id": "local-120-5",
@@ -1767,9 +1767,9 @@
       "input": "uc, cesur qus, qaadlarini yavas cirp. goy uzunde rahat ol.",
       "target": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol.",
       "baseline": "Uc, cəsur qus, qaadlarini yavaş çırp. Göy üzündə rahat ol.",
-      "output": "Uç, cəsur qus, qaadlarini yavaş çırp. Göy üzündə rahat ol.",
+      "output": "Uç, cəsur quş, qanadlarını yavaş çırp. Göy üzündə rahat ol.",
       "baselineDistance": 3,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-140-1",
@@ -1897,9 +1897,9 @@
       "input": "el bieyi agir yuke gore agriyirdi. barmaqlar da yorulmusdu.",
       "target": "Əl biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmuşdu.",
       "baseline": "El bieyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
-      "output": "El bieyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
+      "output": "El biləyi ağır yükə görə ağrıyırdı. Barmaqlar da yorulmusdu.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-150-1",
@@ -1962,9 +1962,9 @@
       "input": "el bamaqlari klaviaturada isleyirdi. bilek rahat saxlanilirdi.",
       "target": "Əl barmaqları klaviaturada işləyirdi. Bilək rahat saxlanılırdı.",
       "baseline": "El bamaqlari klaviaturada işləyirdi. Bilək rahat saxlanilirdi.",
-      "output": "El bamaqlari klaviaturada işləyirdi. Bilək rahat saxlanilirdi.",
+      "output": "El barmaqları klaviaturada işləyirdi. Bilək rahat saxlanilirdi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-155-1",
@@ -2014,9 +2014,9 @@
       "input": "el adeti xalqin tarixinden gelir kend chamaati bayrama hazirlashir",
       "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
       "baseline": "El adəti xalqın tarixindən gəlir. Kənd chamaati bayrama hazırlaşır.",
-      "output": "El adəti xalqın tarixindən gəlir. Kənd chamaati bayrama hazırlaşır.",
+      "output": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-155-5",
@@ -2027,9 +2027,9 @@
       "input": "el adeti xaqin tarixinden gelir. kend camaati bayrama hazirlasir.",
       "target": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
       "baseline": "El adəti xaqin tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
-      "output": "El adəti xaqin tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
+      "output": "El adəti xalqın tarixindən gəlir. Kənd camaatı bayrama hazırlaşır.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-160-1",
@@ -2079,9 +2079,9 @@
       "input": "el birliyi xalqin qarshiliqli yardimina eshashlanir kend chamaati ishe bashladi",
       "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı.",
       "baseline": "El birliyi xalqın qarşılıqlı yardımına eshashlanir. Kənd chamaati işə başladı.",
-      "output": "El birliyi xalqın qarşılıqlı yardımına eshashlanir. Kənd chamaati işə başladı.",
+      "output": "El birliyi xalqın qarşılıqlı yardımına eshashlanir. Kənd camaatı işə başladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-160-5",
@@ -2092,9 +2092,9 @@
       "input": "el biliyi xalqin qarsiliqli yardimina esaslanir. kend camaati ise basladi.",
       "target": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı işə başladı.",
       "baseline": "El biliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı ise başladı.",
-      "output": "El biliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı ise başladı.",
+      "output": "El birliyi xalqın qarşılıqlı yardımına əsaslanır. Kənd camaatı ise başladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-165-1",
@@ -2144,9 +2144,9 @@
       "input": "et yemeyi qonaqlar uchun hazirlanir qazanda shu qaynayirdi",
       "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı.",
       "baseline": "Et yeməyi qonaqlar uçun hazırlanır qazanda shu qaynayirdi.",
-      "output": "Ət yeməyi qonaqlar uçun hazırlanır qazanda shu qaynayirdi.",
+      "output": "Ət yeməyi qonaqlar üçün hazırlanır qazanda shu qaynayirdi.",
       "baselineDistance": 6,
-      "distance": 5
+      "distance": 4
     },
     {
       "id": "local-165-5",
@@ -2157,9 +2157,9 @@
       "input": "et yeeyi qonaqlar ucun hazirlanir. qazanda su qaynayirdi.",
       "target": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayırdı.",
       "baseline": "Et yeeyi qonaqlar üçün hazırlanır. Qazanda su qaynayirdi.",
-      "output": "Et yeeyi qonaqlar üçün hazırlanır. Qazanda su qaynayirdi.",
+      "output": "Ət yeməyi qonaqlar üçün hazırlanır. Qazanda su qaynayirdi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-170-1",
@@ -2209,9 +2209,9 @@
       "input": "et mehshulu shoyuduchudan chixarildi qazana yag elave edildi",
       "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi.",
       "baseline": "Et mehshulu shoyuduchudan çıxarıldı qazana yag əlavə edildi.",
-      "output": "Et mehshulu shoyuduchudan çıxarıldı qazana yag əlavə edildi.",
+      "output": "Ət məhsulu shoyuduchudan çıxarıldı qazana yag əlavə edildi.",
       "baselineDistance": 6,
-      "distance": 6
+      "distance": 4
     },
     {
       "id": "local-170-5",
@@ -2222,9 +2222,9 @@
       "input": "et mesulu soyuducudan cixarildi. qazana yag elave edildi.",
       "target": "Ət məhsulu soyuducudan çıxarıldı. Qazana yağ əlavə edildi.",
       "baseline": "Et mesulu soyuducudan çıxarıldı. Qazana yag əlavə edildi.",
-      "output": "Et mesulu soyuducudan çıxarıldı. Qazana yag əlavə edildi.",
+      "output": "Et məhsulu soyuducudan çıxarıldı. Qazana yag əlavə edildi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-175-1",
@@ -2365,9 +2365,9 @@
       "input": "seher binalari parklarla birlikde xeritede gosterilir belediyye unvanlari deqiqlesdirir",
       "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baseline": "Seher binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir.",
-      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir.",
+      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baselineDistance": 3,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-185-2",
@@ -2391,9 +2391,9 @@
       "input": "şəhər binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir",
       "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baseline": "Şəhər binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir.",
-      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir bələdiyyə ünvanları dəqiqləşdirir.",
+      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-185-4",
@@ -2404,9 +2404,9 @@
       "input": "sheher binalari parklarla birlikde xeritede goshterilir belediyye unvanlari deqiqleshdirir",
       "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baseline": "Şəhər binaları parklarla birlikdə xəritədə goshterilir bələdiyyə ünvanları dəqiqləşdirir.",
-      "output": "Şəhər binaları parklarla birlikdə xəritədə goshterilir bələdiyyə ünvanları dəqiqləşdirir.",
+      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-185-5",
@@ -2417,9 +2417,9 @@
       "input": "seher bialari parklarla birlikde xeritede gosterilir. belediyye unvanlari deqiqlesdirir.",
       "target": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baseline": "Seher bialari parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
-      "output": "Şəhər bialari parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
+      "output": "Şəhər binaları parklarla birlikdə xəritədə göstərilir. Bələdiyyə ünvanları dəqiqləşdirir.",
       "baselineDistance": 2,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-190-1",
@@ -2429,9 +2429,9 @@
       "variant": 0,
       "input": "seher belediyyesi parklari ve yeni binalari xeriteye elave etdi unvanlar yenilendi",
       "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baseline": "Seher bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
+      "baseline": "Seher bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
       "output": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baselineDistance": 2,
+      "baselineDistance": 1,
       "distance": 0
     },
     {
@@ -2442,10 +2442,10 @@
       "variant": 1,
       "input": "seher belediyyesi parklari ve yeni binalari xeriteye elave etdi. unvanlar yenilendi.",
       "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baseline": "Seher bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
-      "output": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
-      "baselineDistance": 2,
-      "distance": 1
+      "baseline": "Seher bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "output": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "baselineDistance": 1,
+      "distance": 0
     },
     {
       "id": "local-190-3",
@@ -2468,10 +2468,10 @@
       "variant": 3,
       "input": "sheher belediyyeshi parklari ve yeni binalari xeriteye elave etdi unvanlar yenilendi",
       "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baseline": "Şəhər belediyyeshi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
-      "output": "Şəhər belediyyeshi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baselineDistance": 2,
-      "distance": 1
+      "baseline": "Şəhər belediyyeshi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "output": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "baselineDistance": 1,
+      "distance": 0
     },
     {
       "id": "local-190-5",
@@ -2481,10 +2481,10 @@
       "variant": 4,
       "input": "seher beediyyesi parklari ve yeni binalari xeriteye elave etdi. unvanlar yenilendi.",
       "target": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
-      "baseline": "Seher beediyyesi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
-      "output": "Şəhər beediyyesi parkları və yeni binaları xəritəyə əlavə etdi. Unvanlar yeniləndi.",
-      "baselineDistance": 3,
-      "distance": 2
+      "baseline": "Seher beediyyesi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "output": "Şəhər bələdiyyəsi parkları və yeni binaları xəritəyə əlavə etdi. Ünvanlar yeniləndi.",
+      "baselineDistance": 2,
+      "distance": 0
     },
     {
       "id": "local-195-1",
@@ -2560,9 +2560,9 @@
       "input": "uc sened qovluqla birlikde teqdim olundu katib muracieti qebul etdi",
       "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baseline": "Üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi.",
-      "output": "Üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi.",
+      "output": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-200-2",
@@ -2586,9 +2586,9 @@
       "input": "üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi",
       "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baseline": "Üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi.",
-      "output": "Üç sənəd qovluqla birlikdə təqdim olundu katib müraciəti qəbul etdi.",
+      "output": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-200-4",
@@ -2599,9 +2599,9 @@
       "input": "uch shened qovluqla birlikde teqdim olundu katib murachieti qebul etdi",
       "target": "Üç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baseline": "Uç shened qovluqla birlikdə təqdim olundu katib murachieti qəbul etdi.",
-      "output": "Uç shened qovluqla birlikdə təqdim olundu katib murachieti qəbul etdi.",
+      "output": "Uç sənəd qovluqla birlikdə təqdim olundu. Katib müraciəti qəbul etdi.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 1
     },
     {
       "id": "local-200-5",

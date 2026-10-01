@@ -1,6 +1,6 @@
 /** Supervised binary token-gap classifier; morphology and ordered context are shared. */
 import { tokenContext, tokenize, type Token } from './core';
-import { productiveMorphology } from '../productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from '../productive-morphology';
 import { isFinitePredicate } from '../segmentation';
 
 export interface BoundaryModel {

@@ -1,6 +1,6 @@
 /** Small supervised ordered-context ranker. No external API or neural-model claim. */
 import { fold, tokenize, tokenContext, type Token } from './core';
-import { productiveMorphology } from '../productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from '../productive-morphology';
 
 export interface SequenceClass {
   examples: number;

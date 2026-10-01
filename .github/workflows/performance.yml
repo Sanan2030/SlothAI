@@ -58,6 +58,14 @@ jobs:
           npm run --ignore-scripts gold:complete
           npm run --ignore-scripts local-ai:train
           git diff --exit-code -- lib/editor/local-ai/model.json data/local-ai/pairs.json data/local-ai/training-report.json
+          python scripts/build-paired-corpus.py
+          python scripts/build-paired-challenge.py
+          git diff --exit-code -- data/local-ai/paired-additions.json data/local-ai/challenge-v2.json
+          npm run --ignore-scripts local-ai:pos:train
+          npm run --ignore-scripts local-ai:paired:train
+          git diff --exit-code -- lib/editor/local-ai/pos-model.json lib/editor/local-ai/paired-model.json lib/editor/local-ai/joint-boundary-model.json data/local-ai/ud/splits.json data/local-ai/pos-report.json data/local-ai/paired-training-report.json
+          npm run --ignore-scripts local-ai:paired:check
+          npm run --ignore-scripts local-ai:reliability
           npm run --ignore-scripts gold:check
           npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check
@@ -232,6 +240,9 @@ jobs:
             docs/independent-gold-v2-results.json
             data/local-ai/fresh-report.json
             data/local-ai/context-test-report.json
+            data/local-ai/paired-test-report.json
+            data/local-ai/paired-reliability-report.json
+            data/local-ai/pos-report.json
           if-no-files-found: error
           retention-days: 30
 

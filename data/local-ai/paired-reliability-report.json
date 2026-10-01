@@ -1,0 +1,117 @@
+{
+  "scope": "Paired lexical ranker only; full editor evaluated separately",
+  "reports": [
+    {
+      "split": "validation",
+      "aligned": 1450,
+      "corruptTokens": 961,
+      "missedCorruptTokens": 824,
+      "unchangedTokens": 489,
+      "changedCorrectTokens": 0,
+      "proposals": 802,
+      "accepted": 137,
+      "correct": 137,
+      "wrong": 0,
+      "abstained": 665,
+      "precision": 1,
+      "acceptedGroups": 30,
+      "allCorrectGroups": 30,
+      "groupWilsonLower95": 0.8864866068260312,
+      "proposalBrier": 0.045952292151637784,
+      "bins": [
+        {
+          "lower": 0,
+          "upper": 0.2,
+          "count": 70,
+          "meanScore": 0.05641982167248908,
+          "empiricalAccuracy": 0.21428571428571427
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "count": 9,
+          "meanScore": 0.30437923368974895,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "count": 53,
+          "meanScore": 0.5179074316034394,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 30,
+          "meanScore": 0.6434389982855752,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.8,
+          "upper": 1,
+          "count": 640,
+          "meanScore": 0.9827068315154536,
+          "empiricalAccuracy": 0.99375
+        }
+      ],
+      "caveat": "Scores are uncalibrated. Brier/bins measure proposal correctness only; abstained/no-candidate tokens are excluded. Repeated variants are correlated. Group Wilson bounds are descriptive, not a general-language guarantee."
+    },
+    {
+      "split": "test",
+      "aligned": 2401,
+      "corruptTokens": 1604,
+      "missedCorruptTokens": 1471,
+      "unchangedTokens": 797,
+      "changedCorrectTokens": 0,
+      "proposals": 1257,
+      "accepted": 133,
+      "correct": 133,
+      "wrong": 0,
+      "abstained": 1124,
+      "precision": 1,
+      "acceptedGroups": 47,
+      "allCorrectGroups": 47,
+      "groupWilsonLower95": 0.9244423958360036,
+      "proposalBrier": 0.05231610666883397,
+      "bins": [
+        {
+          "lower": 0,
+          "upper": 0.2,
+          "count": 136,
+          "meanScore": 0.03655603960009501,
+          "empiricalAccuracy": 0.08823529411764706
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "count": 13,
+          "meanScore": 0.2913732434779423,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "count": 33,
+          "meanScore": 0.5179021486784902,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "count": 46,
+          "meanScore": 0.6830506012655858,
+          "empiricalAccuracy": 1
+        },
+        {
+          "lower": 0.8,
+          "upper": 1,
+          "count": 1029,
+          "meanScore": 0.9771989218690034,
+          "empiricalAccuracy": 0.9659863945578231
+        }
+      ],
+      "caveat": "Scores are uncalibrated. Brier/bins measure proposal correctness only; abstained/no-candidate tokens are excluded. Repeated variants are correlated. Group Wilson bounds are descriptive, not a general-language guarantee."
+    }
+  ]
+}

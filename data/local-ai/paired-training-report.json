@@ -1,0 +1,34 @@
+{
+  "algorithm": "supervised-token-edit-logistic",
+  "pairs": 1948,
+  "train": 1498,
+  "validationPairs": 172,
+  "test": 278,
+  "distinctTrainingTargets": 343,
+  "vocabulary": 762,
+  "learnedCorruptedTokens": 997,
+  "learnedEditChannels": 58,
+  "spacingPatterns": 3,
+  "modelBytes": 260327,
+  "artifactSha256": "e4964e66b5d60663304a084fd62589911e80bd671fae930b75be696277f5027a",
+  "source": "Assistant-authored examples and explicitly labelled synthetic corruptions; not scraped user data",
+  "realReviewedPairs": 0,
+  "threshold": 0.17212641883004803,
+  "validation": {
+    "samples": 137,
+    "accepted": 137,
+    "correct": 137,
+    "precision": 1
+  },
+  "boundary": {
+    "examples": 10460,
+    "positives": 1414,
+    "threshold": 0.95,
+    "validation": {
+      "accepted": 114,
+      "correct": 114,
+      "total": 1278
+    }
+  },
+  "limitations": "Synthetic corruptions and authored examples; empirical validation threshold, not universal probability calibration. No complete sentence lookup."
+}

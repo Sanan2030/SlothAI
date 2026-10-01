@@ -1,0 +1,742 @@
+[
+  {
+    "id": "cairo/1",
+    "group": "cairo/1",
+    "split": "train"
+  },
+  {
+    "id": "cairo/2",
+    "group": "cairo/2",
+    "split": "test"
+  },
+  {
+    "id": "cairo/3/alt1",
+    "group": "cairo/3",
+    "split": "train"
+  },
+  {
+    "id": "cairo/3/alt2",
+    "group": "cairo/3",
+    "split": "train"
+  },
+  {
+    "id": "cairo/4/alt1",
+    "group": "cairo/4",
+    "split": "train"
+  },
+  {
+    "id": "cairo/4/alt2",
+    "group": "cairo/4",
+    "split": "train"
+  },
+  {
+    "id": "cairo/5",
+    "group": "cairo/5",
+    "split": "train"
+  },
+  {
+    "id": "cairo/6/alt1",
+    "group": "cairo/6",
+    "split": "train"
+  },
+  {
+    "id": "cairo/6/alt2",
+    "group": "cairo/6",
+    "split": "train"
+  },
+  {
+    "id": "cairo/7",
+    "group": "cairo/7",
+    "split": "train"
+  },
+  {
+    "id": "cairo/8",
+    "group": "cairo/8",
+    "split": "train"
+  },
+  {
+    "id": "cairo/9",
+    "group": "cairo/9",
+    "split": "train"
+  },
+  {
+    "id": "cairo/10",
+    "group": "cairo/10",
+    "split": "train"
+  },
+  {
+    "id": "cairo/11",
+    "group": "cairo/11",
+    "split": "train"
+  },
+  {
+    "id": "cairo/12/alt1",
+    "group": "cairo/12",
+    "split": "test"
+  },
+  {
+    "id": "cairo/12/alt2",
+    "group": "cairo/12",
+    "split": "test"
+  },
+  {
+    "id": "cairo/13/alt1",
+    "group": "cairo/13",
+    "split": "test"
+  },
+  {
+    "id": "cairo/13/alt2",
+    "group": "cairo/13",
+    "split": "test"
+  },
+  {
+    "id": "cairo/14/alt1",
+    "group": "cairo/14",
+    "split": "train"
+  },
+  {
+    "id": "cairo/14/alt2",
+    "group": "cairo/14",
+    "split": "train"
+  },
+  {
+    "id": "cairo/15/alt1",
+    "group": "cairo/15",
+    "split": "train"
+  },
+  {
+    "id": "cairo/15/alt2",
+    "group": "cairo/15",
+    "split": "train"
+  },
+  {
+    "id": "cairo/16",
+    "group": "cairo/16",
+    "split": "train"
+  },
+  {
+    "id": "cairo/17/alt1",
+    "group": "cairo/17",
+    "split": "train"
+  },
+  {
+    "id": "cairo/17/alt2",
+    "group": "cairo/17",
+    "split": "train"
+  },
+  {
+    "id": "cairo/18",
+    "group": "cairo/18",
+    "split": "train"
+  },
+  {
+    "id": "cairo/19",
+    "group": "cairo/19",
+    "split": "train"
+  },
+  {
+    "id": "cairo/20/alt1",
+    "group": "cairo/20",
+    "split": "test"
+  },
+  {
+    "id": "cairo/20/alt2",
+    "group": "cairo/20",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/udtw23-1",
+    "group": "tuecl/udtw23-1",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-2",
+    "group": "tuecl/udtw23-2",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-3",
+    "group": "tuecl/udtw23-3",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-4",
+    "group": "tuecl/udtw23-4",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-5",
+    "group": "tuecl/udtw23-5",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-6",
+    "group": "tuecl/udtw23-6",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-7",
+    "group": "tuecl/udtw23-7",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-8",
+    "group": "tuecl/udtw23-8",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-9",
+    "group": "tuecl/udtw23-9",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-10",
+    "group": "tuecl/udtw23-10",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-11",
+    "group": "tuecl/udtw23-11",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-12",
+    "group": "tuecl/udtw23-12",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-13",
+    "group": "tuecl/udtw23-13",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-14",
+    "group": "tuecl/udtw23-14",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-15",
+    "group": "tuecl/udtw23-15",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-16",
+    "group": "tuecl/udtw23-16",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/udtw23-17",
+    "group": "tuecl/udtw23-17",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-18",
+    "group": "tuecl/udtw23-18",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-19",
+    "group": "tuecl/udtw23-19",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-20",
+    "group": "tuecl/udtw23-20",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-21",
+    "group": "tuecl/udtw23-21",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/udtw23-22",
+    "group": "tuecl/udtw23-22",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/1",
+    "group": "tuecl/1",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/2",
+    "group": "tuecl/2",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/3",
+    "group": "tuecl/3",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/4",
+    "group": "tuecl/4",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/5",
+    "group": "tuecl/5",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/6",
+    "group": "tuecl/6",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/7",
+    "group": "tuecl/7",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/8",
+    "group": "tuecl/8",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/9",
+    "group": "tuecl/9",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/10",
+    "group": "tuecl/10",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/11",
+    "group": "tuecl/11",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/12",
+    "group": "tuecl/12",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/13",
+    "group": "tuecl/13",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/14",
+    "group": "tuecl/14",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/15",
+    "group": "tuecl/14",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/16",
+    "group": "tuecl/16",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/17",
+    "group": "tuecl/17",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/18",
+    "group": "tuecl/18",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/19",
+    "group": "tuecl/19",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/20",
+    "group": "tuecl/20",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/21",
+    "group": "tuecl/21",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/22",
+    "group": "tuecl/22",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/23",
+    "group": "tuecl/23",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/24",
+    "group": "tuecl/24",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/25",
+    "group": "tuecl/25",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/26",
+    "group": "tuecl/26",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/27",
+    "group": "tuecl/27",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/28",
+    "group": "tuecl/28",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/29",
+    "group": "tuecl/29",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/30",
+    "group": "tuecl/30",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/31",
+    "group": "tuecl/31",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/32",
+    "group": "tuecl/32",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/33",
+    "group": "tuecl/33",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/34",
+    "group": "tuecl/34",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/35",
+    "group": "tuecl/35",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/36",
+    "group": "tuecl/35",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/37",
+    "group": "tuecl/35",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/38",
+    "group": "tuecl/38",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/39",
+    "group": "tuecl/39",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/40",
+    "group": "tuecl/40",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/41",
+    "group": "tuecl/41",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/42",
+    "group": "tuecl/41",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/43",
+    "group": "tuecl/43",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/44",
+    "group": "tuecl/44",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/45",
+    "group": "tuecl/45",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/46",
+    "group": "tuecl/46",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/47",
+    "group": "tuecl/47",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/48",
+    "group": "tuecl/48",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/49",
+    "group": "tuecl/49",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/50",
+    "group": "tuecl/50",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/51",
+    "group": "tuecl/51",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/52",
+    "group": "tuecl/52",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/53",
+    "group": "tuecl/53",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/54",
+    "group": "tuecl/54",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/55",
+    "group": "tuecl/54",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/56",
+    "group": "tuecl/56",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/57",
+    "group": "tuecl/57",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/58",
+    "group": "tuecl/58",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/59",
+    "group": "tuecl/59",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/60",
+    "group": "tuecl/60",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/61",
+    "group": "tuecl/61",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/62",
+    "group": "tuecl/62",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/63",
+    "group": "tuecl/63",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/64",
+    "group": "tuecl/64",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/65",
+    "group": "tuecl/65",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/66",
+    "group": "tuecl/66",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/67",
+    "group": "tuecl/67",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/68",
+    "group": "tuecl/68",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/69",
+    "group": "tuecl/69",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/70",
+    "group": "tuecl/70",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/71",
+    "group": "tuecl/71",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/72",
+    "group": "tuecl/72",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/73",
+    "group": "tuecl/73",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/74",
+    "group": "tuecl/74",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/75",
+    "group": "tuecl/74",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/76",
+    "group": "tuecl/76",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/77",
+    "group": "tuecl/77",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/78",
+    "group": "tuecl/78",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/79",
+    "group": "tuecl/78",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/80",
+    "group": "tuecl/80",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/81",
+    "group": "tuecl/80",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/82",
+    "group": "tuecl/82",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/83",
+    "group": "tuecl/83",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/84",
+    "group": "tuecl/84",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/85",
+    "group": "tuecl/85",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/86",
+    "group": "tuecl/86",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/87",
+    "group": "tuecl/87",
+    "split": "validation"
+  },
+  {
+    "id": "tuecl/88",
+    "group": "tuecl/88",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/89",
+    "group": "tuecl/89",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/90",
+    "group": "tuecl/90",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/91",
+    "group": "tuecl/91",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/92",
+    "group": "tuecl/92",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/93",
+    "group": "tuecl/93",
+    "split": "test"
+  },
+  {
+    "id": "tuecl/94",
+    "group": "tuecl/94",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/95",
+    "group": "tuecl/95",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/96",
+    "group": "tuecl/96",
+    "split": "train"
+  },
+  {
+    "id": "tuecl/97",
+    "group": "tuecl/97",
+    "split": "train"
+  }
+]

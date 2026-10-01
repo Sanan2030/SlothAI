@@ -1,0 +1,126 @@
+{
+  "sourceMain": "f24349d3f92052469cc124efb3392e67b5943ffa",
+  "node": "v24.19.0",
+  "tests": {
+    "total": 3785,
+    "passed": 3785,
+    "failed": 0
+  },
+  "checks": {
+    "typescript": "pass",
+    "eslint": "pass",
+    "productionBuild": "pass",
+    "gold1000Exact": "pass",
+    "freshRegression": "pass",
+    "contextRegression": "pass",
+    "pairedBaselineGate": "pass",
+    "artifactReproduction": "pass"
+  },
+  "pairedEvaluation": {
+    "total": 141,
+    "exact": 118,
+    "regressions": 0,
+    "corpora": [
+      {
+        "corpus": "authored-synthetic",
+        "total": 78,
+        "exact": 66,
+        "previousExact": 29
+      },
+      {
+        "corpus": "challenge",
+        "total": 63,
+        "exact": 52,
+        "previousExact": 42
+      }
+    ]
+  },
+  "latency": [
+    {
+      "words": 20,
+      "requests": 1,
+      "chars": 134,
+      "avgMs": 11.79,
+      "p50Ms": 11.27,
+      "p95Ms": 13.67,
+      "minMs": 10.27,
+      "maxMs": 13.67,
+      "targetMs": 50,
+      "rssBaseMb": 324.5,
+      "rssPeakMb": 324.5,
+      "rssDeltaMb": 0,
+      "heapDeltaMb": 2.36,
+      "status": "PASS"
+    },
+    {
+      "words": 100,
+      "requests": 1,
+      "chars": 732,
+      "avgMs": 45.94,
+      "p50Ms": 45.5,
+      "p95Ms": 51.71,
+      "minMs": 42.31,
+      "maxMs": 51.71,
+      "targetMs": 100,
+      "rssBaseMb": 324.5,
+      "rssPeakMb": 325.12,
+      "rssDeltaMb": 0.63,
+      "heapDeltaMb": 12.47,
+      "status": "PASS"
+    },
+    {
+      "words": 500,
+      "requests": 1,
+      "chars": 3741,
+      "avgMs": 218.51,
+      "p50Ms": 213.99,
+      "p95Ms": 234.74,
+      "minMs": 208.89,
+      "maxMs": 234.74,
+      "targetMs": 300,
+      "rssBaseMb": 322.21,
+      "rssPeakMb": 325.25,
+      "rssDeltaMb": 3.04,
+      "heapDeltaMb": 47.46,
+      "status": "PASS"
+    },
+    {
+      "words": 1000,
+      "requests": 1,
+      "chars": 7491,
+      "avgMs": 470.18,
+      "p50Ms": 461.98,
+      "p95Ms": 497.48,
+      "minMs": 434.24,
+      "maxMs": 497.48,
+      "targetMs": 600,
+      "rssBaseMb": 319.89,
+      "rssPeakMb": 322.58,
+      "rssDeltaMb": 2.7,
+      "heapDeltaMb": 30.42,
+      "status": "PASS"
+    },
+    {
+      "words": 5000,
+      "requests": 5,
+      "chars": 37528,
+      "avgMs": 2350.3,
+      "p50Ms": 2374.04,
+      "p95Ms": 2449.16,
+      "minMs": 2241.5,
+      "maxMs": 2449.16,
+      "targetMs": 2500,
+      "rssBaseMb": 322.52,
+      "rssPeakMb": 324.52,
+      "rssDeltaMb": 2,
+      "heapDeltaMb": 49.27,
+      "status": "PASS"
+    }
+  ],
+  "artifacts": {
+    "lib/editor/local-ai/pos-model.json": "e160feb80d52355c40e2a5e493c1591bf0eded0b879d7f06994862f9891992de",
+    "lib/editor/local-ai/paired-model.json": "e4964e66b5d60663304a084fd62589911e80bd671fae930b75be696277f5027a",
+    "lib/editor/local-ai/joint-boundary-model.json": "1d1f316304c134bd763f5b0d8e1ea130473b60cbaf79beb70f223740128c793d"
+  },
+  "limits": "Authored/synthetic development corpora, not human-certified general-language accuracy. Latency from local Node process, not deployed Vercel."
+}

@@ -1,0 +1,46 @@
+{
+  "sourceRevision": "69fc3c609ccad52adf644fe350cf427713f42b79",
+  "sourceSha256": "8b315f8b065f094e38482465706ba44a9caf1b082fc8bbc94908f6fdeee8c3b5",
+  "license": "CC-BY-SA-4.0",
+  "sentences": 148,
+  "train": 118,
+  "evaluations": [
+    {
+      "split": "validation",
+      "total": 35,
+      "correct": 32,
+      "accuracy": 0.9142857142857143,
+      "unknown": 10,
+      "unknownCorrect": 8,
+      "confusion": {
+        "ADV>NOUN": 1,
+        "ADJ>VERB": 1,
+        "DET>NOUN": 1
+      }
+    },
+    {
+      "split": "test",
+      "total": 134,
+      "correct": 104,
+      "accuracy": 0.7761194029850746,
+      "unknown": 51,
+      "unknownCorrect": 23,
+      "confusion": {
+        "NOUN>VERB": 4,
+        "PRON>NOUN": 3,
+        "VERB>NOUN": 6,
+        "PRON>PROPN": 2,
+        "PRON>VERB": 2,
+        "PROPN>PRON": 2,
+        "PROPN>NOUN": 2,
+        "ADV>NOUN": 1,
+        "ADJ>VERB": 1,
+        "DET>NOUN": 1,
+        "SCONJ>NOUN": 3,
+        "ADJ>NOUN": 2,
+        "VERB>ADJ": 1
+      }
+    }
+  ],
+  "limitations": "Small grammar-example treebank with variety differences; not general Azerbaijani POS accuracy."
+}

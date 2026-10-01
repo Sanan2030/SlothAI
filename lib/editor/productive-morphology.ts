@@ -3,6 +3,8 @@ import type { GenerateFormsRequest, GrammaticalCase, GrammaticalPerson,
   MorphologyEngine } from './contracts/morphology';
 import type { PartOfSpeech } from './contracts/lemma';
 import { foldLetters } from './dictionary';
+import additionalStems from '../../data/local-ai/reviewed-stems.json';
+import posArtifact from './local-ai/pos-model.json';
 
 const vowels = /[aıoueəiöü]$/u;
 // Reviewed stems only: arbitrary dictionary entries cannot safely be passed
@@ -60,7 +62,7 @@ function add(surface: string, form: Form): void {
   index.set(surface, records);
 }
 
-for (const lemma of nouns) {
+for (const lemma of new Set([...nouns, ...additionalStems.nouns])) {
   for (const plural of [false, true]) {
     const base = lemma + (plural ? a(lemma) === 'ə' ? 'lər' : 'lar' : '');
     for (const poss of [undefined, 1, 2, 3] as const) {
@@ -78,7 +80,7 @@ for (const lemma of nouns) {
   }
 }
 
-for (const lemma of verbs) {
+for (const lemma of new Set([...verbs, ...additionalStems.verbs])) {
   const v = vowels.test(lemma);
   for (const passive of [false, true]) {
     const passiveStem: Record<string, string> = { et: 'edil', get: 'gedil', de: 'deyil', ye: 'yeyil', ol: 'olun' };
@@ -190,7 +192,16 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
     const cached = this.analyses.get(surface);
     if (cached) return cached;
     const records = index.get(surface);
-    if (!records) return [];
+    if (!records) {
+      const words = posArtifact.words as Record<string, Record<string, number>>;
+      const lemmas = posArtifact.lemmas as Record<string, string[]>;
+      const labels: Record<string, PartOfSpeech> = { NOUN: 'noun', VERB: 'verb', AUX: 'verb', ADJ: 'adjective',
+        ADV: 'adverb', PRON: 'pronoun', NUM: 'numeral', ADP: 'postposition', CCONJ: 'conjunction',
+        SCONJ: 'conjunction', PART: 'particle', INTJ: 'interjection', PROPN: 'proper-noun' };
+      const lexical = Object.keys(words[surface] ?? {}).filter(tag => labels[tag]);
+      return lexical.flatMap(tag => (lemmas[surface] ?? [surface]).map(lemma => ({ surface, lemma,
+        pos: labels[tag], features: {}, source: 'lexicon' as const })));
+    }
     const analyses: readonly MorphologicalAnalysis[] = records.map(record => ({ surface, lemma: record.lemma,
       pos: record.pos, features: record.features, source: 'rule' }));
     if (this.analyses.size >= 4096) this.analyses.clear();
@@ -220,3 +231,22 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
 }
 
 export const productiveMorphology = new ProductiveMorphologyEngine();
+
+/** Frozen feature vocabulary for established classifiers. New POS/lemma data
+ * must not silently change the features used by an already-trained artifact. */
+const legacyRoots = new Set([...nouns, ...verbs,
+  ...'elektron rəsmi yeni köhnə ilkin ikinci əlavə tam yekun daxili xarici həqiqi kritik böyük kiçik fərqli əvvəlki avtomatik'.split(' ')]);
+export const legacyModelMorphology = {
+  analyzeWord(word: string): readonly MorphologicalAnalysis[] {
+    const surface = lower(word);
+    return (index.get(surface) ?? []).filter(record => legacyRoots.has(record.lemma)).map(record =>
+      ({ surface, lemma: record.lemma, pos: record.pos, features: record.features, source: 'rule' as const }));
+  },
+  findByFoldedForm(word: string): string | undefined {
+    const raw = lower(word);
+    const choices = [...(foldedIndex.get(foldLetters(raw)) ?? [])].filter(surface =>
+      (index.get(surface) ?? []).some(record => legacyRoots.has(record.lemma))
+      && [...raw].every((letter, at) => !/[əıçğöşü]/u.test(letter) || surface[at] === letter));
+    return choices.length === 1 ? choices[0] : undefined;
+  },
+};

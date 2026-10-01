@@ -1,7 +1,7 @@
 /** A small supervised multinomial Naive Bayes model, not a generative LLM. */
 import type { BoundaryModel } from './boundary-model';
 import type { SequenceModel } from './sequence';
-import { productiveMorphology } from '../productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from '../productive-morphology';
 export interface Token { word: string; start: number; end: number; sentence: number }
 export interface ClassCounts { examples: number; total: number; features: Record<string, number> }
 export interface LocalContextModel {

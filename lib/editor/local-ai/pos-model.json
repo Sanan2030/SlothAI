@@ -1,0 +1,4403 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "tags": [
+    "ADJ",
+    "ADP",
+    "ADV",
+    "AUX",
+    "CCONJ",
+    "DET",
+    "INTJ",
+    "NOUN",
+    "NUM",
+    "PART",
+    "PRON",
+    "PROPN",
+    "PUNCT",
+    "SCONJ",
+    "VERB"
+  ],
+  "words": {
+    "qız": {
+      "NOUN": 1
+    },
+    "yoldaşına": {
+      "NOUN": 2
+    },
+    "namə": {
+      "NOUN": 2
+    },
+    "yazdı": {
+      "VERB": 1
+    },
+    ".": {
+      "PUNCT": 94
+    },
+    "o": {
+      "PRON": 7,
+      "DET": 2
+    },
+    "çalışdı": {
+      "VERB": 2
+    },
+    "kı": {
+      "SCONJ": 1,
+      "ADP": 1
+    },
+    "siqar": {
+      "NOUN": 2
+    },
+    "çekmə": {
+      "VERB": 2
+    },
+    "və": {
+      "CCONJ": 5
+    },
+    "əlkol": {
+      "NOUN": 2
+    },
+    "içməni": {
+      "VERB": 2
+    },
+    "tərkidə": {
+      "VERB": 1
+    },
+    "tərkitməyə": {
+      "VERB": 1
+    },
+    "siz": {
+      "PRON": 2
+    },
+    "getmək": {
+      "VERB": 2
+    },
+    "istəyirsiniz": {
+      "VERB": 2
+    },
+    "?": {
+      "PUNCT": 23
+    },
+    "sam": {
+      "PROPN": 1
+    },
+    ",": {
+      "PUNCT": 22
+    },
+    "pəncərəni": {
+      "NOUN": 1
+    },
+    "aç": {
+      "VERB": 1
+    },
+    "!": {
+      "PUNCT": 2
+    },
+    "ərinə": {
+      "NOUN": 2
+    },
+    "maşını": {
+      "NOUN": 2
+    },
+    "yudurtdu": {
+      "VERB": 2
+    },
+    "peterin": {
+      "PROPN": 1
+    },
+    "qonşusu": {
+      "NOUN": 1
+    },
+    "hasarı": {
+      "NOUN": 1
+    },
+    "qırmız": {
+      "ADJ": 1
+    },
+    "rənglədi": {
+      "VERB": 1
+    },
+    "mənin": {
+      "PRON": 1
+    },
+    "babam": {
+      "NOUN": 1
+    },
+    "sənin": {
+      "PRON": 1
+    },
+    "kindən": {
+      "PRON": 1
+    },
+    "bətərdi": {
+      "ADJ": 1
+    },
+    "mary": {
+      "PROPN": 3
+    },
+    "bronz": {
+      "NOUN": 1
+    },
+    "qazandı": {
+      "VERB": 1
+    },
+    "peter": {
+      "PROPN": 2
+    },
+    "gümüş": {
+      "NOUN": 1
+    },
+    "jane": {
+      "PROPN": 1
+    },
+    "qızıl": {
+      "NOUN": 1
+    },
+    "iguazu": {
+      "NOUN": 1
+    },
+    "böyük": {
+      "ADJ": 5
+    },
+    "bir": {
+      "DET": 4,
+      "NUM": 1
+    },
+    "kişvərdir": {
+      "NOUN": 1
+    },
+    "ya": {
+      "CCONJ": 1
+    },
+    "kiçik": {
+      "ADJ": 3
+    },
+    "nə": {
+      "CCONJ": 2,
+      "PRON": 2
+    },
+    "smith": {
+      "PROPN": 1
+    },
+    "də": {
+      "ADV": 3,
+      "PART": 1
+    },
+    "brown": {
+      "PROPN": 1
+    },
+    "intixab": {
+      "NOUN": 1
+    },
+    "ola": {
+      "VERB": 1
+    },
+    "bildi": {
+      "AUX": 1
+    },
+    "fikr": {
+      "NOUN": 2
+    },
+    "eliriz": {
+      "VERB": 2
+    },
+    "vaxt": {
+      "NOUN": 2
+    },
+    "gələ": {
+      "VERB": 2
+    },
+    "bilərsiz": {
+      "AUX": 2
+    },
+    "maşın": {
+      "NOUN": 2
+    },
+    "aldı": {
+      "VERB": 5
+    },
+    "amma": {
+      "CCONJ": 7
+    },
+    "qardaşı": {
+      "NOUN": 2
+    },
+    "fəqət": {
+      "ADV": 2
+    },
+    "çərx": {
+      "NOUN": 2
+    },
+    "peterinən": {
+      "PROPN": 1
+    },
+    "qucaxlaşdılar": {
+      "VERB": 1
+    },
+    "sonra": {
+      "ADV": 1
+    },
+    "otaqdan": {
+      "NOUN": 1
+    },
+    "çıxdılar": {
+      "VERB": 1
+    },
+    "tüklərin": {
+      "NOUN": 2
+    },
+    "cürləməliydi": {
+      "VERB": 2
+    },
+    "neçə": {
+      "NUM": 2
+    },
+    "dəlilə": {
+      "NOUN": 2
+    },
+    "görə": {
+      "ADP": 2
+    },
+    "gün": {
+      "NOUN": 2
+    },
+    "eləmədi": {
+      "VERB": 2
+    },
+    "çox": {
+      "ADV": 1,
+      "ADJ": 1
+    },
+    "yeyin": {
+      "ADV": 1
+    },
+    "qaçdığı": {
+      "VERB": 1
+    },
+    "için": {
+      "ADP": 2
+    },
+    "ona": {
+      "PRON": 2
+    },
+    "çata": {
+      "VERB": 1
+    },
+    "bilmədim": {
+      "AUX": 1
+    },
+    "bu": {
+      "DET": 1
+    },
+    "peterdendir": {
+      "PROPN": 1
+    },
+    "dünən": {
+      "NOUN": 1
+    },
+    "yetişibdir": {
+      "VERB": 1
+    },
+    "ərim": {
+      "NOUN": 1
+    },
+    "bağda": {
+      "NOUN": 1
+    },
+    "uşağ": {
+      "NOUN": 1
+    },
+    "otağının": {
+      "NOUN": 1
+    },
+    "pəncərəsini": {
+      "NOUN": 1
+    },
+    "tez": {
+      "ADV": 2
+    },
+    "-": {
+      "PUNCT": 4
+    },
+    "təmizləmişdi": {
+      "VERB": 1
+    },
+    "aşpazxananın": {
+      "NOUN": 1
+    },
+    "kını": {
+      "PRON": 1
+    },
+    "təmizləməmişdi": {
+      "VERB": 1
+    },
+    "sənə": {
+      "PRON": 1
+    },
+    "bunu": {
+      "PRON": 1
+    },
+    "həmişə": {
+      "ADV": 1
+    },
+    "diyirəm": {
+      "VERB": 1
+    },
+    "söbhlər": {
+      "NOUN": 1
+    },
+    "yoldaşıynan": {
+      "NOUN": 1
+    },
+    "telfunda": {
+      "NOUN": 1
+    },
+    "danışanda": {
+      "VERB": 1
+    },
+    "mənim": {
+      "PRON": 2
+    },
+    "moridimdə": {
+      "NOUN": 1
+    },
+    "danışma": {
+      "VERB": 1
+    },
+    "gecəni": {
+      "NOUN": 1
+    },
+    "qalan": {
+      "VERB": 1
+    },
+    "qonax": {
+      "NOUN": 1
+    },
+    "qapını": {
+      "NOUN": 1
+    },
+    "çalmışdı": {
+      "VERB": 1
+    },
+    "ev": {
+      "NOUN": 1
+    },
+    "sahab": {
+      "NOUN": 1
+    },
+    "sil": {
+      "VERB": 1
+    },
+    "süpür": {
+      "VERB": 1
+    },
+    "elirdi": {
+      "VERB": 2
+    },
+    "resturandan": {
+      "NOUN": 1
+    },
+    "sifariş": {
+      "NOUN": 1
+    },
+    "verən": {
+      "VERB": 1
+    },
+    "qəza": {
+      "NOUN": 1
+    },
+    "hələ": {
+      "ADV": 1
+    },
+    "gələcəgidi": {
+      "VERB": 1
+    },
+    "ayşə": {
+      "NOUN": 1,
+      "PROPN": 2
+    },
+    "düktürdür": {
+      "NOUN": 1
+    },
+    "həll": {
+      "NOUN": 1
+    },
+    "eləməyə": {
+      "VERB": 1
+    },
+    "təlaş": {
+      "NOUN": 1
+    },
+    "elədigimiz": {
+      "VERB": 1
+    },
+    "məsələ": {
+      "NOUN": 1
+    },
+    "kitabxanada": {
+      "NOUN": 2
+    },
+    "beş": {
+      "NUM": 1
+    },
+    "dənə": {
+      "NOUN": 2
+    },
+    "kitaba": {
+      "NOUN": 1
+    },
+    "da": {
+      "ADV": 2
+    },
+    "yer": {
+      "NOUN": 1
+    },
+    "olmamasıdır": {
+      "VERB": 1
+    },
+    "nənəsı": {
+      "NOUN": 1
+    },
+    "pərəstar": {
+      "NOUN": 1
+    },
+    "ıdı": {
+      "AUX": 1
+    },
+    "pəs": {
+      "INTJ": 1
+    },
+    "kılar": {
+      "PRON": 1
+    },
+    "harda": {
+      "PRON": 1
+    },
+    "iydi": {
+      "AUX": 4
+    },
+    "sudə": {
+      "PROPN": 1
+    },
+    "üç": {
+      "NUM": 3
+    },
+    "saatdır": {
+      "NOUN": 1
+    },
+    "afisdə": {
+      "NOUN": 1
+    },
+    "dəyil": {
+      "AUX": 4
+    },
+    "evdə": {
+      "NOUN": 12
+    },
+    "dəyilmiş": {
+      "AUX": 1
+    },
+    "bazarda": {
+      "NOUN": 1
+    },
+    "mivə": {
+      "NOUN": 1
+    },
+    "var": {
+      "ADJ": 7
+    },
+    "yaxçı": {
+      "ADJ": 3
+    },
+    "deniz": {
+      "PROPN": 40,
+      "NOUN": 2
+    },
+    "düktür": {
+      "NOUN": 1
+    },
+    "olacax": {
+      "VERB": 2,
+      "AUX": 1
+    },
+    "bilmiş": {
+      "VERB": 1
+    },
+    "ol": {
+      "AUX": 1
+    },
+    "yatmış": {
+      "VERB": 3
+    },
+    "cələsə": {
+      "NOUN": 1
+    },
+    "elam": {
+      "NOUN": 1
+    },
+    "olanda": {
+      "AUX": 1
+    },
+    "qədər": {
+      "ADP": 2
+    },
+    "təəccüb": {
+      "NOUN": 1
+    },
+    "eləmişdi": {
+      "VERB": 1
+    },
+    "ki": {
+      "SCONJ": 1,
+      "ADP": 2,
+      "NOUN": 1
+    },
+    "mənə": {
+      "PRON": 3
+    },
+    "elə": {
+      "ADV": 2
+    },
+    "mat": {
+      "ADV": 2
+    },
+    "baxırdı": {
+      "VERB": 1
+    },
+    "jakətim": {
+      "NOUN": 1
+    },
+    "iymiş": {
+      "AUX": 1
+    },
+    "mərasim": {
+      "NOUN": 1
+    },
+    "büyün": {
+      "ADV": 1
+    },
+    "bərgüzar": {
+      "VERB": 1
+    },
+    "nəticələr": {
+      "NOUN": 1
+    },
+    "gəlmış": {
+      "VERB": 1
+    },
+    ";": {
+      "PUNCT": 1
+    },
+    "belə": {
+      "PRON": 1
+    },
+    "kollən": {
+      "ADV": 2
+    },
+    "oxumağı": {
+      "VERB": 1
+    },
+    "yox": {
+      "ADJ": 3
+    },
+    "nəqqaşi": {
+      "NOUN": 1
+    },
+    "çekmağı": {
+      "VERB": 1
+    },
+    "söyür": {
+      "VERB": 2
+    },
+    "oxuduxlarını": {
+      "VERB": 4
+    },
+    "oxuyacaxlarını": {
+      "VERB": 1
+    },
+    "annadır": {
+      "VERB": 1
+    },
+    "bunun": {
+      "PRON": 2
+    },
+    "abisi": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "çoxtər": {
+      "ADV": 1
+    },
+    "yaxçıdı": {
+      "ADJ": 1
+    },
+    "abini": {
+      "ADJ": 1
+    },
+    "verərsən": {
+      "VERB": 2
+    },
+    "cəvanlara": {
+      "ADJ": 1
+    },
+    "əlçatmaz": {
+      "VERB": 1
+    },
+    "hədəflərini": {
+      "NOUN": 1
+    },
+    "tərk": {
+      "VERB": 1
+    },
+    "etdirməliyik": {
+      "VERB": 1
+    },
+    "moəllim": {
+      "NOUN": 3
+    },
+    "kitabı": {
+      "NOUN": 8
+    },
+    "alıp": {
+      "VERB": 2
+    },
+    "mədrəsəyə": {
+      "NOUN": 5
+    },
+    "getdi": {
+      "VERB": 3
+    },
+    "apardı": {
+      "VERB": 2
+    },
+    "yoxladı": {
+      "VERB": 1
+    },
+    "kitab": {
+      "NOUN": 12
+    },
+    "oxur": {
+      "VERB": 4
+    },
+    "axşamlar": {
+      "NOUN": 1
+    },
+    "qardaşına": {
+      "NOUN": 1
+    },
+    "verdi": {
+      "VERB": 5
+    },
+    "evə": {
+      "NOUN": 2
+    },
+    "uşaqlara": {
+      "NOUN": 2
+    },
+    "dərs": {
+      "NOUN": 3
+    },
+    "qardaşıynan": {
+      "NOUN": 1
+    },
+    "barışdı": {
+      "VERB": 1
+    },
+    "tezdən": {
+      "ADJ": 1
+    },
+    "yatdı": {
+      "VERB": 1
+    },
+    "yoldaşının": {
+      "NOUN": 1
+    },
+    "pişirdigi": {
+      "VERB": 1
+    },
+    "qəzadan": {
+      "NOUN": 1
+    },
+    "ikki": {
+      "NUM": 1
+    },
+    "boşqab": {
+      "NOUN": 1
+    },
+    "yedi": {
+      "VERB": 1
+    },
+    "saat": {
+      "NOUN": 1
+    },
+    "yuxladı": {
+      "VERB": 1
+    },
+    "mohəssildir": {
+      "NOUN": 2
+    },
+    "evdəyidi": {
+      "NOUN": 1
+    },
+    "hediye": {
+      "NOUN": 1
+    },
+    "içindi": {
+      "ADP": 1
+    },
+    "iydı": {
+      "AUX": 1
+    },
+    "anasının": {
+      "NOUN": 2
+    },
+    "arzusu": {
+      "NOUN": 1
+    },
+    "denizin": {
+      "PROPN": 4
+    },
+    "mədrəsəde": {
+      "NOUN": 1
+    },
+    "oxumasıydı": {
+      "VERB": 1
+    },
+    "mədrəsədə": {
+      "NOUN": 1
+    },
+    "oxumaması": {
+      "VERB": 1
+    },
+    "anasını": {
+      "NOUN": 1
+    },
+    "nigəran": {
+      "ADJ": 1
+    },
+    "mizin": {
+      "NOUN": 1
+    },
+    "üstündə": {
+      "NOUN": 1
+    },
+    "kitabxanda": {
+      "NOUN": 1
+    },
+    "vəxtikən": {
+      "NOUN": 2
+    },
+    "yatmır": {
+      "VERB": 1
+    },
+    "yata": {
+      "VERB": 1
+    },
+    "bilmir": {
+      "AUX": 1
+    },
+    "yatmıya": {
+      "VERB": 1
+    },
+    "bilir": {
+      "AUX": 1
+    },
+    "anasın": {
+      "NOUN": 2
+    },
+    "görmədi": {
+      "VERB": 1
+    },
+    "görməmiş": {
+      "VERB": 1
+    },
+    "olmadı": {
+      "AUX": 1
+    },
+    "düşünmürü": {
+      "VERB": 3
+    },
+    "otaqda": {
+      "NOUN": 2
+    },
+    "dəyildi": {
+      "AUX": 1
+    },
+    "yoxdur": {
+      "ADJ": 1,
+      "VERB": 1
+    },
+    "oxumaq": {
+      "VERB": 3
+    },
+    "istəyir": {
+      "VERB": 3
+    },
+    "babasının": {
+      "NOUN": 1
+    },
+    "oxumasını": {
+      "VERB": 1
+    },
+    "özünə": {
+      "PRON": 1
+    },
+    "olmağı": {
+      "VERB": 1
+    },
+    "oxuması": {
+      "VERB": 1
+    },
+    "yuxlamasını": {
+      "VERB": 1
+    },
+    "rahatlaşdırır": {
+      "VERB": 1
+    },
+    "təkamulları": {
+      "NOUN": 1
+    },
+    "əhəmmiyətlidir": {
+      "ADJ": 1
+    },
+    "tətil": {
+      "NOUN": 2
+    },
+    "olduğunu": {
+      "VERB": 1,
+      "AUX": 1
+    },
+    "yadınnan": {
+      "NOUN": 2
+    },
+    "cıxardıp": {
+      "VERB": 2
+    },
+    "getmişdi": {
+      "VERB": 2
+    },
+    "kifini": {
+      "NOUN": 1
+    },
+    "götürüb": {
+      "VERB": 1
+    },
+    "gec": {
+      "ADV": 2
+    },
+    "yatsa": {
+      "VERB": 1
+    },
+    "qalacax": {
+      "VERB": 1
+    },
+    "uşaq": {
+      "NOUN": 2
+    },
+    "yatsaydı": {
+      "VERB": 1
+    },
+    "filmə": {
+      "NOUN": 1
+    },
+    "baxacaqıdıx": {
+      "VERB": 1
+    },
+    "boşla": {
+      "VERB": 2
+    },
+    "qardaşınnan": {
+      "NOUN": 1
+    },
+    "acığı": {
+      "NOUN": 1
+    },
+    "gelir": {
+      "VERB": 1
+    },
+    "xəstəxana": {
+      "NOUN": 1
+    },
+    "xalqın": {
+      "NOUN": 1
+    },
+    "xidmətinə": {
+      "NOUN": 1
+    },
+    "verildi": {
+      "VERB": 1
+    },
+    "evdəki": {
+      "NOUN": 1
+    },
+    "uşağın": {
+      "NOUN": 1
+    },
+    "tükləri": {
+      "NOUN": 1
+    },
+    "sarıdır": {
+      "ADJ": 1
+    },
+    "kinin": {
+      "NOUN": 1,
+      "PRON": 1
+    },
+    "qəhveyidir": {
+      "ADJ": 1
+    },
+    "soğanları": {
+      "NOUN": 1
+    },
+    "qərələnə": {
+      "VERB": 1
+    },
+    "çan": {
+      "ADP": 1
+    },
+    "qızardın": {
+      "VERB": 1
+    },
+    "evin": {
+      "NOUN": 1
+    },
+    "qabağında": {
+      "NOUN": 1
+    },
+    "maşınlıq": {
+      "ADJ": 1
+    },
+    "park": {
+      "NOUN": 1
+    },
+    "yeri": {
+      "NOUN": 1
+    },
+    "muqəddəs": {
+      "ADJ": 1
+    },
+    "olmuyan": {
+      "VERB": 1
+    },
+    "dinlər": {
+      "NOUN": 1
+    },
+    "pəncərəli": {
+      "NOUN": 1
+    },
+    "evlərdə": {
+      "NOUN": 1
+    },
+    "kifayət": {
+      "ADJ": 1
+    },
+    "işıq": {
+      "NOUN": 1
+    },
+    "gəldi": {
+      "VERB": 1
+    },
+    "evdədir": {
+      "NOUN": 1
+    },
+    "çörək": {
+      "NOUN": 3
+    },
+    "oxuduğuzu": {
+      "VERB": 1
+    },
+    "düsünürdüz": {
+      "VERB": 1
+    },
+    "söbh": {
+      "NOUN": 3
+    },
+    "ayhana": {
+      "PROPN": 3
+    },
+    "abisini": {
+      "ADJ": 1
+    },
+    "daha": {
+      "ADV": 1
+    },
+    "gözəldir": {
+      "ADJ": 1
+    },
+    "maşınım": {
+      "NOUN": 1
+    },
+    "oxunur": {
+      "VERB": 1
+    },
+    "yoxladıldı": {
+      "VERB": 1
+    },
+    "olar": {
+      "PRON": 1
+    },
+    "sən": {
+      "PRON": 2
+    },
+    "bizinən": {
+      "PRON": 1
+    },
+    "gəlirən": {
+      "VERB": 1
+    },
+    "əvvəl": {
+      "ADV": 1
+    },
+    "təmizləməgi": {
+      "NOUN": 1
+    },
+    "qutar": {
+      "VERB": 1
+    },
+    "ütüyü": {
+      "NOUN": 1
+    },
+    "hal": {
+      "NOUN": 1
+    },
+    "elərik": {
+      "VERB": 1
+    },
+    "deyəsən": {
+      "VERB": 1
+    },
+    "hakanın": {
+      "PROPN": 1
+    },
+    "məşq": {
+      "NOUN": 1
+    },
+    "yazmasına": {
+      "VERB": 1
+    },
+    "kömək": {
+      "NOUN": 1
+    },
+    "eləmişimiş": {
+      "VERB": 1
+    },
+    "movəffəq": {
+      "ADJ": 1
+    },
+    "film": {
+      "NOUN": 1
+    },
+    "alma": {
+      "NOUN": 1
+    },
+    "ağaclar": {
+      "NOUN": 1
+    },
+    "fərvərdin": {
+      "PROPN": 1
+    },
+    "ordibeheşt": {
+      "PROPN": 1
+    },
+    "aylarında": {
+      "NOUN": 1
+    },
+    "gül": {
+      "NOUN": 1
+    },
+    "açır": {
+      "VERB": 1
+    },
+    "çarpaz": {
+      "ADJ": 1
+    },
+    "tozlanır": {
+      "VERB": 1
+    }
+  },
+  "suffixes": {
+    "ız": {
+      "NOUN": 1,
+      "ADJ": 1
+    },
+    "qız": {
+      "NOUN": 1
+    },
+    "na": {
+      "NOUN": 4,
+      "PRON": 2,
+      "PROPN": 3,
+      "VERB": 1
+    },
+    "ına": {
+      "NOUN": 3,
+      "VERB": 1
+    },
+    "şına": {
+      "NOUN": 3
+    },
+    "mə": {
+      "NOUN": 3,
+      "VERB": 2
+    },
+    "amə": {
+      "NOUN": 2
+    },
+    "namə": {
+      "NOUN": 2
+    },
+    "dı": {
+      "VERB": 20,
+      "AUX": 3,
+      "ADJ": 1
+    },
+    "zdı": {
+      "VERB": 1
+    },
+    "azdı": {
+      "VERB": 1
+    },
+    "şdı": {
+      "VERB": 4
+    },
+    "ışdı": {
+      "VERB": 4
+    },
+    "kı": {
+      "SCONJ": 1,
+      "ADP": 1
+    },
+    "ar": {
+      "NOUN": 5,
+      "VERB": 4,
+      "PRON": 2,
+      "ADJ": 7
+    },
+    "qar": {
+      "NOUN": 2
+    },
+    "iqar": {
+      "NOUN": 2
+    },
+    "kmə": {
+      "VERB": 2
+    },
+    "ekmə": {
+      "VERB": 2
+    },
+    "və": {
+      "CCONJ": 5,
+      "NOUN": 3
+    },
+    "ol": {
+      "NOUN": 2,
+      "AUX": 1
+    },
+    "kol": {
+      "NOUN": 2
+    },
+    "lkol": {
+      "NOUN": 2
+    },
+    "ni": {
+      "VERB": 2,
+      "NOUN": 5,
+      "ADJ": 2
+    },
+    "əni": {
+      "VERB": 2,
+      "NOUN": 2
+    },
+    "məni": {
+      "VERB": 2
+    },
+    "də": {
+      "VERB": 1,
+      "ADV": 3,
+      "NOUN": 17,
+      "PROPN": 1,
+      "PART": 1
+    },
+    "idə": {
+      "VERB": 1
+    },
+    "kidə": {
+      "VERB": 1
+    },
+    "yə": {
+      "VERB": 2,
+      "NOUN": 5
+    },
+    "əyə": {
+      "VERB": 2,
+      "NOUN": 5
+    },
+    "məyə": {
+      "VERB": 2
+    },
+    "iz": {
+      "PRON": 2,
+      "VERB": 5,
+      "AUX": 2,
+      "PROPN": 40,
+      "NOUN": 2
+    },
+    "siz": {
+      "PRON": 2,
+      "AUX": 2
+    },
+    "ək": {
+      "VERB": 2,
+      "NOUN": 4
+    },
+    "mək": {
+      "VERB": 2,
+      "NOUN": 1
+    },
+    "tmək": {
+      "VERB": 2
+    },
+    "niz": {
+      "VERB": 2,
+      "PROPN": 40,
+      "NOUN": 2
+    },
+    "iniz": {
+      "VERB": 2
+    },
+    "am": {
+      "PROPN": 1,
+      "NOUN": 2
+    },
+    "sam": {
+      "PROPN": 1
+    },
+    "rəni": {
+      "NOUN": 1
+    },
+    "aç": {
+      "VERB": 1
+    },
+    "nə": {
+      "NOUN": 5,
+      "CCONJ": 2,
+      "PRON": 7,
+      "VERB": 1
+    },
+    "inə": {
+      "NOUN": 3
+    },
+    "rinə": {
+      "NOUN": 2
+    },
+    "nı": {
+      "NOUN": 4,
+      "PRON": 1,
+      "VERB": 7
+    },
+    "ını": {
+      "NOUN": 4,
+      "PRON": 1,
+      "VERB": 7
+    },
+    "şını": {
+      "NOUN": 2
+    },
+    "du": {
+      "VERB": 2
+    },
+    "tdu": {
+      "VERB": 2
+    },
+    "rtdu": {
+      "VERB": 2
+    },
+    "in": {
+      "PROPN": 6,
+      "PRON": 3,
+      "NOUN": 5,
+      "ADV": 1,
+      "ADP": 2
+    },
+    "rin": {
+      "PROPN": 1,
+      "NOUN": 2
+    },
+    "erin": {
+      "PROPN": 1
+    },
+    "su": {
+      "NOUN": 2
+    },
+    "usu": {
+      "NOUN": 2
+    },
+    "şusu": {
+      "NOUN": 1
+    },
+    "rı": {
+      "NOUN": 3
+    },
+    "arı": {
+      "NOUN": 3
+    },
+    "sarı": {
+      "NOUN": 1
+    },
+    "mız": {
+      "ADJ": 1
+    },
+    "rmız": {
+      "ADJ": 1
+    },
+    "di": {
+      "VERB": 25,
+      "ADJ": 1,
+      "AUX": 6,
+      "NOUN": 1,
+      "ADP": 1
+    },
+    "ədi": {
+      "VERB": 4
+    },
+    "lədi": {
+      "VERB": 1
+    },
+    "nin": {
+      "PRON": 3,
+      "NOUN": 1
+    },
+    "ənin": {
+      "PRON": 2
+    },
+    "bam": {
+      "NOUN": 1
+    },
+    "abam": {
+      "NOUN": 1
+    },
+    "ən": {
+      "PRON": 4,
+      "PROPN": 1,
+      "NOUN": 3,
+      "VERB": 5,
+      "ADV": 2,
+      "ADJ": 1
+    },
+    "dən": {
+      "PRON": 1,
+      "ADJ": 1
+    },
+    "ndən": {
+      "PRON": 1
+    },
+    "rdi": {
+      "ADJ": 1,
+      "VERB": 7
+    },
+    "ərdi": {
+      "ADJ": 1
+    },
+    "ry": {
+      "PROPN": 3
+    },
+    "ary": {
+      "PROPN": 3
+    },
+    "mary": {
+      "PROPN": 3
+    },
+    "nz": {
+      "NOUN": 1
+    },
+    "onz": {
+      "NOUN": 1
+    },
+    "ronz": {
+      "NOUN": 1
+    },
+    "ndı": {
+      "VERB": 1
+    },
+    "andı": {
+      "VERB": 1
+    },
+    "er": {
+      "PROPN": 2,
+      "NOUN": 1
+    },
+    "ter": {
+      "PROPN": 2
+    },
+    "eter": {
+      "PROPN": 2
+    },
+    "üş": {
+      "NOUN": 1
+    },
+    "müş": {
+      "NOUN": 1
+    },
+    "ümüş": {
+      "NOUN": 1
+    },
+    "ne": {
+      "PROPN": 1
+    },
+    "ane": {
+      "PROPN": 1
+    },
+    "jane": {
+      "PROPN": 1
+    },
+    "ıl": {
+      "NOUN": 1
+    },
+    "zıl": {
+      "NOUN": 1
+    },
+    "ızıl": {
+      "NOUN": 1
+    },
+    "zu": {
+      "NOUN": 1,
+      "VERB": 1
+    },
+    "azu": {
+      "NOUN": 1
+    },
+    "uazu": {
+      "NOUN": 1
+    },
+    "ük": {
+      "ADJ": 5
+    },
+    "yük": {
+      "ADJ": 5
+    },
+    "öyük": {
+      "ADJ": 5
+    },
+    "ir": {
+      "DET": 4,
+      "NOUN": 4,
+      "PROPN": 1,
+      "VERB": 5,
+      "NUM": 1,
+      "AUX": 2,
+      "ADJ": 3
+    },
+    "bir": {
+      "DET": 4,
+      "NUM": 1
+    },
+    "dir": {
+      "NOUN": 4,
+      "PROPN": 1,
+      "VERB": 1,
+      "ADJ": 3
+    },
+    "rdir": {
+      "NOUN": 1
+    },
+    "ya": {
+      "CCONJ": 1,
+      "VERB": 1
+    },
+    "ik": {
+      "ADJ": 3,
+      "VERB": 2
+    },
+    "çik": {
+      "ADJ": 3
+    },
+    "içik": {
+      "ADJ": 3
+    },
+    "th": {
+      "PROPN": 1
+    },
+    "ith": {
+      "PROPN": 1
+    },
+    "mith": {
+      "PROPN": 1
+    },
+    "wn": {
+      "PROPN": 1
+    },
+    "own": {
+      "PROPN": 1
+    },
+    "rown": {
+      "PROPN": 1
+    },
+    "ab": {
+      "NOUN": 15
+    },
+    "xab": {
+      "NOUN": 1
+    },
+    "ixab": {
+      "NOUN": 1
+    },
+    "la": {
+      "VERB": 3
+    },
+    "ola": {
+      "VERB": 1
+    },
+    "ldi": {
+      "AUX": 2,
+      "VERB": 2
+    },
+    "ildi": {
+      "AUX": 2,
+      "VERB": 1
+    },
+    "kr": {
+      "NOUN": 2
+    },
+    "ikr": {
+      "NOUN": 2
+    },
+    "fikr": {
+      "NOUN": 2
+    },
+    "riz": {
+      "VERB": 2
+    },
+    "iriz": {
+      "VERB": 2
+    },
+    "xt": {
+      "NOUN": 2
+    },
+    "axt": {
+      "NOUN": 2
+    },
+    "vaxt": {
+      "NOUN": 2
+    },
+    "lə": {
+      "VERB": 2,
+      "NOUN": 3,
+      "ADV": 3,
+      "PRON": 1
+    },
+    "ələ": {
+      "VERB": 2,
+      "ADV": 1,
+      "NOUN": 1
+    },
+    "gələ": {
+      "VERB": 2
+    },
+    "rsiz": {
+      "AUX": 2
+    },
+    "ın": {
+      "NOUN": 12,
+      "VERB": 1,
+      "PROPN": 1
+    },
+    "şın": {
+      "NOUN": 2
+    },
+    "aşın": {
+      "NOUN": 2
+    },
+    "ldı": {
+      "VERB": 6
+    },
+    "aldı": {
+      "VERB": 5
+    },
+    "ma": {
+      "CCONJ": 7,
+      "VERB": 1,
+      "NOUN": 1
+    },
+    "mma": {
+      "CCONJ": 7
+    },
+    "amma": {
+      "CCONJ": 7
+    },
+    "şı": {
+      "NOUN": 2
+    },
+    "aşı": {
+      "NOUN": 2
+    },
+    "daşı": {
+      "NOUN": 2
+    },
+    "ət": {
+      "ADV": 2,
+      "ADJ": 1
+    },
+    "qət": {
+      "ADV": 2
+    },
+    "əqət": {
+      "ADV": 2
+    },
+    "rx": {
+      "NOUN": 2
+    },
+    "ərx": {
+      "NOUN": 2
+    },
+    "çərx": {
+      "NOUN": 2
+    },
+    "nən": {
+      "PROPN": 1,
+      "NOUN": 1,
+      "PRON": 1
+    },
+    "inən": {
+      "PROPN": 1,
+      "PRON": 1
+    },
+    "lar": {
+      "VERB": 2,
+      "PRON": 2,
+      "NOUN": 2
+    },
+    "ılar": {
+      "VERB": 2,
+      "PRON": 1
+    },
+    "ra": {
+      "ADV": 1,
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "nra": {
+      "ADV": 1
+    },
+    "onra": {
+      "ADV": 1
+    },
+    "an": {
+      "NOUN": 8,
+      "VERB": 2,
+      "ADJ": 1,
+      "ADP": 1
+    },
+    "dan": {
+      "NOUN": 3
+    },
+    "qdan": {
+      "NOUN": 1
+    },
+    "ərin": {
+      "NOUN": 2
+    },
+    "ydi": {
+      "VERB": 2,
+      "AUX": 4
+    },
+    "iydi": {
+      "VERB": 2,
+      "AUX": 4
+    },
+    "çə": {
+      "NUM": 2
+    },
+    "eçə": {
+      "NUM": 2
+    },
+    "neçə": {
+      "NUM": 2
+    },
+    "ilə": {
+      "NOUN": 2
+    },
+    "lilə": {
+      "NOUN": 2
+    },
+    "rə": {
+      "ADP": 2
+    },
+    "örə": {
+      "ADP": 2
+    },
+    "görə": {
+      "ADP": 2
+    },
+    "ün": {
+      "NOUN": 2,
+      "ADV": 1
+    },
+    "gün": {
+      "NOUN": 2
+    },
+    "mədi": {
+      "VERB": 3
+    },
+    "ox": {
+      "ADV": 1,
+      "ADJ": 4
+    },
+    "çox": {
+      "ADV": 1,
+      "ADJ": 1
+    },
+    "yin": {
+      "ADV": 1
+    },
+    "eyin": {
+      "ADV": 1
+    },
+    "ğı": {
+      "VERB": 4,
+      "NOUN": 1
+    },
+    "ığı": {
+      "VERB": 1,
+      "NOUN": 1
+    },
+    "dığı": {
+      "VERB": 1
+    },
+    "çin": {
+      "ADP": 2
+    },
+    "için": {
+      "ADP": 2
+    },
+    "ona": {
+      "PRON": 2
+    },
+    "ta": {
+      "VERB": 2
+    },
+    "ata": {
+      "VERB": 2
+    },
+    "çata": {
+      "VERB": 1
+    },
+    "im": {
+      "AUX": 1,
+      "NOUN": 6,
+      "PRON": 2
+    },
+    "dim": {
+      "AUX": 1
+    },
+    "ədim": {
+      "AUX": 1
+    },
+    "bu": {
+      "DET": 1
+    },
+    "ndir": {
+      "PROPN": 1
+    },
+    "ünən": {
+      "NOUN": 1
+    },
+    "bdir": {
+      "VERB": 1
+    },
+    "rim": {
+      "NOUN": 1
+    },
+    "ərim": {
+      "NOUN": 1
+    },
+    "da": {
+      "NOUN": 10,
+      "VERB": 1,
+      "ADV": 2,
+      "PRON": 1,
+      "AUX": 1
+    },
+    "ğda": {
+      "NOUN": 1
+    },
+    "ağda": {
+      "NOUN": 1
+    },
+    "ağ": {
+      "NOUN": 1
+    },
+    "şağ": {
+      "NOUN": 1
+    },
+    "uşağ": {
+      "NOUN": 1
+    },
+    "nın": {
+      "NOUN": 6,
+      "PROPN": 1
+    },
+    "ının": {
+      "NOUN": 5
+    },
+    "ini": {
+      "NOUN": 3,
+      "ADJ": 2
+    },
+    "sini": {
+      "NOUN": 1,
+      "ADJ": 1
+    },
+    "ez": {
+      "ADV": 2
+    },
+    "tez": {
+      "ADV": 2
+    },
+    "şdi": {
+      "VERB": 5
+    },
+    "işdi": {
+      "VERB": 5
+    },
+    "anın": {
+      "NOUN": 1,
+      "PROPN": 1
+    },
+    "kını": {
+      "PRON": 1
+    },
+    "ənə": {
+      "PRON": 4,
+      "NOUN": 2,
+      "VERB": 1
+    },
+    "sənə": {
+      "PRON": 1
+    },
+    "nu": {
+      "PRON": 1,
+      "VERB": 1,
+      "AUX": 1
+    },
+    "unu": {
+      "PRON": 1,
+      "VERB": 1,
+      "AUX": 1
+    },
+    "bunu": {
+      "PRON": 1
+    },
+    "şə": {
+      "ADV": 1,
+      "NOUN": 1,
+      "PROPN": 2
+    },
+    "işə": {
+      "ADV": 1
+    },
+    "mişə": {
+      "ADV": 1
+    },
+    "əm": {
+      "VERB": 1
+    },
+    "rəm": {
+      "VERB": 1
+    },
+    "irəm": {
+      "VERB": 1
+    },
+    "ər": {
+      "NOUN": 3,
+      "ADP": 2,
+      "ADV": 1
+    },
+    "lər": {
+      "NOUN": 3
+    },
+    "hlər": {
+      "NOUN": 1
+    },
+    "nan": {
+      "NOUN": 5
+    },
+    "ynan": {
+      "NOUN": 2
+    },
+    "nda": {
+      "NOUN": 4,
+      "VERB": 1,
+      "AUX": 1
+    },
+    "unda": {
+      "NOUN": 1
+    },
+    "anda": {
+      "VERB": 1,
+      "AUX": 1,
+      "NOUN": 1
+    },
+    "nim": {
+      "PRON": 2
+    },
+    "ənim": {
+      "PRON": 2
+    },
+    "mdə": {
+      "NOUN": 1
+    },
+    "imdə": {
+      "NOUN": 1
+    },
+    "şma": {
+      "VERB": 1
+    },
+    "ışma": {
+      "VERB": 1
+    },
+    "cəni": {
+      "NOUN": 1
+    },
+    "lan": {
+      "VERB": 1
+    },
+    "alan": {
+      "VERB": 1
+    },
+    "ax": {
+      "NOUN": 1,
+      "VERB": 3,
+      "AUX": 1
+    },
+    "nax": {
+      "NOUN": 1
+    },
+    "onax": {
+      "NOUN": 1
+    },
+    "pını": {
+      "NOUN": 1
+    },
+    "ev": {
+      "NOUN": 1
+    },
+    "hab": {
+      "NOUN": 1
+    },
+    "ahab": {
+      "NOUN": 1
+    },
+    "il": {
+      "VERB": 1,
+      "AUX": 4,
+      "NOUN": 2
+    },
+    "sil": {
+      "VERB": 1
+    },
+    "ür": {
+      "VERB": 3,
+      "NOUN": 2
+    },
+    "pür": {
+      "VERB": 1
+    },
+    "üpür": {
+      "VERB": 1
+    },
+    "irdi": {
+      "VERB": 2
+    },
+    "ndan": {
+      "NOUN": 1
+    },
+    "iş": {
+      "NOUN": 1,
+      "AUX": 2,
+      "VERB": 3
+    },
+    "riş": {
+      "NOUN": 1
+    },
+    "ariş": {
+      "NOUN": 1
+    },
+    "rən": {
+      "VERB": 2
+    },
+    "erən": {
+      "VERB": 1
+    },
+    "za": {
+      "NOUN": 1
+    },
+    "əza": {
+      "NOUN": 1
+    },
+    "qəza": {
+      "NOUN": 1
+    },
+    "hələ": {
+      "ADV": 1
+    },
+    "idi": {
+      "VERB": 1,
+      "NOUN": 1
+    },
+    "gidi": {
+      "VERB": 1
+    },
+    "yşə": {
+      "NOUN": 1,
+      "PROPN": 2
+    },
+    "ayşə": {
+      "NOUN": 1,
+      "PROPN": 2
+    },
+    "dür": {
+      "NOUN": 1
+    },
+    "rdür": {
+      "NOUN": 1
+    },
+    "ll": {
+      "NOUN": 1
+    },
+    "əll": {
+      "NOUN": 1
+    },
+    "həll": {
+      "NOUN": 1
+    },
+    "aş": {
+      "NOUN": 1
+    },
+    "laş": {
+      "NOUN": 1
+    },
+    "əlaş": {
+      "NOUN": 1
+    },
+    "miz": {
+      "VERB": 1
+    },
+    "imiz": {
+      "VERB": 1
+    },
+    "sələ": {
+      "NOUN": 1
+    },
+    "ada": {
+      "NOUN": 2
+    },
+    "nada": {
+      "NOUN": 2
+    },
+    "eş": {
+      "NUM": 1
+    },
+    "beş": {
+      "NUM": 1
+    },
+    "dənə": {
+      "NOUN": 2
+    },
+    "ba": {
+      "NOUN": 1
+    },
+    "aba": {
+      "NOUN": 1
+    },
+    "taba": {
+      "NOUN": 1
+    },
+    "yer": {
+      "NOUN": 1
+    },
+    "ır": {
+      "VERB": 6,
+      "NOUN": 1,
+      "ADJ": 1
+    },
+    "dır": {
+      "VERB": 2,
+      "NOUN": 1,
+      "ADJ": 1
+    },
+    "ıdır": {
+      "VERB": 1,
+      "ADJ": 1
+    },
+    "sı": {
+      "NOUN": 1,
+      "VERB": 2
+    },
+    "əsı": {
+      "NOUN": 1
+    },
+    "nəsı": {
+      "NOUN": 1
+    },
+    "tar": {
+      "NOUN": 1,
+      "VERB": 1
+    },
+    "star": {
+      "NOUN": 1
+    },
+    "ıdı": {
+      "AUX": 1,
+      "ADJ": 1
+    },
+    "əs": {
+      "INTJ": 1,
+      "ADJ": 1
+    },
+    "pəs": {
+      "INTJ": 1
+    },
+    "rda": {
+      "PRON": 1,
+      "NOUN": 1
+    },
+    "arda": {
+      "PRON": 1,
+      "NOUN": 1
+    },
+    "udə": {
+      "PROPN": 1
+    },
+    "sudə": {
+      "PROPN": 1
+    },
+    "üç": {
+      "NUM": 3
+    },
+    "tdır": {
+      "NOUN": 1
+    },
+    "sdə": {
+      "NOUN": 1
+    },
+    "isdə": {
+      "NOUN": 1
+    },
+    "yil": {
+      "AUX": 4
+    },
+    "əyil": {
+      "AUX": 4
+    },
+    "vdə": {
+      "NOUN": 12
+    },
+    "evdə": {
+      "NOUN": 12
+    },
+    "miş": {
+      "AUX": 2,
+      "VERB": 3
+    },
+    "lmiş": {
+      "AUX": 1,
+      "VERB": 1
+    },
+    "ivə": {
+      "NOUN": 1
+    },
+    "mivə": {
+      "NOUN": 1
+    },
+    "var": {
+      "ADJ": 7
+    },
+    "çı": {
+      "ADJ": 3
+    },
+    "xçı": {
+      "ADJ": 3
+    },
+    "axçı": {
+      "ADJ": 3
+    },
+    "eniz": {
+      "PROPN": 40,
+      "NOUN": 2
+    },
+    "tür": {
+      "NOUN": 1
+    },
+    "ktür": {
+      "NOUN": 1
+    },
+    "cax": {
+      "VERB": 3,
+      "AUX": 1
+    },
+    "acax": {
+      "VERB": 3,
+      "AUX": 1
+    },
+    "ış": {
+      "VERB": 4
+    },
+    "mış": {
+      "VERB": 4
+    },
+    "tmış": {
+      "VERB": 3
+    },
+    "sə": {
+      "NOUN": 1
+    },
+    "əsə": {
+      "NOUN": 1
+    },
+    "ləsə": {
+      "NOUN": 1
+    },
+    "lam": {
+      "NOUN": 1
+    },
+    "elam": {
+      "NOUN": 1
+    },
+    "dər": {
+      "ADP": 2
+    },
+    "ədər": {
+      "ADP": 2
+    },
+    "üb": {
+      "NOUN": 1,
+      "VERB": 1
+    },
+    "cüb": {
+      "NOUN": 1
+    },
+    "ccüb": {
+      "NOUN": 1
+    },
+    "ki": {
+      "SCONJ": 1,
+      "NUM": 1,
+      "ADP": 2,
+      "NOUN": 2
+    },
+    "mənə": {
+      "PRON": 3
+    },
+    "elə": {
+      "ADV": 2,
+      "PRON": 1
+    },
+    "at": {
+      "ADV": 2,
+      "NOUN": 1
+    },
+    "mat": {
+      "ADV": 2
+    },
+    "rdı": {
+      "VERB": 3
+    },
+    "ırdı": {
+      "VERB": 1
+    },
+    "tim": {
+      "NOUN": 1
+    },
+    "ətim": {
+      "NOUN": 1
+    },
+    "ymiş": {
+      "AUX": 1
+    },
+    "sim": {
+      "NOUN": 1
+    },
+    "asim": {
+      "NOUN": 1
+    },
+    "yün": {
+      "ADV": 1
+    },
+    "üyün": {
+      "ADV": 1
+    },
+    "zar": {
+      "VERB": 1
+    },
+    "üzar": {
+      "VERB": 1
+    },
+    "ələr": {
+      "NOUN": 1
+    },
+    "lmış": {
+      "VERB": 1
+    },
+    "belə": {
+      "PRON": 1
+    },
+    "lən": {
+      "ADV": 2
+    },
+    "llən": {
+      "ADV": 2
+    },
+    "ağı": {
+      "VERB": 3
+    },
+    "mağı": {
+      "VERB": 3
+    },
+    "yox": {
+      "ADJ": 3
+    },
+    "şi": {
+      "NOUN": 1
+    },
+    "aşi": {
+      "NOUN": 1
+    },
+    "qaşi": {
+      "NOUN": 1
+    },
+    "yür": {
+      "VERB": 2
+    },
+    "öyür": {
+      "VERB": 2
+    },
+    "rını": {
+      "VERB": 5
+    },
+    "adır": {
+      "VERB": 1
+    },
+    "un": {
+      "PRON": 2
+    },
+    "nun": {
+      "PRON": 2
+    },
+    "unun": {
+      "PRON": 2
+    },
+    "si": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "isi": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "bisi": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "tər": {
+      "ADV": 1
+    },
+    "xtər": {
+      "ADV": 1
+    },
+    "çıdı": {
+      "ADJ": 1
+    },
+    "bini": {
+      "ADJ": 1
+    },
+    "sən": {
+      "VERB": 3,
+      "PRON": 2
+    },
+    "rsən": {
+      "VERB": 2
+    },
+    "ara": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "lara": {
+      "ADJ": 1,
+      "NOUN": 2
+    },
+    "az": {
+      "VERB": 1,
+      "ADJ": 1
+    },
+    "maz": {
+      "VERB": 1
+    },
+    "tmaz": {
+      "VERB": 1
+    },
+    "rini": {
+      "NOUN": 1
+    },
+    "rk": {
+      "VERB": 1,
+      "NOUN": 1
+    },
+    "ərk": {
+      "VERB": 1
+    },
+    "tərk": {
+      "VERB": 1
+    },
+    "yik": {
+      "VERB": 1
+    },
+    "iyik": {
+      "VERB": 1
+    },
+    "lim": {
+      "NOUN": 3
+    },
+    "llim": {
+      "NOUN": 3
+    },
+    "bı": {
+      "NOUN": 8
+    },
+    "abı": {
+      "NOUN": 8
+    },
+    "tabı": {
+      "NOUN": 8
+    },
+    "ıp": {
+      "VERB": 4
+    },
+    "lıp": {
+      "VERB": 2
+    },
+    "alıp": {
+      "VERB": 2
+    },
+    "səyə": {
+      "NOUN": 5
+    },
+    "tdi": {
+      "VERB": 3
+    },
+    "etdi": {
+      "VERB": 3
+    },
+    "ardı": {
+      "VERB": 2
+    },
+    "adı": {
+      "VERB": 2,
+      "AUX": 1
+    },
+    "ladı": {
+      "VERB": 2
+    },
+    "tab": {
+      "NOUN": 12
+    },
+    "itab": {
+      "NOUN": 12
+    },
+    "ur": {
+      "VERB": 6,
+      "ADJ": 1
+    },
+    "xur": {
+      "VERB": 4
+    },
+    "oxur": {
+      "VERB": 4
+    },
+    "mlar": {
+      "NOUN": 1
+    },
+    "erdi": {
+      "VERB": 5
+    },
+    "evə": {
+      "NOUN": 2
+    },
+    "rs": {
+      "NOUN": 3
+    },
+    "ərs": {
+      "NOUN": 3
+    },
+    "dərs": {
+      "NOUN": 3
+    },
+    "zdən": {
+      "ADJ": 1
+    },
+    "tdı": {
+      "VERB": 1
+    },
+    "atdı": {
+      "VERB": 1
+    },
+    "gi": {
+      "VERB": 1,
+      "NOUN": 1
+    },
+    "igi": {
+      "VERB": 1
+    },
+    "digi": {
+      "VERB": 1
+    },
+    "adan": {
+      "NOUN": 1
+    },
+    "kki": {
+      "NUM": 1
+    },
+    "ikki": {
+      "NUM": 1
+    },
+    "qab": {
+      "NOUN": 1
+    },
+    "şqab": {
+      "NOUN": 1
+    },
+    "edi": {
+      "VERB": 1
+    },
+    "yedi": {
+      "VERB": 1
+    },
+    "aat": {
+      "NOUN": 1
+    },
+    "saat": {
+      "NOUN": 1
+    },
+    "ldir": {
+      "NOUN": 2,
+      "ADJ": 1
+    },
+    "yidi": {
+      "NOUN": 1
+    },
+    "ye": {
+      "NOUN": 1
+    },
+    "iye": {
+      "NOUN": 1
+    },
+    "diye": {
+      "NOUN": 1
+    },
+    "ndi": {
+      "ADP": 1
+    },
+    "indi": {
+      "ADP": 1
+    },
+    "ydı": {
+      "AUX": 1,
+      "VERB": 2
+    },
+    "iydı": {
+      "AUX": 1
+    },
+    "zusu": {
+      "NOUN": 1
+    },
+    "zin": {
+      "PROPN": 4,
+      "NOUN": 1
+    },
+    "izin": {
+      "PROPN": 4,
+      "NOUN": 1
+    },
+    "de": {
+      "NOUN": 1
+    },
+    "əde": {
+      "NOUN": 1
+    },
+    "səde": {
+      "NOUN": 1
+    },
+    "ıydı": {
+      "VERB": 1
+    },
+    "ədə": {
+      "NOUN": 1
+    },
+    "sədə": {
+      "NOUN": 1
+    },
+    "ası": {
+      "VERB": 2
+    },
+    "ması": {
+      "VERB": 2
+    },
+    "sını": {
+      "NOUN": 1,
+      "VERB": 2
+    },
+    "ran": {
+      "ADJ": 1
+    },
+    "əran": {
+      "ADJ": 1
+    },
+    "ndə": {
+      "NOUN": 1
+    },
+    "ündə": {
+      "NOUN": 1
+    },
+    "kən": {
+      "NOUN": 2
+    },
+    "ikən": {
+      "NOUN": 2
+    },
+    "mır": {
+      "VERB": 1
+    },
+    "tmır": {
+      "VERB": 1
+    },
+    "yata": {
+      "VERB": 1
+    },
+    "mir": {
+      "AUX": 1
+    },
+    "lmir": {
+      "AUX": 1
+    },
+    "ıya": {
+      "VERB": 1
+    },
+    "mıya": {
+      "VERB": 1
+    },
+    "lir": {
+      "AUX": 1,
+      "VERB": 1
+    },
+    "ilir": {
+      "AUX": 1
+    },
+    "sın": {
+      "NOUN": 2
+    },
+    "asın": {
+      "NOUN": 2
+    },
+    "əmiş": {
+      "VERB": 1
+    },
+    "madı": {
+      "AUX": 1
+    },
+    "rü": {
+      "VERB": 3
+    },
+    "ürü": {
+      "VERB": 3
+    },
+    "mürü": {
+      "VERB": 3
+    },
+    "qda": {
+      "NOUN": 2
+    },
+    "aqda": {
+      "NOUN": 2
+    },
+    "dur": {
+      "ADJ": 1,
+      "VERB": 1
+    },
+    "xdur": {
+      "ADJ": 1,
+      "VERB": 1
+    },
+    "aq": {
+      "VERB": 3,
+      "NOUN": 2
+    },
+    "maq": {
+      "VERB": 3
+    },
+    "umaq": {
+      "VERB": 3
+    },
+    "yir": {
+      "VERB": 3
+    },
+    "əyir": {
+      "VERB": 3
+    },
+    "ünə": {
+      "PRON": 1
+    },
+    "zünə": {
+      "PRON": 1
+    },
+    "rır": {
+      "VERB": 1
+    },
+    "ırır": {
+      "VERB": 1
+    },
+    "ları": {
+      "NOUN": 2
+    },
+    "idir": {
+      "ADJ": 2
+    },
+    "til": {
+      "NOUN": 2
+    },
+    "ətil": {
+      "NOUN": 2
+    },
+    "ğunu": {
+      "VERB": 1,
+      "AUX": 1
+    },
+    "nnan": {
+      "NOUN": 3
+    },
+    "dıp": {
+      "VERB": 2
+    },
+    "rdıp": {
+      "VERB": 2
+    },
+    "fini": {
+      "NOUN": 1
+    },
+    "rüb": {
+      "VERB": 1
+    },
+    "ürüb": {
+      "VERB": 1
+    },
+    "ec": {
+      "ADV": 2
+    },
+    "gec": {
+      "ADV": 2
+    },
+    "sa": {
+      "VERB": 1
+    },
+    "tsa": {
+      "VERB": 1
+    },
+    "atsa": {
+      "VERB": 1
+    },
+    "şaq": {
+      "NOUN": 2
+    },
+    "uşaq": {
+      "NOUN": 2
+    },
+    "aydı": {
+      "VERB": 1
+    },
+    "lmə": {
+      "NOUN": 1
+    },
+    "ilmə": {
+      "NOUN": 1
+    },
+    "ıx": {
+      "VERB": 1
+    },
+    "dıx": {
+      "VERB": 1
+    },
+    "ıdıx": {
+      "VERB": 1
+    },
+    "şla": {
+      "VERB": 2
+    },
+    "oşla": {
+      "VERB": 2
+    },
+    "cığı": {
+      "NOUN": 1
+    },
+    "elir": {
+      "VERB": 1
+    },
+    "ana": {
+      "NOUN": 1,
+      "PROPN": 3
+    },
+    "xana": {
+      "NOUN": 1
+    },
+    "qın": {
+      "NOUN": 1
+    },
+    "lqın": {
+      "NOUN": 1
+    },
+    "tinə": {
+      "NOUN": 1
+    },
+    "əki": {
+      "NOUN": 1
+    },
+    "dəki": {
+      "NOUN": 1
+    },
+    "ğın": {
+      "NOUN": 1
+    },
+    "ağın": {
+      "NOUN": 1
+    },
+    "ri": {
+      "NOUN": 2
+    },
+    "əri": {
+      "NOUN": 1
+    },
+    "ləri": {
+      "NOUN": 1
+    },
+    "inin": {
+      "NOUN": 1,
+      "PRON": 1
+    },
+    "lənə": {
+      "VERB": 1
+    },
+    "çan": {
+      "ADP": 1
+    },
+    "dın": {
+      "VERB": 1
+    },
+    "rdın": {
+      "VERB": 1
+    },
+    "vin": {
+      "NOUN": 1
+    },
+    "evin": {
+      "NOUN": 1
+    },
+    "ında": {
+      "NOUN": 2
+    },
+    "ıq": {
+      "ADJ": 1,
+      "NOUN": 1
+    },
+    "lıq": {
+      "ADJ": 1
+    },
+    "nlıq": {
+      "ADJ": 1
+    },
+    "ark": {
+      "NOUN": 1
+    },
+    "park": {
+      "NOUN": 1
+    },
+    "eri": {
+      "NOUN": 1
+    },
+    "yeri": {
+      "NOUN": 1
+    },
+    "dəs": {
+      "ADJ": 1
+    },
+    "ddəs": {
+      "ADJ": 1
+    },
+    "yan": {
+      "VERB": 1
+    },
+    "uyan": {
+      "VERB": 1
+    },
+    "nlər": {
+      "NOUN": 1
+    },
+    "li": {
+      "NOUN": 1
+    },
+    "əli": {
+      "NOUN": 1
+    },
+    "rəli": {
+      "NOUN": 1
+    },
+    "rdə": {
+      "NOUN": 1
+    },
+    "ərdə": {
+      "NOUN": 1
+    },
+    "yət": {
+      "ADJ": 1
+    },
+    "ayət": {
+      "ADJ": 1
+    },
+    "şıq": {
+      "NOUN": 1
+    },
+    "işıq": {
+      "NOUN": 1
+    },
+    "əldi": {
+      "VERB": 1
+    },
+    "ədir": {
+      "NOUN": 1
+    },
+    "rək": {
+      "NOUN": 3
+    },
+    "örək": {
+      "NOUN": 3
+    },
+    "uzu": {
+      "VERB": 1
+    },
+    "ğuzu": {
+      "VERB": 1
+    },
+    "üz": {
+      "VERB": 1
+    },
+    "düz": {
+      "VERB": 1
+    },
+    "rdüz": {
+      "VERB": 1
+    },
+    "bh": {
+      "NOUN": 3
+    },
+    "öbh": {
+      "NOUN": 3
+    },
+    "söbh": {
+      "NOUN": 3
+    },
+    "hana": {
+      "PROPN": 3
+    },
+    "ha": {
+      "ADV": 1
+    },
+    "aha": {
+      "ADV": 1
+    },
+    "daha": {
+      "ADV": 1
+    },
+    "ım": {
+      "NOUN": 1
+    },
+    "nım": {
+      "NOUN": 1
+    },
+    "ınım": {
+      "NOUN": 1
+    },
+    "nur": {
+      "VERB": 1
+    },
+    "unur": {
+      "VERB": 1
+    },
+    "ıldı": {
+      "VERB": 1
+    },
+    "olar": {
+      "PRON": 1
+    },
+    "irən": {
+      "VERB": 1
+    },
+    "əl": {
+      "ADV": 1
+    },
+    "vəl": {
+      "ADV": 1
+    },
+    "vvəl": {
+      "ADV": 1
+    },
+    "əgi": {
+      "NOUN": 1
+    },
+    "məgi": {
+      "NOUN": 1
+    },
+    "utar": {
+      "VERB": 1
+    },
+    "yü": {
+      "NOUN": 1
+    },
+    "üyü": {
+      "NOUN": 1
+    },
+    "tüyü": {
+      "NOUN": 1
+    },
+    "al": {
+      "NOUN": 1
+    },
+    "hal": {
+      "NOUN": 1
+    },
+    "rik": {
+      "VERB": 1
+    },
+    "ərik": {
+      "VERB": 1
+    },
+    "əsən": {
+      "VERB": 1
+    },
+    "şq": {
+      "NOUN": 1
+    },
+    "əşq": {
+      "NOUN": 1
+    },
+    "məşq": {
+      "NOUN": 1
+    },
+    "sına": {
+      "VERB": 1
+    },
+    "ömək": {
+      "NOUN": 1
+    },
+    "imiş": {
+      "VERB": 1
+    },
+    "əq": {
+      "ADJ": 1
+    },
+    "fəq": {
+      "ADJ": 1
+    },
+    "ffəq": {
+      "ADJ": 1
+    },
+    "lm": {
+      "NOUN": 1
+    },
+    "ilm": {
+      "NOUN": 1
+    },
+    "film": {
+      "NOUN": 1
+    },
+    "lma": {
+      "NOUN": 1
+    },
+    "alma": {
+      "NOUN": 1
+    },
+    "clar": {
+      "NOUN": 1
+    },
+    "din": {
+      "PROPN": 1
+    },
+    "rdin": {
+      "PROPN": 1
+    },
+    "şt": {
+      "PROPN": 1
+    },
+    "eşt": {
+      "PROPN": 1
+    },
+    "heşt": {
+      "PROPN": 1
+    },
+    "ül": {
+      "NOUN": 1
+    },
+    "gül": {
+      "NOUN": 1
+    },
+    "çır": {
+      "VERB": 1
+    },
+    "açır": {
+      "VERB": 1
+    },
+    "paz": {
+      "ADJ": 1
+    },
+    "rpaz": {
+      "ADJ": 1
+    },
+    "nır": {
+      "VERB": 1
+    },
+    "anır": {
+      "VERB": 1
+    }
+  },
+  "transitions": {
+    "<s>": {
+      "NOUN": 36,
+      "PRON": 17,
+      "VERB": 9,
+      "PROPN": 44,
+      "CCONJ": 1,
+      "DET": 1,
+      "ADJ": 7,
+      "INTJ": 1,
+      "ADV": 2
+    },
+    "NOUN": {
+      "NOUN": 53,
+      "VERB": 87,
+      "ADJ": 15,
+      "PRON": 4,
+      "PUNCT": 12,
+      "ADV": 9,
+      "ADP": 7,
+      "PROPN": 9,
+      "NUM": 4,
+      "AUX": 9
+    },
+    "VERB": {
+      "PUNCT": 89,
+      "SCONJ": 2,
+      "CCONJ": 6,
+      "VERB": 19,
+      "AUX": 11,
+      "PRON": 3,
+      "ADP": 2,
+      "NOUN": 15,
+      "ADJ": 2,
+      "PROPN": 2,
+      "ADV": 1
+    },
+    "PUNCT": {
+      "</s>": 118,
+      "NOUN": 8,
+      "PROPN": 4,
+      "CCONJ": 5,
+      "ADV": 3,
+      "VERB": 4,
+      "PRON": 2,
+      "ADJ": 2
+    },
+    "PRON": {
+      "VERB": 8,
+      "NOUN": 12,
+      "PRON": 3,
+      "ADJ": 4,
+      "ADV": 4,
+      "AUX": 2,
+      "ADP": 1,
+      "PART": 1
+    },
+    "SCONJ": {
+      "NOUN": 1,
+      "PRON": 1
+    },
+    "CCONJ": {
+      "NOUN": 8,
+      "ADJ": 2,
+      "PROPN": 1,
+      "ADV": 2,
+      "NUM": 2
+    },
+    "PROPN": {
+      "PUNCT": 3,
+      "NOUN": 38,
+      "PROPN": 4,
+      "CCONJ": 2,
+      "VERB": 9,
+      "NUM": 2,
+      "ADV": 2,
+      "ADJ": 3,
+      "PRON": 2
+    },
+    "ADJ": {
+      "VERB": 7,
+      "PUNCT": 16,
+      "DET": 4,
+      "NOUN": 10,
+      "CCONJ": 1,
+      "AUX": 1,
+      "ADV": 1,
+      "ADP": 1
+    },
+    "DET": {
+      "NOUN": 7
+    },
+    "ADV": {
+      "PROPN": 1,
+      "NOUN": 7,
+      "ADV": 2,
+      "VERB": 8,
+      "PUNCT": 3,
+      "ADJ": 4,
+      "AUX": 1
+    },
+    "AUX": {
+      "PUNCT": 22,
+      "PRON": 1,
+      "NOUN": 1
+    },
+    "NUM": {
+      "NOUN": 7,
+      "ADJ": 1
+    },
+    "ADP": {
+      "DET": 2,
+      "PRON": 1,
+      "NOUN": 5,
+      "PUNCT": 1,
+      "ADJ": 1,
+      "VERB": 1
+    },
+    "INTJ": {
+      "NOUN": 1
+    },
+    "PART": {
+      "PRON": 1
+    }
+  },
+  "totals": {
+    "NOUN": 209,
+    "VERB": 152,
+    "PUNCT": 146,
+    "PRON": 35,
+    "SCONJ": 2,
+    "CCONJ": 15,
+    "PROPN": 65,
+    "ADJ": 41,
+    "DET": 7,
+    "ADV": 26,
+    "AUX": 24,
+    "NUM": 8,
+    "ADP": 11,
+    "INTJ": 1,
+    "PART": 1
+  },
+  "lemmas": {
+    "qız": [
+      "qız"
+    ],
+    "yoldaşına": [
+      "yoldaş"
+    ],
+    "namə": [
+      "namə"
+    ],
+    "yazdı": [
+      "yaz"
+    ],
+    ".": [
+      ".",
+      "_"
+    ],
+    "o": [
+      "o"
+    ],
+    "çalışdı": [
+      "çalış"
+    ],
+    "kı": [
+      "ki",
+      "-ki"
+    ],
+    "siqar": [
+      "siqar"
+    ],
+    "çekmə": [
+      "çek"
+    ],
+    "və": [
+      "və"
+    ],
+    "əlkol": [
+      "alkol",
+      "əlkol"
+    ],
+    "içməni": [
+      "iç"
+    ],
+    "tərkidə": [
+      "tərk"
+    ],
+    "tərkitməyə": [
+      "tərk"
+    ],
+    "siz": [
+      "siz"
+    ],
+    "getmək": [
+      "get"
+    ],
+    "istəyirsiniz": [
+      "istə"
+    ],
+    "?": [
+      "?"
+    ],
+    "sam": [
+      "sam"
+    ],
+    ",": [
+      ","
+    ],
+    "pəncərəni": [
+      "pəncərə"
+    ],
+    "aç": [
+      "aç"
+    ],
+    "!": [
+      "!"
+    ],
+    "ərinə": [
+      "ər"
+    ],
+    "maşını": [
+      "maşın"
+    ],
+    "yudurtdu": [
+      "yu"
+    ],
+    "peterin": [
+      "peter"
+    ],
+    "qonşusu": [
+      "qonşu"
+    ],
+    "hasarı": [
+      "hasar"
+    ],
+    "qırmız": [
+      "qırmız"
+    ],
+    "rənglədi": [
+      "rənglə"
+    ],
+    "mənin": [
+      "mən"
+    ],
+    "babam": [
+      "baba"
+    ],
+    "sənin": [
+      "sən"
+    ],
+    "kindən": [
+      "-ki"
+    ],
+    "bətərdi": [
+      "bətər"
+    ],
+    "mary": [
+      "mary"
+    ],
+    "bronz": [
+      "bronz"
+    ],
+    "qazandı": [
+      "qazan"
+    ],
+    "peter": [
+      "peter"
+    ],
+    "gümüş": [
+      "gümüş"
+    ],
+    "jane": [
+      "jane"
+    ],
+    "qızıl": [
+      "qızıl"
+    ],
+    "iguazu": [
+      "iguazu"
+    ],
+    "böyük": [
+      "böyük",
+      "büyük"
+    ],
+    "bir": [
+      "bir"
+    ],
+    "kişvərdir": [
+      "keşvər"
+    ],
+    "ya": [
+      "ya"
+    ],
+    "kiçik": [
+      "kiçik"
+    ],
+    "nə": [
+      "nə"
+    ],
+    "smith": [
+      "smith"
+    ],
+    "də": [
+      "də"
+    ],
+    "brown": [
+      "brown"
+    ],
+    "intixab": [
+      "intixab"
+    ],
+    "ola": [
+      "ol"
+    ],
+    "bildi": [
+      "bil"
+    ],
+    "fikr": [
+      "fikr"
+    ],
+    "eliriz": [
+      "el"
+    ],
+    "vaxt": [
+      "vaxt"
+    ],
+    "gələ": [
+      "gəl"
+    ],
+    "bilərsiz": [
+      "bil"
+    ],
+    "maşın": [
+      "maşın"
+    ],
+    "aldı": [
+      "al"
+    ],
+    "amma": [
+      "amma"
+    ],
+    "qardaşı": [
+      "qardaş"
+    ],
+    "fəqət": [
+      "fəqət"
+    ],
+    "çərx": [
+      "çərx"
+    ],
+    "peterinən": [
+      "peter"
+    ],
+    "qucaxlaşdılar": [
+      "qucaxla"
+    ],
+    "sonra": [
+      "sora"
+    ],
+    "otaqdan": [
+      "otaq"
+    ],
+    "çıxdılar": [
+      "çıx"
+    ],
+    "tüklərin": [
+      "tük"
+    ],
+    "cürləməliydi": [
+      "cürləmə"
+    ],
+    "neçə": [
+      "neçə"
+    ],
+    "dəlilə": [
+      "dəlil"
+    ],
+    "görə": [
+      "görə"
+    ],
+    "gün": [
+      "gün"
+    ],
+    "eləmədi": [
+      "elə"
+    ],
+    "çox": [
+      "çox"
+    ],
+    "yeyin": [
+      "yeyin"
+    ],
+    "qaçdığı": [
+      "qaç"
+    ],
+    "için": [
+      "için"
+    ],
+    "ona": [
+      "o"
+    ],
+    "çata": [
+      "çata"
+    ],
+    "bilmədim": [
+      "bil"
+    ],
+    "bu": [
+      "bu"
+    ],
+    "peterdendir": [
+      "peter"
+    ],
+    "dünən": [
+      "dünən"
+    ],
+    "yetişibdir": [
+      "yetiş"
+    ],
+    "ərim": [
+      "ər"
+    ],
+    "bağda": [
+      "baq"
+    ],
+    "uşağ": [
+      "uşaq"
+    ],
+    "otağının": [
+      "otaq"
+    ],
+    "pəncərəsini": [
+      "pəncərə"
+    ],
+    "tez": [
+      "tez"
+    ],
+    "-": [
+      "-"
+    ],
+    "təmizləmişdi": [
+      "təmizlə"
+    ],
+    "aşpazxananın": [
+      "aşpazxana"
+    ],
+    "kını": [
+      "-ki"
+    ],
+    "təmizləməmişdi": [
+      "təmizlə"
+    ],
+    "sənə": [
+      "sən"
+    ],
+    "bunu": [
+      "bu"
+    ],
+    "həmişə": [
+      "həmişə"
+    ],
+    "diyirəm": [
+      "di"
+    ],
+    "söbhlər": [
+      "söbh"
+    ],
+    "yoldaşıynan": [
+      "yoldaş"
+    ],
+    "telfunda": [
+      "telfun"
+    ],
+    "danışanda": [
+      "danış"
+    ],
+    "mənim": [
+      "mən"
+    ],
+    "moridimdə": [
+      "morid"
+    ],
+    "danışma": [
+      "danış"
+    ],
+    "gecəni": [
+      "gecə"
+    ],
+    "qalan": [
+      "qal"
+    ],
+    "qonax": [
+      "qonax"
+    ],
+    "qapını": [
+      "qapı"
+    ],
+    "çalmışdı": [
+      "çal"
+    ],
+    "ev": [
+      "ev"
+    ],
+    "sahab": [
+      "sahab"
+    ],
+    "sil": [
+      "sil"
+    ],
+    "süpür": [
+      "süpür"
+    ],
+    "elirdi": [
+      "elə",
+      "el"
+    ],
+    "resturandan": [
+      "restauran"
+    ],
+    "sifariş": [
+      "sifariş"
+    ],
+    "verən": [
+      "ver"
+    ],
+    "qəza": [
+      "qəza"
+    ],
+    "hələ": [
+      "hələ"
+    ],
+    "gələcəgidi": [
+      "gəl"
+    ],
+    "ayşə": [
+      "ayşe",
+      "ayşə"
+    ],
+    "düktürdür": [
+      "düktür"
+    ],
+    "həll": [
+      "həl"
+    ],
+    "eləməyə": [
+      "elə"
+    ],
+    "təlaş": [
+      "təlaş"
+    ],
+    "elədigimiz": [
+      "elə"
+    ],
+    "məsələ": [
+      "məsələ"
+    ],
+    "kitabxanada": [
+      "kitabxana"
+    ],
+    "beş": [
+      "beş"
+    ],
+    "dənə": [
+      "dənə"
+    ],
+    "kitaba": [
+      "kitab"
+    ],
+    "da": [
+      "da"
+    ],
+    "yer": [
+      "yer"
+    ],
+    "olmamasıdır": [
+      "ol"
+    ],
+    "nənəsı": [
+      "nənə"
+    ],
+    "pərəstar": [
+      "pərəstar"
+    ],
+    "ıdı": [
+      "i"
+    ],
+    "pəs": [
+      "pəs"
+    ],
+    "kılar": [
+      "-ki"
+    ],
+    "harda": [
+      "harda"
+    ],
+    "iydi": [
+      "i"
+    ],
+    "sudə": [
+      "sudə"
+    ],
+    "üç": [
+      "üç"
+    ],
+    "saatdır": [
+      "saat"
+    ],
+    "afisdə": [
+      "afis"
+    ],
+    "dəyil": [
+      "dəyil"
+    ],
+    "evdə": [
+      "ev",
+      "öy"
+    ],
+    "dəyilmiş": [
+      "dəyil"
+    ],
+    "bazarda": [
+      "bazar"
+    ],
+    "mivə": [
+      "mivə"
+    ],
+    "var": [
+      "var"
+    ],
+    "yaxçı": [
+      "yaxçı"
+    ],
+    "deniz": [
+      "deniz",
+      "ev"
+    ],
+    "düktür": [
+      "düktür"
+    ],
+    "olacax": [
+      "ol"
+    ],
+    "bilmiş": [
+      "bil"
+    ],
+    "ol": [
+      "ol"
+    ],
+    "yatmış": [
+      "yat"
+    ],
+    "cələsə": [
+      "cələsə"
+    ],
+    "elam": [
+      "elam"
+    ],
+    "olanda": [
+      "ol"
+    ],
+    "qədər": [
+      "qədər"
+    ],
+    "təəccüb": [
+      "təəccüb"
+    ],
+    "eləmişdi": [
+      "elə"
+    ],
+    "ki": [
+      "ki"
+    ],
+    "mənə": [
+      "mən"
+    ],
+    "elə": [
+      "elə"
+    ],
+    "mat": [
+      "mat"
+    ],
+    "baxırdı": [
+      "bax"
+    ],
+    "jakətim": [
+      "jackət"
+    ],
+    "iymiş": [
+      "i"
+    ],
+    "mərasim": [
+      "mərasim"
+    ],
+    "büyün": [
+      "büyün"
+    ],
+    "bərgüzar": [
+      "bərgüzar"
+    ],
+    "nəticələr": [
+      "nəticə"
+    ],
+    "gəlmış": [
+      "gəl"
+    ],
+    ";": [
+      ";"
+    ],
+    "belə": [
+      "belə"
+    ],
+    "kollən": [
+      "kollən"
+    ],
+    "oxumağı": [
+      "oxu"
+    ],
+    "yox": [
+      "yox"
+    ],
+    "nəqqaşi": [
+      "nəqqaşi"
+    ],
+    "çekmağı": [
+      "çek"
+    ],
+    "söyür": [
+      "söy"
+    ],
+    "oxuduxlarını": [
+      "oxu"
+    ],
+    "oxuyacaxlarını": [
+      "oxu"
+    ],
+    "annadır": [
+      "anna"
+    ],
+    "bunun": [
+      "bu"
+    ],
+    "abisi": [
+      "abi"
+    ],
+    "çoxtər": [
+      "çox"
+    ],
+    "yaxçıdı": [
+      "yaxçı"
+    ],
+    "abini": [
+      "abi"
+    ],
+    "verərsən": [
+      "ver"
+    ],
+    "cəvanlara": [
+      "cəvan"
+    ],
+    "əlçatmaz": [
+      "əlçatmaz"
+    ],
+    "hədəflərini": [
+      "hədəf"
+    ],
+    "tərk": [
+      "tərk"
+    ],
+    "etdirməliyik": [
+      "et"
+    ],
+    "moəllim": [
+      "moəllim"
+    ],
+    "kitabı": [
+      "kitab"
+    ],
+    "alıp": [
+      "al"
+    ],
+    "mədrəsəyə": [
+      "mədrəsəyə",
+      "mədrəsə"
+    ],
+    "getdi": [
+      "get"
+    ],
+    "apardı": [
+      "apar"
+    ],
+    "yoxladı": [
+      "yuxla"
+    ],
+    "kitab": [
+      "kitab"
+    ],
+    "oxur": [
+      "oxu",
+      "ox"
+    ],
+    "axşamlar": [
+      "axşam"
+    ],
+    "qardaşına": [
+      "qardaş"
+    ],
+    "verdi": [
+      "ver"
+    ],
+    "evə": [
+      "ev"
+    ],
+    "uşaqlara": [
+      "uşaq"
+    ],
+    "dərs": [
+      "dərs"
+    ],
+    "qardaşıynan": [
+      "qardaş"
+    ],
+    "barışdı": [
+      "barış"
+    ],
+    "tezdən": [
+      "tez"
+    ],
+    "yatdı": [
+      "yat"
+    ],
+    "yoldaşının": [
+      "yoldaş"
+    ],
+    "pişirdigi": [
+      "piş"
+    ],
+    "qəzadan": [
+      "qəza"
+    ],
+    "ikki": [
+      "ikki"
+    ],
+    "boşqab": [
+      "boşqab"
+    ],
+    "yedi": [
+      "ye"
+    ],
+    "saat": [
+      "saat"
+    ],
+    "yuxladı": [
+      "yuxla"
+    ],
+    "mohəssildir": [
+      "mohəssil"
+    ],
+    "evdəyidi": [
+      "ev"
+    ],
+    "hediye": [
+      "hediye"
+    ],
+    "içindi": [
+      "için"
+    ],
+    "iydı": [
+      "i"
+    ],
+    "anasının": [
+      "ana"
+    ],
+    "arzusu": [
+      "arzu"
+    ],
+    "denizin": [
+      "deniz"
+    ],
+    "mədrəsəde": [
+      "mədrəsə"
+    ],
+    "oxumasıydı": [
+      "oxu"
+    ],
+    "mədrəsədə": [
+      "mədrəsə"
+    ],
+    "oxumaması": [
+      "oxu"
+    ],
+    "anasını": [
+      "ana"
+    ],
+    "nigəran": [
+      "nigəran"
+    ],
+    "mizin": [
+      "miz"
+    ],
+    "üstündə": [
+      "üst"
+    ],
+    "kitabxanda": [
+      "kitabxana"
+    ],
+    "vəxtikən": [
+      "vəxt"
+    ],
+    "yatmır": [
+      "yat"
+    ],
+    "yata": [
+      "yat"
+    ],
+    "bilmir": [
+      "bil"
+    ],
+    "yatmıya": [
+      "yat"
+    ],
+    "bilir": [
+      "bil"
+    ],
+    "anasın": [
+      "ana"
+    ],
+    "görmədi": [
+      "gör"
+    ],
+    "görməmiş": [
+      "gör"
+    ],
+    "olmadı": [
+      "ol"
+    ],
+    "düşünmürü": [
+      "düşün"
+    ],
+    "otaqda": [
+      "otaq"
+    ],
+    "dəyildi": [
+      "dəyil"
+    ],
+    "yoxdur": [
+      "yox"
+    ],
+    "oxumaq": [
+      "oxu"
+    ],
+    "istəyir": [
+      "ist",
+      "istə"
+    ],
+    "babasının": [
+      "baba"
+    ],
+    "oxumasını": [
+      "oxu"
+    ],
+    "özünə": [
+      "öz"
+    ],
+    "olmağı": [
+      "ol"
+    ],
+    "oxuması": [
+      "oku"
+    ],
+    "yuxlamasını": [
+      "yuxla"
+    ],
+    "rahatlaşdırır": [
+      "rahatlaş"
+    ],
+    "təkamulları": [
+      "təkamul"
+    ],
+    "əhəmmiyətlidir": [
+      "əhəmmiyətl"
+    ],
+    "tətil": [
+      "tətil"
+    ],
+    "olduğunu": [
+      "ol"
+    ],
+    "yadınnan": [
+      "yad"
+    ],
+    "cıxardıp": [
+      "çıxar"
+    ],
+    "getmişdi": [
+      "get"
+    ],
+    "kifini": [
+      "kif"
+    ],
+    "götürüb": [
+      "götür"
+    ],
+    "gec": [
+      "gec"
+    ],
+    "yatsa": [
+      "yat"
+    ],
+    "qalacax": [
+      "qal"
+    ],
+    "uşaq": [
+      "uşaq"
+    ],
+    "yatsaydı": [
+      "yat"
+    ],
+    "filmə": [
+      "film"
+    ],
+    "baxacaqıdıx": [
+      "bax"
+    ],
+    "boşla": [
+      "boş"
+    ],
+    "qardaşınnan": [
+      "qardaş"
+    ],
+    "acığı": [
+      "acıq"
+    ],
+    "gelir": [
+      "gəl"
+    ],
+    "xəstəxana": [
+      "xəstəxana"
+    ],
+    "xalqın": [
+      "xalq"
+    ],
+    "xidmətinə": [
+      "xidmət"
+    ],
+    "verildi": [
+      "ver"
+    ],
+    "evdəki": [
+      "ev"
+    ],
+    "uşağın": [
+      "uşaq"
+    ],
+    "tükləri": [
+      "tük"
+    ],
+    "sarıdır": [
+      "sarı"
+    ],
+    "kinin": [
+      "ki",
+      "-ki"
+    ],
+    "qəhveyidir": [
+      "qəhveyi"
+    ],
+    "soğanları": [
+      "soğan"
+    ],
+    "qərələnə": [
+      "qərələn"
+    ],
+    "çan": [
+      "çan"
+    ],
+    "qızardın": [
+      "qızar"
+    ],
+    "evin": [
+      "ev"
+    ],
+    "qabağında": [
+      "qabaq"
+    ],
+    "maşınlıq": [
+      "maşınlıq"
+    ],
+    "park": [
+      "park"
+    ],
+    "yeri": [
+      "yer"
+    ],
+    "muqəddəs": [
+      "muqəddəs"
+    ],
+    "olmuyan": [
+      "ol"
+    ],
+    "dinlər": [
+      "din"
+    ],
+    "pəncərəli": [
+      "pəncərə"
+    ],
+    "evlərdə": [
+      "ev"
+    ],
+    "kifayət": [
+      "kifayət"
+    ],
+    "işıq": [
+      "işıq"
+    ],
+    "gəldi": [
+      "gəl"
+    ],
+    "evdədir": [
+      "ev"
+    ],
+    "çörək": [
+      "çörək"
+    ],
+    "oxuduğuzu": [
+      "oxu"
+    ],
+    "düsünürdüz": [
+      "düşün"
+    ],
+    "söbh": [
+      "söbh"
+    ],
+    "ayhana": [
+      "ayhan"
+    ],
+    "abisini": [
+      "abi"
+    ],
+    "daha": [
+      "daha"
+    ],
+    "gözəldir": [
+      "gözəl"
+    ],
+    "maşınım": [
+      "maşın"
+    ],
+    "oxunur": [
+      "oxu"
+    ],
+    "yoxladıldı": [
+      "yuxla"
+    ],
+    "olar": [
+      "o"
+    ],
+    "sən": [
+      "sən"
+    ],
+    "bizinən": [
+      "biz"
+    ],
+    "gəlirən": [
+      "gəl"
+    ],
+    "əvvəl": [
+      "önce"
+    ],
+    "təmizləməgi": [
+      "təmizləmək"
+    ],
+    "qutar": [
+      "qutar"
+    ],
+    "ütüyü": [
+      "ütü"
+    ],
+    "hal": [
+      "hal"
+    ],
+    "elərik": [
+      "elə"
+    ],
+    "deyəsən": [
+      "de"
+    ],
+    "hakanın": [
+      "hakan"
+    ],
+    "məşq": [
+      "məşq"
+    ],
+    "yazmasına": [
+      "yaz"
+    ],
+    "kömək": [
+      "kömək"
+    ],
+    "eləmişimiş": [
+      "elə"
+    ],
+    "movəffəq": [
+      "movəffəq"
+    ],
+    "film": [
+      "film"
+    ],
+    "alma": [
+      "alma"
+    ],
+    "ağaclar": [
+      "ağaç"
+    ],
+    "fərvərdin": [
+      "fərvərdin"
+    ],
+    "ordibeheşt": [
+      "ordibeheşt"
+    ],
+    "aylarında": [
+      "ay"
+    ],
+    "gül": [
+      "gül"
+    ],
+    "açır": [
+      "aç"
+    ],
+    "çarpaz": [
+      "çarpaz"
+    ],
+    "tozlanır": [
+      "tozlaş"
+    ]
+  }
+}

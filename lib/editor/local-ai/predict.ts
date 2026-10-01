@@ -1,15 +1,16 @@
+import { safePredicate } from './joint-boundary';
 import { createBoundaryContext } from './clause-context';
 import { boundaryProbability } from './boundary-model';
 import { predictSequence } from './sequence';
 import artifact from './model.json';
-import { predictContext, tokenize, features, fold, boundaryKey, type LocalContextModel } from './core';
+import { predictContext, tokenize, features, fold, boundaryKey, type LocalContextModel, type Token } from './core';
 import { isFinitePredicate } from '../segmentation';
 
 const model = artifact as LocalContextModel;
 
 /** Index once per document; prediction reads only six neighbours on either side. */
-export function createLocalPredictor(text: string): (word: string, offset: number) => string | undefined {
-  const tokens = tokenize(text);
+export function createLocalPredictor(text: string, contextTokens?: Token[]): (word: string, offset: number) => string | undefined {
+  const tokens = contextTokens ?? tokenize(text);
   const positions = new Map(tokens.map((token, index) => [token.start, index]));
   return (word, offset) => {
     const index = positions.get(offset);
@@ -37,7 +38,7 @@ export function insertLearnedBoundaries(text: string): string {
   for (let index = 0; index < tokens.length - 1; index++) {
     const left = tokens[index], right = tokens[index + 1];
     if (!/^ +$/u.test(text.slice(left.end, right.start)) || !isFinitePredicate(left.word)) continue;
-    if (!independent(index)) continue;
+    if (!independent(index) || !safePredicate(left.word) && !/(?:ıb|ib|ub|üb)$/iu.test(left.word)) continue;
     const evidence = model.boundaries[boundaryKey(left.word, right.word)];
     const learned = model.boundaryClassifier && boundaryProbability(model.boundaryClassifier, tokens, index) >= 0.98;
     if ((evidence && evidence.positive >= 2 && evidence.negative === 0) || learned) positions.push(left.end);

@@ -1,7 +1,7 @@
 import type { Token } from './core';
 import { fold } from './core';
 import { isFinitePredicate } from '../segmentation';
-import { productiveMorphology } from '../productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from '../productive-morphology';
 
 const joiners = new Set(['ki', 'cunki', 'amma', 'ancaq', 'lakin', 've', 'ya', 'yoxsa', 'eger', 'ucun', 'ile', 'deye', 'ise', 'olaraq', 'kimi']);
 

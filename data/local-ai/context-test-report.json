@@ -6,8 +6,8 @@
   "wrong": 0,
   "abstained": 8,
   "precision": 1,
-  "textExact": 24,
-  "mailBodyExact": 24,
+  "textExact": 27,
+  "mailBodyExact": 27,
   "scope": "120 assistant-authored context examples; split before evaluation; not independently linguist-reviewed or a natural-language benchmark",
   "regressions": 0,
   "rows": [
@@ -76,10 +76,10 @@
       "actual": "səhər",
       "accepted": true,
       "correct": true,
-      "textOutput": "Səhər yuxudan oyanan uşaq çay icdi.",
-      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSəhər yuxudan oyanan uşaq çay icdi.\n\nHörmətlə,",
-      "textExact": false,
-      "mailBodyExact": false
+      "textOutput": "Səhər yuxudan oyanan uşaq çay içdi.",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSəhər yuxudan oyanan uşaq çay içdi.\n\nHörmətlə,",
+      "textExact": true,
+      "mailBodyExact": true
     },
     {
       "id": "context-020",
@@ -90,10 +90,10 @@
       "actual": "səhər",
       "accepted": true,
       "correct": true,
-      "textOutput": "Səhər günəş dogduqda zəngli saat çaldı.",
-      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSəhər günəş dogduqda zəngli saat çaldı.\n\nHörmətlə,",
-      "textExact": false,
-      "mailBodyExact": false
+      "textOutput": "Səhər günəş doğduqda zəngli saat çaldı.",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSəhər günəş doğduqda zəngli saat çaldı.\n\nHörmətlə,",
+      "textExact": true,
+      "mailBodyExact": true
     },
     {
       "id": "context-028",
@@ -160,10 +160,10 @@
       "actual": "surət",
       "accepted": true,
       "correct": true,
-      "textOutput": "Surət sənədin əsli ilə tutuşdurulub qovluga qoyuldu.",
-      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSurət sənədin əsli ilə tutuşdurulub qovluga qoyuldu.\n\nHörmətlə,",
-      "textExact": false,
-      "mailBodyExact": false
+      "textOutput": "Surət sənədin əsli ilə tutuşdurulub qovluğa qoyuldu.",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nSurət sənədin əsli ilə tutuşdurulub qovluğa qoyuldu.\n\nHörmətlə,",
+      "textExact": true,
+      "mailBodyExact": true
     },
     {
       "id": "context-040",

@@ -1,7 +1,7 @@
 import { givenNames } from './entities/person-names';
 import { places } from './entities/geo';
 /** Clause-aware boundaries shared by ordinary text and email body processing. */
-import { productiveMorphology } from './productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from './productive-morphology';
 import { detectQuestion } from './punctuation';
 import { isFinitePredicate } from './segmentation';
 

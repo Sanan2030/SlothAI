@@ -3,18 +3,18 @@
   "scope": "100 synthetic held-out pairs from 20 separate authored gold groups",
   "exact": {
     "baseline": 19,
-    "model": 21,
+    "model": 38,
     "total": 100
   },
-  "changed": 13,
-  "improved": 11,
+  "changed": 45,
+  "improved": 43,
   "regressed": 0,
   "previousReleaseRegressions": null,
   "wordEditDistance": {
-    "baseline": 202,
-    "model": 191
+    "baseline": 201,
+    "model": 134
   },
-  "elapsedMs": 897,
+  "elapsedMs": 1280,
   "rows": [
     {
       "id": "local-104-1",
@@ -90,9 +90,9 @@
       "input": "telebenin adi imtahan senedinde qeyd edildi katib melumati yoxladi",
       "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baseline": "Tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı.",
-      "output": "Tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı.",
+      "output": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-109-2",
@@ -116,9 +116,9 @@
       "input": "tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı",
       "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baseline": "Tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı.",
-      "output": "Tələbənin adı imtahan sənədində qeyd edildi katib məlumatı yoxladı.",
+      "output": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-109-4",
@@ -129,9 +129,9 @@
       "input": "telebenin adi imtahan shenedinde qeyd edildi katib melumati yoxladi",
       "target": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baseline": "Tələbənin adı imtahan shenedinde qeyd edildi katib məlumatı yoxladı.",
-      "output": "Tələbənin adı imtahan shenedinde qeyd edildi katib məlumatı yoxladı.",
+      "output": "Tələbənin adı imtahan sənədində qeyd edildi. Katib məlumatı yoxladı.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 0
     },
     {
       "id": "local-109-5",
@@ -155,9 +155,9 @@
       "input": "bu adi hal gundelik heyatda musahide olunur xususi tedbir gorulmur",
       "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baseline": "Bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür.",
-      "output": "Bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür.",
+      "output": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-114-2",
@@ -181,9 +181,9 @@
       "input": "bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür",
       "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baseline": "Bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür.",
-      "output": "Bu adi hal gündəlik həyatda müşahidə olunur xüsusi tədbir görülmür.",
+      "output": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-114-4",
@@ -194,9 +194,9 @@
       "input": "bu adi hal gundelik heyatda mushahide olunur xushushi tedbir gorulmur",
       "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baseline": "Bu adi hal gündəlik həyatda müşahidə olunur xushushi tədbir görülmür.",
-      "output": "Bu adi hal gündəlik həyatda müşahidə olunur xushushi tədbir görülmür.",
+      "output": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-114-5",
@@ -207,9 +207,9 @@
       "input": "bu adi hal gudelik heyatda musahide olunur. xususi tedbir gorulmur.",
       "target": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baseline": "Bu adi hal gudelik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
-      "output": "Bu adi hal gudelik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
+      "output": "Bu adi hal gündəlik həyatda müşahidə olunur. Xüsusi tədbir görülmür.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-119-1",
@@ -220,9 +220,9 @@
       "input": "bu adi yoxlama gundelik rejimde aparilir xususi avadanliq teleb olunmur",
       "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baseline": "Bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur.",
-      "output": "Bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur.",
+      "output": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-119-2",
@@ -246,9 +246,9 @@
       "input": "bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur",
       "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baseline": "Bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur.",
-      "output": "Bu adi yoxlama gündəlik rejimdə aparılır xüsusi avadanlıq tələb olunmur.",
+      "output": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-119-4",
@@ -259,9 +259,9 @@
       "input": "bu adi yoxlama gundelik rejimde aparilir xushushi avadanliq teleb olunmur",
       "target": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baseline": "Bu adi yoxlama gündəlik rejimdə aparılır xushushi avadanlıq tələb olunmur.",
-      "output": "Bu adi yoxlama gündəlik rejimdə aparılır xushushi avadanlıq tələb olunmur.",
+      "output": "Bu adi yoxlama gündəlik rejimdə aparılır. Xüsusi avadanlıq tələb olunmur.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-119-5",
@@ -324,9 +324,9 @@
       "input": "uch telebe imtahan otagina daxil oldu muellim shiyahini yoxladi",
       "target": "Üç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı.",
       "baseline": "Uç tələbə imtahan otağına daxil oldu. Müəllim shiyahini yoxladı.",
-      "output": "Uç tələbə imtahan otağına daxil oldu. Müəllim shiyahini yoxladı.",
+      "output": "Uç tələbə imtahan otağına daxil oldu. Müəllim siyahını yoxladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-124-5",
@@ -350,9 +350,9 @@
       "input": "uc qonaq tedbir zalina geldi teskilatci onlara yer gosterdi",
       "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.",
       "baseline": "Uc qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi.",
-      "output": "Uc qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi.",
+      "output": "Uc qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-129-2",
@@ -376,9 +376,9 @@
       "input": "üç qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi",
       "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.",
       "baseline": "Üç qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi.",
-      "output": "Üç qonaq tədbir zalına gəldi təşkilatçı onlara yer göstərdi.",
+      "output": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-129-4",
@@ -389,9 +389,9 @@
       "input": "uch qonaq tedbir zalina geldi teshkilatchi onlara yer goshterdi",
       "target": "Üç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer göstərdi.",
       "baseline": "Uç qonaq tədbir zalına gəldi təşkilatçı onlara yer goshterdi.",
-      "output": "Uç qonaq tədbir zalına gəldi təşkilatçı onlara yer goshterdi.",
+      "output": "Uç qonaq tədbir zalına gəldi. Təşkilatçı onlara yer goshterdi.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 2
     },
     {
       "id": "local-129-5",
@@ -467,9 +467,9 @@
       "input": "uc, ag qus, qaadlarini terpet. goy uzunde dovre vur.",
       "target": "Uç, ağ quş, qanadlarını tərpət. Göy üzündə dövrə vur.",
       "baseline": "Uc, ag qus, qaadlarini tərpət. Göy üzündə dövrə vur.",
-      "output": "Uc, ag qus, qaadlarini tərpət. Göy üzündə dövrə vur.",
+      "output": "Uç, ag qus, qanadlarını tərpət. Göy üzündə dövrə vur.",
       "baselineDistance": 4,
-      "distance": 4
+      "distance": 2
     },
     {
       "id": "local-139-1",
@@ -532,9 +532,9 @@
       "input": "uc, cevik qus, qaadlarini hereket etdir. goy uzunde yukseklik qazan.",
       "target": "Uç, çevik quş, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan.",
       "baseline": "Uc, çevik qus, qaadlarini hərəkət etdir. Göy üzündə yüksəklik qazan.",
-      "output": "Uc, çevik qus, qaadlarini hərəkət etdir. Göy üzündə yüksəklik qazan.",
+      "output": "Uç, çevik qus, qanadlarını hərəkət etdir. Göy üzündə yüksəklik qazan.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 1
     },
     {
       "id": "local-144-1",
@@ -597,9 +597,9 @@
       "input": "el bamaqlari kitabin sehifesini tuturdu. bilek rahat veziyyetde idi.",
       "target": "Əl barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi.",
       "baseline": "El bamaqlari kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi.",
-      "output": "El bamaqlari kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi.",
+      "output": "El barmaqları kitabın səhifəsini tuturdu. Bilək rahat vəziyyətdə idi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-149-1",
@@ -648,10 +648,10 @@
       "variant": 3,
       "input": "el derishi guchlu guneshden qorunmalidir barmaqlara krem chekildi",
       "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.",
-      "baseline": "El derishi guchlu günəşdən qorunmalıdır barmaqlara krem çekildi.",
-      "output": "Əl derishi guchlu günəşdən qorunmalıdır barmaqlara krem çekildi.",
-      "baselineDistance": 6,
-      "distance": 5
+      "baseline": "El derishi guchlu günəşdən qorunmalıdır barmaqlara krem çəkildi.",
+      "output": "Əl dərisi guchlu günəşdən qorunmalıdır barmaqlara krem çəkildi.",
+      "baselineDistance": 5,
+      "distance": 3
     },
     {
       "id": "local-149-5",
@@ -662,9 +662,9 @@
       "input": "el deisi guclu gunesden qorunmalidir. barmaqlara krem cekildi.",
       "target": "Əl dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.",
       "baseline": "El deisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.",
-      "output": "El deisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.",
+      "output": "El dərisi güclü günəşdən qorunmalıdır. Barmaqlara krem çəkildi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-154-1",
@@ -714,9 +714,9 @@
       "input": "el birliyi xalqin chetin gunde dayagidir kend chamaati komek etdi",
       "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi.",
       "baseline": "El birliyi xalqın çətin gündə dayagidir. Kənd chamaati kömək etdi.",
-      "output": "El birliyi xalqın çətin gündə dayagidir. Kənd chamaati kömək etdi.",
+      "output": "El birliyi xalqın çətin gündə dayagidir. Kənd camaatı kömək etdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-154-5",
@@ -727,9 +727,9 @@
       "input": "el biliyi xalqin cetin gunde dayagidir. kend camaati komek etdi.",
       "target": "El birliyi xalqın çətin gündə dayağıdır. Kənd camaatı kömək etdi.",
       "baseline": "El biliyi xalqın çətin gündə dayagidir. Kənd camaatı kömək etdi.",
-      "output": "El biliyi xalqın çətin gündə dayagidir. Kənd camaatı kömək etdi.",
+      "output": "El birliyi xalqın çətin gündə dayagidir. Kənd camaatı kömək etdi.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-159-1",
@@ -779,9 +779,9 @@
       "input": "el shenliyi xalqin yaddashinda qaldi kend chamaati qonaqlari qarshiladi",
       "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
       "baseline": "El şənliyi xalqın yaddaşında qaldı. Kənd chamaati qonaqları qarşıladı.",
-      "output": "El şənliyi xalqın yaddaşında qaldı. Kənd chamaati qonaqları qarşıladı.",
+      "output": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-159-5",
@@ -792,9 +792,9 @@
       "input": "el seliyi xalqin yaddasinda qaldi. kend camaati qonaqlari qarsiladi.",
       "target": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
       "baseline": "El seliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
-      "output": "El seliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
+      "output": "El şənliyi xalqın yaddaşında qaldı. Kənd camaatı qonaqları qarşıladı.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-164-1",
@@ -805,9 +805,9 @@
       "input": "et mehsulu bazardan teze alindi metbexde soyuducuya qoyuldu",
       "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baseline": "Et məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
-      "output": "Ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
+      "output": "Et məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baselineDistance": 3,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-164-2",
@@ -831,9 +831,9 @@
       "input": "ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu",
       "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baseline": "Ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
-      "output": "Ət məhsulu bazardan təzə alındı mətbəxdə soyuducuya qoyuldu.",
+      "output": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-164-4",
@@ -844,9 +844,9 @@
       "input": "et mehshulu bazardan teze alindi metbexde shoyuduchuya qoyuldu",
       "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baseline": "Et mehshulu bazardan təzə alındı mətbəxdə shoyuduchuya qoyuldu.",
-      "output": "Et mehshulu bazardan təzə alındı mətbəxdə shoyuduchuya qoyuldu.",
+      "output": "Et məhsulu bazardan təzə alındı. Mətbəxdə shoyuduchuya qoyuldu.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 2
     },
     {
       "id": "local-164-5",
@@ -857,9 +857,9 @@
       "input": "et mesulu bazardan teze alindi. metbexde soyuducuya qoyuldu.",
       "target": "Ət məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baseline": "Et mesulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
-      "output": "Et mesulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
+      "output": "Et məhsulu bazardan təzə alındı. Mətbəxdə soyuducuya qoyuldu.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-169-1",
@@ -922,9 +922,9 @@
       "input": "et yeeyi terevezle birlikde hazirlanib. metbexden xos qoxu gelirdi.",
       "target": "Ət yeməyi tərəvəzlə birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
       "baseline": "Et yeeyi terevezle birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
-      "output": "Et yeeyi terevezle birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
+      "output": "Et yeməyi terevezle birlikdə hazırlanıb. Mətbəxdən xoş qoxu gəlirdi.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-174-1",
@@ -987,9 +987,9 @@
       "input": "bu isi plan uzre et, tasirigi diqqetle oxu. is vaxti qaydalara emel olunmalidir.",
       "target": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
       "baseline": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
-      "output": "Bu işi plan üzrə et, tasirigi diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
+      "output": "Bu işi plan üzrə et, tapşırığı diqqətlə oxu. İş vaxtı qaydalara əməl olunmalıdır.",
       "baselineDistance": 1,
-      "distance": 1
+      "distance": 0
     },
     {
       "id": "local-179-1",
@@ -1052,9 +1052,9 @@
       "input": "yoxlamani plan uzre et, tasirigi ardicilliqla hazirla. is qaydalarini yadda saxla.",
       "target": "Yoxlamanı plan üzrə et, tapşırığı ardıcıllıqla hazırla. İş qaydalarını yadda saxla.",
       "baseline": "Yoxlamanı plan üzrə et, tasirigi ardicilliqla hazırla. İş qaydalarını yadda saxla.",
-      "output": "Yoxlamanı plan üzrə et, tasirigi ardicilliqla hazırla. İş qaydalarını yadda saxla.",
+      "output": "Yoxlamanı plan üzrə et, tapşırığı ardicilliqla hazırla. İş qaydalarını yadda saxla.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 1
     },
     {
       "id": "local-184-1",
@@ -1104,9 +1104,9 @@
       "input": "sheher belediyyeshi parklarin temizliyini yoxladi binalar uchun ayricha plan hazirladi",
       "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
       "baseline": "Şəhər belediyyeshi parkların təmizliyini yoxladı. Binalar uçun ayricha plan hazırladı.",
-      "output": "Şəhər belediyyeshi parkların təmizliyini yoxladı. Binalar uçun ayricha plan hazırladı.",
+      "output": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 0
     },
     {
       "id": "local-184-5",
@@ -1117,9 +1117,9 @@
       "input": "seher beediyyesi parklarin temizliyini yoxladi. binalar ucun ayrica plan hazirladi.",
       "target": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
       "baseline": "Seher beediyyesi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
-      "output": "Seher beediyyesi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
+      "output": "Şəhər bələdiyyəsi parkların təmizliyini yoxladı. Binalar üçün ayrıca plan hazırladı.",
       "baselineDistance": 2,
-      "distance": 2
+      "distance": 0
     },
     {
       "id": "local-189-1",
@@ -1234,9 +1234,9 @@
       "input": "uch kitab kitabxana mashashina getirildi muellim shiyahini yoxladi",
       "target": "Üç kitab kitabxana masasına gətirildi. Müəllim siyahını yoxladı.",
       "baseline": "Uç kitab kitabxana mashashina gətirildi. Müəllim shiyahini yoxladı.",
-      "output": "Uç kitab kitabxana mashashina gətirildi. Müəllim shiyahini yoxladı.",
+      "output": "Uç kitab kitabxana mashashina gətirildi. Müəllim siyahını yoxladı.",
       "baselineDistance": 3,
-      "distance": 3
+      "distance": 2
     },
     {
       "id": "local-194-5",
@@ -1299,9 +1299,9 @@
       "input": "uch shened qovluqda ayricha shaxlanilmalidir katib bu qaydani izah etdi",
       "target": "Üç sənəd qovluqda ayrıca saxlanılmalıdır. Katib bu qaydanı izah etdi.",
       "baseline": "Uç shened qovluqda ayricha saxlanılmalıdır katib bu qaydanı izah etdi.",
-      "output": "Uç shened qovluqda ayricha saxlanılmalıdır katib bu qaydanı izah etdi.",
+      "output": "Uç sənəd qovluqda ayrıca saxlanılmalıdır katib bu qaydanı izah etdi.",
       "baselineDistance": 5,
-      "distance": 5
+      "distance": 3
     },
     {
       "id": "local-199-5",

@@ -1,3 +1,7 @@
+## Paired v2 yenilənməsi
+
+Beş istiqamətdə yeni mərhələ üçün [model sənədi](../../docs/local-ai-paired-v2.md), `paired-training-report.json`, `paired-test-report.json`, `paired-reliability-report.json` və `pos-report.json` fayllarına baxın. Aşağıdakı bölmələr əvvəlki versiyaların tarixi qeydləridir.
+
 # Lokal kontekst modeli — ilkin versiya
 
 ## 900 forma və 100 sərhəd genişlənməsi

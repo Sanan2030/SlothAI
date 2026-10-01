@@ -1,5 +1,5 @@
 /** Conservative, language-wide sentence boundaries for unpunctuated prose. */
-import { productiveMorphology } from './productive-morphology';
+import { legacyModelMorphology as productiveMorphology } from './productive-morphology';
 import { givenNames, ambiguousNames } from './entities/person-names';
 import { places } from './entities/geo';
 const verbs = /(?:mış(?:am|san|ıq|sınız|lar)?|miş(?:əm|sən|ik|siniz|lər)?|muş(?:am|san|uq|sunuz|lar)?|müş(?:əm|sən|ük|sünüz|lər)?|dım|dim|dum|düm|dın|din|dun|dün|dıq|dik|duq|dük|dı|di|du|dü|ırdı|irdi|urdu|ürdü|ır|ir|ur|ür|acaq(?:dır|lar)?|əcək(?:dir|lər)?|aram|ərəm|ərsiniz|acaqsınız|əcəksiniz|ılıb|ilib|ulub|ülüb|ıb|ib|ub|üb)$/iu;

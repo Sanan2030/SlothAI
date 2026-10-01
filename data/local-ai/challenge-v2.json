@@ -1,0 +1,572 @@
+{
+  "source": "63 separately authored text/mail evaluations; fixed targets, excluded from training; assistant review, not linguist certification",
+  "rows": [
+    {
+      "id": "challenge-001",
+      "input": "operator qovluga yeni sened elave etdi",
+      "target": "Operator qovluğa yeni sənəd əlavə etdi.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-002",
+      "input": "redaktor senedlesme prosesini yeniden yoxladi",
+      "target": "Redaktor sənədləşmə prosesini yenidən yoxladı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-003",
+      "input": "istifadeci tehlukesiz baglanti qurdu",
+      "target": "İstifadəçi təhlükəsiz bağlantı qurdu.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-004",
+      "input": "muhendis komputeri axsam sondurdu",
+      "target": "Mühəndis kompüteri axşam söndürdü.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-005",
+      "input": "usaq isti cay icdi",
+      "target": "Uşaq isti çay içdi.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-006",
+      "input": "qonaq kofe icib pencereni acdi",
+      "target": "Qonaq kofe içib pəncərəni açdı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-007",
+      "input": "musteri gonderilmis teklifleri oxudu",
+      "target": "Müştəri göndərilmiş təklifləri oxudu.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-008",
+      "input": "analitik saxlanilmis neticeleri muqayise etdi",
+      "target": "Analitik saxlanılmış nəticələri müqayisə etdi.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-009",
+      "input": "rehber mutesessis ile gorusdu",
+      "target": "Rəhbər mütəxəssis ilə görüşdü.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-010",
+      "input": "sabah yeni proqramci ise baslayacaq",
+      "target": "Sabah yeni proqramçı işə başlayacaq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-011",
+      "input": "zengli saat calanda tez oynib isiqi yandirdim",
+      "target": "Zəngli saat çalanda tez oyanıb işığı yandırdım.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-012",
+      "input": "gunes dogduqda yolumuza davam etdik",
+      "target": "Günəş doğduqda yolumuza davam etdik.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-013",
+      "input": "komekci zegli saati masaya qoydu",
+      "target": "Köməkçi zəngli saatı masaya qoydu.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-014",
+      "input": "komanda duzeldilmis fayli yeniden gonderdi",
+      "target": "Komanda düzəldilmiş faylı yenidən göndərdi.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-015",
+      "input": "musteri sabah qayidacaq",
+      "target": "Müştəri sabah qayıdacaq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-016",
+      "input": "telebe imtahana hazirlasir",
+      "target": "Tələbə imtahana hazırlaşır.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-017",
+      "input": "backend API cavabini JSON formatinda qaytarir",
+      "target": "Backend API cavabını JSON formatında qaytarır.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-018",
+      "input": "GitHub commit ve Vercel deploy haqqinda danisdiq",
+      "target": "GitHub commit və Vercel deploy haqqında danışdıq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-019",
+      "input": "PostgreSQL bazasinda melumatlar saxlanilir",
+      "target": "PostgreSQL bazasında məlumatlar saxlanılır.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-020",
+      "input": "hecbir fayl silinmedi",
+      "target": "Heç bir fayl silinmədi.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-021",
+      "input": "hersey evvelki kimi qaldi",
+      "target": "Hər şey əvvəlki kimi qaldı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-022",
+      "input": "birmuddet gozleyib yeniden yoxladiq",
+      "target": "Bir müddət gözləyib yenidən yoxladıq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-023",
+      "input": "bugunku gorus saat onda basladi",
+      "target": "Bugünkü görüş saat onda başladı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-024",
+      "input": "Mən loglara baxdım.",
+      "target": "Mən loglara baxdım.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-025",
+      "input": "Sürət həddi dəyişməyib.",
+      "target": "Sürət həddi dəyişməyib.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-026",
+      "input": "Surət arxivdə saxlanılır.",
+      "target": "Surət arxivdə saxlanılır.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-027",
+      "input": "Sənədin adı dəyişməyib.",
+      "target": "Sənədin adı dəyişməyib.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-028",
+      "input": "Əli Bakı şəhərində yaşayır.",
+      "target": "Əli Bakı şəhərində yaşayır.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-029",
+      "input": "Azərbaycan Respublikası barədə danışdıq.",
+      "target": "Azərbaycan Respublikası barədə danışdıq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-030",
+      "input": "render framework startup database",
+      "target": "Render framework startup database.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-031",
+      "input": "`const userName = \"seher\";`",
+      "target": "`const userName = \"seher\";`",
+      "mode": "text",
+      "preserveFormatting": true,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-032",
+      "input": "https://example.com/qovluga?id=7",
+      "target": "https://example.com/qovluga?id=7",
+      "mode": "text",
+      "preserveFormatting": true,
+      "domain": "protected",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-033",
+      "input": "operator qovluğu açdı müştəri sənədi oxudu",
+      "target": "Operator qovluğu açdı. Müştəri sənədi oxudu.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-034",
+      "input": "əməkdaş məktubu göndərdi rəhbər cavabı gözləyir",
+      "target": "Əməkdaş məktubu göndərdi. Rəhbər cavabı gözləyir.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-035",
+      "input": "sistem sorğunu aldı komanda nəticəni yoxladı",
+      "target": "Sistem sorğunu aldı. Komanda nəticəni yoxladı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-036",
+      "input": "mən sənədi oxuyub qeydləri yazdım",
+      "target": "Mən sənədi oxuyub qeydləri yazdım.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-037",
+      "input": "dedi ki sənədi oxuyub qeydləri yazacaq",
+      "target": "Dedi ki, sənədi oxuyub qeydləri yazacaq.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-038",
+      "input": "əgər sistem işləsə nəticəni göndərəcəyik",
+      "target": "Əgər sistem işləsə, nəticəni göndərəcəyik.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-039",
+      "input": "Komanda backend endpointini yoxladı.",
+      "target": "Komanda backend endpointini yoxladı.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-040",
+      "input": "Hesabatda 12.5 və 1.2.3 göstərilib.",
+      "target": "Hesabatda 12.5 və 1.2.3 göstərilib.",
+      "mode": "text",
+      "preserveFormatting": false,
+      "domain": "daily-mail-it",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-001",
+      "input": "operator qovluga yeni sened elave etdi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nOperator qovluğa yeni sənəd əlavə etdi.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-002",
+      "input": "redaktor senedlesme prosesini yeniden yoxladi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nRedaktor sənədləşmə prosesini yenidən yoxladı.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-003",
+      "input": "istifadeci tehlukesiz baglanti qurdu",
+      "target": "Salam, hər vaxtınız xeyir.\n\nİstifadəçi təhlükəsiz bağlantı qurdu.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-004",
+      "input": "muhendis komputeri axsam sondurdu",
+      "target": "Salam, hər vaxtınız xeyir.\n\nMühəndis kompüteri axşam söndürdü.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-005",
+      "input": "usaq isti cay icdi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nUşaq isti çay içdi.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-006",
+      "input": "qonaq kofe icib pencereni acdi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nQonaq kofe içib pəncərəni açdı.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-007",
+      "input": "musteri gonderilmis teklifleri oxudu",
+      "target": "Salam, hər vaxtınız xeyir.\n\nMüştəri göndərilmiş təklifləri oxudu.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-008",
+      "input": "analitik saxlanilmis neticeleri muqayise etdi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nAnalitik saxlanılmış nəticələri müqayisə etdi.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-009",
+      "input": "rehber mutesessis ile gorusdu",
+      "target": "Salam, hər vaxtınız xeyir.\n\nRəhbər mütəxəssis ilə görüşdü.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-010",
+      "input": "sabah yeni proqramci ise baslayacaq",
+      "target": "Salam, hər vaxtınız xeyir.\n\nSabah yeni proqramçı işə başlayacaq.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-011",
+      "input": "zengli saat calanda tez oynib isiqi yandirdim",
+      "target": "Salam, hər vaxtınız xeyir.\n\nZəngli saat çalanda tez oyanıb işığı yandırdım.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-012",
+      "input": "gunes dogduqda yolumuza davam etdik",
+      "target": "Salam, hər vaxtınız xeyir.\n\nGünəş doğduqda yolumuza davam etdik.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-013",
+      "input": "komekci zegli saati masaya qoydu",
+      "target": "Salam, hər vaxtınız xeyir.\n\nKöməkçi zəngli saatı masaya qoydu.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-014",
+      "input": "komanda duzeldilmis fayli yeniden gonderdi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nKomanda düzəldilmiş faylı yenidən göndərdi.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-015",
+      "input": "musteri sabah qayidacaq",
+      "target": "Salam, hər vaxtınız xeyir.\n\nMüştəri sabah qayıdacaq.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-016",
+      "input": "telebe imtahana hazirlasir",
+      "target": "Salam, hər vaxtınız xeyir.\n\nTələbə imtahana hazırlaşır.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-017",
+      "input": "backend API cavabini JSON formatinda qaytarir",
+      "target": "Salam, hər vaxtınız xeyir.\n\nBackend API cavabını JSON formatında qaytarır.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-018",
+      "input": "GitHub commit ve Vercel deploy haqqinda danisdiq",
+      "target": "Salam, hər vaxtınız xeyir.\n\nGitHub commit və Vercel deploy haqqında danışdıq.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-019",
+      "input": "PostgreSQL bazasinda melumatlar saxlanilir",
+      "target": "Salam, hər vaxtınız xeyir.\n\nPostgreSQL bazasında məlumatlar saxlanılır.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-020",
+      "input": "hecbir fayl silinmedi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nHeç bir fayl silinmədi.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-021",
+      "input": "hersey evvelki kimi qaldi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nHər şey əvvəlki kimi qaldı.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-022",
+      "input": "birmuddet gozleyib yeniden yoxladiq",
+      "target": "Salam, hər vaxtınız xeyir.\n\nBir müddət gözləyib yenidən yoxladıq.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    },
+    {
+      "id": "challenge-mail-023",
+      "input": "bugunku gorus saat onda basladi",
+      "target": "Salam, hər vaxtınız xeyir.\n\nBugünkü görüş saat onda başladı.\n\nHörmətlə,",
+      "mode": "mail",
+      "preserveFormatting": false,
+      "domain": "mail",
+      "origin": "separately-authored-evaluation-only"
+    }
+  ]
+}

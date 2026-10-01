@@ -1,3 +1,5 @@
+import { dictionaryCandidates } from './dictionary';
+import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
 import { prepareReviewedContext } from './reviewed-context';
 import { languageServices, type LanguageServices } from './language-services';
@@ -12,6 +14,9 @@ import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rule
 import { chooseByGrammar, chooseInflectedPlace, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
 import { createLocalPredictor, insertLearnedBoundaries } from './local-ai/predict';
+import { createPairedPredictor } from './local-ai/paired-runtime';
+import { jointContextTokens, insertJointBoundaries, type JointBoundaryModel } from './local-ai/joint-boundary';
+import jointArtifact from './local-ai/joint-boundary-model.json';
 import { segmentIndependentClauses, isFinitePredicate } from './segmentation';
 import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation } from './punctuation';
 import { segmentParagraphs } from './paragraph-segmentation';
@@ -63,6 +68,7 @@ function punctuate(line: string, useLocalModel = true): string {
   result = segmentCorrespondence(segmentIndependentClauses(result));
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = insertLearnedBoundaries(result);
+  if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
   result = punctuateCommas(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
@@ -102,7 +108,7 @@ function enumerate(line: string): string[] {
   return prefix ? [prefix + ':', ...items] : items;
 }
 
-/** Deterministic, bounded, synchronous editor; no fetch, model or environment access. */
+/** Deterministic, bounded, synchronous editor; no fetch or environment access; bundled local statistical artifacts. */
 export function correctText(input: string, preserveFormatting = false, runtime: CorrectionRuntime = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
@@ -146,8 +152,24 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
+  if (runtime.useLocalModel !== false) {
+    const paired = createPairedPredictor(text);
+    text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
+      if (isCanonicalEntity(word)) return word;
+      const candidate = paired(word, offset);
+      const established = restoreWord(word);
+      // Preserve established spelling repairs, except a supervised digraph
+      // correction whose context can distinguish səhər from şəhər.
+      if (!candidate || established !== word && !/(?:sh|ch|gh)/iu.test(word)
+        && (dictionaryCandidates(established.toLocaleLowerCase('az-AZ'))?.has(established.toLocaleLowerCase('az-AZ'))
+          || productiveMorphology.isValidWordForm(established))) return word;
+      runtime.trace?.({ stage: 'spelling', original: word, replacement: candidate, reason: 'paired local model with context/POS' });
+      return candidate;
+    });
+  }
   const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
-  const localPrediction = runtime.useLocalModel === false ? undefined : createLocalPredictor(text);
+  const localPrediction = runtime.useLocalModel === false ? undefined : createLocalPredictor(text,
+    jointContextTokens(text, restoreWord, jointArtifact as JointBoundaryModel));
   sentenceEnds.push(text.length);
   let sentenceStart = 0;
   let sentenceIndex = 0;
