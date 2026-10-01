@@ -66,6 +66,12 @@ jobs:
           git diff --exit-code -- lib/editor/local-ai/pos-model.json lib/editor/local-ai/paired-model.json lib/editor/local-ai/joint-boundary-model.json data/local-ai/ud/splits.json data/local-ai/pos-report.json data/local-ai/paired-training-report.json
           npm run --ignore-scripts local-ai:paired:check
           npm run --ignore-scripts local-ai:reliability
+          npm run --ignore-scripts neural:corpus
+          git diff --exit-code -- data/neural/corpus.json
+          npm run --ignore-scripts neural:train -- --epochs=12
+          npm run --ignore-scripts neural:continue -- --epochs=12
+          git diff --exit-code -- lib/editor/neural/model.json data/neural/training-report.json data/neural/training-history.json
+          npm run --ignore-scripts neural:check
           npm run --ignore-scripts gold:check
           npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check
@@ -243,6 +249,8 @@ jobs:
             data/local-ai/paired-test-report.json
             data/local-ai/paired-reliability-report.json
             data/local-ai/pos-report.json
+            data/neural/evaluation-report.json
+            data/neural/training-report.json
           if-no-files-found: error
           retention-days: 30
 

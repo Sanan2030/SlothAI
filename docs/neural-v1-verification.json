@@ -1,0 +1,101 @@
+{
+  "baseMain": "24cbc5355f4373e234cf749ef479e5fd362c3117",
+  "tests": {
+    "total": 3789,
+    "passed": 3789,
+    "failed": 0
+  },
+  "typecheck": "pass",
+  "lint": "pass",
+  "productionBuild": "pass",
+  "artifactReproduction": "pass",
+  "node": "v24.19.0",
+  "performance": [
+    {
+      "words": 20,
+      "requests": 1,
+      "chars": 134,
+      "avgMs": 11.62,
+      "p50Ms": 11.64,
+      "p95Ms": 12.21,
+      "minMs": 11.01,
+      "maxMs": 12.21,
+      "targetMs": 50,
+      "rssBaseMb": 318.14,
+      "rssPeakMb": 318.4,
+      "rssDeltaMb": 0.26,
+      "heapDeltaMb": 2.42,
+      "status": "PASS"
+    },
+    {
+      "words": 100,
+      "requests": 1,
+      "chars": 732,
+      "avgMs": 44.42,
+      "p50Ms": 43.29,
+      "p95Ms": 47.53,
+      "minMs": 42.12,
+      "maxMs": 47.53,
+      "targetMs": 100,
+      "rssBaseMb": 318.14,
+      "rssPeakMb": 318.27,
+      "rssDeltaMb": 0.13,
+      "heapDeltaMb": 12.71,
+      "status": "PASS"
+    },
+    {
+      "words": 500,
+      "requests": 1,
+      "chars": 3741,
+      "avgMs": 214.07,
+      "p50Ms": 210.9,
+      "p95Ms": 221.68,
+      "minMs": 207.78,
+      "maxMs": 221.68,
+      "targetMs": 300,
+      "rssBaseMb": 313.59,
+      "rssPeakMb": 318.64,
+      "rssDeltaMb": 5.05,
+      "heapDeltaMb": 48.55,
+      "status": "PASS"
+    },
+    {
+      "words": 1000,
+      "requests": 1,
+      "chars": 7491,
+      "avgMs": 469.78,
+      "p50Ms": 468.62,
+      "p95Ms": 500.32,
+      "minMs": 430.44,
+      "maxMs": 500.32,
+      "targetMs": 600,
+      "rssBaseMb": 314.25,
+      "rssPeakMb": 321.88,
+      "rssDeltaMb": 7.63,
+      "heapDeltaMb": 32.71,
+      "status": "PASS"
+    },
+    {
+      "words": 5000,
+      "requests": 5,
+      "chars": 37528,
+      "avgMs": 2302.95,
+      "p50Ms": 2300.96,
+      "p95Ms": 2369.57,
+      "minMs": 2249.34,
+      "maxMs": 2369.57,
+      "targetMs": 2500,
+      "rssBaseMb": 318.29,
+      "rssPeakMb": 321.88,
+      "rssDeltaMb": 3.59,
+      "heapDeltaMb": 52.66,
+      "status": "PASS"
+    }
+  ],
+  "artifacts": {
+    "lib/editor/neural/model.json": "713e1fdf9ec3dbc7e7f2be9606c2b6626ad2b22d53de17fa7e34274d62ab3381",
+    "data/neural/training-report.json": "c126569cc7482f8af531a2d74fb171f610c468e324c3c0c4ccc16e8547d7d893",
+    "data/neural/training-history.json": "7a142ac2fb9dc4d154cad2dcc1d0dc4cbddee59cda5af22b4ec465a4dd8613c4"
+  },
+  "caveat": "Local warm benchmark, not Vercel deployment latency; small synthetic neural model, not general semantic AI."
+}

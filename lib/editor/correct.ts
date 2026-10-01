@@ -1,3 +1,4 @@
+import { neuralSpelling, neuralAgreement } from './neural/runtime';
 import { dictionaryCandidates } from './dictionary';
 import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
@@ -205,6 +206,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
     return replacement;
   });
+  if (runtime.useLocalModel !== false) text = neuralSpelling(text);
   text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);
   text = expositoryPhrases(text);
@@ -240,6 +242,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     text = text.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n');
     if (!/\n\s*\n/u.test(input)) text = segmentParagraphs(text);
   }
+  if (runtime.useLocalModel !== false) text = neuralAgreement(text);
   text = text.split(marker).map((part, index) => {
     if (!index) return part;
     const end = part.indexOf('\uE001');

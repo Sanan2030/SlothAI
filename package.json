@@ -36,7 +36,11 @@
     "local-ai:paired:train": "node --import tsx scripts/train-paired-ai.ts",
     "local-ai:paired:check": "node --import tsx scripts/evaluate-paired-ai.ts --baseline=data/local-ai/paired-release-baseline.json --enforce",
     "local-ai:reliability": "node --import tsx scripts/evaluate-paired-reliability.ts",
-    "local-ai:rebuild": "npm run local-ai:pos:train && npm run local-ai:train && npm run local-ai:paired:train"
+    "local-ai:rebuild": "npm run local-ai:pos:train && npm run local-ai:train && npm run local-ai:paired:train",
+    "neural:corpus": "node --import tsx scripts/build-neural-corpus.ts",
+    "neural:train": "node --import tsx scripts/train-neural.ts",
+    "neural:continue": "node --import tsx scripts/train-neural.ts --resume",
+    "neural:check": "node --import tsx scripts/evaluate-neural.ts --enforce"
   },
   "engines": {
     "node": ">=20.9.0"

@@ -33,7 +33,7 @@ export function editChannels(raw: string, target: string): string[] {
   }
   return result;
 }
-export function alignTokens(pair: CorrectionPair): { raw: string; target: string; at: number; targetAt: number }[] {
+export function alignTokens(pair: CorrectionPair, maximumDistance = 2): { raw: string; target: string; at: number; targetAt: number }[] {
   const source = tokenize(pair.input), target = tokenize(pair.target);
   const d = Array.from({ length: source.length + 1 }, (_, i) => Array.from({ length: target.length + 1 }, (_, j) => i ? j ? 0 : i : j));
   for (let i = 1; i <= source.length; i++) for (let j = 1; j <= target.length; j++) {
@@ -46,7 +46,7 @@ export function alignTokens(pair: CorrectionPair): { raw: string; target: string
       const equal = fold(normalizeDigraphs(wordLower(source[i - 1].word))) === fold(target[j - 1].word);
       if (d[i][j] === d[i - 1][j - 1] + Number(!equal)) {
         const raw = wordLower(source[i - 1].word), canonical = wordLower(target[j - 1].word);
-        if (boundedEditDistance(fold(normalizeDigraphs(raw)), fold(canonical), 2) <= 2) rows.push({ raw, target: canonical, at: i - 1, targetAt: j - 1 });
+        if (boundedEditDistance(fold(normalizeDigraphs(raw)), fold(canonical), maximumDistance) <= maximumDistance) rows.push({ raw, target: canonical, at: i - 1, targetAt: j - 1 });
         i--; j--; continue;
       }
     }

@@ -1,0 +1,964 @@
+{
+  "lexical": {
+    "total": 523,
+    "exact": 380
+  },
+  "agreement": {
+    "total": 420,
+    "correctClassification": 420,
+    "exact": 420
+  },
+  "challenge": {
+    "total": 14,
+    "exact": 14
+  },
+  "previousExactTextRegressions": [],
+  "caveat": "Correlated synthetic exercises and small authored development probes, not real-world accuracy",
+  "probes": [
+    {
+      "input": "maktablar yeni acildi",
+      "expected": "Məktəblər yeni açıldı.",
+      "actual": "Məktəblər yeni açıldı.",
+      "exact": true
+    },
+    {
+      "input": "maktablarda yeni dersler basladi",
+      "expected": "Məktəblərdə yeni dərslər başladı.",
+      "actual": "Məktəblərdə yeni dərslər başladı.",
+      "exact": true
+    },
+    {
+      "input": "Mən sənədi oxuyurlar.",
+      "expected": "Mən sənədi oxuyuram.",
+      "actual": "Mən sənədi oxuyuram.",
+      "exact": true
+    },
+    {
+      "input": "Biz məktubu göndərdi.",
+      "expected": "Biz məktubu göndərdik.",
+      "actual": "Biz məktubu göndərdik.",
+      "exact": true
+    },
+    {
+      "input": "Onlar layihəni tamamladım.",
+      "expected": "Onlar layihəni tamamladılar.",
+      "actual": "Onlar layihəni tamamladılar.",
+      "exact": true
+    },
+    {
+      "input": "Sən sabah hesabatı yoxlayacağam.",
+      "expected": "Sən sabah hesabatı yoxlayacaqsan.",
+      "actual": "Sən sabah hesabatı yoxlayacaqsan.",
+      "exact": true
+    },
+    {
+      "input": "Siz sənədi hazırladım.",
+      "expected": "Siz sənədi hazırladınız.",
+      "actual": "Siz sənədi hazırladınız.",
+      "exact": true
+    },
+    {
+      "input": "Mən məktubu göndərdim.",
+      "expected": "Mən məktubu göndərdim.",
+      "actual": "Mən məktubu göndərdim.",
+      "exact": true
+    },
+    {
+      "input": "Biz məktubu göndərmədik.",
+      "expected": "Biz məktubu göndərmədik.",
+      "actual": "Biz məktubu göndərmədik.",
+      "exact": true
+    },
+    {
+      "input": "Mən və sən məktubu göndərdik.",
+      "expected": "Mən və sən məktubu göndərdik.",
+      "actual": "Mən və sən məktubu göndərdik.",
+      "exact": true
+    },
+    {
+      "input": "`Mən sənədi oxuyurlar.`",
+      "expected": "`Mən sənədi oxuyurlar.`",
+      "actual": "`Mən sənədi oxuyurlar.`",
+      "exact": true
+    },
+    {
+      "input": "API cavabı JSON formatındadır.",
+      "expected": "API cavabı JSON formatındadır.",
+      "actual": "API cavabı JSON formatındadır.",
+      "exact": true
+    },
+    {
+      "input": "Onlar məktubu göndərdi.",
+      "expected": "Onlar məktubu göndərdi.",
+      "actual": "Onlar məktubu göndərdi.",
+      "exact": true
+    },
+    {
+      "input": "Mən bilirəm ki, sən məktubu oxuyursan.",
+      "expected": "Mən bilirəm ki, sən məktubu oxuyursan.",
+      "actual": "Mən bilirəm ki, sən məktubu oxuyursan.",
+      "exact": true
+    }
+  ],
+  "lexicalFailures": [
+    {
+      "id": "lexical:məktəb:məktəblər:4:0",
+      "exact": false,
+      "actual": "Komanda «mektebler» sözünün formasını yoxladı.",
+      "expected": "Komanda «məktəblər» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərin:2:0",
+      "exact": false,
+      "actual": "Redaktor «mekteblerin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «məktəblərin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərə:2:0",
+      "exact": false,
+      "actual": "Redaktor «mekteblere» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «məktəblərə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərə:4:0",
+      "exact": false,
+      "actual": "Komanda «mekteblere» sözünün formasını yoxladı.",
+      "expected": "Komanda «məktəblərə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəbləri:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «mektebleri» sözü göstərilib.",
+      "expected": "Bu sənəddə «məktəbləri» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərdə:1:0",
+      "exact": false,
+      "actual": "İclasda «mekteblerde» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məktəblərdə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərdən:0:0",
+      "exact": false,
+      "actual": "Müəllim «mekteblerden» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktəblərdən» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərim:0:0",
+      "exact": false,
+      "actual": "Müəllim «mekteblerim» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktəblərim» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərimin:1:0",
+      "exact": false,
+      "actual": "İclasda «mekteblerimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məktəblərimin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərimin:2:0",
+      "exact": false,
+      "actual": "Redaktor «mekteblerimin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «məktəblərimin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərimi:1:0",
+      "exact": false,
+      "actual": "İclasda «mekteblerimi» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məktəblərimi» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərimdə:4:0",
+      "exact": false,
+      "actual": "Komanda «mekteblerimde» sözünün formasını yoxladı.",
+      "expected": "Komanda «məktəblərimdə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məktəb:məktəblərimdən:0:0",
+      "exact": false,
+      "actual": "Müəllim «mekteblerimden» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktəblərimdən» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:kitab:kitablarımın:0:0",
+      "exact": false,
+      "actual": "Müəllim «kitablarimin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «kitablarımın» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:kitab:kitablarımın:1:0",
+      "exact": false,
+      "actual": "İclasda «kitablarimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «kitablarımın» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:kitab:kitablarıma:0:0",
+      "exact": false,
+      "actual": "Müəllim «kitablarima» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «kitablarıma» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:kitab:kitablarımı:1:0",
+      "exact": false,
+      "actual": "İclasda «kitablarimi» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «kitablarımı» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:kitab:kitablarımdan:0:0",
+      "exact": false,
+      "actual": "Müəllim «kitablarimdan» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «kitablarımdan» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:kitab:kitablarımdan:1:0",
+      "exact": false,
+      "actual": "İclasda «kitablarimdan» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «kitablarımdan» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:kitab:kitablarımdan:2:0",
+      "exact": false,
+      "actual": "Redaktor «kitablarimdan» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «kitablarımdan» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:kitab:kitablarımdan:4:0",
+      "exact": false,
+      "actual": "Komanda «kitablarimdan» sözünün formasını yoxladı.",
+      "expected": "Komanda «kitablarımdan» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:sənəd:sənədlər:0:0",
+      "exact": false,
+      "actual": "Müəllim «senedler» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «sənədlər» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:sənəd:sənədlər:4:0",
+      "exact": false,
+      "actual": "Komanda «senedler» sözünün formasını yoxladı.",
+      "expected": "Komanda «sənədlər» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərin:0:0",
+      "exact": false,
+      "actual": "Müəllim «senedlerin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «sənədlərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərə:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «senedlere» sözü göstərilib.",
+      "expected": "Bu sənəddə «sənədlərə» sözü göstərilib."
+    },
+    {
+      "id": "lexical:sənəd:sənədləri:1:0",
+      "exact": false,
+      "actual": "İclasda «senedleri» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «sənədləri» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərdə:1:0",
+      "exact": false,
+      "actual": "İclasda «senedlerde» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «sənədlərdə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərdən:1:0",
+      "exact": false,
+      "actual": "İclasda «senedlerden» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «sənədlərdən» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərimin:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «senedlerimin» sözü göstərilib.",
+      "expected": "Bu sənəddə «sənədlərimin» sözü göstərilib."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərimdə:1:0",
+      "exact": false,
+      "actual": "İclasda «senedlerimde» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «sənədlərimdə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:sənəd:sənədlərimdən:4:0",
+      "exact": false,
+      "actual": "Komanda «senedlerimden» sözünün formasını yoxladı.",
+      "expected": "Komanda «sənədlərimdən» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məktub:məktubların:0:0",
+      "exact": false,
+      "actual": "Müəllim «mektublarin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktubların» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məktub:məktublara:0:0",
+      "exact": false,
+      "actual": "Müəllim «mektublara» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktublara» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məktub:məktublardan:4:0",
+      "exact": false,
+      "actual": "Komanda «mektublardan» sözünün formasını yoxladı.",
+      "expected": "Komanda «məktublardan» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məktub:məktublarım:2:0",
+      "exact": false,
+      "actual": "Redaktor «mektublarim» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «məktublarım» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məktub:məktublarım:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «mektublarim» sözü göstərilib.",
+      "expected": "Bu sənəddə «məktublarım» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məktub:məktublarıma:0:0",
+      "exact": false,
+      "actual": "Müəllim «mektublarima» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məktublarıma» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məktub:məktublarımda:4:0",
+      "exact": false,
+      "actual": "Komanda «mektublarimda» sözünün formasını yoxladı.",
+      "expected": "Komanda «məktublarımda» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqların:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «qovluqlarin» sözü göstərilib.",
+      "expected": "Bu sənəddə «qovluqların» sözü göstərilib."
+    },
+    {
+      "id": "lexical:qovluq:qovluqları:0:0",
+      "exact": false,
+      "actual": "Müəllim «qovluqlari» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «qovluqları» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqları:2:0",
+      "exact": false,
+      "actual": "Redaktor «qovluqlari» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «qovluqları» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqlarımın:0:0",
+      "exact": false,
+      "actual": "Müəllim «qovluqlarimin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «qovluqlarımın» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqlarımın:1:0",
+      "exact": false,
+      "actual": "İclasda «qovluqlarimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «qovluqlarımın» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:qovluq:qovluqlarımda:4:0",
+      "exact": false,
+      "actual": "Komanda «qovluqlarimda» sözünün formasını yoxladı.",
+      "expected": "Komanda «qovluqlarımda» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqlarımdan:0:0",
+      "exact": false,
+      "actual": "Müəllim «qovluqlarimdan» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «qovluqlarımdan» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlər:1:0",
+      "exact": false,
+      "actual": "İclasda «muellimler» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «müəllimlər» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərə:2:0",
+      "exact": false,
+      "actual": "Redaktor «muellimlere» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müəllimlərə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərdə:4:0",
+      "exact": false,
+      "actual": "Komanda «muellimlerde» sözünün formasını yoxladı.",
+      "expected": "Komanda «müəllimlərdə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərdən:2:0",
+      "exact": false,
+      "actual": "Redaktor «muellimlerden» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müəllimlərdən» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərdən:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «muellimlerden» sözü göstərilib.",
+      "expected": "Bu sənəddə «müəllimlərdən» sözü göstərilib."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimin:0:0",
+      "exact": false,
+      "actual": "Müəllim «muellimlerimin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «müəllimlərimin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimə:2:0",
+      "exact": false,
+      "actual": "Redaktor «muellimlerime» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müəllimlərimə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimə:4:0",
+      "exact": false,
+      "actual": "Komanda «muellimlerime» sözünün formasını yoxladı.",
+      "expected": "Komanda «müəllimlərimə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimdə:2:0",
+      "exact": false,
+      "actual": "Redaktor «muellimlerimde» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müəllimlərimdə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimdən:2:0",
+      "exact": false,
+      "actual": "Redaktor «muellimlerimden» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müəllimlərimdən» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərimdən:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «muellimlerimden» sözü göstərilib.",
+      "expected": "Bu sənəddə «müəllimlərimdən» sözü göstərilib."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrin:4:0",
+      "exact": false,
+      "actual": "Komanda «telebelerin» sözünün formasını yoxladı.",
+      "expected": "Komanda «tələbələrin» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrə:0:0",
+      "exact": false,
+      "actual": "Müəllim «telebelere» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrə» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrə:0:1",
+      "exact": false,
+      "actual": "Müəllim «talabalara» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrə» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələri:0:0",
+      "exact": false,
+      "actual": "Müəllim «telebeleri» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələri» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrdə:2:0",
+      "exact": false,
+      "actual": "Redaktor «telebelerde» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «tələbələrdə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrdə:2:1",
+      "exact": false,
+      "actual": "Redaktor «talabalarda» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «tələbələrdə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrim:1:0",
+      "exact": false,
+      "actual": "İclasda «telebelerim» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «tələbələrim» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrim:2:0",
+      "exact": false,
+      "actual": "Redaktor «telebelerim» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «tələbələrim» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrim:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «telebelerim» sözü göstərilib.",
+      "expected": "Bu sənəddə «tələbələrim» sözü göstərilib."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimin:0:0",
+      "exact": false,
+      "actual": "Müəllim «telebelerimin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrimin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimin:2:0",
+      "exact": false,
+      "actual": "Redaktor «telebelerimin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «tələbələrimin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimin:4:0",
+      "exact": false,
+      "actual": "Komanda «telebelerimin» sözünün formasını yoxladı.",
+      "expected": "Komanda «tələbələrimin» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimə:0:0",
+      "exact": false,
+      "actual": "Müəllim «telebelerime» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrimə» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimə:0:1",
+      "exact": false,
+      "actual": "Müəllim «talabalarima» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrimə» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimi:0:0",
+      "exact": false,
+      "actual": "Müəllim «telebelerimi» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «tələbələrimi» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimi:1:0",
+      "exact": false,
+      "actual": "İclasda «telebelerimi» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «tələbələrimi» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimdən:4:0",
+      "exact": false,
+      "actual": "Komanda «telebelerimden» sözünün formasını yoxladı.",
+      "expected": "Komanda «tələbələrimdən» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimdən:4:1",
+      "exact": false,
+      "actual": "Komanda «talabalarimdan» sözünün formasını yoxladı.",
+      "expected": "Komanda «tələbələrimdən» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərin:0:0",
+      "exact": false,
+      "actual": "Müəllim «musterilerin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «müştərilərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərin:1:0",
+      "exact": false,
+      "actual": "İclasda «musterilerin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «müştərilərin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərdə:1:0",
+      "exact": false,
+      "actual": "İclasda «musterilerde» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «müştərilərdə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərdə:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «musterilerde» sözü göstərilib.",
+      "expected": "Bu sənəddə «müştərilərdə» sözü göstərilib."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərdən:0:0",
+      "exact": false,
+      "actual": "Müəllim «musterilerden» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «müştərilərdən» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərdən:4:0",
+      "exact": false,
+      "actual": "Komanda «musterilerden» sözünün formasını yoxladı.",
+      "expected": "Komanda «müştərilərdən» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərim:1:0",
+      "exact": false,
+      "actual": "İclasda «musterilerim» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «müştərilərim» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərim:2:0",
+      "exact": false,
+      "actual": "Redaktor «musterilerim» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müştərilərim» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimə:4:0",
+      "exact": false,
+      "actual": "Komanda «musterilerime» sözünün formasını yoxladı.",
+      "expected": "Komanda «müştərilərimə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimi:2:0",
+      "exact": false,
+      "actual": "Redaktor «musterilerimi» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müştərilərimi» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimdə:0:0",
+      "exact": false,
+      "actual": "Müəllim «musterilerimde» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «müştərilərimdə» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimdən:2:0",
+      "exact": false,
+      "actual": "Redaktor «musterilerimden» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «müştərilərimdən» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlar:1:0",
+      "exact": false,
+      "actual": "İclasda «emekdaslar» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «əməkdaşlar» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşların:1:0",
+      "exact": false,
+      "actual": "İclasda «emekdaslarin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «əməkdaşların» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşların:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «emekdaslarin» sözü göstərilib.",
+      "expected": "Bu sənəddə «əməkdaşların» sözü göstərilib."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşları:0:0",
+      "exact": false,
+      "actual": "Müəllim «emekdaslari» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «əməkdaşları» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşları:1:0",
+      "exact": false,
+      "actual": "İclasda «emekdaslari» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «əməkdaşları» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşları:4:0",
+      "exact": false,
+      "actual": "Komanda «emekdaslari» sözünün formasını yoxladı.",
+      "expected": "Komanda «əməkdaşları» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarımın:1:0",
+      "exact": false,
+      "actual": "İclasda «emekdaslarimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «əməkdaşlarımın» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarıma:2:0",
+      "exact": false,
+      "actual": "Redaktor «emekdaslarima» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «əməkdaşlarıma» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarımı:0:0",
+      "exact": false,
+      "actual": "Müəllim «emekdaslarimi» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «əməkdaşlarımı» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarımda:0:0",
+      "exact": false,
+      "actual": "Müəllim «emekdaslarimda» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «əməkdaşlarımda» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarımda:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «emekdaslarimda» sözü göstərilib.",
+      "expected": "Bu sənəddə «əməkdaşlarımda» sözü göstərilib."
+    },
+    {
+      "id": "lexical:əməkdaş:əməkdaşlarımdan:1:0",
+      "exact": false,
+      "actual": "İclasda «emekdaslarimdan» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «əməkdaşlarımdan» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:0:0",
+      "exact": false,
+      "actual": "Müəllim «sirketlerin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «şirkətlərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:0:1",
+      "exact": false,
+      "actual": "Müəllim «sirkatlarin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «şirkətlərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:0:2",
+      "exact": false,
+      "actual": "Müəllim «siketlerin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «şirkətlərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:0:3",
+      "exact": false,
+      "actual": "Müəllim «sirrketlerin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «şirkətlərin» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:1:0",
+      "exact": false,
+      "actual": "İclasda «sirketlerin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:1:1",
+      "exact": false,
+      "actual": "İclasda «sirkatlarin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:1:2",
+      "exact": false,
+      "actual": "İclasda «siketlerin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:1:3",
+      "exact": false,
+      "actual": "İclasda «sirrketlerin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərin» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:2:0",
+      "exact": false,
+      "actual": "Redaktor «sirketlerin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:2:1",
+      "exact": false,
+      "actual": "Redaktor «sirkatlarin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:2:2",
+      "exact": false,
+      "actual": "Redaktor «siketlerin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:2:3",
+      "exact": false,
+      "actual": "Redaktor «sirrketlerin» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərin» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «sirketlerin» sözü göstərilib.",
+      "expected": "Bu sənəddə «şirkətlərin» sözü göstərilib."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:3:1",
+      "exact": false,
+      "actual": "Bu sənəddə «sirkatlarin» sözü göstərilib.",
+      "expected": "Bu sənəddə «şirkətlərin» sözü göstərilib."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:3:2",
+      "exact": false,
+      "actual": "Bu sənəddə «siketlerin» sözü göstərilib.",
+      "expected": "Bu sənəddə «şirkətlərin» sözü göstərilib."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərin:3:3",
+      "exact": false,
+      "actual": "Bu sənəddə «sirrketlerin» sözü göstərilib.",
+      "expected": "Bu sənəddə «şirkətlərin» sözü göstərilib."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərə:1:0",
+      "exact": false,
+      "actual": "İclasda «sirketlere» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərə:4:0",
+      "exact": false,
+      "actual": "Komanda «sirketlere» sözünün formasını yoxladı.",
+      "expected": "Komanda «şirkətlərə» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərdən:1:0",
+      "exact": false,
+      "actual": "İclasda «sirketlerden» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərdən» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərdən:4:0",
+      "exact": false,
+      "actual": "Komanda «sirketlerden» sözünün formasını yoxladı.",
+      "expected": "Komanda «şirkətlərdən» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərim:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «sirketlerim» sözü göstərilib.",
+      "expected": "Bu sənəddə «şirkətlərim» sözü göstərilib."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərimdə:1:0",
+      "exact": false,
+      "actual": "İclasda «sirketlerimde» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «şirkətlərimdə» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərimdə:2:0",
+      "exact": false,
+      "actual": "Redaktor «sirketlerimde» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərimdə» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərimdən:2:0",
+      "exact": false,
+      "actual": "Redaktor «sirketlerimden» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «şirkətlərimdən» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlar:1:0",
+      "exact": false,
+      "actual": "İclasda «melumatlar» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məlumatlar» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlar:4:0",
+      "exact": false,
+      "actual": "Komanda «melumatlar» sözünün formasını yoxladı.",
+      "expected": "Komanda «məlumatlar» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatların:0:0",
+      "exact": false,
+      "actual": "Müəllim «melumatlarin» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məlumatların» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatların:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «melumatlarin» sözü göstərilib.",
+      "expected": "Bu sənəddə «məlumatların» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məlumat:məlumatların:4:0",
+      "exact": false,
+      "actual": "Komanda «melumatlarin» sözünün formasını yoxladı.",
+      "expected": "Komanda «məlumatların» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlara:2:0",
+      "exact": false,
+      "actual": "Redaktor «melumatlara» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «məlumatlara» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlara:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «melumatlara» sözü göstərilib.",
+      "expected": "Bu sənəddə «məlumatlara» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlara:4:0",
+      "exact": false,
+      "actual": "Komanda «melumatlara» sözünün formasını yoxladı.",
+      "expected": "Komanda «məlumatlara» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatları:1:0",
+      "exact": false,
+      "actual": "İclasda «melumatlari» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məlumatları» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məlumat:məlumatları:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «melumatlari» sözü göstərilib.",
+      "expected": "Bu sənəddə «məlumatları» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məlumat:məlumatları:4:0",
+      "exact": false,
+      "actual": "Komanda «melumatlari» sözünün formasını yoxladı.",
+      "expected": "Komanda «məlumatları» sözünün formasını yoxladı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlarda:0:0",
+      "exact": false,
+      "actual": "Müəllim «melumatlarda» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «məlumatlarda» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlardan:1:0",
+      "exact": false,
+      "actual": "İclasda «melumatlardan» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məlumatlardan» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlarım:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «melumatlarim» sözü göstərilib.",
+      "expected": "Bu sənəddə «məlumatlarım» sözü göstərilib."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlarımın:1:0",
+      "exact": false,
+      "actual": "İclasda «melumatlarimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «məlumatlarımın» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:hesabat:hesabatları:2:0",
+      "exact": false,
+      "actual": "Redaktor «hesabatlari» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «hesabatları» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:hesabat:hesabatlarım:2:0",
+      "exact": false,
+      "actual": "Redaktor «hesabatlarim» sözünün yazılışını yoxladı.",
+      "expected": "Redaktor «hesabatlarım» sözünün yazılışını yoxladı."
+    },
+    {
+      "id": "lexical:hesabat:hesabatlarımın:1:0",
+      "exact": false,
+      "actual": "İclasda «hesabatlarimin» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «hesabatlarımın» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:hesabat:hesabatlarıma:0:0",
+      "exact": false,
+      "actual": "Müəllim «hesabatlarima» sözünü lövhəyə yazdı.",
+      "expected": "Müəllim «hesabatlarıma» sözünü lövhəyə yazdı."
+    },
+    {
+      "id": "lexical:hesabat:hesabatlarıma:1:0",
+      "exact": false,
+      "actual": "İclasda «hesabatlarima» sözünün yazılışını müzakirə etdik.",
+      "expected": "İclasda «hesabatlarıma» sözünün yazılışını müzakirə etdik."
+    },
+    {
+      "id": "lexical:hesabat:hesabatlarımı:3:0",
+      "exact": false,
+      "actual": "Bu sənəddə «hesabatlarimi» sözü göstərilib.",
+      "expected": "Bu sənəddə «hesabatlarımı» sözü göstərilib."
+    }
+  ],
+  "agreementFailures": []
+}

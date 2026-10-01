@@ -1,0 +1,27 @@
+{
+  "architecture": "Two one-hidden-layer tanh MLPs; binary candidate/compatibility heads; CPU-only deterministic SGD",
+  "epochs": {
+    "lexical": 24,
+    "agreement": 24
+  },
+  "parameters": 494,
+  "corpusSha256": "53580bd736d04fab5eb28514efdf4190d4f2a2bfc5fbfabaa7d638b58659b686",
+  "artifactSha256": "713e1fdf9ec3dbc7e7f2be9606c2b6626ad2b22d53de17fa7e34274d62ab3381",
+  "artifactBytes": 93553,
+  "lexical": {
+    "trainExamples": 3382,
+    "validationExamples": 371,
+    "testExamples": 817,
+    "validationLoss": 0.0031486296184356855,
+    "threshold": 0.6
+  },
+  "agreement": {
+    "trainExamples": 1260,
+    "validationExamples": 264,
+    "testExamples": 420,
+    "validationLoss": 0.0017143315465562897,
+    "threshold": 0.6
+  },
+  "source": "Assistant-authored morphology/template exercises, not real user or human-certified language data",
+  "limitations": "Synthetic, morphology-assisted specialized correction networks; no general semantic understanding or calibrated probability guarantee."
+}

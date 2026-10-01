@@ -1,0 +1,19 @@
+{
+  "source": "Separately authored probe sentences, excluded from training; not human-certified benchmark",
+  "rows": [
+    {"input":"maktablar yeni acildi", "expected":"Məktəblər yeni açıldı."},
+    {"input":"maktablarda yeni dersler basladi", "expected":"Məktəblərdə yeni dərslər başladı."},
+    {"input":"Mən sənədi oxuyurlar.", "expected":"Mən sənədi oxuyuram."},
+    {"input":"Biz məktubu göndərdi.", "expected":"Biz məktubu göndərdik."},
+    {"input":"Onlar layihəni tamamladım.", "expected":"Onlar layihəni tamamladılar."},
+    {"input":"Sən sabah hesabatı yoxlayacağam.", "expected":"Sən sabah hesabatı yoxlayacaqsan."},
+    {"input":"Siz sənədi hazırladım.", "expected":"Siz sənədi hazırladınız."},
+    {"input":"Mən məktubu göndərdim.", "expected":"Mən məktubu göndərdim."},
+    {"input":"Biz məktubu göndərmədik.", "expected":"Biz məktubu göndərmədik."},
+    {"input":"Mən və sən məktubu göndərdik.", "expected":"Mən və sən məktubu göndərdik."},
+    {"input":"`Mən sənədi oxuyurlar.`", "expected":"`Mən sənədi oxuyurlar.`"},
+    {"input":"API cavabı JSON formatındadır.", "expected":"API cavabı JSON formatındadır."},
+    {"input":"Onlar məktubu göndərdi.", "expected":"Onlar məktubu göndərdi."},
+    {"input":"Mən bilirəm ki, sən məktubu oxuyursan.", "expected":"Mən bilirəm ki, sən məktubu oxuyursan."}
+  ]
+}

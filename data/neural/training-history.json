@@ -1,0 +1,20 @@
+[
+  {
+    "epochs": {
+      "lexical": 12,
+      "agreement": 12
+    },
+    "lexicalValidationLoss": 0.0073787385978933825,
+    "agreementValidationLoss": 0.0032384629365742094,
+    "artifactSha256": "e040533553ef9a16eba9841504ba11d88a2dfd6bb3cd66f60e25a4b7152cdc4c"
+  },
+  {
+    "epochs": {
+      "lexical": 24,
+      "agreement": 24
+    },
+    "lexicalValidationLoss": 0.0031486296184356855,
+    "agreementValidationLoss": 0.0017143315465562897,
+    "artifactSha256": "713e1fdf9ec3dbc7e7f2be9606c2b6626ad2b22d53de17fa7e34274d62ab3381"
+  }
+]
