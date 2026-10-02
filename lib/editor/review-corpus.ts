@@ -8,6 +8,8 @@ export interface ReviewCase {
   preserveFormatting: boolean;
   greeting?: string;
   reviewedAt: string;
+  /** A user explicitly saved this target; not independent linguistic certification. */
+  reviewStatus?: 'user-approved';
 }
 export interface ReviewCorpus {
   kind: 'slothai-reviewed-tests';
@@ -29,6 +31,7 @@ function validCase(value: unknown): value is ReviewCase {
     && typeof row.actual === 'string' && row.actual.length <= 50000
     && typeof row.preserveFormatting === 'boolean'
     && (row.greeting === undefined || typeof row.greeting === 'string' && row.greeting.length <= 100)
+    && (row.reviewStatus === undefined || row.reviewStatus === 'user-approved')
     && typeof row.reviewedAt === 'string' && Number.isFinite(Date.parse(row.reviewedAt));
 }
 export function parseReviewCorpus(text: string): ReviewCorpus {

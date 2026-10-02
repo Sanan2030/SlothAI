@@ -127,7 +127,7 @@ const aliases: Record<string, string> = {
   dushdu: 'düşdü', ashagi: 'aşağı', shey: 'şey', yaxshidir: 'yaxşıdır',
   shahmat: 'şahmat', gunortan: 'günorta', yataqa: 'yatağa',
   hemen: 'həmin', dedim: 'dedim', eledi: 'elədi', pointleri: 'pointləri',
-  xyir: 'xeyir', hardasan: 'haradasan', birazdan: 'birazdan',
+  xyir: 'xeyir', hardasan: 'haradasan', harda: 'harada', birazdan: 'birazdan',
   gelecem: 'gələcəyəm', edecem: 'edəcəyəm', raziyam: 'razıyam',
   vaxtim: 'vaxtım', movzunu: 'mövzunu', mesgulam: 'məşğulam',
   orda: 'orada', illerdir: 'illərdir', demisdim: 'demişdim',
@@ -534,4 +534,11 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   if (properNames.has(key)) return properNames.get(key)!;
   return /^[A-ZƏÇĞIİÖŞÜ]/.test(word)
     ? replacement[0].toLocaleUpperCase('az-AZ') + replacement.slice(1) : replacement;
+}
+
+/** Canonical reviewed spellings win over later speculative statistical repairs. */
+export function isReviewedSpelling(word: string): boolean {
+  const canonical = word.toLocaleLowerCase('az-AZ'), key = fold(canonical);
+  return aliases[key] === canonical || candidates.get(key)?.has(canonical) === true
+    || properNames.get(key)?.toLocaleLowerCase('az-AZ') === canonical;
 }

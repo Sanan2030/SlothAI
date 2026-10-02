@@ -1,5 +1,5 @@
 /** Conservative, language-wide sentence boundaries for unpunctuated prose. */
-import { legacyModelMorphology as productiveMorphology } from './productive-morphology';
+import { productiveMorphology as syntaxMorphology, legacyModelMorphology as productiveMorphology } from './productive-morphology';
 import { givenNames, ambiguousNames } from './entities/person-names';
 import { places } from './entities/geo';
 const verbs = /(?:mış(?:am|san|ıq|sınız|lar)?|miş(?:əm|sən|ik|siniz|lər)?|muş(?:am|san|uq|sunuz|lar)?|müş(?:əm|sən|ük|sünüz|lər)?|dım|dim|dum|düm|dın|din|dun|dün|dıq|dik|duq|dük|dı|di|du|dü|ırdı|irdi|urdu|ürdü|ır|ir|ur|ür|acaq(?:dır|lar)?|əcək(?:dir|lər)?|aram|ərəm|ərsiniz|acaqsınız|əcəksiniz|ılıb|ilib|ulub|ülüb|ıb|ib|ub|üb)$/iu;
@@ -13,9 +13,10 @@ const dependentStarts = new Set(['əgər', 'çünki', 'ki', 'üçün', 'deyə', 
 const objectPronouns = new Set(['onu', 'onları', 'bunu', 'bunları']);
 
 const lightVerbNouns = new Set(['təsvir', 'təhlil', 'təqdim', 'təklif', 'təmin', 'tətbiq', 'təşkil', 'nadir', 'aydın', 'əsasən', 'soyadın', 'dair', 'rica', 'təşəkkür', 'hazır', 'keçmiş']);
+const numerals = new Set(['sıfır', 'bir', 'iki', 'üç', 'dörd', 'beş', 'altı', 'yeddi', 'səkkiz', 'doqquz', 'on', 'iyirmi', 'otuz', 'qırx', 'əlli', 'altmış', 'yetmiş', 'səksən', 'doxsan', 'yüz', 'min', 'milyon', 'milyard']);
 function independentStart(word: string): boolean {
   if (subjects.has(word) || timeWords.has(word) || namedSubjects.has(word)) return true;
-  if (connectors.has(word) || dependentStarts.has(word) || word.length < 4) return false;
+  if (connectors.has(word) || dependentStarts.has(word)) return false;
   const analyses = productiveMorphology.analyzeWord(word);
   // Nominative subjects can start a fresh clause. Accusative objects and
   // subordinate verbal forms alone cannot prove independence.
@@ -45,6 +46,12 @@ export function isFinitePredicate(word: string): boolean {
     || (lower.length > 5 && copula.test(lower));
 }
 
+/** Runtime clause analysis; frozen classifiers retain the original feature predicate. */
+export function isClausePredicate(word: string): boolean {
+  return /^(?:idi|idim|idin|idik|idiniz|idilər|aç|ye|de)$/iu.test(word) || isFinitePredicate(word)
+    || syntaxMorphology.analyzeWord(word).some(row => row.features.derivation?.some(value => value.startsWith('copula-')));
+}
+
 export function segmentIndependentClauses(text: string): string {
   // A boundary requires a finite predicate followed by a subject or temporal
   // opener and evidence of a second predicate. Existing punctuation wins.
@@ -64,11 +71,15 @@ export function segmentIndependentClauses(text: string): string {
       || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'
         && item.features.case === 'accusative'))
       && (wordAfterNext === 'isə'
-        || (!/(?:ıb|ib|ub|üb)$/iu.test(current) && isFinitePredicate(wordAfterNext))
+        || (!/(?:ıb|ib|ub|üb)$/iu.test(current) && isClausePredicate(wordAfterNext))
         || timeWords.has(wordAfterNext)
         || (objectPronouns.has(next) && wordAfterNext === 'bir'
           && tokens[index + 6]?.[0]?.toLocaleLowerCase('az-AZ') === 'daha'));
     const nextAnalysis = productiveMorphology.analyzeWord(next);
+    // A numeral before a counted noun is not a clause predicate, even if its
+    // spelling also admits a verb analysis (yeddi = seven / ate).
+    const countedNoun = numerals.has(current.toLocaleLowerCase('az-AZ'))
+      && nextAnalysis.some(row => row.pos === 'noun' && row.features.case === 'nominative');
     const afterAnalysis = productiveMorphology.analyzeWord(wordAfterNext);
     const nominalSubjectClause = (nextAnalysis.some(row => row.pos === 'noun' && row.features.case === 'genitive')
       && afterAnalysis.some(row => row.pos === 'noun' && row.features.case === 'nominative' && row.features.possessivePerson === 3))
@@ -86,7 +97,7 @@ export function segmentIndependentClauses(text: string): string {
           && productiveMorphology.analyzeWord(wordAfterNext).some(item => item.pos === 'noun'
             && item.features.case === 'nominative')));
     if (!/^\p{L}+$/u.test(current) || !/^ +$/u.test(space)
-      || !(isFinitePredicate(current) || completedConverb) || participleBeforeNoun || connectors.has(next)
+      || !(isClausePredicate(current) || completedConverb) || countedNoun || participleBeforeNoun || connectors.has(next)
       || !(independentStart(next) || freshObjectClause || nominalSubjectClause || temporalClause || (next === 'daha' && wordAfterNext === 'sonra')
         || (/^[\p{L}]{4,}(?:lar|lər)$/u.test(next) && !connectors.has(next)))) {
       output += current;
@@ -105,10 +116,10 @@ export function segmentIndependentClauses(text: string): string {
       continue;
     }
     const following = tokens.slice(index + 2, index + 34);
-    const secondPredicate = following.some(token => /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0]));
+    const secondPredicate = following.some(token => /^\p{L}+$/u.test(token[0]) && isClausePredicate(token[0]));
     const boundary = following.findIndex(token => /[.!?\n]/u.test(token[0]));
     if (secondPredicate && (boundary < 0 || following.slice(0, boundary).some(token =>
-      /^\p{L}+$/u.test(token[0]) && isFinitePredicate(token[0])))) {
+      /^\p{L}+$/u.test(token[0]) && isClausePredicate(token[0])))) {
       const clause = output.split(/[.!?\n]/u).at(-1) ?? '';
       const question = /^(?:necəsən|necəsiniz|haradasan|haradasınız)$/iu.test(current)
         || /(?:^|\s)(?:necə|neçə|niyə|nə vaxt|harada|kim|hansı)(?!\p{L})/iu.test(clause.trim())

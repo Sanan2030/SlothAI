@@ -1,3 +1,6 @@
+import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscourseClauses } from './context-decisions';
+import { editHTMLStructure } from './html-structure';
+import { editStructuredText } from './structured-text';
 import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
 import { dictionaryCandidates } from './dictionary';
 import { productiveMorphology } from './productive-morphology';
@@ -23,7 +26,8 @@ import { detectExclamation, detectQuestion, punctuateCommas, terminalPunctuation
 import { segmentParagraphs } from './paragraph-segmentation';
 import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText, resolveEntityWord } from './entities/resolver';
 
-export const MAX_TEXT_LENGTH = 10_000;
+import { MAX_TEXT_LENGTH } from './limits';
+export { MAX_TEXT_LENGTH } from './limits';
 export interface LocalCorrection { text: string; corrections: number }
 export interface CorrectionEvent {
   stage: 'spelling';
@@ -72,7 +76,7 @@ function punctuate(line: string, useLocalModel = true): string {
   result = punctuateExpository(result);
   result = punctuateBusiness(result);
   result = punctuateTechnical(result);
-  result = segmentCorrespondence(segmentIndependentClauses(result));
+  result = segmentDiscourseClauses(segmentCorrespondence(segmentIndependentClauses(result)), isFinitePredicate);
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = insertLearnedBoundaries(result);
   if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
@@ -119,6 +123,19 @@ function enumerate(line: string): string[] {
 export function correctText(input: string, preserveFormatting = false, runtime: CorrectionRuntime = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  let corrections = 0;
+  const edit = (value: string) => {
+    if (!value.trim()) return value;
+    const result = correctPlainText(value, true, runtime); corrections += result.corrections; return result.text;
+  };
+  const structured = editStructuredText(input, edit, preserveFormatting) ?? editHTMLStructure(input, edit);
+  return structured === undefined ? correctPlainText(input, preserveFormatting, runtime)
+    : { text: structured, corrections: structured === input ? 0 : Math.max(1, corrections) };
+}
+
+function correctPlainText(input: string, preserveFormatting = false, runtime: CorrectionRuntime = {}): LocalCorrection {
+  if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
+  if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   const services = runtime.services ?? languageServices;
   const restoreWord = (word: string) => isCanonicalEntity(word) || /^eləmi$/iu.test(word) ? word : services.spelling.resolve(word, services);
   const protectedText: string[] = [];
@@ -128,7 +145,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
   // Attribute values (including ?id=7) are markup, not sentence punctuation.
-  let text = input.replace(/```[\s\S]*?```|`[^`\n]*`|<\/?[A-Za-z][^<>\n]*?>|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  let text = input.replace(/<!--[\s\S]*?-->|```[\s\S]*?```|`[^`\n]*`|\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)|<\/?[A-Za-z][^<>\n]*?>|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
     if (/^chess comda$/i.test(value)) return protect('Chess.com-da');
     if (/^https?:/.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
@@ -149,6 +166,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
+  text = preserveContextualHomographs(text, protect);
   if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined));
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
@@ -214,6 +232,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     return replacement;
   });
   if (runtime.useLocalModel !== false) text = neuralSpelling(text, runtime.useAttention !== false);
+  text = normalizeClauseParticles(text);
   text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);
   text = expositoryPhrases(text);

@@ -165,13 +165,57 @@ for (const surface of index.keys()) {
   foldedIndex.set(key, forms);
 }
 
+/** Analyze productive nominal predicates without mutating frozen model features. */
+function nominalPredicate(surface: string): MorphologicalAnalysis[] {
+  const endings: [number, 'singular' | 'plural', string[]][] = [
+    [1, 'singular', ['yam', 'yəm', 'am', 'əm']], [2, 'singular', ['san', 'sən']],
+    [1, 'plural', ['yıq', 'yik', 'yuq', 'yük', 'ıq', 'ik', 'uq', 'ük']],
+    [2, 'plural', ['sınız', 'siniz', 'sunuz', 'sünüz']],
+    [3, 'singular', ['dır', 'dir', 'dur', 'dür']],
+  ];
+  const result: MorphologicalAnalysis[] = [];
+  for (const [person, number, suffixes] of endings) for (const suffix of suffixes) {
+    if (!surface.endsWith(suffix)) continue;
+    const base = surface.slice(0, -suffix.length), front = a(base) === 'ə', roundedI = i(base);
+    const expected = person === 1 ? number === 'singular' ? (vowels.test(base) ? 'y' : '') + (front ? 'əm' : 'am')
+      : (vowels.test(base) ? 'y' : '') + roundedI + (front ? 'k' : 'q')
+      : person === 2 ? number === 'singular' ? (front ? 'sən' : 'san') : 's' + roundedI + 'n' + roundedI + 'z'
+        : 'd' + roundedI + 'r';
+    if (suffix !== expected) continue;
+    for (const record of index.get(base) ?? []) if (record.pos === 'noun' || record.pos === 'adjective') {
+      result.push({ surface, lemma: record.lemma, pos: record.pos,
+        features: { ...record.features, tense: 'present', person: person as GrammaticalPerson,
+          // Predicate number differs from an inflected noun's lexical plural.
+          derivation: [...(record.features.derivation ?? []), 'copula-' + number] }, source: 'rule' });
+    }
+  }
+  return result;
+}
+
+const nominalSuffixes = ['yam', 'yəm', 'am', 'əm', 'san', 'sən', 'yıq', 'yik', 'yuq', 'yük', 'ıq', 'ik', 'uq', 'ük', 'sınız', 'siniz', 'sunuz', 'sünüz', 'dır', 'dir', 'dur', 'dür'].map(suffix => ({ suffix, folded: foldLetters(suffix) }));
+function foldedNominalPredicates(raw: string): string[] {
+  if (!/^[a-zəçğıöşü]{5,32}$/u.test(raw)) return [];
+  const input = foldLetters(raw), found = new Set<string>();
+  for (const { suffix, folded } of nominalSuffixes) {
+    if (!input.endsWith(folded)) continue;
+    const stem = input.slice(0, -suffix.length);
+    for (const base of foldedIndex.get(stem) ?? []) {
+      if (!(index.get(base) ?? []).some(row => row.pos === 'noun' || row.pos === 'adjective')) continue;
+      const surface = base + suffix;
+      if (nominalPredicate(surface).length && foldLetters(surface) === input) found.add(surface);
+    }
+  }
+  return [...found];
+}
+
 export class ProductiveMorphologyEngine implements MorphologyEngine {
   private readonly analyses = new Map<string, readonly MorphologicalAnalysis[]>();
   private readonly folded = new Map<string, string | undefined>();
   findByFoldedForm(word: string): string | undefined {
     const lowerWord = lower(word);
     if (this.folded.has(lowerWord)) return this.folded.get(lowerWord);
-    const matches = [...(foldedIndex.get(foldLetters(lowerWord)) ?? [])].filter(value =>
+    const established = foldedIndex.get(foldLetters(lowerWord));
+    const matches = [...(established?.size ? established : foldedNominalPredicates(lowerWord))].filter(value =>
       [...lowerWord].every((letter, at) => !/[əçğıöşü]/u.test(letter) || value[at] === letter));
     const selected = matches.length === 1 ? matches[0] : undefined;
     if (this.folded.size >= 4096) this.folded.clear();
@@ -193,6 +237,8 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
     if (cached) return cached;
     const records = index.get(surface);
     if (!records) {
+      const nominal = nominalPredicate(surface);
+      if (nominal.length) { if (this.analyses.size >= 4096) this.analyses.clear(); this.analyses.set(surface, nominal); return nominal; }
       const words = posArtifact.words as Record<string, Record<string, number>>;
       const lemmas = posArtifact.lemmas as Record<string, string[]>;
       const labels: Record<string, PartOfSpeech> = { NOUN: 'noun', VERB: 'verb', AUX: 'verb', ADJ: 'adjective',

@@ -5,10 +5,10 @@ import { RichEditor } from '@/components/RichEditor';
 import { Check, Copy, Download, FileText, Info, Mail, Moon, Sun, Trash2, BookOpen } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { getStrategyRegistry } from '@/lib/strategies/bootstrap';
+import { EditorClient } from '@/lib/workers/editor-client';
 import { buildAnimatedDiff } from '@/lib/ui/text-diff';
 import type { TransformationMetadata } from '@/lib/strategies/types';
-import { MAX_TEXT_LENGTH } from '@/lib/editor/correct';
+import { MAX_TEXT_LENGTH } from '@/lib/editor/limits';
 import { DEFAULT_EMAIL_GREETING, EMAIL_GREETINGS, type EmailGreeting } from '@/lib/editor/email-greetings';
 import { appendTransformLog, exportTransformLog, readTransformLog, type TransformLogEntry } from '@/lib/editor/transform-log';
 import { applyPersonalLexicon, confirmPersonalCandidate, dismissPersonalCandidate,
@@ -24,7 +24,6 @@ import { documentHTML, documentText, plainDocument, type RichDocument } from '@/
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
 
-const registry = getStrategyRegistry();
 
 const MODULES = {
   text: {
@@ -44,6 +43,8 @@ const MODULES = {
 } as const;
 
 export default function HomePage() {
+  const editorClient = useRef<EditorClient | null>(null);
+  useEffect(() => () => { editorClient.current?.dispose(); editorClient.current = null; }, []);
   const [activeModule, setActiveModule] = useState<ModuleId>('text');
   const [textValue, setTextValue] = useState('');
   const [mailValue, setMailValue] = useState('');
@@ -226,7 +227,7 @@ export default function HomePage() {
     const row = { ...resultSource,
       id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
       actual: activeModule === 'text' ? textGenerated : mailGenerated,
-      expected: expectedDraft, reviewedAt: new Date().toISOString(),
+      expected: expectedDraft, reviewStatus: 'user-approved' as const, reviewedAt: new Date().toISOString(),
     };
     savingReviewRef.current = true;
     setSavingReview(true);
@@ -272,7 +273,8 @@ export default function HomePage() {
       setFeedbackOpen(false);
       setReviewNotice('');
 
-      const result = await registry.get(config.strategyId).transform({
+      editorClient.current ??= new EditorClient();
+      const result = await editorClient.current.transform(config.strategyId, {
         text: requestText,
         options: activeModule === 'text' ? { preserveFormatting }
           : { emailGreeting: mailGreeting, omitSubject: true },

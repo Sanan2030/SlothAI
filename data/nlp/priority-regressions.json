@@ -1,0 +1,30 @@
+{
+  "annotationStatus": "assistant-reference",
+  "provenance": "Individually authored development targets; no independent human certification and no model fitting on this file",
+  "cases": [
+    {"id":"hunger-copula","input":"o ac idi yemeyi yedi sonra qapini ac","target":"O ac idi. Yeməyi yedi. Sonra qapını aç.","category":"meaning"},
+    {"id":"question-after-subject","input":"men bakida yasayiram sen harda yasayirsan","target":"Mən Bakıda yaşayıram. Sən harada yaşayırsan?","category":"question"},
+    {"id":"contrast-time","input":"bu gun hava yaxsidir sabah ise yagis yagacaq","target":"Bu gün hava yaxşıdır. Sabah isə yağış yağacaq.","category":"contrast"},
+    {"id":"causal-technical","input":"server cavab vermedi buna gore backend komandasina yazdim onlar problemi hell etdiler","target":"Server cavab vermədi. Buna görə backend komandasına yazdım. Onlar problemi həll etdilər.","category":"boundary"},
+    {"id":"copula-role","input":"men hekimem sen muellimsen","target":"Mən həkiməm. Sən müəllimsən.","category":"morphology"},
+    {"id":"copula-plural","input":"biz telebeyik onlar muellimdir","target":"Biz tələbəyik. Onlar müəllimdir.","category":"morphology"},
+    {"id":"hunger-child","input":"uşaq ac idi ana yemək hazırladı","target":"Uşaq ac idi. Ana yemək hazırladı.","category":"boundary"},
+    {"id":"hunger-identity","input":"O ac idi, amma uşaq tox idi.","target":"O ac idi, amma uşaq tox idi.","category":"identity"},
+    {"id":"reported-hunger","input":"mən bilirəm ki o ac idi","target":"Mən bilirəm ki, o ac idi.","category":"meaning"},
+    {"id":"motion-identity","input":"Mən işə getdim.","target":"Mən işə getdim.","category":"identity"},
+    {"id":"technical-identity","input":"Əlbəttə, API işləyir; https://example.com/a?id=7 dəyişməməlidir.","target":"Əlbəttə, API işləyir; https://example.com/a?id=7 dəyişməməlidir.","category":"identity"},
+    {"id":"ascii-school","input":"mektebler acildi muellimler usaqlari qarsiladi","target":"Məktəblər açıldı. Müəllimlər uşaqları qarşıladı.","category":"spelling"},
+    {"id":"phonetic-school","input":"maktablar acildi muallimlar usaqlari qarsiladi","target":"Məktəblər açıldı. Müəllimlər uşaqları qarşıladı.","category":"spelling"},
+    {"id":"conjunction-names","input":"men geldim sen ise getdin amma eli qaldi","target":"Mən gəldim. Sən isə getdin, amma Əli qaldı.","category":"syntax"},
+    {"id":"heading","input":"# hesabat","target":"# Hesabat","category":"formatting"},
+    {"id":"emphasis","input":"**netice** hazirdir","target":"**Nəticə** hazırdır.","category":"formatting"},
+    {"id":"task","input":"- [x] sorgu gonderildi","target":"- [x] Sorğu göndərildi.","category":"formatting"},
+    {"id":"ordered-preservation","input":"1) sorgu gonderildi\n2) cavab hazirdir","target":"1) Sorğu göndərildi.\n2) Cavab hazırdır.","category":"formatting"},
+    {"id":"table","input":"| sahə | dəyər |\n| :--- | ---: |\n| veziyyet | yaxsi |","target":"| Sahə | Dəyər |\n| :--- | ---: |\n| Vəziyyət | Yaxşı |","category":"formatting"},
+    {"id":"code-identity","input":"```ts\nconst x = \"salam\"\n```","target":"```ts\nconst x = \"salam\"\n```","category":"identity"},
+    {"id":"tilde-code-identity","input":"~~~txt\nraw qelirem\n~~~","target":"~~~txt\nraw qelirem\n~~~","category":"identity"},
+    {"id":"open-code-identity","input":"```\nconst x = 1","target":"```\nconst x = 1","category":"identity"},
+    {"id":"link-label","input":"[sened](https://example.com/a_(b)?id=7)","target":"[Sənəd](https://example.com/a_(b)?id=7).","category":"formatting"},
+    {"id":"copula-identity","input":"Mən müəlliməm. Sən həkimsən.","target":"Mən müəlliməm. Sən həkimsən.","category":"identity"}
+  ]
+}

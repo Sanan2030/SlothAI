@@ -36,7 +36,7 @@ npm run nlp:data -- data/nlp/wikipedia-documents.jsonl /path/to/splits
 npm run nlp:ablation -- --data=/path/to/splits --variants=bounded-edits,bounded-uniform,bounded-no-context --epochs=16 --seeds=719 --sample-groups=20000 --output=/path/to/experiments
 npm run nlp:select -- --data=/path/to/splits --models=/path/to/experiments --output=/path/to/selected.json --threshold-floor=0.9999
 npm run nlp:compact -- /path/to/selected.json /path/to/compact.json /path/to/splits
-npm run nlp:evaluate -- --data=/path/to/splits/test.jsonl --model=/path/to/compact.json --full-editor --threshold-floor=0.9999 --enforce
+npm run nlp:evaluate -- --input=/path/to/splits/test.jsonl --model=/path/to/compact.json --full-editor --threshold-floor=0.9999 --enforce
 npm test
 npm run typecheck
 npm run lint
