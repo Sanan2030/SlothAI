@@ -1,0 +1,645 @@
+{
+  "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
+  "rows": [
+    {
+      "id": "diverse-001",
+      "groupId": "diverse-001",
+      "split": "train",
+      "domain": "education",
+      "input": "Maktablar bu həftə yeni laboratoriya açır.",
+      "target": "Məktəblər bu həftə yeni laboratoriya açır."
+    },
+    {
+      "id": "diverse-002",
+      "groupId": "diverse-002",
+      "split": "train",
+      "domain": "education",
+      "input": "Maktabların həyətində ağac əkdik.",
+      "target": "Məktəblərin həyətində ağac əkdik."
+    },
+    {
+      "id": "diverse-003",
+      "groupId": "diverse-003",
+      "split": "train",
+      "domain": "education",
+      "input": "Valideynlər maktablardakı kitabxananı ziyarət etdilər.",
+      "target": "Valideynlər məktəblərdəki kitabxananı ziyarət etdilər."
+    },
+    {
+      "id": "diverse-004",
+      "groupId": "diverse-004",
+      "split": "train",
+      "domain": "mail",
+      "input": "Senedleri imzalamaq üçün sabah ofisə gəlin.",
+      "target": "Sənədləri imzalamaq üçün sabah ofisə gəlin."
+    },
+    {
+      "id": "diverse-005",
+      "groupId": "diverse-005",
+      "split": "train",
+      "domain": "mail",
+      "input": "Senadlərin surətini əlavədə göndərirəm.",
+      "target": "Sənədlərin surətini əlavədə göndərirəm."
+    },
+    {
+      "id": "diverse-006",
+      "groupId": "diverse-006",
+      "split": "train",
+      "domain": "mail",
+      "input": "Müştəri matubları arxivdən çıxardı.",
+      "target": "Müştəri məktubları arxivdən çıxardı."
+    },
+    {
+      "id": "diverse-007",
+      "groupId": "diverse-007",
+      "split": "train",
+      "domain": "it",
+      "input": "Qovlqlarda olan ehtiyat nüsxələri serverə köçürdük.",
+      "target": "Qovluqlarda olan ehtiyat nüsxələri serverə köçürdük."
+    },
+    {
+      "id": "diverse-008",
+      "groupId": "diverse-008",
+      "split": "train",
+      "domain": "it",
+      "input": "Malumatları JSON formatında saxlayın.",
+      "target": "Məlumatları JSON formatında saxlayın."
+    },
+    {
+      "id": "diverse-009",
+      "groupId": "diverse-009",
+      "split": "train",
+      "domain": "it",
+      "input": "Hesabtların PDF nüsxəsi hazırdır.",
+      "target": "Hesabatların PDF nüsxəsi hazırdır."
+    },
+    {
+      "id": "diverse-010",
+      "groupId": "diverse-010",
+      "split": "train",
+      "domain": "service",
+      "input": "Mustarilər üçün ayrıca gözləmə zalı açılıb.",
+      "target": "Müştərilər üçün ayrıca gözləmə zalı açılıb."
+    },
+    {
+      "id": "diverse-011",
+      "groupId": "diverse-011",
+      "split": "train",
+      "domain": "service",
+      "input": "Əmakdaşların giriş kartları yenilənib.",
+      "target": "Əməkdaşların giriş kartları yenilənib."
+    },
+    {
+      "id": "diverse-012",
+      "groupId": "diverse-012",
+      "split": "train",
+      "domain": "business",
+      "input": "Şirkətlər əməkdaslarla yeni müqavilə bağladılar.",
+      "target": "Şirkətlər əməkdaşlarla yeni müqavilə bağladılar."
+    },
+    {
+      "id": "diverse-013",
+      "groupId": "diverse-013",
+      "split": "train",
+      "domain": "science",
+      "input": "Talabələr təcrübənin nəticəsini ölçdülər.",
+      "target": "Tələbələr təcrübənin nəticəsini ölçdülər."
+    },
+    {
+      "id": "diverse-014",
+      "groupId": "diverse-014",
+      "split": "train",
+      "domain": "education",
+      "input": "Müallimlər dərs planını birlikdə hazırladılar.",
+      "target": "Müəllimlər dərs planını birlikdə hazırladılar."
+    },
+    {
+      "id": "diverse-015",
+      "groupId": "diverse-015",
+      "split": "train",
+      "domain": "daily",
+      "input": "Kitbaları masanın üstünə qoydum.",
+      "target": "Kitabları masanın üstünə qoydum."
+    },
+    {
+      "id": "diverse-016",
+      "groupId": "diverse-016",
+      "split": "train",
+      "domain": "service",
+      "input": "Müştarilərə gecikmə barədə məlumat verdik.",
+      "target": "Müştərilərə gecikmə barədə məlumat verdik."
+    },
+    {
+      "id": "diverse-017",
+      "groupId": "diverse-017",
+      "split": "train",
+      "domain": "it",
+      "input": "Məllumatların silinməsi üçün təsdiq lazımdır.",
+      "target": "Məlumatların silinməsi üçün təsdiq lazımdır."
+    },
+    {
+      "id": "diverse-018",
+      "groupId": "diverse-018",
+      "split": "train",
+      "domain": "mail",
+      "input": "Məktbların çatdırılma tarixi dəyişib.",
+      "target": "Məktubların çatdırılma tarixi dəyişib."
+    },
+    {
+      "id": "diverse-019",
+      "groupId": "diverse-019",
+      "split": "train",
+      "domain": "science",
+      "input": "Hesabbatlardan alınan göstəriciləri müqayisə etdik.",
+      "target": "Hesabatlardan alınan göstəriciləri müqayisə etdik."
+    },
+    {
+      "id": "diverse-020",
+      "groupId": "diverse-020",
+      "split": "train",
+      "domain": "business",
+      "input": "Şirkatlərin illik gəliri yüksəlib.",
+      "target": "Şirkətlərin illik gəliri yüksəlib."
+    },
+    {
+      "id": "diverse-021",
+      "groupId": "diverse-021",
+      "split": "train",
+      "domain": "education",
+      "input": "Məktblərdə bu gün yarış keçirildi.",
+      "target": "Məktəblərdə bu gün yarış keçirildi."
+    },
+    {
+      "id": "diverse-022",
+      "groupId": "diverse-022",
+      "split": "train",
+      "domain": "daily",
+      "input": "Kitabblardan biri rəfdən yerə düşdü.",
+      "target": "Kitablardan biri rəfdən yerə düşdü."
+    },
+    {
+      "id": "diverse-023",
+      "groupId": "diverse-023",
+      "split": "train",
+      "domain": "it",
+      "input": "Qovlluq API cavablarını saxlamaq üçün ayrılıb.",
+      "target": "Qovluq API cavablarını saxlamaq üçün ayrılıb."
+    },
+    {
+      "id": "diverse-024",
+      "groupId": "diverse-024",
+      "split": "train",
+      "domain": "mail",
+      "input": "Senədin elektron imzasını yoxlayın.",
+      "target": "Sənədin elektron imzasını yoxlayın."
+    },
+    {
+      "id": "diverse-025",
+      "groupId": "diverse-025",
+      "split": "train",
+      "domain": "service",
+      "input": "Müştri zəmanət kartını təqdim etdi.",
+      "target": "Müştəri zəmanət kartını təqdim etdi."
+    },
+    {
+      "id": "diverse-026",
+      "groupId": "diverse-026",
+      "split": "train",
+      "domain": "science",
+      "input": "Müəlllim ölçmə cihazını işə saldı.",
+      "target": "Müəllim ölçmə cihazını işə saldı."
+    },
+    {
+      "id": "diverse-027",
+      "groupId": "diverse-027",
+      "split": "train",
+      "domain": "business",
+      "input": "Əməkdas müqaviləni diqqətlə oxudu.",
+      "target": "Əməkdaş müqaviləni diqqətlə oxudu."
+    },
+    {
+      "id": "diverse-028",
+      "groupId": "diverse-028",
+      "split": "train",
+      "domain": "education",
+      "input": "Təlləbə sualın cavabını lövhəyə yazdı.",
+      "target": "Tələbə sualın cavabını lövhəyə yazdı."
+    },
+    {
+      "id": "diverse-029",
+      "groupId": "diverse-029",
+      "split": "train",
+      "domain": "mail",
+      "input": "Maktubun ünvanı düzgün göstərilib.",
+      "target": "Məktubun ünvanı düzgün göstərilib."
+    },
+    {
+      "id": "diverse-030",
+      "groupId": "diverse-030",
+      "split": "train",
+      "domain": "it",
+      "input": "Malumat bazası gecə yenilənəcək.",
+      "target": "Məlumat bazası gecə yenilənəcək."
+    },
+    {
+      "id": "diverse-031",
+      "groupId": "diverse-031",
+      "split": "train",
+      "domain": "daily",
+      "input": "Hesabbatı çantama qoyub evə getdim.",
+      "target": "Hesabatı çantama qoyub evə getdim."
+    },
+    {
+      "id": "diverse-032",
+      "groupId": "diverse-032",
+      "split": "train",
+      "domain": "business",
+      "input": "Şirrkət filialını gələn ay açacaq.",
+      "target": "Şirkət filialını gələn ay açacaq."
+    },
+    {
+      "id": "diverse-033",
+      "groupId": "diverse-033",
+      "split": "train",
+      "domain": "science",
+      "input": "Araşdrma üç mərhələdən ibarətdir.",
+      "target": "Araşdırma üç mərhələdən ibarətdir."
+    },
+    {
+      "id": "diverse-034",
+      "groupId": "diverse-034",
+      "split": "train",
+      "domain": "service",
+      "input": "Nəticəni bildiriss vasitəsilə göndərdik.",
+      "target": "Nəticəni bildiriş vasitəsilə göndərdik."
+    },
+    {
+      "id": "diverse-035",
+      "groupId": "diverse-035",
+      "split": "train",
+      "domain": "it",
+      "input": "Təhlükəsizllik yoxlaması uğurla başa çatdı.",
+      "target": "Təhlükəsizlik yoxlaması uğurla başa çatdı."
+    },
+    {
+      "id": "diverse-036",
+      "groupId": "diverse-036",
+      "split": "train",
+      "domain": "daily",
+      "input": "Pəncərrəni açıb otağı havalandırdım.",
+      "target": "Pəncərəni açıb otağı havalandırdım."
+    },
+    {
+      "id": "diverse-037",
+      "groupId": "diverse-037",
+      "split": "train",
+      "domain": "science",
+      "input": "Təcrübəni laborattoriyada təkrar etdik.",
+      "target": "Təcrübəni laboratoriyada təkrar etdik."
+    },
+    {
+      "id": "diverse-038",
+      "groupId": "diverse-038",
+      "split": "train",
+      "domain": "service",
+      "input": "Müqavilənin şərttləri müştəriyə izah olundu.",
+      "target": "Müqavilənin şərtləri müştəriyə izah olundu."
+    },
+    {
+      "id": "diverse-039",
+      "groupId": "diverse-039",
+      "split": "train",
+      "domain": "business",
+      "input": "Ödənişin tarrixi cədvəldə göstərilib.",
+      "target": "Ödənişin tarixi cədvəldə göstərilib."
+    },
+    {
+      "id": "diverse-040",
+      "groupId": "diverse-040",
+      "split": "train",
+      "domain": "mail",
+      "input": "Təkliffimizi nəzərdən keçirməyinizi xahiş edirik.",
+      "target": "Təklifimizi nəzərdən keçirməyinizi xahiş edirik."
+    },
+    {
+      "id": "diverse-041",
+      "groupId": "diverse-041",
+      "split": "train",
+      "domain": "education",
+      "input": "Şagirdlər kitabları kiitabxanaya qaytardılar.",
+      "target": "Şagirdlər kitabları kitabxanaya qaytardılar."
+    },
+    {
+      "id": "diverse-042",
+      "groupId": "diverse-042",
+      "split": "train",
+      "domain": "it",
+      "input": "Backend komandası təhlükkəsizlik jurnalını yoxladı.",
+      "target": "Backend komandası təhlükəsizlik jurnalını yoxladı."
+    },
+    {
+      "id": "diverse-043",
+      "groupId": "diverse-043",
+      "split": "train",
+      "domain": "service",
+      "input": "Avtobusun marşrrutu bu gün dəyişib.",
+      "target": "Avtobusun marşrutu bu gün dəyişib."
+    },
+    {
+      "id": "diverse-044",
+      "groupId": "diverse-044",
+      "split": "train",
+      "domain": "science",
+      "input": "Enerjji sərfiyyatını hər saat ölçürük.",
+      "target": "Enerji sərfiyyatını hər saat ölçürük."
+    },
+    {
+      "id": "diverse-045",
+      "groupId": "diverse-045",
+      "split": "train",
+      "domain": "business",
+      "input": "Layihənin büdcəsi rəhbbərlik tərəfindən təsdiqləndi.",
+      "target": "Layihənin büdcəsi rəhbərlik tərəfindən təsdiqləndi."
+    },
+    {
+      "id": "diverse-046",
+      "groupId": "diverse-046",
+      "split": "train",
+      "domain": "daily",
+      "input": "Axşam dənniz kənarında gəzdik.",
+      "target": "Axşam dəniz kənarında gəzdik."
+    },
+    {
+      "id": "diverse-047",
+      "groupId": "diverse-047",
+      "split": "train",
+      "domain": "mail",
+      "input": "Görüş üçün münnasib vaxtı bizə bildirin.",
+      "target": "Görüş üçün münasib vaxtı bizə bildirin."
+    },
+    {
+      "id": "diverse-048",
+      "groupId": "diverse-048",
+      "split": "train",
+      "domain": "it",
+      "input": "Repo daxilindəki dəyişiklikləri nəticcə ilə müqayisə et.",
+      "target": "Repo daxilindəki dəyişiklikləri nəticə ilə müqayisə et."
+    },
+    {
+      "id": "diverse-049",
+      "groupId": "diverse-049",
+      "split": "validation",
+      "domain": "education",
+      "input": "Yeni maktablarda robototexnika dərnəyi yaradılıb.",
+      "target": "Yeni məktəblərdə robototexnika dərnəyi yaradılıb."
+    },
+    {
+      "id": "diverse-050",
+      "groupId": "diverse-050",
+      "split": "validation",
+      "domain": "mail",
+      "input": "Məktubbları poçt şöbəsinə təhvil verdiniz.",
+      "target": "Məktubları poçt şöbəsinə təhvil verdiniz."
+    },
+    {
+      "id": "diverse-051",
+      "groupId": "diverse-051",
+      "split": "validation",
+      "domain": "it",
+      "input": "Arxiv qovlluqlarında README faylı yoxdur.",
+      "target": "Arxiv qovluqlarında README faylı yoxdur."
+    },
+    {
+      "id": "diverse-052",
+      "groupId": "diverse-052",
+      "split": "validation",
+      "domain": "service",
+      "input": "Əməkkdaşlara təhlükəsizlik təlimi keçdik.",
+      "target": "Əməkdaşlara təhlükəsizlik təlimi keçdik."
+    },
+    {
+      "id": "diverse-053",
+      "groupId": "diverse-053",
+      "split": "validation",
+      "domain": "science",
+      "input": "Taləbələr maddənin sıxlığını hesabladılar.",
+      "target": "Tələbələr maddənin sıxlığını hesabladılar."
+    },
+    {
+      "id": "diverse-054",
+      "groupId": "diverse-054",
+      "split": "validation",
+      "domain": "business",
+      "input": "Müqavilə senadlərində tarix səhv göstərilib.",
+      "target": "Müqavilə sənədlərində tarix səhv göstərilib."
+    },
+    {
+      "id": "diverse-055",
+      "groupId": "diverse-055",
+      "split": "validation",
+      "domain": "daily",
+      "input": "Müəllimmlərlə bayramda görüşdük.",
+      "target": "Müəllimlərlə bayramda görüşdük."
+    },
+    {
+      "id": "diverse-056",
+      "groupId": "diverse-056",
+      "split": "validation",
+      "domain": "mail",
+      "input": "Malumatların doğruluğunu təsdiq etməyinizi istəyirik.",
+      "target": "Məlumatların doğruluğunu təsdiq etməyinizi istəyirik."
+    },
+    {
+      "id": "diverse-057",
+      "groupId": "diverse-057",
+      "split": "validation",
+      "domain": "it",
+      "input": "Hesabbatlardakı sütun adlarını dəyişin.",
+      "target": "Hesabatlardakı sütun adlarını dəyişin."
+    },
+    {
+      "id": "diverse-058",
+      "groupId": "diverse-058",
+      "split": "validation",
+      "domain": "service",
+      "input": "Şirkattlərə təqdim edilən xidmət yenilənib.",
+      "target": "Şirkətlərə təqdim edilən xidmət yenilənib."
+    },
+    {
+      "id": "diverse-059",
+      "groupId": "diverse-059",
+      "split": "validation",
+      "domain": "education",
+      "input": "Kitabblara qoruyucu üzlük taxdıq.",
+      "target": "Kitablara qoruyucu üzlük taxdıq."
+    },
+    {
+      "id": "diverse-060",
+      "groupId": "diverse-060",
+      "split": "validation",
+      "domain": "business",
+      "input": "Mustərilərlə uzunmüddətli əməkdaşlıq qururuq.",
+      "target": "Müştərilərlə uzunmüddətli əməkdaşlıq qururuq."
+    },
+    {
+      "id": "diverse-061",
+      "groupId": "diverse-061",
+      "split": "test",
+      "domain": "education",
+      "input": "Kənddəki maktablar yeni kompüter aldı.",
+      "target": "Kənddəki məktəblər yeni kompüter aldı."
+    },
+    {
+      "id": "diverse-062",
+      "groupId": "diverse-062",
+      "split": "test",
+      "domain": "mail",
+      "input": "Zərfdəki maktubları kuryerə verin.",
+      "target": "Zərfdəki məktubları kuryerə verin."
+    },
+    {
+      "id": "diverse-063",
+      "groupId": "diverse-063",
+      "split": "test",
+      "domain": "it",
+      "input": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
+      "target": "Deploy zamanı qovluqların icazəsi dəyişdi."
+    },
+    {
+      "id": "diverse-064",
+      "groupId": "diverse-064",
+      "split": "test",
+      "domain": "service",
+      "input": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
+      "target": "Əməkdaşları yeni qaydalarla tanış etdilər."
+    },
+    {
+      "id": "diverse-065",
+      "groupId": "diverse-065",
+      "split": "test",
+      "domain": "science",
+      "input": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
+      "target": "Tələbələrin ölçdüyü temperatur sabit qaldı."
+    },
+    {
+      "id": "diverse-066",
+      "groupId": "diverse-066",
+      "split": "test",
+      "domain": "business",
+      "input": "Tender senadlərini portal vasitəsilə təqdim edin.",
+      "target": "Tender sənədlərini portal vasitəsilə təqdim edin."
+    },
+    {
+      "id": "diverse-067",
+      "groupId": "diverse-067",
+      "split": "test",
+      "domain": "daily",
+      "input": "Kitabbları dostuma bir həftəliyə verdim.",
+      "target": "Kitabları dostuma bir həftəliyə verdim."
+    },
+    {
+      "id": "diverse-068",
+      "groupId": "diverse-068",
+      "split": "test",
+      "domain": "mail",
+      "input": "Müəlllimlərin cavabını sabah alacağıq.",
+      "target": "Müəllimlərin cavabını sabah alacağıq."
+    },
+    {
+      "id": "diverse-069",
+      "groupId": "diverse-069",
+      "split": "test",
+      "domain": "it",
+      "input": "Malumatlara giriş OAuth2 ilə qorunur.",
+      "target": "Məlumatlara giriş OAuth2 ilə qorunur."
+    },
+    {
+      "id": "diverse-070",
+      "groupId": "diverse-070",
+      "split": "test",
+      "domain": "service",
+      "input": "Mustərilərin növbəsi ekranda göstərilir.",
+      "target": "Müştərilərin növbəsi ekranda göstərilir."
+    },
+    {
+      "id": "diverse-071",
+      "groupId": "diverse-071",
+      "split": "test",
+      "domain": "science",
+      "input": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
+      "target": "Hesabatlardakı rəqəmlər ölçməyə uyğundur."
+    },
+    {
+      "id": "diverse-072",
+      "groupId": "diverse-072",
+      "split": "test",
+      "domain": "business",
+      "input": "Şirkəttlərin vergi hesabatı təqdim olunub.",
+      "target": "Şirkətlərin vergi hesabatı təqdim olunub."
+    },
+    {
+      "id": "diverse-073",
+      "groupId": "diverse-073",
+      "split": "test",
+      "domain": "daily",
+      "input": "Mən telefonu söndürüb yatdım, amma yağmadı.",
+      "target": "Mən telefonu söndürüb yatdım, amma yağmadı."
+    },
+    {
+      "id": "diverse-074",
+      "groupId": "diverse-074",
+      "split": "test",
+      "domain": "it",
+      "input": "API, backend və framework adlarını dəyişməyin.",
+      "target": "API, backend və framework adlarını dəyişməyin."
+    },
+    {
+      "id": "diverse-075",
+      "groupId": "diverse-075",
+      "split": "test",
+      "domain": "mail",
+      "input": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik.",
+      "target": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik."
+    },
+    {
+      "id": "diverse-076",
+      "groupId": "diverse-076",
+      "split": "test",
+      "domain": "science",
+      "input": "Mən gələndə sən gedirsən.",
+      "target": "Mən gələndə sən gedirsən."
+    },
+    {
+      "id": "diverse-077",
+      "groupId": "diverse-077",
+      "split": "test",
+      "domain": "daily",
+      "input": "Biz kitabları birlikdə oxuyuruq.",
+      "target": "Biz kitabları birlikdə oxuyuruq."
+    },
+    {
+      "id": "diverse-078",
+      "groupId": "diverse-078",
+      "split": "test",
+      "domain": "it",
+      "input": "GET /api/transform cavabı 400 oldu.",
+      "target": "GET /api/transform cavabı 400 oldu."
+    },
+    {
+      "id": "diverse-079",
+      "groupId": "diverse-079",
+      "split": "test",
+      "domain": "service",
+      "input": "Onlar sifarişi vaxtında göndərdi.",
+      "target": "Onlar sifarişi vaxtında göndərdi."
+    },
+    {
+      "id": "diverse-080",
+      "groupId": "diverse-080",
+      "split": "test",
+      "domain": "business",
+      "input": "Siz sənədi dünən hazırladınız.",
+      "target": "Siz sənədi dünən hazırladınız."
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
+  "total": 20,
+  "exact": 14,
+  "neuralExact": 13,
+  "rows": [
+    {
+      "id": "diverse-061",
+      "groupId": "diverse-061",
+      "split": "test",
+      "domain": "education",
+      "input": "Kənddəki maktablar yeni kompüter aldı.",
+      "target": "Kənddəki məktəblər yeni kompüter aldı.",
+      "actual": "Kənddəki məktəblər yeni kompüter aldı.",
+      "neuralActual": "Kənddəki məktəblər yeni kompüter aldı."
+    },
+    {
+      "id": "diverse-062",
+      "groupId": "diverse-062",
+      "split": "test",
+      "domain": "mail",
+      "input": "Zərfdəki maktubları kuryerə verin.",
+      "target": "Zərfdəki məktubları kuryerə verin.",
+      "actual": "Zərfdəki maktubları kuryerə verin.",
+      "neuralActual": "Zərfdəki maktubları kuryerə verin."
+    },
+    {
+      "id": "diverse-063",
+      "groupId": "diverse-063",
+      "split": "test",
+      "domain": "it",
+      "input": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
+      "target": "Deploy zamanı qovluqların icazəsi dəyişdi.",
+      "actual": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
+      "neuralActual": "Deploy zamanı qovluqqların icazəsi dəyişdi."
+    },
+    {
+      "id": "diverse-064",
+      "groupId": "diverse-064",
+      "split": "test",
+      "domain": "service",
+      "input": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
+      "target": "Əməkdaşları yeni qaydalarla tanış etdilər.",
+      "actual": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
+      "neuralActual": "Əməkkdaşları yeni qaydalarla tanış etdilər."
+    },
+    {
+      "id": "diverse-065",
+      "groupId": "diverse-065",
+      "split": "test",
+      "domain": "science",
+      "input": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
+      "target": "Tələbələrin ölçdüyü temperatur sabit qaldı.",
+      "actual": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
+      "neuralActual": "Taləbələrin ölçdüyü temperatur sabit qaldı."
+    },
+    {
+      "id": "diverse-066",
+      "groupId": "diverse-066",
+      "split": "test",
+      "domain": "business",
+      "input": "Tender senadlərini portal vasitəsilə təqdim edin.",
+      "target": "Tender sənədlərini portal vasitəsilə təqdim edin.",
+      "actual": "Tender senadlərini portal vasitəsilə təqdim edin.",
+      "neuralActual": "Tender senadlərini portal vasitəsilə təqdim edin."
+    },
+    {
+      "id": "diverse-067",
+      "groupId": "diverse-067",
+      "split": "test",
+      "domain": "daily",
+      "input": "Kitabbları dostuma bir həftəliyə verdim.",
+      "target": "Kitabları dostuma bir həftəliyə verdim.",
+      "actual": "Kitabları dostuma bir həftəliyə verdim.",
+      "neuralActual": "Kitabları dostuma bir həftəliyə verdim."
+    },
+    {
+      "id": "diverse-068",
+      "groupId": "diverse-068",
+      "split": "test",
+      "domain": "mail",
+      "input": "Müəlllimlərin cavabını sabah alacağıq.",
+      "target": "Müəllimlərin cavabını sabah alacağıq.",
+      "actual": "Müəllimlərin cavabını sabah alacağıq.",
+      "neuralActual": "Müəllimlərin cavabını sabah alacağıq."
+    },
+    {
+      "id": "diverse-069",
+      "groupId": "diverse-069",
+      "split": "test",
+      "domain": "it",
+      "input": "Malumatlara giriş OAuth2 ilə qorunur.",
+      "target": "Məlumatlara giriş OAuth2 ilə qorunur.",
+      "actual": "Məlumatlara giriş OAuth2 ilə qorunur.",
+      "neuralActual": "Məlumatlara giriş OAuth2 ilə qorunur."
+    },
+    {
+      "id": "diverse-070",
+      "groupId": "diverse-070",
+      "split": "test",
+      "domain": "service",
+      "input": "Mustərilərin növbəsi ekranda göstərilir.",
+      "target": "Müştərilərin növbəsi ekranda göstərilir.",
+      "actual": "Müştərilərin növbəsi ekranda göstərilir.",
+      "neuralActual": "Mustərilərin növbəsi ekranda göstərilir."
+    },
+    {
+      "id": "diverse-071",
+      "groupId": "diverse-071",
+      "split": "test",
+      "domain": "science",
+      "input": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
+      "target": "Hesabatlardakı rəqəmlər ölçməyə uyğundur.",
+      "actual": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
+      "neuralActual": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur."
+    },
+    {
+      "id": "diverse-072",
+      "groupId": "diverse-072",
+      "split": "test",
+      "domain": "business",
+      "input": "Şirkəttlərin vergi hesabatı təqdim olunub.",
+      "target": "Şirkətlərin vergi hesabatı təqdim olunub.",
+      "actual": "Şirkətlərin vergi hesabatı təqdim olunub.",
+      "neuralActual": "Şirkətlərin vergi hesabatı təqdim olunub."
+    },
+    {
+      "id": "diverse-073",
+      "groupId": "diverse-073",
+      "split": "test",
+      "domain": "daily",
+      "input": "Mən telefonu söndürüb yatdım, amma yağmadı.",
+      "target": "Mən telefonu söndürüb yatdım, amma yağmadı.",
+      "actual": "Mən telefonu söndürüb yatdım, amma yağmadı.",
+      "neuralActual": "Mən telefonu söndürüb yatdım, amma yağmadı."
+    },
+    {
+      "id": "diverse-074",
+      "groupId": "diverse-074",
+      "split": "test",
+      "domain": "it",
+      "input": "API, backend və framework adlarını dəyişməyin.",
+      "target": "API, backend və framework adlarını dəyişməyin.",
+      "actual": "API, backend və framework adlarını dəyişməyin.",
+      "neuralActual": "API, backend və framework adlarını dəyişməyin."
+    },
+    {
+      "id": "diverse-075",
+      "groupId": "diverse-075",
+      "split": "test",
+      "domain": "mail",
+      "input": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik.",
+      "target": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik.",
+      "actual": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik.",
+      "neuralActual": "Salam, hər vaxtınız xeyir! Cavabınızı gözləyirik."
+    },
+    {
+      "id": "diverse-076",
+      "groupId": "diverse-076",
+      "split": "test",
+      "domain": "science",
+      "input": "Mən gələndə sən gedirsən.",
+      "target": "Mən gələndə sən gedirsən.",
+      "actual": "Mən gələndə sən gedirsən.",
+      "neuralActual": "Mən gələndə sən gedirsən."
+    },
+    {
+      "id": "diverse-077",
+      "groupId": "diverse-077",
+      "split": "test",
+      "domain": "daily",
+      "input": "Biz kitabları birlikdə oxuyuruq.",
+      "target": "Biz kitabları birlikdə oxuyuruq.",
+      "actual": "Biz kitabları birlikdə oxuyuruq.",
+      "neuralActual": "Biz kitabları birlikdə oxuyuruq."
+    },
+    {
+      "id": "diverse-078",
+      "groupId": "diverse-078",
+      "split": "test",
+      "domain": "it",
+      "input": "GET /api/transform cavabı 400 oldu.",
+      "target": "GET /api/transform cavabı 400 oldu.",
+      "actual": "GET /api/transform cavabı 400 oldu.",
+      "neuralActual": "GET /api/transform cavabı 400 oldu."
+    },
+    {
+      "id": "diverse-079",
+      "groupId": "diverse-079",
+      "split": "test",
+      "domain": "service",
+      "input": "Onlar sifarişi vaxtında göndərdi.",
+      "target": "Onlar sifarişi vaxtında göndərdi.",
+      "actual": "Onlar sifarişi vaxtında göndərdi.",
+      "neuralActual": "Onlar sifarişi vaxtında göndərdi."
+    },
+    {
+      "id": "diverse-080",
+      "groupId": "diverse-080",
+      "split": "test",
+      "domain": "business",
+      "input": "Siz sənədi dünən hazırladınız.",
+      "target": "Siz sənədi dünən hazırladınız.",
+      "actual": "Siz sənədi dünən hazırladınız.",
+      "neuralActual": "Siz sənədi dünən hazırladınız."
+    }
+  ],
+  "baselineExact": 11,
+  "gained": [
+    "diverse-067",
+    "diverse-068",
+    "diverse-072"
+  ],
+  "regressions": []
+}

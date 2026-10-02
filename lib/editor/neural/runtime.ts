@@ -1,6 +1,7 @@
 import { finiteAnalyses, agreementForms } from './morphology';
 import { isFinitePredicate } from '../segmentation';
 import artifact from './model.json';
+import pairedArtifact from '../local-ai/paired-model.json';
 import { predictNetwork } from './network';
 import { neuralIndex, neuralCandidates, lexicalFeatures, agreementFeatures, subjects, type Subject } from './features';
 import type { NeuralArtifact } from './types';
@@ -11,21 +12,49 @@ import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
 const model = artifact as NeuralArtifact, index = neuralIndex(model.lexicon);
 
+/** Explicit diacritics may shift with inserted/deleted letters, but may not
+ * themselves be erased or replaced. Work is bounded by the token length. */
+export function preservesDiacritics(raw: string, target: string): boolean {
+  const a = [...raw.toLocaleLowerCase('az-AZ')], b = [...target.toLocaleLowerCase('az-AZ')];
+  const protectedLetter = (letter: string) => /[əıçğöşü]/u.test(letter);
+  let previous = b.map((_, at) => at + 1); previous.unshift(0);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [protectedLetter(a[i - 1]) ? Infinity : previous[0] + 1];
+    for (let j = 1; j <= b.length; j++) current[j] = Math.min(
+      current[j - 1] + 1, protectedLetter(a[i - 1]) ? Infinity : previous[j] + 1,
+      previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : protectedLetter(a[i - 1]) ? Infinity : 1));
+    previous = current;
+  }
+  return previous[b.length] <= 4;
+}
+
 /** This network repairs unknown surfaces. Established/explicit valid words win. */
 export function neuralSpelling(text: string): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word, lower = raw.toLocaleLowerCase('az-AZ');
-    if (!/^[\p{L}]{4,24}$/u.test(raw) || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
+    if (!/^[\p{L}]{4,24}$/u.test(raw) || model.lexicon.words[lower] || Object.hasOwn(pairedArtifact.words, lower)
       || /\p{Ll}\p{Lu}/u.test(raw) || /^[\p{Lu}]+$/u.test(raw)
+      || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
       || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)) continue;
+    // Known errors use frozen prior weights; new errors use the newly trained head.
+    const lexicalNetwork = model.lexicalAnchor && Object.values(model.lexicon.edits[lower] ?? {}).some(count => count >= 3) ? model.lexicalAnchor : model.lexical;
+    // Short forms often represent different valid verbs (itdi/etdi).
+    // Require direct learned evidence before attempting their spelling.
+    if (lower.length < 5 && !Object.hasOwn(model.lexicon.edits, lower)) continue;
     const choices = neuralCandidates(model.lexicon, index, raw).map(word => ({ word,
-      score: predictNetwork(model.lexical, lexicalFeatures(model.lexicon, raw, word, tokens, at)) }))
+      score: predictNetwork(lexicalNetwork, lexicalFeatures(model.lexicon, raw, word, tokens, at)) }))
       .sort((a, b) => b.score - a.score || a.word.localeCompare(b.word, 'az'));
     const best = choices[0];
     if (!best || best.score < model.lexicalThreshold || best.score - (choices[1]?.score ?? 0) < model.lexicalMargin) continue;
+    const learned = model.lexicon.edits[lower]?.[best.word] ?? 0;
+    const repeatedLetterRepair = [...lower].some((letter, i) => i > 0 && letter === lower[i - 1]
+      && fold(lower.slice(0, i) + lower.slice(i + 1)) === fold(best.word));
+    // Do not infer a case-ending deletion from an unseen spelling variant.
+    if (!learned && lower.length !== best.word.length && !repeatedLetterRepair) continue;
+    if (!learned && /(?:anda|əndə|arkən|ərkən|ınca|incə)$/u.test(lower)) continue;
     if (fold(raw) === fold(best.word)) continue; // Existing context model owns diacritics-only ambiguity.
-    if ([...lower].some((letter, i) => /[əıçğöşü]/u.test(letter) && best.word[i] !== letter)) continue;
+    if (!preservesDiacritics(raw, best.word)) continue;
     const target = /^\p{Lu}/u.test(raw) ? best.word[0].toLocaleUpperCase('az-AZ') + best.word.slice(1) : best.word;
     result += text.slice(cursor, token.start) + target; cursor = token.end;
   }

@@ -1,3 +1,5 @@
+> Bu sənəd ilkin v1 buraxılışının tarixi hesabatıdır. Cari təlim və komandalar: [neural-training-v2.md](neural-training-v2.md).
+
 # Kiçik neyron düzəliş modeli
 
 Başlanğıc main: `24cbc5355f4373e234cf749ef479e5fd362c3117`.

@@ -67,11 +67,12 @@ jobs:
           npm run --ignore-scripts local-ai:paired:check
           npm run --ignore-scripts local-ai:reliability
           npm run --ignore-scripts neural:corpus
-          git diff --exit-code -- data/neural/corpus.json
-          npm run --ignore-scripts neural:train -- --epochs=12
-          npm run --ignore-scripts neural:continue -- --epochs=12
+          git diff --exit-code -- data/neural/corpus.json data/neural/data-quality.json
+          npm run --ignore-scripts neural:train -- --epochs=72
+          npm run --ignore-scripts neural:continue -- --epochs=24
           git diff --exit-code -- lib/editor/neural/model.json data/neural/training-report.json data/neural/training-history.json
           npm run --ignore-scripts neural:check
+          npm run --ignore-scripts neural:diversity:check
           npm run --ignore-scripts gold:check
           npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check

@@ -1,27 +1,38 @@
 {
-  "architecture": "Two one-hidden-layer tanh MLPs; binary candidate/compatibility heads; CPU-only deterministic SGD",
+  "architecture": "Candidate and agreement tanh MLPs plus frozen lexical anchor for previously learned errors; CPU-only deterministic SGD",
   "epochs": {
-    "lexical": 24,
+    "lexical": 96,
     "agreement": 24
   },
-  "parameters": 494,
-  "corpusSha256": "53580bd736d04fab5eb28514efdf4190d4f2a2bfc5fbfabaa7d638b58659b686",
-  "artifactSha256": "713e1fdf9ec3dbc7e7f2be9606c2b6626ad2b22d53de17fa7e34274d62ab3381",
-  "artifactBytes": 93553,
+  "parameters": 795,
+  "corpusSha256": "ada409c66611ef93aa9f6beee44c75557c801372d08d19dbdbcf28800982491b",
+  "seedSha256": "f9d085b70bb569b8a68b30496c788540ac329cd552c38715b7aa80ca06e991c6",
+  "artifactSha256": "470a28423bce4a40c1c07def6df98515b7f9a001b84cf39e729fc72f7f50412a",
+  "artifactBytes": 129762,
   "lexical": {
-    "trainExamples": 3382,
-    "validationExamples": 371,
-    "testExamples": 817,
-    "validationLoss": 0.0031486296184356855,
-    "threshold": 0.6
+    "trainExamples": 209,
+    "updateExamples": 206,
+    "hiddenMemorizationFeature": 2,
+    "validationExamples": 41,
+    "testExamples": 78,
+    "validationLoss": 0.17236039405386647,
+    "threshold": 0.9,
+    "calibration": {
+      "threshold": 0.9,
+      "margin": 0.15,
+      "accepted": 16,
+      "groups": 19
+    }
   },
   "agreement": {
-    "trainExamples": 1260,
-    "validationExamples": 264,
-    "testExamples": 420,
-    "validationLoss": 0.0017143315465562897,
+    "trainExamples": 141,
+    "validationExamples": 25,
+    "testExamples": 50,
+    "validationLoss": 0.0018718059017573299,
     "threshold": 0.6
   },
-  "source": "Assistant-authored morphology/template exercises, not real user or human-certified language data",
+  "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
+  "seedCommit": "a5d7c00f9a45de8cb06f5b8271f303ea9a2cbd36",
+  "evaluationCaveat": "Current holdout excludes new updates; v1 may have learned the word forms, error channels and grammar features. Not a cold-start unseen-lemma test.",
   "limitations": "Synthetic, morphology-assisted specialized correction networks; no general semantic understanding or calibrated probability guarantee."
 }

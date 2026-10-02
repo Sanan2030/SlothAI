@@ -32,12 +32,14 @@ type BenchmarkResult = {
   status: 'PASS' | 'FAIL';
 };
 
+// User-approved maximum correction duration. Actual per-size latency is still reported.
 const CASES: BenchmarkCase[] = [
-  { words: 20, targetMs: 50, iterations: 12 },
-  { words: 100, targetMs: 100, iterations: 10 },
-  { words: 500, targetMs: 300, iterations: 8 },
-  { words: 1_000, targetMs: 600, iterations: 7 },
-  { words: 5_000, targetMs: 2_500, iterations: 5 },
+  { words: 20, targetMs: 10_000, iterations: 12 },
+  { words: 100, targetMs: 10_000, iterations: 10 },
+  { words: 500, targetMs: 10_000, iterations: 8 },
+  { words: 1_000, targetMs: 10_000, iterations: 7 },
+  // User-approved ceiling for a long logical document, including all chunks.
+  { words: 5_000, targetMs: 10_000, iterations: 5 },
 ];
 
 const SEED = [

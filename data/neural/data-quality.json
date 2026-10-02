@@ -1,0 +1,24 @@
+{
+  "lexical": {
+    "rows": 224,
+    "duplicates": [],
+    "nearDuplicates": [],
+    "splitLeaks": []
+  },
+  "originalLexicalRows": 2760,
+  "originalAgreementRows": 1944,
+  "agreementRows": 216,
+  "agreementFeatureDuplicates": 0,
+  "agreementFeatureSplitLeaks": 0,
+  "naturalContexts": 80,
+  "domains": [
+    "business",
+    "daily",
+    "education",
+    "it",
+    "mail",
+    "science",
+    "service"
+  ],
+  "nearDuplicateDefinition": "NFC + Azerbaijani folding + token-bigram Jaccard >= 0.8; not a semantic equivalence guarantee"
+}

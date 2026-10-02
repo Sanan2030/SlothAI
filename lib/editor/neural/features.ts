@@ -14,7 +14,12 @@ export function neuralIndex(model: PairedModel): Map<string, string[]> {
 }
 export function neuralCandidates(model: PairedModel, index: Map<string, string[]>, raw: string): string[] {
   const input = fold(normalizeDigraphs(raw));
-  return [...new Set([...Object.keys(model.edits[raw.toLocaleLowerCase('az-AZ')] ?? {}), ...(index.get(skeleton(raw)) ?? [])])]
+  const key = skeleton(raw), keys = new Set([key]);
+  // Only truly adjacent repeated letters may be collapsed. Removing vowels
+  // first would incorrectly treat the separated n's in 'olunan' as a typo.
+  const surface = raw.toLocaleLowerCase('az-AZ');
+  for (let at = 1; at < surface.length; at++) if (surface[at] === surface[at - 1]) keys.add(skeleton(surface.slice(0, at) + surface.slice(at + 1)));
+  return [...new Set([...Object.keys(model.edits[raw.toLocaleLowerCase('az-AZ')] ?? {}), ...[...keys].flatMap(value => index.get(value) ?? [])])]
     .filter(word => boundedEditDistance(input, fold(word), 4) <= 4 && word !== raw.toLocaleLowerCase('az-AZ')).slice(0, 24);
 }
 export function lexicalFeatures(model: PairedModel, raw: string, target: string, tokens: readonly Token[], at: number): number[] {
