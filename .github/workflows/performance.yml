@@ -71,6 +71,10 @@ jobs:
           npm run --ignore-scripts neural:train -- --epochs=72
           npm run --ignore-scripts neural:continue -- --epochs=24
           git diff --exit-code -- lib/editor/neural/model.json data/neural/training-report.json data/neural/training-history.json
+          npm run --ignore-scripts neural:attention:train
+          git diff --exit-code -- lib/editor/neural/attention-model.json data/neural/attention-training-report.json
+          npm run --ignore-scripts neural:attention:check
+          npm run --ignore-scripts neural:attention:independent:check
           npm run --ignore-scripts neural:check
           npm run --ignore-scripts neural:diversity:check
           npm run --ignore-scripts neural:expansion:check

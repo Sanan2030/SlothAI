@@ -1,0 +1,565 @@
+{
+  "total": 32,
+  "exact": 27,
+  "neuralExact": 25,
+  "baselineExact": 21,
+  "baselineNeuralExact": null,
+  "acceptedHeadCorrections": 19,
+  "wrongHeadCorrections": 0,
+  "remainingFailures": [
+    "attention-independent-017",
+    "attention-independent-018",
+    "attention-independent-019",
+    "attention-independent-020",
+    "attention-independent-024"
+  ],
+  "gained": [
+    "attention-independent-003",
+    "attention-independent-014",
+    "attention-independent-015",
+    "attention-independent-016",
+    "attention-independent-022",
+    "attention-independent-023"
+  ],
+  "regressions": [],
+  "neuralRegressions": [],
+  "rows": [
+    {
+      "id": "attention-independent-001",
+      "groupId": "attention-independent-001",
+      "split": "test",
+      "domain": "swap",
+      "input": "API servisi üçün konfqiurasiya hüquqları məhdudlaşdırıldı.",
+      "target": "API servisi üçün konfiqurasiya hüquqları məhdudlaşdırıldı.",
+      "raw": "konfqiurasiya",
+      "expectedWord": "konfiqurasiya",
+      "actual": "API servisi üçün konfiqurasiya hüquqları məhdudlaşdırıldı.",
+      "neuralActual": "API servisi üçün konfiqurasiya hüquqları məhdudlaşdırıldı.",
+      "decision": {
+        "candidate": "konfiqurasiya",
+        "score": 0.9903264224534847,
+        "margin": 0.8316696615599576,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-002",
+      "groupId": "attention-independent-002",
+      "split": "test",
+      "domain": "swap",
+      "input": "Klinikada laboratroiya bütün həftə ərzində işləyir.",
+      "target": "Klinikada laboratoriya bütün həftə ərzində işləyir.",
+      "raw": "laboratroiya",
+      "expectedWord": "laboratoriya",
+      "actual": "Klinikada laboratoriya bütün həftə ərzində işləyir.",
+      "neuralActual": "Klinikada laboratoriya bütün həftə ərzində işləyir.",
+      "decision": {
+        "candidate": "laboratoriya",
+        "score": 0.9935022820484528,
+        "margin": 0.6154473520115686,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-003",
+      "groupId": "attention-independent-003",
+      "split": "test",
+      "domain": "swap",
+      "input": "Seçdiyim nuiversitet elmi əməkdaşlığı dəstəkləyir.",
+      "target": "Seçdiyim universitet elmi əməkdaşlığı dəstəkləyir.",
+      "raw": "nuiversitet",
+      "expectedWord": "universitet",
+      "actual": "Seçdiyim universitet elmi əməkdaşlığı dəstəkləyir.",
+      "neuralActual": "Seçdiyim universitet elmi əməkdaşlığı dəstəkləyir.",
+      "decision": {
+        "candidate": "universitet",
+        "score": 0.9743676237622865,
+        "margin": 0.8404203755122492,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-004",
+      "groupId": "attention-independent-004",
+      "split": "test",
+      "domain": "swap",
+      "input": "Elektron muqaviel telefondan imzalandı.",
+      "target": "Elektron müqavilə telefondan imzalandı.",
+      "raw": "muqaviel",
+      "expectedWord": "müqavilə",
+      "actual": "Elektron müqavilə telefondan imzalandı.",
+      "neuralActual": "Elektron müqavilə telefondan imzalandı.",
+      "decision": {
+        "candidate": "müqavilə",
+        "score": 0.9896856770589106,
+        "margin": 0.9470945670945887,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-005",
+      "groupId": "attention-independent-005",
+      "split": "test",
+      "domain": "swap",
+      "input": "Müştərinin sifairs məlumatları anbarda yoxlanılır.",
+      "target": "Müştərinin sifariş məlumatları anbarda yoxlanılır.",
+      "raw": "sifairs",
+      "expectedWord": "sifariş",
+      "actual": "Müştərinin sifariş məlumatları anbarda yoxlanılır.",
+      "neuralActual": "Müştərinin sifariş məlumatları anbarda yoxlanılır.",
+      "decision": {
+        "candidate": "sifariş",
+        "score": 0.6488591755250784,
+        "margin": 0.6405976296125552,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-006",
+      "groupId": "attention-independent-006",
+      "split": "test",
+      "domain": "swap",
+      "input": "Planlaşdırılan tedqiaqt üçün icazə aldıq.",
+      "target": "Planlaşdırılan tədqiqat üçün icazə aldıq.",
+      "raw": "tedqiaqt",
+      "expectedWord": "tədqiqat",
+      "actual": "Planlaşdırılan tədqiqat üçün icazə aldıq.",
+      "neuralActual": "Planlaşdırılan tədqiqat üçün icazə aldıq.",
+      "decision": {
+        "candidate": "tədqiqat",
+        "score": 0.9924121666521964,
+        "margin": 0.4950609001202921,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-007",
+      "groupId": "attention-independent-007",
+      "split": "test",
+      "domain": "swap",
+      "input": "Rübün sonunda mailyye şöbəsinə hesabat verdik.",
+      "target": "Rübün sonunda maliyyə şöbəsinə hesabat verdik.",
+      "raw": "mailyye",
+      "expectedWord": "maliyyə",
+      "actual": "Rübün sonunda maliyyə şöbəsinə hesabat verdik.",
+      "neuralActual": "Rübün sonunda maliyyə şöbəsinə hesabat verdik.",
+      "decision": {
+        "candidate": "maliyyə",
+        "score": 0.7264875414892275,
+        "margin": 0.7160201129782485,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-008",
+      "groupId": "attention-independent-008",
+      "split": "test",
+      "domain": "swap",
+      "input": "Dünən eşitdiyim muhaizre çox maraqlı idi.",
+      "target": "Dünən eşitdiyim mühazirə çox maraqlı idi.",
+      "raw": "muhaizre",
+      "expectedWord": "mühazirə",
+      "actual": "Dünən eşitdiyim mühazirə çox maraqlı idi.",
+      "neuralActual": "Dünən eşitdiyim mühazirə çox maraqlı idi.",
+      "decision": {
+        "candidate": "mühazirə",
+        "score": 0.8554599813617801,
+        "margin": 0.845413404728099,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-009",
+      "groupId": "attention-independent-009",
+      "split": "test",
+      "domain": "swap",
+      "input": "Bayram günlərində enqliyyat cədvəli dəyişəcək.",
+      "target": "Bayram günlərində nəqliyyat cədvəli dəyişəcək.",
+      "raw": "enqliyyat",
+      "expectedWord": "nəqliyyat",
+      "actual": "Bayram günlərində nəqliyyat cədvəli dəyişəcək.",
+      "neuralActual": "Bayram günlərində nəqliyyat cədvəli dəyişəcək.",
+      "decision": {
+        "candidate": "nəqliyyat",
+        "score": 0.9790611025851189,
+        "margin": 0.8663660864882642,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-010",
+      "groupId": "attention-independent-010",
+      "split": "test",
+      "domain": "swap",
+      "input": "Komandamız tehlukeiszlik üzrə yeni sertifikat aldı.",
+      "target": "Komandamız təhlükəsizlik üzrə yeni sertifikat aldı.",
+      "raw": "tehlukeiszlik",
+      "expectedWord": "təhlükəsizlik",
+      "actual": "Komandamız təhlükəsizlik üzrə yeni sertifikat aldı.",
+      "neuralActual": "Komandamız təhlükəsizlik üzrə yeni sertifikat aldı.",
+      "decision": {
+        "candidate": "təhlükəsizlik",
+        "score": 0.9471858619895539,
+        "margin": 0.9388660978877694,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-011",
+      "groupId": "attention-independent-011",
+      "split": "test",
+      "domain": "swap",
+      "input": "Telefonuma bildirsi gəlmədiyinə görə görüşü unutdum.",
+      "target": "Telefonuma bildiriş gəlmədiyinə görə görüşü unutdum.",
+      "raw": "bildirsi",
+      "expectedWord": "bildiriş",
+      "actual": "Telefonuma bildiriş gəlmədiyinə görə görüşü unutdum.",
+      "neuralActual": "Telefonuma bildiriş gəlmədiyinə görə görüşü unutdum.",
+      "decision": {
+        "candidate": "bildiriş",
+        "score": 0.8330188938574453,
+        "margin": 0.8202173304643661,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-012",
+      "groupId": "attention-independent-012",
+      "split": "test",
+      "domain": "swap",
+      "input": "Məhsulun inteqraisya sınaqları ayrıca aparıldı.",
+      "target": "Məhsulun inteqrasiya sınaqları ayrıca aparıldı.",
+      "raw": "inteqraisya",
+      "expectedWord": "inteqrasiya",
+      "actual": "Məhsulun inteqrasiya sınaqları ayrıca aparıldı.",
+      "neuralActual": "Məhsulun inteqrasiya sınaqları ayrıca aparıldı.",
+      "decision": {
+        "candidate": "inteqrasiya",
+        "score": 0.9529908134081524,
+        "margin": 0.9138777292763357,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-013",
+      "groupId": "attention-independent-013",
+      "split": "test",
+      "domain": "swap",
+      "input": "Gecə moniotrinq panelində xəbərdarlıq gördük.",
+      "target": "Gecə monitorinq panelində xəbərdarlıq gördük.",
+      "raw": "moniotrinq",
+      "expectedWord": "monitorinq",
+      "actual": "Gecə monitorinq panelində xəbərdarlıq gördük.",
+      "neuralActual": "Gecə monitorinq panelində xəbərdarlıq gördük.",
+      "decision": {
+        "candidate": "monitorinq",
+        "score": 0.9848888267147582,
+        "margin": 0.8228880176825784,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-014",
+      "groupId": "attention-independent-014",
+      "split": "test",
+      "domain": "swap",
+      "input": "Bazardan treevez alıb evə qayıtdım.",
+      "target": "Bazardan tərəvəz alıb evə qayıtdım.",
+      "raw": "treevez",
+      "expectedWord": "tərəvəz",
+      "actual": "Bazardan tərəvəz alıb evə qayıtdım.",
+      "neuralActual": "Bazardan tərəvəz alıb evə qayıtdım.",
+      "decision": {
+        "candidate": "tərəvəz",
+        "score": 0.9914248088988251,
+        "margin": 0.7558646291764999,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-015",
+      "groupId": "attention-independent-015",
+      "split": "test",
+      "domain": "swap",
+      "input": "Bu xidmət üçün qyimet siyahısı hələ açıqlanmayıb.",
+      "target": "Bu xidmət üçün qiymət siyahısı hələ açıqlanmayıb.",
+      "raw": "qyimet",
+      "expectedWord": "qiymət",
+      "actual": "Bu xidmət üçün qiymət siyahısı hələ açıqlanmayıb.",
+      "neuralActual": "Bu xidmət üçün qiymət siyahısı hələ açıqlanmayıb.",
+      "decision": {
+        "candidate": "qiymət",
+        "score": 0.646658150282827,
+        "margin": 0.6414196663547057,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-016",
+      "groupId": "attention-independent-016",
+      "split": "test",
+      "domain": "swap",
+      "input": "Bu dəfə rheberlik təklifi qəbul etmədi.",
+      "target": "Bu dəfə rəhbərlik təklifi qəbul etmədi.",
+      "raw": "rheberlik",
+      "expectedWord": "rəhbərlik",
+      "actual": "Bu dəfə rəhbərlik təklifi qəbul etmədi.",
+      "neuralActual": "Bu dəfə rəhbərlik təklifi qəbul etmədi.",
+      "decision": {
+        "candidate": "rəhbərlik",
+        "score": 0.6791066556501172,
+        "margin": 0.6662613850343736,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-017",
+      "groupId": "attention-independent-017",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Notariat sənədindən suert çıxarılmasını istədik.",
+      "target": "Notariat sənədindən surət çıxarılmasını istədik.",
+      "raw": "suert",
+      "expectedWord": "surət",
+      "actual": "Notariat sənədindən suert çıxarılmasını istədik.",
+      "neuralActual": "Notariat sənədindən suert çıxarılmasını istədik.",
+      "decision": {
+        "candidate": "sürət",
+        "score": 0.573217517096575,
+        "margin": 0.07061209484132858,
+        "accepted": false
+      }
+    },
+    {
+      "id": "attention-independent-018",
+      "groupId": "attention-independent-018",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Orijinal məktubdan suert götürən katib onu arxivə verdi.",
+      "target": "Orijinal məktubdan surət götürən katib onu arxivə verdi.",
+      "raw": "suert",
+      "expectedWord": "surət",
+      "actual": "Orijinal məktubdan suert götürən katib onu arxivə verdi.",
+      "neuralActual": "Orijinal məktubdan suert götürən katib onu arxivə verdi.",
+      "decision": {
+        "candidate": "sürət",
+        "score": 0.5523738135579158,
+        "margin": 0.07500784342858524,
+        "accepted": false
+      }
+    },
+    {
+      "id": "attention-independent-019",
+      "groupId": "attention-independent-019",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Avtomobildə suert göstəricisi gözlənilmədən söndü.",
+      "target": "Avtomobildə sürət göstəricisi gözlənilmədən söndü.",
+      "raw": "suert",
+      "expectedWord": "sürət",
+      "actual": "Avtomobildə suert göstəricisi gözlənilmədən söndü.",
+      "neuralActual": "Avtomobildə suert göstəricisi gözlənilmədən söndü.",
+      "decision": {
+        "candidate": "sürət",
+        "score": 0.45618257116402766,
+        "margin": 0.07415092280073543,
+        "accepted": false
+      }
+    },
+    {
+      "id": "attention-independent-020",
+      "groupId": "attention-independent-020",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Bu yol üçün suert limiti ayrıca təyin edilib.",
+      "target": "Bu yol üçün sürət limiti ayrıca təyin edilib.",
+      "raw": "suert",
+      "expectedWord": "sürət",
+      "actual": "Bu yol üçün suert limiti ayrıca təyin edilib.",
+      "neuralActual": "Bu yol üçün suert limiti ayrıca təyin edilib.",
+      "decision": {
+        "candidate": "surət",
+        "score": 0.6743613135091572,
+        "margin": 0.36391752862557164,
+        "accepted": false
+      }
+    },
+    {
+      "id": "attention-independent-021",
+      "groupId": "attention-independent-021",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Hər sehre günəşin doğmasını seyr edirəm.",
+      "target": "Hər səhər günəşin doğmasını seyr edirəm.",
+      "raw": "sehre",
+      "expectedWord": "səhər",
+      "actual": "Hər səhər günəşin doğmasını seyr edirəm.",
+      "neuralActual": "Hər səhər günəşin doğmasını seyr edirəm.",
+      "decision": {
+        "candidate": "səhər",
+        "score": 0.8971201587779865,
+        "margin": 0.3238611190104883,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-022",
+      "groupId": "attention-independent-022",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Açıq sehre havası yorğunluğu azaldır.",
+      "target": "Açıq səhər havası yorğunluğu azaldır.",
+      "raw": "sehre",
+      "expectedWord": "səhər",
+      "actual": "Açıq səhər havası yorğunluğu azaldır.",
+      "neuralActual": "Açıq səhər havası yorğunluğu azaldır.",
+      "decision": {
+        "candidate": "səhər",
+        "score": 0.8741628657827029,
+        "margin": 0.3650168704567619,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-023",
+      "groupId": "attention-independent-023",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Liman yaxınlığında sehre binaları yeniləndi.",
+      "target": "Liman yaxınlığında şəhər binaları yeniləndi.",
+      "raw": "sehre",
+      "expectedWord": "şəhər",
+      "actual": "Liman yaxınlığında şəhər binaları yeniləndi.",
+      "neuralActual": "Liman yaxınlığında şəhər binaları yeniləndi.",
+      "decision": {
+        "candidate": "şəhər",
+        "score": 0.6867886847179071,
+        "margin": 0.40452074971334645,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-independent-024",
+      "groupId": "attention-independent-024",
+      "split": "test",
+      "domain": "ambiguous",
+      "input": "Sehre nəqliyyatı haqqında hesabat yayımlandı.",
+      "target": "Şəhər nəqliyyatı haqqında hesabat yayımlandı.",
+      "raw": "Sehre",
+      "expectedWord": "şəhər",
+      "actual": "Sehrə nəqliyyatı haqqında hesabat yayımlandı.",
+      "neuralActual": "Sehre nəqliyyatı haqqında hesabat yayımlandı.",
+      "decision": {
+        "candidate": "səhər",
+        "score": 0.49118644349396584,
+        "margin": 0.02124506433198492,
+        "accepted": false
+      }
+    },
+    {
+      "id": "attention-independent-025",
+      "groupId": "attention-independent-025",
+      "split": "test",
+      "domain": "control",
+      "input": "Api cavabında userName və retryCount saxlanılıb.",
+      "target": "API cavabında userName və retryCount saxlanılıb.",
+      "raw": "Api",
+      "expectedWord": "API",
+      "actual": "API cavabında userName və retryCount saxlanılıb.",
+      "neuralActual": "Api cavabında userName və retryCount saxlanılıb.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-026",
+      "groupId": "attention-independent-026",
+      "split": "test",
+      "domain": "control",
+      "input": "Github və Vercel üçün ayrıca hesab açdım.",
+      "target": "GitHub və Vercel üçün ayrıca hesab açdım.",
+      "raw": "Github",
+      "expectedWord": "GitHub",
+      "actual": "GitHub və Vercel üçün ayrıca hesab açdım.",
+      "neuralActual": "Github və Vercel üçün ayrıca hesab açdım.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-027",
+      "groupId": "attention-independent-027",
+      "split": "test",
+      "domain": "control",
+      "input": "Bu səhər şəhər parkında gəzdik.",
+      "target": "Bu səhər şəhər parkında gəzdik.",
+      "raw": "səhər",
+      "expectedWord": "səhər",
+      "actual": "Bu səhər şəhər parkında gəzdik.",
+      "neuralActual": "Bu səhər şəhər parkında gəzdik.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-028",
+      "groupId": "attention-independent-028",
+      "split": "test",
+      "domain": "control",
+      "input": "Sənədin surətini götürüb arxivə göndərdim.",
+      "target": "Sənədin surətini götürüb arxivə göndərdim.",
+      "raw": "surətini",
+      "expectedWord": "surətini",
+      "actual": "Sənədin surətini götürüb arxivə göndərdim.",
+      "neuralActual": "Sənədin surətini götürüb arxivə göndərdim.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-029",
+      "groupId": "attention-independent-029",
+      "split": "test",
+      "domain": "control",
+      "input": "Bu tapşırıq qrupa aiddir.",
+      "target": "Bu tapşırıq qrupa aiddir.",
+      "raw": "qrupa",
+      "expectedWord": "qrupa",
+      "actual": "Bu tapşırıq qrupa aiddir.",
+      "neuralActual": "Bu tapşırıq qrupa aiddir.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-030",
+      "groupId": "attention-independent-030",
+      "split": "test",
+      "domain": "control",
+      "input": "Evə çatandan sonra sənədi oxuyacağam.",
+      "target": "Evə çatandan sonra sənədi oxuyacağam.",
+      "raw": "çatandan",
+      "expectedWord": "çatandan",
+      "actual": "Evə çatandan sonra sənədi oxuyacağam.",
+      "neuralActual": "Evə çatandan sonra sənədi oxuyacağam.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-031",
+      "groupId": "attention-independent-031",
+      "split": "test",
+      "domain": "control",
+      "input": "Yeni müqavilə layihəsi müəllifə qaytarıldı.",
+      "target": "Yeni müqavilə layihəsi müəllifə qaytarıldı.",
+      "raw": "müqavilə",
+      "expectedWord": "müqavilə",
+      "actual": "Yeni müqavilə layihəsi müəllifə qaytarıldı.",
+      "neuralActual": "Yeni müqavilə layihəsi müəllifə qaytarıldı.",
+      "decision": null
+    },
+    {
+      "id": "attention-independent-032",
+      "groupId": "attention-independent-032",
+      "split": "test",
+      "domain": "control",
+      "input": "Nəticə hələ təsdiqlənməyib.",
+      "target": "Nəticə hələ təsdiqlənməyib.",
+      "raw": "Nəticə",
+      "expectedWord": "nəticə",
+      "actual": "Nəticə hələ təsdiqlənməyib.",
+      "neuralActual": "Nəticə hələ təsdiqlənməyib.",
+      "decision": null
+    }
+  ],
+  "caveat": "Frozen authored heldout sentences and swap positions; shared word families. Not real-user accuracy or a semantic-understanding guarantee."
+}

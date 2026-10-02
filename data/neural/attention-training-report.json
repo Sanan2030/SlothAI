@@ -1,0 +1,375 @@
+{
+  "source": "Assistant-authored distinct contexts with synthetic adjacent-character swaps and preservation controls; no human-certified provenance",
+  "architecture": "Character n-grams + learned candidate-query scaled dot-product context attention + 12-unit nonlinear ranker",
+  "parameters": 1149,
+  "artifactBytes": 31658,
+  "artifactSha256": "bb1cad61b2882a8f9c9c647444c78faebebc60f4d466567daf1f4ed02abb2d79",
+  "corpusSha256": "7965a7692e551a49ece9394e83fe5ebf7d067398a2021a30ad2bbc3e00e03df1",
+  "lexiconSha256": "3a5ffdd7ed4f4a0ecb90492e9568a75d09ff9870766119f98c01f8cecf6543d7",
+  "epochs": 32,
+  "trainRows": 80,
+  "trainExamples": 190,
+  "validationRows": 24,
+  "validationExamples": 56,
+  "vocabulary": 32,
+  "bestValidationLoss": 0.3795399364850289,
+  "threshold": 0.6,
+  "margin": 0.15,
+  "acceptedValidationCorrections": 14,
+  "queryWeightChangeL1": 1.3017479837472081,
+  "history": [
+    {
+      "epoch": 16,
+      "validationLoss": 0.41404221326072854
+    },
+    {
+      "epoch": 32,
+      "validationLoss": 0.3795399364850289
+    },
+    {
+      "epoch": 48,
+      "validationLoss": 0.3889524615548671
+    },
+    {
+      "epoch": 64,
+      "validationLoss": 0.41065620104548045
+    },
+    {
+      "epoch": 80,
+      "validationLoss": 0.4056989728057574
+    },
+    {
+      "epoch": 96,
+      "validationLoss": 0.4104641021494784
+    },
+    {
+      "epoch": 112,
+      "validationLoss": 0.4330246431168911
+    },
+    {
+      "epoch": 128,
+      "validationLoss": 0.4193900441875784
+    },
+    {
+      "epoch": 144,
+      "validationLoss": 0.426945240104643
+    },
+    {
+      "epoch": 160,
+      "validationLoss": 0.4439327168014282
+    },
+    {
+      "epoch": 176,
+      "validationLoss": 0.42785622967652576
+    },
+    {
+      "epoch": 192,
+      "validationLoss": 0.41334040837937563
+    },
+    {
+      "epoch": 208,
+      "validationLoss": 0.42919342715887715
+    },
+    {
+      "epoch": 224,
+      "validationLoss": 0.419806155609617
+    },
+    {
+      "epoch": 240,
+      "validationLoss": 0.4243319010185593
+    },
+    {
+      "epoch": 256,
+      "validationLoss": 0.40957739519280995
+    },
+    {
+      "epoch": 272,
+      "validationLoss": 0.42174907188210653
+    },
+    {
+      "epoch": 288,
+      "validationLoss": 0.42004702253078097
+    },
+    {
+      "epoch": 304,
+      "validationLoss": 0.423844827723536
+    },
+    {
+      "epoch": 320,
+      "validationLoss": 0.4342642277515815
+    },
+    {
+      "epoch": 336,
+      "validationLoss": 0.4259880222758933
+    },
+    {
+      "epoch": 352,
+      "validationLoss": 0.4363199938436961
+    },
+    {
+      "epoch": 368,
+      "validationLoss": 0.4364905486667761
+    },
+    {
+      "epoch": 384,
+      "validationLoss": 0.43973055685991025
+    },
+    {
+      "epoch": 400,
+      "validationLoss": 0.43637171033316374
+    },
+    {
+      "epoch": 416,
+      "validationLoss": 0.4436443824321329
+    },
+    {
+      "epoch": 432,
+      "validationLoss": 0.43980927319130375
+    },
+    {
+      "epoch": 448,
+      "validationLoss": 0.4462815827886816
+    },
+    {
+      "epoch": 464,
+      "validationLoss": 0.44429724255638675
+    },
+    {
+      "epoch": 480,
+      "validationLoss": 0.45059436463360253
+    },
+    {
+      "epoch": 496,
+      "validationLoss": 0.4507992829336079
+    },
+    {
+      "epoch": 512,
+      "validationLoss": 0.4512328325606127
+    }
+  ],
+  "audit": {
+    "rows": 288,
+    "duplicates": [],
+    "nearDuplicates": [],
+    "splitLeaks": []
+  },
+  "calibration": [
+    {
+      "id": "attention-041",
+      "raw": "konfiqruasiya",
+      "expected": "konfiqurasiya",
+      "winner": "konfiqurasiya",
+      "supported": true,
+      "score": 0.9820529867220265,
+      "margin": 0.8456474496916218
+    },
+    {
+      "id": "attention-042",
+      "raw": "laboratoriay",
+      "expected": "laboratoriya",
+      "winner": "laboratoriya",
+      "supported": true,
+      "score": 0.9638803915223819,
+      "margin": 0.9056389007263581
+    },
+    {
+      "id": "attention-043",
+      "raw": "univresitet",
+      "expected": "universitet",
+      "winner": "universitet",
+      "supported": true,
+      "score": 0.9867589210675769,
+      "margin": 0.9419166193202138
+    },
+    {
+      "id": "attention-044",
+      "raw": "muqvaile",
+      "expected": "müqavilə",
+      "winner": "müqavilə",
+      "supported": true,
+      "score": 0.9975765648465693,
+      "margin": 0.5279626326316071
+    },
+    {
+      "id": "attention-045",
+      "raw": "sifairs",
+      "expected": "sifariş",
+      "winner": "sifariş",
+      "supported": true,
+      "score": 0.6502502395720451,
+      "margin": 0.6418879066762745
+    },
+    {
+      "id": "attention-046",
+      "raw": "tedqiaqt",
+      "expected": "tədqiqat",
+      "winner": "tədqiqat",
+      "supported": true,
+      "score": 0.9903351205708041,
+      "margin": 0.5966849504868281
+    },
+    {
+      "id": "attention-047",
+      "raw": "qiyemt",
+      "expected": "qiymət",
+      "winner": "qiymət",
+      "supported": true,
+      "score": 0.8665906663797529,
+      "margin": 0.8595438138776403
+    },
+    {
+      "id": "attention-048",
+      "raw": "inteqrasiay",
+      "expected": "inteqrasiya",
+      "winner": "inteqrasiya",
+      "supported": true,
+      "score": 0.9828112106073219,
+      "margin": 0.7050400256075564
+    },
+    {
+      "id": "attention-049",
+      "raw": "maliyyə",
+      "expected": "maliyyə",
+      "winner": "maliyyə",
+      "supported": true,
+      "score": 0.6261164987575156,
+      "margin": 0.6261164987575156
+    },
+    {
+      "id": "attention-050",
+      "raw": "bildiriş",
+      "expected": "bildiriş",
+      "winner": "bildiriş",
+      "supported": true,
+      "score": 0.26527245703065977,
+      "margin": 0.26527245703065977
+    },
+    {
+      "id": "attention-051",
+      "raw": "nəqliyyat",
+      "expected": "nəqliyyat",
+      "winner": "nəqliyyat",
+      "supported": true,
+      "score": 0.3526219089255782,
+      "margin": 0.3526219089255782
+    },
+    {
+      "id": "attention-052",
+      "raw": "enerji",
+      "expected": "enerji",
+      "winner": "enerji",
+      "supported": true,
+      "score": 0.5191805905036523,
+      "margin": 0.5191805905036523
+    },
+    {
+      "id": "attention-081",
+      "raw": "suert",
+      "expected": "surət",
+      "winner": "surət",
+      "supported": true,
+      "score": 0.8649055486158793,
+      "margin": 0.2851908474574819
+    },
+    {
+      "id": "attention-082",
+      "raw": "suert",
+      "expected": "sürət",
+      "winner": "sürət",
+      "supported": true,
+      "score": 0.3125697243625454,
+      "margin": 0.060885044025694224
+    },
+    {
+      "id": "attention-083",
+      "raw": "sehre",
+      "expected": "səhər",
+      "winner": "səhər",
+      "supported": true,
+      "score": 0.3765989910424633,
+      "margin": 0.018874653144790643
+    },
+    {
+      "id": "attention-084",
+      "raw": "sehre",
+      "expected": "şəhər",
+      "winner": "səhər",
+      "supported": false,
+      "score": 0.13453408826635643,
+      "margin": 0.010330293774511792
+    },
+    {
+      "id": "attention-121",
+      "raw": "suert",
+      "expected": "surət",
+      "winner": "surət",
+      "supported": true,
+      "score": 0.9371901036691754,
+      "margin": 0.16315793104891163
+    },
+    {
+      "id": "attention-122",
+      "raw": "suert",
+      "expected": "surət",
+      "winner": "sürət",
+      "supported": false,
+      "score": 0.7901734667118336,
+      "margin": 0.049429874246977756
+    },
+    {
+      "id": "attention-123",
+      "raw": "suert",
+      "expected": "sürət",
+      "winner": "sürət",
+      "supported": true,
+      "score": 0.6046549013364994,
+      "margin": 0.0747415570747425
+    },
+    {
+      "id": "attention-124",
+      "raw": "suert",
+      "expected": "sürət",
+      "winner": "sürət",
+      "supported": true,
+      "score": 0.8970597434648886,
+      "margin": 0.37875156579974245
+    },
+    {
+      "id": "attention-125",
+      "raw": "sehre",
+      "expected": "səhər",
+      "winner": "səhər",
+      "supported": true,
+      "score": 0.8347863570111439,
+      "margin": 0.3985313073087289
+    },
+    {
+      "id": "attention-126",
+      "raw": "sehre",
+      "expected": "səhər",
+      "winner": "səhər",
+      "supported": true,
+      "score": 0.7385577166308896,
+      "margin": 0.43674143521635017
+    },
+    {
+      "id": "attention-127",
+      "raw": "sehre",
+      "expected": "şəhər",
+      "winner": "şəhər",
+      "supported": true,
+      "score": 0.7497006868538777,
+      "margin": 0.3965682722604009
+    },
+    {
+      "id": "attention-128",
+      "raw": "sehre",
+      "expected": "şəhər",
+      "winner": "səhər",
+      "supported": false,
+      "score": 0.6956150191504175,
+      "margin": 0.01598044995522252
+    }
+  ],
+  "caveat": "Authored noisy spelling and ambiguity tasks, shared lexical families; not a pretrained LLM or a general-language accuracy guarantee."
+}

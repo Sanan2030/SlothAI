@@ -1,3 +1,4 @@
+import { attentionCorrection } from './attention-runtime';
 import { createNominalRepair } from './nominal-repair';
 import { finiteAnalyses, agreementForms, areRegularCaseAlternatives } from './morphology';
 import { isFinitePredicate } from '../segmentation';
@@ -34,15 +35,22 @@ export function preservesDiacritics(raw: string, target: string): boolean {
   return previous[b.length] <= 4;
 }
 
+function eligibleNeuralWord(raw: string): boolean {
+  const lower = raw.toLocaleLowerCase('az-AZ');
+  return !(!/^[\p{L}]{4,24}$/u.test(raw) || model.lexicon.words[lower] || Object.hasOwn(pairedArtifact.words, lower)
+      || /\p{Ll}\p{Lu}/u.test(raw) || /^[\p{Lu}]+$/u.test(raw)
+      || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
+      || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)
+      || [...(dictionaryCandidates(lower) ?? [])].some(word => preservesDiacritics(raw, word)
+        && productiveMorphology.generateForms({ lemma: word, pos: 'verb', limit: 1 }).length > 0));
+}
+
 /** This network repairs unknown surfaces. Established/explicit valid words win. */
 export function neuralSpelling(text: string): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word, lower = raw.toLocaleLowerCase('az-AZ');
-    if (!/^[\p{L}]{4,24}$/u.test(raw) || model.lexicon.words[lower] || Object.hasOwn(pairedArtifact.words, lower)
-      || /\p{Ll}\p{Lu}/u.test(raw) || /^[\p{Lu}]+$/u.test(raw)
-      || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
-      || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)) continue;
+    if (!eligibleNeuralWord(raw)) continue;
     // Known errors use frozen prior weights; new errors use the newly trained head.
     const lexicalNetwork = model.lexicalAnchor && Object.values(model.lexicon.edits[lower] ?? {}).some(count => count >= 3) ? model.lexicalAnchor : model.lexical;
     // Short forms often represent different valid verbs (itdi/etdi).
@@ -65,8 +73,10 @@ export function neuralSpelling(text: string): string {
     // repair. Keep global model thresholds unchanged; validate this fallback
     // using morphology, trained error channels and explicit-letter protection.
     selected ??= nominalRepair(lower);
-    // Unique reviewed paradigms can restore ASCII diacritics independently
-    // of candidate vocabulary coverage. Ambiguous folded forms abstain.
+    // The small learned character/context head only handles adjacent swaps
+    // when all established correction paths have abstained.
+    selected ??= attentionCorrection(lower, tokens, at);
+    // Unique reviewed paradigms restore ASCII diacritics outside model coverage.
     selected ??= productiveMorphology.findByFoldedForm(lower);
     if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(lower, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
@@ -101,6 +111,21 @@ export function neuralAgreement(text: string): string {
       result += text.slice(cursor, token.start) + candidates[0]; cursor = token.end;
     }
     subject = undefined; // Stop at the first finite predicate, not an arbitrary later verb.
+  }
+  return result + text.slice(cursor);
+}
+
+/** High-confidence learned swap corrections run after span/entity protection
+ * and before dictionary guesses can destroy the original ambiguous surface. */
+export function neuralTranspositions(text: string): string {
+  const tokens = tokenize(text); let result = '', cursor = 0;
+  for (let at = 0; at < tokens.length; at++) {
+    const token = tokens[at], raw = token.word;
+    if (!eligibleNeuralWord(raw)) continue;
+    const selected = attentionCorrection(raw, tokens, at);
+    if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(raw, selected)) continue;
+    const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
+    result += text.slice(cursor, token.start) + target; cursor = token.end;
   }
   return result + text.slice(cursor);
 }

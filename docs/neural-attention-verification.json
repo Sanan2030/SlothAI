@@ -1,0 +1,131 @@
+{
+  "baseCommit": "2bef75d9fe6a60145061570d95c4f976620ca82c",
+  "tests": {
+    "total": 3919,
+    "passed": 3919,
+    "failed": 0
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "oldModelRebuild": "byte-identical",
+  "attentionRebuild": "byte-identical",
+  "oldModelSHA256": "d48c0571f9646d1ee33f85743a48a70dbab41692dac29efea9426495c55f15c3",
+  "attentionSHA256": "bb1cad61b2882a8f9c9c647444c78faebebc60f4d466567daf1f4ed02abb2d79",
+  "newParameters": 1149,
+  "totalParameters": 1944,
+  "newArtifactBytes": 31658,
+  "development": {
+    "total": 24,
+    "exact": 24,
+    "baselineExact": 17,
+    "wrongHeadCorrections": 0,
+    "regressions": []
+  },
+  "additionalAuthored": {
+    "total": 32,
+    "exact": 27,
+    "baselineExact": 21,
+    "wrongHeadCorrections": 0,
+    "remainingFailures": [
+      "attention-independent-017",
+      "attention-independent-018",
+      "attention-independent-019",
+      "attention-independent-020",
+      "attention-independent-024"
+    ],
+    "regressions": []
+  },
+  "performance": {
+    "environment": "v24.19.0",
+    "scope": "Local warm CPU measurements; multi-chunk for 5000 words, not Vercel latency guarantee",
+    "results": [
+      {
+        "words": 20,
+        "requests": 1,
+        "chars": 134,
+        "avgMs": 14.17,
+        "p50Ms": 13.37,
+        "p95Ms": 21.13,
+        "minMs": 11.32,
+        "maxMs": 21.13,
+        "targetMs": 10000,
+        "rssBaseMb": 316.48,
+        "rssPeakMb": 316.91,
+        "rssDeltaMb": 0.43,
+        "heapDeltaMb": 2.59,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "requests": 1,
+        "chars": 732,
+        "avgMs": 64.37,
+        "p50Ms": 62.99,
+        "p95Ms": 73.99,
+        "minMs": 60.74,
+        "maxMs": 73.99,
+        "targetMs": 10000,
+        "rssBaseMb": 316.48,
+        "rssPeakMb": 316.61,
+        "rssDeltaMb": 0.13,
+        "heapDeltaMb": 13.51,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "requests": 1,
+        "chars": 3741,
+        "avgMs": 363.13,
+        "p50Ms": 343.49,
+        "p95Ms": 450.91,
+        "minMs": 329.05,
+        "maxMs": 450.91,
+        "targetMs": 10000,
+        "rssBaseMb": 315.08,
+        "rssPeakMb": 316.95,
+        "rssDeltaMb": 1.88,
+        "heapDeltaMb": 52.63,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "requests": 1,
+        "chars": 7491,
+        "avgMs": 687.75,
+        "p50Ms": 673.36,
+        "p95Ms": 750.34,
+        "minMs": 657.69,
+        "maxMs": 750.34,
+        "targetMs": 10000,
+        "rssBaseMb": 313.2,
+        "rssPeakMb": 316.95,
+        "rssDeltaMb": 3.75,
+        "heapDeltaMb": 40.23,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "requests": 5,
+        "chars": 37528,
+        "avgMs": 4283.86,
+        "p50Ms": 3833.7,
+        "p95Ms": 6285.87,
+        "minMs": 3382.7,
+        "maxMs": 6285.87,
+        "targetMs": 10000,
+        "rssBaseMb": 315.52,
+        "rssPeakMb": 320.64,
+        "rssDeltaMb": 5.13,
+        "heapDeltaMb": 60.29,
+        "status": "PASS"
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic authored corpus with shared lexical families, not real-user accuracy",
+    "Additional corpus influenced abstention engineering, not an untouched blind final evaluation",
+    "Five unresolved additional corpus outputs",
+    "No general semantic understanding guarantee"
+  ]
+}

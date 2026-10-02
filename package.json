@@ -42,7 +42,10 @@
     "neural:continue": "node --import tsx scripts/train-neural.ts --resume",
     "neural:check": "node --import tsx scripts/evaluate-neural.ts --enforce",
     "neural:diversity:check": "node --import tsx scripts/evaluate-neural-diversity.ts --enforce",
-    "neural:expansion:check": "node --import tsx scripts/evaluate-neural-expansion.ts --enforce"
+    "neural:expansion:check": "node --import tsx scripts/evaluate-neural-expansion.ts --enforce",
+    "neural:attention:train": "node --import tsx scripts/train-attention.ts",
+    "neural:attention:check": "node --import tsx scripts/evaluate-attention.ts --enforce",
+    "neural:attention:independent:check": "node --import tsx scripts/evaluate-attention.ts --independent --enforce"
   },
   "engines": {
     "node": ">=20.9.0"

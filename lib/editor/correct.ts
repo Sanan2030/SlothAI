@@ -1,4 +1,4 @@
-import { neuralSpelling, neuralAgreement } from './neural/runtime';
+import { neuralSpelling, neuralAgreement, neuralTranspositions } from './neural/runtime';
 import { dictionaryCandidates } from './dictionary';
 import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
@@ -143,6 +143,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
+  if (runtime.useLocalModel !== false) text = neuralTranspositions(text);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);

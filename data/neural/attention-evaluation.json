@@ -1,0 +1,416 @@
+{
+  "total": 24,
+  "exact": 24,
+  "neuralExact": 24,
+  "baselineExact": 17,
+  "baselineNeuralExact": 10,
+  "acceptedHeadCorrections": 16,
+  "wrongHeadCorrections": 0,
+  "remainingFailures": [],
+  "gained": [
+    "attention-054",
+    "attention-059",
+    "attention-061",
+    "attention-085",
+    "attention-086",
+    "attention-087",
+    "attention-088"
+  ],
+  "regressions": [],
+  "neuralRegressions": [],
+  "rows": [
+    {
+      "id": "attention-053",
+      "groupId": "attention-053",
+      "split": "test",
+      "domain": "it",
+      "input": "Ehtiyat server üçün konfiquarsiya ayrıca təsdiqlənməlidir.",
+      "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+      "raw": "konfiquarsiya",
+      "expectedWord": "konfiqurasiya",
+      "actual": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+      "neuralActual": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+      "decision": {
+        "candidate": "konfiqurasiya",
+        "score": 0.977548478926432,
+        "margin": 0.9396353140024946,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-054",
+      "groupId": "attention-054",
+      "split": "test",
+      "domain": "science",
+      "input": "Məktəbin lbaoratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "target": "Məktəbin laboratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "raw": "lbaoratoriya",
+      "expectedWord": "laboratoriya",
+      "actual": "Məktəbin laboratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "neuralActual": "Məktəbin laboratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "decision": {
+        "candidate": "laboratoriya",
+        "score": 0.9741093163611491,
+        "margin": 0.9134612199707793,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-055",
+      "groupId": "attention-055",
+      "split": "test",
+      "domain": "education",
+      "input": "Onun seçdiyi universtiet xaricdə yerləşir.",
+      "target": "Onun seçdiyi universitet xaricdə yerləşir.",
+      "raw": "universtiet",
+      "expectedWord": "universitet",
+      "actual": "Onun seçdiyi universitet xaricdə yerləşir.",
+      "neuralActual": "Onun seçdiyi universitet xaricdə yerləşir.",
+      "decision": {
+        "candidate": "universitet",
+        "score": 0.9466364717485138,
+        "margin": 0.9001282991569615,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-056",
+      "groupId": "attention-056",
+      "split": "test",
+      "domain": "business",
+      "input": "Yekun muaqvile hüquqşünasa təqdim olunacaq.",
+      "target": "Yekun müqavilə hüquqşünasa təqdim olunacaq.",
+      "raw": "muaqvile",
+      "expectedWord": "müqavilə",
+      "actual": "Yekun müqavilə hüquqşünasa təqdim olunacaq.",
+      "neuralActual": "Yekun müqavilə hüquqşünasa təqdim olunacaq.",
+      "decision": {
+        "candidate": "müqavilə",
+        "score": 0.9978536290956597,
+        "margin": 0.6583282901672038,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-057",
+      "groupId": "attention-057",
+      "split": "test",
+      "domain": "service",
+      "input": "Sizin sifarsi üçün çatdırılma ünvanı dəyişdirildi.",
+      "target": "Sizin sifariş üçün çatdırılma ünvanı dəyişdirildi.",
+      "raw": "sifarsi",
+      "expectedWord": "sifariş",
+      "actual": "Sizin sifariş üçün çatdırılma ünvanı dəyişdirildi.",
+      "neuralActual": "Sizin sifariş üçün çatdırılma ünvanı dəyişdirildi.",
+      "decision": {
+        "candidate": "sifariş",
+        "score": 0.6920283431018015,
+        "margin": 0.6819454403847554,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-058",
+      "groupId": "attention-058",
+      "split": "test",
+      "domain": "science",
+      "input": "Bu tedqqiat üçün könüllülər axtarılır.",
+      "target": "Bu tədqiqat üçün könüllülər axtarılır.",
+      "raw": "tedqqiat",
+      "expectedWord": "tədqiqat",
+      "actual": "Bu tədqiqat üçün könüllülər axtarılır.",
+      "neuralActual": "Bu tədqiqat üçün könüllülər axtarılır.",
+      "decision": {
+        "candidate": "tədqiqat",
+        "score": 0.9691272271989166,
+        "margin": 0.9377427529032956,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-059",
+      "groupId": "attention-059",
+      "split": "test",
+      "domain": "business",
+      "input": "Departament mlaiyye hesabatını müzakirə edəcək.",
+      "target": "Departament maliyyə hesabatını müzakirə edəcək.",
+      "raw": "mlaiyye",
+      "expectedWord": "maliyyə",
+      "actual": "Departament maliyyə hesabatını müzakirə edəcək.",
+      "neuralActual": "Departament maliyyə hesabatını müzakirə edəcək.",
+      "decision": {
+        "candidate": "maliyyə",
+        "score": 0.8645155545225488,
+        "margin": 0.8465369552728129,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-060",
+      "groupId": "attention-060",
+      "split": "test",
+      "domain": "education",
+      "input": "Növbəti muhazier tarix elminə həsr olunacaq.",
+      "target": "Növbəti mühazirə tarix elminə həsr olunacaq.",
+      "raw": "muhazier",
+      "expectedWord": "mühazirə",
+      "actual": "Növbəti mühazirə tarix elminə həsr olunacaq.",
+      "neuralActual": "Növbəti mühazirə tarix elminə həsr olunacaq.",
+      "decision": {
+        "candidate": "mühazirə",
+        "score": 0.9300824298266404,
+        "margin": 0.9147074965651978,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-061",
+      "groupId": "attention-061",
+      "split": "test",
+      "domain": "service",
+      "input": "Yolda enqliyyat sıxlığı azaldı.",
+      "target": "Yolda nəqliyyat sıxlığı azaldı.",
+      "raw": "enqliyyat",
+      "expectedWord": "nəqliyyat",
+      "actual": "Yolda nəqliyyat sıxlığı azaldı.",
+      "neuralActual": "Yolda nəqliyyat sıxlığı azaldı.",
+      "decision": {
+        "candidate": "nəqliyyat",
+        "score": 0.9836495805709489,
+        "margin": 0.8320931540503311,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-062",
+      "groupId": "attention-062",
+      "split": "test",
+      "domain": "daily",
+      "input": "Bu menzree uşaqlıq xatirələrimi canlandırdı.",
+      "target": "Bu mənzərə uşaqlıq xatirələrimi canlandırdı.",
+      "raw": "menzree",
+      "expectedWord": "mənzərə",
+      "actual": "Bu mənzərə uşaqlıq xatirələrimi canlandırdı.",
+      "neuralActual": "Bu mənzərə uşaqlıq xatirələrimi canlandırdı.",
+      "decision": {
+        "candidate": "mənzərə",
+        "score": 0.9836680496583805,
+        "margin": 0.7975682933068272,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-063",
+      "groupId": "attention-063",
+      "split": "test",
+      "domain": "it",
+      "input": "Yeni tehlueksizlik siyasəti bütün şöbələrə aiddir.",
+      "target": "Yeni təhlükəsizlik siyasəti bütün şöbələrə aiddir.",
+      "raw": "tehlueksizlik",
+      "expectedWord": "təhlükəsizlik",
+      "actual": "Yeni təhlükəsizlik siyasəti bütün şöbələrə aiddir.",
+      "neuralActual": "Yeni təhlükəsizlik siyasəti bütün şöbələrə aiddir.",
+      "decision": {
+        "candidate": "təhlükəsizlik",
+        "score": 0.9742939733882329,
+        "margin": 0.915818176213061,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-064",
+      "groupId": "attention-064",
+      "split": "test",
+      "domain": "service",
+      "input": "Sistem bizə bilidris göndərə bilmədi.",
+      "target": "Sistem bizə bildiriş göndərə bilmədi.",
+      "raw": "bilidris",
+      "expectedWord": "bildiriş",
+      "actual": "Sistem bizə bildiriş göndərə bilmədi.",
+      "neuralActual": "Sistem bizə bildiriş göndərə bilmədi.",
+      "decision": {
+        "candidate": "bildiriş",
+        "score": 0.8637540790647557,
+        "margin": 0.8438745874810287,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-065",
+      "groupId": "attention-065",
+      "split": "test",
+      "domain": "control",
+      "input": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "target": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "raw": "Münasib",
+      "expectedWord": "münasib",
+      "actual": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "neuralActual": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "decision": null
+    },
+    {
+      "id": "attention-066",
+      "groupId": "attention-066",
+      "split": "test",
+      "domain": "control",
+      "input": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "raw": "Sərmayə",
+      "expectedWord": "sərmayə",
+      "actual": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "neuralActual": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "decision": null
+    },
+    {
+      "id": "attention-067",
+      "groupId": "attention-067",
+      "split": "test",
+      "domain": "control",
+      "input": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "target": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "raw": "Monitorinq",
+      "expectedWord": "monitorinq",
+      "actual": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "neuralActual": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "decision": null
+    },
+    {
+      "id": "attention-068",
+      "groupId": "attention-068",
+      "split": "test",
+      "domain": "control",
+      "input": "Müraciətin nömrəsini yadda saxlayın.",
+      "target": "Müraciətin nömrəsini yadda saxlayın.",
+      "raw": "Müraciətin",
+      "expectedWord": "müraciətin",
+      "actual": "Müraciətin nömrəsini yadda saxlayın.",
+      "neuralActual": "Müraciətin nömrəsini yadda saxlayın.",
+      "decision": null
+    },
+    {
+      "id": "attention-069",
+      "groupId": "attention-069",
+      "split": "test",
+      "domain": "control",
+      "input": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "target": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "raw": "məxfiliyini",
+      "expectedWord": "məxfiliyini",
+      "actual": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "neuralActual": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "decision": null
+    },
+    {
+      "id": "attention-070",
+      "groupId": "attention-070",
+      "split": "test",
+      "domain": "control",
+      "input": "Enerji sərfiyyatı ötən ay azalıb.",
+      "target": "Enerji sərfiyyatı ötən ay azalıb.",
+      "raw": "Enerji",
+      "expectedWord": "enerji",
+      "actual": "Enerji sərfiyyatı ötən ay azalıb.",
+      "neuralActual": "Enerji sərfiyyatı ötən ay azalıb.",
+      "decision": null
+    },
+    {
+      "id": "attention-071",
+      "groupId": "attention-071",
+      "split": "test",
+      "domain": "control",
+      "input": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "target": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "raw": "Çeviklik",
+      "expectedWord": "çeviklik",
+      "actual": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "neuralActual": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "decision": null
+    },
+    {
+      "id": "attention-072",
+      "groupId": "attention-072",
+      "split": "test",
+      "domain": "control",
+      "input": "Nəticə artıq elektron bazada görünür.",
+      "target": "Nəticə artıq elektron bazada görünür.",
+      "raw": "Nəticə",
+      "expectedWord": "nəticə",
+      "actual": "Nəticə artıq elektron bazada görünür.",
+      "neuralActual": "Nəticə artıq elektron bazada görünür.",
+      "decision": null
+    },
+    {
+      "id": "attention-085",
+      "groupId": "attention-085",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Arxiv işçisi sənəddən suert hazırladı.",
+      "target": "Arxiv işçisi sənəddən surət hazırladı.",
+      "raw": "suert",
+      "expectedWord": "surət",
+      "actual": "Arxiv işçisi sənəddən surət hazırladı.",
+      "neuralActual": "Arxiv işçisi sənəddən surət hazırladı.",
+      "decision": {
+        "candidate": "surət",
+        "score": 0.7867994511466161,
+        "margin": 0.34814324257335905,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-086",
+      "groupId": "attention-086",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Bu avtomobil suert yarışına qatılacaq.",
+      "target": "Bu avtomobil sürət yarışına qatılacaq.",
+      "raw": "suert",
+      "expectedWord": "sürət",
+      "actual": "Bu avtomobil sürət yarışına qatılacaq.",
+      "neuralActual": "Bu avtomobil sürət yarışına qatılacaq.",
+      "decision": {
+        "candidate": "sürət",
+        "score": 0.8966189545613905,
+        "margin": 0.3793772895411106,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-087",
+      "groupId": "attention-087",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Sərin sehre havası insana enerji verir.",
+      "target": "Sərin səhər havası insana enerji verir.",
+      "raw": "sehre",
+      "expectedWord": "səhər",
+      "actual": "Sərin səhər havası insana enerji verir.",
+      "neuralActual": "Sərin səhər havası insana enerji verir.",
+      "decision": {
+        "candidate": "səhər",
+        "score": 0.7441834125286079,
+        "margin": 0.442132710178125,
+        "accepted": true
+      }
+    },
+    {
+      "id": "attention-088",
+      "groupId": "attention-088",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Sahil boyunca sehre binaları görünür.",
+      "target": "Sahil boyunca şəhər binaları görünür.",
+      "raw": "sehre",
+      "expectedWord": "şəhər",
+      "actual": "Sahil boyunca şəhər binaları görünür.",
+      "neuralActual": "Sahil boyunca şəhər binaları görünür.",
+      "decision": {
+        "candidate": "şəhər",
+        "score": 0.8744994314379751,
+        "margin": 0.3231161505773352,
+        "accepted": true
+      }
+    }
+  ],
+  "caveat": "Frozen authored heldout sentences and swap positions; shared word families. Not real-user accuracy or a semantic-understanding guarantee."
+}

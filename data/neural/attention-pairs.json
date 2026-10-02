@@ -1,0 +1,1285 @@
+{
+  "source": "Assistant-authored distinct contexts with synthetic adjacent-character swaps and preservation controls; no human-certified provenance",
+  "rows": [
+    {
+      "id": "attention-001",
+      "groupId": "attention-001",
+      "split": "train",
+      "domain": "it",
+      "input": "Bu knofiqurasiya şəbəkənin ehtiyaclarına uyğun seçilib.",
+      "target": "Bu konfiqurasiya şəbəkənin ehtiyaclarına uyğun seçilib.",
+      "raw": "knofiqurasiya",
+      "expectedWord": "konfiqurasiya"
+    },
+    {
+      "id": "attention-002",
+      "groupId": "attention-002",
+      "split": "train",
+      "domain": "science",
+      "input": "Yeni laobratoriya nadir mineralları təhlil edəcək.",
+      "target": "Yeni laboratoriya nadir mineralları təhlil edəcək.",
+      "raw": "laobratoriya",
+      "expectedWord": "laboratoriya"
+    },
+    {
+      "id": "attention-003",
+      "groupId": "attention-003",
+      "split": "train",
+      "domain": "education",
+      "input": "Bu unievrsitet tələbələrə yataqxana verir.",
+      "target": "Bu universitet tələbələrə yataqxana verir.",
+      "raw": "unievrsitet",
+      "expectedWord": "universitet"
+    },
+    {
+      "id": "attention-004",
+      "groupId": "attention-004",
+      "split": "train",
+      "domain": "mail",
+      "input": "Həmin muraicetin cavabını arxivdə tapa bilərsiniz.",
+      "target": "Həmin müraciətin cavabını arxivdə tapa bilərsiniz.",
+      "raw": "muraicetin",
+      "expectedWord": "müraciətin"
+    },
+    {
+      "id": "attention-005",
+      "groupId": "attention-005",
+      "split": "train",
+      "domain": "business",
+      "input": "İcarə üçün muqavlie gələn ay hazırlanacaq.",
+      "target": "İcarə üçün müqavilə gələn ay hazırlanacaq.",
+      "raw": "muqavlie",
+      "expectedWord": "müqavilə"
+    },
+    {
+      "id": "attention-006",
+      "groupId": "attention-006",
+      "split": "train",
+      "domain": "service",
+      "input": "Qəbul etdiyimiz isfaris xüsusi qablaşdırma tələb edir.",
+      "target": "Qəbul etdiyimiz sifariş xüsusi qablaşdırma tələb edir.",
+      "raw": "isfaris",
+      "expectedWord": "sifariş"
+    },
+    {
+      "id": "attention-007",
+      "groupId": "attention-007",
+      "split": "train",
+      "domain": "science",
+      "input": "Son etdqiqat torpağın tərkibini müəyyənləşdirir.",
+      "target": "Son tədqiqat torpağın tərkibini müəyyənləşdirir.",
+      "raw": "etdqiqat",
+      "expectedWord": "tədqiqat"
+    },
+    {
+      "id": "attention-008",
+      "groupId": "attention-008",
+      "split": "train",
+      "domain": "it",
+      "input": "Fasiləsiz monitoriqn nasazlığı erkən aşkarlamağa kömək edir.",
+      "target": "Fasiləsiz monitorinq nasazlığı erkən aşkarlamağa kömək edir.",
+      "raw": "monitoriqn",
+      "expectedWord": "monitorinq"
+    },
+    {
+      "id": "attention-009",
+      "groupId": "attention-009",
+      "split": "train",
+      "domain": "daily",
+      "input": "Bu terveez soyuq yerdə saxlanmalıdır.",
+      "target": "Bu tərəvəz soyuq yerdə saxlanmalıdır.",
+      "raw": "terveez",
+      "expectedWord": "tərəvəz"
+    },
+    {
+      "id": "attention-010",
+      "groupId": "attention-010",
+      "split": "train",
+      "domain": "business",
+      "input": "İllik amliyye planında təmir xərcləri ayrıca göstərilib.",
+      "target": "İllik maliyyə planında təmir xərcləri ayrıca göstərilib.",
+      "raw": "amliyye",
+      "expectedWord": "maliyyə"
+    },
+    {
+      "id": "attention-011",
+      "groupId": "attention-011",
+      "split": "train",
+      "domain": "education",
+      "input": "Açıq muhaizre şəhər kitabxanasında başlayacaq.",
+      "target": "Açıq mühazirə şəhər kitabxanasında başlayacaq.",
+      "raw": "muhaizre",
+      "expectedWord": "mühazirə"
+    },
+    {
+      "id": "attention-012",
+      "groupId": "attention-012",
+      "split": "train",
+      "domain": "service",
+      "input": "İctimai neqliyayt sərnişinlər üçün əlçatan olmalıdır.",
+      "target": "İctimai nəqliyyat sərnişinlər üçün əlçatan olmalıdır.",
+      "raw": "neqliyayt",
+      "expectedWord": "nəqliyyat"
+    },
+    {
+      "id": "attention-013",
+      "groupId": "attention-013",
+      "split": "train",
+      "domain": "daily",
+      "input": "Dağdan görünən mnezere bizi heyrətləndirdi.",
+      "target": "Dağdan görünən mənzərə bizi heyrətləndirdi.",
+      "raw": "mnezere",
+      "expectedWord": "mənzərə"
+    },
+    {
+      "id": "attention-014",
+      "groupId": "attention-014",
+      "split": "train",
+      "domain": "business",
+      "input": "Bu semraye fabrikin məhsuldarlığını artıracaq.",
+      "target": "Bu sərmayə fabrikin məhsuldarlığını artıracaq.",
+      "raw": "semraye",
+      "expectedWord": "sərmayə"
+    },
+    {
+      "id": "attention-015",
+      "groupId": "attention-015",
+      "split": "train",
+      "domain": "it",
+      "input": "Yeni komandada cveiklik qərarların icrasını sürətləndirir.",
+      "target": "Yeni komandada çeviklik qərarların icrasını sürətləndirir.",
+      "raw": "cveiklik",
+      "expectedWord": "çeviklik"
+    },
+    {
+      "id": "attention-016",
+      "groupId": "attention-016",
+      "split": "train",
+      "domain": "mail",
+      "input": "Cavab məktubunda qyimet barədə dəqiq məlumat istəyirik.",
+      "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+      "raw": "qyimet",
+      "expectedWord": "qiymət"
+    },
+    {
+      "id": "attention-017",
+      "groupId": "attention-017",
+      "split": "train",
+      "domain": "it",
+      "input": "Tətbiqlər arasında inteqraisya artıq sınaqdan keçirilib.",
+      "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+      "raw": "inteqraisya",
+      "expectedWord": "inteqrasiya"
+    },
+    {
+      "id": "attention-018",
+      "groupId": "attention-018",
+      "split": "train",
+      "domain": "business",
+      "input": "Şirkət müqavilənin mexfiliynii təmin etməlidir.",
+      "target": "Şirkət müqavilənin məxfiliyini təmin etməlidir.",
+      "raw": "mexfiliynii",
+      "expectedWord": "məxfiliyini"
+    },
+    {
+      "id": "attention-019",
+      "groupId": "attention-019",
+      "split": "train",
+      "domain": "daily",
+      "input": "Səhər yola çıxmaq üçün çantaları hzairladiq.",
+      "target": "Səhər yola çıxmaq üçün çantaları hazırladıq.",
+      "raw": "hzairladiq",
+      "expectedWord": "hazırladıq"
+    },
+    {
+      "id": "attention-020",
+      "groupId": "attention-020",
+      "split": "train",
+      "domain": "science",
+      "input": "Müşahidədən alınan meulmat elmi məqalədə istifadə olunacaq.",
+      "target": "Müşahidədən alınan məlumat elmi məqalədə istifadə olunacaq.",
+      "raw": "meulmat",
+      "expectedWord": "məlumat"
+    },
+    {
+      "id": "attention-021",
+      "groupId": "attention-021",
+      "split": "train",
+      "domain": "it",
+      "input": "Təlimatda tehlukesilzik qaydalarına xüsusi yer ayrılıb.",
+      "target": "Təlimatda təhlükəsizlik qaydalarına xüsusi yer ayrılıb.",
+      "raw": "tehlukesilzik",
+      "expectedWord": "təhlükəsizlik"
+    },
+    {
+      "id": "attention-022",
+      "groupId": "attention-022",
+      "split": "train",
+      "domain": "service",
+      "input": "Hər sərnişinə blidiris göndərmək mümkün olmadı.",
+      "target": "Hər sərnişinə bildiriş göndərmək mümkün olmadı.",
+      "raw": "blidiris",
+      "expectedWord": "bildiriş"
+    },
+    {
+      "id": "attention-023",
+      "groupId": "attention-023",
+      "split": "train",
+      "domain": "service",
+      "input": "Sürücü masrrutu xəritə ilə müqayisə etdi.",
+      "target": "Sürücü marşrutu xəritə ilə müqayisə etdi.",
+      "raw": "masrrutu",
+      "expectedWord": "marşrutu"
+    },
+    {
+      "id": "attention-024",
+      "groupId": "attention-024",
+      "split": "train",
+      "domain": "science",
+      "input": "Batareyada enerij azaldıqda cihaz sönür.",
+      "target": "Batareyada enerji azaldıqda cihaz sönür.",
+      "raw": "enerij",
+      "expectedWord": "enerji"
+    },
+    {
+      "id": "attention-025",
+      "groupId": "attention-025",
+      "split": "train",
+      "domain": "business",
+      "input": "İclasda rheberlik yeni büdcə barədə danışdı.",
+      "target": "İclasda rəhbərlik yeni büdcə barədə danışdı.",
+      "raw": "rheberlik",
+      "expectedWord": "rəhbərlik"
+    },
+    {
+      "id": "attention-026",
+      "groupId": "attention-026",
+      "split": "train",
+      "domain": "daily",
+      "input": "Bu gün deinz çox sakit görünür.",
+      "target": "Bu gün dəniz çox sakit görünür.",
+      "raw": "deinz",
+      "expectedWord": "dəniz"
+    },
+    {
+      "id": "attention-027",
+      "groupId": "attention-027",
+      "split": "train",
+      "domain": "mail",
+      "input": "Zəng üçün munsaib saatı əvvəlcədən razılaşdıraq.",
+      "target": "Zəng üçün münasib saatı əvvəlcədən razılaşdıraq.",
+      "raw": "munsaib",
+      "expectedWord": "münasib"
+    },
+    {
+      "id": "attention-028",
+      "groupId": "attention-028",
+      "split": "train",
+      "domain": "science",
+      "input": "Həmin netcie təcrübənin təkrarında da alındı.",
+      "target": "Həmin nəticə təcrübənin təkrarında da alındı.",
+      "raw": "netcie",
+      "expectedWord": "nəticə"
+    },
+    {
+      "id": "attention-029",
+      "groupId": "attention-029",
+      "split": "train",
+      "domain": "it",
+      "input": "Yanlış konfiuqrasiya xidmətin başlamasına mane ola bilər.",
+      "target": "Yanlış konfiqurasiya xidmətin başlamasına mane ola bilər.",
+      "raw": "konfiuqrasiya",
+      "expectedWord": "konfiqurasiya"
+    },
+    {
+      "id": "attention-030",
+      "groupId": "attention-030",
+      "split": "train",
+      "domain": "education",
+      "input": "Məzunlar nuiversitet yaxınlığındakı parkda görüşdülər.",
+      "target": "Məzunlar universitet yaxınlığındakı parkda görüşdülər.",
+      "raw": "nuiversitet",
+      "expectedWord": "universitet"
+    },
+    {
+      "id": "attention-031",
+      "groupId": "attention-031",
+      "split": "train",
+      "domain": "control",
+      "input": "Müqavilə oxunmadan imzalanmamalıdır.",
+      "target": "Müqavilə oxunmadan imzalanmamalıdır.",
+      "raw": "Müqavilə",
+      "expectedWord": "müqavilə"
+    },
+    {
+      "id": "attention-032",
+      "groupId": "attention-032",
+      "split": "train",
+      "domain": "control",
+      "input": "Məlumat itkisinin səbəbi hələ bilinmir.",
+      "target": "Məlumat itkisinin səbəbi hələ bilinmir.",
+      "raw": "Məlumat",
+      "expectedWord": "məlumat"
+    },
+    {
+      "id": "attention-033",
+      "groupId": "attention-033",
+      "split": "train",
+      "domain": "control",
+      "input": "Müraciətin sonunda telefon nömrənizi qeyd edin.",
+      "target": "Müraciətin sonunda telefon nömrənizi qeyd edin.",
+      "raw": "Müraciətin",
+      "expectedWord": "müraciətin"
+    },
+    {
+      "id": "attention-034",
+      "groupId": "attention-034",
+      "split": "train",
+      "domain": "control",
+      "input": "Mühazirə haqqında rəy yazmağı unutmayın.",
+      "target": "Mühazirə haqqında rəy yazmağı unutmayın.",
+      "raw": "Mühazirə",
+      "expectedWord": "mühazirə"
+    },
+    {
+      "id": "attention-035",
+      "groupId": "attention-035",
+      "split": "train",
+      "domain": "control",
+      "input": "Mənzərə açıq havada daha aydın görünür.",
+      "target": "Mənzərə açıq havada daha aydın görünür.",
+      "raw": "Mənzərə",
+      "expectedWord": "mənzərə"
+    },
+    {
+      "id": "attention-036",
+      "groupId": "attention-036",
+      "split": "train",
+      "domain": "control",
+      "input": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+      "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+      "raw": "Təhlükəsizlik",
+      "expectedWord": "təhlükəsizlik"
+    },
+    {
+      "id": "attention-037",
+      "groupId": "attention-037",
+      "split": "train",
+      "domain": "control",
+      "input": "Çeviklik yalnız sürətlə qərar vermək demək deyil.",
+      "target": "Çeviklik yalnız sürətlə qərar vermək demək deyil.",
+      "raw": "Çeviklik",
+      "expectedWord": "çeviklik"
+    },
+    {
+      "id": "attention-038",
+      "groupId": "attention-038",
+      "split": "train",
+      "domain": "control",
+      "input": "Nəticə dəyişmədiyinə görə ölçməni dayandırdıq.",
+      "target": "Nəticə dəyişmədiyinə görə ölçməni dayandırdıq.",
+      "raw": "Nəticə",
+      "expectedWord": "nəticə"
+    },
+    {
+      "id": "attention-039",
+      "groupId": "attention-039",
+      "split": "train",
+      "domain": "control",
+      "input": "Monitorinq üçün əlavə işçi ayrılmayacaq.",
+      "target": "Monitorinq üçün əlavə işçi ayrılmayacaq.",
+      "raw": "Monitorinq",
+      "expectedWord": "monitorinq"
+    },
+    {
+      "id": "attention-040",
+      "groupId": "attention-040",
+      "split": "train",
+      "domain": "control",
+      "input": "Tərəflər danışıqların məxfiliyini qoruyurlar.",
+      "target": "Tərəflər danışıqların məxfiliyini qoruyurlar.",
+      "raw": "məxfiliyini",
+      "expectedWord": "məxfiliyini"
+    },
+    {
+      "id": "attention-041",
+      "groupId": "attention-041",
+      "split": "validation",
+      "domain": "it",
+      "input": "Router üçün konfiqruasiya ayrıca faylda saxlanır.",
+      "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+      "raw": "konfiqruasiya",
+      "expectedWord": "konfiqurasiya"
+    },
+    {
+      "id": "attention-042",
+      "groupId": "attention-042",
+      "split": "validation",
+      "domain": "science",
+      "input": "Tədqiqatçılar laboratoriay avadanlığını dəyişdilər.",
+      "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+      "raw": "laboratoriay",
+      "expectedWord": "laboratoriya"
+    },
+    {
+      "id": "attention-043",
+      "groupId": "attention-043",
+      "split": "validation",
+      "domain": "education",
+      "input": "Bu gün univresitet sərgisinə getdik.",
+      "target": "Bu gün universitet sərgisinə getdik.",
+      "raw": "univresitet",
+      "expectedWord": "universitet"
+    },
+    {
+      "id": "attention-044",
+      "groupId": "attention-044",
+      "split": "validation",
+      "domain": "business",
+      "input": "Yeni muqvaile əvvəlki razılaşmanı əvəz edir.",
+      "target": "Yeni müqavilə əvvəlki razılaşmanı əvəz edir.",
+      "raw": "muqvaile",
+      "expectedWord": "müqavilə"
+    },
+    {
+      "id": "attention-045",
+      "groupId": "attention-045",
+      "split": "validation",
+      "domain": "service",
+      "input": "Anbar növbəti sifairs üçün məhsul hazırlayır.",
+      "target": "Anbar növbəti sifariş üçün məhsul hazırlayır.",
+      "raw": "sifairs",
+      "expectedWord": "sifariş"
+    },
+    {
+      "id": "attention-046",
+      "groupId": "attention-046",
+      "split": "validation",
+      "domain": "science",
+      "input": "Beynəlxalq tedqiaqt iki il davam edəcək.",
+      "target": "Beynəlxalq tədqiqat iki il davam edəcək.",
+      "raw": "tedqiaqt",
+      "expectedWord": "tədqiqat"
+    },
+    {
+      "id": "attention-047",
+      "groupId": "attention-047",
+      "split": "validation",
+      "domain": "mail",
+      "input": "Təklifdə qiyemt çox yüksək göstərilib.",
+      "target": "Təklifdə qiymət çox yüksək göstərilib.",
+      "raw": "qiyemt",
+      "expectedWord": "qiymət"
+    },
+    {
+      "id": "attention-048",
+      "groupId": "attention-048",
+      "split": "validation",
+      "domain": "it",
+      "input": "Ödəniş servisi ilə inteqrasiay sabah tamamlanacaq.",
+      "target": "Ödəniş servisi ilə inteqrasiya sabah tamamlanacaq.",
+      "raw": "inteqrasiay",
+      "expectedWord": "inteqrasiya"
+    },
+    {
+      "id": "attention-049",
+      "groupId": "attention-049",
+      "split": "validation",
+      "domain": "control",
+      "input": "Maliyyə sənədlərini əlavədə təqdim edirik.",
+      "target": "Maliyyə sənədlərini əlavədə təqdim edirik.",
+      "raw": "Maliyyə",
+      "expectedWord": "maliyyə"
+    },
+    {
+      "id": "attention-050",
+      "groupId": "attention-050",
+      "split": "validation",
+      "domain": "control",
+      "input": "Bildiriş səsini telefonda söndürdüm.",
+      "target": "Bildiriş səsini telefonda söndürdüm.",
+      "raw": "Bildiriş",
+      "expectedWord": "bildiriş"
+    },
+    {
+      "id": "attention-051",
+      "groupId": "attention-051",
+      "split": "validation",
+      "domain": "control",
+      "input": "Nəqliyyat üçün ayrılan zolaq boşdur.",
+      "target": "Nəqliyyat üçün ayrılan zolaq boşdur.",
+      "raw": "Nəqliyyat",
+      "expectedWord": "nəqliyyat"
+    },
+    {
+      "id": "attention-052",
+      "groupId": "attention-052",
+      "split": "validation",
+      "domain": "control",
+      "input": "Enerji qiymətləri barədə sualınız varmı?",
+      "target": "Enerji qiymətləri barədə sualınız varmı?",
+      "raw": "Enerji",
+      "expectedWord": "enerji"
+    },
+    {
+      "id": "attention-053",
+      "groupId": "attention-053",
+      "split": "test",
+      "domain": "it",
+      "input": "Ehtiyat server üçün konfiquarsiya ayrıca təsdiqlənməlidir.",
+      "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+      "raw": "konfiquarsiya",
+      "expectedWord": "konfiqurasiya"
+    },
+    {
+      "id": "attention-054",
+      "groupId": "attention-054",
+      "split": "test",
+      "domain": "science",
+      "input": "Məktəbin lbaoratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "target": "Məktəbin laboratoriya otağında təhlükəsizlik təlimi keçirildi.",
+      "raw": "lbaoratoriya",
+      "expectedWord": "laboratoriya"
+    },
+    {
+      "id": "attention-055",
+      "groupId": "attention-055",
+      "split": "test",
+      "domain": "education",
+      "input": "Onun seçdiyi universtiet xaricdə yerləşir.",
+      "target": "Onun seçdiyi universitet xaricdə yerləşir.",
+      "raw": "universtiet",
+      "expectedWord": "universitet"
+    },
+    {
+      "id": "attention-056",
+      "groupId": "attention-056",
+      "split": "test",
+      "domain": "business",
+      "input": "Yekun muaqvile hüquqşünasa təqdim olunacaq.",
+      "target": "Yekun müqavilə hüquqşünasa təqdim olunacaq.",
+      "raw": "muaqvile",
+      "expectedWord": "müqavilə"
+    },
+    {
+      "id": "attention-057",
+      "groupId": "attention-057",
+      "split": "test",
+      "domain": "service",
+      "input": "Sizin sifarsi üçün çatdırılma ünvanı dəyişdirildi.",
+      "target": "Sizin sifariş üçün çatdırılma ünvanı dəyişdirildi.",
+      "raw": "sifarsi",
+      "expectedWord": "sifariş"
+    },
+    {
+      "id": "attention-058",
+      "groupId": "attention-058",
+      "split": "test",
+      "domain": "science",
+      "input": "Bu tedqqiat üçün könüllülər axtarılır.",
+      "target": "Bu tədqiqat üçün könüllülər axtarılır.",
+      "raw": "tedqqiat",
+      "expectedWord": "tədqiqat"
+    },
+    {
+      "id": "attention-059",
+      "groupId": "attention-059",
+      "split": "test",
+      "domain": "business",
+      "input": "Departament mlaiyye hesabatını müzakirə edəcək.",
+      "target": "Departament maliyyə hesabatını müzakirə edəcək.",
+      "raw": "mlaiyye",
+      "expectedWord": "maliyyə"
+    },
+    {
+      "id": "attention-060",
+      "groupId": "attention-060",
+      "split": "test",
+      "domain": "education",
+      "input": "Növbəti muhazier tarix elminə həsr olunacaq.",
+      "target": "Növbəti mühazirə tarix elminə həsr olunacaq.",
+      "raw": "muhazier",
+      "expectedWord": "mühazirə"
+    },
+    {
+      "id": "attention-061",
+      "groupId": "attention-061",
+      "split": "test",
+      "domain": "service",
+      "input": "Yolda enqliyyat sıxlığı azaldı.",
+      "target": "Yolda nəqliyyat sıxlığı azaldı.",
+      "raw": "enqliyyat",
+      "expectedWord": "nəqliyyat"
+    },
+    {
+      "id": "attention-062",
+      "groupId": "attention-062",
+      "split": "test",
+      "domain": "daily",
+      "input": "Bu menzree uşaqlıq xatirələrimi canlandırdı.",
+      "target": "Bu mənzərə uşaqlıq xatirələrimi canlandırdı.",
+      "raw": "menzree",
+      "expectedWord": "mənzərə"
+    },
+    {
+      "id": "attention-063",
+      "groupId": "attention-063",
+      "split": "test",
+      "domain": "it",
+      "input": "Yeni tehlueksizlik siyasəti bütün şöbələrə aiddir.",
+      "target": "Yeni təhlükəsizlik siyasəti bütün şöbələrə aiddir.",
+      "raw": "tehlueksizlik",
+      "expectedWord": "təhlükəsizlik"
+    },
+    {
+      "id": "attention-064",
+      "groupId": "attention-064",
+      "split": "test",
+      "domain": "service",
+      "input": "Sistem bizə bilidris göndərə bilmədi.",
+      "target": "Sistem bizə bildiriş göndərə bilmədi.",
+      "raw": "bilidris",
+      "expectedWord": "bildiriş"
+    },
+    {
+      "id": "attention-065",
+      "groupId": "attention-065",
+      "split": "test",
+      "domain": "control",
+      "input": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "target": "Münasib vaxt tapanda birlikdə görüşərik.",
+      "raw": "Münasib",
+      "expectedWord": "münasib"
+    },
+    {
+      "id": "attention-066",
+      "groupId": "attention-066",
+      "split": "test",
+      "domain": "control",
+      "input": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+      "raw": "Sərmayə",
+      "expectedWord": "sərmayə"
+    },
+    {
+      "id": "attention-067",
+      "groupId": "attention-067",
+      "split": "test",
+      "domain": "control",
+      "input": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "target": "Monitorinq nəticələrini rəhbərə göstərdik.",
+      "raw": "Monitorinq",
+      "expectedWord": "monitorinq"
+    },
+    {
+      "id": "attention-068",
+      "groupId": "attention-068",
+      "split": "test",
+      "domain": "control",
+      "input": "Müraciətin nömrəsini yadda saxlayın.",
+      "target": "Müraciətin nömrəsini yadda saxlayın.",
+      "raw": "Müraciətin",
+      "expectedWord": "müraciətin"
+    },
+    {
+      "id": "attention-069",
+      "groupId": "attention-069",
+      "split": "test",
+      "domain": "control",
+      "input": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "target": "Müştərinin şəxsi məlumatlarının məxfiliyini qoruyun.",
+      "raw": "məxfiliyini",
+      "expectedWord": "məxfiliyini"
+    },
+    {
+      "id": "attention-070",
+      "groupId": "attention-070",
+      "split": "test",
+      "domain": "control",
+      "input": "Enerji sərfiyyatı ötən ay azalıb.",
+      "target": "Enerji sərfiyyatı ötən ay azalıb.",
+      "raw": "Enerji",
+      "expectedWord": "enerji"
+    },
+    {
+      "id": "attention-071",
+      "groupId": "attention-071",
+      "split": "test",
+      "domain": "control",
+      "input": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "target": "Çeviklik və dəqiqlik birlikdə qiymətləndirilir.",
+      "raw": "Çeviklik",
+      "expectedWord": "çeviklik"
+    },
+    {
+      "id": "attention-072",
+      "groupId": "attention-072",
+      "split": "test",
+      "domain": "control",
+      "input": "Nəticə artıq elektron bazada görünür.",
+      "target": "Nəticə artıq elektron bazada görünür.",
+      "raw": "Nəticə",
+      "expectedWord": "nəticə"
+    },
+    {
+      "id": "attention-073",
+      "groupId": "attention-073",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Elektron suert sənədin məzmununu qoruyur.",
+      "target": "Elektron surət sənədin məzmununu qoruyur.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-074",
+      "groupId": "attention-074",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "İmzalı sənəddən suert çıxarmaq lazımdır.",
+      "target": "İmzalı sənəddən surət çıxarmaq lazımdır.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-075",
+      "groupId": "attention-075",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Avtomobil suert həddini keçəndə cərimə tətbiq edilir.",
+      "target": "Avtomobil sürət həddini keçəndə cərimə tətbiq edilir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-076",
+      "groupId": "attention-076",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Sabit suert maşının hərəkətini təhlükəsiz edir.",
+      "target": "Sabit sürət maşının hərəkətini təhlükəsiz edir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-077",
+      "groupId": "attention-077",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Hər sehre günəş doğmadan yürüşə çıxıram.",
+      "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-078",
+      "groupId": "attention-078",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bu sehre yağış yağdığı üçün çətir götürdüm.",
+      "target": "Bu səhər yağış yağdığı üçün çətir götürdüm.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-079",
+      "groupId": "attention-079",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Köhnə sehre mərkəzində tarixi binalar saxlanılıb.",
+      "target": "Köhnə şəhər mərkəzində tarixi binalar saxlanılıb.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-080",
+      "groupId": "attention-080",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Yeni sehre planında parklar üçün yer ayrılıb.",
+      "target": "Yeni şəhər planında parklar üçün yer ayrılıb.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-081",
+      "groupId": "attention-081",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Sənəddən suert götürüb möhür vurun.",
+      "target": "Sənəddən surət götürüb möhür vurun.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-082",
+      "groupId": "attention-082",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Yolda suert həddi altmış kilometrdir.",
+      "target": "Yolda sürət həddi altmış kilometrdir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-083",
+      "groupId": "attention-083",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Sabah sehre qonaqları qarşılayacağıq.",
+      "target": "Sabah səhər qonaqları qarşılayacağıq.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-084",
+      "groupId": "attention-084",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Kiçik sehre turistləri heyrətləndirdi.",
+      "target": "Kiçik şəhər turistləri heyrətləndirdi.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-085",
+      "groupId": "attention-085",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Arxiv işçisi sənəddən suert hazırladı.",
+      "target": "Arxiv işçisi sənəddən surət hazırladı.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-086",
+      "groupId": "attention-086",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Bu avtomobil suert yarışına qatılacaq.",
+      "target": "Bu avtomobil sürət yarışına qatılacaq.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-087",
+      "groupId": "attention-087",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Sərin sehre havası insana enerji verir.",
+      "target": "Sərin səhər havası insana enerji verir.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-088",
+      "groupId": "attention-088",
+      "split": "test",
+      "domain": "ambiguous-context",
+      "input": "Sahil boyunca sehre binaları görünür.",
+      "target": "Sahil boyunca şəhər binaları görünür.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-089",
+      "groupId": "attention-089",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Notarius sənəddən suert çıxardıqdan sonra onu təsdiqlədi.",
+      "target": "Notarius sənəddən surət çıxardıqdan sonra onu təsdiqlədi.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-090",
+      "groupId": "attention-090",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Məktəbə sənəddən suert təqdim etmək kifayətdir.",
+      "target": "Məktəbə sənəddən surət təqdim etmək kifayətdir.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-091",
+      "groupId": "attention-091",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Rəqəmsal suert orijinal sənədə əlavə olundu.",
+      "target": "Rəqəmsal surət orijinal sənədə əlavə olundu.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-092",
+      "groupId": "attention-092",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Təsdiqli suert üçün möhür tələb edilir.",
+      "target": "Təsdiqli surət üçün möhür tələb edilir.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-093",
+      "groupId": "attention-093",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Kağız suert qovluqda saxlanılır.",
+      "target": "Kağız surət qovluqda saxlanılır.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-094",
+      "groupId": "attention-094",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Arxivdə suert saxlamaq üçün ayrıca rəf var.",
+      "target": "Arxivdə surət saxlamaq üçün ayrıca rəf var.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-095",
+      "groupId": "attention-095",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Məktubdan suert hazırlamaq barədə göstəriş aldıq.",
+      "target": "Məktubdan surət hazırlamaq barədə göstəriş aldıq.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-096",
+      "groupId": "attention-096",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bu suert sənədin bütün səhifələrini əhatə edir.",
+      "target": "Bu surət sənədin bütün səhifələrini əhatə edir.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-097",
+      "groupId": "attention-097",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Sürücü suert həddinə əməl etməlidir.",
+      "target": "Sürücü sürət həddinə əməl etməlidir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-098",
+      "groupId": "attention-098",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Yeni avtomobil suert göstəricisini ekranda göstərir.",
+      "target": "Yeni avtomobil sürət göstəricisini ekranda göstərir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-099",
+      "groupId": "attention-099",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Maşın suert yığdıqca mühərrikin səsi artırdı.",
+      "target": "Maşın sürət yığdıqca mühərrikin səsi artırdı.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-100",
+      "groupId": "attention-100",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Avtomobil suert limitini aşmadı.",
+      "target": "Avtomobil sürət limitini aşmadı.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-101",
+      "groupId": "attention-101",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Yolun bu hissəsində suert azaltmaq vacibdir.",
+      "target": "Yolun bu hissəsində sürət azaltmaq vacibdir.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-102",
+      "groupId": "attention-102",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Qaçışçı suert məşqlərinə başlayıb.",
+      "target": "Qaçışçı sürət məşqlərinə başlayıb.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-103",
+      "groupId": "attention-103",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Sürətli qatar üçün suert cədvəli tərtib edilib.",
+      "target": "Sürətli qatar üçün sürət cədvəli tərtib edilib.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-104",
+      "groupId": "attention-104",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Hərəkət zamanı suert sabit qaldı.",
+      "target": "Hərəkət zamanı sürət sabit qaldı.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-105",
+      "groupId": "attention-105",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Dağda sehre havası sərin olur.",
+      "target": "Dağda səhər havası sərin olur.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-106",
+      "groupId": "attention-106",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bu sehre havası məni yürüşə çıxmağa həvəsləndirdi.",
+      "target": "Bu səhər havası məni yürüşə çıxmağa həvəsləndirdi.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-107",
+      "groupId": "attention-107",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Sabah sehre tez oyanmaq istəyirəm.",
+      "target": "Sabah səhər tez oyanmaq istəyirəm.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-108",
+      "groupId": "attention-108",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Hər sehre qəhvə içməzdən əvvəl su içirəm.",
+      "target": "Hər səhər qəhvə içməzdən əvvəl su içirəm.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-109",
+      "groupId": "attention-109",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Yeni gün sehre işığı ilə başlayır.",
+      "target": "Yeni gün səhər işığı ilə başlayır.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-110",
+      "groupId": "attention-110",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Yazda sehre quşların səsinə oyanırıq.",
+      "target": "Yazda səhər quşların səsinə oyanırıq.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-111",
+      "groupId": "attention-111",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "İşçilər sehre yeməyindən sonra toplantıya qatıldılar.",
+      "target": "İşçilər səhər yeməyindən sonra toplantıya qatıldılar.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-112",
+      "groupId": "attention-112",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Gecədən sonra sakit sehre gəldi.",
+      "target": "Gecədən sonra sakit səhər gəldi.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-113",
+      "groupId": "attention-113",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Müasir sehre binaları memarların diqqətini çəkir.",
+      "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-114",
+      "groupId": "attention-114",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bu sehre binaları zəlzələyə davamlı tikilib.",
+      "target": "Bu şəhər binaları zəlzələyə davamlı tikilib.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-115",
+      "groupId": "attention-115",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Dənizkənarı sehre yeni yollar çəkir.",
+      "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-116",
+      "groupId": "attention-116",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Böyük sehre mərkəzində piyada küçəsi açılıb.",
+      "target": "Böyük şəhər mərkəzində piyada küçəsi açılıb.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-117",
+      "groupId": "attention-117",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bələdiyyə sehre parklarını abadlaşdırır.",
+      "target": "Bələdiyyə şəhər parklarını abadlaşdırır.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-118",
+      "groupId": "attention-118",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Tarixi sehre turistlər üçün maraqlı yerdir.",
+      "target": "Tarixi şəhər turistlər üçün maraqlı yerdir.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-119",
+      "groupId": "attention-119",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Biz sehre nəqliyyatının xəritəsini hazırladıq.",
+      "target": "Biz şəhər nəqliyyatının xəritəsini hazırladıq.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-120",
+      "groupId": "attention-120",
+      "split": "train",
+      "domain": "ambiguous-context",
+      "input": "Bu sehre sakinləri üçün yeni məktəb tikilir.",
+      "target": "Bu şəhər sakinləri üçün yeni məktəb tikilir.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-121",
+      "groupId": "attention-121",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Sənəddən suert alan əməkdaş onu poçtla göndərdi.",
+      "target": "Sənəddən surət alan əməkdaş onu poçtla göndərdi.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-122",
+      "groupId": "attention-122",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Arxivdə suert tapmaq bir neçə dəqiqə çəkdi.",
+      "target": "Arxivdə surət tapmaq bir neçə dəqiqə çəkdi.",
+      "raw": "suert",
+      "expectedWord": "surət"
+    },
+    {
+      "id": "attention-123",
+      "groupId": "attention-123",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Maşın suert həddini keçmədi.",
+      "target": "Maşın sürət həddini keçmədi.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-124",
+      "groupId": "attention-124",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Avtomobil suert rejiminə uyğun hərəkət etdi.",
+      "target": "Avtomobil sürət rejiminə uyğun hərəkət etdi.",
+      "raw": "suert",
+      "expectedWord": "sürət"
+    },
+    {
+      "id": "attention-125",
+      "groupId": "attention-125",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Sehre havası cavanları idmana həvəsləndirir.",
+      "target": "Səhər havası cavanları idmana həvəsləndirir.",
+      "raw": "Sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-126",
+      "groupId": "attention-126",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Hər sehre küçələr təmizlənir.",
+      "target": "Hər səhər küçələr təmizlənir.",
+      "raw": "sehre",
+      "expectedWord": "səhər"
+    },
+    {
+      "id": "attention-127",
+      "groupId": "attention-127",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Sehre binaları gecə işıqlandırılır.",
+      "target": "Şəhər binaları gecə işıqlandırılır.",
+      "raw": "Sehre",
+      "expectedWord": "şəhər"
+    },
+    {
+      "id": "attention-128",
+      "groupId": "attention-128",
+      "split": "validation",
+      "domain": "ambiguous-context",
+      "input": "Bu sehre yolları təmirə ehtiyac duyur.",
+      "target": "Bu şəhər yolları təmirə ehtiyac duyur.",
+      "raw": "sehre",
+      "expectedWord": "şəhər"
+    }
+  ]
+}
