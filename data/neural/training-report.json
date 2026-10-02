@@ -1,27 +1,27 @@
 {
   "architecture": "Candidate and agreement tanh MLPs plus frozen lexical anchor for previously learned errors; CPU-only deterministic SGD",
   "epochs": {
-    "lexical": 96,
+    "lexical": 120,
     "agreement": 24
   },
   "parameters": 795,
-  "corpusSha256": "ada409c66611ef93aa9f6beee44c75557c801372d08d19dbdbcf28800982491b",
+  "corpusSha256": "a86c67bc3c60cb97d78ae6e185df2282dfc834f0dfedc0946c747fc8728e98cd",
   "seedSha256": "f9d085b70bb569b8a68b30496c788540ac329cd552c38715b7aa80ca06e991c6",
-  "artifactSha256": "470a28423bce4a40c1c07def6df98515b7f9a001b84cf39e729fc72f7f50412a",
-  "artifactBytes": 129762,
+  "artifactSha256": "d48c0571f9646d1ee33f85743a48a70dbab41692dac29efea9426495c55f15c3",
+  "artifactBytes": 142215,
   "lexical": {
-    "trainExamples": 209,
-    "updateExamples": 206,
+    "trainExamples": 233,
+    "updateExamples": 230,
     "hiddenMemorizationFeature": 2,
-    "validationExamples": 41,
-    "testExamples": 78,
-    "validationLoss": 0.17236039405386647,
-    "threshold": 0.9,
+    "validationExamples": 49,
+    "testExamples": 90,
+    "validationLoss": 0.1423967759277765,
+    "threshold": 0.6,
     "calibration": {
-      "threshold": 0.9,
+      "threshold": 0.6,
       "margin": 0.15,
-      "accepted": 16,
-      "groups": 19
+      "accepted": 25,
+      "groups": 27
     }
   },
   "agreement": {

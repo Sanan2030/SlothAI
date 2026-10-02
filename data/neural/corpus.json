@@ -1648,6 +1648,390 @@
       "domain": "business",
       "input": "Siz sənədi dünən hazırladınız.",
       "target": "Siz sənədi dünən hazırladınız."
+    },
+    {
+      "id": "diverse-081",
+      "groupId": "diverse-081",
+      "split": "train",
+      "domain": "mail",
+      "input": "Müracciətin cavabı elektron poçtla göndəriləcək.",
+      "target": "Müraciətin cavabı elektron poçtla göndəriləcək."
+    },
+    {
+      "id": "diverse-082",
+      "groupId": "diverse-082",
+      "split": "train",
+      "domain": "it",
+      "input": "Serverdə konfiqurrasiya dəyişəndən sonra xidmət bərpa olundu.",
+      "target": "Serverdə konfiqurasiya dəyişəndən sonra xidmət bərpa olundu."
+    },
+    {
+      "id": "diverse-083",
+      "groupId": "diverse-083",
+      "split": "train",
+      "domain": "science",
+      "input": "Tədqiqqat qrupu su nümunələrini topladı.",
+      "target": "Tədqiqat qrupu su nümunələrini topladı."
+    },
+    {
+      "id": "diverse-084",
+      "groupId": "diverse-084",
+      "split": "train",
+      "domain": "daily",
+      "input": "Səyahhət üçün bileti əvvəlcədən aldım.",
+      "target": "Səyahət üçün bileti əvvəlcədən aldım."
+    },
+    {
+      "id": "diverse-085",
+      "groupId": "diverse-085",
+      "split": "train",
+      "domain": "business",
+      "input": "Müqavvilə tərəflərin razılığı ilə uzadıldı.",
+      "target": "Müqavilə tərəflərin razılığı ilə uzadıldı."
+    },
+    {
+      "id": "diverse-086",
+      "groupId": "diverse-086",
+      "split": "train",
+      "domain": "education",
+      "input": "Universittet bu il yeni təqaüd proqramı elan etdi.",
+      "target": "Universitet bu il yeni təqaüd proqramı elan etdi."
+    },
+    {
+      "id": "diverse-087",
+      "groupId": "diverse-087",
+      "split": "train",
+      "domain": "service",
+      "input": "Sifarriş təsdiqlənəndə telefonuma bildiriş gəldi.",
+      "target": "Sifariş təsdiqlənəndə telefonuma bildiriş gəldi."
+    },
+    {
+      "id": "diverse-088",
+      "groupId": "diverse-088",
+      "split": "train",
+      "domain": "science",
+      "input": "Nəticələr təcrübənin dəqiqqliyini göstərir.",
+      "target": "Nəticələr təcrübənin dəqiqliyini göstərir."
+    },
+    {
+      "id": "diverse-089",
+      "groupId": "diverse-089",
+      "split": "train",
+      "domain": "it",
+      "input": "Monittorinq sistemi yaddaş sərfiyyatını ölçür.",
+      "target": "Monitorinq sistemi yaddaş sərfiyyatını ölçür."
+    },
+    {
+      "id": "diverse-090",
+      "groupId": "diverse-090",
+      "split": "train",
+      "domain": "daily",
+      "input": "Bağda tərəvvez yetişdirmək istəyirik.",
+      "target": "Bağda tərəvəz yetişdirmək istəyirik."
+    },
+    {
+      "id": "diverse-091",
+      "groupId": "diverse-091",
+      "split": "train",
+      "domain": "business",
+      "input": "Maliyə şöbəsi xərcləri ayrıca hesabladı.",
+      "target": "Maliyyə şöbəsi xərcləri ayrıca hesabladı."
+    },
+    {
+      "id": "diverse-092",
+      "groupId": "diverse-092",
+      "split": "train",
+      "domain": "education",
+      "input": "Dərsdən sonra məşqq üçün meydançaya çıxdıq.",
+      "target": "Dərsdən sonra məşq üçün meydançaya çıxdıq."
+    },
+    {
+      "id": "diverse-093",
+      "groupId": "diverse-093",
+      "split": "train",
+      "domain": "mail",
+      "input": "Göndərilən təliff barədə rəyinizi gözləyirik.",
+      "target": "Göndərilən təklif barədə rəyinizi gözləyirik."
+    },
+    {
+      "id": "diverse-094",
+      "groupId": "diverse-094",
+      "split": "train",
+      "domain": "it",
+      "input": "İnteqrrasiya mərhələsində API cavablarını yoxladıq.",
+      "target": "İnteqrasiya mərhələsində API cavablarını yoxladıq."
+    },
+    {
+      "id": "diverse-095",
+      "groupId": "diverse-095",
+      "split": "train",
+      "domain": "science",
+      "input": "Müşahhidə zamanı quşların sayı qeyd edildi.",
+      "target": "Müşahidə zamanı quşların sayı qeyd edildi."
+    },
+    {
+      "id": "diverse-096",
+      "groupId": "diverse-096",
+      "split": "train",
+      "domain": "daily",
+      "input": "Pəncərədən mənzzərə çox gözəl görünürdü.",
+      "target": "Pəncərədən mənzərə çox gözəl görünürdü."
+    },
+    {
+      "id": "diverse-097",
+      "groupId": "diverse-097",
+      "split": "train",
+      "domain": "business",
+      "input": "Rəhbər sərmayyə planını iclasda təqdim etdi.",
+      "target": "Rəhbər sərmayə planını iclasda təqdim etdi."
+    },
+    {
+      "id": "diverse-098",
+      "groupId": "diverse-098",
+      "split": "train",
+      "domain": "education",
+      "input": "Mühazzirə bitəndə tələbələr sual verdilər.",
+      "target": "Mühazirə bitəndə tələbələr sual verdilər."
+    },
+    {
+      "id": "diverse-099",
+      "groupId": "diverse-099",
+      "split": "train",
+      "domain": "service",
+      "input": "Yolun təmiri nəqlliyyat axınını ləngitdi.",
+      "target": "Yolun təmiri nəqliyyat axınını ləngitdi."
+    },
+    {
+      "id": "diverse-100",
+      "groupId": "diverse-100",
+      "split": "train",
+      "domain": "science",
+      "input": "Təhlil üçün laborratoriya yeni cihaz aldı.",
+      "target": "Təhlil üçün laboratoriya yeni cihaz aldı."
+    },
+    {
+      "id": "diverse-101",
+      "groupId": "diverse-101",
+      "split": "train",
+      "domain": "it",
+      "input": "Şifrələmə məlumatın məxffiliyini qoruyur.",
+      "target": "Şifrələmə məlumatın məxfiliyini qoruyur."
+    },
+    {
+      "id": "diverse-102",
+      "groupId": "diverse-102",
+      "split": "train",
+      "domain": "daily",
+      "input": "Qonaqlar üçün səhər yeməyi hazzırladıq.",
+      "target": "Qonaqlar üçün səhər yeməyi hazırladıq."
+    },
+    {
+      "id": "diverse-103",
+      "groupId": "diverse-103",
+      "split": "train",
+      "domain": "business",
+      "input": "İş qrafikində çevviklik əməkdaşlara kömək edir.",
+      "target": "İş qrafikində çeviklik əməkdaşlara kömək edir."
+    },
+    {
+      "id": "diverse-104",
+      "groupId": "diverse-104",
+      "split": "train",
+      "domain": "mail",
+      "input": "Əlavədə qiymmət cədvəlini tapa bilərsiniz.",
+      "target": "Əlavədə qiymət cədvəlini tapa bilərsiniz."
+    },
+    {
+      "id": "diverse-105",
+      "groupId": "diverse-105",
+      "split": "validation",
+      "domain": "mail",
+      "input": "Daxil olan müracciətin qeydiyyat nömrəsi məlumdur.",
+      "target": "Daxil olan müraciətin qeydiyyat nömrəsi məlumdur."
+    },
+    {
+      "id": "diverse-106",
+      "groupId": "diverse-106",
+      "split": "validation",
+      "domain": "it",
+      "input": "Yeni konfiqurrasiya yalnız sınaq mühitində aktivdir.",
+      "target": "Yeni konfiqurasiya yalnız sınaq mühitində aktivdir."
+    },
+    {
+      "id": "diverse-107",
+      "groupId": "diverse-107",
+      "split": "validation",
+      "domain": "science",
+      "input": "Bu tədqiqqat üçün ayrıca büdcə ayrılıb.",
+      "target": "Bu tədqiqat üçün ayrıca büdcə ayrılıb."
+    },
+    {
+      "id": "diverse-108",
+      "groupId": "diverse-108",
+      "split": "validation",
+      "domain": "daily",
+      "input": "Uzun səyahhət insanı yorur.",
+      "target": "Uzun səyahət insanı yorur."
+    },
+    {
+      "id": "diverse-109",
+      "groupId": "diverse-109",
+      "split": "validation",
+      "domain": "business",
+      "input": "Arxivdə müqavvilə üçün yer ayırdıq.",
+      "target": "Arxivdə müqavilə üçün yer ayırdıq."
+    },
+    {
+      "id": "diverse-110",
+      "groupId": "diverse-110",
+      "split": "validation",
+      "domain": "education",
+      "input": "Kəndimizdə universittet açılması müzakirə olunur.",
+      "target": "Kəndimizdə universitet açılması müzakirə olunur."
+    },
+    {
+      "id": "diverse-111",
+      "groupId": "diverse-111",
+      "split": "validation",
+      "domain": "service",
+      "input": "Son sifarriş hələ yoldadır.",
+      "target": "Son sifariş hələ yoldadır."
+    },
+    {
+      "id": "diverse-112",
+      "groupId": "diverse-112",
+      "split": "validation",
+      "domain": "science",
+      "input": "Cihazın dəqiqqliyini yenidən yoxlamaq lazımdır.",
+      "target": "Cihazın dəqiqliyini yenidən yoxlamaq lazımdır."
+    },
+    {
+      "id": "diverse-113",
+      "groupId": "diverse-113",
+      "split": "test",
+      "domain": "mail",
+      "input": "Həmin müracciətin əsasında ödəniş qaytarıldı.",
+      "target": "Həmin müraciətin əsasında ödəniş qaytarıldı."
+    },
+    {
+      "id": "diverse-114",
+      "groupId": "diverse-114",
+      "split": "test",
+      "domain": "it",
+      "input": "Restart zamanı konfiqurrasiya faylı oxunmadı.",
+      "target": "Restart zamanı konfiqurasiya faylı oxunmadı."
+    },
+    {
+      "id": "diverse-115",
+      "groupId": "diverse-115",
+      "split": "test",
+      "domain": "science",
+      "input": "Beynəlxalq tədqiqqat okean axınlarını araşdırır.",
+      "target": "Beynəlxalq tədqiqat okean axınlarını araşdırır."
+    },
+    {
+      "id": "diverse-116",
+      "groupId": "diverse-116",
+      "split": "test",
+      "domain": "daily",
+      "input": "Qatarla səyahhət etməyi daha çox sevirəm.",
+      "target": "Qatarla səyahət etməyi daha çox sevirəm."
+    },
+    {
+      "id": "diverse-117",
+      "groupId": "diverse-117",
+      "split": "test",
+      "domain": "business",
+      "input": "Sabah müqavvilə qüvvəyə minəcək.",
+      "target": "Sabah müqavilə qüvvəyə minəcək."
+    },
+    {
+      "id": "diverse-118",
+      "groupId": "diverse-118",
+      "split": "test",
+      "domain": "education",
+      "input": "Qardaşım universittet yaxınlığında yaşayır.",
+      "target": "Qardaşım universitet yaxınlığında yaşayır."
+    },
+    {
+      "id": "diverse-119",
+      "groupId": "diverse-119",
+      "split": "test",
+      "domain": "service",
+      "input": "Anbarda sifarriş üçün bütün məhsullar var.",
+      "target": "Anbarda sifariş üçün bütün məhsullar var."
+    },
+    {
+      "id": "diverse-120",
+      "groupId": "diverse-120",
+      "split": "test",
+      "domain": "science",
+      "input": "Ölçmənin dəqiqqliyini üç üsulla müqayisə etdilər.",
+      "target": "Ölçmənin dəqiqliyini üç üsulla müqayisə etdilər."
+    },
+    {
+      "id": "diverse-121",
+      "groupId": "diverse-121",
+      "split": "test",
+      "domain": "it",
+      "input": "Məlumatların məxffiliyini saxlamaq bizim öhdəliyimizdir.",
+      "target": "Məlumatların məxfiliyini saxlamaq bizim öhdəliyimizdir."
+    },
+    {
+      "id": "diverse-122",
+      "groupId": "diverse-122",
+      "split": "test",
+      "domain": "daily",
+      "input": "Bayram süfrəsi üçün tərəvvez aldıq.",
+      "target": "Bayram süfrəsi üçün tərəvəz aldıq."
+    },
+    {
+      "id": "diverse-123",
+      "groupId": "diverse-123",
+      "split": "test",
+      "domain": "business",
+      "input": "Yeni layihənin maliyə hesabatı hazırdır.",
+      "target": "Yeni layihənin maliyyə hesabatı hazırdır."
+    },
+    {
+      "id": "diverse-124",
+      "groupId": "diverse-124",
+      "split": "test",
+      "domain": "education",
+      "input": "Bu gün kitabxanada mühazzirə keçiriləcək.",
+      "target": "Bu gün kitabxanada mühazirə keçiriləcək."
+    },
+    {
+      "id": "diverse-125",
+      "groupId": "diverse-125",
+      "split": "test",
+      "domain": "it",
+      "input": "Config faylında userName və retryCount dəyişməyib.",
+      "target": "Config faylında userName və retryCount dəyişməyib."
+    },
+    {
+      "id": "diverse-126",
+      "groupId": "diverse-126",
+      "split": "test",
+      "domain": "daily",
+      "input": "Mənim babam bağda lalə yetişdirir.",
+      "target": "Mənim babam bağda lalə yetişdirir."
+    },
+    {
+      "id": "diverse-127",
+      "groupId": "diverse-127",
+      "split": "test",
+      "domain": "business",
+      "input": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir.",
+      "target": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir."
+    },
+    {
+      "id": "diverse-128",
+      "groupId": "diverse-128",
+      "split": "test",
+      "domain": "mail",
+      "input": "Salam! Sizə uğurlu həftə arzulayıram.",
+      "target": "Salam! Sizə uğurlu həftə arzulayıram."
     }
   ],
   "agreement": [

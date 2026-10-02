@@ -4,6 +4,8 @@ import { productiveMorphology } from '../lib/editor/productive-morphology';
 import { agreementFeatures, subjects } from '../lib/editor/neural/features';
 import { fold } from '../lib/editor/local-ai/core';
 import diverse from '../data/neural/diverse-pairs.json';
+import expansion from '../data/neural/expansion-pairs.json';
+const naturalRows = [...diverse.rows, ...expansion.rows];
 import { auditPairs, uniqueExamples } from './neural-data-quality';
 import { atomicWriteSync } from './atomic-files.mjs';
 const nouns = ['məktəb', 'kitab', 'sənəd', 'məktub', 'qovluq', 'müəllim', 'tələbə', 'müştəri', 'əməkdaş', 'şirkət', 'məlumat', 'hesabat'];
@@ -15,7 +17,7 @@ const lexical = nouns.flatMap(lemma => productiveMorphology.generateForms({ lemm
   const ascii = fold(word), confusions = ascii.replace(/e/gu, 'a');
   return [[ascii, confusions, ascii.slice(0, 2) + ascii.slice(3), ascii.slice(0, 2) + ascii[2] + ascii.slice(2)][at % 4]].map((raw, variant) => ({ id: `${group}:${variant}`, groupId: group, split: split(group), input: frame.replace('{word}', raw), target }));
 }));
-lexical.push(...diverse.rows);
+lexical.push(...naturalRows);
 const verbs = ['yaz', 'oxu', 'göndər', 'hazırla', 'yoxla', 'tamamla', 'işlə', 'gəl', 'get'];
 const agreementCandidates = verbs.flatMap(lemma => ['past', 'present', 'future'].flatMap(tense => [false, true].flatMap(negative => Object.entries(subjects).flatMap(([pronoun, subject]) => {
   const group = `agreement:${lemma}:${tense}:${negative}:${pronoun}`;
@@ -44,7 +46,7 @@ atomicWriteSync('data/neural/corpus.json', JSON.stringify({ source: diverse.sour
 atomicWriteSync('data/neural/data-quality.json', JSON.stringify({ lexical: audit,
   originalLexicalRows: 2760, originalAgreementRows: 1944, agreementRows: agreement.length,
   agreementFeatureDuplicates: 0, agreementFeatureSplitLeaks: 0,
-  naturalContexts: diverse.rows.length, domains: [...new Set(diverse.rows.map(row => row.domain))].sort(),
+  naturalContexts: naturalRows.length, domains: [...new Set(naturalRows.map(row => row.domain))].sort(),
   nearDuplicateDefinition: 'NFC + Azerbaijani folding + token-bigram Jaccard >= 0.8; not a semantic equivalence guarantee',
 }, null, 2) + '\n');
 console.log({ lexical: lexical.length, agreement: agreement.length });

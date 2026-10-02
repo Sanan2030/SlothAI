@@ -73,6 +73,7 @@ jobs:
           git diff --exit-code -- lib/editor/neural/model.json data/neural/training-report.json data/neural/training-history.json
           npm run --ignore-scripts neural:check
           npm run --ignore-scripts neural:diversity:check
+          npm run --ignore-scripts neural:expansion:check
           npm run --ignore-scripts gold:check
           npm run --ignore-scripts gold:exact
           npm run --ignore-scripts local-ai:fresh:check

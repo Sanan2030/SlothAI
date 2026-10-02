@@ -1,0 +1,199 @@
+{
+  "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
+  "total": 16,
+  "exact": 16,
+  "neuralExact": 16,
+  "rows": [
+    {
+      "id": "diverse-113",
+      "groupId": "diverse-113",
+      "split": "test",
+      "domain": "mail",
+      "input": "Həmin müracciətin əsasında ödəniş qaytarıldı.",
+      "target": "Həmin müraciətin əsasında ödəniş qaytarıldı.",
+      "actual": "Həmin müraciətin əsasında ödəniş qaytarıldı.",
+      "neuralActual": "Həmin müraciətin əsasında ödəniş qaytarıldı."
+    },
+    {
+      "id": "diverse-114",
+      "groupId": "diverse-114",
+      "split": "test",
+      "domain": "it",
+      "input": "Restart zamanı konfiqurrasiya faylı oxunmadı.",
+      "target": "Restart zamanı konfiqurasiya faylı oxunmadı.",
+      "actual": "Restart zamanı konfiqurasiya faylı oxunmadı.",
+      "neuralActual": "Restart zamanı konfiqurasiya faylı oxunmadı."
+    },
+    {
+      "id": "diverse-115",
+      "groupId": "diverse-115",
+      "split": "test",
+      "domain": "science",
+      "input": "Beynəlxalq tədqiqqat okean axınlarını araşdırır.",
+      "target": "Beynəlxalq tədqiqat okean axınlarını araşdırır.",
+      "actual": "Beynəlxalq tədqiqat okean axınlarını araşdırır.",
+      "neuralActual": "Beynəlxalq tədqiqat okean axınlarını araşdırır."
+    },
+    {
+      "id": "diverse-116",
+      "groupId": "diverse-116",
+      "split": "test",
+      "domain": "daily",
+      "input": "Qatarla səyahhət etməyi daha çox sevirəm.",
+      "target": "Qatarla səyahət etməyi daha çox sevirəm.",
+      "actual": "Qatarla səyahət etməyi daha çox sevirəm.",
+      "neuralActual": "Qatarla səyahət etməyi daha çox sevirəm."
+    },
+    {
+      "id": "diverse-117",
+      "groupId": "diverse-117",
+      "split": "test",
+      "domain": "business",
+      "input": "Sabah müqavvilə qüvvəyə minəcək.",
+      "target": "Sabah müqavilə qüvvəyə minəcək.",
+      "actual": "Sabah müqavilə qüvvəyə minəcək.",
+      "neuralActual": "Sabah müqavilə qüvvəyə minəcək."
+    },
+    {
+      "id": "diverse-118",
+      "groupId": "diverse-118",
+      "split": "test",
+      "domain": "education",
+      "input": "Qardaşım universittet yaxınlığında yaşayır.",
+      "target": "Qardaşım universitet yaxınlığında yaşayır.",
+      "actual": "Qardaşım universitet yaxınlığında yaşayır.",
+      "neuralActual": "Qardaşım universitet yaxınlığında yaşayır."
+    },
+    {
+      "id": "diverse-119",
+      "groupId": "diverse-119",
+      "split": "test",
+      "domain": "service",
+      "input": "Anbarda sifarriş üçün bütün məhsullar var.",
+      "target": "Anbarda sifariş üçün bütün məhsullar var.",
+      "actual": "Anbarda sifariş üçün bütün məhsullar var.",
+      "neuralActual": "Anbarda sifariş üçün bütün məhsullar var."
+    },
+    {
+      "id": "diverse-120",
+      "groupId": "diverse-120",
+      "split": "test",
+      "domain": "science",
+      "input": "Ölçmənin dəqiqqliyini üç üsulla müqayisə etdilər.",
+      "target": "Ölçmənin dəqiqliyini üç üsulla müqayisə etdilər.",
+      "actual": "Ölçmənin dəqiqliyini üç üsulla müqayisə etdilər.",
+      "neuralActual": "Ölçmənin dəqiqliyini üç üsulla müqayisə etdilər."
+    },
+    {
+      "id": "diverse-121",
+      "groupId": "diverse-121",
+      "split": "test",
+      "domain": "it",
+      "input": "Məlumatların məxffiliyini saxlamaq bizim öhdəliyimizdir.",
+      "target": "Məlumatların məxfiliyini saxlamaq bizim öhdəliyimizdir.",
+      "actual": "Məlumatların məxfiliyini saxlamaq bizim öhdəliyimizdir.",
+      "neuralActual": "Məlumatların məxfiliyini saxlamaq bizim öhdəliyimizdir."
+    },
+    {
+      "id": "diverse-122",
+      "groupId": "diverse-122",
+      "split": "test",
+      "domain": "daily",
+      "input": "Bayram süfrəsi üçün tərəvvez aldıq.",
+      "target": "Bayram süfrəsi üçün tərəvəz aldıq.",
+      "actual": "Bayram süfrəsi üçün tərəvəz aldıq.",
+      "neuralActual": "Bayram süfrəsi üçün tərəvəz aldıq."
+    },
+    {
+      "id": "diverse-123",
+      "groupId": "diverse-123",
+      "split": "test",
+      "domain": "business",
+      "input": "Yeni layihənin maliyə hesabatı hazırdır.",
+      "target": "Yeni layihənin maliyyə hesabatı hazırdır.",
+      "actual": "Yeni layihənin maliyyə hesabatı hazırdır.",
+      "neuralActual": "Yeni layihənin maliyyə hesabatı hazırdır."
+    },
+    {
+      "id": "diverse-124",
+      "groupId": "diverse-124",
+      "split": "test",
+      "domain": "education",
+      "input": "Bu gün kitabxanada mühazzirə keçiriləcək.",
+      "target": "Bu gün kitabxanada mühazirə keçiriləcək.",
+      "actual": "Bu gün kitabxanada mühazirə keçiriləcək.",
+      "neuralActual": "Bu gün kitabxanada mühazirə keçiriləcək."
+    },
+    {
+      "id": "diverse-125",
+      "groupId": "diverse-125",
+      "split": "test",
+      "domain": "it",
+      "input": "Config faylında userName və retryCount dəyişməyib.",
+      "target": "Config faylında userName və retryCount dəyişməyib.",
+      "actual": "Config faylında userName və retryCount dəyişməyib.",
+      "neuralActual": "Config faylında userName və retryCount dəyişməyib."
+    },
+    {
+      "id": "diverse-126",
+      "groupId": "diverse-126",
+      "split": "test",
+      "domain": "daily",
+      "input": "Mənim babam bağda lalə yetişdirir.",
+      "target": "Mənim babam bağda lalə yetişdirir.",
+      "actual": "Mənim babam bağda lalə yetişdirir.",
+      "neuralActual": "Mənim babam bağda lalə yetişdirir."
+    },
+    {
+      "id": "diverse-127",
+      "groupId": "diverse-127",
+      "split": "test",
+      "domain": "business",
+      "input": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir.",
+      "target": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir.",
+      "actual": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir.",
+      "neuralActual": "Müqavilə üzrə məsuliyyət hər iki tərəfə aiddir."
+    },
+    {
+      "id": "diverse-128",
+      "groupId": "diverse-128",
+      "split": "test",
+      "domain": "mail",
+      "input": "Salam! Sizə uğurlu həftə arzulayıram.",
+      "target": "Salam! Sizə uğurlu həftə arzulayıram.",
+      "actual": "Salam! Sizə uğurlu həftə arzulayıram.",
+      "neuralActual": "Salam! Sizə uğurlu həftə arzulayıram."
+    }
+  ],
+  "baselineExact": 6,
+  "baselineNeuralExact": 5,
+  "gains": [
+    "diverse-113",
+    "diverse-114",
+    "diverse-115",
+    "diverse-116",
+    "diverse-118",
+    "diverse-119",
+    "diverse-120",
+    "diverse-121",
+    "diverse-122",
+    "diverse-124"
+  ],
+  "neuralGains": [
+    "diverse-113",
+    "diverse-114",
+    "diverse-115",
+    "diverse-116",
+    "diverse-118",
+    "diverse-119",
+    "diverse-120",
+    "diverse-121",
+    "diverse-122",
+    "diverse-123",
+    "diverse-124"
+  ],
+  "regressions": [],
+  "neuralRegressions": [],
+  "controlFailures": [],
+  "caveat": "Frozen authored holdout, shared lexical error families with training, not real-user or semantic comprehension accuracy."
+}

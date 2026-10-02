@@ -1,0 +1,882 @@
+{
+  "baseMain": "7c96784953db719393fd6bad3deb5035c4df7afd",
+  "tests": {
+    "total": 3833,
+    "pass": 3833,
+    "fail": 0
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "legacyPairedReproduction": "exact artifact match",
+  "neuralReproduction": "exact model/report/history SHA-256 match",
+  "parameters": 795,
+  "artifactBytes": 142215,
+  "artifactSha256": "d48c0571f9646d1ee33f85743a48a70dbab41692dac29efea9426495c55f15c3",
+  "corpus": {
+    "lexical": {
+      "rows": 272,
+      "duplicates": [],
+      "nearDuplicates": [],
+      "splitLeaks": []
+    },
+    "originalLexicalRows": 2760,
+    "originalAgreementRows": 1944,
+    "agreementRows": 216,
+    "agreementFeatureDuplicates": 0,
+    "agreementFeatureSplitLeaks": 0,
+    "naturalContexts": 128,
+    "domains": [
+      "business",
+      "daily",
+      "education",
+      "it",
+      "mail",
+      "science",
+      "service"
+    ],
+    "nearDuplicateDefinition": "NFC + Azerbaijani folding + token-bigram Jaccard >= 0.8; not a semantic equivalence guarantee"
+  },
+  "newHoldout": {
+    "total": 16,
+    "beforeExact": 6,
+    "afterExact": 16,
+    "beforeNeuralExact": 5,
+    "afterNeuralExact": 16
+  },
+  "priorNaturalHoldout": {
+    "total": 20,
+    "exact": 20
+  },
+  "linguisticExercise": {
+    "lexical": {
+      "total": 66,
+      "exact": 53
+    },
+    "agreement": {
+      "total": 50,
+      "correctClassification": 50,
+      "exact": 50
+    },
+    "challenge": {
+      "total": 14,
+      "exact": 14
+    },
+    "previousExactTextRegressions": [],
+    "caveat": "Correlated synthetic exercises and small authored development probes, not real-world accuracy",
+    "probes": [
+      {
+        "input": "maktablar yeni acildi",
+        "expected": "Məktəblər yeni açıldı.",
+        "actual": "Məktəblər yeni açıldı.",
+        "exact": true
+      },
+      {
+        "input": "maktablarda yeni dersler basladi",
+        "expected": "Məktəblərdə yeni dərslər başladı.",
+        "actual": "Məktəblərdə yeni dərslər başladı.",
+        "exact": true
+      },
+      {
+        "input": "Mən sənədi oxuyurlar.",
+        "expected": "Mən sənədi oxuyuram.",
+        "actual": "Mən sənədi oxuyuram.",
+        "exact": true
+      },
+      {
+        "input": "Biz məktubu göndərdi.",
+        "expected": "Biz məktubu göndərdik.",
+        "actual": "Biz məktubu göndərdik.",
+        "exact": true
+      },
+      {
+        "input": "Onlar layihəni tamamladım.",
+        "expected": "Onlar layihəni tamamladılar.",
+        "actual": "Onlar layihəni tamamladılar.",
+        "exact": true
+      },
+      {
+        "input": "Sən sabah hesabatı yoxlayacağam.",
+        "expected": "Sən sabah hesabatı yoxlayacaqsan.",
+        "actual": "Sən sabah hesabatı yoxlayacaqsan.",
+        "exact": true
+      },
+      {
+        "input": "Siz sənədi hazırladım.",
+        "expected": "Siz sənədi hazırladınız.",
+        "actual": "Siz sənədi hazırladınız.",
+        "exact": true
+      },
+      {
+        "input": "Mən məktubu göndərdim.",
+        "expected": "Mən məktubu göndərdim.",
+        "actual": "Mən məktubu göndərdim.",
+        "exact": true
+      },
+      {
+        "input": "Biz məktubu göndərmədik.",
+        "expected": "Biz məktubu göndərmədik.",
+        "actual": "Biz məktubu göndərmədik.",
+        "exact": true
+      },
+      {
+        "input": "Mən və sən məktubu göndərdik.",
+        "expected": "Mən və sən məktubu göndərdik.",
+        "actual": "Mən və sən məktubu göndərdik.",
+        "exact": true
+      },
+      {
+        "input": "`Mən sənədi oxuyurlar.`",
+        "expected": "`Mən sənədi oxuyurlar.`",
+        "actual": "`Mən sənədi oxuyurlar.`",
+        "exact": true
+      },
+      {
+        "input": "API cavabı JSON formatındadır.",
+        "expected": "API cavabı JSON formatındadır.",
+        "actual": "API cavabı JSON formatındadır.",
+        "exact": true
+      },
+      {
+        "input": "Onlar məktubu göndərdi.",
+        "expected": "Onlar məktubu göndərdi.",
+        "actual": "Onlar məktubu göndərdi.",
+        "exact": true
+      },
+      {
+        "input": "Mən bilirəm ki, sən məktubu oxuyursan.",
+        "expected": "Mən bilirəm ki, sən məktubu oxuyursan.",
+        "actual": "Mən bilirəm ki, sən məktubu oxuyursan.",
+        "exact": true
+      }
+    ],
+    "lexicalFailures": [
+      {
+        "id": "lexical:məktəb:məktəblərə:2:0",
+        "exact": false,
+        "actual": "Mən «meteblere» sözünü axtardım.",
+        "expected": "Mən «məktəblərə» sözünü axtardım."
+      },
+      {
+        "id": "lexical:kitab:kitablarımı:9:0",
+        "exact": false,
+        "actual": "Siyahıya «kitablarimi» əlavə edildi.",
+        "expected": "Siyahıya «kitablarımı» əlavə edildi."
+      },
+      {
+        "id": "lexical:sənəd:sənədlər:0:0",
+        "exact": false,
+        "actual": "Redaktor «senedler» formasını yoxladı.",
+        "expected": "Redaktor «sənədlər» formasını yoxladı."
+      },
+      {
+        "id": "lexical:qovluq:qovluqlarımı:9:0",
+        "exact": false,
+        "actual": "Siyahıya «qovluqlarimi» əlavə edildi.",
+        "expected": "Siyahıya «qovluqlarımı» əlavə edildi."
+      },
+      {
+        "id": "lexical:müəllim:müəllimlərdə:4:0",
+        "exact": false,
+        "actual": "Burada «muellimlerde» nümunəsi göstərilir.",
+        "expected": "Burada «müəllimlərdə» nümunəsi göstərilir."
+      },
+      {
+        "id": "lexical:tələbə:tələbələrimin:7:0",
+        "exact": false,
+        "actual": "Lövhədə «tellebelerimin» yazılıb.",
+        "expected": "Lövhədə «tələbələrimin» yazılıb."
+      },
+      {
+        "id": "lexical:tələbə:tələbələrimdə:10:0",
+        "exact": false,
+        "actual": "Burada «teebelerimde» nümunəsi göstərilir.",
+        "expected": "Burada «tələbələrimdə» nümunəsi göstərilir."
+      },
+      {
+        "id": "lexical:müştəri:müştərilərimin:7:0",
+        "exact": false,
+        "actual": "Lövhədə «mussterilerimin» yazılıb.",
+        "expected": "Lövhədə «müştərilərimin» yazılıb."
+      },
+      {
+        "id": "lexical:müştəri:müştərilərimə:8:0",
+        "exact": false,
+        "actual": "Mən «musterilerime» sözünü axtardım.",
+        "expected": "Mən «müştərilərimə» sözünü axtardım."
+      },
+      {
+        "id": "lexical:müştəri:müştərilərimdə:10:0",
+        "exact": false,
+        "actual": "Burada «muterilerimde» nümunəsi göstərilir.",
+        "expected": "Burada «müştərilərimdə» nümunəsi göstərilir."
+      },
+      {
+        "id": "lexical:şirkət:şirkətlərimdə:10:0",
+        "exact": false,
+        "actual": "Burada «siketlerimde» nümunəsi göstərilir.",
+        "expected": "Burada «şirkətlərimdə» nümunəsi göstərilir."
+      },
+      {
+        "id": "lexical:məlumat:məlumatlarıma:8:0",
+        "exact": false,
+        "actual": "Mən «melumatlarima» sözünü axtardım.",
+        "expected": "Mən «məlumatlarıma» sözünü axtardım."
+      },
+      {
+        "id": "diverse-070",
+        "exact": false,
+        "actual": "Mustərilərin növbəsi ekranda göstərilir.",
+        "expected": "Müştərilərin növbəsi ekranda göstərilir."
+      }
+    ],
+    "agreementFailures": []
+  },
+  "benchmark": {
+    "node": "v24.19.0",
+    "maxInputChars": 10000,
+    "maxBenchmarkChunkChars": 9000,
+    "results": [
+      {
+        "words": 20,
+        "requests": 1,
+        "chars": 134,
+        "avgMs": 12.76,
+        "p50Ms": 12.51,
+        "p95Ms": 14.75,
+        "minMs": 11.08,
+        "maxMs": 14.75,
+        "targetMs": 10000,
+        "rssBaseMb": 320.35,
+        "rssPeakMb": 320.35,
+        "rssDeltaMb": 0,
+        "heapDeltaMb": 2.45,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "requests": 1,
+        "chars": 732,
+        "avgMs": 53.1,
+        "p50Ms": 51.94,
+        "p95Ms": 59.84,
+        "minMs": 49.4,
+        "maxMs": 59.84,
+        "targetMs": 10000,
+        "rssBaseMb": 320.35,
+        "rssPeakMb": 321.85,
+        "rssDeltaMb": 1.5,
+        "heapDeltaMb": 12.96,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "requests": 1,
+        "chars": 3741,
+        "avgMs": 316.13,
+        "p50Ms": 272.02,
+        "p95Ms": 453.86,
+        "minMs": 255,
+        "maxMs": 453.86,
+        "targetMs": 10000,
+        "rssBaseMb": 321.85,
+        "rssPeakMb": 322.97,
+        "rssDeltaMb": 1.13,
+        "heapDeltaMb": 49.66,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "requests": 1,
+        "chars": 7491,
+        "avgMs": 576.08,
+        "p50Ms": 566.1,
+        "p95Ms": 651.68,
+        "minMs": 547.05,
+        "maxMs": 651.68,
+        "targetMs": 10000,
+        "rssBaseMb": 318.98,
+        "rssPeakMb": 323.1,
+        "rssDeltaMb": 4.12,
+        "heapDeltaMb": 34.96,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "requests": 5,
+        "chars": 37528,
+        "avgMs": 2920.77,
+        "p50Ms": 2828.15,
+        "p95Ms": 3237.1,
+        "minMs": 2762.74,
+        "maxMs": 3237.1,
+        "targetMs": 10000,
+        "rssBaseMb": 319.42,
+        "rssPeakMb": 324.71,
+        "rssDeltaMb": 5.29,
+        "heapDeltaMb": 55.11,
+        "status": "PASS"
+      }
+    ],
+    "diffResults": [
+      {
+        "words": 20,
+        "requests": 1,
+        "chars": 134,
+        "scope": "single request",
+        "avgMs": 0.38,
+        "p50Ms": 0.13,
+        "p95Ms": 2.93,
+        "targetMs": 10000,
+        "heapDeltaMb": 0.36,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "requests": 1,
+        "chars": 732,
+        "scope": "single request",
+        "avgMs": 0.75,
+        "p50Ms": 0.68,
+        "p95Ms": 1.16,
+        "targetMs": 10000,
+        "heapDeltaMb": 1.23,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "requests": 1,
+        "chars": 3741,
+        "scope": "single request",
+        "avgMs": 3.67,
+        "p50Ms": 3.59,
+        "p95Ms": 4.17,
+        "targetMs": 10000,
+        "heapDeltaMb": 5.01,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "requests": 1,
+        "chars": 7491,
+        "scope": "single request",
+        "avgMs": 6.72,
+        "p50Ms": 6.64,
+        "p95Ms": 7.19,
+        "targetMs": 10000,
+        "heapDeltaMb": 8.74,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "requests": 5,
+        "chars": 37528,
+        "scope": "logical multi-chunk document",
+        "avgMs": 34.31,
+        "p50Ms": 33.99,
+        "p95Ms": 35.76,
+        "targetMs": 10000,
+        "heapDeltaMb": 0,
+        "status": "PASS"
+      }
+    ],
+    "componentResults": [
+      {
+        "name": "segmentation",
+        "words": 20,
+        "avgMs": 0.72,
+        "p50Ms": 0.74,
+        "p95Ms": 0.74,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 20,
+        "avgMs": 0.36,
+        "p50Ms": 0.21,
+        "p95Ms": 0.74,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 20,
+        "avgMs": 0.01,
+        "p50Ms": 0,
+        "p95Ms": 0.01,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 20,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 20,
+        "avgMs": 0.1,
+        "p50Ms": 0.09,
+        "p95Ms": 0.14,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 20,
+        "avgMs": 0.04,
+        "p50Ms": 0.04,
+        "p95Ms": 0.04,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 20,
+        "avgMs": 0.08,
+        "p50Ms": 0.05,
+        "p95Ms": 0.13,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 20,
+        "avgMs": 0.06,
+        "p50Ms": 0.06,
+        "p95Ms": 0.08,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 20,
+        "avgMs": 0.19,
+        "p50Ms": 0.01,
+        "p95Ms": 0.57,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 20,
+        "avgMs": 0.17,
+        "p50Ms": 0.14,
+        "p95Ms": 0.24,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 20,
+        "avgMs": 1.14,
+        "p50Ms": 1.12,
+        "p95Ms": 1.17,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 100,
+        "avgMs": 4.22,
+        "p50Ms": 4.22,
+        "p95Ms": 4.27,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 100,
+        "avgMs": 0.52,
+        "p50Ms": 0.52,
+        "p95Ms": 0.53,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 100,
+        "avgMs": 0.01,
+        "p50Ms": 0.01,
+        "p95Ms": 0.01,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 100,
+        "avgMs": 0.01,
+        "p50Ms": 0,
+        "p95Ms": 0.02,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 100,
+        "avgMs": 0.35,
+        "p50Ms": 0.31,
+        "p95Ms": 0.44,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 100,
+        "avgMs": 0.1,
+        "p50Ms": 0.11,
+        "p95Ms": 0.12,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 100,
+        "avgMs": 0.27,
+        "p50Ms": 0.27,
+        "p95Ms": 0.3,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 100,
+        "avgMs": 0.26,
+        "p50Ms": 0.26,
+        "p95Ms": 0.26,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 100,
+        "avgMs": 0.04,
+        "p50Ms": 0.06,
+        "p95Ms": 0.06,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 100,
+        "avgMs": 0.67,
+        "p50Ms": 0.68,
+        "p95Ms": 0.7,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 100,
+        "avgMs": 6.31,
+        "p50Ms": 6.42,
+        "p95Ms": 6.51,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 500,
+        "avgMs": 20.88,
+        "p50Ms": 20.87,
+        "p95Ms": 21.31,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 500,
+        "avgMs": 2.98,
+        "p50Ms": 2.97,
+        "p95Ms": 3,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 500,
+        "avgMs": 0.03,
+        "p50Ms": 0.03,
+        "p95Ms": 0.04,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 500,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 500,
+        "avgMs": 1.39,
+        "p50Ms": 1.39,
+        "p95Ms": 1.4,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 500,
+        "avgMs": 0.49,
+        "p50Ms": 0.49,
+        "p95Ms": 0.51,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 500,
+        "avgMs": 1.39,
+        "p50Ms": 1.4,
+        "p95Ms": 1.44,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 500,
+        "avgMs": 1.99,
+        "p50Ms": 1.87,
+        "p95Ms": 2.6,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 500,
+        "avgMs": 0.12,
+        "p50Ms": 0.13,
+        "p95Ms": 0.17,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 500,
+        "avgMs": 2.88,
+        "p50Ms": 2.93,
+        "p95Ms": 2.97,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 500,
+        "avgMs": 31.75,
+        "p50Ms": 31.71,
+        "p95Ms": 32.45,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 1000,
+        "avgMs": 41.63,
+        "p50Ms": 42.25,
+        "p95Ms": 42.29,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 1000,
+        "avgMs": 5.63,
+        "p50Ms": 5.44,
+        "p95Ms": 6.06,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 1000,
+        "avgMs": 0.07,
+        "p50Ms": 0.07,
+        "p95Ms": 0.07,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 1000,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 1000,
+        "avgMs": 3.07,
+        "p50Ms": 3.06,
+        "p95Ms": 3.17,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 1000,
+        "avgMs": 1.02,
+        "p50Ms": 0.89,
+        "p95Ms": 1.28,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 1000,
+        "avgMs": 2.49,
+        "p50Ms": 2.46,
+        "p95Ms": 2.59,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 1000,
+        "avgMs": 2.82,
+        "p50Ms": 2.75,
+        "p95Ms": 3,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 1000,
+        "avgMs": 0.17,
+        "p50Ms": 0.13,
+        "p95Ms": 0.25,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 1000,
+        "avgMs": 5.53,
+        "p50Ms": 5.52,
+        "p95Ms": 5.54,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 1000,
+        "avgMs": 63.93,
+        "p50Ms": 63.32,
+        "p95Ms": 65.62,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 5000,
+        "avgMs": 210.82,
+        "p50Ms": 211.71,
+        "p95Ms": 216.19,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 5000,
+        "avgMs": 27.57,
+        "p50Ms": 27.62,
+        "p95Ms": 28.36,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 5000,
+        "avgMs": 0.64,
+        "p50Ms": 0.64,
+        "p95Ms": 0.66,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 5000,
+        "avgMs": 0.46,
+        "p50Ms": 0.47,
+        "p95Ms": 0.55,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 5000,
+        "avgMs": 15.59,
+        "p50Ms": 15.58,
+        "p95Ms": 15.68,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 5000,
+        "avgMs": 5.12,
+        "p50Ms": 5.07,
+        "p95Ms": 5.34,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 5000,
+        "avgMs": 13.96,
+        "p50Ms": 13.88,
+        "p95Ms": 14.12,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 5000,
+        "avgMs": 15.36,
+        "p50Ms": 15.65,
+        "p95Ms": 15.74,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 5000,
+        "avgMs": 0.75,
+        "p50Ms": 0.71,
+        "p95Ms": 0.89,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 5000,
+        "avgMs": 27.2,
+        "p50Ms": 27.03,
+        "p95Ms": 27.88,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 5000,
+        "avgMs": 322.98,
+        "p50Ms": 324.01,
+        "p95Ms": 324.33,
+        "targetMs": 10000,
+        "status": "PASS"
+      }
+    ]
+  },
+  "limitations": "Assistant-authored synthetic exercises; shared lexical families, not real-user/general semantic accuracy. Local warm p95 timings, not a Vercel SLA."
+}

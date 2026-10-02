@@ -1,6 +1,6 @@
 {
   "lexical": {
-    "rows": 224,
+    "rows": 272,
     "duplicates": [],
     "nearDuplicates": [],
     "splitLeaks": []
@@ -10,7 +10,7 @@
   "agreementRows": 216,
   "agreementFeatureDuplicates": 0,
   "agreementFeatureSplitLeaks": 0,
-  "naturalContexts": 80,
+  "naturalContexts": 128,
   "domains": [
     "business",
     "daily",

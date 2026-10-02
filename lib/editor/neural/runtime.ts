@@ -1,5 +1,5 @@
 import { createNominalRepair } from './nominal-repair';
-import { finiteAnalyses, agreementForms } from './morphology';
+import { finiteAnalyses, agreementForms, areRegularCaseAlternatives } from './morphology';
 import { isFinitePredicate } from '../segmentation';
 import artifact from './model.json';
 import pairedArtifact from '../local-ai/paired-model.json';
@@ -61,7 +61,7 @@ export function neuralSpelling(text: string): string {
     // repair. Keep global model thresholds unchanged; validate this fallback
     // using morphology, trained error channels and explicit-letter protection.
     selected ??= nominalRepair(lower);
-    if (!selected || !preservesDiacritics(raw, selected)) continue;
+    if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(lower, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     result += text.slice(cursor, token.start) + target; cursor = token.end;
   }

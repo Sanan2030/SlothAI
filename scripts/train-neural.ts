@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import seedArtifact from '../data/neural/seed-v1.json';
 import corpus from '../data/neural/corpus.json';
 import posArtifact from '../lib/editor/local-ai/pos-model.json';
-import { alignTokens, trainPaired, type CorrectionPair } from '../lib/editor/local-ai/paired';
+import { alignTokens, collectPairedEvidence, type CorrectionPair } from '../lib/editor/local-ai/paired';
 import { tokenize, fold } from '../lib/editor/local-ai/core';
 import type { POSModel } from '../lib/editor/local-ai/pos';
 import { trainNetwork, predictNetwork, parameterCount, type Example } from '../lib/editor/neural/network';
@@ -17,7 +17,7 @@ const pairs: CorrectionPair[] = corpus.lexical;
 const reserved = new Set(pairs.filter(row => row.split !== 'train').map(row => row.target));
 for (const row of pairs.filter(row => row.split === 'train')) if (reserved.has(row.target)) throw new Error('Neural target split leakage.');
 const hash = createHash('sha256').update(JSON.stringify(corpus)).digest('hex');
-const learned = trainPaired(pairs.filter(row => row.split === 'train'), posArtifact as POSModel);
+const learned = collectPairedEvidence(pairs.filter(row => row.split === 'train'), posArtifact as POSModel);
 // Published checkpoint is immutable. Only current training rows update counts.
 const lexicon = structuredClone(seedArtifact.lexicon) as NeuralArtifact['lexicon'];
 for (const [word, value] of Object.entries(learned.words)) {

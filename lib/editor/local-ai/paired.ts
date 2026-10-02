@@ -118,7 +118,8 @@ export function rankPaired(model: PairedModel, index: Map<string, string[]>, raw
   return { word: winner.word, probability: winner.probability, margin, supportingContext: winner.support,
     accepted: plausible && winner.probability >= model.threshold && margin >= model.margin };
 }
-export function trainPaired(pairs: readonly CorrectionPair[], posModel: POSModel): PairedModel {
+/** Collect shared lexical evidence without fitting the optional logistic classifier. */
+export function collectPairedEvidence(pairs: readonly CorrectionPair[], posModel: POSModel): PairedModel {
   if (pairs.some(pair => pair.split !== 'train')) throw new Error('Only training pairs may reach the paired trainer.');
   const model: PairedModel = { version: 1, algorithm: 'supervised-token-edit-logistic', words: {}, edits: {}, channels: {}, splits: {}, weights: Array(9).fill(0), threshold: 1, margin: 0.15,
     calibration: { samples: 0, accepted: 0, correct: 0, precision: null } };
@@ -151,6 +152,11 @@ export function trainPaired(pairs: readonly CorrectionPair[], posModel: POSModel
       }
     }
   }
+  return model;
+}
+
+export function trainPaired(pairs: readonly CorrectionPair[], posModel: POSModel): PairedModel {
+  const model = collectPairedEvidence(pairs, posModel);
   const index = candidateIndex(model);
   const examples: { values: number[]; target: number }[] = [];
   for (const pair of pairs) {

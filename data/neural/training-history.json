@@ -7,20 +7,20 @@
       "lexical": 96,
       "agreement": 24
     },
-    "lexicalValidationLoss": 0.17236039405386647,
+    "lexicalValidationLoss": 0.14796307657582708,
     "agreementValidationLoss": 0.0018718059017573299,
-    "artifactSha256": "470a28423bce4a40c1c07def6df98515b7f9a001b84cf39e729fc72f7f50412a"
+    "artifactSha256": "1ec129b6f9731020a7d9a2bddf404009c27e5b45e98a7dd895239a82f86ef4e1"
   },
   {
     "requestedEpochs": 24,
-    "retainedPreviousLexical": true,
+    "retainedPreviousLexical": false,
     "retainedPreviousAgreement": true,
     "epochs": {
-      "lexical": 96,
+      "lexical": 120,
       "agreement": 24
     },
-    "lexicalValidationLoss": 0.17236039405386647,
+    "lexicalValidationLoss": 0.1423967759277765,
     "agreementValidationLoss": 0.0018718059017573299,
-    "artifactSha256": "470a28423bce4a40c1c07def6df98515b7f9a001b84cf39e729fc72f7f50412a"
+    "artifactSha256": "d48c0571f9646d1ee33f85743a48a70dbab41692dac29efea9426495c55f15c3"
   }
 ]
