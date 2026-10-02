@@ -30,7 +30,8 @@ On the new frozen 16 sentences the complete editor improved from 6/16 to 16/16
 exact outputs; neural spelling alone improved from 5/16 to 16/16. The previous
 20 development contexts remain 20/20 in the complete editor (19/20 neural-only),
 and the earlier 14 probes remain 14/14. The larger lexical exercise evaluation
-is 53/66 exact, leaving 13 unresolved exercises. Grammar feature classification
+was 53/66 exact at this release, leaving 13 unresolved exercises. Those were
+subsequently fixed; see [neural-thirteen-fix.md](neural-thirteen-fix.md). Grammar feature classification
 and correction remain 50/50, but these are symbolic synthetic tests. These
 numbers do not establish general grammar or meaning comprehension.
 

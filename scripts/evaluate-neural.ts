@@ -22,4 +22,4 @@ const summary = { lexical: { total: lexical.length, exact: lexical.filter(row =>
 atomicWriteSync('data/neural/evaluation-report.json', JSON.stringify({ ...summary, caveat: 'Correlated synthetic exercises and small authored development probes, not real-world accuracy', probes,
   lexicalFailures: lexical.filter(row => !row.exact), agreementFailures: agreement.filter(row => row.actual !== row.expected) }, null, 2) + '\n');
 console.log(summary);
-if (process.argv.includes('--enforce') && (regressions.length || summary.challenge.exact !== probes.length || summary.agreement.correctClassification !== agreement.length || summary.agreement.exact !== agreement.length)) process.exitCode = 1;
+if (process.argv.includes('--enforce') && (regressions.length || summary.lexical.exact !== lexical.length || summary.challenge.exact !== probes.length || summary.agreement.correctClassification !== agreement.length || summary.agreement.exact !== agreement.length)) process.exitCode = 1;

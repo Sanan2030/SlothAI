@@ -1,0 +1,70 @@
+{
+  "source": "Frozen failures from main 55bb0c3; development regressions, not unseen validation",
+  "rows": [
+    {
+      "id": "lexical:məktəb:məktəblərə:2:0",
+      "input": "Mən «meteblere» sözünü axtardım.",
+      "expected": "Mən «məktəblərə» sözünü axtardım."
+    },
+    {
+      "id": "lexical:kitab:kitablarımı:9:0",
+      "input": "Siyahıya «kitablarimi» əlavə edildi.",
+      "expected": "Siyahıya «kitablarımı» əlavə edildi."
+    },
+    {
+      "id": "lexical:sənəd:sənədlər:0:0",
+      "input": "Redaktor «senedler» formasını yoxladı.",
+      "expected": "Redaktor «sənədlər» formasını yoxladı."
+    },
+    {
+      "id": "lexical:qovluq:qovluqlarımı:9:0",
+      "input": "Siyahıya «qovluqlarimi» əlavə edildi.",
+      "expected": "Siyahıya «qovluqlarımı» əlavə edildi."
+    },
+    {
+      "id": "lexical:müəllim:müəllimlərdə:4:0",
+      "input": "Burada «muellimlerde» nümunəsi göstərilir.",
+      "expected": "Burada «müəllimlərdə» nümunəsi göstərilir."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimin:7:0",
+      "input": "Lövhədə «tellebelerimin» yazılıb.",
+      "expected": "Lövhədə «tələbələrimin» yazılıb."
+    },
+    {
+      "id": "lexical:tələbə:tələbələrimdə:10:0",
+      "input": "Burada «teebelerimde» nümunəsi göstərilir.",
+      "expected": "Burada «tələbələrimdə» nümunəsi göstərilir."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimin:7:0",
+      "input": "Lövhədə «mussterilerimin» yazılıb.",
+      "expected": "Lövhədə «müştərilərimin» yazılıb."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimə:8:0",
+      "input": "Mən «musterilerime» sözünü axtardım.",
+      "expected": "Mən «müştərilərimə» sözünü axtardım."
+    },
+    {
+      "id": "lexical:müştəri:müştərilərimdə:10:0",
+      "input": "Burada «muterilerimde» nümunəsi göstərilir.",
+      "expected": "Burada «müştərilərimdə» nümunəsi göstərilir."
+    },
+    {
+      "id": "lexical:şirkət:şirkətlərimdə:10:0",
+      "input": "Burada «siketlerimde» nümunəsi göstərilir.",
+      "expected": "Burada «şirkətlərimdə» nümunəsi göstərilir."
+    },
+    {
+      "id": "lexical:məlumat:məlumatlarıma:8:0",
+      "input": "Mən «melumatlarima» sözünü axtardım.",
+      "expected": "Mən «məlumatlarıma» sözünü axtardım."
+    },
+    {
+      "id": "diverse-070",
+      "input": "Mustərilərin növbəsi ekranda göstərilir.",
+      "expected": "Müştərilərin növbəsi ekranda göstərilir."
+    }
+  ]
+}

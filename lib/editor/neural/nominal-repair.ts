@@ -14,6 +14,7 @@ const vowels = /^[aeiou]$/u;
  * neural probability or an exact-sentence replay table. */
 export function createNominalRepair(model: PairedModel): (raw: string) => string | undefined {
   const buckets = new Map<string, string[]>();
+  const missingConsonantBuckets = new Map<string, string[]>();
   const roots = new Set<string>();
   for (const word of Object.keys(model.words)) for (const row of productiveMorphology.analyzeWord(word)) {
     if (row.pos === 'noun' && row.source === 'rule' && row.lemma.length >= 4 && row.lemma.length <= MAX_ROOT_LENGTH) roots.add(row.lemma);
@@ -22,6 +23,15 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
     const key = skeleton(root), values = buckets.get(key) ?? [];
     if (values.length < MAX_BUCKET_ROOTS) values.push(root);
     buckets.set(key, values);
+    const foldedRoot = fold(root);
+    for (let at = 0; at < foldedRoot.length; at++) {
+      const letter = foldedRoot[at];
+      if (vowels.test(letter) || (model.channels[`insert:${letter}`] ?? 0) < 2) continue;
+      const shortened = skeleton(foldedRoot.slice(0, at) + foldedRoot.slice(at + 1));
+      const alternatives = missingConsonantBuckets.get(shortened) ?? [];
+      if (!alternatives.includes(root) && alternatives.length < MAX_BUCKET_ROOTS) alternatives.push(root);
+      missingConsonantBuckets.set(shortened, alternatives);
+    }
   }
 
   function supportedRootRepair(raw: string, root: string): boolean {
@@ -29,6 +39,14 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
     // A single accidentally doubled letter, including before a case ending.
     for (let at = 1; at < raw.length; at++) if (raw[at] === raw[at - 1]
       && fold(raw.slice(0, at) + raw.slice(at + 1)) === target) return true;
+    // One dropped consonant, supported by the learned insertion channel.
+    // The suffix is checked separately and cannot be shortened or invented.
+    if (target.length === input.length + 1) {
+      for (let at = 0; at < target.length; at++) if (!vowels.test(target[at])
+        && (model.channels[`insert:${target[at]}`] ?? 0) >= 2
+        && target.slice(0, at) + target.slice(at + 1) === input) return true;
+      return false;
+    }
     if (input.length !== target.length || skeleton(raw) !== skeleton(root)) return false;
     const changes = [...input].map((letter, at) => ({ letter, to: target[at] })).filter(row => row.letter !== row.to);
     // Require an error channel observed during training. Diacritics-only
@@ -65,12 +83,17 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
   return raw => {
     const lower = raw.normalize('NFC').toLocaleLowerCase('az-AZ');
     if (!/^[\p{L}]{6,24}$/u.test(lower)) return undefined;
+    // A converb ending can also resemble a possessed noun case ending.
+    // Do not insert a root consonant to turn a dependent verb into a noun.
+    const dependentEnding = /(?:andan?|enden?|arken|erken|inca|ince)$/u.test(fold(lower));
     const candidates = new Set<string>();
     let inspected = 0;
     for (let at = 4; at <= Math.min(MAX_ROOT_LENGTH, lower.length - 2); at++) {
       const prefix = lower.slice(0, at), keys = new Set([skeleton(prefix)]);
       for (let i = 1; i < prefix.length; i++) if (prefix[i] === prefix[i - 1]) keys.add(skeleton(prefix.slice(0, i) + prefix.slice(i + 1)));
-      const possibleRoots = new Set([...keys].flatMap(key => buckets.get(key) ?? []));
+      const possibleRoots = new Set([...keys].flatMap(key => [
+        ...(buckets.get(key) ?? []), ...(dependentEnding ? [] : missingConsonantBuckets.get(key) ?? []),
+      ]));
       for (const root of possibleRoots) {
         if (++inspected > MAX_ROOT_INSPECTIONS) return undefined;
         if (!supportedRootRepair(prefix, root)) continue;

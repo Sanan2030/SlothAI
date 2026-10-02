@@ -1,7 +1,7 @@
 {
   "lexical": {
     "total": 66,
-    "exact": 53
+    "exact": 66
   },
   "agreement": {
     "total": 50,
@@ -100,85 +100,6 @@
       "exact": true
     }
   ],
-  "lexicalFailures": [
-    {
-      "id": "lexical:məktəb:məktəblərə:2:0",
-      "exact": false,
-      "actual": "Mən «meteblere» sözünü axtardım.",
-      "expected": "Mən «məktəblərə» sözünü axtardım."
-    },
-    {
-      "id": "lexical:kitab:kitablarımı:9:0",
-      "exact": false,
-      "actual": "Siyahıya «kitablarimi» əlavə edildi.",
-      "expected": "Siyahıya «kitablarımı» əlavə edildi."
-    },
-    {
-      "id": "lexical:sənəd:sənədlər:0:0",
-      "exact": false,
-      "actual": "Redaktor «senedler» formasını yoxladı.",
-      "expected": "Redaktor «sənədlər» formasını yoxladı."
-    },
-    {
-      "id": "lexical:qovluq:qovluqlarımı:9:0",
-      "exact": false,
-      "actual": "Siyahıya «qovluqlarimi» əlavə edildi.",
-      "expected": "Siyahıya «qovluqlarımı» əlavə edildi."
-    },
-    {
-      "id": "lexical:müəllim:müəllimlərdə:4:0",
-      "exact": false,
-      "actual": "Burada «muellimlerde» nümunəsi göstərilir.",
-      "expected": "Burada «müəllimlərdə» nümunəsi göstərilir."
-    },
-    {
-      "id": "lexical:tələbə:tələbələrimin:7:0",
-      "exact": false,
-      "actual": "Lövhədə «tellebelerimin» yazılıb.",
-      "expected": "Lövhədə «tələbələrimin» yazılıb."
-    },
-    {
-      "id": "lexical:tələbə:tələbələrimdə:10:0",
-      "exact": false,
-      "actual": "Burada «teebelerimde» nümunəsi göstərilir.",
-      "expected": "Burada «tələbələrimdə» nümunəsi göstərilir."
-    },
-    {
-      "id": "lexical:müştəri:müştərilərimin:7:0",
-      "exact": false,
-      "actual": "Lövhədə «mussterilerimin» yazılıb.",
-      "expected": "Lövhədə «müştərilərimin» yazılıb."
-    },
-    {
-      "id": "lexical:müştəri:müştərilərimə:8:0",
-      "exact": false,
-      "actual": "Mən «musterilerime» sözünü axtardım.",
-      "expected": "Mən «müştərilərimə» sözünü axtardım."
-    },
-    {
-      "id": "lexical:müştəri:müştərilərimdə:10:0",
-      "exact": false,
-      "actual": "Burada «muterilerimde» nümunəsi göstərilir.",
-      "expected": "Burada «müştərilərimdə» nümunəsi göstərilir."
-    },
-    {
-      "id": "lexical:şirkət:şirkətlərimdə:10:0",
-      "exact": false,
-      "actual": "Burada «siketlerimde» nümunəsi göstərilir.",
-      "expected": "Burada «şirkətlərimdə» nümunəsi göstərilir."
-    },
-    {
-      "id": "lexical:məlumat:məlumatlarıma:8:0",
-      "exact": false,
-      "actual": "Mən «melumatlarima» sözünü axtardım.",
-      "expected": "Mən «məlumatlarıma» sözünü axtardım."
-    },
-    {
-      "id": "diverse-070",
-      "exact": false,
-      "actual": "Mustərilərin növbəsi ekranda göstərilir.",
-      "expected": "Müştərilərin növbəsi ekranda göstərilir."
-    }
-  ],
+  "lexicalFailures": [],
   "agreementFailures": []
 }

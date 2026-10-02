@@ -2,7 +2,7 @@
   "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
   "total": 20,
   "exact": 20,
-  "neuralExact": 19,
+  "neuralExact": 20,
   "rows": [
     {
       "id": "diverse-061",
@@ -102,7 +102,7 @@
       "input": "Mustərilərin növbəsi ekranda göstərilir.",
       "target": "Müştərilərin növbəsi ekranda göstərilir.",
       "actual": "Müştərilərin növbəsi ekranda göstərilir.",
-      "neuralActual": "Mustərilərin növbəsi ekranda göstərilir."
+      "neuralActual": "Müştərilərin növbəsi ekranda göstərilir."
     },
     {
       "id": "diverse-071",
