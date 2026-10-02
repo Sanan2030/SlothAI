@@ -11,10 +11,15 @@ const documents = sourceText.split(/\r?\n/u).filter(line => line.trim()).map((li
   if (value.protectedTerms !== undefined && (!Array.isArray(value.protectedTerms) || value.protectedTerms.some(term => typeof term !== 'string'))) throw new Error(`Invalid protectedTerms at line ${at + 1}`);
   return value;
 });
-const { rows, report } = buildData(documents, variantsArg === undefined ? 4 : Number(variantsArg));
+const { rows, report, assignments } = buildData(documents, variantsArg === undefined ? 4 : Number(variantsArg));
 if (!rows.length) throw new Error('No sentence-sized examples were produced.');
 const out = resolve(destination); mkdirSync(out, { recursive: true });
-for (const split of ['train', 'validation', 'test']) atomicWriteSync(resolve(out, split + '.jsonl'), rows.filter(row => row.split === split).map(row => JSON.stringify(row)).join('\n') + '\n');
-atomicWriteSync(resolve(out, 'manifest.json'), JSON.stringify({ ...report, sourceSHA256: checksum(sourceText), outputSHA256: checksum(JSON.stringify(rows)),
-  note: 'Documents are assigned before augmentation. Small inputs may have an empty validation/test partition; add independent documents, never copy rows across splits.' }, null, 2) + '\n');
+const partitions = Object.fromEntries(['train', 'validation', 'test'].map(split => {
+  const selected = rows.filter(row => row.split === split), contents = selected.map(row => JSON.stringify(row)).join('\n') + (selected.length ? '\n' : '');
+  atomicWriteSync(resolve(out, split + '.jsonl'), contents);
+  return [split, { sha256: checksum(contents), rows: selected.length }];
+}));
+atomicWriteSync(resolve(out, 'manifest.json'), JSON.stringify({ version: 2, ...report, partitions, documents: assignments,
+  sourceSHA256: checksum(sourceText), outputSHA256: checksum(JSON.stringify(rows)),
+  note: 'Document/near-duplicate clusters are assigned before augmentation. Never copy held-out rows into training.' }, null, 2) + '\n');
 console.log(report);

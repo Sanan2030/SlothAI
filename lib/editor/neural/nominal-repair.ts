@@ -82,13 +82,13 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
 
   return raw => {
     const lower = raw.normalize('NFC').toLocaleLowerCase('az-AZ');
-    if (!/^[\p{L}]{6,24}$/u.test(lower)) return undefined;
+    if (!/^[\p{L}]{5,24}$/u.test(lower)) return undefined;
     // A converb ending can also resemble a possessed noun case ending.
     // Do not insert a root consonant to turn a dependent verb into a noun.
     const dependentEnding = /(?:andan?|enden?|arken|erken|inca|ince)$/u.test(fold(lower));
     const candidates = new Set<string>();
     let inspected = 0;
-    for (let at = 4; at <= Math.min(MAX_ROOT_LENGTH, lower.length - 2); at++) {
+    for (let at = 4; at <= Math.min(MAX_ROOT_LENGTH, lower.length); at++) {
       const prefix = lower.slice(0, at), keys = new Set([skeleton(prefix)]);
       for (let i = 1; i < prefix.length; i++) if (prefix[i] === prefix[i - 1]) keys.add(skeleton(prefix.slice(0, i) + prefix.slice(i + 1)));
       const possibleRoots = new Set([...keys].flatMap(key => [
@@ -97,6 +97,9 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
       for (const root of possibleRoots) {
         if (++inspected > MAX_ROOT_INSPECTIONS) return undefined;
         if (!supportedRootRepair(prefix, root)) continue;
+        // Bare roots lack enough evidence for consonant insertion: preserve yadda.
+        if (lower.length - at < 2 && ![...prefix].some((letter, i) => i > 0 && letter === prefix[i - 1]
+          && fold(prefix.slice(0, i) + prefix.slice(i + 1)) === fold(root))) continue;
         const surface = nominalSurface(root, lower.slice(at));
         if (surface && surface !== lower) candidates.add(surface);
         if (candidates.size > 1) return undefined; // Context cannot justify choosing between two meanings here.

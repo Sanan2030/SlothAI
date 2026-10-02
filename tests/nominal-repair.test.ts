@@ -52,3 +52,11 @@ test('valid lexical forms and protected technical names remain intact', () => {
     'Hesabatlardakı rəqəmlər düzgündür.', 'API, backend, OAuth2 və GitHub adlarını qoruyun.',
   ]) assert.equal(neuralSpelling(text), text);
 });
+
+test('supported bare-root duplicate repairs preserve grammatical case and adverbs', () => {
+  for (const [input, expected] of [['kitabb', 'kitab'], ['qovluqq', 'qovluq'], ['hesabbat', 'hesabat'], ['əməkddaş', 'əməkdaş']]) {
+    assert.equal(neuralSpelling(input), expected); assert.equal(neuralSpelling(expected), expected);
+  }
+  for (const input of ['kitab', 'kitabc', 'qovluqxyz', 'GitHub', 'backend', 'yadda']) assert.equal(neuralSpelling(input), input);
+  assert.equal(correctText('Müraciətin nömrəsini yadda saxlayın.').text, 'Müraciətin nömrəsini yadda saxlayın.');
+});

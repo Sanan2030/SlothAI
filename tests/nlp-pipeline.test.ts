@@ -88,3 +88,17 @@ test('offline trained-bundle inference repairs swaps while preserving protected 
   const text = 'Əli konfiqruasiya https://example.az/a 12.5 backend kodunu saxladı.';
   assert.equal(predictor(text, ['konfiqruasiya', 'backend']), text);
 });
+
+test('character edit metrics include whitespace and trim long unchanged spans', () => {
+  const row = { id: 'spacing', input: 'bir  söz', target: 'bir söz', actual: 'bir  söz', category: 'space' };
+  assert.equal(quality([row]).wer, 0); assert.equal(quality([row]).characterEdits.missed, 1);
+  const source = 'a'.repeat(5000) + 'x' + 'b'.repeat(5000), target = 'a'.repeat(5000) + 'y' + 'b'.repeat(5000);
+  assert.deepEqual(edits([...source], [...target]), [{ start: 5000, end: 5001, replacement: ['y'] }]);
+  assert.deepEqual(edits([...source], [...source]), []);
+});
+
+test('custom protected terms remain attached to generated pairs', () => {
+  const data = buildData([{ documentId: 'protected-doc', source: 'fixture', license: 'fixture', text: 'Bu sənəddə frawn servisi məlumatları müntəzəm yoxlayır.', protectedTerms: ['frawn'] }]);
+  assert.ok(data.rows.length > 0);
+  assert.ok(data.rows.every(row => row.protectedTerms?.includes('frawn') && row.input.includes('frawn')));
+});

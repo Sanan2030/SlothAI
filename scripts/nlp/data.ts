@@ -7,7 +7,7 @@ export interface CleanDocument {
 }
 export interface DataRow {
   id: string; documentId: string; source: string; license: string; split: Split;
-  category: Category; input: string; target: string;
+  category: Category; input: string; target: string; protectedTerms?: string[];
 }
 export const checksum = (text: string) => createHash('sha256').update(text).digest('hex');
 const normalization = (text: string) => text.normalize('NFC').toLocaleLowerCase('az-AZ').replace(/\s+/gu, ' ').trim();
@@ -144,12 +144,12 @@ export function buildData(documents: readonly CleanDocument[], variants = 4) {
         if (category !== 'identity' && input === target) continue;
         const key = checksum(input + '\n' + target); if (seen.has(key)) continue; seen.add(key);
         rows.push({ id: checksum(doc.documentId + ':' + unit + ':' + variant).slice(0, 24), documentId: doc.documentId,
-          source: doc.source, license: doc.license, split: doc.split, category, input, target });
+          source: doc.source, license: doc.license, split: doc.split, category, input, target, ...(doc.protectedTerms ? { protectedTerms: doc.protectedTerms } : {}) });
       }
     }
   }
   const counts = Object.fromEntries(['train', 'validation', 'test'].map(split => [split, rows.filter(row => row.split === split).length]));
-  return { rows, report: { sourceDocuments: documents.length, keptDocuments: grouped.documents.length, clusters: grouped.clusters,
+  return { rows, assignments: grouped.documents.map(doc => ({ documentId: doc.documentId, split: doc.split, cluster: doc.cluster })), report: { sourceDocuments: documents.length, keptDocuments: grouped.documents.length, clusters: grouped.clusters,
     removedExactDuplicates: grouped.removedExactDuplicates, repeatedTargets, counts, categories: Object.fromEntries(['identity', ...categories].map(category => [category, rows.filter(row => row.category === category).length])),
     limitations: 'Synthetic noise; no real-user accuracy claim. Capitalized words are conservatively protected, including sentence-initial words. Supply protectedTerms for lowercase names and foreign words. Near duplicates clustered at document token-bigram Jaccard >=0.8; exact sentences audited across splits. Sentence segmentation protects URLs, code and numbers but is not a full abbreviation model. Noise frequencies are illustrative, not estimated from real errors.' } };
 }

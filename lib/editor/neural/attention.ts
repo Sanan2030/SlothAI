@@ -1,3 +1,4 @@
+import { boundedCandidates } from './bounded-candidates';
 import { productiveMorphology } from '../productive-morphology';
 import { fold, tokenize, type Token } from '../local-ai/core';
 import type { PairedModel, PairedWord } from '../local-ai/paired';
@@ -9,7 +10,7 @@ const D = CHARACTER_DIMENSIONS;
 export interface AttentionNetwork { version: 1; query: number[]; bias: number[]; ranker: Network; epochs: number; experiment?: { context?: 'none'; position?: 'none'; attention?: 'uniform' } }
 export interface AttentionExample { raw: string; candidate: string; tokens: Token[]; at: number; y: number; group: string }
 export interface AttentionArtifact { version: 1; featureVersion: number; lexiconSha256: string; corpusSha256: string;
-  network: AttentionNetwork; vocabulary: Record<string, PairedWord>; threshold: number; margin: number; candidateMode?: 'folded-and-swaps' }
+  network: AttentionNetwork; vocabulary: Record<string, PairedWord>; threshold: number; margin: number; candidateMode?: 'folded-and-swaps' | 'bounded-edits' }
 const hash = (text: string) => { let value = 2166136261; for (const char of text) value = Math.imul(value ^ char.charCodeAt(0), 16777619) >>> 0; return value; };
 /** Fixed character n-grams, with no subword tokenizer or downloaded embeddings. */
 export function characterVector(text: string): number[] {
@@ -44,8 +45,8 @@ export function contextKeys(tokens: readonly Token[], at: number, positions = tr
   }
   return keys.length ? keys : [Array(D).fill(0)];
 }
-export function attend(network: AttentionNetwork, candidate: string, keys: readonly number[][]) {
-  const chars = characterVector(candidate);
+export function attend(network: AttentionNetwork, candidate: string, keys: readonly number[][], preparedChars?: number[]) {
+  const chars = preparedChars ?? characterVector(candidate);
   const query = network.experiment?.attention === 'uniform' ? Array(D).fill(0) : network.bias.map((bias, j) => chars.reduce((sum, value, i) => sum + network.query[j * D + i] * value, bias));
   const scores = keys.map(key => key.reduce((sum, value, j) => sum + value * query[j], 0) / Math.sqrt(D));
   const max = Math.max(...scores), exponentials = scores.map(score => Math.exp(score - max));
@@ -53,15 +54,32 @@ export function attend(network: AttentionNetwork, candidate: string, keys: reado
   const pooled = Array.from({ length: D }, (_, j) => keys.reduce((sum, key, at) => sum + weights[at] * key[j], 0));
   return { chars, weights, pooled };
 }
-function forward(network: AttentionNetwork, lexicon: PairedModel, row: Omit<AttentionExample, 'y' | 'group'>) {
-  const noContext = network.experiment?.context === 'none';
-  const keys = noContext ? [Array(D).fill(0)] : contextKeys(row.tokens, row.at, network.experiment?.position !== 'none');
-  const attention = attend(network, row.candidate, keys);
-  const base = lexicalFeatures(lexicon, row.raw, row.candidate, row.tokens, row.at);
-  if (noContext) { base[3] = 0; base.fill(0, 11); }
-  base[2] = 0; // Exact typo observations never become the new head's shortcut.
-  const x = [...base, ...characterVector(row.raw), ...attention.chars, ...attention.pooled];
-  return { keys, attention, x };
+type ForwardRow = Omit<AttentionExample, 'y' | 'group'>;
+interface StaticFeatures { keys: number[][]; base: number[]; rawChars: number[]; candidateChars: number[] }
+// Cache only weight-independent features. Query pooling and gradients remain live.
+let staticCaches = new WeakMap<PairedModel, WeakMap<ForwardRow, Map<string, StaticFeatures>>>();
+let keyCaches = new WeakMap<Token[], Map<string, number[][]>>();
+export function clearAttentionCaches(): void { staticCaches = new WeakMap(); keyCaches = new WeakMap(); }
+function forward(network: AttentionNetwork, lexicon: PairedModel, row: ForwardRow) {
+  const noContext = network.experiment?.context === 'none', positions = network.experiment?.position !== 'none';
+  const configuration = `${noContext}:${positions}`;
+  let rows = staticCaches.get(lexicon); if (!rows) { rows = new WeakMap(); staticCaches.set(lexicon, rows); }
+  let configurations = rows.get(row); if (!configurations) { configurations = new Map(); rows.set(row, configurations); }
+  let prepared = configurations.get(configuration);
+  if (!prepared) {
+    let byPosition = keyCaches.get(row.tokens); if (!byPosition) { byPosition = new Map(); keyCaches.set(row.tokens, byPosition); }
+    const keyId = `${row.at}:${positions}`;
+    let keys = byPosition.get(keyId);
+    if (!keys) { keys = contextKeys(row.tokens, row.at, positions); byPosition.set(keyId, keys); }
+    const base = lexicalFeatures(lexicon, row.raw, row.candidate, row.tokens, row.at);
+    if (noContext) { base[3] = 0; base.fill(0, 11); }
+    base[2] = 0;
+    prepared = { keys: noContext ? [Array(D).fill(0)] : keys, base,
+      rawChars: characterVector(row.raw), candidateChars: characterVector(row.candidate) };
+    configurations.set(configuration, prepared);
+  }
+  const attention = attend(network, row.candidate, prepared.keys, prepared.candidateChars);
+  return { keys: prepared.keys, attention, x: [...prepared.base, ...prepared.rawChars, ...attention.chars, ...attention.pooled] };
 }
 export function attentionProbability(network: AttentionNetwork, lexicon: PairedModel, row: Omit<AttentionExample, 'y' | 'group'>): number {
   return predictNetwork(network.ranker, forward(network, lexicon, row).x);
@@ -107,7 +125,11 @@ export function transpositionCandidates(index: Map<string, string[]>, raw: strin
   return [...words].slice(0, 12);
 }
 /** Extra direct diacritic candidates are experimental and off in production. */
-export function attentionCandidates(index: Map<string, string[]>, raw: string, mode?: 'folded-and-swaps'): string[] {
+export function attentionCandidates(index: Map<string, string[]>, raw: string, mode?: 'folded-and-swaps' | 'bounded-edits', lexicon?: PairedModel): string[] {
+  if (mode === 'bounded-edits') {
+    if (!lexicon) throw new Error('Bounded candidates require a trained lexical model.');
+    return boundedCandidates(lexicon, index, raw);
+  }
   const swaps = transpositionCandidates(index, raw);
   if (!mode) return swaps;
   const direct = (index.get(fold(raw)) ?? []).filter(word => word !== raw.toLocaleLowerCase('az-AZ'));
@@ -142,7 +164,7 @@ export function ambiguitySupported(lexicon: PairedModel, candidates: string[], w
   });
 }
 export function rankAttention(artifact: AttentionArtifact, lexicon: PairedModel, index: Map<string, string[]>, raw: string, tokens: Token[], at: number) {
-  const candidates = attentionCandidates(index, raw, artifact.candidateMode);
+  const candidates = attentionCandidates(index, raw, artifact.candidateMode, lexicon);
   if (!candidates.length) return undefined;
   const choices = [raw.toLocaleLowerCase('az-AZ'), ...candidates].map(candidate => ({ candidate,
     score: attentionProbability(artifact.network, lexicon, { raw, candidate, tokens, at }) })).sort((a, b) => b.score - a.score || a.candidate.localeCompare(b.candidate, 'az'));

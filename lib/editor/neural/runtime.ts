@@ -1,3 +1,5 @@
+import { preservesDiacritics } from './diacritics';
+export { preservesDiacritics } from './diacritics';
 import { attentionCorrection, unresolvedAttentionAmbiguity } from './attention-runtime';
 import { createNominalRepair } from './nominal-repair';
 import { finiteAnalyses, agreementForms, areRegularCaseAlternatives } from './morphology';
@@ -7,33 +9,13 @@ import pairedArtifact from '../local-ai/paired-model.json';
 import { predictNetwork } from './network';
 import { neuralIndex, neuralCandidates, lexicalFeatures, agreementFeatures, subjects, type Subject } from './features';
 import type { NeuralArtifact } from './types';
-import { tokenize, fold } from '../local-ai/core';
+import { tokenize, fold, type Token } from '../local-ai/core';
 import { dictionaryCandidates } from '../dictionary';
 import { productiveMorphology } from '../productive-morphology';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
 const model = artifact as NeuralArtifact, index = neuralIndex(model.lexicon);
 const nominalRepair = createNominalRepair(model.lexicon);
-
-/** Explicit diacritics may shift with inserted/deleted letters, but may not
- * themselves be erased or replaced. ASCII diacritic restoration is not a
- * structural edit; long inflections may need more than four accents.
- * Work is bounded by the token length. */
-export function preservesDiacritics(raw: string, target: string): boolean {
-  const a = [...raw.toLocaleLowerCase('az-AZ')], b = [...target.toLocaleLowerCase('az-AZ')];
-  const foldedA = a.map(fold), foldedB = b.map(fold);
-  const protectedLetter = (letter: string) => /[əıçğöşü]/u.test(letter);
-  let previous = b.map((_, at) => at + 1); previous.unshift(0);
-  for (let i = 1; i <= a.length; i++) {
-    const current = [protectedLetter(a[i - 1]) ? Infinity : previous[0] + 1];
-    for (let j = 1; j <= b.length; j++) current[j] = Math.min(
-      current[j - 1] + 1, protectedLetter(a[i - 1]) ? Infinity : previous[j] + 1,
-      previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : protectedLetter(a[i - 1]) ? Infinity
-        : foldedA[i - 1] === foldedB[j - 1] ? 0 : 1));
-    previous = current;
-  }
-  return previous[b.length] <= 4;
-}
 
 function eligibleNeuralWord(raw: string): boolean {
   const lower = raw.toLocaleLowerCase('az-AZ');
@@ -60,8 +42,8 @@ export function neuralSpelling(text: string, useAttention = true): string {
       score: predictNetwork(lexicalNetwork, lexicalFeatures(model.lexicon, raw, word, tokens, at)) }))
       .sort((a, b) => b.score - a.score || a.word.localeCompare(b.word, 'az'));
     const best = choices[0];
-    let selected: string | undefined;
-    if (best && best.score >= model.lexicalThreshold && best.score - (choices[1]?.score ?? 0) >= model.lexicalMargin) {
+    let selected: string | undefined = nominalRepair(lower);
+    if (!selected && best && best.score >= model.lexicalThreshold && best.score - (choices[1]?.score ?? 0) >= model.lexicalMargin) {
       const learned = model.lexicon.edits[lower]?.[best.word] ?? 0;
       const repeatedLetterRepair = [...lower].some((letter, i) => i > 0 && letter === lower[i - 1]
         && fold(lower.slice(0, i) + lower.slice(i + 1)) === fold(best.word));
@@ -72,7 +54,6 @@ export function neuralSpelling(text: string, useAttention = true): string {
     // A low neural score does not disprove a uniquely validated root/suffix
     // repair. Keep global model thresholds unchanged; validate this fallback
     // using morphology, trained error channels and explicit-letter protection.
-    selected ??= nominalRepair(lower);
     // The small learned character/context head only handles adjacent swaps
     // when all established correction paths have abstained.
     if (useAttention) selected ??= attentionCorrection(lower, tokens, at);
@@ -117,7 +98,8 @@ export function neuralAgreement(text: string): string {
 
 /** High-confidence learned swap corrections run after span/entity protection
  * and before dictionary guesses can destroy the original ambiguous surface. */
-export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string): string {
+export type NeuralSpellingFallback = (raw: string, tokens: Token[], at: number) => string | undefined;
+export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string, fallback?: NeuralSpellingFallback): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word;
@@ -125,7 +107,7 @@ export function neuralTranspositions(text: string, protectUncertain?: (word: str
     if (protectUncertain && unresolvedAttentionAmbiguity(raw, tokens, at)) {
       result += text.slice(cursor, token.start) + protectUncertain(raw); cursor = token.end; continue;
     }
-    const selected = attentionCorrection(raw, tokens, at);
+    const selected = attentionCorrection(raw, tokens, at) ?? fallback?.(raw, tokens, at);
     if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(raw, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     result += text.slice(cursor, token.start) + target; cursor = token.end;

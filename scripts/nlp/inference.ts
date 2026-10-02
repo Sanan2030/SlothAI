@@ -1,10 +1,11 @@
+import type { NeuralSpellingFallback } from '../../lib/editor/neural/runtime';
 import type { PairedModel } from '../../lib/editor/local-ai/paired';
 import { tokenize } from '../../lib/editor/local-ai/core';
 import { rankAttention, transpositionIndex, type AttentionArtifact } from '../../lib/editor/neural/attention';
 import { dictionaryCandidates } from '../../lib/editor/dictionary';
 import { productiveMorphology } from '../../lib/editor/productive-morphology';
 import { canonicalProtectedTerm } from '../../lib/editor/protected-terminology';
-import { preservesDiacritics } from '../../lib/editor/neural/runtime';
+import { preservesDiacritics } from '../../lib/editor/neural/diacritics';
 import { protectedMask } from './data';
 export interface ExperimentBundle { artifact: AttentionArtifact; lexicon: PairedModel }
 /** Offline experiment inference; production never loads these model files. */
@@ -24,5 +25,16 @@ export function createExperimentPredictor(bundle: ExperimentBundle) {
       output += text.slice(cursor, token.start) + decision.candidate; cursor = token.end;
     }
     return output + text.slice(cursor);
+  };
+}
+
+/** Inject a candidate head into the complete production pipeline for comparison. */
+export function createExperimentFallback(bundle: ExperimentBundle, terms: readonly string[] = []): NeuralSpellingFallback {
+  const { artifact, lexicon } = bundle, index = transpositionIndex(lexicon);
+  return (raw, tokens, at) => {
+    const lower = raw.toLocaleLowerCase('az-AZ');
+    if (/\p{Lu}/u.test(raw) || canonicalProtectedTerm(raw) || terms.some(term => term.toLocaleLowerCase('az-AZ') === lower)) return undefined;
+    const decision = rankAttention(artifact, lexicon, index, raw, tokens, at);
+    return decision?.accepted && preservesDiacritics(raw, decision.candidate) ? decision.candidate : undefined;
   };
 }

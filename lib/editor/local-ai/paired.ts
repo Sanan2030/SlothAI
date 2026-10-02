@@ -126,8 +126,9 @@ export function collectPairedEvidence(pairs: readonly CorrectionPair[], posModel
   const knownTexts = new Set<string>();
   const ambiguousSplits = new Set<string>();
   for (const pair of pairs) {
-    const tokens = tokenize(pair.target), positions = tagPOS(posModel, tokens.map(token => token.word));
+    const tokens = tokenize(pair.target);
     if (!knownTexts.has(pair.target)) {
+      const positions = tagPOS(posModel, tokens.map(token => token.word));
       knownTexts.add(pair.target);
       tokens.forEach((token, at) => {
         const word = wordLower(token.word); if (canonicalProtectedTerm(word) || (posModel.words[word]?.PROPN && Object.keys(posModel.words[word]).length === 1)) return;
@@ -142,9 +143,10 @@ export function collectPairedEvidence(pairs: readonly CorrectionPair[], posModel
       for (const channel of editChannels(normalizeDigraphs(row.raw), row.target)) model.channels[channel] = (model.channels[channel] ?? 0) + 1;
     }
     // Spacing is learned only from aligned lexical concatenations, never full replies.
+    const joinedInputWords = new Set(tokenize(pair.input).map(token => fold(token.word)));
     for (let at = 0; at < tokens.length - 1; at++) {
       const joined = fold(tokens[at].word + tokens[at + 1].word);
-      if (tokenize(pair.input).some(token => fold(token.word) === joined)) {
+      if (joinedInputWords.has(joined)) {
         const target = wordLower(tokens[at].word + ' ' + tokens[at + 1].word);
         const entry = model.splits[joined];
         if (entry && entry.target !== target) { ambiguousSplits.add(joined); delete model.splits[joined]; }

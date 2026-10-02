@@ -1,0 +1,62 @@
+{
+  "dataset": "wikimedia/wikipedia",
+  "config": "20231101.az",
+  "upstreamRevisionAtImport": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+  "upstreamDeclaredLicenses": [
+    "cc-by-sa-3.0",
+    "gfdl"
+  ],
+  "documents": 300,
+  "sourceSHA256": "1b6e658d701c8ebd4499a8c7d6abf240ea30ce89c0a6c83af073f9d21baf2a01",
+  "requests": [
+    {
+      "offset": 0,
+      "rows": 50,
+      "responseSHA256": "07b211199e478426e1c13bc9453d36b705cfcb314affe8350dd7301ac85702a9"
+    },
+    {
+      "offset": 1700,
+      "rows": 50,
+      "responseSHA256": "81c9e80cc93378baf334e12ea7891ff44f5acaa9c5262525355aeb29c1374f7c"
+    },
+    {
+      "offset": 3400,
+      "rows": 50,
+      "responseSHA256": "c5cb206b1e147048cf6d7627b0c8f8047a747da5f2b5f3af97b63664fa4b4b89"
+    },
+    {
+      "offset": 5100,
+      "rows": 50,
+      "responseSHA256": "df61ac5f1c280ba7ca793900abdd981b8e51d96ea94ce34f8a3dceb6da8bba6a"
+    },
+    {
+      "offset": 6800,
+      "rows": 50,
+      "responseSHA256": "f443e12db3e2c95eec01fda83e7fb048e4b7abb7952678e9ed4858e70d30d8ea"
+    },
+    {
+      "offset": 8500,
+      "rows": 50,
+      "responseSHA256": "72049925baaadef84406166cfa73d3cb294b18f9b4c16522049ea4a3a6b0662e"
+    },
+    {
+      "offset": 10200,
+      "rows": 50,
+      "responseSHA256": "5a5a6d85e482be050d6019148b3cf849c578f767b3530daf88cb4d6129c46101"
+    },
+    {
+      "offset": 11900,
+      "rows": 50,
+      "responseSHA256": "9d8ec0fcb5e4bee037a5dffda9afd8c20d57804d76125b11364a168039d01b84"
+    },
+    {
+      "offset": 13600,
+      "rows": 50,
+      "responseSHA256": "e640136581e13d2009f9e288e988cc4094bbdfc9f5cfb498f56c30a968cc45f0"
+    }
+  ],
+  "attribution": "Azerbaijani Wikipedia contributors; per-document article URLs link to history/authors.",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "modifications": "Two automatically filtered paragraphs per article, whitespace normalized; synthetic noise generated separately.",
+  "limitations": "Not human-reviewed errors. The public rows API cannot pin a revision; response/source hashes detect changed upstream content. The committed excerpts are the reproducible local snapshot."
+}

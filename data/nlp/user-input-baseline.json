@@ -1,0 +1,538 @@
+{
+  "source": "Provided examples; real provenance not asserted",
+  "attentionOff": {
+    "overall": {
+      "rows": 12,
+      "exact": 3,
+      "accuracy": 0.25,
+      "cer": 0.08508604206500955,
+      "wer": 0.2585034013605442,
+      "precision": 0.76,
+      "recall": 0.6333333333333333,
+      "f05": 0.7307692307692307,
+      "characterEdits": {
+        "precision": 0.93717277486911,
+        "recall": 0.6964980544747081,
+        "f05": 0.8765915768854065,
+        "truePositive": 179,
+        "falsePositive": 12,
+        "missed": 78
+      },
+      "truePositiveEdits": 76,
+      "falsePositiveEdits": 24,
+      "missedEdits": 44,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 89,
+      "referenceChars": 1046,
+      "wordErrors": 38,
+      "referenceWords": 147
+    },
+    "byCategory": {
+      "boundaries": {
+        "rows": 3,
+        "exact": 2,
+        "accuracy": 0.6666666666666666,
+        "cer": 0.02631578947368421,
+        "wer": 0.13333333333333333,
+        "precision": 0.9545454545454546,
+        "recall": 0.84,
+        "f05": 0.9292035398230089,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.8909090909090909,
+          "f05": 0.9760956175298805,
+          "truePositive": 49,
+          "falsePositive": 0,
+          "missed": 6
+        },
+        "truePositiveEdits": 21,
+        "falsePositiveEdits": 1,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 228,
+        "wordErrors": 4,
+        "referenceWords": 30
+      },
+      "diacritics": {
+        "rows": 2,
+        "exact": 1,
+        "accuracy": 0.5,
+        "cer": 0.014285714285714285,
+        "wer": 0.043478260869565216,
+        "precision": 1,
+        "recall": 0.9411764705882353,
+        "f05": 0.9876543209876543,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.9230769230769231,
+          "f05": 0.9836065573770492,
+          "truePositive": 24,
+          "falsePositive": 0,
+          "missed": 2
+        },
+        "truePositiveEdits": 16,
+        "falsePositiveEdits": 0,
+        "missedEdits": 1,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 2,
+        "referenceChars": 140,
+        "wordErrors": 1,
+        "referenceWords": 23
+      },
+      "punctuation": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.05172413793103448,
+        "wer": 0.26666666666666666,
+        "precision": 0.8181818181818182,
+        "recall": 0.6923076923076923,
+        "f05": 0.7894736842105263,
+        "characterEdits": {
+          "precision": 0.9166666666666666,
+          "recall": 0.6875,
+          "f05": 0.859375,
+          "truePositive": 11,
+          "falsePositive": 1,
+          "missed": 5
+        },
+        "truePositiveEdits": 9,
+        "falsePositiveEdits": 2,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 116,
+        "wordErrors": 4,
+        "referenceWords": 15
+      },
+      "question": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.06666666666666667,
+        "wer": 0.3333333333333333,
+        "precision": 1,
+        "recall": 0.5,
+        "f05": 0.8333333333333334,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.625,
+          "f05": 0.8928571428571429,
+          "truePositive": 5,
+          "falsePositive": 0,
+          "missed": 3
+        },
+        "truePositiveEdits": 2,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 3,
+        "referenceChars": 45,
+        "wordErrors": 2,
+        "referenceWords": 6
+      },
+      "syntax": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.3,
+        "wer": 0.5555555555555556,
+        "precision": 0.5,
+        "recall": 0.35294117647058826,
+        "f05": 0.46153846153846156,
+        "characterEdits": {
+          "precision": 0.875,
+          "recall": 0.4772727272727273,
+          "f05": 0.75,
+          "truePositive": 21,
+          "falsePositive": 3,
+          "missed": 23
+        },
+        "truePositiveEdits": 6,
+        "falsePositiveEdits": 6,
+        "missedEdits": 11,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 36,
+        "referenceChars": 120,
+        "wordErrors": 10,
+        "referenceWords": 18
+      },
+      "technical": {
+        "rows": 4,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.0906801007556675,
+        "wer": 0.3090909090909091,
+        "precision": 0.5945945945945946,
+        "recall": 0.5,
+        "f05": 0.5729166666666666,
+        "characterEdits": {
+          "precision": 0.8961038961038961,
+          "recall": 0.6388888888888888,
+          "f05": 0.8293269230769231,
+          "truePositive": 69,
+          "falsePositive": 8,
+          "missed": 39
+        },
+        "truePositiveEdits": 22,
+        "falsePositiveEdits": 15,
+        "missedEdits": 22,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 36,
+        "referenceChars": 397,
+        "wordErrors": 17,
+        "referenceWords": 55
+      }
+    },
+    "failures": [
+      {
+        "id": "user-001",
+        "input": "men istemirem ai api ile islesin program.Program ozu texti goturub fix elesin",
+        "target": "Mən istəmirəm ki, proqram AI API ilə işləsin. Proqram özü text-i götürüb fix eləsin.",
+        "category": "technical",
+        "actual": "Mən istəmirəm ai API ilə işləsin program. Program özü texti götürüb fix elesin."
+      },
+      {
+        "id": "user-002",
+        "input": "yukle basanda dil modeli cach da saxlanilir?",
+        "target": "Yüklə basanda dil modeli cache-də saxlanılır?",
+        "category": "question",
+        "actual": "Yüklə basanda dil modeli cach da saxlanılır?"
+      },
+      {
+        "id": "user-003",
+        "input": "men artiq bu programi agilli elemek isteyirem cumleleri menasini basa dussun falan ai kimi nece ede bilerem tokensiz",
+        "target": "Mən artıq bu proqramı ağıllı eləmək istəyirəm, cümlələrin mənasını başa düşsün, AI kimi. Bunu tokensiz necə edə bilərəm?",
+        "category": "syntax",
+        "actual": "Mən artıq bu programi ağıllı eləmək istəyirəm. Cümlələri mənasını başa dussun falan ai kimi necə edə bilərəm tokensiz?"
+      },
+      {
+        "id": "user-006",
+        "input": "swaggerde olan openapi spesifikasiyasi xarab idi bezi tipler qarisdirilmisdi integer yerine string yazmisdilar",
+        "target": "Swagger-də olan OpenAPI spesifikasiyası xarab idi. Bəzi tiplər qarışdırılmışdı, integer yerinə string yazmışdılar.",
+        "category": "technical",
+        "actual": "Swagger-də olan OpenAPI spesifikasiyası xarab idi. Bəzi tiplər qarışdırılmışdı. integer yerinə string yazmışdılar."
+      },
+      {
+        "id": "user-007",
+        "input": "musiqi ise ruhun qidasidir klassik musiqi dinleyerken insan derin dusuncelere dalir",
+        "target": "Musiqi isə ruhun qidasıdır. Klassik musiqi dinləyərkən insan dərin düşüncələrə dalır.",
+        "category": "boundaries",
+        "actual": "Musiqi ise ruhun qidasıdır klassik musiqi dinleyerken insan dərin düşüncələrə dalır."
+      },
+      {
+        "id": "user-008",
+        "input": "saglam heyat terzi surmek ucun duzgun qidalanma ve muntezam idman cox vacibdir",
+        "target": "Sağlam həyat tərzi sürmək üçün düzgün qidalanma və müntəzəm idman çox vacibdir.",
+        "category": "diacritics",
+        "actual": "Sağlam həyat tərzi surmek üçün düzgün qidalanma və müntəzəm idman çox vacibdir."
+      },
+      {
+        "id": "user-009",
+        "input": "serverlerin yuklenmesini azaltmaq ucun kesleme mexanizmini aktivlesdirdik ve neticede sistemin sureti iki defe artdi",
+        "target": "Serverlərin yüklənməsini azaltmaq üçün keşləmə mexanizmini aktivləşdirdik və nəticədə sistemin sürəti iki dəfə artdı.",
+        "category": "technical",
+        "actual": "Serverlərin yüklənməsini azaltmaq üçün keşləmə mexanizmini aktivlesdirdik və nəticədə sistemin sürəti iki dəfə artdı."
+      },
+      {
+        "id": "user-010",
+        "input": "muzeylerde saxlanilan qadim keramik qablar silahlar ve xalcalar hemin dovrlerin heyat terzi haqqinda melumat verir",
+        "target": "Muzeylərdə saxlanılan qədim keramik qablar, silahlar və xalçalar həmin dövrlərin həyat tərzi haqqında məlumat verir.",
+        "category": "punctuation",
+        "actual": "Muzeylerde saxlanılan qadım keramik qablar silahlar və xalcalar həmin dövrlərin həyat tərzi haqqında məlumat verir."
+      },
+      {
+        "id": "user-011",
+        "input": "tamam sen onda appi analiz ele neler catismir denen men onlari app e elave edim",
+        "target": "Tamam, sən onda app-i analiz elə, nələr çatışmır, de, mən onları app-ə əlavə edim.",
+        "category": "technical",
+        "actual": "Tamam sən onda appi analiz elə nələr çatışmır denen mən onları app e əlavə edim."
+      }
+    ],
+    "convention": "NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Character edit precision/recall/F0.5 also cover whitespace and punctuation; token metrics retain their earlier definition. Null means undefined denominator, not perfect accuracy."
+  },
+  "attentionOn": {
+    "overall": {
+      "rows": 12,
+      "exact": 3,
+      "accuracy": 0.25,
+      "cer": 0.08508604206500955,
+      "wer": 0.2585034013605442,
+      "precision": 0.76,
+      "recall": 0.6333333333333333,
+      "f05": 0.7307692307692307,
+      "characterEdits": {
+        "precision": 0.93717277486911,
+        "recall": 0.6964980544747081,
+        "f05": 0.8765915768854065,
+        "truePositive": 179,
+        "falsePositive": 12,
+        "missed": 78
+      },
+      "truePositiveEdits": 76,
+      "falsePositiveEdits": 24,
+      "missedEdits": 44,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 89,
+      "referenceChars": 1046,
+      "wordErrors": 38,
+      "referenceWords": 147
+    },
+    "byCategory": {
+      "boundaries": {
+        "rows": 3,
+        "exact": 2,
+        "accuracy": 0.6666666666666666,
+        "cer": 0.02631578947368421,
+        "wer": 0.13333333333333333,
+        "precision": 0.9545454545454546,
+        "recall": 0.84,
+        "f05": 0.9292035398230089,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.8909090909090909,
+          "f05": 0.9760956175298805,
+          "truePositive": 49,
+          "falsePositive": 0,
+          "missed": 6
+        },
+        "truePositiveEdits": 21,
+        "falsePositiveEdits": 1,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 228,
+        "wordErrors": 4,
+        "referenceWords": 30
+      },
+      "diacritics": {
+        "rows": 2,
+        "exact": 1,
+        "accuracy": 0.5,
+        "cer": 0.014285714285714285,
+        "wer": 0.043478260869565216,
+        "precision": 1,
+        "recall": 0.9411764705882353,
+        "f05": 0.9876543209876543,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.9230769230769231,
+          "f05": 0.9836065573770492,
+          "truePositive": 24,
+          "falsePositive": 0,
+          "missed": 2
+        },
+        "truePositiveEdits": 16,
+        "falsePositiveEdits": 0,
+        "missedEdits": 1,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 2,
+        "referenceChars": 140,
+        "wordErrors": 1,
+        "referenceWords": 23
+      },
+      "punctuation": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.05172413793103448,
+        "wer": 0.26666666666666666,
+        "precision": 0.8181818181818182,
+        "recall": 0.6923076923076923,
+        "f05": 0.7894736842105263,
+        "characterEdits": {
+          "precision": 0.9166666666666666,
+          "recall": 0.6875,
+          "f05": 0.859375,
+          "truePositive": 11,
+          "falsePositive": 1,
+          "missed": 5
+        },
+        "truePositiveEdits": 9,
+        "falsePositiveEdits": 2,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 116,
+        "wordErrors": 4,
+        "referenceWords": 15
+      },
+      "question": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.06666666666666667,
+        "wer": 0.3333333333333333,
+        "precision": 1,
+        "recall": 0.5,
+        "f05": 0.8333333333333334,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.625,
+          "f05": 0.8928571428571429,
+          "truePositive": 5,
+          "falsePositive": 0,
+          "missed": 3
+        },
+        "truePositiveEdits": 2,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 3,
+        "referenceChars": 45,
+        "wordErrors": 2,
+        "referenceWords": 6
+      },
+      "syntax": {
+        "rows": 1,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.3,
+        "wer": 0.5555555555555556,
+        "precision": 0.5,
+        "recall": 0.35294117647058826,
+        "f05": 0.46153846153846156,
+        "characterEdits": {
+          "precision": 0.875,
+          "recall": 0.4772727272727273,
+          "f05": 0.75,
+          "truePositive": 21,
+          "falsePositive": 3,
+          "missed": 23
+        },
+        "truePositiveEdits": 6,
+        "falsePositiveEdits": 6,
+        "missedEdits": 11,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 36,
+        "referenceChars": 120,
+        "wordErrors": 10,
+        "referenceWords": 18
+      },
+      "technical": {
+        "rows": 4,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.0906801007556675,
+        "wer": 0.3090909090909091,
+        "precision": 0.5945945945945946,
+        "recall": 0.5,
+        "f05": 0.5729166666666666,
+        "characterEdits": {
+          "precision": 0.8961038961038961,
+          "recall": 0.6388888888888888,
+          "f05": 0.8293269230769231,
+          "truePositive": 69,
+          "falsePositive": 8,
+          "missed": 39
+        },
+        "truePositiveEdits": 22,
+        "falsePositiveEdits": 15,
+        "missedEdits": 22,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 36,
+        "referenceChars": 397,
+        "wordErrors": 17,
+        "referenceWords": 55
+      }
+    },
+    "failures": [
+      {
+        "id": "user-001",
+        "input": "men istemirem ai api ile islesin program.Program ozu texti goturub fix elesin",
+        "target": "Mən istəmirəm ki, proqram AI API ilə işləsin. Proqram özü text-i götürüb fix eləsin.",
+        "category": "technical",
+        "actual": "Mən istəmirəm ai API ilə işləsin program. Program özü texti götürüb fix elesin."
+      },
+      {
+        "id": "user-002",
+        "input": "yukle basanda dil modeli cach da saxlanilir?",
+        "target": "Yüklə basanda dil modeli cache-də saxlanılır?",
+        "category": "question",
+        "actual": "Yüklə basanda dil modeli cach da saxlanılır?"
+      },
+      {
+        "id": "user-003",
+        "input": "men artiq bu programi agilli elemek isteyirem cumleleri menasini basa dussun falan ai kimi nece ede bilerem tokensiz",
+        "target": "Mən artıq bu proqramı ağıllı eləmək istəyirəm, cümlələrin mənasını başa düşsün, AI kimi. Bunu tokensiz necə edə bilərəm?",
+        "category": "syntax",
+        "actual": "Mən artıq bu programi ağıllı eləmək istəyirəm. Cümlələri mənasını başa dussun falan ai kimi necə edə bilərəm tokensiz?"
+      },
+      {
+        "id": "user-006",
+        "input": "swaggerde olan openapi spesifikasiyasi xarab idi bezi tipler qarisdirilmisdi integer yerine string yazmisdilar",
+        "target": "Swagger-də olan OpenAPI spesifikasiyası xarab idi. Bəzi tiplər qarışdırılmışdı, integer yerinə string yazmışdılar.",
+        "category": "technical",
+        "actual": "Swagger-də olan OpenAPI spesifikasiyası xarab idi. Bəzi tiplər qarışdırılmışdı. integer yerinə string yazmışdılar."
+      },
+      {
+        "id": "user-007",
+        "input": "musiqi ise ruhun qidasidir klassik musiqi dinleyerken insan derin dusuncelere dalir",
+        "target": "Musiqi isə ruhun qidasıdır. Klassik musiqi dinləyərkən insan dərin düşüncələrə dalır.",
+        "category": "boundaries",
+        "actual": "Musiqi ise ruhun qidasıdır klassik musiqi dinleyerken insan dərin düşüncələrə dalır."
+      },
+      {
+        "id": "user-008",
+        "input": "saglam heyat terzi surmek ucun duzgun qidalanma ve muntezam idman cox vacibdir",
+        "target": "Sağlam həyat tərzi sürmək üçün düzgün qidalanma və müntəzəm idman çox vacibdir.",
+        "category": "diacritics",
+        "actual": "Sağlam həyat tərzi surmek üçün düzgün qidalanma və müntəzəm idman çox vacibdir."
+      },
+      {
+        "id": "user-009",
+        "input": "serverlerin yuklenmesini azaltmaq ucun kesleme mexanizmini aktivlesdirdik ve neticede sistemin sureti iki defe artdi",
+        "target": "Serverlərin yüklənməsini azaltmaq üçün keşləmə mexanizmini aktivləşdirdik və nəticədə sistemin sürəti iki dəfə artdı.",
+        "category": "technical",
+        "actual": "Serverlərin yüklənməsini azaltmaq üçün keşləmə mexanizmini aktivlesdirdik və nəticədə sistemin sürəti iki dəfə artdı."
+      },
+      {
+        "id": "user-010",
+        "input": "muzeylerde saxlanilan qadim keramik qablar silahlar ve xalcalar hemin dovrlerin heyat terzi haqqinda melumat verir",
+        "target": "Muzeylərdə saxlanılan qədim keramik qablar, silahlar və xalçalar həmin dövrlərin həyat tərzi haqqında məlumat verir.",
+        "category": "punctuation",
+        "actual": "Muzeylerde saxlanılan qadım keramik qablar silahlar və xalcalar həmin dövrlərin həyat tərzi haqqında məlumat verir."
+      },
+      {
+        "id": "user-011",
+        "input": "tamam sen onda appi analiz ele neler catismir denen men onlari app e elave edim",
+        "target": "Tamam, sən onda app-i analiz elə, nələr çatışmır, de, mən onları app-ə əlavə edim.",
+        "category": "technical",
+        "actual": "Tamam sən onda appi analiz elə nələr çatışmır denen mən onları app e əlavə edim."
+      }
+    ],
+    "convention": "NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Character edit precision/recall/F0.5 also cover whitespace and punctuation; token metrics retain their earlier definition. Null means undefined denominator, not perfect accuracy."
+  },
+  "regressions": [],
+  "gains": [],
+  "ablation": "Same editor, same inputs, only useAttention changes. Earlier morphology/rules/other networks remain enabled."
+}

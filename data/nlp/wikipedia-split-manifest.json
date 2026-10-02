@@ -1,0 +1,1543 @@
+{
+  "version": 2,
+  "sourceDocuments": 300,
+  "keptDocuments": 300,
+  "clusters": 281,
+  "removedExactDuplicates": [],
+  "repeatedTargets": 64,
+  "counts": {
+    "train": 7215,
+    "validation": 840,
+    "test": 448
+  },
+  "categories": {
+    "identity": 1898,
+    "diacritics": 3493,
+    "delete": 595,
+    "insert": 581,
+    "swap": 643,
+    "keyboard": 644,
+    "space": 620,
+    "colloquial": 29
+  },
+  "limitations": "Synthetic noise; no real-user accuracy claim. Capitalized words are conservatively protected, including sentence-initial words. Supply protectedTerms for lowercase names and foreign words. Near duplicates clustered at document token-bigram Jaccard >=0.8; exact sentences audited across splits. Sentence segmentation protects URLs, code and numbers but is not a full abbreviation model. Noise frequencies are illustrative, not estimated from real errors.",
+  "partitions": {
+    "train": {
+      "sha256": "9a2191505bf2447d6bccda7196e6c6e12c35be2b2fec6dce3233b36de8ea52fc",
+      "rows": 7215
+    },
+    "validation": {
+      "sha256": "a0130ead04d9299cd2eebd2f37a2ec44089847740e38d8b7a56286ba3f5ebb0b",
+      "rows": 840
+    },
+    "test": {
+      "sha256": "aa073348e2627b00e72e685495133e147ba675257a53a9cb374d1910e0c9b162",
+      "rows": 448
+    }
+  },
+  "documents": [
+    {
+      "documentId": "wiki-az-604",
+      "split": "train",
+      "cluster": "16804201bd8995966df15ef7929c5a42271c58e1577f2f5ea4273e78de034deb"
+    },
+    {
+      "documentId": "wiki-az-610",
+      "split": "train",
+      "cluster": "709f4e61fcde6381fb63afcc68df63acac50c3e8263a7ad4357df9cc35cd8705"
+    },
+    {
+      "documentId": "wiki-az-611",
+      "split": "train",
+      "cluster": "d3f98dbb4b6051782d45b9646e0792d0b3d4bc14c73098184820996dae156a99"
+    },
+    {
+      "documentId": "wiki-az-613",
+      "split": "train",
+      "cluster": "65a713b21c2e49bb23b12b42a95a2dd56740ba04ad47e1ccbfa45c193c6cf579"
+    },
+    {
+      "documentId": "wiki-az-615",
+      "split": "train",
+      "cluster": "8e9de9c559fa5d6b05d8cd49cb57bd2487a13872fa90fc1ba5cdeb48dc8d2f2a"
+    },
+    {
+      "documentId": "wiki-az-616",
+      "split": "train",
+      "cluster": "72bc38ea6d1c7c810b8af3e15cbb7f2ee31b505e60f2675850ad94a4715170bf"
+    },
+    {
+      "documentId": "wiki-az-618",
+      "split": "train",
+      "cluster": "23a9837e3cbfed60899c768a5f2935c2b20b937030c7b6838e2a29d024b68649"
+    },
+    {
+      "documentId": "wiki-az-627",
+      "split": "test",
+      "cluster": "2d470b31db20241aa07cdac2218643f4d6c26dfc6b98cb0615e17846729d3e27"
+    },
+    {
+      "documentId": "wiki-az-628",
+      "split": "test",
+      "cluster": "dedb1fd74fb12faa231c547a2eff08c85f4cc61380632bb3ed36c72a065dcb60"
+    },
+    {
+      "documentId": "wiki-az-840",
+      "split": "train",
+      "cluster": "94f8235f53e169dd05900157452424bfc1960cb6a7102c22f1b2798e09b36174"
+    },
+    {
+      "documentId": "wiki-az-844",
+      "split": "train",
+      "cluster": "0b6fad929d133757ed3cc047675dbb4be64b42842ac1486ac1775059e8a9d626"
+    },
+    {
+      "documentId": "wiki-az-847",
+      "split": "train",
+      "cluster": "74fbb893c4ddfd7b5f87ce64ab01a6e2f06a4e8b19e5fb28d8c73616806455de"
+    },
+    {
+      "documentId": "wiki-az-848",
+      "split": "train",
+      "cluster": "975c8c1fb7ffa4a34a335ffeee81f7618665f36716ffd5310ba5d81ca1b94700"
+    },
+    {
+      "documentId": "wiki-az-851",
+      "split": "validation",
+      "cluster": "e2d95210afa67f719158cfb37fd616d2309dd64f572b3f4731cefe6c910bab19"
+    },
+    {
+      "documentId": "wiki-az-1084",
+      "split": "train",
+      "cluster": "26d5516b326acf5b1700331a667a1965efc96d4ed09efac6b3629abc2e2c753d"
+    },
+    {
+      "documentId": "wiki-az-1085",
+      "split": "validation",
+      "cluster": "8810337a1a9ae2578dafe9ce54be4687f5e4e3586fb9261a60a660233ee493b0"
+    },
+    {
+      "documentId": "wiki-az-1087",
+      "split": "train",
+      "cluster": "4b640edf1cd4bfd8065a5170d6c261fb6ad682d29a464ad8c7704efa76aa3930"
+    },
+    {
+      "documentId": "wiki-az-1088",
+      "split": "train",
+      "cluster": "ac702a4070351840fc070ddda0b53c5d79a8556e00ff5d8190ee8f92b152093d"
+    },
+    {
+      "documentId": "wiki-az-1091",
+      "split": "train",
+      "cluster": "172c5ba1bf002c912e282cfb2102edbb4a806dd943802837a7353d6aa09be0e8"
+    },
+    {
+      "documentId": "wiki-az-1093",
+      "split": "validation",
+      "cluster": "4bb5e9b87644b18801f11fdc049beed34efcb04708d529d98db0f7f05f0fd3c6"
+    },
+    {
+      "documentId": "wiki-az-1094",
+      "split": "train",
+      "cluster": "e79c320b559ef30e11e2aef3a8df8f0468fd07c2e9100af553e1a633b3c36da4"
+    },
+    {
+      "documentId": "wiki-az-1095",
+      "split": "train",
+      "cluster": "62b69acd2f30a84a6c572aa46b90eaf1c6875612921bdcd04382e8f64a67e65b"
+    },
+    {
+      "documentId": "wiki-az-1102",
+      "split": "train",
+      "cluster": "735e58f47b789b679c283dc38990a7381c33307de3927f4553facc1ca6feaa95"
+    },
+    {
+      "documentId": "wiki-az-1107",
+      "split": "train",
+      "cluster": "816521614efa50469db1288b4be9e25182d6d8452bdcad6d431354eedb888eec"
+    },
+    {
+      "documentId": "wiki-az-1111",
+      "split": "test",
+      "cluster": "e6aea941ba7c01879432b19529da8d656540196a825347e9f486d8db0f6cf745"
+    },
+    {
+      "documentId": "wiki-az-1112",
+      "split": "train",
+      "cluster": "bac73c5f7e25e6ceb39641c89a45b7a641862edd420a7e966addf11cddb550cf"
+    },
+    {
+      "documentId": "wiki-az-1113",
+      "split": "validation",
+      "cluster": "67d212c83fa3fcb91d1381473cbc72417c5d3cbbaf8d61922c4ce20b9900d84e"
+    },
+    {
+      "documentId": "wiki-az-1114",
+      "split": "train",
+      "cluster": "ea4d2df3efa770ce5a0d8f8426865653f1e6c2f89fc011bccf708c921131860a"
+    },
+    {
+      "documentId": "wiki-az-1115",
+      "split": "train",
+      "cluster": "6a940d909f1ee5013caa476f043ed6c5bd6471612b344fac62defff4092b2d0f"
+    },
+    {
+      "documentId": "wiki-az-1116",
+      "split": "train",
+      "cluster": "2c1f6f4bb3a047bb6148015fd789406ab4dbdf574f59466976ee5b2bc94bb60c"
+    },
+    {
+      "documentId": "wiki-az-1117",
+      "split": "validation",
+      "cluster": "c96bf3843a8daecc2daf4237bca494b6a48024c012150d9d40b8eb6ba8dba727"
+    },
+    {
+      "documentId": "wiki-az-1120",
+      "split": "train",
+      "cluster": "c041225e680cb72a726683a2426659bbbfdf9822a0b4207d05bf1f6b5e6c1472"
+    },
+    {
+      "documentId": "wiki-az-1122",
+      "split": "train",
+      "cluster": "21ec28f93515ed0b8623bd4034728feef7c2fede690756fd3c67c84c32eb092f"
+    },
+    {
+      "documentId": "wiki-az-1126",
+      "split": "train",
+      "cluster": "bbc345b9d5057531b3627541c43c20400fc1392ff85ddde0735fec02c6b64ac5"
+    },
+    {
+      "documentId": "wiki-az-1128",
+      "split": "train",
+      "cluster": "663e65173468e030d5e2526739688a5d6b63f6f30fdf8061376a566d457f2eb0"
+    },
+    {
+      "documentId": "wiki-az-1131",
+      "split": "train",
+      "cluster": "f4abffabe965f6f78d05ebecdc98e02e7e9b090bd49cfd7d9527c99972495524"
+    },
+    {
+      "documentId": "wiki-az-1150",
+      "split": "train",
+      "cluster": "70353c32c85de46449056c20ac4c56008dad1b73a7882a3c57087e10c9472e6a"
+    },
+    {
+      "documentId": "wiki-az-1560",
+      "split": "train",
+      "cluster": "45d9dae1ac8bac7990a51fce6937903cc16e64bf8d3e2bde4b85a12b043d929d"
+    },
+    {
+      "documentId": "wiki-az-1564",
+      "split": "validation",
+      "cluster": "a357e713392e4188c6773e01d9041cb57cdb631d9d3c4f5be0f1e1aeef40ece9"
+    },
+    {
+      "documentId": "wiki-az-1584",
+      "split": "train",
+      "cluster": "03cf3d0df4728761bbb07f1608f4e8868d69585be3bbfa3c62c0f2d976af47bf"
+    },
+    {
+      "documentId": "wiki-az-1585",
+      "split": "train",
+      "cluster": "995280ffc03340a515b084558d6e6039b06e7a731fa679028799666a124d42d3"
+    },
+    {
+      "documentId": "wiki-az-1586",
+      "split": "train",
+      "cluster": "d01a8139585209b7a63768c521d0712d22eb95650975e2519a441e592dae0e9c"
+    },
+    {
+      "documentId": "wiki-az-1592",
+      "split": "train",
+      "cluster": "94bedd6daac698ffb79b408e0941004d23be1aa92efa8a9d579c488529380fe0"
+    },
+    {
+      "documentId": "wiki-az-3899",
+      "split": "train",
+      "cluster": "3a0d63c70be2698baeaf560564a661976ad50921862bacb02bf6b6e31af09b9b"
+    },
+    {
+      "documentId": "wiki-az-9264",
+      "split": "train",
+      "cluster": "cd290069cebbe080730b1cc367c05c6ba732b9fe2d450ca02564de3767562134"
+    },
+    {
+      "documentId": "wiki-az-9267",
+      "split": "train",
+      "cluster": "e8285478a635a5e275faedeafd699bd61076eeefb9a44a87d650029ced83fa9d"
+    },
+    {
+      "documentId": "wiki-az-9269",
+      "split": "train",
+      "cluster": "762f0a317b6fd81cb5ed9ccbc7e4fdcf4ffc21c8b87f755d5dc55ea733642677"
+    },
+    {
+      "documentId": "wiki-az-9271",
+      "split": "test",
+      "cluster": "64bd101da7b67cfb9fc6b715d105db26afca20da3e6e8519f8286940ffd8f3f9"
+    },
+    {
+      "documentId": "wiki-az-9273",
+      "split": "test",
+      "cluster": "e49eff23ce23721a64aaeaf41ff598fb56411344b381e1f5163edf7ff7637e39"
+    },
+    {
+      "documentId": "wiki-az-9297",
+      "split": "train",
+      "cluster": "e2f520e1b29c877f09c4857a075fce786cbed2cfc74511d6b73a2de7f26e8db4"
+    },
+    {
+      "documentId": "wiki-az-9299",
+      "split": "train",
+      "cluster": "c70f9aee6441837ea5200c30bfebc06406ae89e7a8d45ed33eb7993b5ddc57df"
+    },
+    {
+      "documentId": "wiki-az-9308",
+      "split": "train",
+      "cluster": "b2d1b592465799694b37ce8a69b52ab34ea482d5ee810861686a7be21c4d2698"
+    },
+    {
+      "documentId": "wiki-az-9319",
+      "split": "train",
+      "cluster": "0093ee7e2d0f06924bc9d5b8e74bdffea85b688a911f319621c69e1a86b85497"
+    },
+    {
+      "documentId": "wiki-az-9321",
+      "split": "validation",
+      "cluster": "59da35e00e70d223488df7800f1a81640fcbf298d5e5117fbb7061fc19a66309"
+    },
+    {
+      "documentId": "wiki-az-9323",
+      "split": "train",
+      "cluster": "8644ff0a5cc471706a93e40563a402530d3265c7ad8bf226f9442e08ffcb57c4"
+    },
+    {
+      "documentId": "wiki-az-9332",
+      "split": "test",
+      "cluster": "8e0a7ff929977c11846888b822ec621e83b9d7f7c2baaa566fdf9987c4d0603a"
+    },
+    {
+      "documentId": "wiki-az-9333",
+      "split": "train",
+      "cluster": "f45a30e0082eb031a46ee60e1c2884b619b1d6ba009d8a0da0c0928c9ef25f11"
+    },
+    {
+      "documentId": "wiki-az-9334",
+      "split": "train",
+      "cluster": "98fdf537c8db5e60accee8b029f486a6b35ae8b61fba0eafa7d23d1c65ec1622"
+    },
+    {
+      "documentId": "wiki-az-9336",
+      "split": "train",
+      "cluster": "44898787942341c94b518a9ce87f67636beaf2c861dbfc444ca1009f56036557"
+    },
+    {
+      "documentId": "wiki-az-9338",
+      "split": "train",
+      "cluster": "7a390aceaf1e9e84040084cf83935b1381b34ec418697845f067b009c9e6f25a"
+    },
+    {
+      "documentId": "wiki-az-9343",
+      "split": "train",
+      "cluster": "cd0f9d115fc123560a2059087205ca7224fe1cf0d942c9c0429fedc30c3f0798"
+    },
+    {
+      "documentId": "wiki-az-9345",
+      "split": "train",
+      "cluster": "374d4418429af271b56236917486610d172ccc7cbc20f1d77c97abc30e6fd3ce"
+    },
+    {
+      "documentId": "wiki-az-9351",
+      "split": "validation",
+      "cluster": "828808e05afc85a06d0e2a11ca99a8e1bca6a0dd94aac18f820b91fa8afd5bac"
+    },
+    {
+      "documentId": "wiki-az-9356",
+      "split": "train",
+      "cluster": "6e3331402c0efbeaf5ba92207a681f1627dfc0482c46ac82f9dd5853d14aca5c"
+    },
+    {
+      "documentId": "wiki-az-9360",
+      "split": "train",
+      "cluster": "30cdcb747627aa45a7e5f2370a77ae5c3108aa46bdf719aad685c819b2543e93"
+    },
+    {
+      "documentId": "wiki-az-9370",
+      "split": "train",
+      "cluster": "7e100d1dc03b9cf11cc8cca89ed05b4a5de31c8812dc8364e45e876f12c02bde"
+    },
+    {
+      "documentId": "wiki-az-9372",
+      "split": "train",
+      "cluster": "0e36252a484602dfb19b8fb06a1f6cc044bff39131a7b75562610b0720dc4f5a"
+    },
+    {
+      "documentId": "wiki-az-9375",
+      "split": "train",
+      "cluster": "286e209533c9f8f52efe1029201d133c5810d73f906cdf0d7b1e23b6fcace0aa"
+    },
+    {
+      "documentId": "wiki-az-9381",
+      "split": "train",
+      "cluster": "8852124cc2085c2c9023fd71a2fa7194eb5cafe9c7afe3f0235d7e4ba7f481bf"
+    },
+    {
+      "documentId": "wiki-az-9382",
+      "split": "train",
+      "cluster": "d988b701c57facad06490c849d3593d01d7835f9272a7c8fab86280881001736"
+    },
+    {
+      "documentId": "wiki-az-9386",
+      "split": "train",
+      "cluster": "1ad34610b6502f002f33f414060514e0b837ac976c558cd0b13e659a739dc074"
+    },
+    {
+      "documentId": "wiki-az-9400",
+      "split": "train",
+      "cluster": "5baeec49afaeec069f9239dbe02336d569d394ecfcf11d2235ee5f1f8f2c3c26"
+    },
+    {
+      "documentId": "wiki-az-9406",
+      "split": "train",
+      "cluster": "2d8b9029dc60fe03c60d163659be86a8c8f0bd1d1d46614930d09362e082979b"
+    },
+    {
+      "documentId": "wiki-az-9407",
+      "split": "train",
+      "cluster": "8b04d7d9150e57031df4342dee5203e85adbfdc9e19cbf1ccea4740033c5d213"
+    },
+    {
+      "documentId": "wiki-az-9409",
+      "split": "train",
+      "cluster": "cfe6f0d7fcfc863505c02c951d132d0f2a103c05c7c9d4c6273c6d309598e957"
+    },
+    {
+      "documentId": "wiki-az-9410",
+      "split": "train",
+      "cluster": "37c603301dd91d81ba713118a896359493e183beee1497d433f97c8275d97915"
+    },
+    {
+      "documentId": "wiki-az-9411",
+      "split": "train",
+      "cluster": "6f69098bd968ad947e3ec01ae9a2572315bbad3a140ada3825ed858ddff7e738"
+    },
+    {
+      "documentId": "wiki-az-9414",
+      "split": "train",
+      "cluster": "fcffd56213a27154197fc9691903486e9fa94a76e263fdccf7e9d276ba8345cf"
+    },
+    {
+      "documentId": "wiki-az-9415",
+      "split": "train",
+      "cluster": "112661e116196f46d96a30c8fbbc2de48c4a634cc9e5fc19c7f3456a242a4ad9"
+    },
+    {
+      "documentId": "wiki-az-9417",
+      "split": "train",
+      "cluster": "4f4d14944479c302a987fa1af73bb19d816cbed92f62bae1b04dadfda099fd29"
+    },
+    {
+      "documentId": "wiki-az-9420",
+      "split": "validation",
+      "cluster": "8a05f4c8a71150df76f451a0e89e07a8dedbcf2d79816ebc87a6db704bb0acd6"
+    },
+    {
+      "documentId": "wiki-az-9431",
+      "split": "train",
+      "cluster": "74ad6703e29afb25d19951057ecd3e1f339771e0d980a2d4d09663b7e3b37c8b"
+    },
+    {
+      "documentId": "wiki-az-9433",
+      "split": "validation",
+      "cluster": "47ce34103ba5d77b3340cbd7848067adb53612a975060e724deccc6c782a2e50"
+    },
+    {
+      "documentId": "wiki-az-9435",
+      "split": "train",
+      "cluster": "d2b57ec4b66d2723c4ae1cb80d05ce72672dd92a037a888590bfacd4e2062fb6"
+    },
+    {
+      "documentId": "wiki-az-9458",
+      "split": "train",
+      "cluster": "e375040795c1ca8236687d8b61a37ec1de6c5574507553d2ca338c6c791a4e6b"
+    },
+    {
+      "documentId": "wiki-az-20502",
+      "split": "train",
+      "cluster": "97c6a2d9262136ab6454790c475024913e28f9c84b42f3f08f10523a0f37995b"
+    },
+    {
+      "documentId": "wiki-az-20504",
+      "split": "train",
+      "cluster": "6b88652ede9f0b9fb60daf51701edf1e4f86b8fd8c837651a1a73d84df691cf2"
+    },
+    {
+      "documentId": "wiki-az-20507",
+      "split": "train",
+      "cluster": "9c912367a5fb585fb26d49c790e5c85a512b633a3ffbf23f81edd97f968b7fa5"
+    },
+    {
+      "documentId": "wiki-az-20509",
+      "split": "train",
+      "cluster": "3bd50e76dcc7b1695795578891a5b35c44740185ffba05755837bdf7ce9a7035"
+    },
+    {
+      "documentId": "wiki-az-20511",
+      "split": "train",
+      "cluster": "a88885faa11ab1683c86cf153f26573716c1104762c77fcac78ab150669e9410"
+    },
+    {
+      "documentId": "wiki-az-20515",
+      "split": "train",
+      "cluster": "95e3b00786aaa40bc82ec2a0f58cdb7d9acea10da502b374b29954e8d952ee6a"
+    },
+    {
+      "documentId": "wiki-az-20521",
+      "split": "validation",
+      "cluster": "9c77764e1e11e3ff5a221dcf9f74b7d72b291792aea104db6b27ce8cf2152685"
+    },
+    {
+      "documentId": "wiki-az-20523",
+      "split": "train",
+      "cluster": "19878a59aea87ce34fc947e64851a7075cf32a252677757c5c6371caf4805d26"
+    },
+    {
+      "documentId": "wiki-az-20536",
+      "split": "train",
+      "cluster": "fcd60c8c54f0f3a148bf782411f08068cdaee60660bb3fa35030bfa937085b4f"
+    },
+    {
+      "documentId": "wiki-az-20546",
+      "split": "train",
+      "cluster": "98b49c83690022eb2bc355e5ddd3ebf27528e7a10d78476bc22193de73de4d9b"
+    },
+    {
+      "documentId": "wiki-az-20563",
+      "split": "validation",
+      "cluster": "1a6fbe6842a2d97542249c629dc2b6fd310fe2022064f09eb9af775df576f850"
+    },
+    {
+      "documentId": "wiki-az-20574",
+      "split": "train",
+      "cluster": "3287ea69596b3f06c902776d86c260b4e94dea247ac8d2f7ce4b07c658b1e214"
+    },
+    {
+      "documentId": "wiki-az-20575",
+      "split": "train",
+      "cluster": "ec487c8d55abf1741850632c68b79ab1376921a653783761487a7d461889d314"
+    },
+    {
+      "documentId": "wiki-az-20579",
+      "split": "train",
+      "cluster": "91773dfc10070f6d2545f87eb789b445e366679a97dbad9d53cc9e5df5cb36fb"
+    },
+    {
+      "documentId": "wiki-az-20599",
+      "split": "train",
+      "cluster": "c42558d6fbbdb475c55f0ff59a80562c1a2fc7748357d95a94aa61822a2fb9b1"
+    },
+    {
+      "documentId": "wiki-az-20610",
+      "split": "train",
+      "cluster": "5e2644efdcb8286ea4ca2c78acec07d7c55833e5b6cad512025dc077c123cd06"
+    },
+    {
+      "documentId": "wiki-az-20611",
+      "split": "train",
+      "cluster": "2e63a73dad174c889fe809e737eed726363dafb90c0b7a3a0802a2aff9724680"
+    },
+    {
+      "documentId": "wiki-az-20613",
+      "split": "validation",
+      "cluster": "862aa35033315b271438e546ab996ba9b90b0902b50dfc403ac6ff509e75a543"
+    },
+    {
+      "documentId": "wiki-az-20614",
+      "split": "train",
+      "cluster": "2e63a73dad174c889fe809e737eed726363dafb90c0b7a3a0802a2aff9724680"
+    },
+    {
+      "documentId": "wiki-az-20615",
+      "split": "validation",
+      "cluster": "266ff15cda47559c4b42c91b2323eb983d4ccc59416bd866b248282c92be2e43"
+    },
+    {
+      "documentId": "wiki-az-20616",
+      "split": "train",
+      "cluster": "317aff15f9817b91d40fd1ac6d36c7648d5617cac8dda27f329601eaa5419e21"
+    },
+    {
+      "documentId": "wiki-az-20617",
+      "split": "train",
+      "cluster": "fc1e8e99259639e947e8bf9e4eee22035bd6538e855ebff3d65d99745ac88049"
+    },
+    {
+      "documentId": "wiki-az-20618",
+      "split": "train",
+      "cluster": "a38966fa2f23a6e5003c4c802fa0d7d2ba2b06c66f46c5bc5c549bfc76070de5"
+    },
+    {
+      "documentId": "wiki-az-20624",
+      "split": "validation",
+      "cluster": "862aa35033315b271438e546ab996ba9b90b0902b50dfc403ac6ff509e75a543"
+    },
+    {
+      "documentId": "wiki-az-20627",
+      "split": "train",
+      "cluster": "190148097edc9e6d2ee0c874bb6e09795008f589e4801f5966a76f0fc4f59f0c"
+    },
+    {
+      "documentId": "wiki-az-20628",
+      "split": "validation",
+      "cluster": "862aa35033315b271438e546ab996ba9b90b0902b50dfc403ac6ff509e75a543"
+    },
+    {
+      "documentId": "wiki-az-20629",
+      "split": "validation",
+      "cluster": "862aa35033315b271438e546ab996ba9b90b0902b50dfc403ac6ff509e75a543"
+    },
+    {
+      "documentId": "wiki-az-20632",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-20640",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-20679",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-20696",
+      "split": "train",
+      "cluster": "7c80ea1195d39bcd0674941bce64842848d1210ebee7ce4b35e5df09c8d5485b"
+    },
+    {
+      "documentId": "wiki-az-20697",
+      "split": "train",
+      "cluster": "3fe042adfdc5083183f5e43845de37ee12fd457f384ebd973547ef8b3bd262ba"
+    },
+    {
+      "documentId": "wiki-az-20700",
+      "split": "train",
+      "cluster": "764bb7f25df59986a1e5b975840e014bc1b194c03d2d7d49c2f1c8072ea7660b"
+    },
+    {
+      "documentId": "wiki-az-20701",
+      "split": "train",
+      "cluster": "497744632fd1ee081d532069f51c72c9e4e0f578a0bb992cde42ce27e2840381"
+    },
+    {
+      "documentId": "wiki-az-31449",
+      "split": "train",
+      "cluster": "eb4d42651cc776e466391146de564a98e2bb8f7ca1ef5f08be791404f9889244"
+    },
+    {
+      "documentId": "wiki-az-31450",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31451",
+      "split": "train",
+      "cluster": "2f4b61ac1e57b575ae64671edffa2a9d88b11716b6ef762831080e941b05ab11"
+    },
+    {
+      "documentId": "wiki-az-31452",
+      "split": "train",
+      "cluster": "20983535add9d7958350f10c4f527a588c83682df34871c13fa65de07954a5bc"
+    },
+    {
+      "documentId": "wiki-az-31453",
+      "split": "train",
+      "cluster": "705de889d2a5b6074bcc38aa0c92838b803c0a74657d3f43d41f9911ac29555c"
+    },
+    {
+      "documentId": "wiki-az-31457",
+      "split": "train",
+      "cluster": "aae4a92340f3ba9cfe08306d1860d647ffe2f29c187dbebcb568e3d5e1a67c4d"
+    },
+    {
+      "documentId": "wiki-az-31465",
+      "split": "train",
+      "cluster": "c77914305604092f2b8414fff57acbc18a01bd0a2d87a9f89a373a09db70ac53"
+    },
+    {
+      "documentId": "wiki-az-31469",
+      "split": "train",
+      "cluster": "194407ec28b0fcbbd966617fd1cac5c9a40e6a5ecc15377d691eb3ebae5cf3c8"
+    },
+    {
+      "documentId": "wiki-az-31471",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31474",
+      "split": "validation",
+      "cluster": "0a7ea03950215d12ad62f1f88ddea213141d075f6109d568e14a02e673240676"
+    },
+    {
+      "documentId": "wiki-az-31477",
+      "split": "train",
+      "cluster": "8be8223a2b4966a1311db35046d8304f0efac4472a3e6f04ad5b6a77b0be37c5"
+    },
+    {
+      "documentId": "wiki-az-31480",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31481",
+      "split": "train",
+      "cluster": "21982e4cf5867869753e974cf6dae899366e3c428d5aab6ff10454b29ea38877"
+    },
+    {
+      "documentId": "wiki-az-31487",
+      "split": "train",
+      "cluster": "eb3c6e517423f6a312c3a895b9e4a75ed84f53d7703f79c0f848de175c8821b7"
+    },
+    {
+      "documentId": "wiki-az-31488",
+      "split": "train",
+      "cluster": "b7f9138f088e3e7d34a7c2c69589fbed1f4485f100f5f8d1cb0ff4dfc7415100"
+    },
+    {
+      "documentId": "wiki-az-31491",
+      "split": "train",
+      "cluster": "f3ff16343aa716ea281ca6a1e8ea92817b504c90f598aafd3e8b66762c19114b"
+    },
+    {
+      "documentId": "wiki-az-31494",
+      "split": "train",
+      "cluster": "591f2902fa10bf97358d3c45ca158a2847d5d33662e5fb9daf9bdf3d2c4d1b20"
+    },
+    {
+      "documentId": "wiki-az-31497",
+      "split": "train",
+      "cluster": "e3986f517b37f191e9a662af2f4dc793774f7b2dda1a248b20cc432784920156"
+    },
+    {
+      "documentId": "wiki-az-31499",
+      "split": "validation",
+      "cluster": "8dc904143d1be8cbf44b353c82b6925b3b314dd8a31fb7115a1f99ad47f6728b"
+    },
+    {
+      "documentId": "wiki-az-31502",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31503",
+      "split": "train",
+      "cluster": "9d16f29045b093546fda03b24f1e288ad4be9a661187f457a6d15a2ce467709f"
+    },
+    {
+      "documentId": "wiki-az-31506",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31508",
+      "split": "train",
+      "cluster": "444fd98421ed9247062db4e0424785283788992287170a4be03f58f5064b3366"
+    },
+    {
+      "documentId": "wiki-az-31509",
+      "split": "train",
+      "cluster": "061b4533bf2c956ad2f2ee8d5a05e83cba8bea61e0d8fa3155961fe8a9a79ed2"
+    },
+    {
+      "documentId": "wiki-az-31510",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31511",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31512",
+      "split": "train",
+      "cluster": "688592eeca88792f1e0d0347b6d171b4198d99438a9bb1ddcab1e8bcace1897a"
+    },
+    {
+      "documentId": "wiki-az-31513",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31515",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31518",
+      "split": "train",
+      "cluster": "67b115eb11e50928df7cae477e1967a3ab857bf9564104c977eb471ed07f9221"
+    },
+    {
+      "documentId": "wiki-az-31521",
+      "split": "validation",
+      "cluster": "1ae49b3f0b70b087c14917991b8cba5a8b2c9afdc96ecb993275c184dfc3a925"
+    },
+    {
+      "documentId": "wiki-az-31523",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31526",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-31527",
+      "split": "train",
+      "cluster": "3ca734ec8e54022ccb936f6307aaa197c49bbf5964f3d9393ec3f6320d982038"
+    },
+    {
+      "documentId": "wiki-az-31529",
+      "split": "train",
+      "cluster": "fafa2e86456ed80d6ec1794d024203a69b11dabe93e2dccb710a817e01a575c6"
+    },
+    {
+      "documentId": "wiki-az-31531",
+      "split": "train",
+      "cluster": "749c9ee8d1e81742f961b74b7b1b73d37fc8aff1bd43e0c16d69c42822331240"
+    },
+    {
+      "documentId": "wiki-az-31535",
+      "split": "train",
+      "cluster": "e26e366a33e60c692b28b6effb9b54a5d0b09ee72c6c2412c55cdcf1464bf9ae"
+    },
+    {
+      "documentId": "wiki-az-38658",
+      "split": "train",
+      "cluster": "01462f207be55b16cd12917d662d9b8a28c4ce7994fb654a6b2ea943ac16efea"
+    },
+    {
+      "documentId": "wiki-az-38663",
+      "split": "train",
+      "cluster": "9d34715806437081e2adee2e472f66ef1c9e0e6c6adf7744662e1fcac3b0a885"
+    },
+    {
+      "documentId": "wiki-az-38686",
+      "split": "train",
+      "cluster": "5b91c2fc2fe3016498b66b4dcdf5758d1fbc80cbb741d5fe963886d712869c94"
+    },
+    {
+      "documentId": "wiki-az-38688",
+      "split": "validation",
+      "cluster": "c668dbe9a5363adb268dce6a634d40ac131d1cb9a4e21c179d5c2bbefff89cfb"
+    },
+    {
+      "documentId": "wiki-az-38692",
+      "split": "train",
+      "cluster": "86b8e7ccc0f2025ee501b8c7a953adabc0b574cf2321bc95e6982f68340163d3"
+    },
+    {
+      "documentId": "wiki-az-38701",
+      "split": "train",
+      "cluster": "00f407aefbd4ee452c1d6dce96f848d7e2344abf260e7080e950b1e57c07797c"
+    },
+    {
+      "documentId": "wiki-az-38702",
+      "split": "train",
+      "cluster": "64c924245538968173870d9f5cf9ea91ebc806f9e2fa88d934e0d3e28247bc7d"
+    },
+    {
+      "documentId": "wiki-az-38731",
+      "split": "train",
+      "cluster": "983ba7cd026da7cc98a96a7e922f1694300d04e6ff29fba35802366e82d7dd7f"
+    },
+    {
+      "documentId": "wiki-az-38733",
+      "split": "train",
+      "cluster": "d5bed4fbbe8ce650052967eac303112dd6199e624a3f0fd0ef88699b1255ae07"
+    },
+    {
+      "documentId": "wiki-az-38761",
+      "split": "train",
+      "cluster": "ea7b10931bff18b6ecb6f9cc1816530a8fbdbf446747c677fd6306b8bb9492a4"
+    },
+    {
+      "documentId": "wiki-az-38779",
+      "split": "train",
+      "cluster": "f05a25fda930e3fd550b75599e9addbadba98d6db688108ef5bcc52251f97ed5"
+    },
+    {
+      "documentId": "wiki-az-38789",
+      "split": "train",
+      "cluster": "6c2cff1bd780940a63cb3f8a0a37ab35c682e601cf2bd4189b33b5704b5bc2c6"
+    },
+    {
+      "documentId": "wiki-az-38791",
+      "split": "train",
+      "cluster": "b6ca3bafbe2b1748edc8e0f3c9790a2a2faa9528356dfefdfdd510cc785b19fe"
+    },
+    {
+      "documentId": "wiki-az-38792",
+      "split": "train",
+      "cluster": "fafc4a9ec1e2f841c77261677b297cd9dda6d031724751add0637d7ce1025975"
+    },
+    {
+      "documentId": "wiki-az-38827",
+      "split": "train",
+      "cluster": "246002671ab1779ff08188fb41ca950b52e91c80e7330028307c62dd2a8fb5ca"
+    },
+    {
+      "documentId": "wiki-az-38828",
+      "split": "train",
+      "cluster": "26ae960340946923c37524884ab1ff17ad32d7223f30d6d8ca657feb80bd5fc1"
+    },
+    {
+      "documentId": "wiki-az-38829",
+      "split": "train",
+      "cluster": "d9301bb50cfa6316e058bbeaf468cda4ef9e60389ab3e291091596e609ddff38"
+    },
+    {
+      "documentId": "wiki-az-38830",
+      "split": "train",
+      "cluster": "6eb327682f581c76f1c2ec8871a30c9dbb1b4b14c381550515b96685a985abce"
+    },
+    {
+      "documentId": "wiki-az-38831",
+      "split": "train",
+      "cluster": "7eaa474243e7f2e0765c5e1f8a35943d1047e365adef6db803ec223580f01dcf"
+    },
+    {
+      "documentId": "wiki-az-38833",
+      "split": "train",
+      "cluster": "8461207549c294b10d1d31191cdb3f76a133dfd7776a1e47bf5bc3ab8cbb44f5"
+    },
+    {
+      "documentId": "wiki-az-38842",
+      "split": "train",
+      "cluster": "1ee622aac7c2790135adfd2a497d3c6e65fe93e119ec246b829a3a7e4cee5072"
+    },
+    {
+      "documentId": "wiki-az-38843",
+      "split": "train",
+      "cluster": "abeeedc929f15e19e5a04157ee11e6ad1676d14296a0dc6449f6ee436abee532"
+    },
+    {
+      "documentId": "wiki-az-38849",
+      "split": "train",
+      "cluster": "033d341b53d15c510b621e25ab6506758bf0273abc4dac42d2bcbea812bf9826"
+    },
+    {
+      "documentId": "wiki-az-38879",
+      "split": "test",
+      "cluster": "35a148c5807edb905f6b270f4c2dc9d0139ad2926c22482e44cf62eaaff95217"
+    },
+    {
+      "documentId": "wiki-az-38883",
+      "split": "train",
+      "cluster": "8e19ca8a7672e2a0f338396731726d3c45781fc41946c6ea3e0fc08a348e9678"
+    },
+    {
+      "documentId": "wiki-az-38892",
+      "split": "train",
+      "cluster": "c7f0d1c674e811b53eaee06274f99b2892eb6cebc3aaa691d63a2db6269adfd2"
+    },
+    {
+      "documentId": "wiki-az-38893",
+      "split": "train",
+      "cluster": "0b35588e480221efc00cf669138e1be1767ad2e6b35aeed9cfb383986c0e411d"
+    },
+    {
+      "documentId": "wiki-az-38911",
+      "split": "test",
+      "cluster": "d6e3cbf505d1b681e9240c6283bb40818271a56d75c43300c0ae8c956b5ca4a0"
+    },
+    {
+      "documentId": "wiki-az-38915",
+      "split": "validation",
+      "cluster": "e977c47b9cf142c54ba78fe2ea56b5b50727a3f6d9201c347fafd40a6efa3ebc"
+    },
+    {
+      "documentId": "wiki-az-38916",
+      "split": "train",
+      "cluster": "ea77bcb160b135d517fb775e3324e475994ad53de95740a9be0d360dddc590b0"
+    },
+    {
+      "documentId": "wiki-az-38920",
+      "split": "train",
+      "cluster": "f40c2d592f85f1208137076376899cae94e089ca9534e40d28b027b00b36b784"
+    },
+    {
+      "documentId": "wiki-az-38921",
+      "split": "train",
+      "cluster": "a7d53b879669334725d4de8a348e8268cee13318dae41fcf0ef1c5ccd58d16e4"
+    },
+    {
+      "documentId": "wiki-az-38923",
+      "split": "train",
+      "cluster": "7f20f06fb2622feb6b88b9d3cd8d32c48d1e8f58d732952a20473f01f168f75d"
+    },
+    {
+      "documentId": "wiki-az-38924",
+      "split": "train",
+      "cluster": "4ea57e90d99fdf951429c535f80354a9f2a85110de55727b512a5b61d2f3f870"
+    },
+    {
+      "documentId": "wiki-az-38962",
+      "split": "train",
+      "cluster": "ebb5ed0c414c6b6caf76afa5db66edc9f60efd4992e517ad3f73cb45e34219af"
+    },
+    {
+      "documentId": "wiki-az-38966",
+      "split": "train",
+      "cluster": "82ff97bb12ad4b2e2a47795de19f95b0a91eb9480f19e6fa99e99c8e8d869e46"
+    },
+    {
+      "documentId": "wiki-az-38967",
+      "split": "train",
+      "cluster": "e1faea05dae9f227b34a665e9182411ab6e42d4a4db17667b0c214abe4c7fe91"
+    },
+    {
+      "documentId": "wiki-az-38968",
+      "split": "train",
+      "cluster": "daf38012b3b5035f50384199999cb66dd3d25ee0a2ceb8b6195a4e9d7a204c70"
+    },
+    {
+      "documentId": "wiki-az-38972",
+      "split": "train",
+      "cluster": "8acab5ea50fe9c9a1c611f1304360e0a6822b4e9e53e12f0b2cfb8992c244cb0"
+    },
+    {
+      "documentId": "wiki-az-38995",
+      "split": "train",
+      "cluster": "7856900629283c7bdd2698ca1c48a98c0114b20b186e02e5b49925ac0f151318"
+    },
+    {
+      "documentId": "wiki-az-39027",
+      "split": "train",
+      "cluster": "f1a01b6cfd59fee2cb2223b7bcec271134a1c78617b1fef6fb1d2ad9aedbe628"
+    },
+    {
+      "documentId": "wiki-az-39028",
+      "split": "train",
+      "cluster": "f1b926825028fab3748eb1164866bc355fb6fb0ad78d7fb0a8a21bc5bcfe1fa5"
+    },
+    {
+      "documentId": "wiki-az-39044",
+      "split": "train",
+      "cluster": "141d6cedf9c0af94856ba9574d2a4d0588e6b68b7adbf0155ce4364f3f5ee600"
+    },
+    {
+      "documentId": "wiki-az-51708",
+      "split": "train",
+      "cluster": "e8b6e640a282e514b5e32f0c696821c054dbb03679a65787f33093c696367e82"
+    },
+    {
+      "documentId": "wiki-az-51711",
+      "split": "train",
+      "cluster": "85faf4d1d305662b8cc71b89309ba1e72eec85568bf9a5947e6d1ec1ffc1e39c"
+    },
+    {
+      "documentId": "wiki-az-51719",
+      "split": "train",
+      "cluster": "5c1f465f9d74bd73bb269fbdfaf6c04e2951b1d56f8ec2a730ee77ea3fe326fb"
+    },
+    {
+      "documentId": "wiki-az-51733",
+      "split": "train",
+      "cluster": "3f3d27fb11c86974b1ed80b68cbd6ab03b82503c0a5c9a1fb187b92020db5872"
+    },
+    {
+      "documentId": "wiki-az-51734",
+      "split": "train",
+      "cluster": "8c84246dca04b302d5cb093a57c22ab1e41da9461a9c9ef272247a06bf67b21e"
+    },
+    {
+      "documentId": "wiki-az-51740",
+      "split": "train",
+      "cluster": "87e28166163da30973091cf371f14ea939378e167f210557289c31be1c35c606"
+    },
+    {
+      "documentId": "wiki-az-51741",
+      "split": "train",
+      "cluster": "09498a71d597cb6c1a48f0383d259abea882eb5c4a3460eb0a5a03ad0dc20bd4"
+    },
+    {
+      "documentId": "wiki-az-51743",
+      "split": "train",
+      "cluster": "5d889398c2a6ea818317e62c1658bf387d2db0a26aea6a745fa95832f8a1c8c1"
+    },
+    {
+      "documentId": "wiki-az-51745",
+      "split": "train",
+      "cluster": "adfe9a873da51f2c60b41200768464fe33b0bb1f6db8b821e4bb3a474efbccbe"
+    },
+    {
+      "documentId": "wiki-az-51747",
+      "split": "train",
+      "cluster": "89cf3364412e089b02e7e2fe070076b7ca7590b0b53405acbbe80c3f3c260258"
+    },
+    {
+      "documentId": "wiki-az-51748",
+      "split": "train",
+      "cluster": "2b7308b3bd8fef2dba154903539e96ec0b33839914d17f36b4da8020e87e767c"
+    },
+    {
+      "documentId": "wiki-az-51753",
+      "split": "train",
+      "cluster": "c541f3c7294f85684fdc5f80882c1c27526c45d546ed96d94cf945a4712ffa32"
+    },
+    {
+      "documentId": "wiki-az-51754",
+      "split": "train",
+      "cluster": "22b50a1b9f6a8a6fc499986f11330fa94629705007e333c525e6bd047ded5189"
+    },
+    {
+      "documentId": "wiki-az-51756",
+      "split": "train",
+      "cluster": "48162709f97a3001fd65685bc7b035ad046c8df1561c9445bef7ae6603cf2b82"
+    },
+    {
+      "documentId": "wiki-az-51758",
+      "split": "train",
+      "cluster": "b03d20c72bebd6a11af32bafd18ab7d966f5792cd11dae9a12f5530a97a57090"
+    },
+    {
+      "documentId": "wiki-az-51759",
+      "split": "train",
+      "cluster": "90313eb06be07114b378590b27538db4c8df71481177058e2e603b4f2bd0ef22"
+    },
+    {
+      "documentId": "wiki-az-51763",
+      "split": "train",
+      "cluster": "781bbc381018742d132941c933fedb242c95120e333167243ec708615ce9bf01"
+    },
+    {
+      "documentId": "wiki-az-51764",
+      "split": "train",
+      "cluster": "4622ecefbc36ffbb9eb9ad89dd230fc7e1fd27ec50c9273afd05256e9e4d475a"
+    },
+    {
+      "documentId": "wiki-az-51765",
+      "split": "train",
+      "cluster": "299649aba37456a5c42b7c47fbe589ec88242446dad1c80b826901f7985dffa8"
+    },
+    {
+      "documentId": "wiki-az-51766",
+      "split": "train",
+      "cluster": "bd7687f0f714a94472d15d6a10107cc6bf8864e9c239fedf4e5d006ba50b1867"
+    },
+    {
+      "documentId": "wiki-az-51769",
+      "split": "validation",
+      "cluster": "3bf6629f64d3b222560ffc66aa46fecf977af4501f232db126f107d5d00fc31c"
+    },
+    {
+      "documentId": "wiki-az-51774",
+      "split": "test",
+      "cluster": "5689661fe1f436f832f427d5ff0e7b5d74c8b1572f1fc3598a0961fe9be12f05"
+    },
+    {
+      "documentId": "wiki-az-51775",
+      "split": "train",
+      "cluster": "bb6dc29684a317130704b7e9447e55ee9b406081e8697e49d41e4c3a2b3293d3"
+    },
+    {
+      "documentId": "wiki-az-51776",
+      "split": "train",
+      "cluster": "262484e19258ee150a898816e2090aeb1fcfc0b380c04d63ba6a2e6ccfa64ee7"
+    },
+    {
+      "documentId": "wiki-az-51777",
+      "split": "validation",
+      "cluster": "f55093cf1cea2111ad707c05086b6fe197c4d0db610768ad79d8f85479e113bc"
+    },
+    {
+      "documentId": "wiki-az-51778",
+      "split": "train",
+      "cluster": "3ad8dc9841205a47f4db3274d5692004215d59185470fceba889317fce21ebcf"
+    },
+    {
+      "documentId": "wiki-az-64792",
+      "split": "train",
+      "cluster": "b84c34e6bbe3ab1dc8fe7013016c522c7be721c9f693f2338fa3659a8741766f"
+    },
+    {
+      "documentId": "wiki-az-64793",
+      "split": "train",
+      "cluster": "9c6cdc6dd57af666afc0bc3afbd9e191b49bf707d0854e0f92ad677de6a60602"
+    },
+    {
+      "documentId": "wiki-az-64794",
+      "split": "train",
+      "cluster": "78b399d98d67eb6e99b1454717814e1f0f121587e8657fc536bf4eb3ed6c8646"
+    },
+    {
+      "documentId": "wiki-az-64795",
+      "split": "train",
+      "cluster": "acf993406926cc65d3a7a9f34fc2538e386f866a45f000581772187197c08815"
+    },
+    {
+      "documentId": "wiki-az-64797",
+      "split": "train",
+      "cluster": "4bfaaa31db59afd94c81d5e3eb1a7cf0d13a7dfd2e9a6c72c38cd42d1062c2e4"
+    },
+    {
+      "documentId": "wiki-az-64798",
+      "split": "train",
+      "cluster": "907c035cb1ce1d85ee2dfb61c5686d85ad6938a596b0371b899206a1adc051db"
+    },
+    {
+      "documentId": "wiki-az-64799",
+      "split": "test",
+      "cluster": "2b90c373e8f7d0c083d110d45c5d9098bfab7c2aa601bee6b80d06859f0654e4"
+    },
+    {
+      "documentId": "wiki-az-64800",
+      "split": "train",
+      "cluster": "dbd158b902041bc8abae11c5181664861aa144120e97d0242a482f4483b972a5"
+    },
+    {
+      "documentId": "wiki-az-64801",
+      "split": "train",
+      "cluster": "508636bc3dba49693e85d29e24a1bef92ef9a0a167ae2d5004e52bf9dc89fc26"
+    },
+    {
+      "documentId": "wiki-az-64802",
+      "split": "train",
+      "cluster": "394031885b25922b4ea5834259c5f5bffab0fab5ff333d935b22d685017fb378"
+    },
+    {
+      "documentId": "wiki-az-64812",
+      "split": "train",
+      "cluster": "91cb746bc3f4da4ff5ffb877b5e5900cd01f7429e405952cee54c22cc1ad4993"
+    },
+    {
+      "documentId": "wiki-az-64834",
+      "split": "validation",
+      "cluster": "f2bdd64dcd0f1e2254b47ee170e6108ca842d8847911d21bc8c86400e9ddacf4"
+    },
+    {
+      "documentId": "wiki-az-64847",
+      "split": "train",
+      "cluster": "4c95ceadf45030bf5eed15c3c42ed2208351fad8e218c297e83ca76cc3a81eb3"
+    },
+    {
+      "documentId": "wiki-az-64864",
+      "split": "train",
+      "cluster": "256a79ae07dc00679d4d49a7cfbcf71337cfabd6459da23d930ab2bd1c966a2e"
+    },
+    {
+      "documentId": "wiki-az-64879",
+      "split": "train",
+      "cluster": "108833c777aa1c35e9ef66b40abffbbe6d41020a80316e9f47ef38dac959d402"
+    },
+    {
+      "documentId": "wiki-az-64880",
+      "split": "train",
+      "cluster": "b92e0577c4389f1dd434c4eef5719e16c333a2037ba41f8b624751982cb5537f"
+    },
+    {
+      "documentId": "wiki-az-64887",
+      "split": "test",
+      "cluster": "fef948a6ff8062a59539c3f492f5818237f3e551767ee17f0b0976eeff579378"
+    },
+    {
+      "documentId": "wiki-az-64892",
+      "split": "train",
+      "cluster": "ca495d24491c186d3eb7eee88d8ff94a7128db3b8ab1b1bf26e615c1078422f1"
+    },
+    {
+      "documentId": "wiki-az-64893",
+      "split": "train",
+      "cluster": "0f0a0bcd14aab0bc5142a7283bb0cc1d564babf13d523a17fe68288690656bb6"
+    },
+    {
+      "documentId": "wiki-az-64898",
+      "split": "train",
+      "cluster": "cfc3ae15a8bc082be51108778cad1671ce6f60df71c7ff4882bd021efd591e96"
+    },
+    {
+      "documentId": "wiki-az-64920",
+      "split": "train",
+      "cluster": "1fa5a2dcfbb131a1924a0e035ee50dd9d85624c63fa01d2a2d926a41b2172dfb"
+    },
+    {
+      "documentId": "wiki-az-64954",
+      "split": "train",
+      "cluster": "a7ac6ea562b0a8d8a2e792433bebc960d9cab1a1c0d754d6d9713efaecadc33f"
+    },
+    {
+      "documentId": "wiki-az-64962",
+      "split": "train",
+      "cluster": "56a1d5140fd2515ade4dea6271a32398ca7fad4efa6958a2517e5c9f540a5901"
+    },
+    {
+      "documentId": "wiki-az-64974",
+      "split": "test",
+      "cluster": "a53fa90eaa953a0519bfd83ee029fccf5deb374ab1f79c67319d0a097bbce673"
+    },
+    {
+      "documentId": "wiki-az-65021",
+      "split": "train",
+      "cluster": "62957b9d5e338b04333bbd4ff6fa579cd8ae5e60992a427c6cb40d0f8168b66f"
+    },
+    {
+      "documentId": "wiki-az-65024",
+      "split": "train",
+      "cluster": "354ee151b5ccf522486b773e0d08ef19d2ade58cd551d9aef87262b6e04c56be"
+    },
+    {
+      "documentId": "wiki-az-65030",
+      "split": "train",
+      "cluster": "4679e372d5464c4c614c27df998fe00398b1d97e84df23193c934deb381022fe"
+    },
+    {
+      "documentId": "wiki-az-65045",
+      "split": "train",
+      "cluster": "f4cea2b30bbf15911c364edf08a66e77d4605c51016432a7bd9ef55c749e458b"
+    },
+    {
+      "documentId": "wiki-az-65047",
+      "split": "train",
+      "cluster": "cb698278a8406b87d07498a1ff4112c20e1169fd992704a84f3eb9215dd4fdb1"
+    },
+    {
+      "documentId": "wiki-az-65048",
+      "split": "train",
+      "cluster": "b567d5827a4938957a3bd0535cd092e21c5bd7b596398c4bd352647e1f9b7d74"
+    },
+    {
+      "documentId": "wiki-az-65062",
+      "split": "train",
+      "cluster": "90b3ad3617f955f0ce9c44bdb38b2f8112675b1b361770b3bb042fd4551c794b"
+    },
+    {
+      "documentId": "wiki-az-65064",
+      "split": "train",
+      "cluster": "19e73708acbe75efcb2496f22e569b14410447cc3d263cc1a48029f51f8b35b8"
+    },
+    {
+      "documentId": "wiki-az-65067",
+      "split": "train",
+      "cluster": "91fb89b97e80169bb97d8f5974fd516b0a645f1566e40918e01b0f538cac55ae"
+    },
+    {
+      "documentId": "wiki-az-65071",
+      "split": "train",
+      "cluster": "3a375b48c85c18da140f653e1d83f5b1822565f2f0037593941a429299806a83"
+    },
+    {
+      "documentId": "wiki-az-65074",
+      "split": "train",
+      "cluster": "3f3330e8e40762d638a72588d6eb7e7d1de15bef6de70e3e8c176c00edf4ab8a"
+    },
+    {
+      "documentId": "wiki-az-65076",
+      "split": "test",
+      "cluster": "9cbfe37074aedcfce4f34afc010daf35a36938a4b852509b68f5d9dfeb98ad64"
+    },
+    {
+      "documentId": "wiki-az-65080",
+      "split": "train",
+      "cluster": "28e9ef2e47f74d99a8f11f143f8e9f7bf20578c15a2fed363d3480f26ecba36d"
+    },
+    {
+      "documentId": "wiki-az-65081",
+      "split": "validation",
+      "cluster": "6160e2c918323207dc0f48228ef64fb8909657d2c84b3adbd81a93949a8f2b56"
+    },
+    {
+      "documentId": "wiki-az-65082",
+      "split": "train",
+      "cluster": "a5f8bbe763946a397244a52bb3594226ca1eb3d5dc4ceefccd7b6b8c6b9fc656"
+    },
+    {
+      "documentId": "wiki-az-65083",
+      "split": "train",
+      "cluster": "83d8d53d3c6d0d329bd33672ddd9a8ad13120ccedd27260d19204b5e1bf92adc"
+    },
+    {
+      "documentId": "wiki-az-65107",
+      "split": "train",
+      "cluster": "b62e362573e1be0c66969bd8144efc70e184af06e68f3d7181b9a37a8620a7ba"
+    },
+    {
+      "documentId": "wiki-az-65112",
+      "split": "test",
+      "cluster": "504baf7f2e88bd16eaaa7fdd4e072a492e4005da2b40907b970040147aec03a5"
+    },
+    {
+      "documentId": "wiki-az-65131",
+      "split": "validation",
+      "cluster": "fb06cbae1d1bee1e72f1e79f5a55ba853728f3193ab7c8a321b9cd449fdddfab"
+    },
+    {
+      "documentId": "wiki-az-72679",
+      "split": "train",
+      "cluster": "5396e7a15d1831ab8e4dd61f2aac2ce1bc1e5bcffe8e0567cfda5d9337f591a2"
+    },
+    {
+      "documentId": "wiki-az-72681",
+      "split": "train",
+      "cluster": "7f58f8660bcf01d54aa3ff0fdb4605c4d4e419fc3dbb4849372576b56ae83783"
+    },
+    {
+      "documentId": "wiki-az-72685",
+      "split": "train",
+      "cluster": "a96fc58f026070d1c7db959972fe0012c1c212966e3535eecba84b7c494f10bf"
+    },
+    {
+      "documentId": "wiki-az-72686",
+      "split": "test",
+      "cluster": "9cc02f5b267d2a53f8c548472f6287896e1f90f1f6cd5e58d45b1bfa04a79248"
+    },
+    {
+      "documentId": "wiki-az-72688",
+      "split": "train",
+      "cluster": "6ad6a5752563a04a8d529408aa47b7664d73ff1dce2c0698d1e44288b5098acd"
+    },
+    {
+      "documentId": "wiki-az-72689",
+      "split": "validation",
+      "cluster": "5a72b6555386cb33f334b09bd90c749bcaba86f020e6582f5ed12db1b2deb108"
+    },
+    {
+      "documentId": "wiki-az-72698",
+      "split": "train",
+      "cluster": "a6bb42f81acb781fdd648762d6df42aec37a05e3542830798b983e99a625e4fd"
+    },
+    {
+      "documentId": "wiki-az-72700",
+      "split": "train",
+      "cluster": "fcbf3c33fb82c9b8a30b6bd31473c577895b0d8caa9f113f517cced70af9ccbf"
+    },
+    {
+      "documentId": "wiki-az-72701",
+      "split": "train",
+      "cluster": "26c4133c0e59233f1217ab6df1205de47c37fcebba76d790f284d88cd580343f"
+    },
+    {
+      "documentId": "wiki-az-72708",
+      "split": "train",
+      "cluster": "ac25742cd00c628575a1633f290fef392e1f288f56f9159d6b6bfc5a984da4cc"
+    },
+    {
+      "documentId": "wiki-az-72709",
+      "split": "train",
+      "cluster": "e80f4ef4e32851dccdc8b37b28b78ded269dad31105390e0d2db5f53294c4eb0"
+    },
+    {
+      "documentId": "wiki-az-72711",
+      "split": "train",
+      "cluster": "e80f4ef4e32851dccdc8b37b28b78ded269dad31105390e0d2db5f53294c4eb0"
+    },
+    {
+      "documentId": "wiki-az-72712",
+      "split": "train",
+      "cluster": "e70520d6a54e5198f87cdc1f4ff46b0d1c204de09cf94e5f77eddc33d35d696e"
+    },
+    {
+      "documentId": "wiki-az-72713",
+      "split": "train",
+      "cluster": "9a69165aaf336f9514eea274a611d85550cca2e5c322fa17b272557d16672993"
+    },
+    {
+      "documentId": "wiki-az-72714",
+      "split": "train",
+      "cluster": "e699d090e663b4dd1eda97223ad00a42ec7c1ba9a1bb06942757d0a10adcd782"
+    },
+    {
+      "documentId": "wiki-az-72720",
+      "split": "train",
+      "cluster": "b63f21fd0bc305eb74f642f6ed60706693decc6bbe74b0422fbe8dae723e5fc2"
+    },
+    {
+      "documentId": "wiki-az-72722",
+      "split": "validation",
+      "cluster": "414e58ea1b6168780104d2df26456b01d2673b4d7a398314406b51c76ccfb9cf"
+    },
+    {
+      "documentId": "wiki-az-72747",
+      "split": "train",
+      "cluster": "42b2946af13b6e2ab3912d6a58e4a57f783adde0711e9323a45a390033f70c5c"
+    },
+    {
+      "documentId": "wiki-az-72750",
+      "split": "validation",
+      "cluster": "abd91bd37e42b398c972c92a105ee832b7c974b4ec9023dde00e0041f0d2cf9a"
+    },
+    {
+      "documentId": "wiki-az-72755",
+      "split": "train",
+      "cluster": "687f75c561ecbb1a44875fe876cb7f6a85f729fe0d20ace6cad7fc5a700c5f41"
+    },
+    {
+      "documentId": "wiki-az-72763",
+      "split": "train",
+      "cluster": "f59e553ecf47b745cf66ccfb17b06444945b361b96ceed70a8780bea8781e0ed"
+    },
+    {
+      "documentId": "wiki-az-72765",
+      "split": "train",
+      "cluster": "1d778226ec34fc0b5f2a26d0bda5f0553d22ba0afbc9fc495935718a528cf7e8"
+    },
+    {
+      "documentId": "wiki-az-72766",
+      "split": "test",
+      "cluster": "a9d7a16ef42271444d163ef0da51abbdd31907e1f08361e3b0606d897cc31c85"
+    },
+    {
+      "documentId": "wiki-az-72767",
+      "split": "validation",
+      "cluster": "829ffc75dbdcc341c8f2f845b53baa594446af57ec7ad69e27e9ac49d335885e"
+    },
+    {
+      "documentId": "wiki-az-72798",
+      "split": "train",
+      "cluster": "677ed63256d10ff16e6a88bec8805eda068c207a2d893e886c80c022c4cf6dc0"
+    },
+    {
+      "documentId": "wiki-az-72804",
+      "split": "train",
+      "cluster": "ee93d0b28083683a9ccea04f0fda3ce7945a8a7f82bc6ab261c75b5e34ce61ff"
+    },
+    {
+      "documentId": "wiki-az-72822",
+      "split": "train",
+      "cluster": "eef3e4279628987fdf37dd5f5336fd3bd950f07d3407aa6aab806be943a73e6f"
+    },
+    {
+      "documentId": "wiki-az-72876",
+      "split": "train",
+      "cluster": "6372f6db22d72dc5e021e0eea9b74e96901a16b7591dcafa2b8500be232803fd"
+    },
+    {
+      "documentId": "wiki-az-72879",
+      "split": "train",
+      "cluster": "fff22296fd98ced0c7f5d386e1bdb63c888b18a36fd0f5e7ab48659c324868a0"
+    },
+    {
+      "documentId": "wiki-az-72907",
+      "split": "validation",
+      "cluster": "abfac415f9bcc2fffef6d8e12582164dba3d022f20392bed9de7c2e19d8af265"
+    },
+    {
+      "documentId": "wiki-az-72916",
+      "split": "train",
+      "cluster": "87774aaba0b49c3a95e09db3da6a1ab75caa6fdef4c324fa4b430d2dc3abf593"
+    },
+    {
+      "documentId": "wiki-az-72917",
+      "split": "train",
+      "cluster": "1cfdebba3b958d6ee2e28cbb0dad194750e7907655dde5cbfa32ff2a1a4ea4c9"
+    }
+  ],
+  "sourceSHA256": "1b6e658d701c8ebd4499a8c7d6abf240ea30ce89c0a6c83af073f9d21baf2a01",
+  "outputSHA256": "574ee02fdaabd126fc2c8f9428756bf47a388ecb6eb2dc04aaae278ccab05a25",
+  "note": "Document/near-duplicate clusters are assigned before augmentation. Never copy held-out rows into training."
+}
