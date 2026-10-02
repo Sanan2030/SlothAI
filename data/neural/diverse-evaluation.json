@@ -1,8 +1,8 @@
 {
   "source": "Assistant-authored natural-context exercises; synthetic errors; no human certification or real-user provenance",
   "total": 20,
-  "exact": 14,
-  "neuralExact": 13,
+  "exact": 20,
+  "neuralExact": 19,
   "rows": [
     {
       "id": "diverse-061",
@@ -21,8 +21,8 @@
       "domain": "mail",
       "input": "Zərfdəki maktubları kuryerə verin.",
       "target": "Zərfdəki məktubları kuryerə verin.",
-      "actual": "Zərfdəki maktubları kuryerə verin.",
-      "neuralActual": "Zərfdəki maktubları kuryerə verin."
+      "actual": "Zərfdəki məktubları kuryerə verin.",
+      "neuralActual": "Zərfdəki məktubları kuryerə verin."
     },
     {
       "id": "diverse-063",
@@ -31,8 +31,8 @@
       "domain": "it",
       "input": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
       "target": "Deploy zamanı qovluqların icazəsi dəyişdi.",
-      "actual": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
-      "neuralActual": "Deploy zamanı qovluqqların icazəsi dəyişdi."
+      "actual": "Deploy zamanı qovluqların icazəsi dəyişdi.",
+      "neuralActual": "Deploy zamanı qovluqların icazəsi dəyişdi."
     },
     {
       "id": "diverse-064",
@@ -41,8 +41,8 @@
       "domain": "service",
       "input": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
       "target": "Əməkdaşları yeni qaydalarla tanış etdilər.",
-      "actual": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
-      "neuralActual": "Əməkkdaşları yeni qaydalarla tanış etdilər."
+      "actual": "Əməkdaşları yeni qaydalarla tanış etdilər.",
+      "neuralActual": "Əməkdaşları yeni qaydalarla tanış etdilər."
     },
     {
       "id": "diverse-065",
@@ -51,8 +51,8 @@
       "domain": "science",
       "input": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
       "target": "Tələbələrin ölçdüyü temperatur sabit qaldı.",
-      "actual": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
-      "neuralActual": "Taləbələrin ölçdüyü temperatur sabit qaldı."
+      "actual": "Tələbələrin ölçdüyü temperatur sabit qaldı.",
+      "neuralActual": "Tələbələrin ölçdüyü temperatur sabit qaldı."
     },
     {
       "id": "diverse-066",
@@ -61,8 +61,8 @@
       "domain": "business",
       "input": "Tender senadlərini portal vasitəsilə təqdim edin.",
       "target": "Tender sənədlərini portal vasitəsilə təqdim edin.",
-      "actual": "Tender senadlərini portal vasitəsilə təqdim edin.",
-      "neuralActual": "Tender senadlərini portal vasitəsilə təqdim edin."
+      "actual": "Tender sənədlərini portal vasitəsilə təqdim edin.",
+      "neuralActual": "Tender sənədlərini portal vasitəsilə təqdim edin."
     },
     {
       "id": "diverse-067",
@@ -111,8 +111,8 @@
       "domain": "science",
       "input": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
       "target": "Hesabatlardakı rəqəmlər ölçməyə uyğundur.",
-      "actual": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
-      "neuralActual": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur."
+      "actual": "Hesabatlardakı rəqəmlər ölçməyə uyğundur.",
+      "neuralActual": "Hesabatlardakı rəqəmlər ölçməyə uyğundur."
     },
     {
       "id": "diverse-072",
@@ -207,8 +207,14 @@
   ],
   "baselineExact": 11,
   "gained": [
+    "diverse-062",
+    "diverse-063",
+    "diverse-064",
+    "diverse-065",
+    "diverse-066",
     "diverse-067",
     "diverse-068",
+    "diverse-071",
     "diverse-072"
   ],
   "regressions": []

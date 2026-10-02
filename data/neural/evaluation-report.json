@@ -1,7 +1,7 @@
 {
   "lexical": {
     "total": 50,
-    "exact": 31
+    "exact": 37
   },
   "agreement": {
     "total": 50,
@@ -174,46 +174,10 @@
       "expected": "Mən «məlumatlarıma» sözünü axtardım."
     },
     {
-      "id": "diverse-062",
-      "exact": false,
-      "actual": "Zərfdəki maktubları kuryerə verin.",
-      "expected": "Zərfdəki məktubları kuryerə verin."
-    },
-    {
-      "id": "diverse-063",
-      "exact": false,
-      "actual": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
-      "expected": "Deploy zamanı qovluqların icazəsi dəyişdi."
-    },
-    {
-      "id": "diverse-064",
-      "exact": false,
-      "actual": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
-      "expected": "Əməkdaşları yeni qaydalarla tanış etdilər."
-    },
-    {
-      "id": "diverse-065",
-      "exact": false,
-      "actual": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
-      "expected": "Tələbələrin ölçdüyü temperatur sabit qaldı."
-    },
-    {
-      "id": "diverse-066",
-      "exact": false,
-      "actual": "Tender senadlərini portal vasitəsilə təqdim edin.",
-      "expected": "Tender sənədlərini portal vasitəsilə təqdim edin."
-    },
-    {
       "id": "diverse-070",
       "exact": false,
       "actual": "Mustərilərin növbəsi ekranda göstərilir.",
       "expected": "Müştərilərin növbəsi ekranda göstərilir."
-    },
-    {
-      "id": "diverse-071",
-      "exact": false,
-      "actual": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
-      "expected": "Hesabatlardakı rəqəmlər ölçməyə uyğundur."
     }
   ],
   "agreementFailures": []

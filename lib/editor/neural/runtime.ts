@@ -1,3 +1,4 @@
+import { createNominalRepair } from './nominal-repair';
 import { finiteAnalyses, agreementForms } from './morphology';
 import { isFinitePredicate } from '../segmentation';
 import artifact from './model.json';
@@ -11,6 +12,7 @@ import { productiveMorphology } from '../productive-morphology';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
 const model = artifact as NeuralArtifact, index = neuralIndex(model.lexicon);
+const nominalRepair = createNominalRepair(model.lexicon);
 
 /** Explicit diacritics may shift with inserted/deleted letters, but may not
  * themselves be erased or replaced. Work is bounded by the token length. */
@@ -46,16 +48,21 @@ export function neuralSpelling(text: string): string {
       score: predictNetwork(lexicalNetwork, lexicalFeatures(model.lexicon, raw, word, tokens, at)) }))
       .sort((a, b) => b.score - a.score || a.word.localeCompare(b.word, 'az'));
     const best = choices[0];
-    if (!best || best.score < model.lexicalThreshold || best.score - (choices[1]?.score ?? 0) < model.lexicalMargin) continue;
-    const learned = model.lexicon.edits[lower]?.[best.word] ?? 0;
-    const repeatedLetterRepair = [...lower].some((letter, i) => i > 0 && letter === lower[i - 1]
-      && fold(lower.slice(0, i) + lower.slice(i + 1)) === fold(best.word));
-    // Do not infer a case-ending deletion from an unseen spelling variant.
-    if (!learned && lower.length !== best.word.length && !repeatedLetterRepair) continue;
-    if (!learned && /(?:anda|əndə|arkən|ərkən|ınca|incə)$/u.test(lower)) continue;
-    if (fold(raw) === fold(best.word)) continue; // Existing context model owns diacritics-only ambiguity.
-    if (!preservesDiacritics(raw, best.word)) continue;
-    const target = /^\p{Lu}/u.test(raw) ? best.word[0].toLocaleUpperCase('az-AZ') + best.word.slice(1) : best.word;
+    let selected: string | undefined;
+    if (best && best.score >= model.lexicalThreshold && best.score - (choices[1]?.score ?? 0) >= model.lexicalMargin) {
+      const learned = model.lexicon.edits[lower]?.[best.word] ?? 0;
+      const repeatedLetterRepair = [...lower].some((letter, i) => i > 0 && letter === lower[i - 1]
+        && fold(lower.slice(0, i) + lower.slice(i + 1)) === fold(best.word));
+      const safeLength = learned || lower.length === best.word.length || repeatedLetterRepair;
+      const safeEnding = learned || !/(?:anda|əndə|arkən|ərkən|ınca|incə)$/u.test(lower);
+      if (safeLength && safeEnding && fold(raw) !== fold(best.word) && preservesDiacritics(raw, best.word)) selected = best.word;
+    }
+    // A low neural score does not disprove a uniquely validated root/suffix
+    // repair. Keep global model thresholds unchanged; validate this fallback
+    // using morphology, trained error channels and explicit-letter protection.
+    selected ??= nominalRepair(lower);
+    if (!selected || !preservesDiacritics(raw, selected)) continue;
+    const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     result += text.slice(cursor, token.start) + target; cursor = token.end;
   }
   return result + text.slice(cursor);

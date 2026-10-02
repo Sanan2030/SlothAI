@@ -1,0 +1,709 @@
+{
+  "baseCommit": "414c0a43e0b5c22d9d3a567b3040128ecc531c2e",
+  "beforeExact": 14,
+  "afterExact": 20,
+  "total": 20,
+  "fixed": [
+    {
+      "id": "diverse-062",
+      "input": "Zərfdəki maktubları kuryerə verin.",
+      "expected": "Zərfdəki məktubları kuryerə verin.",
+      "before": "Zərfdəki maktubları kuryerə verin.",
+      "after": "Zərfdəki məktubları kuryerə verin."
+    },
+    {
+      "id": "diverse-063",
+      "input": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
+      "expected": "Deploy zamanı qovluqların icazəsi dəyişdi.",
+      "before": "Deploy zamanı qovluqqların icazəsi dəyişdi.",
+      "after": "Deploy zamanı qovluqların icazəsi dəyişdi."
+    },
+    {
+      "id": "diverse-064",
+      "input": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
+      "expected": "Əməkdaşları yeni qaydalarla tanış etdilər.",
+      "before": "Əməkkdaşları yeni qaydalarla tanış etdilər.",
+      "after": "Əməkdaşları yeni qaydalarla tanış etdilər."
+    },
+    {
+      "id": "diverse-065",
+      "input": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
+      "expected": "Tələbələrin ölçdüyü temperatur sabit qaldı.",
+      "before": "Taləbələrin ölçdüyü temperatur sabit qaldı.",
+      "after": "Tələbələrin ölçdüyü temperatur sabit qaldı."
+    },
+    {
+      "id": "diverse-066",
+      "input": "Tender senadlərini portal vasitəsilə təqdim edin.",
+      "expected": "Tender sənədlərini portal vasitəsilə təqdim edin.",
+      "before": "Tender senadlərini portal vasitəsilə təqdim edin.",
+      "after": "Tender sənədlərini portal vasitəsilə təqdim edin."
+    },
+    {
+      "id": "diverse-071",
+      "input": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
+      "expected": "Hesabatlardakı rəqəmlər ölçməyə uyğundur.",
+      "before": "Hesabbatlardakı rəqəmlər ölçməyə uyğundur.",
+      "after": "Hesabatlardakı rəqəmlər ölçməyə uyğundur."
+    }
+  ],
+  "trainingCorpusChanged": false,
+  "neuralArtifactChanged": false,
+  "regressions": [],
+  "tests": {
+    "total": 3814,
+    "passed": 3814,
+    "newNominalTests": 21,
+    "freshForms": 13
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "performance": {
+    "node": "v24.19.0",
+    "maxInputChars": 10000,
+    "maxBenchmarkChunkChars": 9000,
+    "results": [
+      {
+        "words": 20,
+        "requests": 1,
+        "chars": 134,
+        "avgMs": 15.65,
+        "p50Ms": 15.54,
+        "p95Ms": 18.34,
+        "minMs": 13.72,
+        "maxMs": 18.34,
+        "targetMs": 10000,
+        "rssBaseMb": 326.63,
+        "rssPeakMb": 326.63,
+        "rssDeltaMb": 0,
+        "heapDeltaMb": 2.48,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "requests": 1,
+        "chars": 732,
+        "avgMs": 56.76,
+        "p50Ms": 55.15,
+        "p95Ms": 66.79,
+        "minMs": 49.68,
+        "maxMs": 66.79,
+        "targetMs": 10000,
+        "rssBaseMb": 326.63,
+        "rssPeakMb": 326.75,
+        "rssDeltaMb": 0.13,
+        "heapDeltaMb": 12.95,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "requests": 1,
+        "chars": 3741,
+        "avgMs": 251.57,
+        "p50Ms": 248.33,
+        "p95Ms": 265.5,
+        "minMs": 247.1,
+        "maxMs": 265.5,
+        "targetMs": 10000,
+        "rssBaseMb": 325.16,
+        "rssPeakMb": 327.25,
+        "rssDeltaMb": 2.09,
+        "heapDeltaMb": 49.66,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "requests": 1,
+        "chars": 7491,
+        "avgMs": 552.84,
+        "p50Ms": 554.02,
+        "p95Ms": 579.62,
+        "minMs": 533.23,
+        "maxMs": 579.62,
+        "targetMs": 10000,
+        "rssBaseMb": 325,
+        "rssPeakMb": 328.08,
+        "rssDeltaMb": 3.08,
+        "heapDeltaMb": 34.98,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "requests": 5,
+        "chars": 37528,
+        "avgMs": 2725.45,
+        "p50Ms": 2715.76,
+        "p95Ms": 2829.53,
+        "minMs": 2680.2,
+        "maxMs": 2829.53,
+        "targetMs": 10000,
+        "rssBaseMb": 324.9,
+        "rssPeakMb": 327.75,
+        "rssDeltaMb": 2.85,
+        "heapDeltaMb": 55.21,
+        "status": "PASS"
+      }
+    ],
+    "diffResults": [
+      {
+        "words": 20,
+        "requests": 1,
+        "chars": 134,
+        "scope": "single request",
+        "avgMs": 0.38,
+        "p50Ms": 0.13,
+        "p95Ms": 2.6,
+        "targetMs": 10000,
+        "heapDeltaMb": 0.36,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "requests": 1,
+        "chars": 732,
+        "scope": "single request",
+        "avgMs": 0.71,
+        "p50Ms": 0.66,
+        "p95Ms": 1.03,
+        "targetMs": 10000,
+        "heapDeltaMb": 1.23,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "requests": 1,
+        "chars": 3741,
+        "scope": "single request",
+        "avgMs": 3.45,
+        "p50Ms": 3.34,
+        "p95Ms": 3.7,
+        "targetMs": 10000,
+        "heapDeltaMb": 5,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "requests": 1,
+        "chars": 7491,
+        "scope": "single request",
+        "avgMs": 6.51,
+        "p50Ms": 6.45,
+        "p95Ms": 6.82,
+        "targetMs": 10000,
+        "heapDeltaMb": 8.74,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "requests": 5,
+        "chars": 37528,
+        "scope": "logical multi-chunk document",
+        "avgMs": 32.73,
+        "p50Ms": 32.54,
+        "p95Ms": 34.02,
+        "targetMs": 10000,
+        "heapDeltaMb": 32.44,
+        "status": "PASS"
+      }
+    ],
+    "componentResults": [
+      {
+        "name": "segmentation",
+        "words": 20,
+        "avgMs": 0.82,
+        "p50Ms": 0.78,
+        "p95Ms": 0.95,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 20,
+        "avgMs": 0.35,
+        "p50Ms": 0.16,
+        "p95Ms": 0.78,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 20,
+        "avgMs": 0.03,
+        "p50Ms": 0.01,
+        "p95Ms": 0.09,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 20,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 20,
+        "avgMs": 0.11,
+        "p50Ms": 0.09,
+        "p95Ms": 0.16,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 20,
+        "avgMs": 0.04,
+        "p50Ms": 0.04,
+        "p95Ms": 0.04,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 20,
+        "avgMs": 0.08,
+        "p50Ms": 0.05,
+        "p95Ms": 0.15,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 20,
+        "avgMs": 0.06,
+        "p50Ms": 0.06,
+        "p95Ms": 0.07,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 20,
+        "avgMs": 0.01,
+        "p50Ms": 0.01,
+        "p95Ms": 0.01,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 20,
+        "avgMs": 0.6,
+        "p50Ms": 0.23,
+        "p95Ms": 1.43,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 20,
+        "avgMs": 1.06,
+        "p50Ms": 1.06,
+        "p95Ms": 1.1,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 100,
+        "avgMs": 4.64,
+        "p50Ms": 4.61,
+        "p95Ms": 5.05,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 100,
+        "avgMs": 0.67,
+        "p50Ms": 0.63,
+        "p95Ms": 0.85,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 100,
+        "avgMs": 0.01,
+        "p50Ms": 0.01,
+        "p95Ms": 0.01,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 100,
+        "avgMs": 0.01,
+        "p50Ms": 0,
+        "p95Ms": 0.02,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 100,
+        "avgMs": 0.31,
+        "p50Ms": 0.28,
+        "p95Ms": 0.36,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 100,
+        "avgMs": 0.07,
+        "p50Ms": 0.07,
+        "p95Ms": 0.07,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 100,
+        "avgMs": 0.28,
+        "p50Ms": 0.27,
+        "p95Ms": 0.3,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 100,
+        "avgMs": 0.28,
+        "p50Ms": 0.27,
+        "p95Ms": 0.29,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 100,
+        "avgMs": 0.03,
+        "p50Ms": 0.02,
+        "p95Ms": 0.05,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 100,
+        "avgMs": 0.77,
+        "p50Ms": 0.71,
+        "p95Ms": 0.89,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 100,
+        "avgMs": 6.58,
+        "p50Ms": 6.25,
+        "p95Ms": 7.29,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 500,
+        "avgMs": 20.69,
+        "p50Ms": 20.38,
+        "p95Ms": 21.49,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 500,
+        "avgMs": 2.83,
+        "p50Ms": 2.78,
+        "p95Ms": 3.18,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 500,
+        "avgMs": 0.03,
+        "p50Ms": 0.03,
+        "p95Ms": 0.03,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 500,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 500,
+        "avgMs": 1.59,
+        "p50Ms": 1.53,
+        "p95Ms": 1.73,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 500,
+        "avgMs": 0.57,
+        "p50Ms": 0.54,
+        "p95Ms": 0.64,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 500,
+        "avgMs": 1.36,
+        "p50Ms": 1.31,
+        "p95Ms": 1.48,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 500,
+        "avgMs": 1.41,
+        "p50Ms": 1.4,
+        "p95Ms": 1.48,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 500,
+        "avgMs": 0.1,
+        "p50Ms": 0.11,
+        "p95Ms": 0.12,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 500,
+        "avgMs": 2.78,
+        "p50Ms": 2.8,
+        "p95Ms": 2.8,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 500,
+        "avgMs": 31.23,
+        "p50Ms": 31.13,
+        "p95Ms": 32.04,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 1000,
+        "avgMs": 41.52,
+        "p50Ms": 41.57,
+        "p95Ms": 41.7,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 1000,
+        "avgMs": 5.7,
+        "p50Ms": 5.64,
+        "p95Ms": 6.26,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 1000,
+        "avgMs": 0.07,
+        "p50Ms": 0.07,
+        "p95Ms": 0.07,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 1000,
+        "avgMs": 0,
+        "p50Ms": 0,
+        "p95Ms": 0,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 1000,
+        "avgMs": 3.2,
+        "p50Ms": 3.22,
+        "p95Ms": 3.28,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 1000,
+        "avgMs": 1.01,
+        "p50Ms": 0.98,
+        "p95Ms": 1.15,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 1000,
+        "avgMs": 22.32,
+        "p50Ms": 2.62,
+        "p95Ms": 61.91,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 1000,
+        "avgMs": 2.99,
+        "p50Ms": 2.89,
+        "p95Ms": 3.35,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 1000,
+        "avgMs": 0.13,
+        "p50Ms": 0.12,
+        "p95Ms": 0.13,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 1000,
+        "avgMs": 6.13,
+        "p50Ms": 5.74,
+        "p95Ms": 7.01,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 1000,
+        "avgMs": 81.09,
+        "p50Ms": 78.2,
+        "p95Ms": 103.94,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "segmentation",
+        "words": 5000,
+        "avgMs": 201.89,
+        "p50Ms": 201.27,
+        "p95Ms": 204.33,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "clause analysis",
+        "words": 5000,
+        "avgMs": 26.72,
+        "p50Ms": 26.35,
+        "p95Ms": 27.49,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "question detection",
+        "words": 5000,
+        "avgMs": 0.62,
+        "p50Ms": 0.62,
+        "p95Ms": 0.63,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "exclamation detection",
+        "words": 5000,
+        "avgMs": 0.31,
+        "p50Ms": 0.29,
+        "p95Ms": 0.36,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "comma processing",
+        "words": 5000,
+        "avgMs": 14.85,
+        "p50Ms": 14.91,
+        "p95Ms": 14.95,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "paragraph segmentation",
+        "words": 5000,
+        "avgMs": 5.63,
+        "p50Ms": 5.22,
+        "p95Ms": 6.64,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "typo candidates",
+        "words": 5000,
+        "avgMs": 13.32,
+        "p50Ms": 13.36,
+        "p95Ms": 13.6,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "morphology",
+        "words": 5000,
+        "avgMs": 14.83,
+        "p50Ms": 14.69,
+        "p95Ms": 15.41,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity lookup",
+        "words": 5000,
+        "avgMs": 0.69,
+        "p50Ms": 0.7,
+        "p95Ms": 0.72,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity typo lookup",
+        "words": 5000,
+        "avgMs": 27.35,
+        "p50Ms": 27.54,
+        "p95Ms": 28.11,
+        "targetMs": 10000,
+        "status": "PASS"
+      },
+      {
+        "name": "entity suffix and context",
+        "words": 5000,
+        "avgMs": 317.58,
+        "p50Ms": 319.65,
+        "p95Ms": 323.17,
+        "targetMs": 10000,
+        "status": "PASS"
+      }
+    ]
+  },
+  "caveat": "Development/regression cases examined during the fix; not blind or general language accuracy. CPU timings are local and do not guarantee Vercel end-to-end latency."
+}

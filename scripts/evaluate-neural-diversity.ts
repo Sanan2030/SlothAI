@@ -13,6 +13,6 @@ else {
   const regressions = rows.filter(row => baseline.rows.some(old => old.id === row.id && old.actual === old.target) && row.actual !== row.target);
   const gained = rows.filter(row => baseline.rows.some(old => old.id === row.id && old.actual !== old.target) && row.actual === row.target);
   atomicWriteSync('data/neural/diverse-evaluation.json', JSON.stringify({ ...report, baselineExact: baseline.exact, gained: gained.map(row => row.id), regressions: regressions.map(row => row.id) }, null, 2) + '\n');
-  if (process.argv.includes('--enforce') && regressions.length) throw new Error('Diverse holdout regression.');
+  if (process.argv.includes('--enforce') && (regressions.length || report.exact !== report.total)) throw new Error('Diverse context outputs must remain exact, including the six repaired cases.');
 }
 console.log({ total: report.total, exact: report.exact, neuralExact: report.neuralExact });

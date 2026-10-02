@@ -87,7 +87,7 @@ CI korpusu və model artefaktlarını yenidən qurub Git versiyası ilə müqayi
 `--resume` korpus/feature versiyası dəyişibsə dayanır. Yeni korpus üçün seed-dən
 `neural:train` işlədilir. Validation və test çıxışlarını train-ə köçürmək olmaz.
 
-## Ölçülmüş nəticə
+## İlkin təlim buraxılışının nəticəsi
 
 Yeni 20 kontekst üçün əvvəlki main 11, təhlükəsiz seçimlə son model 14 tam
 uyğun çıxış verir. Əvvəl düzgün olan həmin çıxışlarda reqressiya yoxdur.
@@ -111,3 +111,8 @@ Baseline snapshot köhnə daha sərt hədlərlə çəkilib; cari hədd fərqi us
 qərarıdır. Bu lokal ölçmə Vercel və ya bütün mümkün mətnlər üçün 10 saniyə
 gecikmə zəmanəti deyil.
 Tam rəqəmlər `neural-training-v2-verification.json` faylındadır.
+
+## Son nominal düzəliş
+
+Altı qalan xəta düzəldilib; cari müxtəlif-kontekst dəsti 20/20-dir. Səbəblər,
+umumi mexanizm və yeni sınaqlar: [nominal-repair-six.md](nominal-repair-six.md).
