@@ -1,6 +1,6 @@
 # Five editor priorities: implementation and measured limits
 
-This release improves the existing API-free hybrid editor. It does not replace it with a general language model. No pretrained model, paid API, GPU requirement or Python inference service was introduced, and the neural weights were not retrained in this release.
+This release improves the existing API-free hybrid editor. It does not replace it with a general language model. No pretrained model, paid API, GPU requirement or Python inference service was introduced. Established models were retrained for reproduction checks and their released weights remain byte-identical.
 
 ## 1. Approved real examples
 
@@ -36,7 +36,7 @@ The scanners cover the tested structures, not every extension of CommonMark or H
 
 The page loads the engine lazily in a Web Worker, leaving the UI thread available. Text and mail use one reusable worker. A 10-second deadline terminates stalled work and permits a fresh retry; stale replies, overlapping requests, worker failures and unmount disposal have tests. The API remains independently functional with request validation and rate limits.
 
-CI additionally runs the development regression targets and the source-held-out full-editor bounded-head gate, alongside existing tests, reproducibility, lint, typecheck, production build and performance checks.
+CI additionally runs the development regression targets and the source-held-out full-editor bounded-head gate, alongside existing tests, reproducibility, lint, typecheck, production build and performance checks. The existing joint-boundary and attention artifacts use the exact pre-extension indexed/POS morphology for both training and inference; productive nominal analysis is a separate runtime seam. Remote CI exposed and prevented feature drift during this release's verification.
 
 ## Results
 
@@ -50,9 +50,9 @@ The baseline is commit `bb1ec235e175c9c6f067f2daf0c16d70c5d27beb`. No fitting or
 
 The 24 targets are assistant-authored development references, not independent certification. Wikipedia-derived targets and synthetic errors are not manually reviewed real-user gold. Whole-pipeline held-out edit precision remains about 83.67%; fresh precision is about 92.51%. Exact-match accuracy on these broad sets is only about 30%, so the product still needs real reviewed training and general syntax improvements. Fresh CER is approximately 0.01579. No claim of professional-editor parity is supported.
 
-All 3,953 tests, TypeScript, ESLint and the Turbopack production build passed. An isolated Node 24 warm benchmark measured p95 817.82 ms for 1,000 words and 3,907.98 ms for a 5,000-word logical document split into five size-safe requests. Peak process RSS was approximately 348 MB. These timings do not guarantee every device or cold start finishes within 10 seconds.
+All 3,953 tests, TypeScript, ESLint and the Turbopack production build passed. An isolated Node 24 warm benchmark measured p95 850.33 ms for 1,000 words and 4,006.13 ms for a 5,000-word logical document split into five size-safe requests. Peak process RSS was approximately 349 MB. These timings do not guarantee every device or cold start finishes within 10 seconds.
 
-A production-build Chromium check verified text output, default and selected mail greetings, zero browser API requests during correction, one reused worker, successful API responses and invalid-input HTTP 400. A 1,000-word browser input took 1,613 ms with 73 UI heartbeat ticks while processing. No console or page errors were observed. The test used temporary verification tooling, not a new application dependency.
+A production-build Chromium check verified text output, default and selected mail greetings, zero browser API requests during correction, one reused worker, successful API responses and invalid-input HTTP 400. A 1,000-word browser input took 1,643 ms with 72 UI heartbeat ticks while processing. No console or page errors were observed. The test used temporary verification tooling, not a new application dependency.
 
 The committed `data/nlp/five-priorities-validation.json` records the measurements and source checksums; `data/nlp/priority-quality-report.json` includes the development category metrics.
 

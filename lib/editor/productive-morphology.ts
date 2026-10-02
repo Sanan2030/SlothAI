@@ -209,13 +209,14 @@ function foldedNominalPredicates(raw: string): string[] {
 }
 
 export class ProductiveMorphologyEngine implements MorphologyEngine {
+  constructor(private readonly nominalPredicates = true) {}
   private readonly analyses = new Map<string, readonly MorphologicalAnalysis[]>();
   private readonly folded = new Map<string, string | undefined>();
   findByFoldedForm(word: string): string | undefined {
     const lowerWord = lower(word);
     if (this.folded.has(lowerWord)) return this.folded.get(lowerWord);
     const established = foldedIndex.get(foldLetters(lowerWord));
-    const matches = [...(established?.size ? established : foldedNominalPredicates(lowerWord))].filter(value =>
+    const matches = [...(established?.size ? established : this.nominalPredicates ? foldedNominalPredicates(lowerWord) : [])].filter(value =>
       [...lowerWord].every((letter, at) => !/[əçğıöşü]/u.test(letter) || value[at] === letter));
     const selected = matches.length === 1 ? matches[0] : undefined;
     if (this.folded.size >= 4096) this.folded.clear();
@@ -237,7 +238,7 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
     if (cached) return cached;
     const records = index.get(surface);
     if (!records) {
-      const nominal = nominalPredicate(surface);
+      const nominal = this.nominalPredicates ? nominalPredicate(surface) : [];
       if (nominal.length) { if (this.analyses.size >= 4096) this.analyses.clear(); this.analyses.set(surface, nominal); return nominal; }
       const words = posArtifact.words as Record<string, Record<string, number>>;
       const lemmas = posArtifact.lemmas as Record<string, string[]>;
@@ -277,6 +278,9 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
 }
 
 export const productiveMorphology = new ProductiveMorphologyEngine();
+/** Exact indexed + POS analysis used to train the deployed spelling/boundary
+ * artifacts before nominal predicates were added. Freeze train and inference together. */
+export const artifactMorphology = new ProductiveMorphologyEngine(false);
 
 /** Frozen feature vocabulary for established classifiers. New POS/lemma data
  * must not silently change the features used by an already-trained artifact. */

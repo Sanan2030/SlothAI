@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { productiveMorphology, legacyModelMorphology } from '../lib/editor/productive-morphology';
+import { productiveMorphology, legacyModelMorphology, artifactMorphology } from '../lib/editor/productive-morphology';
 import { isClausePredicate } from '../lib/editor/segmentation';
 import { correctText } from '../lib/editor/correct';
 test('productive copulas recover nominal lemmas and case without altering frozen features', () => {
   for (const [surface, lemma, person] of [['müəlliməm', 'müəllim', 1], ['həkimsən', 'həkim', 2], ['məktəbdəyəm', 'məktəb', 1], ['şirkətlərimizdəndir', 'şirkət', 3], ['müəllimlərik', 'müəllim', 1]] as const) {
     assert.ok(productiveMorphology.analyzeWord(surface).some(row => row.lemma === lemma && row.features.person === person && row.features.derivation?.some(value => value.startsWith('copula-'))), surface);
     assert.ok(isClausePredicate(surface)); assert.equal(legacyModelMorphology.analyzeWord(surface).length, 0);
+    assert.equal(artifactMorphology.analyzeWord(surface).length, 0);
   }
   assert.equal(productiveMorphology.findByFoldedForm('muellimem'), 'müəlliməm');
   assert.equal(productiveMorphology.findByFoldedForm('mektebdeyem'), 'məktəbdəyəm');

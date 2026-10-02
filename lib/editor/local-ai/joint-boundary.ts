@@ -1,7 +1,7 @@
 /** Paired boundary learning and conservative lexical/segmentation feedback. */
 import { fold, tokenize, type Token } from './core';
 import { alignTokens, type CorrectionPair } from './paired';
-import { productiveMorphology } from '../productive-morphology';
+import { productiveMorphology, artifactMorphology } from '../productive-morphology';
 import { createBoundaryContext } from './clause-context';
 export interface JointBoundaryModel { version: 1; weights: Record<string, number>; threshold: number;
   examples: number; positives: number; validation: { accepted: number; correct: number; total: number } }
@@ -11,7 +11,7 @@ function values(tokens: readonly Token[], at: number): string[] {
     const token = tokens[at + offset]; if (!token) continue;
     const word = fold(token.word);
     output.push(`word:${offset}:${word}`, `ending:${offset}:${word.slice(-3)}`);
-    const records = productiveMorphology.analyzeWord(token.word);
+    const records = artifactMorphology.analyzeWord(token.word);
     for (const pos of new Set(records.map(row => row.pos).filter(Boolean))) output.push(`pos:${offset}:${pos}`);
     for (const grammaticalCase of new Set(records.map(row => row.features.case).filter(Boolean))) output.push(`case:${offset}:${grammaticalCase}`);
     if (records.some(row => row.pos === 'verb' && row.features.tense)) output.push(`finite:${offset}`);

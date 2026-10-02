@@ -1,5 +1,5 @@
 import { boundedCandidates } from './bounded-candidates';
-import { productiveMorphology } from '../productive-morphology';
+import { artifactMorphology as productiveMorphology } from '../productive-morphology';
 import { fold, tokenize, type Token } from '../local-ai/core';
 import type { PairedModel, PairedWord } from '../local-ai/paired';
 import { lexicalFeatures } from './features';
