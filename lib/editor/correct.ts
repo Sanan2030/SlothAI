@@ -34,6 +34,8 @@ export interface CorrectionEvent {
 export interface CorrectionRuntime {
   /** Evaluation switch; both application strategies enable the local model by default. */
   useLocalModel?: boolean;
+  /** Isolate the attention head for offline ablation; default production behavior stays enabled. */
+  useAttention?: boolean;
   services?: LanguageServices;
   trace?: (event: CorrectionEvent) => void;
 }
@@ -143,7 +145,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
-  if (runtime.useLocalModel !== false) text = neuralTranspositions(text);
+  if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);
@@ -207,7 +209,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
     return replacement;
   });
-  if (runtime.useLocalModel !== false) text = neuralSpelling(text);
+  if (runtime.useLocalModel !== false) text = neuralSpelling(text, runtime.useAttention !== false);
   text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);
   text = expositoryPhrases(text);

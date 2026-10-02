@@ -1,4 +1,4 @@
-import { attentionCorrection } from './attention-runtime';
+import { attentionCorrection, unresolvedAttentionAmbiguity } from './attention-runtime';
 import { createNominalRepair } from './nominal-repair';
 import { finiteAnalyses, agreementForms, areRegularCaseAlternatives } from './morphology';
 import { isFinitePredicate } from '../segmentation';
@@ -46,7 +46,7 @@ function eligibleNeuralWord(raw: string): boolean {
 }
 
 /** This network repairs unknown surfaces. Established/explicit valid words win. */
-export function neuralSpelling(text: string): string {
+export function neuralSpelling(text: string, useAttention = true): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word, lower = raw.toLocaleLowerCase('az-AZ');
@@ -75,7 +75,7 @@ export function neuralSpelling(text: string): string {
     selected ??= nominalRepair(lower);
     // The small learned character/context head only handles adjacent swaps
     // when all established correction paths have abstained.
-    selected ??= attentionCorrection(lower, tokens, at);
+    if (useAttention) selected ??= attentionCorrection(lower, tokens, at);
     // Unique reviewed paradigms restore ASCII diacritics outside model coverage.
     selected ??= productiveMorphology.findByFoldedForm(lower);
     if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(lower, selected)) continue;
@@ -117,11 +117,14 @@ export function neuralAgreement(text: string): string {
 
 /** High-confidence learned swap corrections run after span/entity protection
  * and before dictionary guesses can destroy the original ambiguous surface. */
-export function neuralTranspositions(text: string): string {
+export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word;
     if (!eligibleNeuralWord(raw)) continue;
+    if (protectUncertain && unresolvedAttentionAmbiguity(raw, tokens, at)) {
+      result += text.slice(cursor, token.start) + protectUncertain(raw); cursor = token.end; continue;
+    }
     const selected = attentionCorrection(raw, tokens, at);
     if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(raw, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;

@@ -75,6 +75,7 @@ jobs:
           git diff --exit-code -- lib/editor/neural/attention-model.json data/neural/attention-training-report.json
           npm run --ignore-scripts neural:attention:check
           npm run --ignore-scripts neural:attention:independent:check
+          npm run --ignore-scripts nlp:evaluate -- --enforce
           npm run --ignore-scripts neural:check
           npm run --ignore-scripts neural:diversity:check
           npm run --ignore-scripts neural:expansion:check
@@ -257,6 +258,7 @@ jobs:
             data/local-ai/pos-report.json
             data/neural/evaluation-report.json
             data/neural/training-report.json
+            data/neural/quality-report.json
           if-no-files-found: error
           retention-days: 30
 

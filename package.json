@@ -45,7 +45,10 @@
     "neural:expansion:check": "node --import tsx scripts/evaluate-neural-expansion.ts --enforce",
     "neural:attention:train": "node --import tsx scripts/train-attention.ts",
     "neural:attention:check": "node --import tsx scripts/evaluate-attention.ts --enforce",
-    "neural:attention:independent:check": "node --import tsx scripts/evaluate-attention.ts --independent --enforce"
+    "neural:attention:independent:check": "node --import tsx scripts/evaluate-attention.ts --independent --enforce",
+    "nlp:data": "node --import tsx scripts/build-correction-data.ts",
+    "nlp:evaluate": "node --import tsx scripts/evaluate-correction-quality.ts",
+    "nlp:ablation": "node --import tsx scripts/train-attention-experiments.ts"
   },
   "engines": {
     "node": ">=20.9.0"

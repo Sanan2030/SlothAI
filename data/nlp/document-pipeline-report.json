@@ -1,0 +1,129 @@
+{
+  "data": "/tmp/nlp-generated-data",
+  "corpusSHA256": "715ba4816afe9558c7bcbda882b049e406017c71386f2ac23fe2afbad5177a81",
+  "splitUnit": "documentId (upstream clustering manifest required for near-duplicate audit)",
+  "alignedWordRows": 3115,
+  "sourceRows": 570,
+  "reports": [
+    {
+      "variant": "full",
+      "seed": 719,
+      "attemptedEpochs": 16,
+      "retainedEpochs": 0,
+      "threshold": 1,
+      "margin": 1,
+      "calibratedValidationCorrections": 0,
+      "partitions": {
+        "train": {
+          "rows": 2500,
+          "exact": 1720,
+          "covered": 1749,
+          "candidateCoverage": 0.6996,
+          "needsCorrection": 780,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 1720,
+          "falseChanges": 0,
+          "candidateBCE": 0.6835237049677062,
+          "candidateRecallOnErrors": 0.03717948717948718
+        },
+        "validation": {
+          "rows": 294,
+          "exact": 213,
+          "covered": 214,
+          "candidateCoverage": 0.7278911564625851,
+          "needsCorrection": 81,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 213,
+          "falseChanges": 0,
+          "candidateBCE": 0.6857721454127743,
+          "candidateRecallOnErrors": 0.012345679012345678
+        },
+        "test": {
+          "rows": 321,
+          "exact": 222,
+          "covered": 225,
+          "candidateCoverage": 0.7009345794392523,
+          "needsCorrection": 99,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 222,
+          "falseChanges": 0,
+          "candidateBCE": 0.6869186003174668,
+          "candidateRecallOnErrors": 0.030303030303030304
+        }
+      },
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    },
+    {
+      "variant": "direct-diacritics",
+      "seed": 719,
+      "attemptedEpochs": 16,
+      "retainedEpochs": 0,
+      "threshold": 1,
+      "margin": 1,
+      "calibratedValidationCorrections": 0,
+      "partitions": {
+        "train": {
+          "rows": 2500,
+          "exact": 1720,
+          "covered": 2378,
+          "candidateCoverage": 0.9512,
+          "needsCorrection": 780,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 1720,
+          "falseChanges": 0,
+          "candidateBCE": 0.6852665489275527,
+          "candidateRecallOnErrors": 0.8435897435897436
+        },
+        "validation": {
+          "rows": 294,
+          "exact": 213,
+          "covered": 240,
+          "candidateCoverage": 0.8163265306122449,
+          "needsCorrection": 81,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 213,
+          "falseChanges": 0,
+          "candidateBCE": 0.687035853712747,
+          "candidateRecallOnErrors": 0.3333333333333333
+        },
+        "test": {
+          "rows": 321,
+          "exact": 222,
+          "covered": 261,
+          "candidateCoverage": 0.8130841121495327,
+          "needsCorrection": 99,
+          "proposed": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "precision": null,
+          "recall": 0,
+          "identity": 222,
+          "falseChanges": 0,
+          "candidateBCE": 0.6880406852709,
+          "candidateRecallOnErrors": 0.3939393939393939
+        }
+      },
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    }
+  ]
+}

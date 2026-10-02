@@ -6,10 +6,10 @@ import { createNetwork, predictNetwork, trainNetworkStep, parameterCount, type N
 export const ATTENTION_VERSION = 1;
 export const CHARACTER_DIMENSIONS = 16;
 const D = CHARACTER_DIMENSIONS;
-export interface AttentionNetwork { version: 1; query: number[]; bias: number[]; ranker: Network; epochs: number }
+export interface AttentionNetwork { version: 1; query: number[]; bias: number[]; ranker: Network; epochs: number; experiment?: { context?: 'none'; position?: 'none'; attention?: 'uniform' } }
 export interface AttentionExample { raw: string; candidate: string; tokens: Token[]; at: number; y: number; group: string }
 export interface AttentionArtifact { version: 1; featureVersion: number; lexiconSha256: string; corpusSha256: string;
-  network: AttentionNetwork; vocabulary: Record<string, PairedWord>; threshold: number; margin: number }
+  network: AttentionNetwork; vocabulary: Record<string, PairedWord>; threshold: number; margin: number; candidateMode?: 'folded-and-swaps' }
 const hash = (text: string) => { let value = 2166136261; for (const char of text) value = Math.imul(value ^ char.charCodeAt(0), 16777619) >>> 0; return value; };
 /** Fixed character n-grams, with no subword tokenizer or downloaded embeddings. */
 export function characterVector(text: string): number[] {
@@ -23,11 +23,11 @@ export function characterVector(text: string): number[] {
   const norm = Math.sqrt(values.reduce((sum, value) => sum + value * value, 0)) || 1;
   return values.map(value => value / norm);
 }
-export function createAttentionNetwork(): AttentionNetwork {
-  const seed = createNetwork(D, D, 719);
-  return { version: 1, query: seed.w1, bias: Array(D).fill(0), ranker: createNetwork(23 + 3 * D, 12, 811), epochs: 0 };
+export function createAttentionNetwork(randomSeed = 719): AttentionNetwork {
+  const seed = createNetwork(D, D, randomSeed);
+  return { version: 1, query: seed.w1, bias: Array(D).fill(0), ranker: createNetwork(23 + 3 * D, 12, randomSeed + 92), epochs: 0 };
 }
-export function contextKeys(tokens: readonly Token[], at: number): number[][] {
+export function contextKeys(tokens: readonly Token[], at: number, positions = true): number[][] {
   const keys: number[][] = [];
   for (let i = Math.max(0, at - 5); i <= Math.min(tokens.length - 1, at + 5); i++) {
     if (i === at || tokens[i].sentence !== tokens[at].sentence) continue;
@@ -36,15 +36,17 @@ export function contextKeys(tokens: readonly Token[], at: number): number[][] {
     const text = lemmas.size === 1 ? [...lemmas][0] : tokens[i].word;
     const key = characterVector(text), offset = i - at;
     // Relative position preserves left/right order that a bag of words loses.
-    key[12] += Math.sign(offset) * 0.3; key[13] += offset / 10;
-    key[14] += Math.sin(offset) * 0.2; key[15] += Math.cos(offset) * 0.2;
+    if (positions) {
+      key[12] += Math.sign(offset) * 0.3; key[13] += offset / 10;
+      key[14] += Math.sin(offset) * 0.2; key[15] += Math.cos(offset) * 0.2;
+    }
     keys.push(key);
   }
   return keys.length ? keys : [Array(D).fill(0)];
 }
 export function attend(network: AttentionNetwork, candidate: string, keys: readonly number[][]) {
   const chars = characterVector(candidate);
-  const query = network.bias.map((bias, j) => chars.reduce((sum, value, i) => sum + network.query[j * D + i] * value, bias));
+  const query = network.experiment?.attention === 'uniform' ? Array(D).fill(0) : network.bias.map((bias, j) => chars.reduce((sum, value, i) => sum + network.query[j * D + i] * value, bias));
   const scores = keys.map(key => key.reduce((sum, value, j) => sum + value * query[j], 0) / Math.sqrt(D));
   const max = Math.max(...scores), exponentials = scores.map(score => Math.exp(score - max));
   const total = exponentials.reduce((sum, value) => sum + value, 0), weights = exponentials.map(value => value / total);
@@ -52,8 +54,11 @@ export function attend(network: AttentionNetwork, candidate: string, keys: reado
   return { chars, weights, pooled };
 }
 function forward(network: AttentionNetwork, lexicon: PairedModel, row: Omit<AttentionExample, 'y' | 'group'>) {
-  const keys = contextKeys(row.tokens, row.at), attention = attend(network, row.candidate, keys);
+  const noContext = network.experiment?.context === 'none';
+  const keys = noContext ? [Array(D).fill(0)] : contextKeys(row.tokens, row.at, network.experiment?.position !== 'none');
+  const attention = attend(network, row.candidate, keys);
   const base = lexicalFeatures(lexicon, row.raw, row.candidate, row.tokens, row.at);
+  if (noContext) { base[3] = 0; base.fill(0, 11); }
   base[2] = 0; // Exact typo observations never become the new head's shortcut.
   const x = [...base, ...characterVector(row.raw), ...attention.chars, ...attention.pooled];
   return { keys, attention, x };
@@ -64,6 +69,7 @@ export function attentionProbability(network: AttentionNetwork, lexicon: PairedM
 export function trainAttentionStep(network: AttentionNetwork, lexicon: PairedModel, row: AttentionExample, rate: number): void {
   const { keys, attention, x } = forward(network, lexicon, row);
   const gradient = trainNetworkStep(network.ranker, x, row.y, rate, true).slice(-D);
+  if (network.experiment?.attention === 'uniform') return;
   const scoreGradients = keys.map((key, at) => attention.weights[at]
     * key.reduce((sum, value, j) => sum + gradient[j] * (value - attention.pooled[j]), 0));
   const queryGradient = Array.from({ length: D }, (_, j) => keys.reduce((sum, key, at) => sum + scoreGradients[at] * key[j], 0) / Math.sqrt(D));
@@ -100,6 +106,13 @@ export function transpositionCandidates(index: Map<string, string[]>, raw: strin
   }
   return [...words].slice(0, 12);
 }
+/** Extra direct diacritic candidates are experimental and off in production. */
+export function attentionCandidates(index: Map<string, string[]>, raw: string, mode?: 'folded-and-swaps'): string[] {
+  const swaps = transpositionCandidates(index, raw);
+  if (!mode) return swaps;
+  const direct = (index.get(fold(raw)) ?? []).filter(word => word !== raw.toLocaleLowerCase('az-AZ'));
+  return [...new Set([...direct, ...swaps])].slice(0, 12);
+}
 /** Fold-identical words need independent lexical context evidence: neural scores
  * alone can be confident because of collisions in the tiny character embedding. */
 function contextLemma(word: string): string {
@@ -129,7 +142,7 @@ export function ambiguitySupported(lexicon: PairedModel, candidates: string[], w
   });
 }
 export function rankAttention(artifact: AttentionArtifact, lexicon: PairedModel, index: Map<string, string[]>, raw: string, tokens: Token[], at: number) {
-  const candidates = transpositionCandidates(index, raw);
+  const candidates = attentionCandidates(index, raw, artifact.candidateMode);
   if (!candidates.length) return undefined;
   const choices = [raw.toLocaleLowerCase('az-AZ'), ...candidates].map(candidate => ({ candidate,
     score: attentionProbability(artifact.network, lexicon, { raw, candidate, tokens, at }) })).sort((a, b) => b.score - a.score || a.candidate.localeCompare(b.candidate, 'az'));

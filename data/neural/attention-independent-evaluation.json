@@ -447,7 +447,7 @@
       "target": "Şəhər nəqliyyatı haqqında hesabat yayımlandı.",
       "raw": "Sehre",
       "expectedWord": "şəhər",
-      "actual": "Sehrə nəqliyyatı haqqında hesabat yayımlandı.",
+      "actual": "Sehre nəqliyyatı haqqında hesabat yayımlandı.",
       "neuralActual": "Sehre nəqliyyatı haqqında hesabat yayımlandı.",
       "decision": {
         "candidate": "səhər",

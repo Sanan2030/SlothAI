@@ -1,0 +1,970 @@
+{
+  "source": "Provided examples; real provenance not asserted",
+  "attentionOff": {
+    "overall": {
+      "rows": 58,
+      "exact": 13,
+      "accuracy": 0.22413793103448276,
+      "cer": 0.05925925925925926,
+      "wer": 0.32,
+      "precision": null,
+      "recall": 0,
+      "f05": 0,
+      "truePositiveEdits": 0,
+      "falsePositiveEdits": 0,
+      "missedEdits": 104,
+      "identityRows": 13,
+      "identityChanged": 0,
+      "identityFalseChangeRate": 0,
+      "charErrors": 160,
+      "referenceChars": 2700,
+      "wordErrors": 104,
+      "referenceWords": 325
+    },
+    "byCategory": {
+      "delete": {
+        "rows": 2,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.02040816326530612,
+        "wer": 0.16666666666666666,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 2,
+        "referenceChars": 98,
+        "wordErrors": 2,
+        "referenceWords": 12
+      },
+      "diacritics": {
+        "rows": 23,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.12755598831548198,
+        "wer": 0.6076923076923076,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 79,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 131,
+        "referenceChars": 1027,
+        "wordErrors": 79,
+        "referenceWords": 130
+      },
+      "identity": {
+        "rows": 13,
+        "exact": 13,
+        "accuracy": 1,
+        "cer": 0,
+        "wer": 0,
+        "precision": null,
+        "recall": null,
+        "f05": null,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 0,
+        "identityRows": 13,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 0,
+        "referenceChars": 596,
+        "wordErrors": 0,
+        "referenceWords": 72
+      },
+      "insert": {
+        "rows": 6,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.01935483870967742,
+        "wer": 0.1935483870967742,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 6,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 310,
+        "wordErrors": 6,
+        "referenceWords": 31
+      },
+      "keyboard": {
+        "rows": 4,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.023391812865497075,
+        "wer": 0.2,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 4,
+        "referenceChars": 171,
+        "wordErrors": 4,
+        "referenceWords": 20
+      },
+      "space": {
+        "rows": 3,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.02040816326530612,
+        "wer": 0.3333333333333333,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 6,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 3,
+        "referenceChars": 147,
+        "wordErrors": 6,
+        "referenceWords": 18
+      },
+      "swap": {
+        "rows": 7,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.039886039886039885,
+        "wer": 0.16666666666666666,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 7,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 14,
+        "referenceChars": 351,
+        "wordErrors": 7,
+        "referenceWords": 42
+      }
+    },
+    "failures": [
+      {
+        "id": "0aef6a9742d9afa078239272",
+        "input": "Cavab mektubunda qiymet barede dəqiq məlumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab mektubunda qiymet barede dəqiq məlumat isteyirik."
+      },
+      {
+        "id": "53e1e8c175deb14a3238c309",
+        "input": "Cavab məktubunda qiymət barədə dəqiq məlumta istəyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "swap",
+        "actual": "Cavab məktubunda qiymət barədə dəqiq məlumta istəyirik."
+      },
+      {
+        "id": "5887feec3f87ec9bb798117f",
+        "input": "Cavab mektubunda qiymet barede deqiq melumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab mektubunda qiymet barede deqiq melumat isteyirik."
+      },
+      {
+        "id": "5a9c52bbacebe8f9a0df5f0a",
+        "input": "Cavab məktubunda qiymet barede deqiq melumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab məktubunda qiymet barede deqiq melumat isteyirik."
+      },
+      {
+        "id": "68cf2d80bc5e0fef4c1c8266",
+        "input": "Tətbiqlər arasinda inteqrasiya artiq sinaqdan kecirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "diacritics",
+        "actual": "Tətbiqlər arasinda inteqrasiya artiq sinaqdan kecirilib."
+      },
+      {
+        "id": "380b9678f92c7ee144e4813f",
+        "input": "Tətbiqlər raasında inteqrasiya artıq sınaqdan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "swap",
+        "actual": "Tətbiqlər raasında inteqrasiya artıq sınaqdan keçirilib."
+      },
+      {
+        "id": "e285f3bf74c12f412b4899c9",
+        "input": "Tətbiqlər arasında inteqrasiya artıq sınqadan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "swap",
+        "actual": "Tətbiqlər arasında inteqrasiya artıq sınqadan keçirilib."
+      },
+      {
+        "id": "30f7d456f7b5331e41c39202",
+        "input": "Tətbiqlər arasında inteqrasiya aartıq sınaqdan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "insert",
+        "actual": "Tətbiqlər arasında inteqrasiya aartıq sınaqdan keçirilib."
+      },
+      {
+        "id": "c6052f5edc1cc9d4d94e0cfb",
+        "input": "Bu gun deniz cox sakit görunur.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit görunur."
+      },
+      {
+        "id": "065e3b9955398b2134ad189f",
+        "input": "Bu gun deniz cox sakit gorunür.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit gorunür."
+      },
+      {
+        "id": "30799779152df9c146f74e8e",
+        "input": "Bu gun deniz cox sakit gorunur.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit gorunur."
+      },
+      {
+        "id": "303d39d781dd91d076a621f5",
+        "input": "Təhlükəsizlik uzre mutəxessis toplantiya qatilib.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "diacritics",
+        "actual": "Təhlükəsizlik uzre mutəxessis toplantiya qatilib."
+      },
+      {
+        "id": "ed0cf434977b2e34507d79b3",
+        "input": "Təhlükəsizlik üxrə mütəxəssis toplantıya qatılıb.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "keyboard",
+        "actual": "Təhlükəsizlik üxrə mütəxəssis toplantıya qatılıb."
+      },
+      {
+        "id": "63e0cc5466d700c9af37cf2a",
+        "input": "Təhlükəsizlik uzre mutexessis toplantiya qatilib.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "diacritics",
+        "actual": "Təhlükəsizlik uzre mutexessis toplantiya qatilib."
+      },
+      {
+        "id": "5f0c8157b73f25c12e03f798",
+        "input": "Router ücun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router ücun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "071e874aff6e67b7b7c19f27",
+        "input": "Router uçun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router uçun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "54e7a835ffe652ad334649c3",
+        "input": "Router ucun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router ucun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "3778f4e50310a4f55d571b58",
+        "input": "Router çüün konfiqurasiya ayrıca faylda saxlanır.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "swap",
+        "actual": "Router çüün konfiqurasiya ayrıca faylda saxlanır."
+      },
+      {
+        "id": "4a27fa091661db952f867a15",
+        "input": "Tədqiqatçılar laboratoriya avadanliğini deyişdiler.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "diacritics",
+        "actual": "Tədqiqatçılar laboratoriya avadanliğini deyişdiler."
+      },
+      {
+        "id": "f5b50e023cbc59a029b21557",
+        "input": "Tədqiqatçılar laboratoriya avadanlığını dəəyişdilər.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "insert",
+        "actual": "Tədqiqatçılar laboratoriya avadanlığını dəəyişdilər."
+      },
+      {
+        "id": "1c18f8336077f4fd8d6621d1",
+        "input": "Tədqiqatçılar laboratoriya avadannlığını dəyişdilər.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "insert",
+        "actual": "Tədqiqatçılar laboratoriya avadannlığını dəyişdilər."
+      },
+      {
+        "id": "c41514b6243f1892ec9d2b22",
+        "input": "Ehtiyat server üçün konfiqurasiya ayrıcaa təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "insert",
+        "actual": "Ehtiyat server üçün konfiqurasiya ayrıcaa təsdiqlənməlidir."
+      },
+      {
+        "id": "9dcd24cfb336fa634ab1d0a9",
+        "input": "Ehtiyat servr üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "delete",
+        "actual": "Ehtiyat servr üçün konfiqurasiya ayrıca təsdiqlənməlidir."
+      },
+      {
+        "id": "a1bf1cc30bf54e4632571bde",
+        "input": "Ehtiyat serverr üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "insert",
+        "actual": "Ehtiyat serverr üçün konfiqurasiya ayrıca təsdiqlənməlidir."
+      },
+      {
+        "id": "28a7e9e466319f2349ba6819",
+        "input": "Ehtiyat server ucun konfiqurasiya ayrıca tesdiqlenmelidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "diacritics",
+        "actual": "Ehtiyat server ucun konfiqurasiya ayrıca tesdiqlenmelidir."
+      },
+      {
+        "id": "1338acde9229b6a35d591ea9",
+        "input": "Sərmayə qoymazdan əvvəl riskləri ölçmək avcibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "swap",
+        "actual": "Sərmayə qoymazdan əvvəl riskləri ölçmək avcibdir."
+      },
+      {
+        "id": "8f46f19be94ebd3f29ee9945",
+        "input": "Sərmayə qoymazdan evvel riskləri olcmek vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "diacritics",
+        "actual": "Sərmayə qoymazdan evvel riskləri olcmek vacibdir."
+      },
+      {
+        "id": "65c9204c38fd70970da696ee",
+        "input": "Sərmayə qoymazdan əvvəl ris kləri ölçmək vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "space",
+        "actual": "Sərmayə qoymazdan əvvəl ris kləri ölçmək vacibdir."
+      },
+      {
+        "id": "dd9efe0e3ceabf061ec4b00e",
+        "input": "Sərmayə qoymazdan vəvəl riskləri ölçmək vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "swap",
+        "actual": "Sərmayə qoymazdan vəvəl riskləri ölçmək vacibdir."
+      },
+      {
+        "id": "4a07530bf121209cc0600a83",
+        "input": "Müraciətin nomrəsini yadda saxlayin.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "diacritics",
+        "actual": "Müraciətin nomrəsini yadda saxlayin."
+      },
+      {
+        "id": "e19ae5a75247be039bb29f9e",
+        "input": "Müraciətin nomresini yadda saxlayin.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "diacritics",
+        "actual": "Müraciətin nomresini yadda saxlayin."
+      },
+      {
+        "id": "2a43ea0d2021079c4ea3ff82",
+        "input": "Müraciətin nömrəsini yadda saxlayıh.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "keyboard",
+        "actual": "Müraciətin nömrəsini yadda saxlayıh."
+      },
+      {
+        "id": "4166771de965af31e2018e78",
+        "input": "Hər seher gunes dogmadan yurusə cixiram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "diacritics",
+        "actual": "Hər seher gunes dogmadan yurusə cixiram."
+      },
+      {
+        "id": "61009fb85dd5f8ca466eb70f",
+        "input": "Hər seher gunes dogmadan yuruse cixiram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "diacritics",
+        "actual": "Hər seher gunes dogmadan yuruse cixiram."
+      },
+      {
+        "id": "90c1f3409206664c1ee2e3ee",
+        "input": "Hər səhər günəş dğmadan yürüşə çıxıram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "delete",
+        "actual": "Hər səhər günəş dğmadan yürüşə çıxıram."
+      },
+      {
+        "id": "0a3be3857954148f5dea133c",
+        "input": "Yolda sürət həddi latmış kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "swap",
+        "actual": "Yolda sürət həddi latmış kilometrdir."
+      },
+      {
+        "id": "42a972011c14d281ca66fbe6",
+        "input": "Yolda süret heddi altmis kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "diacritics",
+        "actual": "Yolda süret heddi altmis kilometrdir."
+      },
+      {
+        "id": "f6d0a6e7c83f62b2d46cac83",
+        "input": "Yolda sürət həddi qltmış kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "keyboard",
+        "actual": "Yolda sürət həddi qltmış kilometrdir."
+      },
+      {
+        "id": "442efea62330b18789400dbc",
+        "input": "Müasir şəhərbinaları memarların diqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "space",
+        "actual": "Müasir şəhərbinaları memarların diqqətini çəkir."
+      },
+      {
+        "id": "8268418dc2c8dc9e59e12142",
+        "input": "Müasir şəhər binaları memarlarındiqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "space",
+        "actual": "Müasir şəhər binaları memarlarındiqqətini çəkir."
+      },
+      {
+        "id": "627b80447c4687c249932f1c",
+        "input": "Müasir şəhər bibaları memarların diqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "keyboard",
+        "actual": "Müasir şəhər bibaları memarların diqqətini çəkir."
+      },
+      {
+        "id": "899209e917aa2dece7b0c83f",
+        "input": "Müasir seher binalari memarlarin diqqətini çekir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "diacritics",
+        "actual": "Müasir seher binalari memarlarin diqqətini çekir."
+      },
+      {
+        "id": "1f4b40f19ee6b15a8123dd8b",
+        "input": "Dənizkənarı şəhər yeni yyollar çəkir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "insert",
+        "actual": "Dənizkənarı şəhər yeni yyollar çəkir."
+      },
+      {
+        "id": "393cfb0c9172f8d04eeaec4d",
+        "input": "Dənizkənarı seher yeni yollar cekir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "diacritics",
+        "actual": "Dənizkənarı seher yeni yollar cekir."
+      },
+      {
+        "id": "145db232716e20c609cbd020",
+        "input": "Dənizkənarı seher yeni yollar cəkir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "diacritics",
+        "actual": "Dənizkənarı seher yeni yollar cəkir."
+      }
+    ],
+    "convention": "NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Whitespace-only errors affect CER/accuracy but not token edits. Null means undefined denominator, not perfect accuracy."
+  },
+  "attentionOn": {
+    "overall": {
+      "rows": 58,
+      "exact": 13,
+      "accuracy": 0.22413793103448276,
+      "cer": 0.05925925925925926,
+      "wer": 0.32,
+      "precision": null,
+      "recall": 0,
+      "f05": 0,
+      "truePositiveEdits": 0,
+      "falsePositiveEdits": 0,
+      "missedEdits": 104,
+      "identityRows": 13,
+      "identityChanged": 0,
+      "identityFalseChangeRate": 0,
+      "charErrors": 160,
+      "referenceChars": 2700,
+      "wordErrors": 104,
+      "referenceWords": 325
+    },
+    "byCategory": {
+      "delete": {
+        "rows": 2,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.02040816326530612,
+        "wer": 0.16666666666666666,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 2,
+        "referenceChars": 98,
+        "wordErrors": 2,
+        "referenceWords": 12
+      },
+      "diacritics": {
+        "rows": 23,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.12755598831548198,
+        "wer": 0.6076923076923076,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 79,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 131,
+        "referenceChars": 1027,
+        "wordErrors": 79,
+        "referenceWords": 130
+      },
+      "identity": {
+        "rows": 13,
+        "exact": 13,
+        "accuracy": 1,
+        "cer": 0,
+        "wer": 0,
+        "precision": null,
+        "recall": null,
+        "f05": null,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 0,
+        "identityRows": 13,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 0,
+        "referenceChars": 596,
+        "wordErrors": 0,
+        "referenceWords": 72
+      },
+      "insert": {
+        "rows": 6,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.01935483870967742,
+        "wer": 0.1935483870967742,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 6,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 6,
+        "referenceChars": 310,
+        "wordErrors": 6,
+        "referenceWords": 31
+      },
+      "keyboard": {
+        "rows": 4,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.023391812865497075,
+        "wer": 0.2,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 4,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 4,
+        "referenceChars": 171,
+        "wordErrors": 4,
+        "referenceWords": 20
+      },
+      "space": {
+        "rows": 3,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.02040816326530612,
+        "wer": 0.3333333333333333,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 6,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 3,
+        "referenceChars": 147,
+        "wordErrors": 6,
+        "referenceWords": 18
+      },
+      "swap": {
+        "rows": 7,
+        "exact": 0,
+        "accuracy": 0,
+        "cer": 0.039886039886039885,
+        "wer": 0.16666666666666666,
+        "precision": null,
+        "recall": 0,
+        "f05": 0,
+        "truePositiveEdits": 0,
+        "falsePositiveEdits": 0,
+        "missedEdits": 7,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 14,
+        "referenceChars": 351,
+        "wordErrors": 7,
+        "referenceWords": 42
+      }
+    },
+    "failures": [
+      {
+        "id": "0aef6a9742d9afa078239272",
+        "input": "Cavab mektubunda qiymet barede dəqiq məlumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab mektubunda qiymet barede dəqiq məlumat isteyirik."
+      },
+      {
+        "id": "53e1e8c175deb14a3238c309",
+        "input": "Cavab məktubunda qiymət barədə dəqiq məlumta istəyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "swap",
+        "actual": "Cavab məktubunda qiymət barədə dəqiq məlumta istəyirik."
+      },
+      {
+        "id": "5887feec3f87ec9bb798117f",
+        "input": "Cavab mektubunda qiymet barede deqiq melumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab mektubunda qiymet barede deqiq melumat isteyirik."
+      },
+      {
+        "id": "5a9c52bbacebe8f9a0df5f0a",
+        "input": "Cavab məktubunda qiymet barede deqiq melumat isteyirik.",
+        "target": "Cavab məktubunda qiymət barədə dəqiq məlumat istəyirik.",
+        "category": "diacritics",
+        "actual": "Cavab məktubunda qiymet barede deqiq melumat isteyirik."
+      },
+      {
+        "id": "68cf2d80bc5e0fef4c1c8266",
+        "input": "Tətbiqlər arasinda inteqrasiya artiq sinaqdan kecirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "diacritics",
+        "actual": "Tətbiqlər arasinda inteqrasiya artiq sinaqdan kecirilib."
+      },
+      {
+        "id": "380b9678f92c7ee144e4813f",
+        "input": "Tətbiqlər raasında inteqrasiya artıq sınaqdan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "swap",
+        "actual": "Tətbiqlər raasında inteqrasiya artıq sınaqdan keçirilib."
+      },
+      {
+        "id": "e285f3bf74c12f412b4899c9",
+        "input": "Tətbiqlər arasında inteqrasiya artıq sınqadan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "swap",
+        "actual": "Tətbiqlər arasında inteqrasiya artıq sınqadan keçirilib."
+      },
+      {
+        "id": "30f7d456f7b5331e41c39202",
+        "input": "Tətbiqlər arasında inteqrasiya aartıq sınaqdan keçirilib.",
+        "target": "Tətbiqlər arasında inteqrasiya artıq sınaqdan keçirilib.",
+        "category": "insert",
+        "actual": "Tətbiqlər arasında inteqrasiya aartıq sınaqdan keçirilib."
+      },
+      {
+        "id": "c6052f5edc1cc9d4d94e0cfb",
+        "input": "Bu gun deniz cox sakit görunur.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit görunur."
+      },
+      {
+        "id": "065e3b9955398b2134ad189f",
+        "input": "Bu gun deniz cox sakit gorunür.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit gorunür."
+      },
+      {
+        "id": "30799779152df9c146f74e8e",
+        "input": "Bu gun deniz cox sakit gorunur.",
+        "target": "Bu gün dəniz çox sakit görünür.",
+        "category": "diacritics",
+        "actual": "Bu gun deniz cox sakit gorunur."
+      },
+      {
+        "id": "303d39d781dd91d076a621f5",
+        "input": "Təhlükəsizlik uzre mutəxessis toplantiya qatilib.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "diacritics",
+        "actual": "Təhlükəsizlik uzre mutəxessis toplantiya qatilib."
+      },
+      {
+        "id": "ed0cf434977b2e34507d79b3",
+        "input": "Təhlükəsizlik üxrə mütəxəssis toplantıya qatılıb.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "keyboard",
+        "actual": "Təhlükəsizlik üxrə mütəxəssis toplantıya qatılıb."
+      },
+      {
+        "id": "63e0cc5466d700c9af37cf2a",
+        "input": "Təhlükəsizlik uzre mutexessis toplantiya qatilib.",
+        "target": "Təhlükəsizlik üzrə mütəxəssis toplantıya qatılıb.",
+        "category": "diacritics",
+        "actual": "Təhlükəsizlik uzre mutexessis toplantiya qatilib."
+      },
+      {
+        "id": "5f0c8157b73f25c12e03f798",
+        "input": "Router ücun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router ücun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "071e874aff6e67b7b7c19f27",
+        "input": "Router uçun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router uçun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "54e7a835ffe652ad334649c3",
+        "input": "Router ucun konfiqurasiya ayrica faylda saxlanir.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "diacritics",
+        "actual": "Router ucun konfiqurasiya ayrica faylda saxlanir."
+      },
+      {
+        "id": "3778f4e50310a4f55d571b58",
+        "input": "Router çüün konfiqurasiya ayrıca faylda saxlanır.",
+        "target": "Router üçün konfiqurasiya ayrıca faylda saxlanır.",
+        "category": "swap",
+        "actual": "Router çüün konfiqurasiya ayrıca faylda saxlanır."
+      },
+      {
+        "id": "4a27fa091661db952f867a15",
+        "input": "Tədqiqatçılar laboratoriya avadanliğini deyişdiler.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "diacritics",
+        "actual": "Tədqiqatçılar laboratoriya avadanliğini deyişdiler."
+      },
+      {
+        "id": "f5b50e023cbc59a029b21557",
+        "input": "Tədqiqatçılar laboratoriya avadanlığını dəəyişdilər.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "insert",
+        "actual": "Tədqiqatçılar laboratoriya avadanlığını dəəyişdilər."
+      },
+      {
+        "id": "1c18f8336077f4fd8d6621d1",
+        "input": "Tədqiqatçılar laboratoriya avadannlığını dəyişdilər.",
+        "target": "Tədqiqatçılar laboratoriya avadanlığını dəyişdilər.",
+        "category": "insert",
+        "actual": "Tədqiqatçılar laboratoriya avadannlığını dəyişdilər."
+      },
+      {
+        "id": "c41514b6243f1892ec9d2b22",
+        "input": "Ehtiyat server üçün konfiqurasiya ayrıcaa təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "insert",
+        "actual": "Ehtiyat server üçün konfiqurasiya ayrıcaa təsdiqlənməlidir."
+      },
+      {
+        "id": "9dcd24cfb336fa634ab1d0a9",
+        "input": "Ehtiyat servr üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "delete",
+        "actual": "Ehtiyat servr üçün konfiqurasiya ayrıca təsdiqlənməlidir."
+      },
+      {
+        "id": "a1bf1cc30bf54e4632571bde",
+        "input": "Ehtiyat serverr üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "insert",
+        "actual": "Ehtiyat serverr üçün konfiqurasiya ayrıca təsdiqlənməlidir."
+      },
+      {
+        "id": "28a7e9e466319f2349ba6819",
+        "input": "Ehtiyat server ucun konfiqurasiya ayrıca tesdiqlenmelidir.",
+        "target": "Ehtiyat server üçün konfiqurasiya ayrıca təsdiqlənməlidir.",
+        "category": "diacritics",
+        "actual": "Ehtiyat server ucun konfiqurasiya ayrıca tesdiqlenmelidir."
+      },
+      {
+        "id": "1338acde9229b6a35d591ea9",
+        "input": "Sərmayə qoymazdan əvvəl riskləri ölçmək avcibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "swap",
+        "actual": "Sərmayə qoymazdan əvvəl riskləri ölçmək avcibdir."
+      },
+      {
+        "id": "8f46f19be94ebd3f29ee9945",
+        "input": "Sərmayə qoymazdan evvel riskləri olcmek vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "diacritics",
+        "actual": "Sərmayə qoymazdan evvel riskləri olcmek vacibdir."
+      },
+      {
+        "id": "65c9204c38fd70970da696ee",
+        "input": "Sərmayə qoymazdan əvvəl ris kləri ölçmək vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "space",
+        "actual": "Sərmayə qoymazdan əvvəl ris kləri ölçmək vacibdir."
+      },
+      {
+        "id": "dd9efe0e3ceabf061ec4b00e",
+        "input": "Sərmayə qoymazdan vəvəl riskləri ölçmək vacibdir.",
+        "target": "Sərmayə qoymazdan əvvəl riskləri ölçmək vacibdir.",
+        "category": "swap",
+        "actual": "Sərmayə qoymazdan vəvəl riskləri ölçmək vacibdir."
+      },
+      {
+        "id": "4a07530bf121209cc0600a83",
+        "input": "Müraciətin nomrəsini yadda saxlayin.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "diacritics",
+        "actual": "Müraciətin nomrəsini yadda saxlayin."
+      },
+      {
+        "id": "e19ae5a75247be039bb29f9e",
+        "input": "Müraciətin nomresini yadda saxlayin.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "diacritics",
+        "actual": "Müraciətin nomresini yadda saxlayin."
+      },
+      {
+        "id": "2a43ea0d2021079c4ea3ff82",
+        "input": "Müraciətin nömrəsini yadda saxlayıh.",
+        "target": "Müraciətin nömrəsini yadda saxlayın.",
+        "category": "keyboard",
+        "actual": "Müraciətin nömrəsini yadda saxlayıh."
+      },
+      {
+        "id": "4166771de965af31e2018e78",
+        "input": "Hər seher gunes dogmadan yurusə cixiram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "diacritics",
+        "actual": "Hər seher gunes dogmadan yurusə cixiram."
+      },
+      {
+        "id": "61009fb85dd5f8ca466eb70f",
+        "input": "Hər seher gunes dogmadan yuruse cixiram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "diacritics",
+        "actual": "Hər seher gunes dogmadan yuruse cixiram."
+      },
+      {
+        "id": "90c1f3409206664c1ee2e3ee",
+        "input": "Hər səhər günəş dğmadan yürüşə çıxıram.",
+        "target": "Hər səhər günəş doğmadan yürüşə çıxıram.",
+        "category": "delete",
+        "actual": "Hər səhər günəş dğmadan yürüşə çıxıram."
+      },
+      {
+        "id": "0a3be3857954148f5dea133c",
+        "input": "Yolda sürət həddi latmış kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "swap",
+        "actual": "Yolda sürət həddi latmış kilometrdir."
+      },
+      {
+        "id": "42a972011c14d281ca66fbe6",
+        "input": "Yolda süret heddi altmis kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "diacritics",
+        "actual": "Yolda süret heddi altmis kilometrdir."
+      },
+      {
+        "id": "f6d0a6e7c83f62b2d46cac83",
+        "input": "Yolda sürət həddi qltmış kilometrdir.",
+        "target": "Yolda sürət həddi altmış kilometrdir.",
+        "category": "keyboard",
+        "actual": "Yolda sürət həddi qltmış kilometrdir."
+      },
+      {
+        "id": "442efea62330b18789400dbc",
+        "input": "Müasir şəhərbinaları memarların diqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "space",
+        "actual": "Müasir şəhərbinaları memarların diqqətini çəkir."
+      },
+      {
+        "id": "8268418dc2c8dc9e59e12142",
+        "input": "Müasir şəhər binaları memarlarındiqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "space",
+        "actual": "Müasir şəhər binaları memarlarındiqqətini çəkir."
+      },
+      {
+        "id": "627b80447c4687c249932f1c",
+        "input": "Müasir şəhər bibaları memarların diqqətini çəkir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "keyboard",
+        "actual": "Müasir şəhər bibaları memarların diqqətini çəkir."
+      },
+      {
+        "id": "899209e917aa2dece7b0c83f",
+        "input": "Müasir seher binalari memarlarin diqqətini çekir.",
+        "target": "Müasir şəhər binaları memarların diqqətini çəkir.",
+        "category": "diacritics",
+        "actual": "Müasir seher binalari memarlarin diqqətini çekir."
+      },
+      {
+        "id": "1f4b40f19ee6b15a8123dd8b",
+        "input": "Dənizkənarı şəhər yeni yyollar çəkir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "insert",
+        "actual": "Dənizkənarı şəhər yeni yyollar çəkir."
+      },
+      {
+        "id": "393cfb0c9172f8d04eeaec4d",
+        "input": "Dənizkənarı seher yeni yollar cekir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "diacritics",
+        "actual": "Dənizkənarı seher yeni yollar cekir."
+      },
+      {
+        "id": "145db232716e20c609cbd020",
+        "input": "Dənizkənarı seher yeni yollar cəkir.",
+        "target": "Dənizkənarı şəhər yeni yollar çəkir.",
+        "category": "diacritics",
+        "actual": "Dənizkənarı seher yeni yollar cəkir."
+      }
+    ],
+    "convention": "NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Whitespace-only errors affect CER/accuracy but not token edits. Null means undefined denominator, not perfect accuracy."
+  },
+  "regressions": [],
+  "gains": [],
+  "ablation": "Experimental head-only inference versus unchanged input; not the production editor. Conservative proper-name/known-word protection."
+}

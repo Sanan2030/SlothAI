@@ -1,0 +1,26 @@
+{
+  "sourceDocuments": 128,
+  "keptDocuments": 128,
+  "clusters": 128,
+  "removedExactDuplicates": [],
+  "repeatedTargets": 0,
+  "counts": {
+    "train": 458,
+    "validation": 54,
+    "test": 58
+  },
+  "categories": {
+    "identity": 128,
+    "diacritics": 225,
+    "delete": 55,
+    "insert": 45,
+    "swap": 41,
+    "keyboard": 34,
+    "space": 41,
+    "colloquial": 1
+  },
+  "limitations": "Synthetic noise; no real-user accuracy claim. Capitalized words are conservatively protected, including sentence-initial words. Supply protectedTerms for lowercase names and foreign words. Near duplicates clustered at document token-bigram Jaccard >=0.8; exact sentences audited across splits. Sentence segmentation protects URLs, code and numbers but is not a full abbreviation model. Noise frequencies are illustrative, not estimated from real errors.",
+  "sourceSHA256": "7b98b22fdaf57de35c617e4603b78ae58ec762df86cfb44f5a897c475d93a299",
+  "outputSHA256": "dfb4aa1b09399d198d541e43e799076047bc5803dfaa5f7ec2281121af5d395a",
+  "note": "Documents are assigned before augmentation. Small inputs may have an empty validation/test partition; add independent documents, never copy rows across splits."
+}
