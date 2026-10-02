@@ -50,15 +50,16 @@ def main():
     parser.add_argument('--output', default='data/nlp/wikipedia-documents.jsonl')
     parser.add_argument('--documents', type=int, default=300)
     parser.add_argument('--pages', type=int, default=24)
+    parser.add_argument('--start-page', type=int, default=0)
     args = parser.parse_args()
-    if not 30 <= args.documents <= 1000 or not 1 <= args.pages <= 60:
+    if not 30 <= args.documents <= 1000 or not 1 <= args.pages <= 60 or not 0 <= args.start_page <= 100:
         raise ValueError('Use 30..1000 documents and 1..60 bounded pages')
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     metadata = fetch('https://huggingface.co/api/datasets/wikimedia/wikipedia')
     rows, seen, receipts = [], set(), []
     for page in range(args.pages):
-        offset = page * 1700
+        offset = (page + args.start_page) * 1700
         query = urllib.parse.urlencode({'dataset': 'wikimedia/wikipedia', 'config': '20231101.az', 'split': 'train', 'offset': offset, 'length': 50})
         batch = fetch('https://datasets-server.huggingface.co/rows?' + query)
         receipts.append({'offset': offset, 'rows': len(batch.get('rows', [])), 'responseSHA256': hashlib.sha256(json.dumps(batch, ensure_ascii=False, sort_keys=True).encode()).hexdigest()})
@@ -78,7 +79,7 @@ def main():
     contents = ''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in rows)
     output.write_text(contents, encoding='utf-8')
     receipt = {'dataset': 'wikimedia/wikipedia', 'config': '20231101.az', 'upstreamRevisionAtImport': metadata.get('sha'),
-               'upstreamDeclaredLicenses': metadata.get('cardData', {}).get('license'), 'documents': len(rows),
+               'upstreamDeclaredLicenses': metadata.get('cardData', {}).get('license'), 'documents': len(rows), 'startPage': args.start_page,
                'sourceSHA256': hashlib.sha256(contents.encode()).hexdigest(), 'requests': receipts,
                'attribution': 'Azerbaijani Wikipedia contributors; per-document article URLs link to history/authors.',
                'licenseURL': 'https://creativecommons.org/licenses/by-sa/3.0/',

@@ -1,0 +1,105 @@
+{
+  "policy": "Validation-only selection; zero token false-positive edits/identity changes, at least 30 true-positive edits, fixed conservative score floor. This is not a real-world correctness guarantee.",
+  "validationSHA256": "a0130ead04d9299cd2eebd2f37a2ec44089847740e38d8b7a56286ba3f5ebb0b",
+  "thresholdFloor": 0.9999,
+  "selected": "bounded-edits-719.json",
+  "results": [
+    {
+      "model": "bounded-edits-719.json",
+      "summary": {
+        "rows": 840,
+        "exact": 188,
+        "accuracy": 0.22380952380952382,
+        "cer": 0.045884214803567226,
+        "wer": 0.22947976878612716,
+        "precision": 1,
+        "recall": 0.019407198306280876,
+        "f05": 0.09004584151931892,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.013789933348655482,
+          "f05": 0.0653452406883032,
+          "truePositive": 60,
+          "falsePositive": 0,
+          "missed": 4291
+        },
+        "truePositiveEdits": 55,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2779,
+        "identityRows": 188,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 4291,
+        "referenceChars": 93518,
+        "wordErrors": 2779,
+        "referenceWords": 12110
+      },
+      "eligible": true
+    },
+    {
+      "model": "bounded-no-context-719.json",
+      "summary": {
+        "rows": 840,
+        "exact": 188,
+        "accuracy": 0.22380952380952382,
+        "cer": 0.046354712461772064,
+        "wer": 0.23303055326176714,
+        "precision": 1,
+        "recall": 0.004234297812279464,
+        "f05": 0.020818875780707843,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.0036773155596414617,
+          "f05": 0.01812004530011325,
+          "truePositive": 16,
+          "falsePositive": 0,
+          "missed": 4335
+        },
+        "truePositiveEdits": 12,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2822,
+        "identityRows": 188,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 4335,
+        "referenceChars": 93518,
+        "wordErrors": 2822,
+        "referenceWords": 12110
+      },
+      "eligible": false
+    },
+    {
+      "model": "bounded-uniform-719.json",
+      "summary": {
+        "rows": 840,
+        "exact": 188,
+        "accuracy": 0.22380952380952382,
+        "cer": 0.04599114608952287,
+        "wer": 0.23022295623451694,
+        "precision": 1,
+        "recall": 0.016231474947071278,
+        "f05": 0.07620941020543406,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.011491611123879569,
+          "f05": 0.054932981762250054,
+          "truePositive": 50,
+          "falsePositive": 0,
+          "missed": 4301
+        },
+        "truePositiveEdits": 46,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2788,
+        "identityRows": 188,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 4301,
+        "referenceChars": 93518,
+        "wordErrors": 2788,
+        "referenceWords": 12110
+      },
+      "eligible": true
+    }
+  ],
+  "nextGate": "Complete editor validation, held-out test, identity/protected-span checks and measured latency are mandatory before importing a selected bundle into production."
+}

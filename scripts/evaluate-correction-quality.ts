@@ -4,7 +4,7 @@ import attention from '../data/neural/attention-pairs.json';
 import independent from '../data/neural/attention-independent.json';
 import { createExperimentPredictor, createExperimentFallback, type ExperimentBundle } from './nlp/inference';
 import { correctText } from '../lib/editor/correct';
-import { qualityReport, type QualityRow } from './nlp/metrics';
+import { edits, qualityReport, type QualityRow } from './nlp/metrics';
 import { atomicWriteSync } from './atomic-files.mjs';
 const option = (name: string) => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3);
 const file = option('input'), output = option('output') ?? 'data/neural/quality-report.json';
@@ -27,9 +27,14 @@ if (!Number.isFinite(floor) || floor < 0 || floor > 1) throw new Error('threshol
 if (bundle) bundle.artifact.threshold = Math.max(bundle.artifact.threshold, floor);
 const predictor = bundle ? createExperimentPredictor(bundle) : undefined;
 const evaluate = (useAttention: boolean): QualityRow[] => source.map(row => ({ id: row.id, input: row.input, target: row.target,
-  category: row.category ?? row.domain ?? 'unspecified', actual: fullEditor && bundle ? correctText(row.input, false, { neuralFallback: useAttention ? createExperimentFallback(bundle, row.protectedTerms) : undefined }).text : predictor ? (useAttention ? predictor(row.input, row.protectedTerms) : row.input) : correctText(row.input, false, { useAttention }).text }));
+  category: row.category ?? row.domain ?? 'unspecified', actual: fullEditor && bundle ? correctText(row.input, false, { useBounded: false, neuralFallback: useAttention ? createExperimentFallback(bundle, row.protectedTerms) : undefined }).text : predictor ? (useAttention ? predictor(row.input, row.protectedTerms) : row.input) : correctText(row.input, false, { useAttention }).text }));
 const without = evaluate(false), withHead = evaluate(true);
-const newFalsePositiveRows = withHead.filter((row, at) => qualityReport([row]).overall.falsePositiveEdits > qualityReport([without[at]]).overall.falsePositiveEdits).map(row => row.id);
+const falseEdits = (row: QualityRow) => {
+  const tokens = (text: string) => text.normalize('NFC').match(/\S+/gu) ?? [];
+  const source = tokens(row.input), gold = new Set(edits(source, tokens(row.target)).map(edit => JSON.stringify(edit)));
+  return new Set(edits(source, tokens(row.actual)).map(edit => JSON.stringify(edit)).filter(edit => !gold.has(edit)));
+};
+const newFalsePositiveRows = withHead.filter((row, at) => { const old = falseEdits(without[at]); return [...falseEdits(row)].some(edit => !old.has(edit)); }).map(row => row.id);
 const report = { newFalsePositiveRows, source: real ? 'User-attested reviewed real examples' : file ? 'Provided examples; real provenance not asserted' : 'Authored development and additional contexts, shared lexical families',
   attentionOff: qualityReport(without), attentionOn: qualityReport(withHead),
   regressions: withHead.filter((row, at) => without[at].actual === row.target && row.actual !== row.target),

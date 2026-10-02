@@ -1,5 +1,7 @@
 # Azərbaycan dili redaktorunun diaqnozu və ölçülə bilən inkişaf yolu
 
+Latest release: see [offline correction priorities and measured results](nlp-priorities.md). The historical measurements below describe the earlier head.
+
 ## Qısa diaqnoz
 
 Hazırkı sistem seq2seq Transformer və ya BiLSTM deyil. TypeScript-də işləyən hibrid redaktordur: lüğət, morphology və qaydalar, əvvəlki 795 parametrli şəbəkələr və əlavə 1 149 parametrli attention namizəd seçicisi. Hərf 1–3-gramları 16 ölçüyə hash olunur; namizəd sorğusu 16 × 16 proyeksiya ilə yaxın kontekstə baxır; 71 girişli, 12 gizli vahidli MLP seçim edir. Xarici API, GPU, Python inference serveri və pretrained model yoxdur.

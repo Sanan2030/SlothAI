@@ -1,3 +1,4 @@
+import { boundedCorrection } from './bounded-runtime';
 import { preservesDiacritics } from './diacritics';
 export { preservesDiacritics } from './diacritics';
 import { attentionCorrection, unresolvedAttentionAmbiguity } from './attention-runtime';
@@ -99,7 +100,7 @@ export function neuralAgreement(text: string): string {
 /** High-confidence learned swap corrections run after span/entity protection
  * and before dictionary guesses can destroy the original ambiguous surface. */
 export type NeuralSpellingFallback = (raw: string, tokens: Token[], at: number) => string | undefined;
-export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string, fallback?: NeuralSpellingFallback): string {
+export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string, fallback: NeuralSpellingFallback | null = boundedCorrection): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word;

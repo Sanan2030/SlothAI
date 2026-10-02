@@ -34,6 +34,8 @@ export interface CorrectionEvent {
 export interface CorrectionRuntime {
   /** Offline evaluation seam. Application callers retain established heads. */
   neuralFallback?: NeuralSpellingFallback;
+  /** Isolate the source-trained fallback without disabling existing heads. */
+  useBounded?: boolean;
   /** Evaluation switch; both application strategies enable the local model by default. */
   useLocalModel?: boolean;
   /** Isolate the attention head for offline ablation; default production behavior stays enabled. */
@@ -147,7 +149,7 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
-  if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback);
+  if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined));
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);

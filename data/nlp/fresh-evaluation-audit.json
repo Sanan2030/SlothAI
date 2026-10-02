@@ -1,0 +1,8 @@
+{
+  "sourceDocuments": 30,
+  "novelDocuments": 30,
+  "removedOverlappingDocuments": [],
+  "evaluationRows": 869,
+  "sha256": "02818fd4a6e5b7860fdec16920fbc729a87d2dcdf75aaa9016536d619ec3f75b",
+  "caveat": "Document/paragraph/sentence exact-fold matches and >=0.8 bigram Jaccard. Does not prove absence of all semantic overlap. All fresh partitions pooled for evaluation only, never fitting or selection."
+}

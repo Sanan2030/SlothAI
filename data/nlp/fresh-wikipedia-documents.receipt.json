@@ -1,0 +1,23 @@
+{
+  "dataset": "wikimedia/wikipedia",
+  "config": "20231101.az",
+  "upstreamRevisionAtImport": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+  "upstreamDeclaredLicenses": [
+    "cc-by-sa-3.0",
+    "gfdl"
+  ],
+  "documents": 30,
+  "startPage": 40,
+  "sourceSHA256": "27324a6010883c7e9ad3263cc997f4d4a7792f5aa299607064c65e73a86553ca",
+  "requests": [
+    {
+      "offset": 68000,
+      "rows": 50,
+      "responseSHA256": "ff5ec7973b94f27889a717de87264fa257efcdd2ea9790684da7d37bf37baf13"
+    }
+  ],
+  "attribution": "Azerbaijani Wikipedia contributors; per-document article URLs link to history/authors.",
+  "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "modifications": "Two automatically filtered paragraphs per article, whitespace normalized; synthetic noise generated separately.",
+  "limitations": "Not human-reviewed errors. The public rows API cannot pin a revision; response/source hashes detect changed upstream content. The committed excerpts are the reproducible local snapshot."
+}

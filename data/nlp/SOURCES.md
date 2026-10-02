@@ -23,3 +23,5 @@ from this conversation, with assistant reference corrections awaiting human
 review. It never participates in training or threshold selection. Exact-output
 scoring is intentionally strict and can reject alternative acceptable wording.
 These are development references, not blind human-reviewed ground truth.
+
+The fresh evaluation snapshot contains 30 additional articles from the same licensed source, sampled at page 40 onward. Attribution and article/history URLs are retained per document in `fresh-wikipedia-documents.jsonl`; its receipt records the retrieval. It was excluded from fitting and calibration. The derived bounded model retains the CC BY-SA 3.0 / GFDL source attribution in its provenance; this attribution does not relicense unrelated application code.

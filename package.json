@@ -48,7 +48,9 @@
     "neural:attention:independent:check": "node --import tsx scripts/evaluate-attention.ts --independent --enforce",
     "nlp:data": "node --import tsx scripts/build-correction-data.ts",
     "nlp:evaluate": "node --import tsx scripts/evaluate-correction-quality.ts",
-    "nlp:ablation": "node --import tsx scripts/train-attention-experiments.ts"
+    "nlp:ablation": "node --import tsx scripts/train-attention-experiments.ts",
+    "nlp:select": "node --import tsx scripts/select-bounded-model.ts",
+    "nlp:compact": "node --import tsx scripts/compact-bounded-model.ts"
   },
   "engines": {
     "node": ">=20.9.0"
