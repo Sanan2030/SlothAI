@@ -4,7 +4,7 @@ import { correctText } from '../lib/editor/correct';
 import { analyzeClause, detectExclamation, detectQuestion } from '../lib/editor/punctuation';
 
 const examples = [
-  ['səncə bu yaxşıdır', 'Səncə, bu yaxşıdır?'],
+  ['səncə bu yaxşıdır', 'Səncə, bu, yaxşıdır?'],
   ['görəsən o gələcək', 'Görəsən, o gələcək?'],
   ['necə də gözəldir', 'Necə də gözəldir!'],
   ['Əli gəldi Rəşad getdi', 'Əli gəldi. Rəşad getdi.'],

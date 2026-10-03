@@ -273,7 +273,7 @@
       "mode": "text",
       "category": "punctuation",
       "input": "bu yaxsidir amma daha yaxsi ola biler",
-      "expected": "Bu yaxşıdır, amma daha yaxşı ola bilər.",
+      "expected": "Bu, yaxşıdır, amma daha yaxşı ola bilər.",
       "errorCategory": "punctuation"
     },
     {
@@ -1430,7 +1430,7 @@
       "mode": "text",
       "category": "punctuation",
       "input": "bu duzgundur lakin bir problem var",
-      "expected": "Bu düzgündür, lakin bir problem var.",
+      "expected": "Bu, düzgündür, lakin bir problem var.",
       "errorCategory": "punctuation"
     },
     {
@@ -1502,7 +1502,7 @@
       "mode": "text",
       "category": "punctuation",
       "input": "bu testdir;netice sonra gelecek",
-      "expected": "Bu testdir; nəticə sonra gələcək.",
+      "expected": "Bu, testdir; nəticə sonra gələcək.",
       "errorCategory": "punctuation"
     },
     {

@@ -17,13 +17,13 @@ test('productive copulas recover nominal lemmas and case without altering frozen
 });
 test('scoped syntax distinguishes hunger, questions, contrasts and completed causal clauses', () => {
   const cases = [
-    ['o ac idi yemeyi yedi sonra qapini ac', 'O ac idi. Yeməyi yedi. Sonra qapını aç.'],
+    ['o ac idi yemeyi yedi sonra qapini ac', 'O, ac idi. Yeməyi yedi. Sonra qapını aç.'],
     ['men bakida yasayiram sen harda yasayirsan', 'Mən Bakıda yaşayıram. Sən harada yaşayırsan?'],
     ['bu gun hava yaxsidir sabah ise yagis yagacaq', 'Bu gün hava yaxşıdır. Sabah isə yağış yağacaq.'],
     ['server cavab vermedi buna gore backend komandasina yazdim onlar problemi hell etdiler', 'Server cavab vermədi. Buna görə backend komandasına yazdım. Onlar problemi həll etdilər.'],
   ];
   for (const [input, expected] of cases) assert.equal(correctText(input, true).text, expected);
-  assert.equal(correctText('O ac idi. Qapını aç.', true).text, 'O ac idi. Qapını aç.');
+  assert.equal(correctText('O, ac idi. Qapını aç.', true).text, 'O, ac idi. Qapını aç.');
   assert.equal(correctText('Mən işə getdim.', true).text, 'Mən işə getdim.');
 });
 test('ambiguous numerals retain counted noun phrases without disabling verbal readings', () => {

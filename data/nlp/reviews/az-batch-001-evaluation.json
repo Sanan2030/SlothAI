@@ -1,0 +1,442 @@
+{
+  "kind": "development-evaluation",
+  "baselineCommit": "064068b7957c9a63fced1a0d46689ceeaed60382",
+  "total": 60,
+  "originalApprovedBeforeExact": 18,
+  "effectiveBeforeExact": 17,
+  "effectiveAfterExact": 18,
+  "previousEffectiveExactRegressions": [],
+  "amendments": [
+    {
+      "id": "az-review-001-060",
+      "originalExpected": "O ac idi, amma yeməyi gözləmək istədi. Mən isə pəncərəni açdım.",
+      "expected": "O, ac idi, amma yeməyi gözləmək istədi. Mən isə pəncərəni açdım.",
+      "reviewer": "assistant-under-user-delegated-grammar-correction",
+      "reason": "O is the subject, ac is the predicative adjective before idi; insert subject comma.",
+      "source": "https://science.gov.az/az/news/open/7465"
+    }
+  ],
+  "note": "User-approved synthetic proposals with one delegated grammatical amendment. Development measurement; no model fitting; not held-out accuracy.",
+  "rows": [
+    {
+      "id": "az-review-001-001",
+      "before": "Avtobus gecikdiyi üçün görüşə vaxtında cata bilmədim. Dostuma zəng edib. Bir az gözləməsini xahiş etdim.",
+      "after": "Avtobus gecikdiyi üçün görüşə vaxtında cata bilmədim. Dostuma zəng edib. Bir az gözləməsini xahiş etdim.",
+      "expected": "Avtobus gecikdiyi üçün görüşə vaxtında çata bilmədim. Dostuma zəng edib bir az gözləməsini xahiş etdim.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-002",
+      "before": "Anam bazardan pomidor xiyar və reyhan aldı. Mən isə çörək almaq üçün fırına getdim.",
+      "after": "Anam bazardan pomidor xiyar və reyhan aldı. Mən isə çörək almaq üçün fırına getdim.",
+      "expected": "Anam bazardan pomidor, xiyar və reyhan aldı. Mən isə çörək almaq üçün fırına getdim.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-003",
+      "before": "Telefonumun batareyası bitmişdi ona görə göndərdiyin mesajı axşam gördüm.",
+      "after": "Telefonumun batareyası bitmişdi ona görə göndərdiyin mesajı axşam gördüm.",
+      "expected": "Telefonumun batareyası bitmişdi. Ona görə göndərdiyin mesajı axşam gördüm.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-004",
+      "before": "Kitabın son fəslini hələ oxumamışam xahiş edirəm, sonluğunu mənə demə.",
+      "after": "Kitabın son fəslini hələ oxumamışam xahiş edirəm, sonluğunu mənə demə.",
+      "expected": "Kitabın son fəslini hələ oxumamışam. Xahiş edirəm, sonluğunu mənə demə.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-005",
+      "before": "Bu ayaqqabının ölçüsü mənə kiçikdir. Bir ölçü böyüyünü göstərə bilərsiniz.",
+      "after": "Bu ayaqqabının ölçüsü mənə kiçikdir. Bir ölçü böyüyünü göstərə bilərsiniz.",
+      "expected": "Bu ayaqqabının ölçüsü mənə kiçikdir. Bir ölçü böyüyünü göstərə bilərsiniz?",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-006",
+      "before": "Qonsumuzun iti itmişdi. Uşaqlar onu parkda tapıb sahibinə qaytardılar.",
+      "after": "Qonsumuzun iti itmişdi. Uşaqlar onu parkda tapıb sahibinə qaytardılar.",
+      "expected": "Qonşumuzun iti itmişdi. Uşaqlar onu parkda tapıb sahibinə qaytardılar.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-007",
+      "before": "Sabah yağış yagmasa velosipedle dəniz kənarına gedəcəyik, yoxsa evdə qalib film izləyəcəyik?",
+      "after": "Sabah yağış yagmasa velosipedle dəniz kənarına gedəcəyik, yoxsa evdə qalib film izləyəcəyik?",
+      "expected": "Sabah yağış yağmasa, velosipedlə dəniz kənarına gedəcəyik. Yoxsa evdə qalıb film izləyəcəyik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-008",
+      "before": "Tərəflərdən biri gəlmədi deyə görüş təxirə salındı. Yeni tarix hələ müəyyənləşməyib.",
+      "after": "Tərəflərdən biri gəlmədi deyə görüş təxirə salındı. Yeni tarix hələ müəyyənləşməyib.",
+      "expected": "Tərəflərdən biri gəlmədi deyə görüş təxirə salındı. Yeni tarix hələ müəyyənləşməyib.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-009",
+      "before": "Bu seklin harada çəkildiyini xatirlamiram, amma dağların görünüşü mənə tanış gəlir.",
+      "after": "Bu seklin harada çəkildiyini xatirlamiram, amma dağların görünüşü mənə tanış gəlir.",
+      "expected": "Bu şəklin harada çəkildiyini xatırlamıram, amma dağların görünüşü mənə tanış gəlir.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-010",
+      "before": "Sumkanı avtobusda unutdum sürücü ilə əlaqə saxlamaq mümkündürmü?",
+      "after": "Sumkanı avtobusda unutdum sürücü ilə əlaqə saxlamaq mümkündürmü?",
+      "expected": "Sumkanı avtobusda unutdum. Sürücü ilə əlaqə saxlamaq mümkündürmü?",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-011",
+      "before": "Muzeyə bilet almamisdan əvvəl iş saatlarını yoxlayaq bəlkə bazar ertəsi bağlı olur.",
+      "after": "Muzeyə bilet almamisdan əvvəl iş saatlarını yoxlayaq bəlkə bazar ertəsi bağlı olur.",
+      "expected": "Muzeyə bilet almamışdan əvvəl iş saatlarını yoxlayaq. Bəlkə bazar ertəsi bağlı olur.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-012",
+      "before": "Qonağımız çay yox qəhvə istədi. Mən de ona sekersiz qəhvə hazırladım.",
+      "after": "Qonağımız çay yox qəhvə istədi. Mən de ona sekersiz qəhvə hazırladım.",
+      "expected": "Qonağımız çay yox, qəhvə istədi. Mən də ona şəkərsiz qəhvə hazırladım.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-013",
+      "before": "Docker konteyneri açılır, amma backend verilənlər bazasina qosula bilmir bazanın connection string parametrini yoxlamaq lazımdır.",
+      "after": "Docker konteyneri açılır, amma backend verilənlər bazasina qosula bilmir bazanın connection string parametrini yoxlamaq lazımdır.",
+      "expected": "Docker konteyneri açılır, amma backend verilənlər bazasına qoşula bilmir. Bazanın connection string parametrini yoxlamaq lazımdır.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-014",
+      "before": "POST sorğusunun body hissəsində userId integer olmalıdır parametr string kimi göndəriləndə API 400 qaytarır.",
+      "after": "POST sorğusunun body hissəsində userId integer olmalıdır parametr string kimi göndəriləndə API 400 qaytarır.",
+      "expected": "POST sorğusunun body hissəsində userId integer olmalıdır. Parametr string kimi göndəriləndə API 400 qaytarır.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-015",
+      "before": "Bu pull request hazırdır, amma testlər keçmədiyi üçün merge etmədim.",
+      "after": "Bu pull request hazırdır, amma testlər keçmədiyi üçün merge etmədim.",
+      "expected": "Bu pull request hazırdır, amma testlər keçmədiyi üçün merge etmədim.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-016",
+      "before": "Redis bağlantısı kəsiləndə sistem dayanmasin sorğular əsas bazaya yönləndirilsin.",
+      "after": "Redis bağlantısı kəsiləndə sistem dayanmasin sorğular əsas bazaya yönləndirilsin.",
+      "expected": "Redis bağlantısı kəsiləndə sistem dayanmasın. Sorğular əsas bazaya yönləndirilsin.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-017",
+      "before": "Production mühitində debug loglarını sondurdum. Xəta qeydləri isə saxlanılır.",
+      "after": "Production mühitində debug loglarını sondurdum. Xəta qeydləri isə saxlanılır.",
+      "expected": "Production mühitində debug loglarını söndürdüm. Xəta qeydləri isə saxlanılır.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-018",
+      "before": "OpenAPI sənədində bu parametr optional göstərilib, halbuki backend onu məcburu sayır.",
+      "after": "OpenAPI sənədində bu parametr optional göstərilib, halbuki backend onu məcburu sayır.",
+      "expected": "OpenAPI sənədində bu parametr optional göstərilib, halbuki backend onu məcburi sayır.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-019",
+      "before": "İstifadəçi parolunu loga yazmayin yalnız requestId və xəta kodu qeyd olunsun.",
+      "after": "İstifadəçi parolunu loga yazmayin yalnız requestId və xəta kodu qeyd olunsun.",
+      "expected": "İstifadəçi parolunu loga yazmayın. Yalnız requestId və xəta kodu qeyd olunsun.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-020",
+      "before": "Yeni migration tətbiq olunandan sonra köhnə sütunu silmək olar indilik hər iki sütun qalmalıdır.",
+      "after": "Yeni migration tətbiq olunandan sonra köhnə sütunu silmək olar indilik hər iki sütun qalmalıdır.",
+      "expected": "Yeni migration tətbiq olunandan sonra köhnə sütunu silmək olar. İndilik hər iki sütun qalmalıdır.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-021",
+      "before": "Frontend eyni sorğunu iki dəfə göndərir. Bu debounce mexanizmini yoxladım, amma problem aradan qalxmadı.",
+      "after": "Frontend eyni sorğunu iki dəfə göndərir. Bu debounce mexanizmini yoxladım, amma problem aradan qalxmadı.",
+      "expected": "Frontend eyni sorğunu iki dəfə göndərir. Bu debounce mexanizmini yoxladım, amma problem aradan qalxmadı.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-022",
+      "before": "Son commit mesajında dəyişikliyin səbəbini yazdım. README faylına da quraşdırma addımlarını əlavə etdim.",
+      "after": "Son commit mesajında dəyişikliyin səbəbini yazdım. README faylına da quraşdırma addımlarını əlavə etdim.",
+      "expected": "Son commit mesajında dəyişikliyin səbəbini yazdım. README faylına da quraşdırma addımlarını əlavə etdim.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-023",
+      "before": "Web Worker xəta verəndə interfeys bağlanmamalıdır. İstifadəçi yenidən cəhd edə bilməlidir.",
+      "after": "Web Worker xəta verəndə interfeys bağlanmamalıdır. İstifadəçi yenidən cəhd edə bilməlidir.",
+      "expected": "Web Worker xəta verəndə interfeys bağlanmamalıdır. İstifadəçi yenidən cəhd edə bilməlidir.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-024",
+      "before": "JSON cavabında boş array qayıtdı, lakin HTTP status 200 idi bu hal üçün ayrıca test yazdım.",
+      "after": "JSON cavabında boş array qayıtdı, lakin HTTP status 200 idi bu hal üçün ayrıca test yazdım.",
+      "expected": "JSON cavabında boş array qayıtdı, lakin HTTP status 200 idi. Bu hal üçün ayrıca test yazdım.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-025",
+      "before": "Göndərdiyiniz sənədi aldıq. Əlavə etdiyiniz qeydlərə bu gün baxacağıq. Yekun cavabı sabah sizə çatdıracağıq.",
+      "after": "Göndərdiyiniz sənədi aldıq. Əlavə etdiyiniz qeydlərə bu gün baxacağıq. Yekun cavabı sabah sizə çatdıracağıq.",
+      "expected": "Göndərdiyiniz sənədi aldıq. Əlavə etdiyiniz qeydlərə bu gün baxacağıq. Yekun cavabı sabah sizə çatdıracağıq.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-026",
+      "before": "Təklif etdiyiniz görüş vaxtı bizim üçün uygundur. Zəhmət olmasa, onlayn görüşün keçidini göndərin.",
+      "after": "Təklif etdiyiniz görüş vaxtı bizim üçün uygundur. Zəhmət olmasa, onlayn görüşün keçidini göndərin.",
+      "expected": "Təklif etdiyiniz görüş vaxtı bizim üçün uyğundur. Zəhmət olmasa, onlayn görüşün keçidini göndərin.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-027",
+      "before": "Müqavilənin son versiyasinda ödəniş müddəti qeyd olunmayub bu bəndin deqiqləsdirilmesini xahiş edirik.",
+      "after": "Müqavilənin son versiyasinda ödəniş müddəti qeyd olunmayub bu bəndin deqiqləsdirilmesini xahiş edirik.",
+      "expected": "Müqavilənin son versiyasında ödəniş müddəti qeyd olunmayıb. Bu bəndin dəqiqləşdirilməsini xahiş edirik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-028",
+      "before": "Müraciətinizi qeydə almisig araşdırma davam edir. Əlavə məlumat lazım olsa, sizinlə əlaqə saxlayacağıq.",
+      "after": "Müraciətinizi qeydə almisig araşdırma davam edir. Əlavə məlumat lazım olsa, sizinlə əlaqə saxlayacağıq.",
+      "expected": "Müraciətinizi qeydə almışıq. Araşdırma davam edir. Əlavə məlumat lazım olsa, sizinlə əlaqə saxlayacağıq.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-029",
+      "before": "Sənədin imzalanmış nüsxəsini məktuba əlavə etmişəm qəbul etdiyinizi təsdiq edə bilersinizmi?",
+      "after": "Sənədin imzalanmış nüsxəsini məktuba əlavə etmişəm qəbul etdiyinizi təsdiq edə bilersinizmi?",
+      "expected": "Sənədin imzalanmış nüsxəsini məktuba əlavə etmişəm. Qəbul etdiyinizi təsdiq edə bilərsinizmi?",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-030",
+      "before": "Bu mərhələdə əlavə lisenziya almaq istəmirik mövcud istifadəçi sayı bizim ehtiyacimiza kifayət edir.",
+      "after": "Bu mərhələdə əlavə lisenziya almaq istəmirik mövcud istifadəçi sayı bizim ehtiyacimiza kifayət edir.",
+      "expected": "Bu mərhələdə əlavə lisenziya almaq istəmirik. Mövcud istifadəçi sayı bizim ehtiyacımıza kifayət edir.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-031",
+      "before": "Hesab fakturada şirkətimizin ünvanı səhv yazılıb. Düzəliş edilmiş nüsxəni yenidən göndərməyinizi xahiş edirik.",
+      "after": "Hesab fakturada şirkətimizin ünvanı səhv yazılıb. Düzəliş edilmiş nüsxəni yenidən göndərməyinizi xahiş edirik.",
+      "expected": "Hesab-fakturada şirkətimizin ünvanı səhv yazılıb. Düzəliş edilmiş nüsxəni yenidən göndərməyinizi xahiş edirik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-032",
+      "before": "Təsdiq gəlmədiyi üçün dəyişikliyi canlı sistemə keçirmədik sizin raziliginizdan sonra keçid vaxtını razılaşdıracağıq.",
+      "after": "Təsdiq gəlmədiyi üçün dəyişikliyi canlı sistemə keçirmədik sizin raziliginizdan sonra keçid vaxtını razılaşdıracağıq.",
+      "expected": "Təsdiq gəlmədiyi üçün dəyişikliyi canlı sistemə keçirmədik. Sizin razılığınızdan sonra keçid vaxtını razılaşdıracağıq.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-033",
+      "before": "Texniki dəstək üçün təşəkkür edirik problem həll olundu hazırda sistemdən normal istifadə edə bilirik.",
+      "after": "Texniki dəstək üçün təşəkkür edirik problem həll olundu hazırda sistemdən normal istifadə edə bilirik.",
+      "expected": "Texniki dəstək üçün təşəkkür edirik. Problem həll olundu. Hazırda sistemdən normal istifadə edə bilirik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-034",
+      "before": "Hesabatda göstərdiyiniz rəqəmlər bizim qeydlərimizle üst uste düşmür. Müqayisə cədvəlini məktuba əlavə edirik.",
+      "after": "Hesabatda göstərdiyiniz rəqəmlər bizim qeydlərimizle üst uste düşmür. Müqayisə cədvəlini məktuba əlavə edirik.",
+      "expected": "Hesabatda göstərdiyiniz rəqəmlər bizim qeydlərimizlə üst-üstə düşmür. Müqayisə cədvəlini məktuba əlavə edirik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-035",
+      "before": "Layihənin təhvil tarixi dəyişməyib yalnız daxili sınaq mərhələsi bir gün uzadılıb. Bunu nəzərə almağınızı xahiş edirik.",
+      "after": "Layihənin təhvil tarixi dəyişməyib yalnız daxili sınaq mərhələsi bir gün uzadılıb. Bunu nəzərə almağınızı xahiş edirik.",
+      "expected": "Layihənin təhvil tarixi dəyişməyib. Yalnız daxili sınaq mərhələsi bir gün uzadılıb. Bunu nəzərə almağınızı xahiş edirik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-036",
+      "before": "Ödənişi etmişik. Bank təsdiqini de. Əlavə göndəririk. Zəhmət olmasa, hesabimizin aktivləşdirilmə vaxtını bildirin.",
+      "after": "Ödənişi etmişik. Bank təsdiqini de. Əlavə göndəririk. Zəhmət olmasa, hesabimizin aktivləşdirilmə vaxtını bildirin.",
+      "expected": "Ödənişi etmişik. Bank təsdiqini də əlavə göndəririk. Zəhmət olmasa, hesabımızın aktivləşdirilmə vaxtını bildirin.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-037",
+      "before": "Biz sabah hesabatı rəhbərliyə təqdim edəcəyik.",
+      "after": "Biz sabah hesabatı rəhbərliyə təqdim edəcəyik.",
+      "expected": "Biz sabah hesabatı rəhbərliyə təqdim edəcəyik.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-038",
+      "before": "Sən bu faylı dünən mənə gondermisem.",
+      "after": "Sən bu faylı dünən mənə gondermisem.",
+      "expected": "Sən bu faylı dünən mənə göndərmisən.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-039",
+      "before": "Hamımız iclasa qatildim və təklifləri müzakirə etdik.",
+      "after": "Hamımız iclasa qatildim və təklifləri müzakirə etdik.",
+      "expected": "Hamımız iclasa qatıldıq və təklifləri müzakirə etdik.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-040",
+      "before": "Mən sabah evdə olacagsan, amma axşam cixa bilərəm.",
+      "after": "Mən sabah evdə olacagsan, amma axşam cixa bilərəm.",
+      "expected": "Mən sabah evdə olacağam, amma axşam çıxa bilərəm.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-041",
+      "before": "Uşaq aç olduğu üçün yemək istədi qapını açmaq üçün isə atasını çağırdı.",
+      "after": "Uşaq aç olduğu üçün yemək istədi qapını açmaq üçün isə atasını çağırdı.",
+      "expected": "Uşaq ac olduğu üçün yemək istədi. Qapını açmaq üçün isə atasını çağırdı.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-042",
+      "before": "Bağda gul açıb. Bu gün onu suladım.",
+      "after": "Bağda gul açıb. Bu gün onu suladım.",
+      "expected": "Bağda gül açıb. Bu gün onu suladım.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-043",
+      "before": "İsenin çox olduğunu bilirəm, amma bu gün isə gec getmək istəmirəm.",
+      "after": "İsenin çox olduğunu bilirəm, amma bu gün isə gec getmək istəmirəm.",
+      "expected": "İşin çox olduğunu bilirəm, amma bu gün işə gec getmək istəmirəm.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-044",
+      "before": "Şora baxaram demisem, amma getmiremki iş yarımçıq qalmasin.",
+      "after": "Şora baxaram demisem, amma getmiremki iş yarımçıq qalmasin.",
+      "expected": "Sonra baxaram demişəm, amma getmirəm ki, iş yarımçıq qalmasın.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-045",
+      "before": "Emil Sumqayıtdan Lənkərana getdi. Nərmin ise Bakıda qaldı.",
+      "after": "Emil Sumqayıtdan Lənkərana getdi. Nərmin ise Bakıda qaldı.",
+      "expected": "Emil Sumqayıtdan Lənkərana getdi. Nərmin isə Bakıda qaldı.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-046",
+      "before": "Əlbəttə, təklifinizi oxumuşam, lakin bəzi bendlerle razı deyilmə.",
+      "after": "Əlbəttə, təklifinizi oxumuşam, lakin bəzi bendlerle razı deyilmə.",
+      "expected": "Əlbəttə, təklifinizi oxumuşam, lakin bəzi bəndlərlə razı deyiləm.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-047",
+      "before": "Əgər sənədlər hazirdirsa bu gün göndərin deyillerse sabah tamamlayın.",
+      "after": "Əgər sənədlər hazirdirsa bu gün göndərin deyillerse sabah tamamlayın.",
+      "expected": "Əgər sənədlər hazırdırsa, bu gün göndərin. Deyillərsə, sabah tamamlayın.",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-048",
+      "before": "Seminarda uc mövzu müzakirə edildi birinci məlumat təhlükəsizliyi ikinci ehtiyat nüsxələr üçüncü istifadəçi icazələri.",
+      "after": "Seminarda uc mövzu müzakirə edildi birinci məlumat təhlükəsizliyi ikinci ehtiyat nüsxələr üçüncü istifadəçi icazələri.",
+      "expected": "Seminarda üç mövzu müzakirə edildi:\n\n1. Məlumat təhlükəsizliyi\n2. Ehtiyat nüsxələr\n3. İstifadəçi icazələri",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-049",
+      "before": "OAuth2 ilə autentifikasiya uğurludur, amma istifadəçinin bu resursa giriş icazəsi yoxdur.",
+      "after": "OAuth2 ilə autentifikasiya uğurludur, amma istifadəçinin bu resursa giriş icazəsi yoxdur.",
+      "expected": "OAuth2 ilə autentifikasiya uğurludur, amma istifadəçinin bu resursa giriş icazəsi yoxdur.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-050",
+      "before": "Müraciətin nömrəsi 2026-104-dür. Bu nömrəni olduğu kimi saxlayın.",
+      "after": "Müraciətin nömrəsi 2026-104-dür. Bu nömrəni olduğu kimi saxlayın.",
+      "expected": "Müraciətin nömrəsi 2026-104-dür. Bu nömrəni olduğu kimi saxlayın.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-051",
+      "before": "Faylı support@example.com ünvanına göndərdim.",
+      "after": "Faylı support@example.com ünvanına göndərdim.",
+      "expected": "Faylı support@example.com ünvanına göndərdim.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-052",
+      "before": "Sənəd https://example.org/docs?id=27&lang=az ünvanında yerləşir.",
+      "after": "Sənəd https://example.org/docs?id=27&lang=az ünvanında yerləşir.",
+      "expected": "Sənəd https://example.org/docs?id=27&lang=az ünvanında yerləşir.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-053",
+      "before": "Komanda `git diff --stat` əmrinin nəticəsini yoxladı.",
+      "after": "Komanda `git diff --stat` əmrinin nəticəsini yoxladı.",
+      "expected": "Komanda `git diff --stat` əmrinin nəticəsini yoxladı.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-054",
+      "before": "# Quraşdırma\n\nƏvvəlcə **Node.js** quraşdırın.\n\n- Layihəni açın.\n- Asılılıqları yükləyin.",
+      "after": "# Quraşdırma\n\nƏvvəlcə **Node.js** quraşdırın.\n\n- Layihəni açın.\n- Asılılıqları yükləyin.",
+      "expected": "# Quraşdırma\n\nƏvvəlcə **Node.js** quraşdırın.\n\n- Layihəni açın.\n- Asılılıqları yükləyin.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-055",
+      "before": "```ts\nconst message = \"sorgu hazirdir\";\nconsole.log(message);\n```",
+      "after": "```ts\nconst message = \"sorgu hazirdir\";\nconsole.log(message);\n```",
+      "expected": "```ts\nconst message = \"sorgu hazirdir\";\nconsole.log(message);\n```",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-056",
+      "before": "| Modul | Status |\n| --- | --- |\n| Backend | Hazır |\n| Frontend | Sınaqda |",
+      "after": "| Modul | Status |\n| --- | --- |\n| Backend | Hazır |\n| Frontend | Sınaqda |",
+      "expected": "| Modul | Status |\n| --- | --- |\n| backend | Hazır |\n| frontend | Sınaqda |",
+      "exact": false
+    },
+    {
+      "id": "az-review-001-057",
+      "before": "Nərgiz Gəncədə yaşayır, Cavid isə Qubada işləyir.",
+      "after": "Nərgiz Gəncədə yaşayır, Cavid isə Qubada işləyir.",
+      "expected": "Nərgiz Gəncədə yaşayır, Cavid isə Qubada işləyir.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-058",
+      "before": "Mən bilmirəm, sənədi kim göndərib. Bunu dəqiqləşdirəcəyəm.",
+      "after": "Mən bilmirəm, sənədi kim göndərib. Bunu dəqiqləşdirəcəyəm.",
+      "expected": "Mən bilmirəm, sənədi kim göndərib. Bunu dəqiqləşdirəcəyəm.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-059",
+      "before": "Təklifiniz maraqlıdır; qərar vermək üçün əlavə məlumat lazımdır.",
+      "after": "Təklifiniz maraqlıdır; qərar vermək üçün əlavə məlumat lazımdır.",
+      "expected": "Təklifiniz maraqlıdır; qərar vermək üçün əlavə məlumat lazımdır.",
+      "exact": true
+    },
+    {
+      "id": "az-review-001-060",
+      "before": "O ac idi, amma yeməyi gözləmək istədi. Mən isə pəncərəni açdım.",
+      "after": "O, ac idi, amma yeməyi gözləmək istədi. Mən isə pəncərəni açdım.",
+      "expected": "O, ac idi, amma yeməyi gözləmək istədi. Mən isə pəncərəni açdım.",
+      "exact": true
+    }
+  ]
+}

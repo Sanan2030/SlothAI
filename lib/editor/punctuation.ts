@@ -1,6 +1,7 @@
 /** Shared, deterministic punctuation decisions over already normalized Azerbaijani text. */
 import { productiveMorphology } from './productive-morphology';
 import { isFinitePredicate } from './segmentation';
+import { grammaticalCommas } from './grammatical-commas';
 
 export type SentenceMood = 'declarative' | 'interrogative' | 'exclamatory' | 'imperative' | 'unknown';
 export interface ClauseAnalysis {
@@ -77,7 +78,7 @@ function conditionalCommas(text: string): string {
     const conditional = analyses.some(item => item.pos === 'verb' && item.features.mood === 'conditional');
     const compound = /(?:sa|sə)$/iu.test(word) && productiveMorphology.analyzeWord(word.slice(0, -2))
       .some(item => item.pos === 'verb' && item.features.tense);
-    if (/^d[aə]$/iu.test(words[at + 1][0])) continue;
+    if (/^(?:d[aə]|olsun)$/iu.test(words[at + 1][0])) continue;
     if (conditional || compound || /^(?:varsa|yoxdursa|bitirsə|olarsa|ayrılmasa|deyilsə|vermirsə|yaşayırsınızsa)$/iu.test(word)) positions.push(end);
   }
   let output = '', cursor = 0;
@@ -87,7 +88,7 @@ function conditionalCommas(text: string): string {
 
 /** Commas only at grammatical boundaries, with existing commas left intact. */
 export function punctuateCommas(text: string): string {
-  return conditionalCommas(text)
+  return grammaticalCommas(conditionalCommas(text))
     .replace(/(?<!\p{L})(yox) +(?=biznes\s)/giu, '$1, ')
     .replace(/(?<!\p{L})(kim\s+[^.!?]+?silib) +(?=onu\s)/giu, '$1, ')
     .replace(/(?<!\p{L})(birinci\s+qrup\s+səhər) +(?=ikinci\s+qrup)/giu, '$1, ')

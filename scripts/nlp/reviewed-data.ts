@@ -1,7 +1,10 @@
 import { parseReviewCorpus } from '../../lib/editor/review-corpus';
 import { checksum, splitDocuments, type Split } from './data';
 const folded = (text: string) => text.normalize('NFC').toLocaleLowerCase('az-AZ').replace(/[əıçğöşü]/gu, letter => ({ ə: 'e', ı: 'i', ç: 'c', ğ: 'g', ö: 'o', ş: 's', ü: 'u' })[letter]!).replace(/\s+/gu, ' ').trim();
-/** Real input and explicitly saved target, never machine output relabeled as gold. */
+/** Explicitly approved target with caller-supplied provenance. Inputs can be
+ * real or synthetic; user approval does not turn synthetic text into real data.
+ * Machine output is never silently relabeled as approved gold.
+ */
 export function reviewedDataset(raw: string, provenance: string, reviewedBy: string, license: string, excludedTargets: readonly string[] = []) {
   if (!provenance.trim() || !reviewedBy.trim() || !license.trim()) throw new Error('Provide provenance, reviewedBy and license for your own review file.');
   const corpus = parseReviewCorpus(raw);

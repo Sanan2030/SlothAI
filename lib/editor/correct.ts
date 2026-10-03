@@ -1,4 +1,5 @@
 import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscourseClauses } from './context-decisions';
+import { punctuateSubjectPronouns } from './grammatical-commas';
 import { editHTMLStructure } from './html-structure';
 import { editStructuredText } from './structured-text';
 import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
@@ -166,7 +167,9 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
   text = protectMultiwordEntities(text, protect);
   text = resolveEntitiesInText(text);
-  text = preserveContextualHomographs(text, protect);
+  // Hunger adjective "ac" becomes opaque to prevent ac/aç overcorrection.
+  // Establish its subject comma while the grammatical evidence is visible.
+  text = preserveContextualHomographs(punctuateSubjectPronouns(text), protect);
   if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined));
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).

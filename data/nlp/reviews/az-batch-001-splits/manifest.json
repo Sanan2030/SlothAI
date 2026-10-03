@@ -1,0 +1,329 @@
+{
+  "version": 2,
+  "sourceSHA256": "a1e90df2a4ebcb5a6520e5a383474e6012eb39e7ba5b9ec813e9692f52114dc2",
+  "documents": [
+    {
+      "documentId": "az-review-001-001",
+      "cluster": "98eb7120f79b94e5b67db05db2d82f3621e78bcd77a1a1477a3ba8bfa89c5a66",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-002",
+      "cluster": "06245e564d06c1f41f7fd01b5a91b18e3eefadad086bd82e05f30c18eb8dd3f4",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-003",
+      "cluster": "08ef90ead0675a270e1b2b368053f4a23549279c5765092af81004c177d5de6d",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-004",
+      "cluster": "fb2e8c5a6e36d4eba5d58a40cf7d9848ca84b72862a3a36a85db5389f3afa31f",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-005",
+      "cluster": "6d08c6bda38c4db04b278beba4c5127f01b1c00cf8d23aac6fe26d228b697b64",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-006",
+      "cluster": "872af2d219bd568db4dad6c04d93dfb920ed52fb5515057897bac4bba1bb46bb",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-007",
+      "cluster": "f2bb8c1941a838410a995dbdacc923cfe3177270a1f64a83a8a64cf54be0e638",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-008",
+      "cluster": "36aab6adb46c6147a7e3019dee6f8ba15fb67c722aab0dc365fba539b21fea5e",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-009",
+      "cluster": "adc00e4f6cda50bdd4d492d6b42bfc9af74998ecd68b134e2647bbd67ee95108",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-010",
+      "cluster": "3b0ebead48994368199a021067e8f854d47a5ac19e3bcbf1e8d66af1a1fa597c",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-011",
+      "cluster": "c0e1236c31c297d973dbfa84025c79ec78967bd4af712c59cdf960b077d1aa7c",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-012",
+      "cluster": "2086d5a68f3970b90cedc11b5df8bde851bd75685ebd6a387be4cc13a9628c5f",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-013",
+      "cluster": "c8db810259740e246caa344e890767c942d62b4bd18f2895924f755b3d1168a3",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-014",
+      "cluster": "2c74bd746a5eed24d25fbe42957a711929c7bac81316e37ecf6fc689441698cb",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-015",
+      "cluster": "f21daa1e2db076e0ab551193d3d3a594e550e3be63d34ef38c5dc094fb385d87",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-016",
+      "cluster": "2591f147be00b09c7b9ea2da794ef510b77471be643a54047a78a17030373c47",
+      "split": "validation"
+    },
+    {
+      "documentId": "az-review-001-017",
+      "cluster": "5a2412a5a0025e772f9a1af84d65916fd325b8f492c6473c8764b89e1a3b76ad",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-018",
+      "cluster": "6fd03daf935c99a2e5045b0e2b8fa318edd47778ef8107c82b74a6f611999c0e",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-019",
+      "cluster": "e2ed53bb2ad2fd3768c1c3ed264b469a8fd41e4358b4f73cad531c11e45be86a",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-020",
+      "cluster": "61d4d1b8c37a135a261e70208808e088af72c6f7f01fe52c894f7575f1b7240e",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-021",
+      "cluster": "458c8ad340f512753f0091bd7c9337a81e77224115c6d340602d33ec85350c86",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-022",
+      "cluster": "f64725ded46437c2e10e1657d5fd4c8918ad392965d6e472dd20017fab007524",
+      "split": "validation"
+    },
+    {
+      "documentId": "az-review-001-023",
+      "cluster": "8d902ba5069cff7603a3271cc626bb35971a5f690212906658be08930d0649a3",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-024",
+      "cluster": "92cca105dd0c34c502e61918b3137a0f6998c9e54276edafdfd4005b70d2f728",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-025",
+      "cluster": "d20749a57435b07b04db51a7cbeca2c6d053a1d98ce126db4f128a24c41dd5e6",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-026",
+      "cluster": "39c78d089dc3a5707575628811b6c8f632333e42f98042ad9a1c972ced1a50c7",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-027",
+      "cluster": "2c331409c2687881c3892536ee73d7d2ffc0912bfcd3d075edd3ea1d38584542",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-028",
+      "cluster": "36ba400ca8d0c2a538eef51d2f88b92cbd83d7e92e0577c929b6a0e068c735f7",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-029",
+      "cluster": "d4fb12145a4ca12fd5cf40980a1c4799c71d5ec2c6da47c137f34ec2bff887fb",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-030",
+      "cluster": "685ed993e8137592affc6c0fe25b9d009aa19c0c20d1c1f6cefe452a73bc9fb4",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-031",
+      "cluster": "8f28267c9374dffa2f0f33484388451c56c872b36b350a8df1a9cf8727fda529",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-032",
+      "cluster": "f586fa6046164cc095ec113214b2eca6a92042d6115fca0a9728eae1876e4de3",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-033",
+      "cluster": "823b086981a8e6ec714010bdb6e69d927578a4c91e1228ec6b33fc495da56e81",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-034",
+      "cluster": "1ba0879a7e208c247f8065c39e52ef5e2f55954d0a48f4a059809554f0ea4bc3",
+      "split": "validation"
+    },
+    {
+      "documentId": "az-review-001-035",
+      "cluster": "0cba012e29d24f6ceb7698c9a74c242df1bbc88c33c920055f83d981f3ccd135",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-036",
+      "cluster": "7a4ae05e99b5f0375eec526843d3a70cd363f4d42c112e381eee029291fd2e5a",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-037",
+      "cluster": "c181b735cc4f59d5efc7ff6f6101e15c7cb3dfa43ef030cd0af605b3e8adad79",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-038",
+      "cluster": "3f182394c164cc8ae0768471740cc7a4111f4364b9e21525cb5bb8da0a600cda",
+      "split": "validation"
+    },
+    {
+      "documentId": "az-review-001-039",
+      "cluster": "598652c39edc416e8de741241050a831b76762aafff82fa04af1ce9f91617eb4",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-040",
+      "cluster": "e3f0f6e50be6ad1307a06ed9a3ff501556abe25d77d143cafc71054e0c2223c7",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-041",
+      "cluster": "c124da0a9a6d1abc662feb1cd0b92736ee3e2af697adc48140243f2ef6563d9c",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-042",
+      "cluster": "48b175986beeebba1ae8689e66e6531dd14fee18ca80cda5bd12dac04aa57712",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-043",
+      "cluster": "a0b9acebc837761e8b2dd404751b088eb3b95def343b1ecbad20569016c7e94e",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-044",
+      "cluster": "0b6c7f1aa0443a8efa9c536ceb2eb37ac116e9ba111a2bd9f65b968d3186a1da",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-045",
+      "cluster": "a83eeb1e5306563ac3d6ddf4db1bbaa838fe95fc6e06a61ef3239ad38e24ccbf",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-046",
+      "cluster": "6154e77ef0c5568cc1c6835a41eb84ee73bef6c0e044253fd397aff04b62c6d2",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-047",
+      "cluster": "0480e7c0f569a795726abd3af81a1da46fa4c5769cb8b7335ce1213596c061a1",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-048",
+      "cluster": "62f6a5c8df5add9c5dfd3601a4bb2094117beb620fffb8e93ce5b613ba2e8d15",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-049",
+      "cluster": "fffa4a46e185125df5a9d62555d78e89403917c870eb9598ef31428157f93fe8",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-050",
+      "cluster": "e4e99d210f3cee5d02058da97d45df5e26a82f7e67daf7c7533efd310440ad96",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-051",
+      "cluster": "e1753fc12b2b5032b6b89f305ea54633c452b9b27ef30040feed18ad06b5c735",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-052",
+      "cluster": "ca5b8f4225073c8fcc5974f5f14a573b38c0941a8860481380095a967701be7a",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-053",
+      "cluster": "8f7b194b17dcef2b2e48e001edf9869ea328137152cb30940744db876b9b6085",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-054",
+      "cluster": "7f13e45a86bdadffae0cc1158263f2751ddb08ccf1391d97c1f0a3031b6d2219",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-055",
+      "cluster": "5274acd81140674b3494ba6c3a332ceac8f7292c519e94ef7bcc96a2b86a2c93",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-056",
+      "cluster": "593bae11f058fc0006556c10dda36da3fd010d584480c53eef0346c5a4647453",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-057",
+      "cluster": "74ab7db9792ed974bdca16ca76e38b5f2a25acbe7f41db716759ea863cac87c9",
+      "split": "test"
+    },
+    {
+      "documentId": "az-review-001-058",
+      "cluster": "81cbb7a3c24ed53c1842dd08d6399572e2e93cce6f33258949f6139f297856c1",
+      "split": "validation"
+    },
+    {
+      "documentId": "az-review-001-059",
+      "cluster": "0db94158da5403c21e81a27471cfc69b01ccbc65baef76675fb78730e897bfe7",
+      "split": "train"
+    },
+    {
+      "documentId": "az-review-001-060",
+      "cluster": "09ae495a58978d5f56a4be8699a7ff252a550f02e24b5c7b8ff0e1f66d72c766",
+      "split": "train"
+    }
+  ],
+  "partitions": {
+    "train": {
+      "rows": 48,
+      "sha256": "565d4969263286669c2cf59583589f4e88b97777857e7aa3f2b0d1cf798c99c2"
+    },
+    "validation": {
+      "rows": 5,
+      "sha256": "cb79f1e560180336200a2193ff1c9aa5b8adc5f3bd50da8737a170d2fc7c2b59"
+    },
+    "test": {
+      "rows": 7,
+      "sha256": "5befd8bdfae44425eb2bf24a68036d3a4db6bfc1857b866dfe17227d5a3bca0d"
+    }
+  },
+  "review": {
+    "provenance": "assistant-authored-synthetic-user-approved-with-delegated-grammar-amendment",
+    "reviewedBy": "owner-approval-assistant-grammar-amendment-2026-10-03",
+    "license": "user-authorized-project-use",
+    "accepted": 60,
+    "rejected": [],
+    "certification": "User-attested targets, not independently certified linguistic gold",
+    "excludedTargets": 0
+  }
+}

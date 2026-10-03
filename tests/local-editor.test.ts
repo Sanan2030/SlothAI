@@ -82,7 +82,7 @@ test('phrase rules, clause boundaries and punctuation work together', () => {
   const examples = [
     ['biz gedirem sen gelirem', 'Biz gedirik. Sən gəlirsən.'],
     ['zehmet olmasa senedleri gonderin tesekur edirem', 'Zəhmət olmasa, sənədləri göndərin. Təşəkkür edirəm.'],
-    ['men dusunurem ki bu yaxsidir', 'Mən düşünürəm ki, bu yaxşıdır.'],
+    ['men dusunurem ki bu yaxsidir', 'Mən düşünürəm ki, bu, yaxşıdır.'],
     ['salam,,, necesen???', 'Salam, necəsən?'],
     ['niye proqram islemir', 'Niyə proqram işləmir?'],
     ['hers ey', 'Hers ey.'],
