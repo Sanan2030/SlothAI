@@ -77,7 +77,11 @@ jobs:
           npm run --ignore-scripts neural:attention:independent:check
           npm run --ignore-scripts nlp:evaluate -- --enforce
           npm run --ignore-scripts nlp:data -- data/nlp/wikipedia-documents.jsonl /tmp/slothai-release-splits
+          npm run --ignore-scripts nlp:reviewed:data -- --source=/tmp/slothai-release-splits --reviews=data/nlp/reviews/az-batch-001-splits --output=/tmp/slothai-reviewed-release-splits
+          cmp /tmp/slothai-reviewed-release-splits/manifest.json data/neural/reviewed-data-manifest.json
+          npm run --ignore-scripts nlp:reviewed:verify -- --data=/tmp/slothai-reviewed-release-splits --model=lib/editor/neural/bounded-model.json
           npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --threshold-floor=0.9999 --output=/tmp/slothai-release-quality.json --enforce
+          npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-reviewed-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --output=/tmp/slothai-reviewed-release-quality.json --enforce
           npm run --ignore-scripts quality:priorities
           npm run --ignore-scripts neural:check
           npm run --ignore-scripts neural:diversity:check

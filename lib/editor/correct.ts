@@ -28,6 +28,7 @@ import { segmentParagraphs } from './paragraph-segmentation';
 import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText, resolveEntityWord } from './entities/resolver';
 
 import { MAX_TEXT_LENGTH } from './limits';
+import { protectInitialNames } from './initial-names';
 export { MAX_TEXT_LENGTH } from './limits';
 export interface LocalCorrection { text: string; corrections: number }
 export interface CorrectionEvent {
@@ -154,6 +155,9 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     }
     return protect(value);
   });
+  // Initials belong to the following proper name. A period in M.Füzuli is
+  // not a sentence boundary; preserve the author's spacing and spelling.
+  text = protectInitialNames(text, protect);
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
   text = prepareTechnicalPhrases(text);
   // Numeric/date/version values take Azerbaijani suffixes with a hyphen.

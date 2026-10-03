@@ -129,6 +129,11 @@ must be configured before calling this a mandatory merge gate.
 
 ## Local language engine (September 2026)
 
+The October reviewed training release adds a retrained compact attention
+fallback and strict approved-data provenance checks. See
+[reviewed neural training](docs/reviewed-neural-training.md) for frozen splits,
+measured gains, remaining errors and complete reproduction commands.
+
 The editor combines reviewed dictionary entries, productive morphology, true
 lemma/POS analyses for reviewed stems, a conservative ordered-context perceptron,
 and a supervised sentence-gap classifier. Training is offline; inference stays

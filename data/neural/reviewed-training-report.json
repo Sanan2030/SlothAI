@@ -1,0 +1,147 @@
+{
+  "data": "/workspace/scratch/5340223e7dd2/training-run/merged-splits",
+  "corpusSHA256": "bbda5f9510050f5aac2bca541a18cb0c2cf916602de207bf0cfa43c58a4438e4",
+  "splitUnit": "documentId (upstream clustering manifest required for near-duplicate audit)",
+  "alignedWordRows": 124229,
+  "sourceRows": 9167,
+  "reports": [
+    {
+      "variant": "bounded-edits",
+      "seed": 719,
+      "trainingExamples": 99872,
+      "allTrainingExamples": 100557,
+      "trainingGroups": 20000,
+      "attemptedEpochs": 32,
+      "retainedEpochs": 32,
+      "threshold": 0.995,
+      "margin": 0.1,
+      "calibratedValidationCorrections": 1305,
+      "validationRanking": {
+        "groups": 11644,
+        "changedWinners": 2213,
+        "correctWinners": 10388,
+        "incorrectConfident": 7
+      },
+      "partitions": {
+        "train": {
+          "rows": 106392,
+          "exact": 97276,
+          "covered": 102139,
+          "candidateCoverage": 0.9600251898638995,
+          "needsCorrection": 24274,
+          "candidateRecallOnErrors": 0.8247919584740875,
+          "proposed": 15160,
+          "correct": 15158,
+          "incorrect": 2,
+          "precision": 0.999868073878628,
+          "recall": 0.6244541484716157,
+          "identity": 82118,
+          "falseChanges": 0,
+          "candidateBCE": 0.03405696930260681
+        },
+        "validation": {
+          "rows": 11644,
+          "exact": 10175,
+          "covered": 10716,
+          "candidateCoverage": 0.9203023016145654,
+          "needsCorrection": 2774,
+          "candidateRecallOnErrors": 0.665465032444124,
+          "proposed": 1305,
+          "correct": 1305,
+          "incorrect": 0,
+          "precision": 1,
+          "recall": 0.4704397981254506,
+          "identity": 8870,
+          "falseChanges": 0,
+          "candidateBCE": 0.29562805072878534
+        },
+        "test": {
+          "rows": 6193,
+          "exact": 5421,
+          "covered": 5729,
+          "candidateCoverage": 0.9250766994994348,
+          "needsCorrection": 1316,
+          "candidateRecallOnErrors": 0.6474164133738601,
+          "proposed": 568,
+          "correct": 555,
+          "incorrect": 13,
+          "precision": 0.977112676056338,
+          "recall": 0.4217325227963526,
+          "identity": 4877,
+          "falseChanges": 11,
+          "candidateBCE": 0.3683615834226182
+        }
+      },
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    },
+    {
+      "variant": "bounded-edits",
+      "seed": 919,
+      "trainingExamples": 99872,
+      "allTrainingExamples": 100557,
+      "trainingGroups": 20000,
+      "attemptedEpochs": 32,
+      "retainedEpochs": 32,
+      "threshold": 0.999,
+      "margin": 0.1,
+      "calibratedValidationCorrections": 997,
+      "validationRanking": {
+        "groups": 11644,
+        "changedWinners": 2216,
+        "correctWinners": 10383,
+        "incorrectConfident": 10
+      },
+      "partitions": {
+        "train": {
+          "rows": 106392,
+          "exact": 93004,
+          "covered": 102139,
+          "candidateCoverage": 0.9600251898638995,
+          "needsCorrection": 24274,
+          "candidateRecallOnErrors": 0.8247919584740875,
+          "proposed": 10886,
+          "correct": 10886,
+          "incorrect": 0,
+          "precision": 1,
+          "recall": 0.44846337645217105,
+          "identity": 82118,
+          "falseChanges": 0,
+          "candidateBCE": 0.03359042600033323
+        },
+        "validation": {
+          "rows": 11644,
+          "exact": 9867,
+          "covered": 10716,
+          "candidateCoverage": 0.9203023016145654,
+          "needsCorrection": 2774,
+          "candidateRecallOnErrors": 0.665465032444124,
+          "proposed": 997,
+          "correct": 997,
+          "incorrect": 0,
+          "precision": 1,
+          "recall": 0.359408795962509,
+          "identity": 8870,
+          "falseChanges": 0,
+          "candidateBCE": 0.29604476389461015
+        },
+        "test": {
+          "rows": 6193,
+          "exact": 5303,
+          "covered": 5729,
+          "candidateCoverage": 0.9250766994994348,
+          "needsCorrection": 1316,
+          "candidateRecallOnErrors": 0.6474164133738601,
+          "proposed": 435,
+          "correct": 430,
+          "incorrect": 5,
+          "precision": 0.9885057471264368,
+          "recall": 0.32674772036474165,
+          "identity": 4877,
+          "falseChanges": 4,
+          "candidateBCE": 0.37097633740938
+        }
+      },
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    }
+  ]
+}

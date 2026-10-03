@@ -52,6 +52,8 @@
     "nlp:select": "node --import tsx scripts/select-bounded-model.ts",
     "nlp:compact": "node --import tsx scripts/compact-bounded-model.ts",
     "nlp:reviewed": "node --import tsx scripts/import-reviewed-training.ts",
+    "nlp:reviewed:data": "node --import tsx scripts/build-reviewed-neural-data.ts",
+    "nlp:reviewed:verify": "node --import tsx scripts/verify-reviewed-neural-artifact.ts",
     "quality:priorities": "node --import tsx scripts/check-priority-quality.ts --enforce"
   },
   "engines": {

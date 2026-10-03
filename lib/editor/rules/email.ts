@@ -1,4 +1,5 @@
 /** Parse mail structure before passing body prose to the local editor. */
+import { withProtectedInitialNames } from '../initial-names';
 export interface EmailDocument {
   subject?: string;
   salutation?: { type: 'hello' | 'honorific'; addressee?: string };
@@ -20,6 +21,10 @@ export function prepareEmailBody(body: string): string {
 
 /** Keep a dense draft readable without replacing paragraphs the author supplied. */
 export function paragraphEmailBody(body: string): string {
+  return withProtectedInitialNames(body, paragraphUnprotectedEmailBody);
+}
+
+function paragraphUnprotectedEmailBody(body: string): string {
   if (/\n/u.test(body) || body.length < 360) return body;
   const sentences = body.split(/(?<=[.!?])\s+(?=\p{Lu})/u);
   if (sentences.length < 4) return body;

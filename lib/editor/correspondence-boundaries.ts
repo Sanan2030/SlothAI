@@ -3,7 +3,7 @@ import { places } from './entities/geo';
 /** Clause-aware boundaries shared by ordinary text and email body processing. */
 import { legacyModelMorphology as productiveMorphology } from './productive-morphology';
 import { detectQuestion } from './punctuation';
-import { isFinitePredicate } from './segmentation';
+import { isFinitePredicate, continuesConverb } from './segmentation';
 
 const names = new Set([...givenNames, ...places].map(word => word.toLocaleLowerCase('az-AZ')));
 const connectors = new Set(['və', 'ilə', 'ki', 'çünki', 'amma', 'lakin', 'halbuki', 'isə', 'da', 'də', 'üçün', 'kimi', 'olaraq']);
@@ -35,6 +35,7 @@ export function segmentCorrespondence(text: string): string {
     if (/[.!?\n]/u.test(left)) clauseStart = result.length;
     if (!/^ +$/u.test(gap) || !predicate(left)) continue;
     const next = right.toLocaleLowerCase('az-AZ');
+    if (continuesConverb(left, next, tokens[at + 4]?.[0] ?? '')) continue;
     if (/^(?:et|edin|edirik|edirəm|olacaq|deyil|olanda)$/iu.test(next)) continue;
     if (connectors.has(next) || /^(?:olanda|olarkən)$/iu.test(next)) continue;
     if (/(?:mış|miş|muş|müş)$/iu.test(left) && !openers.has(next)) continue;

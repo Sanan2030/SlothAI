@@ -1,6 +1,6 @@
 import type { Token } from './core';
 import { fold } from './core';
-import { isFinitePredicate } from '../segmentation';
+import { isFinitePredicate, continuesConverb } from '../segmentation';
 import { legacyModelMorphology as productiveMorphology } from '../productive-morphology';
 
 const joiners = new Set(['ki', 'cunki', 'amma', 'ancaq', 'lakin', 've', 'ya', 'yoxsa', 'eger', 'ucun', 'ile', 'deye', 'ise', 'olaraq', 'kimi']);
@@ -28,6 +28,7 @@ export function createBoundaryContext(tokens: readonly Token[]): (at: number) =>
     const left = tokens[at], right = tokens[at + 1];
     if (!right || left.sentence !== right.sentence || !finite[at]
       || joiners.has(folded[at + 1]) || precedingDependent[at] || !followingPredicate[at]) return false;
+    if (continuesConverb(left.word, right.word, tokens[at + 2]?.word ?? '')) return false;
     const surface = productiveMorphology.findByFoldedForm(right.word) ?? right.word;
     const analyses = productiveMorphology.analyzeWord(surface);
     // A declined object after a converb does not establish a new subject:

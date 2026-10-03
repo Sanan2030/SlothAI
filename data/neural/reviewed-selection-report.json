@@ -1,0 +1,73 @@
+{
+  "policy": "Validation-only selection; zero token false-positive edits/identity changes, at least 30 true-positive edits, fixed conservative score floor. This is not a real-world correctness guarantee.",
+  "validationSHA256": "b8776128de86ce940c73d99f7d00487c89d0ff034255b201194c92c02224828c",
+  "thresholdFloor": 0.99995,
+  "selected": "bounded-edits-719.json",
+  "results": [
+    {
+      "model": "bounded-edits-719.json",
+      "summary": {
+        "rows": 845,
+        "exact": 190,
+        "accuracy": 0.22485207100591717,
+        "cer": 0.043521318737487755,
+        "wer": 0.21543143867730524,
+        "precision": 1,
+        "recall": 0.08650156958493198,
+        "f05": 0.3213267685928997,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.07492077863286555,
+          "f05": 0.28822709857192613,
+          "truePositive": 331,
+          "falsePositive": 0,
+          "missed": 4087
+        },
+        "truePositiveEdits": 248,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2619,
+        "identityRows": 189,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 4087,
+        "referenceChars": 93908,
+        "wordErrors": 2619,
+        "referenceWords": 12157
+      },
+      "eligible": true
+    },
+    {
+      "model": "bounded-edits-919.json",
+      "summary": {
+        "rows": 845,
+        "exact": 190,
+        "accuracy": 0.22485207100591717,
+        "cer": 0.04376623929803638,
+        "wer": 0.21592498149214445,
+        "precision": 1,
+        "recall": 0.08440878967561911,
+        "f05": 0.3155149934810952,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.06971480307831598,
+          "f05": 0.27256637168141595,
+          "truePositive": 308,
+          "falsePositive": 0,
+          "missed": 4110
+        },
+        "truePositiveEdits": 242,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2625,
+        "identityRows": 189,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 4110,
+        "referenceChars": 93908,
+        "wordErrors": 2625,
+        "referenceWords": 12157
+      },
+      "eligible": true
+    }
+  ],
+  "nextGate": "Complete editor validation, held-out test, identity/protected-span checks and measured latency are mandatory before importing a selected bundle into production."
+}

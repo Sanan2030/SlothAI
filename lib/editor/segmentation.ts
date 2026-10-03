@@ -52,6 +52,13 @@ export function isClausePredicate(word: string): boolean {
     || syntaxMorphology.analyzeWord(word).some(row => row.features.derivation?.some(value => value.startsWith('copula-')));
 }
 
+/** A degree phrase cannot establish a new subject after an ambiguous -ıb converb. */
+export function continuesConverb(left: string, right: string, following: string): boolean {
+  if (!/(?:ıb|ib|ub|üb)$/iu.test(left)
+    || !productiveMorphology.analyzeWord(left).some(row => row.pos === 'verb')) return false;
+  return /^(?:bir (?:az|qədər)|daha (?:az|çox))$/iu.test(`${right} ${following}`);
+}
+
 export function segmentIndependentClauses(text: string): string {
   // A boundary requires a finite predicate followed by a subject or temporal
   // opener and evidence of a second predicate. Existing punctuation wins.
@@ -66,6 +73,7 @@ export function segmentIndependentClauses(text: string): string {
       && (/(?:lar|lər)$/iu.test(next)
         || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'));
     const wordAfterNext = tokens[index + 4]?.[0]?.toLocaleLowerCase('az-AZ') ?? '';
+    if (continuesConverb(current, next, wordAfterNext)) { output += current; continue; }
     if (/^(?:tamamlayıb|hazırlayıb)$/iu.test(current) && next === 'yenidən') { output += current; continue; }
     const freshObjectClause = (objectPronouns.has(next)
       || productiveMorphology.analyzeWord(next).some(item => item.pos === 'noun'

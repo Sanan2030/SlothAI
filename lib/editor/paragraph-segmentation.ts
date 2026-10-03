@@ -1,4 +1,5 @@
 import { isDiscourseTransition } from './punctuation';
+import { withProtectedInitialNames } from './initial-names';
 
 const stopwords = new Set('mən sən o biz siz onlar bu həmin bir və ya ilə üçün da də isə ki də buna görə olan olaraq daha sonra çox necə var idi oldu belə bütün hər həmin kimi'.split(' '));
 const temporal = /^(?:səhər|günorta(?:dan sonra)?|axşam|gecə|ertəsi gün|sabah|bir neçə saat sonra|daha sonra)(?!\p{L})/iu;
@@ -23,6 +24,10 @@ function differentTopics(a: string, b: string): boolean {
 
 /** Conservative local score; existing line breaks and list structure take priority. */
 export function segmentParagraphs(text: string): string {
+  return withProtectedInitialNames(text, segmentUnprotectedParagraphs);
+}
+
+function segmentUnprotectedParagraphs(text: string): string {
   return text.split(/(\n+)/u).map(part => {
     if (!part || part.includes('\n') || /^\s*(?:[-*]|\d+[.)]|#|```|<)/u.test(part)) return part;
     const sentences = part.match(/(?:[^.!?]|\d\.\d|\uE000+\d+\uE001)+[.!?]+(?:[”"»)]|$)?/gu);
