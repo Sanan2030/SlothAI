@@ -54,7 +54,9 @@
     "nlp:reviewed": "node --import tsx scripts/import-reviewed-training.ts",
     "nlp:reviewed:data": "node --import tsx scripts/build-reviewed-neural-data.ts",
     "nlp:reviewed:verify": "node --import tsx scripts/verify-reviewed-neural-artifact.ts",
-    "quality:priorities": "node --import tsx scripts/check-priority-quality.ts --enforce"
+    "quality:priorities": "node --import tsx scripts/check-priority-quality.ts --enforce",
+    "neural:boundaries:train": "node --import tsx scripts/train-sentence-boundaries.ts",
+    "neural:boundaries:check": "node --import tsx scripts/evaluate-sentence-boundaries.ts --enforce"
   },
   "engines": {
     "node": ">=20.9.0"

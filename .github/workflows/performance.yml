@@ -82,6 +82,12 @@ jobs:
           npm run --ignore-scripts nlp:reviewed:verify -- --data=/tmp/slothai-reviewed-release-splits --model=lib/editor/neural/bounded-model.json
           npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --threshold-floor=0.9999 --output=/tmp/slothai-release-quality.json --enforce
           npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-reviewed-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --output=/tmp/slothai-reviewed-release-quality.json --enforce
+          npm run --ignore-scripts neural:boundaries:train -- --source=/tmp/slothai-release-splits --output=/tmp/slothai-boundary-release
+          cmp /tmp/slothai-boundary-release/selected.json lib/editor/neural/sentence-boundary-model.json
+          cmp /tmp/slothai-boundary-release/report.json data/neural/sentence-boundary-training-report.json
+          npm run --ignore-scripts neural:boundaries:check -- --source=/tmp/slothai-release-splits --output=/tmp/slothai-boundary-validation.json --split=validation
+          npm run --ignore-scripts neural:boundaries:check -- --source=/tmp/slothai-release-splits --output=/tmp/slothai-boundary-test.json --split=test
+          npm run --ignore-scripts neural:boundaries:check -- --source=/tmp/slothai-release-splits --output=/tmp/slothai-boundary-fresh.json --input=data/nlp/fresh-wikipedia-documents.jsonl
           npm run --ignore-scripts quality:priorities
           npm run --ignore-scripts neural:check
           npm run --ignore-scripts neural:diversity:check

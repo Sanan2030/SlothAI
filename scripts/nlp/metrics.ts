@@ -85,3 +85,18 @@ export function qualityReport(rows: readonly QualityRow[]) {
     failures: rows.filter(row => row.actual.normalize('NFC') !== row.target.normalize('NFC')),
     convention: 'NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Character edit precision/recall/F0.5 also cover whitespace and punctuation; token metrics retain their earlier definition. Null means undefined denominator, not perfect accuracy.' };
 }
+
+/** A new correct edit cannot conceal a different new wrong edit in the same row. */
+export function newFalseEditRows(before: readonly QualityRow[], after: readonly QualityRow[]): string[] {
+  if (before.length !== after.length) throw new Error('Regression comparison requires identical rows.');
+  const result: string[] = [];
+  for (let at = 0; at < after.length; at++) {
+    const old = before[at], row = after[at];
+    if (old.id !== row.id || old.input !== row.input || old.target !== row.target) throw new Error('Regression rows are not aligned.');
+    const source = words(row.input), gold = new Set(edits(source, words(row.target)).map(edit => JSON.stringify(edit)));
+    const oldFalse = new Set(edits(source, words(old.actual)).map(edit => JSON.stringify(edit)).filter(edit => !gold.has(edit)));
+    const newlyWrong = edits(source, words(row.actual)).map(edit => JSON.stringify(edit)).some(edit => !gold.has(edit) && !oldFalse.has(edit));
+    if (newlyWrong) result.push(row.id);
+  }
+  return result;
+}

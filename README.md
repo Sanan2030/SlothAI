@@ -134,6 +134,11 @@ fallback and strict approved-data provenance checks. See
 [reviewed neural training](docs/reviewed-neural-training.md) for frozen splits,
 measured gains, remaining errors and complete reproduction commands.
 
+The additional compact neural sentence-boundary head restores missing gaps
+without changing spelling or deleting user punctuation. See
+[sentence-boundary training](docs/neural-sentence-boundaries.md) for the isolated
+ablation, checkpoint selection, regression gates and remaining limitations.
+
 The editor combines reviewed dictionary entries, productive morphology, true
 lemma/POS analyses for reviewed stems, a conservative ordered-context perceptron,
 and a supervised sentence-gap classifier. Training is offline; inference stays

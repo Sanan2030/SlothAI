@@ -1,0 +1,59 @@
+{
+  "partitions": {
+    "train": {
+      "rows": 1800,
+      "positive": 1035,
+      "documents": 230,
+      "sha256": "011959d9723ca061c86849d088571427119be0f06b8597f22f061bb9eb13aab5"
+    },
+    "validation": {
+      "rows": 205,
+      "positive": 107,
+      "documents": 28,
+      "sha256": "657bec00afc6b6fe685e47bac76b37af45d57d8759c7e2a926abb12beb73d15b"
+    },
+    "test": {
+      "rows": 149,
+      "positive": 81,
+      "documents": 18,
+      "sha256": "b5d1645e4cc71f2d10bb5a62ae68303c2908201154a90b6cdc79e218791af0ef"
+    }
+  },
+  "skippedStructuredDocuments": [
+    "wiki-az-9319",
+    "az-review-001-053",
+    "az-review-001-056",
+    "az-review-001-054",
+    "az-review-001-055"
+  ],
+  "reports": [
+    {
+      "seed": 1201,
+      "attemptedEpochs": 64,
+      "retainedEpochs": 8,
+      "validationBCE": 0.6225763690350622,
+      "threshold": 0.97,
+      "validationAccepted": 12,
+      "parameters": 2017,
+      "eligible": true
+    },
+    {
+      "seed": 2201,
+      "attemptedEpochs": 64,
+      "retainedEpochs": 8,
+      "validationBCE": 0.627119503272329,
+      "threshold": 0.97,
+      "validationAccepted": 18,
+      "parameters": 2017,
+      "eligible": true
+    }
+  ],
+  "selectedSeed": 2201,
+  "heldOut": {
+    "rows": 149,
+    "accepted": 9,
+    "correct": 9,
+    "incorrect": 0
+  },
+  "nextGate": "Complete editor identity, boundary/edit regressions, formatting/protected spans and latency must pass before production integration."
+}

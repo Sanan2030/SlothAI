@@ -29,6 +29,8 @@ import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText, res
 
 import { MAX_TEXT_LENGTH } from './limits';
 import { protectInitialNames } from './initial-names';
+import { insertNeuralBoundaries } from './neural/boundary-runtime';
+import type { NeuralBoundaryArtifact } from './neural/boundary-features';
 export { MAX_TEXT_LENGTH } from './limits';
 export interface LocalCorrection { text: string; corrections: number }
 export interface CorrectionEvent {
@@ -38,6 +40,10 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Isolate the compact gap network in offline comparisons. */
+  useNeuralBoundary?: boolean;
+  /** Evaluation-only candidate checkpoint; application callers use the bundled model. */
+  boundaryModel?: NeuralBoundaryArtifact;
   /** Offline evaluation seam. Application callers retain established heads. */
   neuralFallback?: NeuralSpellingFallback;
   /** Isolate the source-trained fallback without disabling existing heads. */
@@ -55,7 +61,7 @@ function capitalize(text: string): string {
     (_, prefix: string, word: string) => prefix + word[0].toLocaleUpperCase(canonicalProtectedTerm(word) ? 'en-US' : 'az-AZ') + word.slice(1));
 }
 
-function punctuate(line: string, useLocalModel = true): string {
+function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntime = {}): string {
   if (!line.trim()) return '';
   // Documentary headings and standalone subtitles are structure, not prose.
   if (/^===.+===$/u.test(line.trim()) || /^[A-ZƏÇĞIİÖŞÜ\s-]{3,}$/u.test(line.trim()) || (/^\(.+\)$/u.test(line.trim()) && line.trim().length <= 160)) return line.trim();
@@ -82,6 +88,7 @@ function punctuate(line: string, useLocalModel = true): string {
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = insertLearnedBoundaries(result);
   if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
+  if (useLocalModel && runtime.useNeuralBoundary !== false) result = insertNeuralBoundaries(result, runtime.boundaryModel);
   result = punctuateCommas(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
@@ -261,13 +268,13 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     // list item, including when each item was entered on a separate line.
     const normalizedPrefix = list?.[1].replace(/^(\s*\d+)[.)]\s+$/, '$1. ');
     if (list) {
-      let item = punctuate(list[2], runtime.useLocalModel !== false);
+      let item = punctuate(list[2], runtime.useLocalModel !== false, runtime);
       // All-caps technical list items (for example "API") are headings only
       // outside lists; inside a list they still need terminal punctuation.
       if (!/[.!?:;…]["”»)]?$/u.test(item)) item += '.';
       return normalizedPrefix! + item;
     }
-    return punctuate(line, runtime.useLocalModel !== false);
+    return punctuate(line, runtime.useLocalModel !== false, runtime);
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!preserveFormatting) {
     text = businessStageLists(text);
