@@ -3,7 +3,7 @@ import { tokenize, fold, type Token } from '../local-ai/core';
 import { artifactMorphology } from '../productive-morphology';
 import { isClausePredicate, continuesConverb } from '../segmentation';
 import { canonicalProtectedTerm } from '../protected-terminology';
-import { isCanonicalEntity } from '../entities/resolver';
+import { isArtifactEntity } from '../entities/resolver';
 import { characterVector } from './attention';
 import type { Network } from './network';
 
@@ -33,7 +33,7 @@ function wordFeatures(word: string): WordFeatures {
   const hasPOS = (pos: string) => Number(analyses.some(row => row.pos === pos));
   const converb = /(?:ıb|ib|ub|üb)$/iu.test(surface)
     || analyses.some(row => row.features.mood === 'converb');
-  const finite = !numerals.has(surface) && !isCanonicalEntity(surface)
+  const finite = !numerals.has(surface) && !isArtifactEntity(surface)
     && !canonicalProtectedTerm(surface) && isClausePredicate(surface);
   const values = [...characterVector(surface), hasPOS('noun'), hasPOS('verb'), hasPOS('adjective'),
     Number(pronouns.has(surface)), Number(analyses.some(row => row.features.case === 'genitive')),

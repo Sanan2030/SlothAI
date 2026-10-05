@@ -15,12 +15,16 @@ export const namedEntities: readonly NamedEntity[] = [
 ];
 /** Single source of truth for type-aware lookup and suffix normalization. */
 const typedForms = new Map<string, { entity: NamedEntity; surface: string }>();
+// The v1 boundary artifact was trained before copular entity forms were added.
+// Keep its recognition features stable across runtime entity improvements.
+const artifactTypedForms = new Map<string, string>();
 const predicateEntityTypes = new Set(['person', 'country', 'city', 'district', 'region', 'autonomous_republic', 'river', 'sea', 'lake', 'mountain', 'island', 'street', 'square']);
 for (const entity of namedEntities) {
   if (entity.canonical.includes(' ') || entity.inflectionPolicy === 'none' && entity.type !== 'religious_text') continue;
   for (const name of [entity.canonical, ...entity.aliases]) {
     for (const ending of entity.inflectionPolicy === 'none' ? [''] : caseSuffixes(entity.canonical)) {
       const key = fold(name + ending);
+      if (!artifactTypedForms.has(key)) artifactTypedForms.set(key, entity.canonical + ending);
       if (!typedForms.has(key)) typedForms.set(key, { entity, surface: entity.canonical + ending });
       if (predicateEntityTypes.has(entity.type)) {
         const surface = entity.canonical + ending, copula = copulaSuffix(surface);
@@ -33,6 +37,7 @@ for (const entity of namedEntities) {
 const geographic = new Map(places.map(name => [fold(name), name]));
 const persons = new Map([...givenNames, ...surnames].map(name => [fold(name), name]));
 const exact = new Set([...places, ...givenNames, ...surnames, ...multiwordPlaces, ...organizations].map(azLower));
+const artifactExact = new Set([...exact, ...[...artifactTypedForms.values()].map(azLower)]);
 for (const item of typedForms.values()) exact.add(azLower(item.surface));
 const suffixes = ['ndan', 'ndən', 'nın', 'nin', 'nun', 'nün', 'dan', 'dən', 'nda', 'ndə', 'den', 'ya', 'yə', 'ye', 'da', 'de', 'də', 'ın', 'in', 'un', 'ün', 'a', 'e', 'ə', 'ı', 'i', 'u', 'ü'];
 const typoForms = new Map<string, string>();
@@ -108,6 +113,7 @@ export function resolveEntityTypo(word: string): string | undefined {
   return sameEnding.length === 1 ? typoForms.get(sameEnding[0]) : undefined;
 }
 export function isCanonicalEntity(word: string): boolean { return exact.has(azLower(word)); }
+export function isArtifactEntity(word: string): boolean { return artifactExact.has(azLower(word)); }
 const wordCache = new Map<string, string | undefined>();
 export function resolveEntityWord(word: string, personContext = false, allowTypo = true): string | undefined {
   const cacheKey = `${word}:${personContext ? 1 : 0}:${allowTypo ? 1 : 0}`;
