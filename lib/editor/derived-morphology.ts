@@ -4,7 +4,7 @@ import { foldLetters } from './dictionary';
 /** Runtime-only extension. Frozen neural feature extractors keep the original
  * engine, so adding a paradigm cannot silently change deployed model inputs. */
 const reviewedAdjectives = new Set('ciddi rəqəmsal təşkilati strateji ümumi güclü vacib'.split(' '));
-const reviewedNouns = 'təşkilat mövzu heyət rüb infrastruktur konfiqurasiya kommunikasiya motivasiya meyar komissiya platforma parametr dokumentasiya bölüşdürmə arxivləşdirmə səlahiyyət aidiyyət vəziyyət başlıq məmnuniyyət əməliyyat inteqrasiya paytaxt qiymət keyfiyyət abidə as'.split(' ');
+const reviewedNouns = 'təşkilat mövzu heyət rüb infrastruktur konfiqurasiya kommunikasiya motivasiya meyar komissiya platforma parametr dokumentasiya bölüşdürmə arxivləşdirmə səlahiyyət aidiyyət vəziyyət başlıq məmnuniyyət əməliyyat inteqrasiya paytaxt qiymət keyfiyyət abidə as bağlantı'.split(' ');
 const lower = (word: string) => word.normalize('NFC').toLocaleLowerCase('az-AZ');
 const vowel = (word: string) => word.match(/[aəeıioöuü]/gu)?.at(-1) ?? 'a';
 const harmonyA = (word: string) => /[əeiöü]/u.test(vowel(word)) ? 'ə' : 'a';

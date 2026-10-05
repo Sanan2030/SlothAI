@@ -1,4 +1,5 @@
 import { guardInsertedBoundaries } from './syntax-boundary-guard';
+import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
 import { observedSpelling, repairObservedSpacing } from './observed-channel';
 import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscourseClauses } from './context-decisions';
 import { punctuateSubjectPronouns } from './grammatical-commas';
@@ -95,8 +96,8 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
   if (useLocalModel) result = insertLearnedBoundaries(result);
   if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
   if (useLocalModel && runtime.useNeuralBoundary !== false) result = insertNeuralBoundaries(result, runtime.boundaryModel);
-  result = guardInsertedBoundaries(boundarySource, result);
-  result = punctuateCommas(result);
+  result = guardInsertedBoundaries(boundarySource, segmentTechnicalNounClauses(result));
+  result = punctuateConversation(punctuateCausalTransition(punctuateCommas(result)));
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
@@ -262,6 +263,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
     return replacement;
   });
+  text = resolveRemainingPredicate(text);
   if (runtime.useLocalModel !== false) text = neuralSpelling(text, runtime.useAttention !== false);
   text = normalizeClauseParticles(text);
   text = prepareReviewedContext(repairPhrases(text));

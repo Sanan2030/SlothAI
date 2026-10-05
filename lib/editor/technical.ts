@@ -5,6 +5,7 @@ import { canonicalProtectedTerm } from './protected-terminology';
 const foreign = new Set(`agile scrum sprint backlog demo transactional responsive
 dynamic hashing unit zero downtime deployment retry roll-back framework startup
 database backend frontend deploy commit open data veri beta server optimum cache branch production`.split(/\s+/));
+export function isForeignTechnicalStem(word: string): boolean { return foreign.has(word.toLocaleLowerCase('en-US')); }
 
 const technicalCaseSuffixes = [
   ['den', '-dən'], ['dan', '-dan'], ['de', '-də'], ['da', '-da'], ['e', '-ə'], ['a', '-a'],

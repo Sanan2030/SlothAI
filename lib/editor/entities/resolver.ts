@@ -4,7 +4,7 @@ import { organizations, organizationEntities } from './organizations';
 import { geographicEntities } from './geo';
 import { culturalEntities } from './cultural';
 import { namedEntity, type NamedEntity } from './types';
-import { caseSuffixes } from './morphology';
+import { caseSuffixes, copulaSuffix } from './morphology';
 
 const azLower = (s: string) => s.toLocaleLowerCase('az-AZ');
 const fold = (s: string) => azLower(s).replace(/ə/g, 'e').replace(/ı/g, 'i').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
@@ -15,12 +15,18 @@ export const namedEntities: readonly NamedEntity[] = [
 ];
 /** Single source of truth for type-aware lookup and suffix normalization. */
 const typedForms = new Map<string, { entity: NamedEntity; surface: string }>();
+const predicateEntityTypes = new Set(['person', 'country', 'city', 'district', 'region', 'autonomous_republic', 'river', 'sea', 'lake', 'mountain', 'island', 'street', 'square']);
 for (const entity of namedEntities) {
   if (entity.canonical.includes(' ') || entity.inflectionPolicy === 'none' && entity.type !== 'religious_text') continue;
   for (const name of [entity.canonical, ...entity.aliases]) {
     for (const ending of entity.inflectionPolicy === 'none' ? [''] : caseSuffixes(entity.canonical)) {
       const key = fold(name + ending);
       if (!typedForms.has(key)) typedForms.set(key, { entity, surface: entity.canonical + ending });
+      if (predicateEntityTypes.has(entity.type)) {
+        const surface = entity.canonical + ending, copula = copulaSuffix(surface);
+        const predicateKey = fold(name + ending + copula);
+        if (!typedForms.has(predicateKey)) typedForms.set(predicateKey, { entity, surface: surface + copula });
+      }
     }
   }
 }
