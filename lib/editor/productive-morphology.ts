@@ -1,3 +1,4 @@
+import { DerivedMorphologyEngine } from './derived-morphology';
 import type { GenerateFormsRequest, GrammaticalCase, GrammaticalPerson,
   MorphologicalAnalysis, MorphologicalFeatures, MorphologicalStemCandidate,
   MorphologyEngine } from './contracts/morphology';
@@ -277,7 +278,7 @@ export class ProductiveMorphologyEngine implements MorphologyEngine {
   }
 }
 
-export const productiveMorphology = new ProductiveMorphologyEngine();
+export const productiveMorphology = new DerivedMorphologyEngine(new ProductiveMorphologyEngine());
 /** Exact indexed + POS analysis used to train the deployed spelling/boundary
  * artifacts before nominal predicates were added. Freeze train and inference together. */
 export const artifactMorphology = new ProductiveMorphologyEngine(false);

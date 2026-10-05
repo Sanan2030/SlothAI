@@ -1,0 +1,580 @@
+{
+  "version": 1,
+  "provenance": {
+    "sourceSHA256": "4835319bf2b59300a8c6933b6b8cea84f0933aab9ff9ef1ae985076506e92678",
+    "reviewer": "assistant under delegated review authorization",
+    "policy": "Minimal spelling spans only; no raw corporate document or stored output published. Not independently certified gold. No word-random split."
+  },
+  "cases": [
+    {
+      "id": "real-span-001",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "hüyəti",
+      "target": "heyəti",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-002",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "ucunju",
+      "target": "üçüncü",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-003",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "şırketimizin",
+      "target": "şirkətimizin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-004",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "reqəmsal",
+      "target": "rəqəmsal",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-005",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "bisnes",
+      "target": "biznes",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-006",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "prosesderinin",
+      "target": "proseslərinin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-007",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "optimallawdirilmasi",
+      "target": "optimallaşdırılması",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-008",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "isdiqamətində",
+      "target": "istiqamətində",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-009",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "qiymədləndirilməsini",
+      "target": "qiymətləndirilməsini",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-010",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "Maqsedimiz",
+      "target": "Məqsədimiz",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-011",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "inteqrassiyani",
+      "target": "inteqrasiyanı",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-012",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "gucləndirmək",
+      "target": "gücləndirmək",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-013",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "əməliyat",
+      "target": "əməliyyat",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-014",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "muwtəri",
+      "target": "müştəri",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-015",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "məmnuniyətini",
+      "target": "məmnuniyyətini",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-016",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "maksumum",
+      "target": "maksimum",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-017",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "səviyəyə",
+      "target": "səviyyəyə",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-018",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "ərziində",
+      "target": "ərzində",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-019",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "muwahidə",
+      "target": "müşahidə",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-020",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "təwkilati",
+      "target": "təşkilati",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-021",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "səbəbinən",
+      "target": "səbəbindən",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-022",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "stareji",
+      "target": "strateji",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-023",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "kecikmələr",
+      "target": "gecikmələr",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-024",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "baw",
+      "target": "baş",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-025",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "vermiwdir",
+      "target": "vermişdir",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-026",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "wobəsinin",
+      "target": "şöbəsinin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-027",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "sisdeminin",
+      "target": "sisteminin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-028",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "yarammisdir",
+      "target": "yaranmışdır",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-029",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "malumatlarin",
+      "target": "məlumatların",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-030",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "itgileri",
+      "target": "itkiləri",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-031",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "gosterijilerin",
+      "target": "göstəricilərin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-032",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "olunmuwdur",
+      "target": "olunmuşdur",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-033",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "prablem",
+      "target": "problem",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-034",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "odeniw",
+      "target": "ödəniş",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-035",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "gosderir",
+      "target": "göstərir",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-036",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "parametirləri",
+      "target": "parametrləri",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-037",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "tənzimlanmali",
+      "target": "tənzimlənməli",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-038",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "Ikinji",
+      "target": "İkinci",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-039",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "komunikassiyanin",
+      "target": "kommunikasiyanın",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-040",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "metodalogiyasi",
+      "target": "metodologiyası",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-041",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "tapwiriqlari",
+      "target": "tapşırıqları",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-042",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "dokumentassiya",
+      "target": "dokumentasiya",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-043",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "emeliat",
+      "target": "əməliyyat",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-044",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "dovürde",
+      "target": "dövrdə",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-045",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "isjilərin",
+      "target": "işçilərin",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-046",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "sorqular",
+      "target": "sorğular",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-047",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "geniwləndirilmiw",
+      "target": "genişləndirilmiş",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-048",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "kəsilerək",
+      "target": "kəsilərək",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-049",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "infraksstrukturunun",
+      "target": "infrastrukturunun",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-050",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "birinji",
+      "target": "birinci",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-051",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "derejeli",
+      "target": "dərəcəli",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-052",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "Hakker",
+      "target": "Haker",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-053",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "jiddi",
+      "target": "ciddi",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-054",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "langimeler",
+      "target": "ləngimələr",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-055",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "punktuassiya",
+      "target": "punktuasiya",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-056",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "istifada",
+      "target": "istifadə",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    },
+    {
+      "id": "real-span-057",
+      "documentId": "user-memo-2026-10-02",
+      "split": "train",
+      "input": "Yukarıda",
+      "target": "Yuxarıda",
+      "annotationStatus": "assistant-reviewed",
+      "origin": "observed-user-input",
+      "scope": "spelling-span"
+    }
+  ]
+}

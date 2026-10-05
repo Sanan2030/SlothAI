@@ -39,11 +39,12 @@ export function createNominalRepair(model: PairedModel): (raw: string) => string
     // A single accidentally doubled letter, including before a case ending.
     for (let at = 1; at < raw.length; at++) if (raw[at] === raw[at - 1]
       && fold(raw.slice(0, at) + raw.slice(at + 1)) === target) return true;
-    // One dropped consonant, supported by the learned insertion channel.
+    // One dropped root letter, supported by the learned insertion channel.
+    // Vowels need one observation plus a verified unchanged noun suffix;
+    // consonants retain the stronger evidence threshold.
     // The suffix is checked separately and cannot be shortened or invented.
     if (target.length === input.length + 1) {
-      for (let at = 0; at < target.length; at++) if (!vowels.test(target[at])
-        && (model.channels[`insert:${target[at]}`] ?? 0) >= 2
+      for (let at = 0; at < target.length; at++) if ((model.channels[`insert:${target[at]}`] ?? 0) >= (vowels.test(target[at]) ? 1 : 2)
         && target.slice(0, at) + target.slice(at + 1) === input) return true;
       return false;
     }

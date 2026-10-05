@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "certification": "Real user inputs with assistant-reviewed references, excluded from channel training. Development evaluation: these inputs were inspected during implementation; not a blind linguistic benchmark. Near-duplicate field and mail variants share document IDs. Raw app outputs are not gold.",
+  "cases": [
+    {
+      "id": "observed-eval-01",
+      "documentId": "field-label-document",
+      "split": "test",
+      "input": "nezaret\nqeydiyyat operatoru\nDerkenar muellifi\nİcracinin qeydi\nTeskilatin adi \nsenedin nomresi\nmuellifin adi \nSenedin tarixi\nMovzunun novu\n",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "module": "text",
+      "greeting": null,
+      "category": "field-labels",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-02",
+      "documentId": "field-label-document",
+      "split": "test",
+      "input": "nezaret\nqeydiyyat operatoru\nDerkenar muellifi\nİcracinin qeydi\nTeskilatin adi \nsenedin nomresi\nmuellifin adi \nSenedin tarixi\nMovzunun novu\nqisa mezmun\ndaxil olma formasi\nkime unvanlanib\nqeydiyyat tarixi\nqeydiyyat nomresi\nİcracilar\nicra qaydasi\n\n",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "module": "text",
+      "greeting": null,
+      "category": "field-labels",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-03",
+      "documentId": "field-label-document",
+      "split": "test",
+      "input": "son icra muddeti senedin statusu",
+      "target": "Son icra müddəti sənədin statusu.",
+      "module": "text",
+      "greeting": null,
+      "category": "fragment",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-04",
+      "documentId": "vpn-mail-document",
+      "split": "test",
+      "input": "vpn e daxilde problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "module": "mail",
+      "greeting": "Salam, hər vaxtınız xeyir.",
+      "category": "mail",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-05",
+      "documentId": "vpn-mail-document",
+      "split": "test",
+      "input": "vpn e daxil olmaq barede hec bir problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "module": "mail",
+      "greeting": "Salam, hər vaxtınız xeyir.",
+      "category": "mail",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-06",
+      "documentId": "vpn-mail-document",
+      "split": "test",
+      "input": "her vaxtiniz xeyir vpn e daxil olmaq barede hec bir problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "module": "mail",
+      "greeting": "Salam, hər vaxtınız xeyir.",
+      "category": "mail",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-07",
+      "documentId": "vpn-mail-document",
+      "split": "test",
+      "input": "her vaxtiniz xeyir\nVpn e daxil olmaq barede hec bir problem olmamisdir .Tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "module": "mail",
+      "greeting": "Salam, hər vaxtınız xeyir.",
+      "category": "mail",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-08",
+      "documentId": "short-question",
+      "split": "test",
+      "input": "necesen nece gedir",
+      "target": "Necəsən? Necə gedir?",
+      "module": "text",
+      "greeting": null,
+      "category": "question",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    },
+    {
+      "id": "observed-eval-09",
+      "documentId": "short-city",
+      "split": "test",
+      "input": "baki seherinde coxlu insan var ",
+      "target": "Bakı şəhərində çoxlu insan var.",
+      "module": "text",
+      "greeting": null,
+      "category": "entity",
+      "origin": "observed-user-input",
+      "annotationStatus": "assistant-reviewed"
+    }
+  ]
+}

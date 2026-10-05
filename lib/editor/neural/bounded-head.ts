@@ -1,3 +1,4 @@
+import { productiveMorphology } from '../productive-morphology';
 import { fold, type Token } from '../local-ai/core';
 import type { PairedModel } from '../local-ai/paired';
 import { canonicalProtectedTerm } from '../protected-terminology';
@@ -33,7 +34,7 @@ export function createDomainHead(bundle: BoundedBundle, terms: readonly string[]
   const predict = createBoundedHead(bundle, terms, 0.7);
   return (raw, tokens, at) => {
     const candidate = predict(raw, tokens, at);
-    return candidate && preservesWordEdges(raw, candidate) && isSingleMissingVowel(raw, candidate) ? candidate : undefined;
+    return candidate && preservesWordEdges(raw, candidate) && (isSingleMissingVowel(raw, candidate) || isMissingRepeatedConsonant(raw, candidate)) ? candidate : undefined;
   };
 }
 export function preservesWordEdges(raw: string, candidate: string): boolean {
@@ -41,13 +42,24 @@ export function preservesWordEdges(raw: string, candidate: string): boolean {
   return input.length >= 4 && output.length >= 4 && input[0] === output[0] && input.at(-1) === output.at(-1);
 }
 
-/** This release only adds one missing interior vowel, never a consonant,
- * suffix, deletion or replacement that could change voice or possession. */
+/** Interior vowel insertion category. The separate repeated-consonant
+ * category retains its noun validation; arbitrary suffix/voice edits abstain. */
 export function isSingleMissingVowel(raw: string, candidate: string): boolean {
   const input = fold(raw), output = fold(candidate);
   if (output.length !== input.length + 1) return false;
   for (let at = 1; at < output.length - 1; at++) {
     if (/[aeiou]/u.test(output[at]) && output.slice(0, at) + output.slice(at + 1) === input) return true;
+  }
+  return false;
+}
+
+/** A lost doubled root consonant may be restored in a verified noun; an
+ * arbitrary n/l insertion could change voice and remains prohibited. */
+export function isMissingRepeatedConsonant(raw: string, candidate: string): boolean {
+  const input = fold(raw), output = fold(candidate);
+  if (output.length !== input.length + 1 || !productiveMorphology.analyzeWord(candidate).some(row => row.pos === 'noun' && row.source === 'rule')) return false;
+  for (let at = 1; at < output.length - 1; at++) {
+    if (!/[aeiou]/u.test(output[at]) && output[at] === output[at - 1] && output.slice(0, at) + output.slice(at + 1) === input) return true;
   }
   return false;
 }

@@ -60,7 +60,9 @@
     "nlp:domain:data": "node --import tsx scripts/build-domain-neural-data.ts",
     "nlp:domain:compact": "node --import tsx scripts/compact-domain-model.ts",
     "nlp:domain:select": "node --import tsx scripts/select-domain-model.ts",
-    "nlp:domain:evaluate": "node --import tsx scripts/evaluate-domain-neural.ts"
+    "nlp:domain:evaluate": "node --import tsx scripts/evaluate-domain-neural.ts",
+    "nlp:observed:train": "node --import tsx scripts/train-observed-channel.ts",
+    "nlp:observed:evaluate": "node --import tsx scripts/evaluate-observed-inputs.ts"
   },
   "engines": {
     "node": ">=20.9.0"

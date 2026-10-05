@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "vocabulary": [
+    "baş",
+    "birinci",
+    "biznes",
+    "ciddi",
+    "dokumentasiya",
+    "dövrdə",
+    "dərəcəli",
+    "gecikmələr",
+    "genişləndirilmiş",
+    "göstəricilərin",
+    "göstərir",
+    "gücləndirmək",
+    "haker",
+    "heyəti",
+    "ikinci",
+    "infrastrukturunun",
+    "inteqrasiyanı",
+    "istifadə",
+    "istiqamətində",
+    "itkiləri",
+    "işçilərin",
+    "kommunikasiyanın",
+    "kəsilərək",
+    "ləngimələr",
+    "maksimum",
+    "metodologiyası",
+    "müşahidə",
+    "müştəri",
+    "məlumatların",
+    "məmnuniyyətini",
+    "məqsədimiz",
+    "olunmuşdur",
+    "optimallaşdırılması",
+    "parametrləri",
+    "problem",
+    "proseslərinin",
+    "punktuasiya",
+    "qiymətləndirilməsini",
+    "rəqəmsal",
+    "sisteminin",
+    "sorğular",
+    "strateji",
+    "səbəbindən",
+    "səviyyəyə",
+    "tapşırıqları",
+    "tənzimlənməli",
+    "təşkilati",
+    "vermişdir",
+    "yaranmışdır",
+    "yuxarıda",
+    "ödəniş",
+    "üçüncü",
+    "şirkətimizin",
+    "şöbəsinin",
+    "əməliyyat",
+    "ərzində"
+  ],
+  "rules": [
+    {
+      "from": "s",
+      "to": "",
+      "left": "s",
+      "right": "i",
+      "count": 3
+    },
+    {
+      "from": "",
+      "to": "y",
+      "left": "y",
+      "right": "e",
+      "count": 2
+    },
+    {
+      "from": "a",
+      "to": "e",
+      "left": "l",
+      "right": "n",
+      "count": 2
+    },
+    {
+      "from": "a",
+      "to": "e",
+      "left": "m",
+      "right": "l",
+      "count": 2
+    },
+    {
+      "from": "d",
+      "to": "t",
+      "left": "s",
+      "right": "e",
+      "count": 2
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "n",
+      "right": "i",
+      "count": 2
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "i",
+      "right": "$",
+      "count": 2
+    },
+    {
+      "from": "",
+      "to": "d",
+      "left": "n",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "",
+      "to": "m",
+      "left": "m",
+      "right": "u",
+      "count": 1
+    },
+    {
+      "from": "",
+      "to": "r",
+      "left": "t",
+      "right": "a",
+      "count": 1
+    },
+    {
+      "from": "",
+      "to": "y",
+      "left": "y",
+      "right": "a",
+      "count": 1
+    },
+    {
+      "from": "",
+      "to": "yy",
+      "left": "i",
+      "right": "a",
+      "count": 1
+    },
+    {
+      "from": "a",
+      "to": "e",
+      "left": "d",
+      "right": "$",
+      "count": 1
+    },
+    {
+      "from": "a",
+      "to": "e",
+      "left": "m",
+      "right": "q",
+      "count": 1
+    },
+    {
+      "from": "a",
+      "to": "o",
+      "left": "d",
+      "right": "l",
+      "count": 1
+    },
+    {
+      "from": "a",
+      "to": "o",
+      "left": "r",
+      "right": "b",
+      "count": 1
+    },
+    {
+      "from": "d",
+      "to": "l",
+      "left": "s",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "d",
+      "to": "t",
+      "left": "e",
+      "right": "l",
+      "count": 1
+    },
+    {
+      "from": "d",
+      "to": "t",
+      "left": "s",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "g",
+      "to": "k",
+      "left": "t",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "i",
+      "to": "",
+      "left": "i",
+      "right": "n",
+      "count": 1
+    },
+    {
+      "from": "i",
+      "to": "",
+      "left": "t",
+      "right": "r",
+      "count": 1
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "^",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "e",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "i",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "n",
+      "right": "u",
+      "count": 1
+    },
+    {
+      "from": "j",
+      "to": "c",
+      "left": "s",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "k",
+      "to": "",
+      "left": "k",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "k",
+      "to": "g",
+      "left": "^",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "k",
+      "to": "x",
+      "left": "u",
+      "right": "a",
+      "count": 1
+    },
+    {
+      "from": "ks",
+      "to": "",
+      "left": "a",
+      "right": "s",
+      "count": 1
+    },
+    {
+      "from": "m",
+      "to": "n",
+      "left": "a",
+      "right": "m",
+      "count": 1
+    },
+    {
+      "from": "q",
+      "to": "g",
+      "left": "r",
+      "right": "u",
+      "count": 1
+    },
+    {
+      "from": "r",
+      "to": "t",
+      "left": "a",
+      "right": "e",
+      "count": 1
+    },
+    {
+      "from": "s",
+      "to": "",
+      "left": "a",
+      "right": "s",
+      "count": 1
+    },
+    {
+      "from": "s",
+      "to": "z",
+      "left": "i",
+      "right": "n",
+      "count": 1
+    },
+    {
+      "from": "u",
+      "to": "",
+      "left": "v",
+      "right": "r",
+      "count": 1
+    },
+    {
+      "from": "u",
+      "to": "e",
+      "left": "h",
+      "right": "y",
+      "count": 1
+    },
+    {
+      "from": "u",
+      "to": "i",
+      "left": "s",
+      "right": "m",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "^",
+      "right": "o",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "a",
+      "right": "$",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "a",
+      "right": "d",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "e",
+      "right": "k",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "i",
+      "right": "d",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "i",
+      "right": "l",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "p",
+      "right": "i",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "u",
+      "right": "a",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "u",
+      "right": "d",
+      "count": 1
+    },
+    {
+      "from": "w",
+      "to": "s",
+      "left": "u",
+      "right": "t",
+      "count": 1
+    }
+  ],
+  "accentRules": [
+    {
+      "from": "ü",
+      "to": "e",
+      "left": "h",
+      "right": "y",
+      "count": 1
+    },
+    {
+      "from": "ı",
+      "to": "i",
+      "left": "ş",
+      "right": "r",
+      "count": 1
+    },
+    {
+      "from": "ı",
+      "to": "i",
+      "left": "^",
+      "right": "k",
+      "count": 1
+    }
+  ],
+  "trainingSHA256": "cf21ecc2ab9b3aa01be68ddb0e205d6bea9e1070b694351bdb5c8740870ecb7d",
+  "documents": 1,
+  "examples": 57
+}

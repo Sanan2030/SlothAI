@@ -1,3 +1,5 @@
+import { guardInsertedBoundaries } from './syntax-boundary-guard';
+import { observedSpelling, repairObservedSpacing } from './observed-channel';
 import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscourseClauses } from './context-decisions';
 import { punctuateSubjectPronouns } from './grammatical-commas';
 import { editHTMLStructure } from './html-structure';
@@ -40,6 +42,8 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Ablation for the real-input edit channel and conservative space repair. */
+  useObservedChannel?: boolean;
   /** Isolate the compact gap network in offline comparisons. */
   useNeuralBoundary?: boolean;
   /** Evaluation-only candidate checkpoint; application callers use the bundled model. */
@@ -78,6 +82,7 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
     .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
     .replace(/\s+([,;:!?])/g, '$1')
     .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
+  const boundarySource = result;
   result = sentenceBoundaries(result);
   result = punctuateNarrative(result);
   result = extendedBoundaries(result);
@@ -89,12 +94,13 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
   if (useLocalModel) result = insertLearnedBoundaries(result);
   if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
   if (useLocalModel && runtime.useNeuralBoundary !== false) result = insertNeuralBoundaries(result, runtime.boundaryModel);
+  result = guardInsertedBoundaries(boundarySource, result);
   result = punctuateCommas(result);
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
   result = result
     .replace(/^(salam)\s+(?=[a-zəçğıöşü])/i, '$1, ')
-    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|$)/gi, '$1$2?');
+    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|\s+(?:necə|nə)\s|$)/gi, '$1$2?');
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
     const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence)
@@ -181,6 +187,15 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Hunger adjective "ac" becomes opaque to prevent ac/aç overcorrection.
   // Establish its subject comma while the grammatical evidence is visible.
   text = preserveContextualHomographs(punctuateSubjectPronouns(text), protect);
+  if (runtime.useObservedChannel !== false) {
+    text = repairObservedSpacing(text);
+    text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/gu, word => {
+      const selected = observedSpelling(word);
+      if (!selected) return word;
+      runtime.trace?.({ stage: 'spelling', original: word, replacement: selected, reason: 'reviewed real-input edit channel + verified morphology' });
+      return /^\p{Lu}/u.test(word) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
+    });
+  }
   if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined));
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
@@ -257,7 +272,17 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     if (preserveFormatting) return [line];
     return enumerate(line);
   });
+  // Repeated nominal field labels are document structure, not sentences.
+  const nonemptyLines = lines.filter(line => line.trim());
+  const fieldLabelBlock = nonemptyLines.length >= 3 && nonemptyLines.every(line =>
+    !/[.!?:;]|^(?:\s*[-*]|\s*\d+[.)])/u.test(line) && (line.match(/\p{L}+/gu)?.length ?? 0) <= 6)
+    && nonemptyLines.filter(line => {
+      const words = line.match(/\p{L}+/gu) ?? [];
+      return words.length >= 2 && productiveMorphology.analyzeWord(words[0] ?? '').some(row => row.pos === 'noun' && row.features.case === 'genitive');
+    }).length >= 2
+    && nonemptyLines.filter(line => !(line.match(/\p{L}+/gu) ?? []).some(isFinitePredicate)).length / nonemptyLines.length >= 0.8;
   text = lines.map((line, index) => {
+    if (fieldLabelBlock) return capitalize(line.trim());
     if (index > 0 && /^hörmətlə[,!.]?$/i.test(lines[index - 1].trim())) return capitalize(line.trim());
     if (line.includes(marker) && line.trim().startsWith(marker)) {
       const index = Number(line.trim().slice(marker.length).split('\uE001')[0]);

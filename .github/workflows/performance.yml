@@ -55,6 +55,9 @@ jobs:
         run: |
           python scripts/build-additional-gold.py
           git diff --exit-code -- tests/fixtures/additional-gold-200.json
+          npm run --ignore-scripts nlp:observed:train -- data/nlp/real/observed-spelling.json /tmp/slothai-observed-channel.json
+          cmp /tmp/slothai-observed-channel.json lib/editor/observed-channel-model.json
+          npm run --ignore-scripts nlp:observed:evaluate -- --output=/tmp/slothai-observed-evaluation.json --enforce
           npm run --ignore-scripts gold:complete
           npm run --ignore-scripts local-ai:train
           git diff --exit-code -- lib/editor/local-ai/model.json data/local-ai/pairs.json data/local-ai/training-report.json

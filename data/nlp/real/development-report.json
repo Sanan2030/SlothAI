@@ -1,0 +1,333 @@
+{
+  "certification": "Real user inputs with assistant-reviewed references, excluded from channel training. Development evaluation: these inputs were inspected during implementation; not a blind linguistic benchmark. Near-duplicate field and mail variants share document IDs. Raw app outputs are not gold.",
+  "trainingDocuments": 1,
+  "evaluationDocuments": 4,
+  "overall": {
+    "rows": 18,
+    "exact": 18,
+    "accuracy": 1,
+    "cer": 0,
+    "wer": 0,
+    "precision": 1,
+    "recall": 1,
+    "f05": 1,
+    "characterEdits": {
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "truePositive": 192,
+      "falsePositive": 0,
+      "missed": 0
+    },
+    "truePositiveEdits": 86,
+    "falsePositiveEdits": 0,
+    "missedEdits": 0,
+    "identityRows": 9,
+    "identityChanged": 0,
+    "identityFalseChangeRate": 0,
+    "charErrors": 0,
+    "referenceChars": 1712,
+    "wordErrors": 0,
+    "referenceWords": 226
+  },
+  "byCategory": {
+    "entity": {
+      "rows": 1,
+      "exact": 1,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "characterEdits": {
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "truePositive": 8,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 4,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 0,
+      "referenceChars": 31,
+      "wordErrors": 0,
+      "referenceWords": 5
+    },
+    "field-labels": {
+      "rows": 2,
+      "exact": 2,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "characterEdits": {
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "truePositive": 81,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 40,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 0,
+      "referenceChars": 375,
+      "wordErrors": 0,
+      "referenceWords": 48
+    },
+    "fragment": {
+      "rows": 1,
+      "exact": 1,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "characterEdits": {
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "truePositive": 6,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 4,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 0,
+      "referenceChars": 33,
+      "wordErrors": 0,
+      "referenceWords": 5
+    },
+    "identity": {
+      "rows": 9,
+      "exact": 9,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "characterEdits": {
+        "precision": null,
+        "recall": null,
+        "f05": null,
+        "truePositive": 0,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 0,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 9,
+      "identityChanged": 0,
+      "identityFalseChangeRate": 0,
+      "charErrors": 0,
+      "referenceChars": 856,
+      "wordErrors": 0,
+      "referenceWords": 113
+    },
+    "mail": {
+      "rows": 4,
+      "exact": 4,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "characterEdits": {
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "truePositive": 90,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 35,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 0,
+      "referenceChars": 397,
+      "wordErrors": 0,
+      "referenceWords": 52
+    },
+    "question": {
+      "rows": 1,
+      "exact": 1,
+      "accuracy": 1,
+      "cer": 0,
+      "wer": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "characterEdits": {
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "truePositive": 7,
+        "falsePositive": 0,
+        "missed": 0
+      },
+      "truePositiveEdits": 3,
+      "falsePositiveEdits": 0,
+      "missedEdits": 0,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 0,
+      "referenceChars": 20,
+      "wordErrors": 0,
+      "referenceWords": 3
+    }
+  },
+  "failures": [],
+  "convention": "NFC exact output; Unicode code-point CER; whitespace-token WER; exact source-token-span correction precision/recall/F0.5 with deterministic single-reference alignment. Character edit precision/recall/F0.5 also cover whitespace and punctuation; token metrics retain their earlier definition. Null means undefined denominator, not perfect accuracy.",
+  "rows": [
+    {
+      "id": "observed-eval-01",
+      "input": "nezaret\nqeydiyyat operatoru\nDerkenar muellifi\nİcracinin qeydi\nTeskilatin adi \nsenedin nomresi\nmuellifin adi \nSenedin tarixi\nMovzunun novu\n",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "actual": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "category": "field-labels"
+    },
+    {
+      "id": "observed-eval-01-identity",
+      "input": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "actual": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-02",
+      "input": "nezaret\nqeydiyyat operatoru\nDerkenar muellifi\nİcracinin qeydi\nTeskilatin adi \nsenedin nomresi\nmuellifin adi \nSenedin tarixi\nMovzunun novu\nqisa mezmun\ndaxil olma formasi\nkime unvanlanib\nqeydiyyat tarixi\nqeydiyyat nomresi\nİcracilar\nicra qaydasi\n\n",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "actual": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "category": "field-labels"
+    },
+    {
+      "id": "observed-eval-02-identity",
+      "input": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "target": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "actual": "Nəzarət\nQeydiyyat operatoru\nDərkənar müəllifi\nİcraçının qeydi\nTəşkilatın adı\nSənədin nömrəsi\nMüəllifin adı\nSənədin tarixi\nMövzunun növü\nQısa məzmun\nDaxil olma forması\nKimə ünvanlanıb\nQeydiyyat tarixi\nQeydiyyat nömrəsi\nİcraçılar\nİcra qaydası",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-03",
+      "input": "son icra muddeti senedin statusu",
+      "target": "Son icra müddəti sənədin statusu.",
+      "actual": "Son icra müddəti sənədin statusu.",
+      "category": "fragment"
+    },
+    {
+      "id": "observed-eval-03-identity",
+      "input": "Son icra müddəti sənədin statusu.",
+      "target": "Son icra müddəti sənədin statusu.",
+      "actual": "Son icra müddəti sənədin statusu.",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-04",
+      "input": "vpn e daxilde problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "mail"
+    },
+    {
+      "id": "observed-eval-04-identity",
+      "input": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxildə problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-05",
+      "input": "vpn e daxil olmaq barede hec bir problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "mail"
+    },
+    {
+      "id": "observed-eval-05-identity",
+      "input": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-06",
+      "input": "her vaxtiniz xeyir vpn e daxil olmaq barede hec bir problem olmamisdir tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "mail"
+    },
+    {
+      "id": "observed-eval-06-identity",
+      "input": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-07",
+      "input": "her vaxtiniz xeyir\nVpn e daxil olmaq barede hec bir problem olmamisdir .Tesekkurler",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "mail"
+    },
+    {
+      "id": "observed-eval-07-identity",
+      "input": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "target": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "actual": "Salam, hər vaxtınız xeyir.\n\nVPN-ə daxil olmaq barədə heç bir problem olmamışdır. Təşəkkürlər.\n\nHörmətlə,",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-08",
+      "input": "necesen nece gedir",
+      "target": "Necəsən? Necə gedir?",
+      "actual": "Necəsən? Necə gedir?",
+      "category": "question"
+    },
+    {
+      "id": "observed-eval-08-identity",
+      "input": "Necəsən? Necə gedir?",
+      "target": "Necəsən? Necə gedir?",
+      "actual": "Necəsən? Necə gedir?",
+      "category": "identity"
+    },
+    {
+      "id": "observed-eval-09",
+      "input": "baki seherinde coxlu insan var ",
+      "target": "Bakı şəhərində çoxlu insan var.",
+      "actual": "Bakı şəhərində çoxlu insan var.",
+      "category": "entity"
+    },
+    {
+      "id": "observed-eval-09-identity",
+      "input": "Bakı şəhərində çoxlu insan var.",
+      "target": "Bakı şəhərində çoxlu insan var.",
+      "actual": "Bakı şəhərində çoxlu insan var.",
+      "category": "identity"
+    }
+  ]
+}

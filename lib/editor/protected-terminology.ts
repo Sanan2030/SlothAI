@@ -50,7 +50,10 @@ const protectedPattern = new RegExp(
 );
 
 export function canonicalProtectedTerm(value: string): string | undefined {
-  return canonicalByLower.get(value.toLocaleLowerCase('en-US'));
+  const canonical = canonicalByLower.get(value.toLocaleLowerCase('en-US'));
+  // Descriptive foreign phrases have no mandatory lowercase spelling. Keep
+  // existing editorial casing; branded acronyms still use their canonical case.
+  return canonical && canonical === canonical.toLocaleLowerCase('en-US') ? value : canonical;
 }
 
 export function protectKnownTerminology(

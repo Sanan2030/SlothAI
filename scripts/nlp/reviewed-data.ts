@@ -22,6 +22,7 @@ export function reviewedDataset(raw: string, provenance: string, reviewedBy: str
     if (row.reviewStatus !== 'user-approved') reason = 'No explicit user approval';
     else if ((targets.get(folded(row.input))?.size ?? 0) > 1) reason = 'Conflicting reviewed targets for the same input';
     else if (row.module !== 'text') reason = 'Mail layout targets must be reviewed as body-only spelling pairs before token training';
+    else if (!row.preserveFormatting && (/[ \t]{3,}/u.test(row.expected) || /\n[ \t]+/u.test(row.expected))) reason = 'Target needs whitespace review before training';
     else if (row.input.length > 1200 || row.expected.length > 1200) reason = 'Split long reviewed documents into aligned sentence-sized pairs first';
     else if (blocked.has(folded(row.expected))) reason = 'Overlaps excluded evaluation target';
     const key = checksum(folded(row.input) + '\n' + folded(row.expected));
