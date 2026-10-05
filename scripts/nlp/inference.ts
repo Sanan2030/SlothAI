@@ -1,3 +1,4 @@
+import { createBoundedHead } from '../../lib/editor/neural/bounded-head';
 import type { NeuralSpellingFallback } from '../../lib/editor/neural/runtime';
 import type { PairedModel } from '../../lib/editor/local-ai/paired';
 import { tokenize } from '../../lib/editor/local-ai/core';
@@ -30,6 +31,7 @@ export function createExperimentPredictor(bundle: ExperimentBundle) {
 
 /** Inject a candidate head into the complete production pipeline for comparison. */
 export function createExperimentFallback(bundle: ExperimentBundle, terms: readonly string[] = []): NeuralSpellingFallback {
+  if (bundle.artifact.candidateMode === 'bounded-edits') return createBoundedHead(bundle, terms, 0.7);
   const { artifact, lexicon } = bundle, index = transpositionIndex(lexicon);
   return (raw, tokens, at) => {
     const lower = raw.toLocaleLowerCase('az-AZ');

@@ -49,6 +49,9 @@ export function segmentCorrespondence(text: string): string {
     }
     if (!remaining.some(predicate) && !request(remaining)) continue;
     const analysis = productiveMorphology.analyzeWord(next);
+    // Future participles followed by a genitive noun phrase remain attached.
+    // An accusative object may instead start a separate clause (qərarı sonra verəcəyik).
+    if (/(?:acaq|əcək)$/iu.test(left) && analysis.some(row => row.pos === 'noun' && row.features.case === 'genitive')) continue;
 
     const nounObject = analysis.some(row => row.pos === 'noun' && ['accusative', 'dative'].includes(row.features.case ?? ''));
     const nounSubject = analysis.some(row => row.pos === 'noun' && row.features.case === 'nominative');

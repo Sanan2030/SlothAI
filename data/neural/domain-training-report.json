@@ -1,0 +1,53 @@
+{
+  "data": "/tmp/domain-run/domain",
+  "corpusSHA256": "10bc1a07a53b81f70d7bc8b1401c4df9609f37497b09ed320e07ac55d1d6ac52",
+  "splitUnit": "documentId (upstream clustering manifest required for near-duplicate audit)",
+  "alignedWordRows": 132441,
+  "sourceRows": 10269,
+  "reports": [
+    {
+      "variant": "bounded-edits",
+      "seed": 719,
+      "trainingExamples": 98523,
+      "allTrainingExamples": 106072,
+      "trainingGroups": 20000,
+      "attemptedEpochs": 32,
+      "retainedEpochs": 32,
+      "validationLoss": 0.2916968003161509,
+      "descriptiveScoringSkipped": true,
+      "threshold": 0.995,
+      "margin": 0.1,
+      "calibratedValidationCorrections": 1282,
+      "validationRanking": {
+        "groups": 11720,
+        "changedWinners": 2193,
+        "correctWinners": 10475,
+        "incorrectConfident": 5
+      },
+      "partitions": {},
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    },
+    {
+      "variant": "bounded-edits",
+      "seed": 919,
+      "trainingExamples": 98523,
+      "allTrainingExamples": 106072,
+      "trainingGroups": 20000,
+      "attemptedEpochs": 32,
+      "retainedEpochs": 32,
+      "validationLoss": 0.29492888514883187,
+      "descriptiveScoringSkipped": true,
+      "threshold": 0.999,
+      "margin": 0.1,
+      "calibratedValidationCorrections": 927,
+      "validationRanking": {
+        "groups": 11720,
+        "changedWinners": 2209,
+        "correctWinners": 10469,
+        "incorrectConfident": 10
+      },
+      "partitions": {},
+      "caveat": "Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability."
+    }
+  ]
+}

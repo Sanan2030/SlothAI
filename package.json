@@ -56,7 +56,11 @@
     "nlp:reviewed:verify": "node --import tsx scripts/verify-reviewed-neural-artifact.ts",
     "quality:priorities": "node --import tsx scripts/check-priority-quality.ts --enforce",
     "neural:boundaries:train": "node --import tsx scripts/train-sentence-boundaries.ts",
-    "neural:boundaries:check": "node --import tsx scripts/evaluate-sentence-boundaries.ts --enforce"
+    "neural:boundaries:check": "node --import tsx scripts/evaluate-sentence-boundaries.ts --enforce",
+    "nlp:domain:data": "node --import tsx scripts/build-domain-neural-data.ts",
+    "nlp:domain:compact": "node --import tsx scripts/compact-domain-model.ts",
+    "nlp:domain:select": "node --import tsx scripts/select-domain-model.ts",
+    "nlp:domain:evaluate": "node --import tsx scripts/evaluate-domain-neural.ts"
   },
   "engines": {
     "node": ">=20.9.0"

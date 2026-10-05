@@ -82,6 +82,13 @@ jobs:
           npm run --ignore-scripts nlp:reviewed:verify -- --data=/tmp/slothai-reviewed-release-splits --model=lib/editor/neural/bounded-model.json
           npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --threshold-floor=0.9999 --output=/tmp/slothai-release-quality.json --enforce
           npm run --ignore-scripts nlp:evaluate -- --input=/tmp/slothai-reviewed-release-splits/test.jsonl --model=lib/editor/neural/bounded-model.json --full-editor --output=/tmp/slothai-reviewed-release-quality.json --enforce
+          npm run --ignore-scripts nlp:domain:data -- --base=/tmp/slothai-reviewed-release-splits --output=/tmp/slothai-domain-release-splits
+          cmp /tmp/slothai-domain-release-splits/manifest.json data/neural/domain-data-manifest.json
+          node --import tsx scripts/verify-domain-neural-artifact.ts --data=/tmp/slothai-domain-release-splits --model=lib/editor/neural/domain-model.json
+          npm run --ignore-scripts nlp:domain:evaluate -- --model=lib/editor/neural/domain-model.json --split=train --output=/tmp/slothai-domain-train.json --enforce
+          npm run --ignore-scripts nlp:domain:evaluate -- --model=lib/editor/neural/domain-model.json --split=test --output=/tmp/slothai-domain-test.json --enforce
+          npm run --ignore-scripts nlp:domain:evaluate -- --model=lib/editor/neural/domain-model.json --fresh --output=/tmp/slothai-domain-fresh.json --enforce
+          npm run --ignore-scripts nlp:domain:evaluate -- --model=lib/editor/neural/domain-model.json --input=/tmp/slothai-domain-release-splits/test.jsonl --output=/tmp/slothai-domain-source.json --enforce
           npm run --ignore-scripts neural:boundaries:train -- --source=/tmp/slothai-release-splits --output=/tmp/slothai-boundary-release
           cmp /tmp/slothai-boundary-release/selected.json lib/editor/neural/sentence-boundary-model.json
           cmp /tmp/slothai-boundary-release/report.json data/neural/sentence-boundary-training-report.json

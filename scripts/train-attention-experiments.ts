@@ -113,7 +113,9 @@ for (const seed of seeds) for (const variant of variants) {
     const selected = calibration.filter(row => row.winner !== row.raw.toLocaleLowerCase('az-AZ') && row.score >= threshold && row.margin >= margin && row.supported);
     if (selected.length >= (folder ? 30 : 4) && selected.length > accepted && selected.every(row => row.winner === row.expectedWord)) { accepted = selected.length; artifact.threshold = threshold; artifact.margin = margin; }
   }
-  const partitions = Object.fromEntries((folder ? ['train', 'validation', 'test'] : ['train', 'validation', 'test', 'additional']).map(split => {
+  // Persist calibrated weights before optional expensive descriptive scoring.
+  atomicWriteSync(resolve(destination, `${variant}-${seed}.json`), JSON.stringify({ artifact, lexicon }, null, 2) + '\n');
+  const partitions = Object.fromEntries((process.argv.includes('--selection-only') ? [] : folder ? ['train', 'validation', 'test'] : ['train', 'validation', 'test', 'additional']).map(split => {
     const rows: WordRow[] = split === 'additional' ? independent.rows.map(row => ({ ...row, expectedWord: row.expectedWord.toLocaleLowerCase('az-AZ') })) : wordRows.filter(row => row.split === split); let covered = 0, coveredErrors = 0, exact = 0, proposed = 0, correct = 0, incorrect = 0, needs = 0, falseChanges = 0, identity = 0;
     for (const row of rows) {
       const raw = row.raw.toLocaleLowerCase('az-AZ'), candidates = row.protected ? [] : attentionCandidates(index, row.raw, mode, lexicon);
@@ -129,7 +131,7 @@ for (const seed of seeds) for (const variant of variants) {
       precision: proposed ? correct / proposed : null, recall: needs ? correct / needs : null, identity, falseChanges,
       candidateBCE: split === 'additional' ? null : loss(best, examples(split)) }];
   }));
-  const report = { variant, seed, trainingExamples: training.length, allTrainingExamples: allTraining.length, trainingGroups: selectedGroups.size, attemptedEpochs: epochs, retainedEpochs: best.epochs, threshold: artifact.threshold, margin: artifact.margin,
+  const report = { variant, seed, trainingExamples: training.length, allTrainingExamples: allTraining.length, trainingGroups: selectedGroups.size, attemptedEpochs: epochs, retainedEpochs: best.epochs, validationLoss: bestLoss, descriptiveScoringSkipped: process.argv.includes('--selection-only'), threshold: artifact.threshold, margin: artifact.margin,
     calibratedValidationCorrections: accepted, validationRanking: { groups: calibration.length, changedWinners: calibration.filter(row => row.winner !== row.raw.toLocaleLowerCase('az-AZ')).length, correctWinners: calibration.filter(row => row.winner === row.expectedWord).length, incorrectConfident: calibration.filter(row => row.winner !== row.expectedWord && row.winner !== row.raw.toLocaleLowerCase('az-AZ') && row.score >= 0.99).length }, partitions,
     caveat: 'Word-head ablation with fresh identical-seed initialization and equal epoch budgets. No test-based threshold selection; sentence-level full-editor quality is a separate report. Score is not a calibrated probability.' };
   reports.push(report);

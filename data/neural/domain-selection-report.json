@@ -1,0 +1,71 @@
+{
+  "policy": "Complete-editor validation only; previous production head first, domain head only on abstention; strict improvement; zero new wrong token edits or exact regressions; no additional identity changes; maximize correct edits. Scores are not calibrated probabilities.",
+  "validationSHA256": "109ff490d6d494f7a0c757d7aaff2da882b9b42b8c2ecccc2727765f1cc97758",
+  "baseline": {
+    "rows": 865,
+    "exact": 243,
+    "accuracy": 0.2809248554913295,
+    "cer": 0.01545958662409679,
+    "wer": 0.09261515963928832,
+    "precision": 0.8582507539853511,
+    "recall": 0.6923879040667362,
+    "f05": 0.8190115944412466,
+    "characterEdits": {
+      "precision": 0.9099274958170663,
+      "recall": 0.7369015356820234,
+      "f05": 0.8691135734072022,
+      "truePositive": 3263,
+      "falsePositive": 323,
+      "missed": 1165
+    },
+    "truePositiveEdits": 1992,
+    "falsePositiveEdits": 329,
+    "missedEdits": 885,
+    "identityRows": 199,
+    "identityChanged": 44,
+    "identityFalseChangeRate": 0.22110552763819097,
+    "charErrors": 1472,
+    "referenceChars": 95216,
+    "wordErrors": 1140,
+    "referenceWords": 12309
+  },
+  "selected": "bounded-edits-919.json",
+  "reports": [
+    {
+      "file": "bounded-edits-919.json",
+      "floor": 0.7,
+      "threshold": 0.7,
+      "eligible": true,
+      "summary": {
+        "rows": 865,
+        "exact": 248,
+        "accuracy": 0.28670520231213875,
+        "cer": 0.015407074441270374,
+        "wer": 0.09220895279876513,
+        "precision": 0.858555460017197,
+        "recall": 0.6941258255126869,
+        "f05": 0.8197192348739841,
+        "characterEdits": {
+          "precision": 0.91005291005291,
+          "recall": 0.7380307136404698,
+          "f05": 0.8695189442315879,
+          "truePositive": 3268,
+          "falsePositive": 323,
+          "missed": 1160
+        },
+        "truePositiveEdits": 1997,
+        "falsePositiveEdits": 329,
+        "missedEdits": 880,
+        "identityRows": 199,
+        "identityChanged": 44,
+        "identityFalseChangeRate": 0.22110552763819097,
+        "charErrors": 1467,
+        "referenceChars": 95216,
+        "wordErrors": 1135,
+        "referenceWords": 12309
+      },
+      "newWrong": [],
+      "regressions": []
+    }
+  ]
+}

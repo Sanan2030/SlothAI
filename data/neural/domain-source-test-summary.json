@@ -1,0 +1,103 @@
+{
+  "source": "Frozen Wikipedia/reference corpus with synthetic corruption; identity rows included. Not real-user accuracy.",
+  "baseline": "Previous production spelling fallback; candidate only on its abstentions",
+  "split": "/tmp/domain-run/domain/test.jsonl",
+  "inputSHA256": "9cae8b0e89e02f0400d9dde605eb8fcea798c1b4f19f9e52aad688a85ccc503f",
+  "before": {
+    "rows": 826,
+    "exact": 443,
+    "accuracy": 0.5363196125907991,
+    "cer": 0.010531151306345105,
+    "wer": 0.06066620642043493,
+    "precision": 0.7607260726072608,
+    "recall": 0.6681159420289855,
+    "f05": 0.7402055234425177,
+    "characterEdits": {
+      "precision": 0.849640685461581,
+      "recall": 0.7018264840182649,
+      "f05": 0.8152981116061956,
+      "truePositive": 1537,
+      "falsePositive": 272,
+      "missed": 653
+    },
+    "truePositiveEdits": 922,
+    "falsePositiveEdits": 290,
+    "missedEdits": 458,
+    "identityRows": 465,
+    "identityChanged": 83,
+    "identityFalseChangeRate": 0.17849462365591398,
+    "charErrors": 917,
+    "referenceChars": 87075,
+    "wordErrors": 703,
+    "referenceWords": 11588
+  },
+  "after": {
+    "rows": 826,
+    "exact": 445,
+    "accuracy": 0.5387409200968523,
+    "cer": 0.010508182601205857,
+    "wer": 0.060493614083534694,
+    "precision": 0.7611202635914333,
+    "recall": 0.6695652173913044,
+    "f05": 0.7408595253367544,
+    "characterEdits": {
+      "precision": 0.8498067366096079,
+      "recall": 0.7027397260273973,
+      "f05": 0.8156667373330506,
+      "truePositive": 1539,
+      "falsePositive": 272,
+      "missed": 651
+    },
+    "truePositiveEdits": 924,
+    "falsePositiveEdits": 290,
+    "missedEdits": 456,
+    "identityRows": 465,
+    "identityChanged": 83,
+    "identityFalseChangeRate": 0.17849462365591398,
+    "charErrors": 915,
+    "referenceChars": 87075,
+    "wordErrors": 701,
+    "referenceWords": 11588
+  },
+  "newFalseEditRows": [],
+  "regressions": [],
+  "gains": [
+    "az-domain-001-032:error",
+    "az-domain-001-034:error"
+  ],
+  "changedRows": [
+    {
+      "id": "az-domain-001-032:error",
+      "documentId": "az-domain-001-032",
+      "split": "test",
+      "domain": "it",
+      "input": "Tətbiqin başlğında layihənin adı və versiyası göstərilir.",
+      "target": "Tətbiqin başlığında layihənin adı və versiyası göstərilir.",
+      "category": "domain-authored",
+      "annotationStatus": "assistant-reviewed",
+      "reviewedBy": "Codex under explicit delegated user authorization",
+      "reviewedAt": "2026-10-04T00:05:28+04:00",
+      "provenance": "Assistant-authored fictional example, not an observed error, legal instruction or human-certified gold",
+      "protectedTerms": [],
+      "actual": "Tətbiqin başlığında layihənin adı və versiyası göstərilir.",
+      "before": "Tətbiqin başlğında layihənin adı və versiyası göstərilir."
+    },
+    {
+      "id": "az-domain-001-034:error",
+      "documentId": "az-domain-001-034",
+      "split": "test",
+      "domain": "it",
+      "input": "Mobil tətbiq bildrişləri oxunduqdan sonra ayrıca siyahıya keçirir.",
+      "target": "Mobil tətbiq bildirişləri oxunduqdan sonra ayrıca siyahıya keçirir.",
+      "category": "domain-authored",
+      "annotationStatus": "assistant-reviewed",
+      "reviewedBy": "Codex under explicit delegated user authorization",
+      "reviewedAt": "2026-10-04T00:05:28+04:00",
+      "provenance": "Assistant-authored fictional example, not an observed error, legal instruction or human-certified gold",
+      "protectedTerms": [],
+      "actual": "Mobil tətbiq bildirişləri oxunduqdan sonra ayrıca siyahıya keçirir.",
+      "before": "Mobil tətbiq bildrişləri oxunduqdan sonra ayrıca siyahıya keçirir."
+    }
+  ],
+  "phase": "Additive spelling-head evaluation before the independent participle boundary fix"
+}
