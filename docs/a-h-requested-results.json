@@ -1,0 +1,86 @@
+{
+  "baselineCommit": "8a8f5caeffb2d42d195ba204cf05f428f3f20662",
+  "implementationCommit": "04e8350",
+  "cases": [
+    {
+      "id": "a",
+      "input": "sirket yeni layiheni ireli surdu ve musterilerle gorush kecirdi",
+      "expected": "Şirkət yeni layihəni irəli sürdü və müştərilərlə görüş keçirdi.",
+      "before": "Şirkət yeni layihəni irəli surdu və müştərilərlə görüş keçirdi.",
+      "after": "Şirkət yeni layihəni irəli sürdü və müştərilərlə görüş keçirdi.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "b",
+      "input": "her kes evvelceden hazirlashmali idi chunki imtahan cetin olacaqdi",
+      "expected": "Hər kəs əvvəlcədən hazırlaşmalı idi, çünki imtahan çətin olacaqdı.",
+      "before": "Hər kəs əvvəlcədən hazirlashmali idi chunki imtahan çətin olacaqdı.",
+      "after": "Hər kəs əvvəlcədən hazırlaşmalı idi, çünki imtahan çətin olacaqdı.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "c",
+      "input": "azerbaycanin paytaxti bakidir ve orada cox sayda tarixi abide var",
+      "expected": "Azərbaycanın paytaxtı Bakıdır və orada çox sayda tarixi abidə var.",
+      "before": "Azərbaycanın paytaxtı bakıdır və orada çox sayda tarixi abıdə var.",
+      "after": "Azərbaycanın paytaxtı Bakıdır və orada çox sayda tarixi abidə var.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "d",
+      "input": "neceyisen bu gun hava cox gozeldir gel gezmeye cixaq",
+      "expected": "Necəsən? Bu gün hava çox gözəldir, gəl gəzməyə çıxaq.",
+      "before": "Neceyisen bu gün hava çox gözəldir gəl gəzməyə cixaq.",
+      "after": "Necəsən? Bu gün hava çox gözəldir, gəl gəzməyə çıxaq.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "e",
+      "input": "mehsulun qiymeti endirim olunub lakin keyfiyyeti eyni qalib",
+      "expected": "Məhsulun qiyməti endirim olunub, lakin keyfiyyəti eyni qalıb.",
+      "before": "Məhsulun qiyməti endirim olunub, lakin keyfiyyəti eyni qalib.",
+      "after": "Məhsulun qiyməti endirim olunub, lakin keyfiyyəti eyni qalıb.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "f",
+      "input": "Muellimler telebelerin biliyini yoxlayanda obyektiv olmalidirlar",
+      "expected": "Müəllimlər tələbələrin biliyini yoxlayanda obyektiv olmalıdırlar.",
+      "before": "Müəllimlər tələbələrin biliyini yoxlayanda obyektiv olmalidirlar.",
+      "after": "Müəllimlər tələbələrin biliyini yoxlayanda obyektiv olmalıdırlar.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "g",
+      "input": "komputerim yavash isleyir ona gore yenisini almaq isteyirem",
+      "expected": "Kompüterim yavaş işləyir, ona görə yenisini almaq istəyirəm.",
+      "before": "Kompüterim yavaş işləyir ona görə yenisini almaq istəyirəm.",
+      "after": "Kompüterim yavaş işləyir, ona görə yenisini almaq istəyirəm.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    },
+    {
+      "id": "h",
+      "input": "serverde xeta bash verdi database baglantisi kesildi biz bunu duzeltdik",
+      "expected": "Serverdə xəta baş verdi. Database bağlantısı kəsildi. Biz bunu düzəltdik.",
+      "before": "Serverdə xəta baş verdi database bağlantısı kəsildi. Biz bunu düzəltdik.",
+      "after": "Serverdə xəta baş verdi. Database bağlantısı kəsildi. Biz bunu düzəltdik.",
+      "baselineExact": false,
+      "afterExact": true,
+      "idempotent": true
+    }
+  ]
+}

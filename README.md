@@ -4,14 +4,17 @@ A deterministic Azerbaijani text and email editor. The primary UI runs in the
 browser after application assets load. There is no LLM, model download, Python
 service, API key, GPU requirement or network call during correction.
 
-## Stabilization status
+## Validation status
 
-The production baseline inspected was `e67438f` on `main`. The new full
-240-case corpus runner exposes substantial previously untested language gaps.
-**This stabilization branch is not yet a production-ready release.**
-See [validation report](docs/stabilization-report.md) and the machine-readable
-[case diagnostics](docs/stabilization-regressions.json). Do not merge while the
-correctness gate is red.
+`main` is the deployed offline editor. Changes must pass typecheck, lint, build,
+the full regression suite, 1000 exact frozen gold targets with stable second
+passes, and the enforced performance benchmark. Passing these engineering gates
+does not certify arbitrary Azerbaijani grammar or full semantic understanding.
+
+See the [current spelling/context evaluation](docs/a-h-release-report.md) for
+the separately frozen 300-sentence engineering holdout, before/after metrics,
+unresolved cases and provenance. The earlier [stabilization report](docs/stabilization-report.md)
+is a historical audit, not the current release status.
 
 ## Local development
 

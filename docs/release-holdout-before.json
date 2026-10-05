@@ -1,0 +1,2650 @@
+{
+  "hash": "4c81864af86066a234a8cb94e0b8e13ccf268bc9e78bf4c409fd58436ed46187",
+  "certification": "assistant-authored compositional heldout; not a blind real-user benchmark",
+  "overall": {
+    "rows": 300,
+    "exact": 244,
+    "accuracy": 0.8133333333333334,
+    "cer": 0.009065600685273753,
+    "wer": 0.03967761934283943,
+    "precision": 0.9664492078285182,
+    "recall": 0.9435850773430391,
+    "f05": 0.9617881654609535,
+    "characterEdits": {
+      "precision": 0.9810508182601206,
+      "recall": 0.948771345272803,
+      "f05": 0.9744203952433912,
+      "truePositive": 2278,
+      "falsePositive": 44,
+      "missed": 123
+    },
+    "truePositiveEdits": 1037,
+    "falsePositiveEdits": 36,
+    "missedEdits": 62,
+    "identityRows": 60,
+    "identityChanged": 1,
+    "identityFalseChangeRate": 0.016666666666666666,
+    "charErrors": 127,
+    "referenceChars": 14009,
+    "wordErrors": 64,
+    "referenceWords": 1613
+  },
+  "lexical": {
+    "rows": 300,
+    "exact": 244,
+    "accuracy": 0.8133333333333334,
+    "cer": 0.009263987161718579,
+    "wer": 0.03967761934283943,
+    "precision": 0.9839518555667001,
+    "recall": 0.9405560882070949,
+    "f05": 0.9749552772808586,
+    "characterEdits": {
+      "precision": 0.9884726224783862,
+      "recall": 0.9523368810735771,
+      "f05": 0.9810277433501764,
+      "truePositive": 2058,
+      "falsePositive": 24,
+      "missed": 103
+    },
+    "truePositiveEdits": 981,
+    "falsePositiveEdits": 16,
+    "missedEdits": 62,
+    "identityRows": 60,
+    "identityChanged": 1,
+    "identityFalseChangeRate": 0.016666666666666666,
+    "charErrors": 127,
+    "referenceChars": 13709,
+    "wordErrors": 64,
+    "referenceWords": 1613
+  },
+  "categories": {
+    "diacritics": {
+      "rows": 180,
+      "exact": 137,
+      "accuracy": 0.7611111111111111,
+      "cer": 0.010713444784553803,
+      "wer": 0.04800817160367722,
+      "precision": 0.9677819083023544,
+      "recall": 0.9432367149758454,
+      "f05": 0.9627712031558185,
+      "characterEdits": {
+        "precision": 0.9818075117370892,
+        "recall": 0.9489506522972206,
+        "f05": 0.97505536775848,
+        "truePositive": 1673,
+        "falsePositive": 31,
+        "missed": 90
+      },
+      "truePositiveEdits": 781,
+      "falsePositiveEdits": 26,
+      "missedEdits": 47,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 91,
+      "referenceChars": 8494,
+      "wordErrors": 47,
+      "referenceWords": 979
+    },
+    "digraph": {
+      "rows": 60,
+      "exact": 48,
+      "accuracy": 0.8,
+      "cer": 0.011412268188302425,
+      "wer": 0.04672897196261682,
+      "precision": 0.9696969696969697,
+      "recall": 0.9446494464944649,
+      "f05": 0.9645817633760362,
+      "characterEdits": {
+        "precision": 0.9853420195439739,
+        "recall": 0.9482758620689655,
+        "f05": 0.9776987718164188,
+        "truePositive": 605,
+        "falsePositive": 9,
+        "missed": 33
+      },
+      "truePositiveEdits": 256,
+      "falsePositiveEdits": 8,
+      "missedEdits": 15,
+      "identityRows": 0,
+      "identityChanged": 0,
+      "identityFalseChangeRate": null,
+      "charErrors": 32,
+      "referenceChars": 2804,
+      "wordErrors": 15,
+      "referenceWords": 321
+    },
+    "identity": {
+      "rows": 60,
+      "exact": 59,
+      "accuracy": 0.9833333333333333,
+      "cer": 0.0014754703061600886,
+      "wer": 0.006389776357827476,
+      "precision": 0,
+      "recall": null,
+      "f05": 0,
+      "characterEdits": {
+        "precision": 0,
+        "recall": null,
+        "f05": 0,
+        "truePositive": 0,
+        "falsePositive": 4,
+        "missed": 0
+      },
+      "truePositiveEdits": 0,
+      "falsePositiveEdits": 2,
+      "missedEdits": 0,
+      "identityRows": 60,
+      "identityChanged": 1,
+      "identityFalseChangeRate": 0.016666666666666666,
+      "charErrors": 4,
+      "referenceChars": 2711,
+      "wordErrors": 2,
+      "referenceWords": 313
+    }
+  },
+  "lexicalAbstention": {
+    "definition": "unaltered erroneous tokens / reference-error tokens in equal-length word alignments",
+    "needed": 1043,
+    "abstained": 48,
+    "rate": 0.046021093000958774
+  },
+  "idempotencyFailures": [],
+  "editorJsonBytes": 5070973,
+  "rows": [
+    {
+      "id": "release-holdout-001",
+      "input": "Müəllim dərsin mövzusunu izah etdi.",
+      "target": "Müəllim dərsin mövzusunu izah etdi.",
+      "actual": "Müəllim dərsin mövzusunu izah etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-002",
+      "input": "Muellim telebelerin suallarini cavablandirdi",
+      "target": "Müəllim tələbələrin suallarını cavablandırdı.",
+      "actual": "Müəllim tələbələrin suallarını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-003",
+      "input": "Muellim yeni telim proqramini hazirladi",
+      "target": "Müəllim yeni təlim proqramını hazırladı.",
+      "actual": "Müəllim yeni təlim proqramını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-004",
+      "input": "Telimci dersin movzusunu izah etdi",
+      "target": "Təlimçi dərsin mövzusunu izah etdi.",
+      "actual": "Təlimçi dərsin mövzusunu izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-005",
+      "input": "Telimci telebelerin suallarini cavablandirdi",
+      "target": "Təlimçi tələbələrin suallarını cavablandırdı.",
+      "actual": "Təlimçi tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-006",
+      "input": "Təlimçi yeni təlim proqramını hazırladı.",
+      "target": "Təlimçi yeni təlim proqramını hazırladı.",
+      "actual": "Təlimçi yeni təlim proqramını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-007",
+      "input": "Mektebin direktoru dersin movzusunu izah etdi",
+      "target": "Məktəbin direktoru dərsin mövzusunu izah etdi.",
+      "actual": "Məktəbin direktoru dərsin mövzusunu izah etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-008",
+      "input": "Mektebin direktoru telebelerin suallarini cavablandirdi",
+      "target": "Məktəbin direktoru tələbələrin suallarını cavablandırdı.",
+      "actual": "Məktəbin direktoru tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-009",
+      "input": "Mektebin direktoru yeni telim proqramini hazirladi",
+      "target": "Məktəbin direktoru yeni təlim proqramını hazırladı.",
+      "actual": "Məktəbin direktoru yeni təlim proqramını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-010",
+      "input": "Genc tedqiqatci dersin movzusunu izah etdi",
+      "target": "Gənc tədqiqatçı dərsin mövzusunu izah etdi.",
+      "actual": "Gənc tədqiqatçı dərsin mövzusunu izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-011",
+      "input": "Gənc tədqiqatçı tələbələrin suallarını cavablandırdı.",
+      "target": "Gənc tədqiqatçı tələbələrin suallarını cavablandırdı.",
+      "actual": "Gənc tədqiqatçı tələbələrin suallarını cavablandırdı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-012",
+      "input": "Genc tedqiqatchi yeni telim proqramini hazirladi",
+      "target": "Gənc tədqiqatçı yeni təlim proqramını hazırladı.",
+      "actual": "Gənc tədqiqatçı yeni təlim proqramını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-013",
+      "input": "Kursun rehberi dersin movzusunu izah etdi",
+      "target": "Kursun rəhbəri dərsin mövzusunu izah etdi.",
+      "actual": "Kursun rəhbəri dərsin mövzusunu izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-014",
+      "input": "Kursun rehberi telebelerin suallarini cavablandirdi",
+      "target": "Kursun rəhbəri tələbələrin suallarını cavablandırdı.",
+      "actual": "Kursun rəhbəri tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-015",
+      "input": "Kursun rehberi yeni telim proqramini hazirladi",
+      "target": "Kursun rəhbəri yeni təlim proqramını hazırladı.",
+      "actual": "Kursun rəhbəri yeni təlim proqramını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-016",
+      "input": "Həkim xəstənin vəziyyətini yoxladı.",
+      "target": "Həkim xəstənin vəziyyətini yoxladı.",
+      "actual": "Həkim xəstənin vəziyyətini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-017",
+      "input": "Hekim muayine neticelerini qeyd etdi",
+      "target": "Həkim müayinə nəticələrini qeyd etdi.",
+      "actual": "Həkim müayinə nəticələrini qeyd etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-018",
+      "input": "Hekim yeni mualice planini nezerden kecirdi",
+      "target": "Həkim yeni müalicə planını nəzərdən keçirdi.",
+      "actual": "Həkim yeni müalicə planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-019",
+      "input": "Tibb bacisi xestenin veziyyetini yoxladi",
+      "target": "Tibb bacısı xəstənin vəziyyətini yoxladı.",
+      "actual": "Tibb bacısı xəstənin vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-020",
+      "input": "Tibb bacisi muayine neticelerini qeyd etdi",
+      "target": "Tibb bacısı müayinə nəticələrini qeyd etdi.",
+      "actual": "Tibb bacısı müayinə nəticələrini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-021",
+      "input": "Tibb bacısı yeni müalicə planını nəzərdən keçirdi.",
+      "target": "Tibb bacısı yeni müalicə planını nəzərdən keçirdi.",
+      "actual": "Tibb bacısı yeni müalicə planını nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-022",
+      "input": "Klinikanin rehberi xestenin veziyyetini yoxladi",
+      "target": "Klinikanın rəhbəri xəstənin vəziyyətini yoxladı.",
+      "actual": "Klinikanın rəhbəri xəstənin vəziyyətini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-023",
+      "input": "Klinikanin rehberi muayine neticelerini qeyd etdi",
+      "target": "Klinikanın rəhbəri müayinə nəticələrini qeyd etdi.",
+      "actual": "Klinikanın rəhbəri müayinə nəticələrini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-024",
+      "input": "Klinikanin rehberi yeni mualice planini nezerden kecirdi",
+      "target": "Klinikanın rəhbəri yeni müalicə planını nəzərdən keçirdi.",
+      "actual": "Klinikanın rəhbəri yeni müalicə planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-025",
+      "input": "Novbetci mutexessis xestenin veziyyetini yoxladi",
+      "target": "Növbətçi mütəxəssis xəstənin vəziyyətini yoxladı.",
+      "actual": "Növbətçi mütəxəssis xəstənin vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-026",
+      "input": "Növbətçi mütəxəssis müayinə nəticələrini qeyd etdi.",
+      "target": "Növbətçi mütəxəssis müayinə nəticələrini qeyd etdi.",
+      "actual": "Növbətçi mütəxəssis müayinə nəticələrini qeyd etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-027",
+      "input": "Novbetchi mutexessis yeni mualice planini nezerden kechirdi",
+      "target": "Növbətçi mütəxəssis yeni müalicə planını nəzərdən keçirdi.",
+      "actual": "Növbətçi mütəxəssis yeni müalicə planını nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-028",
+      "input": "Xestexananin emekdasi xestenin veziyyetini yoxladi",
+      "target": "Xəstəxananın əməkdaşı xəstənin vəziyyətini yoxladı.",
+      "actual": "Xəstəxananın əməkdaşı xəstənin vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-029",
+      "input": "Xestexananin emekdasi muayine neticelerini qeyd etdi",
+      "target": "Xəstəxananın əməkdaşı müayinə nəticələrini qeyd etdi.",
+      "actual": "Xəstəxananın əməkdaşı müayinə nəticələrini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-030",
+      "input": "Xestexananin emekdasi yeni mualice planini nezerden kecirdi",
+      "target": "Xəstəxananın əməkdaşı yeni müalicə planını nəzərdən keçirdi.",
+      "actual": "Xəstəxananın əməkdaşı yeni müalicə planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-031",
+      "input": "Qeydiyyat operatoru müraciətin nömrəsini yoxladı.",
+      "target": "Qeydiyyat operatoru müraciətin nömrəsini yoxladı.",
+      "actual": "Qeydiyyat operatoru müraciətin nömrəsini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-032",
+      "input": "Qeydiyyat operatoru senedin suretini gonderdi",
+      "target": "Qeydiyyat operatoru sənədin surətini göndərdi.",
+      "actual": "Qeydiyyat operatoru sənədin sürətini göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-033",
+      "input": "Qeydiyyat operatoru hesabatin tarixini deqiqlesdirdi",
+      "target": "Qeydiyyat operatoru hesabatın tarixini dəqiqləşdirdi.",
+      "actual": "Qeydiyyat operatoru hesabatın tarixini dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-034",
+      "input": "Arxiv iscisi muracietin nomresini yoxladi",
+      "target": "Arxiv işçisi müraciətin nömrəsini yoxladı.",
+      "actual": "Arxiv işçisi müraciətin nömrəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-035",
+      "input": "Arxiv iscisi senedin suretini gonderdi",
+      "target": "Arxiv işçisi sənədin surətini göndərdi.",
+      "actual": "Arxiv işçisi sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-036",
+      "input": "Arxiv işçisi hesabatın tarixini dəqiqləşdirdi.",
+      "target": "Arxiv işçisi hesabatın tarixini dəqiqləşdirdi.",
+      "actual": "Arxiv işçisi hesabatın tarixini dəqiqləşdirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-037",
+      "input": "Shobenin rehberi muracietin nomresini yoxladi",
+      "target": "Şöbənin rəhbəri müraciətin nömrəsini yoxladı.",
+      "actual": "Şöbənin rəhbəri müraciətin nömrəsini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-038",
+      "input": "Sobenin rehberi senedin suretini gonderdi",
+      "target": "Şöbənin rəhbəri sənədin surətini göndərdi.",
+      "actual": "Şöbənin rəhbəri sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-039",
+      "input": "Sobenin rehberi hesabatin tarixini deqiqlesdirdi",
+      "target": "Şöbənin rəhbəri hesabatın tarixini dəqiqləşdirdi.",
+      "actual": "Şöbənin rəhbəri hesabatın tarixini dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-040",
+      "input": "Senedin muellifi muracietin nomresini yoxladi",
+      "target": "Sənədin müəllifi müraciətin nömrəsini yoxladı.",
+      "actual": "Sənədin müəllifi müraciətin nömrəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-041",
+      "input": "Sənədin müəllifi sənədin surətini göndərdi.",
+      "target": "Sənədin müəllifi sənədin surətini göndərdi.",
+      "actual": "Sənədin müəllifi sənədin surətini göndərdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-042",
+      "input": "Senedin muellifi hesabatin tarixini deqiqleshdirdi",
+      "target": "Sənədin müəllifi hesabatın tarixini dəqiqləşdirdi.",
+      "actual": "Sənədin müəllifi hesabatın tarixini dəqiqləşdirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-043",
+      "input": "Mesul icraci muracietin nomresini yoxladi",
+      "target": "Məsul icraçı müraciətin nömrəsini yoxladı.",
+      "actual": "Məsul icraçı müraciətin nömrəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-044",
+      "input": "Mesul icraci senedin suretini gonderdi",
+      "target": "Məsul icraçı sənədin surətini göndərdi.",
+      "actual": "Məsul icraçı sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-045",
+      "input": "Mesul icraci hesabatin tarixini deqiqlesdirdi",
+      "target": "Məsul icraçı hesabatın tarixini dəqiqləşdirdi.",
+      "actual": "Məsul icraçı hesabatın tarixini dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-046",
+      "input": "Bankın əməkdaşı ödənişin məbləğini yoxladı.",
+      "target": "Bankın əməkdaşı ödənişin məbləğini yoxladı.",
+      "actual": "Bankın əməkdaşı ödənişin məbləğini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-047",
+      "input": "Bankin emekdashi muqavilenin shertlerini izah etdi",
+      "target": "Bankın əməkdaşı müqavilənin şərtlərini izah etdi.",
+      "actual": "Bankın əməkdaşı müqavilənin şərtlərini izah etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-048",
+      "input": "Bankin emekdasi musterinin muracietini cavablandirdi",
+      "target": "Bankın əməkdaşı müştərinin müraciətini cavablandırdı.",
+      "actual": "Bankın əməkdaşı müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-049",
+      "input": "Musteri numayendesi odenisin meblegini yoxladi",
+      "target": "Müştəri nümayəndəsi ödənişin məbləğini yoxladı.",
+      "actual": "Müştəri nümayəndəsi ödənişin məbləğini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-050",
+      "input": "Musteri numayendesi muqavilenin sertlerini izah etdi",
+      "target": "Müştəri nümayəndəsi müqavilənin şərtlərini izah etdi.",
+      "actual": "Müştəri nümayəndəsi müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-051",
+      "input": "Müştəri nümayəndəsi müştərinin müraciətini cavablandırdı.",
+      "target": "Müştəri nümayəndəsi müştərinin müraciətini cavablandırdı.",
+      "actual": "Müştəri nümayəndəsi müştərinin müraciətini cavablandırdı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-052",
+      "input": "Filialin rehberi odenishin mebleghini yoxladi",
+      "target": "Filialın rəhbəri ödənişin məbləğini yoxladı.",
+      "actual": "Filialın rəhbəri ödənişin məbləğini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-053",
+      "input": "Filialin rehberi muqavilenin sertlerini izah etdi",
+      "target": "Filialın rəhbəri müqavilənin şərtlərini izah etdi.",
+      "actual": "Filialın rəhbəri müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-054",
+      "input": "Filialin rehberi musterinin muracietini cavablandirdi",
+      "target": "Filialın rəhbəri müştərinin müraciətini cavablandırdı.",
+      "actual": "Filialın rəhbəri müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-055",
+      "input": "Maliyye mutexessisi odenisin meblegini yoxladi",
+      "target": "Maliyyə mütəxəssisi ödənişin məbləğini yoxladı.",
+      "actual": "Maliyyə mütəxəssisi ödənişin məbləğini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-056",
+      "input": "Maliyyə mütəxəssisi müqavilənin şərtlərini izah etdi.",
+      "target": "Maliyyə mütəxəssisi müqavilənin şərtlərini izah etdi.",
+      "actual": "Maliyyə mütəxəssisi müqavilənin şərtlərini izah etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-057",
+      "input": "Maliyye mutexessisi mushterinin muracietini cavablandirdi",
+      "target": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandırdı.",
+      "actual": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-058",
+      "input": "Kredit mutexessisi odenisin meblegini yoxladi",
+      "target": "Kredit mütəxəssisi ödənişin məbləğini yoxladı.",
+      "actual": "Kredit mütəxəssisi ödənişin məbləğini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-059",
+      "input": "Kredit mutexessisi muqavilenin sertlerini izah etdi",
+      "target": "Kredit mütəxəssisi müqavilənin şərtlərini izah etdi.",
+      "actual": "Kredit mütəxəssisi müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-060",
+      "input": "Kredit mutexessisi musterinin muracietini cavablandirdi",
+      "target": "Kredit mütəxəssisi müştərinin müraciətini cavablandırdı.",
+      "actual": "Kredit mütəxəssisi müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-061",
+      "input": "Backend mütəxəssisi API cavabını yoxladı.",
+      "target": "Backend mütəxəssisi API cavabını yoxladı.",
+      "actual": "Backend mütəxəssisi API cavabını yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-062",
+      "input": "Backend mutexessisi yeni modulun kodunu nezerden kechirdi",
+      "target": "Backend mütəxəssisi yeni modulun kodunu nəzərdən keçirdi.",
+      "actual": "Backend mütəxəssisi yeni modulun kodunu nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-063",
+      "input": "Backend mutexessisi xeta haqqinda melumati komandaya gonderdi",
+      "target": "Backend mütəxəssisi xəta haqqında məlumatı komandaya göndərdi.",
+      "actual": "Backend mütəxəssisi xəta haqqında məlumatı komandaya göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-064",
+      "input": "Proqramci API cavabini yoxladi",
+      "target": "Proqramçı API cavabını yoxladı.",
+      "actual": "Proqramçı API cavabını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-065",
+      "input": "Proqramci yeni modulun kodunu nezerden kecirdi",
+      "target": "Proqramçı yeni modulun kodunu nəzərdən keçirdi.",
+      "actual": "Proqramçı yeni modulun kodunu nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-066",
+      "input": "Proqramçı xəta haqqında məlumatı komandaya göndərdi.",
+      "target": "Proqramçı xəta haqqında məlumatı komandaya göndərdi.",
+      "actual": "Proqramçı xəta haqqında məlumatı komandaya göndərdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-067",
+      "input": "Test muhendisi API cavabini yoxladi",
+      "target": "Test mühəndisi API cavabını yoxladı.",
+      "actual": "Test mühəndisi API cavabını yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-068",
+      "input": "Test muhendisi yeni modulun kodunu nezerden kecirdi",
+      "target": "Test mühəndisi yeni modulun kodunu nəzərdən keçirdi.",
+      "actual": "Test mühəndisi yeni modulun kodunu nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-069",
+      "input": "Test muhendisi xeta haqqinda melumati komandaya gonderdi",
+      "target": "Test mühəndisi xəta haqqında məlumatı komandaya göndərdi.",
+      "actual": "Test mühəndisi xəta haqqında məlumatı komandaya göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-070",
+      "input": "Layihenin rehberi API cavabini yoxladi",
+      "target": "Layihənin rəhbəri API cavabını yoxladı.",
+      "actual": "Layihənin rəhbəri API cavabını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-071",
+      "input": "Layihənin rəhbəri yeni modulun kodunu nəzərdən keçirdi.",
+      "target": "Layihənin rəhbəri yeni modulun kodunu nəzərdən keçirdi.",
+      "actual": "Layihənin rəhbəri yeni modulun kodunu nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-072",
+      "input": "Layihenin rehberi xeta haqqinda melumati komandaya gonderdi",
+      "target": "Layihənin rəhbəri xəta haqqında məlumatı komandaya göndərdi.",
+      "actual": "Layihənin rəhbəri xəta haqqında məlumatı komandaya göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-073",
+      "input": "Sistem inzibatcisi API cavabini yoxladi",
+      "target": "Sistem inzibatçısı API cavabını yoxladı.",
+      "actual": "Sistem inzibatçısı API cavabını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-074",
+      "input": "Sistem inzibatcisi yeni modulun kodunu nezerden kecirdi",
+      "target": "Sistem inzibatçısı yeni modulun kodunu nəzərdən keçirdi.",
+      "actual": "Sistem inzibatçısı yeni modulun kodunu nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-075",
+      "input": "Sistem inzibatcisi xeta haqqinda melumati komandaya gonderdi",
+      "target": "Sistem inzibatçısı xəta haqqında məlumatı komandaya göndərdi.",
+      "actual": "Sistem inzibatçısı xəta haqqında məlumatı komandaya göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-076",
+      "input": "Təhlükəsizlik mütəxəssisi giriş qeydlərini yoxladı.",
+      "target": "Təhlükəsizlik mütəxəssisi giriş qeydlərini yoxladı.",
+      "actual": "Təhlükəsizlik mütəxəssisi giriş qeydlərini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-077",
+      "input": "Tehlukesizlik mutexessisi istifadechinin icazelerini nezerden kechirdi",
+      "target": "Təhlükəsizlik mütəxəssisi istifadəçinin icazələrini nəzərdən keçirdi.",
+      "actual": "Təhlükəsizlik mütəxəssisi istifadəçinin icazələrini nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-078",
+      "input": "Tehlukesizlik mutexessisi sebeke haqqinda hesabat hazirladi",
+      "target": "Təhlükəsizlik mütəxəssisi şəbəkə haqqında hesabat hazırladı.",
+      "actual": "Təhlükəsizlik mütəxəssisi şəbəkə haqqında hesabat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-079",
+      "input": "Sebeke inzibatcisi giris qeydlerini yoxladi",
+      "target": "Şəbəkə inzibatçısı giriş qeydlərini yoxladı.",
+      "actual": "Şəbəkə inzibatçısı giriş qeydlərini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-080",
+      "input": "Sebeke inzibatcisi istifadecinin icazelerini nezerden kecirdi",
+      "target": "Şəbəkə inzibatçısı istifadəçinin icazələrini nəzərdən keçirdi.",
+      "actual": "Şəbəkə inzibatçısı istifadəçinin icazələrini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-081",
+      "input": "Şəbəkə inzibatçısı şəbəkə haqqında hesabat hazırladı.",
+      "target": "Şəbəkə inzibatçısı şəbəkə haqqında hesabat hazırladı.",
+      "actual": "Şəbəkə inzibatçısı şəbəkə haqqında hesabat hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-082",
+      "input": "Texniki rehber girish qeydlerini yoxladi",
+      "target": "Texniki rəhbər giriş qeydlərini yoxladı.",
+      "actual": "Texniki rəhbər giriş qeydlərini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-083",
+      "input": "Texniki rehber istifadecinin icazelerini nezerden kecirdi",
+      "target": "Texniki rəhbər istifadəçinin icazələrini nəzərdən keçirdi.",
+      "actual": "Texniki rəhbər istifadəçinin icazələrini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-084",
+      "input": "Texniki rehber sebeke haqqinda hesabat hazirladi",
+      "target": "Texniki rəhbər şəbəkə haqqında hesabat hazırladı.",
+      "actual": "Texniki rəhbər şəbəkə haqqında hesabat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-085",
+      "input": "Novbetci muhendis giris qeydlerini yoxladi",
+      "target": "Növbətçi mühəndis giriş qeydlərini yoxladı.",
+      "actual": "Növbətçi mühəndis giriş qeydlərini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-086",
+      "input": "Növbətçi mühəndis istifadəçinin icazələrini nəzərdən keçirdi.",
+      "target": "Növbətçi mühəndis istifadəçinin icazələrini nəzərdən keçirdi.",
+      "actual": "Növbətçi mühəndis istifadəçinin icazələrini nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-087",
+      "input": "Novbetchi muhendis shebeke haqqinda hesabat hazirladi",
+      "target": "Növbətçi mühəndis şəbəkə haqqında hesabat hazırladı.",
+      "actual": "Növbətçi mühəndis şəbəkə haqqında hesabat hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-088",
+      "input": "Audit emekdasi giris qeydlerini yoxladi",
+      "target": "Audit əməkdaşı giriş qeydlərini yoxladı.",
+      "actual": "Audit əməkdaşı giriş qeydlərini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-089",
+      "input": "Audit emekdasi istifadecinin icazelerini nezerden kecirdi",
+      "target": "Audit əməkdaşı istifadəçinin icazələrini nəzərdən keçirdi.",
+      "actual": "Audit əməkdaşı istifadəçinin icazələrini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-090",
+      "input": "Audit emekdasi sebeke haqqinda hesabat hazirladi",
+      "target": "Audit əməkdaşı şəbəkə haqqında hesabat hazırladı.",
+      "actual": "Audit əməkdaşı şəbəkə haqqında hesabat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-091",
+      "input": "Katib görüşün vaxtını məktubla bildirdi.",
+      "target": "Katib görüşün vaxtını məktubla bildirdi.",
+      "actual": "Katib görüşün vaxtını məktubla bildirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-092",
+      "input": "Katib sorghunun cavabini elektron pochtla gonderdi",
+      "target": "Katib sorğunun cavabını elektron poçtla göndərdi.",
+      "actual": "Katib sorğunun cavabını elektron poçtla göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-093",
+      "input": "Katib muracietin alindigini tesdiqledi",
+      "target": "Katib müraciətin alındığını təsdiqlədi.",
+      "actual": "Katib müraciətin alındığını təsdiqlədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-094",
+      "input": "Sirketin numayendesi gorusun vaxtini mektubla bildirdi",
+      "target": "Şirkətin nümayəndəsi görüşün vaxtını məktubla bildirdi.",
+      "actual": "Şirkətin nümayəndəsi görüşün vaxtını məktubla bildirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-095",
+      "input": "Sirketin numayendesi sorgunun cavabini elektron poctla gonderdi",
+      "target": "Şirkətin nümayəndəsi sorğunun cavabını elektron poçtla göndərdi.",
+      "actual": "Şirkətin nümayəndəsi sorğunun cavabını elektron poçtla göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-096",
+      "input": "Şirkətin nümayəndəsi müraciətin alındığını təsdiqlədi.",
+      "target": "Şirkətin nümayəndəsi müraciətin alındığını təsdiqlədi.",
+      "actual": "Şirkətin nümayəndəsi müraciətin alındığını təsdiqlədi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-097",
+      "input": "Layihe meneceri gorushun vaxtini mektubla bildirdi",
+      "target": "Layihə meneceri görüşün vaxtını məktubla bildirdi.",
+      "actual": "Layihə meneceri görüşün vaxtını məktubla bildirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-098",
+      "input": "Layihe meneceri sorgunun cavabini elektron poctla gonderdi",
+      "target": "Layihə meneceri sorğunun cavabını elektron poçtla göndərdi.",
+      "actual": "Layihə meneceri sorğunun cavabını elektron poçtla göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-099",
+      "input": "Layihe meneceri muracietin alindigini tesdiqledi",
+      "target": "Layihə meneceri müraciətin alındığını təsdiqlədi.",
+      "actual": "Layihə meneceri müraciətin alındığını təsdiqlədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-100",
+      "input": "Insan resurslari mutexessisi gorusun vaxtini mektubla bildirdi",
+      "target": "İnsan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+      "actual": "Insan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-101",
+      "input": "İnsan resursları mütəxəssisi sorğunun cavabını elektron poçtla göndərdi.",
+      "target": "İnsan resursları mütəxəssisi sorğunun cavabını elektron poçtla göndərdi.",
+      "actual": "İnsan resursları mütəxəssisi sorğunun cavabını elektron poçtla göndərdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-102",
+      "input": "Insan resurslari mutexessisi muracietin alindighini tesdiqledi",
+      "target": "İnsan resursları mütəxəssisi müraciətin alındığını təsdiqlədi.",
+      "actual": "Insan resursları mütəxəssisi müraciətin alindighini təsdiqlədi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-103",
+      "input": "Destek emekdasi gorusun vaxtini mektubla bildirdi",
+      "target": "Dəstək əməkdaşı görüşün vaxtını məktubla bildirdi.",
+      "actual": "Dəstək əməkdaşı görüşün vaxtını məktubla bildirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-104",
+      "input": "Destek emekdasi sorgunun cavabini elektron poctla gonderdi",
+      "target": "Dəstək əməkdaşı sorğunun cavabını elektron poçtla göndərdi.",
+      "actual": "Dəstək əməkdaşı sorğunun cavabını elektron poçtla göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-105",
+      "input": "Destek emekdasi muracietin alindigini tesdiqledi",
+      "target": "Dəstək əməkdaşı müraciətin alındığını təsdiqlədi.",
+      "actual": "Dəstək əməkdaşı müraciətin alındığını təsdiqlədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-106",
+      "input": "Alim təcrübənin nəticələrini müqayisə etdi.",
+      "target": "Alim təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Alim təcrübənin nəticələrini müqayisə etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-107",
+      "input": "Alim olchme cihazini yoxladi",
+      "target": "Alim ölçmə cihazını yoxladı.",
+      "actual": "Alim ölçmə cihazını yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-108",
+      "input": "Alim yeni tedqiqatin planini hazirladi",
+      "target": "Alim yeni tədqiqatın planını hazırladı.",
+      "actual": "Alim yeni tədqiqatın planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-109",
+      "input": "Laboratoriyanin rehberi tecrubenin neticelerini muqayise etdi",
+      "target": "Laboratoriyanın rəhbəri təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Laboratoriyanın rəhbəri təcrübənin nəticələrini müqayisə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-110",
+      "input": "Laboratoriyanin rehberi olcme cihazini yoxladi",
+      "target": "Laboratoriyanın rəhbəri ölçmə cihazını yoxladı.",
+      "actual": "Laboratoriyanın rəhbəri ölçmə cihazını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-111",
+      "input": "Laboratoriyanın rəhbəri yeni tədqiqatın planını hazırladı.",
+      "target": "Laboratoriyanın rəhbəri yeni tədqiqatın planını hazırladı.",
+      "actual": "Laboratoriyanın rəhbəri yeni tədqiqatın planını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-112",
+      "input": "Universitetin emekdashi tecrubenin neticelerini muqayise etdi",
+      "target": "Universitetin əməkdaşı təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Universitetin əməkdaşı təcrübənin nəticələrini müqayisə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-113",
+      "input": "Universitetin emekdasi olcme cihazini yoxladi",
+      "target": "Universitetin əməkdaşı ölçmə cihazını yoxladı.",
+      "actual": "Universitetin əməkdaşı ölçmə cihazını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-114",
+      "input": "Universitetin emekdasi yeni tedqiqatin planini hazirladi",
+      "target": "Universitetin əməkdaşı yeni tədqiqatın planını hazırladı.",
+      "actual": "Universitetin əməkdaşı yeni tədqiqatın planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-115",
+      "input": "Genc muhendis tecrubenin neticelerini muqayise etdi",
+      "target": "Gənc mühəndis təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Gənc mühəndis təcrübənin nəticələrini müqayisə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-116",
+      "input": "Gənc mühəndis ölçmə cihazını yoxladı.",
+      "target": "Gənc mühəndis ölçmə cihazını yoxladı.",
+      "actual": "Gənc mühəndis ölçmə cihazını yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-117",
+      "input": "Genc muhendis yeni tedqiqatin planini hazirladi",
+      "target": "Gənc mühəndis yeni tədqiqatın planını hazırladı.",
+      "actual": "Gənc mühəndis yeni tədqiqatın planını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-118",
+      "input": "Tedqiqat qrupunun uzvu tecrubenin neticelerini muqayise etdi",
+      "target": "Tədqiqat qrupunun üzvü təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Tədqiqat qrupunun uzvu təcrübənin nəticələrini müqayisə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-119",
+      "input": "Tedqiqat qrupunun uzvu olcme cihazini yoxladi",
+      "target": "Tədqiqat qrupunun üzvü ölçmə cihazını yoxladı.",
+      "actual": "Tədqiqat qrupunun uzvu ölçmə cihazını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-120",
+      "input": "Tedqiqat qrupunun uzvu yeni tedqiqatin planini hazirladi",
+      "target": "Tədqiqat qrupunun üzvü yeni tədqiqatın planını hazırladı.",
+      "actual": "Tədqiqat qrupunun uzvu yeni tədqiqatın planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-121",
+      "input": "Muzeyin əməkdaşı tədbirin proqramını təqdim etdi.",
+      "target": "Muzeyin əməkdaşı tədbirin proqramını təqdim etdi.",
+      "actual": "Muzeyin əməkdaşı tədbirin proqramını təqdim etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-122",
+      "input": "Muzeyin emekdashi qonaqlarin suallarini cavablandirdi",
+      "target": "Muzeyin əməkdaşı qonaqların suallarını cavablandırdı.",
+      "actual": "Muzeyin əməkdaşı qonaqların suallarını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-123",
+      "input": "Muzeyin emekdasi sergi haqqinda melumat hazirladi",
+      "target": "Muzeyin əməkdaşı sərgi haqqında məlumat hazırladı.",
+      "actual": "Muzeyin əməkdaşı şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-124",
+      "input": "Serginin rehberi tedbirin proqramini teqdim etdi",
+      "target": "Sərginin rəhbəri tədbirin proqramını təqdim etdi.",
+      "actual": "Şərğinin rəhbəri tədbirin proqramını təqdim etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-125",
+      "input": "Serginin rehberi qonaqlarin suallarini cavablandirdi",
+      "target": "Sərginin rəhbəri qonaqların suallarını cavablandırdı.",
+      "actual": "Şərğinin rəhbəri qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-126",
+      "input": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+      "target": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+      "actual": "Şərğinin rəhbəri şərği haqqında məlumat hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-127",
+      "input": "Senetshunas tedbirin proqramini teqdim etdi",
+      "target": "Sənətşünas tədbirin proqramını təqdim etdi.",
+      "actual": "Sənətşünas tədbirin proqramını təqdim etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-128",
+      "input": "Senetsunas qonaqlarin suallarini cavablandirdi",
+      "target": "Sənətşünas qonaqların suallarını cavablandırdı.",
+      "actual": "Sənətşünas qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-129",
+      "input": "Senetsunas sergi haqqinda melumat hazirladi",
+      "target": "Sənətşünas sərgi haqqında məlumat hazırladı.",
+      "actual": "Sənətşünas şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-130",
+      "input": "Kitabxananin iscisi tedbirin proqramini teqdim etdi",
+      "target": "Kitabxananın işçisi tədbirin proqramını təqdim etdi.",
+      "actual": "Kitabxananın işçisi tədbirin proqramını təqdim etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-131",
+      "input": "Kitabxananın işçisi qonaqların suallarını cavablandırdı.",
+      "target": "Kitabxananın işçisi qonaqların suallarını cavablandırdı.",
+      "actual": "Kitabxananın işçisi qonaqların suallarını cavablandırdı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-132",
+      "input": "Kitabxananin ishchisi sergi haqqinda melumat hazirladi",
+      "target": "Kitabxananın işçisi sərgi haqqında məlumat hazırladı.",
+      "actual": "Kitabxananın işçisi şərği haqqında məlumat hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-133",
+      "input": "Medeniyyet merkezinin numayendesi tedbirin proqramini teqdim etdi",
+      "target": "Mədəniyyət mərkəzinin nümayəndəsi tədbirin proqramını təqdim etdi.",
+      "actual": "Mədəniyyət mərkəzinin nümayəndəsi tədbirin proqramını təqdim etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-134",
+      "input": "Medeniyyet merkezinin numayendesi qonaqlarin suallarini cavablandirdi",
+      "target": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandırdı.",
+      "actual": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-135",
+      "input": "Medeniyyet merkezinin numayendesi sergi haqqinda melumat hazirladi",
+      "target": "Mədəniyyət mərkəzinin nümayəndəsi sərgi haqqında məlumat hazırladı.",
+      "actual": "Mədəniyyət mərkəzinin nümayəndəsi şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-136",
+      "input": "Səyahətçi şəhərin xəritəsini nəzərdən keçirdi.",
+      "target": "Səyahətçi şəhərin xəritəsini nəzərdən keçirdi.",
+      "actual": "Səyahətçi şəhərin xəritəsini nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-137",
+      "input": "Seyahetchi muzeye geden yolu oyrendi",
+      "target": "Səyahətçi muzeyə gedən yolu öyrəndi.",
+      "actual": "Səyahətçi muzeyə gedən yolu öyrəndi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-138",
+      "input": "Seyahetci seferin vaxtini deqiqlesdirdi",
+      "target": "Səyahətçi səfərin vaxtını dəqiqləşdirdi.",
+      "actual": "Səyahətçi səfərin vaxtını dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-139",
+      "input": "Turist seherin xeritesini nezerden kecirdi",
+      "target": "Turist şəhərin xəritəsini nəzərdən keçirdi.",
+      "actual": "Turist şəhərin xəritəsini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-140",
+      "input": "Turist muzeye geden yolu oyrendi",
+      "target": "Turist muzeyə gedən yolu öyrəndi.",
+      "actual": "Turist muzeyə gedən yolu öyrəndi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-141",
+      "input": "Turist səfərin vaxtını dəqiqləşdirdi.",
+      "target": "Turist səfərin vaxtını dəqiqləşdirdi.",
+      "actual": "Turist səfərin vaxtını dəqiqləşdirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-142",
+      "input": "Beledchi sheherin xeritesini nezerden kechirdi",
+      "target": "Bələdçi şəhərin xəritəsini nəzərdən keçirdi.",
+      "actual": "Bələdçi şəhərin xəritəsini nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-143",
+      "input": "Beledci muzeye geden yolu oyrendi",
+      "target": "Bələdçi muzeyə gedən yolu öyrəndi.",
+      "actual": "Bələdçi muzeyə gedən yolu öyrəndi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-144",
+      "input": "Beledci seferin vaxtini deqiqlesdirdi",
+      "target": "Bələdçi səfərin vaxtını dəqiqləşdirdi.",
+      "actual": "Bələdçi səfərin vaxtını dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-145",
+      "input": "Seferin teskilatcisi seherin xeritesini nezerden kecirdi",
+      "target": "Səfərin təşkilatçısı şəhərin xəritəsini nəzərdən keçirdi.",
+      "actual": "Səfərin təşkilatçısı şəhərin xəritəsini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-146",
+      "input": "Səfərin təşkilatçısı muzeyə gedən yolu öyrəndi.",
+      "target": "Səfərin təşkilatçısı muzeyə gedən yolu öyrəndi.",
+      "actual": "Səfərin təşkilatçısı muzeyə gedən yolu öyrəndi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-147",
+      "input": "Seferin teshkilatchisi seferin vaxtini deqiqleshdirdi",
+      "target": "Səfərin təşkilatçısı səfərin vaxtını dəqiqləşdirdi.",
+      "actual": "Səfərin təşkilatçısı səfərin vaxtını dəqiqləşdirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-148",
+      "input": "Qrupun rehberi seherin xeritesini nezerden kecirdi",
+      "target": "Qrupun rəhbəri şəhərin xəritəsini nəzərdən keçirdi.",
+      "actual": "Qrupun rəhbəri şəhərin xəritəsini nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-149",
+      "input": "Qrupun rehberi muzeye geden yolu oyrendi",
+      "target": "Qrupun rəhbəri muzeyə gedən yolu öyrəndi.",
+      "actual": "Qrupun rəhbəri muzeyə gedən yolu öyrəndi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-150",
+      "input": "Qrupun rehberi seferin vaxtini deqiqlesdirdi",
+      "target": "Qrupun rəhbəri səfərin vaxtını dəqiqləşdirdi.",
+      "actual": "Qrupun rəhbəri səfərin vaxtını dəqiqləşdirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-151",
+      "input": "Fermer suvarma sistemini yoxladı.",
+      "target": "Fermer suvarma sistemini yoxladı.",
+      "actual": "Fermer suvarma sistemini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-152",
+      "input": "Fermer mehsulun keyfiyyetini qiymetlendirdi",
+      "target": "Fermer məhsulun keyfiyyətini qiymətləndirdi.",
+      "actual": "Fermer məhsulun keyfiyyətini qiymətləndirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-153",
+      "input": "Fermer yeni ekin planini hazirladi",
+      "target": "Fermer yeni əkin planını hazırladı.",
+      "actual": "Fermer yeni əkin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-154",
+      "input": "Bagban suvarma sistemini yoxladi",
+      "target": "Bağban suvarma sistemini yoxladı.",
+      "actual": "Bağban suvarma sistemini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-155",
+      "input": "Bagban mehsulun keyfiyyetini qiymetlendirdi",
+      "target": "Bağban məhsulun keyfiyyətini qiymətləndirdi.",
+      "actual": "Bağban məhsulun keyfiyyətini qiymətləndirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-156",
+      "input": "Bağban yeni əkin planını hazırladı.",
+      "target": "Bağban yeni əkin planını hazırladı.",
+      "actual": "Bağban yeni əkin planını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-157",
+      "input": "Kend teserrufati mutexessisi suvarma sistemini yoxladi",
+      "target": "Kənd təsərrüfatı mütəxəssisi suvarma sistemini yoxladı.",
+      "actual": "Kənd təsərrüfatı mütəxəssisi suvarma sistemini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-158",
+      "input": "Kend teserrufati mutexessisi mehsulun keyfiyyetini qiymetlendirdi",
+      "target": "Kənd təsərrüfatı mütəxəssisi məhsulun keyfiyyətini qiymətləndirdi.",
+      "actual": "Kənd təsərrüfatı mütəxəssisi məhsulun keyfiyyətini qiymətləndirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-159",
+      "input": "Kend teserrufati mutexessisi yeni ekin planini hazirladi",
+      "target": "Kənd təsərrüfatı mütəxəssisi yeni əkin planını hazırladı.",
+      "actual": "Kənd təsərrüfatı mütəxəssisi yeni əkin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-160",
+      "input": "Teserrufatin rehberi suvarma sistemini yoxladi",
+      "target": "Təsərrüfatın rəhbəri suvarma sistemini yoxladı.",
+      "actual": "Təsərrüfatın rəhbəri suvarma sistemini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-161",
+      "input": "Təsərrüfatın rəhbəri məhsulun keyfiyyətini qiymətləndirdi.",
+      "target": "Təsərrüfatın rəhbəri məhsulun keyfiyyətini qiymətləndirdi.",
+      "actual": "Təsərrüfatın rəhbəri məhsulun keyfiyyətini qiymətləndirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-162",
+      "input": "Teserrufatin rehberi yeni ekin planini hazirladi",
+      "target": "Təsərrüfatın rəhbəri yeni əkin planını hazırladı.",
+      "actual": "Təsərrüfatın rəhbəri yeni əkin planını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-163",
+      "input": "Sahenin iscisi suvarma sistemini yoxladi",
+      "target": "Sahənin işçisi suvarma sistemini yoxladı.",
+      "actual": "Sahənin işçisi suvarma sistemini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-164",
+      "input": "Sahenin iscisi mehsulun keyfiyyetini qiymetlendirdi",
+      "target": "Sahənin işçisi məhsulun keyfiyyətini qiymətləndirdi.",
+      "actual": "Sahənin işçisi məhsulun keyfiyyətini qiymətləndirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-165",
+      "input": "Sahenin iscisi yeni ekin planini hazirladi",
+      "target": "Sahənin işçisi yeni əkin planını hazırladı.",
+      "actual": "Sahənin işçisi yeni əkin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-166",
+      "input": "Ekoloq ağacların vəziyyətini yoxladı.",
+      "target": "Ekoloq ağacların vəziyyətini yoxladı.",
+      "actual": "Ekoloq ağacların vəziyyətini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-167",
+      "input": "Ekoloq erazideki tullantilari topladi",
+      "target": "Ekoloq ərazidəki tullantıları topladı.",
+      "actual": "Ekoloq ərazidəki tullantıları topladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-168",
+      "input": "Ekoloq su menbeyini musahide etdi",
+      "target": "Ekoloq su mənbəyini müşahidə etdi.",
+      "actual": "Ekoloq su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-169",
+      "input": "Mese iscisi agaclarin veziyyetini yoxladi",
+      "target": "Meşə işçisi ağacların vəziyyətini yoxladı.",
+      "actual": "Meşə işçisi ağacların vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-170",
+      "input": "Mese iscisi erazideki tullantilari topladi",
+      "target": "Meşə işçisi ərazidəki tullantıları topladı.",
+      "actual": "Meşə işçisi ərazidəki tullantıları topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-171",
+      "input": "Meşə işçisi su mənbəyini müşahidə etdi.",
+      "target": "Meşə işçisi su mənbəyini müşahidə etdi.",
+      "actual": "Meşə işçisi su mənbəyini müşahidə etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-172",
+      "input": "Parkin emekdashi aghaclarin veziyyetini yoxladi",
+      "target": "Parkın əməkdaşı ağacların vəziyyətini yoxladı.",
+      "actual": "Parkın əməkdaşı ağacların vəziyyətini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-173",
+      "input": "Parkin emekdasi erazideki tullantilari topladi",
+      "target": "Parkın əməkdaşı ərazidəki tullantıları topladı.",
+      "actual": "Parkın əməkdaşı ərazidəki tullantıları topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-174",
+      "input": "Parkin emekdasi su menbeyini musahide etdi",
+      "target": "Parkın əməkdaşı su mənbəyini müşahidə etdi.",
+      "actual": "Parkın əməkdaşı su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-175",
+      "input": "Tebiet konullusu agaclarin veziyyetini yoxladi",
+      "target": "Təbiət könüllüsü ağacların vəziyyətini yoxladı.",
+      "actual": "Təbiət konullusu ağacların vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-176",
+      "input": "Təbiət könüllüsü ərazidəki tullantıları topladı.",
+      "target": "Təbiət könüllüsü ərazidəki tullantıları topladı.",
+      "actual": "Təbiət könüllüsü ərazidəki tullantıları topladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-177",
+      "input": "Tebiet konullusu su menbeyini mushahide etdi",
+      "target": "Təbiət könüllüsü su mənbəyini müşahidə etdi.",
+      "actual": "Təbiət konullusu su menbeyini müşahidə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-178",
+      "input": "Etraf muhit mutexessisi agaclarin veziyyetini yoxladi",
+      "target": "Ətraf mühit mütəxəssisi ağacların vəziyyətini yoxladı.",
+      "actual": "Ətraf mühit mütəxəssisi ağacların vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-179",
+      "input": "Etraf muhit mutexessisi erazideki tullantilari topladi",
+      "target": "Ətraf mühit mütəxəssisi ərazidəki tullantıları topladı.",
+      "actual": "Ətraf mühit mütəxəssisi ərazidəki tullantıları topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-180",
+      "input": "Etraf muhit mutexessisi su menbeyini musahide etdi",
+      "target": "Ətraf mühit mütəxəssisi su mənbəyini müşahidə etdi.",
+      "actual": "Ətraf mühit mütəxəssisi su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-181",
+      "input": "Məşqçi məşqin planını nəzərdən keçirdi.",
+      "target": "Məşqçi məşqin planını nəzərdən keçirdi.",
+      "actual": "Məşqçi məşqin planını nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-182",
+      "input": "Meshqchi yeni hereketi izah etdi",
+      "target": "Məşqçi yeni hərəkəti izah etdi.",
+      "actual": "Məşqçi yeni hərəkəti izah etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-183",
+      "input": "Mesqci yarisin neticelerini muzakire etdi",
+      "target": "Məşqçi yarışın nəticələrini müzakirə etdi.",
+      "actual": "Məşqçi yarışın nəticələrini müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-184",
+      "input": "Idmanci mesqin planini nezerden kecirdi",
+      "target": "İdmançı məşqin planını nəzərdən keçirdi.",
+      "actual": "Idmanci məşqin planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-185",
+      "input": "Idmanci yeni hereketi izah etdi",
+      "target": "İdmançı yeni hərəkəti izah etdi.",
+      "actual": "Idmanci yeni hərəkəti izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-186",
+      "input": "İdmançı yarışın nəticələrini müzakirə etdi.",
+      "target": "İdmançı yarışın nəticələrini müzakirə etdi.",
+      "actual": "İdmançı yarışın nəticələrini müzakirə etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-187",
+      "input": "Komandanin kapitani meshqin planini nezerden kechirdi",
+      "target": "Komandanın kapitanı məşqin planını nəzərdən keçirdi.",
+      "actual": "Komandanın kapitanı məşqin planını nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-188",
+      "input": "Komandanin kapitani yeni hereketi izah etdi",
+      "target": "Komandanın kapitanı yeni hərəkəti izah etdi.",
+      "actual": "Komandanın kapitanı yeni hərəkəti izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-189",
+      "input": "Komandanin kapitani yarisin neticelerini muzakire etdi",
+      "target": "Komandanın kapitanı yarışın nəticələrini müzakirə etdi.",
+      "actual": "Komandanın kapitanı yarışın nəticələrini müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-190",
+      "input": "Idman zalinin rehberi mesqin planini nezerden kecirdi",
+      "target": "İdman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+      "actual": "Idman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-191",
+      "input": "İdman zalının rəhbəri yeni hərəkəti izah etdi.",
+      "target": "İdman zalının rəhbəri yeni hərəkəti izah etdi.",
+      "actual": "İdman zalının rəhbəri yeni hərəkəti izah etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-192",
+      "input": "Idman zalinin rehberi yarishin neticelerini muzakire etdi",
+      "target": "İdman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+      "actual": "Idman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-193",
+      "input": "Fitnes mutexessisi mesqin planini nezerden kecirdi",
+      "target": "Fitnes mütəxəssisi məşqin planını nəzərdən keçirdi.",
+      "actual": "Fitnes mütəxəssisi məşqin planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-194",
+      "input": "Fitnes mutexessisi yeni hereketi izah etdi",
+      "target": "Fitnes mütəxəssisi yeni hərəkəti izah etdi.",
+      "actual": "Fitnes mütəxəssisi yeni hərəkəti izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-195",
+      "input": "Fitnes mutexessisi yarisin neticelerini muzakire etdi",
+      "target": "Fitnes mütəxəssisi yarışın nəticələrini müzakirə etdi.",
+      "actual": "Fitnes mütəxəssisi yarışın nəticələrini müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-196",
+      "input": "Anam pəncərəni açdı.",
+      "target": "Anam pəncərəni açdı.",
+      "actual": "Anam pəncərəni açdı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-197",
+      "input": "Anam kitablari refe duzdu",
+      "target": "Anam kitabları rəfə düzdü.",
+      "actual": "Anam kitabları refe duzdu.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-198",
+      "input": "Anam axsam yemeyini hazirladi",
+      "target": "Anam axşam yeməyini hazırladı.",
+      "actual": "Anam axşam yeməyini hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-199",
+      "input": "Atam pencereni acdi",
+      "target": "Atam pəncərəni açdı.",
+      "actual": "Atam pəncərəni açdı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-200",
+      "input": "Atam kitablari refe duzdu",
+      "target": "Atam kitabları rəfə düzdü.",
+      "actual": "Atam kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-201",
+      "input": "Atam axşam yeməyini hazırladı.",
+      "target": "Atam axşam yeməyini hazırladı.",
+      "actual": "Atam axşam yeməyini hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-202",
+      "input": "Bacim pencereni achdi",
+      "target": "Bacım pəncərəni açdı.",
+      "actual": "Bacım pəncərəni açdı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-203",
+      "input": "Bacim kitablari refe duzdu",
+      "target": "Bacım kitabları rəfə düzdü.",
+      "actual": "Bacım kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-204",
+      "input": "Bacim axsam yemeyini hazirladi",
+      "target": "Bacım axşam yeməyini hazırladı.",
+      "actual": "Bacım axşam yeməyini hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-205",
+      "input": "Qardasim pencereni acdi",
+      "target": "Qardaşım pəncərəni açdı.",
+      "actual": "Qardaşım pəncərəni açdı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-206",
+      "input": "Qardaşım kitabları rəfə düzdü.",
+      "target": "Qardaşım kitabları rəfə düzdü.",
+      "actual": "Qardaşım kitabları rəfə düzdü.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-207",
+      "input": "Qardashim axsham yemeyini hazirladi",
+      "target": "Qardaşım axşam yeməyini hazırladı.",
+      "actual": "Qardaşım axşam yeməyini hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-208",
+      "input": "Dostum pencereni acdi",
+      "target": "Dostum pəncərəni açdı.",
+      "actual": "Dostum pəncərəni açdı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-209",
+      "input": "Dostum kitablari refe duzdu",
+      "target": "Dostum kitabları rəfə düzdü.",
+      "actual": "Dostum kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-210",
+      "input": "Dostum axsam yemeyini hazirladi",
+      "target": "Dostum axşam yeməyini hazırladı.",
+      "actual": "Dostum axşam yeməyini hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-211",
+      "input": "Alıcı məhsulun qiymətini yoxladı.",
+      "target": "Alıcı məhsulun qiymətini yoxladı.",
+      "actual": "Alıcı məhsulun qiymətini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-212",
+      "input": "Alici sifarishin nomresini qeyd etdi",
+      "target": "Alıcı sifarişin nömrəsini qeyd etdi.",
+      "actual": "Alıcı sifarişin nömrəsini qeyd etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-213",
+      "input": "Alici mallarin siyahisini hazirladi",
+      "target": "Alıcı malların siyahısını hazırladı.",
+      "actual": "Alıcı malların siyahısını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-214",
+      "input": "Satici mehsulun qiymetini yoxladi",
+      "target": "Satıcı məhsulun qiymətini yoxladı.",
+      "actual": "Satıcı məhsulun qiymətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-215",
+      "input": "Satici sifarisin nomresini qeyd etdi",
+      "target": "Satıcı sifarişin nömrəsini qeyd etdi.",
+      "actual": "Satıcı sifarişin nömrəsini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-216",
+      "input": "Satıcı malların siyahısını hazırladı.",
+      "target": "Satıcı malların siyahısını hazırladı.",
+      "actual": "Satıcı malların siyahısını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-217",
+      "input": "Maghazanin rehberi mehsulun qiymetini yoxladi",
+      "target": "Mağazanın rəhbəri məhsulun qiymətini yoxladı.",
+      "actual": "Mağazanın rəhbəri məhsulun qiymətini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-218",
+      "input": "Magazanin rehberi sifarisin nomresini qeyd etdi",
+      "target": "Mağazanın rəhbəri sifarişin nömrəsini qeyd etdi.",
+      "actual": "Mağazanın rəhbəri sifarişin nömrəsini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-219",
+      "input": "Magazanin rehberi mallarin siyahisini hazirladi",
+      "target": "Mağazanın rəhbəri malların siyahısını hazırladı.",
+      "actual": "Mağazanın rəhbəri malların siyahısını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-220",
+      "input": "Kassir mehsulun qiymetini yoxladi",
+      "target": "Kassir məhsulun qiymətini yoxladı.",
+      "actual": "Kassir məhsulun qiymətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-221",
+      "input": "Kassir sifarişin nömrəsini qeyd etdi.",
+      "target": "Kassir sifarişin nömrəsini qeyd etdi.",
+      "actual": "Kassir sifarişin nömrəsini qeyd etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-222",
+      "input": "Kassir mallarin siyahisini hazirladi",
+      "target": "Kassir malların siyahısını hazırladı.",
+      "actual": "Kassir malların siyahısını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-223",
+      "input": "Anbarin emekdasi mehsulun qiymetini yoxladi",
+      "target": "Anbarın əməkdaşı məhsulun qiymətini yoxladı.",
+      "actual": "Anbarın əməkdaşı məhsulun qiymətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-224",
+      "input": "Anbarin emekdasi sifarisin nomresini qeyd etdi",
+      "target": "Anbarın əməkdaşı sifarişin nömrəsini qeyd etdi.",
+      "actual": "Anbarın əməkdaşı sifarişin nömrəsini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-225",
+      "input": "Anbarin emekdasi mallarin siyahisini hazirladi",
+      "target": "Anbarın əməkdaşı malların siyahısını hazırladı.",
+      "actual": "Anbarın əməkdaşı malların siyahısını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-226",
+      "input": "Sürücü avtobusun gəliş vaxtını yoxladı.",
+      "target": "Sürücü avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Sürücü avtobusun gəliş vaxtını yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-227",
+      "input": "Surucu seferin cedvelini yeniledi",
+      "target": "Sürücü səfərin cədvəlini yenilədi.",
+      "actual": "Sürücü səfərin cədvəlini yenilədi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-228",
+      "input": "Surucu yol haqqinda melumat topladi",
+      "target": "Sürücü yol haqqında məlumat topladı.",
+      "actual": "Sürücü yol haqqında məlumat topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-229",
+      "input": "Dispetcer avtobusun gelis vaxtini yoxladi",
+      "target": "Dispetçer avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Dispetçer avtobusun gəliş vaxtını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-230",
+      "input": "Dispetcer seferin cedvelini yeniledi",
+      "target": "Dispetçer səfərin cədvəlini yenilədi.",
+      "actual": "Dispetçer səfərin cədvəlini yenilədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-231",
+      "input": "Dispetçer yol haqqında məlumat topladı.",
+      "target": "Dispetçer yol haqqında məlumat topladı.",
+      "actual": "Dispetçer yol haqqında məlumat topladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-232",
+      "input": "Neqliyyat mutexessisi avtobusun gelish vaxtini yoxladi",
+      "target": "Nəqliyyat mütəxəssisi avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Nəqliyyat mütəxəssisi avtobusun gəliş vaxtını yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-233",
+      "input": "Neqliyyat mutexessisi seferin cedvelini yeniledi",
+      "target": "Nəqliyyat mütəxəssisi səfərin cədvəlini yenilədi.",
+      "actual": "Nəqliyyat mütəxəssisi səfərin cədvəlini yenilədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-234",
+      "input": "Neqliyyat mutexessisi yol haqqinda melumat topladi",
+      "target": "Nəqliyyat mütəxəssisi yol haqqında məlumat topladı.",
+      "actual": "Nəqliyyat mütəxəssisi yol haqqında məlumat topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-235",
+      "input": "Marsrutun rehberi avtobusun gelis vaxtini yoxladi",
+      "target": "Marşrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Marsrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-236",
+      "input": "Marşrutun rəhbəri səfərin cədvəlini yenilədi.",
+      "target": "Marşrutun rəhbəri səfərin cədvəlini yenilədi.",
+      "actual": "Marşrutun rəhbəri səfərin cədvəlini yenilədi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-237",
+      "input": "Marshrutun rehberi yol haqqinda melumat topladi",
+      "target": "Marşrutun rəhbəri yol haqqında məlumat topladı.",
+      "actual": "Marshrutun rəhbəri yol haqqında məlumat topladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-238",
+      "input": "Dasima sirketinin emekdasi avtobusun gelis vaxtini yoxladi",
+      "target": "Daşıma şirkətinin əməkdaşı avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Daşıma şirkətinin əməkdaşı avtobusun gəliş vaxtını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-239",
+      "input": "Dasima sirketinin emekdasi seferin cedvelini yeniledi",
+      "target": "Daşıma şirkətinin əməkdaşı səfərin cədvəlini yenilədi.",
+      "actual": "Daşıma şirkətinin əməkdaşı səfərin cədvəlini yenilədi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-240",
+      "input": "Dasima sirketinin emekdasi yol haqqinda melumat topladi",
+      "target": "Daşıma şirkətinin əməkdaşı yol haqqında məlumat topladı.",
+      "actual": "Daşıma şirkətinin əməkdaşı yol haqqında məlumat topladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-241",
+      "input": "Hüquqşünas sənədin məzmununu oxudu.",
+      "target": "Hüquqşünas sənədin məzmununu oxudu.",
+      "actual": "Hüquqşünas sənədin məzmununu oxudu.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-242",
+      "input": "Huquqshunas muracietin tarixini yoxladi",
+      "target": "Hüquqşünas müraciətin tarixini yoxladı.",
+      "actual": "Hüquqşünas müraciətin tarixini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-243",
+      "input": "Huquqsunas qerarin suretini gonderdi",
+      "target": "Hüquqşünas qərarın surətini göndərdi.",
+      "actual": "Hüquqşünas qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-244",
+      "input": "Vekil senedin mezmununu oxudu",
+      "target": "Vəkil sənədin məzmununu oxudu.",
+      "actual": "Vəkil sənədin məzmununu oxudu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-245",
+      "input": "Vekil muracietin tarixini yoxladi",
+      "target": "Vəkil müraciətin tarixini yoxladı.",
+      "actual": "Vəkil müraciətin tarixini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-246",
+      "input": "Vəkil qərarın surətini göndərdi.",
+      "target": "Vəkil qərarın surətini göndərdi.",
+      "actual": "Vəkil qərarın surətini göndərdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-247",
+      "input": "Notarius senedin mezmununu oxudu",
+      "target": "Notarius sənədin məzmununu oxudu.",
+      "actual": "Notarius sənədin məzmununu oxudu.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-248",
+      "input": "Notarius muracietin tarixini yoxladi",
+      "target": "Notarius müraciətin tarixini yoxladı.",
+      "actual": "Notarius müraciətin tarixini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-249",
+      "input": "Notarius qerarin suretini gonderdi",
+      "target": "Notarius qərarın surətini göndərdi.",
+      "actual": "Notarius qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-250",
+      "input": "Huquq sobesinin emekdasi senedin mezmununu oxudu",
+      "target": "Hüquq şöbəsinin əməkdaşı sənədin məzmununu oxudu.",
+      "actual": "Hüquq şöbəsinin əməkdaşı sənədin məzmununu oxudu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-251",
+      "input": "Hüquq şöbəsinin əməkdaşı müraciətin tarixini yoxladı.",
+      "target": "Hüquq şöbəsinin əməkdaşı müraciətin tarixini yoxladı.",
+      "actual": "Hüquq şöbəsinin əməkdaşı müraciətin tarixini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-252",
+      "input": "Huquq shobesinin emekdashi qerarin suretini gonderdi",
+      "target": "Hüquq şöbəsinin əməkdaşı qərarın surətini göndərdi.",
+      "actual": "Hüquq şöbəsinin əməkdaşı qərarın sürətini göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-253",
+      "input": "Mehkemenin numayendesi senedin mezmununu oxudu",
+      "target": "Məhkəmənin nümayəndəsi sənədin məzmununu oxudu.",
+      "actual": "Məhkəmənin nümayəndəsi sənədin məzmununu oxudu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-254",
+      "input": "Mehkemenin numayendesi muracietin tarixini yoxladi",
+      "target": "Məhkəmənin nümayəndəsi müraciətin tarixini yoxladı.",
+      "actual": "Məhkəmənin nümayəndəsi müraciətin tarixini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-255",
+      "input": "Mehkemenin numayendesi qerarin suretini gonderdi",
+      "target": "Məhkəmənin nümayəndəsi qərarın surətini göndərdi.",
+      "actual": "Məhkəmənin nümayəndəsi qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-256",
+      "input": "Biznes analitiki işlərin ardıcıllığını müəyyən etdi.",
+      "target": "Biznes analitiki işlərin ardıcıllığını müəyyən etdi.",
+      "actual": "Biznes analitiki işlərin ardıcıllığını müəyyən etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-257",
+      "input": "Biznes analitiki yeni teklifleri muzakire etdi",
+      "target": "Biznes analitiki yeni təklifləri müzakirə etdi.",
+      "actual": "Biznes analitiki yeni təklifləri müzakirə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-258",
+      "input": "Biznes analitiki gelen heftenin planini hazirladi",
+      "target": "Biznes analitiki gələn həftənin planını hazırladı.",
+      "actual": "Biznes analitiki gələn həftənin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-259",
+      "input": "Mehsul meneceri islerin ardicilligini mueyyen etdi",
+      "target": "Məhsul meneceri işlərin ardıcıllığını müəyyən etdi.",
+      "actual": "Məhsul meneceri işlərin ardıcıllığını müəyyən etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-260",
+      "input": "Mehsul meneceri yeni teklifleri muzakire etdi",
+      "target": "Məhsul meneceri yeni təklifləri müzakirə etdi.",
+      "actual": "Məhsul meneceri yeni təklifləri müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-261",
+      "input": "Məhsul meneceri gələn həftənin planını hazırladı.",
+      "target": "Məhsul meneceri gələn həftənin planını hazırladı.",
+      "actual": "Məhsul meneceri gələn həftənin planını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-262",
+      "input": "Komandanin rehberi ishlerin ardicillighini mueyyen etdi",
+      "target": "Komandanın rəhbəri işlərin ardıcıllığını müəyyən etdi.",
+      "actual": "Komandanın rəhbəri işlərin ardıcıllığını müəyyən etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-263",
+      "input": "Komandanin rehberi yeni teklifleri muzakire etdi",
+      "target": "Komandanın rəhbəri yeni təklifləri müzakirə etdi.",
+      "actual": "Komandanın rəhbəri yeni təklifləri müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-264",
+      "input": "Komandanin rehberi gelen heftenin planini hazirladi",
+      "target": "Komandanın rəhbəri gələn həftənin planını hazırladı.",
+      "actual": "Komandanın rəhbəri gələn həftənin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-265",
+      "input": "Layihenin koordinatoru islerin ardicilligini mueyyen etdi",
+      "target": "Layihənin koordinatoru işlərin ardıcıllığını müəyyən etdi.",
+      "actual": "Layihənin koordinatoru işlərin ardıcıllığını müəyyən etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-266",
+      "input": "Layihənin koordinatoru yeni təklifləri müzakirə etdi.",
+      "target": "Layihənin koordinatoru yeni təklifləri müzakirə etdi.",
+      "actual": "Layihənin koordinatoru yeni təklifləri müzakirə etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-267",
+      "input": "Layihenin koordinatoru gelen heftenin planini hazirladi",
+      "target": "Layihənin koordinatoru gələn həftənin planını hazırladı.",
+      "actual": "Layihənin koordinatoru gələn həftənin planını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-268",
+      "input": "Sirketin emekdasi islerin ardicilligini mueyyen etdi",
+      "target": "Şirkətin əməkdaşı işlərin ardıcıllığını müəyyən etdi.",
+      "actual": "Şirkətin əməkdaşı işlərin ardıcıllığını müəyyən etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-269",
+      "input": "Sirketin emekdasi yeni teklifleri muzakire etdi",
+      "target": "Şirkətin əməkdaşı yeni təklifləri müzakirə etdi.",
+      "actual": "Şirkətin əməkdaşı yeni təklifləri müzakirə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-270",
+      "input": "Sirketin emekdasi gelen heftenin planini hazirladi",
+      "target": "Şirkətin əməkdaşı gələn həftənin planını hazırladı.",
+      "actual": "Şirkətin əməkdaşı gələn həftənin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-271",
+      "input": "Redaktor mətnin başlığını yoxladı.",
+      "target": "Redaktor mətnin başlığını yoxladı.",
+      "actual": "Redaktor mətnin başlığını yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-272",
+      "input": "Redaktor yeni meqaleni nezerden kechirdi",
+      "target": "Redaktor yeni məqaləni nəzərdən keçirdi.",
+      "actual": "Redaktor yeni məqaləni nəzərdən keçirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-273",
+      "input": "Redaktor oxucunun sualini cavablandirdi",
+      "target": "Redaktor oxucunun sualını cavablandırdı.",
+      "actual": "Redaktor oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-274",
+      "input": "Jurnalist metnin basligini yoxladi",
+      "target": "Jurnalist mətnin başlığını yoxladı.",
+      "actual": "Jurnalist mətnin başlığını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-275",
+      "input": "Jurnalist yeni meqaleni nezerden kecirdi",
+      "target": "Jurnalist yeni məqaləni nəzərdən keçirdi.",
+      "actual": "Jurnalist yeni məqaləni nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-276",
+      "input": "Jurnalist oxucunun sualını cavablandırdı.",
+      "target": "Jurnalist oxucunun sualını cavablandırdı.",
+      "actual": "Jurnalist oxucunun sualını cavablandırdı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-277",
+      "input": "Meqalenin muellifi metnin bashlighini yoxladi",
+      "target": "Məqalənin müəllifi mətnin başlığını yoxladı.",
+      "actual": "Məqalənin müəllifi mətnin başlığını yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-278",
+      "input": "Meqalenin muellifi yeni meqaleni nezerden kecirdi",
+      "target": "Məqalənin müəllifi yeni məqaləni nəzərdən keçirdi.",
+      "actual": "Məqalənin müəllifi yeni məqaləni nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-279",
+      "input": "Meqalenin muellifi oxucunun sualini cavablandirdi",
+      "target": "Məqalənin müəllifi oxucunun sualını cavablandırdı.",
+      "actual": "Məqalənin müəllifi oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-280",
+      "input": "Nesriyyatin emekdasi metnin basligini yoxladi",
+      "target": "Nəşriyyatın əməkdaşı mətnin başlığını yoxladı.",
+      "actual": "Nəşriyyatın əməkdaşı mətnin başlığını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-281",
+      "input": "Nəşriyyatın əməkdaşı yeni məqaləni nəzərdən keçirdi.",
+      "target": "Nəşriyyatın əməkdaşı yeni məqaləni nəzərdən keçirdi.",
+      "actual": "Nəşriyyatın əməkdaşı yeni məqaləni nəzərdən keçirdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-282",
+      "input": "Neshriyyatin emekdashi oxucunun sualini cavablandirdi",
+      "target": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandırdı.",
+      "actual": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-283",
+      "input": "Jurnalin rehberi metnin basligini yoxladi",
+      "target": "Jurnalın rəhbəri mətnin başlığını yoxladı.",
+      "actual": "Jurnalın rəhbəri mətnin başlığını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-284",
+      "input": "Jurnalin rehberi yeni meqaleni nezerden kecirdi",
+      "target": "Jurnalın rəhbəri yeni məqaləni nəzərdən keçirdi.",
+      "actual": "Jurnalın rəhbəri yeni məqaləni nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-285",
+      "input": "Jurnalin rehberi oxucunun sualini cavablandirdi",
+      "target": "Jurnalın rəhbəri oxucunun sualını cavablandırdı.",
+      "actual": "Jurnalın rəhbəri oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-286",
+      "input": "Bələdiyyənin əməkdaşı sakinlərin müraciətini qeyd etdi.",
+      "target": "Bələdiyyənin əməkdaşı sakinlərin müraciətini qeyd etdi.",
+      "actual": "Bələdiyyənin əməkdaşı sakinlərin müraciətini qeyd etdi.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-287",
+      "input": "Belediyyenin emekdashi erazinin xeritesini yoxladi",
+      "target": "Bələdiyyənin əməkdaşı ərazinin xəritəsini yoxladı.",
+      "actual": "Bələdiyyənin əməkdaşı ərazinin xəritəsini yoxladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-288",
+      "input": "Belediyyenin emekdasi temir islerinin planini hazirladi",
+      "target": "Bələdiyyənin əməkdaşı təmir işlərinin planını hazırladı.",
+      "actual": "Bələdiyyənin əməkdaşı təmir işlərinin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-289",
+      "input": "Icra numayendesi sakinlerin muracietini qeyd etdi",
+      "target": "İcra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Icra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-290",
+      "input": "Icra numayendesi erazinin xeritesini yoxladi",
+      "target": "İcra nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "actual": "Icra nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-291",
+      "input": "İcra nümayəndəsi təmir işlərinin planını hazırladı.",
+      "target": "İcra nümayəndəsi təmir işlərinin planını hazırladı.",
+      "actual": "İcra nümayəndəsi təmir işlərinin planını hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-292",
+      "input": "Kommunal xidmetin ishchisi sakinlerin muracietini qeyd etdi",
+      "target": "Kommunal xidmətin işçisi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Kommunal xidmətin işçisi sakinlərin müraciətini qeyd etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-293",
+      "input": "Kommunal xidmetin iscisi erazinin xeritesini yoxladi",
+      "target": "Kommunal xidmətin işçisi ərazinin xəritəsini yoxladı.",
+      "actual": "Kommunal xidmətin işçisi ərazinin xəritəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-294",
+      "input": "Kommunal xidmetin iscisi temir islerinin planini hazirladi",
+      "target": "Kommunal xidmətin işçisi təmir işlərinin planını hazırladı.",
+      "actual": "Kommunal xidmətin işçisi təmir işlərinin planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-295",
+      "input": "Seher planlasdirma mutexessisi sakinlerin muracietini qeyd etdi",
+      "target": "Şəhər planlaşdırma mütəxəssisi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Seher planlaşdırma mütəxəssisi sakinlərin müraciətini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-296",
+      "input": "Şəhər planlaşdırma mütəxəssisi ərazinin xəritəsini yoxladı.",
+      "target": "Şəhər planlaşdırma mütəxəssisi ərazinin xəritəsini yoxladı.",
+      "actual": "Şəhər planlaşdırma mütəxəssisi ərazinin xəritəsini yoxladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-297",
+      "input": "Sheher planlashdirma mutexessisi temir ishlerinin planini hazirladi",
+      "target": "Şəhər planlaşdırma mütəxəssisi təmir işlərinin planını hazırladı.",
+      "actual": "Şəhər planlaşdırma mütəxəssisi təmir işlərinin planını hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-298",
+      "input": "Yasayis binasinin numayendesi sakinlerin muracietini qeyd etdi",
+      "target": "Yaşayış binasının nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Yaşayış binasının nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-299",
+      "input": "Yasayis binasinin numayendesi erazinin xeritesini yoxladi",
+      "target": "Yaşayış binasının nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "actual": "Yaşayış binasının nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-300",
+      "input": "Yasayis binasinin numayendesi temir islerinin planini hazirladi",
+      "target": "Yaşayış binasının nümayəndəsi təmir işlərinin planını hazırladı.",
+      "actual": "Yaşayış binasının nümayəndəsi təmir işlərinin planını hazırladı.",
+      "category": "diacritics"
+    }
+  ],
+  "failures": [
+    {
+      "id": "release-holdout-002",
+      "input": "Muellim telebelerin suallarini cavablandirdi",
+      "target": "Müəllim tələbələrin suallarını cavablandırdı.",
+      "actual": "Müəllim tələbələrin suallarını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-005",
+      "input": "Telimci telebelerin suallarini cavablandirdi",
+      "target": "Təlimçi tələbələrin suallarını cavablandırdı.",
+      "actual": "Təlimçi tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-008",
+      "input": "Mektebin direktoru telebelerin suallarini cavablandirdi",
+      "target": "Məktəbin direktoru tələbələrin suallarını cavablandırdı.",
+      "actual": "Məktəbin direktoru tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-014",
+      "input": "Kursun rehberi telebelerin suallarini cavablandirdi",
+      "target": "Kursun rəhbəri tələbələrin suallarını cavablandırdı.",
+      "actual": "Kursun rəhbəri tələbələrin suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-032",
+      "input": "Qeydiyyat operatoru senedin suretini gonderdi",
+      "target": "Qeydiyyat operatoru sənədin surətini göndərdi.",
+      "actual": "Qeydiyyat operatoru sənədin sürətini göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-035",
+      "input": "Arxiv iscisi senedin suretini gonderdi",
+      "target": "Arxiv işçisi sənədin surətini göndərdi.",
+      "actual": "Arxiv işçisi sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-038",
+      "input": "Sobenin rehberi senedin suretini gonderdi",
+      "target": "Şöbənin rəhbəri sənədin surətini göndərdi.",
+      "actual": "Şöbənin rəhbəri sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-044",
+      "input": "Mesul icraci senedin suretini gonderdi",
+      "target": "Məsul icraçı sənədin surətini göndərdi.",
+      "actual": "Məsul icraçı sənədin sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-048",
+      "input": "Bankin emekdasi musterinin muracietini cavablandirdi",
+      "target": "Bankın əməkdaşı müştərinin müraciətini cavablandırdı.",
+      "actual": "Bankın əməkdaşı müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-050",
+      "input": "Musteri numayendesi muqavilenin sertlerini izah etdi",
+      "target": "Müştəri nümayəndəsi müqavilənin şərtlərini izah etdi.",
+      "actual": "Müştəri nümayəndəsi müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-053",
+      "input": "Filialin rehberi muqavilenin sertlerini izah etdi",
+      "target": "Filialın rəhbəri müqavilənin şərtlərini izah etdi.",
+      "actual": "Filialın rəhbəri müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-054",
+      "input": "Filialin rehberi musterinin muracietini cavablandirdi",
+      "target": "Filialın rəhbəri müştərinin müraciətini cavablandırdı.",
+      "actual": "Filialın rəhbəri müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-057",
+      "input": "Maliyye mutexessisi mushterinin muracietini cavablandirdi",
+      "target": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandırdı.",
+      "actual": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-059",
+      "input": "Kredit mutexessisi muqavilenin sertlerini izah etdi",
+      "target": "Kredit mütəxəssisi müqavilənin şərtlərini izah etdi.",
+      "actual": "Kredit mütəxəssisi müqavilənin sertlerini izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-060",
+      "input": "Kredit mutexessisi musterinin muracietini cavablandirdi",
+      "target": "Kredit mütəxəssisi müştərinin müraciətini cavablandırdı.",
+      "actual": "Kredit mütəxəssisi müştərinin müraciətini cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-100",
+      "input": "Insan resurslari mutexessisi gorusun vaxtini mektubla bildirdi",
+      "target": "İnsan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+      "actual": "Insan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-102",
+      "input": "Insan resurslari mutexessisi muracietin alindighini tesdiqledi",
+      "target": "İnsan resursları mütəxəssisi müraciətin alındığını təsdiqlədi.",
+      "actual": "Insan resursları mütəxəssisi müraciətin alindighini təsdiqlədi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-118",
+      "input": "Tedqiqat qrupunun uzvu tecrubenin neticelerini muqayise etdi",
+      "target": "Tədqiqat qrupunun üzvü təcrübənin nəticələrini müqayisə etdi.",
+      "actual": "Tədqiqat qrupunun uzvu təcrübənin nəticələrini müqayisə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-119",
+      "input": "Tedqiqat qrupunun uzvu olcme cihazini yoxladi",
+      "target": "Tədqiqat qrupunun üzvü ölçmə cihazını yoxladı.",
+      "actual": "Tədqiqat qrupunun uzvu ölçmə cihazını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-120",
+      "input": "Tedqiqat qrupunun uzvu yeni tedqiqatin planini hazirladi",
+      "target": "Tədqiqat qrupunun üzvü yeni tədqiqatın planını hazırladı.",
+      "actual": "Tədqiqat qrupunun uzvu yeni tədqiqatın planını hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-122",
+      "input": "Muzeyin emekdashi qonaqlarin suallarini cavablandirdi",
+      "target": "Muzeyin əməkdaşı qonaqların suallarını cavablandırdı.",
+      "actual": "Muzeyin əməkdaşı qonaqların suallarını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-123",
+      "input": "Muzeyin emekdasi sergi haqqinda melumat hazirladi",
+      "target": "Muzeyin əməkdaşı sərgi haqqında məlumat hazırladı.",
+      "actual": "Muzeyin əməkdaşı şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-124",
+      "input": "Serginin rehberi tedbirin proqramini teqdim etdi",
+      "target": "Sərginin rəhbəri tədbirin proqramını təqdim etdi.",
+      "actual": "Şərğinin rəhbəri tədbirin proqramını təqdim etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-125",
+      "input": "Serginin rehberi qonaqlarin suallarini cavablandirdi",
+      "target": "Sərginin rəhbəri qonaqların suallarını cavablandırdı.",
+      "actual": "Şərğinin rəhbəri qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-126",
+      "input": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+      "target": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+      "actual": "Şərğinin rəhbəri şərği haqqında məlumat hazırladı.",
+      "category": "identity"
+    },
+    {
+      "id": "release-holdout-128",
+      "input": "Senetsunas qonaqlarin suallarini cavablandirdi",
+      "target": "Sənətşünas qonaqların suallarını cavablandırdı.",
+      "actual": "Sənətşünas qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-129",
+      "input": "Senetsunas sergi haqqinda melumat hazirladi",
+      "target": "Sənətşünas sərgi haqqında məlumat hazırladı.",
+      "actual": "Sənətşünas şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-132",
+      "input": "Kitabxananin ishchisi sergi haqqinda melumat hazirladi",
+      "target": "Kitabxananın işçisi sərgi haqqında məlumat hazırladı.",
+      "actual": "Kitabxananın işçisi şərği haqqında məlumat hazırladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-134",
+      "input": "Medeniyyet merkezinin numayendesi qonaqlarin suallarini cavablandirdi",
+      "target": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandırdı.",
+      "actual": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-135",
+      "input": "Medeniyyet merkezinin numayendesi sergi haqqinda melumat hazirladi",
+      "target": "Mədəniyyət mərkəzinin nümayəndəsi sərgi haqqında məlumat hazırladı.",
+      "actual": "Mədəniyyət mərkəzinin nümayəndəsi şərği haqqında məlumat hazırladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-168",
+      "input": "Ekoloq su menbeyini musahide etdi",
+      "target": "Ekoloq su mənbəyini müşahidə etdi.",
+      "actual": "Ekoloq su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-174",
+      "input": "Parkin emekdasi su menbeyini musahide etdi",
+      "target": "Parkın əməkdaşı su mənbəyini müşahidə etdi.",
+      "actual": "Parkın əməkdaşı su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-175",
+      "input": "Tebiet konullusu agaclarin veziyyetini yoxladi",
+      "target": "Təbiət könüllüsü ağacların vəziyyətini yoxladı.",
+      "actual": "Təbiət konullusu ağacların vəziyyətini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-177",
+      "input": "Tebiet konullusu su menbeyini mushahide etdi",
+      "target": "Təbiət könüllüsü su mənbəyini müşahidə etdi.",
+      "actual": "Təbiət konullusu su menbeyini müşahidə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-180",
+      "input": "Etraf muhit mutexessisi su menbeyini musahide etdi",
+      "target": "Ətraf mühit mütəxəssisi su mənbəyini müşahidə etdi.",
+      "actual": "Ətraf mühit mütəxəssisi su menbeyini müşahidə etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-184",
+      "input": "Idmanci mesqin planini nezerden kecirdi",
+      "target": "İdmançı məşqin planını nəzərdən keçirdi.",
+      "actual": "Idmanci məşqin planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-185",
+      "input": "Idmanci yeni hereketi izah etdi",
+      "target": "İdmançı yeni hərəkəti izah etdi.",
+      "actual": "Idmanci yeni hərəkəti izah etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-190",
+      "input": "Idman zalinin rehberi mesqin planini nezerden kecirdi",
+      "target": "İdman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+      "actual": "Idman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-192",
+      "input": "Idman zalinin rehberi yarishin neticelerini muzakire etdi",
+      "target": "İdman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+      "actual": "Idman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-197",
+      "input": "Anam kitablari refe duzdu",
+      "target": "Anam kitabları rəfə düzdü.",
+      "actual": "Anam kitabları refe duzdu.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-200",
+      "input": "Atam kitablari refe duzdu",
+      "target": "Atam kitabları rəfə düzdü.",
+      "actual": "Atam kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-203",
+      "input": "Bacim kitablari refe duzdu",
+      "target": "Bacım kitabları rəfə düzdü.",
+      "actual": "Bacım kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-209",
+      "input": "Dostum kitablari refe duzdu",
+      "target": "Dostum kitabları rəfə düzdü.",
+      "actual": "Dostum kitabları refe duzdu.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-235",
+      "input": "Marsrutun rehberi avtobusun gelis vaxtini yoxladi",
+      "target": "Marşrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+      "actual": "Marsrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-237",
+      "input": "Marshrutun rehberi yol haqqinda melumat topladi",
+      "target": "Marşrutun rəhbəri yol haqqında məlumat topladı.",
+      "actual": "Marshrutun rəhbəri yol haqqında məlumat topladı.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-243",
+      "input": "Huquqsunas qerarin suretini gonderdi",
+      "target": "Hüquqşünas qərarın surətini göndərdi.",
+      "actual": "Hüquqşünas qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-249",
+      "input": "Notarius qerarin suretini gonderdi",
+      "target": "Notarius qərarın surətini göndərdi.",
+      "actual": "Notarius qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-252",
+      "input": "Huquq shobesinin emekdashi qerarin suretini gonderdi",
+      "target": "Hüquq şöbəsinin əməkdaşı qərarın surətini göndərdi.",
+      "actual": "Hüquq şöbəsinin əməkdaşı qərarın sürətini göndərdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-255",
+      "input": "Mehkemenin numayendesi qerarin suretini gonderdi",
+      "target": "Məhkəmənin nümayəndəsi qərarın surətini göndərdi.",
+      "actual": "Məhkəmənin nümayəndəsi qərarın sürətini göndərdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-273",
+      "input": "Redaktor oxucunun sualini cavablandirdi",
+      "target": "Redaktor oxucunun sualını cavablandırdı.",
+      "actual": "Redaktor oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-279",
+      "input": "Meqalenin muellifi oxucunun sualini cavablandirdi",
+      "target": "Məqalənin müəllifi oxucunun sualını cavablandırdı.",
+      "actual": "Məqalənin müəllifi oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-282",
+      "input": "Neshriyyatin emekdashi oxucunun sualini cavablandirdi",
+      "target": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandırdı.",
+      "actual": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandirdi.",
+      "category": "digraph"
+    },
+    {
+      "id": "release-holdout-285",
+      "input": "Jurnalin rehberi oxucunun sualini cavablandirdi",
+      "target": "Jurnalın rəhbəri oxucunun sualını cavablandırdı.",
+      "actual": "Jurnalın rəhbəri oxucunun sualını cavablandirdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-289",
+      "input": "Icra numayendesi sakinlerin muracietini qeyd etdi",
+      "target": "İcra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Icra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-290",
+      "input": "Icra numayendesi erazinin xeritesini yoxladi",
+      "target": "İcra nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "actual": "Icra nümayəndəsi ərazinin xəritəsini yoxladı.",
+      "category": "diacritics"
+    },
+    {
+      "id": "release-holdout-295",
+      "input": "Seher planlasdirma mutexessisi sakinlerin muracietini qeyd etdi",
+      "target": "Şəhər planlaşdırma mütəxəssisi sakinlərin müraciətini qeyd etdi.",
+      "actual": "Seher planlaşdırma mütəxəssisi sakinlərin müraciətini qeyd etdi.",
+      "category": "diacritics"
+    }
+  ]
+}
