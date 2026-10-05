@@ -47,3 +47,7 @@ npm run benchmark:check
 CI regenerates the observed artifact and compares it byte-for-byte, then enforces the development evaluation and existing release gates. A larger independently annotated real test corpus, particularly unknown names, meaning-sensitive alternatives and long unpunctuated clauses, is the next requirement. It cannot be replaced by generating more synthetic examples or treating machine outputs as gold.
 
 Linguistic design references: [Azerbaijani Universal Dependencies](https://universaldependencies.org/az/index.html), [nominal dependencies](https://universaldependencies.org/u/overview/nominal-syntax.html), and [official Azerbaijani orthography norms](https://frameworks.e-qanun.az/42/c_f_42073.html). These inform the constraints; this release does not train a dependency parser from those pages.
+
+## Paired model reproducibility guard
+
+The paired classifier's morphology feature and model-internal eligibility use the frozen artifact engine. The production predictor applies the expanded runtime preservation guard outside that classifier. A regression test distinguishes a derived runtime-valid word from the original classifier feature vocabulary; this prevents future morphology additions from silently changing trained weights or thresholds. Local paired retraining reproduced the existing artifact byte-for-byte after this separation.

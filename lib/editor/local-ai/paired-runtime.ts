@@ -1,3 +1,4 @@
+import { productiveMorphology } from '../productive-morphology';
 import artifact from './paired-model.json';
 import posArtifact from './pos-model.json';
 import { candidateIndex, rankPaired, normalizeDigraphs, wordLower, type PairedModel } from './paired';
@@ -21,7 +22,7 @@ export function createPairedPredictor(text: string): (raw: string, offset: numbe
     output.forEach((value, at) => { tags[start + at] = value.tag; }); start = end;
   }
   return (raw, offset) => {
-    const at = byOffset.get(offset); if (at === undefined || canonicalProtectedTerm(raw)) return;
+    const at = byOffset.get(offset); if (at === undefined || canonicalProtectedTerm(raw) || productiveMorphology.isValidWordForm(raw)) return;
     const lower = wordLower(raw), split = model.splits[lower];
     if (split && split.count >= 3 && !dictionaryCandidates(lower)?.has(lower)) return split.target;
     const result = rankPaired(model, index, raw, tokens, at, tags[at]);

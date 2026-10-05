@@ -3,7 +3,8 @@ import { fold, tokenize, type Token } from './core';
 import { boundedEditDistance } from '../spelling-candidates';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { dictionaryCandidates } from '../dictionary';
-import { productiveMorphology } from '../productive-morphology';
+// Feature/eligibility contract of the deployed paired artifact stays frozen.
+import { artifactMorphology as productiveMorphology } from '../productive-morphology';
 import { tagPOS, type POSModel } from './pos';
 
 export interface CorrectionPair { id: string; groupId: string; input: string; target: string; split: string }

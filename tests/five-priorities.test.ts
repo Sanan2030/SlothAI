@@ -64,3 +64,12 @@ test('unformatted targets with accidental indentation are quarantined, not learn
   assert.equal(data.manifest.review.accepted, 0);
   assert.match(data.manifest.review.rejected[0].reason, /whitespace/u);
 });
+
+test('paired feature contract remains frozen while runtime recognizes derived forms', async () => {
+  const { pairedFeatures } = await import('../lib/editor/local-ai/paired');
+  const { tokenize } = await import('../lib/editor/local-ai/core');
+  const artifact = (await import('../lib/editor/local-ai/paired-model.json')).default as import('../lib/editor/local-ai/paired').PairedModel;
+  assert.equal(productiveMorphology.isValidWordForm('müəllimlə'), true);
+  assert.equal(pairedFeatures(artifact, 'muellimle', 'müəllimlə', tokenize('muellimle'), 0)[7], 0);
+  assert.equal(pairedFeatures(artifact, 'mekteb', 'məktəb', tokenize('mekteb'), 0)[7], 1);
+});
