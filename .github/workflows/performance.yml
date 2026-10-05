@@ -59,6 +59,10 @@ jobs:
           cmp /tmp/slothai-observed-channel.json lib/editor/observed-channel-model.json
           npm run --ignore-scripts nlp:document:train -- --output=/tmp/slothai-document-model.json
           cmp /tmp/slothai-document-model.json lib/editor/neural/document-model.json
+          node --import tsx scripts/train-log-spelling.ts --output=/tmp/slothai-log-model.json
+          cmp /tmp/slothai-log-model.json lib/editor/neural/log-model.json
+          node --import tsx scripts/train-log-ocr.ts
+          git diff --exit-code -- lib/editor/log-ocr-model.json data/nlp/logs/log-training-report.json
           git diff --exit-code -- data/nlp/documents/document-training-report.json
           npm run --ignore-scripts nlp:observed:evaluate -- --output=/tmp/slothai-observed-evaluation.json --enforce
           npm run --ignore-scripts gold:complete

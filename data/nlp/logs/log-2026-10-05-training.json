@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "source": "User-uploaded log 2026-10-05; corrected by assistant, not human/language-specialist-reviewed",
+    "entries": 4,
+    "uniqueInputs": 3,
+    "duplicateEntries": 1,
+    "privacy": "Personal name replaced by pronoun; no company/branch/team proper names in training. Ambiguous/truncated OCR quarantined."
+  },
+  "sentences": [
+    {
+      "id": "log-story-001",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Sheherin merkezinde gunesli bir gun baslayirdi.",
+      "target": "Şəhərin mərkəzində günəşli bir gün başlayırdı."
+    },
+    {
+      "id": "log-story-002",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Seher saatlarinda kuce boyu addimlayan insanlar oz islerine telesir, avtobuslar dayanacaqlarda dayandiqca insan axini daha da artirdi.",
+      "target": "Səhər saatlarında küçə boyu addımlayan insanlar öz işlərinə tələsir, avtobuslar dayanacaqlarda dayandıqca insan axını daha da artırdı."
+    },
+    {
+      "id": "log-story-003",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Kulək hafifce esir, agaclarin yarpaqlarini terpedir, seherin adeti uzre dinamik ritmini daha da canlandirirdi.",
+      "target": "Külək xəfifcə əsir, ağacların yarpaqlarını tərpədir, şəhərin adəti üzrə dinamik ritmini daha da canlandırırdı."
+    },
+    {
+      "id": "log-story-004",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Insanlar ellerinde qehve fincanlari ile tez-tez addimlayir, bir-biri ile salamlasir ve seherin yeni gunune hazirlasirdilar.",
+      "target": "İnsanlar əllərində qəhvə fincanları ilə tez-tez addımlayır, bir-biri ilə salamlaşır və şəhərin yeni gününə hazırlaşırdılar."
+    },
+    {
+      "id": "log-story-005",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Her kes oz gunluk planlarini reallasdirmaq, yeni hedeflere catmaq ucun boyuk bir hevesle hereket edirdi.",
+      "target": "Hər kəs öz günlük planlarını reallaşdırmaq, yeni hədəflərə çatmaq üçün böyük bir həvəslə hərəkət edirdi."
+    },
+    {
+      "id": "log-story-006",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "O da diger insanlar kimi telem-teles evden cixib dayanacaga teref qacirdi.",
+      "target": "O da digər insanlar kimi tələm-tələs evdən çıxıb dayanacağa tərəf qaçırdı."
+    },
+    {
+      "id": "log-story-007",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Yol boyu fikirlesirdi ki, bu gun kecirilecek vacib iclasda teqdimati nece edecek, hansi meseleleri qabardacaq ve kecen hefdeden qalan layihe teleblerini nece yekunlasdiracaq.",
+      "target": "Yol boyu fikirləşirdi ki, bu gün keçiriləcək vacib iclasda təqdimatı necə edəcək, hansı məsələləri qabardacaq və keçən həftədən qalan layihə tələblərini necə yekunlaşdıracaq."
+    },
+    {
+      "id": "log-story-008",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Daxilinde bir az heyecan var idi, cunki bu layihe onun ucun cox boyuk ehemiyyet kesf edirdi ve komandanin umumi uguru birbasa bu neticelerden asili idi.",
+      "target": "Daxilində bir az həyəcan var idi, çünki bu layihə onun üçün çox böyük əhəmiyyət kəsb edirdi və komandanın ümumi uğuru birbaşa bu nəticələrdən asılı idi."
+    },
+    {
+      "id": "log-story-009",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "O, beyninde kecireceyi teqdimatin addimlarini defelerle tekrarlayir, ehtimal olunan suallari ve onlara vereceyi cavablari hazirlayirdi.",
+      "target": "O, beynində keçirəcəyi təqdimatın addımlarını dəfələrlə təkrarlayır, ehtimal olunan sualları və onlara verəcəyi cavabları hazırlayırdı."
+    },
+    {
+      "id": "log-story-010",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Dayanacaga catanda avtobusun gecikdiyini gorduyunu xatirladi, amma fikri ele qarismisdi ki, cibindeki telefonu cixarib tez qeydlere baxmaga basladi.",
+      "target": "Dayanacağa çatanda avtobusun gecikdiyini gördüyünü xatırladı, amma fikri elə qarışmışdı ki, cibindəki telefonu çıxarıb tez qeydlərə baxmağa başladı."
+    },
+    {
+      "id": "log-story-011",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Qeyd defterinde butun meseleler bir-bir yazilmisdi: istifadeci senarileri, sistem qarsiliqli elaqeleri, arxivlesdirme qaydalari ve yeni funksionalliqlarin etrafli tesviri.",
+      "target": "Qeyd dəftərində bütün məsələlər bir-bir yazılmışdı: istifadəçi ssenariləri, sistem qarşılıqlı əlaqələri, arxivləşdirmə qaydaları və yeni funksionallıqların ətraflı təsviri."
+    },
+    {
+      "id": "log-story-012",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "O, xususile son gunlerde reallasdirilan deyisikliklerin neticelerini yoxlamaq isteyirdi.",
+      "target": "O, xüsusilə son günlərdə reallaşdırılan dəyişikliklərin nəticələrini yoxlamaq istəyirdi."
+    },
+    {
+      "id": "log-story-013",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Avtobus gelende boyuk bir izdihamla iceri daxil oldu ve pencere kenarinda yer tapib eylesdi.",
+      "target": "Avtobus gələndə böyük bir izdihamla içəri daxil oldu və pəncərə kənarında yer tapıb əyləşdi."
+    },
+    {
+      "id": "log-story-014",
+      "documentId": "log-story-2026-10-05",
+      "split": "train",
+      "annotationStatus": "assistant-reviewed",
+      "errorOrigin": "observed-user-input-name-redacted",
+      "input": "Bayira baxarken seherin ses-kuyu onun fikirlerini bir qeder dagitdi, amma daxilindeki heyecan hiss olunacaq derecede yuksek olaraq qalirdi.",
+      "target": "Bayıra baxarkən şəhərin səs-küyü onun fikirlərini bir qədər dağıtdı, amma daxilindəki həyəcan hiss olunacaq dərəcədə yüksək olaraq qalırdı."
+    }
+  ],
+  "ocrTokens": [
+    {
+      "input": "sikayet",
+      "target": "şikayət"
+    },
+    {
+      "input": "sikayat",
+      "target": "şikayət"
+    },
+    {
+      "input": "eriza",
+      "target": "ərizə"
+    },
+    {
+      "input": "Tepkkürnama",
+      "target": "təşəkkürnamə"
+    },
+    {
+      "input": "bankqllq",
+      "target": "bankçılıq"
+    },
+    {
+      "input": "BankClltq",
+      "target": "bankçılıq"
+    },
+    {
+      "input": "bankGlllq",
+      "target": "bankçılıq"
+    },
+    {
+      "input": "Kigik",
+      "target": "kiçik"
+    },
+    {
+      "input": "mü$arilari",
+      "target": "müştəriləri"
+    },
+    {
+      "input": "inzibatla;dlnlmasl",
+      "target": "inzibatlaşdırılması"
+    },
+    {
+      "input": "5öböSi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "Söbasi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": ";öbasi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "9öbasi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "Söbesi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": ";öbesi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "söbasi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "söbas",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "#basi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "50böS1",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "kapitallnln",
+      "target": "kapitalının"
+    },
+    {
+      "input": "texnologiyalan",
+      "target": "texnologiyaları"
+    },
+    {
+      "input": "taminatlnln",
+      "target": "təminatının"
+    },
+    {
+      "input": "inki;afl",
+      "target": "inkişafı"
+    },
+    {
+      "input": "Proqramla;dlrma",
+      "target": "proqramlaşdırma"
+    },
+    {
+      "input": "Vö",
+      "target": "və"
+    },
+    {
+      "input": "Mühasibatllq",
+      "target": "mühasibatlıq"
+    },
+    {
+      "input": "hesabatllq",
+      "target": "hesabatlıq"
+    },
+    {
+      "input": "Xezinedarltq",
+      "target": "xəzinədarlıq"
+    },
+    {
+      "input": "Parakenda",
+      "target": "pərakəndə"
+    },
+    {
+      "input": "avtomatla;dlnlmasl",
+      "target": "avtomatlaşdırılması"
+    },
+    {
+      "input": "barpast",
+      "target": "bərpası"
+    },
+    {
+      "input": ";atlS",
+      "target": "satış"
+    },
+    {
+      "input": ";at15tn",
+      "target": "satışın"
+    },
+    {
+      "input": "Vletodologiya",
+      "target": "metodologiya"
+    },
+    {
+      "input": "sati91n",
+      "target": "satışın"
+    },
+    {
+      "input": "te;kili",
+      "target": "təşkili"
+    },
+    {
+      "input": "ara;dlrllmasl",
+      "target": "araşdırılması"
+    },
+    {
+      "input": "mükafatlandlrma",
+      "target": "mükafatlandırma"
+    },
+    {
+      "input": "istedadlann",
+      "target": "istedadların"
+    },
+    {
+      "input": "planlamasl",
+      "target": "planlaması"
+    },
+    {
+      "input": "inki;afi",
+      "target": "inkişafı"
+    },
+    {
+      "input": "Malumatlann",
+      "target": "məlumatların"
+    },
+    {
+      "input": "sistemla;dirilmasi",
+      "target": "sistemləşdirilməsi"
+    },
+    {
+      "input": "Mühasibathq",
+      "target": "mühasibatlıq"
+    },
+    {
+      "input": "Naéd",
+      "target": "nağd"
+    },
+    {
+      "input": "bazannda",
+      "target": "bazarında"
+    },
+    {
+      "input": "amenyyatlar",
+      "target": "əməliyyatlar"
+    },
+    {
+      "input": "Mü$eri",
+      "target": "müştəri"
+    },
+    {
+      "input": "tacrübesinin",
+      "target": "təcrübəsinin"
+    },
+    {
+      "input": "töhlükasizliyi",
+      "target": "təhlükəsizliyi"
+    },
+    {
+      "input": "satl$l",
+      "target": "satışı"
+    },
+    {
+      "input": "orqanlan",
+      "target": "orqanları"
+    },
+    {
+      "input": "sati91mn",
+      "target": "satışının"
+    },
+    {
+      "input": "Girovlann",
+      "target": "girovların"
+    },
+    {
+      "input": "mahsullanmn",
+      "target": "məhsullarının"
+    },
+    {
+      "input": "mahsullann",
+      "target": "məhsullarının"
+    },
+    {
+      "input": "sati;",
+      "target": "satış"
+    },
+    {
+      "input": "va",
+      "target": "və"
+    },
+    {
+      "input": "ila",
+      "target": "ilə"
+    },
+    {
+      "input": "taskili",
+      "target": "təşkili"
+    },
+    {
+      "input": "dastak",
+      "target": "dəstək"
+    },
+    {
+      "input": "idaraedilmesi",
+      "target": "idarə edilməsi"
+    },
+    {
+      "input": "idareedilmesi",
+      "target": "idarə edilməsi"
+    },
+    {
+      "input": "idaraedilmasi",
+      "target": "idarə edilməsi"
+    },
+    {
+      "input": "sahasi",
+      "target": "sahəsi"
+    },
+    {
+      "input": "idaraetme",
+      "target": "idarəetmə"
+    },
+    {
+      "input": "amaliyyatlarl",
+      "target": "əməliyyatları"
+    },
+    {
+      "input": "markazi",
+      "target": "mərkəzi"
+    },
+    {
+      "input": "tahlükasizliyi",
+      "target": "təhlükəsizliyi"
+    },
+    {
+      "input": "tahlükesizliyi",
+      "target": "təhlükəsizliyi"
+    },
+    {
+      "input": "Insan",
+      "target": "insan"
+    },
+    {
+      "input": "Inzibati",
+      "target": "inzibati"
+    },
+    {
+      "input": "Informasiya",
+      "target": "informasiya"
+    },
+    {
+      "input": "SöböSi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": ";öböSi",
+      "target": "şöbəsi"
+    },
+    {
+      "input": "layihölerin",
+      "target": "layihələrin"
+    },
+    {
+      "input": "sistemlari",
+      "target": "sistemləri"
+    },
+    {
+      "input": "mutlaq",
+      "target": "mütləq"
+    },
+    {
+      "input": "Satinalma",
+      "target": "satınalma"
+    },
+    {
+      "input": "Proseslarin",
+      "target": "proseslərin"
+    },
+    {
+      "input": "Kreditlarin",
+      "target": "kreditlərin"
+    },
+    {
+      "input": "kanallart",
+      "target": "kanallar"
+    },
+    {
+      "input": "markezi",
+      "target": "mərkəzi"
+    },
+    {
+      "input": "Nazaratgi",
+      "target": "nəzarətçi"
+    },
+    {
+      "input": "Müracietlarin",
+      "target": "müraciətlərin"
+    },
+    {
+      "input": "amak",
+      "target": "əmək"
+    },
+    {
+      "input": "münasibatlerinin",
+      "target": "münasibətlərinin"
+    },
+    {
+      "input": "inki;af",
+      "target": "inkişaf"
+    },
+    {
+      "input": "tatbiqlarinin",
+      "target": "tətbiqlərinin"
+    },
+    {
+      "input": "tatbiqlerinin",
+      "target": "tətbiqlərinin"
+    },
+    {
+      "input": "destak",
+      "target": "dəstək"
+    },
+    {
+      "input": "nazaret",
+      "target": "nəzarət"
+    },
+    {
+      "input": "ictimaiyyötlö",
+      "target": "ictimaiyyətlə"
+    },
+    {
+      "input": "elaqelar",
+      "target": "əlaqələr"
+    },
+    {
+      "input": "masuliyyat",
+      "target": "məsuliyyət"
+    },
+    {
+      "input": "qiymatlandirilmasi",
+      "target": "qiymətləndirilməsi"
+    },
+    {
+      "input": "dastök",
+      "target": "dəstək"
+    },
+    {
+      "input": "Mahkame",
+      "target": "məhkəmə"
+    },
+    {
+      "input": "ameliyyat",
+      "target": "əməliyyat"
+    }
+  ],
+  "quarantine": [
+    "Ümumi Pba",
+    "Ylélm Söbasi",
+    "'ayments",
+    "Sati* dastak ;öbesi",
+    "Malumatlann sistemla;dirilmasi ;öbesi (D",
+    "arakanda mahsullanmn sati91 departamen",
+    "3usiness prostucts tribe / Micro & agro ending"
+  ],
+  "ocrPhrases": [
+    {
+      "input": "isa qabul va kadr planlamasl",
+      "target": "işə qəbul və kadr planlaması"
+    }
+  ]
+}

@@ -64,7 +64,9 @@
     "nlp:observed:train": "node --import tsx scripts/train-observed-channel.ts",
     "nlp:observed:evaluate": "node --import tsx scripts/evaluate-observed-inputs.ts",
     "nlp:document:train": "node --import tsx scripts/train-document-spelling.ts",
-    "nlp:document:evaluate": "node --import tsx scripts/evaluate-document-spelling.ts"
+    "nlp:document:evaluate": "node --import tsx scripts/evaluate-document-spelling.ts",
+    "nlp:log:train": "node --import tsx scripts/train-log-spelling.ts && node --import tsx scripts/train-log-ocr.ts",
+    "nlp:log:evaluate": "node --import tsx scripts/evaluate-log-spelling.ts"
   },
   "engines": {
     "node": ">=20.9.0"

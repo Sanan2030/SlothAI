@@ -11,7 +11,8 @@ import { chooseIndexedTypo } from './spelling-candidates';
 import { productiveMorphology } from './productive-morphology';
 import type { MorphologicalAnalysis } from './contracts/morphology';
 import documentArtifact from './neural/document-model.json';
-const documentSurfaces = new Set(Object.keys(documentArtifact.lexicon.words));
+import logArtifact from './neural/log-model.json';
+const documentSurfaces = new Set([...Object.keys(documentArtifact.lexicon.words), ...Object.keys(logArtifact.lexicon.words)]);
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `

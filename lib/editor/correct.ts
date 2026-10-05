@@ -7,6 +7,8 @@ import { editHTMLStructure } from './html-structure';
 import { editStructuredText } from './structured-text';
 import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
 import { documentSpelling } from './neural/document-runtime';
+import { logSpelling, isLogSurface } from './neural/log-runtime';
+import { editOCRLabels, isOCRSurface } from './log-ocr';
 import { dictionaryCandidates } from './dictionary';
 import { isEstablishedSurface } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
@@ -146,16 +148,23 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
     if (!value.trim()) return value;
     const result = correctPlainText(value, true, runtime); corrections += result.corrections; return result.text;
   };
-  const structured = editStructuredText(input, edit, preserveFormatting) ?? editHTMLStructure(input, edit);
-  return structured === undefined ? correctPlainText(input, preserveFormatting, runtime)
+  const structured = editOCRLabels(input, edit) ?? editStructuredText(input, edit, preserveFormatting) ?? editHTMLStructure(input, edit);
+  const result = structured === undefined ? correctPlainText(input, preserveFormatting, runtime)
     : { text: structured, corrections: structured === input ? 0 : Math.max(1, corrections) };
+  // A dangling example introducer is an unfinished clause, not a new sentence.
+  // Do not invent the missing example or touch complete enumerations/markup.
+  if (structured === undefined && /\bvar\s+(?:meselen|məsələn)\s*$/iu.test(input)) {
+    const repaired = result.text.replace(/\.\s+Məsələn\.$/u, ', məsələn…').replace(/^Burda(?=\s)/u, 'Burada');
+    return { text: repaired, corrections: repaired === result.text ? result.corrections : result.corrections + 1 };
+  }
+  return result;
 }
 
 function correctPlainText(input: string, preserveFormatting = false, runtime: CorrectionRuntime = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   const services = runtime.services ?? languageServices;
-  const restoreWord = (word: string) => isCanonicalEntity(word) || /^eləmi$/iu.test(word) ? word : services.spelling.resolve(word, services);
+  const restoreWord = (word: string) => isCanonicalEntity(word) || isLogSurface(word) || isOCRSurface(word) || /^eləmi$/iu.test(word) ? word : services.spelling.resolve(word, services);
   const protectedText: string[] = [];
   // Reserve an unused delimiter; user-supplied private-use characters cannot
   // accidentally collide with our placeholders.
@@ -174,6 +183,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Initials belong to the following proper name. A period in M.Füzuli is
   // not a sentence boundary; preserve the author's spacing and spelling.
   text = protectInitialNames(text, protect);
+  if (runtime.useLocalModel !== false) text = logSpelling(text);
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
   text = prepareTechnicalPhrases(text);
   // Numeric/date/version values take Azerbaijani suffixes with a hyphen.

@@ -1,0 +1,125 @@
+{
+  "provenance": "Separate assistant-authored evaluation, not human-reviewed, not added to training. Novel contexts and preservation controls; shares vocabulary with train and cannot certify general-language accuracy.",
+  "cases": [
+    {
+      "id": "log-unseen-001",
+      "input": "Avtobuslar dayanacaqlarda dayandiqca insan axini azalirdi.",
+      "target": "Avtobuslar dayanacaqlarda dayandıqca insan axını azalırdı.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-002",
+      "input": "Insanlar ellerinde qehve fincanlari ile otururdular.",
+      "target": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-003",
+      "input": "Yeni hedeflere catmaq ucun hereket edirdi.",
+      "target": "Yeni hədəflərə çatmaq üçün hərəkət edirdi.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-004",
+      "input": "Komandanin umumi uguru bu neticelerden asili idi.",
+      "target": "Komandanın ümumi uğuru bu nəticələrdən asılı idi.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-005",
+      "input": "O, beyninde teqdimatin addimlarini tekrarlayir.",
+      "target": "O, beynində təqdimatın addımlarını təkrarlayır.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-006",
+      "input": "Istifadeci senarileri ve arxivlesdirme qaydalari yoxlanilir.",
+      "target": "İstifadəçi ssenariləri və arxivləşdirmə qaydaları yoxlanılır.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-007",
+      "input": "Bu layihe boyuk ehemiyyet kesf edirdi.",
+      "target": "Bu layihə böyük əhəmiyyət kəsb edirdi.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-008",
+      "input": "Alimler yeni planet kesf etdiler.",
+      "target": "Alimlər yeni planet kəşf etdilər.",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-009",
+      "input": "burda coxlu melumat var meselen",
+      "target": "Burada çoxlu məlumat var, məsələn…",
+      "category": "spelling-context"
+    },
+    {
+      "id": "log-unseen-010",
+      "input": "Burada çoxlu məlumat var, məsələn…",
+      "target": "Burada çoxlu məlumat var, məsələn…",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-011",
+      "input": "O, beynində təqdimatın addımlarını təkrarlayır.",
+      "target": "O, beynində təqdimatın addımlarını təkrarlayır.",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-012",
+      "input": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+      "target": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-013",
+      "input": "API backend deploy commit framework database.",
+      "target": "API backend deploy commit framework database.",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-014",
+      "input": "https://example.com/a test@example.com `git commit`",
+      "target": "https://example.com/a test@example.com `git commit`",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-015",
+      "input": "Serverdə xəta baş verdi. Database bağlantısı kəsildi.",
+      "target": "Serverdə xəta baş verdi. Database bağlantısı kəsildi.",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-016",
+      "input": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nTexniki dəstək şöbəsi",
+      "target": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nTexniki dəstək şöbəsi",
+      "category": "preservation"
+    },
+    {
+      "id": "log-unseen-017",
+      "input": "Proqram taminatlnln inki;afl departamenti\n\nSatinalma ;öbasi\n\nTexniki dastak ;öbasi",
+      "target": "Proqram təminatının inkişafı departamenti\n\nSatınalma şöbəsi\n\nTexniki dəstək şöbəsi",
+      "category": "ocr-list"
+    },
+    {
+      "id": "log-unseen-018",
+      "input": "Kredit Vö qeyri-kredit amaliyyatlarl Söbasi\n\nMüracietlarin ara;dlrllmasl qrupu\n\nRisklerin idareedilmesi departamenti",
+      "target": "Kredit və qeyri-kredit əməliyyatları şöbəsi\n\nMüraciətlərin araşdırılması qrupu\n\nRisklərin idarə edilməsi departamenti",
+      "category": "ocr-list"
+    },
+    {
+      "id": "log-unseen-019",
+      "input": "isa qabul va kadr planlamasl söbasi\n\nArxiv ;öbasi\n\nKiber tahlükesizliyi xidmetleri 5öböSi",
+      "target": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nKiber təhlükəsizliyi xidmətləri şöbəsi",
+      "category": "ocr-list"
+    },
+    {
+      "id": "log-unseen-020",
+      "input": "Strategiya va layihölerin idaraedilmesi\n\ndepartamenti\n\nMaliyye monitorinqi SöböSi\n\nArxiv ;öbasi",
+      "target": "Strategiya və layihələrin idarə edilməsi departamenti\n\nMaliyyə monitorinqi şöbəsi\n\nArxiv şöbəsi",
+      "category": "ocr-list"
+    }
+  ]
+}

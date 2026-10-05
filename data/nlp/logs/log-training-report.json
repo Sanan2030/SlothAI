@@ -1,0 +1,19 @@
+{
+  "sourceSHA256": "856ad25fdd03db1a8b7ce33d114b1952e25c6c5d5029cffd0cdf989ddade4824",
+  "artifactSHA256": "cbb562876cdc66a0b9194878a6d27fce701d3f4689f843940ab632a9e99fd513",
+  "sourceSentences": 14,
+  "sourceDocuments": 1,
+  "pairs": 48,
+  "examples": 759,
+  "positive": 483,
+  "vocabulary": 158,
+  "parameters": 313,
+  "epochs": 200,
+  "initialTrainingBCE": 0.6883013543771493,
+  "finalTrainingBCE": 0.00032791351357609315,
+  "artifactBytes": 36296,
+  "threshold": 0.999,
+  "margin": 0.2,
+  "minimumContext": 2,
+  "policy": "Fixed conservative thresholds, no test/validation threshold selection. All source fragments train-only. Assistant-reviewed observed log fragments (personal name redacted), with additional explicitly synthetic ASCII/digraph and identity examples; not human-reviewed pairs. Small candidate ranker, not a general semantic language model."
+}
