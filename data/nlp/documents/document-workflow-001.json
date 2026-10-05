@@ -1,0 +1,1319 @@
+{
+  "version": 1,
+  "provenance": {
+    "source": "User-authorized document fragments; source file and names excluded",
+    "sourceSHA256": "8201466e785b866a1a668e687ade4351263c06d04312ec1455756918e60381dd",
+    "documentCount": 1,
+    "review": "Assistant-curated; not human-reviewed or individually user-attested",
+    "policy": "One source document belongs entirely to train; no validation/test fragments from this document",
+    "deduplication": "NFC/folded exact targets and token-bigram Jaccard >= 0.72 rejected",
+    "syntheticErrors": "ASCII diacritics and sh/ch variants; not observed user mistakes"
+  },
+  "sentences": [
+    {
+      "id": "workflow-001",
+      "sourceParagraph": 208,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə “Məktublar” pəncərəsi vasitəsilə “Məktublar” sənəd növü üzrə qeydiyyata alınmış sənədlərə grid üzərindən baxış keçirmək imkanı təqdim edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-002",
+      "sourceParagraph": 209,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Grid “Məktublar” modulunda qeydiyyata alınmış sənədlərin strukturlaşdırılmış şəkildə göstərilməsi və üzərində əməliyyatların aparılması üçün nəzərdə tutulmuşdur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-003",
+      "sourceParagraph": 210,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Grid hər bir sətirdə bir sənədi əks etdirir və sənədlər üzrə əsas məlumatlar sütunlar vasitəsilə göstərilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-004",
+      "sourceParagraph": 218,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman istifadəçiyə əvvəlcədən təyin edilmiş rol əsasında əməliyyatları icra etməyə imkan verən düymələr əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-005",
+      "sourceParagraph": 220,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman müvafiq sənədin Qeydiyyat Nəzarət Vərəqəsi brauzerin yeni pəncərəsində açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-006",
+      "sourceParagraph": 222,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman seçilən əsas sənəd brauzerin yeni pəncərəsində açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-007",
+      "sourceParagraph": 273,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə griddə təqdim olunan məlumatlar üzrə axtarış aparmaq və müxtəlif filtrasiyaları tətbiq etmək imkanı təqdim edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-008",
+      "sourceParagraph": 274,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Hər bir sütun adının aşağı hissəsində axtarış xanası mövcuddur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-009",
+      "sourceParagraph": 279,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Hər bir sütun adının qarşısında filtr düyməsi mövcuddur və hər bir sütunun xana məlumatına əsasən filtrasiyanı həyata keçirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-010",
+      "sourceParagraph": 279,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Düyməni sıxan zaman xana məlumatları seçim siyahısı şəklində təqdim edilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-011",
+      "sourceParagraph": 280,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Yalnız daxil edilən dəyərlə xanadakı məlumat 100% üst-üstə düşdükdə həmin sətirləri ekranda əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-012",
+      "sourceParagraph": 301,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi tərəfindən seçilən dəyər əsasında “Məktublar” modulunun grid görünüşündə məlumatların filtrasiya olunmasını təmin edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-013",
+      "sourceParagraph": 301,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sahədə statik olaraq “Son 3 ay” və “Bütün illər” filtr seçimləri mövcuddur, il üzrə filtr seçimləri 2000-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə generasiya olunur və il üzrə filtrasiya cari sistem tarixinə əsasən avtomatik hesablanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-014",
+      "sourceParagraph": 328,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə “Xanalar” düyməsi vasitəsilə “Məktublar” modulunda griddə əks olunan əsas məlumat sütunlarının seçilməsi və ardıcıllığının tənzimlənməsi imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-015",
+      "sourceParagraph": 328,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Düyməni sıxan zaman “Xanalar” modal pəncərəsi (Modal Dialog) açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-016",
+      "sourceParagraph": 334,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq sütun adının griddə göstərilmə ardıcıllığını müəyyən edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-017",
+      "sourceParagraph": 334,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "0-dan başlayaraq sıra sayı təyin etmək mümkündür.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-018",
+      "sourceParagraph": 334,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müxtəlif sütun adları eyni sıra nömrəsi ala bilər.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-019",
+      "sourceParagraph": 334,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıra nömrələrini qeyd edib, “Düzəlişləri yadda saxla” düyməsi sıxılan zaman “Sütun adları” sütununun dəyərləri qeyd edilən dəyərlərə əsasən sıralanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-020",
+      "sourceParagraph": 336,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi seçim xanası vasitəsilə müvafiq sütunların griddə görünürlüyünü aktiv və ya deaktiv edə bilər.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-021",
+      "sourceParagraph": 336,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Ən azı bir checkbox seçili olmalıdır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-022",
+      "sourceParagraph": 338,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Susmaya görə deaktiv (disabled) vəziyyətdə olur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-023",
+      "sourceParagraph": 338,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi tərəfindən hər hansı dəyişiklik edildikdə avtomatik olaraq aktiv (enabled) vəziyyətə keçir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-024",
+      "sourceParagraph": 338,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Yadda saxla əməliyyatı səhifələr arasında keçid zamanı avtomatik tətbiq olunmur və yalnız cari səhifə üzrə edilmiş dəyişikliklər üçün ayrıca həyata keçirilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-025",
+      "sourceParagraph": 342,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Məktublar” modulunun sənədlərin siyahısını əks etdirən grid görünüşünə yönləndirilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-026",
+      "sourceParagraph": 345,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Pəncərədə səhifələmə (pagination) mexanizmi mövcuddur və bir səhifədə maksimum 10 məlumat əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-027",
+      "sourceParagraph": 372,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə grid üzərindən ümumi sənəd sayını görmək və məlumatları səhifələr üzrə görüntüləmək imkanı təqdim edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-028",
+      "sourceParagraph": 375,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi dəyərlərdən hər hansı birini seçdikdə səhifə yenilənir və grid üzrə sətir sayı dəyişir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-029",
+      "sourceParagraph": 377,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Birbaşa səhifə nömrəsi üzrə keçid mümkün olmalıdır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-030",
+      "sourceParagraph": 382,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə grid üzərindən sənədlərin icra statusunu vizual olaraq fərqləndirmək üçün rəng indikatorlarını görüntüləmək imkanı təqdim edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-031",
+      "sourceParagraph": 386,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Gridin sol hissəsində hər bir sənəd sətiri üçün icra vəziyyətini göstərən rəngli indikator yerləşdirilməlidir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-032",
+      "sourceParagraph": 400,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sistem istifadəçilərə “Məktublar” modulu vasitəsilə yeni sənəd yaratmaq imkanı təqdim edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-033",
+      "sourceParagraph": 400,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bu zaman istifadəçi sənəd yaratma əməliyyatını başladır və “Əsas məlumatlar” pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-034",
+      "sourceParagraph": 403,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Dəyərlər sistemin “Sənəd ünvanlama icazələri” bölməsindəki təyinatlar əsasında əldə edilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-035",
+      "sourceParagraph": 403,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədin ünvanlandığı tərəfi seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-036",
+      "sourceParagraph": 404,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədi göndərən tərəfin kateqoriyasını seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-037",
+      "sourceParagraph": 439,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədin daxilolma kanalını seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-038",
+      "sourceParagraph": 439,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Xananın daxilində yerləşən təmizləmə düyməsi sıxılan zaman seçilmiş dəyər xanadan silinir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-039",
+      "sourceParagraph": 449,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədin icra qaydasını seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-040",
+      "sourceParagraph": 478,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Daxil olan sənədin nömrəsini yazmaq imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-041",
+      "sourceParagraph": 478,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Daxil edilmiş dəyər yadda saxlanıldıqdan sonra gridin “No” sütununda əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-042",
+      "sourceParagraph": 479,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Daxil olan sənədin tarixini seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-043",
+      "sourceParagraph": 479,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Seçilmiş tarix yadda saxlanıldıqdan sonra gridin “Tarix” sütununda əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-044",
+      "sourceParagraph": 481,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müəllifin soyadını daxil etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-045",
+      "sourceParagraph": 482,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müəllifin adını daxil etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-046",
+      "sourceParagraph": 483,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müəllifin atasının adını daxil etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-047",
+      "sourceParagraph": 484,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Təşkilatı mövcud siyahıdan seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-048",
+      "sourceParagraph": 485,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Yeni təşkilatın əlavə edilməsi üçün nəzərdə tutulur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-049",
+      "sourceParagraph": 486,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müəllifin şöbəsini daxil etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-050",
+      "sourceParagraph": 487,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Ünvan məlumatını daxil etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-051",
+      "sourceParagraph": 488,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman məcburi xanaların doldurulması yoxlanılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-052",
+      "sourceParagraph": 488,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Yoxlama uğurlu olduqda daxil edilmiş məlumatlar yadda saxlanılır və gridin müvafiq sütunlarında əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-053",
+      "sourceParagraph": 489,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman daxil edilmiş məlumatlar yadda saxlanılmadan forma bağlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-054",
+      "sourceParagraph": 495,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "“Əlaqəli sənədlər” komponenti “Əsas məlumatlar” pəncərəsi daxilində ayrıca blok şəklində yerləşdirilir və grid görünüşünə malikdir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-055",
+      "sourceParagraph": 504,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bu zaman istifadəçi üçün “+” düyməsi aktiv olur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-056",
+      "sourceParagraph": 506,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi “+” düyməsini sıxan zaman əlaqəli sənədin əlavə edilməsi üçün forma açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-057",
+      "sourceParagraph": 507,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Susmaya görə “Son 3 ay” dəyərini alır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-058",
+      "sourceParagraph": 507,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sahədə statik olaraq “Son 3 ay” və “Bütün illər” seçimləri mövcuddur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-059",
+      "sourceParagraph": 507,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İl üzrə seçimlər 2018-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə yaradılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-060",
+      "sourceParagraph": 507,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Seçilmiş dəyər “Sənədi seçin” xanasının axtarış nəticələrinə təsir edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-061",
+      "sourceParagraph": 545,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədin qeydiyyat nömrəsinə görə axtarışı həyata keçirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-062",
+      "sourceParagraph": 545,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Axtarış nəticələri qeydiyyat nömrəsi, sənəd məlumatı və qısa məzmunu əhatə edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-063",
+      "sourceParagraph": 546,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman seçilmiş sənəd məlumatlarının “Əlaqəli sənədlər” gridində əks olunmasını təmin edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-064",
+      "sourceParagraph": 547,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman heç bir dəyişiklik etmədən forma bağlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-065",
+      "sourceParagraph": 549,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman əlaqəli sənədin əlavə edilməsi üçün forma açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-066",
+      "sourceParagraph": 549,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Cari əlaqəli sənədlərdən əlavə yeni sənəd əlavə etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-067",
+      "sourceParagraph": 550,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman gridin müvafiq sətri silinir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-068",
+      "sourceParagraph": 552,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bir neçə əlaqəli sənəd ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-069",
+      "sourceParagraph": 553,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Griddə səhifələmə elementləri, cari və ümumi səhifə nömrələri və ümumi sətir sayı göstərilmir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-070",
+      "sourceParagraph": 567,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi “+” düyməsini sıxan zaman grid daxilində icraçının əlavə edilməsi üçün forma açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-071",
+      "sourceParagraph": 568,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Dəyərlər sistemin istifadəçi məlumatlarını təqdim edən xidmət (API) vasitəsilə dinamik şəkildə əldə edilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-072",
+      "sourceParagraph": 569,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq icraçı üzrə məzmun dəyərini seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-073",
+      "sourceParagraph": 570,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Susmaya görə “İcra üçün” dəyərini alır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-074",
+      "sourceParagraph": 570,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Xananın daxilindəki təmizləmə düyməsi seçilmiş dəyəri silir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-075",
+      "sourceParagraph": 575,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman daxil edilmiş icraçı məlumatları qəbul edilir və gridin müvafiq sətrində əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-076",
+      "sourceParagraph": 576,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "UI-da qırmızı “×” simvolu ilə göstərilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-077",
+      "sourceParagraph": 576,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman əlavəetmə forması bağlanır və daxil edilmiş məlumatlar gridə əlavə edilmir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-078",
+      "sourceParagraph": 578,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İcraçının sənədin iş axınında iştirakını müəyyənləşdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-079",
+      "sourceParagraph": 579,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Əlavə edilmiş icraçının soyadını və adını əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-080",
+      "sourceParagraph": 580,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq icraçı üçün seçilmiş məzmun dəyərini əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-081",
+      "sourceParagraph": 581,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq icraçı üzrə seçilmiş göndərilmə növünü əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-082",
+      "sourceParagraph": 583,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Əvvəlcədən yaradılmış şablonu seçmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-083",
+      "sourceParagraph": 584,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İcraçı məlumatlarından şablon yaratmaq üçün nəzərdə tutulur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-084",
+      "sourceParagraph": 585,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Seçilmiş şablonu yükləmək üçün nəzərdə tutulur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-085",
+      "sourceParagraph": 587,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənəd üzrə ən azı bir icraçının seçilməsi məcburidir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-086",
+      "sourceParagraph": 588,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bir neçə icraçı ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-087",
+      "sourceParagraph": 591,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman istifadəçinin fayl seçimi pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-088",
+      "sourceParagraph": 591,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi eyni anda bir və ya bir neçə fayl seçmək imkanına malikdir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-089",
+      "sourceParagraph": 591,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Fayl seçilən zaman onun məlumatları griddə əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-090",
+      "sourceParagraph": 601,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Yalnız “Əsas sənəd” radio button-u seçilmiş sətirdə aktiv olur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-091",
+      "sourceParagraph": 602,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Əlavə edilmiş fayllardan yalnız biri əsas sənəd olaraq seçilməlidir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-092",
+      "sourceParagraph": 603,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Sənədin məlumatlarını daxil edin” pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-093",
+      "sourceParagraph": 608,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Nüsxə” və “Vərəq” xanalarının məlumatları yadda saxlanılır və pəncərə bağlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-094",
+      "sourceParagraph": 609,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman dəyişikliklər yadda saxlanılmadan pəncərə bağlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-095",
+      "sourceParagraph": 611,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Faylın əlavə edilmə tarixini və saatını əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-096",
+      "sourceParagraph": 612,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Faylı əlavə edən istifadəçinin ad, soyad, ata adı və vəzifə məlumatlarını əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-097",
+      "sourceParagraph": 614,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman müvafiq fayl istifadəçinin kompüterinə endirilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-098",
+      "sourceParagraph": 615,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman fayl seçimi pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-099",
+      "sourceParagraph": 615,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Mövcud faylın yenisi ilə əvəzlənməsinə imkan verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-100",
+      "sourceParagraph": 616,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Skan vasitəsilə sənəd əlavə edilməsi üçün nəzərdə tutulur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-101",
+      "sourceParagraph": 617,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman Word tipli mətn redaktoru açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-102",
+      "sourceParagraph": 617,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçiyə sistem daxilində yeni sənəd faylı hazırlamaq imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-103",
+      "sourceParagraph": 621,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Ən azı bir sənəd faylının yaradılması və ya yüklənməsi məcburidir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-104",
+      "sourceParagraph": 622,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Əlavə edilən sənəd fayllarının sayına məhdudiyyət qoyulmur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-105",
+      "sourceParagraph": 625,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "“Qeydlər” ayrıca tab şəklində yerləşdirilir və grid görünüşünə malikdir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-106",
+      "sourceParagraph": 630,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənədə aid qeyd mətnini əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-107",
+      "sourceParagraph": 631,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Qeydə aid tarix məlumatını əks etdirir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-108",
+      "sourceParagraph": 925,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi sayına uyğun ardıcıl dəyərlər alır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-109",
+      "sourceParagraph": 925,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İki müxtəlif istifadəçiyə eyni dəyəri vermək mümkündür.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-110",
+      "sourceParagraph": 926,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsində qeyd edilən məlumatlar griddə əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-111",
+      "sourceParagraph": 927,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsi bağlanır və heç bir dəyişiklik baş vermir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-112",
+      "sourceParagraph": 928,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsi bağlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-113",
+      "sourceParagraph": 931,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Seçilmiş istifadəçinin adı, soyadı və vəzifəsi read-only rejimdə göstərilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-114",
+      "sourceParagraph": 932,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Vizaçının sıra nömrəsi read-only rejimdə göstərilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-115",
+      "sourceParagraph": 933,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Gridin “Məsul şəxs” və “Qrup nömrəsi” sütunları yalnız baxış məqsədlidir, birbaşa xanadaxili redaktə mümkün deyil.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-116",
+      "sourceParagraph": 934,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Gridə heç bir məlumat əlavə edilmədikdə grid üzərində “Məlumat yoxdur” yazısı əks olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-117",
+      "sourceParagraph": 940,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” modal pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-118",
+      "sourceParagraph": 940,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bu düymə yeni vizaçı (grid üzrə yeni sətir) əlavə etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-119",
+      "sourceParagraph": 944,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman gridin müvafiq sətri üzrə məlumatlar silinir və sətir sayı azalır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-120",
+      "sourceParagraph": 945,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman heç bir silinmə əməliyyatı baş vermir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-121",
+      "sourceParagraph": 1016,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza paneli” modal pəncərəsi bağlanır və sənəd iş axınına uyğun olaraq istiqamətlənir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-122",
+      "sourceParagraph": 1016,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Viza prosesini təsdiq etmək imkanı verir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-123",
+      "sourceParagraph": 1018,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "“Qeydlər” xanası boş olduğu halda sıxılan zaman pop-up açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-124",
+      "sourceParagraph": 1021,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman pop-up bağlanır və “Viza paneli” pəncərəsi görünür.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-125",
+      "sourceParagraph": 1025,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sıxılan zaman “Viza paneli” modal pəncərəsi bağlanır və heç bir əməliyyat icra edilmir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-126",
+      "sourceParagraph": 1078,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Operator “Məktublar” modulunda “Yeni sənəd” düyməsini sıxdıqda “Əsas məlumatlar” pəncərəsi açılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-127",
+      "sourceParagraph": 1078,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Operator sənədin daxil edilməsi üçün tələb olunan məlumatları doldurur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-128",
+      "sourceParagraph": 1078,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Operator əlavə vizaçı təyin etmək imkanına malikdir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-129",
+      "sourceParagraph": 1086,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Vizadan imtina edilir və sənəd operatora geri qaytarılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-130",
+      "sourceParagraph": 1089,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Viza prosesi vizaçıların sıra nömrəsinə uyğun ardıcıllıqla həyata keçirilir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-131",
+      "sourceParagraph": 1090,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bütün vizalar toplandıqdan sonra sənəd imzalayan şəxsin “Oxunmamışlar” qutusunda görünür.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-132",
+      "sourceParagraph": 1091,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İlk vizaçının təsdiqindən sonra sənəd sistem tərəfindən əvvəlcədən təyin edilmiş istifadəçilərə aidiyyəti üzrə ünvanlanır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-133",
+      "sourceParagraph": 1097,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi bu düyməni sıxdıqda sənəd istifadəçinin “Oxunmamışlar” qutusundan çıxarılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-134",
+      "sourceParagraph": 1098,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "İstifadəçi “Dərkənar göndərmək” pəncərəsi vasitəsilə yeni dərkənar yarada bilər.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-135",
+      "sourceParagraph": 1098,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Bu halda istifadəçi əsas icraçı seçə bilmir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-136",
+      "sourceParagraph": 1104,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq səlahiyyətə malik istifadəçi “Dərkənar göndərmək” pəncərəsində dərkənar yaradır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-137",
+      "sourceParagraph": 1105,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Başqa sənəd növü əsasında cavab sənədi yaradılır; əsas sənədin QNV-sində əməliyyat statusu “İcra olunub” olur, cavab sənədi üçün yeni QNV formalaşır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-138",
+      "sourceParagraph": 1106,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Başqa sənəd növü əsasında əlaqəli cavab sənədi yaradılır; əsas sənəd “İcraatdadır” statusunda qalır, cavab sənədi üçün yeni QNV formalaşır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-139",
+      "sourceParagraph": 1107,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənəd əsas icraçının “Oxunmamışlar” qutusundan çıxarılır və icraçı təyinatının dəyişdirilməsi üçün operatora qaytarılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-140",
+      "sourceParagraph": 1108,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənəd “İcra olunub” statusunu alır və tamamlanmış hesab olunur.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-141",
+      "sourceParagraph": 1109,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müvafiq səlahiyyətə malik istifadəçi icra müddətini dəyişir; əməliyyat daxili iş axını diaqramında göstərilib.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-142",
+      "sourceParagraph": 1110,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənəd redaktə üçün operatora qaytarılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-143",
+      "sourceParagraph": 1112,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Əlaqəli cavab sənədi yaradılır; əsas sənəd “İcraatdadır” statusunda qalır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-144",
+      "sourceParagraph": 1113,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Sənəd həmin istifadəçinin “Oxunmamışlar” qutusundan çıxarılır.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    },
+    {
+      "id": "workflow-145",
+      "sourceParagraph": 1114,
+      "documentId": "document-workflow-001",
+      "split": "train",
+      "target": "Müştərək icraçı sənəd üzrə icra qeydini daxil edir.",
+      "annotationStatus": "assistant-curated-source",
+      "errorOrigin": "synthetic"
+    }
+  ]
+}

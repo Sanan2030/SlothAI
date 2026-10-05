@@ -1,0 +1,19 @@
+{
+  "sourceSHA256": "9f8ac71ddd03654de42992478a7779744878b66b23856606c56a097cec243086",
+  "artifactSHA256": "fc4db527f68fcdefd42fa96bb58993c8852774c62376612b13561bfd89374c33",
+  "sourceSentences": 145,
+  "sourceDocuments": 1,
+  "pairs": 408,
+  "examples": 5330,
+  "positive": 3092,
+  "vocabulary": 464,
+  "parameters": 313,
+  "epochs": 96,
+  "initialTrainingBCE": 0.6895133618562944,
+  "finalTrainingBCE": 0.0008306719454219362,
+  "artifactBytes": 126324,
+  "threshold": 0.9999,
+  "margin": 0.2,
+  "minimumContext": 2,
+  "policy": "Fixed conservative thresholds, no test/validation threshold selection. All source fragments train-only. Assistant-curated source with synthetic spelling errors; not human-reviewed pairs. Small candidate ranker, not a general semantic language model."
+}

@@ -6,6 +6,7 @@ import { punctuateSubjectPronouns } from './grammatical-commas';
 import { editHTMLStructure } from './html-structure';
 import { editStructuredText } from './structured-text';
 import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
+import { documentSpelling } from './neural/document-runtime';
 import { dictionaryCandidates } from './dictionary';
 import { isEstablishedSurface } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
@@ -265,6 +266,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   });
   text = resolveRemainingPredicate(text);
   if (runtime.useLocalModel !== false) text = neuralSpelling(text, runtime.useAttention !== false);
+  if (runtime.useLocalModel !== false) text = documentSpelling(text);
   text = normalizeClauseParticles(text);
   text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);

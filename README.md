@@ -6,6 +6,8 @@ service, API key, GPU requirement or network call during correction.
 
 ## Validation status
 
+Name-free document fragments now train a separate small offline spelling ranker; source ownership, synthetic-error provenance, limitations and reproducible results are documented in [document training](docs/document-training.md).
+
 `main` is the deployed offline editor. Changes must pass typecheck, lint, build,
 the full regression suite, 1000 exact frozen gold targets with stable second
 passes, and the enforced performance benchmark. Passing these engineering gates

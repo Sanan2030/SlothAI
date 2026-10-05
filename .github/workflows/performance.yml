@@ -57,6 +57,9 @@ jobs:
           git diff --exit-code -- tests/fixtures/additional-gold-200.json
           npm run --ignore-scripts nlp:observed:train -- data/nlp/real/observed-spelling.json /tmp/slothai-observed-channel.json
           cmp /tmp/slothai-observed-channel.json lib/editor/observed-channel-model.json
+          npm run --ignore-scripts nlp:document:train -- --output=/tmp/slothai-document-model.json
+          cmp /tmp/slothai-document-model.json lib/editor/neural/document-model.json
+          git diff --exit-code -- data/nlp/documents/document-training-report.json
           npm run --ignore-scripts nlp:observed:evaluate -- --output=/tmp/slothai-observed-evaluation.json --enforce
           npm run --ignore-scripts gold:complete
           npm run --ignore-scripts local-ai:train

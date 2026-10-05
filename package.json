@@ -62,7 +62,9 @@
     "nlp:domain:select": "node --import tsx scripts/select-domain-model.ts",
     "nlp:domain:evaluate": "node --import tsx scripts/evaluate-domain-neural.ts",
     "nlp:observed:train": "node --import tsx scripts/train-observed-channel.ts",
-    "nlp:observed:evaluate": "node --import tsx scripts/evaluate-observed-inputs.ts"
+    "nlp:observed:evaluate": "node --import tsx scripts/evaluate-observed-inputs.ts",
+    "nlp:document:train": "node --import tsx scripts/train-document-spelling.ts",
+    "nlp:document:evaluate": "node --import tsx scripts/evaluate-document-spelling.ts"
   },
   "engines": {
     "node": ">=20.9.0"

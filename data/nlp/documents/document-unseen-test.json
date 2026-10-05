@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "provenance": "Assistant-authored separate sentences, not real/human-reviewed; fixed training settings selected without this test",
+  "cases": [
+    {
+      "id": "document-unseen-1",
+      "documentId": "authored-document-eval-1",
+      "split": "test",
+      "input": "Yeni icraci ucun elave selahiyyetler mueyyen edilir.",
+      "target": "Yeni icraçı üçün əlavə səlahiyyətlər müəyyən edilir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-2",
+      "documentId": "authored-document-eval-2",
+      "split": "test",
+      "input": "Qeydiyyata alinmis muracietler ayrica qovluqda saxlanilir.",
+      "target": "Qeydiyyata alınmış müraciətlər ayrıca qovluqda saxlanılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-3",
+      "documentId": "authored-document-eval-3",
+      "split": "test",
+      "input": "Esas sened secilmedikde istifadeciye xeberdarliq gosterilir.",
+      "target": "Əsas sənəd seçilmədikdə istifadəçiyə xəbərdarlıq göstərilir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-4",
+      "documentId": "authored-document-eval-4",
+      "split": "test",
+      "input": "Operator senedin tarixini ve qeydiyyat nomresini yoxlayir.",
+      "target": "Operator sənədin tarixini və qeydiyyat nömrəsini yoxlayır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-5",
+      "documentId": "authored-document-eval-5",
+      "split": "test",
+      "input": "Secilmis icracinin melumatlari yeni setirde eks olunur.",
+      "target": "Seçilmiş icraçının məlumatları yeni sətirdə əks olunur.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-6",
+      "documentId": "authored-document-eval-6",
+      "split": "test",
+      "input": "Daxil edilmis qeydler tesdiqden sonra yadda saxlanilir.",
+      "target": "Daxil edilmiş qeydlər təsdiqdən sonra yadda saxlanılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-7",
+      "documentId": "authored-document-eval-7",
+      "split": "test",
+      "input": "İcra muddeti bitdikde sistem bildiris gonderir.",
+      "target": "İcra müddəti bitdikdə sistem bildiriş göndərir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-8",
+      "documentId": "authored-document-eval-8",
+      "split": "test",
+      "input": "Muvafiq sutunlarin ardicilligi istifadeci terefinden tenzimlenir.",
+      "target": "Müvafiq sütunların ardıcıllığı istifadəçi tərəfindən tənzimlənir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-9",
+      "documentId": "authored-document-eval-9",
+      "split": "test",
+      "input": "Axtaris neticeleri qeydiyyat tarixine gore siralanir.",
+      "target": "Axtarış nəticələri qeydiyyat tarixinə görə sıralanır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-10",
+      "documentId": "authored-document-eval-10",
+      "split": "test",
+      "input": "Elaqeli sened silindikde esas fayl saxlanilir.",
+      "target": "Əlaqəli sənəd silindikdə əsas fayl saxlanılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-11",
+      "documentId": "authored-document-eval-11",
+      "split": "test",
+      "input": "İmtina sebebi metn xanasina daxil edilmelidir.",
+      "target": "İmtina səbəbi mətn xanasına daxil edilməlidir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-12",
+      "documentId": "authored-document-eval-12",
+      "split": "test",
+      "input": "Yeni sablon yalniz tesdiqden sonra aktiv olur.",
+      "target": "Yeni şablon yalnız təsdiqdən sonra aktiv olur.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-13",
+      "documentId": "authored-document-eval-13",
+      "split": "test",
+      "input": "İcracinin secilmesi ucun axtaris penceresi acilir.",
+      "target": "İcraçının seçilməsi üçün axtarış pəncərəsi açılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-14",
+      "documentId": "authored-document-eval-14",
+      "split": "test",
+      "input": "Fayl yuklendikde onun olcusu ve novu yoxlanilir.",
+      "target": "Fayl yükləndikdə onun ölçüsü və növü yoxlanılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-15",
+      "documentId": "authored-document-eval-15",
+      "split": "test",
+      "input": "Deyisiklikler yadda saxlanilmadan pencere baglanmir.",
+      "target": "Dəyişikliklər yadda saxlanılmadan pəncərə bağlanmır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-16",
+      "documentId": "authored-document-eval-16",
+      "split": "test",
+      "input": "Mecburi xana bos olduqda forma gonderilmir.",
+      "target": "Məcburi xana boş olduqda forma göndərilmir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-17",
+      "documentId": "authored-document-eval-17",
+      "split": "test",
+      "input": "Sened redakte ucun yeniden operatora qaytarilir.",
+      "target": "Sənəd redaktə üçün yenidən operatora qaytarılır.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-18",
+      "documentId": "authored-document-eval-18",
+      "split": "test",
+      "input": "Vizanin tesdiqi senedin is axinini davam etdirir.",
+      "target": "Vizanın təsdiqi sənədin iş axınını davam etdirir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-19",
+      "documentId": "authored-document-eval-19",
+      "split": "test",
+      "input": "Qrup nomreleri icracilarin ardicilligini mueyyenlesdirir.",
+      "target": "Qrup nömrələri icraçıların ardıcıllığını müəyyənləşdirir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-20",
+      "documentId": "authored-document-eval-20",
+      "split": "test",
+      "input": "Muellifin vezifesi senedin melumatlarinda gosterilir.",
+      "target": "Müəllifin vəzifəsi sənədin məlumatlarında göstərilir.",
+      "origin": "assistant-authored",
+      "errors": "synthetic-diacritics"
+    },
+    {
+      "id": "document-unseen-21",
+      "documentId": "authored-document-eval-21",
+      "split": "test",
+      "input": "İstifadəçi yalnız öz səlahiyyətlərinə uyğun əməliyyatları görür.",
+      "target": "İstifadəçi yalnız öz səlahiyyətlərinə uyğun əməliyyatları görür.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-22",
+      "documentId": "authored-document-eval-22",
+      "split": "test",
+      "input": "Yeni qeyd əlavə edildikdə əvvəlki məlumatlar dəyişmir.",
+      "target": "Yeni qeyd əlavə edildikdə əvvəlki məlumatlar dəyişmir.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-23",
+      "documentId": "authored-document-eval-23",
+      "split": "test",
+      "input": "Sənədlərin siyahısı səhifələr üzrə təqdim olunur.",
+      "target": "Sənədlərin siyahısı səhifələr üzrə təqdim olunur.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-24",
+      "documentId": "authored-document-eval-24",
+      "split": "test",
+      "input": "Seçilmiş faylların sayı üçün məhdudiyyət qoyulmur.",
+      "target": "Seçilmiş faylların sayı üçün məhdudiyyət qoyulmur.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-25",
+      "documentId": "authored-document-eval-25",
+      "split": "test",
+      "input": "Grid görünüşündə hər sənəd ayrıca sətirdə göstərilir.",
+      "target": "Grid görünüşündə hər sənəd ayrıca sətirdə göstərilir.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-26",
+      "documentId": "authored-document-eval-26",
+      "split": "test",
+      "input": "API vasitəsilə gələn məlumatlar təhlükəsiz kanalda ötürülür.",
+      "target": "API vasitəsilə gələn məlumatlar təhlükəsiz kanalda ötürülür.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-27",
+      "documentId": "authored-document-eval-27",
+      "split": "test",
+      "input": "Backend xidməti sənədin statusunu yeniləyir.",
+      "target": "Backend xidməti sənədin statusunu yeniləyir.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-28",
+      "documentId": "authored-document-eval-28",
+      "split": "test",
+      "input": "İcraçı dəyişdikdə əvvəlki təyinat arxivdə saxlanılır.",
+      "target": "İcraçı dəyişdikdə əvvəlki təyinat arxivdə saxlanılır.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-29",
+      "documentId": "authored-document-eval-29",
+      "split": "test",
+      "input": "Sistem qeydləri tarix və saat ilə birlikdə göstərir.",
+      "target": "Sistem qeydləri tarix və saat ilə birlikdə göstərir.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    },
+    {
+      "id": "document-unseen-30",
+      "documentId": "authored-document-eval-30",
+      "split": "test",
+      "input": "Qeydiyyat operatoru səhv daxil edilmiş nömrəni düzəldir.",
+      "target": "Qeydiyyat operatoru səhv daxil edilmiş nömrəni düzəldir.",
+      "origin": "assistant-authored",
+      "errors": "identity"
+    }
+  ]
+}

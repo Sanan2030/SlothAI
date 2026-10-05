@@ -1,0 +1,609 @@
+{
+  "scope": "Training diagnostics, not held-out accuracy",
+  "rows": 145,
+  "changed": 32,
+  "beforeExact": 70,
+  "afterExact": 88,
+  "cases": [
+    {
+      "id": "workflow-001",
+      "input": "sistem istifadecilere “mektublar” penceresi vasitesile “mektublar” sened novu uzre qeydiyyata alinmis senedlere grid uzerinden baxis kecirmek imkani teqdim edir.",
+      "target": "Sistem istifadəçilərə “Məktublar” pəncərəsi vasitəsilə “Məktublar” sənəd növü üzrə qeydiyyata alınmış sənədlərə grid üzərindən baxış keçirmək imkanı təqdim edir.",
+      "before": "Sistem istifadəçilərə “məktublar” pəncərəsi vasitəsilə “məktublar” sənəd növü üzrə qeydiyyata alınmış sənədlərə grid üzərindən baxış keçirmək imkanı təqdim edir.",
+      "after": "Sistem istifadəçilərə “məktublar” pəncərəsi vasitəsilə “məktublar” sənəd növü üzrə qeydiyyata alınmış sənədlərə grid üzərindən baxış keçirmək imkanı təqdim edir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-002",
+      "input": "grid “mektublar” modulunda qeydiyyata alinmis senedlerin strukturlasdirilmis sekilde gosterilmesi ve uzerinde emeliyyatlarin aparilmasi ucun nezerde tutulmusdur.",
+      "target": "Grid “Məktublar” modulunda qeydiyyata alınmış sənədlərin strukturlaşdırılmış şəkildə göstərilməsi və üzərində əməliyyatların aparılması üçün nəzərdə tutulmuşdur.",
+      "before": "Grid “məktublar” modulunda qeydiyyata alınmış sənədlərin strukturlasdirilmis şəkildə göstərilməsi və üzərində əməliyyatların aparılması üçün nəzərdə tutulmuşdur.",
+      "after": "Grid “məktublar” modulunda qeydiyyata alınmış sənədlərin strukturlasdirilmis şəkildə göstərilməsi və üzərində əməliyyatların aparılması üçün nəzərdə tutulmuşdur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-005",
+      "input": "sixilan zaman muvafiq senedin qeydiyyat nezaret vereqesi brauzerin yeni penceresinde acilir.",
+      "target": "Sıxılan zaman müvafiq sənədin Qeydiyyat Nəzarət Vərəqəsi brauzerin yeni pəncərəsində açılır.",
+      "before": "Sıxılan zaman müvafiq sənədin qeydiyyat nəzarət vərəqəsi brauzerin yeni pəncərəsində açılır.",
+      "after": "Sıxılan zaman müvafiq sənədin qeydiyyat nəzarət vərəqəsi brauzerin yeni pəncərəsində açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-007",
+      "input": "sistem istifadecilere gridde teqdim olunan melumatlar uzre axtaris aparmaq ve muxtelif filtrasiyalari tetbiq etmek imkani teqdim edir.",
+      "target": "Sistem istifadəçilərə griddə təqdim olunan məlumatlar üzrə axtarış aparmaq və müxtəlif filtrasiyaları tətbiq etmək imkanı təqdim edir.",
+      "before": "Sistem istifadəçilərə gridde təqdim olunan məlumatlar üzrə axtarış aparmaq və müxtəlif filtrasiyaları tətbiq etmək imkanı təqdim edir.",
+      "after": "Sistem istifadəçilərə griddə təqdim olunan məlumatlar üzrə axtarış aparmaq və müxtəlif filtrasiyaları tətbiq etmək imkanı təqdim edir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-008",
+      "input": "her bir sutun adinin asagi hissesinde axtaris xanasi movcuddur.",
+      "target": "Hər bir sütun adının aşağı hissəsində axtarış xanası mövcuddur.",
+      "before": "Hər bir sütun adının aşağı hissesinde axtarış xanası movcuddur.",
+      "after": "Hər bir sütun adının aşağı hissesinde axtarış xanası mövcuddur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-009",
+      "input": "her bir sutun adinin qarsisinda filtr duymesi movcuddur ve her bir sutunun xana melumatina esasen filtrasiyani heyata kecirir.",
+      "target": "Hər bir sütun adının qarşısında filtr düyməsi mövcuddur və hər bir sütunun xana məlumatına əsasən filtrasiyanı həyata keçirir.",
+      "before": "Hər bir sütun adının qarşısında filtr düyməsi movcuddur və hər bir sütunun xana məlumatına əsasən filtrasiyanı həyata keçirir.",
+      "after": "Hər bir sütun adının qarşısında filtr düyməsi movcuddur və hər bir sütunun xana məlumatına əsasən filtrasiyanı həyata keçirir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-012",
+      "input": "istifadeci terefinden secilen deyer esasinda “mektublar” modulunun grid gorunusunde melumatlarin filtrasiya olunmasini temin edir.",
+      "target": "İstifadəçi tərəfindən seçilən dəyər əsasında “Məktublar” modulunun grid görünüşündə məlumatların filtrasiya olunmasını təmin edir.",
+      "before": "İstifadəçi tərəfindən seçilən dəyər əsasında “məktublar” modulunun grid görünüşündə məlumatların filtrasiya olunmasını təmin edir.",
+      "after": "İstifadəçi tərəfindən seçilən dəyər əsasında “məktublar” modulunun grid görünüşündə məlumatların filtrasiya olunmasını təmin edir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-013",
+      "input": "sahede statik olaraq “son 3 ay” ve “butun iller” filtr secimleri movcuddur, il uzre filtr secimleri 2000-ci ilden baslayaraq cari il daxil olmaqla sistem terefinden dinamik sekilde generasiya olunur ve il uzre filtrasiya cari sistem tarixine esasen avtomatik hesablanir.",
+      "target": "Sahədə statik olaraq “Son 3 ay” və “Bütün illər” filtr seçimləri mövcuddur, il üzrə filtr seçimləri 2000-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə generasiya olunur və il üzrə filtrasiya cari sistem tarixinə əsasən avtomatik hesablanır.",
+      "before": "Sahədə statik olaraq “son 3 ay” və “bütün iller” filtr seçimləri movcuddur, il üzrə filtr seçimləri 2000-ci ilden başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə generasiya olunur və il üzrə filtrasiya cari sistem tarixinə əsasən avtomatik hesablanır.",
+      "after": "Sahədə statik olaraq “son 3 ay” və “bütün illər” filtr seçimləri movcuddur, il üzrə filtr seçimləri 2000-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə generasiya olunur və il üzrə filtrasiya cari sistem tarixinə əsasən avtomatik hesablanır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-014",
+      "input": "sistem istifadecilere “xanalar” duymesi vasitesile “mektublar” modulunda gridde eks olunan esas melumat sutunlarinin secilmesi ve ardicilliginin tenzimlenmesi imkani verir.",
+      "target": "Sistem istifadəçilərə “Xanalar” düyməsi vasitəsilə “Məktublar” modulunda griddə əks olunan əsas məlumat sütunlarının seçilməsi və ardıcıllığının tənzimlənməsi imkanı verir.",
+      "before": "Sistem istifadəçilərə “xanalar” düyməsi vasitəsilə “məktublar” modulunda gridde əks olunan əsas məlumat sütunlarının seçilməsi və ardıcıllığının tenzimlenmesi imkanı verir.",
+      "after": "Sistem istifadəçilərə “xanalar” düyməsi vasitəsilə “məktublar” modulunda griddə əks olunan əsas məlumat sütunlarının seçilməsi və ardıcıllığının tənzimlənməsi imkanı verir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-015",
+      "input": "duymeni sixan zaman “xanalar” modal penceresi (modal dialog) acilir.",
+      "target": "Düyməni sıxan zaman “Xanalar” modal pəncərəsi (Modal Dialog) açılır.",
+      "before": "Düyməni sıxan zaman “xanalar” modal pəncərəsi (modal dialog) açılır.",
+      "after": "Düyməni sıxan zaman “xanalar” modal pəncərəsi (modal dialog) açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-016",
+      "input": "muvafiq sutun adinin gridde gosterilme ardicilligini mueyyen edir.",
+      "target": "Müvafiq sütun adının griddə göstərilmə ardıcıllığını müəyyən edir.",
+      "before": "Müvafiq sütun adının gridde göstərilmə ardıcıllığını müəyyən edir.",
+      "after": "Müvafiq sütun adının griddə göstərilmə ardıcıllığını müəyyən edir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-017",
+      "input": "0-dan baslayaraq sira sayi teyin etmek mumkundur.",
+      "target": "0-dan başlayaraq sıra sayı təyin etmək mümkündür.",
+      "before": "0-dan başlayaraq sira sayı təyin etmək mümkündür.",
+      "after": "0-dan başlayaraq sıra sayı təyin etmək mümkündür.",
+      "changed": true
+    },
+    {
+      "id": "workflow-018",
+      "input": "muxtelif sutun adlari eyni sira nomresi ala biler.",
+      "target": "Müxtəlif sütun adları eyni sıra nömrəsi ala bilər.",
+      "before": "Müxtəlif sütun adları eyni sira nömrəsi ala bilər.",
+      "after": "Müxtəlif sütun adları eyni sıra nömrəsi ala bilər.",
+      "changed": true
+    },
+    {
+      "id": "workflow-019",
+      "input": "sira nomrelerini qeyd edib, “duzelisleri yadda saxla” duymesi sixilan zaman “sutun adlari” sutununun deyerleri qeyd edilen deyerlere esasen siralanir.",
+      "target": "Sıra nömrələrini qeyd edib, “Düzəlişləri yadda saxla” düyməsi sıxılan zaman “Sütun adları” sütununun dəyərləri qeyd edilən dəyərlərə əsasən sıralanır.",
+      "before": "Sira nömrələrini qeyd edib, “düzəlişləri yadda saxla” düyməsi sıxılan zaman “sütun adları” sütununun dəyərləri qeyd edilən dəyərlərə əsasən sıralanır.",
+      "after": "Sıra nömrələrini qeyd edib, “düzəlişləri yadda saxla” düyməsi sıxılan zaman “sütun adları” sütununun dəyərləri qeyd edilən dəyərlərə əsasən sıralanır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-020",
+      "input": "istifadeci secim xanasi vasitesile muvafiq sutunlarin gridde gorunurluyunu aktiv ve ya deaktiv ede biler.",
+      "target": "İstifadəçi seçim xanası vasitəsilə müvafiq sütunların griddə görünürlüyünü aktiv və ya deaktiv edə bilər.",
+      "before": "İstifadəçi seçim xanası vasitəsilə müvafiq sütunların gridde gorunurluyunu aktiv və ya deaktiv edə bilər.",
+      "after": "İstifadəçi seçim xanası vasitəsilə müvafiq sütunların gridde gorunurluyunu aktiv və ya deaktiv edə bilər.",
+      "changed": false
+    },
+    {
+      "id": "workflow-025",
+      "input": "sixilan zaman “mektublar” modulunun senedlerin siyahisini eks etdiren grid gorunusune yonlendirilir.",
+      "target": "Sıxılan zaman “Məktublar” modulunun sənədlərin siyahısını əks etdirən grid görünüşünə yönləndirilir.",
+      "before": "Sıxılan zaman “məktublar” modulunun sənədlərin siyahısını əks etdiren grid görünüşünə yönləndirilir.",
+      "after": "Sıxılan zaman “məktublar” modulunun sənədlərin siyahısını əks etdirən grid görünüşünə yönləndirilir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-026",
+      "input": "pencerede sehifeleme (pagination) mexanizmi movcuddur ve bir sehifede maksimum 10 melumat eks olunur.",
+      "target": "Pəncərədə səhifələmə (pagination) mexanizmi mövcuddur və bir səhifədə maksimum 10 məlumat əks olunur.",
+      "before": "Pəncərədə səhifələmə (pagination) mexanizmi movcuddur və bir səhifədə maksimum 10 məlumat əks olunur.",
+      "after": "Pəncərədə səhifələmə (pagination) mexanizmi movcuddur və bir səhifədə maksimum 10 məlumat əks olunur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-031",
+      "input": "gridin sol hissesinde her bir sened setiri ucun icra veziyyetini gosteren rengli indikator yerlesdirilmelidir.",
+      "target": "Gridin sol hissəsində hər bir sənəd sətiri üçün icra vəziyyətini göstərən rəngli indikator yerləşdirilməlidir.",
+      "before": "Gridin sol hissesinde hər bir sənəd sətiri üçün icra vəziyyətini göstərən rəngli indikator yerləşdirilməlidir.",
+      "after": "Gridin sol hissəsində hər bir sənəd sətiri üçün icra vəziyyətini göstərən rəngli indikator yerləşdirilməlidir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-032",
+      "input": "sistem istifadecilere “mektublar” modulu vasitesile yeni sened yaratmaq imkani teqdim edir.",
+      "target": "Sistem istifadəçilərə “Məktublar” modulu vasitəsilə yeni sənəd yaratmaq imkanı təqdim edir.",
+      "before": "Sistem istifadəçilərə “məktublar” modulu vasitəsilə yeni sənəd yaratmaq imkanı təqdim edir.",
+      "after": "Sistem istifadəçilərə “məktublar” modulu vasitəsilə yeni sənəd yaratmaq imkanı təqdim edir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-033",
+      "input": "bu zaman istifadeci sened yaratma emeliyyatini basladir ve “esas melumatlar” penceresi acilir.",
+      "target": "Bu zaman istifadəçi sənəd yaratma əməliyyatını başladır və “Əsas məlumatlar” pəncərəsi açılır.",
+      "before": "Bu zaman istifadəçi sənəd yaratma əməliyyatını başladır və “əsas məlumatlar” pəncərəsi açılır.",
+      "after": "Bu zaman istifadəçi sənəd yaratma əməliyyatını başladır və “əsas məlumatlar” pəncərəsi açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-034",
+      "input": "deyerler sistemin “sened unvanlama icazeleri” bolmesindeki teyinatlar esasinda elde edilir.",
+      "target": "Dəyərlər sistemin “Sənəd ünvanlama icazələri” bölməsindəki təyinatlar əsasında əldə edilir.",
+      "before": "Dəyərlər sistemin “sənəd ünvanlama icazələri” bölməsindəki teyinatlar əsasında elde edilir.",
+      "after": "Dəyərlər sistemin “sənəd ünvanlama icazələri” bölməsindəki teyinatlar əsasında əldə edilir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-035",
+      "input": "senedin unvanlandigi terefi secmek imkani verir.",
+      "target": "Sənədin ünvanlandığı tərəfi seçmək imkanı verir.",
+      "before": "Sənədin unvanlandigi tərəfi seçmək imkanı verir.",
+      "after": "Sənədin ünvanlandığı tərəfi seçmək imkanı verir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-041",
+      "input": "daxil edilmis deyer yadda saxlanildiqdan sonra gridin “no” sutununda eks olunur.",
+      "target": "Daxil edilmiş dəyər yadda saxlanıldıqdan sonra gridin “No” sütununda əks olunur.",
+      "before": "Daxil edilmiş dəyər yadda saxlanildiqdan sonra gridin “no” sütununda əks olunur.",
+      "after": "Daxil edilmiş dəyər yadda saxlanildiqdan sonra gridin “no” sütununda əks olunur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-043",
+      "input": "secilmis tarix yadda saxlanildiqdan sonra gridin “tarix” sutununda eks olunur.",
+      "target": "Seçilmiş tarix yadda saxlanıldıqdan sonra gridin “Tarix” sütununda əks olunur.",
+      "before": "Seçilmiş tarix yadda saxlanildiqdan sonra gridin “tarix” sütununda əks olunur.",
+      "after": "Seçilmiş tarix yadda saxlanildiqdan sonra gridin “tarix” sütununda əks olunur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-053",
+      "input": "sixilan zaman daxil edilmis melumatlar yadda saxlanilmadan forma baglanir.",
+      "target": "Sıxılan zaman daxil edilmiş məlumatlar yadda saxlanılmadan forma bağlanır.",
+      "before": "Sıxılan zaman daxil edilmiş məlumatlar yadda saxlanilmadan forma bağlanır.",
+      "after": "Sıxılan zaman daxil edilmiş məlumatlar yadda saxlanilmadan forma bağlanır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-054",
+      "input": "“elaqeli senedler” komponenti “esas melumatlar” penceresi daxilinde ayrica blok seklinde yerlesdirilir ve grid gorunusune malikdir.",
+      "target": "“Əlaqəli sənədlər” komponenti “Əsas məlumatlar” pəncərəsi daxilində ayrıca blok şəklində yerləşdirilir və grid görünüşünə malikdir.",
+      "before": "“Əlaqəli sənədlər” komponenti “əsas məlumatlar” pəncərəsi daxilində ayrıca blok şəklində yerləşdirilir və grid görünüşünə malikdir.",
+      "after": "“Əlaqəli sənədlər” komponenti “əsas məlumatlar” pəncərəsi daxilində ayrıca blok şəklində yerləşdirilir və grid görünüşünə malikdir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-057",
+      "input": "susmaya gore “son 3 ay” deyerini alir.",
+      "target": "Susmaya görə “Son 3 ay” dəyərini alır.",
+      "before": "Susmaya görə “son 3 ay” dəyərini alır.",
+      "after": "Susmaya görə “son 3 ay” dəyərini alır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-058",
+      "input": "sahede statik olaraq “son 3 ay” ve “butun iller” secimleri movcuddur.",
+      "target": "Sahədə statik olaraq “Son 3 ay” və “Bütün illər” seçimləri mövcuddur.",
+      "before": "Sahədə statik olaraq “son 3 ay” və “bütün iller” seçimləri movcuddur.",
+      "after": "Sahədə statik olaraq “son 3 ay” və “bütün illər” seçimləri mövcuddur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-059",
+      "input": "il uzre secimler 2018-ci ilden baslayaraq cari il daxil olmaqla sistem terefinden dinamik sekilde yaradilir.",
+      "target": "İl üzrə seçimlər 2018-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə yaradılır.",
+      "before": "İl üzrə seçimlər 2018-ci ilden başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə yaradılır.",
+      "after": "İl üzrə seçimlər 2018-ci ildən başlayaraq cari il daxil olmaqla sistem tərəfindən dinamik şəkildə yaradılır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-060",
+      "input": "secilmis deyer “senedi secin” xanasinin axtaris neticelerine tesir edir.",
+      "target": "Seçilmiş dəyər “Sənədi seçin” xanasının axtarış nəticələrinə təsir edir.",
+      "before": "Seçilmiş dəyər “sənədi seçin” xanasının axtarış nəticələrinə təsir edir.",
+      "after": "Seçilmiş dəyər “sənədi seçin” xanasının axtarış nəticələrinə təsir edir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-063",
+      "input": "sixilan zaman secilmis sened melumatlarinin “elaqeli senedler” gridinde eks olunmasini temin edir.",
+      "target": "Sıxılan zaman seçilmiş sənəd məlumatlarının “Əlaqəli sənədlər” gridində əks olunmasını təmin edir.",
+      "before": "Sıxılan zaman seçilmiş sənəd məlumatlarının “əlaqəli sənədlər” gridinde əks olunmasını təmin edir.",
+      "after": "Sıxılan zaman seçilmiş sənəd məlumatlarının “əlaqəli sənədlər” gridində əks olunmasını təmin edir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-068",
+      "input": "bir nece elaqeli sened ayri-ayri setirler elave etmekle secile biler.",
+      "target": "Bir neçə əlaqəli sənəd ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "before": "Bir neçə əlaqəli sənəd ayrı-ayrı sətirlər əlavə etmekle seçilə bilər.",
+      "after": "Bir neçə əlaqəli sənəd ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "changed": true
+    },
+    {
+      "id": "workflow-069",
+      "input": "gridde sehifeleme elementleri, cari ve umumi sehife nomreleri ve umumi setir sayi gosterilmir.",
+      "target": "Griddə səhifələmə elementləri, cari və ümumi səhifə nömrələri və ümumi sətir sayı göstərilmir.",
+      "before": "Gridde səhifələmə elementləri, cari və ümumi səhifə nömrələri və ümumi sətir sayı göstərilmir.",
+      "after": "Griddə səhifələmə elementləri, cari və ümumi səhifə nömrələri və ümumi sətir sayı göstərilmir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-071",
+      "input": "deyerler sistemin istifadeci melumatlarini teqdim eden xidmet (api) vasitesile dinamik sekilde elde edilir.",
+      "target": "Dəyərlər sistemin istifadəçi məlumatlarını təqdim edən xidmət (API) vasitəsilə dinamik şəkildə əldə edilir.",
+      "before": "Dəyərlər sistemin istifadəçi məlumatlarını təqdim edən xidmət (API) vasitəsilə dinamik şəkildə elde edilir.",
+      "after": "Dəyərlər sistemin istifadəçi məlumatlarını təqdim edən xidmət (API) vasitəsilə dinamik şəkildə əldə edilir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-073",
+      "input": "susmaya gore “icra ucun” deyerini alir.",
+      "target": "Susmaya görə “İcra üçün” dəyərini alır.",
+      "before": "Susmaya görə “icra üçün” dəyərini alır.",
+      "after": "Susmaya görə “icra üçün” dəyərini alır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-075",
+      "input": "sixilan zaman daxil edilmis icraci melumatlari qebul edilir ve gridin muvafiq setrinde eks olunur.",
+      "target": "Sıxılan zaman daxil edilmiş icraçı məlumatları qəbul edilir və gridin müvafiq sətrində əks olunur.",
+      "before": "Sıxılan zaman daxil edilmiş icraçı məlumatları qəbul edilir və gridin müvafiq setrinde əks olunur.",
+      "after": "Sıxılan zaman daxil edilmiş icraçı məlumatları qəbul edilir və gridin müvafiq setrinde əks olunur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-076",
+      "input": "ui-da qirmizi “×” simvolu ile gosterilir.",
+      "target": "UI-da qırmızı “×” simvolu ilə göstərilir.",
+      "before": "Ui-da qırmızı “×” simvolu ilə göstərilir.",
+      "after": "Ui-da qırmızı “×” simvolu ilə göstərilir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-077",
+      "input": "sixilan zaman elaveetme formasi baglanir ve daxil edilmis melumatlar gride elave edilmir.",
+      "target": "Sıxılan zaman əlavəetmə forması bağlanır və daxil edilmiş məlumatlar gridə əlavə edilmir.",
+      "before": "Sıxılan zaman elaveetme forması bağlanır və daxil edilmiş məlumatlar gride əlavə edilmir.",
+      "after": "Sıxılan zaman elaveetme forması bağlanır və daxil edilmiş məlumatlar gride əlavə edilmir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-082",
+      "input": "evvelceden yaradilmis sablonu secmek imkani verir.",
+      "target": "Əvvəlcədən yaradılmış şablonu seçmək imkanı verir.",
+      "before": "Əvvəlcədən yaradılmış sablonu seçmək imkanı verir.",
+      "after": "Əvvəlcədən yaradılmış şablonu seçmək imkanı verir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-084",
+      "input": "secilmis sablonu yuklemek ucun nezerde tutulur.",
+      "target": "Seçilmiş şablonu yükləmək üçün nəzərdə tutulur.",
+      "before": "Seçilmiş sablonu yükləmək üçün nəzərdə tutulur.",
+      "after": "Seçilmiş şablonu yükləmək üçün nəzərdə tutulur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-086",
+      "input": "bir nece icraci ayri-ayri setirler elave etmekle secile biler.",
+      "target": "Bir neçə icraçı ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "before": "Bir neçə icraçı ayrı-ayrı sətirlər əlavə etmekle seçilə bilər.",
+      "after": "Bir neçə icraçı ayrı-ayrı sətirlər əlavə etməklə seçilə bilər.",
+      "changed": true
+    },
+    {
+      "id": "workflow-089",
+      "input": "fayl secilen zaman onun melumatlari gridde eks olunur.",
+      "target": "Fayl seçilən zaman onun məlumatları griddə əks olunur.",
+      "before": "Fayl seçilən zaman onun məlumatları gridde əks olunur.",
+      "after": "Fayl seçilən zaman onun məlumatları griddə əks olunur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-090",
+      "input": "yalniz “esas sened” radio button-u secilmis setirde aktiv olur.",
+      "target": "Yalnız “Əsas sənəd” radio button-u seçilmiş sətirdə aktiv olur.",
+      "before": "Yalnız “əsas sənəd” radio button-u seçilmiş sətirdə aktiv olur.",
+      "after": "Yalnız “əsas sənəd” radio button-u seçilmiş sətirdə aktiv olur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-092",
+      "input": "sixilan zaman “senedin melumatlarini daxil edin” penceresi acilir.",
+      "target": "Sıxılan zaman “Sənədin məlumatlarını daxil edin” pəncərəsi açılır.",
+      "before": "Sıxılan zaman “sənədin məlumatlarını daxil edin” pəncərəsi açılır.",
+      "after": "Sıxılan zaman “sənədin məlumatlarını daxil edin” pəncərəsi açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-093",
+      "input": "sixilan zaman “nusxe” ve “vereq” xanalarinin melumatlari yadda saxlanilir ve pencere baglanir.",
+      "target": "Sıxılan zaman “Nüsxə” və “Vərəq” xanalarının məlumatları yadda saxlanılır və pəncərə bağlanır.",
+      "before": "Sıxılan zaman “nüsxə” və “vərəq” xanalarinin məlumatları yadda saxlanılır və pəncərə bağlanır.",
+      "after": "Sıxılan zaman “nüsxə” və “vərəq” xanalarinin məlumatları yadda saxlanılır və pəncərə bağlanır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-094",
+      "input": "sixilan zaman deyisiklikler yadda saxlanilmadan pencere baglanir.",
+      "target": "Sıxılan zaman dəyişikliklər yadda saxlanılmadan pəncərə bağlanır.",
+      "before": "Sıxılan zaman dəyişikliklər yadda saxlanilmadan pəncərə bağlanır.",
+      "after": "Sıxılan zaman dəyişikliklər yadda saxlanılmadan pəncərə bağlanır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-096",
+      "input": "fayli elave eden istifadecinin ad, soyad, ata adi ve vezife melumatlarini eks etdirir.",
+      "target": "Faylı əlavə edən istifadəçinin ad, soyad, ata adı və vəzifə məlumatlarını əks etdirir.",
+      "before": "Faylı əlavə edən istifadəçinin ad, soyad, ata adi və vəzifə məlumatlarını əks etdirir.",
+      "after": "Faylı əlavə edən istifadəçinin ad, soyad, ata adi və vəzifə məlumatlarını əks etdirir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-099",
+      "input": "movcud faylin yenisi ile evezlenmesine imkan verir.",
+      "target": "Mövcud faylın yenisi ilə əvəzlənməsinə imkan verir.",
+      "before": "Mövcud faylın yenisi ilə evezlenmesine imkan verir.",
+      "after": "Mövcud faylın yenisi ilə evezlenmesine imkan verir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-101",
+      "input": "sixilan zaman word tipli metn redaktoru acilir.",
+      "target": "Sıxılan zaman Word tipli mətn redaktoru açılır.",
+      "before": "Sıxılan zaman word tipli mətn redaktoru açılır.",
+      "after": "Sıxılan zaman word tipli mətn redaktoru açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-110",
+      "input": "sixilan zaman “viza melumatlarini daxil edin” penceresinde qeyd edilen melumatlar gridde eks olunur.",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsində qeyd edilən məlumatlar griddə əks olunur.",
+      "before": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsində qeyd edilən məlumatlar gridde əks olunur.",
+      "after": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsində qeyd edilən məlumatlar griddə əks olunur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-111",
+      "input": "sixilan zaman “viza melumatlarini daxil edin” penceresi baglanir ve hec bir deyisiklik bas vermir.",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsi bağlanır və heç bir dəyişiklik baş vermir.",
+      "before": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsi bağlanır və heç bir dəyişiklik baş vermir.",
+      "after": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsi bağlanır və heç bir dəyişiklik baş vermir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-112",
+      "input": "sixilan zaman “viza melumatlarini daxil edin” penceresi baglanir.",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” pəncərəsi bağlanır.",
+      "before": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsi bağlanır.",
+      "after": "Sıxılan zaman “viza məlumatlarını daxil edin” pəncərəsi bağlanır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-114",
+      "input": "vizacinin sira nomresi read-only rejimde gosterilir.",
+      "target": "Vizaçının sıra nömrəsi read-only rejimdə göstərilir.",
+      "before": "Vizacinin sira nömrəsi read-only rejimdə göstərilir.",
+      "after": "Vizaçının sıra nömrəsi read-only rejimdə göstərilir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-115",
+      "input": "gridin “mesul sexs” ve “qrup nomresi” sutunlari yalniz baxis meqsedlidir, birbasa xanadaxili redakte mumkun deyil.",
+      "target": "Gridin “Məsul şəxs” və “Qrup nömrəsi” sütunları yalnız baxış məqsədlidir, birbaşa xanadaxili redaktə mümkün deyil.",
+      "before": "Gridin “məsul şəxs” və “qrup nömrəsi” sütunları yalnız baxış məqsədlidir, birbaşa xanadaxili redaktə mümkün deyil.",
+      "after": "Gridin “məsul şəxs” və “qrup nömrəsi” sütunları yalnız baxış məqsədlidir, birbaşa xanadaxili redaktə mümkün deyil.",
+      "changed": false
+    },
+    {
+      "id": "workflow-116",
+      "input": "gride hec bir melumat elave edilmedikde grid uzerinde “melumat yoxdur” yazisi eks olunur.",
+      "target": "Gridə heç bir məlumat əlavə edilmədikdə grid üzərində “Məlumat yoxdur” yazısı əks olunur.",
+      "before": "Gride heç bir məlumat əlavə edilmədikdə grid üzərində “məlumat yoxdur” yazısı əks olunur.",
+      "after": "Gridə heç bir məlumat əlavə edilmədikdə grid üzərində “məlumat yoxdur” yazısı əks olunur.",
+      "changed": true
+    },
+    {
+      "id": "workflow-117",
+      "input": "sixilan zaman “viza melumatlarini daxil edin” modal penceresi acilir.",
+      "target": "Sıxılan zaman “Viza məlumatlarını daxil edin” modal pəncərəsi açılır.",
+      "before": "Sıxılan zaman “viza məlumatlarını daxil edin” modal pəncərəsi açılır.",
+      "after": "Sıxılan zaman “viza məlumatlarını daxil edin” modal pəncərəsi açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-118",
+      "input": "bu duyme yeni vizaci (grid uzre yeni setir) elave etmek imkani verir.",
+      "target": "Bu düymə yeni vizaçı (grid üzrə yeni sətir) əlavə etmək imkanı verir.",
+      "before": "Bu düymə yeni vizaci (grid üzrə yeni sətir) əlavə etmək imkanı verir.",
+      "after": "Bu düymə yeni vizaci (grid üzrə yeni sətir) əlavə etmək imkanı verir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-121",
+      "input": "sixilan zaman “viza paneli” modal penceresi baglanir ve sened is axinina uygun olaraq istiqametlenir.",
+      "target": "Sıxılan zaman “Viza paneli” modal pəncərəsi bağlanır və sənəd iş axınına uyğun olaraq istiqamətlənir.",
+      "before": "Sıxılan zaman “viza paneli” modal pəncərəsi bağlanır və sənəd iş axınına uyğun olaraq istiqamətlənir.",
+      "after": "Sıxılan zaman “viza paneli” modal pəncərəsi bağlanır və sənəd iş axınına uyğun olaraq istiqamətlənir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-124",
+      "input": "sixilan zaman pop-up baglanir ve “viza paneli” penceresi gorunur.",
+      "target": "Sıxılan zaman pop-up bağlanır və “Viza paneli” pəncərəsi görünür.",
+      "before": "Sıxılan zaman pop-up bağlanır və “viza paneli” pəncərəsi görünür.",
+      "after": "Sıxılan zaman pop-up bağlanır və “viza paneli” pəncərəsi görünür.",
+      "changed": false
+    },
+    {
+      "id": "workflow-125",
+      "input": "sixilan zaman “viza paneli” modal penceresi baglanir ve hec bir emeliyyat icra edilmir.",
+      "target": "Sıxılan zaman “Viza paneli” modal pəncərəsi bağlanır və heç bir əməliyyat icra edilmir.",
+      "before": "Sıxılan zaman “viza paneli” modal pəncərəsi bağlanır və heç bir əməliyyat icra edilmir.",
+      "after": "Sıxılan zaman “viza paneli” modal pəncərəsi bağlanır və heç bir əməliyyat icra edilmir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-126",
+      "input": "operator “mektublar” modulunda “yeni sened” duymesini sixdiqda “esas melumatlar” penceresi acilir.",
+      "target": "Operator “Məktublar” modulunda “Yeni sənəd” düyməsini sıxdıqda “Əsas məlumatlar” pəncərəsi açılır.",
+      "before": "Operator “məktublar” modulunda “yeni sənəd” düyməsini sıxdıqda “əsas məlumatlar” pəncərəsi açılır.",
+      "after": "Operator “məktublar” modulunda “yeni sənəd” düyməsini sıxdıqda “əsas məlumatlar” pəncərəsi açılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-128",
+      "input": "operator elave vizaci teyin etmek imkanina malikdir.",
+      "target": "Operator əlavə vizaçı təyin etmək imkanına malikdir.",
+      "before": "Operator əlavə vizaci təyin etmək imkanına malikdir.",
+      "after": "Operator əlavə vizaci təyin etmək imkanına malikdir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-130",
+      "input": "viza prosesi vizacilarin sira nomresine uygun ardicilliqla heyata kecirilir.",
+      "target": "Viza prosesi vizaçıların sıra nömrəsinə uyğun ardıcıllıqla həyata keçirilir.",
+      "before": "Viza prosesi vizacilarin sira nömrəsinə uyğun ardicilliqla həyata keçirilir.",
+      "after": "Viza prosesi vizacilarin sira nömrəsinə uyğun ardicilliqla həyata keçirilir.",
+      "changed": false
+    },
+    {
+      "id": "workflow-131",
+      "input": "butun vizalar toplandiqdan sonra sened imzalayan sexsin “oxunmamislar” qutusunda gorunur.",
+      "target": "Bütün vizalar toplandıqdan sonra sənəd imzalayan şəxsin “Oxunmamışlar” qutusunda görünür.",
+      "before": "Bütün vizalar toplandıqdan sonra sənəd imzalayan şəxsin “oxunmamislar” qutusunda görünür.",
+      "after": "Bütün vizalar toplandıqdan sonra sənəd imzalayan şəxsin “oxunmamışlar” qutusunda görünür.",
+      "changed": true
+    },
+    {
+      "id": "workflow-132",
+      "input": "ilk vizacinin tesdiqinden sonra sened sistem terefinden evvelceden teyin edilmis istifadecilere aidiyyeti uzre unvanlanir.",
+      "target": "İlk vizaçının təsdiqindən sonra sənəd sistem tərəfindən əvvəlcədən təyin edilmiş istifadəçilərə aidiyyəti üzrə ünvanlanır.",
+      "before": "İlk vizacinin tesdiqinden sonra sənəd sistem tərəfindən əvvəlcədən təyin edilmiş istifadəçilərə aidiyyəti üzrə unvanlanir.",
+      "after": "İlk vizaçının təsdiqindən sonra sənəd sistem tərəfindən əvvəlcədən təyin edilmiş istifadəçilərə aidiyyəti üzrə ünvanlanır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-133",
+      "input": "istifadeci bu duymeni sixdiqda sened istifadecinin “oxunmamislar” qutusundan cixarilir.",
+      "target": "İstifadəçi bu düyməni sıxdıqda sənəd istifadəçinin “Oxunmamışlar” qutusundan çıxarılır.",
+      "before": "İstifadəçi bu düyməni sıxdıqda sənəd istifadəçinin “oxunmamislar” qutusundan çıxarılır.",
+      "after": "İstifadəçi bu düyməni sıxdıqda sənəd istifadəçinin “oxunmamışlar” qutusundan çıxarılır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-134",
+      "input": "istifadeci “derkenar gondermek” penceresi vasitesile yeni derkenar yarada biler.",
+      "target": "İstifadəçi “Dərkənar göndərmək” pəncərəsi vasitəsilə yeni dərkənar yarada bilər.",
+      "before": "İstifadəçi “dərkənar göndərmək” pəncərəsi vasitəsilə yeni dərkənar yarada bilər.",
+      "after": "İstifadəçi “dərkənar göndərmək” pəncərəsi vasitəsilə yeni dərkənar yarada bilər.",
+      "changed": false
+    },
+    {
+      "id": "workflow-135",
+      "input": "bu halda istifadeci esas icraci sece bilmir.",
+      "target": "Bu halda istifadəçi əsas icraçı seçə bilmir.",
+      "before": "Bu halda istifadəçi əsas icraçı sece bilmir.",
+      "after": "Bu halda istifadəçi əsas icraçı seçə bilmir.",
+      "changed": true
+    },
+    {
+      "id": "workflow-136",
+      "input": "muvafiq selahiyyete malik istifadeci “derkenar gondermek” penceresinde derkenar yaradir.",
+      "target": "Müvafiq səlahiyyətə malik istifadəçi “Dərkənar göndərmək” pəncərəsində dərkənar yaradır.",
+      "before": "Müvafiq səlahiyyətə malik istifadəçi “dərkənar göndərmək” pəncərəsində dərkənar yaradır.",
+      "after": "Müvafiq səlahiyyətə malik istifadəçi “dərkənar göndərmək” pəncərəsində dərkənar yaradır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-137",
+      "input": "basqa sened novu esasinda cavab senedi yaradilir; esas senedin qnv-sinde emeliyyat statusu “icra olunub” olur, cavab senedi ucun yeni qnv formalasir.",
+      "target": "Başqa sənəd növü əsasında cavab sənədi yaradılır; əsas sənədin QNV-sində əməliyyat statusu “İcra olunub” olur, cavab sənədi üçün yeni QNV formalaşır.",
+      "before": "Başqa sənəd növü əsasında cavab sənədi yaradılır; əsas sənədin qnv-sində əməliyyat statusu “icra olunub” olur, cavab sənədi üçün yeni qnv formalaşır.",
+      "after": "Başqa sənəd növü əsasında cavab sənədi yaradılır; əsas sənədin qnv-sində əməliyyat statusu “icra olunub” olur, cavab sənədi üçün yeni qnv formalaşır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-138",
+      "input": "basqa sened novu esasinda elaqeli cavab senedi yaradilir; esas sened “icraatdadir” statusunda qalir, cavab senedi ucun yeni qnv formalasir.",
+      "target": "Başqa sənəd növü əsasında əlaqəli cavab sənədi yaradılır; əsas sənəd “İcraatdadır” statusunda qalır, cavab sənədi üçün yeni QNV formalaşır.",
+      "before": "Başqa sənəd növü əsasında əlaqəli cavab sənədi yaradılır; əsas sənəd “icraatdadir” statusunda qalır, cavab sənədi üçün yeni qnv formalaşır.",
+      "after": "Başqa sənəd növü əsasında əlaqəli cavab sənədi yaradılır; əsas sənəd “icraatdadir” statusunda qalır, cavab sənədi üçün yeni qnv formalaşır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-139",
+      "input": "sened esas icracinin “oxunmamislar” qutusundan cixarilir ve icraci teyinatinin deyisdirilmesi ucun operatora qaytarilir.",
+      "target": "Sənəd əsas icraçının “Oxunmamışlar” qutusundan çıxarılır və icraçı təyinatının dəyişdirilməsi üçün operatora qaytarılır.",
+      "before": "Sənəd əsas icraçının “oxunmamislar” qutusundan çıxarılır və icraçı təyinatının dəyişdirilməsi üçün operatora qaytarılır.",
+      "after": "Sənəd əsas icraçının “oxunmamislar” qutusundan çıxarılır və icraçı təyinatının dəyişdirilməsi üçün operatora qaytarılır.",
+      "changed": false
+    },
+    {
+      "id": "workflow-140",
+      "input": "sened “icra olunub” statusunu alir ve tamamlanmis hesab olunur.",
+      "target": "Sənəd “İcra olunub” statusunu alır və tamamlanmış hesab olunur.",
+      "before": "Sənəd “icra olunub” statusunu alır və tamamlanmış hesab olunur.",
+      "after": "Sənəd “icra olunub” statusunu alır və tamamlanmış hesab olunur.",
+      "changed": false
+    },
+    {
+      "id": "workflow-143",
+      "input": "elaqeli cavab senedi yaradilir; esas sened “icraatdadir” statusunda qalir.",
+      "target": "Əlaqəli cavab sənədi yaradılır; əsas sənəd “İcraatdadır” statusunda qalır.",
+      "before": "Əlaqəli cavab sənədi yaradılır; əsas sənəd “icraatdadir” statusunda qalır.",
+      "after": "Əlaqəli cavab sənədi yaradılır; əsas sənəd “icraatdadır” statusunda qalır.",
+      "changed": true
+    },
+    {
+      "id": "workflow-144",
+      "input": "sened hemin istifadecinin “oxunmamislar” qutusundan cixarilir.",
+      "target": "Sənəd həmin istifadəçinin “Oxunmamışlar” qutusundan çıxarılır.",
+      "before": "Sənəd həmin istifadəçinin “oxunmamislar” qutusundan çıxarılır.",
+      "after": "Sənəd həmin istifadəçinin “oxunmamışlar” qutusundan çıxarılır.",
+      "changed": true
+    }
+  ]
+}

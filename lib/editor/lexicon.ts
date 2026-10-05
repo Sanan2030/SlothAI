@@ -10,6 +10,8 @@ import type { SpellingContext } from './contracts/spelling';
 import { chooseIndexedTypo } from './spelling-candidates';
 import { productiveMorphology } from './productive-morphology';
 import type { MorphologicalAnalysis } from './contracts/morphology';
+import documentArtifact from './neural/document-model.json';
+const documentSurfaces = new Set(Object.keys(documentArtifact.lexicon.words));
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -170,6 +172,7 @@ const establishedCache = new Map<string, boolean>();
  * explicitly admitted rather than guessed as native Azerbaijani words. */
 export function isEstablishedSurface(word: string, services?: SpellingContext): boolean {
   const lower = word.toLocaleLowerCase('az-AZ');
+  if (documentSurfaces.has(lower)) return true;
   if (dictionaryCandidates(lower)?.has(lower) === true || candidates.get(fold(lower))?.has(lower) === true
     || aliasSurfaces.has(lower) || (services?.morphology ?? productiveMorphology).isValidWordForm(lower)
     || (services?.morphology ?? productiveMorphology).analyzeWord(lower).some(row => row.source === 'lexicon')
