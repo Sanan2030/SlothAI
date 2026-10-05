@@ -1,0 +1,577 @@
+{
+  "testSHA256": "f2d69b84dc5ef55823da88db3f3fc7f3fdbc37b15da3947a4a581128fbdd47e7",
+  "baselineCommit": "39fbdf3cdf351d9b1de200d7c766ebb42bffe16c",
+  "before": {
+    "trainingDiagnostics": {
+      "fullOutput": {
+        "rows": 14,
+        "exact": 4,
+        "accuracy": 0.2857142857142857,
+        "cer": 0.024837374334713187,
+        "wer": 0.0871559633027523,
+        "precision": 0.9701492537313433,
+        "recall": 0.87248322147651,
+        "f05": 0.948905109489051,
+        "characterEdits": {
+          "precision": 0.9926739926739927,
+          "recall": 0.8713826366559485,
+          "f05": 0.9657875980042766,
+          "truePositive": 271,
+          "falsePositive": 2,
+          "missed": 40
+        },
+        "truePositiveEdits": 130,
+        "falsePositiveEdits": 4,
+        "missedEdits": 19,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 42,
+        "referenceChars": 1691,
+        "wordErrors": 19,
+        "referenceWords": 218
+      },
+      "lexical": {
+        "rows": 14,
+        "exact": 4,
+        "accuracy": 0.2857142857142857,
+        "cer": 0.02530120481927711,
+        "wer": 0.0871559633027523,
+        "precision": 0.9701492537313433,
+        "recall": 0.87248322147651,
+        "f05": 0.948905109489051,
+        "characterEdits": {
+          "precision": 0.9926739926739927,
+          "recall": 0.8713826366559485,
+          "f05": 0.9657875980042766,
+          "truePositive": 271,
+          "falsePositive": 2,
+          "missed": 40
+        },
+        "truePositiveEdits": 130,
+        "falsePositiveEdits": 4,
+        "missedEdits": 19,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 42,
+        "referenceChars": 1660,
+        "wordErrors": 19,
+        "referenceWords": 218
+      }
+    },
+    "unseen": {
+      "fullOutput": {
+        "rows": 20,
+        "exact": 6,
+        "accuracy": 0.3,
+        "cer": 0.08601216333622937,
+        "wer": 0.37142857142857144,
+        "precision": 0.45901639344262296,
+        "recall": 0.4057971014492754,
+        "f05": 0.4472843450479233,
+        "characterEdits": {
+          "precision": 0.6428571428571429,
+          "recall": 0.4701492537313433,
+          "f05": 0.5988593155893536,
+          "truePositive": 63,
+          "falsePositive": 35,
+          "missed": 71
+        },
+        "truePositiveEdits": 28,
+        "falsePositiveEdits": 33,
+        "missedEdits": 41,
+        "identityRows": 7,
+        "identityChanged": 2,
+        "identityFalseChangeRate": 0.2857142857142857,
+        "charErrors": 99,
+        "referenceChars": 1151,
+        "wordErrors": 52,
+        "referenceWords": 140
+      },
+      "lexical": {
+        "rows": 20,
+        "exact": 8,
+        "accuracy": 0.4,
+        "cer": 0.059033989266547404,
+        "wer": 0.2620689655172414,
+        "precision": 0.8857142857142857,
+        "recall": 0.44285714285714284,
+        "f05": 0.7380952380952381,
+        "characterEdits": {
+          "precision": 0.9538461538461539,
+          "recall": 0.496,
+          "f05": 0.8051948051948052,
+          "truePositive": 62,
+          "falsePositive": 3,
+          "missed": 63
+        },
+        "truePositiveEdits": 31,
+        "falsePositiveEdits": 4,
+        "missedEdits": 39,
+        "identityRows": 7,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 66,
+        "referenceChars": 1118,
+        "wordErrors": 38,
+        "referenceWords": 145
+      }
+    }
+  },
+  "after": {
+    "trainingDiagnostics": {
+      "fullOutput": {
+        "rows": 14,
+        "exact": 14,
+        "accuracy": 1,
+        "cer": 0,
+        "wer": 0,
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 1,
+          "f05": 1,
+          "truePositive": 311,
+          "falsePositive": 0,
+          "missed": 0
+        },
+        "truePositiveEdits": 149,
+        "falsePositiveEdits": 0,
+        "missedEdits": 0,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 0,
+        "referenceChars": 1691,
+        "wordErrors": 0,
+        "referenceWords": 218
+      },
+      "lexical": {
+        "rows": 14,
+        "exact": 14,
+        "accuracy": 1,
+        "cer": 0,
+        "wer": 0,
+        "precision": 1,
+        "recall": 1,
+        "f05": 1,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 1,
+          "f05": 1,
+          "truePositive": 311,
+          "falsePositive": 0,
+          "missed": 0
+        },
+        "truePositiveEdits": 149,
+        "falsePositiveEdits": 0,
+        "missedEdits": 0,
+        "identityRows": 0,
+        "identityChanged": 0,
+        "identityFalseChangeRate": null,
+        "charErrors": 0,
+        "referenceChars": 1660,
+        "wordErrors": 0,
+        "referenceWords": 218
+      },
+      "idempotencyFailures": [],
+      "rankerAbstention": {
+        "requiredTokenEdits": 149,
+        "unchangedTokens": 16,
+        "rate": 0.10738255033557047,
+        "definition": "Tokens requiring reference changes left unchanged by the added ranker alone; existing heads may still fix them. Includes case and punctuation-independent lexical tokens."
+      },
+      "failures": [],
+      "cases": [
+        {
+          "id": "log-story-001",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Sheherin merkezinde gunesli bir gun baslayirdi.",
+          "target": "Şəhərin mərkəzində günəşli bir gün başlayırdı.",
+          "category": "observed-redacted",
+          "actual": "Şəhərin mərkəzində günəşli bir gün başlayırdı."
+        },
+        {
+          "id": "log-story-002",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Seher saatlarinda kuce boyu addimlayan insanlar oz islerine telesir, avtobuslar dayanacaqlarda dayandiqca insan axini daha da artirdi.",
+          "target": "Səhər saatlarında küçə boyu addımlayan insanlar öz işlərinə tələsir, avtobuslar dayanacaqlarda dayandıqca insan axını daha da artırdı.",
+          "category": "observed-redacted",
+          "actual": "Səhər saatlarında küçə boyu addımlayan insanlar öz işlərinə tələsir, avtobuslar dayanacaqlarda dayandıqca insan axını daha da artırdı."
+        },
+        {
+          "id": "log-story-003",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Kulək hafifce esir, agaclarin yarpaqlarini terpedir, seherin adeti uzre dinamik ritmini daha da canlandirirdi.",
+          "target": "Külək xəfifcə əsir, ağacların yarpaqlarını tərpədir, şəhərin adəti üzrə dinamik ritmini daha da canlandırırdı.",
+          "category": "observed-redacted",
+          "actual": "Külək xəfifcə əsir, ağacların yarpaqlarını tərpədir, şəhərin adəti üzrə dinamik ritmini daha da canlandırırdı."
+        },
+        {
+          "id": "log-story-004",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Insanlar ellerinde qehve fincanlari ile tez-tez addimlayir, bir-biri ile salamlasir ve seherin yeni gunune hazirlasirdilar.",
+          "target": "İnsanlar əllərində qəhvə fincanları ilə tez-tez addımlayır, bir-biri ilə salamlaşır və şəhərin yeni gününə hazırlaşırdılar.",
+          "category": "observed-redacted",
+          "actual": "İnsanlar əllərində qəhvə fincanları ilə tez-tez addımlayır, bir-biri ilə salamlaşır və şəhərin yeni gününə hazırlaşırdılar."
+        },
+        {
+          "id": "log-story-005",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Her kes oz gunluk planlarini reallasdirmaq, yeni hedeflere catmaq ucun boyuk bir hevesle hereket edirdi.",
+          "target": "Hər kəs öz günlük planlarını reallaşdırmaq, yeni hədəflərə çatmaq üçün böyük bir həvəslə hərəkət edirdi.",
+          "category": "observed-redacted",
+          "actual": "Hər kəs öz günlük planlarını reallaşdırmaq, yeni hədəflərə çatmaq üçün böyük bir həvəslə hərəkət edirdi."
+        },
+        {
+          "id": "log-story-006",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "O da diger insanlar kimi telem-teles evden cixib dayanacaga teref qacirdi.",
+          "target": "O da digər insanlar kimi tələm-tələs evdən çıxıb dayanacağa tərəf qaçırdı.",
+          "category": "observed-redacted",
+          "actual": "O da digər insanlar kimi tələm-tələs evdən çıxıb dayanacağa tərəf qaçırdı."
+        },
+        {
+          "id": "log-story-007",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Yol boyu fikirlesirdi ki, bu gun kecirilecek vacib iclasda teqdimati nece edecek, hansi meseleleri qabardacaq ve kecen hefdeden qalan layihe teleblerini nece yekunlasdiracaq.",
+          "target": "Yol boyu fikirləşirdi ki, bu gün keçiriləcək vacib iclasda təqdimatı necə edəcək, hansı məsələləri qabardacaq və keçən həftədən qalan layihə tələblərini necə yekunlaşdıracaq.",
+          "category": "observed-redacted",
+          "actual": "Yol boyu fikirləşirdi ki, bu gün keçiriləcək vacib iclasda təqdimatı necə edəcək, hansı məsələləri qabardacaq və keçən həftədən qalan layihə tələblərini necə yekunlaşdıracaq."
+        },
+        {
+          "id": "log-story-008",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Daxilinde bir az heyecan var idi, cunki bu layihe onun ucun cox boyuk ehemiyyet kesf edirdi ve komandanin umumi uguru birbasa bu neticelerden asili idi.",
+          "target": "Daxilində bir az həyəcan var idi, çünki bu layihə onun üçün çox böyük əhəmiyyət kəsb edirdi və komandanın ümumi uğuru birbaşa bu nəticələrdən asılı idi.",
+          "category": "observed-redacted",
+          "actual": "Daxilində bir az həyəcan var idi, çünki bu layihə onun üçün çox böyük əhəmiyyət kəsb edirdi və komandanın ümumi uğuru birbaşa bu nəticələrdən asılı idi."
+        },
+        {
+          "id": "log-story-009",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "O, beyninde kecireceyi teqdimatin addimlarini defelerle tekrarlayir, ehtimal olunan suallari ve onlara vereceyi cavablari hazirlayirdi.",
+          "target": "O, beynində keçirəcəyi təqdimatın addımlarını dəfələrlə təkrarlayır, ehtimal olunan sualları və onlara verəcəyi cavabları hazırlayırdı.",
+          "category": "observed-redacted",
+          "actual": "O, beynində keçirəcəyi təqdimatın addımlarını dəfələrlə təkrarlayır, ehtimal olunan sualları və onlara verəcəyi cavabları hazırlayırdı."
+        },
+        {
+          "id": "log-story-010",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Dayanacaga catanda avtobusun gecikdiyini gorduyunu xatirladi, amma fikri ele qarismisdi ki, cibindeki telefonu cixarib tez qeydlere baxmaga basladi.",
+          "target": "Dayanacağa çatanda avtobusun gecikdiyini gördüyünü xatırladı, amma fikri elə qarışmışdı ki, cibindəki telefonu çıxarıb tez qeydlərə baxmağa başladı.",
+          "category": "observed-redacted",
+          "actual": "Dayanacağa çatanda avtobusun gecikdiyini gördüyünü xatırladı, amma fikri elə qarışmışdı ki, cibindəki telefonu çıxarıb tez qeydlərə baxmağa başladı."
+        },
+        {
+          "id": "log-story-011",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Qeyd defterinde butun meseleler bir-bir yazilmisdi: istifadeci senarileri, sistem qarsiliqli elaqeleri, arxivlesdirme qaydalari ve yeni funksionalliqlarin etrafli tesviri.",
+          "target": "Qeyd dəftərində bütün məsələlər bir-bir yazılmışdı: istifadəçi ssenariləri, sistem qarşılıqlı əlaqələri, arxivləşdirmə qaydaları və yeni funksionallıqların ətraflı təsviri.",
+          "category": "observed-redacted",
+          "actual": "Qeyd dəftərində bütün məsələlər bir-bir yazılmışdı: istifadəçi ssenariləri, sistem qarşılıqlı əlaqələri, arxivləşdirmə qaydaları və yeni funksionallıqların ətraflı təsviri."
+        },
+        {
+          "id": "log-story-012",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "O, xususile son gunlerde reallasdirilan deyisikliklerin neticelerini yoxlamaq isteyirdi.",
+          "target": "O, xüsusilə son günlərdə reallaşdırılan dəyişikliklərin nəticələrini yoxlamaq istəyirdi.",
+          "category": "observed-redacted",
+          "actual": "O, xüsusilə son günlərdə reallaşdırılan dəyişikliklərin nəticələrini yoxlamaq istəyirdi."
+        },
+        {
+          "id": "log-story-013",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Avtobus gelende boyuk bir izdihamla iceri daxil oldu ve pencere kenarinda yer tapib eylesdi.",
+          "target": "Avtobus gələndə böyük bir izdihamla içəri daxil oldu və pəncərə kənarında yer tapıb əyləşdi.",
+          "category": "observed-redacted",
+          "actual": "Avtobus gələndə böyük bir izdihamla içəri daxil oldu və pəncərə kənarında yer tapıb əyləşdi."
+        },
+        {
+          "id": "log-story-014",
+          "documentId": "log-story-2026-10-05",
+          "split": "train",
+          "annotationStatus": "assistant-reviewed",
+          "errorOrigin": "observed-user-input-name-redacted",
+          "input": "Bayira baxarken seherin ses-kuyu onun fikirlerini bir qeder dagitdi, amma daxilindeki heyecan hiss olunacaq derecede yuksek olaraq qalirdi.",
+          "target": "Bayıra baxarkən şəhərin səs-küyü onun fikirlərini bir qədər dağıtdı, amma daxilindəki həyəcan hiss olunacaq dərəcədə yüksək olaraq qalırdı.",
+          "category": "observed-redacted",
+          "actual": "Bayıra baxarkən şəhərin səs-küyü onun fikirlərini bir qədər dağıtdı, amma daxilindəki həyəcan hiss olunacaq dərəcədə yüksək olaraq qalırdı."
+        }
+      ]
+    },
+    "unseen": {
+      "fullOutput": {
+        "rows": 20,
+        "exact": 17,
+        "accuracy": 0.85,
+        "cer": 0.006081668114682885,
+        "wer": 0.02142857142857143,
+        "precision": 0.9852941176470589,
+        "recall": 0.9710144927536232,
+        "f05": 0.9824046920821115,
+        "characterEdits": {
+          "precision": 0.9922480620155039,
+          "recall": 0.9552238805970149,
+          "f05": 0.9846153846153847,
+          "truePositive": 128,
+          "falsePositive": 1,
+          "missed": 6
+        },
+        "truePositiveEdits": 67,
+        "falsePositiveEdits": 1,
+        "missedEdits": 2,
+        "identityRows": 7,
+        "identityChanged": 1,
+        "identityFalseChangeRate": 0.14285714285714285,
+        "charErrors": 7,
+        "referenceChars": 1151,
+        "wordErrors": 3,
+        "referenceWords": 140
+      },
+      "lexical": {
+        "rows": 20,
+        "exact": 18,
+        "accuracy": 0.9,
+        "cer": 0.005366726296958855,
+        "wer": 0.013793103448275862,
+        "precision": 1,
+        "recall": 0.9714285714285714,
+        "f05": 0.9941520467836257,
+        "characterEdits": {
+          "precision": 1,
+          "recall": 0.952,
+          "f05": 0.9900166389351082,
+          "truePositive": 119,
+          "falsePositive": 0,
+          "missed": 6
+        },
+        "truePositiveEdits": 68,
+        "falsePositiveEdits": 0,
+        "missedEdits": 2,
+        "identityRows": 7,
+        "identityChanged": 0,
+        "identityFalseChangeRate": 0,
+        "charErrors": 6,
+        "referenceChars": 1118,
+        "wordErrors": 2,
+        "referenceWords": 145
+      },
+      "idempotencyFailures": [],
+      "rankerAbstention": {
+        "requiredTokenEdits": 56,
+        "unchangedTokens": 37,
+        "rate": 0.6607142857142857,
+        "definition": "Tokens requiring reference changes left unchanged by the added ranker alone; existing heads may still fix them. Includes case and punctuation-independent lexical tokens."
+      },
+      "failures": [
+        {
+          "id": "log-unseen-003",
+          "input": "Yeni hedeflere catmaq ucun hereket edirdi.",
+          "target": "Yeni hədəflərə çatmaq üçün hərəkət edirdi.",
+          "category": "spelling-context",
+          "actual": "Yeni hedeflere çatmaq üçün hərəkət edirdi."
+        },
+        {
+          "id": "log-unseen-005",
+          "input": "O, beyninde teqdimatin addimlarini tekrarlayir.",
+          "target": "O, beynində təqdimatın addımlarını təkrarlayır.",
+          "category": "spelling-context",
+          "actual": "O, beynində təqdimatın addımlarını tekrarlayir."
+        },
+        {
+          "id": "log-unseen-014",
+          "input": "https://example.com/a test@example.com `git commit`",
+          "target": "https://example.com/a test@example.com `git commit`",
+          "category": "preservation",
+          "actual": "https://example.com/a test@example.com `git commit`."
+        }
+      ],
+      "cases": [
+        {
+          "id": "log-unseen-001",
+          "input": "Avtobuslar dayanacaqlarda dayandiqca insan axini azalirdi.",
+          "target": "Avtobuslar dayanacaqlarda dayandıqca insan axını azalırdı.",
+          "category": "spelling-context",
+          "actual": "Avtobuslar dayanacaqlarda dayandıqca insan axını azalırdı."
+        },
+        {
+          "id": "log-unseen-002",
+          "input": "Insanlar ellerinde qehve fincanlari ile otururdular.",
+          "target": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+          "category": "spelling-context",
+          "actual": "İnsanlar əllərində qəhvə fincanları ilə otururdular."
+        },
+        {
+          "id": "log-unseen-003",
+          "input": "Yeni hedeflere catmaq ucun hereket edirdi.",
+          "target": "Yeni hədəflərə çatmaq üçün hərəkət edirdi.",
+          "category": "spelling-context",
+          "actual": "Yeni hedeflere çatmaq üçün hərəkət edirdi."
+        },
+        {
+          "id": "log-unseen-004",
+          "input": "Komandanin umumi uguru bu neticelerden asili idi.",
+          "target": "Komandanın ümumi uğuru bu nəticələrdən asılı idi.",
+          "category": "spelling-context",
+          "actual": "Komandanın ümumi uğuru bu nəticələrdən asılı idi."
+        },
+        {
+          "id": "log-unseen-005",
+          "input": "O, beyninde teqdimatin addimlarini tekrarlayir.",
+          "target": "O, beynində təqdimatın addımlarını təkrarlayır.",
+          "category": "spelling-context",
+          "actual": "O, beynində təqdimatın addımlarını tekrarlayir."
+        },
+        {
+          "id": "log-unseen-006",
+          "input": "Istifadeci senarileri ve arxivlesdirme qaydalari yoxlanilir.",
+          "target": "İstifadəçi ssenariləri və arxivləşdirmə qaydaları yoxlanılır.",
+          "category": "spelling-context",
+          "actual": "İstifadəçi ssenariləri və arxivləşdirmə qaydaları yoxlanılır."
+        },
+        {
+          "id": "log-unseen-007",
+          "input": "Bu layihe boyuk ehemiyyet kesf edirdi.",
+          "target": "Bu layihə böyük əhəmiyyət kəsb edirdi.",
+          "category": "spelling-context",
+          "actual": "Bu layihə böyük əhəmiyyət kəsb edirdi."
+        },
+        {
+          "id": "log-unseen-008",
+          "input": "Alimler yeni planet kesf etdiler.",
+          "target": "Alimlər yeni planet kəşf etdilər.",
+          "category": "spelling-context",
+          "actual": "Alimlər yeni planet kəşf etdilər."
+        },
+        {
+          "id": "log-unseen-009",
+          "input": "burda coxlu melumat var meselen",
+          "target": "Burada çoxlu məlumat var, məsələn…",
+          "category": "spelling-context",
+          "actual": "Burada çoxlu məlumat var, məsələn…"
+        },
+        {
+          "id": "log-unseen-010",
+          "input": "Burada çoxlu məlumat var, məsələn…",
+          "target": "Burada çoxlu məlumat var, məsələn…",
+          "category": "preservation",
+          "actual": "Burada çoxlu məlumat var, məsələn…"
+        },
+        {
+          "id": "log-unseen-011",
+          "input": "O, beynində təqdimatın addımlarını təkrarlayır.",
+          "target": "O, beynində təqdimatın addımlarını təkrarlayır.",
+          "category": "preservation",
+          "actual": "O, beynində təqdimatın addımlarını təkrarlayır."
+        },
+        {
+          "id": "log-unseen-012",
+          "input": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+          "target": "İnsanlar əllərində qəhvə fincanları ilə otururdular.",
+          "category": "preservation",
+          "actual": "İnsanlar əllərində qəhvə fincanları ilə otururdular."
+        },
+        {
+          "id": "log-unseen-013",
+          "input": "API backend deploy commit framework database.",
+          "target": "API backend deploy commit framework database.",
+          "category": "preservation",
+          "actual": "API backend deploy commit framework database."
+        },
+        {
+          "id": "log-unseen-014",
+          "input": "https://example.com/a test@example.com `git commit`",
+          "target": "https://example.com/a test@example.com `git commit`",
+          "category": "preservation",
+          "actual": "https://example.com/a test@example.com `git commit`."
+        },
+        {
+          "id": "log-unseen-015",
+          "input": "Serverdə xəta baş verdi. Database bağlantısı kəsildi.",
+          "target": "Serverdə xəta baş verdi. Database bağlantısı kəsildi.",
+          "category": "preservation",
+          "actual": "Serverdə xəta baş verdi. Database bağlantısı kəsildi."
+        },
+        {
+          "id": "log-unseen-016",
+          "input": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nTexniki dəstək şöbəsi",
+          "target": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nTexniki dəstək şöbəsi",
+          "category": "preservation",
+          "actual": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nTexniki dəstək şöbəsi"
+        },
+        {
+          "id": "log-unseen-017",
+          "input": "Proqram taminatlnln inki;afl departamenti\n\nSatinalma ;öbasi\n\nTexniki dastak ;öbasi",
+          "target": "Proqram təminatının inkişafı departamenti\n\nSatınalma şöbəsi\n\nTexniki dəstək şöbəsi",
+          "category": "ocr-list",
+          "actual": "Proqram təminatının inkişafı departamenti\n\nSatınalma şöbəsi\n\nTexniki dəstək şöbəsi"
+        },
+        {
+          "id": "log-unseen-018",
+          "input": "Kredit Vö qeyri-kredit amaliyyatlarl Söbasi\n\nMüracietlarin ara;dlrllmasl qrupu\n\nRisklerin idareedilmesi departamenti",
+          "target": "Kredit və qeyri-kredit əməliyyatları şöbəsi\n\nMüraciətlərin araşdırılması qrupu\n\nRisklərin idarə edilməsi departamenti",
+          "category": "ocr-list",
+          "actual": "Kredit və qeyri-kredit əməliyyatları şöbəsi\n\nMüraciətlərin araşdırılması qrupu\n\nRisklərin idarə edilməsi departamenti"
+        },
+        {
+          "id": "log-unseen-019",
+          "input": "isa qabul va kadr planlamasl söbasi\n\nArxiv ;öbasi\n\nKiber tahlükesizliyi xidmetleri 5öböSi",
+          "target": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nKiber təhlükəsizliyi xidmətləri şöbəsi",
+          "category": "ocr-list",
+          "actual": "İşə qəbul və kadr planlaması şöbəsi\n\nArxiv şöbəsi\n\nKiber təhlükəsizliyi xidmətləri şöbəsi"
+        },
+        {
+          "id": "log-unseen-020",
+          "input": "Strategiya va layihölerin idaraedilmesi\n\ndepartamenti\n\nMaliyye monitorinqi SöböSi\n\nArxiv ;öbasi",
+          "target": "Strategiya və layihələrin idarə edilməsi departamenti\n\nMaliyyə monitorinqi şöbəsi\n\nArxiv şöbəsi",
+          "category": "ocr-list",
+          "actual": "Strategiya və layihələrin idarə edilməsi departamenti\n\nMaliyyə monitorinqi şöbəsi\n\nArxiv şöbəsi"
+        }
+      ]
+    }
+  },
+  "caveat": "Training diagnostics are not independent accuracy. The separate 20-case evaluation is assistant-authored and synthetic, not human-reviewed. OCR reference snippets are generic tokens; truncated/unclear fields and proper names excluded from training. No claim of semantic understanding."
+}
