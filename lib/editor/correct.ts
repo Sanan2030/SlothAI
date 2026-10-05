@@ -6,6 +6,7 @@ import { editHTMLStructure } from './html-structure';
 import { editStructuredText } from './structured-text';
 import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
 import { dictionaryCandidates } from './dictionary';
+import { isEstablishedSurface } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
 import { prepareReviewedContext } from './reviewed-context';
@@ -215,7 +216,8 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       const established = restoreWord(word);
       // Preserve established spelling repairs, except a supervised digraph
       // correction whose context can distinguish səhər from şəhər.
-      if (!candidate || established !== word && !/(?:sh|ch|gh)/iu.test(word)
+      if (!candidate || !candidate.split(/\s+/u).every(value => isEstablishedSurface(value, services))
+        || established !== word && !/(?:sh|ch|gh)/iu.test(word)
         && (dictionaryCandidates(established.toLocaleLowerCase('az-AZ'))?.has(established.toLocaleLowerCase('az-AZ'))
           || productiveMorphology.isValidWordForm(established))) return word;
       runtime.trace?.({ stage: 'spelling', original: word, replacement: candidate, reason: 'paired local model with context/POS' });
@@ -245,7 +247,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     }
     const contextual = chooseInflectedPlace(word, previousWord)
       ?? localPrediction?.(word, offset) ?? chooseBySentence(word, context);
-    if (contextual) return contextual;
+    if (contextual && isEstablishedSurface(contextual, services)) return contextual;
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);

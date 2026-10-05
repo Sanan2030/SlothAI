@@ -8,6 +8,8 @@ import { technicalWords, technicalAliases, technicalSpelling } from './technical
 import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
 import type { SpellingContext } from './contracts/spelling';
 import { chooseIndexedTypo } from './spelling-candidates';
+import { productiveMorphology } from './productive-morphology';
+import type { MorphologicalAnalysis } from './contracts/morphology';
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
@@ -152,6 +154,7 @@ const aliases: Record<string, string> = {
   yekunu: 'yekunu',
   qanuni: 'qanuni',
   loglarini: 'loglarını',
+  neceyisen: 'necəsən',
 };
 const ambiguous = new Set(['et', 'el', 'un', 'uc', 'su', 'yag', 'gul', 'ali', 'sira', 'suret']);
 const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İstanbul',
@@ -159,6 +162,25 @@ const properNames = new Map(['Azərbaycan', 'Bakı', 'Gəncə', 'Türkiyə', 'İ
   'Bakıya', 'Bakıda', 'Bakının', 'Bakını', 'Bakıdan',
   'Gəncəyə', 'Gəncədə', 'Gəncənin', 'Türkiyəyə', 'Türkiyədə', 'Türkiyənin',
   'Sənan', 'Xədicə', 'Nərmin', 'Aysel', 'Günel', 'Rəşad'].map(name => [fold(name), name]));
+
+const aliasSurfaces = new Set(Object.values(aliases).map(word => word.toLocaleLowerCase('az-AZ')));
+const establishedCache = new Map<string, boolean>();
+/** Recognition invariant shared by lexical and statistical spelling stages.
+ * The existing local curated lexicon is a dictionary too; technical names are
+ * explicitly admitted rather than guessed as native Azerbaijani words. */
+export function isEstablishedSurface(word: string, services?: SpellingContext): boolean {
+  const lower = word.toLocaleLowerCase('az-AZ');
+  if (dictionaryCandidates(lower)?.has(lower) === true || candidates.get(fold(lower))?.has(lower) === true
+    || aliasSurfaces.has(lower) || (services?.morphology ?? productiveMorphology).isValidWordForm(lower)
+    || (services?.morphology ?? productiveMorphology).analyzeWord(lower).some(row => row.source === 'lexicon')
+    || technicalSpelling(word) === word || properNames.get(fold(lower))?.toLocaleLowerCase('az-AZ') === lower) return true;
+  if (services?.lemmaDictionary.findByFoldedForm(lower).entries.some(row => (row.surface ?? row.lemma).toLocaleLowerCase('az-AZ') === lower)) return true;
+  if (establishedCache.has(lower)) return establishedCache.get(lower)!;
+  const valid = analyzeEstablishedInflection(lower).length > 0;
+  if (establishedCache.size >= 4096) establishedCache.clear();
+  establishedCache.set(lower, valid);
+  return valid;
+}
 
 
 function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
@@ -400,7 +422,7 @@ const productiveSuffixRules: readonly ProductiveSuffixRule[] = [
   { raw: 'dadir', apply: stem => stem + 'd' + harmonyA(stem) + 'dır' },
   { raw: 'den', apply: stem => stem + 'dən' },
   { raw: 'dan', apply: stem => stem + 'dan' },
-  { raw: 'de', apply: stem => stem + 'də' },
+  { raw: 'de', apply: stem => stem + 'd' + harmonyA(stem) },
   { raw: 'da', apply: stem => stem + 'da' },
 
   { raw: 'imizi', apply: stem => /[aıoueəiöü]$/u.test(stem) ? undefined : stem + harmonyI(stem) + 'm' + harmonyI(stem) + 'z' + harmonyI(stem) },
@@ -482,13 +504,50 @@ function restoreProductiveSuffix(word: string, services?: SpellingContext): stri
   return undefined;
 }
 
+const inflectionCache = new Map<string, readonly MorphologicalAnalysis[]>();
+/** Parse the established suffix inventory instead of calling an inflected
+ * surface its own lemma. Short unknown stems cannot license guessed suffixes
+ * (ab + ide was the source of the unattested abıdə regression).
+ * POS is left unknown when the dictionary supplies no lexical POS evidence. */
+export function analyzeEstablishedInflection(word: string): readonly MorphologicalAnalysis[] {
+  const surface = word.toLocaleLowerCase('az-AZ');
+  if (inflectionCache.has(surface)) return inflectionCache.get(surface)!;
+  const records: MorphologicalAnalysis[] = [];
+  if (/^[a-zəçğıöşü]{4,40}$/u.test(surface)) for (const rule of productiveSuffixRules) {
+    const key = fold(surface);
+    const ending = rule.raw.replace(/sh/gu, 's').replace(/ch/gu, 'c').replace(/gh/gu, 'g');
+    if (!key.endsWith(ending)) continue;
+    const rawStem = surface.slice(0, -ending.length);
+    if (rawStem.length < 3 && !reviewedProductiveRoots.has(fold(rawStem))
+      && !productiveMorphology.analyzeWord(rawStem).some(row => row.pos === 'noun' || row.pos === 'verb')) continue;
+    let stem = recognizedStem(rawStem) ?? productiveMorphology.findByFoldedForm(rawStem);
+    let underlying: string | undefined;
+    if (!stem && /[ygd]$/u.test(fold(rawStem))) {
+      const originalEnd = { y: 'k', g: 'q', d: 't' }[fold(rawStem).at(-1)! as 'y' | 'g' | 'd'];
+      underlying = recognizedStem(rawStem.slice(0, -1) + originalEnd)
+        ?? productiveMorphology.findByFoldedForm(rawStem.slice(0, -1) + originalEnd);
+      if (underlying) stem = underlying.slice(0, -1) + ({ k: 'y', q: 'ğ', t: 'd' }[originalEnd as 'k' | 'q' | 't']);
+    }
+    if (!stem || rule.apply(stem) !== surface) continue;
+    const base = productiveMorphology.analyzeWord(underlying ?? stem);
+    if (base.length) for (const row of base) records.push({ surface, lemma: row.lemma, pos: row.pos,
+      features: { derivation: ['established-suffix:' + surface.slice(stem.length)] }, source: 'rule' });
+    else records.push({ surface, lemma: underlying ?? stem, features: { derivation: ['established-suffix:' + surface.slice(stem.length)] }, source: 'rule' });
+  }
+  if (inflectionCache.size >= 4096) inflectionCache.clear();
+  inflectionCache.set(surface, records);
+  return records;
+}
+
 function restoreDigraphTransliteration(word: string, services?: SpellingContext): string | undefined {
   if (!/(?:sh|ch|gh)/i.test(word)) return undefined;
   const variant = word
     .replace(/sh/gi, match => match[0] === 'S' ? 'Ş' : 'ş')
     .replace(/ch/gi, match => match[0] === 'C' ? 'Ç' : 'ç')
     .replace(/gh/gi, match => match[0] === 'G' ? 'Ğ' : 'ğ');
-  return uniqueDictionaryCandidate(variant, services) ?? restoreProductiveSuffix(variant, services);
+  const candidate = services?.morphology.findByFoldedForm?.(variant) ?? chooseSpelling(variant, candidates.get(fold(variant)))
+    ?? uniqueDictionaryCandidate(variant, services) ?? restoreProductiveSuffix(variant, services);
+  return candidate && isEstablishedSurface(candidate, services) ? candidate : undefined;
 }
 
 export function restoreWord(word: string, services?: SpellingContext): string {
@@ -509,6 +568,9 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // üçün). Imported candidates are conservative fallback, not frequency data.
   const alias = Object.hasOwn(aliases, key) ? aliases[key] : undefined;
   const morphologyCandidates = services?.morphology.analyzeWord(word).map(analysis => analysis.surface);
+  // A unique explicitly accented dictionary spelling is stronger evidence
+  // than decomposing a whole lexical word into a coincidental suffix.
+  const accentedDictionary = chooseSpelling(word, imported);
   // Prefer reviewed productive Azerbaijani morphology before the imported
   // dictionary fallback. The Hunspell source may contain ASCII/Turkic surface
   // forms that are valid dictionary entries but are not the intended
@@ -520,13 +582,19 @@ export function restoreWord(word: string, services?: SpellingContext): string {
     ?? (key === 'testi' ? 'testi' : undefined)
     ?? (key === 'sistme' ? chooseIndexedTypo(word) : undefined)
     ?? services?.morphology.correctMalformedForm?.(word)
-    ?? restoreProductiveSuffix(word, services)
+    ?? (() => {
+      const value = restoreProductiveSuffix(word, services);
+      // Whole-word dictionary evidence wins when a suffix guess changes even
+      // the ASCII vowel skeleton, rather than restoring missing diacritics.
+      return value && isEstablishedSurface(value, services)
+        && (!accentedDictionary || fold(value) === fold(word)) ? value : undefined;
+    })()
     ?? chooseSpelling(word, imported)
     ?? chooseSpelling(word, new Set(morphologyCandidates))
     ?? ((imported?.size ?? 0) > 1 ? undefined : services?.morphology.findByFoldedForm?.(word))
     ?? chooseIndexedTypo(word)
     ?? restoreDigraphTransliteration(word, services);
-  if (!replacement) return word;
+  if (!replacement || !isEstablishedSurface(replacement, services)) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
   if (!alias && [...word.toLocaleLowerCase('az-AZ')].some((letter, index) =>

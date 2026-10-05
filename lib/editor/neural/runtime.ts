@@ -11,7 +11,7 @@ import { predictNetwork } from './network';
 import { neuralIndex, neuralCandidates, lexicalFeatures, agreementFeatures, subjects, type Subject } from './features';
 import type { NeuralArtifact } from './types';
 import { tokenize, fold, type Token } from '../local-ai/core';
-import { isReviewedSpelling } from '../lexicon';
+import { isReviewedSpelling, isEstablishedSurface } from '../lexicon';
 import { dictionaryCandidates } from '../dictionary';
 import { productiveMorphology } from '../productive-morphology';
 import { canonicalProtectedTerm } from '../protected-terminology';
@@ -61,7 +61,7 @@ export function neuralSpelling(text: string, useAttention = true): string {
     if (useAttention) selected ??= attentionCorrection(lower, tokens, at);
     // Unique reviewed paradigms restore ASCII diacritics outside model coverage.
     selected ??= productiveMorphology.findByFoldedForm(lower);
-    if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(lower, selected)) continue;
+    if (!selected || !isEstablishedSurface(selected) || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(lower, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     result += text.slice(cursor, token.start) + target; cursor = token.end;
   }
@@ -88,7 +88,7 @@ export function neuralAgreement(text: string): string {
     const candidates = agreementForms({ lemma: original.lemma, pos: 'verb',
       features: { ...original.features, ...subject }, limit: 4 }).filter(candidate => {
       const rows = finiteAnalyses(candidate);
-      return rows.some(row => row.lemma === original.lemma && row.features.tense === original.features.tense && JSON.stringify(row.features.derivation ?? []) === JSON.stringify(original.features.derivation ?? []) && predictNetwork(model.agreement, agreementFeatures(subject!, row.features)) >= model.agreementThreshold);
+      return rows.some(row => row.lemma === original.lemma && row.features.tense === original.features.tense && !row.features.mood && JSON.stringify(row.features.derivation ?? []) === JSON.stringify(original.features.derivation ?? []) && predictNetwork(model.agreement, agreementFeatures(subject!, row.features)) >= model.agreementThreshold);
     });
     if (candidates.length === 1 && candidates[0] !== word) {
       result += text.slice(cursor, token.start) + candidates[0]; cursor = token.end;
@@ -110,7 +110,7 @@ export function neuralTranspositions(text: string, protectUncertain?: (word: str
       result += text.slice(cursor, token.start) + protectUncertain(raw); cursor = token.end; continue;
     }
     const selected = attentionCorrection(raw, tokens, at) ?? fallback?.(raw, tokens, at);
-    if (!selected || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(raw, selected)) continue;
+    if (!selected || !isEstablishedSurface(selected) || !preservesDiacritics(raw, selected) || areRegularCaseAlternatives(raw, selected)) continue;
     const target = /^\p{Lu}/u.test(raw) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     result += text.slice(cursor, token.start) + target; cursor = token.end;
   }

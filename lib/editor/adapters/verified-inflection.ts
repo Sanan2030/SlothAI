@@ -1,0 +1,18 @@
+import type { MorphologyEngine, GenerateFormsRequest } from '../contracts/morphology';
+import { analyzeEstablishedInflection } from '../lexicon';
+
+/** Parsed legacy suffix fallback. Unlike the old surface-as-lemma adapter,
+ * returns recognized stems; POS remains unspecified if lexical evidence lacks it. */
+export class VerifiedInflectionAdapter implements MorphologyEngine {
+  constructor(private readonly base: MorphologyEngine) {}
+  analyzeWord(word: string) {
+    const known = this.base.analyzeWord(word);
+    return known.length ? known : analyzeEstablishedInflection(word);
+  }
+  isValidWordForm(word: string): boolean { return this.base.isValidWordForm(word) || analyzeEstablishedInflection(word).length > 0; }
+  findByFoldedForm(word: string): string | undefined { return this.base.findByFoldedForm?.(word); }
+  correctMalformedForm(word: string): string | undefined { return this.base.correctMalformedForm?.(word); }
+  generateForms(request: GenerateFormsRequest) { return this.base.generateForms(request); }
+  stripSuffixes(word: string) { return this.analyzeWord(word).map(row => ({ stem: row.lemma,
+    removedSuffixes: [word.toLocaleLowerCase('az-AZ').slice(row.lemma.length)].filter(Boolean) })); }
+}

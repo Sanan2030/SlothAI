@@ -3,6 +3,7 @@ import type { MorphologyEngine } from './contracts/morphology';
 import type { SpellingResolver, SpellingContext } from './contracts/spelling';
 import { restoreWord } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
+import { VerifiedInflectionAdapter } from './adapters/verified-inflection';
 import {
   MorphologicalLemmaDictionary,
 } from './adapters/legacy-language';
@@ -14,7 +15,7 @@ import {
  * changing correctText(), API routes, UI code, or regression fixtures.
  */
 export const lemmaDictionary: LemmaDictionary = new MorphologicalLemmaDictionary();
-export const morphologyEngine: MorphologyEngine = productiveMorphology;
+export const morphologyEngine: MorphologyEngine = new VerifiedInflectionAdapter(productiveMorphology);
 
 export interface LanguageServices extends SpellingContext {
   spelling: SpellingResolver;
