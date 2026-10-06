@@ -1,0 +1,678 @@
+[
+  {
+    "fixture": "corporate-letter.json",
+    "id": "1",
+    "input": "hormetli musteri numayendesi sirketimizin texniki destek ve korporativ xidmetler bolmesi adindan sizi urekden salamlayiriq gonderdiyiniz sorgu ve resmi müracietiniz sistemlerimizde qeydiyyata alindi ve muafiq ekspertlerimiz terefinden etrafli sekilde tehlil edildi texnoloji altyapinizin yenilenmesi ve bulud sistemlerine inteqrasiyasi ile bagli qaldirdiginiz meseleler bizm ucun yuksek prioritet kesb edir sirketinizin reqamsal transformasiya prosesinde etibarli terfdas olmaqdan buyuk mennunluq duyuruq bu mektubda qeyd etdiyiniz butun suallara ve texnki teleblere cavab olaraq hazirladigimiz etrafli fealiyyet planini ve kommersiya tekliflerimizi diqqetinize catdiririq meqsedimiz sizin biznes proseslerinizi daha verimli sekilde optimallasdirmaq ve gelecekdki inkisaf hedefleriniz ucun mohkem texnoloji temel yaratmaqdir\n\nevvelce movcud altyapinizin auditi zamani uze cixan esas meqamlari ve resurs ehtiyaclarini nezerden kecirmek isteyirik ekspertlerimizin kecirdiyi ilkin qiymetlendirmeye esasen kohne server altyapinizin yeni reqamsal gostericilere cavab vermediyi ve yuklenmeler zamani mueyyen lengimelerin yarandigi tespit edilmisdir bu nov gecikmeler ise istifadeci tecrubesine ve daxili biznes proseslerinin suretine menfi tesir gosterir teklif etdiyimiz yeni bulud arxitekturasi sayesinde melumat bazalarinizin paralel emali temin olunacaq ve neticede sistemin umumi performansinda boyuk artis musahide edilecekdir infrastrukturdaki butun resurslar dinamik olaraq idare olunacaq ve yuklenme artdigi zaman avtomatik genislenme mexanizmleri ise dusecekdir belelikle siz pique saatlarinda bele hec bir kesinti yasamadan faliyyetinizi davam etdire bileceksiniz\n\ninteqrasiya merhelesinde esas diqqet yetireceyimiz meselelerden biri de menbe sistemler ve hedef platforma arasinda melumatlarin kesintisiz oturulmesidir bunun ucun muasir rest ve grpc protokollari uzerinden xususi sebeke qovsaqlari hazirlanacaqdir avtomatlasdirilmis verilenler axini sayesinde kecmis sistemdeki melumatlar itkisiz sekilde yeni bazaya kocurulecekdir ve bu emeliyyat biznesinizin gundelik fealiyyetine hec bir maneclik yaratmayacaqdir melumatlarin sinxronlasdirilmasi merheleli sekilde heyata kecirilecek ve her merheleden sonra avtomatik test skriptleri vasitesile deqiqliq yoxlanilacaqdir mikroservis arxitekturasi istifade olundugu ucun gelecekde yeni modullarin elave olunmasi da cox rahat sekilde mumkun olacaqdir sistemlerin bir birile inteqrasiyasi zamani kecid protokollari en yuksek standartlara cavab verecekdir\n\ntehlukesizlik ve konfidensialliq meseleleri korporativ munasibetlerimizde en vacib postulatdir mefhi melumatlarin qorunmasi ucun beynelxalq standartlara cavab veren sifreleme alqoritmlerinden istifade olunacaqdir statik ve dinamik melumatlarin her ikisi boyuk diqqetle mudafie olunacaq ve kibertehlukelere qarsi muntezam olaraq penetrasiya testleri kecirilecekdir habele daxili icazelerin idare olunmasi ucun rola esaslanan giris nezareti mexanizmi tətbiq edilecekdir bu ise sirket daxilinde selahiyyetsiz sexslerin kritik melumatlara girisinin tamamilə qarsisini alacaqdir bu cercivede iki merheleli dogrulama sistemleri ve IP unvanlarina gorə kısıtlamalar da tətbiq edile biler butun giris cixis emeliyyatlari ve log qeydleri avtomatik olaraq arxivlesdirilecek ve istenilen an audit ucun elcatan olacaqdir\n\nyeni platformaya kecid zamani melumat itkisinin tamamilə qarsisina almaq meqsedile muntezam ehtiyat nusxe cixarma mexanizmleri aktivlesdirilecekdir geo ehtiyatlandirma altyapisi sayesinde melumatlariniz ferqli cografi mekanlarda yerlesen tehlukesiz data merkezlerinde saxlanilacaqdir her hansi bir gozlenilmez texniki qeza ve ya sebeke kesintisi bas verdiyi teqdirde sistem avtomatik olaraq ehtiyat serverlere kecid edecek ve xidmetlerin davamliligi kesintisiz sekilde temin olunacaqdir bu mexanizm biznesinizin faliyyetinin dayanmasinin ve maliyye itkilerinin tam sekilde qarsisini almaga imkan verir ehtiyat nusxelerin berpa olunmasi testleri her ay muntezam olaraq kecirilecekdir faleketden berpa planlari hazirlanaraq texniki heyetinize teqdim olunacaqdir\n\nxidmet seviyyesi serhedlerinin mueyyen edilmesil bagli sualiniza cavab olaraq bildirmek isteyirik ki sirketimiz doqsan doqquz tam onda doqquz faiz kesintisiz isleme zemaneti verir qarsilasa bileceyiniz her hansi bir texnki problem ve ya sual ile bagli iyirmi dord saat yeddi gun fealiyyet gosteren korporativ destek xettimiz xidmetinizde olacaqdir kritik seviyyeli müracietlere reaksiya suresi maksimum on bes deqiqe olaraq teyin edilmisdir müracietinizin statusunu daxili bilet idareetme sistemimiz vasitesile canli olaraq izleye bileceksiniz mutesessislerimiz problemin kokunu araşdirib en qisa zamanda aradan qaldirmaq ucun lazimi addimlari atacaqlar emeliytlarin kesintisizliyi ucun sexsi musteri meneceri de layihenize teyin olunacaqdir\n\nyeni proqram teminati paketlerinin lisenziyalandirilmasi ve emekdaslarinizin telim merhelesi de xususi fealiyyet planimiza daxil edilmisdir istifadeci lisenziyalari sirketinizin strukturuna uygun olaraq ferqli selahiyyet seviyyelerinde paylanacaqdir sistemden effektiv istifade olunmasini temin etmek meqsedile personaliniz ucun hem onlayn hem de eyani telim sessiyalari teskil olunacaqdir telim proqramini bitiren emekdaslar xususi qiymetlendirme testinden kecerek sertifikatlandirilacaqlar habele istifadeciler ucun etrafli telimat kitabcalari ve video rehberler de teqdim edilecekdir bu addimlar yeni sisteme adaptasiya muddetini minimuma endirecek ve isci heyətinin yeni proqramdan maksimum faydalanmasina serait yaradacaqdir\n\nsirketinizin spesifik ehtiyaclarina uygun olaraq standarta daxil olmayan elave funksional imkanlarin hazirlanmasi da teklifimiz cercivesinde mumkundur daxili biznes mentiqinize xususi olaraq uygunlaşdirilacaq hesabatliq modullari ve kecid panelleri dizayn edile biler biznes analitiklerimiz sizin aparici mutesessislerinizle birge isleyerek telebler senedini formaşdiracaqlar muafiq funksiyalar hazir olduqdan sonra sineq muhitinde yoxlanilacaq ve yalniz sizin tesdiqinizden sonra canlı sisteme integrasiya olunacaqdir xususi proqram teminati inkisaf etdirilmesi layihenin umumi qrafikine paralel sekilde heyata kecirilecekdir\n\nmaliyye sertleri ve abune planlari ile bagli olaraq size en elverisli ve serfeli kommersiya teklifini hazirlamisiq teklif olunan paket daxilinde hem lisenziya xercleri hem texniki destek hem de ayliq bulud resurslarinin istifikasi daxildir odenisler rubluk ve ya illik esasda heyata kecirile biler illik abune secildiyi teqdirde umumi meblege elave guzestler tətbiq olunacaqdir gelecekde sirketinizin hacmi boyudukce ve lisenziya sayi artdiqca abune planinizi istədiyiniz an tenzimleye ve resurslari artira bilersiniz maliyye senedlesmesi ve hesab fakturalar tam avtomatlasdirilmis sekilde elektron portaldan teqdim olunacaqdir odenislerde seffafliq ve ceviklik prinsipleri esas goturulmusdur\n\nlayihenin icra qrafiki umumi olaraq alti esas merheleden ibaretdir birinci merhelede altyapinin yekun analizi və hazirligi heyata kecirilecek ikinci merhelede test muhiti qurulacaq ve melumatlarin bir hissəsi sinaq ucun kocurulecek ucuncu merhelede esas inteqrasiya ve konfiqurasiya isleri yekunlasdirilacaq dorduncu merhelede tehlukesizlik ve yuklenme testleri aparilacaq besinci merhelede personalin telimleri tamamlanacaq altiinci merhelede ise tam sekilde canlı rejimə kecid bas tutacaqdir umumi kecid muddetinin xeriteye uygun olaraq sekkiz hefte erzinde tamamlanmasi planlasdirilir kecid zamani her merhele uzre cavabdeh sexsler teyin olunacaqdir\n\nyenilenmis platforma uzerinden real vaxt rejiminde analitik hesabatlarin alinmasi ve rehberlik ucun vizual panellerin yaradilmasi mumkun olacaqdir bu paneller vasitesile sirketinizin esas faliyyet gostericilerini anliq olaraq izleye bileceksiniz avtomatik hesabatliq sistemi sayesinde heftelik ve ayliq xulaseden ibaret melumatlar cavabdeh sexslerin e poct unvanlarina avtomatik gonderilecekdir bu imkan qerar qebulu prosesini qat qat suretlendirecek ve biznesinizin bazardaki reqabet qabiliyyetini artiracaqdir melumatlarin qrafik ve cedvel formasinda eks olunmasi idareetmeni daha simplified ve anlasilan edecekdir\n\nteklif etdiyimiz hellerin sirketinizin inkişafina boyuk tohfe vereceyine ve biznes proseslerinizi daha verimli edeceyine tam eminik mektubda qeyd olunan meselelerle bagli elave suallariniz yarandigi teqdirde ve ya layihe qrafikini muzakire etmek ucun heyata kecirilecek onlayn gorus vaxtini teyin etmek meqsedile bizimle elaqe saxlamaginizi xahis edirik reqamsal transformasiya yolunda sizinle emekdasliq etmekden megrurluq duyuruq korporativ desteyimiz her zaman yaninizdadir diqqetiniz ve etibariniz ucun tesekkur edirik hormetle korporativ musteri elaqeleri bolmesi ve sistem inteqrasiyasi komandasi",
+    "output": "Hörmətli müştəri nümayəndəsi,\n\nŞirkətimizin texniki dəstək və korporativ xidmətlər bölməsi adından sizi ürəkdən salamlayırıq. Göndərdiyiniz sorğu və rəsmi müraciətiniz sistemlərimizdə qeydiyyata alındı və müvafiq ekspertlərimiz tərəfindən ətraflı şəkildə təhlil edildi. Texnoloji infrastrukturunuzun yenilənməsi və bulud sistemlərinə inteqrasiyası ilə bağlı qaldırdığınız məsələlər bizim üçün yüksək prioritet kəsb edir. Şirkətinizin rəqəmsal transformasiya prosesində etibarlı tərəfdaş olmaqdan böyük məmnunluq duyuruq. Bu məktubda qeyd etdiyiniz bütün suallara və texniki tələblərə cavab olaraq hazırladığımız ətraflı fəaliyyət planını və kommersiya təkliflərimizi diqqətinizə çatdırırıq. Məqsədimiz sizin biznes proseslərinizi daha səmərəli şəkildə optimallaşdırmaq və gələcəkdəki inkişaf hədəfləriniz üçün möhkəm texnoloji təməl yaratmaqdır.\n\nƏvvəlcə mövcud infrastrukturunuzun auditi zamanı üzə çıxan əsas məqamları və resurs ehtiyaclarını nəzərdən keçirmək istəyirik. Ekspertlərimizin keçirdiyi ilkin qiymətləndirməyə əsasən köhnə server infrastrukturunuzun yeni rəqəmsal göstəricilərə cavab vermədiyi və yüklənmələr zamanı müəyyən ləngimələrin yarandığı müəyyən edilmişdir. Bu növ gecikmələr isə istifadəçi təcrübəsinə və daxili biznes proseslərinin surətini mənfi təsir göstərir. Təklif etdiyimiz yeni bulud arxitekturası sayəsində məlumat bazalarınızın paralel emalı təmin olunacaq və nəticədə sistemin ümumi performansında böyük artım müşahidə ediləcəkdir. İnfrastrukturdakı bütün resurslar dinamik olaraq idarə olunacaq və yüklənmə artdığı zaman avtomatik genişlənmə mexanizmləri işə düşəcəkdir. Beləliklə, siz pik saatlarında belə heç bir kəsinti yaşamadan fəaliyyətinizi davam etdirə biləcəksiniz.\n\nİnteqrasiya mərhələsində əsas diqqət yetirəcəyimiz məsələlərdən biri də mənbə sistemlər və hədəf platforma arasında məlumatların kəsintisiz ötürülməsidir. Bunun üçün müasir REST və gRPC protokolları üzərindən xüsusi şəbəkə qovşaqları hazırlanacaqdır. Avtomatlaşdırılmış verilənlər axını sayəsində keçmiş sistemdəki məlumatlar itkisiz şəkildə yeni bazaya köçürüləcəkdir və bu əməliyyat biznesinizin gündəlik fəaliyyətinə heç bir maneə yaratmayacaqdır. Məlumatların sinxronlaşdırılması mərhələli şəkildə həyata keçiriləcək və hər mərhələdən sonra avtomatik test skriptləri vasitəsilə dəqiqlik yoxlanılacaqdır. Mikroservis arxitekturası istifadə olunduğu üçün gələcəkdə yeni modulların əlavə olunması da çox rahat şəkildə mümkün olacaqdır. Sistemlərin bir-birilə inteqrasiyası zamanı keçid protokolları ən yüksək standartlara cavab verəcəkdir.\n\nTəhlükəsizlik və konfidensiallıq məsələləri korporativ münasibətlərimizdə ən vacib postulatdır. Məxfi məlumatların qorunması üçün beynəlxalq standartlara cavab verən şifrələmə alqoritmlərindən istifadə olunacaqdır. Statik və dinamik məlumatların hər ikisi böyük diqqətlə müdafiə olunacaq və kibertəhlükələrə qarşı müntəzəm olaraq penetrasiya testləri keçiriləcəkdir. Habelə daxili icazələrin idarə olunması üçün rola əsaslanan giriş nəzarəti mexanizmi tətbiq ediləcəkdir. Bu isə şirkət daxilində səlahiyyətsiz şəxslərin kritik məlumatlara girişinin tamamilə qarşısını alacaqdır. Bu çərçivədə iki mərhələli doğrulama sistemləri və IP ünvanlarına görə məhdudiyyətlər də tətbiq edilə bilər. Bütün giriş-çıxış əməliyyatları və log qeydləri avtomatik olaraq arxivləşdiriləcək və istənilən an audit üçün əlçatan olacaqdır.\n\nYeni platformaya keçid zamanı məlumat itkisinin tamamilə qarşısını almaq məqsədilə müntəzəm ehtiyat nüsxə çıxarma mexanizmləri aktivləşdiriləcəkdir. Geo ehtiyatlandırma infrastrukturu sayəsində məlumatlarınız fərqli coğrafi məkanlarda yerləşən təhlükəsiz data mərkəzlərində saxlanılacaqdır. Hər hansı bir gözlənilməz texniki qəza və ya şəbəkə kəsintisi baş verdiyi təqdirdə sistem avtomatik olaraq ehtiyat serverlərə keçid edəcək və xidmətlərin davamlılığı kəsintisiz şəkildə təmin olunacaqdır. Bu mexanizm biznesinizin fəaliyyətinin dayanmasının və maliyyə itkilərinin tam şəkildə qarşısını almağa imkan verir. Ehtiyat nüsxələrin bərpa olunması testləri hər ay müntəzəm olaraq keçiriləcəkdir. Fəlakətdən bərpa planları hazırlanaraq texniki heyətinizə təqdim olunacaqdır.\n\nXidmət səviyyəsi sərhədlərinin müəyyən edilməsi ilə bağlı sualınıza cavab olaraq bildirmək istəyirik ki, şirkətimiz doxsan doqquz tam onda doqquz faiz kəsintisiz işləmə zəmanəti verir. Qarşılaşa biləcəyiniz hər hansı bir texniki problem və ya sual ilə bağlı iyirmi dörd saat, yeddi gün fəaliyyət göstərən korporativ dəstək xəttimiz xidmətinizdə olacaqdır. Kritik səviyyəli müraciətlərə reaksiya müddəti maksimum on beş dəqiqə olaraq təyin edilmişdir. Müraciətinizin statusunu daxili bilet idarəetmə sistemimiz vasitəsilə canlı olaraq izləyə biləcəksiniz. Mütəxəssislərimiz problemin kökünü araşdırıb ən qısa zamanda aradan qaldırmaq üçün lazımı addımları atacaqlar. Əməliyyatların kəsintisizliyi üçün şəxsi müştəri meneceri də layihənizə təyin olunacaqdır.\n\nYeni proqram təminatı paketlərinin lisenziyalaşdırılması və əməkdaşlarınızın təlim mərhələsi də xüsusi fəaliyyət planımıza daxil edilmişdir. İstifadəçi lisenziyaları şirkətinizin strukturuna uyğun olaraq fərqli səlahiyyət səviyyələrində paylanacaqdır. Sistemdən effektiv istifadə olunmasını təmin etmək məqsədilə personalınız üçün həm onlayn, həm də əyanı təlim sessiyaları təşkil olunacaqdır. Təlim proqramını bitirən əməkdaşlar xüsusi qiymətləndirmə testindən keçərək sertifikatlandırılacaqlar. Habelə istifadəçilər üçün ətraflı təlimat kitabçaları və video təlimatlar da təqdim ediləcəkdir. Bu addımlar yeni sistemə adaptasiya müddətini minimuma endirəcək və işçi heyətinin yeni proqramdan maksimum faydalanmasına şərait yaradacaqdır.\n\nŞirkətinizin spesifik ehtiyaclarına uyğun olaraq standarta daxil olmayan əlavə funksional imkanların hazırlanması da təklifimiz çərçivəsində mümkündür. Daxili biznes məntiqinizə xüsusi olaraq uyğunlaşdırılacaq hesabatlılıq modulları və keçid panelləri dizayn edilə bilər. Biznes analitiklərimiz sizin aparıcı mütəxəssislərinizlə birgə işləyərək tələblər sənədini formalaşdıracaqlar. Müvafiq funksiyalar hazır olduqdan sonra sınaq mühitində yoxlanılacaq və yalnız sizin təsdiqinizdən sonra canlı sistemə inteqrasiya olunacaqdır. Xüsusi proqram təminatının inkişaf etdirilməsi layihənin ümumi qrafikinə paralel şəkildə həyata keçiriləcəkdir.\n\nMaliyyə şərtləri və abunə planları ilə bağlı olaraq sizə ən əlverişli və sərfəli kommersiya təklifini hazırlamışıq. Təklif olunan paket daxilində həm lisenziya xərcləri, həm texniki dəstək, həm də aylıq bulud resurslarının istifadəsi daxildir. Ödənişlər rüblük və ya illik əsasda həyata keçirilə bilər. İllik abunə seçildiyi təqdirdə ümumi məbləğə əlavə güzəştlər tətbiq olunacaqdır. Gələcəkdə şirkətinizin həcmi böyüdükcə və lisenziya sayı artdıqca abunə planınızı istədiyiniz an tənzimləyə və resursları artıra bilərsiniz. Maliyyə sənədləşməsi və hesab-fakturalar tam avtomatlaşdırılmış şəkildə elektron portaldan təqdim olunacaqdır. Ödənişlərdə şəffaflıq və çeviklik prinsipləri əsas götürülmüşdür.\n\nLayihənin icra qrafiki ümumi olaraq altı əsas mərhələdən ibarətdir:\n1. İnfrastrukturun yekun analizi və hazırlığı həyata keçiriləcək.\n2. Test mühiti qurulacaq və məlumatların bir hissəsi sınaq üçün köçürüləcək.\n3. Əsas inteqrasiya və konfiqurasiya işləri yekunlaşdırılacaq.\n4. Təhlükəsizlik və yüklənmə testləri aparılacaq.\n5. Personalın təlimləri tamamlanacaq.\n6. Tam şəkildə canlı rejimə keçid baş tutacaqdır.\n\nÜmumi keçid müddətinin xəritəyə uyğun olaraq səkkiz həftə ərzində tamamlanması planlaşdırılır. Keçid zamanı hər mərhələ üzrə cavabdeh şəxslər təyin olunacaqdır.\n\nYenilənmiş platforma üzərindən real vaxt rejimində analitik hesabatların alınması və rəhbərlik üçün vizual panellərin yaradılması mümkün olacaqdır. Bu panellər vasitəsilə şirkətinizin əsas fəaliyyət göstəricilərini anlıq olaraq izləyə biləcəksiniz. Avtomatik hesabatlılıq sistemi sayəsində həftəlik və aylıq xülasədən ibarət məlumatlar cavabdeh şəxslərin e-poçt ünvanlarına avtomatik göndəriləcəkdir. Bu imkan qərar qəbulu prosesini qat-qat sürətləndirəcək və biznesinizin bazardakı rəqabət qabiliyyətini artıracaqdır. Məlumatların qrafik və cədvəl formasında əks olunması idarəetməni daha sadə və anlaşılan edəcəkdir.\n\nTəklif etdiyimiz həllərin şirkətinizin inkişafına böyük töhfə verəcəyinə və biznes proseslərinizi daha səmərəli edəcəyinə tam eminik. Məktubda qeyd olunan məsələlərlə bağlı əlavə suallarınız yarandığı təqdirdə və ya layihə qrafikini müzakirə etmək üçün həyata keçiriləcək. Onlayn görüş vaxtını təyin etmək məqsədilə bizimlə əlaqə saxlamağınızı xahiş edirik, rəqəmsal transformasiya yolunda sizinlə əməkdaşlıq etməkdən məğrurluq duyuruq. Korporativ dəstəyimiz hər zaman yanınızdadır. Diqqətiniz və etibarınız üçün təşəkkür edirik.\n\nHörmətlə,\nKorporativ müştəri əlaqələri bölməsi və sistem inteqrasiyası komandası",
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-026",
+    "input": "Istixanada pomidor şitilləri böyüyür.",
+    "expected": "İstixanada pomidor şitilləri böyüyür.",
+    "output": "İstixanada pomidor şitilləri böyüyür.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-038",
+    "input": "Velosiped yolu çayın kenarindan keçir.",
+    "expected": "Velosiped yolu çayın kənarından keçir.",
+    "output": "Velosiped yolu çayın kənarından keçir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-057",
+    "input": "Iddiaci əlavə sübut təqdim etdi.",
+    "expected": "İddiaçı əlavə sübut təqdim etdi.",
+    "output": "İddiaçı əlavə sübut təqdim etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-082",
+    "input": "İcra şöbəsi məktubu cavablandirdi.",
+    "expected": "İcra şöbəsi məktubu cavablandırdı.",
+    "output": "İcra şöbəsi məktubu cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-103",
+    "input": "Çayın suyundan nümunə goturuldu.",
+    "expected": "Çayın suyundan nümunə götürüldü.",
+    "output": "Çayın şüyündən nümunə götürüldü.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-111",
+    "input": "Sərgi yeni əsərlərlə zenginlesdi.",
+    "expected": "Sərgi yeni əsərlərlə zənginləşdi.",
+    "output": "Sərgi yeni əsərlərlə zənginləşdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-132",
+    "input": "Müştəri olcusune uyğun köynək seçdi.",
+    "expected": "Müştəri ölçüsünə uyğun köynək seçdi.",
+    "output": "Müştəri ölçüsünə uyğun köynək seçdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-192",
+    "input": "Çörəyin xəmiri səhər yogruldu.",
+    "expected": "Çörəyin xəmiri səhər yoğruldu.",
+    "output": "Çörəyin xəmiri səhər yoğruldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-212",
+    "input": "Toplantiya bütün əməkdaşlar gəldilər.",
+    "expected": "Toplantıya bütün əməkdaşlar gəldilər.",
+    "output": "Toplantıya bütün əməkdaşlar gəldilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-215",
+    "input": "Əla nəticə əldə etmək üçün calisiriq.",
+    "expected": "Əla nəticə əldə etmək üçün çalışırıq.",
+    "output": "Əla nəticə əldə etmək üçün çalışırıq.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-234",
+    "input": "Dissertasiya suraya təqdim edildi.",
+    "expected": "Dissertasiya şuraya təqdim edildi.",
+    "output": "Dissertasiya şuraya təqdim edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "platform-proposal.json",
+    "id": "1",
+    "input": "hormetli terefdasimiz sirketimizin proqram teminati ve texnoloji heller korporativ departamenti adindan sizi salamlayiriq teqdim etdiyiniz yeni layihenin texniki sertnamesi ve biznes telebleri uzmanlarimiz terefinden etrafli sekilde nezerden kecirilmisdir mueyyen olunmus hedefler daxilinde sistemin memarligini ve istifadeci tecrubesini en yuksek seviyyeye qaldirmaq ucun lazimi hazirliq islerine baslanilmisdir bu mektubda layihenin icra merheleleri funksional modullarin strukturu texniki xarakteristikalar ve tehlukesizlik mexanizmleri haqda genis melumat teqdim edirik meqsedimiz reqabetqabiliyyetli ve dayaniqli bir reqamsal mehsul ortaya cixarmaqdir biznes proseslerinizin avtomatlasdirilmasi ve fealiyyətinizin reqamsal muvite kocurulmesi ucun lazimi olan butun resurslarimiz seferber edilmisdir\n\nagile ve scrum metodologiyalarina esaslanaraq idare edilecek olan bu inkisaf prosesi sprintler seklinde bolunmusdur her bir sprint iki hefdelik muddeti ehate edecek ve her sprintin sonunda islek funksionalliq sinaq muhitinde size teqdim olunacaqdir bu usul sayesinde layihedeki deyisiklikler cevik sekilde idare olunacaq ve biznes ehtiyaclariniza uygun olaraq operativ tenzimlemeler aparilacaqdir backlog siyahisindaki tapsiriqlar prioritet sirasina gorə duzulmusdur ve komandamiz ilk novbede esas muesse funksiyalarini tamamlamaga diqqet ayiracaqdir sprint qiymetlendirme gorusleri vasitesile inkisaf tempini birge izleye bileceyik her sprintin yekununda heyata kecirilen demo sessiyalari platformanin gidisatini real vaxtda qiymatlendirmeye serait yaradacaqdir\n\nsistemin arxitektura strukturu mikroservis konsepsiyasina esaslanaraq layihelendirilmisdir bu yanaşma her bir modulun digerinden asili olmadan murekkeblesmeden genislenmesine imkan yaradir istifadeci idareetmesi odenis inteqrasiyalari bildiris servisleri ve analitika paneli ferqli konteynerlerde faliyyet gosterecekdir konteynerlerin orkestrasiyasi kubernetes vasitesile heyata kecirilecekdir bu ise sistemin yuklenmeye uygun olaraq avtomatik olceklenmesini temin edecekdir neticede pikey vaxtlarinda bele sistemin keciricilik qabiliyyeti ve cavab verme sureti en ust seviyyede qalacaqdir servislerin bir birile elaqesi yuksek suretli grpc protokolu ile heyata kecirilecek bu da daxili sebeke gecikmelerini minimuma endirecekdir\n\nverilenler bazasinin strukturu yuksek melumat hacmini desteklemek ucun hisselere bolunmus ve releysnl hem de no sql sistemlerinin birge istifikasi esasinda qurulmusdur relasiyali transactional emeliyyatlar ucun postgresql baza sisteminden istifade olunacaq analitik ve boyuk veri emali ucun ise meqsedeuygun no sql helleri tətbiq edilecekdir cəld giris cıxıs emeliyyatlarini temin etmek ve server yukunu azaltmaq ucun redis keşleme mexanizmi aktivlesdirilecekdir melumatlarin strukturu duzgundur ve gələcekde elave sahelerin elave olunmasi zemanet altina alinir baza sorgularinin optimallasdirilmasi ucun xususi indeksleme strategiyalari tetbiq olunacaqdir bu da milyonlarla yazinin oldugu cedvellerde bele axtaris suretini millisaniyelere endirecekdir\n\napı dizayni ve sistemlerarasi inteqrasiya merhelesinde rest ve open api standartlarindan istifade edilecekdir kənar sistemlerle melumat mubadilesi tehlukesiz kanallar vasitesile heyata kecirilecek ve api keys oauth2 avtorizasiya protokollari tətbiq olunacaqdir sistemdeki emeliyyatlarin gecikmədən emal olunmasi ucun asinxron mesaj novbeleri aktiv olacaq rabbitmq ve ya kafka texnologiyasi vasitesile fon tapsiriqlari kesintisiz icra edileceqdir bu funksionalliq xususile boyuk hacmli fayllarin yuklenmesi ve kütlevi e poct gonderisleri zamani sistemin donmasinin tamamilə qarsisinis alir ucuncu teref xidmetlerinin integrasiyasi zamani avtomatik retry mexanizmleri yaradilacaq ve xeta jurnallari muntezam arxivlesdirilecekdir\n\nistifadeci interfeysi ve tecrubesi bolmesinde ux ui dizaynerlerimiz istifadeçilerin rahatligini esas prioritet kimi goturmusdur mobil uygunluq responsive dizayn prinsipleri ilə temin olunacaqdir brauzer ve cihaz ferqinden asili olmayaraq platforma eyni keyfiyyetde və suretde faliyyet gosterecekdir istifadeci panelleri sade aydin ve vizual olaraq celbedici formada tertib edilecekdir adaptiv komponentler sayesinde sehifelerin yuklenme sureti optimum seviyyeye getirilecekdir istifadeci davranislarinin tehlili ucun xususi istilik xeriteleri ve analitik modullar inteqrasiya olunacaqdir daxili axtaris mühərriki istifadeçilerin axtardigi melumatlari dərhal tapmasina komek edecek ve dynamic filtrləme imkani teqdim edecekdir\n\nkibertehlukesizlik ve data konfidensialligi layihenin en omemli dayaqlarindan biridir butun mefhi melumatlar tls ve ssl protokollari ile sifrelenerek sebeke uzerinden oturulecekdir veri bazasinda saxlanilan sifreler ve menfeat melumatlari hashing alqoritmleri ile qorunacaqdir mutəmadi olaraq xosniyyetli haker sinaglari ve penetrasiya testleri heyata kecirilecek xətalar dərhal aradan qaldirilacaqdir istifadeci yetkileri rola esaslanan giris nezareti rbac modeli ile idare olunacaqdir bu model selahiyyetsiz sexslerin kənar melumatlara giris imkanini sifira endirir habele iki faktorlu dogrulama 2fa sistemi elave olunaraq istifadeci hesablarinin tehlukesizlik seviyyesi maksimuma qaldirilacaqdir\n\navtomatlasdirilmis test prosesleri ci cd boru xetleri vasitesile proqram kodunun heyat dovrune inteqrasiya edilmisdir her bir kod yenilenmesi sinaq serverine yuklenmezden evvel avtomatik reqamsal unit testler inteqrasiya testleri ve e2e testlerden kecirileceyidir bu mexanizm proqram koda daxil edilen xətalarin canlı muhite dusmesinin qarsisina alir ve mehsulun keyfiyyet seviyyesini davamli olaraq yuksek tutur yeni versiyalarin canlı servere buraxilmasi zamani zero downtime deployment usullarindan istifade olunacaqdir kodun deyisdirilmesi zamani kohne versiyanin kopyasi ehtiyatda saxlanilacaq ve her hansi bir nasazliq aninda avtomatik olaraq kecmis stabil versiyaya qayidis roll-back temin olunacaqdir\n\nmelumatlarin kocurulmesi ve kohne sistemlerden yeni platformaya miqrasiyasi xususi yazilmis skriptler vasitesile heyata kecirilecekdir kocurulme prosesinden evvel melumatlarin temizlenmesi ve strukturlasdirilmasi icra olunacaq duplikasiya olunmus ve ya korlanmis yazilar sistemden cixarilacaqdir miqrasiya sinaqlari evvelceden izolasiya olunmus mühitde dəfələrlə yoxlanilacaq ve deqiqlik faizi yuz faiz olana qeder tənzimlənəcəkdir kecid gecə saatlarinda istifadeci aktivliyinin en asagi oldugu zaman kesiyinde icra olunacaqdir bu addim biznesinizin gundelik emeliyyatlarina hec bir maneclik yaratmadan kesintisiz miqrasiyani temin etmək ucun nəzərdə tutulmusdur\n\ntehsillendirme ve adaptasiya merhelesinde sirketinizin heyetine yeni proqram teminatindan istifade qaydalari etrafli izah olunacaqdir inzibatcilar ve adii istifadeciler ucun ayriliqda onlayn ve eyani telim sessiyalari teskil edilecekdir sistemin istifade telimatlari video derslikler ve addim addim senedlesdirilmis rehberler seklinde teqdim olunacaqdir telim kecmis emekdaslarin bilikleri test olunacaq ve suallari cavablandirilacaqdir bu yanaşma kecid prosesinin insan amilinden qaynaklanan ləngimələr olmadan rahatliqla tamamlanmasina imkan yaradacaqdir habele istifadecilerin fikirlerini toplamaq ucun xususi rəy modulu da yaradilacaqdir\n\nlayihe tamamlandiqdan sonra sistemin texniki desteyi ve monitorinqi yeddi gun yirmi dord saat esasi ile davam etdirilecekdir prometheus ve grafana kimi idareetme vasiteleri ile serverlerin yuklenmesi yaddas istifikasi ve sebeke trafiki anliq olaraq izlenilecekdir kritik seviyyede gostericiler artdiqda avtomatik xeberdarliq sistemleri texnik heyete bildiris gonderecekdir bu yanaşma olasi problemleri yaranmadan evvel tespit edib qarsisini almaga imkan verir sirketiniz ucun ayrilmis xususi menecer istenilen an suallarinizi cavablandirmaga hazir olacaqdir texniki destek komandamiz yarana bilecek her hansi bir sual ve ya intensiv sorqu zamanı derhal mudaxile etmeye hazirdir\n\nmaliyye ve resurs planlamasi cercivesinde teklif olunan budce ve muddet cədvəli layihe sertnamesine tam uygun olaraq hazirlanmisdir mehsulun ilkin beta versiyasinin dord hefde erzinde istifadeye verilmesi planlaşdirilir yekun mehsulun tam tehvil verilmesi ise umumi olaraq on iki hefdelik vaxt cercivesinde tamamlanacaqdir biz sizinlə uzunmuddetli ve ugurlu bir emekdasliga inaniriq ve bu layihenin biznesinizə boyuk deyer qatacagina eminlik bildiririk elave suallariniz ve taklifleriniz ucun bizimle istediyiniz an elaqe saxlaya bilersiniz diqqetiniz ucun tesekkur edirik korporativ desteyimiz ve proqram teminati inkisafi komandamiz her zaman xidmetinizdedir",
+    "output": "Hörmətli tərəfdaşımız,\n\nŞirkətimizin proqram təminatı və texnoloji həllər korporativ departamenti adından sizi salamlayırıq. Təqdim etdiyiniz yeni layihənin texniki şərtnaməsi və biznes tələbləri mütəxəssislərimiz tərəfindən ətraflı şəkildə nəzərdən keçirilmişdir. Müəyyən olunmuş hədəflər daxilində sistemin memarlığını və istifadəçi təcrübəsini ən yüksək səviyyəyə qaldırmaq üçün lazımı hazırlıq işlərinə başlanılmışdır. Bu məktubda layihənin icra mərhələləri, funksional modulların strukturu, texniki xarakteristikalar və təhlükəsizlik mexanizmləri haqda geniş məlumat təqdim edirik. Məqsədimiz rəqabətqabiliyyətli və dayanıqlı bir rəqəmsal məhsul ortaya çıxarmaqdır. Biznes proseslərinizin avtomatlaşdırılması və fəaliyyətinizin rəqəmsal mühitə köçürülməsi üçün lazımı olan bütün resurslarımız səfərbər edilmişdir.\n\nAgile və scrum metodologiyalarına əsaslanaraq idarə ediləcək olan bu inkişaf prosesi sprintlər şəklində bölünmüşdür. Hər bir sprint iki həftəlik müddəti əhatə edəcək və hər sprintin sonunda işlək funksionallıq sınaq mühitində sizə təqdim olunacaqdır. Bu üsul sayəsində layihədəki dəyişikliklər çevik şəkildə idarə olunacaq və biznes ehtiyaclarınıza uyğun olaraq operativ tənzimləmələr aparılacaqdır. Backlog siyahısındakı tapşırıqlar prioritet sırasına görə düzülmüşdür və komandamız ilk növbədə əsas müəssisə funksiyalarını tamamlamağa diqqət ayıracaqdır. Sprint qiymətləndirmə görüşləri vasitəsilə inkişaf tempini birgə izləyə biləcəyik. Hər sprintin yekununda həyata keçirilən demo sessiyaları platformanın gedişatını real vaxtda qiymətləndirməyə şərait yaradacaqdır.\n\nSistemin arxitektura strukturu mikroservis konsepsiyasına əsaslanaraq layihələndirilmişdir. Bu yanaşma hər bir modulun digərindən asili olmadan mürəkkəbləşmədən genişlənməsinə imkan yaradır. İstifadəçi idarəetməsi, ödəniş inteqrasiyaları, bildiriş servisləri və analitika paneli fərqli konteynerlərdə fəaliyyət göstərəcəkdir. Konteynerlərin orkestrasiyası Kubernetes vasitəsilə həyata keçiriləcəkdir. Bu isə sistemin yüklənməyə uyğun olaraq avtomatik ölçəklənməsini təmin edəcəkdir. Nəticədə pik vaxtlarında belə sistemin keçiricilik qabiliyyəti və cavab vermə sureti ən üst səviyyədə qalacaqdır. Servislərin bir-birilə əlaqəsi yüksək sürətli gRPC protokolu ilə həyata keçiriləcək. Bu da daxili şəbəkə gecikmələrini minimuma endirəcəkdir.\n\nVerilənlər bazasının strukturu yüksək məlumat həcmini dəstəkləmək üçün hissələrə bölünmüş və həm relational, həm də NoSQL sistemlərinin birgə istifadəsi əsasında qurulmuşdur. Relyasiyalı transactional əməliyyatlar üçün PostgreSQL baza sistemindən istifadə olunacaq. Analitik və böyük veri emalı üçün isə məqsədəuyğun NoSQL həlləri tətbiq ediləcəkdir. Cəld giriş-çıxış əməliyyatlarını təmin etmək və server yükünü azaltmaq üçün Redis keşləmə mexanizmi aktivləşdiriləcəkdir. Məlumatların strukturu düzgündür və gələcəkdə əlavə sahələrin əlavə olunması zəmanət altına alınır. Baza sorğularının optimallaşdırılması üçün xüsusi indeksləmə strategiyaları tətbiq olunacaqdır. Bu da milyonlarla yazının olduğu cədvəllərdə belə axtarış suretini millisaniyələrə endirəcəkdir.\n\nAPI dizaynı və sistemlərarası inteqrasiya mərhələsində REST və OpenAPI standartlarından istifadə ediləcəkdir. Kənar sistemlərlə məlumat mübadiləsi təhlükəsiz kanallar vasitəsilə həyata keçiriləcək və API keys və OAuth2 avtorizasiya protokolları tətbiq olunacaqdır. Sistemdəki əməliyyatların gecikmədən emal olunması üçün asinxron mesaj növbələri aktiv olacaq. RabbitMQ və ya Kafka texnologiyası vasitəsilə fon tapşırıqları kəsintisiz icra ediləcəkdir. Bu funksionallıq xüsusilə böyük həcmli faylların yüklənməsi və kütləvi e-poçt göndərişləri zamanı sistemin donmasının tamamilə qarşısını alır. Üçüncü tərəf xidmətlərinin inteqrasiyası zamanı avtomatik retry mexanizmləri yaradılacaq və xəta jurnalları müntəzəm arxivləşdiriləcəkdir.\n\nİstifadəçi interfeysi və təcrübəsi bölməsində UX/UI dizaynerlərimiz istifadəçilərin rahatlığını əsas prioritet kimi götürmüşdür. Mobil uyğunluq responsive dizayn prinsipləri ilə təmin olunacaqdır. Brauzer və cihaz fərqindən asili olmayaraq platforma eyni keyfiyyətdə və suretde fəaliyyət göstərəcəkdir. İstifadəçi panelləri sadə, aydın və vizual olaraq cəlbedici formada tərtib ediləcəkdir. Adaptiv komponentlər sayəsində səhifələrin yüklənmə sürəti optimum səviyyəyə gətiriləcəkdir. İstifadəçi davranışlarının təhlili üçün xüsusi istilik xəritələri və analitik modullar inteqrasiya olunacaqdır. Daxili axtarış mühərriki istifadəçilərin axtardığı məlumatları dərhal tapmasına kömək edəcək və dynamic filtrləmə imkanı təqdim edəcəkdir.\n\nKibertəhlükəsizlik və data konfidensiallığı layihənin ən önəmli dayaqlarından biridir. Bütün məxfi məlumatlar TLS və SSL protokolları ilə şifrələnərək şəbəkə üzərindən ötürüləcəkdir. Veri bazasında saxlanılan şifrələr və mənfəət məlumatları hashing alqoritmləri ilə qorunacaqdır. Mütəmadi olaraq xoşniyyətli haker sınaqları və penetrasiya testləri həyata keçiriləcək. Xətalar dərhal aradan qaldırılacaqdır. İstifadəçi yetkiləri rola əsaslanan giriş nəzarəti RBAC modeli ilə idarə olunacaqdır. Bu model səlahiyyətsiz şəxslərin kənar məlumatlara giriş imkanını sıfıra endirir. Habelə iki faktorlu doğrulama 2FA sistemi əlavə olunaraq istifadəçi hesablarının təhlükəsizlik səviyyəsi maksimuma qaldırılacaqdır.\n\nAvtomatlaşdırılmış test prosesləri CI/CD boru xətləri vasitəsilə proqram kodunun həyat dövrünə inteqrasiya edilmişdir. Hər bir kod yenilənməsi sınaq serverinə yüklənməzdən əvvəl avtomatik rəqəmsal unit testlər, inteqrasiya testləri və E2E testlərdən keçiriləcəkdir. Bu mexanizm proqram koduna daxil edilən xətaların canlı mühitə düşməsinin qarşısını alır və məhsulun keyfiyyət səviyyəsini davamlı olaraq yüksək tutur. Yeni versiyaların canlı serverə buraxılması zamanı zero downtime deployment üsullarından istifadə olunacaqdır. Kodun dəyişdirilməsi zamanı köhnə versiyanın kopiyası ehtiyatda saxlanılacaq və hər hansı bir nasazlıq anında avtomatik olaraq keçmiş stabil versiyaya qayıdış roll-back təmin olunacaqdır.\n\nMəlumatların köçürülməsi və köhnə sistemlərdən yeni platformaya miqrasiyası xüsusi yazılmış skriptlər vasitəsilə həyata keçiriləcəkdir. Köçürülmə prosesindən əvvəl məlumatların təmizlənməsi və strukturlaşdırılması icra olunacaq. Duplikasiya olunmuş və ya korlanmış yazılar sistemdən çıxarılacaqdır. Miqrasiya sınaqları əvvəlcədən izolasiya olunmuş mühitdə dəfələrlə yoxlanılacaq və dəqiqlik faizi yüz faiz olana qədər tənzimlənəcəkdir. Keçid gecə saatlarında istifadəçi aktivliyinin ən aşağı olduğu zaman kəsiyində icra olunacaqdır. Bu addım biznesinizin gündəlik əməliyyatlarına heç bir maneə yaratmadan kəsintisiz miqrasiyanı təmin etmək üçün nəzərdə tutulmuşdur.\n\nTəlimləndirmə və adaptasiya mərhələsində şirkətinizin heyətinə yeni proqram təminatından istifadə qaydaları ətraflı izah olunacaqdır. İnzibatçılar və adi istifadəçilər üçün ayrılıqda onlayn və əyanı təlim sessiyaları təşkil ediləcəkdir. Sistemin istifadə təlimatları video dərsliklər və addım-addım sənədləşdirilmiş rəhbərlər şəklində təqdim olunacaqdır. Təlim keçmiş əməkdaşların bilikləri test olunacaq və sualları cavablandırılacaqdır. Bu yanaşma keçid prosesinin insan amilindən qaynaklanan ləngimələr olmadan rahatlıqla tamamlanmasına imkan yaradacaqdır. Habelə istifadəçilərin fikirlərini toplamaq üçün xüsusi rəy modulu da yaradılacaqdır.\n\nLayihə tamamlandıqdan sonra sistemin texniki dəstəyi və monitorinqi yeddi gün, iyirmi dörd saat əsasında davam etdiriləcəkdir. Prometheus və Grafana kimi idarəetmə vasitələri ilə serverlərin yüklənməsi, yaddaş istifadəsi və şəbəkə trafiki anlıq olaraq izləniləcəkdir. Kritik səviyyədə göstəricilər artdıqda avtomatik xəbərdarlıq sistemləri texnik heyətə bildiriş göndərəcəkdir. Bu yanaşma ehtimal olunan problemləri yaranmadan əvvəl müəyyən edib qarşısını almağa imkan verir. Şirkətiniz üçün ayrılmış xüsusi menecer istənilən an suallarınızı cavablandırmağa hazır olacaqdır. Texniki dəstək komandamız yarana biləcək. Hər hansı bir sual və ya intensiv sorğu zamanı dərhal müdaxilə etməyə hazırdır.\n\nMaliyyə və resurs planlaması çərçivəsində təklif olunan büdcə və müddət cədvəli layihə şərtnaməsinə tam uyğun olaraq hazırlanmışdır. Məhsulun ilkin beta versiyasının dörd həftə ərzində istifadəyə verilməsi planlaşdırılır. Yekun məhsulun tam təhvil verilməsi isə ümumi olaraq on iki həftəlik vaxt çərçivəsində tamamlanacaqdır. Biz sizinlə uzunmüddətli və uğurlu bir əməkdaşlığa inanırıq və bu layihənin biznesinizə böyük dəyər qatacağına əminlik bildiririk. Əlavə suallarınız və təklifləriniz üçün bizimlə istədiyiniz an əlaqə saxlaya bilərsiniz. Diqqətiniz üçün təşəkkür edirik. Korporativ dəstəyimiz və proqram təminatı inkişafı komandamız hər zaman xidmətinizdədir.",
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-002",
+    "input": "Muellim telebelerin suallarini cavablandirdi",
+    "expected": "Müəllim tələbələrin suallarını cavablandırdı.",
+    "output": "Müəllim tələbələrin suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-005",
+    "input": "Telimci telebelerin suallarini cavablandirdi",
+    "expected": "Təlimçi tələbələrin suallarını cavablandırdı.",
+    "output": "Təlimçi tələbələrin suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-008",
+    "input": "Mektebin direktoru telebelerin suallarini cavablandirdi",
+    "expected": "Məktəbin direktoru tələbələrin suallarını cavablandırdı.",
+    "output": "Məktəbin direktoru tələbələrin suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-014",
+    "input": "Kursun rehberi telebelerin suallarini cavablandirdi",
+    "expected": "Kursun rəhbəri tələbələrin suallarını cavablandırdı.",
+    "output": "Kursun rəhbəri tələbələrin suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-032",
+    "input": "Qeydiyyat operatoru senedin suretini gonderdi",
+    "expected": "Qeydiyyat operatoru sənədin surətini göndərdi.",
+    "output": "Qeydiyyat operatoru sənədin surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-035",
+    "input": "Arxiv iscisi senedin suretini gonderdi",
+    "expected": "Arxiv işçisi sənədin surətini göndərdi.",
+    "output": "Arxiv işçisi sənədin surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-038",
+    "input": "Sobenin rehberi senedin suretini gonderdi",
+    "expected": "Şöbənin rəhbəri sənədin surətini göndərdi.",
+    "output": "Şöbənin rəhbəri sənədin surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-044",
+    "input": "Mesul icraci senedin suretini gonderdi",
+    "expected": "Məsul icraçı sənədin surətini göndərdi.",
+    "output": "Məsul icraçı sənədin surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-048",
+    "input": "Bankin emekdasi musterinin muracietini cavablandirdi",
+    "expected": "Bankın əməkdaşı müştərinin müraciətini cavablandırdı.",
+    "output": "Bankın əməkdaşı müştərinin müraciətini cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-050",
+    "input": "Musteri numayendesi muqavilenin sertlerini izah etdi",
+    "expected": "Müştəri nümayəndəsi müqavilənin şərtlərini izah etdi.",
+    "output": "Müştəri nümayəndəsi müqavilənin şərtlərini izah etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-053",
+    "input": "Filialin rehberi muqavilenin sertlerini izah etdi",
+    "expected": "Filialın rəhbəri müqavilənin şərtlərini izah etdi.",
+    "output": "Filialın rəhbəri müqavilənin şərtlərini izah etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-054",
+    "input": "Filialin rehberi musterinin muracietini cavablandirdi",
+    "expected": "Filialın rəhbəri müştərinin müraciətini cavablandırdı.",
+    "output": "Filialın rəhbəri müştərinin müraciətini cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-057",
+    "input": "Maliyye mutexessisi mushterinin muracietini cavablandirdi",
+    "expected": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandırdı.",
+    "output": "Maliyyə mütəxəssisi müştərinin müraciətini cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-059",
+    "input": "Kredit mutexessisi muqavilenin sertlerini izah etdi",
+    "expected": "Kredit mütəxəssisi müqavilənin şərtlərini izah etdi.",
+    "output": "Kredit mütəxəssisi müqavilənin şərtlərini izah etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-060",
+    "input": "Kredit mutexessisi musterinin muracietini cavablandirdi",
+    "expected": "Kredit mütəxəssisi müştərinin müraciətini cavablandırdı.",
+    "output": "Kredit mütəxəssisi müştərinin müraciətini cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-100",
+    "input": "Insan resurslari mutexessisi gorusun vaxtini mektubla bildirdi",
+    "expected": "İnsan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+    "output": "İnsan resursları mütəxəssisi görüşün vaxtını məktubla bildirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-102",
+    "input": "Insan resurslari mutexessisi muracietin alindighini tesdiqledi",
+    "expected": "İnsan resursları mütəxəssisi müraciətin alındığını təsdiqlədi.",
+    "output": "İnsan resursları mütəxəssisi müraciətin alındığını təsdiqlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-118",
+    "input": "Tedqiqat qrupunun uzvu tecrubenin neticelerini muqayise etdi",
+    "expected": "Tədqiqat qrupunun üzvü təcrübənin nəticələrini müqayisə etdi.",
+    "output": "Tədqiqat qrupunun üzvü təcrübənin nəticələrini müqayisə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-119",
+    "input": "Tedqiqat qrupunun uzvu olcme cihazini yoxladi",
+    "expected": "Tədqiqat qrupunun üzvü ölçmə cihazını yoxladı.",
+    "output": "Tədqiqat qrupunun üzvü ölçmə cihazını yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-120",
+    "input": "Tedqiqat qrupunun uzvu yeni tedqiqatin planini hazirladi",
+    "expected": "Tədqiqat qrupunun üzvü yeni tədqiqatın planını hazırladı.",
+    "output": "Tədqiqat qrupunun üzvü yeni tədqiqatın planını hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-122",
+    "input": "Muzeyin emekdashi qonaqlarin suallarini cavablandirdi",
+    "expected": "Muzeyin əməkdaşı qonaqların suallarını cavablandırdı.",
+    "output": "Muzeyin əməkdaşı qonaqların suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-123",
+    "input": "Muzeyin emekdasi sergi haqqinda melumat hazirladi",
+    "expected": "Muzeyin əməkdaşı sərgi haqqında məlumat hazırladı.",
+    "output": "Muzeyin əməkdaşı sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-124",
+    "input": "Serginin rehberi tedbirin proqramini teqdim etdi",
+    "expected": "Sərginin rəhbəri tədbirin proqramını təqdim etdi.",
+    "output": "Sərginin rəhbəri tədbirin proqramını təqdim etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-125",
+    "input": "Serginin rehberi qonaqlarin suallarini cavablandirdi",
+    "expected": "Sərginin rəhbəri qonaqların suallarını cavablandırdı.",
+    "output": "Sərginin rəhbəri qonaqların suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-126",
+    "input": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "expected": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "output": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-128",
+    "input": "Senetsunas qonaqlarin suallarini cavablandirdi",
+    "expected": "Sənətşünas qonaqların suallarını cavablandırdı.",
+    "output": "Sənətşünas qonaqların suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-129",
+    "input": "Senetsunas sergi haqqinda melumat hazirladi",
+    "expected": "Sənətşünas sərgi haqqında məlumat hazırladı.",
+    "output": "Sənətşünas sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-132",
+    "input": "Kitabxananin ishchisi sergi haqqinda melumat hazirladi",
+    "expected": "Kitabxananın işçisi sərgi haqqında məlumat hazırladı.",
+    "output": "Kitabxananın işçisi sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-134",
+    "input": "Medeniyyet merkezinin numayendesi qonaqlarin suallarini cavablandirdi",
+    "expected": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandırdı.",
+    "output": "Mədəniyyət mərkəzinin nümayəndəsi qonaqların suallarını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-135",
+    "input": "Medeniyyet merkezinin numayendesi sergi haqqinda melumat hazirladi",
+    "expected": "Mədəniyyət mərkəzinin nümayəndəsi sərgi haqqında məlumat hazırladı.",
+    "output": "Mədəniyyət mərkəzinin nümayəndəsi sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-168",
+    "input": "Ekoloq su menbeyini musahide etdi",
+    "expected": "Ekoloq su mənbəyini müşahidə etdi.",
+    "output": "Ekoloq su mənbəyini müşahidə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-174",
+    "input": "Parkin emekdasi su menbeyini musahide etdi",
+    "expected": "Parkın əməkdaşı su mənbəyini müşahidə etdi.",
+    "output": "Parkın əməkdaşı su mənbəyini müşahidə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-175",
+    "input": "Tebiet konullusu agaclarin veziyyetini yoxladi",
+    "expected": "Təbiət könüllüsü ağacların vəziyyətini yoxladı.",
+    "output": "Təbiət könüllüsü ağacların vəziyyətini yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-177",
+    "input": "Tebiet konullusu su menbeyini mushahide etdi",
+    "expected": "Təbiət könüllüsü su mənbəyini müşahidə etdi.",
+    "output": "Təbiət könüllüsü su mənbəyini müşahidə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-180",
+    "input": "Etraf muhit mutexessisi su menbeyini musahide etdi",
+    "expected": "Ətraf mühit mütəxəssisi su mənbəyini müşahidə etdi.",
+    "output": "Ətraf mühit mütəxəssisi su mənbəyini müşahidə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-184",
+    "input": "Idmanci mesqin planini nezerden kecirdi",
+    "expected": "İdmançı məşqin planını nəzərdən keçirdi.",
+    "output": "İdmançı məşqin planını nəzərdən keçirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-185",
+    "input": "Idmanci yeni hereketi izah etdi",
+    "expected": "İdmançı yeni hərəkəti izah etdi.",
+    "output": "İdmançı yeni hərəkəti izah etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-190",
+    "input": "Idman zalinin rehberi mesqin planini nezerden kecirdi",
+    "expected": "İdman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+    "output": "İdman zalının rəhbəri məşqin planını nəzərdən keçirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-192",
+    "input": "Idman zalinin rehberi yarishin neticelerini muzakire etdi",
+    "expected": "İdman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+    "output": "İdman zalının rəhbəri yarışın nəticələrini müzakirə etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-197",
+    "input": "Anam kitablari refe duzdu",
+    "expected": "Anam kitabları rəfə düzdü.",
+    "output": "Anam kitabları rəfə düzdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-200",
+    "input": "Atam kitablari refe duzdu",
+    "expected": "Atam kitabları rəfə düzdü.",
+    "output": "Atam kitabları rəfə düzdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-203",
+    "input": "Bacim kitablari refe duzdu",
+    "expected": "Bacım kitabları rəfə düzdü.",
+    "output": "Bacım kitabları rəfə düzdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-209",
+    "input": "Dostum kitablari refe duzdu",
+    "expected": "Dostum kitabları rəfə düzdü.",
+    "output": "Dostum kitabları rəfə düzdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-235",
+    "input": "Marsrutun rehberi avtobusun gelis vaxtini yoxladi",
+    "expected": "Marşrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+    "output": "Marşrutun rəhbəri avtobusun gəliş vaxtını yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-237",
+    "input": "Marshrutun rehberi yol haqqinda melumat topladi",
+    "expected": "Marşrutun rəhbəri yol haqqında məlumat topladı.",
+    "output": "Marşrutun rəhbəri yol haqqında məlumat topladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-243",
+    "input": "Huquqsunas qerarin suretini gonderdi",
+    "expected": "Hüquqşünas qərarın surətini göndərdi.",
+    "output": "Hüquqşünas qərarın surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-249",
+    "input": "Notarius qerarin suretini gonderdi",
+    "expected": "Notarius qərarın surətini göndərdi.",
+    "output": "Notarius qərarın surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-252",
+    "input": "Huquq shobesinin emekdashi qerarin suretini gonderdi",
+    "expected": "Hüquq şöbəsinin əməkdaşı qərarın surətini göndərdi.",
+    "output": "Hüquq şöbəsinin əməkdaşı qərarın surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-255",
+    "input": "Mehkemenin numayendesi qerarin suretini gonderdi",
+    "expected": "Məhkəmənin nümayəndəsi qərarın surətini göndərdi.",
+    "output": "Məhkəmənin nümayəndəsi qərarın surətini göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-273",
+    "input": "Redaktor oxucunun sualini cavablandirdi",
+    "expected": "Redaktor oxucunun sualını cavablandırdı.",
+    "output": "Redaktor oxucunun sualını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-279",
+    "input": "Meqalenin muellifi oxucunun sualini cavablandirdi",
+    "expected": "Məqalənin müəllifi oxucunun sualını cavablandırdı.",
+    "output": "Məqalənin müəllifi oxucunun sualını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-282",
+    "input": "Neshriyyatin emekdashi oxucunun sualini cavablandirdi",
+    "expected": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandırdı.",
+    "output": "Nəşriyyatın əməkdaşı oxucunun sualını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-285",
+    "input": "Jurnalin rehberi oxucunun sualini cavablandirdi",
+    "expected": "Jurnalın rəhbəri oxucunun sualını cavablandırdı.",
+    "output": "Jurnalın rəhbəri oxucunun sualını cavablandırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-289",
+    "input": "Icra numayendesi sakinlerin muracietini qeyd etdi",
+    "expected": "İcra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+    "output": "İcra nümayəndəsi sakinlərin müraciətini qeyd etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-290",
+    "input": "Icra numayendesi erazinin xeritesini yoxladi",
+    "expected": "İcra nümayəndəsi ərazinin xəritəsini yoxladı.",
+    "output": "İcra nümayəndəsi ərazinin xəritəsini yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  }
+]

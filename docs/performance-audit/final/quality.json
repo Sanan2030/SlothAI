@@ -1,0 +1,422 @@
+{
+  "additional-gold-200.json": {
+    "sentences": 200,
+    "exact": 100,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 740,
+      "fp": 146,
+      "fn": 230,
+      "precision": 0.835214446952596,
+      "recall": 0.7628865979381443,
+      "f05": 0.8196721311475411,
+      "required": 970,
+      "abstainedErrors": 84,
+      "errorAbstentionRate": 0.0865979381443299,
+      "correctWords": 515,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "corporate-letter.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "diverse-release-300.json": {
+    "sentences": 300,
+    "exact": 291,
+    "identitySentences": 60,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 233,
+      "fp": 2,
+      "fn": 7,
+      "precision": 0.9914893617021276,
+      "recall": 0.9708333333333333,
+      "f05": 0.9872881355932203,
+      "required": 240,
+      "abstainedErrors": 7,
+      "errorAbstentionRate": 0.029166666666666667,
+      "correctWords": 1024,
+      "changedCorrectWords": 2,
+      "falsePositiveRateOnCorrectWords": 0.001953125,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "email-holdout.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "essay.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "holdout-corpus.json": {
+    "sentences": 265,
+    "exact": 263,
+    "identitySentences": 219,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 52,
+      "fp": 1,
+      "fn": 8,
+      "precision": 0.9811320754716981,
+      "recall": 0.8666666666666667,
+      "f05": 0.9558823529411765,
+      "required": 60,
+      "abstainedErrors": 7,
+      "errorAbstentionRate": 0.11666666666666667,
+      "correctWords": 1840,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "hybrid-regression-corpus.json": {
+    "sentences": 240,
+    "exact": 200,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 784,
+      "fp": 60,
+      "fn": 165,
+      "precision": 0.9289099526066351,
+      "recall": 0.8261327713382508,
+      "f05": 0.9063583815028903,
+      "required": 949,
+      "abstainedErrors": 105,
+      "errorAbstentionRate": 0.11064278187565858,
+      "correctWords": 371,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "independent-gold-baseline.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "independent-gold-v2.json": {
+    "sentences": 800,
+    "exact": 460,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 2639,
+      "fp": 317,
+      "fn": 897,
+      "precision": 0.8927604871447903,
+      "recall": 0.7463235294117647,
+      "f05": 0.8590494791666667,
+      "required": 3536,
+      "abstainedErrors": 580,
+      "errorAbstentionRate": 0.16402714932126697,
+      "correctWords": 4845,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "independent-reviewed.json": {
+    "sentences": 41,
+    "exact": 27,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 139,
+      "fp": 17,
+      "fn": 46,
+      "precision": 0.8910256410256411,
+      "recall": 0.7513513513513513,
+      "f05": 0.8590852904820767,
+      "required": 185,
+      "abstainedErrors": 29,
+      "errorAbstentionRate": 0.15675675675675677,
+      "correctWords": 210,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "named-entity-holdout.json": {
+    "sentences": 432,
+    "exact": 432,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 1101,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "required": 1101,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": 0,
+      "correctWords": 504,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "neural-thirteen.json": {
+    "sentences": 13,
+    "exact": 13,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "required": 13,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": 0,
+      "correctWords": 37,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "platform-proposal.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "punctuation-holdout.json": {
+    "sentences": 336,
+    "exact": 336,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 562,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "required": 562,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": 0,
+      "correctWords": 1505,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "release-holdout-300.json": {
+    "sentences": 300,
+    "exact": 299,
+    "identitySentences": 60,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 1042,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.9990412272291467,
+      "f05": 0.9998080982536941,
+      "required": 1043,
+      "abstainedErrors": 1,
+      "errorAbstentionRate": 0.0009587727708533077,
+      "correctWords": 570,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "rsd-it-holdout.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "technical-day-extended.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "technical-day.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "typed-entity-holdout.json": {
+    "sentences": 1128,
+    "exact": 1128,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 1543,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f05": 1,
+      "required": 1543,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": 0,
+      "correctWords": 2461,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  },
+  "workday.json": {
+    "sentences": 0,
+    "exact": 0,
+    "identitySentences": 0,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f05": null,
+      "required": 0,
+      "abstainedErrors": 0,
+      "errorAbstentionRate": null,
+      "correctWords": 0,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": null,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  }
+}

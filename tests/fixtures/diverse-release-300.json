@@ -1,0 +1,4509 @@
+{
+  "kind": "independent-release-holdout",
+  "version": 1,
+  "certification": "assistant-authored, not human-reviewed",
+  "policy": "Written before code changes; not used for training. Each distinct error pair occurs at most twice. Editorial targets are immutable.",
+  "domains": 24,
+  "cases": [
+    {
+      "id": "diverse-001",
+      "module": "text",
+      "domain": "education",
+      "input": "Sagirdler kitabxanada səssizcə oxuyurdular.",
+      "expected": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Sagirdler",
+          "expected": "Şagirdlər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-002",
+      "module": "text",
+      "domain": "education",
+      "input": "Müəllim qiymetlendirme meyarlarını lövhəyə yazdı.",
+      "expected": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qiymetlendirme",
+          "expected": "qiymətləndirmə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-003",
+      "module": "text",
+      "domain": "education",
+      "input": "Laboratoriyada yeni mikroskop qurasdirildi.",
+      "expected": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qurasdirildi",
+          "expected": "quraşdırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-004",
+      "module": "text",
+      "domain": "education",
+      "input": "Derslikdeki xəritə yeniləndi.",
+      "expected": "Dərslikdəki xəritə yeniləndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Derslikdeki",
+          "expected": "Dərslikdəki"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-005",
+      "module": "text",
+      "domain": "education",
+      "input": "Sinif numayendesi tədbirin vaxtını bildirdi.",
+      "expected": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "numayendesi",
+          "expected": "nümayəndəsi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-006",
+      "module": "text",
+      "domain": "education",
+      "input": "Təqaüd üçün erizeler qəbul edilir.",
+      "expected": "Təqaüd üçün ərizələr qəbul edilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "erizeler",
+          "expected": "ərizələr"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-007",
+      "module": "text",
+      "domain": "education",
+      "input": "Mektebliler ekskursiyadan qayıtdılar.",
+      "expected": "Məktəblilər ekskursiyadan qayıtdılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mektebliler",
+          "expected": "Məktəblilər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-008",
+      "module": "text",
+      "domain": "education",
+      "input": "Valideynler iclasda iştirak etdilər.",
+      "expected": "Valideynlər iclasda iştirak etdilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Valideynler",
+          "expected": "Valideynlər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-009",
+      "module": "text",
+      "domain": "education",
+      "input": "Universitet arxivə yeni senedler göndərdi.",
+      "expected": "Universitet arxivə yeni sənədlər göndərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "senedler",
+          "expected": "sənədlər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-010",
+      "module": "text",
+      "domain": "education",
+      "input": "İmtahanın nəticələri sabah aciqlanacaq.",
+      "expected": "İmtahanın nəticələri sabah açıqlanacaq.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "aciqlanacaq",
+          "expected": "açıqlanacaq"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-011",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Həkim xəstənin tezyiqini ölçdü.",
+      "expected": "Həkim xəstənin təzyiqini ölçdü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tezyiqini",
+          "expected": "təzyiqini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-012",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Tibb bacısı dermanin dozasını yoxladı.",
+      "expected": "Tibb bacısı dərmanın dozasını yoxladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dermanin",
+          "expected": "dərmanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-013",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Poliklinikada növbə sistemi yenilendi.",
+      "expected": "Poliklinikada növbə sistemi yeniləndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yenilendi",
+          "expected": "yeniləndi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-014",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Emeliyyatdan sonra müşahidə davam etdi.",
+      "expected": "Əməliyyatdan sonra müşahidə davam etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Emeliyyatdan",
+          "expected": "Əməliyyatdan"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-015",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Rentgen muayinesi günortaya təyin olundu.",
+      "expected": "Rentgen müayinəsi günortaya təyin olundu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muayinesi",
+          "expected": "müayinəsi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-016",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Uşağın peyvənd cədvəli hazirdir.",
+      "expected": "Uşağın peyvənd cədvəli hazırdır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hazirdir",
+          "expected": "hazırdır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-017",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Aptekdə resept esasinda dərman verilir.",
+      "expected": "Aptekdə resept əsasında dərman verilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "esasinda",
+          "expected": "əsasında"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-018",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Təcili yardım briqadasi ünvana çatdı.",
+      "expected": "Təcili yardım briqadası ünvana çatdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "briqadasi",
+          "expected": "briqadası"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-019",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Cərrah yaranın sargisini dəyişdi.",
+      "expected": "Cərrah yaranın sarğısını dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sargisini",
+          "expected": "sarğısını"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-020",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Mualice planına əlavə müayinə daxil edildi.",
+      "expected": "Müalicə planına əlavə müayinə daxil edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mualice",
+          "expected": "Müalicə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-021",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Fermerlər yazlıq əkinə hazirlasirlar.",
+      "expected": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hazirlasirlar",
+          "expected": "hazırlaşırlar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-022",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Suvarma kanalı cokuntuden təmizləndi.",
+      "expected": "Suvarma kanalı çöküntüdən təmizləndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "cokuntuden",
+          "expected": "çöküntüdən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-023",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Buğda sahəsində zererverici aşkarlanıb.",
+      "expected": "Buğda sahəsində zərərverici aşkarlanıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "zererverici",
+          "expected": "zərərverici"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-024",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Bağban ağacların budaqlarini kəsdi.",
+      "expected": "Bağban ağacların budaqlarını kəsdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "budaqlarini",
+          "expected": "budaqlarını"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-025",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Torpagin rütubəti cihazla ölçülür.",
+      "expected": "Torpağın rütubəti cihazla ölçülür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Torpagin",
+          "expected": "Torpağın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-026",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Istixanada pomidor şitilləri böyüyür.",
+      "expected": "İstixanada pomidor şitilləri böyüyür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Istixanada",
+          "expected": "İstixanada"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-027",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Məhsulun dasinmasi üçün soyuducu ayrıldı.",
+      "expected": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dasinmasi",
+          "expected": "daşınması"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-028",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Gübrənin tərkibi laboratoriyada yoxlanildi.",
+      "expected": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yoxlanildi",
+          "expected": "yoxlanıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-029",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Arıçılar pətəkləri kölgəyə yerlesdirdiler.",
+      "expected": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yerlesdirdiler",
+          "expected": "yerləşdirdilər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-030",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Taxıl anbarinin damı təmir edildi.",
+      "expected": "Taxıl anbarının damı təmir edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "anbarinin",
+          "expected": "anbarının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-031",
+      "module": "text",
+      "domain": "transport",
+      "input": "Marşrutun dayanacaqlari xəritədə göstərilib.",
+      "expected": "Marşrutun dayanacaqları xəritədə göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dayanacaqlari",
+          "expected": "dayanacaqları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-032",
+      "module": "text",
+      "domain": "transport",
+      "input": "Sürücü yükün cekisini yoxladı.",
+      "expected": "Sürücü yükün çəkisini yoxladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "cekisini",
+          "expected": "çəkisini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-033",
+      "module": "text",
+      "domain": "transport",
+      "input": "Qatarin yola düşmə vaxtı dəyişdi.",
+      "expected": "Qatarın yola düşmə vaxtı dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qatarin",
+          "expected": "Qatarın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-034",
+      "module": "text",
+      "domain": "transport",
+      "input": "Sernisinler avtobusun gəlməsini gözlədilər.",
+      "expected": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Sernisinler",
+          "expected": "Sərnişinlər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-035",
+      "module": "text",
+      "domain": "transport",
+      "input": "Liman işçiləri konteyneri bosaltdilar.",
+      "expected": "Liman işçiləri konteyneri boşaltdılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "bosaltdilar",
+          "expected": "boşaltdılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-036",
+      "module": "text",
+      "domain": "transport",
+      "input": "Tramvayin qapıları avtomatik bağlandı.",
+      "expected": "Tramvayın qapıları avtomatik bağlandı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Tramvayin",
+          "expected": "Tramvayın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-037",
+      "module": "text",
+      "domain": "transport",
+      "input": "Teyyarenin enişi uğurla başa çatdı.",
+      "expected": "Təyyarənin enişi uğurla başa çatdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Teyyarenin",
+          "expected": "Təyyarənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-038",
+      "module": "text",
+      "domain": "transport",
+      "input": "Velosiped yolu çayın kenarindan keçir.",
+      "expected": "Velosiped yolu çayın kənarından keçir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "kenarindan",
+          "expected": "kənarından"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-039",
+      "module": "text",
+      "domain": "transport",
+      "input": "Neqliyyat sıxlığı axşam artdı.",
+      "expected": "Nəqliyyat sıxlığı axşam artdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Neqliyyat",
+          "expected": "Nəqliyyat"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-040",
+      "module": "text",
+      "domain": "transport",
+      "input": "Gəminin muherriki yenidən işə salındı.",
+      "expected": "Gəminin mühərriki yenidən işə salındı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muherriki",
+          "expected": "mühərriki"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-041",
+      "module": "text",
+      "domain": "finance",
+      "input": "Mühasib ödəniş tapsirigini imzaladı.",
+      "expected": "Mühasib ödəniş tapşırığını imzaladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tapsirigini",
+          "expected": "tapşırığını"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-042",
+      "module": "text",
+      "domain": "finance",
+      "input": "Hesabatda gəlir və xərclər gosterilib.",
+      "expected": "Hesabatda gəlir və xərclər göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gosterilib",
+          "expected": "göstərilib"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-043",
+      "module": "text",
+      "domain": "finance",
+      "input": "Sığorta muqavilesi bir il qüvvədədir.",
+      "expected": "Sığorta müqaviləsi bir il qüvvədədir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muqavilesi",
+          "expected": "müqaviləsi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-044",
+      "module": "text",
+      "domain": "finance",
+      "input": "Borcun qaytarilma müddəti uzadıldı.",
+      "expected": "Borcun qaytarılma müddəti uzadıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qaytarilma",
+          "expected": "qaytarılma"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-045",
+      "module": "text",
+      "domain": "finance",
+      "input": "İnvestorlar layihənin riskini qiymetlendirdiler.",
+      "expected": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qiymetlendirdiler",
+          "expected": "qiymətləndirdilər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-046",
+      "module": "text",
+      "domain": "finance",
+      "input": "Əmanətin faiz dərəcəsi deyismeyib.",
+      "expected": "Əmanətin faiz dərəcəsi dəyişməyib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "deyismeyib",
+          "expected": "dəyişməyib"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-047",
+      "module": "text",
+      "domain": "finance",
+      "input": "Vergi beyannamesi vaxtında təqdim edildi.",
+      "expected": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "beyannamesi",
+          "expected": "bəyannaməsi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-048",
+      "module": "text",
+      "domain": "finance",
+      "input": "Budceden təmir üçün vəsait ayrılıb.",
+      "expected": "Büdcədən təmir üçün vəsait ayrılıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Budceden",
+          "expected": "Büdcədən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-049",
+      "module": "text",
+      "domain": "finance",
+      "input": "Kassir qəbzin surətini musteriye verdi.",
+      "expected": "Kassir qəbzin surətini müştəriyə verdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "musteriye",
+          "expected": "müştəriyə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-050",
+      "module": "text",
+      "domain": "finance",
+      "input": "Maliyyə şöbəsi hesablamani tamamladı.",
+      "expected": "Maliyyə şöbəsi hesablamanı tamamladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hesablamani",
+          "expected": "hesablamanı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-051",
+      "module": "text",
+      "domain": "law",
+      "input": "Vəkil muqavilenin şərtlərini izah etdi.",
+      "expected": "Vəkil müqavilənin şərtlərini izah etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muqavilenin",
+          "expected": "müqavilənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-052",
+      "module": "text",
+      "domain": "law",
+      "input": "Mehkemenin qərarı tərəflərə göndərildi.",
+      "expected": "Məhkəmənin qərarı tərəflərə göndərildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mehkemenin",
+          "expected": "Məhkəmənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-053",
+      "module": "text",
+      "domain": "law",
+      "input": "Şahid hadisənin vaxtını deqiqlesdirdi.",
+      "expected": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "deqiqlesdirdi",
+          "expected": "dəqiqləşdirdi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-054",
+      "module": "text",
+      "domain": "law",
+      "input": "Ərizənin qeydiyyat nömrəsi saxlanildi.",
+      "expected": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "saxlanildi",
+          "expected": "saxlanıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-055",
+      "module": "text",
+      "domain": "law",
+      "input": "Hakim iclasi sabaha təxirə saldı.",
+      "expected": "Hakim iclası sabaha təxirə saldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "iclasi",
+          "expected": "iclası"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-056",
+      "module": "text",
+      "domain": "law",
+      "input": "Notarius sənədin heqiqiliyini təsdiqlədi.",
+      "expected": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "heqiqiliyini",
+          "expected": "həqiqiliyini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-057",
+      "module": "text",
+      "domain": "law",
+      "input": "Iddiaci əlavə sübut təqdim etdi.",
+      "expected": "İddiaçı əlavə sübut təqdim etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Iddiaci",
+          "expected": "İddiaçı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-058",
+      "module": "text",
+      "domain": "law",
+      "input": "Qanunun yeni redaksiyasi dərc olundu.",
+      "expected": "Qanunun yeni redaksiyası dərc olundu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "redaksiyasi",
+          "expected": "redaksiyası"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-059",
+      "module": "text",
+      "domain": "law",
+      "input": "Mubahise barışıq yolu ilə həll edildi.",
+      "expected": "Mübahisə barışıq yolu ilə həll edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mubahise",
+          "expected": "Mübahisə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-060",
+      "module": "text",
+      "domain": "law",
+      "input": "Hüquqşünas etibarnameni nəzərdən keçirdi.",
+      "expected": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "etibarnameni",
+          "expected": "etibarnaməni"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-061",
+      "module": "text",
+      "domain": "software",
+      "input": "Backend komandasi yeni modulu sınaqdan keçirdi.",
+      "expected": "Backend komandası yeni modulu sınaqdan keçirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "komandasi",
+          "expected": "komandası"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-062",
+      "module": "text",
+      "domain": "software",
+      "input": "API sorğusunun cavabı JSON formatindadir.",
+      "expected": "API sorğusunun cavabı JSON formatındadır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "formatindadir",
+          "expected": "formatındadır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-063",
+      "module": "text",
+      "domain": "software",
+      "input": "Database baglantisi bərpa edildi.",
+      "expected": "Database bağlantısı bərpa edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "baglantisi",
+          "expected": "bağlantısı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-064",
+      "module": "text",
+      "domain": "software",
+      "input": "Developer commit tarixcesini yoxladı.",
+      "expected": "Developer commit tarixçəsini yoxladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tarixcesini",
+          "expected": "tarixçəsini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-065",
+      "module": "text",
+      "domain": "software",
+      "input": "Frontend komponentinin ölçüsü azaldildi.",
+      "expected": "Frontend komponentinin ölçüsü azaldıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "azaldildi",
+          "expected": "azaldıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-066",
+      "module": "text",
+      "domain": "software",
+      "input": "Serverdə xəta jurnalı yaradildi.",
+      "expected": "Serverdə xəta jurnalı yaradıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yaradildi",
+          "expected": "yaradıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-067",
+      "module": "text",
+      "domain": "software",
+      "input": "Framework yenilenenden sonra testlər keçdi.",
+      "expected": "Framework yenilənəndən sonra testlər keçdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yenilenenden",
+          "expected": "yenilənəndən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-068",
+      "module": "text",
+      "domain": "software",
+      "input": "Deploy zamanı xidmət dayandirilmadi.",
+      "expected": "Deploy zamanı xidmət dayandırılmadı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dayandirilmadi",
+          "expected": "dayandırılmadı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-069",
+      "module": "text",
+      "domain": "software",
+      "input": "Cache acarinin müddəti bitdi.",
+      "expected": "Cache açarının müddəti bitdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "acarinin",
+          "expected": "açarının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-070",
+      "module": "text",
+      "domain": "software",
+      "input": "TypeScript kodunda şərt sadelesdirildi.",
+      "expected": "TypeScript kodunda şərt sadələşdirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sadelesdirildi",
+          "expected": "sadələşdirildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-071",
+      "module": "text",
+      "domain": "security",
+      "input": "Parolun uzunluğu tehlukesizlik tələbini ödəyir.",
+      "expected": "Parolun uzunluğu təhlükəsizlik tələbini ödəyir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tehlukesizlik",
+          "expected": "təhlükəsizlik"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-072",
+      "module": "text",
+      "domain": "security",
+      "input": "Şəbəkədə şübhəli bağlantı askarlandi.",
+      "expected": "Şəbəkədə şübhəli bağlantı aşkarlandı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "askarlandi",
+          "expected": "aşkarlandı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-073",
+      "module": "text",
+      "domain": "security",
+      "input": "İstifadəçinin giriş hüququ mehdudlasdirildi.",
+      "expected": "İstifadəçinin giriş hüququ məhdudlaşdırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "mehdudlasdirildi",
+          "expected": "məhdudlaşdırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-074",
+      "module": "text",
+      "domain": "security",
+      "input": "Ehtiyat nüsxənin şifrəsi ayrıca saxlanilir.",
+      "expected": "Ehtiyat nüsxənin şifrəsi ayrıca saxlanılır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "saxlanilir",
+          "expected": "saxlanılır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-075",
+      "module": "text",
+      "domain": "security",
+      "input": "Monitorinq sistemi xeberdarliq göndərdi.",
+      "expected": "Monitorinq sistemi xəbərdarlıq göndərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "xeberdarliq",
+          "expected": "xəbərdarlıq"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-076",
+      "module": "text",
+      "domain": "security",
+      "input": "Firewall qaydalari yenidən yoxlanıldı.",
+      "expected": "Firewall qaydaları yenidən yoxlanıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qaydalari",
+          "expected": "qaydaları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-077",
+      "module": "text",
+      "domain": "security",
+      "input": "Hesabın fəaliyyəti müvəqqəti dayandirildi.",
+      "expected": "Hesabın fəaliyyəti müvəqqəti dayandırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dayandirildi",
+          "expected": "dayandırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-078",
+      "module": "text",
+      "domain": "security",
+      "input": "Audit zamanı icazələr nəzərdən kecirildi.",
+      "expected": "Audit zamanı icazələr nəzərdən keçirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "kecirildi",
+          "expected": "keçirildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-079",
+      "module": "text",
+      "domain": "security",
+      "input": "Sessiyanin müddəti avtomatik bitir.",
+      "expected": "Sessiyanın müddəti avtomatik bitir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Sessiyanin",
+          "expected": "Sessiyanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-080",
+      "module": "text",
+      "domain": "security",
+      "input": "Məxfi məlumat jurnala yazilmadi.",
+      "expected": "Məxfi məlumat jurnala yazılmadı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yazilmadi",
+          "expected": "yazılmadı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-081",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Vətəndaş muracietin statusunu öyrəndi.",
+      "expected": "Vətəndaş müraciətin statusunu öyrəndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muracietin",
+          "expected": "müraciətin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-082",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "İcra şöbəsi məktubu cavablandirdi.",
+      "expected": "İcra şöbəsi məktubu cavablandırdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "cavablandirdi",
+          "expected": "cavablandırdı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-083",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Hökumət yeni proqramı tesdiqledi.",
+      "expected": "Hökumət yeni proqramı təsdiqlədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tesdiqledi",
+          "expected": "təsdiqlədi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-084",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Belediyye küçənin təmirinə başladı.",
+      "expected": "Bələdiyyə küçənin təmirinə başladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Belediyye",
+          "expected": "Bələdiyyə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-085",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Arayis elektron qaydada verilir.",
+      "expected": "Arayış elektron qaydada verilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Arayis",
+          "expected": "Arayış"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-086",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Qəbul otaginda növbə sakit keçdi.",
+      "expected": "Qəbul otağında növbə sakit keçdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "otaginda",
+          "expected": "otağında"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-087",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Katib senedleri rəfə düzdü.",
+      "expected": "Katib sənədləri rəfə düzdü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "senedleri",
+          "expected": "sənədləri"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-088",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Müdirlə görüş gunortaya təyin edildi.",
+      "expected": "Müdirlə görüş günortaya təyin edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gunortaya",
+          "expected": "günortaya"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-089",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Komissiyanin üzvü protokolu imzaladı.",
+      "expected": "Komissiyanın üzvü protokolu imzaladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Komissiyanin",
+          "expected": "Komissiyanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-090",
+      "module": "text",
+      "domain": "publicservice",
+      "input": "Xidmətin müddəti telimatda göstərilib.",
+      "expected": "Xidmətin müddəti təlimatda göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "telimatda",
+          "expected": "təlimatda"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-091",
+      "module": "text",
+      "domain": "science",
+      "input": "Tedqiqatcilar nümunənin tərkibini araşdırdılar.",
+      "expected": "Tədqiqatçılar nümunənin tərkibini araşdırdılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Tedqiqatcilar",
+          "expected": "Tədqiqatçılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-092",
+      "module": "text",
+      "domain": "science",
+      "input": "Tecrubenin nəticəsi fərziyyəni təsdiqlədi.",
+      "expected": "Təcrübənin nəticəsi fərziyyəni təsdiqlədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Tecrubenin",
+          "expected": "Təcrübənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-093",
+      "module": "text",
+      "domain": "science",
+      "input": "Alim meqalenin mənbəyini göstərdi.",
+      "expected": "Alim məqalənin mənbəyini göstərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "meqalenin",
+          "expected": "məqalənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-094",
+      "module": "text",
+      "domain": "science",
+      "input": "Olcmeler eyni şəraitdə aparıldı.",
+      "expected": "Ölçmələr eyni şəraitdə aparıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Olcmeler",
+          "expected": "Ölçmələr"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-095",
+      "module": "text",
+      "domain": "science",
+      "input": "Kristalin quruluşu təsvir edildi.",
+      "expected": "Kristalın quruluşu təsvir edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Kristalin",
+          "expected": "Kristalın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-096",
+      "module": "text",
+      "domain": "science",
+      "input": "Astronomlar yeni ulduzu musahide etdilər.",
+      "expected": "Astronomlar yeni ulduzu müşahidə etdilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "musahide",
+          "expected": "müşahidə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-097",
+      "module": "text",
+      "domain": "science",
+      "input": "Molekulun kütləsi hesablandi.",
+      "expected": "Molekulun kütləsi hesablandı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hesablandi",
+          "expected": "hesablandı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-098",
+      "module": "text",
+      "domain": "science",
+      "input": "Neyronun fealiyyeti cihazla qeydə alındı.",
+      "expected": "Neyronun fəaliyyəti cihazla qeydə alındı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "fealiyyeti",
+          "expected": "fəaliyyəti"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-099",
+      "module": "text",
+      "domain": "science",
+      "input": "Nəzəri model təcrübə ilə muqayise olundu.",
+      "expected": "Nəzəri model təcrübə ilə müqayisə olundu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muqayise",
+          "expected": "müqayisə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-100",
+      "module": "text",
+      "domain": "science",
+      "input": "Elmi muzakire açıq keçirildi.",
+      "expected": "Elmi müzakirə açıq keçirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muzakire",
+          "expected": "müzakirə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-101",
+      "module": "text",
+      "domain": "environment",
+      "input": "Meşənin sahəsi xeritede qeyd olundu.",
+      "expected": "Meşənin sahəsi xəritədə qeyd olundu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "xeritede",
+          "expected": "xəritədə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-102",
+      "module": "text",
+      "domain": "environment",
+      "input": "Tullantilar növlərinə görə ayrılır.",
+      "expected": "Tullantılar növlərinə görə ayrılır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Tullantilar",
+          "expected": "Tullantılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-103",
+      "module": "text",
+      "domain": "environment",
+      "input": "Çayın suyundan nümunə goturuldu.",
+      "expected": "Çayın suyundan nümunə götürüldü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "goturuldu",
+          "expected": "götürüldü"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-104",
+      "module": "text",
+      "domain": "environment",
+      "input": "Ekoloqlar sahildə quşları saydilar.",
+      "expected": "Ekoloqlar sahildə quşları saydılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "saydilar",
+          "expected": "saydılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-105",
+      "module": "text",
+      "domain": "environment",
+      "input": "Yaşıl zona yeni ağaclarla genislendirildi.",
+      "expected": "Yaşıl zona yeni ağaclarla genişləndirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "genislendirildi",
+          "expected": "genişləndirildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-106",
+      "module": "text",
+      "domain": "environment",
+      "input": "Havanın keyfiyyeti hər gün ölçülür.",
+      "expected": "Havanın keyfiyyəti hər gün ölçülür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "keyfiyyeti",
+          "expected": "keyfiyyəti"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-107",
+      "module": "text",
+      "domain": "environment",
+      "input": "Qoruqda nadir heyvan musahide edildi.",
+      "expected": "Qoruqda nadir heyvan müşahidə edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "musahide",
+          "expected": "müşahidə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-108",
+      "module": "text",
+      "domain": "environment",
+      "input": "Yagintinin miqdarı bu ay artıb.",
+      "expected": "Yağıntının miqdarı bu ay artıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Yagintinin",
+          "expected": "Yağıntının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-109",
+      "module": "text",
+      "domain": "environment",
+      "input": "Buzlağın əriməsi suretlendi.",
+      "expected": "Buzlağın əriməsi sürətləndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "suretlendi",
+          "expected": "sürətləndi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-110",
+      "module": "text",
+      "domain": "environment",
+      "input": "Könüllülər çimərliyi temizlediler.",
+      "expected": "Könüllülər çimərliyi təmizlədilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "temizlediler",
+          "expected": "təmizlədilər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-111",
+      "module": "text",
+      "domain": "culture",
+      "input": "Sərgi yeni əsərlərlə zenginlesdi.",
+      "expected": "Sərgi yeni əsərlərlə zənginləşdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "zenginlesdi",
+          "expected": "zənginləşdi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-112",
+      "module": "text",
+      "domain": "culture",
+      "input": "Sərginin acilisina tələbələr gəldilər.",
+      "expected": "Sərginin açılışına tələbələr gəldilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "acilisina",
+          "expected": "açılışına"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-113",
+      "module": "text",
+      "domain": "culture",
+      "input": "Rəssam kətanın uzerinde işləyir.",
+      "expected": "Rəssam kətanın üzərində işləyir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "uzerinde",
+          "expected": "üzərində"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-114",
+      "module": "text",
+      "domain": "culture",
+      "input": "Musiqici köhnə aləti köklədi.",
+      "expected": "Musiqiçi köhnə aləti köklədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Musiqici",
+          "expected": "Musiqiçi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-115",
+      "module": "text",
+      "domain": "culture",
+      "input": "Teatrın səhnəsi tamaşaya hazirlanir.",
+      "expected": "Teatrın səhnəsi tamaşaya hazırlanır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hazirlanir",
+          "expected": "hazırlanır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-116",
+      "module": "text",
+      "domain": "culture",
+      "input": "Heykelteras daşın formasını dəyişdi.",
+      "expected": "Heykəltəraş daşın formasını dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Heykelteras",
+          "expected": "Heykəltəraş"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-117",
+      "module": "text",
+      "domain": "culture",
+      "input": "Muzey beledcisi eksponatı göstərdi.",
+      "expected": "Muzey bələdçisi eksponatı göstərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "beledcisi",
+          "expected": "bələdçisi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-118",
+      "module": "text",
+      "domain": "culture",
+      "input": "Şair şeirini dinleyicilere oxudu.",
+      "expected": "Şair şeirini dinləyicilərə oxudu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dinleyicilere",
+          "expected": "dinləyicilərə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-119",
+      "module": "text",
+      "domain": "culture",
+      "input": "Orkestr məşqə vaxtinda başladı.",
+      "expected": "Orkestr məşqə vaxtında başladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "vaxtinda",
+          "expected": "vaxtında"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-120",
+      "module": "text",
+      "domain": "culture",
+      "input": "Rejissor cekilisi sabaha saxladı.",
+      "expected": "Rejissor çəkilişi sabaha saxladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "cekilisi",
+          "expected": "çəkilişi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-121",
+      "module": "text",
+      "domain": "sports",
+      "input": "İdman zalı səhər acilir.",
+      "expected": "İdman zalı səhər açılır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "acilir",
+          "expected": "açılır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-122",
+      "module": "text",
+      "domain": "sports",
+      "input": "Məşqçi oyuncularin hazırlığını yoxladı.",
+      "expected": "Məşqçi oyunçuların hazırlığını yoxladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "oyuncularin",
+          "expected": "oyunçuların"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-123",
+      "module": "text",
+      "domain": "sports",
+      "input": "Komandanin kapitanı müsahibə verdi.",
+      "expected": "Komandanın kapitanı müsahibə verdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Komandanin",
+          "expected": "Komandanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-124",
+      "module": "text",
+      "domain": "sports",
+      "input": "Üzgüçü mesafeni tez qət etdi.",
+      "expected": "Üzgüçü məsafəni tez qət etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "mesafeni",
+          "expected": "məsafəni"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-125",
+      "module": "text",
+      "domain": "sports",
+      "input": "Hakim yarışın neticesini elan etdi.",
+      "expected": "Hakim yarışın nəticəsini elan etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "neticesini",
+          "expected": "nəticəsini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-126",
+      "module": "text",
+      "domain": "sports",
+      "input": "Qacisci finişə birinci çatdı.",
+      "expected": "Qaçışçı finişə birinci çatdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qacisci",
+          "expected": "Qaçışçı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-127",
+      "module": "text",
+      "domain": "sports",
+      "input": "Gulescinin çəkisi yenidən ölçüldü.",
+      "expected": "Güləşçinin çəkisi yenidən ölçüldü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Gulescinin",
+          "expected": "Güləşçinin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-128",
+      "module": "text",
+      "domain": "sports",
+      "input": "Stadionun tribunalari doldu.",
+      "expected": "Stadionun tribunaları doldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tribunalari",
+          "expected": "tribunaları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-129",
+      "module": "text",
+      "domain": "sports",
+      "input": "Topun istiqameti qəfil dəyişdi.",
+      "expected": "Topun istiqaməti qəfil dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "istiqameti",
+          "expected": "istiqaməti"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-130",
+      "module": "text",
+      "domain": "sports",
+      "input": "Turnirin qalibi mukafat aldı.",
+      "expected": "Turnirin qalibi mükafat aldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "mukafat",
+          "expected": "mükafat"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-131",
+      "module": "text",
+      "domain": "retail",
+      "input": "Satıcı məhsulun qiymetini göstərdi.",
+      "expected": "Satıcı məhsulun qiymətini göstərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qiymetini",
+          "expected": "qiymətini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-132",
+      "module": "text",
+      "domain": "retail",
+      "input": "Müştəri olcusune uyğun köynək seçdi.",
+      "expected": "Müştəri ölçüsünə uyğun köynək seçdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "olcusune",
+          "expected": "ölçüsünə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-133",
+      "module": "text",
+      "domain": "retail",
+      "input": "Magazanin iş saatları dəyişib.",
+      "expected": "Mağazanın iş saatları dəyişib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Magazanin",
+          "expected": "Mağazanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-134",
+      "module": "text",
+      "domain": "retail",
+      "input": "Sifarişin çatdırılması sabaha planlasdirildi.",
+      "expected": "Sifarişin çatdırılması sabaha planlaşdırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "planlasdirildi",
+          "expected": "planlaşdırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-135",
+      "module": "text",
+      "domain": "retail",
+      "input": "Anbardaki ehtiyatlar yenidən sayıldı.",
+      "expected": "Anbardakı ehtiyatlar yenidən sayıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Anbardaki",
+          "expected": "Anbardakı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-136",
+      "module": "text",
+      "domain": "retail",
+      "input": "Endirim bütün bolmelere tətbiq edilir.",
+      "expected": "Endirim bütün bölmələrə tətbiq edilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "bolmelere",
+          "expected": "bölmələrə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-137",
+      "module": "text",
+      "domain": "retail",
+      "input": "Paketin üzərində ünvan yazilib.",
+      "expected": "Paketin üzərində ünvan yazılıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yazilib",
+          "expected": "yazılıb"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-138",
+      "module": "text",
+      "domain": "retail",
+      "input": "Kuryer qapinin zəngini basdı.",
+      "expected": "Kuryer qapının zəngini basdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qapinin",
+          "expected": "qapının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-139",
+      "module": "text",
+      "domain": "retail",
+      "input": "Alıcı qüsurlu malı qaytardi.",
+      "expected": "Alıcı qüsurlu malı qaytardı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qaytardi",
+          "expected": "qaytardı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-140",
+      "module": "text",
+      "domain": "retail",
+      "input": "Etiketdə istehsal tarixi gosterilir.",
+      "expected": "Etiketdə istehsal tarixi göstərilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gosterilir",
+          "expected": "göstərilir"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-141",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Turistler dağ yoluna çıxdılar.",
+      "expected": "Turistlər dağ yoluna çıxdılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Turistler",
+          "expected": "Turistlər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-142",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Bələdçi qalaya gedən cığırı gosterdi.",
+      "expected": "Bələdçi qalaya gedən cığırı göstərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gosterdi",
+          "expected": "göstərdi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-143",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Oteldə otaqlar evvelceden ayrıldı.",
+      "expected": "Oteldə otaqlar əvvəlcədən ayrıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "evvelceden",
+          "expected": "əvvəlcədən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-144",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Səyahətin proqramı istirakcilara verildi.",
+      "expected": "Səyahətin proqramı iştirakçılara verildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "istirakcilara",
+          "expected": "iştirakçılara"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-145",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Qonaqlar kəndin tarixini oyrendiler.",
+      "expected": "Qonaqlar kəndin tarixini öyrəndilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "oyrendiler",
+          "expected": "öyrəndilər"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-146",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Çadırlar çayın yaxinliginda quruldu.",
+      "expected": "Çadırlar çayın yaxınlığında quruldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yaxinliginda",
+          "expected": "yaxınlığında"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-147",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Mənzərə fotosekilde aydın görünür.",
+      "expected": "Mənzərə fotoşəkildə aydın görünür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "fotosekilde",
+          "expected": "fotoşəkildə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-148",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Biletin qiymetine səhər yeməyi daxildir.",
+      "expected": "Biletin qiymətinə səhər yeməyi daxildir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qiymetine",
+          "expected": "qiymətinə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-149",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Gezinti yağışa görə dayandırıldı.",
+      "expected": "Gəzinti yağışa görə dayandırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Gezinti",
+          "expected": "Gəzinti"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-150",
+      "module": "text",
+      "domain": "tourism",
+      "input": "Səyyah yolun uzunlugunu hesabladı.",
+      "expected": "Səyyah yolun uzunluğunu hesabladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "uzunlugunu",
+          "expected": "uzunluğunu"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-151",
+      "module": "text",
+      "domain": "construction",
+      "input": "Memar binanın eskizini hazirladi.",
+      "expected": "Memar binanın eskizini hazırladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hazirladi",
+          "expected": "hazırladı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-152",
+      "module": "text",
+      "domain": "construction",
+      "input": "Usta divarın səthini hamarladi.",
+      "expected": "Usta divarın səthini hamarladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hamarladi",
+          "expected": "hamarladı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-153",
+      "module": "text",
+      "domain": "construction",
+      "input": "Təməl üçün torpaq qazildi.",
+      "expected": "Təməl üçün torpaq qazıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qazildi",
+          "expected": "qazıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-154",
+      "module": "text",
+      "domain": "construction",
+      "input": "Betonun mohkemliyi yoxlanıldı.",
+      "expected": "Betonun möhkəmliyi yoxlanıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "mohkemliyi",
+          "expected": "möhkəmliyi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-155",
+      "module": "text",
+      "domain": "construction",
+      "input": "Mühəndis sutunlarin yerini müəyyən etdi.",
+      "expected": "Mühəndis sütunların yerini müəyyən etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sutunlarin",
+          "expected": "sütunların"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-156",
+      "module": "text",
+      "domain": "construction",
+      "input": "Tikintinin gedişi nezaretde saxlanılır.",
+      "expected": "Tikintinin gedişi nəzarətdə saxlanılır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "nezaretde",
+          "expected": "nəzarətdə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-157",
+      "module": "text",
+      "domain": "construction",
+      "input": "Pəncərənin çərçivəsi deyisdirildi.",
+      "expected": "Pəncərənin çərçivəsi dəyişdirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "deyisdirildi",
+          "expected": "dəyişdirildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-158",
+      "module": "text",
+      "domain": "construction",
+      "input": "Dam örtüyü küləyə davamlidir.",
+      "expected": "Dam örtüyü küləyə davamlıdır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "davamlidir",
+          "expected": "davamlıdır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-159",
+      "module": "text",
+      "domain": "construction",
+      "input": "Boruların birlesmesi sınaqdan keçirildi.",
+      "expected": "Boruların birləşməsi sınaqdan keçirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "birlesmesi",
+          "expected": "birləşməsi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-160",
+      "module": "text",
+      "domain": "construction",
+      "input": "İşçilər qoruyucu dəbilqə taxdilar.",
+      "expected": "İşçilər qoruyucu dəbilqə taxdılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "taxdilar",
+          "expected": "taxdılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-161",
+      "module": "text",
+      "domain": "energy",
+      "input": "Gunes paneli damda quraşdırıldı.",
+      "expected": "Günəş paneli damda quraşdırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Gunes",
+          "expected": "Günəş"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-162",
+      "module": "text",
+      "domain": "energy",
+      "input": "Külək turbininin qanadlari fırlanır.",
+      "expected": "Külək turbininin qanadları fırlanır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qanadlari",
+          "expected": "qanadları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-163",
+      "module": "text",
+      "domain": "energy",
+      "input": "Şəbəkənin gerginliyi ölçüldü.",
+      "expected": "Şəbəkənin gərginliyi ölçüldü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gerginliyi",
+          "expected": "gərginliyi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-164",
+      "module": "text",
+      "domain": "energy",
+      "input": "Elektrik xəttində nasazlıq aradan qaldirildi.",
+      "expected": "Elektrik xəttində nasazlıq aradan qaldırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qaldirildi",
+          "expected": "qaldırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-165",
+      "module": "text",
+      "domain": "energy",
+      "input": "Sayğacın gostericisi qeyd edildi.",
+      "expected": "Sayğacın göstəricisi qeyd edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gostericisi",
+          "expected": "göstəricisi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-166",
+      "module": "text",
+      "domain": "energy",
+      "input": "İstilik itkisi əvvəlki aya nisbeten azalıb.",
+      "expected": "İstilik itkisi əvvəlki aya nisbətən azalıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "nisbeten",
+          "expected": "nisbətən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-167",
+      "module": "text",
+      "domain": "energy",
+      "input": "Generator ehtiyat rejimde işləyir.",
+      "expected": "Generator ehtiyat rejimdə işləyir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "rejimde",
+          "expected": "rejimdə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-168",
+      "module": "text",
+      "domain": "energy",
+      "input": "Batareyanin tutumu yoxlanıldı.",
+      "expected": "Batareyanın tutumu yoxlanıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Batareyanin",
+          "expected": "Batareyanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-169",
+      "module": "text",
+      "domain": "energy",
+      "input": "Stansiyanin gücü artırıldı.",
+      "expected": "Stansiyanın gücü artırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Stansiyanin",
+          "expected": "Stansiyanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-170",
+      "module": "text",
+      "domain": "energy",
+      "input": "Yanacagin sərfi hesabatda göstərilib.",
+      "expected": "Yanacağın sərfi hesabatda göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Yanacagin",
+          "expected": "Yanacağın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-171",
+      "module": "text",
+      "domain": "communication",
+      "input": "Redaktor xəbərin basligini dəyişdi.",
+      "expected": "Redaktor xəbərin başlığını dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "basligini",
+          "expected": "başlığını"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-172",
+      "module": "text",
+      "domain": "communication",
+      "input": "Jurnalist musahibeni yazıya köçürdü.",
+      "expected": "Jurnalist müsahibəni yazıya köçürdü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "musahibeni",
+          "expected": "müsahibəni"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-173",
+      "module": "text",
+      "domain": "communication",
+      "input": "Operator efirin vaxtini bildirdi.",
+      "expected": "Operator efirin vaxtını bildirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "vaxtini",
+          "expected": "vaxtını"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-174",
+      "module": "text",
+      "domain": "communication",
+      "input": "Mektubun mövzusu aydın yazılıb.",
+      "expected": "Məktubun mövzusu aydın yazılıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mektubun",
+          "expected": "Məktubun"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-175",
+      "module": "text",
+      "domain": "communication",
+      "input": "Abunəçiyə bildiriş gonderildi.",
+      "expected": "Abunəçiyə bildiriş göndərildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gonderildi",
+          "expected": "göndərildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-176",
+      "module": "text",
+      "domain": "communication",
+      "input": "Elaqenin keyfiyyəti yenidən yoxlandı.",
+      "expected": "Əlaqənin keyfiyyəti yenidən yoxlandı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Elaqenin",
+          "expected": "Əlaqənin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-177",
+      "module": "text",
+      "domain": "communication",
+      "input": "Çapdan əvvəl sehifeler nəzərdən keçirildi.",
+      "expected": "Çapdan əvvəl səhifələr nəzərdən keçirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sehifeler",
+          "expected": "səhifələr"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-178",
+      "module": "text",
+      "domain": "communication",
+      "input": "Verilişin müddəti qisaldildi.",
+      "expected": "Verilişin müddəti qısaldıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "qisaldildi",
+          "expected": "qısaldıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-179",
+      "module": "text",
+      "domain": "communication",
+      "input": "Poctalyon bağlamanı ünvana çatdırdı.",
+      "expected": "Poçtalyon bağlamanı ünvana çatdırdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Poctalyon",
+          "expected": "Poçtalyon"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-180",
+      "module": "text",
+      "domain": "communication",
+      "input": "Dinləyicinin sualı cavablandirildi.",
+      "expected": "Dinləyicinin sualı cavablandırıldı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "cavablandirildi",
+          "expected": "cavablandırıldı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-181",
+      "module": "text",
+      "domain": "family",
+      "input": "Nənəm axşam nağıl danisdi.",
+      "expected": "Nənəm axşam nağıl danışdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "danisdi",
+          "expected": "danışdı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-182",
+      "module": "text",
+      "domain": "family",
+      "input": "Uşaqlar həyətdə gizlenpac oynadılar.",
+      "expected": "Uşaqlar həyətdə gizlənpaç oynadılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gizlenpac",
+          "expected": "gizlənpaç"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-183",
+      "module": "text",
+      "domain": "family",
+      "input": "Qardasim kitabını rəfə qoydu.",
+      "expected": "Qardaşım kitabını rəfə qoydu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qardasim",
+          "expected": "Qardaşım"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-184",
+      "module": "text",
+      "domain": "family",
+      "input": "Anam pencereni açdı.",
+      "expected": "Anam pəncərəni açdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "pencereni",
+          "expected": "pəncərəni"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-185",
+      "module": "text",
+      "domain": "family",
+      "input": "Atam kohne saatı təmir etdi.",
+      "expected": "Atam köhnə saatı təmir etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "kohne",
+          "expected": "köhnə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-186",
+      "module": "text",
+      "domain": "family",
+      "input": "Bacim şəkli divardan asdı.",
+      "expected": "Bacım şəkli divardan asdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Bacim",
+          "expected": "Bacım"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-187",
+      "module": "text",
+      "domain": "family",
+      "input": "Qonsular həyəti birlikdə təmizlədilər.",
+      "expected": "Qonşular həyəti birlikdə təmizlədilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qonsular",
+          "expected": "Qonşular"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-188",
+      "module": "text",
+      "domain": "family",
+      "input": "Qonaqlar süfrə arxasında toplandilar.",
+      "expected": "Qonaqlar süfrə arxasında toplandılar.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "toplandilar",
+          "expected": "toplandılar"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-189",
+      "module": "text",
+      "domain": "family",
+      "input": "Dostum qapıda məni gozledi.",
+      "expected": "Dostum qapıda məni gözlədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "gozledi",
+          "expected": "gözlədi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-190",
+      "module": "text",
+      "domain": "family",
+      "input": "Körpə sakitce yuxuya getdi.",
+      "expected": "Körpə sakitcə yuxuya getdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sakitce",
+          "expected": "sakitcə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-191",
+      "module": "text",
+      "domain": "food",
+      "input": "Aşpaz terevezleri doğradı.",
+      "expected": "Aşpaz tərəvəzləri doğradı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "terevezleri",
+          "expected": "tərəvəzləri"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-192",
+      "module": "text",
+      "domain": "food",
+      "input": "Çörəyin xəmiri səhər yogruldu.",
+      "expected": "Çörəyin xəmiri səhər yoğruldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yogruldu",
+          "expected": "yoğruldu"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-193",
+      "module": "text",
+      "domain": "food",
+      "input": "Qazandaki şorba qaynamağa başladı.",
+      "expected": "Qazandakı şorba qaynamağa başladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qazandaki",
+          "expected": "Qazandakı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-194",
+      "module": "text",
+      "domain": "food",
+      "input": "Sirniyyatin tərkibində qoz var.",
+      "expected": "Şirniyyatın tərkibində qoz var.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Sirniyyatin",
+          "expected": "Şirniyyatın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-195",
+      "module": "text",
+      "domain": "food",
+      "input": "Meyveler süzgəcdə yuyuldu.",
+      "expected": "Meyvələr süzgəcdə yuyuldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Meyveler",
+          "expected": "Meyvələr"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-196",
+      "module": "text",
+      "domain": "food",
+      "input": "Çayın rəngi tunddur.",
+      "expected": "Çayın rəngi tünddür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "tunddur",
+          "expected": "tünddür"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-197",
+      "module": "text",
+      "domain": "food",
+      "input": "Süfrəyə təzə salat getirildi.",
+      "expected": "Süfrəyə təzə salat gətirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "getirildi",
+          "expected": "gətirildi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-198",
+      "module": "text",
+      "domain": "food",
+      "input": "Duzun miqdarı reseptde göstərilib.",
+      "expected": "Duzun miqdarı reseptdə göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "reseptde",
+          "expected": "reseptdə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-199",
+      "module": "text",
+      "domain": "food",
+      "input": "Qablarin hamısı təmiz yuyuldu.",
+      "expected": "Qabların hamısı təmiz yuyuldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qablarin",
+          "expected": "Qabların"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-200",
+      "module": "text",
+      "domain": "food",
+      "input": "Yemeyin dadı hamının xoşuna gəldi.",
+      "expected": "Yeməyin dadı hamının xoşuna gəldi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Yemeyin",
+          "expected": "Yeməyin"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-201",
+      "module": "text",
+      "domain": "geography",
+      "input": "Azerbaycanin paytaxtı Bakıdır.",
+      "expected": "Azərbaycanın paytaxtı Bakıdır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Azerbaycanin",
+          "expected": "Azərbaycanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-202",
+      "module": "text",
+      "domain": "geography",
+      "input": "Gölün sahilinde qamışlar bitir.",
+      "expected": "Gölün sahilində qamışlar bitir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sahilinde",
+          "expected": "sahilində"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-203",
+      "module": "text",
+      "domain": "geography",
+      "input": "Dərənin derinliyi ölçüldü.",
+      "expected": "Dərənin dərinliyi ölçüldü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "derinliyi",
+          "expected": "dərinliyi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-204",
+      "module": "text",
+      "domain": "geography",
+      "input": "Adanın etrafinda mərcanlar var.",
+      "expected": "Adanın ətrafında mərcanlar var.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "etrafinda",
+          "expected": "ətrafında"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-205",
+      "module": "text",
+      "domain": "geography",
+      "input": "Səhrada temperatur gündüz yukselir.",
+      "expected": "Səhrada temperatur gündüz yüksəlir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yukselir",
+          "expected": "yüksəlir"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-206",
+      "module": "text",
+      "domain": "geography",
+      "input": "Çayın mənbəyi dagdadir.",
+      "expected": "Çayın mənbəyi dağdadır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "dagdadir",
+          "expected": "dağdadır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-207",
+      "module": "text",
+      "domain": "geography",
+      "input": "Vulkanın fəaliyyəti izlenilir.",
+      "expected": "Vulkanın fəaliyyəti izlənilir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "izlenilir",
+          "expected": "izlənilir"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-208",
+      "module": "text",
+      "domain": "geography",
+      "input": "Yarimadanin xəritəsi yeniləndi.",
+      "expected": "Yarımadanın xəritəsi yeniləndi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Yarimadanin",
+          "expected": "Yarımadanın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-209",
+      "module": "text",
+      "domain": "geography",
+      "input": "Okeanın derinliyinde canlılar yaşayır.",
+      "expected": "Okeanın dərinliyində canlılar yaşayır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "derinliyinde",
+          "expected": "dərinliyində"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-210",
+      "module": "text",
+      "domain": "geography",
+      "input": "Vadinin yamaclari meşə ilə örtülüb.",
+      "expected": "Vadinin yamacları meşə ilə örtülüb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yamaclari",
+          "expected": "yamacları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-211",
+      "module": "text",
+      "domain": "workplace",
+      "input": "İnsan resurslari şöbəsi elan hazırladı.",
+      "expected": "İnsan resursları şöbəsi elan hazırladı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "resurslari",
+          "expected": "resursları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-212",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Toplantiya bütün əməkdaşlar gəldilər.",
+      "expected": "Toplantıya bütün əməkdaşlar gəldilər.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Toplantiya",
+          "expected": "Toplantıya"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-213",
+      "module": "text",
+      "domain": "workplace",
+      "input": "İclasın istirakcilari salonda toplaşmışdı.",
+      "expected": "İclasın iştirakçıları salonda toplaşmışdı.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "istirakcilari",
+          "expected": "iştirakçıları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-214",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Layihe vaxtında həyata keçirildi.",
+      "expected": "Layihə vaxtında həyata keçirildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Layihe",
+          "expected": "Layihə"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-215",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Əla nəticə əldə etmək üçün calisiriq.",
+      "expected": "Əla nəticə əldə etmək üçün çalışırıq.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "calisiriq",
+          "expected": "çalışırıq"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-216",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Mutexessis işi diqqətlə yerinə yetirdi.",
+      "expected": "Mütəxəssis işi diqqətlə yerinə yetirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Mutexessis",
+          "expected": "Mütəxəssis"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-217",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Terefdasimiz yeni təklif göndərdi.",
+      "expected": "Tərəfdaşımız yeni təklif göndərdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Terefdasimiz",
+          "expected": "Tərəfdaşımız"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-218",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Teqdimatin sonunda suallar verildi.",
+      "expected": "Təqdimatın sonunda suallar verildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Teqdimatin",
+          "expected": "Təqdimatın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-219",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Rəhbərlik emekdaslara təşəkkür etdi.",
+      "expected": "Rəhbərlik əməkdaşlara təşəkkür etdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "emekdaslara",
+          "expected": "əməkdaşlara"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-220",
+      "module": "text",
+      "domain": "workplace",
+      "input": "Planın icrası nezaretdedir.",
+      "expected": "Planın icrası nəzarətdədir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "nezaretdedir",
+          "expected": "nəzarətdədir"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-221",
+      "module": "text",
+      "domain": "craft",
+      "input": "Dərzi parcani ölçdü.",
+      "expected": "Dərzi parçanı ölçdü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "parcani",
+          "expected": "parçanı"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-222",
+      "module": "text",
+      "domain": "craft",
+      "input": "Dülgər masanın ayağını berkitdi.",
+      "expected": "Dülgər masanın ayağını bərkitdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "berkitdi",
+          "expected": "bərkitdi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-223",
+      "module": "text",
+      "domain": "craft",
+      "input": "Zərgər üzüyün daşını yerlesdirdi.",
+      "expected": "Zərgər üzüyün daşını yerləşdirdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yerlesdirdi",
+          "expected": "yerləşdirdi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-224",
+      "module": "text",
+      "domain": "craft",
+      "input": "Duluscu gil qabı sobaya qoydu.",
+      "expected": "Dulusçu gil qabı sobaya qoydu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Duluscu",
+          "expected": "Dulusçu"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-225",
+      "module": "text",
+      "domain": "craft",
+      "input": "Xalcacinin toxuduğu naxış gözəldir.",
+      "expected": "Xalçaçının toxuduğu naxış gözəldir.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Xalcacinin",
+          "expected": "Xalçaçının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-226",
+      "module": "text",
+      "domain": "craft",
+      "input": "Çəkməçi ayaqqabinin altını dəyişdi.",
+      "expected": "Çəkməçi ayaqqabının altını dəyişdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "ayaqqabinin",
+          "expected": "ayaqqabının"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-227",
+      "module": "text",
+      "domain": "craft",
+      "input": "Saç ustası darağı temizledi.",
+      "expected": "Saç ustası darağı təmizlədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "temizledi",
+          "expected": "təmizlədi"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-228",
+      "module": "text",
+      "domain": "craft",
+      "input": "Toxucu rəngli saplari seçdi.",
+      "expected": "Toxucu rəngli sapları seçdi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "saplari",
+          "expected": "sapları"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-229",
+      "module": "text",
+      "domain": "craft",
+      "input": "Misgər qabın sethini bəzədi.",
+      "expected": "Misgər qabın səthini bəzədi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "sethini",
+          "expected": "səthini"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-230",
+      "module": "text",
+      "domain": "craft",
+      "input": "Saat ustasi mexanizmi sökdü.",
+      "expected": "Saat ustası mexanizmi sökdü.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "ustasi",
+          "expected": "ustası"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-231",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Qrantin müddəti altı aydır.",
+      "expected": "Qrantın müddəti altı aydır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Qrantin",
+          "expected": "Qrantın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-232",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Seminarın proqramı hazirlanib.",
+      "expected": "Seminarın proqramı hazırlanıb.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "hazirlanib",
+          "expected": "hazırlanıb"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-233",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Nəşrin muellifleri göstərilib.",
+      "expected": "Nəşrin müəllifləri göstərilib.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "muellifleri",
+          "expected": "müəllifləri"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-234",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Dissertasiya suraya təqdim edildi.",
+      "expected": "Dissertasiya şuraya təqdim edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "suraya",
+          "expected": "şuraya"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-235",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Rəyçi meqaleni diqqətlə oxudu.",
+      "expected": "Rəyçi məqaləni diqqətlə oxudu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "meqaleni",
+          "expected": "məqaləni"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-236",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Konfransin məruzələri topluda dərc edildi.",
+      "expected": "Konfransın məruzələri topluda dərc edildi.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "Konfransin",
+          "expected": "Konfransın"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-237",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Statistik cədvəl yeniden quruldu.",
+      "expected": "Statistik cədvəl yenidən quruldu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "yeniden",
+          "expected": "yenidən"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-238",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Sorğunun iştirakçıları konulludur.",
+      "expected": "Sorğunun iştirakçıları könüllüdür.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "konulludur",
+          "expected": "könüllüdür"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-239",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Arxivin kataloqu elektron formadadir.",
+      "expected": "Arxivin kataloqu elektron formadadır.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "formadadir",
+          "expected": "formadadır"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-240",
+      "module": "text",
+      "domain": "researchadministration",
+      "input": "Təhlilin neticeleri müzakirə olundu.",
+      "expected": "Təhlilin nəticələri müzakirə olundu.",
+      "category": "diacritics",
+      "errorPairs": [
+        {
+          "input": "neticeleri",
+          "expected": "nəticələri"
+        }
+      ],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-241",
+      "module": "text",
+      "domain": "education",
+      "input": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+      "expected": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-242",
+      "module": "text",
+      "domain": "education",
+      "input": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+      "expected": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-243",
+      "module": "text",
+      "domain": "education",
+      "input": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+      "expected": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-244",
+      "module": "text",
+      "domain": "education",
+      "input": "Dərslikdəki xəritə yeniləndi.",
+      "expected": "Dərslikdəki xəritə yeniləndi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-245",
+      "module": "text",
+      "domain": "education",
+      "input": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+      "expected": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-246",
+      "module": "text",
+      "domain": "education",
+      "input": "Təqaüd üçün ərizələr qəbul edilir.",
+      "expected": "Təqaüd üçün ərizələr qəbul edilir.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-247",
+      "module": "text",
+      "domain": "education",
+      "input": "Məktəblilər ekskursiyadan qayıtdılar.",
+      "expected": "Məktəblilər ekskursiyadan qayıtdılar.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-248",
+      "module": "text",
+      "domain": "education",
+      "input": "Valideynlər iclasda iştirak etdilər.",
+      "expected": "Valideynlər iclasda iştirak etdilər.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-249",
+      "module": "text",
+      "domain": "education",
+      "input": "Universitet arxivə yeni sənədlər göndərdi.",
+      "expected": "Universitet arxivə yeni sənədlər göndərdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-250",
+      "module": "text",
+      "domain": "education",
+      "input": "İmtahanın nəticələri sabah açıqlanacaq.",
+      "expected": "İmtahanın nəticələri sabah açıqlanacaq.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-251",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Həkim xəstənin təzyiqini ölçdü.",
+      "expected": "Həkim xəstənin təzyiqini ölçdü.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-252",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Tibb bacısı dərmanın dozasını yoxladı.",
+      "expected": "Tibb bacısı dərmanın dozasını yoxladı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-253",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Poliklinikada növbə sistemi yeniləndi.",
+      "expected": "Poliklinikada növbə sistemi yeniləndi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-254",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Əməliyyatdan sonra müşahidə davam etdi.",
+      "expected": "Əməliyyatdan sonra müşahidə davam etdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-255",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Rentgen müayinəsi günortaya təyin olundu.",
+      "expected": "Rentgen müayinəsi günortaya təyin olundu.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-256",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Uşağın peyvənd cədvəli hazırdır.",
+      "expected": "Uşağın peyvənd cədvəli hazırdır.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-257",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Aptekdə resept əsasında dərman verilir.",
+      "expected": "Aptekdə resept əsasında dərman verilir.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-258",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Təcili yardım briqadası ünvana çatdı.",
+      "expected": "Təcili yardım briqadası ünvana çatdı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-259",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Cərrah yaranın sarğısını dəyişdi.",
+      "expected": "Cərrah yaranın sarğısını dəyişdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-260",
+      "module": "text",
+      "domain": "medicine",
+      "input": "Müalicə planına əlavə müayinə daxil edildi.",
+      "expected": "Müalicə planına əlavə müayinə daxil edildi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-261",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+      "expected": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-262",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Suvarma kanalı çöküntüdən təmizləndi.",
+      "expected": "Suvarma kanalı çöküntüdən təmizləndi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-263",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Buğda sahəsində zərərverici aşkarlanıb.",
+      "expected": "Buğda sahəsində zərərverici aşkarlanıb.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-264",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Bağban ağacların budaqlarını kəsdi.",
+      "expected": "Bağban ağacların budaqlarını kəsdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-265",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Torpağın rütubəti cihazla ölçülür.",
+      "expected": "Torpağın rütubəti cihazla ölçülür.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-266",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "İstixanada pomidor şitilləri böyüyür.",
+      "expected": "İstixanada pomidor şitilləri böyüyür.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-267",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+      "expected": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-268",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+      "expected": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-269",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+      "expected": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-270",
+      "module": "text",
+      "domain": "agriculture",
+      "input": "Taxıl anbarının damı təmir edildi.",
+      "expected": "Taxıl anbarının damı təmir edildi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-271",
+      "module": "text",
+      "domain": "transport",
+      "input": "Marşrutun dayanacaqları xəritədə göstərilib.",
+      "expected": "Marşrutun dayanacaqları xəritədə göstərilib.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-272",
+      "module": "text",
+      "domain": "transport",
+      "input": "Sürücü yükün çəkisini yoxladı.",
+      "expected": "Sürücü yükün çəkisini yoxladı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-273",
+      "module": "text",
+      "domain": "transport",
+      "input": "Qatarın yola düşmə vaxtı dəyişdi.",
+      "expected": "Qatarın yola düşmə vaxtı dəyişdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-274",
+      "module": "text",
+      "domain": "transport",
+      "input": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+      "expected": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-275",
+      "module": "text",
+      "domain": "transport",
+      "input": "Liman işçiləri konteyneri boşaltdılar.",
+      "expected": "Liman işçiləri konteyneri boşaltdılar.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-276",
+      "module": "text",
+      "domain": "transport",
+      "input": "Tramvayın qapıları avtomatik bağlandı.",
+      "expected": "Tramvayın qapıları avtomatik bağlandı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-277",
+      "module": "text",
+      "domain": "transport",
+      "input": "Təyyarənin enişi uğurla başa çatdı.",
+      "expected": "Təyyarənin enişi uğurla başa çatdı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-278",
+      "module": "text",
+      "domain": "transport",
+      "input": "Velosiped yolu çayın kənarından keçir.",
+      "expected": "Velosiped yolu çayın kənarından keçir.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-279",
+      "module": "text",
+      "domain": "transport",
+      "input": "Nəqliyyat sıxlığı axşam artdı.",
+      "expected": "Nəqliyyat sıxlığı axşam artdı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-280",
+      "module": "text",
+      "domain": "transport",
+      "input": "Gəminin mühərriki yenidən işə salındı.",
+      "expected": "Gəminin mühərriki yenidən işə salındı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-281",
+      "module": "text",
+      "domain": "finance",
+      "input": "Mühasib ödəniş tapşırığını imzaladı.",
+      "expected": "Mühasib ödəniş tapşırığını imzaladı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-282",
+      "module": "text",
+      "domain": "finance",
+      "input": "Hesabatda gəlir və xərclər göstərilib.",
+      "expected": "Hesabatda gəlir və xərclər göstərilib.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-283",
+      "module": "text",
+      "domain": "finance",
+      "input": "Sığorta müqaviləsi bir il qüvvədədir.",
+      "expected": "Sığorta müqaviləsi bir il qüvvədədir.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-284",
+      "module": "text",
+      "domain": "finance",
+      "input": "Borcun qaytarılma müddəti uzadıldı.",
+      "expected": "Borcun qaytarılma müddəti uzadıldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-285",
+      "module": "text",
+      "domain": "finance",
+      "input": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+      "expected": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-286",
+      "module": "text",
+      "domain": "finance",
+      "input": "Əmanətin faiz dərəcəsi dəyişməyib.",
+      "expected": "Əmanətin faiz dərəcəsi dəyişməyib.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-287",
+      "module": "text",
+      "domain": "finance",
+      "input": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+      "expected": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-288",
+      "module": "text",
+      "domain": "finance",
+      "input": "Büdcədən təmir üçün vəsait ayrılıb.",
+      "expected": "Büdcədən təmir üçün vəsait ayrılıb.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-289",
+      "module": "text",
+      "domain": "finance",
+      "input": "Kassir qəbzin surətini müştəriyə verdi.",
+      "expected": "Kassir qəbzin surətini müştəriyə verdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-290",
+      "module": "text",
+      "domain": "finance",
+      "input": "Maliyyə şöbəsi hesablamanı tamamladı.",
+      "expected": "Maliyyə şöbəsi hesablamanı tamamladı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-291",
+      "module": "text",
+      "domain": "law",
+      "input": "Vəkil müqavilənin şərtlərini izah etdi.",
+      "expected": "Vəkil müqavilənin şərtlərini izah etdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-292",
+      "module": "text",
+      "domain": "law",
+      "input": "Məhkəmənin qərarı tərəflərə göndərildi.",
+      "expected": "Məhkəmənin qərarı tərəflərə göndərildi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-293",
+      "module": "text",
+      "domain": "law",
+      "input": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+      "expected": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-294",
+      "module": "text",
+      "domain": "law",
+      "input": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+      "expected": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-295",
+      "module": "text",
+      "domain": "law",
+      "input": "Hakim iclası sabaha təxirə saldı.",
+      "expected": "Hakim iclası sabaha təxirə saldı.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-296",
+      "module": "text",
+      "domain": "law",
+      "input": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+      "expected": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-297",
+      "module": "text",
+      "domain": "law",
+      "input": "İddiaçı əlavə sübut təqdim etdi.",
+      "expected": "İddiaçı əlavə sübut təqdim etdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-298",
+      "module": "text",
+      "domain": "law",
+      "input": "Qanunun yeni redaksiyası dərc olundu.",
+      "expected": "Qanunun yeni redaksiyası dərc olundu.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-299",
+      "module": "text",
+      "domain": "law",
+      "input": "Mübahisə barışıq yolu ilə həll edildi.",
+      "expected": "Mübahisə barışıq yolu ilə həll edildi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    },
+    {
+      "id": "diverse-300",
+      "module": "text",
+      "domain": "law",
+      "input": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+      "expected": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+      "category": "identity",
+      "errorPairs": [],
+      "preserveFormatting": false,
+      "provenance": "assistant-authored, not human-reviewed"
+    }
+  ]
+}
