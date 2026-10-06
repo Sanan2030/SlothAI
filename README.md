@@ -20,6 +20,10 @@ the separately frozen 300-sentence engineering holdout, before/after metrics,
 unresolved cases and provenance. The earlier [stabilization report](docs/stabilization-report.md)
 is a historical audit, not the current release status.
 
+The browser worker allows up to 10 minutes per correction, then terminates the
+worker with a clear timeout message. This watchdog is independent of the
+unchanged performance benchmark budgets and optional server API limits.
+
 ## Local development
 
 Node >=20.9 (Node 24 used for validation):

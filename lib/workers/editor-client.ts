@@ -7,12 +7,14 @@ export interface EditorWorker {
   postMessage(value: EditorWorkerRequest): void;
   terminate(): void;
 }
+export const EDITOR_TIMEOUT_MS = 10 * 60 * 1000;
+
 /** The editor never runs heavy synchronous inference on the browser UI thread. */
 export class EditorClient {
   private worker?: EditorWorker;
   private sequence = 0;
   private pending?: { id: number; resolve: (value: TransformationResult) => void; reject: (error: Error) => void; timer: ReturnType<typeof setTimeout> };
-  constructor(private readonly factory: () => EditorWorker = () => new Worker(new URL('./editor.worker.ts', import.meta.url), { type: 'module' }), private readonly timeoutMs = 10_000) {}
+  constructor(private readonly factory: () => EditorWorker = () => new Worker(new URL('./editor.worker.ts', import.meta.url), { type: 'module' }), private readonly timeoutMs = EDITOR_TIMEOUT_MS) {}
   transform(strategyId: string, request: TransformationRequest): Promise<TransformationResult> {
     if (this.pending) return Promise.reject(new Error('Əvvəlki düzəliş hələ davam edir.'));
     return new Promise((resolve, reject) => {
@@ -28,7 +30,8 @@ export class EditorClient {
           this.worker.onerror = this.worker.onmessageerror = () => this.dispose('Yerli mühərrik açılmadı. Səhifəni yeniləyib yenidən cəhd edin.');
         }
         const id = ++this.sequence;
-        const timer = setTimeout(() => this.dispose('Emal 10 saniyə həddini keçdi. Mətni kiçik hissələrə bölüb yenidən cəhd edin.'), this.timeoutMs);
+        const deadline = this.timeoutMs % 60_000 === 0 ? `${this.timeoutMs / 60_000} dəqiqə` : `${Math.ceil(this.timeoutMs / 1000)} saniyə`;
+        const timer = setTimeout(() => this.dispose(`Emal ${deadline} həddini keçdi. Mətni kiçik hissələrə bölüb yenidən cəhd edin.`), this.timeoutMs);
         this.pending = { id, resolve, reject, timer };
         this.worker.postMessage({ id, strategyId, request });
       } catch (cause) { this.dispose(cause instanceof Error ? cause.message : 'Yerli mühərrik açılmadı.'); reject(cause); }

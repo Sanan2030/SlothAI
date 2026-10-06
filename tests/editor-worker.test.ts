@@ -18,7 +18,7 @@ test('worker sends requests, ignores stale replies and rejects overlapping work'
 test('deadline terminates inference and a retry gets a new worker', async () => {
   const workers = [fake(), fake()]; let at = 0;
   const client = new EditorClient(() => workers[at++].worker, 15);
-  await assert.rejects(client.transform('text-corrector', { text: 'salam' }), /10 saniyə/u);
+  await assert.rejects(client.transform('text-corrector', { text: 'salam' }), /həddini keçdi/u);
   assert.equal(workers[0].stopped(), 1);
   const retry = client.transform('text-corrector', { text: 'salam' }); workers[1].reply({ id: 2, result });
   assert.deepEqual(await retry, result); client.dispose();
@@ -29,4 +29,18 @@ test('worker errors and component disposal settle pending promises', async () =>
   await assert.rejects(pending, /açılmadı/u); assert.equal(f.stopped(), 1);
   const g = fake(), c = new EditorClient(() => g.worker), next = c.transform('text-corrector', { text: 'salam' }); c.dispose();
   await assert.rejects(next, /dayandırıldı/u);
+});
+
+test('default deadline allows work past ten seconds and stops it at ten minutes', async context => {
+  context.mock.timers.enable({ apis: ['setTimeout'] });
+  const f = fake(), client = new EditorClient(() => f.worker);
+  const pending = client.transform('text-corrector', { text: 'salam' });
+  const rejected = assert.rejects(pending, /10 dəqiqə/u);
+  context.mock.timers.tick(10_000);
+  assert.equal(f.stopped(), 0);
+  context.mock.timers.tick(589_999);
+  assert.equal(f.stopped(), 0);
+  context.mock.timers.tick(1);
+  await rejected;
+  assert.equal(f.stopped(), 1);
 });
