@@ -122,14 +122,23 @@ export function boundaryKey(left: string, right: string): string {
   return `${fold(left).slice(-4)}|${fold(right).slice(0, 5)}`;
 }
 export interface Prediction { word: string; margin: number; supportingFeatures: number; accepted: boolean }
+// Model groups are immutable inference artifacts. Weak keys release alternate evaluation models.
+const groupVocabulary = new WeakMap<Record<string, ClassCounts>, { entries: [string, ClassCounts][]; vocabulary: Set<string>; totalExamples: number }>();
+function contextVocabulary(group: Record<string, ClassCounts>) {
+  const cached = groupVocabulary.get(group);
+  if (cached) return cached;
+  const entries = Object.entries(group);
+  const value = { entries, vocabulary: new Set(entries.flatMap(([, cls]) => Object.keys(cls.features))),
+    totalExamples: entries.reduce((sum, [, cls]) => sum + cls.examples, 0) };
+  groupVocabulary.set(group, value);
+  return value;
+}
 export function predictContext(model: LocalContextModel, raw: string, tokens: readonly Token[], index: number): Prediction | undefined {
   if (/[əıçğöşü]/iu.test(raw) || /^[A-Z]{2,}$/u.test(raw)) return undefined;
   const group = model.groups[fold(raw)];
   if (!group) return undefined;
-  const entries = Object.entries(group);
-  const vocabulary = new Set(entries.flatMap(([, cls]) => Object.keys(cls.features)));
+  const { entries, vocabulary, totalExamples } = contextVocabulary(group);
   const observed = features(tokens, index).filter(feature => vocabulary.has(feature));
-  const totalExamples = entries.reduce((sum, [, cls]) => sum + cls.examples, 0);
   const ranked = entries.map(([word, cls]) => ({ word, cls,
     score: Math.log((cls.examples + 1) / (totalExamples + entries.length))
       + observed.reduce((sum, feature) => sum + Math.log(((cls.features[feature] ?? 0) + 1) / (cls.total + vocabulary.size)), 0),

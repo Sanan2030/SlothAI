@@ -52,9 +52,9 @@ for (const { name, rows } of fixtures) {
   console.error(`${name}: ${snapshot.filter(row => row.fixture === name).length} text-mode rows`);
 }
 const previousPath = argument('compare', '');
-const previous = previousPath ? JSON.parse(readFileSync(previousPath, 'utf8')) as typeof snapshot : undefined;
+const previous = previousPath ? previousPath.split(',').flatMap(path => JSON.parse(readFileSync(path, 'utf8')) as typeof snapshot) : undefined;
 const previousByKey = new Map(previous?.map(row => [`${row.fixture}/${row.id}`, row]));
-const differences = previous ? snapshot.filter(row => previousByKey.get(`${row.fixture}/${row.id}`)?.output !== row.output) : [];
+const differences = previous ? snapshot.filter(row => previousByKey.has(`${row.fixture}/${row.id}`) && previousByKey.get(`${row.fixture}/${row.id}`)!.output !== row.output) : [];
 const corpora = Object.fromEntries(fixtures.map(({ name }) => {
   const rows = snapshot.filter(row => row.fixture === name);
   return [name, { total: rows.length, targets: rows.filter(row => row.expected !== undefined).length, exact: rows.filter(row => row.exact).length,
@@ -62,7 +62,7 @@ const corpora = Object.fromEntries(fixtures.map(({ name }) => {
 }));
 const realRows = (JSON.parse(readFileSync('data/nlp/logs/log-2026-10-05-training.json', 'utf8')).sentences as { id: string; input: string; target: string }[]).map(row => ({ ...row, default: correctText(row.input).text, rulesOnly: correctText(row.input, false, ablations.rulesOnly).text, active: correctText(row.input, false, activeRuntime).text }));
 writeFileSync(`${outputDirectory}/observed-pairs.json`, JSON.stringify(realRows, null, 2) + '\n');
-const report = { runtime: argument('runtime', 'default'), observedDiagnostic: { total: realRows.length, defaultExact: realRows.filter(row => row.default === row.target).length, rulesOnlyExact: realRows.filter(row => row.rulesOnly === row.target).length, activeExact: realRows.filter(row => row.active === row.target).length, note: 'Observed inputs already used in training; this is a diagnostic, not an independent evaluation.' }, provenance: 'offline audit; project fixtures do not constitute independent human evaluation', moduleLoadMs, firstCallMs, timings, corpora,
+const report = { comparedRows: snapshot.filter(row => previousByKey.has(`${row.fixture}/${row.id}`)).length, runtime: argument('runtime', 'default'), observedDiagnostic: { total: realRows.length, defaultExact: realRows.filter(row => row.default === row.target).length, rulesOnlyExact: realRows.filter(row => row.rulesOnly === row.target).length, activeExact: realRows.filter(row => row.active === row.target).length, note: 'Observed inputs already used in training; this is a diagnostic, not an independent evaluation.' }, provenance: 'offline audit; project fixtures do not constitute independent human evaluation', moduleLoadMs, firstCallMs, timings, corpora,
   snapshotSha256: createHash('sha256').update(JSON.stringify(snapshot)).digest('hex'), changedOutputs: differences.length,
   modelJsonBytes: readdirSync('lib/editor', { recursive: true }).filter(name => String(name).endsWith('.json')).reduce((sum, name) => sum + Buffer.byteLength(readFileSync(`lib/editor/${name}`)), 0) };
 writeFileSync(`${outputDirectory}/snapshot.json`, JSON.stringify(snapshot, null, 2) + '\n');

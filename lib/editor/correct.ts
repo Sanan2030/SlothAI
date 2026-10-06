@@ -236,6 +236,14 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       return candidate;
     });
   }
+  // Index letter runs and their whitespace gaps once. The old prefix scan was quadratic.
+  // Use the exact \p{L} run semantics (a hyphen ends the previous run).
+  const previousWords = new Map<number, string>();
+  let priorEnd = 0, priorWord = '';
+  for (const match of text.matchAll(/\p{L}+/gu)) {
+    if (priorWord && /^\s+$/u.test(text.slice(priorEnd, match.index!))) previousWords.set(match.index!, priorWord);
+    priorWord = match[0]; priorEnd = match.index! + match[0].length;
+  }
   const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
   const localPrediction = runtime.useLocalModel === false ? undefined : createLocalPredictor(text,
     jointContextTokens(text, restoreWord, jointArtifact as JointBoundaryModel));
@@ -248,11 +256,10 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       sentenceStart = sentenceEnds[sentenceIndex++];
       context = sentenceEvidence(text.slice(sentenceStart, sentenceEnds[sentenceIndex]));
     }
-    const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
+    const previousWord = previousWords.get(offset) ?? '';
     if (/^(?:karta|məcburi|artsa|kursu)$/iu.test(word)) return word;
     if (/^(?:uc|adi|suret)$/iu.test(word)) {
       const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';
-      const previousWord = text.slice(0, offset).match(/([\p{L}]+)\s+$/u)?.[1] ?? '';
       const grammatical = chooseByGrammar(word, nextWord ? restoreWord(nextWord) : '',
         previousWord ? restoreWord(previousWord) : '');
       if (grammatical) return grammatical;

@@ -1,0 +1,189 @@
+{
+  "runtime": "default",
+  "observedDiagnostic": {
+    "total": 14,
+    "defaultExact": 14,
+    "rulesOnlyExact": 3,
+    "activeExact": 14,
+    "note": "Observed inputs already used in training; this is a diagnostic, not an independent evaluation."
+  },
+  "provenance": "offline audit; project fixtures do not constitute independent human evaluation",
+  "moduleLoadMs": 2383.310935,
+  "firstCallMs": 681.9331970000003,
+  "timings": {
+    "default": {
+      "words200Ms": 382.0310410000002,
+      "words900Ms": 1713.042528
+    },
+    "noLocal": {
+      "words200Ms": 48.79631599999993,
+      "words900Ms": 219.9799520000015
+    },
+    "noAttention": {
+      "words200Ms": 142.03527199999735,
+      "words900Ms": 580.4653160000016
+    },
+    "noBounded": {
+      "words200Ms": 133.0741999999991,
+      "words900Ms": 558.4138059999968
+    },
+    "noObserved": {
+      "words200Ms": 374.5016579999974,
+      "words900Ms": 1709.2017389999965
+    },
+    "noBoundary": {
+      "words200Ms": 391.01622599999973,
+      "words900Ms": 1677.0082669999974
+    },
+    "rulesOnly": {
+      "words200Ms": 32.94101199999568,
+      "words900Ms": 147.02711199999612
+    }
+  },
+  "corpora": {
+    "additional-gold-200.json": {
+      "total": 200,
+      "targets": 200,
+      "exact": 100,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "corporate-letter.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "diverse-release-300.json": {
+      "total": 300,
+      "targets": 300,
+      "exact": 281,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "email-holdout.json": {
+      "total": 340,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "essay.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "holdout-corpus.json": {
+      "total": 265,
+      "targets": 265,
+      "exact": 263,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "hybrid-regression-corpus.json": {
+      "total": 240,
+      "targets": 240,
+      "exact": 200,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-gold-baseline.json": {
+      "total": 0,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-gold-v2.json": {
+      "total": 800,
+      "targets": 800,
+      "exact": 460,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-reviewed.json": {
+      "total": 41,
+      "targets": 41,
+      "exact": 27,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "named-entity-holdout.json": {
+      "total": 432,
+      "targets": 432,
+      "exact": 432,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "neural-thirteen.json": {
+      "total": 13,
+      "targets": 13,
+      "exact": 13,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "platform-proposal.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "punctuation-holdout.json": {
+      "total": 336,
+      "targets": 336,
+      "exact": 336,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "release-holdout-300.json": {
+      "total": 300,
+      "targets": 300,
+      "exact": 244,
+      "identityFalsePositives": 1,
+      "idempotencyFailures": 0
+    },
+    "rsd-it-holdout.json": {
+      "total": 460,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "technical-day-extended.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "technical-day.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "typed-entity-holdout.json": {
+      "total": 1128,
+      "targets": 1128,
+      "exact": 1128,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "workday.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    }
+  },
+  "snapshotSha256": "ad701dcf76d10b0d83f5507fade2be53390c87db1a15122cb76d34c5a4666fae",
+  "changedOutputs": 0,
+  "modelJsonBytes": 5236646,
+  "comparedRows": 4861
+}
