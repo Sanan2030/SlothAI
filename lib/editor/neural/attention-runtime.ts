@@ -20,3 +20,6 @@ export function unresolvedAttentionAmbiguity(raw: string, tokens: Token[], at: n
   for (const candidate of candidates) { const key = fold(candidate); counts.set(key, (counts.get(key) ?? 0) + 1); }
   return [...counts.values()].some(count => count > 1) && !rankAttention(artifact, lexicon, index, raw, tokens, at)?.accepted;
 }
+
+/** Cheap vocabulary lookup; candidate presence keeps context inference eligible. */
+export function hasAttentionCandidate(raw: string): boolean { return transpositionCandidates(index, raw).length > 0; }

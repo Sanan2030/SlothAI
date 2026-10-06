@@ -5,7 +5,7 @@ import { neuralCandidates, neuralIndex } from './features';
 import { predictNetwork } from './network';
 import { tokenize, fold } from '../local-ai/core';
 import { normalizeDigraphs } from '../local-ai/paired';
-import { isEstablishedSurface } from '../lexicon';
+import { isEstablishedSurface, isEstablishedLegacySurface } from '../lexicon';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
 import { isForeignTechnicalStem } from '../technical';
@@ -29,7 +29,7 @@ export function logSpelling(text: string): string {
   tokens.forEach((token, at) => {
     const raw = token.word, lower = raw.toLocaleLowerCase('az-AZ');
     if (!/^[a-zəçğıöşü]{4,24}(?:-[a-zəçğıöşü]{2,12})?$/u.test(lower) || /^[\p{Lu}]+$/u.test(raw) || /\p{Ll}\p{Lu}/u.test(raw)
-      || isEstablishedSurface(raw) && !model.lexicon.edits[lower] || isCanonicalEntity(raw) || canonicalProtectedTerm(raw) || isForeignTechnicalStem(raw)) return;
+      || isEstablishedLegacySurface(raw) && !model.lexicon.edits[lower] || isCanonicalEntity(raw) || canonicalProtectedTerm(raw) || isForeignTechnicalStem(raw)) return;
     const observed = Object.keys(model.lexicon.edits[lower] ?? {});
     const candidates = [...new Set([...observed, ...neuralCandidates(model.lexicon, index, lower)])]
       .filter(candidate => (observed.includes(candidate) || fold(normalizeDigraphs(lower)) === fold(candidate) && preservesDiacritics(raw, candidate)));

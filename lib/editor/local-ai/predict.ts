@@ -8,6 +8,11 @@ import { isFinitePredicate } from '../segmentation';
 
 const model = artifact as LocalContextModel;
 
+export function hasLocalSpellingCandidate(word: string): boolean {
+  const key = fold(word);
+  return Boolean(model.groups[key] || model.forms[key] && model.forms[key].word !== word.toLocaleLowerCase('az-AZ'));
+}
+
 /** Index once per document; prediction reads only six neighbours on either side. */
 export function createLocalPredictor(text: string, contextTokens?: Token[]): (word: string, offset: number) => string | undefined {
   const tokens = contextTokens ?? tokenize(text);

@@ -1,3 +1,4 @@
+import { isClosedFunctionForm } from '../function-word-forms';
 import { boundedCorrection } from './bounded-runtime';
 import { preservesDiacritics } from './diacritics';
 export { preservesDiacritics } from './diacritics';
@@ -24,9 +25,14 @@ function eligibleNeuralWord(raw: string): boolean {
   return !(!/^[\p{L}]{4,24}$/u.test(raw) || model.lexicon.words[lower] || Object.hasOwn(pairedArtifact.words, lower)
       || /\p{Ll}\p{Lu}/u.test(raw) || /^[\p{Lu}]+$/u.test(raw)
       || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
-      || isReviewedSpelling(lower) || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)
+      || isClosedFunctionForm(raw) || isReviewedSpelling(lower) || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)
       || [...(dictionaryCandidates(lower) ?? [])].some(word => preservesDiacritics(raw, word)
         && productiveMorphology.generateForms({ lemma: word, pos: 'verb', limit: 1 }).length > 0));
+}
+
+export function hasLearnedSpellingCandidate(raw: string): boolean {
+  const lower = raw.toLocaleLowerCase('az-AZ');
+  return eligibleNeuralWord(raw) && Object.hasOwn(model.lexicon.edits, lower);
 }
 
 /** This network repairs unknown surfaces. Established/explicit valid words win. */

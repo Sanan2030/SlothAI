@@ -1,3 +1,4 @@
+import { hasAttentionCandidate } from './neural/attention-runtime';
 import { guardInsertedBoundaries } from './syntax-boundary-guard';
 import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
 import { observedSpelling, repairObservedSpacing } from './observed-channel';
@@ -5,12 +6,12 @@ import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscours
 import { punctuateSubjectPronouns } from './grammatical-commas';
 import { editHTMLStructure } from './html-structure';
 import { editStructuredText } from './structured-text';
-import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
+import { neuralSpelling, hasLearnedSpellingCandidate, neuralAgreement, neuralTranspositions, type NeuralSpellingFallback } from './neural/runtime';
 import { documentSpelling } from './neural/document-runtime';
 import { logSpelling, isLogSurface } from './neural/log-runtime';
 import { editOCRLabels, isOCRSurface } from './log-ocr';
 import { dictionaryCandidates, foldLetters } from './dictionary';
-import { isEstablishedSurface } from './lexicon';
+import { isEstablishedSurface, validatedGeneratedSpelling, restorePriorWord, sourceRepairNeedsContext } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
 import { prepareReviewedContext } from './reviewed-context';
@@ -23,9 +24,9 @@ import { businessPhrases, punctuateBusiness, businessLayout, businessStageLists 
 import { prepareTechnicalPhrases, technicalPhrases, punctuateTechnical } from './technical';
 import { protectKnownTerminology, canonicalProtectedTerm } from './protected-terminology';
 import { paragraphEmailBody, parseEmailSections, prepareEmailBody } from './rules/email';
-import { chooseByGrammar, chooseInflectedPlace, chooseBySentence, sentenceEvidence } from './contextual-choices';
+import { chooseByGrammar, chooseInflectedPlace, chooseInflectedHomograph, chooseBySentence, sentenceEvidence } from './contextual-choices';
 import { isEmailGreeting } from './email-greetings';
-import { createLocalPredictor, insertLearnedBoundaries } from './local-ai/predict';
+import { createLocalPredictor, hasLocalSpellingCandidate, insertLearnedBoundaries } from './local-ai/predict';
 import { createPairedPredictor } from './local-ai/paired-runtime';
 import { jointContextTokens, insertJointBoundaries, type JointBoundaryModel } from './local-ai/joint-boundary';
 import jointArtifact from './local-ai/joint-boundary-model.json';
@@ -71,13 +72,13 @@ export interface CorrectionRuntime {
  * Structural typos and ambiguous lexical senses retain full contextual inference.
  * Per-document caching avoids another morphological pass for repeated tokens.
  */
-function spellingInferenceGate(restore: (word: string) => string): (raw: string) => boolean {
+function spellingInferenceGate(restore: (word: string) => string, services: LanguageServices): (raw: string) => boolean {
   const checked = new Map<string, boolean>();
   return raw => {
     if (checked.has(raw)) return checked.get(raw)!;
     const candidate = restore(raw);
     const normalized = raw.replace(/sh/giu, 's').replace(/ch/giu, 'c').replace(/gh/giu, 'g');
-    const uncertain = /^(?:seher|suret)(?:$|[a-z])/iu.test(raw)
+    const uncertain = candidate !== restorePriorWord(raw, services) || candidate === raw && (hasLocalSpellingCandidate(raw) || hasLearnedSpellingCandidate(raw)) || !isEstablishedSurface(raw) && hasAttentionCandidate(raw) || sourceRepairNeedsContext(raw, services) || /^(?:seher|suret)(?:$|[a-z])/iu.test(raw)
       || !isEstablishedSurface(candidate)
       || foldLetters(normalized) !== foldLetters(candidate);
     checked.set(raw, uncertain);
@@ -224,7 +225,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Establish its subject comma while the grammatical evidence is visible.
   text = preserveContextualHomographs(punctuateSubjectPronouns(text), protect);
   const alwaysInfer = runtime.modelPolicy === 'always';
-  const inferWord = spellingInferenceGate(restoreWord);
+  const inferWord = spellingInferenceGate(restoreWord, services);
   if (runtime.useObservedChannel !== false && (alwaysInfer || needsSpellingInference(text, inferWord))) {
     text = repairObservedSpacing(text);
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/gu, word => {
@@ -251,7 +252,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
       if (isCanonicalEntity(word) || !alwaysInfer && !inferWord(word)) return word;
       const candidate = paired(word, offset);
-      const established = restoreWord(word);
+      const established = restorePriorWord(word, services);
       // Preserve established spelling repairs, except a supervised digraph
       // correction whose context can distinguish səhər from şəhər.
       if (!candidate || !candidate.split(/\s+/u).every(value => isEstablishedSurface(value, services))
@@ -270,6 +271,13 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     if (priorWord && /^\s+$/u.test(text.slice(priorEnd, match.index!))) previousWords.set(match.index!, priorWord);
     priorWord = match[0]; priorEnd = match.index! + match[0].length;
   }
+  const generatedDictionaryRepairs = new Map<string, string>();
+  const contextWords = [...text.matchAll(/\p{L}+/gu)];
+  const contextPositions = new Map(contextWords.map((match, index) => [match.index!, index]));
+  const nearbyEvidence = (offset: number) => {
+    const at = contextPositions.get(offset) ?? 0;
+    return sentenceEvidence(contextWords.slice(Math.max(0, at - 7), at + 8).map(match => match[0]).join(' '));
+  };
   const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
   const localPrediction = !useSpellingModels ? undefined : createLocalPredictor(text,
     jointContextTokens(text, restoreWord, jointArtifact as JointBoundaryModel));
@@ -290,7 +298,11 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
         previousWord ? restoreWord(previousWord) : '');
       if (grammatical) return grammatical;
     }
-    const contextual = chooseInflectedPlace(word, previousWord)
+    const contextual = chooseInflectedHomograph(word, () => nearbyEvidence(offset), () => {
+      const next = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1];
+      return next ? restoreWord(next) : '';
+    })
+      ?? chooseInflectedPlace(word, previousWord)
       ?? (alwaysInfer || inferWord(word) ? localPrediction?.(word, offset) : undefined) ?? chooseBySentence(word, context);
     if (contextual && isEstablishedSurface(contextual, services)) return contextual;
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
@@ -303,6 +315,10 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       }
     }
     const corrected = restoreWord(word);
+    if (corrected !== word && !/[əçğıöşü]/iu.test(word)) {
+      const validated = validatedGeneratedSpelling(corrected);
+      if (validated) generatedDictionaryRepairs.set(corrected.toLocaleLowerCase('az-AZ'), validated);
+    }
     const replacement = corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
     return replacement;
@@ -316,6 +332,10 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   text = expositoryPhrases(text);
   text = businessPhrases(text);
   text = technicalPhrases(text);
+  if (generatedDictionaryRepairs.size) text = text.replace(/\p{L}+/gu, word => {
+    const validated = generatedDictionaryRepairs.get(word.toLocaleLowerCase('az-AZ'));
+    return validated ? (/^\p{Lu}/u.test(word) ? validated[0].toLocaleUpperCase('az-AZ') + validated.slice(1) : validated) : word;
+  });
   if (!preserveFormatting) text = businessLayout(text);
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];

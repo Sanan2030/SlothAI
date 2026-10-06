@@ -5,7 +5,7 @@ import { neuralCandidates, neuralIndex } from './features';
 import { predictNetwork } from './network';
 import { tokenize, fold } from '../local-ai/core';
 import { normalizeDigraphs } from '../local-ai/paired';
-import { isEstablishedSurface } from '../lexicon';
+import { isEstablishedSurface, isEstablishedLegacySurface } from '../lexicon';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
 import { isForeignTechnicalStem } from '../technical';
@@ -23,7 +23,7 @@ export function documentSpelling(text: string): string {
   tokens.forEach((token, at) => {
     const raw = token.word, lower = raw.toLocaleLowerCase('az-AZ');
     if (!/^[a-zəçğıöşü]{4,24}$/u.test(lower) || /^[\p{Lu}]+$/u.test(raw) || /\p{Ll}\p{Lu}/u.test(raw)
-      || isEstablishedSurface(raw) || isCanonicalEntity(raw) || canonicalProtectedTerm(raw) || isForeignTechnicalStem(raw)) return;
+      || isEstablishedLegacySurface(raw) || isCanonicalEntity(raw) || canonicalProtectedTerm(raw) || isForeignTechnicalStem(raw)) return;
     const candidates = neuralCandidates(model.lexicon, index, lower)
       .filter(candidate => fold(normalizeDigraphs(lower)) === fold(candidate) && preservesDiacritics(raw, candidate));
     if (!candidates.length) return;

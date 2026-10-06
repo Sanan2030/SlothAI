@@ -4,8 +4,15 @@ import { canonicalProtectedTerm } from './protected-terminology';
 // Canonical product/acronym spelling is shared with the protected terminology registry.
 const foreign = new Set(`agile scrum sprint backlog demo transactional responsive
 dynamic hashing unit zero downtime deployment retry roll-back framework startup
-database backend frontend deploy commit open data veri beta server optimum cache branch production`.split(/\s+/));
+database backend frontend deploy commit open data veri beta server optimum cache branch production
+tag site change merge rebase cherry checkout cookie session request response header payload`.split(/\s+/));
 export function isForeignTechnicalStem(word: string): boolean { return foreign.has(word.toLocaleLowerCase('en-US')); }
+
+export function isForeignTechnicalInflection(word: string): boolean {
+  const lower = word.toLowerCase();
+  return ['i', 'in', 'ini', 'e', 'a', 'de', 'da', 'den', 'dan', 'ler', 'lar'].some(ending =>
+    lower.endsWith(ending) && foreign.has(lower.slice(0, -ending.length)));
+}
 
 const technicalCaseSuffixes = [
   ['den', '-dən'], ['dan', '-dan'], ['de', '-də'], ['da', '-da'], ['e', '-ə'], ['a', '-a'],
@@ -40,7 +47,8 @@ export function technicalSpelling(word: string): string | undefined {
     if (base !== undefined) return base + canonicalSuffix;
   }
 
-  return foreign.has(lower) ? word : undefined;
+  if (foreign.has(lower)) return word;
+  return undefined;
 }
 
 export const technicalWords = `

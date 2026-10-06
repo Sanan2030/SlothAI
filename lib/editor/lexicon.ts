@@ -1,10 +1,14 @@
+import { isClosedFunctionForm } from './function-word-forms';
+import type { MorphologyEngine } from './contracts/morphology';
+import boundedLexicalArtifact from './neural/bounded-model.json';
+import { SourceInflectionEngine } from './source-inflection';
 import { reviewedSpelling } from './reviewed-spelling';
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
 import { expositoryWords, expositoryAliases } from './expository';
 import { businessWords, businessAliases } from './business';
-import { technicalWords, technicalAliases, technicalSpelling } from './technical';
+import { technicalWords, technicalAliases, technicalSpelling, isForeignTechnicalInflection } from './technical';
 import { dictionaryCandidates, foldLetters as fold, chooseSpelling } from './dictionary';
 import type { SpellingContext } from './contracts/spelling';
 import { chooseIndexedTypo } from './spelling-candidates';
@@ -171,7 +175,7 @@ const establishedCache = new Map<string, boolean>();
 /** Recognition invariant shared by lexical and statistical spelling stages.
  * The existing local curated lexicon is a dictionary too; technical names are
  * explicitly admitted rather than guessed as native Azerbaijani words. */
-export function isEstablishedSurface(word: string, services?: SpellingContext): boolean {
+export function isEstablishedLegacySurface(word: string, services?: SpellingContext): boolean {
   const lower = word.toLocaleLowerCase('az-AZ');
   if (documentSurfaces.has(lower)) return true;
   if (dictionaryCandidates(lower)?.has(lower) === true || candidates.get(fold(lower))?.has(lower) === true
@@ -186,6 +190,13 @@ export function isEstablishedSurface(word: string, services?: SpellingContext): 
   return valid;
 }
 
+
+export function isEstablishedSurface(word: string, services?: SpellingContext): boolean {
+  return isClosedFunctionForm(word) || isEstablishedLegacySurface(word, services) || sourceInflections.analyze(word).length > 0;
+}
+
+const sourceInflections = new SourceInflectionEngine(surface => candidates.get(fold(surface))?.has(surface) === true || dictionaryCandidates(surface)?.has(surface) === true);
+export const analyzeSourceInflection = (word: string) => sourceInflections.analyze(word);
 
 function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
   const values = services
@@ -551,10 +562,10 @@ function restoreDigraphTransliteration(word: string, services?: SpellingContext)
     .replace(/gh/gi, match => match[0] === 'G' ? 'Ğ' : 'ğ');
   const candidate = services?.morphology.findByFoldedForm?.(variant) ?? chooseSpelling(variant, candidates.get(fold(variant)))
     ?? uniqueDictionaryCandidate(variant, services) ?? restoreProductiveSuffix(variant, services);
-  return candidate && isEstablishedSurface(candidate, services) ? candidate : undefined;
+  return candidate && isEstablishedLegacySurface(candidate, services) ? candidate : undefined;
 }
 
-export function restoreWord(word: string, services?: SpellingContext): string {
+function restoreEstablishedWord(word: string, services?: SpellingContext): string {
   const technical = technicalSpelling(word);
   if (technical !== undefined) return technical;
   // Preserve camelCase identifiers and acronyms. Title case remains editable.
@@ -595,7 +606,7 @@ export function restoreWord(word: string, services?: SpellingContext): string {
       const value = restoreProductiveSuffix(word, services);
       // Whole-word dictionary evidence wins when a suffix guess changes even
       // the ASCII vowel skeleton, rather than restoring missing diacritics.
-      return value && isEstablishedSurface(value, services)
+      return value && isEstablishedLegacySurface(value, services)
         && (!accentedDictionary || fold(value) === fold(word)) ? value : undefined;
     })()
     ?? chooseSpelling(word, imported)
@@ -603,7 +614,7 @@ export function restoreWord(word: string, services?: SpellingContext): string {
     ?? ((imported?.size ?? 0) > 1 ? undefined : services?.morphology.findByFoldedForm?.(word))
     ?? chooseIndexedTypo(word)
     ?? restoreDigraphTransliteration(word, services);
-  if (!replacement || !isEstablishedSurface(replacement, services)) return word;
+  if (!replacement || !isEstablishedLegacySurface(replacement, services)) return word;
   // Explicit diacritics are evidence: do not replace a correctly accented letter
   // with another candidate merely because both fold to the same ASCII spelling.
   if (!alias && [...word.toLocaleLowerCase('az-AZ')].some((letter, index) =>
@@ -611,6 +622,56 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   if (properNames.has(key)) return properNames.get(key)!;
   return /^[A-ZƏÇĞIİÖŞÜ]/.test(word)
     ? replacement[0].toLocaleUpperCase('az-AZ') + replacement.slice(1) : replacement;
+}
+
+const originalServices = new WeakMap<SpellingContext, SpellingContext>();
+function beforeSourceExpansion(services?: SpellingContext): SpellingContext | undefined {
+  if (!services) return undefined;
+  const cached = originalServices.get(services); if (cached) return cached;
+  const morphology = Object.hasOwn(services.morphology, 'analyzeWord') ? services.morphology : ((services.morphology as MorphologyEngine & { legacyEngine?: MorphologyEngine }).legacyEngine ?? services.morphology);
+  const value = morphology === services.morphology ? services : { ...services, morphology };
+  originalServices.set(services, value); return value;
+}
+/** Source-only analyses are plausible candidates, not proof of the sentence's
+ * intended meaning. Retain contextual models when the prior lexical path abstained. */
+export function sourceRepairNeedsContext(word: string, services?: SpellingContext): boolean {
+  const prior = beforeSourceExpansion(services);
+  return !isClosedFunctionForm(word) && !isEstablishedLegacySurface(word, prior) && restoreEstablishedWord(word, prior) === word;
+}
+export function restorePriorWord(word: string, services?: SpellingContext): string {
+  return restoreEstablishedWord(word, beforeSourceExpansion(services));
+}
+export function restoreWord(word: string, services?: SpellingContext): string {
+  if (isClosedFunctionForm(word) || ambiguous.has(fold(word)) || fold(word) === 'seher') return word;
+  const prior = beforeSourceExpansion(services);
+  const sourceRows = sourceInflections.candidates(word);
+  // Only the established long homograph families veto a forced default sense.
+  // Closed grammatical words cannot inherit a coincidental short noun analysis.
+  if (!/[əçğıöşü]/iu.test(word) && new Set(sourceRows.map(row => row.surface)).size > 1
+    && sourceRows.some(row => row.lemma.length >= 4 && ambiguous.has(fold(row.lemma)) && !row.features.derivation?.includes('adjectival'))) return word;
+  const existing = restoreEstablishedWord(word, prior);
+  if (existing !== word || isForeignTechnicalInflection(word) || isEstablishedLegacySurface(word, prior) || word.length < 3
+    || technicalSpelling(word) !== undefined || /\p{Ll}\p{Lu}/u.test(word) || /^[\p{Lu}]+$/u.test(word)) return existing;
+  // Whole-lemma attestation in the existing source-trained vocabulary is lexical
+  // evidence only. It cannot decide an inflected lexical homograph's sense.
+  const attested = chooseSpelling(word, new Set(sourceRows.filter(row => row.surface === row.lemma
+    && (boundedLexicalArtifact.lexicon.words[row.surface as keyof typeof boundedLexicalArtifact.lexicon.words]?.count ?? 0) >= 3).map(row => row.surface)));
+  const replacement = attested ?? sourceInflections.restore(word) ?? sourceInflections.restoreVowelConfusion(word);
+  if (!replacement || !isEstablishedSurface(replacement, services)) return word;
+  return /^\p{Lu}/u.test(word) ? replacement[0].toLocaleUpperCase('az-AZ') + replacement.slice(1) : replacement;
+}
+
+/** Revalidate a generated guess only after contextual spelling had its turn.
+ * The caller must restrict this to ASCII input changed by lexical correction. */
+export function validatedGeneratedSpelling(word: string): string | undefined {
+  const lower = word.toLocaleLowerCase('az-AZ');
+  if (isReviewedSpelling(lower) || productiveMorphology.isValidWordForm(lower) || technicalSpelling(lower) !== undefined || isForeignTechnicalInflection(lower) || dictionaryCandidates(lower)?.has(lower) || sourceInflections.analyze(lower).length) return undefined;
+  const whole = chooseSpelling(fold(lower), dictionaryCandidates(lower)) ?? sourceInflections.restore(fold(lower));
+  // Only reverse an unattested stem-softening guess. A new dictionary entry
+  // alone is insufficient evidence to add a different lexical consonant.
+  const undoSoftening = whole && [...lower].some((letter, at) =>
+    ({ 'ğ': 'gq', y: 'k', d: 't' } as Record<string, string>)[letter]?.includes(whole[at]));
+  return whole && undoSoftening && sourceInflections.analyze(whole).some(row => row.pos === 'noun') ? whole : undefined;
 }
 
 /** Canonical reviewed spellings win over later speculative statistical repairs. */

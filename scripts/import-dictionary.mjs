@@ -77,5 +77,18 @@ const metadata = {
 };
 await mkdir(resolve(root, 'lib/editor/generated'), { recursive: true });
 await atomicWrite(resolve(root, 'lib/editor/generated/az-words.json'), JSON.stringify(wordList) + '\n');
+// Keep lemma classes, not generated surfaces: N/O noun, V/E verb, A/J adjective.
+// These are the pinned source's own affix categories, not inferred contextual POS.
+const stemClasses = { noun: new Set(), verb: new Set(), adjective: new Set() };
+for (const entry of entries) {
+  if (!/^[A-Za-zƏəÇçĞğİıÖöŞşÜü]+$/u.test(entry.word) || entry.flags.length % 2) continue;
+  const flags = splitLongFlags(entry.flags);
+  for (const [pos, prefixes] of [['noun', 'NO'], ['verb', 'VE'], ['adjective', 'AJ']]) {
+    if (flags.some(flag => prefixes.includes(flag[0]))) stemClasses[pos].add(entry.word.toLocaleLowerCase('az-AZ'));
+  }
+}
+await atomicWrite(resolve(root, 'lib/editor/generated/az-stem-classes.json'), JSON.stringify(Object.fromEntries(
+  Object.entries(stemClasses).map(([pos, stems]) => [pos, [...stems].sort().join(' ')]))) + '\n');
+
 await atomicWrite(resolve(output, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n');
 console.log(JSON.stringify(metadata, null, 2));

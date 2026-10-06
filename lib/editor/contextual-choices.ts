@@ -10,8 +10,8 @@ const evidence: Record<string, { alternatives: readonly [string, readonly string
     ['şəhər', ['küçə', 'kuce', 'küçələr', 'kuceler', 'mərkəz', 'merkez', 'bina', 'binalar', 'əhalisi', 'ehalisi', 'nəqliyyat', 'neqliyyat', 'rayon', 'paytaxt']],
   ] },
   suret: { alternatives: [
-    ['surət', ['sənəd', 'sened', 'məktub', 'mektub', 'nüsxə', 'nusxe', 'arxiv', 'imza', 'əsli', 'esli', 'çıxarış', 'cixaris', 'fayl']],
-    ['sürət', ['saniyə', 'saniye', 'tezlik', 'internet', 'şəbəkə', 'sebeke', 'performans', 'artdı', 'artdi', 'azaldı', 'azaldi', 'yavaş', 'yavas', 'km']],
+    ['surət', ['sənəd', 'sened', 'məktub', 'mektub', 'nüsxə', 'nusxe', 'arxiv', 'imza', 'əsli', 'esli', 'çıxarış', 'cixaris', 'fayl', 'qərar', 'sərəncam', 'əmr', 'protokol']],
+    ['sürət', ['saniyə', 'saniye', 'tezlik', 'internet', 'şəbəkə', 'sebeke', 'performans', 'artdı', 'artdi', 'azaldı', 'azaldi', 'yavaş', 'yavas', 'km', 'cavablandır', 'emal', 'yüklən', 'işlən']],
   ] },
 };
 
@@ -75,4 +75,31 @@ export function chooseInflectedPlace(word: string, previousWord: string): string
   if (!/^seher/iu.test(word) || /[əçğıöşü]/iu.test(word)
     || !placeKeys.has(fold(previousWord))) return undefined;
   return cityForms.get(fold(word));
+}
+
+
+// Scope the existing semantic cues to verified inflections of the same noun.
+// A literal accented word is never changed to the competing lexical meaning.
+const inflectedHomographs = new Map<string, { base: string; surfaces: Map<string, string> }>();
+for (const [base, entry] of Object.entries(evidence)) for (const [lemma] of entry.alternatives) {
+  if (base !== 'suret') continue;
+  for (const surface of [...productiveMorphology.generateForms({ lemma, pos: 'noun', limit: 256 }), lemma + 'lə']) {
+    const key = fold(surface), family = inflectedHomographs.get(key) ?? { base, surfaces: new Map<string, string>() };
+    family.surfaces.set(lemma, surface); inflectedHomographs.set(key, family);
+  }
+}
+export function chooseInflectedHomograph(word: string, surrounding: () => ReadonlySet<string>, nextWord: () => string): string | undefined {
+  if (/[əçğıöşü]/iu.test(word)) return undefined;
+  const family = inflectedHomographs.get(fold(word));
+  if (family && family.surfaces.size > 1 && fold(word) !== family.base) {
+    const selected = chooseBySentence(family.base, surrounding());
+    const surface = selected ? family.surfaces.get(selected.toLocaleLowerCase('az-AZ')) : undefined;
+    if (surface) return /^\p{Lu}/u.test(word) ? surface[0].toLocaleUpperCase('az-AZ') + surface.slice(1) : surface;
+  }
+  // The locative əl-də versus el-də is resolved by the established light-verb
+  // construction, not by declaring the standalone noun "el" a spelling error.
+  if (fold(word) === 'elde' && productiveMorphology.analyzeWord(nextWord()).some(row => row.lemma === 'et' && row.pos === 'verb')) {
+    return /^\p{Lu}/u.test(word) ? 'Əldə' : 'əldə';
+  }
+  return undefined;
 }
