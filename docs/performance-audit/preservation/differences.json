@@ -1,0 +1,22 @@
+[
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-111",
+    "input": "Sərgi yeni əsərlərlə zenginlesdi.",
+    "expected": "Sərgi yeni əsərlərlə zənginləşdi.",
+    "output": "Sərgi yeni əsərlərlə zənginləşdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "release-holdout-300.json",
+    "id": "release-holdout-126",
+    "input": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "expected": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "output": "Sərginin rəhbəri sərgi haqqında məlumat hazırladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  }
+]

@@ -563,6 +563,11 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   // Explicit, morphologically valid diacritics encode the author's chosen meaning.
   if (/[əçğıöşü]/iu.test(word) && services?.morphology.isValidWordForm(word)) return word;
   const key = fold(word);
+  // Imported whole-word evidence outranks speculative malformed suffix repair.
+  // Explicit accents identify the author's lexical choice; folding does not.
+  if (/[əçğıöşü]/iu.test(word) && dictionaryCandidates(word)?.has(word.toLocaleLowerCase('az-AZ'))) {
+    return properNames.get(key) ?? word;
+  }
   if (ambiguous.has(key)) return word;
   const values = candidates.get(key);
   const imported = word.length > 2 ? (services
