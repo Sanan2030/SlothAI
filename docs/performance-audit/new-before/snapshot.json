@@ -1,0 +1,3002 @@
+[
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-001",
+    "input": "Sagirdler kitabxanada səssizcə oxuyurdular.",
+    "expected": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+    "output": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-002",
+    "input": "Müəllim qiymetlendirme meyarlarını lövhəyə yazdı.",
+    "expected": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+    "output": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-003",
+    "input": "Laboratoriyada yeni mikroskop qurasdirildi.",
+    "expected": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+    "output": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-004",
+    "input": "Derslikdeki xəritə yeniləndi.",
+    "expected": "Dərslikdəki xəritə yeniləndi.",
+    "output": "Dərslikdəki xəritə yeniləndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-005",
+    "input": "Sinif numayendesi tədbirin vaxtını bildirdi.",
+    "expected": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+    "output": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-006",
+    "input": "Təqaüd üçün erizeler qəbul edilir.",
+    "expected": "Təqaüd üçün ərizələr qəbul edilir.",
+    "output": "Təqaüd üçün ərizələr qəbul edilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-007",
+    "input": "Mektebliler ekskursiyadan qayıtdılar.",
+    "expected": "Məktəblilər ekskursiyadan qayıtdılar.",
+    "output": "Məktəblilər ekskursiyadan qayıtdılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-008",
+    "input": "Valideynler iclasda iştirak etdilər.",
+    "expected": "Valideynlər iclasda iştirak etdilər.",
+    "output": "Valideynlər iclasda iştirak etdilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-009",
+    "input": "Universitet arxivə yeni senedler göndərdi.",
+    "expected": "Universitet arxivə yeni sənədlər göndərdi.",
+    "output": "Universitet arxivə yeni sənədlər göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-010",
+    "input": "İmtahanın nəticələri sabah aciqlanacaq.",
+    "expected": "İmtahanın nəticələri sabah açıqlanacaq.",
+    "output": "İmtahanın nəticələri sabah açıqlanacaq.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-011",
+    "input": "Həkim xəstənin tezyiqini ölçdü.",
+    "expected": "Həkim xəstənin təzyiqini ölçdü.",
+    "output": "Həkim xəstənin təzyiqini ölçdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-012",
+    "input": "Tibb bacısı dermanin dozasını yoxladı.",
+    "expected": "Tibb bacısı dərmanın dozasını yoxladı.",
+    "output": "Tibb bacısı dərmanın dozasını yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-013",
+    "input": "Poliklinikada növbə sistemi yenilendi.",
+    "expected": "Poliklinikada növbə sistemi yeniləndi.",
+    "output": "Poliklinikada növbə sistemi yeniləndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-014",
+    "input": "Emeliyyatdan sonra müşahidə davam etdi.",
+    "expected": "Əməliyyatdan sonra müşahidə davam etdi.",
+    "output": "Əməliyyatdan sonra müşahidə davam etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-015",
+    "input": "Rentgen muayinesi günortaya təyin olundu.",
+    "expected": "Rentgen müayinəsi günortaya təyin olundu.",
+    "output": "Rentgen müayinəsi günortaya təyin olundu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-016",
+    "input": "Uşağın peyvənd cədvəli hazirdir.",
+    "expected": "Uşağın peyvənd cədvəli hazırdır.",
+    "output": "Uşağın peyvənd cədvəli hazırdır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-017",
+    "input": "Aptekdə resept esasinda dərman verilir.",
+    "expected": "Aptekdə resept əsasında dərman verilir.",
+    "output": "Aptekdə resept əsasında dərman verilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-018",
+    "input": "Təcili yardım briqadasi ünvana çatdı.",
+    "expected": "Təcili yardım briqadası ünvana çatdı.",
+    "output": "Təcili yardım briqadası ünvana çatdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-019",
+    "input": "Cərrah yaranın sargisini dəyişdi.",
+    "expected": "Cərrah yaranın sarğısını dəyişdi.",
+    "output": "Cərrah yaranın sarğısını dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-020",
+    "input": "Mualice planına əlavə müayinə daxil edildi.",
+    "expected": "Müalicə planına əlavə müayinə daxil edildi.",
+    "output": "Müalicə planına əlavə müayinə daxil edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-021",
+    "input": "Fermerlər yazlıq əkinə hazirlasirlar.",
+    "expected": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+    "output": "Fermerlər yazlıq əkinə hazirlasirlar.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-022",
+    "input": "Suvarma kanalı cokuntuden təmizləndi.",
+    "expected": "Suvarma kanalı çöküntüdən təmizləndi.",
+    "output": "Suvarma kanalı çöküntüdən təmizləndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-023",
+    "input": "Buğda sahəsində zererverici aşkarlanıb.",
+    "expected": "Buğda sahəsində zərərverici aşkarlanıb.",
+    "output": "Buğda sahəsində zərərverici aşkarlanıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-024",
+    "input": "Bağban ağacların budaqlarini kəsdi.",
+    "expected": "Bağban ağacların budaqlarını kəsdi.",
+    "output": "Bağban ağacların budaqlarını kəsdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-025",
+    "input": "Torpagin rütubəti cihazla ölçülür.",
+    "expected": "Torpağın rütubəti cihazla ölçülür.",
+    "output": "Torpağın rütubəti cihazla ölçülür.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-026",
+    "input": "Istixanada pomidor şitilləri böyüyür.",
+    "expected": "İstixanada pomidor şitilləri böyüyür.",
+    "output": "Istixanada pomidor şitilləri böyüyür.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-027",
+    "input": "Məhsulun dasinmasi üçün soyuducu ayrıldı.",
+    "expected": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+    "output": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-028",
+    "input": "Gübrənin tərkibi laboratoriyada yoxlanildi.",
+    "expected": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+    "output": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-029",
+    "input": "Arıçılar pətəkləri kölgəyə yerlesdirdiler.",
+    "expected": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+    "output": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-030",
+    "input": "Taxıl anbarinin damı təmir edildi.",
+    "expected": "Taxıl anbarının damı təmir edildi.",
+    "output": "Taxıl anbarının damı təmir edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-031",
+    "input": "Marşrutun dayanacaqlari xəritədə göstərilib.",
+    "expected": "Marşrutun dayanacaqları xəritədə göstərilib.",
+    "output": "Marşrutun dayanacaqları xəritədə göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-032",
+    "input": "Sürücü yükün cekisini yoxladı.",
+    "expected": "Sürücü yükün çəkisini yoxladı.",
+    "output": "Sürücü yükün çəkisini yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-033",
+    "input": "Qatarin yola düşmə vaxtı dəyişdi.",
+    "expected": "Qatarın yola düşmə vaxtı dəyişdi.",
+    "output": "Qatarın yola düşmə vaxtı dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-034",
+    "input": "Sernisinler avtobusun gəlməsini gözlədilər.",
+    "expected": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+    "output": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-035",
+    "input": "Liman işçiləri konteyneri bosaltdilar.",
+    "expected": "Liman işçiləri konteyneri boşaltdılar.",
+    "output": "Liman işçiləri konteyneri boşaltdılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-036",
+    "input": "Tramvayin qapıları avtomatik bağlandı.",
+    "expected": "Tramvayın qapıları avtomatik bağlandı.",
+    "output": "Tramvayın qapıları avtomatik bağlandı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-037",
+    "input": "Teyyarenin enişi uğurla başa çatdı.",
+    "expected": "Təyyarənin enişi uğurla başa çatdı.",
+    "output": "Təyyarənin enişi uğurla başa çatdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-038",
+    "input": "Velosiped yolu çayın kenarindan keçir.",
+    "expected": "Velosiped yolu çayın kənarından keçir.",
+    "output": "Velosiped yolu çayın kenarindan keçir.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-039",
+    "input": "Neqliyyat sıxlığı axşam artdı.",
+    "expected": "Nəqliyyat sıxlığı axşam artdı.",
+    "output": "Nəqliyyat sıxlığı axşam artdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-040",
+    "input": "Gəminin muherriki yenidən işə salındı.",
+    "expected": "Gəminin mühərriki yenidən işə salındı.",
+    "output": "Gəminin mühərriki yenidən işə salındı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-041",
+    "input": "Mühasib ödəniş tapsirigini imzaladı.",
+    "expected": "Mühasib ödəniş tapşırığını imzaladı.",
+    "output": "Mühasib ödəniş tapşırığını imzaladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-042",
+    "input": "Hesabatda gəlir və xərclər gosterilib.",
+    "expected": "Hesabatda gəlir və xərclər göstərilib.",
+    "output": "Hesabatda gəlir və xərclər göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-043",
+    "input": "Sığorta muqavilesi bir il qüvvədədir.",
+    "expected": "Sığorta müqaviləsi bir il qüvvədədir.",
+    "output": "Sığorta müqaviləsi bir il qüvvədədir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-044",
+    "input": "Borcun qaytarilma müddəti uzadıldı.",
+    "expected": "Borcun qaytarılma müddəti uzadıldı.",
+    "output": "Borcun qaytarılma müddəti uzadıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-045",
+    "input": "İnvestorlar layihənin riskini qiymetlendirdiler.",
+    "expected": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+    "output": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-046",
+    "input": "Əmanətin faiz dərəcəsi deyismeyib.",
+    "expected": "Əmanətin faiz dərəcəsi dəyişməyib.",
+    "output": "Əmanətin faiz dərəcəsi dəyişməyib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-047",
+    "input": "Vergi beyannamesi vaxtında təqdim edildi.",
+    "expected": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+    "output": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-048",
+    "input": "Budceden təmir üçün vəsait ayrılıb.",
+    "expected": "Büdcədən təmir üçün vəsait ayrılıb.",
+    "output": "Büdcədən təmir üçün vəsait ayrılıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-049",
+    "input": "Kassir qəbzin surətini musteriye verdi.",
+    "expected": "Kassir qəbzin surətini müştəriyə verdi.",
+    "output": "Kassir qəbzin surətini müştəriyə verdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-050",
+    "input": "Maliyyə şöbəsi hesablamani tamamladı.",
+    "expected": "Maliyyə şöbəsi hesablamanı tamamladı.",
+    "output": "Maliyyə şöbəsi hesablamanı tamamladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-051",
+    "input": "Vəkil muqavilenin şərtlərini izah etdi.",
+    "expected": "Vəkil müqavilənin şərtlərini izah etdi.",
+    "output": "Vəkil müqavilənin şərtlərini izah etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-052",
+    "input": "Mehkemenin qərarı tərəflərə göndərildi.",
+    "expected": "Məhkəmənin qərarı tərəflərə göndərildi.",
+    "output": "Məhkəmənin qərarı tərəflərə göndərildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-053",
+    "input": "Şahid hadisənin vaxtını deqiqlesdirdi.",
+    "expected": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+    "output": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-054",
+    "input": "Ərizənin qeydiyyat nömrəsi saxlanildi.",
+    "expected": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+    "output": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-055",
+    "input": "Hakim iclasi sabaha təxirə saldı.",
+    "expected": "Hakim iclası sabaha təxirə saldı.",
+    "output": "Hakim iclası sabaha təxirə saldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-056",
+    "input": "Notarius sənədin heqiqiliyini təsdiqlədi.",
+    "expected": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+    "output": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-057",
+    "input": "Iddiaci əlavə sübut təqdim etdi.",
+    "expected": "İddiaçı əlavə sübut təqdim etdi.",
+    "output": "Iddiaci əlavə sübut təqdim etdi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-058",
+    "input": "Qanunun yeni redaksiyasi dərc olundu.",
+    "expected": "Qanunun yeni redaksiyası dərc olundu.",
+    "output": "Qanunun yeni redaksiyası dərc olundu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-059",
+    "input": "Mubahise barışıq yolu ilə həll edildi.",
+    "expected": "Mübahisə barışıq yolu ilə həll edildi.",
+    "output": "Mübahisə barışıq yolu ilə həll edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-060",
+    "input": "Hüquqşünas etibarnameni nəzərdən keçirdi.",
+    "expected": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+    "output": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-061",
+    "input": "Backend komandasi yeni modulu sınaqdan keçirdi.",
+    "expected": "Backend komandası yeni modulu sınaqdan keçirdi.",
+    "output": "Backend komandası yeni modulu sınaqdan keçirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-062",
+    "input": "API sorğusunun cavabı JSON formatindadir.",
+    "expected": "API sorğusunun cavabı JSON formatındadır.",
+    "output": "API sorğusunun cavabı JSON formatindadir.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-063",
+    "input": "Database baglantisi bərpa edildi.",
+    "expected": "Database bağlantısı bərpa edildi.",
+    "output": "Database bağlantısı bərpa edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-064",
+    "input": "Developer commit tarixcesini yoxladı.",
+    "expected": "Developer commit tarixçəsini yoxladı.",
+    "output": "Developer commit tarixçəsini yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-065",
+    "input": "Frontend komponentinin ölçüsü azaldildi.",
+    "expected": "Frontend komponentinin ölçüsü azaldıldı.",
+    "output": "Frontend komponentinin ölçüsü azaldıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-066",
+    "input": "Serverdə xəta jurnalı yaradildi.",
+    "expected": "Serverdə xəta jurnalı yaradıldı.",
+    "output": "Serverdə xəta jurnalı yaradıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-067",
+    "input": "Framework yenilenenden sonra testlər keçdi.",
+    "expected": "Framework yenilənəndən sonra testlər keçdi.",
+    "output": "Framework yenilənəndən sonra testlər keçdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-068",
+    "input": "Deploy zamanı xidmət dayandirilmadi.",
+    "expected": "Deploy zamanı xidmət dayandırılmadı.",
+    "output": "Deploy zamanı xidmət dayandırılmadı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-069",
+    "input": "Cache acarinin müddəti bitdi.",
+    "expected": "Cache açarının müddəti bitdi.",
+    "output": "Cache açarının müddəti bitdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-070",
+    "input": "TypeScript kodunda şərt sadelesdirildi.",
+    "expected": "TypeScript kodunda şərt sadələşdirildi.",
+    "output": "TypeScript kodunda şərt sadələşdirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-071",
+    "input": "Parolun uzunluğu tehlukesizlik tələbini ödəyir.",
+    "expected": "Parolun uzunluğu təhlükəsizlik tələbini ödəyir.",
+    "output": "Parolun uzunluğu təhlükəsizlik tələbini ödəyir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-072",
+    "input": "Şəbəkədə şübhəli bağlantı askarlandi.",
+    "expected": "Şəbəkədə şübhəli bağlantı aşkarlandı.",
+    "output": "Şəbəkədə şübhəli bağlantı aşkarlandı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-073",
+    "input": "İstifadəçinin giriş hüququ mehdudlasdirildi.",
+    "expected": "İstifadəçinin giriş hüququ məhdudlaşdırıldı.",
+    "output": "İstifadəçinin giriş hüququ məhdudlaşdırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-074",
+    "input": "Ehtiyat nüsxənin şifrəsi ayrıca saxlanilir.",
+    "expected": "Ehtiyat nüsxənin şifrəsi ayrıca saxlanılır.",
+    "output": "Ehtiyat nüsxənin şifrəsi ayrıca saxlanılır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-075",
+    "input": "Monitorinq sistemi xeberdarliq göndərdi.",
+    "expected": "Monitorinq sistemi xəbərdarlıq göndərdi.",
+    "output": "Monitorinq sistemi xəbərdarlıq göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-076",
+    "input": "Firewall qaydalari yenidən yoxlanıldı.",
+    "expected": "Firewall qaydaları yenidən yoxlanıldı.",
+    "output": "Firewall qaydaları yenidən yoxlanıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-077",
+    "input": "Hesabın fəaliyyəti müvəqqəti dayandirildi.",
+    "expected": "Hesabın fəaliyyəti müvəqqəti dayandırıldı.",
+    "output": "Hesabın fəaliyyəti müvəqqəti dayandırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-078",
+    "input": "Audit zamanı icazələr nəzərdən kecirildi.",
+    "expected": "Audit zamanı icazələr nəzərdən keçirildi.",
+    "output": "Audit zamanı icazələr nəzərdən keçirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-079",
+    "input": "Sessiyanin müddəti avtomatik bitir.",
+    "expected": "Sessiyanın müddəti avtomatik bitir.",
+    "output": "Sessiyanın müddəti avtomatik bitir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-080",
+    "input": "Məxfi məlumat jurnala yazilmadi.",
+    "expected": "Məxfi məlumat jurnala yazılmadı.",
+    "output": "Məxfi məlumat jurnala yazılmadı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-081",
+    "input": "Vətəndaş muracietin statusunu öyrəndi.",
+    "expected": "Vətəndaş müraciətin statusunu öyrəndi.",
+    "output": "Vətəndaş müraciətin statusunu öyrəndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-082",
+    "input": "İcra şöbəsi məktubu cavablandirdi.",
+    "expected": "İcra şöbəsi məktubu cavablandırdı.",
+    "output": "İcra şöbəsi məktubu cavablandirdi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-083",
+    "input": "Hökumət yeni proqramı tesdiqledi.",
+    "expected": "Hökumət yeni proqramı təsdiqlədi.",
+    "output": "Hökumət yeni proqramı təsdiqlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-084",
+    "input": "Belediyye küçənin təmirinə başladı.",
+    "expected": "Bələdiyyə küçənin təmirinə başladı.",
+    "output": "Bələdiyyə küçənin təmirinə başladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-085",
+    "input": "Arayis elektron qaydada verilir.",
+    "expected": "Arayış elektron qaydada verilir.",
+    "output": "Arayış elektron qaydada verilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-086",
+    "input": "Qəbul otaginda növbə sakit keçdi.",
+    "expected": "Qəbul otağında növbə sakit keçdi.",
+    "output": "Qəbul otağında növbə sakit keçdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-087",
+    "input": "Katib senedleri rəfə düzdü.",
+    "expected": "Katib sənədləri rəfə düzdü.",
+    "output": "Katib sənədləri rəfə düzdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-088",
+    "input": "Müdirlə görüş gunortaya təyin edildi.",
+    "expected": "Müdirlə görüş günortaya təyin edildi.",
+    "output": "Müdirlə görüş günortaya təyin edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-089",
+    "input": "Komissiyanin üzvü protokolu imzaladı.",
+    "expected": "Komissiyanın üzvü protokolu imzaladı.",
+    "output": "Komissiyanın üzvü protokolu imzaladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-090",
+    "input": "Xidmətin müddəti telimatda göstərilib.",
+    "expected": "Xidmətin müddəti təlimatda göstərilib.",
+    "output": "Xidmətin müddəti təlimatda göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-091",
+    "input": "Tedqiqatcilar nümunənin tərkibini araşdırdılar.",
+    "expected": "Tədqiqatçılar nümunənin tərkibini araşdırdılar.",
+    "output": "Tədqiqatçılar nümunənin tərkibini araşdırdılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-092",
+    "input": "Tecrubenin nəticəsi fərziyyəni təsdiqlədi.",
+    "expected": "Təcrübənin nəticəsi fərziyyəni təsdiqlədi.",
+    "output": "Təcrübənin nəticəsi fərziyyəni təsdiqlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-093",
+    "input": "Alim meqalenin mənbəyini göstərdi.",
+    "expected": "Alim məqalənin mənbəyini göstərdi.",
+    "output": "Alim məqalənin mənbəyini göstərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-094",
+    "input": "Olcmeler eyni şəraitdə aparıldı.",
+    "expected": "Ölçmələr eyni şəraitdə aparıldı.",
+    "output": "Ölçmələr eyni şəraitdə aparıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-095",
+    "input": "Kristalin quruluşu təsvir edildi.",
+    "expected": "Kristalın quruluşu təsvir edildi.",
+    "output": "Kristalın quruluşu təsvir edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-096",
+    "input": "Astronomlar yeni ulduzu musahide etdilər.",
+    "expected": "Astronomlar yeni ulduzu müşahidə etdilər.",
+    "output": "Astronomlar yeni ulduzu müşahidə etdilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-097",
+    "input": "Molekulun kütləsi hesablandi.",
+    "expected": "Molekulun kütləsi hesablandı.",
+    "output": "Molekulun kütləsi hesablandı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-098",
+    "input": "Neyronun fealiyyeti cihazla qeydə alındı.",
+    "expected": "Neyronun fəaliyyəti cihazla qeydə alındı.",
+    "output": "Neyronun fəaliyyəti cihazla qeydə alındı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-099",
+    "input": "Nəzəri model təcrübə ilə muqayise olundu.",
+    "expected": "Nəzəri model təcrübə ilə müqayisə olundu.",
+    "output": "Nəzəri model təcrübə ilə müqayisə olundu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-100",
+    "input": "Elmi muzakire açıq keçirildi.",
+    "expected": "Elmi müzakirə açıq keçirildi.",
+    "output": "Elmi müzakirə açıq keçirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-101",
+    "input": "Meşənin sahəsi xeritede qeyd olundu.",
+    "expected": "Meşənin sahəsi xəritədə qeyd olundu.",
+    "output": "Meşənin sahəsi xəritədə qeyd olundu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-102",
+    "input": "Tullantilar növlərinə görə ayrılır.",
+    "expected": "Tullantılar növlərinə görə ayrılır.",
+    "output": "Tullantılar növlərinə görə ayrılır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-103",
+    "input": "Çayın suyundan nümunə goturuldu.",
+    "expected": "Çayın suyundan nümunə götürüldü.",
+    "output": "Çayın suyundan nümunə goturuldu.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-104",
+    "input": "Ekoloqlar sahildə quşları saydilar.",
+    "expected": "Ekoloqlar sahildə quşları saydılar.",
+    "output": "Ekoloqlar sahildə quşları saydılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-105",
+    "input": "Yaşıl zona yeni ağaclarla genislendirildi.",
+    "expected": "Yaşıl zona yeni ağaclarla genişləndirildi.",
+    "output": "Yaşıl zona yeni ağaclarla genişləndirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-106",
+    "input": "Havanın keyfiyyeti hər gün ölçülür.",
+    "expected": "Havanın keyfiyyəti hər gün ölçülür.",
+    "output": "Havanın keyfiyyəti hər gün ölçülür.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-107",
+    "input": "Qoruqda nadir heyvan musahide edildi.",
+    "expected": "Qoruqda nadir heyvan müşahidə edildi.",
+    "output": "Qoruqda nadir heyvan müşahidə edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-108",
+    "input": "Yagintinin miqdarı bu ay artıb.",
+    "expected": "Yağıntının miqdarı bu ay artıb.",
+    "output": "Yağıntının miqdarı bu ay artıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-109",
+    "input": "Buzlağın əriməsi suretlendi.",
+    "expected": "Buzlağın əriməsi sürətləndi.",
+    "output": "Buzlağın əriməsi sürətləndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-110",
+    "input": "Könüllülər çimərliyi temizlediler.",
+    "expected": "Könüllülər çimərliyi təmizlədilər.",
+    "output": "Könüllülər çimərliyi təmizlədilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-111",
+    "input": "Sərgi yeni əsərlərlə zenginlesdi.",
+    "expected": "Sərgi yeni əsərlərlə zənginləşdi.",
+    "output": "Şərği yeni əsərlərlə zənginləşdi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-112",
+    "input": "Sərginin acilisina tələbələr gəldilər.",
+    "expected": "Sərginin açılışına tələbələr gəldilər.",
+    "output": "Sərginin açılışına tələbələr gəldilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-113",
+    "input": "Rəssam kətanın uzerinde işləyir.",
+    "expected": "Rəssam kətanın üzərində işləyir.",
+    "output": "Rəssam kətanın üzərində işləyir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-114",
+    "input": "Musiqici köhnə aləti köklədi.",
+    "expected": "Musiqiçi köhnə aləti köklədi.",
+    "output": "Musiqiçi köhnə aləti köklədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-115",
+    "input": "Teatrın səhnəsi tamaşaya hazirlanir.",
+    "expected": "Teatrın səhnəsi tamaşaya hazırlanır.",
+    "output": "Teatrın səhnəsi tamaşaya hazırlanır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-116",
+    "input": "Heykelteras daşın formasını dəyişdi.",
+    "expected": "Heykəltəraş daşın formasını dəyişdi.",
+    "output": "Heykəltəraş daşın formasını dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-117",
+    "input": "Muzey beledcisi eksponatı göstərdi.",
+    "expected": "Muzey bələdçisi eksponatı göstərdi.",
+    "output": "Muzey bələdçisi eksponatı göstərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-118",
+    "input": "Şair şeirini dinleyicilere oxudu.",
+    "expected": "Şair şeirini dinləyicilərə oxudu.",
+    "output": "Şair şeirini dinləyicilərə oxudu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-119",
+    "input": "Orkestr məşqə vaxtinda başladı.",
+    "expected": "Orkestr məşqə vaxtında başladı.",
+    "output": "Orkestr məşqə vaxtında başladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-120",
+    "input": "Rejissor cekilisi sabaha saxladı.",
+    "expected": "Rejissor çəkilişi sabaha saxladı.",
+    "output": "Rejissor çəkilişi sabaha saxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-121",
+    "input": "İdman zalı səhər acilir.",
+    "expected": "İdman zalı səhər açılır.",
+    "output": "İdman zalı səhər açılır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-122",
+    "input": "Məşqçi oyuncularin hazırlığını yoxladı.",
+    "expected": "Məşqçi oyunçuların hazırlığını yoxladı.",
+    "output": "Məşqçi oyunçuların hazırlığını yoxladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-123",
+    "input": "Komandanin kapitanı müsahibə verdi.",
+    "expected": "Komandanın kapitanı müsahibə verdi.",
+    "output": "Komandanın kapitanı müsahibə verdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-124",
+    "input": "Üzgüçü mesafeni tez qət etdi.",
+    "expected": "Üzgüçü məsafəni tez qət etdi.",
+    "output": "Üzgüçü məsafəni tez qət etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-125",
+    "input": "Hakim yarışın neticesini elan etdi.",
+    "expected": "Hakim yarışın nəticəsini elan etdi.",
+    "output": "Hakim yarışın nəticəsini elan etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-126",
+    "input": "Qacisci finişə birinci çatdı.",
+    "expected": "Qaçışçı finişə birinci çatdı.",
+    "output": "Qaçışçı finişə birinci çatdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-127",
+    "input": "Gulescinin çəkisi yenidən ölçüldü.",
+    "expected": "Güləşçinin çəkisi yenidən ölçüldü.",
+    "output": "Güləşçinin çəkisi yenidən ölçüldü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-128",
+    "input": "Stadionun tribunalari doldu.",
+    "expected": "Stadionun tribunaları doldu.",
+    "output": "Stadionun tribunaları doldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-129",
+    "input": "Topun istiqameti qəfil dəyişdi.",
+    "expected": "Topun istiqaməti qəfil dəyişdi.",
+    "output": "Topun istiqaməti qəfil dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-130",
+    "input": "Turnirin qalibi mukafat aldı.",
+    "expected": "Turnirin qalibi mükafat aldı.",
+    "output": "Turnirin qalibi mükafat aldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-131",
+    "input": "Satıcı məhsulun qiymetini göstərdi.",
+    "expected": "Satıcı məhsulun qiymətini göstərdi.",
+    "output": "Satıcı məhsulun qiymətini göstərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-132",
+    "input": "Müştəri olcusune uyğun köynək seçdi.",
+    "expected": "Müştəri ölçüsünə uyğun köynək seçdi.",
+    "output": "Müştəri olcusune uyğun köynək seçdi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-133",
+    "input": "Magazanin iş saatları dəyişib.",
+    "expected": "Mağazanın iş saatları dəyişib.",
+    "output": "Mağazanın iş saatları dəyişib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-134",
+    "input": "Sifarişin çatdırılması sabaha planlasdirildi.",
+    "expected": "Sifarişin çatdırılması sabaha planlaşdırıldı.",
+    "output": "Sifarişin çatdırılması sabaha planlaşdırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-135",
+    "input": "Anbardaki ehtiyatlar yenidən sayıldı.",
+    "expected": "Anbardakı ehtiyatlar yenidən sayıldı.",
+    "output": "Anbardakı ehtiyatlar yenidən sayıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-136",
+    "input": "Endirim bütün bolmelere tətbiq edilir.",
+    "expected": "Endirim bütün bölmələrə tətbiq edilir.",
+    "output": "Endirim bütün bölmələrə tətbiq edilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-137",
+    "input": "Paketin üzərində ünvan yazilib.",
+    "expected": "Paketin üzərində ünvan yazılıb.",
+    "output": "Paketin üzərində ünvan yazılıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-138",
+    "input": "Kuryer qapinin zəngini basdı.",
+    "expected": "Kuryer qapının zəngini basdı.",
+    "output": "Kuryer qapının zəngini basdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-139",
+    "input": "Alıcı qüsurlu malı qaytardi.",
+    "expected": "Alıcı qüsurlu malı qaytardı.",
+    "output": "Alıcı qüsurlu malı qaytardı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-140",
+    "input": "Etiketdə istehsal tarixi gosterilir.",
+    "expected": "Etiketdə istehsal tarixi göstərilir.",
+    "output": "Etiketdə istehsal tarixi göstərilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-141",
+    "input": "Turistler dağ yoluna çıxdılar.",
+    "expected": "Turistlər dağ yoluna çıxdılar.",
+    "output": "Turistlər dağ yoluna çıxdılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-142",
+    "input": "Bələdçi qalaya gedən cığırı gosterdi.",
+    "expected": "Bələdçi qalaya gedən cığırı göstərdi.",
+    "output": "Bələdçi qalaya gedən cığırı göstərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-143",
+    "input": "Oteldə otaqlar evvelceden ayrıldı.",
+    "expected": "Oteldə otaqlar əvvəlcədən ayrıldı.",
+    "output": "Oteldə otaqlar əvvəlcədən ayrıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-144",
+    "input": "Səyahətin proqramı istirakcilara verildi.",
+    "expected": "Səyahətin proqramı iştirakçılara verildi.",
+    "output": "Səyahətin proqramı istirakcilara verildi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-145",
+    "input": "Qonaqlar kəndin tarixini oyrendiler.",
+    "expected": "Qonaqlar kəndin tarixini öyrəndilər.",
+    "output": "Qonaqlar kəndin tarixini öyrəndilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-146",
+    "input": "Çadırlar çayın yaxinliginda quruldu.",
+    "expected": "Çadırlar çayın yaxınlığında quruldu.",
+    "output": "Çadırlar çayın yaxınlığında quruldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-147",
+    "input": "Mənzərə fotosekilde aydın görünür.",
+    "expected": "Mənzərə fotoşəkildə aydın görünür.",
+    "output": "Mənzərə fotoşəkildə aydın görünür.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-148",
+    "input": "Biletin qiymetine səhər yeməyi daxildir.",
+    "expected": "Biletin qiymətinə səhər yeməyi daxildir.",
+    "output": "Biletin qiymətinə səhər yeməyi daxildir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-149",
+    "input": "Gezinti yağışa görə dayandırıldı.",
+    "expected": "Gəzinti yağışa görə dayandırıldı.",
+    "output": "Gəzinti yağışa görə dayandırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-150",
+    "input": "Səyyah yolun uzunlugunu hesabladı.",
+    "expected": "Səyyah yolun uzunluğunu hesabladı.",
+    "output": "Səyyah yolun uzunluğunu hesabladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-151",
+    "input": "Memar binanın eskizini hazirladi.",
+    "expected": "Memar binanın eskizini hazırladı.",
+    "output": "Memar binanın eskizini hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-152",
+    "input": "Usta divarın səthini hamarladi.",
+    "expected": "Usta divarın səthini hamarladı.",
+    "output": "Usta divarın səthini hamarladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-153",
+    "input": "Təməl üçün torpaq qazildi.",
+    "expected": "Təməl üçün torpaq qazıldı.",
+    "output": "Təməl üçün torpaq qazıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-154",
+    "input": "Betonun mohkemliyi yoxlanıldı.",
+    "expected": "Betonun möhkəmliyi yoxlanıldı.",
+    "output": "Betonun möhkəmliyi yoxlanıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-155",
+    "input": "Mühəndis sutunlarin yerini müəyyən etdi.",
+    "expected": "Mühəndis sütunların yerini müəyyən etdi.",
+    "output": "Mühəndis sütunların yerini müəyyən etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-156",
+    "input": "Tikintinin gedişi nezaretde saxlanılır.",
+    "expected": "Tikintinin gedişi nəzarətdə saxlanılır.",
+    "output": "Tikintinin gedişi nəzarətdə saxlanılır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-157",
+    "input": "Pəncərənin çərçivəsi deyisdirildi.",
+    "expected": "Pəncərənin çərçivəsi dəyişdirildi.",
+    "output": "Pəncərənin çərçivəsi dəyişdirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-158",
+    "input": "Dam örtüyü küləyə davamlidir.",
+    "expected": "Dam örtüyü küləyə davamlıdır.",
+    "output": "Dam örtüyü küləyə davamlıdır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-159",
+    "input": "Boruların birlesmesi sınaqdan keçirildi.",
+    "expected": "Boruların birləşməsi sınaqdan keçirildi.",
+    "output": "Boruların birləşməsi sınaqdan keçirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-160",
+    "input": "İşçilər qoruyucu dəbilqə taxdilar.",
+    "expected": "İşçilər qoruyucu dəbilqə taxdılar.",
+    "output": "İşçilər qoruyucu dəbilqə taxdılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-161",
+    "input": "Gunes paneli damda quraşdırıldı.",
+    "expected": "Günəş paneli damda quraşdırıldı.",
+    "output": "Günəş paneli damda quraşdırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-162",
+    "input": "Külək turbininin qanadlari fırlanır.",
+    "expected": "Külək turbininin qanadları fırlanır.",
+    "output": "Külək turbininin qanadları fırlanır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-163",
+    "input": "Şəbəkənin gerginliyi ölçüldü.",
+    "expected": "Şəbəkənin gərginliyi ölçüldü.",
+    "output": "Şəbəkənin gərginliyi ölçüldü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-164",
+    "input": "Elektrik xəttində nasazlıq aradan qaldirildi.",
+    "expected": "Elektrik xəttində nasazlıq aradan qaldırıldı.",
+    "output": "Elektrik xəttində nasazlıq aradan qaldırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-165",
+    "input": "Sayğacın gostericisi qeyd edildi.",
+    "expected": "Sayğacın göstəricisi qeyd edildi.",
+    "output": "Sayğacın göstəricisi qeyd edildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-166",
+    "input": "İstilik itkisi əvvəlki aya nisbeten azalıb.",
+    "expected": "İstilik itkisi əvvəlki aya nisbətən azalıb.",
+    "output": "İstilik itkisi əvvəlki aya nisbətən azalıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-167",
+    "input": "Generator ehtiyat rejimde işləyir.",
+    "expected": "Generator ehtiyat rejimdə işləyir.",
+    "output": "Generator ehtiyat rejimdə işləyir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-168",
+    "input": "Batareyanin tutumu yoxlanıldı.",
+    "expected": "Batareyanın tutumu yoxlanıldı.",
+    "output": "Batareyanın tutumu yoxlanıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-169",
+    "input": "Stansiyanin gücü artırıldı.",
+    "expected": "Stansiyanın gücü artırıldı.",
+    "output": "Stansiyanın gücü artırıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-170",
+    "input": "Yanacagin sərfi hesabatda göstərilib.",
+    "expected": "Yanacağın sərfi hesabatda göstərilib.",
+    "output": "Yanacağın sərfi hesabatda göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-171",
+    "input": "Redaktor xəbərin basligini dəyişdi.",
+    "expected": "Redaktor xəbərin başlığını dəyişdi.",
+    "output": "Redaktor xəbərin başlığını dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-172",
+    "input": "Jurnalist musahibeni yazıya köçürdü.",
+    "expected": "Jurnalist müsahibəni yazıya köçürdü.",
+    "output": "Jurnalist müsahibəni yazıya köçürdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-173",
+    "input": "Operator efirin vaxtini bildirdi.",
+    "expected": "Operator efirin vaxtını bildirdi.",
+    "output": "Operator efirin vaxtını bildirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-174",
+    "input": "Mektubun mövzusu aydın yazılıb.",
+    "expected": "Məktubun mövzusu aydın yazılıb.",
+    "output": "Məktubun mövzusu aydın yazılıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-175",
+    "input": "Abunəçiyə bildiriş gonderildi.",
+    "expected": "Abunəçiyə bildiriş göndərildi.",
+    "output": "Abunəçiyə bildiriş göndərildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-176",
+    "input": "Elaqenin keyfiyyəti yenidən yoxlandı.",
+    "expected": "Əlaqənin keyfiyyəti yenidən yoxlandı.",
+    "output": "Əlaqənin keyfiyyəti yenidən yoxlandı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-177",
+    "input": "Çapdan əvvəl sehifeler nəzərdən keçirildi.",
+    "expected": "Çapdan əvvəl səhifələr nəzərdən keçirildi.",
+    "output": "Çapdan əvvəl səhifələr nəzərdən keçirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-178",
+    "input": "Verilişin müddəti qisaldildi.",
+    "expected": "Verilişin müddəti qısaldıldı.",
+    "output": "Verilişin müddəti qısaldıldı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-179",
+    "input": "Poctalyon bağlamanı ünvana çatdırdı.",
+    "expected": "Poçtalyon bağlamanı ünvana çatdırdı.",
+    "output": "Poçtalyon bağlamanı ünvana çatdırdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-180",
+    "input": "Dinləyicinin sualı cavablandirildi.",
+    "expected": "Dinləyicinin sualı cavablandırıldı.",
+    "output": "Dinləyicinin sualı cavablandirildi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-181",
+    "input": "Nənəm axşam nağıl danisdi.",
+    "expected": "Nənəm axşam nağıl danışdı.",
+    "output": "Nənəm axşam nağıl danışdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-182",
+    "input": "Uşaqlar həyətdə gizlenpac oynadılar.",
+    "expected": "Uşaqlar həyətdə gizlənpaç oynadılar.",
+    "output": "Uşaqlar həyətdə gizlənpaç oynadılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-183",
+    "input": "Qardasim kitabını rəfə qoydu.",
+    "expected": "Qardaşım kitabını rəfə qoydu.",
+    "output": "Qardaşım kitabını rəfə qoydu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-184",
+    "input": "Anam pencereni açdı.",
+    "expected": "Anam pəncərəni açdı.",
+    "output": "Anam pəncərəni açdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-185",
+    "input": "Atam kohne saatı təmir etdi.",
+    "expected": "Atam köhnə saatı təmir etdi.",
+    "output": "Atam köhnə saatı təmir etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-186",
+    "input": "Bacim şəkli divardan asdı.",
+    "expected": "Bacım şəkli divardan asdı.",
+    "output": "Bacım şəkli divardan asdı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-187",
+    "input": "Qonsular həyəti birlikdə təmizlədilər.",
+    "expected": "Qonşular həyəti birlikdə təmizlədilər.",
+    "output": "Qonşular həyəti birlikdə təmizlədilər.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-188",
+    "input": "Qonaqlar süfrə arxasında toplandilar.",
+    "expected": "Qonaqlar süfrə arxasında toplandılar.",
+    "output": "Qonaqlar süfrə arxasında toplandılar.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-189",
+    "input": "Dostum qapıda məni gozledi.",
+    "expected": "Dostum qapıda məni gözlədi.",
+    "output": "Dostum qapıda məni gözlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-190",
+    "input": "Körpə sakitce yuxuya getdi.",
+    "expected": "Körpə sakitcə yuxuya getdi.",
+    "output": "Körpə sakitcə yuxuya getdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-191",
+    "input": "Aşpaz terevezleri doğradı.",
+    "expected": "Aşpaz tərəvəzləri doğradı.",
+    "output": "Aşpaz tərəvəzləri doğradı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-192",
+    "input": "Çörəyin xəmiri səhər yogruldu.",
+    "expected": "Çörəyin xəmiri səhər yoğruldu.",
+    "output": "Çörəyin xəmiri səhər yogruldu.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-193",
+    "input": "Qazandaki şorba qaynamağa başladı.",
+    "expected": "Qazandakı şorba qaynamağa başladı.",
+    "output": "Qazandakı şorba qaynamağa başladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-194",
+    "input": "Sirniyyatin tərkibində qoz var.",
+    "expected": "Şirniyyatın tərkibində qoz var.",
+    "output": "Şirniyyatın tərkibində qoz var.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-195",
+    "input": "Meyveler süzgəcdə yuyuldu.",
+    "expected": "Meyvələr süzgəcdə yuyuldu.",
+    "output": "Meyvələr süzgəcdə yuyuldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-196",
+    "input": "Çayın rəngi tunddur.",
+    "expected": "Çayın rəngi tünddür.",
+    "output": "Çayın rəngi tunddur.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-197",
+    "input": "Süfrəyə təzə salat getirildi.",
+    "expected": "Süfrəyə təzə salat gətirildi.",
+    "output": "Süfrəyə təzə salat gətirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-198",
+    "input": "Duzun miqdarı reseptde göstərilib.",
+    "expected": "Duzun miqdarı reseptdə göstərilib.",
+    "output": "Duzun miqdarı reseptdə göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-199",
+    "input": "Qablarin hamısı təmiz yuyuldu.",
+    "expected": "Qabların hamısı təmiz yuyuldu.",
+    "output": "Qabların hamısı təmiz yuyuldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-200",
+    "input": "Yemeyin dadı hamının xoşuna gəldi.",
+    "expected": "Yeməyin dadı hamının xoşuna gəldi.",
+    "output": "Yeməyin dadı hamının xoşuna gəldi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-201",
+    "input": "Azerbaycanin paytaxtı Bakıdır.",
+    "expected": "Azərbaycanın paytaxtı Bakıdır.",
+    "output": "Azərbaycanın paytaxtı Bakıdır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-202",
+    "input": "Gölün sahilinde qamışlar bitir.",
+    "expected": "Gölün sahilində qamışlar bitir.",
+    "output": "Gölün sahilində qamışlar bitir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-203",
+    "input": "Dərənin derinliyi ölçüldü.",
+    "expected": "Dərənin dərinliyi ölçüldü.",
+    "output": "Dərənin dərinliyi ölçüldü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-204",
+    "input": "Adanın etrafinda mərcanlar var.",
+    "expected": "Adanın ətrafında mərcanlar var.",
+    "output": "Adanın ətrafında mərcanlar var.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-205",
+    "input": "Səhrada temperatur gündüz yukselir.",
+    "expected": "Səhrada temperatur gündüz yüksəlir.",
+    "output": "Səhrada temperatur gündüz yüksəlir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-206",
+    "input": "Çayın mənbəyi dagdadir.",
+    "expected": "Çayın mənbəyi dağdadır.",
+    "output": "Çayın mənbəyi dağdadır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-207",
+    "input": "Vulkanın fəaliyyəti izlenilir.",
+    "expected": "Vulkanın fəaliyyəti izlənilir.",
+    "output": "Vulkanın fəaliyyəti izlənilir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-208",
+    "input": "Yarimadanin xəritəsi yeniləndi.",
+    "expected": "Yarımadanın xəritəsi yeniləndi.",
+    "output": "Yarımadanın xəritəsi yeniləndi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-209",
+    "input": "Okeanın derinliyinde canlılar yaşayır.",
+    "expected": "Okeanın dərinliyində canlılar yaşayır.",
+    "output": "Okeanın dərinliyində canlılar yaşayır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-210",
+    "input": "Vadinin yamaclari meşə ilə örtülüb.",
+    "expected": "Vadinin yamacları meşə ilə örtülüb.",
+    "output": "Vadinin yamacları meşə ilə örtülüb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-211",
+    "input": "İnsan resurslari şöbəsi elan hazırladı.",
+    "expected": "İnsan resursları şöbəsi elan hazırladı.",
+    "output": "İnsan resursları şöbəsi elan hazırladı.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-212",
+    "input": "Toplantiya bütün əməkdaşlar gəldilər.",
+    "expected": "Toplantıya bütün əməkdaşlar gəldilər.",
+    "output": "Toplantiya bütün əməkdaşlar gəldilər.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-213",
+    "input": "İclasın istirakcilari salonda toplaşmışdı.",
+    "expected": "İclasın iştirakçıları salonda toplaşmışdı.",
+    "output": "İclasın istirakcilari salonda toplaşmışdı.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-214",
+    "input": "Layihe vaxtında həyata keçirildi.",
+    "expected": "Layihə vaxtında həyata keçirildi.",
+    "output": "Layihə vaxtında həyata keçirildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-215",
+    "input": "Əla nəticə əldə etmək üçün calisiriq.",
+    "expected": "Əla nəticə əldə etmək üçün çalışırıq.",
+    "output": "Əla, nəticə əldə etmək üçün çalışırıq.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-216",
+    "input": "Mutexessis işi diqqətlə yerinə yetirdi.",
+    "expected": "Mütəxəssis işi diqqətlə yerinə yetirdi.",
+    "output": "Mütəxəssis işi diqqətlə yerinə yetirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-217",
+    "input": "Terefdasimiz yeni təklif göndərdi.",
+    "expected": "Tərəfdaşımız yeni təklif göndərdi.",
+    "output": "Tərəfdaşımız yeni təklif göndərdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-218",
+    "input": "Teqdimatin sonunda suallar verildi.",
+    "expected": "Təqdimatın sonunda suallar verildi.",
+    "output": "Təqdimatın sonunda suallar verildi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-219",
+    "input": "Rəhbərlik emekdaslara təşəkkür etdi.",
+    "expected": "Rəhbərlik əməkdaşlara təşəkkür etdi.",
+    "output": "Rəhbərlik əməkdaşlara təşəkkür etdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-220",
+    "input": "Planın icrası nezaretdedir.",
+    "expected": "Planın icrası nəzarətdədir.",
+    "output": "Planın icrası nəzarətdədir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-221",
+    "input": "Dərzi parcani ölçdü.",
+    "expected": "Dərzi parçanı ölçdü.",
+    "output": "Dərzi parçanı ölçdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-222",
+    "input": "Dülgər masanın ayağını berkitdi.",
+    "expected": "Dülgər masanın ayağını bərkitdi.",
+    "output": "Dülgər masanın ayağını bərkitdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-223",
+    "input": "Zərgər üzüyün daşını yerlesdirdi.",
+    "expected": "Zərgər üzüyün daşını yerləşdirdi.",
+    "output": "Zərgər üzüyün daşını yerləşdirdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-224",
+    "input": "Duluscu gil qabı sobaya qoydu.",
+    "expected": "Dulusçu gil qabı sobaya qoydu.",
+    "output": "Dulusçu gil qabı sobaya qoydu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-225",
+    "input": "Xalcacinin toxuduğu naxış gözəldir.",
+    "expected": "Xalçaçının toxuduğu naxış gözəldir.",
+    "output": "Xalçaçının toxuduğu naxış gözəldir.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-226",
+    "input": "Çəkməçi ayaqqabinin altını dəyişdi.",
+    "expected": "Çəkməçi ayaqqabının altını dəyişdi.",
+    "output": "Çəkməçi ayaqqabının altını dəyişdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-227",
+    "input": "Saç ustası darağı temizledi.",
+    "expected": "Saç ustası darağı təmizlədi.",
+    "output": "Saç ustası darağı təmizlədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-228",
+    "input": "Toxucu rəngli saplari seçdi.",
+    "expected": "Toxucu rəngli sapları seçdi.",
+    "output": "Toxucu rəngli sapları seçdi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-229",
+    "input": "Misgər qabın sethini bəzədi.",
+    "expected": "Misgər qabın səthini bəzədi.",
+    "output": "Misgər qabın səthini bəzədi.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-230",
+    "input": "Saat ustasi mexanizmi sökdü.",
+    "expected": "Saat ustası mexanizmi sökdü.",
+    "output": "Saat ustası mexanizmi sökdü.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-231",
+    "input": "Qrantin müddəti altı aydır.",
+    "expected": "Qrantın müddəti altı aydır.",
+    "output": "Qrantın müddəti altı aydır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-232",
+    "input": "Seminarın proqramı hazirlanib.",
+    "expected": "Seminarın proqramı hazırlanıb.",
+    "output": "Seminarın proqramı hazırlanıb.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-233",
+    "input": "Nəşrin muellifleri göstərilib.",
+    "expected": "Nəşrin müəllifləri göstərilib.",
+    "output": "Nəşrin müəllifləri göstərilib.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-234",
+    "input": "Dissertasiya suraya təqdim edildi.",
+    "expected": "Dissertasiya şuraya təqdim edildi.",
+    "output": "Dissertasiya suraya təqdim edildi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-235",
+    "input": "Rəyçi meqaleni diqqətlə oxudu.",
+    "expected": "Rəyçi məqaləni diqqətlə oxudu.",
+    "output": "Rəyçi məqaləni diqqətlə oxudu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-236",
+    "input": "Konfransin məruzələri topluda dərc edildi.",
+    "expected": "Konfransın məruzələri topluda dərc edildi.",
+    "output": "Konfransın məruzələri topladı dərc edildi.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-237",
+    "input": "Statistik cədvəl yeniden quruldu.",
+    "expected": "Statistik cədvəl yenidən quruldu.",
+    "output": "Statistik cədvəl yenidən quruldu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-238",
+    "input": "Sorğunun iştirakçıları konulludur.",
+    "expected": "Sorğunun iştirakçıları könüllüdür.",
+    "output": "Sorğunun iştirakçıları konulludur.",
+    "exact": false,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-239",
+    "input": "Arxivin kataloqu elektron formadadir.",
+    "expected": "Arxivin kataloqu elektron formadadır.",
+    "output": "Arxivin kataloqu elektron formadadır.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-240",
+    "input": "Təhlilin neticeleri müzakirə olundu.",
+    "expected": "Təhlilin nəticələri müzakirə olundu.",
+    "output": "Təhlilin nəticələri müzakirə olundu.",
+    "exact": true,
+    "identity": false,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-241",
+    "input": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+    "expected": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+    "output": "Şagirdlər kitabxanada səssizcə oxuyurdular.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-242",
+    "input": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+    "expected": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+    "output": "Müəllim qiymətləndirmə meyarlarını lövhəyə yazdı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-243",
+    "input": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+    "expected": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+    "output": "Laboratoriyada yeni mikroskop quraşdırıldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-244",
+    "input": "Dərslikdəki xəritə yeniləndi.",
+    "expected": "Dərslikdəki xəritə yeniləndi.",
+    "output": "Dərslikdəki xəritə yeniləndi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-245",
+    "input": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+    "expected": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+    "output": "Sinif nümayəndəsi tədbirin vaxtını bildirdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-246",
+    "input": "Təqaüd üçün ərizələr qəbul edilir.",
+    "expected": "Təqaüd üçün ərizələr qəbul edilir.",
+    "output": "Təqaüd üçün ərizələr qəbul edilir.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-247",
+    "input": "Məktəblilər ekskursiyadan qayıtdılar.",
+    "expected": "Məktəblilər ekskursiyadan qayıtdılar.",
+    "output": "Məktəblilər ekskursiyadan qayıtdılar.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-248",
+    "input": "Valideynlər iclasda iştirak etdilər.",
+    "expected": "Valideynlər iclasda iştirak etdilər.",
+    "output": "Valideynlər iclasda iştirak etdilər.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-249",
+    "input": "Universitet arxivə yeni sənədlər göndərdi.",
+    "expected": "Universitet arxivə yeni sənədlər göndərdi.",
+    "output": "Universitet arxivə yeni sənədlər göndərdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-250",
+    "input": "İmtahanın nəticələri sabah açıqlanacaq.",
+    "expected": "İmtahanın nəticələri sabah açıqlanacaq.",
+    "output": "İmtahanın nəticələri sabah açıqlanacaq.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-251",
+    "input": "Həkim xəstənin təzyiqini ölçdü.",
+    "expected": "Həkim xəstənin təzyiqini ölçdü.",
+    "output": "Həkim xəstənin təzyiqini ölçdü.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-252",
+    "input": "Tibb bacısı dərmanın dozasını yoxladı.",
+    "expected": "Tibb bacısı dərmanın dozasını yoxladı.",
+    "output": "Tibb bacısı dərmanın dozasını yoxladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-253",
+    "input": "Poliklinikada növbə sistemi yeniləndi.",
+    "expected": "Poliklinikada növbə sistemi yeniləndi.",
+    "output": "Poliklinikada növbə sistemi yeniləndi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-254",
+    "input": "Əməliyyatdan sonra müşahidə davam etdi.",
+    "expected": "Əməliyyatdan sonra müşahidə davam etdi.",
+    "output": "Əməliyyatdan sonra müşahidə davam etdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-255",
+    "input": "Rentgen müayinəsi günortaya təyin olundu.",
+    "expected": "Rentgen müayinəsi günortaya təyin olundu.",
+    "output": "Rentgen müayinəsi günortaya təyin olundu.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-256",
+    "input": "Uşağın peyvənd cədvəli hazırdır.",
+    "expected": "Uşağın peyvənd cədvəli hazırdır.",
+    "output": "Uşağın peyvənd cədvəli hazırdır.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-257",
+    "input": "Aptekdə resept əsasında dərman verilir.",
+    "expected": "Aptekdə resept əsasında dərman verilir.",
+    "output": "Aptekdə resept əsasında dərman verilir.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-258",
+    "input": "Təcili yardım briqadası ünvana çatdı.",
+    "expected": "Təcili yardım briqadası ünvana çatdı.",
+    "output": "Təcili yardım briqadası ünvana çatdı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-259",
+    "input": "Cərrah yaranın sarğısını dəyişdi.",
+    "expected": "Cərrah yaranın sarğısını dəyişdi.",
+    "output": "Cərrah yaranın sarğısını dəyişdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-260",
+    "input": "Müalicə planına əlavə müayinə daxil edildi.",
+    "expected": "Müalicə planına əlavə müayinə daxil edildi.",
+    "output": "Müalicə planına əlavə müayinə daxil edildi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-261",
+    "input": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+    "expected": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+    "output": "Fermerlər yazlıq əkinə hazırlaşırlar.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-262",
+    "input": "Suvarma kanalı çöküntüdən təmizləndi.",
+    "expected": "Suvarma kanalı çöküntüdən təmizləndi.",
+    "output": "Suvarma kanalı çöküntüdən təmizləndi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-263",
+    "input": "Buğda sahəsində zərərverici aşkarlanıb.",
+    "expected": "Buğda sahəsində zərərverici aşkarlanıb.",
+    "output": "Buğda sahəsində zərərverici aşkarlanıb.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-264",
+    "input": "Bağban ağacların budaqlarını kəsdi.",
+    "expected": "Bağban ağacların budaqlarını kəsdi.",
+    "output": "Bağban ağacların budaqlarını kəsdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-265",
+    "input": "Torpağın rütubəti cihazla ölçülür.",
+    "expected": "Torpağın rütubəti cihazla ölçülür.",
+    "output": "Torpağın rütubəti cihazla ölçülür.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-266",
+    "input": "İstixanada pomidor şitilləri böyüyür.",
+    "expected": "İstixanada pomidor şitilləri böyüyür.",
+    "output": "İstixanada pomidor şitilləri böyüyür.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-267",
+    "input": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+    "expected": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+    "output": "Məhsulun daşınması üçün soyuducu ayrıldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-268",
+    "input": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+    "expected": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+    "output": "Gübrənin tərkibi laboratoriyada yoxlanıldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-269",
+    "input": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+    "expected": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+    "output": "Arıçılar pətəkləri kölgəyə yerləşdirdilər.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-270",
+    "input": "Taxıl anbarının damı təmir edildi.",
+    "expected": "Taxıl anbarının damı təmir edildi.",
+    "output": "Taxıl anbarının damı təmir edildi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-271",
+    "input": "Marşrutun dayanacaqları xəritədə göstərilib.",
+    "expected": "Marşrutun dayanacaqları xəritədə göstərilib.",
+    "output": "Marşrutun dayanacaqları xəritədə göstərilib.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-272",
+    "input": "Sürücü yükün çəkisini yoxladı.",
+    "expected": "Sürücü yükün çəkisini yoxladı.",
+    "output": "Sürücü yükün çəkisini yoxladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-273",
+    "input": "Qatarın yola düşmə vaxtı dəyişdi.",
+    "expected": "Qatarın yola düşmə vaxtı dəyişdi.",
+    "output": "Qatarın yola düşmə vaxtı dəyişdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-274",
+    "input": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+    "expected": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+    "output": "Sərnişinlər avtobusun gəlməsini gözlədilər.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-275",
+    "input": "Liman işçiləri konteyneri boşaltdılar.",
+    "expected": "Liman işçiləri konteyneri boşaltdılar.",
+    "output": "Liman işçiləri konteyneri boşaltdılar.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-276",
+    "input": "Tramvayın qapıları avtomatik bağlandı.",
+    "expected": "Tramvayın qapıları avtomatik bağlandı.",
+    "output": "Tramvayın qapıları avtomatik bağlandı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-277",
+    "input": "Təyyarənin enişi uğurla başa çatdı.",
+    "expected": "Təyyarənin enişi uğurla başa çatdı.",
+    "output": "Təyyarənin enişi uğurla başa çatdı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-278",
+    "input": "Velosiped yolu çayın kənarından keçir.",
+    "expected": "Velosiped yolu çayın kənarından keçir.",
+    "output": "Velosiped yolu çayın kənarından keçir.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-279",
+    "input": "Nəqliyyat sıxlığı axşam artdı.",
+    "expected": "Nəqliyyat sıxlığı axşam artdı.",
+    "output": "Nəqliyyat sıxlığı axşam artdı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-280",
+    "input": "Gəminin mühərriki yenidən işə salındı.",
+    "expected": "Gəminin mühərriki yenidən işə salındı.",
+    "output": "Gəminin mühərriki yenidən işə salındı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-281",
+    "input": "Mühasib ödəniş tapşırığını imzaladı.",
+    "expected": "Mühasib ödəniş tapşırığını imzaladı.",
+    "output": "Mühasib ödəniş tapşırığını imzaladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-282",
+    "input": "Hesabatda gəlir və xərclər göstərilib.",
+    "expected": "Hesabatda gəlir və xərclər göstərilib.",
+    "output": "Hesabatda gəlir və xərclər göstərilib.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-283",
+    "input": "Sığorta müqaviləsi bir il qüvvədədir.",
+    "expected": "Sığorta müqaviləsi bir il qüvvədədir.",
+    "output": "Sığorta müqaviləsi bir il qüvvədədir.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-284",
+    "input": "Borcun qaytarılma müddəti uzadıldı.",
+    "expected": "Borcun qaytarılma müddəti uzadıldı.",
+    "output": "Borcun qaytarılma müddəti uzadıldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-285",
+    "input": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+    "expected": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+    "output": "İnvestorlar layihənin riskini qiymətləndirdilər.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-286",
+    "input": "Əmanətin faiz dərəcəsi dəyişməyib.",
+    "expected": "Əmanətin faiz dərəcəsi dəyişməyib.",
+    "output": "Əmanətin faiz dərəcəsi dəyişməyib.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-287",
+    "input": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+    "expected": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+    "output": "Vergi bəyannaməsi vaxtında təqdim edildi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-288",
+    "input": "Büdcədən təmir üçün vəsait ayrılıb.",
+    "expected": "Büdcədən təmir üçün vəsait ayrılıb.",
+    "output": "Büdcədən təmir üçün vəsait ayrılıb.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-289",
+    "input": "Kassir qəbzin surətini müştəriyə verdi.",
+    "expected": "Kassir qəbzin surətini müştəriyə verdi.",
+    "output": "Kassir qəbzin surətini müştəriyə verdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-290",
+    "input": "Maliyyə şöbəsi hesablamanı tamamladı.",
+    "expected": "Maliyyə şöbəsi hesablamanı tamamladı.",
+    "output": "Maliyyə şöbəsi hesablamanı tamamladı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-291",
+    "input": "Vəkil müqavilənin şərtlərini izah etdi.",
+    "expected": "Vəkil müqavilənin şərtlərini izah etdi.",
+    "output": "Vəkil müqavilənin şərtlərini izah etdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-292",
+    "input": "Məhkəmənin qərarı tərəflərə göndərildi.",
+    "expected": "Məhkəmənin qərarı tərəflərə göndərildi.",
+    "output": "Məhkəmənin qərarı tərəflərə göndərildi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-293",
+    "input": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+    "expected": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+    "output": "Şahid hadisənin vaxtını dəqiqləşdirdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-294",
+    "input": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+    "expected": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+    "output": "Ərizənin qeydiyyat nömrəsi saxlanıldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-295",
+    "input": "Hakim iclası sabaha təxirə saldı.",
+    "expected": "Hakim iclası sabaha təxirə saldı.",
+    "output": "Hakim iclası sabaha təxirə saldı.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-296",
+    "input": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+    "expected": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+    "output": "Notarius sənədin həqiqiliyini təsdiqlədi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-297",
+    "input": "İddiaçı əlavə sübut təqdim etdi.",
+    "expected": "İddiaçı əlavə sübut təqdim etdi.",
+    "output": "İddiaçı əlavə sübut təqdim etdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-298",
+    "input": "Qanunun yeni redaksiyası dərc olundu.",
+    "expected": "Qanunun yeni redaksiyası dərc olundu.",
+    "output": "Qanunun yeni redaksiyası dərc olundu.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-299",
+    "input": "Mübahisə barışıq yolu ilə həll edildi.",
+    "expected": "Mübahisə barışıq yolu ilə həll edildi.",
+    "output": "Mübahisə barışıq yolu ilə həll edildi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  },
+  {
+    "fixture": "diverse-release-300.json",
+    "id": "diverse-300",
+    "input": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+    "expected": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+    "output": "Hüquqşünas etibarnaməni nəzərdən keçirdi.",
+    "exact": true,
+    "identity": true,
+    "idempotent": true
+  }
+]

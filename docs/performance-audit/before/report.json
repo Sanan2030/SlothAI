@@ -1,0 +1,173 @@
+{
+  "provenance": "offline audit; project fixtures do not constitute independent human evaluation",
+  "moduleLoadMs": 1943.9444829999998,
+  "firstCallMs": 813.6182330000001,
+  "timings": {
+    "default": {
+      "words200Ms": 398.4606960000001,
+      "words900Ms": 1849.4989180000011
+    },
+    "noLocal": {
+      "words200Ms": 60.66809999999896,
+      "words900Ms": 297.3524510000025
+    },
+    "noAttention": {
+      "words200Ms": 132.95364400000108,
+      "words900Ms": 623.3694250000008
+    },
+    "noBounded": {
+      "words200Ms": 138.93354300000283,
+      "words900Ms": 646.2224490000008
+    },
+    "noObserved": {
+      "words200Ms": 376.740345000002,
+      "words900Ms": 1693.687844
+    },
+    "noBoundary": {
+      "words200Ms": 382.4921449999965,
+      "words900Ms": 1760.2030640000012
+    },
+    "rulesOnly": {
+      "words200Ms": 36.036895999997796,
+      "words900Ms": 189.889353999999
+    }
+  },
+  "corpora": {
+    "additional-gold-200.json": {
+      "total": 200,
+      "targets": 200,
+      "exact": 100,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "corporate-letter.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "email-holdout.json": {
+      "total": 340,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "essay.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "holdout-corpus.json": {
+      "total": 265,
+      "targets": 265,
+      "exact": 263,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "hybrid-regression-corpus.json": {
+      "total": 240,
+      "targets": 240,
+      "exact": 200,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-gold-baseline.json": {
+      "total": 0,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-gold-v2.json": {
+      "total": 800,
+      "targets": 800,
+      "exact": 460,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "independent-reviewed.json": {
+      "total": 41,
+      "targets": 41,
+      "exact": 27,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "named-entity-holdout.json": {
+      "total": 432,
+      "targets": 432,
+      "exact": 432,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "neural-thirteen.json": {
+      "total": 13,
+      "targets": 13,
+      "exact": 13,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "platform-proposal.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "punctuation-holdout.json": {
+      "total": 336,
+      "targets": 336,
+      "exact": 336,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "release-holdout-300.json": {
+      "total": 300,
+      "targets": 300,
+      "exact": 244,
+      "identityFalsePositives": 1,
+      "idempotencyFailures": 0
+    },
+    "rsd-it-holdout.json": {
+      "total": 460,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "technical-day-extended.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "technical-day.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "typed-entity-holdout.json": {
+      "total": 1128,
+      "targets": 1128,
+      "exact": 1128,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    },
+    "workday.json": {
+      "total": 1,
+      "targets": 0,
+      "exact": 0,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    }
+  },
+  "snapshotSha256": "130b98c50131db95b49607b4ecc722754e3bef7ffc2b9f2ac2ffb166db9c4ede",
+  "changedOutputs": 0,
+  "modelJsonBytes": 5236646
+}
