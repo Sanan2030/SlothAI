@@ -8,12 +8,14 @@ service, API key, GPU requirement or network call during correction.
 
 Name-free document fragments now train a separate small offline spelling ranker; source ownership, synthetic-error provenance, limitations and reproducible results are documented in [document training](docs/document-training.md).
 
-`main` is the deployed offline editor. Changes must pass typecheck, lint, build,
+`main` contains the offline editor. Changes must pass typecheck, lint, build,
 the full regression suite, 1000 exact frozen gold targets with stable second
 passes, and the enforced performance benchmark. Passing these engineering gates
 does not certify arbitrary Azerbaijani grammar or full semantic understanding.
 
-See the [current spelling/context evaluation](docs/a-h-release-report.md) for
+See the [latest performance and quality audit](docs/performance-audit/README.md): warm Node medians are 66 ms for 200 words and 245 ms for 900 words; the existing holdout is 299/300 and the new assistant-authored holdout is 291/300. Cold import plus first correction remains about 2.7 seconds. The new holdout still contains two incorrect changes to otherwise correct words. These results do not establish general semantic understanding.
+
+See the [earlier spelling/context evaluation](docs/a-h-release-report.md) for
 the separately frozen 300-sentence engineering holdout, before/after metrics,
 unresolved cases and provenance. The earlier [stabilization report](docs/stabilization-report.md)
 is a historical audit, not the current release status.
@@ -72,10 +74,11 @@ implementation replacement and optional development tracing. Tracing currently
 reports spelling changes only; it is disabled by default. No global per-request
 service mutation is needed.
 
-The legacy dictionary adapter exposes surface forms through the historical
-lemma interface; it is **not true lemmatization**. Legacy morphology recognizes
-reviewed generated forms, marked `source: "legacy"`; it does not parse suffix
-chains. Do not interpret its surface-as-lemma records as linguistic analyses.
+The legacy dictionary adapter retains historical surface-as-lemma records; these
+are not linguistic analyses. A separate source-inflection adapter now recovers
+source lemmas and selected harmonic noun/verb suffix chains from pinned stem
+classes. It is partial morphology, not full contextual POS or syntax analysis.
+Generated coverage and engineering test success do not imply human review.
 
 ## Dictionary policy
 
