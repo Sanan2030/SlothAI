@@ -51,7 +51,13 @@ Vercel uses `npm ci`, matching CI's lockfile installation.
 
 ## Implemented architecture
 
-`app/page.tsx → strategy bootstrap → strategy → correctText/formatEmail`
+`app/page.tsx → EditorClient → central worker → strategy → correctText/formatEmail`
+
+On supported devices, two local expert workers prepare spelling and sentence-boundary
+proposals after 400 ms of idle typing. The central worker reuses only accepted results
+whose stage context is unchanged; otherwise normal inference runs. Smaller devices
+retain one worker. This adds parallel execution, not general semantic understanding;
+see [implementation and validation](docs/parallel-inference/README.md).
 
 The optional `POST /api/transform` endpoint uses exactly the same strategies.
 Both paths accept at most 10,000 UTF-16 code units; an email's subject and its

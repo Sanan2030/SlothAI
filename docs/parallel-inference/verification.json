@@ -1,0 +1,23 @@
+{
+  "textCases": 4861,
+  "mailCases": 340,
+  "distinctInputs": 4001,
+  "reused": 5494,
+  "recomputed": 5253,
+  "rejected": 0,
+  "changedOutputs": 0,
+  "elapsedMs": 148400.721613,
+  "timings": {
+    "200": {
+      "directMs": 97.54104400001233,
+      "preparedFinalMs": 61.35547499998938,
+      "preparationMs": 34.880776000005426
+    },
+    "900": {
+      "directMs": 355.12250700002187,
+      "preparedFinalMs": 265.12268299999414,
+      "preparationMs": 108.47125600001891
+    }
+  },
+  "note": "Node timings exclude browser worker startup and serialization; preparation is additional CPU work. No speedup claim for end-to-end browser latency."
+}

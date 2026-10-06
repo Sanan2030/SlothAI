@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "cores": 8,
+      "workers": 3,
+      "clickToResultMs": 2492,
+      "inference": {
+        "proposed": 0,
+        "rejected": 0,
+        "reused": 1,
+        "recomputed": 1
+      }
+    },
+    {
+      "cores": 8,
+      "rapidReplacement": true,
+      "emailGreeting": true,
+      "apiDisabled": true
+    },
+    {
+      "cores": 2,
+      "workers": 1,
+      "clickToResultMs": 2392
+    },
+    {
+      "cores": 2,
+      "rapidReplacement": true,
+      "emailGreeting": true,
+      "apiDisabled": true
+    }
+  ],
+  "errors": []
+}
