@@ -4,11 +4,19 @@ import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { performance } from 'node:perf_hooks';
+import { scoreAuditRows, type AuditRow } from './editor-audit-metrics';
 import type { CorrectionRuntime } from '../lib/editor/correct';
 
 type Row = { id?: string; input?: string; expected?: string; preserveFormatting?: boolean; category?: string };
 const argument = (name: string, fallback: string) => process.argv.find(value => value.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 async function main() {
+const scoreOnly = argument('score-only', '');
+if (scoreOnly) {
+  const rows = JSON.parse(readFileSync(`${scoreOnly}/snapshot.json`, 'utf8')) as AuditRow[];
+  const summary = Object.fromEntries([...new Set(rows.map(row => row.fixture))].map(name => [name, scoreAuditRows(rows.filter(row => row.fixture === name))]));
+  writeFileSync(`${scoreOnly}/quality.json`, JSON.stringify(summary, null, 2) + '\n');
+  return;
+}
 const outputDirectory = resolve(argument('out', 'docs/performance-audit/current'));
 mkdirSync(outputDirectory, { recursive: true });
 const started = performance.now();
@@ -24,7 +32,7 @@ const measure = (text: string, runtime: CorrectionRuntime = {}) => {
   return median(Array.from({ length: 5 }, () => { const start = performance.now(); correctText(text, false, runtime); return performance.now() - start; }));
 };
 const ablations: Record<string, CorrectionRuntime> = {
-  default: {}, noLocal: { useLocalModel: false }, noAttention: { useAttention: false }, noBounded: { useBounded: false },
+  default: {}, always: { modelPolicy: 'always' }, noLocal: { useLocalModel: false }, noAttention: { useAttention: false }, noBounded: { useBounded: false },
   noObserved: { useObservedChannel: false }, noBoundary: { useNeuralBoundary: false },
   rulesOnly: { useLocalModel: false, useAttention: false, useBounded: false, useObservedChannel: false, useNeuralBoundary: false },
 };
@@ -68,6 +76,7 @@ const report = { comparedRows: snapshot.filter(row => previousByKey.has(`${row.f
 writeFileSync(`${outputDirectory}/snapshot.json`, JSON.stringify(snapshot, null, 2) + '\n');
 writeFileSync(`${outputDirectory}/report.json`, JSON.stringify(report, null, 2) + '\n');
 writeFileSync(`${outputDirectory}/differences.json`, JSON.stringify(differences, null, 2) + '\n');
+writeFileSync(`${outputDirectory}/quality.json`, JSON.stringify(Object.fromEntries(fixtures.map(({ name }) => [name, scoreAuditRows(snapshot.filter(row => row.fixture === name))])), null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));
 if (process.argv.includes('--require-identical') && differences.length) process.exitCode = 1;
 

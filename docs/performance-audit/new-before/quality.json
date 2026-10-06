@@ -1,0 +1,23 @@
+{
+  "diverse-release-300.json": {
+    "sentences": 300,
+    "exact": 281,
+    "identitySentences": 60,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 224,
+      "fp": 2,
+      "fn": 16,
+      "precision": 0.9911504424778761,
+      "recall": 0.9333333333333333,
+      "f05": 0.979020979020979,
+      "required": 240,
+      "abstainedErrors": 16,
+      "errorAbstentionRate": 0.06666666666666667,
+      "correctWords": 1024,
+      "changedCorrectWords": 2,
+      "falsePositiveRateOnCorrectWords": 0.001953125,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  }
+}

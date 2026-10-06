@@ -101,11 +101,11 @@ export function neuralAgreement(text: string): string {
 /** High-confidence learned swap corrections run after span/entity protection
  * and before dictionary guesses can destroy the original ambiguous surface. */
 export type NeuralSpellingFallback = (raw: string, tokens: Token[], at: number) => string | undefined;
-export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string, fallback: NeuralSpellingFallback | null = boundedCorrection): string {
+export function neuralTranspositions(text: string, protectUncertain?: (word: string) => string, fallback: NeuralSpellingFallback | null = boundedCorrection, inferWord?: (raw: string) => boolean): string {
   const tokens = tokenize(text); let result = '', cursor = 0;
   for (let at = 0; at < tokens.length; at++) {
     const token = tokens[at], raw = token.word;
-    if (!eligibleNeuralWord(raw)) continue;
+    if (inferWord && !inferWord(raw) || !eligibleNeuralWord(raw)) continue;
     if (protectUncertain && unresolvedAttentionAmbiguity(raw, tokens, at)) {
       result += text.slice(cursor, token.start) + protectUncertain(raw); cursor = token.end; continue;
     }

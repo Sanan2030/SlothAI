@@ -9,7 +9,7 @@ import { neuralSpelling, neuralAgreement, neuralTranspositions, type NeuralSpell
 import { documentSpelling } from './neural/document-runtime';
 import { logSpelling, isLogSurface } from './neural/log-runtime';
 import { editOCRLabels, isOCRSurface } from './log-ocr';
-import { dictionaryCandidates } from './dictionary';
+import { dictionaryCandidates, foldLetters } from './dictionary';
 import { isEstablishedSurface } from './lexicon';
 import { productiveMorphology } from './productive-morphology';
 import { segmentCorrespondence } from './correspondence-boundaries';
@@ -47,6 +47,8 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Always retains the pre-routing model path for offline A/B evaluation. */
+  modelPolicy?: 'always' | 'unresolved';
   /** Ablation for the real-input edit channel and conservative space repair. */
   useObservedChannel?: boolean;
   /** Isolate the compact gap network in offline comparisons. */
@@ -57,12 +59,33 @@ export interface CorrectionRuntime {
   neuralFallback?: NeuralSpellingFallback;
   /** Isolate the source-trained fallback without disabling existing heads. */
   useBounded?: boolean;
-  /** Evaluation switch; both application strategies enable the local model by default. */
+  /** Evaluation switch; both application strategies retain locally bundled inference. */
   useLocalModel?: boolean;
-  /** Isolate the attention head for offline ablation; default production behavior stays enabled. */
+  /** Isolate the attention head for offline ablation; resolved words bypass spelling inference by default. */
   useAttention?: boolean;
   services?: LanguageServices;
   trace?: (event: CorrectionEvent) => void;
+}
+
+/** A dictionary repair is decisive only if it preserves the transliteration skeleton.
+ * Structural typos and ambiguous lexical senses retain full contextual inference.
+ * Per-document caching avoids another morphological pass for repeated tokens.
+ */
+function spellingInferenceGate(restore: (word: string) => string): (raw: string) => boolean {
+  const checked = new Map<string, boolean>();
+  return raw => {
+    if (checked.has(raw)) return checked.get(raw)!;
+    const candidate = restore(raw);
+    const normalized = raw.replace(/sh/giu, 's').replace(/ch/giu, 'c').replace(/gh/giu, 'g');
+    const uncertain = /^(?:seher|suret)(?:$|[a-z])/iu.test(raw)
+      || !isEstablishedSurface(candidate)
+      || foldLetters(normalized) !== foldLetters(candidate);
+    checked.set(raw, uncertain);
+    return uncertain;
+  };
+}
+function needsSpellingInference(text: string, gate: (word: string) => boolean): boolean {
+  return [...text.matchAll(/\p{L}+(?:[-’']\p{L}+)*/gu)].some(match => gate(match[0]));
 }
 
 function capitalize(text: string): string {
@@ -200,7 +223,9 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Hunger adjective "ac" becomes opaque to prevent ac/aç overcorrection.
   // Establish its subject comma while the grammatical evidence is visible.
   text = preserveContextualHomographs(punctuateSubjectPronouns(text), protect);
-  if (runtime.useObservedChannel !== false) {
+  const alwaysInfer = runtime.modelPolicy === 'always';
+  const inferWord = spellingInferenceGate(restoreWord);
+  if (runtime.useObservedChannel !== false && (alwaysInfer || needsSpellingInference(text, inferWord))) {
     text = repairObservedSpacing(text);
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/gu, word => {
       const selected = observedSpelling(word);
@@ -209,7 +234,8 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       return /^\p{Lu}/u.test(word) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
     });
   }
-  if (runtime.useLocalModel !== false && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined));
+  const useSpellingModels = runtime.useLocalModel !== false && (alwaysInfer || needsSpellingInference(text, inferWord));
+  if (useSpellingModels && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined), alwaysInfer ? undefined : inferWord);
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);
@@ -220,10 +246,10 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
   text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
     '$1mən də $3');
-  if (runtime.useLocalModel !== false) {
+  if (useSpellingModels) {
     const paired = createPairedPredictor(text);
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
-      if (isCanonicalEntity(word)) return word;
+      if (isCanonicalEntity(word) || !alwaysInfer && !inferWord(word)) return word;
       const candidate = paired(word, offset);
       const established = restoreWord(word);
       // Preserve established spelling repairs, except a supervised digraph
@@ -245,7 +271,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     priorWord = match[0]; priorEnd = match.index! + match[0].length;
   }
   const sentenceEnds = [...text.matchAll(/[.!?\n]/gu)].map(match => match.index! + 1);
-  const localPrediction = runtime.useLocalModel === false ? undefined : createLocalPredictor(text,
+  const localPrediction = !useSpellingModels ? undefined : createLocalPredictor(text,
     jointContextTokens(text, restoreWord, jointArtifact as JointBoundaryModel));
   sentenceEnds.push(text.length);
   let sentenceStart = 0;
@@ -265,7 +291,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       if (grammatical) return grammatical;
     }
     const contextual = chooseInflectedPlace(word, previousWord)
-      ?? localPrediction?.(word, offset) ?? chooseBySentence(word, context);
+      ?? (alwaysInfer || inferWord(word) ? localPrediction?.(word, offset) : undefined) ?? chooseBySentence(word, context);
     if (contextual && isEstablishedSurface(contextual, services)) return contextual;
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
@@ -282,8 +308,8 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     return replacement;
   });
   text = resolveRemainingPredicate(text);
-  if (runtime.useLocalModel !== false) text = neuralSpelling(text, runtime.useAttention !== false);
-  if (runtime.useLocalModel !== false) text = documentSpelling(text);
+  if (useSpellingModels) text = neuralSpelling(text, runtime.useAttention !== false);
+  if (useSpellingModels) text = documentSpelling(text);
   text = normalizeClauseParticles(text);
   text = prepareReviewedContext(repairPhrases(text));
   text = extendedPhrases(text);
