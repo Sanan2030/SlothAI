@@ -42,9 +42,18 @@ export function detectQuestion(text: string): boolean {
   return questionConstituent.test(value) && !/(?:bilmirəm|bilmirik|bilirik|bildim|bilirəm|soruşdum|öyrəndim|izah etdim|deyirəm|maraqlıdır|bilmək istəyirəm)(?:\s+[^.!?]{0,80})?\s+(?:niyə|necə|kim|hara|harada|nə vaxt|hansı|neçə)\b/iu.test(value);
 }
 
+/** An attributive adjective is not an interjection. Explicit commas/! are
+ * authored mood cues and are never removed by this classifier. */
+export function isAttributiveEla(text: string): boolean {
+  const next = text.trim().match(/^əla\s+(\p{L}+)(?=$|[^\p{L}])/iu)?.[1];
+  if (!next) return false;
+  return /^(?:idi|oldu|olacaq|olsun|olardı)$/iu.test(next)
+    || productiveMorphology.analyzeWord(next).some(row => row.pos === 'noun' && row.features.case === 'nominative');
+}
+
 export function detectExclamation(text: string): boolean {
   const value = text.trim();
-  return interjection.test(value) || emphatic.test(value);
+  return !isAttributiveEla(value) && interjection.test(value) || emphatic.test(value);
 }
 
 export function analyzeClause(text: string): ClauseAnalysis {
@@ -100,7 +109,9 @@ export function punctuateCommas(text: string): string {
     .replace(/([^,;.!?:\s])\s+(amma|lakin|çünki|yoxsa|halbuki)\s+/giu, '$1, $2 ')
     .replace(/([^,;.!?:\s])\s+(ancaq)\s+(?=(?:mən|sən|biz|siz|o|onlar)\s)/giu, '$1, $2 ')
     .replace(/(^|[.!?]\s+)(beləliklə|ümumiyyətlə|əslində|məsələn|əksinə|səncə|görəsən)\s+/giu, '$1$2, ')
-    .replace(/(^|[.!?]\s+)(vay|aman|afərin|əla|heyif|təəssüf)\s+/giu, '$1$2, ')
+    .replace(/(^|[.!?]\s+)(vay|aman|afərin|heyif|təəssüf)\s+/giu, '$1$2, ')
+    .replace(/(^|[.!?]\s+)(əla)\s+/giu, (match, prefix: string, word: string, offset: number, source: string) =>
+      isAttributiveEla(source.slice(offset + prefix.length)) ? match : `${prefix}${word}, `)
     .replace(/(^|[.!?]\s+)(zəhmət olmasa|xahiş edirəm|xahiş edirik)\s+/giu, '$1$2, ')
     .replace(/([^,;.!?:\s])\s+(zəhmət olmasa)\s+/giu, '$1, $2, ')
     .replace(/\b(həm\s+[^,;.!?]{1,70}?)\s+(həm də)\s+/giu, '$1, $2 ')

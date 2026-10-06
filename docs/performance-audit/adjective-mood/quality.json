@@ -1,0 +1,23 @@
+{
+  "release-holdout-300.json": {
+    "sentences": 300,
+    "exact": 299,
+    "identitySentences": 60,
+    "identityFalsePositives": 0,
+    "wordEdits": {
+      "tp": 1042,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.9990412272291467,
+      "f05": 0.9998080982536941,
+      "required": 1043,
+      "abstainedErrors": 1,
+      "errorAbstentionRate": 0.0009587727708533077,
+      "correctWords": 570,
+      "changedCorrectWords": 0,
+      "falsePositiveRateOnCorrectWords": 0,
+      "note": "Case-sensitive word alignment; punctuation and whitespace are evaluated by sentence exactness. Abstention counts erroneous words left unchanged, not a calibrated confidence probability."
+    }
+  }
+}
