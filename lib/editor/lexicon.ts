@@ -642,6 +642,14 @@ export function restorePriorWord(word: string, services?: SpellingContext): stri
   return restoreEstablishedWord(word, beforeSourceExpansion(services));
 }
 export function restoreWord(word: string, services?: SpellingContext): string {
+  // ASCII title-case I does not encode Azerbaijani dotless ı. Resolve the
+  // lowercase lexical spelling first; only attested i-initial native words
+  // may receive dotted İ. Explicit diacritics, acronyms and foreign terms win.
+  if (/^I[a-z]+$/u.test(word) && technicalSpelling(word) === undefined) {
+    const base = 'i' + word.slice(1), canonical = restoreWord(base, services);
+    if (/^[iİ]/u.test(canonical) && technicalSpelling(base) === undefined && isEstablishedSurface(canonical, services))
+      return 'İ' + canonical.slice(1);
+  }
   if (isClosedFunctionForm(word) || ambiguous.has(fold(word)) || fold(word) === 'seher') return word;
   const prior = beforeSourceExpansion(services);
   const sourceRows = sourceInflections.candidates(word);

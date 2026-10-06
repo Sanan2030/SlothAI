@@ -1,0 +1,60 @@
+{
+  "comparedRows": 300,
+  "runtime": "default",
+  "observedDiagnostic": {
+    "total": 14,
+    "defaultExact": 14,
+    "rulesOnlyExact": 4,
+    "activeExact": 14,
+    "note": "Observed inputs already used in training; this is a diagnostic, not an independent evaluation."
+  },
+  "provenance": "offline audit; project fixtures do not constitute independent human evaluation",
+  "moduleLoadMs": 2774.65454,
+  "firstCallMs": 290.0107079999998,
+  "timings": {
+    "default": {
+      "words200Ms": 64.06868699999995,
+      "words900Ms": 282.2045450000005
+    },
+    "always": {
+      "words200Ms": 474.02705700000024,
+      "words900Ms": 1871.9179740000018
+    },
+    "noLocal": {
+      "words200Ms": 42.79554300000018,
+      "words900Ms": 180.62067399999796
+    },
+    "noAttention": {
+      "words200Ms": 53.64833600000202,
+      "words900Ms": 247.48034800000096
+    },
+    "noBounded": {
+      "words200Ms": 57.29483099999925,
+      "words900Ms": 286.058771
+    },
+    "noObserved": {
+      "words200Ms": 81.68973499999993,
+      "words900Ms": 276.98588200000086
+    },
+    "noBoundary": {
+      "words200Ms": 56.758765999999014,
+      "words900Ms": 237.12451800000053
+    },
+    "rulesOnly": {
+      "words200Ms": 46.245693000000756,
+      "words900Ms": 171.11216299999796
+    }
+  },
+  "corpora": {
+    "release-holdout-300.json": {
+      "total": 300,
+      "targets": 300,
+      "exact": 299,
+      "identityFalsePositives": 0,
+      "idempotencyFailures": 0
+    }
+  },
+  "snapshotSha256": "c38c9fe0edf3c13bf68099061676a440fe56765f974cdbb383d057a3ce23f53b",
+  "changedOutputs": 8,
+  "modelJsonBytes": 5634256
+}
