@@ -1,3 +1,5 @@
+import type { InferenceRunner, InferenceStats } from '../editor/inference-cache';
+
 export interface TransformationOptions {
   preserveFormatting?: boolean;
   emailGreeting?: string;
@@ -9,7 +11,11 @@ export interface TransformationRequest {
   options?: TransformationOptions;
 }
 
+export interface TransformationContext { inference?: InferenceRunner }
+
 export interface TransformationMetadata {
+  /** Speculative heads are optional; context mismatches rerun normal inference. */
+  inference?: InferenceStats;
   correctionsMade: number;
   detectedLanguage: string;
   /** Processing language; detectedLanguage is a deprecated compatibility alias. */
@@ -32,5 +38,5 @@ export interface StrategyDescriptor {
 }
 
 export interface ITextTransformationStrategy extends StrategyDescriptor {
-  transform(request: TransformationRequest): Promise<TransformationResult>;
+  transform(request: TransformationRequest, context?: TransformationContext): Promise<TransformationResult>;
 }

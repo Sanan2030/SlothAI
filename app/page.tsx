@@ -62,6 +62,7 @@ export default function HomePage() {
   const [preserveFormatting, setPreserveFormatting] = useState(false);
   const [theme, setTheme] = useState<Theme>('dark');
   const [loading, setLoading] = useState(false);
+  const [composing, setComposing] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
   const [showResultInfo, setShowResultInfo] = useState(false);
@@ -112,6 +113,18 @@ export default function HomePage() {
   const generated = activeModule === 'text' ? textGenerated : mailGenerated;
   const outputDocument = activeModule === 'text' ? textOutputDocument : mailOutputDocument;
   const metadata = activeModule === 'text' ? textMetadata : mailMetadata;
+
+  // A finished draft version is speculative; explicit correction owns the result.
+  // Invalidate immediately, before the debounce, so a quick click cannot reuse stale work.
+  useEffect(() => {
+    editorClient.current?.invalidatePreparation();
+    if (loading || composing || !inputValue.trim() || inputValue.length > MAX_TEXT_LENGTH) return;
+    const timer = setTimeout(() => {
+      editorClient.current ??= new EditorClient();
+      editorClient.current.prepare(inputValue);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [inputValue, activeModule, loading, composing]);
 
   const inputLength = useMemo(() => inputValue.length, [inputValue]);
   const diffSource = inputValue;
@@ -442,6 +455,8 @@ export default function HomePage() {
                   value={inputValue}
                   disabled={loading}
                   maxLength={Math.max(0, MAX_TEXT_LENGTH - (diffSource.length - inputValue.length))}
+                  onCompositionStart={() => setComposing(true)}
+                  onCompositionEnd={() => setComposing(false)}
                   onChange={event => setInput(event.target.value)}
                   onKeyDown={event => {
                     if (shouldSubmitEditorKey({ key: event.key, shiftKey: event.shiftKey,

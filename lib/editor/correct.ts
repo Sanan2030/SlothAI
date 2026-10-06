@@ -1,3 +1,4 @@
+import type { InferenceRunner } from './inference-cache';
 import { hasAttentionCandidate } from './neural/attention-runtime';
 import { guardInsertedBoundaries } from './syntax-boundary-guard';
 import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
@@ -48,6 +49,8 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Trusted worker speculation, reused only for byte-identical stage context. */
+  inference?: InferenceRunner;
   /** Always retains the pre-routing model path for offline A/B evaluation. */
   modelPolicy?: 'always' | 'unresolved';
   /** Ablation for the real-input edit channel and conservative space repair. */
@@ -122,7 +125,8 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = insertLearnedBoundaries(result);
   if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
-  if (useLocalModel && runtime.useNeuralBoundary !== false) result = insertNeuralBoundaries(result, runtime.boundaryModel);
+  if (useLocalModel && runtime.useNeuralBoundary !== false) result = runtime.boundaryModel ? insertNeuralBoundaries(result, runtime.boundaryModel)
+    : runtime.inference?.('sentence-boundary', result, () => insertNeuralBoundaries(result)) ?? insertNeuralBoundaries(result);
   result = guardInsertedBoundaries(boundarySource, segmentTechnicalNounClauses(result));
   result = punctuateConversation(punctuateCausalTransition(punctuateCommas(result)));
   // Only well-defined conversational patterns are split; no guessed sentence
@@ -207,7 +211,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Initials belong to the following proper name. A period in M.Füzuli is
   // not a sentence boundary; preserve the author's spacing and spelling.
   text = protectInitialNames(text, protect);
-  if (runtime.useLocalModel !== false) text = logSpelling(text);
+  if (runtime.useLocalModel !== false) text = runtime.inference?.('log-spelling', text, () => logSpelling(text)) ?? logSpelling(text);
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');
   text = prepareTechnicalPhrases(text);
   // Numeric/date/version values take Azerbaijani suffixes with a hyphen.
@@ -401,7 +405,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   return { text, corrections: input === text ? 0 : Math.max(1, Math.max(before.length, after.length) - prefix - suffix) };
 }
 
-export function formatEmail(input: string, options: { emailGreeting?: string; omitSubject?: boolean } = {}): LocalCorrection {
+export function formatEmail(input: string, options: { emailGreeting?: string; omitSubject?: boolean } = {}, runtime: CorrectionRuntime = {}): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   // The dropdown owns the salutation. Remove the same salutation from a pasted
@@ -411,12 +415,12 @@ export function formatEmail(input: string, options: { emailGreeting?: string; om
     : input;
   const document = parseEmailSections(draft);
   const subject = document.subject
-    ? correctText(document.subject, true).text.replace(/[.!?]+$/u, '')
+    ? correctText(document.subject, true, runtime).text.replace(/[.!?]+$/u, '')
       .replace(/\babb\b/giu, 'ABB').replace(/\b(?:it|İt)\b/gu, 'IT')
       .replace(/\b(?:sla|Sla)\b/gu, 'SLA').replace(/\b(?:hr|Hr)\b/gu, 'HR')
     : 'Müraciət';
   const greeting = isEmailGreeting(options.emailGreeting) ? options.emailGreeting : document.salutation?.type === 'honorific'
-    ? correctText(`Hörmətli ${document.salutation.addressee}`, true).text
+    ? correctText(`Hörmətli ${document.salutation.addressee}`, true, runtime).text
       .replace(/[,.!?]+$/u, '')
       .replace(/^(Hörmətli\s+)(\p{L}+)(\s+(?:xanım|bəy))$/iu,
         (_, title: string, name: string, suffix: string) => title + name[0].toLocaleUpperCase('az-AZ') + name.slice(1) + suffix) + ','
@@ -424,10 +428,10 @@ export function formatEmail(input: string, options: { emailGreeting?: string; om
   // A compact draft needs the same sentence and paragraph segmentation as
   // prose; explicit user line breaks still take priority in a structured mail.
   const preparedBody = document.body;
-  let body = preparedBody ? correctText(prepareEmailBody(preparedBody), /\n/u.test(preparedBody)).text : '';
+  let body = preparedBody ? correctText(prepareEmailBody(preparedBody), /\n/u.test(preparedBody), runtime).text : '';
   if (body) {
     const inferred = prepareEmailBody(body);
-    if (inferred !== body) body = correctText(inferred, true).text;
+    if (inferred !== body) body = correctText(inferred, true, runtime).text;
     if (!/\n/u.test(document.body)) body = paragraphEmailBody(segmentParagraphs(body));
   }
   // Names and job titles are structural signature text, never prose: preserve
