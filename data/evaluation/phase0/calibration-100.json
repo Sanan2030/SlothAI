@@ -1,0 +1,808 @@
+{
+  "schemaVersion": 1,
+  "purpose": "calibration-only",
+  "provenance": "assistant-authored, not human-reviewed; reserved, never used for model selection or evaluation in phase 0",
+  "trainingAllowed": false,
+  "cases": [
+    {
+      "id": "p0-c-00-0",
+      "documentId": "calibration-00-0",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Hesabatin tehsil bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın təhsil bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-00-1",
+      "documentId": "calibration-00-1",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Hesabatin tehsil bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın təhsil bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-00-2",
+      "documentId": "calibration-00-2",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Hesabatin tehsil bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın təhsil bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-00-3",
+      "documentId": "calibration-00-3",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Hesabatin tehsil bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın təhsil bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-01-0",
+      "documentId": "calibration-01-0",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Hesabatin sehiyye bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın səhiyyə bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-01-1",
+      "documentId": "calibration-01-1",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Hesabatin sehiyye bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın səhiyyə bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-01-2",
+      "documentId": "calibration-01-2",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Hesabatin sehiyye bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın səhiyyə bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-01-3",
+      "documentId": "calibration-01-3",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Hesabatin sehiyye bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın səhiyyə bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-02-0",
+      "documentId": "calibration-02-0",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Hesabatin neqliyyat bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın nəqliyyat bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-02-1",
+      "documentId": "calibration-02-1",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Hesabatin neqliyyat bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın nəqliyyat bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-02-2",
+      "documentId": "calibration-02-2",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Hesabatin neqliyyat bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın nəqliyyat bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-02-3",
+      "documentId": "calibration-02-3",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Hesabatin neqliyyat bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın nəqliyyat bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-03-0",
+      "documentId": "calibration-03-0",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Hesabatin enerji bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın enerji bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-03-1",
+      "documentId": "calibration-03-1",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Hesabatin enerji bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın enerji bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-03-2",
+      "documentId": "calibration-03-2",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Hesabatin enerji bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın enerji bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-03-3",
+      "documentId": "calibration-03-3",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Hesabatin enerji bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın enerji bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-04-0",
+      "documentId": "calibration-04-0",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Hesabatin kend teserrufati bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın kənd təsərrüfatı bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-04-1",
+      "documentId": "calibration-04-1",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Hesabatin kend teserrufati bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın kənd təsərrüfatı bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-04-2",
+      "documentId": "calibration-04-2",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Hesabatin kend teserrufati bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın kənd təsərrüfatı bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-04-3",
+      "documentId": "calibration-04-3",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Hesabatin kend teserrufati bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın kənd təsərrüfatı bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-05-0",
+      "documentId": "calibration-05-0",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Hesabatin maliyye bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın maliyyə bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-05-1",
+      "documentId": "calibration-05-1",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Hesabatin maliyye bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın maliyyə bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-05-2",
+      "documentId": "calibration-05-2",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Hesabatin maliyye bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın maliyyə bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-05-3",
+      "documentId": "calibration-05-3",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Hesabatin maliyye bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın maliyyə bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-06-0",
+      "documentId": "calibration-06-0",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Hesabatin huquq bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın hüquq bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-06-1",
+      "documentId": "calibration-06-1",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Hesabatin huquq bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın hüquq bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-06-2",
+      "documentId": "calibration-06-2",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Hesabatin huquq bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın hüquq bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-06-3",
+      "documentId": "calibration-06-3",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Hesabatin huquq bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın hüquq bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-07-0",
+      "documentId": "calibration-07-0",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Hesabatin dovlet idareetmesi bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın dövlət idarəetməsi bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-07-1",
+      "documentId": "calibration-07-1",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Hesabatin dovlet idareetmesi bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın dövlət idarəetməsi bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-07-2",
+      "documentId": "calibration-07-2",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Hesabatin dovlet idareetmesi bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın dövlət idarəetməsi bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-07-3",
+      "documentId": "calibration-07-3",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Hesabatin dovlet idareetmesi bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın dövlət idarəetməsi bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-08-0",
+      "documentId": "calibration-08-0",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Hesabatin sened dovriyyesi bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın sənəd dövriyyəsi bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-08-1",
+      "documentId": "calibration-08-1",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Hesabatin sened dovriyyesi bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın sənəd dövriyyəsi bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-08-2",
+      "documentId": "calibration-08-2",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Hesabatin sened dovriyyesi bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın sənəd dövriyyəsi bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-08-3",
+      "documentId": "calibration-08-3",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Hesabatin sened dovriyyesi bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın sənəd dövriyyəsi bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-09-0",
+      "documentId": "calibration-09-0",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Hesabatin proqramlasdirma bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın proqramlaşdırma bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-09-1",
+      "documentId": "calibration-09-1",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Hesabatin proqramlasdirma bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın proqramlaşdırma bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-09-2",
+      "documentId": "calibration-09-2",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Hesabatin proqramlasdirma bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın proqramlaşdırma bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-09-3",
+      "documentId": "calibration-09-3",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Hesabatin proqramlasdirma bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın proqramlaşdırma bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-10-0",
+      "documentId": "calibration-10-0",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Hesabatin kibertehlukesizlik bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın kibertəhlükəsizlik bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-10-1",
+      "documentId": "calibration-10-1",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Hesabatin kibertehlukesizlik bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın kibertəhlükəsizlik bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-10-2",
+      "documentId": "calibration-10-2",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Hesabatin kibertehlukesizlik bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın kibertəhlükəsizlik bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-10-3",
+      "documentId": "calibration-10-3",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Hesabatin kibertehlukesizlik bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın kibertəhlükəsizlik bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-11-0",
+      "documentId": "calibration-11-0",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Hesabatin telekommunikasiya bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın telekommunikasiya bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-11-1",
+      "documentId": "calibration-11-1",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Hesabatin telekommunikasiya bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın telekommunikasiya bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-11-2",
+      "documentId": "calibration-11-2",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Hesabatin telekommunikasiya bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın telekommunikasiya bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-11-3",
+      "documentId": "calibration-11-3",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Hesabatin telekommunikasiya bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın telekommunikasiya bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-12-0",
+      "documentId": "calibration-12-0",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Hesabatin astronomiya bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın astronomiya bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-12-1",
+      "documentId": "calibration-12-1",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Hesabatin astronomiya bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın astronomiya bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-12-2",
+      "documentId": "calibration-12-2",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Hesabatin astronomiya bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın astronomiya bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-12-3",
+      "documentId": "calibration-12-3",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Hesabatin astronomiya bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın astronomiya bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-13-0",
+      "documentId": "calibration-13-0",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Hesabatin ekologiya bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın ekologiya bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-13-1",
+      "documentId": "calibration-13-1",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Hesabatin ekologiya bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın ekologiya bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-13-2",
+      "documentId": "calibration-13-2",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Hesabatin ekologiya bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın ekologiya bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-13-3",
+      "documentId": "calibration-13-3",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Hesabatin ekologiya bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın ekologiya bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-14-0",
+      "documentId": "calibration-14-0",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Hesabatin medeniyyet bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın mədəniyyət bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-14-1",
+      "documentId": "calibration-14-1",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Hesabatin medeniyyet bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın mədəniyyət bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-14-2",
+      "documentId": "calibration-14-2",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Hesabatin medeniyyet bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın mədəniyyət bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-14-3",
+      "documentId": "calibration-14-3",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Hesabatin medeniyyet bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın mədəniyyət bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-15-0",
+      "documentId": "calibration-15-0",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Hesabatin idman bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın idman bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-15-1",
+      "documentId": "calibration-15-1",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Hesabatin idman bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın idman bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-15-2",
+      "documentId": "calibration-15-2",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Hesabatin idman bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın idman bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-15-3",
+      "documentId": "calibration-15-3",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Hesabatin idman bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın idman bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-16-0",
+      "documentId": "calibration-16-0",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Hesabatin qida bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın qida bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-16-1",
+      "documentId": "calibration-16-1",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Hesabatin qida bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın qida bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-16-2",
+      "documentId": "calibration-16-2",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Hesabatin qida bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın qida bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-16-3",
+      "documentId": "calibration-16-3",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Hesabatin qida bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın qida bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-17-0",
+      "documentId": "calibration-17-0",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Hesabatin turizm bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın turizm bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-17-1",
+      "documentId": "calibration-17-1",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Hesabatin turizm bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın turizm bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-17-2",
+      "documentId": "calibration-17-2",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Hesabatin turizm bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın turizm bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-17-3",
+      "documentId": "calibration-17-3",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Hesabatin turizm bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın turizm bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-18-0",
+      "documentId": "calibration-18-0",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Hesabatin tikinti bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın tikinti bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-18-1",
+      "documentId": "calibration-18-1",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Hesabatin tikinti bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın tikinti bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-18-2",
+      "documentId": "calibration-18-2",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Hesabatin tikinti bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın tikinti bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-18-3",
+      "documentId": "calibration-18-3",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Hesabatin tikinti bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın tikinti bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-19-0",
+      "documentId": "calibration-19-0",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Hesabatin logistika bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın logistika bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-19-1",
+      "documentId": "calibration-19-1",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Hesabatin logistika bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın logistika bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-19-2",
+      "documentId": "calibration-19-2",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Hesabatin logistika bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın logistika bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-19-3",
+      "documentId": "calibration-19-3",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Hesabatin logistika bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın logistika bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-20-0",
+      "documentId": "calibration-20-0",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Hesabatin meteorologiya bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın meteorologiya bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-20-1",
+      "documentId": "calibration-20-1",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Hesabatin meteorologiya bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın meteorologiya bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-20-2",
+      "documentId": "calibration-20-2",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Hesabatin meteorologiya bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın meteorologiya bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-20-3",
+      "documentId": "calibration-20-3",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Hesabatin meteorologiya bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın meteorologiya bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-21-0",
+      "documentId": "calibration-21-0",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Hesabatin geologiya bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın geologiya bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-21-1",
+      "documentId": "calibration-21-1",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Hesabatin geologiya bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın geologiya bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-21-2",
+      "documentId": "calibration-21-2",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Hesabatin geologiya bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın geologiya bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-21-3",
+      "documentId": "calibration-21-3",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Hesabatin geologiya bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın geologiya bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-22-0",
+      "documentId": "calibration-22-0",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Hesabatin riyaziyyat bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın riyaziyyat bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-22-1",
+      "documentId": "calibration-22-1",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Hesabatin riyaziyyat bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın riyaziyyat bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-22-2",
+      "documentId": "calibration-22-2",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Hesabatin riyaziyyat bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın riyaziyyat bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-22-3",
+      "documentId": "calibration-22-3",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Hesabatin riyaziyyat bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın riyaziyyat bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-23-0",
+      "documentId": "calibration-23-0",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Hesabatin perakende satis bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın pərakəndə satış bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-23-1",
+      "documentId": "calibration-23-1",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Hesabatin perakende satis bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın pərakəndə satış bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-23-2",
+      "documentId": "calibration-23-2",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Hesabatin perakende satis bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın pərakəndə satış bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-23-3",
+      "documentId": "calibration-23-3",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Hesabatin perakende satis bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın pərakəndə satış bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    },
+    {
+      "id": "p0-c-24-0",
+      "documentId": "calibration-24-0",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Hesabatin gundelik heyat bolmesinde qeyd edilib: bu sahede melumatlarin keyfiyyeti ayrica yoxlanilacaq.",
+      "expected": "Hesabatın gündəlik həyat bölməsində qeyd edilib: bu sahədə məlumatların keyfiyyəti ayrıca yoxlanılacaq."
+    },
+    {
+      "id": "p0-c-24-1",
+      "documentId": "calibration-24-1",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Hesabatin gundelik heyat bolmesinde qeyd edilib: mesul emekdas yeni teklifleri yazili sekilde bildirecek.",
+      "expected": "Hesabatın gündəlik həyat bölməsində qeyd edilib: məsul əməkdaş yeni təklifləri yazılı şəkildə bildirəcək."
+    },
+    {
+      "id": "p0-c-24-2",
+      "documentId": "calibration-24-2",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Hesabatin gundelik heyat bolmesinde qeyd edilib: arasdirmanin neticeleri novbeti toplantida muzakire olunacaq.",
+      "expected": "Hesabatın gündəlik həyat bölməsində qeyd edilib: araşdırmanın nəticələri növbəti toplantıda müzakirə olunacaq."
+    },
+    {
+      "id": "p0-c-24-3",
+      "documentId": "calibration-24-3",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Hesabatin gundelik heyat bolmesinde qeyd edilib: novbeti merhelenin vaxti elave bildirisde gosterilecek.",
+      "expected": "Hesabatın gündəlik həyat bölməsində qeyd edilib: növbəti mərhələnin vaxtı əlavə bildirişdə göstəriləcək."
+    }
+  ]
+}

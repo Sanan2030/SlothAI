@@ -1,0 +1,23 @@
+{
+  "baseCommit": "b3b5af74c366b1e57d9c64ce284384d8ad69ca66",
+  "seed": 20261007,
+  "holdout": {
+    "sentences": 500,
+    "domains": 25,
+    "identity": 150,
+    "documentClusters": 250,
+    "limitation": "Repeated subjects/actions and 250 paired clauses; not 500 independent documents or representative real user errors."
+  },
+  "noHarm": {
+    "forms": 2000,
+    "source": "public/dictionaries/az/metadata.json",
+    "license": "MPL-2.0",
+    "limitation": "Dictionary membership is not expert certification; mention contexts do not test all natural inflections or meanings."
+  },
+  "calibration": {
+    "sentences": 100,
+    "used": false,
+    "limitation": "Four repeated frames across 25 domains; must be expanded before reliable calibration."
+  },
+  "trainingAllowed": false
+}

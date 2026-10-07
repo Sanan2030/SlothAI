@@ -1,0 +1,4008 @@
+{
+  "schemaVersion": 1,
+  "purpose": "evaluation-only",
+  "provenance": "assistant-authored, not human-reviewed; 250 clause documents, two contextual variants each",
+  "trainingAllowed": false,
+  "cases": [
+    {
+      "id": "p0-h-00-00-0",
+      "documentId": "holdout-00-00",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Müəllim dərsin məqsədini izah etdi.",
+      "expected": "Müəllim dərsin məqsədini izah etdi."
+    },
+    {
+      "id": "p0-h-00-00-1",
+      "documentId": "holdout-00-00",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Yekun qeydə görə, müəllim dərsin məqsədini izah etdi.",
+      "expected": "Yekun qeydə görə, müəllim dərsin məqsədini izah etdi."
+    },
+    {
+      "id": "p0-h-00-01-0",
+      "documentId": "holdout-00-01",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Şagird kitabxanadan roman götürdü.",
+      "expected": "Şagird kitabxanadan roman götürdü."
+    },
+    {
+      "id": "p0-h-00-01-1",
+      "documentId": "holdout-00-01",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Yekun qeydə görə, şagird kitabxanadan roman götürdü.",
+      "expected": "Yekun qeydə görə, şagird kitabxanadan roman götürdü."
+    },
+    {
+      "id": "p0-h-00-02-0",
+      "documentId": "holdout-00-02",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Sinif rəhbəri davamiyyəti yoxladı.",
+      "expected": "Sinif rəhbəri davamiyyəti yoxladı."
+    },
+    {
+      "id": "p0-h-00-02-1",
+      "documentId": "holdout-00-02",
+      "domain": "təhsil",
+      "category": "identity",
+      "input": "Yekun qeydə görə, sinif rəhbəri davamiyyəti yoxladı.",
+      "expected": "Yekun qeydə görə, sinif rəhbəri davamiyyəti yoxladı."
+    },
+    {
+      "id": "p0-h-00-03-0",
+      "documentId": "holdout-00-03",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Telebe meruzenin planini hazirladi.",
+      "expected": "Tələbə məruzənin planını hazırladı."
+    },
+    {
+      "id": "p0-h-00-03-1",
+      "documentId": "holdout-00-03",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, telebe meruzenin planini hazirladi.",
+      "expected": "Yekun qeydə görə, tələbə məruzənin planını hazırladı."
+    },
+    {
+      "id": "p0-h-00-04-0",
+      "documentId": "holdout-00-04",
+      "domain": "təhsil",
+      "category": "digraph",
+      "input": "Laborant təcrübə üchün cihazları sechdi.",
+      "expected": "Laborant təcrübə üçün cihazları seçdi."
+    },
+    {
+      "id": "p0-h-00-04-1",
+      "documentId": "holdout-00-04",
+      "domain": "təhsil",
+      "category": "partial",
+      "input": "Yekun qeyde göre, laborant tecrübe üçün cihazlari seçdi.",
+      "expected": "Yekun qeydə görə, laborant təcrübə üçün cihazları seçdi."
+    },
+    {
+      "id": "p0-h-00-05-0",
+      "documentId": "holdout-00-05",
+      "domain": "təhsil",
+      "category": "partial",
+      "input": "Direktor ders cedvelini tesdiqledi.",
+      "expected": "Direktor dərs cədvəlini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-00-05-1",
+      "documentId": "holdout-00-05",
+      "domain": "təhsil",
+      "category": "case",
+      "input": "yekun qeydə görə, direktor dərs cədvəlini təsdiqlədi.",
+      "expected": "Yekun qeydə görə, direktor dərs cədvəlini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-00-06-0",
+      "documentId": "holdout-00-06",
+      "domain": "təhsil",
+      "category": "case",
+      "input": "valideyn məktəbin həyətində gözlədi.",
+      "expected": "Valideyn məktəbin həyətində gözlədi."
+    },
+    {
+      "id": "p0-h-00-06-1",
+      "documentId": "holdout-00-06",
+      "domain": "təhsil",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, valideyn məktəbin həyətində gözlədi",
+      "expected": "Yekun qeydə görə, valideyn məktəbin həyətində gözlədi."
+    },
+    {
+      "id": "p0-h-00-07-0",
+      "documentId": "holdout-00-07",
+      "domain": "təhsil",
+      "category": "punctuation",
+      "input": "Məzun qəbul sənədini təqdim etdi",
+      "expected": "Məzun qəbul sənədini təqdim etdi."
+    },
+    {
+      "id": "p0-h-00-07-1",
+      "documentId": "holdout-00-07",
+      "domain": "təhsil",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, məzun qəubl sənədini təqdim etdi.",
+      "expected": "Yekun qeydə görə, məzun qəbul sənədini təqdim etdi."
+    },
+    {
+      "id": "p0-h-00-08-0",
+      "documentId": "holdout-00-08",
+      "domain": "təhsil",
+      "category": "transpose",
+      "input": "Təlimçi məəsləni lövhədə həll etdi.",
+      "expected": "Təlimçi məsələni lövhədə həll etdi."
+    },
+    {
+      "id": "p0-h-00-08-1",
+      "documentId": "holdout-00-08",
+      "domain": "təhsil",
+      "category": "delete",
+      "input": "Yekun qeydə görə, təlimçi məsələni löhədə həll etdi.",
+      "expected": "Yekun qeydə görə, təlimçi məsələni lövhədə həll etdi."
+    },
+    {
+      "id": "p0-h-00-09-0",
+      "documentId": "holdout-00-09",
+      "domain": "təhsil",
+      "category": "delete",
+      "input": "Kitabxanaçı köhnə dərsliyi bəpa etdi.",
+      "expected": "Kitabxanaçı köhnə dərsliyi bərpa etdi."
+    },
+    {
+      "id": "p0-h-00-09-1",
+      "documentId": "holdout-00-09",
+      "domain": "təhsil",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, kitabxanaci kohne dersliyi berpa etdi.",
+      "expected": "Yekun qeydə görə, kitabxanaçı köhnə dərsliyi bərpa etdi."
+    },
+    {
+      "id": "p0-h-01-00-0",
+      "documentId": "holdout-01-00",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Həkim xəstənin təzyiqini ölçdü.",
+      "expected": "Həkim xəstənin təzyiqini ölçdü."
+    },
+    {
+      "id": "p0-h-01-00-1",
+      "documentId": "holdout-01-00",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, həkim xəstənin təzyiqini ölçdü.",
+      "expected": "Yekun qeydə görə, həkim xəstənin təzyiqini ölçdü."
+    },
+    {
+      "id": "p0-h-01-01-0",
+      "documentId": "holdout-01-01",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Tibb bacısı sarğını dəyişdi.",
+      "expected": "Tibb bacısı sarğını dəyişdi."
+    },
+    {
+      "id": "p0-h-01-01-1",
+      "documentId": "holdout-01-01",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, tibb bacısı sarğını dəyişdi.",
+      "expected": "Yekun qeydə görə, tibb bacısı sarğını dəyişdi."
+    },
+    {
+      "id": "p0-h-01-02-0",
+      "documentId": "holdout-01-02",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Cərrah əməliyyatın gedişini izah etdi.",
+      "expected": "Cərrah əməliyyatın gedişini izah etdi."
+    },
+    {
+      "id": "p0-h-01-02-1",
+      "documentId": "holdout-01-02",
+      "domain": "səhiyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, cərrah əməliyyatın gedişini izah etdi.",
+      "expected": "Yekun qeydə görə, cərrah əməliyyatın gedişini izah etdi."
+    },
+    {
+      "id": "p0-h-01-03-0",
+      "documentId": "holdout-01-03",
+      "domain": "səhiyyə",
+      "category": "digraph",
+      "input": "Əczachı dərmanın təlimatını oxudu.",
+      "expected": "Əczaçı dərmanın təlimatını oxudu."
+    },
+    {
+      "id": "p0-h-01-03-1",
+      "documentId": "holdout-01-03",
+      "domain": "səhiyyə",
+      "category": "partial",
+      "input": "Yekun qeyde göre, eczaçi dermanin telimatini oxudu.",
+      "expected": "Yekun qeydə görə, əczaçı dərmanın təlimatını oxudu."
+    },
+    {
+      "id": "p0-h-01-04-0",
+      "documentId": "holdout-01-04",
+      "domain": "səhiyyə",
+      "category": "partial",
+      "input": "Pasiyent qebul üçün növbe götürdü.",
+      "expected": "Pasiyent qəbul üçün növbə götürdü."
+    },
+    {
+      "id": "p0-h-01-04-1",
+      "documentId": "holdout-01-04",
+      "domain": "səhiyyə",
+      "category": "case",
+      "input": "yekun qeydə görə, pasiyent qəbul üçün növbə götürdü.",
+      "expected": "Yekun qeydə görə, pasiyent qəbul üçün növbə götürdü."
+    },
+    {
+      "id": "p0-h-01-05-0",
+      "documentId": "holdout-01-05",
+      "domain": "səhiyyə",
+      "category": "case",
+      "input": "laboratoriya nəticəni səhər göndərdi.",
+      "expected": "Laboratoriya nəticəni səhər göndərdi."
+    },
+    {
+      "id": "p0-h-01-05-1",
+      "documentId": "holdout-01-05",
+      "domain": "səhiyyə",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, laboratoriya nəticəni səhər göndərdi",
+      "expected": "Yekun qeydə görə, laboratoriya nəticəni səhər göndərdi."
+    },
+    {
+      "id": "p0-h-01-06-0",
+      "documentId": "holdout-01-06",
+      "domain": "səhiyyə",
+      "category": "punctuation",
+      "input": "Fizioterapevt məşqin müddətini azaltdı",
+      "expected": "Fizioterapevt məşqin müddətini azaltdı."
+    },
+    {
+      "id": "p0-h-01-06-1",
+      "documentId": "holdout-01-06",
+      "domain": "səhiyyə",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, fizioterapevt məqşin müddətini azaltdı.",
+      "expected": "Yekun qeydə görə, fizioterapevt məşqin müddətini azaltdı."
+    },
+    {
+      "id": "p0-h-01-07-0",
+      "documentId": "holdout-01-07",
+      "domain": "səhiyyə",
+      "category": "transpose",
+      "input": "Dietoloq qidalanma plnaını hazırladı.",
+      "expected": "Dietoloq qidalanma planını hazırladı."
+    },
+    {
+      "id": "p0-h-01-07-1",
+      "documentId": "holdout-01-07",
+      "domain": "səhiyyə",
+      "category": "delete",
+      "input": "Yekun qeydə görə, dietoloq qidalanma planını haırladı.",
+      "expected": "Yekun qeydə görə, dietoloq qidalanma planını hazırladı."
+    },
+    {
+      "id": "p0-h-01-08-0",
+      "documentId": "holdout-01-08",
+      "domain": "səhiyyə",
+      "category": "delete",
+      "input": "Stomatoloq dişin şəklini çədi.",
+      "expected": "Stomatoloq dişin şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-01-08-1",
+      "documentId": "holdout-01-08",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, stomatoloq disin seklini cekdi.",
+      "expected": "Yekun qeydə görə, stomatoloq dişin şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-01-09-0",
+      "documentId": "holdout-01-09",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Klinika tecili yardima xeber verdi.",
+      "expected": "Klinika təcili yardıma xəbər verdi."
+    },
+    {
+      "id": "p0-h-01-09-1",
+      "documentId": "holdout-01-09",
+      "domain": "səhiyyə",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, klinika tecili yardima xeber verdi.",
+      "expected": "Yekun qeydə görə, klinika təcili yardıma xəbər verdi."
+    },
+    {
+      "id": "p0-h-02-00-0",
+      "documentId": "holdout-02-00",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Sürücü yol nişanını vaxtında gördü.",
+      "expected": "Sürücü yol nişanını vaxtında gördü."
+    },
+    {
+      "id": "p0-h-02-00-1",
+      "documentId": "holdout-02-00",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, sürücü yol nişanını vaxtında gördü.",
+      "expected": "Yekun qeydə görə, sürücü yol nişanını vaxtında gördü."
+    },
+    {
+      "id": "p0-h-02-01-0",
+      "documentId": "holdout-02-01",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Dispetçer avtobusun vaxtını dəyişdi.",
+      "expected": "Dispetçer avtobusun vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-02-01-1",
+      "documentId": "holdout-02-01",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, dispetçer avtobusun vaxtını dəyişdi.",
+      "expected": "Yekun qeydə görə, dispetçer avtobusun vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-02-02-0",
+      "documentId": "holdout-02-02",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Sərnişin dayanacaqda bilet aldı.",
+      "expected": "Sərnişin dayanacaqda bilet aldı."
+    },
+    {
+      "id": "p0-h-02-02-1",
+      "documentId": "holdout-02-02",
+      "domain": "nəqliyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, sərnişin dayanacaqda bilet aldı.",
+      "expected": "Yekun qeydə görə, sərnişin dayanacaqda bilet aldı."
+    },
+    {
+      "id": "p0-h-02-03-0",
+      "documentId": "holdout-02-03",
+      "domain": "nəqliyyat",
+      "category": "partial",
+      "input": "Maşinist qatari ehtiyatla saxladi.",
+      "expected": "Maşinist qatarı ehtiyatla saxladı."
+    },
+    {
+      "id": "p0-h-02-03-1",
+      "documentId": "holdout-02-03",
+      "domain": "nəqliyyat",
+      "category": "case",
+      "input": "yekun qeydə görə, maşinist qatarı ehtiyatla saxladı.",
+      "expected": "Yekun qeydə görə, maşinist qatarı ehtiyatla saxladı."
+    },
+    {
+      "id": "p0-h-02-04-0",
+      "documentId": "holdout-02-04",
+      "domain": "nəqliyyat",
+      "category": "case",
+      "input": "bələdçi vaqonun qapısını bağladı.",
+      "expected": "Bələdçi vaqonun qapısını bağladı."
+    },
+    {
+      "id": "p0-h-02-04-1",
+      "documentId": "holdout-02-04",
+      "domain": "nəqliyyat",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, bələdçi vaqonun qapısını bağladı",
+      "expected": "Yekun qeydə görə, bələdçi vaqonun qapısını bağladı."
+    },
+    {
+      "id": "p0-h-02-05-0",
+      "documentId": "holdout-02-05",
+      "domain": "nəqliyyat",
+      "category": "punctuation",
+      "input": "Mexanik mühərrikin yağını yoxladı",
+      "expected": "Mexanik mühərrikin yağını yoxladı."
+    },
+    {
+      "id": "p0-h-02-05-1",
+      "documentId": "holdout-02-05",
+      "domain": "nəqliyyat",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, mexanik müəhrrikin yağını yoxladı.",
+      "expected": "Yekun qeydə görə, mexanik mühərrikin yağını yoxladı."
+    },
+    {
+      "id": "p0-h-02-06-0",
+      "documentId": "holdout-02-06",
+      "domain": "nəqliyyat",
+      "category": "transpose",
+      "input": "Nəzarətçi keçid katrını oxutdu.",
+      "expected": "Nəzarətçi keçid kartını oxutdu."
+    },
+    {
+      "id": "p0-h-02-06-1",
+      "documentId": "holdout-02-06",
+      "domain": "nəqliyyat",
+      "category": "delete",
+      "input": "Yekun qeydə görə, nəzarətçi keçid kartını oxtdu.",
+      "expected": "Yekun qeydə görə, nəzarətçi keçid kartını oxutdu."
+    },
+    {
+      "id": "p0-h-02-07-0",
+      "documentId": "holdout-02-07",
+      "domain": "nəqliyyat",
+      "category": "delete",
+      "input": "Kuryer bağlamanı ünvana çadırdı.",
+      "expected": "Kuryer bağlamanı ünvana çatdırdı."
+    },
+    {
+      "id": "p0-h-02-07-1",
+      "documentId": "holdout-02-07",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, kuryer baglamani unvana catdirdi.",
+      "expected": "Yekun qeydə görə, kuryer bağlamanı ünvana çatdırdı."
+    },
+    {
+      "id": "p0-h-02-08-0",
+      "documentId": "holdout-02-08",
+      "domain": "nəqliyyat",
+      "category": "ascii",
+      "input": "Pilot ucusun istiqametini deyisdi.",
+      "expected": "Pilot uçuşun istiqamətini dəyişdi."
+    },
+    {
+      "id": "p0-h-02-08-1",
+      "documentId": "holdout-02-08",
+      "domain": "nəqliyyat",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, pilot uchushun istiqamətini dəyishdi.",
+      "expected": "Yekun qeydə görə, pilot uçuşun istiqamətini dəyişdi."
+    },
+    {
+      "id": "p0-h-02-09-0",
+      "documentId": "holdout-02-09",
+      "domain": "nəqliyyat",
+      "category": "digraph",
+      "input": "Kapitan limana yaxınlashdı.",
+      "expected": "Kapitan limana yaxınlaşdı."
+    },
+    {
+      "id": "p0-h-02-09-1",
+      "documentId": "holdout-02-09",
+      "domain": "nəqliyyat",
+      "category": "partial",
+      "input": "Yekun qeyde göre, kapitan limana yaxinlaşdi.",
+      "expected": "Yekun qeydə görə, kapitan limana yaxınlaşdı."
+    },
+    {
+      "id": "p0-h-03-00-0",
+      "documentId": "holdout-03-00",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Mühəndis turbinin gücünü hesabladı.",
+      "expected": "Mühəndis turbinin gücünü hesabladı."
+    },
+    {
+      "id": "p0-h-03-00-1",
+      "documentId": "holdout-03-00",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühəndis turbinin gücünü hesabladı.",
+      "expected": "Yekun qeydə görə, mühəndis turbinin gücünü hesabladı."
+    },
+    {
+      "id": "p0-h-03-01-0",
+      "documentId": "holdout-03-01",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Usta elektrik xəttini təmir etdi.",
+      "expected": "Usta elektrik xəttini təmir etdi."
+    },
+    {
+      "id": "p0-h-03-01-1",
+      "documentId": "holdout-03-01",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Yekun qeydə görə, usta elektrik xəttini təmir etdi.",
+      "expected": "Yekun qeydə görə, usta elektrik xəttini təmir etdi."
+    },
+    {
+      "id": "p0-h-03-02-0",
+      "documentId": "holdout-03-02",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Texnik sayğacın göstəricisini yazdı.",
+      "expected": "Texnik sayğacın göstəricisini yazdı."
+    },
+    {
+      "id": "p0-h-03-02-1",
+      "documentId": "holdout-03-02",
+      "domain": "enerji",
+      "category": "identity",
+      "input": "Yekun qeydə görə, texnik sayğacın göstəricisini yazdı.",
+      "expected": "Yekun qeydə görə, texnik sayğacın göstəricisini yazdı."
+    },
+    {
+      "id": "p0-h-03-03-0",
+      "documentId": "holdout-03-03",
+      "domain": "enerji",
+      "category": "case",
+      "input": "operator stansiyanın yükünü azaltdı.",
+      "expected": "Operator stansiyanın yükünü azaltdı."
+    },
+    {
+      "id": "p0-h-03-03-1",
+      "documentId": "holdout-03-03",
+      "domain": "enerji",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, operator stansiyanın yükünü azaltdı",
+      "expected": "Yekun qeydə görə, operator stansiyanın yükünü azaltdı."
+    },
+    {
+      "id": "p0-h-03-04-0",
+      "documentId": "holdout-03-04",
+      "domain": "enerji",
+      "category": "punctuation",
+      "input": "Briqada kabelin yerini müəyyənləşdirdi",
+      "expected": "Briqada kabelin yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-03-04-1",
+      "documentId": "holdout-03-04",
+      "domain": "enerji",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, briqada kaeblin yerini müəyyənləşdirdi.",
+      "expected": "Yekun qeydə görə, briqada kabelin yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-03-05-0",
+      "documentId": "holdout-03-05",
+      "domain": "enerji",
+      "category": "transpose",
+      "input": "Mütəxəssis batareyanın tuutmunu ölçdü.",
+      "expected": "Mütəxəssis batareyanın tutumunu ölçdü."
+    },
+    {
+      "id": "p0-h-03-05-1",
+      "documentId": "holdout-03-05",
+      "domain": "enerji",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis batareyanın tutumunu öldü.",
+      "expected": "Yekun qeydə görə, mütəxəssis batareyanın tutumunu ölçdü."
+    },
+    {
+      "id": "p0-h-03-06-0",
+      "documentId": "holdout-03-06",
+      "domain": "enerji",
+      "category": "delete",
+      "input": "Nəzarətçi transformatoru yoladı.",
+      "expected": "Nəzarətçi transformatoru yoxladı."
+    },
+    {
+      "id": "p0-h-03-06-1",
+      "documentId": "holdout-03-06",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, nezaretci transformatoru yoxladi.",
+      "expected": "Yekun qeydə görə, nəzarətçi transformatoru yoxladı."
+    },
+    {
+      "id": "p0-h-03-07-0",
+      "documentId": "holdout-03-07",
+      "domain": "enerji",
+      "category": "ascii",
+      "input": "Isci gunes panelini temizledi.",
+      "expected": "İşçi günəş panelini təmizlədi."
+    },
+    {
+      "id": "p0-h-03-07-1",
+      "documentId": "holdout-03-07",
+      "domain": "enerji",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, i̇shchi günəsh panelini təmizlədi.",
+      "expected": "Yekun qeydə görə, i̇şçi günəş panelini təmizlədi."
+    },
+    {
+      "id": "p0-h-03-08-0",
+      "documentId": "holdout-03-08",
+      "domain": "enerji",
+      "category": "digraph",
+      "input": "Qrup ehtiyat generatoru ishə saldı.",
+      "expected": "Qrup ehtiyat generatoru işə saldı."
+    },
+    {
+      "id": "p0-h-03-08-1",
+      "documentId": "holdout-03-08",
+      "domain": "enerji",
+      "category": "partial",
+      "input": "Yekun qeyde göre, qrup ehtiyat generatoru işe saldi.",
+      "expected": "Yekun qeydə görə, qrup ehtiyat generatoru işə saldı."
+    },
+    {
+      "id": "p0-h-03-09-0",
+      "documentId": "holdout-03-09",
+      "domain": "enerji",
+      "category": "partial",
+      "input": "Analitik istehlakin artimini araşdirdi.",
+      "expected": "Analitik istehlakın artımını araşdırdı."
+    },
+    {
+      "id": "p0-h-03-09-1",
+      "documentId": "holdout-03-09",
+      "domain": "enerji",
+      "category": "case",
+      "input": "yekun qeydə görə, analitik istehlakın artımını araşdırdı.",
+      "expected": "Yekun qeydə görə, analitik istehlakın artımını araşdırdı."
+    },
+    {
+      "id": "p0-h-04-00-0",
+      "documentId": "holdout-04-00",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Fermer əkin sahəsini suvardı.",
+      "expected": "Fermer əkin sahəsini suvardı."
+    },
+    {
+      "id": "p0-h-04-00-1",
+      "documentId": "holdout-04-00",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Yekun qeydə görə, fermer əkin sahəsini suvardı.",
+      "expected": "Yekun qeydə görə, fermer əkin sahəsini suvardı."
+    },
+    {
+      "id": "p0-h-04-01-0",
+      "documentId": "holdout-04-01",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Aqronom torpaqdan nümunə götürdü.",
+      "expected": "Aqronom torpaqdan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-04-01-1",
+      "documentId": "holdout-04-01",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Yekun qeydə görə, aqronom torpaqdan nümunə götürdü.",
+      "expected": "Yekun qeydə görə, aqronom torpaqdan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-04-02-0",
+      "documentId": "holdout-04-02",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Bağban ağacın quru budağını kəsdi.",
+      "expected": "Bağban ağacın quru budağını kəsdi."
+    },
+    {
+      "id": "p0-h-04-02-1",
+      "documentId": "holdout-04-02",
+      "domain": "kənd təsərrüfatı",
+      "category": "identity",
+      "input": "Yekun qeydə görə, bağban ağacın quru budağını kəsdi.",
+      "expected": "Yekun qeydə görə, bağban ağacın quru budağını kəsdi."
+    },
+    {
+      "id": "p0-h-04-03-0",
+      "documentId": "holdout-04-03",
+      "domain": "kənd təsərrüfatı",
+      "category": "punctuation",
+      "input": "Çoban sürünü otlağa apardı",
+      "expected": "Çoban sürünü otlağa apardı."
+    },
+    {
+      "id": "p0-h-04-03-1",
+      "documentId": "holdout-04-03",
+      "domain": "kənd təsərrüfatı",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, çoban süürnü otlağa apardı.",
+      "expected": "Yekun qeydə görə, çoban sürünü otlağa apardı."
+    },
+    {
+      "id": "p0-h-04-04-0",
+      "documentId": "holdout-04-04",
+      "domain": "kənd təsərrüfatı",
+      "category": "transpose",
+      "input": "Arıçı pətəyin qaapğını açdı.",
+      "expected": "Arıçı pətəyin qapağını açdı."
+    },
+    {
+      "id": "p0-h-04-04-1",
+      "documentId": "holdout-04-04",
+      "domain": "kənd təsərrüfatı",
+      "category": "delete",
+      "input": "Yekun qeydə görə, arıçı pətəyin qaağını açdı.",
+      "expected": "Yekun qeydə görə, arıçı pətəyin qapağını açdı."
+    },
+    {
+      "id": "p0-h-04-05-0",
+      "documentId": "holdout-04-05",
+      "domain": "kənd təsərrüfatı",
+      "category": "delete",
+      "input": "Traktorçu sahənin kənarında daandı.",
+      "expected": "Traktorçu sahənin kənarında dayandı."
+    },
+    {
+      "id": "p0-h-04-05-1",
+      "documentId": "holdout-04-05",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, traktorcu sahenin kenarinda dayandi.",
+      "expected": "Yekun qeydə görə, traktorçu sahənin kənarında dayandı."
+    },
+    {
+      "id": "p0-h-04-06-0",
+      "documentId": "holdout-04-06",
+      "domain": "kənd təsərrüfatı",
+      "category": "ascii",
+      "input": "Bicinci taxilin nemliyini yoxladi.",
+      "expected": "Biçinçi taxılın nəmliyini yoxladı."
+    },
+    {
+      "id": "p0-h-04-06-1",
+      "documentId": "holdout-04-06",
+      "domain": "kənd təsərrüfatı",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, bichinchi taxılın nəmliyini yoxladı.",
+      "expected": "Yekun qeydə görə, biçinçi taxılın nəmliyini yoxladı."
+    },
+    {
+      "id": "p0-h-04-07-0",
+      "documentId": "holdout-04-07",
+      "domain": "kənd təsərrüfatı",
+      "category": "digraph",
+      "input": "İshchi toxumları anbara dashıdı.",
+      "expected": "İşçi toxumları anbara daşıdı."
+    },
+    {
+      "id": "p0-h-04-07-1",
+      "documentId": "holdout-04-07",
+      "domain": "kənd təsərrüfatı",
+      "category": "partial",
+      "input": "Yekun qeyde göre, i̇şçi toxumlari anbara daşidi.",
+      "expected": "Yekun qeydə görə, i̇şçi toxumları anbara daşıdı."
+    },
+    {
+      "id": "p0-h-04-08-0",
+      "documentId": "holdout-04-08",
+      "domain": "kənd təsərrüfatı",
+      "category": "partial",
+      "input": "Mütexessis gübrenin miqdarini hesabladi.",
+      "expected": "Mütəxəssis gübrənin miqdarını hesabladı."
+    },
+    {
+      "id": "p0-h-04-08-1",
+      "documentId": "holdout-04-08",
+      "domain": "kənd təsərrüfatı",
+      "category": "case",
+      "input": "yekun qeydə görə, mütəxəssis gübrənin miqdarını hesabladı.",
+      "expected": "Yekun qeydə görə, mütəxəssis gübrənin miqdarını hesabladı."
+    },
+    {
+      "id": "p0-h-04-09-0",
+      "documentId": "holdout-04-09",
+      "domain": "kənd təsərrüfatı",
+      "category": "case",
+      "input": "sahibkar məhsulu bazara çıxardı.",
+      "expected": "Sahibkar məhsulu bazara çıxardı."
+    },
+    {
+      "id": "p0-h-04-09-1",
+      "documentId": "holdout-04-09",
+      "domain": "kənd təsərrüfatı",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, sahibkar məhsulu bazara çıxardı",
+      "expected": "Yekun qeydə görə, sahibkar məhsulu bazara çıxardı."
+    },
+    {
+      "id": "p0-h-05-00-0",
+      "documentId": "holdout-05-00",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Mühasib ödəniş sənədini yoxladı.",
+      "expected": "Mühasib ödəniş sənədini yoxladı."
+    },
+    {
+      "id": "p0-h-05-00-1",
+      "documentId": "holdout-05-00",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühasib ödəniş sənədini yoxladı.",
+      "expected": "Yekun qeydə görə, mühasib ödəniş sənədini yoxladı."
+    },
+    {
+      "id": "p0-h-05-01-0",
+      "documentId": "holdout-05-01",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Auditor hesabın qalığını təsdiqlədi.",
+      "expected": "Auditor hesabın qalığını təsdiqlədi."
+    },
+    {
+      "id": "p0-h-05-01-1",
+      "documentId": "holdout-05-01",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, auditor hesabın qalığını təsdiqlədi.",
+      "expected": "Yekun qeydə görə, auditor hesabın qalığını təsdiqlədi."
+    },
+    {
+      "id": "p0-h-05-02-0",
+      "documentId": "holdout-05-02",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Analitik büdcənin strukturunu araşdırdı.",
+      "expected": "Analitik büdcənin strukturunu araşdırdı."
+    },
+    {
+      "id": "p0-h-05-02-1",
+      "documentId": "holdout-05-02",
+      "domain": "maliyyə",
+      "category": "identity",
+      "input": "Yekun qeydə görə, analitik büdcənin strukturunu araşdırdı.",
+      "expected": "Yekun qeydə görə, analitik büdcənin strukturunu araşdırdı."
+    },
+    {
+      "id": "p0-h-05-03-0",
+      "documentId": "holdout-05-03",
+      "domain": "maliyyə",
+      "category": "transpose",
+      "input": "Kassir mütşəriyə qəbz verdi.",
+      "expected": "Kassir müştəriyə qəbz verdi."
+    },
+    {
+      "id": "p0-h-05-03-1",
+      "documentId": "holdout-05-03",
+      "domain": "maliyyə",
+      "category": "delete",
+      "input": "Yekun qeydə görə, kassir müştəriyə qəbz vedi.",
+      "expected": "Yekun qeydə görə, kassir müştəriyə qəbz verdi."
+    },
+    {
+      "id": "p0-h-05-04-0",
+      "documentId": "holdout-05-04",
+      "domain": "maliyyə",
+      "category": "delete",
+      "input": "İqtisadçı qiymət arımını izah etdi.",
+      "expected": "İqtisadçı qiymət artımını izah etdi."
+    },
+    {
+      "id": "p0-h-05-04-1",
+      "documentId": "holdout-05-04",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, i̇qtisadci qiymet artimini izah etdi.",
+      "expected": "Yekun qeydə görə, i̇qtisadçı qiymət artımını izah etdi."
+    },
+    {
+      "id": "p0-h-05-05-0",
+      "documentId": "holdout-05-05",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Menecer xerclerin siyahisini hazirladi.",
+      "expected": "Menecer xərclərin siyahısını hazırladı."
+    },
+    {
+      "id": "p0-h-05-05-1",
+      "documentId": "holdout-05-05",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, menecer xerclerin siyahisini hazirladi.",
+      "expected": "Yekun qeydə görə, menecer xərclərin siyahısını hazırladı."
+    },
+    {
+      "id": "p0-h-05-06-0",
+      "documentId": "holdout-05-06",
+      "domain": "maliyyə",
+      "category": "ascii",
+      "input": "Investor layihenin riskini qiymetlendirdi.",
+      "expected": "İnvestor layihənin riskini qiymətləndirdi."
+    },
+    {
+      "id": "p0-h-05-06-1",
+      "documentId": "holdout-05-06",
+      "domain": "maliyyə",
+      "category": "partial",
+      "input": "Yekun qeyde göre, i̇nvestor layihenin riskini qiymetlendirdi.",
+      "expected": "Yekun qeydə görə, i̇nvestor layihənin riskini qiymətləndirdi."
+    },
+    {
+      "id": "p0-h-05-07-0",
+      "documentId": "holdout-05-07",
+      "domain": "maliyyə",
+      "category": "partial",
+      "input": "Xezinedar vesaiti hesaba köçürdü.",
+      "expected": "Xəzinədar vəsaiti hesaba köçürdü."
+    },
+    {
+      "id": "p0-h-05-07-1",
+      "documentId": "holdout-05-07",
+      "domain": "maliyyə",
+      "category": "case",
+      "input": "yekun qeydə görə, xəzinədar vəsaiti hesaba köçürdü.",
+      "expected": "Yekun qeydə görə, xəzinədar vəsaiti hesaba köçürdü."
+    },
+    {
+      "id": "p0-h-05-08-0",
+      "documentId": "holdout-05-08",
+      "domain": "maliyyə",
+      "category": "case",
+      "input": "nəzarətçi müqavilənin məbləğini yoxladı.",
+      "expected": "Nəzarətçi müqavilənin məbləğini yoxladı."
+    },
+    {
+      "id": "p0-h-05-08-1",
+      "documentId": "holdout-05-08",
+      "domain": "maliyyə",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, nəzarətçi müqavilənin məbləğini yoxladı",
+      "expected": "Yekun qeydə görə, nəzarətçi müqavilənin məbləğini yoxladı."
+    },
+    {
+      "id": "p0-h-05-09-0",
+      "documentId": "holdout-05-09",
+      "domain": "maliyyə",
+      "category": "punctuation",
+      "input": "Ekspert maliyyə hesabatını tamamladı",
+      "expected": "Ekspert maliyyə hesabatını tamamladı."
+    },
+    {
+      "id": "p0-h-05-09-1",
+      "documentId": "holdout-05-09",
+      "domain": "maliyyə",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, ekspert mailyyə hesabatını tamamladı.",
+      "expected": "Yekun qeydə görə, ekspert maliyyə hesabatını tamamladı."
+    },
+    {
+      "id": "p0-h-06-00-0",
+      "documentId": "holdout-06-00",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Vəkil müqavilənin şərtini izah etdi.",
+      "expected": "Vəkil müqavilənin şərtini izah etdi."
+    },
+    {
+      "id": "p0-h-06-00-1",
+      "documentId": "holdout-06-00",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Yekun qeydə görə, vəkil müqavilənin şərtini izah etdi.",
+      "expected": "Yekun qeydə görə, vəkil müqavilənin şərtini izah etdi."
+    },
+    {
+      "id": "p0-h-06-01-0",
+      "documentId": "holdout-06-01",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Hakim iclasın vaxtını bildirdi.",
+      "expected": "Hakim iclasın vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-06-01-1",
+      "documentId": "holdout-06-01",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Yekun qeydə görə, hakim iclasın vaxtını bildirdi.",
+      "expected": "Yekun qeydə görə, hakim iclasın vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-06-02-0",
+      "documentId": "holdout-06-02",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Katib müraciəti qeydə aldı.",
+      "expected": "Katib müraciəti qeydə aldı."
+    },
+    {
+      "id": "p0-h-06-02-1",
+      "documentId": "holdout-06-02",
+      "domain": "hüquq",
+      "category": "identity",
+      "input": "Yekun qeydə görə, katib müraciəti qeydə aldı.",
+      "expected": "Yekun qeydə görə, katib müraciəti qeydə aldı."
+    },
+    {
+      "id": "p0-h-06-03-0",
+      "documentId": "holdout-06-03",
+      "domain": "hüquq",
+      "category": "delete",
+      "input": "Notarius sənədin surətini tədiqlədi.",
+      "expected": "Notarius sənədin surətini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-06-03-1",
+      "documentId": "holdout-06-03",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, notarius senedin suretini tesdiqledi.",
+      "expected": "Yekun qeydə görə, notarius sənədin surətini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-06-04-0",
+      "documentId": "holdout-06-04",
+      "domain": "hüquq",
+      "category": "ascii",
+      "input": "Iddiaci erizeni mehkemeye verdi.",
+      "expected": "İddiaçı ərizəni məhkəməyə verdi."
+    },
+    {
+      "id": "p0-h-06-04-1",
+      "documentId": "holdout-06-04",
+      "domain": "hüquq",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, i̇ddiachı ərizəni məhkəməyə verdi.",
+      "expected": "Yekun qeydə görə, i̇ddiaçı ərizəni məhkəməyə verdi."
+    },
+    {
+      "id": "p0-h-06-05-0",
+      "documentId": "holdout-06-05",
+      "domain": "hüquq",
+      "category": "digraph",
+      "input": "Ekspert sübutun mənbəyini arashdırdı.",
+      "expected": "Ekspert sübutun mənbəyini araşdırdı."
+    },
+    {
+      "id": "p0-h-06-05-1",
+      "documentId": "holdout-06-05",
+      "domain": "hüquq",
+      "category": "partial",
+      "input": "Yekun qeyde göre, ekspert sübutun menbeyini araşdirdi.",
+      "expected": "Yekun qeydə görə, ekspert sübutun mənbəyini araşdırdı."
+    },
+    {
+      "id": "p0-h-06-06-0",
+      "documentId": "holdout-06-06",
+      "domain": "hüquq",
+      "category": "partial",
+      "input": "Hüquqşünas qerarin esasini yoxladi.",
+      "expected": "Hüquqşünas qərarın əsasını yoxladı."
+    },
+    {
+      "id": "p0-h-06-06-1",
+      "documentId": "holdout-06-06",
+      "domain": "hüquq",
+      "category": "case",
+      "input": "yekun qeydə görə, hüquqşünas qərarın əsasını yoxladı.",
+      "expected": "Yekun qeydə görə, hüquqşünas qərarın əsasını yoxladı."
+    },
+    {
+      "id": "p0-h-06-07-0",
+      "documentId": "holdout-06-07",
+      "domain": "hüquq",
+      "category": "case",
+      "input": "şahid hadisənin yerini göstərdi.",
+      "expected": "Şahid hadisənin yerini göstərdi."
+    },
+    {
+      "id": "p0-h-06-07-1",
+      "documentId": "holdout-06-07",
+      "domain": "hüquq",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, şahid hadisənin yerini göstərdi",
+      "expected": "Yekun qeydə görə, şahid hadisənin yerini göstərdi."
+    },
+    {
+      "id": "p0-h-06-08-0",
+      "documentId": "holdout-06-08",
+      "domain": "hüquq",
+      "category": "punctuation",
+      "input": "Müdafiəçi etirazını yazılı bildirdi",
+      "expected": "Müdafiəçi etirazını yazılı bildirdi."
+    },
+    {
+      "id": "p0-h-06-08-1",
+      "documentId": "holdout-06-08",
+      "domain": "hüquq",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, müdafiəçi etriazını yazılı bildirdi.",
+      "expected": "Yekun qeydə görə, müdafiəçi etirazını yazılı bildirdi."
+    },
+    {
+      "id": "p0-h-06-09-0",
+      "documentId": "holdout-06-09",
+      "domain": "hüquq",
+      "category": "transpose",
+      "input": "Tərəflər raızlaşmanı imzaladı.",
+      "expected": "Tərəflər razılaşmanı imzaladı."
+    },
+    {
+      "id": "p0-h-06-09-1",
+      "documentId": "holdout-06-09",
+      "domain": "hüquq",
+      "category": "delete",
+      "input": "Yekun qeydə görə, tərəflər razılaşmanı imaladı.",
+      "expected": "Yekun qeydə görə, tərəflər razılaşmanı imzaladı."
+    },
+    {
+      "id": "p0-h-07-00-0",
+      "documentId": "holdout-07-00",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "Katib rəsmi məktubu qeydiyyata aldı.",
+      "expected": "Katib rəsmi məktubu qeydiyyata aldı."
+    },
+    {
+      "id": "p0-h-07-00-1",
+      "documentId": "holdout-07-00",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, katib rəsmi məktubu qeydiyyata aldı.",
+      "expected": "Yekun qeydə görə, katib rəsmi məktubu qeydiyyata aldı."
+    },
+    {
+      "id": "p0-h-07-01-0",
+      "documentId": "holdout-07-01",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "İnspektor müəssisənin fəaliyyətini yoxladı.",
+      "expected": "İnspektor müəssisənin fəaliyyətini yoxladı."
+    },
+    {
+      "id": "p0-h-07-01-1",
+      "documentId": "holdout-07-01",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, i̇nspektor müəssisənin fəaliyyətini yoxladı.",
+      "expected": "Yekun qeydə görə, i̇nspektor müəssisənin fəaliyyətini yoxladı."
+    },
+    {
+      "id": "p0-h-07-02-0",
+      "documentId": "holdout-07-02",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "Komissiya müraciətin məzmununu araşdırdı.",
+      "expected": "Komissiya müraciətin məzmununu araşdırdı."
+    },
+    {
+      "id": "p0-h-07-02-1",
+      "documentId": "holdout-07-02",
+      "domain": "dövlət idarəetməsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, komissiya müraciətin məzmununu araşdırdı.",
+      "expected": "Yekun qeydə görə, komissiya müraciətin məzmununu araşdırdı."
+    },
+    {
+      "id": "p0-h-07-03-0",
+      "documentId": "holdout-07-03",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Vetendas qebul ucun erize yazdi.",
+      "expected": "Vətəndaş qəbul üçün ərizə yazdı."
+    },
+    {
+      "id": "p0-h-07-03-1",
+      "documentId": "holdout-07-03",
+      "domain": "dövlət idarəetməsi",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, vətəndash qəbul üchün ərizə yazdı.",
+      "expected": "Yekun qeydə görə, vətəndaş qəbul üçün ərizə yazdı."
+    },
+    {
+      "id": "p0-h-07-04-0",
+      "documentId": "holdout-07-04",
+      "domain": "dövlət idarəetməsi",
+      "category": "digraph",
+      "input": "Shöbə müdiri hesabatı imzaladı.",
+      "expected": "Şöbə müdiri hesabatı imzaladı."
+    },
+    {
+      "id": "p0-h-07-04-1",
+      "documentId": "holdout-07-04",
+      "domain": "dövlət idarəetməsi",
+      "category": "partial",
+      "input": "Yekun qeyde göre, şöbe müdiri hesabati imzaladi.",
+      "expected": "Yekun qeydə görə, şöbə müdiri hesabatı imzaladı."
+    },
+    {
+      "id": "p0-h-07-05-0",
+      "documentId": "holdout-07-05",
+      "domain": "dövlət idarəetməsi",
+      "category": "partial",
+      "input": "Belediyye nümayendesi teklifi dinledi.",
+      "expected": "Bələdiyyə nümayəndəsi təklifi dinlədi."
+    },
+    {
+      "id": "p0-h-07-05-1",
+      "documentId": "holdout-07-05",
+      "domain": "dövlət idarəetməsi",
+      "category": "case",
+      "input": "yekun qeydə görə, bələdiyyə nümayəndəsi təklifi dinlədi.",
+      "expected": "Yekun qeydə görə, bələdiyyə nümayəndəsi təklifi dinlədi."
+    },
+    {
+      "id": "p0-h-07-06-0",
+      "documentId": "holdout-07-06",
+      "domain": "dövlət idarəetməsi",
+      "category": "case",
+      "input": "i̇craçı qərarın surətini göndərdi.",
+      "expected": "İcraçı qərarın surətini göndərdi."
+    },
+    {
+      "id": "p0-h-07-06-1",
+      "documentId": "holdout-07-06",
+      "domain": "dövlət idarəetməsi",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, i̇craçı qərarın surətini göndərdi",
+      "expected": "Yekun qeydə görə, i̇craçı qərarın surətini göndərdi."
+    },
+    {
+      "id": "p0-h-07-07-0",
+      "documentId": "holdout-07-07",
+      "domain": "dövlət idarəetməsi",
+      "category": "punctuation",
+      "input": "Mütəxəssis xidmətin müddətini açıqladı",
+      "expected": "Mütəxəssis xidmətin müddətini açıqladı."
+    },
+    {
+      "id": "p0-h-07-07-1",
+      "documentId": "holdout-07-07",
+      "domain": "dövlət idarəetməsi",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, mütəxəssis ximdətin müddətini açıqladı.",
+      "expected": "Yekun qeydə görə, mütəxəssis xidmətin müddətini açıqladı."
+    },
+    {
+      "id": "p0-h-07-08-0",
+      "documentId": "holdout-07-08",
+      "domain": "dövlət idarəetməsi",
+      "category": "transpose",
+      "input": "Nümayəndə yeni qadyanı izah etdi.",
+      "expected": "Nümayəndə yeni qaydanı izah etdi."
+    },
+    {
+      "id": "p0-h-07-08-1",
+      "documentId": "holdout-07-08",
+      "domain": "dövlət idarəetməsi",
+      "category": "delete",
+      "input": "Yekun qeydə görə, nümayəndə yeni qadanı izah etdi.",
+      "expected": "Yekun qeydə görə, nümayəndə yeni qaydanı izah etdi."
+    },
+    {
+      "id": "p0-h-07-09-0",
+      "documentId": "holdout-07-09",
+      "domain": "dövlət idarəetməsi",
+      "category": "delete",
+      "input": "İdarə arxivə sorğu gödərdi.",
+      "expected": "İdarə arxivə sorğu göndərdi."
+    },
+    {
+      "id": "p0-h-07-09-1",
+      "documentId": "holdout-07-09",
+      "domain": "dövlət idarəetməsi",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, i̇dare arxive sorgu gonderdi.",
+      "expected": "Yekun qeydə görə, i̇darə arxivə sorğu göndərdi."
+    },
+    {
+      "id": "p0-h-08-00-0",
+      "documentId": "holdout-08-00",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Arxivçi sənədin tarixini yoxladı.",
+      "expected": "Arxivçi sənədin tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-08-00-1",
+      "documentId": "holdout-08-00",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, arxivçi sənədin tarixini yoxladı.",
+      "expected": "Yekun qeydə görə, arxivçi sənədin tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-08-01-0",
+      "documentId": "holdout-08-01",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Redaktor məktubun başlığını dəyişdi.",
+      "expected": "Redaktor məktubun başlığını dəyişdi."
+    },
+    {
+      "id": "p0-h-08-01-1",
+      "documentId": "holdout-08-01",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, redaktor məktubun başlığını dəyişdi.",
+      "expected": "Yekun qeydə görə, redaktor məktubun başlığını dəyişdi."
+    },
+    {
+      "id": "p0-h-08-02-0",
+      "documentId": "holdout-08-02",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Katib əlavələrin sayını qeyd etdi.",
+      "expected": "Katib əlavələrin sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-08-02-1",
+      "documentId": "holdout-08-02",
+      "domain": "sənəd dövriyyəsi",
+      "category": "identity",
+      "input": "Yekun qeydə görə, katib əlavələrin sayını qeyd etdi.",
+      "expected": "Yekun qeydə görə, katib əlavələrin sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-08-03-0",
+      "documentId": "holdout-08-03",
+      "domain": "sənəd dövriyyəsi",
+      "category": "digraph",
+      "input": "Operator imzanın etibarlılıghını yoxladı.",
+      "expected": "Operator imzanın etibarlılığını yoxladı."
+    },
+    {
+      "id": "p0-h-08-03-1",
+      "documentId": "holdout-08-03",
+      "domain": "sənəd dövriyyəsi",
+      "category": "partial",
+      "input": "Yekun qeyde göre, operator imzanin etibarliliğini yoxladi.",
+      "expected": "Yekun qeydə görə, operator imzanın etibarlılığını yoxladı."
+    },
+    {
+      "id": "p0-h-08-04-0",
+      "documentId": "holdout-08-04",
+      "domain": "sənəd dövriyyəsi",
+      "category": "partial",
+      "input": "İcraçi bildirişin suretini saxladi.",
+      "expected": "İcraçı bildirişin surətini saxladı."
+    },
+    {
+      "id": "p0-h-08-04-1",
+      "documentId": "holdout-08-04",
+      "domain": "sənəd dövriyyəsi",
+      "category": "case",
+      "input": "yekun qeydə görə, i̇craçı bildirişin surətini saxladı.",
+      "expected": "Yekun qeydə görə, i̇craçı bildirişin surətini saxladı."
+    },
+    {
+      "id": "p0-h-08-05-0",
+      "documentId": "holdout-08-05",
+      "domain": "sənəd dövriyyəsi",
+      "category": "case",
+      "input": "şöbə protokolu rəhbərliyə göndərdi.",
+      "expected": "Şöbə protokolu rəhbərliyə göndərdi."
+    },
+    {
+      "id": "p0-h-08-05-1",
+      "documentId": "holdout-08-05",
+      "domain": "sənəd dövriyyəsi",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, şöbə protokolu rəhbərliyə göndərdi",
+      "expected": "Yekun qeydə görə, şöbə protokolu rəhbərliyə göndərdi."
+    },
+    {
+      "id": "p0-h-08-06-0",
+      "documentId": "holdout-08-06",
+      "domain": "sənəd dövriyyəsi",
+      "category": "punctuation",
+      "input": "Müfəttiş qeydiyyat jurnalını açdı",
+      "expected": "Müfəttiş qeydiyyat jurnalını açdı."
+    },
+    {
+      "id": "p0-h-08-06-1",
+      "documentId": "holdout-08-06",
+      "domain": "sənəd dövriyyəsi",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, müfəttiş qedyiyyat jurnalını açdı.",
+      "expected": "Yekun qeydə görə, müfəttiş qeydiyyat jurnalını açdı."
+    },
+    {
+      "id": "p0-h-08-07-0",
+      "documentId": "holdout-08-07",
+      "domain": "sənəd dövriyyəsi",
+      "category": "transpose",
+      "input": "Mütəxəssis sənədin vesriyasını seçdi.",
+      "expected": "Mütəxəssis sənədin versiyasını seçdi."
+    },
+    {
+      "id": "p0-h-08-07-1",
+      "documentId": "holdout-08-07",
+      "domain": "sənəd dövriyyəsi",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis sənədin versiyasını sedi.",
+      "expected": "Yekun qeydə görə, mütəxəssis sənədin versiyasını seçdi."
+    },
+    {
+      "id": "p0-h-08-08-0",
+      "documentId": "holdout-08-08",
+      "domain": "sənəd dövriyyəsi",
+      "category": "delete",
+      "input": "Əməkdaş cavab məktubunu haırladı.",
+      "expected": "Əməkdaş cavab məktubunu hazırladı."
+    },
+    {
+      "id": "p0-h-08-08-1",
+      "documentId": "holdout-08-08",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, emekdas cavab mektubunu hazirladi.",
+      "expected": "Yekun qeydə görə, əməkdaş cavab məktubunu hazırladı."
+    },
+    {
+      "id": "p0-h-08-09-0",
+      "documentId": "holdout-08-09",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Komissiya aktin metnini tesdiqledi.",
+      "expected": "Komissiya aktın mətnini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-08-09-1",
+      "documentId": "holdout-08-09",
+      "domain": "sənəd dövriyyəsi",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, komissiya aktin metnini tesdiqledi.",
+      "expected": "Yekun qeydə görə, komissiya aktın mətnini təsdiqlədi."
+    },
+    {
+      "id": "p0-h-09-00-0",
+      "documentId": "holdout-09-00",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Proqramçı funksiyanın nəticəsini yoxladı.",
+      "expected": "Proqramçı funksiyanın nəticəsini yoxladı."
+    },
+    {
+      "id": "p0-h-09-00-1",
+      "documentId": "holdout-09-00",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Yekun qeydə görə, proqramçı funksiyanın nəticəsini yoxladı.",
+      "expected": "Yekun qeydə görə, proqramçı funksiyanın nəticəsini yoxladı."
+    },
+    {
+      "id": "p0-h-09-01-0",
+      "documentId": "holdout-09-01",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Mühəndis API üçün test yazdı.",
+      "expected": "Mühəndis API üçün test yazdı."
+    },
+    {
+      "id": "p0-h-09-01-1",
+      "documentId": "holdout-09-01",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühəndis API üçün test yazdı.",
+      "expected": "Yekun qeydə görə, mühəndis API üçün test yazdı."
+    },
+    {
+      "id": "p0-h-09-02-0",
+      "documentId": "holdout-09-02",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Komanda backend modulunu yenilədi.",
+      "expected": "Komanda backend modulunu yenilədi."
+    },
+    {
+      "id": "p0-h-09-02-1",
+      "documentId": "holdout-09-02",
+      "domain": "proqramlaşdırma",
+      "category": "identity",
+      "input": "Yekun qeydə görə, komanda backend modulunu yenilədi.",
+      "expected": "Yekun qeydə görə, komanda backend modulunu yenilədi."
+    },
+    {
+      "id": "p0-h-09-03-0",
+      "documentId": "holdout-09-03",
+      "domain": "proqramlaşdırma",
+      "category": "partial",
+      "input": "Analitik database sxemini araşdirdi.",
+      "expected": "Analitik database sxemini araşdırdı."
+    },
+    {
+      "id": "p0-h-09-03-1",
+      "documentId": "holdout-09-03",
+      "domain": "proqramlaşdırma",
+      "category": "case",
+      "input": "yekun qeydə görə, analitik database sxemini araşdırdı.",
+      "expected": "Yekun qeydə görə, analitik database sxemini araşdırdı."
+    },
+    {
+      "id": "p0-h-09-04-0",
+      "documentId": "holdout-09-04",
+      "domain": "proqramlaşdırma",
+      "category": "case",
+      "input": "tərtibatçı commit mesajını düzəltdi.",
+      "expected": "Tərtibatçı commit mesajını düzəltdi."
+    },
+    {
+      "id": "p0-h-09-04-1",
+      "documentId": "holdout-09-04",
+      "domain": "proqramlaşdırma",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, tərtibatçı commit mesajını düzəltdi",
+      "expected": "Yekun qeydə görə, tərtibatçı commit mesajını düzəltdi."
+    },
+    {
+      "id": "p0-h-09-05-0",
+      "documentId": "holdout-09-05",
+      "domain": "proqramlaşdırma",
+      "category": "punctuation",
+      "input": "Tester serverin cavabını ölçdü",
+      "expected": "Tester serverin cavabını ölçdü."
+    },
+    {
+      "id": "p0-h-09-05-1",
+      "documentId": "holdout-09-05",
+      "domain": "proqramlaşdırma",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, tester sevrerin cavabını ölçdü.",
+      "expected": "Yekun qeydə görə, tester serverin cavabını ölçdü."
+    },
+    {
+      "id": "p0-h-09-06-0",
+      "documentId": "holdout-09-06",
+      "domain": "proqramlaşdırma",
+      "category": "transpose",
+      "input": "Mütəxəssis framework vesriyasını yoxladı.",
+      "expected": "Mütəxəssis framework versiyasını yoxladı."
+    },
+    {
+      "id": "p0-h-09-06-1",
+      "documentId": "holdout-09-06",
+      "domain": "proqramlaşdırma",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis framework versiyasını yoladı.",
+      "expected": "Yekun qeydə görə, mütəxəssis framework versiyasını yoxladı."
+    },
+    {
+      "id": "p0-h-09-07-0",
+      "documentId": "holdout-09-07",
+      "domain": "proqramlaşdırma",
+      "category": "delete",
+      "input": "Menecer deploy vaxtını bidirdi.",
+      "expected": "Menecer deploy vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-09-07-1",
+      "documentId": "holdout-09-07",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, menecer deploy vaxtini bildirdi.",
+      "expected": "Yekun qeydə görə, menecer deploy vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-09-08-0",
+      "documentId": "holdout-09-08",
+      "domain": "proqramlaşdırma",
+      "category": "ascii",
+      "input": "Operator JSON faylini acdi.",
+      "expected": "Operator JSON faylını açdı."
+    },
+    {
+      "id": "p0-h-09-08-1",
+      "documentId": "holdout-09-08",
+      "domain": "proqramlaşdırma",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, operator JSON faylını achdı.",
+      "expected": "Yekun qeydə görə, operator JSON faylını açdı."
+    },
+    {
+      "id": "p0-h-09-09-0",
+      "documentId": "holdout-09-09",
+      "domain": "proqramlaşdırma",
+      "category": "digraph",
+      "input": "İcrachı Git branch adını saxladı.",
+      "expected": "İcraçı Git branch adını saxladı."
+    },
+    {
+      "id": "p0-h-09-09-1",
+      "documentId": "holdout-09-09",
+      "domain": "proqramlaşdırma",
+      "category": "partial",
+      "input": "Yekun qeyde göre, i̇craçi Git branch adini saxladi.",
+      "expected": "Yekun qeydə görə, i̇craçı Git branch adını saxladı."
+    },
+    {
+      "id": "p0-h-10-00-0",
+      "documentId": "holdout-10-00",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "Ekspert giriş jurnalını araşdırdı.",
+      "expected": "Ekspert giriş jurnalını araşdırdı."
+    },
+    {
+      "id": "p0-h-10-00-1",
+      "documentId": "holdout-10-00",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "Yekun qeydə görə, ekspert giriş jurnalını araşdırdı.",
+      "expected": "Yekun qeydə görə, ekspert giriş jurnalını araşdırdı."
+    },
+    {
+      "id": "p0-h-10-01-0",
+      "documentId": "holdout-10-01",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "İnzibatçı hesabın parolunu dəyişdi.",
+      "expected": "İnzibatçı hesabın parolunu dəyişdi."
+    },
+    {
+      "id": "p0-h-10-01-1",
+      "documentId": "holdout-10-01",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "Yekun qeydə görə, i̇nzibatçı hesabın parolunu dəyişdi.",
+      "expected": "Yekun qeydə görə, i̇nzibatçı hesabın parolunu dəyişdi."
+    },
+    {
+      "id": "p0-h-10-02-0",
+      "documentId": "holdout-10-02",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "Analitik şübhəli trafiki aşkar etdi.",
+      "expected": "Analitik şübhəli trafiki aşkar etdi."
+    },
+    {
+      "id": "p0-h-10-02-1",
+      "documentId": "holdout-10-02",
+      "domain": "kibertəhlükəsizlik",
+      "category": "identity",
+      "input": "Yekun qeydə görə, analitik şübhəli trafiki aşkar etdi.",
+      "expected": "Yekun qeydə görə, analitik şübhəli trafiki aşkar etdi."
+    },
+    {
+      "id": "p0-h-10-03-0",
+      "documentId": "holdout-10-03",
+      "domain": "kibertəhlükəsizlik",
+      "category": "case",
+      "input": "mühəndis sertifikatın tarixini yoxladı.",
+      "expected": "Mühəndis sertifikatın tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-10-03-1",
+      "documentId": "holdout-10-03",
+      "domain": "kibertəhlükəsizlik",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, mühəndis sertifikatın tarixini yoxladı",
+      "expected": "Yekun qeydə görə, mühəndis sertifikatın tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-10-04-0",
+      "documentId": "holdout-10-04",
+      "domain": "kibertəhlükəsizlik",
+      "category": "punctuation",
+      "input": "Operator ehtiyat nüsxəni bərpa etdi",
+      "expected": "Operator ehtiyat nüsxəni bərpa etdi."
+    },
+    {
+      "id": "p0-h-10-04-1",
+      "documentId": "holdout-10-04",
+      "domain": "kibertəhlükəsizlik",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, operator ehityat nüsxəni bərpa etdi.",
+      "expected": "Yekun qeydə görə, operator ehtiyat nüsxəni bərpa etdi."
+    },
+    {
+      "id": "p0-h-10-05-0",
+      "documentId": "holdout-10-05",
+      "domain": "kibertəhlükəsizlik",
+      "category": "transpose",
+      "input": "Komanda təhlükəsizlik qadyasını yenilədi.",
+      "expected": "Komanda təhlükəsizlik qaydasını yenilədi."
+    },
+    {
+      "id": "p0-h-10-05-1",
+      "documentId": "holdout-10-05",
+      "domain": "kibertəhlükəsizlik",
+      "category": "delete",
+      "input": "Yekun qeydə görə, komanda təhlükəsizlik qaydasını yeilədi.",
+      "expected": "Yekun qeydə görə, komanda təhlükəsizlik qaydasını yenilədi."
+    },
+    {
+      "id": "p0-h-10-06-0",
+      "documentId": "holdout-10-06",
+      "domain": "kibertəhlükəsizlik",
+      "category": "delete",
+      "input": "Nəzarətçi icazələrin siyahısını haırladı.",
+      "expected": "Nəzarətçi icazələrin siyahısını hazırladı."
+    },
+    {
+      "id": "p0-h-10-06-1",
+      "documentId": "holdout-10-06",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, nezaretci icazelerin siyahisini hazirladi.",
+      "expected": "Yekun qeydə görə, nəzarətçi icazələrin siyahısını hazırladı."
+    },
+    {
+      "id": "p0-h-10-07-0",
+      "documentId": "holdout-10-07",
+      "domain": "kibertəhlükəsizlik",
+      "category": "ascii",
+      "input": "Isci mexfi fayli sifreledi.",
+      "expected": "İşçi məxfi faylı şifrələdi."
+    },
+    {
+      "id": "p0-h-10-07-1",
+      "documentId": "holdout-10-07",
+      "domain": "kibertəhlükəsizlik",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, i̇shchi məxfi faylı shifrələdi.",
+      "expected": "Yekun qeydə görə, i̇şçi məxfi faylı şifrələdi."
+    },
+    {
+      "id": "p0-h-10-08-0",
+      "documentId": "holdout-10-08",
+      "domain": "kibertəhlükəsizlik",
+      "category": "digraph",
+      "input": "Mütəxəssis bildirishin mənbəyini yoxladı.",
+      "expected": "Mütəxəssis bildirişin mənbəyini yoxladı."
+    },
+    {
+      "id": "p0-h-10-08-1",
+      "documentId": "holdout-10-08",
+      "domain": "kibertəhlükəsizlik",
+      "category": "partial",
+      "input": "Yekun qeyde göre, mütexessis bildirişin menbeyini yoxladi.",
+      "expected": "Yekun qeydə görə, mütəxəssis bildirişin mənbəyini yoxladı."
+    },
+    {
+      "id": "p0-h-10-09-0",
+      "documentId": "holdout-10-09",
+      "domain": "kibertəhlükəsizlik",
+      "category": "partial",
+      "input": "İnzibatçi şebekenin serhedini qorudu.",
+      "expected": "İnzibatçı şəbəkənin sərhədini qorudu."
+    },
+    {
+      "id": "p0-h-10-09-1",
+      "documentId": "holdout-10-09",
+      "domain": "kibertəhlükəsizlik",
+      "category": "case",
+      "input": "yekun qeydə görə, i̇nzibatçı şəbəkənin sərhədini qorudu.",
+      "expected": "Yekun qeydə görə, i̇nzibatçı şəbəkənin sərhədini qorudu."
+    },
+    {
+      "id": "p0-h-11-00-0",
+      "documentId": "holdout-11-00",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Texnik antenanın istiqamətini dəyişdi.",
+      "expected": "Texnik antenanın istiqamətini dəyişdi."
+    },
+    {
+      "id": "p0-h-11-00-1",
+      "documentId": "holdout-11-00",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, texnik antenanın istiqamətini dəyişdi.",
+      "expected": "Yekun qeydə görə, texnik antenanın istiqamətini dəyişdi."
+    },
+    {
+      "id": "p0-h-11-01-0",
+      "documentId": "holdout-11-01",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Mühəndis siqnalın səviyyəsini ölçdü.",
+      "expected": "Mühəndis siqnalın səviyyəsini ölçdü."
+    },
+    {
+      "id": "p0-h-11-01-1",
+      "documentId": "holdout-11-01",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühəndis siqnalın səviyyəsini ölçdü.",
+      "expected": "Yekun qeydə görə, mühəndis siqnalın səviyyəsini ölçdü."
+    },
+    {
+      "id": "p0-h-11-02-0",
+      "documentId": "holdout-11-02",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Operator bağlantının müddətini yoxladı.",
+      "expected": "Operator bağlantının müddətini yoxladı."
+    },
+    {
+      "id": "p0-h-11-02-1",
+      "documentId": "holdout-11-02",
+      "domain": "telekommunikasiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, operator bağlantının müddətini yoxladı.",
+      "expected": "Yekun qeydə görə, operator bağlantının müddətini yoxladı."
+    },
+    {
+      "id": "p0-h-11-03-0",
+      "documentId": "holdout-11-03",
+      "domain": "telekommunikasiya",
+      "category": "punctuation",
+      "input": "Usta fiber kabeli birləşdirdi",
+      "expected": "Usta fiber kabeli birləşdirdi."
+    },
+    {
+      "id": "p0-h-11-03-1",
+      "documentId": "holdout-11-03",
+      "domain": "telekommunikasiya",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, usta fiber kaebli birləşdirdi.",
+      "expected": "Yekun qeydə görə, usta fiber kabeli birləşdirdi."
+    },
+    {
+      "id": "p0-h-11-04-0",
+      "documentId": "holdout-11-04",
+      "domain": "telekommunikasiya",
+      "category": "transpose",
+      "input": "Abunəçi xidmətin kefyiyyətini soruşdu.",
+      "expected": "Abunəçi xidmətin keyfiyyətini soruşdu."
+    },
+    {
+      "id": "p0-h-11-04-1",
+      "documentId": "holdout-11-04",
+      "domain": "telekommunikasiya",
+      "category": "delete",
+      "input": "Yekun qeydə görə, abunəçi xidmətin keyfiyyətini souşdu.",
+      "expected": "Yekun qeydə görə, abunəçi xidmətin keyfiyyətini soruşdu."
+    },
+    {
+      "id": "p0-h-11-05-0",
+      "documentId": "holdout-11-05",
+      "domain": "telekommunikasiya",
+      "category": "delete",
+      "input": "Dispetçer nasazlığı qedə aldı.",
+      "expected": "Dispetçer nasazlığı qeydə aldı."
+    },
+    {
+      "id": "p0-h-11-05-1",
+      "documentId": "holdout-11-05",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, dispetcer nasazligi qeyde aldi.",
+      "expected": "Yekun qeydə görə, dispetçer nasazlığı qeydə aldı."
+    },
+    {
+      "id": "p0-h-11-06-0",
+      "documentId": "holdout-11-06",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Mutexessis tezlik cedvelini hazirladi.",
+      "expected": "Mütəxəssis tezlik cədvəlini hazırladı."
+    },
+    {
+      "id": "p0-h-11-06-1",
+      "documentId": "holdout-11-06",
+      "domain": "telekommunikasiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, mutexessis tezlik cedvelini hazirladi.",
+      "expected": "Yekun qeydə görə, mütəxəssis tezlik cədvəlini hazırladı."
+    },
+    {
+      "id": "p0-h-11-07-0",
+      "documentId": "holdout-11-07",
+      "domain": "telekommunikasiya",
+      "category": "digraph",
+      "input": "İshchi qurghunun yerini müəyyənləshdirdi.",
+      "expected": "İşçi qurğunun yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-11-07-1",
+      "documentId": "holdout-11-07",
+      "domain": "telekommunikasiya",
+      "category": "partial",
+      "input": "Yekun qeyde göre, i̇şçi qurğunun yerini müeyyenleşdirdi.",
+      "expected": "Yekun qeydə görə, i̇şçi qurğunun yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-11-08-0",
+      "documentId": "holdout-11-08",
+      "domain": "telekommunikasiya",
+      "category": "partial",
+      "input": "Qrup ötürücünün gücünü azaltdi.",
+      "expected": "Qrup ötürücünün gücünü azaltdı."
+    },
+    {
+      "id": "p0-h-11-08-1",
+      "documentId": "holdout-11-08",
+      "domain": "telekommunikasiya",
+      "category": "case",
+      "input": "yekun qeydə görə, qrup ötürücünün gücünü azaltdı.",
+      "expected": "Yekun qeydə görə, qrup ötürücünün gücünü azaltdı."
+    },
+    {
+      "id": "p0-h-11-09-0",
+      "documentId": "holdout-11-09",
+      "domain": "telekommunikasiya",
+      "category": "case",
+      "input": "analitik şəbəkənin yükünü hesabladı.",
+      "expected": "Analitik şəbəkənin yükünü hesabladı."
+    },
+    {
+      "id": "p0-h-11-09-1",
+      "documentId": "holdout-11-09",
+      "domain": "telekommunikasiya",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, analitik şəbəkənin yükünü hesabladı",
+      "expected": "Yekun qeydə görə, analitik şəbəkənin yükünü hesabladı."
+    },
+    {
+      "id": "p0-h-12-00-0",
+      "documentId": "holdout-12-00",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Astronom teleskopun obyektivini təmizlədi.",
+      "expected": "Astronom teleskopun obyektivini təmizlədi."
+    },
+    {
+      "id": "p0-h-12-00-1",
+      "documentId": "holdout-12-00",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, astronom teleskopun obyektivini təmizlədi.",
+      "expected": "Yekun qeydə görə, astronom teleskopun obyektivini təmizlədi."
+    },
+    {
+      "id": "p0-h-12-01-0",
+      "documentId": "holdout-12-01",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Tədqiqatçı ulduzun parlaqlığını ölçdü.",
+      "expected": "Tədqiqatçı ulduzun parlaqlığını ölçdü."
+    },
+    {
+      "id": "p0-h-12-01-1",
+      "documentId": "holdout-12-01",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, tədqiqatçı ulduzun parlaqlığını ölçdü.",
+      "expected": "Yekun qeydə görə, tədqiqatçı ulduzun parlaqlığını ölçdü."
+    },
+    {
+      "id": "p0-h-12-02-0",
+      "documentId": "holdout-12-02",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Alim planetin orbitini hesabladı.",
+      "expected": "Alim planetin orbitini hesabladı."
+    },
+    {
+      "id": "p0-h-12-02-1",
+      "documentId": "holdout-12-02",
+      "domain": "astronomiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, alim planetin orbitini hesabladı.",
+      "expected": "Yekun qeydə görə, alim planetin orbitini hesabladı."
+    },
+    {
+      "id": "p0-h-12-03-0",
+      "documentId": "holdout-12-03",
+      "domain": "astronomiya",
+      "category": "transpose",
+      "input": "Müşahidəçi səmanın şəlkini çəkdi.",
+      "expected": "Müşahidəçi səmanın şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-12-03-1",
+      "documentId": "holdout-12-03",
+      "domain": "astronomiya",
+      "category": "delete",
+      "input": "Yekun qeydə görə, müşahidəçi səmanın şəklini çədi.",
+      "expected": "Yekun qeydə görə, müşahidəçi səmanın şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-12-04-0",
+      "documentId": "holdout-12-04",
+      "domain": "astronomiya",
+      "category": "delete",
+      "input": "Ekspert qalaktikanın məsafəsini arşdırdı.",
+      "expected": "Ekspert qalaktikanın məsafəsini araşdırdı."
+    },
+    {
+      "id": "p0-h-12-04-1",
+      "documentId": "holdout-12-04",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, ekspert qalaktikanin mesafesini arasdirdi.",
+      "expected": "Yekun qeydə görə, ekspert qalaktikanın məsafəsini araşdırdı."
+    },
+    {
+      "id": "p0-h-12-05-0",
+      "documentId": "holdout-12-05",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Komanda peykin trayektoriyasini yoxladi.",
+      "expected": "Komanda peykin trayektoriyasını yoxladı."
+    },
+    {
+      "id": "p0-h-12-05-1",
+      "documentId": "holdout-12-05",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, komanda peykin trayektoriyasini yoxladi.",
+      "expected": "Yekun qeydə görə, komanda peykin trayektoriyasını yoxladı."
+    },
+    {
+      "id": "p0-h-12-06-0",
+      "documentId": "holdout-12-06",
+      "domain": "astronomiya",
+      "category": "ascii",
+      "input": "Telebe tutulmanin vaxtini hesabladi.",
+      "expected": "Tələbə tutulmanın vaxtını hesabladı."
+    },
+    {
+      "id": "p0-h-12-06-1",
+      "documentId": "holdout-12-06",
+      "domain": "astronomiya",
+      "category": "partial",
+      "input": "Yekun qeyde göre, telebe tutulmanin vaxtini hesabladi.",
+      "expected": "Yekun qeydə görə, tələbə tutulmanın vaxtını hesabladı."
+    },
+    {
+      "id": "p0-h-12-07-0",
+      "documentId": "holdout-12-07",
+      "domain": "astronomiya",
+      "category": "partial",
+      "input": "Mühendis cihazin sensorunu deyişdi.",
+      "expected": "Mühəndis cihazın sensorunu dəyişdi."
+    },
+    {
+      "id": "p0-h-12-07-1",
+      "documentId": "holdout-12-07",
+      "domain": "astronomiya",
+      "category": "case",
+      "input": "yekun qeydə görə, mühəndis cihazın sensorunu dəyişdi.",
+      "expected": "Yekun qeydə görə, mühəndis cihazın sensorunu dəyişdi."
+    },
+    {
+      "id": "p0-h-12-08-0",
+      "documentId": "holdout-12-08",
+      "domain": "astronomiya",
+      "category": "case",
+      "input": "operator siqnalın gecikməsini ölçdü.",
+      "expected": "Operator siqnalın gecikməsini ölçdü."
+    },
+    {
+      "id": "p0-h-12-08-1",
+      "documentId": "holdout-12-08",
+      "domain": "astronomiya",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, operator siqnalın gecikməsini ölçdü",
+      "expected": "Yekun qeydə görə, operator siqnalın gecikməsini ölçdü."
+    },
+    {
+      "id": "p0-h-12-09-0",
+      "documentId": "holdout-12-09",
+      "domain": "astronomiya",
+      "category": "punctuation",
+      "input": "Araşdırmaçı müşahidənin nəticəsini yazdı",
+      "expected": "Araşdırmaçı müşahidənin nəticəsini yazdı."
+    },
+    {
+      "id": "p0-h-12-09-1",
+      "documentId": "holdout-12-09",
+      "domain": "astronomiya",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, araşdırmaçı müaşhidənin nəticəsini yazdı.",
+      "expected": "Yekun qeydə görə, araşdırmaçı müşahidənin nəticəsini yazdı."
+    },
+    {
+      "id": "p0-h-13-00-0",
+      "documentId": "holdout-13-00",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Ekoloq çayın suyundan nümunə götürdü.",
+      "expected": "Ekoloq çayın suyundan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-13-00-1",
+      "documentId": "holdout-13-00",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, ekoloq çayın suyundan nümunə götürdü.",
+      "expected": "Yekun qeydə görə, ekoloq çayın suyundan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-13-01-0",
+      "documentId": "holdout-13-01",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Mütəxəssis havanın keyfiyyətini ölçdü.",
+      "expected": "Mütəxəssis havanın keyfiyyətini ölçdü."
+    },
+    {
+      "id": "p0-h-13-01-1",
+      "documentId": "holdout-13-01",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mütəxəssis havanın keyfiyyətini ölçdü.",
+      "expected": "Yekun qeydə görə, mütəxəssis havanın keyfiyyətini ölçdü."
+    },
+    {
+      "id": "p0-h-13-02-0",
+      "documentId": "holdout-13-02",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Könüllü sahildə tullantıları topladı.",
+      "expected": "Könüllü sahildə tullantıları topladı."
+    },
+    {
+      "id": "p0-h-13-02-1",
+      "documentId": "holdout-13-02",
+      "domain": "ekologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, könüllü sahildə tullantıları topladı.",
+      "expected": "Yekun qeydə görə, könüllü sahildə tullantıları topladı."
+    },
+    {
+      "id": "p0-h-13-03-0",
+      "documentId": "holdout-13-03",
+      "domain": "ekologiya",
+      "category": "delete",
+      "input": "Tədqiqatçı quşların saını qeyd etdi.",
+      "expected": "Tədqiqatçı quşların sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-13-03-1",
+      "documentId": "holdout-13-03",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, tedqiqatci quslarin sayini qeyd etdi.",
+      "expected": "Yekun qeydə görə, tədqiqatçı quşların sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-13-04-0",
+      "documentId": "holdout-13-04",
+      "domain": "ekologiya",
+      "category": "ascii",
+      "input": "Isci fidani torpaga ekdi.",
+      "expected": "İşçi fidanı torpağa əkdi."
+    },
+    {
+      "id": "p0-h-13-04-1",
+      "documentId": "holdout-13-04",
+      "domain": "ekologiya",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, i̇shchi fidanı torpagha əkdi.",
+      "expected": "Yekun qeydə görə, i̇şçi fidanı torpağa əkdi."
+    },
+    {
+      "id": "p0-h-13-05-0",
+      "documentId": "holdout-13-05",
+      "domain": "ekologiya",
+      "category": "digraph",
+      "input": "Komanda meshənin sərhədini xəritəyə chəkdi.",
+      "expected": "Komanda meşənin sərhədini xəritəyə çəkdi."
+    },
+    {
+      "id": "p0-h-13-05-1",
+      "documentId": "holdout-13-05",
+      "domain": "ekologiya",
+      "category": "partial",
+      "input": "Yekun qeyde göre, komanda meşenin serhedini xeriteye çekdi.",
+      "expected": "Yekun qeydə görə, komanda meşənin sərhədini xəritəyə çəkdi."
+    },
+    {
+      "id": "p0-h-13-06-0",
+      "documentId": "holdout-13-06",
+      "domain": "ekologiya",
+      "category": "partial",
+      "input": "Ekspert torpağin çirklenmesini araşdirdi.",
+      "expected": "Ekspert torpağın çirklənməsini araşdırdı."
+    },
+    {
+      "id": "p0-h-13-06-1",
+      "documentId": "holdout-13-06",
+      "domain": "ekologiya",
+      "category": "case",
+      "input": "yekun qeydə görə, ekspert torpağın çirklənməsini araşdırdı.",
+      "expected": "Yekun qeydə görə, ekspert torpağın çirklənməsini araşdırdı."
+    },
+    {
+      "id": "p0-h-13-07-0",
+      "documentId": "holdout-13-07",
+      "domain": "ekologiya",
+      "category": "case",
+      "input": "nəzarətçi suyun sərfini yoxladı.",
+      "expected": "Nəzarətçi suyun sərfini yoxladı."
+    },
+    {
+      "id": "p0-h-13-07-1",
+      "documentId": "holdout-13-07",
+      "domain": "ekologiya",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, nəzarətçi suyun sərfini yoxladı",
+      "expected": "Yekun qeydə görə, nəzarətçi suyun sərfini yoxladı."
+    },
+    {
+      "id": "p0-h-13-08-0",
+      "documentId": "holdout-13-08",
+      "domain": "ekologiya",
+      "category": "punctuation",
+      "input": "Qrup ehtiyatların istifadəsini planlaşdırdı",
+      "expected": "Qrup ehtiyatların istifadəsini planlaşdırdı."
+    },
+    {
+      "id": "p0-h-13-08-1",
+      "documentId": "holdout-13-08",
+      "domain": "ekologiya",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, qrup ehtiyatların isitfadəsini planlaşdırdı.",
+      "expected": "Yekun qeydə görə, qrup ehtiyatların istifadəsini planlaşdırdı."
+    },
+    {
+      "id": "p0-h-13-09-0",
+      "documentId": "holdout-13-09",
+      "domain": "ekologiya",
+      "category": "transpose",
+      "input": "Alim iqlimin dəiyşməsini izah etdi.",
+      "expected": "Alim iqlimin dəyişməsini izah etdi."
+    },
+    {
+      "id": "p0-h-13-09-1",
+      "documentId": "holdout-13-09",
+      "domain": "ekologiya",
+      "category": "delete",
+      "input": "Yekun qeydə görə, alim iqlimin dəişməsini izah etdi.",
+      "expected": "Yekun qeydə görə, alim iqlimin dəyişməsini izah etdi."
+    },
+    {
+      "id": "p0-h-14-00-0",
+      "documentId": "holdout-14-00",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Kurator sərginin kataloqunu hazırladı.",
+      "expected": "Kurator sərginin kataloqunu hazırladı."
+    },
+    {
+      "id": "p0-h-14-00-1",
+      "documentId": "holdout-14-00",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Yekun qeydə görə, kurator sərginin kataloqunu hazırladı.",
+      "expected": "Yekun qeydə görə, kurator sərginin kataloqunu hazırladı."
+    },
+    {
+      "id": "p0-h-14-01-0",
+      "documentId": "holdout-14-01",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Rəssam tablonun rəngini seçdi.",
+      "expected": "Rəssam tablonun rəngini seçdi."
+    },
+    {
+      "id": "p0-h-14-01-1",
+      "documentId": "holdout-14-01",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Yekun qeydə görə, rəssam tablonun rəngini seçdi.",
+      "expected": "Yekun qeydə görə, rəssam tablonun rəngini seçdi."
+    },
+    {
+      "id": "p0-h-14-02-0",
+      "documentId": "holdout-14-02",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Aktyor səhnənin işığını yoxladı.",
+      "expected": "Aktyor səhnənin işığını yoxladı."
+    },
+    {
+      "id": "p0-h-14-02-1",
+      "documentId": "holdout-14-02",
+      "domain": "mədəniyyət",
+      "category": "identity",
+      "input": "Yekun qeydə görə, aktyor səhnənin işığını yoxladı.",
+      "expected": "Yekun qeydə görə, aktyor səhnənin işığını yoxladı."
+    },
+    {
+      "id": "p0-h-14-03-0",
+      "documentId": "holdout-14-03",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Rejissor tamasanin planini deyisdi.",
+      "expected": "Rejissor tamaşanın planını dəyişdi."
+    },
+    {
+      "id": "p0-h-14-03-1",
+      "documentId": "holdout-14-03",
+      "domain": "mədəniyyət",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, rejissor tamashanın planını dəyishdi.",
+      "expected": "Yekun qeydə görə, rejissor tamaşanın planını dəyişdi."
+    },
+    {
+      "id": "p0-h-14-04-0",
+      "documentId": "holdout-14-04",
+      "domain": "mədəniyyət",
+      "category": "digraph",
+      "input": "Musiqichi alətin kökünü yoxladı.",
+      "expected": "Musiqiçi alətin kökünü yoxladı."
+    },
+    {
+      "id": "p0-h-14-04-1",
+      "documentId": "holdout-14-04",
+      "domain": "mədəniyyət",
+      "category": "partial",
+      "input": "Yekun qeyde göre, musiqiçi aletin kökünü yoxladi.",
+      "expected": "Yekun qeydə görə, musiqiçi alətin kökünü yoxladı."
+    },
+    {
+      "id": "p0-h-14-05-0",
+      "documentId": "holdout-14-05",
+      "domain": "mədəniyyət",
+      "category": "partial",
+      "input": "Dirijor orkestri meşqe çağirdi.",
+      "expected": "Dirijor orkestri məşqə çağırdı."
+    },
+    {
+      "id": "p0-h-14-05-1",
+      "documentId": "holdout-14-05",
+      "domain": "mədəniyyət",
+      "category": "case",
+      "input": "yekun qeydə görə, dirijor orkestri məşqə çağırdı.",
+      "expected": "Yekun qeydə görə, dirijor orkestri məşqə çağırdı."
+    },
+    {
+      "id": "p0-h-14-06-0",
+      "documentId": "holdout-14-06",
+      "domain": "mədəniyyət",
+      "category": "case",
+      "input": "bələdçi abidənin tarixini danışdı.",
+      "expected": "Bələdçi abidənin tarixini danışdı."
+    },
+    {
+      "id": "p0-h-14-06-1",
+      "documentId": "holdout-14-06",
+      "domain": "mədəniyyət",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, bələdçi abidənin tarixini danışdı",
+      "expected": "Yekun qeydə görə, bələdçi abidənin tarixini danışdı."
+    },
+    {
+      "id": "p0-h-14-07-0",
+      "documentId": "holdout-14-07",
+      "domain": "mədəniyyət",
+      "category": "punctuation",
+      "input": "Restavrator köhnə xalçanı bərpa etdi",
+      "expected": "Restavrator köhnə xalçanı bərpa etdi."
+    },
+    {
+      "id": "p0-h-14-07-1",
+      "documentId": "holdout-14-07",
+      "domain": "mədəniyyət",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, restavrator könhə xalçanı bərpa etdi.",
+      "expected": "Yekun qeydə görə, restavrator köhnə xalçanı bərpa etdi."
+    },
+    {
+      "id": "p0-h-14-08-0",
+      "documentId": "holdout-14-08",
+      "domain": "mədəniyyət",
+      "category": "transpose",
+      "input": "Tənqidçi əsərin üsulbunu araşdırdı.",
+      "expected": "Tənqidçi əsərin üslubunu araşdırdı."
+    },
+    {
+      "id": "p0-h-14-08-1",
+      "documentId": "holdout-14-08",
+      "domain": "mədəniyyət",
+      "category": "delete",
+      "input": "Yekun qeydə görə, tənqidçi əsərin üslubunu arşdırdı.",
+      "expected": "Yekun qeydə görə, tənqidçi əsərin üslubunu araşdırdı."
+    },
+    {
+      "id": "p0-h-14-09-0",
+      "documentId": "holdout-14-09",
+      "domain": "mədəniyyət",
+      "category": "delete",
+      "input": "Təşkilatçı festivalın vaxtını açqladı.",
+      "expected": "Təşkilatçı festivalın vaxtını açıqladı."
+    },
+    {
+      "id": "p0-h-14-09-1",
+      "documentId": "holdout-14-09",
+      "domain": "mədəniyyət",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, teskilatci festivalin vaxtini aciqladi.",
+      "expected": "Yekun qeydə görə, təşkilatçı festivalın vaxtını açıqladı."
+    },
+    {
+      "id": "p0-h-15-00-0",
+      "documentId": "holdout-15-00",
+      "domain": "idman",
+      "category": "identity",
+      "input": "Məşqçi komandanın heyətini seçdi.",
+      "expected": "Məşqçi komandanın heyətini seçdi."
+    },
+    {
+      "id": "p0-h-15-00-1",
+      "documentId": "holdout-15-00",
+      "domain": "idman",
+      "category": "identity",
+      "input": "Yekun qeydə görə, məşqçi komandanın heyətini seçdi.",
+      "expected": "Yekun qeydə görə, məşqçi komandanın heyətini seçdi."
+    },
+    {
+      "id": "p0-h-15-01-0",
+      "documentId": "holdout-15-01",
+      "domain": "idman",
+      "category": "identity",
+      "input": "İdmançı məşqin müddətini artırdı.",
+      "expected": "İdmançı məşqin müddətini artırdı."
+    },
+    {
+      "id": "p0-h-15-01-1",
+      "documentId": "holdout-15-01",
+      "domain": "idman",
+      "category": "identity",
+      "input": "Yekun qeydə görə, i̇dmançı məşqin müddətini artırdı.",
+      "expected": "Yekun qeydə görə, i̇dmançı məşqin müddətini artırdı."
+    },
+    {
+      "id": "p0-h-15-02-0",
+      "documentId": "holdout-15-02",
+      "domain": "idman",
+      "category": "identity",
+      "input": "Hakim oyunun qaydasını izah etdi.",
+      "expected": "Hakim oyunun qaydasını izah etdi."
+    },
+    {
+      "id": "p0-h-15-02-1",
+      "documentId": "holdout-15-02",
+      "domain": "idman",
+      "category": "identity",
+      "input": "Yekun qeydə görə, hakim oyunun qaydasını izah etdi.",
+      "expected": "Yekun qeydə görə, hakim oyunun qaydasını izah etdi."
+    },
+    {
+      "id": "p0-h-15-03-0",
+      "documentId": "holdout-15-03",
+      "domain": "idman",
+      "category": "digraph",
+      "input": "Üzgüchü hovuzun uzunlughunu ölchdü.",
+      "expected": "Üzgüçü hovuzun uzunluğunu ölçdü."
+    },
+    {
+      "id": "p0-h-15-03-1",
+      "documentId": "holdout-15-03",
+      "domain": "idman",
+      "category": "partial",
+      "input": "Yekun qeyde göre, üzgüçü hovuzun uzunluğunu ölçdü.",
+      "expected": "Yekun qeydə görə, üzgüçü hovuzun uzunluğunu ölçdü."
+    },
+    {
+      "id": "p0-h-15-04-0",
+      "documentId": "holdout-15-04",
+      "domain": "idman",
+      "category": "partial",
+      "input": "Qaçişçi mesafeni vaxtinda tamamladi.",
+      "expected": "Qaçışçı məsafəni vaxtında tamamladı."
+    },
+    {
+      "id": "p0-h-15-04-1",
+      "documentId": "holdout-15-04",
+      "domain": "idman",
+      "category": "case",
+      "input": "yekun qeydə görə, qaçışçı məsafəni vaxtında tamamladı.",
+      "expected": "Yekun qeydə görə, qaçışçı məsafəni vaxtında tamamladı."
+    },
+    {
+      "id": "p0-h-15-05-0",
+      "documentId": "holdout-15-05",
+      "domain": "idman",
+      "category": "case",
+      "input": "fizioterapevt zədənin səbəbini araşdırdı.",
+      "expected": "Fizioterapevt zədənin səbəbini araşdırdı."
+    },
+    {
+      "id": "p0-h-15-05-1",
+      "documentId": "holdout-15-05",
+      "domain": "idman",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, fizioterapevt zədənin səbəbini araşdırdı",
+      "expected": "Yekun qeydə görə, fizioterapevt zədənin səbəbini araşdırdı."
+    },
+    {
+      "id": "p0-h-15-06-0",
+      "documentId": "holdout-15-06",
+      "domain": "idman",
+      "category": "punctuation",
+      "input": "Kapitan rəqibin taktikasını yoxladı",
+      "expected": "Kapitan rəqibin taktikasını yoxladı."
+    },
+    {
+      "id": "p0-h-15-06-1",
+      "documentId": "holdout-15-06",
+      "domain": "idman",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, kapitan rəiqbin taktikasını yoxladı.",
+      "expected": "Yekun qeydə görə, kapitan rəqibin taktikasını yoxladı."
+    },
+    {
+      "id": "p0-h-15-07-0",
+      "documentId": "holdout-15-07",
+      "domain": "idman",
+      "category": "transpose",
+      "input": "Təlimçi hərəkətin tenxikasını göstərdi.",
+      "expected": "Təlimçi hərəkətin texnikasını göstərdi."
+    },
+    {
+      "id": "p0-h-15-07-1",
+      "documentId": "holdout-15-07",
+      "domain": "idman",
+      "category": "delete",
+      "input": "Yekun qeydə görə, təlimçi hərəkətin texnikasını götərdi.",
+      "expected": "Yekun qeydə görə, təlimçi hərəkətin texnikasını göstərdi."
+    },
+    {
+      "id": "p0-h-15-08-0",
+      "documentId": "holdout-15-08",
+      "domain": "idman",
+      "category": "delete",
+      "input": "Azarkeş stadionda yerini tadı.",
+      "expected": "Azarkeş stadionda yerini tapdı."
+    },
+    {
+      "id": "p0-h-15-08-1",
+      "documentId": "holdout-15-08",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, azarkes stadionda yerini tapdi.",
+      "expected": "Yekun qeydə görə, azarkeş stadionda yerini tapdı."
+    },
+    {
+      "id": "p0-h-15-09-0",
+      "documentId": "holdout-15-09",
+      "domain": "idman",
+      "category": "ascii",
+      "input": "Komanda yarisin neticesini muzakire etdi.",
+      "expected": "Komanda yarışın nəticəsini müzakirə etdi."
+    },
+    {
+      "id": "p0-h-15-09-1",
+      "documentId": "holdout-15-09",
+      "domain": "idman",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, komanda yarıshın nəticəsini müzakirə etdi.",
+      "expected": "Yekun qeydə görə, komanda yarışın nəticəsini müzakirə etdi."
+    },
+    {
+      "id": "p0-h-16-00-0",
+      "documentId": "holdout-16-00",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Aşpaz yeməyin duzunu yoxladı.",
+      "expected": "Aşpaz yeməyin duzunu yoxladı."
+    },
+    {
+      "id": "p0-h-16-00-1",
+      "documentId": "holdout-16-00",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Yekun qeydə görə, aşpaz yeməyin duzunu yoxladı.",
+      "expected": "Yekun qeydə görə, aşpaz yeməyin duzunu yoxladı."
+    },
+    {
+      "id": "p0-h-16-01-0",
+      "documentId": "holdout-16-01",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Çörəkçi xəmirin çəkisini ölçdü.",
+      "expected": "Çörəkçi xəmirin çəkisini ölçdü."
+    },
+    {
+      "id": "p0-h-16-01-1",
+      "documentId": "holdout-16-01",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Yekun qeydə görə, çörəkçi xəmirin çəkisini ölçdü.",
+      "expected": "Yekun qeydə görə, çörəkçi xəmirin çəkisini ölçdü."
+    },
+    {
+      "id": "p0-h-16-02-0",
+      "documentId": "holdout-16-02",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Qənnadçı tortun formasını seçdi.",
+      "expected": "Qənnadçı tortun formasını seçdi."
+    },
+    {
+      "id": "p0-h-16-02-1",
+      "documentId": "holdout-16-02",
+      "domain": "qida",
+      "category": "identity",
+      "input": "Yekun qeydə görə, qənnadçı tortun formasını seçdi.",
+      "expected": "Yekun qeydə görə, qənnadçı tortun formasını seçdi."
+    },
+    {
+      "id": "p0-h-16-03-0",
+      "documentId": "holdout-16-03",
+      "domain": "qida",
+      "category": "partial",
+      "input": "Ofisiant sifarişi metbexe çatdirdi.",
+      "expected": "Ofisiant sifarişi mətbəxə çatdırdı."
+    },
+    {
+      "id": "p0-h-16-03-1",
+      "documentId": "holdout-16-03",
+      "domain": "qida",
+      "category": "case",
+      "input": "yekun qeydə görə, ofisiant sifarişi mətbəxə çatdırdı.",
+      "expected": "Yekun qeydə görə, ofisiant sifarişi mətbəxə çatdırdı."
+    },
+    {
+      "id": "p0-h-16-04-0",
+      "documentId": "holdout-16-04",
+      "domain": "qida",
+      "category": "case",
+      "input": "mütəxəssis məhsulun tərkibini araşdırdı.",
+      "expected": "Mütəxəssis məhsulun tərkibini araşdırdı."
+    },
+    {
+      "id": "p0-h-16-04-1",
+      "documentId": "holdout-16-04",
+      "domain": "qida",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, mütəxəssis məhsulun tərkibini araşdırdı",
+      "expected": "Yekun qeydə görə, mütəxəssis məhsulun tərkibini araşdırdı."
+    },
+    {
+      "id": "p0-h-16-05-0",
+      "documentId": "holdout-16-05",
+      "domain": "qida",
+      "category": "punctuation",
+      "input": "İşçi soyuducunun temperaturunu azaltdı",
+      "expected": "İşçi soyuducunun temperaturunu azaltdı."
+    },
+    {
+      "id": "p0-h-16-05-1",
+      "documentId": "holdout-16-05",
+      "domain": "qida",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, i̇şçi soyuducunun tepmeraturunu azaltdı.",
+      "expected": "Yekun qeydə görə, i̇şçi soyuducunun temperaturunu azaltdı."
+    },
+    {
+      "id": "p0-h-16-06-0",
+      "documentId": "holdout-16-06",
+      "domain": "qida",
+      "category": "transpose",
+      "input": "Menecer menyunun qimyətini dəyişdi.",
+      "expected": "Menecer menyunun qiymətini dəyişdi."
+    },
+    {
+      "id": "p0-h-16-06-1",
+      "documentId": "holdout-16-06",
+      "domain": "qida",
+      "category": "delete",
+      "input": "Yekun qeydə görə, menecer menyunun qiymətini dəişdi.",
+      "expected": "Yekun qeydə görə, menecer menyunun qiymətini dəyişdi."
+    },
+    {
+      "id": "p0-h-16-07-0",
+      "documentId": "holdout-16-07",
+      "domain": "qida",
+      "category": "delete",
+      "input": "Alıcı meyvənin yetişməsini yoladı.",
+      "expected": "Alıcı meyvənin yetişməsini yoxladı."
+    },
+    {
+      "id": "p0-h-16-07-1",
+      "documentId": "holdout-16-07",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, alici meyvenin yetismesini yoxladi.",
+      "expected": "Yekun qeydə görə, alıcı meyvənin yetişməsini yoxladı."
+    },
+    {
+      "id": "p0-h-16-08-0",
+      "documentId": "holdout-16-08",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Ekspert sudun keyfiyyetini qiymetlendirdi.",
+      "expected": "Ekspert südün keyfiyyətini qiymətləndirdi."
+    },
+    {
+      "id": "p0-h-16-08-1",
+      "documentId": "holdout-16-08",
+      "domain": "qida",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, ekspert sudun keyfiyyetini qiymetlendirdi.",
+      "expected": "Yekun qeydə görə, ekspert südün keyfiyyətini qiymətləndirdi."
+    },
+    {
+      "id": "p0-h-16-09-0",
+      "documentId": "holdout-16-09",
+      "domain": "qida",
+      "category": "digraph",
+      "input": "Satıcı ərzaghı rəfə düzdü.",
+      "expected": "Satıcı ərzağı rəfə düzdü."
+    },
+    {
+      "id": "p0-h-16-09-1",
+      "documentId": "holdout-16-09",
+      "domain": "qida",
+      "category": "partial",
+      "input": "Yekun qeyde göre, satici erzaği refe düzdü.",
+      "expected": "Yekun qeydə görə, satıcı ərzağı rəfə düzdü."
+    },
+    {
+      "id": "p0-h-17-00-0",
+      "documentId": "holdout-17-00",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Bələdçi səfərin marşrutunu izah etdi.",
+      "expected": "Bələdçi səfərin marşrutunu izah etdi."
+    },
+    {
+      "id": "p0-h-17-00-1",
+      "documentId": "holdout-17-00",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Yekun qeydə görə, bələdçi səfərin marşrutunu izah etdi.",
+      "expected": "Yekun qeydə görə, bələdçi səfərin marşrutunu izah etdi."
+    },
+    {
+      "id": "p0-h-17-01-0",
+      "documentId": "holdout-17-01",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Turist muzeyin girişini tapdı.",
+      "expected": "Turist muzeyin girişini tapdı."
+    },
+    {
+      "id": "p0-h-17-01-1",
+      "documentId": "holdout-17-01",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Yekun qeydə görə, turist muzeyin girişini tapdı.",
+      "expected": "Yekun qeydə görə, turist muzeyin girişini tapdı."
+    },
+    {
+      "id": "p0-h-17-02-0",
+      "documentId": "holdout-17-02",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Menecer otağın qiymətini bildirdi.",
+      "expected": "Menecer otağın qiymətini bildirdi."
+    },
+    {
+      "id": "p0-h-17-02-1",
+      "documentId": "holdout-17-02",
+      "domain": "turizm",
+      "category": "identity",
+      "input": "Yekun qeydə görə, menecer otağın qiymətini bildirdi.",
+      "expected": "Yekun qeydə görə, menecer otağın qiymətini bildirdi."
+    },
+    {
+      "id": "p0-h-17-03-0",
+      "documentId": "holdout-17-03",
+      "domain": "turizm",
+      "category": "case",
+      "input": "səyyah dağın zirvəsinə qalxdı.",
+      "expected": "Səyyah dağın zirvəsinə qalxdı."
+    },
+    {
+      "id": "p0-h-17-03-1",
+      "documentId": "holdout-17-03",
+      "domain": "turizm",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, səyyah dağın zirvəsinə qalxdı",
+      "expected": "Yekun qeydə görə, səyyah dağın zirvəsinə qalxdı."
+    },
+    {
+      "id": "p0-h-17-04-0",
+      "documentId": "holdout-17-04",
+      "domain": "turizm",
+      "category": "punctuation",
+      "input": "Təşkilatçı səfərin tarixini dəyişdi",
+      "expected": "Təşkilatçı səfərin tarixini dəyişdi."
+    },
+    {
+      "id": "p0-h-17-04-1",
+      "documentId": "holdout-17-04",
+      "domain": "turizm",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, təşkilatçı səəfrin tarixini dəyişdi.",
+      "expected": "Yekun qeydə görə, təşkilatçı səfərin tarixini dəyişdi."
+    },
+    {
+      "id": "p0-h-17-05-0",
+      "documentId": "holdout-17-05",
+      "domain": "turizm",
+      "category": "transpose",
+      "input": "Qonaq şəhərin xəirtəsini aldı.",
+      "expected": "Qonaq şəhərin xəritəsini aldı."
+    },
+    {
+      "id": "p0-h-17-05-1",
+      "documentId": "holdout-17-05",
+      "domain": "turizm",
+      "category": "delete",
+      "input": "Yekun qeydə görə, qonaq şəhərin xəitəsini aldı.",
+      "expected": "Yekun qeydə görə, qonaq şəhərin xəritəsini aldı."
+    },
+    {
+      "id": "p0-h-17-06-0",
+      "documentId": "holdout-17-06",
+      "domain": "turizm",
+      "category": "delete",
+      "input": "İşçi rezervasiyanın statusunu yoladı.",
+      "expected": "İşçi rezervasiyanın statusunu yoxladı."
+    },
+    {
+      "id": "p0-h-17-06-1",
+      "documentId": "holdout-17-06",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, i̇sci rezervasiyanin statusunu yoxladi.",
+      "expected": "Yekun qeydə görə, i̇şçi rezervasiyanın statusunu yoxladı."
+    },
+    {
+      "id": "p0-h-17-07-0",
+      "documentId": "holdout-17-07",
+      "domain": "turizm",
+      "category": "ascii",
+      "input": "Ekspert yolun tehlukesizliyini arasdirdi.",
+      "expected": "Ekspert yolun təhlükəsizliyini araşdırdı."
+    },
+    {
+      "id": "p0-h-17-07-1",
+      "documentId": "holdout-17-07",
+      "domain": "turizm",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, ekspert yolun təhlükəsizliyini arashdırdı.",
+      "expected": "Yekun qeydə görə, ekspert yolun təhlükəsizliyini araşdırdı."
+    },
+    {
+      "id": "p0-h-17-08-0",
+      "documentId": "holdout-17-08",
+      "domain": "turizm",
+      "category": "digraph",
+      "input": "Qrup dayanacaghın yerini sechdi.",
+      "expected": "Qrup dayanacağın yerini seçdi."
+    },
+    {
+      "id": "p0-h-17-08-1",
+      "documentId": "holdout-17-08",
+      "domain": "turizm",
+      "category": "partial",
+      "input": "Yekun qeyde göre, qrup dayanacağin yerini seçdi.",
+      "expected": "Yekun qeydə görə, qrup dayanacağın yerini seçdi."
+    },
+    {
+      "id": "p0-h-17-09-0",
+      "documentId": "holdout-17-09",
+      "domain": "turizm",
+      "category": "partial",
+      "input": "Fotoqraf menzerenin şeklini çekdi.",
+      "expected": "Fotoqraf mənzərənin şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-17-09-1",
+      "documentId": "holdout-17-09",
+      "domain": "turizm",
+      "category": "case",
+      "input": "yekun qeydə görə, fotoqraf mənzərənin şəklini çəkdi.",
+      "expected": "Yekun qeydə görə, fotoqraf mənzərənin şəklini çəkdi."
+    },
+    {
+      "id": "p0-h-18-00-0",
+      "documentId": "holdout-18-00",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Memar binanın planını hazırladı.",
+      "expected": "Memar binanın planını hazırladı."
+    },
+    {
+      "id": "p0-h-18-00-1",
+      "documentId": "holdout-18-00",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Yekun qeydə görə, memar binanın planını hazırladı.",
+      "expected": "Yekun qeydə görə, memar binanın planını hazırladı."
+    },
+    {
+      "id": "p0-h-18-01-0",
+      "documentId": "holdout-18-01",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Usta divarın hündürlüyünü ölçdü.",
+      "expected": "Usta divarın hündürlüyünü ölçdü."
+    },
+    {
+      "id": "p0-h-18-01-1",
+      "documentId": "holdout-18-01",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Yekun qeydə görə, usta divarın hündürlüyünü ölçdü.",
+      "expected": "Yekun qeydə görə, usta divarın hündürlüyünü ölçdü."
+    },
+    {
+      "id": "p0-h-18-02-0",
+      "documentId": "holdout-18-02",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Mühəndis təməlin möhkəmliyini yoxladı.",
+      "expected": "Mühəndis təməlin möhkəmliyini yoxladı."
+    },
+    {
+      "id": "p0-h-18-02-1",
+      "documentId": "holdout-18-02",
+      "domain": "tikinti",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühəndis təməlin möhkəmliyini yoxladı.",
+      "expected": "Yekun qeydə görə, mühəndis təməlin möhkəmliyini yoxladı."
+    },
+    {
+      "id": "p0-h-18-03-0",
+      "documentId": "holdout-18-03",
+      "domain": "tikinti",
+      "category": "punctuation",
+      "input": "İşçi materialı meydançaya daşıdı",
+      "expected": "İşçi materialı meydançaya daşıdı."
+    },
+    {
+      "id": "p0-h-18-03-1",
+      "documentId": "holdout-18-03",
+      "domain": "tikinti",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, i̇şçi materialı medyançaya daşıdı.",
+      "expected": "Yekun qeydə görə, i̇şçi materialı meydançaya daşıdı."
+    },
+    {
+      "id": "p0-h-18-04-0",
+      "documentId": "holdout-18-04",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Briqadir isin muddetini hesabladi.",
+      "expected": "Briqadir işin müddətini hesabladı."
+    },
+    {
+      "id": "p0-h-18-04-1",
+      "documentId": "holdout-18-04",
+      "domain": "tikinti",
+      "category": "delete",
+      "input": "Yekun qeydə görə, briqadir işin müddətini heabladı.",
+      "expected": "Yekun qeydə görə, briqadir işin müddətini hesabladı."
+    },
+    {
+      "id": "p0-h-18-05-0",
+      "documentId": "holdout-18-05",
+      "domain": "tikinti",
+      "category": "delete",
+      "input": "Ekspert layihənin riskini arşdırdı.",
+      "expected": "Ekspert layihənin riskini araşdırdı."
+    },
+    {
+      "id": "p0-h-18-05-1",
+      "documentId": "holdout-18-05",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, ekspert layihenin riskini arasdirdi.",
+      "expected": "Yekun qeydə görə, ekspert layihənin riskini araşdırdı."
+    },
+    {
+      "id": "p0-h-18-06-0",
+      "documentId": "holdout-18-06",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Operator kranin yukunu azaltdi.",
+      "expected": "Operator kranın yükünü azaltdı."
+    },
+    {
+      "id": "p0-h-18-06-1",
+      "documentId": "holdout-18-06",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, operator kranin yukunu azaltdi.",
+      "expected": "Yekun qeydə görə, operator kranın yükünü azaltdı."
+    },
+    {
+      "id": "p0-h-18-07-0",
+      "documentId": "holdout-18-07",
+      "domain": "tikinti",
+      "category": "digraph",
+      "input": "Nəzarətchi betonun tərkibini yoxladı.",
+      "expected": "Nəzarətçi betonun tərkibini yoxladı."
+    },
+    {
+      "id": "p0-h-18-07-1",
+      "documentId": "holdout-18-07",
+      "domain": "tikinti",
+      "category": "partial",
+      "input": "Yekun qeyde göre, nezaretçi betonun terkibini yoxladi.",
+      "expected": "Yekun qeydə görə, nəzarətçi betonun tərkibini yoxladı."
+    },
+    {
+      "id": "p0-h-18-08-0",
+      "documentId": "holdout-18-08",
+      "domain": "tikinti",
+      "category": "ascii",
+      "input": "Texnik borunun diametrini olcdu.",
+      "expected": "Texnik borunun diametrini ölçdü."
+    },
+    {
+      "id": "p0-h-18-08-1",
+      "documentId": "holdout-18-08",
+      "domain": "tikinti",
+      "category": "case",
+      "input": "yekun qeydə görə, texnik borunun diametrini ölçdü.",
+      "expected": "Yekun qeydə görə, texnik borunun diametrini ölçdü."
+    },
+    {
+      "id": "p0-h-18-09-0",
+      "documentId": "holdout-18-09",
+      "domain": "tikinti",
+      "category": "case",
+      "input": "podratçı müqaviləni imzaladı.",
+      "expected": "Podratçı müqaviləni imzaladı."
+    },
+    {
+      "id": "p0-h-18-09-1",
+      "documentId": "holdout-18-09",
+      "domain": "tikinti",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, podratçı müqaviləni imzaladı",
+      "expected": "Yekun qeydə görə, podratçı müqaviləni imzaladı."
+    },
+    {
+      "id": "p0-h-19-00-0",
+      "documentId": "holdout-19-00",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Anbardar yükün çəkisini ölçdü.",
+      "expected": "Anbardar yükün çəkisini ölçdü."
+    },
+    {
+      "id": "p0-h-19-00-1",
+      "documentId": "holdout-19-00",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Yekun qeydə görə, anbardar yükün çəkisini ölçdü.",
+      "expected": "Yekun qeydə görə, anbardar yükün çəkisini ölçdü."
+    },
+    {
+      "id": "p0-h-19-01-0",
+      "documentId": "holdout-19-01",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Operator sifarişin ünvanını yoxladı.",
+      "expected": "Operator sifarişin ünvanını yoxladı."
+    },
+    {
+      "id": "p0-h-19-01-1",
+      "documentId": "holdout-19-01",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Yekun qeydə görə, operator sifarişin ünvanını yoxladı.",
+      "expected": "Yekun qeydə görə, operator sifarişin ünvanını yoxladı."
+    },
+    {
+      "id": "p0-h-19-02-0",
+      "documentId": "holdout-19-02",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Kuryer çatdırılmanın vaxtını bildirdi.",
+      "expected": "Kuryer çatdırılmanın vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-19-02-1",
+      "documentId": "holdout-19-02",
+      "domain": "logistika",
+      "category": "identity",
+      "input": "Yekun qeydə görə, kuryer çatdırılmanın vaxtını bildirdi.",
+      "expected": "Yekun qeydə görə, kuryer çatdırılmanın vaxtını bildirdi."
+    },
+    {
+      "id": "p0-h-19-03-0",
+      "documentId": "holdout-19-03",
+      "domain": "logistika",
+      "category": "transpose",
+      "input": "Dispetçer maşının yeirni müəyyənləşdirdi.",
+      "expected": "Dispetçer maşının yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-19-03-1",
+      "documentId": "holdout-19-03",
+      "domain": "logistika",
+      "category": "delete",
+      "input": "Yekun qeydə görə, dispetçer maşının yerini müyyənləşdirdi.",
+      "expected": "Yekun qeydə görə, dispetçer maşının yerini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-19-04-0",
+      "documentId": "holdout-19-04",
+      "domain": "logistika",
+      "category": "delete",
+      "input": "İşçi bağlamanın etiketini dəişdi.",
+      "expected": "İşçi bağlamanın etiketini dəyişdi."
+    },
+    {
+      "id": "p0-h-19-04-1",
+      "documentId": "holdout-19-04",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, i̇sci baglamanin etiketini deyisdi.",
+      "expected": "Yekun qeydə görə, i̇şçi bağlamanın etiketini dəyişdi."
+    },
+    {
+      "id": "p0-h-19-05-0",
+      "documentId": "holdout-19-05",
+      "domain": "logistika",
+      "category": "ascii",
+      "input": "Menecer dasinmanin qiymetini hesabladi.",
+      "expected": "Menecer daşınmanın qiymətini hesabladı."
+    },
+    {
+      "id": "p0-h-19-05-1",
+      "documentId": "holdout-19-05",
+      "domain": "logistika",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, menecer dashınmanın qiymətini hesabladı.",
+      "expected": "Yekun qeydə görə, menecer daşınmanın qiymətini hesabladı."
+    },
+    {
+      "id": "p0-h-19-06-0",
+      "documentId": "holdout-19-06",
+      "domain": "logistika",
+      "category": "digraph",
+      "input": "Nəzarətchi konteynerin möhürünü yoxladı.",
+      "expected": "Nəzarətçi konteynerin möhürünü yoxladı."
+    },
+    {
+      "id": "p0-h-19-06-1",
+      "documentId": "holdout-19-06",
+      "domain": "logistika",
+      "category": "partial",
+      "input": "Yekun qeyde göre, nezaretçi konteynerin möhürünü yoxladi.",
+      "expected": "Yekun qeydə görə, nəzarətçi konteynerin möhürünü yoxladı."
+    },
+    {
+      "id": "p0-h-19-07-0",
+      "documentId": "holdout-19-07",
+      "domain": "logistika",
+      "category": "partial",
+      "input": "Komanda ehtiyatlarin sayini qeyd etdi.",
+      "expected": "Komanda ehtiyatların sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-19-07-1",
+      "documentId": "holdout-19-07",
+      "domain": "logistika",
+      "category": "case",
+      "input": "yekun qeydə görə, komanda ehtiyatların sayını qeyd etdi.",
+      "expected": "Yekun qeydə görə, komanda ehtiyatların sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-19-08-0",
+      "documentId": "holdout-19-08",
+      "domain": "logistika",
+      "category": "case",
+      "input": "ekspert zədənin səbəbini araşdırdı.",
+      "expected": "Ekspert zədənin səbəbini araşdırdı."
+    },
+    {
+      "id": "p0-h-19-08-1",
+      "documentId": "holdout-19-08",
+      "domain": "logistika",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, ekspert zədənin səbəbini araşdırdı",
+      "expected": "Yekun qeydə görə, ekspert zədənin səbəbini araşdırdı."
+    },
+    {
+      "id": "p0-h-19-09-0",
+      "documentId": "holdout-19-09",
+      "domain": "logistika",
+      "category": "punctuation",
+      "input": "Qrup yükü başqa anbara köçürdü",
+      "expected": "Qrup yükü başqa anbara köçürdü."
+    },
+    {
+      "id": "p0-h-19-09-1",
+      "documentId": "holdout-19-09",
+      "domain": "logistika",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, qrup yükü başqa anabra köçürdü.",
+      "expected": "Yekun qeydə görə, qrup yükü başqa anbara köçürdü."
+    },
+    {
+      "id": "p0-h-20-00-0",
+      "documentId": "holdout-20-00",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Sinoptik hava proqnozunu hazırladı.",
+      "expected": "Sinoptik hava proqnozunu hazırladı."
+    },
+    {
+      "id": "p0-h-20-00-1",
+      "documentId": "holdout-20-00",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, sinoptik hava proqnozunu hazırladı.",
+      "expected": "Yekun qeydə görə, sinoptik hava proqnozunu hazırladı."
+    },
+    {
+      "id": "p0-h-20-01-0",
+      "documentId": "holdout-20-01",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Müşahidəçi küləyin sürətini ölçdü.",
+      "expected": "Müşahidəçi küləyin sürətini ölçdü."
+    },
+    {
+      "id": "p0-h-20-01-1",
+      "documentId": "holdout-20-01",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, müşahidəçi küləyin sürətini ölçdü.",
+      "expected": "Yekun qeydə görə, müşahidəçi küləyin sürətini ölçdü."
+    },
+    {
+      "id": "p0-h-20-02-0",
+      "documentId": "holdout-20-02",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Texnik termometrin göstəricisini yazdı.",
+      "expected": "Texnik termometrin göstəricisini yazdı."
+    },
+    {
+      "id": "p0-h-20-02-1",
+      "documentId": "holdout-20-02",
+      "domain": "meteorologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, texnik termometrin göstəricisini yazdı.",
+      "expected": "Yekun qeydə görə, texnik termometrin göstəricisini yazdı."
+    },
+    {
+      "id": "p0-h-20-03-0",
+      "documentId": "holdout-20-03",
+      "domain": "meteorologiya",
+      "category": "delete",
+      "input": "Ekspert yağıntının miqdarını heabladı.",
+      "expected": "Ekspert yağıntının miqdarını hesabladı."
+    },
+    {
+      "id": "p0-h-20-03-1",
+      "documentId": "holdout-20-03",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, ekspert yagintinin miqdarini hesabladi.",
+      "expected": "Yekun qeydə görə, ekspert yağıntının miqdarını hesabladı."
+    },
+    {
+      "id": "p0-h-20-04-0",
+      "documentId": "holdout-20-04",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Komanda buludun hereketini arasdirdi.",
+      "expected": "Komanda buludun hərəkətini araşdırdı."
+    },
+    {
+      "id": "p0-h-20-04-1",
+      "documentId": "holdout-20-04",
+      "domain": "meteorologiya",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, komanda buludun hərəkətini arashdırdı.",
+      "expected": "Yekun qeydə görə, komanda buludun hərəkətini araşdırdı."
+    },
+    {
+      "id": "p0-h-20-05-0",
+      "documentId": "holdout-20-05",
+      "domain": "meteorologiya",
+      "category": "ascii",
+      "input": "Operator stansiyanin melumatini gonderdi.",
+      "expected": "Operator stansiyanın məlumatını göndərdi."
+    },
+    {
+      "id": "p0-h-20-05-1",
+      "documentId": "holdout-20-05",
+      "domain": "meteorologiya",
+      "category": "partial",
+      "input": "Yekun qeyde göre, operator stansiyanin melumatini gönderdi.",
+      "expected": "Yekun qeydə görə, operator stansiyanın məlumatını göndərdi."
+    },
+    {
+      "id": "p0-h-20-06-0",
+      "documentId": "holdout-20-06",
+      "domain": "meteorologiya",
+      "category": "partial",
+      "input": "Alim temperaturun artimini izah etdi.",
+      "expected": "Alim temperaturun artımını izah etdi."
+    },
+    {
+      "id": "p0-h-20-06-1",
+      "documentId": "holdout-20-06",
+      "domain": "meteorologiya",
+      "category": "case",
+      "input": "yekun qeydə görə, alim temperaturun artımını izah etdi.",
+      "expected": "Yekun qeydə görə, alim temperaturun artımını izah etdi."
+    },
+    {
+      "id": "p0-h-20-07-0",
+      "documentId": "holdout-20-07",
+      "domain": "meteorologiya",
+      "category": "case",
+      "input": "mühəndis sensorun işləməsini yoxladı.",
+      "expected": "Mühəndis sensorun işləməsini yoxladı."
+    },
+    {
+      "id": "p0-h-20-07-1",
+      "documentId": "holdout-20-07",
+      "domain": "meteorologiya",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, mühəndis sensorun işləməsini yoxladı",
+      "expected": "Yekun qeydə görə, mühəndis sensorun işləməsini yoxladı."
+    },
+    {
+      "id": "p0-h-20-08-0",
+      "documentId": "holdout-20-08",
+      "domain": "meteorologiya",
+      "category": "punctuation",
+      "input": "Tədqiqatçı rütubətin səviyyəsini ölçdü",
+      "expected": "Tədqiqatçı rütubətin səviyyəsini ölçdü."
+    },
+    {
+      "id": "p0-h-20-08-1",
+      "documentId": "holdout-20-08",
+      "domain": "meteorologiya",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, tədqiqatçı rüutbətin səviyyəsini ölçdü.",
+      "expected": "Yekun qeydə görə, tədqiqatçı rütubətin səviyyəsini ölçdü."
+    },
+    {
+      "id": "p0-h-20-09-0",
+      "documentId": "holdout-20-09",
+      "domain": "meteorologiya",
+      "category": "transpose",
+      "input": "Mütəxəssis xəbərdarlığın vatxını dəyişdi.",
+      "expected": "Mütəxəssis xəbərdarlığın vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-20-09-1",
+      "documentId": "holdout-20-09",
+      "domain": "meteorologiya",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis xəbərdarlığın vaxtını dəişdi.",
+      "expected": "Yekun qeydə görə, mütəxəssis xəbərdarlığın vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-21-00-0",
+      "documentId": "holdout-21-00",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Geoloq süxurun tərkibini araşdırdı.",
+      "expected": "Geoloq süxurun tərkibini araşdırdı."
+    },
+    {
+      "id": "p0-h-21-00-1",
+      "documentId": "holdout-21-00",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, geoloq süxurun tərkibini araşdırdı.",
+      "expected": "Yekun qeydə görə, geoloq süxurun tərkibini araşdırdı."
+    },
+    {
+      "id": "p0-h-21-01-0",
+      "documentId": "holdout-21-01",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Tədqiqatçı quyudan nümunə götürdü.",
+      "expected": "Tədqiqatçı quyudan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-21-01-1",
+      "documentId": "holdout-21-01",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, tədqiqatçı quyudan nümunə götürdü.",
+      "expected": "Yekun qeydə görə, tədqiqatçı quyudan nümunə götürdü."
+    },
+    {
+      "id": "p0-h-21-02-0",
+      "documentId": "holdout-21-02",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Mühəndis layın dərinliyini ölçdü.",
+      "expected": "Mühəndis layın dərinliyini ölçdü."
+    },
+    {
+      "id": "p0-h-21-02-1",
+      "documentId": "holdout-21-02",
+      "domain": "geologiya",
+      "category": "identity",
+      "input": "Yekun qeydə görə, mühəndis layın dərinliyini ölçdü.",
+      "expected": "Yekun qeydə görə, mühəndis layın dərinliyini ölçdü."
+    },
+    {
+      "id": "p0-h-21-03-0",
+      "documentId": "holdout-21-03",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Ekspert xeritenin miqyasini yoxladi.",
+      "expected": "Ekspert xəritənin miqyasını yoxladı."
+    },
+    {
+      "id": "p0-h-21-03-1",
+      "documentId": "holdout-21-03",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, ekspert xeritenin miqyasini yoxladi.",
+      "expected": "Yekun qeydə görə, ekspert xəritənin miqyasını yoxladı."
+    },
+    {
+      "id": "p0-h-21-04-0",
+      "documentId": "holdout-21-04",
+      "domain": "geologiya",
+      "category": "digraph",
+      "input": "Komanda chatın istiqamətini qeyd etdi.",
+      "expected": "Komanda çatın istiqamətini qeyd etdi."
+    },
+    {
+      "id": "p0-h-21-04-1",
+      "documentId": "holdout-21-04",
+      "domain": "geologiya",
+      "category": "partial",
+      "input": "Yekun qeyde göre, komanda çatin istiqametini qeyd etdi.",
+      "expected": "Yekun qeydə görə, komanda çatın istiqamətini qeyd etdi."
+    },
+    {
+      "id": "p0-h-21-05-0",
+      "documentId": "holdout-21-05",
+      "domain": "geologiya",
+      "category": "partial",
+      "input": "Alim vulkanin fealiyyetini izah etdi.",
+      "expected": "Alim vulkanın fəaliyyətini izah etdi."
+    },
+    {
+      "id": "p0-h-21-05-1",
+      "documentId": "holdout-21-05",
+      "domain": "geologiya",
+      "category": "case",
+      "input": "yekun qeydə görə, alim vulkanın fəaliyyətini izah etdi.",
+      "expected": "Yekun qeydə görə, alim vulkanın fəaliyyətini izah etdi."
+    },
+    {
+      "id": "p0-h-21-06-0",
+      "documentId": "holdout-21-06",
+      "domain": "geologiya",
+      "category": "case",
+      "input": "i̇şçi cihazı yamaca daşıdı.",
+      "expected": "İşçi cihazı yamaca daşıdı."
+    },
+    {
+      "id": "p0-h-21-06-1",
+      "documentId": "holdout-21-06",
+      "domain": "geologiya",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, i̇şçi cihazı yamaca daşıdı",
+      "expected": "Yekun qeydə görə, i̇şçi cihazı yamaca daşıdı."
+    },
+    {
+      "id": "p0-h-21-07-0",
+      "documentId": "holdout-21-07",
+      "domain": "geologiya",
+      "category": "punctuation",
+      "input": "Operator ölçmənin nəticəsini saxladı",
+      "expected": "Operator ölçmənin nəticəsini saxladı."
+    },
+    {
+      "id": "p0-h-21-07-1",
+      "documentId": "holdout-21-07",
+      "domain": "geologiya",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, operator ölmçənin nəticəsini saxladı.",
+      "expected": "Yekun qeydə görə, operator ölçmənin nəticəsini saxladı."
+    },
+    {
+      "id": "p0-h-21-08-0",
+      "documentId": "holdout-21-08",
+      "domain": "geologiya",
+      "category": "transpose",
+      "input": "Mütəxəssis sahənin səhrədini müəyyənləşdirdi.",
+      "expected": "Mütəxəssis sahənin sərhədini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-21-08-1",
+      "documentId": "holdout-21-08",
+      "domain": "geologiya",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis sahənin sərhədini müyyənləşdirdi.",
+      "expected": "Yekun qeydə görə, mütəxəssis sahənin sərhədini müəyyənləşdirdi."
+    },
+    {
+      "id": "p0-h-21-09-0",
+      "documentId": "holdout-21-09",
+      "domain": "geologiya",
+      "category": "delete",
+      "input": "Qrup qazıntının planını haırladı.",
+      "expected": "Qrup qazıntının planını hazırladı."
+    },
+    {
+      "id": "p0-h-21-09-1",
+      "documentId": "holdout-21-09",
+      "domain": "geologiya",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, qrup qazintinin planini hazirladi.",
+      "expected": "Yekun qeydə görə, qrup qazıntının planını hazırladı."
+    },
+    {
+      "id": "p0-h-22-00-0",
+      "documentId": "holdout-22-00",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Tələbə tənliyin həllini tapdı.",
+      "expected": "Tələbə tənliyin həllini tapdı."
+    },
+    {
+      "id": "p0-h-22-00-1",
+      "documentId": "holdout-22-00",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, tələbə tənliyin həllini tapdı.",
+      "expected": "Yekun qeydə görə, tələbə tənliyin həllini tapdı."
+    },
+    {
+      "id": "p0-h-22-01-0",
+      "documentId": "holdout-22-01",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Müəllim sübutun məntiqini izah etdi.",
+      "expected": "Müəllim sübutun məntiqini izah etdi."
+    },
+    {
+      "id": "p0-h-22-01-1",
+      "documentId": "holdout-22-01",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, müəllim sübutun məntiqini izah etdi.",
+      "expected": "Yekun qeydə görə, müəllim sübutun məntiqini izah etdi."
+    },
+    {
+      "id": "p0-h-22-02-0",
+      "documentId": "holdout-22-02",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Alim funksiyanın həddini hesabladı.",
+      "expected": "Alim funksiyanın həddini hesabladı."
+    },
+    {
+      "id": "p0-h-22-02-1",
+      "documentId": "holdout-22-02",
+      "domain": "riyaziyyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, alim funksiyanın həddini hesabladı.",
+      "expected": "Yekun qeydə görə, alim funksiyanın həddini hesabladı."
+    },
+    {
+      "id": "p0-h-22-03-0",
+      "documentId": "holdout-22-03",
+      "domain": "riyaziyyat",
+      "category": "digraph",
+      "input": "Tədqiqatchı modelin parametrini sechdi.",
+      "expected": "Tədqiqatçı modelin parametrini seçdi."
+    },
+    {
+      "id": "p0-h-22-03-1",
+      "documentId": "holdout-22-03",
+      "domain": "riyaziyyat",
+      "category": "partial",
+      "input": "Yekun qeyde göre, tedqiqatçi modelin parametrini seçdi.",
+      "expected": "Yekun qeydə görə, tədqiqatçı modelin parametrini seçdi."
+    },
+    {
+      "id": "p0-h-22-04-0",
+      "documentId": "holdout-22-04",
+      "domain": "riyaziyyat",
+      "category": "partial",
+      "input": "Analitik ehtimalin qiymetini yoxladi.",
+      "expected": "Analitik ehtimalın qiymətini yoxladı."
+    },
+    {
+      "id": "p0-h-22-04-1",
+      "documentId": "holdout-22-04",
+      "domain": "riyaziyyat",
+      "category": "case",
+      "input": "yekun qeydə görə, analitik ehtimalın qiymətini yoxladı.",
+      "expected": "Yekun qeydə görə, analitik ehtimalın qiymətini yoxladı."
+    },
+    {
+      "id": "p0-h-22-05-0",
+      "documentId": "holdout-22-05",
+      "domain": "riyaziyyat",
+      "category": "case",
+      "input": "şagird fiqurun sahəsini ölçdü.",
+      "expected": "Şagird fiqurun sahəsini ölçdü."
+    },
+    {
+      "id": "p0-h-22-05-1",
+      "documentId": "holdout-22-05",
+      "domain": "riyaziyyat",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, şagird fiqurun sahəsini ölçdü",
+      "expected": "Yekun qeydə görə, şagird fiqurun sahəsini ölçdü."
+    },
+    {
+      "id": "p0-h-22-06-0",
+      "documentId": "holdout-22-06",
+      "domain": "riyaziyyat",
+      "category": "punctuation",
+      "input": "Ekspert hesablamanın dəqiqliyini araşdırdı",
+      "expected": "Ekspert hesablamanın dəqiqliyini araşdırdı."
+    },
+    {
+      "id": "p0-h-22-06-1",
+      "documentId": "holdout-22-06",
+      "domain": "riyaziyyat",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, ekspert heasblamanın dəqiqliyini araşdırdı.",
+      "expected": "Yekun qeydə görə, ekspert hesablamanın dəqiqliyini araşdırdı."
+    },
+    {
+      "id": "p0-h-22-07-0",
+      "documentId": "holdout-22-07",
+      "domain": "riyaziyyat",
+      "category": "transpose",
+      "input": "Komanda nəticəni baqşa üsulla yoxladı.",
+      "expected": "Komanda nəticəni başqa üsulla yoxladı."
+    },
+    {
+      "id": "p0-h-22-07-1",
+      "documentId": "holdout-22-07",
+      "domain": "riyaziyyat",
+      "category": "delete",
+      "input": "Yekun qeydə görə, komanda nəticəni başqa üsulla yoladı.",
+      "expected": "Yekun qeydə görə, komanda nəticəni başqa üsulla yoxladı."
+    },
+    {
+      "id": "p0-h-22-08-0",
+      "documentId": "holdout-22-08",
+      "domain": "riyaziyyat",
+      "category": "delete",
+      "input": "Mütəxəssis dəyişənin mənasını açqladı.",
+      "expected": "Mütəxəssis dəyişənin mənasını açıqladı."
+    },
+    {
+      "id": "p0-h-22-08-1",
+      "documentId": "holdout-22-08",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, mutexessis deyisenin menasini aciqladi.",
+      "expected": "Yekun qeydə görə, mütəxəssis dəyişənin mənasını açıqladı."
+    },
+    {
+      "id": "p0-h-22-09-0",
+      "documentId": "holdout-22-09",
+      "domain": "riyaziyyat",
+      "category": "ascii",
+      "input": "Icraci cedvelin sutununu tamamladi.",
+      "expected": "İcraçı cədvəlin sütununu tamamladı."
+    },
+    {
+      "id": "p0-h-22-09-1",
+      "documentId": "holdout-22-09",
+      "domain": "riyaziyyat",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, i̇crachı cədvəlin sütununu tamamladı.",
+      "expected": "Yekun qeydə görə, i̇craçı cədvəlin sütununu tamamladı."
+    },
+    {
+      "id": "p0-h-23-00-0",
+      "documentId": "holdout-23-00",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Satıcı malın qiymətini dəyişdi.",
+      "expected": "Satıcı malın qiymətini dəyişdi."
+    },
+    {
+      "id": "p0-h-23-00-1",
+      "documentId": "holdout-23-00",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Yekun qeydə görə, satıcı malın qiymətini dəyişdi.",
+      "expected": "Yekun qeydə görə, satıcı malın qiymətini dəyişdi."
+    },
+    {
+      "id": "p0-h-23-01-0",
+      "documentId": "holdout-23-01",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Alıcı məhsulun ölçüsünü yoxladı.",
+      "expected": "Alıcı məhsulun ölçüsünü yoxladı."
+    },
+    {
+      "id": "p0-h-23-01-1",
+      "documentId": "holdout-23-01",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Yekun qeydə görə, alıcı məhsulun ölçüsünü yoxladı.",
+      "expected": "Yekun qeydə görə, alıcı məhsulun ölçüsünü yoxladı."
+    },
+    {
+      "id": "p0-h-23-02-0",
+      "documentId": "holdout-23-02",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Kassir ödənişin məbləğini bildirdi.",
+      "expected": "Kassir ödənişin məbləğini bildirdi."
+    },
+    {
+      "id": "p0-h-23-02-1",
+      "documentId": "holdout-23-02",
+      "domain": "pərakəndə satış",
+      "category": "identity",
+      "input": "Yekun qeydə görə, kassir ödənişin məbləğini bildirdi.",
+      "expected": "Yekun qeydə görə, kassir ödənişin məbləğini bildirdi."
+    },
+    {
+      "id": "p0-h-23-03-0",
+      "documentId": "holdout-23-03",
+      "domain": "pərakəndə satış",
+      "category": "partial",
+      "input": "Menecer endirimin müddetini açiqladi.",
+      "expected": "Menecer endirimin müddətini açıqladı."
+    },
+    {
+      "id": "p0-h-23-03-1",
+      "documentId": "holdout-23-03",
+      "domain": "pərakəndə satış",
+      "category": "case",
+      "input": "yekun qeydə görə, menecer endirimin müddətini açıqladı.",
+      "expected": "Yekun qeydə görə, menecer endirimin müddətini açıqladı."
+    },
+    {
+      "id": "p0-h-23-04-0",
+      "documentId": "holdout-23-04",
+      "domain": "pərakəndə satış",
+      "category": "case",
+      "input": "i̇şçi vitrinə yeni məhsul qoydu.",
+      "expected": "İşçi vitrinə yeni məhsul qoydu."
+    },
+    {
+      "id": "p0-h-23-04-1",
+      "documentId": "holdout-23-04",
+      "domain": "pərakəndə satış",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, i̇şçi vitrinə yeni məhsul qoydu",
+      "expected": "Yekun qeydə görə, i̇şçi vitrinə yeni məhsul qoydu."
+    },
+    {
+      "id": "p0-h-23-05-0",
+      "documentId": "holdout-23-05",
+      "domain": "pərakəndə satış",
+      "category": "punctuation",
+      "input": "Nəzarətçi qəbzin tarixini yoxladı",
+      "expected": "Nəzarətçi qəbzin tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-23-05-1",
+      "documentId": "holdout-23-05",
+      "domain": "pərakəndə satış",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, nəzarətçi qəzbin tarixini yoxladı.",
+      "expected": "Yekun qeydə görə, nəzarətçi qəbzin tarixini yoxladı."
+    },
+    {
+      "id": "p0-h-23-06-0",
+      "documentId": "holdout-23-06",
+      "domain": "pərakəndə satış",
+      "category": "transpose",
+      "input": "Mütəxəssis tələbatın arıtmını araşdırdı.",
+      "expected": "Mütəxəssis tələbatın artımını araşdırdı."
+    },
+    {
+      "id": "p0-h-23-06-1",
+      "documentId": "holdout-23-06",
+      "domain": "pərakəndə satış",
+      "category": "delete",
+      "input": "Yekun qeydə görə, mütəxəssis tələbatın artımını arşdırdı.",
+      "expected": "Yekun qeydə görə, mütəxəssis tələbatın artımını araşdırdı."
+    },
+    {
+      "id": "p0-h-23-07-0",
+      "documentId": "holdout-23-07",
+      "domain": "pərakəndə satış",
+      "category": "delete",
+      "input": "Anbardar ehtiyatın saını qeyd etdi.",
+      "expected": "Anbardar ehtiyatın sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-23-07-1",
+      "documentId": "holdout-23-07",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, anbardar ehtiyatin sayini qeyd etdi.",
+      "expected": "Yekun qeydə görə, anbardar ehtiyatın sayını qeyd etdi."
+    },
+    {
+      "id": "p0-h-23-08-0",
+      "documentId": "holdout-23-08",
+      "domain": "pərakəndə satış",
+      "category": "ascii",
+      "input": "Operator sifarisin statusunu yeniledi.",
+      "expected": "Operator sifarişin statusunu yenilədi."
+    },
+    {
+      "id": "p0-h-23-08-1",
+      "documentId": "holdout-23-08",
+      "domain": "pərakəndə satış",
+      "category": "digraph",
+      "input": "Yekun qeydə görə, operator sifarishin statusunu yenilədi.",
+      "expected": "Yekun qeydə görə, operator sifarişin statusunu yenilədi."
+    },
+    {
+      "id": "p0-h-23-09-0",
+      "documentId": "holdout-23-09",
+      "domain": "pərakəndə satış",
+      "category": "digraph",
+      "input": "Maghaza müshtərinin sualını cavablandırdı.",
+      "expected": "Mağaza müştərinin sualını cavablandırdı."
+    },
+    {
+      "id": "p0-h-23-09-1",
+      "documentId": "holdout-23-09",
+      "domain": "pərakəndə satış",
+      "category": "partial",
+      "input": "Yekun qeyde göre, mağaza müşterinin sualini cavablandirdi.",
+      "expected": "Yekun qeydə görə, mağaza müştərinin sualını cavablandırdı."
+    },
+    {
+      "id": "p0-h-24-00-0",
+      "documentId": "holdout-24-00",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Qonşu həyətin qapısını bağladı.",
+      "expected": "Qonşu həyətin qapısını bağladı."
+    },
+    {
+      "id": "p0-h-24-00-1",
+      "documentId": "holdout-24-00",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, qonşu həyətin qapısını bağladı.",
+      "expected": "Yekun qeydə görə, qonşu həyətin qapısını bağladı."
+    },
+    {
+      "id": "p0-h-24-01-0",
+      "documentId": "holdout-24-01",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Dostum görüşün vaxtını dəyişdi.",
+      "expected": "Dostum görüşün vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-24-01-1",
+      "documentId": "holdout-24-01",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, dostum görüşün vaxtını dəyişdi.",
+      "expected": "Yekun qeydə görə, dostum görüşün vaxtını dəyişdi."
+    },
+    {
+      "id": "p0-h-24-02-0",
+      "documentId": "holdout-24-02",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Uşaq çantasını otağa apardı.",
+      "expected": "Uşaq çantasını otağa apardı."
+    },
+    {
+      "id": "p0-h-24-02-1",
+      "documentId": "holdout-24-02",
+      "domain": "gündəlik həyat",
+      "category": "identity",
+      "input": "Yekun qeydə görə, uşaq çantasını otağa apardı.",
+      "expected": "Yekun qeydə görə, uşaq çantasını otağa apardı."
+    },
+    {
+      "id": "p0-h-24-03-0",
+      "documentId": "holdout-24-03",
+      "domain": "gündəlik həyat",
+      "category": "case",
+      "input": "ailə səhər yeməyini hazırladı.",
+      "expected": "Ailə səhər yeməyini hazırladı."
+    },
+    {
+      "id": "p0-h-24-03-1",
+      "documentId": "holdout-24-03",
+      "domain": "gündəlik həyat",
+      "category": "punctuation",
+      "input": "Yekun qeydə görə, ailə səhər yeməyini hazırladı",
+      "expected": "Yekun qeydə görə, ailə səhər yeməyini hazırladı."
+    },
+    {
+      "id": "p0-h-24-04-0",
+      "documentId": "holdout-24-04",
+      "domain": "gündəlik həyat",
+      "category": "punctuation",
+      "input": "Qonaq pəncərənin yanına keçdi",
+      "expected": "Qonaq pəncərənin yanına keçdi."
+    },
+    {
+      "id": "p0-h-24-04-1",
+      "documentId": "holdout-24-04",
+      "domain": "gündəlik həyat",
+      "category": "transpose",
+      "input": "Yekun qeydə görə, qonaq pəcnərənin yanına keçdi.",
+      "expected": "Yekun qeydə görə, qonaq pəncərənin yanına keçdi."
+    },
+    {
+      "id": "p0-h-24-05-0",
+      "documentId": "holdout-24-05",
+      "domain": "gündəlik həyat",
+      "category": "transpose",
+      "input": "Sakin binanın giirşini təmizlədi.",
+      "expected": "Sakin binanın girişini təmizlədi."
+    },
+    {
+      "id": "p0-h-24-05-1",
+      "documentId": "holdout-24-05",
+      "domain": "gündəlik həyat",
+      "category": "delete",
+      "input": "Yekun qeydə görə, sakin binanın girişini təizlədi.",
+      "expected": "Yekun qeydə görə, sakin binanın girişini təmizlədi."
+    },
+    {
+      "id": "p0-h-24-06-0",
+      "documentId": "holdout-24-06",
+      "domain": "gündəlik həyat",
+      "category": "delete",
+      "input": "Qardaşım kitabı rəfə qodu.",
+      "expected": "Qardaşım kitabı rəfə qoydu."
+    },
+    {
+      "id": "p0-h-24-06-1",
+      "documentId": "holdout-24-06",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, qardasim kitabi refe qoydu.",
+      "expected": "Yekun qeydə görə, qardaşım kitabı rəfə qoydu."
+    },
+    {
+      "id": "p0-h-24-07-0",
+      "documentId": "holdout-24-07",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Bacim mektubun metnini oxudu.",
+      "expected": "Bacım məktubun mətnini oxudu."
+    },
+    {
+      "id": "p0-h-24-07-1",
+      "documentId": "holdout-24-07",
+      "domain": "gündəlik həyat",
+      "category": "ascii",
+      "input": "Yekun qeyde gore, bacim mektubun metnini oxudu.",
+      "expected": "Yekun qeydə görə, bacım məktubun mətnini oxudu."
+    },
+    {
+      "id": "p0-h-24-08-0",
+      "documentId": "holdout-24-08",
+      "domain": "gündəlik həyat",
+      "category": "digraph",
+      "input": "Yoldashım səfərin planını hazırladı.",
+      "expected": "Yoldaşım səfərin planını hazırladı."
+    },
+    {
+      "id": "p0-h-24-08-1",
+      "documentId": "holdout-24-08",
+      "domain": "gündəlik həyat",
+      "category": "partial",
+      "input": "Yekun qeyde göre, yoldaşim seferin planini hazirladi.",
+      "expected": "Yekun qeydə görə, yoldaşım səfərin planını hazırladı."
+    },
+    {
+      "id": "p0-h-24-09-0",
+      "documentId": "holdout-24-09",
+      "domain": "gündəlik həyat",
+      "category": "partial",
+      "input": "Ev sahibi açari masanin üstüne qoydu.",
+      "expected": "Ev sahibi açarı masanın üstünə qoydu."
+    },
+    {
+      "id": "p0-h-24-09-1",
+      "documentId": "holdout-24-09",
+      "domain": "gündəlik həyat",
+      "category": "case",
+      "input": "yekun qeydə görə, ev sahibi açarı masanın üstünə qoydu.",
+      "expected": "Yekun qeydə görə, ev sahibi açarı masanın üstünə qoydu."
+    }
+  ]
+}

@@ -12,3 +12,15 @@ The upstream header declares 42,937 records, but the file contains 42,936 data l
 This is the full pinned source dictionary, not every Azerbaijani word. Build preparation executes a restricted single-step SFX subset with two-character FLAG long parsing, strip/add and terminal conditions. It does not execute prefix, compound, continuation or cross-product rules. Fourteen malformed/unsupported rule lines and eleven malformed flag entries are skipped, rather than guessed. Runtime forms are capped at 100,000 to bound memory; reaching this cap does not certify linguistic completeness or correctness. Reviewed spelling choices take priority; imported ambiguities are preserved. Imported one/two-letter forms are not used for automatic correction.
 
 Reproduce with npm run dictionary:import -- public/dictionaries/az (offline), or omit the argument to explicitly download the pinned source. All three inputs are SHA-256-checked before output is written. Generated JSON is excluded from git and recreated by dev, test, typecheck and build preparation. Normal correction uses bundled application assets and performs no dictionary download. Generated output remains covered by MPL-2.0.
+
+## Phase 0 evaluation (October 2026)
+
+`data/evaluation/phase0/no-harm-2000.json` samples 2,000 forms from the pinned
+MPL-2.0 dictionary described above. The word forms remain MPL-2.0-derived material;
+source revision, full license, generator and attribution are available above.
+The surrounding mention sentences and holdout/calibration clauses were authored
+by the assistant for this project, not copied from an outside text corpus and
+not reviewed by a linguist. These frozen datasets are evaluation/calibration-only;
+they do not train weights. No new Wikipedia/CC BY-SA/GFDL text or pretrained
+model was imported in phase 0, and no decision about licensing derived model
+weights has been made. That owner decision remains a phase 1 prerequisite.
