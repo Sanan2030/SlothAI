@@ -14,6 +14,19 @@ overlap = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(overlap)
 
 
+def register_keys(db, keys, split):
+    """Preserve exact collision semantics with compact batched SQL lookups."""
+    encoded = [b'\x00' + bytes.fromhex(key[9:]) if key.startswith('sentence:')
+               else b'\x01' + bytes.fromhex(key) for key in keys]
+    if not encoded:
+        return 0
+    placeholders = ','.join('?' for _ in encoded)
+    collisions = sum(old != split for (old,) in db.execute(
+        f'SELECT split FROM seen WHERE hash IN ({placeholders})', encoded))
+    db.executemany('INSERT OR IGNORE INTO seen VALUES (?,?)', ((key, split) for key in encoded))
+    return collisions
+
+
 def gate(directory):
     directory = Path(directory)
     manifest = json.loads((directory / 'MANIFEST.json').read_text())
@@ -35,7 +48,8 @@ def gate(directory):
     with tempfile.TemporaryDirectory(prefix='sloth-gate-') as temporary:
         db = sqlite3.connect(str(Path(temporary) / 'split.sqlite'))
         try:
-            db.execute('CREATE TABLE seen (hash TEXT PRIMARY KEY, split TEXT)')
+            db.execute('PRAGMA cache_size=-131072')
+            db.execute('CREATE TABLE seen (hash BLOB PRIMARY KEY, split TEXT) WITHOUT ROWID')
             db.execute('CREATE TABLE documents (id TEXT PRIMARY KEY, split TEXT)')
             cross_split = 0
             for split in ('train', 'validation', 'test'):
@@ -69,11 +83,7 @@ def gate(directory):
                         db.execute('INSERT OR IGNORE INTO documents VALUES (?,?)', (row['documentId'], split))
                         keys = (overlap.ngrams(row['text'], 8) | overlap.ngrams(pair['input'], 8)
                                 | {'sentence:' + overlap.sentence_key(row['text']), 'sentence:' + overlap.sentence_key(pair['input'])})
-                        for key in keys:
-                            old = db.execute('SELECT split FROM seen WHERE hash=?', (key,)).fetchone()
-                            if old and old[0] != split:
-                                cross_split += 1
-                            db.execute('INSERT OR IGNORE INTO seen VALUES (?,?)', (key, split))
+                        cross_split += register_keys(db, keys, split)
                         if counts[split] % 1000 == 0:
                             db.commit()
                         yield row

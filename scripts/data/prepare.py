@@ -82,8 +82,14 @@ def _prepare(input_path, sources_path, output):
                 except sqlite3.IntegrityError:
                     rejected['exact_duplicate'] += 1
                     continue
+                protected = list(document.get('protectedTerms', []))
+                first_word = re.search(r'[^\W\d_]+', text)
+                # Without reliable NER, preserve an initial capital conservatively,
+                # even when it is an ordinary sentence-initial word.
+                if first_word and first_word.group()[0].isupper():
+                    protected.append(first_word.group())
                 row = {'id': f'{document_id}:{at}', 'documentId': document_id, 'sourceId': source_id,
-                       'text': text, 'protectedTerms': document.get('protectedTerms', [])}
+                       'text': text, 'protectedTerms': list(dict.fromkeys(protected))}
                 clean[split].write(json.dumps(row, ensure_ascii=False) + '\n')
                 pair = corrupt(text, pair_seed(20261007, document_id, at), protected_terms=row['protectedTerms'])
                 pairs[split].write(json.dumps({**row, **pair, 'errorOrigin': 'synthetic'}, ensure_ascii=False) + '\n')

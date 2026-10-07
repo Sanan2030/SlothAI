@@ -2,9 +2,10 @@ import unittest
 import json
 import hashlib
 import tempfile
+import sqlite3
 from pathlib import Path
 from prepare import prepare
-from gate import gate
+from gate import gate, register_keys
 from common import sha256
 from common import az_lower, source_assignments
 from noise import corrupt, KINDS, pair_seed
@@ -67,6 +68,11 @@ class DataTests(unittest.TestCase):
             sources.write_text(json.dumps(metadata))
             manifest = prepare(corpus, sources, root / 'out')
             self.assertEqual(manifest['cleanSentences'], 3)
+            for path in (root / 'out').glob('*-pairs.jsonl'):
+                for line in path.read_text().splitlines():
+                    pair = json.loads(line)
+                    self.assertIn(pair['text'].split()[0], pair['protectedTerms'])
+                    self.assertIn(pair['text'].split()[0], pair['input'])
             self.assertEqual(gate(root / 'out')['status'], 'failed')  # Never relax the five-million gate.
             with self.assertRaises(ValueError):
                 prepare(corpus, sources, root / 'out')
@@ -79,6 +85,22 @@ class DataTests(unittest.TestCase):
             sources.write_text(json.dumps(metadata))
             with self.assertRaises(ValueError):
                 prepare(corpus, sources, root / 'unapproved')
+
+    def test_compact_collision_index_matches_original(self):
+        with sqlite3.connect(':memory:') as compact, sqlite3.connect(':memory:') as original:
+            compact.execute('CREATE TABLE seen (hash BLOB PRIMARY KEY, split TEXT) WITHOUT ROWID')
+            original.execute('CREATE TABLE seen (hash TEXT PRIMARY KEY, split TEXT)')
+            a, b = 'a' * 64, 'b' * 64
+            for keys, split in [({a, 'sentence:' + a}, 'train'), ({a, b}, 'train'),
+                                ({a, 'sentence:' + a, b}, 'validation'), ({b}, 'test')]:
+                expected = 0
+                for key in keys:
+                    old = original.execute('SELECT split FROM seen WHERE hash=?', (key,)).fetchone()
+                    expected += bool(old and old[0] != split)
+                    original.execute('INSERT OR IGNORE INTO seen VALUES (?,?)', (key, split))
+                self.assertEqual(register_keys(compact, keys, split), expected)
+            self.assertEqual(compact.execute('SELECT COUNT(*) FROM seen').fetchone(),
+                             original.execute('SELECT COUNT(*) FROM seen').fetchone())
 
 
 if __name__ == '__main__':

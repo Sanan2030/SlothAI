@@ -64,3 +64,14 @@ The completed collection report, source hashes, split/pair manifest and gate rep
 must supply actual counts. A progress count alone never authorizes Stage 2.
 Bulk data and indexes are ignored by git and stay out of the application bundle.
 Python/pyarrow are offline preparation dependencies only.
+
+## Five-million-row preparation safeguards
+
+Synthetic pair preparation conservatively protects the first capitalized token
+as well as existing names/acronyms/technical spans. This avoids damaging an initial
+name without claiming a trained NER system; it also reduces sentence-initial case
+noise for ordinary words. The generator is still synthetic, not human-reviewed.
+The leakage gate stores its exact SHA-256 keys in compact binary form and batches
+per-sentence SQL lookups. Sentence keys and ngram keys have distinct prefixes.
+An equivalence test compares cross-split collision counts to the original SQL
+algorithm; no overlap rule, minimum or frozen dataset is relaxed.
