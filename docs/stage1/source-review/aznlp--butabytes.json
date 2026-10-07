@@ -1,0 +1,23 @@
+{
+  "dataset": "aznlp/butabytes",
+  "metadataURL": "https://huggingface.co/api/datasets/aznlp/butabytes",
+  "retrievedAt": "2026-10-07T07:45:05.690506+00:00",
+  "revision": "d201350a53841ca665781b4f341ee50a87ce87b9",
+  "metadataSHA256": "35ddd3bc124222f29759fdb1c27cc6de32880cb37f3df64e09c9ef379b5a6909",
+  "declaredLicense": "openrail",
+  "gated": "manual",
+  "approvedForTraining": false,
+  "downloadedCleanSentences": 0,
+  "files": [
+    ".gitattributes",
+    "README.md",
+    "butabytes/news.json",
+    "butabytes/sentences.csv",
+    "butabytes/wikipedia.json"
+  ],
+  "cardAccessResult": {
+    "url": "https://huggingface.co/datasets/aznlp/butabytes/raw/main/README.md",
+    "httpStatus": 401,
+    "bypassAttempted": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "commands": [
+    {
+      "command": "npm run data:test",
+      "exitCode": 0,
+      "output": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> slothai@0.1.0 data:test\n> python3 -m unittest discover -s scripts/data -p test_*.py\n\n.....\n----------------------------------------------------------------------\nRan 5 tests in 0.636s\n\nOK\n"
+    },
+    {
+      "command": "npm run data:gate",
+      "exitCode": 2,
+      "output": "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.\n\n> slothai@0.1.0 data:gate\n> python3 scripts/data/gate.py data/corpus\n\n{\n  \"status\": \"failed\",\n  \"minimumCleanSentences\": 5000000,\n  \"cleanSentences\": 0,\n  \"auditScope\": \"Both clean targets and generated noisy inputs; 8-word normalized ngrams and exact sentences\",\n  \"errors\": [\n    \"Three independent approved source groups and nonempty source splits required\",\n    \"Missing clean/pair files: train\",\n    \"Missing clean/pair files: validation\",\n    \"Missing clean/pair files: test\",\n    \"Insufficient clean sentences: 0/5000000\"\n  ],\n  \"phase0Overlap\": {},\n  \"crossSplitCollisions\": null,\n  \"crossSplitAudit\": \"not-exercised\",\n  \"trainingStarted\": false\n}\n"
+    }
+  ],
+  "qualityCommand": "npm run eval:phase0",
+  "ablationCommand": "npm run eval:ablation",
+  "latencyCommand": "npm run eval:latency",
+  "qualityMatchesBaseline": true,
+  "ablationMatchesBaseline": true,
+  "holdout": {
+    "tp": 532,
+    "fp": 3,
+    "fn": 108,
+    "abstainedErrors": 106,
+    "required": 640,
+    "correctWords": 2207,
+    "harmedWords": 1,
+    "exact": 393,
+    "identity": 150,
+    "harmedIdentitySentences": 0,
+    "unstable": 0
+  },
+  "noHarmProbe": {
+    "forms": 2000,
+    "changedForms": 5,
+    "falseChangeRate": {
+      "value": 0.0025,
+      "ci95": [
+        0.0005,
+        0.004512499999999988
+      ]
+    },
+    "convention": "Second letter-word token is the mentioned probe; wrapper words do not dilute this denominator. References may include proper-name casing disputes."
+  },
+  "latencyScope": "Node process TS imports and synchronous correction, not real browser/Worker startup or downloaded asset timings.",
+  "approvedCleanSentences": 0,
+  "overlap": "not-exercised",
+  "trainingStarted": false
+}

@@ -1,0 +1,19 @@
+{
+  "url": "https://datasets-server.huggingface.co/info?dataset=LocalDoc%2FAzTC-full",
+  "retrievedAt": "2026-10-07T07:46:38.113988+00:00",
+  "metadataSHA256": "0ae6c01d1e88beb6558e0c579ebb91964e764440e6bde1d44a2dd86c6d62da56",
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "publishedTrainRows": 4404338,
+  "publishedDownloadBytes": 4628433880,
+  "publishedDatasetBytes": 8729639751,
+  "warning": "Publisher metadata, not measured accepted clean sentences; no corpus download or training approval."
+}
