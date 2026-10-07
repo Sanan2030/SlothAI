@@ -1,0 +1,26 @@
+{
+  "scope": "10000 assistant-authored synthetic index rows; not corpus or runtime timing",
+  "seed": 20261007,
+  "repetitions": 3,
+  "milliseconds": {
+    "sqlite": [
+      860.0508499985153,
+      744.462057000419,
+      773.6955780001153
+    ],
+    "partitioned": [
+      297.83810099979746,
+      281.9602159997885,
+      443.303645000924
+    ]
+  },
+  "medianMs": {
+    "sqlite": 773.6955780001153,
+    "partitioned": 297.83810099979746
+  },
+  "crossSplitCollisions": {
+    "sqlite": 88937,
+    "partitioned": 88937
+  },
+  "productionGateChanged": false
+}

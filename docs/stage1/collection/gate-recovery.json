@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "errors": [
+    "[Errno 2] No such file or directory: 'data/corpus/az-v1/MANIFEST.json'"
+  ],
+  "trainingStarted": false
+}

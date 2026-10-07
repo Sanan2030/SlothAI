@@ -1,5 +1,11 @@
 # AzTC-full acquisition — Stage 1 remains gated
 
+Current continuation status: the first full audit failed with two cross-split
+key collision occurrences, although all clean/noisy rows had zero phase0 overlaps. The
+source-only repair is separately unit-tested; it has not been applied to the
+five-million corpus because saved bulk-file recovery returned HTTP 403.
+See `source-guard.md`; do not treat earlier pending-gate text as a passing gate.
+
 The owner requested collection after the pinned source/use plan was presented.
 `owner-approval.json` records the actual conversation instruction and restricted
 scope. This owner decision accepts the publisher's CC BY 4.0 declaration for the
@@ -167,7 +173,7 @@ the gate. The larger combined tar failed to save; it is not the delivery route.
 `archive.json` records that failed persistence attempt rather than claiming it
 succeeded. Gzip compression is packaging, not quantization or a trained model.
 
-The full gate is still running and covers both clean targets and generated noisy
+The first full gate failed with two cross-split key collision occurrences; it covered both clean targets and generated noisy
 inputs, protected-span preservation, file alignment/integrity, source/document
 split boundaries, normalized cross-split sentence/8-gram collisions, and phase0
 leakage. No model training has begun. Only `gate.json` with status `passed` may

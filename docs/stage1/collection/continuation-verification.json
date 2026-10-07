@@ -1,0 +1,281 @@
+{
+  "runtimeChanged": false,
+  "trainingStarted": false,
+  "environmentRepair": "Generated dictionary built from pinned, locally present checked source; no dictionary edit",
+  "checks": [
+    {
+      "command": "npm run data:test",
+      "exitCode": 0,
+      "seconds": 1.646
+    },
+    {
+      "command": "npm run eval:phase0",
+      "exitCode": 0,
+      "seconds": 56.395
+    },
+    {
+      "command": "npm run eval:ablation",
+      "exitCode": 0,
+      "seconds": 93.549
+    },
+    {
+      "command": "npm run eval:latency",
+      "exitCode": 0,
+      "seconds": 193.2
+    },
+    {
+      "command": "npm run benchmark:check",
+      "exitCode": 0,
+      "seconds": 92.904
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "seconds": 191.011
+    },
+    {
+      "command": "npm run gold:check",
+      "exitCode": 0,
+      "seconds": 28.351
+    },
+    {
+      "command": "npm run gold:exact",
+      "exitCode": 0,
+      "seconds": 31.514
+    },
+    {
+      "command": "npm run local-ai:fresh:check",
+      "exitCode": 0,
+      "seconds": 6.851
+    },
+    {
+      "command": "npm run quality:priorities",
+      "exitCode": 0,
+      "seconds": 7.527
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "seconds": 16.083
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "seconds": 14.872
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "seconds": 37.127
+    }
+  ],
+  "initialAttempt": {
+    "runtimeChanged": false,
+    "trainingStarted": false,
+    "checks": [
+      {
+        "command": "npm run data:test",
+        "exitCode": 0,
+        "seconds": 1.98,
+        "log": "/tmp/sloth-continuation-checks/data-test.log"
+      },
+      {
+        "command": "npm run eval:phase0",
+        "exitCode": 1,
+        "seconds": 1.45,
+        "log": "/tmp/sloth-continuation-checks/eval-phase0.log"
+      }
+    ]
+  },
+  "applicationTests": {
+    "total": 4111,
+    "passed": 4111,
+    "failed": 0
+  },
+  "dataTests": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0,
+    "provenance": "Assistant-authored unit fixtures, not human-reviewed training data"
+  },
+  "gateState": "blocked: original full gate failed; saved bulk recovery HTTP 403; repaired corpus not audited",
+  "sourceGuardAppliedToFullCorpus": false,
+  "identityFallbacks": "not measured",
+  "modelJSONGrowthKiB": 0,
+  "editorJSONBytes": 5634256,
+  "verificationNotes": [
+    "Initial phase0 run failed because generated dictionary was missing; existing local dictionary import repaired environment only.",
+    "Quality and ablation JSON byte-identical; latency output retained separately, not a performance gate pass.",
+    "local-ai:fresh:check generated a report with comparator 29/30 versus archived 28/30, model 30/30; new report saved separately and archived reference restored."
+  ],
+  "immutableFileComparison": {
+    "files": 32,
+    "changed": []
+  },
+  "commandOutputTails": {
+    "data-test": [
+      "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.",
+      "",
+      "> slothai@0.1.0 data:test",
+      "> python3 -m unittest discover -s scripts/data -p test_*.py",
+      "",
+      "..................",
+      "----------------------------------------------------------------------",
+      "Ran 18 tests in 1.230s",
+      "",
+      "OK"
+    ],
+    "eval-phase0": [
+      "      }",
+      "    },",
+      "    \"bootstrap\": {",
+      "      \"repetitions\": 1000,",
+      "      \"seed\": 20261007,",
+      "      \"unit\": \"documentId\",",
+      "      \"method\": \"percentile\",",
+      "      \"warning\": \"All-zero events give a degenerate bootstrap interval; this does not establish zero population risk.\"",
+      "    },",
+      "    \"convention\": \"Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision.\"",
+      "  }",
+      "}"
+    ],
+    "eval-ablation": [
+      "",
+      "> slothai@0.1.0 eval:ablation",
+      "> node --import tsx scripts/eval/ablation.ts --out=docs/stage1/evaluation",
+      "",
+      "ablation: default",
+      "ablation: always",
+      "ablation: noLocal",
+      "ablation: noAttention",
+      "ablation: noBounded",
+      "ablation: noObserved",
+      "ablation: noBoundary",
+      "ablation: rulesOnly"
+    ],
+    "eval-latency": [
+      "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.",
+      "",
+      "> slothai@0.1.0 eval:latency",
+      "> node --import tsx scripts/eval/latency.ts --policy=default --out=docs/stage1/evaluation/latency.json",
+      "",
+      "latency: default"
+    ],
+    "benchmark-check": [
+      "│ 48      │ 'comma processing'          │ 5000  │ 96.61  │ 94.23  │ 120.41  │ 10000    │ 'PASS' │",
+      "│ 49      │ 'paragraph segmentation'    │ 5000  │ 14.19  │ 12.42  │ 18.68   │ 10000    │ 'PASS' │",
+      "│ 50      │ 'typo candidates'           │ 5000  │ 26.38  │ 22.39  │ 36.04   │ 10000    │ 'PASS' │",
+      "│ 51      │ 'morphology'                │ 5000  │ 90.38  │ 91.06  │ 92.92   │ 10000    │ 'PASS' │",
+      "│ 52      │ 'entity lookup'             │ 5000  │ 1.17   │ 0.75   │ 2.09    │ 10000    │ 'PASS' │",
+      "│ 53      │ 'entity typo lookup'        │ 5000  │ 60.58  │ 62.43  │ 63.98   │ 10000    │ 'PASS' │",
+      "│ 54      │ 'entity suffix and context' │ 5000  │ 789.54 │ 726.59 │ 1050.98 │ 10000    │ 'PASS' │",
+      "└─────────┴─────────────────────────────┴───────┴────────┴────────┴─────────┴──────────┴────────┘",
+      "- Latency gate uses p95 warm latency.",
+      "- RSS/heap values are process-level approximate measurements, useful for before/after regressions.",
+      "- Use the same Node version and machine when comparing commits.",
+      "- Run with --json for machine-readable output."
+    ],
+    "test": [
+      "✔ reported workday repairs misspellings without losing technical details or numbers (6722.228027ms)",
+      "✔ workday has topic paragraphs and keeps optional original line structure (1850.516272ms)",
+      "✔ new vocabulary applies to independent sentences without corrupting valid words (89.783816ms)",
+      "✔ new punctuation preserves dependent clauses, literal types and protected code (97.836969ms)",
+      "ℹ tests 4111",
+      "ℹ suites 0",
+      "ℹ pass 4111",
+      "ℹ fail 0",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0",
+      "ℹ duration_ms 189199.596849"
+    ],
+    "gold-exact": [
+      "      \"exact\": 340",
+      "    },",
+      "    \"fresh-text-\": {",
+      "      \"total\": 100,",
+      "      \"exact\": 100",
+      "    },",
+      "    \"fresh-mail-\": {",
+      "      \"total\": 100,",
+      "      \"exact\": 100",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "local-ai-fresh-check": [
+      "> node --import tsx scripts/evaluate-fresh-ai.ts --enforce",
+      "",
+      "{",
+      "  \"scope\": \"New author-written full-output probes, excluded from training; not an independent human-reviewed benchmark\",",
+      "  \"total\": 30,",
+      "  \"baselineExact\": 29,",
+      "  \"modelExact\": 30,",
+      "  \"mailExactBody\": 30,",
+      "  \"greetingPreserved\": 30,",
+      "  \"elapsedMs\": 1654,",
+      "  \"failures\": []",
+      "}"
+    ],
+    "quality-priorities": [
+      "> slothai@0.1.0 quality:priorities",
+      "> node --import tsx scripts/check-priority-quality.ts --enforce",
+      "",
+      "{",
+      "  rows: 24,",
+      "  exact: 24,",
+      "  baselineExact: undefined,",
+      "  regressions: 0,",
+      "  failures: 0,",
+      "  cer: 0,",
+      "  precision: 1",
+      "}"
+    ],
+    "typecheck": [
+      "  \"skippedMalformedFlagEntries\": 11,",
+      "  \"matchableEntries\": 100000,",
+      "  \"checksums\": {",
+      "    \"dictionaries/az.dic\": \"9d21f073f7cd8a7b67131b4edc165878579f699ac66eea86d9d5459a65dd16bb\",",
+      "    \"dictionaries/az.aff\": \"a2a9a85dcdf83f21d463c6da527d90d306d7f7f0f9f3f479618dc6e02e889aae\",",
+      "    \"LICENSE\": \"1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5\"",
+      "  }",
+      "}",
+      "",
+      "> slothai@0.1.0 typecheck",
+      "> tsc --noEmit",
+      ""
+    ],
+    "lint": [
+      "npm warn Unknown env config \"http-proxy\". This will stop working in the next major version of npm.",
+      "",
+      "> slothai@0.1.0 lint",
+      "> eslint .",
+      ""
+    ],
+    "build": [
+      "",
+      "Route (app)",
+      "┌ ○ /",
+      "├ ○ /_not-found",
+      "├ ƒ /api/health",
+      "├ ƒ /api/strategies",
+      "└ ƒ /api/transform",
+      "",
+      "",
+      "○  (Static)   prerendered as static content",
+      "ƒ  (Dynamic)  server-rendered on demand",
+      ""
+    ]
+  },
+  "recoveryGate": {
+    "command": "npm run data:gate",
+    "exitCode": 2,
+    "result": {
+      "status": "failed",
+      "errors": [
+        "[Errno 2] No such file or directory: 'data/corpus/az-v1/MANIFEST.json'"
+      ],
+      "trainingStarted": false
+    }
+  }
+}

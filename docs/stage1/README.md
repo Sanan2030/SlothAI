@@ -15,7 +15,11 @@ pinned publisher CC BY 4.0 declaration/restricted use plan, not independently
 verified underlying-publication rights or human linguistic review. Sources,
 hashes, actual splits and noise shares are in `collection/README.md` and
 `collection/MANIFEST.json`. The clean-only phase0 audit passed 5,000,000 rows
-with zero overlaps; the full clean/noisy/cross-split gate is still running.
+with zero overlaps. The subsequent full clean/noisy/source-split audit failed:
+all 10,000,000 clean/noisy rows had zero phase0 overlaps, but there were two
+cross-split normalized-key collision occurrences. The original corpus version is blocked. See
+`collection/source-guard.md` for the evaluation-independent repair and current
+recovery limitation; a fresh full gate has not passed.
 Training has not begun; do not advance to Stage 2 until `collection/gate.json`
 is a full pass. Earlier empty-input figures below are historical infrastructure
 measurements, not the current collection size.

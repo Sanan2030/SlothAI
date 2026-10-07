@@ -1,0 +1,159 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 20261007,
+    "unit": "fresh process (cold), trial/document (warm/novel)",
+    "confidence": 0.95
+  },
+  "cold": {
+    "importMs": {
+      "value": 5676.336073500001,
+      "ci95": [
+        4474.7427915,
+        7471.175692999999
+      ]
+    },
+    "firstMs": {
+      "value": 518.0556414999996,
+      "ci95": [
+        431.7416739999999,
+        645.6315584999998
+      ]
+    },
+    "importAndFirstMs": {
+      "value": 6194.391715,
+      "ci95": [
+        4897.5314714999995,
+        8131.1531295
+      ]
+    },
+    "heapDeltaBytes": {
+      "value": 184839024,
+      "ci95": [
+        184172688,
+        197168176
+      ]
+    },
+    "rssBytes": {
+      "value": 352444416,
+      "ci95": [
+        348813312,
+        359004160
+      ]
+    }
+  },
+  "coldTrials": 10,
+  "policies": {
+    "default": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 115.37856099999772,
+              "ci95": [
+                107.82348699999966,
+                135.35534999999982
+              ]
+            },
+            "p95Ms": {
+              "value": 160.8262623999995,
+              "ci95": [
+                130.1710712000007,
+                174.29752299999927
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 896.1253189999989,
+              "ci95": [
+                725.474737999999,
+                975.3255930000005
+              ]
+            },
+            "p95Ms": {
+              "value": 1144.5189088000006,
+              "ci95": [
+                1014.9649442999998,
+                1215.382020000001
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 4.480626594999994,
+            "ci95": [
+              3.627373689999995,
+              4.876627965000003
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 5.722594544000003,
+            "ci95": [
+              5.074824721499999,
+              6.0769101000000045
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 521.8933299999917,
+              "ci95": [
+                501.72844199999963,
+                617.6039319999982
+              ]
+            },
+            "p95Ms": {
+              "value": 1516.4192699999946,
+              "ci95": [
+                594.9476500999997,
+                2179.294769999993
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 4950.696006999999,
+              "ci95": [
+                4080.171279999995,
+                5114.170957999988
+              ]
+            },
+            "p95Ms": {
+              "value": 11820.5692465,
+              "ci95": [
+                5414.891840899993,
+                16188.024901999997
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 5.50077334111111,
+            "ci95": [
+              4.533523644444439,
+              5.682412175555542
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 13.133965829444444,
+            "ci95": [
+              6.016546489888881,
+              17.98669433555555
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    }
+  },
+  "measurementScope": "Node process TS imports and synchronous correction, not real browser/Worker startup or downloaded asset timings."
+}
