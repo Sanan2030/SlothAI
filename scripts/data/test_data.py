@@ -41,6 +41,10 @@ class DataTests(unittest.TestCase):
         self.assertEqual(report['overlapRows'], 1)
         self.assertEqual(overlap.compare([], [])['status'], 'not-exercised')
         self.assertEqual(overlap.compare([{'text': 'Tamamilə ayrı müstəqil cümlə.'}], ['Digər sözlər burada yerləşir.'])['status'], 'passed')
+        documents = [{'documentId': 'unit:1', 'sentences': ['Tamamilə ayrı müstəqil cümlə.', 'Digər sözlər burada yerləşir.']}]
+        self.assertEqual(overlap.compare(overlap.document_sentences(documents), ['Digər sözlər burada yerləşir.'])['overlapRows'], 1)
+        with self.assertRaises(ValueError):
+            list(overlap.document_sentences([{'sentences': 'not an array'}]))
 
     def test_prepare_integrity_and_fail_closed_gate(self):
         # Tiny assistant-authored unit fixtures are not training data or approval receipts.

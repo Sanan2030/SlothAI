@@ -50,12 +50,24 @@ def phase0_references():
     return result
 
 
+def document_sentences(rows):
+    """Read-only collection audit; do not generate pairs or filter on references."""
+    for row in rows:
+        sentences = row.get('sentences')
+        if not isinstance(sentences, list) or any(not isinstance(text, str) for text in sentences):
+            raise ValueError('Collected document requires an array of sentences')
+        for index, text in enumerate(sentences):
+            yield {'text': text, 'documentId': row.get('documentId'), 'sentenceIndex': index}
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('corpus')
     parser.add_argument('--out', default='docs/stage1/overlap.json')
+    parser.add_argument('--documents', action='store_true')
     args = parser.parse_args()
-    report = compare(read_jsonl(args.corpus), phase0_references())
+    rows = read_jsonl(args.corpus)
+    report = compare(document_sentences(rows) if args.documents else rows, phase0_references())
     write_json(args.out, report)
     print(json.dumps(report))
     raise SystemExit(0 if report['status'] == 'passed' else 2)
