@@ -88,3 +88,34 @@ The archived `latency.json` was measured while collection was running. CPU, page
 cache and I/O contention make it an uncontrolled comparison to the original
 baseline; no application speed change is claimed. A final isolated measurement
 is required before declaring any performance gate passed.
+
+## Completed acquisition and clean-only audit (2026-10-07)
+
+`collection-report.json` records exactly 5,000,000 mechanically filtered unique
+sentences from 1,090,872 scanned source records. `sources.json` contains canonical
+source-record hashes and the pinned publisher declaration/use-plan approval.
+`uniqueness-index.json` independently verifies 5,000,000 retained sentence hashes.
+The closed gzip SHA-256 is
+`5c28420ea979c411f52902cd217c165145eb1c8b6f7045fca58bf26d2058e7f5`.
+
+| Collection | Retained sentences | Source-group split |
+| --- | ---: | --- |
+| ANL | 1,250,000 | train |
+| axar | 1,250,000 | train |
+| medeniyyet | 668,903 | train |
+| marja | 118,454 | train |
+| apasport | 1,082,532 | validation |
+| musavat | 630,111 | test |
+
+Command: `python3 scripts/data/check-overlap.py data/corpus/az-v1-download/az-corpus.jsonl.gz --documents --out=docs/stage1/collection/overlap.json`.
+Measured result: 5,000,000 compared clean rows; zero exact-sentence/normalized
+8-word-span overlaps against the read-only frozen phase0 references. This clean-only
+result does not replace the full clean/noisy/cross-split gate. No phase0 target was
+used to filter the collection or tune the noise generator. Training has not begun.
+
+Application checks: `npm run test` passed all 4,111 tests; `npm run typecheck`,
+`npm run lint`, and `npm run build` passed. The first build failed because the local
+node_modules symlink was outside Turbopack's filesystem root; copying identical
+installed dependencies into a physical directory resolved it without tracked
+application/configuration changes. `checks.json` retains the failed attempt and
+successful retry; retry duration was not measured.

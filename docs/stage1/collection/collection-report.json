@@ -1,0 +1,84 @@
+{
+  "acceptedUniqueSentences": 5000000,
+  "target": 5000000,
+  "rowsSeen": 1090872,
+  "sourceSentenceCounts": {
+    "ANL": 1250000,
+    "apasport": 1082532,
+    "axar": 1250000,
+    "marja": 118454,
+    "medeniyyet": 668903,
+    "musavat": 630111
+  },
+  "rejected": {
+    "quarantined_or_capped_rows": 598052,
+    "length_or_terminal_punctuation": 266460,
+    "language_heuristic": 1441974,
+    "normalized_exact_duplicate": 242008,
+    "markup_contact_or_fragment": 20650,
+    "source_balance_or_target_cap": 33923,
+    "cross_source_sixgram": 411465
+  },
+  "elapsedSeconds": 2317.4,
+  "dataset": "LocalDoc/AzTC-full",
+  "revision": "4ea07271d4a2c9746759547264a5e4310bc2956e",
+  "inputSHA256": "5c28420ea979c411f52902cd217c165145eb1c8b6f7045fca58bf26d2058e7f5",
+  "documentCounts": {
+    "ANL": 27808,
+    "apasport": 130571,
+    "axar": 183892,
+    "marja": 19526,
+    "medeniyyet": 59101,
+    "musavat": 45666
+  },
+  "shards": [
+    {
+      "path": "data/train-00000-of-00018.parquet",
+      "bytes": 821174198,
+      "sha256": "630e44ff1e5f10b3e999e90022b216b55a5c810b75409bf59c7eb73e06da86b2",
+      "verified": true,
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00"
+    },
+    {
+      "path": "data/train-00001-of-00018.parquet",
+      "bytes": 174156640,
+      "sha256": "361710311a6713341c76b20592e25b95467361a053c81c339282a48fddd51328",
+      "verified": true,
+      "collectedAt": "2026-10-07T11:36:37.734413+00:00"
+    },
+    {
+      "path": "data/train-00002-of-00018.parquet",
+      "bytes": 174728388,
+      "sha256": "cc1c7f580725331907dffed020be74b08d1ab2365071454a1f97ad90695dfc84",
+      "verified": true,
+      "collectedAt": "2026-10-07T11:48:01.210284+00:00"
+    },
+    {
+      "path": "data/train-00003-of-00018.parquet",
+      "bytes": 238314595,
+      "sha256": "3386d323c29401f58858af90a0efdb07046fa84639cea22777a50cb59946382c",
+      "verified": true,
+      "collectedAt": "2026-10-07T11:52:26.584151+00:00"
+    },
+    {
+      "path": "data/train-00004-of-00018.parquet",
+      "bytes": 348246025,
+      "sha256": "71026151efdabce528abe2cf7fce3e42c9ea27a9e898e6c16991f9326cdcdfc4",
+      "verified": true,
+      "collectedAt": "2026-10-07T11:54:19.642056+00:00"
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "by": "repository-owner",
+    "dataset": "LocalDoc/AzTC-full",
+    "revision": "4ea07271d4a2c9746759547264a5e4310bc2956e",
+    "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works.",
+    "scope": "Publisher CC BY 4.0 declaration with attribution; quarantine Wikipedia and unknown/ambiguous collections; no training before Stage 1 passes."
+  },
+  "phase0ReadByCollector": false,
+  "trainingStarted": false,
+  "qualityMeaning": "Mechanically filtered; not human-reviewed, linguist-certified or guaranteed error-free.",
+  "gate": "not-evaluated",
+  "completeMinimum": true
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "command": "npm run test",
+    "exitCode": 0,
+    "elapsedSeconds": 154.019
+  },
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "elapsedSeconds": 12.195
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "elapsedSeconds": 11.299
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 1,
+    "elapsedSeconds": 3.124
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "elapsedSeconds": null,
+    "retryReason": "Local node_modules symlink was outside Turbopack filesystem root; replaced with physical hardlinks to identical installed dependencies. No tracked configuration change."
+  }
+]

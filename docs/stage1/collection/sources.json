@@ -1,0 +1,101 @@
+{
+  "inputSHA256": "5c28420ea979c411f52902cd217c165145eb1c8b6f7045fca58bf26d2058e7f5",
+  "sources": [
+    {
+      "id": "aztc-ANL",
+      "name": "LocalDoc/AzTC-full / ANL",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "2e628c6b42ff2f8be3f3e4f56e1537860d05694823883e719a5ca8ab744165af",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "ANL",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-apasport",
+      "name": "LocalDoc/AzTC-full / apasport",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "77e64020d4e1cd8942df2940e6c604d2ba4e02b96166bea0082109bfece2636f",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "apasport",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-axar",
+      "name": "LocalDoc/AzTC-full / axar",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "1f5f3a2ddf592ab28019a57ac29d8e071e930565c7d574693b7e2b87881f3f30",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "axar",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-marja",
+      "name": "LocalDoc/AzTC-full / marja",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "053676955913d62f0dfc91ac317e19e938edf026e442b3247692f50c715ff0ba",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "marja",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-medeniyyet",
+      "name": "LocalDoc/AzTC-full / medeniyyet",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "13d8d7a1553ee301728848ebd291952601a65081343b51530c87bf8f465862e3",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "medeniyyet",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-musavat",
+      "name": "LocalDoc/AzTC-full / musavat",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "9fadfeb981dd2a9c19ed2e91563c0775ae0975679b783a98f50ecea166407ac0",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "musavat",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    }
+  ]
+}
