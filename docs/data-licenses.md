@@ -1,8 +1,12 @@
 # Stage 1 source and license decisions
 
 The owner selected **5,000,000 accepted clean sentences** on 2026-10-07.
-No newly collected source is approved for model training. The checked-in corpus
-manifest consequently contains zero approved sentences and fails the gate.
+The owner subsequently authorized the restricted pinned AzTC-full acquisition
+plan; see `docs/stage1/collection/owner-approval.json`. This accepts the publisher's
+CC BY 4.0 declaration for that use plan, not independently verified rights in
+every underlying work. Training remains blocked until the full data gate passes.
+The checked-in empty root manifest is the original blocked input template;
+actual bulk collection/preparation manifests are produced outside git.
 Network metadata access is not training permission. The existing phase0 files,
 including calibration-100, are evaluation-only and cannot tune noise, models,
 thresholds, or source selection. An overlap failure blocks this corpus version;
@@ -22,6 +26,18 @@ adaptations. Possible paths are to approve a documented CC BY-SA/GFDL plan after
 review, use a source with explicit training/artifact rights, or commission original
 text. Existing project samples and broad permission to develop code do not settle
 third-party text rights. Synthetic pairs are not human-reviewed annotations.
+
+## Accepted restricted acquisition plan
+
+`LocalDoc/AzTC-full` revision `4ea07271d4a2c9746759547264a5e4310bc2956e`
+declares CC BY 4.0 in its publisher card. The owner asked to proceed with the
+reviewable plan on 2026-10-07. Preserve LocalDoc/dataset attribution, collection
+labels and applicable original notices. Wikipedia and unidentified/ambiguous
+labels remain quarantined, not automatically relicensed. Accepted labels and
+the unmodified card are recorded in `docs/stage1/collection/`.
+Source-specific copyright grants and linguistic correctness are not certified
+by this engineering collection. Any newly encountered label is excluded unless
+its separate provenance/use plan is documented; inaccessible shards stop work.
 
 ## Exact input contract
 

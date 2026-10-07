@@ -1,0 +1,159 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 20261007,
+    "unit": "fresh process (cold), trial/document (warm/novel)",
+    "confidence": 0.95
+  },
+  "cold": {
+    "importMs": {
+      "value": 4693.00982,
+      "ci95": [
+        3942.860712,
+        5144.175367
+      ]
+    },
+    "firstMs": {
+      "value": 449.8722705,
+      "ci95": [
+        381.6695972500001,
+        511.8710390000001
+      ]
+    },
+    "importAndFirstMs": {
+      "value": 5141.1580665,
+      "ci95": [
+        4293.194345000001,
+        5780.559039000001
+      ]
+    },
+    "heapDeltaBytes": {
+      "value": 184885672,
+      "ci95": [
+        184420256,
+        189888512
+      ]
+    },
+    "rssBytes": {
+      "value": 349997056,
+      "ci95": [
+        347512832,
+        354037760
+      ]
+    }
+  },
+  "coldTrials": 10,
+  "policies": {
+    "default": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 95.85319299999901,
+              "ci95": [
+                72.28905300000042,
+                127.83711100000073
+              ]
+            },
+            "p95Ms": {
+              "value": 371.4535057999979,
+              "ci95": [
+                129.57602229999975,
+                879.2245849999999
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 710.5211960000015,
+              "ci95": [
+                545.9756039999993,
+                1086.576481
+              ]
+            },
+            "p95Ms": {
+              "value": 1829.5269512999985,
+              "ci95": [
+                969.2980483999979,
+                2357.822068999998
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 3.5526059800000076,
+            "ci95": [
+              2.7298780199999966,
+              5.432882405
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 9.147634756499992,
+            "ci95": [
+              4.84649024199999,
+              11.78911034499999
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 467.85031199999503,
+              "ci95": [
+                383.05717800000275,
+                544.530313999996
+              ]
+            },
+            "p95Ms": {
+              "value": 664.5244669999956,
+              "ci95": [
+                551.3861704999973,
+                675.7040409999972
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 4344.482152000004,
+              "ci95": [
+                3768.5755149999895,
+                4728.485658999998
+              ]
+            },
+            "p95Ms": {
+              "value": 5554.9932275,
+              "ci95": [
+                4817.661407199999,
+                5701.304879000003
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 4.827202391111116,
+            "ci95": [
+              4.187306127777767,
+              5.253872954444442
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 6.1722146972222225,
+            "ci95": [
+              5.352957119111109,
+              6.334783198888892
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    }
+  },
+  "measurementScope": "Node process TS imports and synchronous correction, not real browser/Worker startup or downloaded asset timings."
+}

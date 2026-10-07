@@ -75,3 +75,16 @@ The leakage gate stores its exact SHA-256 keys in compact binary form and batche
 per-sentence SQL lookups. Sentence keys and ngram keys have distinct prefixes.
 An equivalence test compares cross-split collision counts to the original SQL
 algorithm; no overlap rule, minimum or frozen dataset is relaxed.
+
+For a full approved corpus, preparation accepts `--workers 6`. The queue is bounded
+to 1,024 rows, output order is preserved, and each seed derives from the unchanged
+document ID and sentence index. Unit tests compare the complete file hashes and
+noise counts of serial and parallel runs. A 5,000-row source-text sample also
+produced identical pair objects: 1,131.53 ms serial versus 328.03 ms with six workers
+including pool startup. This is offline noise-generation timing, not model quality
+or browser performance; extrapolating it to the full pipeline is unsupported.
+
+The archived `latency.json` was measured while collection was running. CPU, page
+cache and I/O contention make it an uncontrolled comparison to the original
+baseline; no application speed change is claimed. A final isolated measurement
+is required before declaring any performance gate passed.

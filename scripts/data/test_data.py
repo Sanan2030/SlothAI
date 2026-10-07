@@ -68,6 +68,9 @@ class DataTests(unittest.TestCase):
             sources.write_text(json.dumps(metadata))
             manifest = prepare(corpus, sources, root / 'out')
             self.assertEqual(manifest['cleanSentences'], 3)
+            parallel = prepare(corpus, sources, root / 'parallel', workers=2)
+            self.assertEqual(manifest['files'], parallel['files'])
+            self.assertEqual(manifest['noise'], parallel['noise'])
             for path in (root / 'out').glob('*-pairs.jsonl'):
                 for line in path.read_text().splitlines():
                     pair = json.loads(line)

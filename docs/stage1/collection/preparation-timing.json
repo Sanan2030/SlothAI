@@ -1,0 +1,7 @@
+{
+  "rows": 5000,
+  "serialMs": 1131.5336719999323,
+  "sixWorkersMsIncludingStartup": 328.0323330000101,
+  "outputsIdentical": true,
+  "scope": "Offline synthetic-noise generation only, real source text sample; not inference latency, linguistic accuracy or gate."
+}

@@ -2,6 +2,7 @@
 import argparse
 from collections import Counter
 from contextlib import ExitStack
+from concurrent.futures import ProcessPoolExecutor
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -14,7 +15,14 @@ from common import MINIMUM_SENTENCES, normalized, read_jsonl, sha256, source_ass
 from noise import corrupt, pair_seed, KINDS
 
 
-def _prepare(input_path, sources_path, output):
+def make_pair(job):
+    row, seed = job
+    return corrupt(row['text'], seed, protected_terms=row['protectedTerms'])
+
+
+def _prepare(input_path, sources_path, output, workers=1):
+    if not 1 <= workers <= 8:
+        raise ValueError('workers must be 1–8')
     metadata = json.loads(Path(sources_path).read_text())
     sources = metadata.get('sources', [])
     if not sources or len({s['id'] for s in sources}) != len(sources):
@@ -45,6 +53,22 @@ def _prepare(input_path, sources_path, output):
         db.execute('CREATE TABLE documents (id TEXT PRIMARY KEY)')
         clean = {split: stack.enter_context((output / f'{split}.jsonl').open('w', encoding='utf-8')) for split in ('train', 'validation', 'test')}
         pairs = {split: stack.enter_context((output / f'{split}-pairs.jsonl').open('w', encoding='utf-8')) for split in clean}
+        pool = stack.enter_context(ProcessPoolExecutor(max_workers=workers)) if workers > 1 else None
+        pending = []
+
+        def flush():
+            # Bound queued work and preserve source/input order and per-row seeds.
+            jobs = [(row, seed) for _, row, seed in pending]
+            results = pool.map(make_pair, jobs, chunksize=32) if pool else map(make_pair, jobs)
+            for (split, row, _), pair in zip(pending, results):
+                clean[split].write(json.dumps(row, ensure_ascii=False) + '\n')
+                pairs[split].write(json.dumps({**row, **pair, 'errorOrigin': 'synthetic'}, ensure_ascii=False) + '\n')
+                counts[split] += 1
+                source_sentences[row['sourceId']] += 1
+                requested[pair['requestedCategory']] += 1
+                realized[pair['category']] += 1
+            pending.clear()
+
         for document in read_jsonl(input_path):
             source_id, document_id = document.get('sourceId'), document.get('documentId')
             if source_id not in by_id or not isinstance(document_id, str) or not document_id:
@@ -90,15 +114,12 @@ def _prepare(input_path, sources_path, output):
                     protected.append(first_word.group())
                 row = {'id': f'{document_id}:{at}', 'documentId': document_id, 'sourceId': source_id,
                        'text': text, 'protectedTerms': list(dict.fromkeys(protected))}
-                clean[split].write(json.dumps(row, ensure_ascii=False) + '\n')
-                pair = corrupt(text, pair_seed(20261007, document_id, at), protected_terms=row['protectedTerms'])
-                pairs[split].write(json.dumps({**row, **pair, 'errorOrigin': 'synthetic'}, ensure_ascii=False) + '\n')
-                counts[split] += 1
-                source_sentences[source_id] += 1
-                requested[pair['requestedCategory']] += 1
-                realized[pair['category']] += 1
+                pending.append((split, row, pair_seed(20261007, document_id, at)))
+                if len(pending) >= 1024:
+                    flush()
             if sum(source_counts.values()) % 1000 == 0:
                 db.commit()
+        flush()
         db.commit()
         for source in sources:
             if source_hashes[source['id']].hexdigest() != source['sha256']:
@@ -117,7 +138,7 @@ def _prepare(input_path, sources_path, output):
     return manifest
 
 
-def prepare(input_path, sources_path, output):
+def prepare(input_path, sources_path, output, workers=1):
     # Late integrity failures leave no accepted/partially built output directory.
     output = Path(output)
     if output.exists() and any(output.iterdir()):
@@ -125,7 +146,7 @@ def prepare(input_path, sources_path, output):
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.corpus-staging-', dir=output.parent) as temporary:
         staged = Path(temporary) / 'prepared'
-        manifest = _prepare(input_path, sources_path, staged)
+        manifest = _prepare(input_path, sources_path, staged, workers)
         if output.exists():
             output.rmdir()  # Only a still-empty directory can be replaced.
         os.replace(staged, output)
@@ -137,5 +158,6 @@ if __name__ == '__main__':
     parser.add_argument('corpus')
     parser.add_argument('sources')
     parser.add_argument('output')
+    parser.add_argument('--workers', type=int, default=1)
     args = parser.parse_args()
-    print(json.dumps(prepare(args.corpus, args.sources, args.output), ensure_ascii=False))
+    print(json.dumps(prepare(args.corpus, args.sources, args.output, args.workers), ensure_ascii=False))
