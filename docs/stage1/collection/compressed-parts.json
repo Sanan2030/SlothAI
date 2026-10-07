@@ -1,0 +1,46 @@
+{
+  "parts": [
+    {
+      "file": "train.jsonl.gz",
+      "bytes": 269104627,
+      "sha256": "c293e89eb9bc534c9d63ea727ff48d93c93bb9552d5eaf4e5e228114f12504dd",
+      "uncompressedFile": "train.jsonl"
+    },
+    {
+      "file": "validation.jsonl.gz",
+      "bytes": 71054440,
+      "sha256": "d84e14fe7eb4cf25bbffd955ec59d270e1749f7aa78da3a9ef874249572f38e1",
+      "uncompressedFile": "validation.jsonl"
+    },
+    {
+      "file": "test.jsonl.gz",
+      "bytes": 50564464,
+      "sha256": "6a3ea96190cb6049ccce937d08359fe2b892fe019e1e55f3e28f1f6d233fc5f8",
+      "uncompressedFile": "test.jsonl"
+    },
+    {
+      "file": "train-pairs.jsonl.gz",
+      "bytes": 372247406,
+      "sha256": "cca8d983db30d86a8b71e184505b283eabf5c2e8b20eccd6ec3761f6fb175f69",
+      "uncompressedFile": "train-pairs.jsonl"
+    },
+    {
+      "file": "validation-pairs.jsonl.gz",
+      "bytes": 102510514,
+      "sha256": "338af977d90e7f612c275d7548878556b4a660f123b7fd05fb195a1d0074b6da",
+      "uncompressedFile": "validation-pairs.jsonl"
+    },
+    {
+      "file": "test-pairs.jsonl.gz",
+      "bytes": 69911769,
+      "sha256": "e201b5edca246614732b9f0bf68df2f91d742c2098c9aa557356286a54e759e4",
+      "uncompressedFile": "test-pairs.jsonl"
+    }
+  ],
+  "elapsedSeconds": 22.651,
+  "cleanSentences": 5000000,
+  "syntheticPairs": 5000000,
+  "trainingStarted": false,
+  "gate": "pending; see final separate gate report",
+  "format": "Each file is a standalone gzip JSONL stream. Decompress into az-v1 alongside the original MANIFEST.json to rerun the gate."
+}

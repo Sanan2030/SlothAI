@@ -1,0 +1,22 @@
+[
+  {
+    "command": "npm run gold:check",
+    "exitCode": 0,
+    "elapsedSeconds": 39.131
+  },
+  {
+    "command": "npm run gold:exact",
+    "exitCode": 0,
+    "elapsedSeconds": 51.525
+  },
+  {
+    "command": "npm run local-ai:fresh:check",
+    "exitCode": 0,
+    "elapsedSeconds": 10.118
+  },
+  {
+    "command": "npm run quality:priorities",
+    "exitCode": 0,
+    "elapsedSeconds": 9.03
+  }
+]

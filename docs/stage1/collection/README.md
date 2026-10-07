@@ -119,3 +119,67 @@ node_modules symlink was outside Turbopack's filesystem root; copying identical
 installed dependencies into a physical directory resolved it without tracked
 application/configuration changes. `checks.json` retains the failed attempt and
 successful retry; retry duration was not measured.
+
+## Unchanged editor quality and release checks
+
+`npm run eval:phase0` and `npm run eval:ablation` reproduce the previously
+published quality and ablation JSON byte for byte. The runtime, weights and frozen
+references are unchanged. Training on the acquired text has not occurred.
+
+| Measure | Baseline | After acquisition |
+| --- | ---: | ---: |
+| Phase0 holdout exact | 393/500 | 393/500 |
+| Holdout word recall | 83.125% | 83.125% |
+| No-harm changed sentences (including punctuation) | 6/2,000 | 6/2,000 |
+| No-harm harmed words | 5/8,000 | 5/8,000 |
+| No-harm target-only probe, wrapper excluded | 5/2,000 | 5/2,000 |
+| Editor JSON bytes | 5,634,256 | 5,634,256; growth 0 KiB |
+
+The current no-harm word FP is 0.0625%, above the later model acceptance target
+of 0.05%; corpus acquisition does not resolve this. The target-only probe has a
+different denominator and must not be presented as the full-text word metric.
+The holdout is assistant-authored, not human-reviewed. Neither these references
+nor their metrics were used for acquisition or noise choices.
+
+`release-checks.json` records successful `gold:check`, `gold:exact`,
+`local-ai:fresh:check`, and `quality:priorities` commands. Concurrent data preparation
+makes their elapsed times unsuitable for app performance claims.
+
+## Prepared source splits and reproducible synthetic pairs
+
+`MANIFEST.json` records exactly 5,000,000 accepted clean rows and 5,000,000
+synthetic pairs; preparation rejected no retained collection sentence. Source-group
+counts are train 3,287,357, validation 1,082,532 and test 630,111. These are actual
+sentence ratios, not a claim of exactly 80/10/10 sentence proportions.
+
+Seed 20261007 is derived per document/sentence. Requested identity count is
+1,001,052 (approximately 20%); realized identity is 1,058,542 (21.17084%) because
+ineligible edits fall back to unchanged input. The other 14 requested kinds have
+individual realized counts and shares in the manifest. Names/technical/protected
+spans are conservatively preserved. Pair errors are synthetic, not human-reviewed.
+The source text remains mechanically filtered, not certified grammatical ground
+truth. News/book genre bias and residual OCR/source spelling errors remain.
+
+`compressed-parts.json` records all six standalone gzip sizes/hashes; each was
+saved successfully. Decompress each `.jsonl.gz` into the same `az-v1` directory
+alongside the original `MANIFEST.json` to verify its uncompressed hashes and rerun
+the gate. The larger combined tar failed to save; it is not the delivery route.
+`archive.json` records that failed persistence attempt rather than claiming it
+succeeded. Gzip compression is packaging, not quantization or a trained model.
+
+The full gate is still running and covers both clean targets and generated noisy
+inputs, protected-span preservation, file alignment/integrity, source/document
+split boundaries, normalized cross-split sentence/8-gram collisions, and phase0
+leakage. No model training has begun. Only `gate.json` with status `passed` may
+authorize the next data-dependent stage; the clean-only audit alone may not.
+
+## Rejected audit-index batching trial
+
+Command: `python3 scripts/data/benchmark-gate.py --rows=10000 --repetitions=3 --out=docs/stage1/collection/gate-index-timing.json`.
+The benchmark uses seeded synthetic hash keys with intentional cross-split
+collisions; it does not read phase0, the corpus or model outputs. Collision counts
+and first-owner hashes matched in all six runs. Original median was 1,182.79 ms;
+the trial's median was 1,329.17 ms, so the batching trial was **not applied**.
+The production `gate.py` remains unchanged. This is an audit-index microbenchmark
+under concurrent load, not a claim about full-gate or application performance.
+The rejected implementation remains only inside the benchmark for reproduction.

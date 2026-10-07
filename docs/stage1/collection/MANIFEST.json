@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-07T12:31:03.665815+00:00",
+  "inputSHA256": "5c28420ea979c411f52902cd217c165145eb1c8b6f7045fca58bf26d2058e7f5",
+  "minimumCleanSentences": 5000000,
+  "cleanSentences": 5000000,
+  "sources": [
+    {
+      "id": "aztc-ANL",
+      "name": "LocalDoc/AzTC-full / ANL",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "2e628c6b42ff2f8be3f3e4f56e1537860d05694823883e719a5ca8ab744165af",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "ANL",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-apasport",
+      "name": "LocalDoc/AzTC-full / apasport",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "77e64020d4e1cd8942df2940e6c604d2ba4e02b96166bea0082109bfece2636f",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "apasport",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-axar",
+      "name": "LocalDoc/AzTC-full / axar",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "1f5f3a2ddf592ab28019a57ac29d8e071e930565c7d574693b7e2b87881f3f30",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "axar",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-marja",
+      "name": "LocalDoc/AzTC-full / marja",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "053676955913d62f0dfc91ac317e19e938edf026e442b3247692f50c715ff0ba",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "marja",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-medeniyyet",
+      "name": "LocalDoc/AzTC-full / medeniyyet",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "13d8d7a1553ee301728848ebd291952601a65081343b51530c87bf8f465862e3",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "medeniyyet",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    },
+    {
+      "id": "aztc-musavat",
+      "name": "LocalDoc/AzTC-full / musavat",
+      "url": "https://huggingface.co/datasets/LocalDoc/AzTC-full",
+      "license": "CC-BY-4.0 (dataset publisher declaration; original notices retained)",
+      "licenseEvidence": "https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md",
+      "collectedAt": "2026-10-07T11:29:40.011221+00:00",
+      "sha256": "9fadfeb981dd2a9c19ed2e91563c0775ae0975679b783a98f50ecea166407ac0",
+      "approval": {
+        "status": "approved",
+        "by": "repository-owner",
+        "evidence": "Conversation 2026-10-07: owner instructed \"5 milyon təsdiqlənmiş təmiz cümlə hələ hazırla\" and \"davam ele\" after the pinned source/use plan was presented. Authorization is for the restricted proposed acquisition plan, not relicensing underlying third-party works."
+      },
+      "provenanceLabel": "musavat",
+      "recordUnit": "document-or-passage; source group is the split boundary"
+    }
+  ],
+  "sourceDocumentCounts": {
+    "aztc-ANL": 27808,
+    "aztc-apasport": 130571,
+    "aztc-axar": 183892,
+    "aztc-marja": 19526,
+    "aztc-medeniyyet": 59101,
+    "aztc-musavat": 45666
+  },
+  "sourceLineCounts": {
+    "aztc-ANL": 27808,
+    "aztc-apasport": 130571,
+    "aztc-axar": 183892,
+    "aztc-marja": 19526,
+    "aztc-medeniyyet": 59101,
+    "aztc-musavat": 45666
+  },
+  "sourceAcceptedSentenceCounts": {
+    "aztc-ANL": 1250000,
+    "aztc-apasport": 1082532,
+    "aztc-axar": 1250000,
+    "aztc-marja": 118454,
+    "aztc-medeniyyet": 668903,
+    "aztc-musavat": 630111
+  },
+  "assignments": {
+    "aztc-axar": "train",
+    "aztc-ANL": "train",
+    "aztc-medeniyyet": "train",
+    "aztc-marja": "train",
+    "aztc-apasport": "validation",
+    "aztc-musavat": "test"
+  },
+  "splitCounts": {
+    "train": 3287357,
+    "validation": 1082532,
+    "test": 630111
+  },
+  "rejectedCounts": {},
+  "noise": {
+    "seed": 20261007,
+    "pairs": 5000000,
+    "origin": "synthetic; identity prior 20%, other requested kinds uniform, not fitted to evaluation",
+    "requestedCounts": {
+      "identity": 1001052,
+      "diacritics_all": 285230,
+      "diacritics_partial": 286282,
+      "qk_xh": 285489,
+      "deletion": 285921,
+      "insertion": 285103,
+      "transpose": 285002,
+      "keyboard_az": 286822,
+      "keyboard_ascii": 285819,
+      "digraph": 285593,
+      "space_split": 285518,
+      "space_join": 285882,
+      "hyphen": 285841,
+      "punctuation": 284918,
+      "case": 285528
+    },
+    "realizedCounts": {
+      "identity": 1058542,
+      "diacritics_all": 284634,
+      "diacritics_partial": 285726,
+      "qk_xh": 275437,
+      "deletion": 285661,
+      "insertion": 285015,
+      "transpose": 284828,
+      "keyboard_az": 286726,
+      "keyboard_ascii": 285719,
+      "digraph": 244008,
+      "space_split": 285018,
+      "space_join": 285093,
+      "hyphen": 285029,
+      "punctuation": 284918,
+      "case": 283646
+    },
+    "realizedShares": {
+      "identity": 0.2117084,
+      "diacritics_all": 0.0569268,
+      "diacritics_partial": 0.0571452,
+      "qk_xh": 0.0550874,
+      "deletion": 0.0571322,
+      "insertion": 0.057003,
+      "transpose": 0.0569656,
+      "keyboard_az": 0.0573452,
+      "keyboard_ascii": 0.0571438,
+      "digraph": 0.0488016,
+      "space_split": 0.0570036,
+      "space_join": 0.0570186,
+      "hyphen": 0.0570058,
+      "punctuation": 0.0569836,
+      "case": 0.0567292
+    }
+  },
+  "files": {
+    "test-pairs.jsonl": {
+      "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee",
+      "bytes": 502607898
+    },
+    "test.jsonl": {
+      "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85",
+      "bytes": 246883337
+    },
+    "train-pairs.jsonl": {
+      "sha256": "a9026fd430c6da4319f3fe247a902c68764399cb57123dd5abb10b398fad79b6",
+      "bytes": 2670564756
+    },
+    "train.jsonl": {
+      "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9",
+      "bytes": 1299323896
+    },
+    "validation-pairs.jsonl": {
+      "sha256": "fea16ccd38b14269c01d1b5b4b70c5a839096c76fed68a4872d59915962b3843",
+      "bytes": 771523231
+    },
+    "validation.jsonl": {
+      "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717",
+      "bytes": 393989461
+    }
+  },
+  "overlapStatus": "not-checked",
+  "gate": "blocked-until-overlap-and-minimum-check",
+  "limitations": [
+    "Fallback segmentation is heuristic and source-declared az is not a trained language-ID filter.",
+    "Casefolded near-duplicates and split ngram collisions must be checked separately.",
+    "No training or threshold selection occurs in this builder."
+  ]
+}

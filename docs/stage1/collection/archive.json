@@ -1,0 +1,11 @@
+{
+  "file": "az-corpus-5000000-splits-and-pairs.tar.gz",
+  "bytes": 935405330,
+  "sha256": "87e40df11460c335740118affc7921a560a6df72b448446c3ba4c1fd034a15e8",
+  "elapsedSeconds": 57.943,
+  "cleanSentences": 5000000,
+  "syntheticPairs": 5000000,
+  "trainingStarted": false,
+  "scope": "Immutable prepared source-group splits and deterministic synthetic pairs; use only if the separately supplied final data gate passes.",
+  "availability": "Large tar was not saved (prepare_uploads failed); six standalone gzip parts were saved successfully instead."
+}

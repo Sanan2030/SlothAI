@@ -1,0 +1,48 @@
+{
+  "rows": 10000,
+  "repetitions": 3,
+  "seed": 20261007,
+  "sqliteVersion": "3.53.1",
+  "ownersAndCollisionCountsEqual": true,
+  "medianMs": {
+    "original": 1182.7912509997986,
+    "batched": 1329.1721079995114
+  },
+  "runs": {
+    "original": [
+      {
+        "ms": 1951.7123749992606,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      },
+      {
+        "ms": 1182.7912509997986,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      },
+      {
+        "ms": 1151.9264640000983,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      }
+    ],
+    "batched": [
+      {
+        "ms": 1901.909507999335,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      },
+      {
+        "ms": 1329.1721079995114,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      },
+      {
+        "ms": 1023.1786519998423,
+        "collisions": 25758,
+        "ownershipSHA256": "58d8d0b8e15def89f56aa4f4143ff71b1802e5112a1c078cb58724a3b4d396c3"
+      }
+    ]
+  },
+  "scope": "Synthetic audit-index microbenchmark with intentional split collisions; not corpus leakage, full-gate throughput, app latency or model quality."
+}
