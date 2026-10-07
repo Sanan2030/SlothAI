@@ -1,4 +1,4 @@
-# Stage 1 — licensed data preparation, blocked training gate
+# Stage 1 — source-approved corpus preparation and diagnostics
 
 Base: `9bd4531fa05fb64866cfbedd588bdeadc253c483`. Branch:
 `phase1-licensed-data`. No browser/editor runtime, model weights, thresholds,
@@ -6,6 +6,19 @@ protected spans, logging, frozen phase0/gold references, or baselines changed.
 The owner selected a five-million-clean-sentence minimum. **Stage 1 has not passed.**
 Stages 2–7 have not started. This is a draft infrastructure/diagnosis PR, not a
 claim that a new trained language model exists.
+
+## Current acquisition update — 2026-10-07
+
+Exactly 5,000,000 mechanically filtered unique source sentences and 5,000,000
+deterministic synthetic pairs are now prepared. Owner acceptance concerns the
+pinned publisher CC BY 4.0 declaration/restricted use plan, not independently
+verified underlying-publication rights or human linguistic review. Sources,
+hashes, actual splits and noise shares are in `collection/README.md` and
+`collection/MANIFEST.json`. The clean-only phase0 audit passed 5,000,000 rows
+with zero overlaps; the full clean/noisy/cross-split gate is still running.
+Training has not begun; do not advance to Stage 2 until `collection/gate.json`
+is a full pass. Earlier empty-input figures below are historical infrastructure
+measurements, not the current collection size.
 
 ## Changes
 
@@ -21,7 +34,7 @@ claim that a new trained language model exists.
   exact normalized sentence and 8-word ngram audits against phase0 and across
   splits. Both clean targets and noisy inputs are audited. The builder never
   reads phase0; only final evaluation/firewall checks do.
-- Five stdlib unit tests and a CI step. Samples are assistant-authored unit
+- Nine stdlib unit tests and a CI step. Samples are assistant-authored unit
   fixtures; mock source approvals are not real source approvals.
 - npm evaluation aliases and alternate output directories preserve phase0 reports.
   Per-target candidate/ranker/fallback diagnostics and a scoped CPU sample report.
@@ -29,9 +42,11 @@ claim that a new trained language model exists.
 `docs/data-licenses.md` defines the input files and unresolved owner decisions.
 The Hugging Face Wikipedia metadata request returned HTTP 200 and declared
 CC BY-SA 3.0/GFDL. This establishes metadata access, not corpus size, rights to
-train/distribute weights, or owner approval. No new corpus has been downloaded
-or trained. Approved clean rows: **0 / 5,000,000**. Overlap is **not exercised**,
-not a fictitious zero-overlap pass. `npm run data:gate` exits 2 intentionally.
+train/distribute weights, or owner approval. At the initial infrastructure measurement, no new corpus had been downloaded
+or trained: the archived root template/gate recorded **0 / 5,000,000** and
+overlap **not exercised**. That is a historical failed empty-input gate, not
+the current collected corpus. `npm run data:gate` now verifies `data/corpus/az-v1`
+and writes `collection/gate.json`; missing corpus files still fail closed.
 
 ## Diagnosis of the 12 targets
 
@@ -110,7 +125,7 @@ ASCII word soup, not browser download/Worker timing or natural prose.
 | Fixture output changes / idempotency failures | 0 / 0 | 0 / 0 (4861 compared) |
 | Runtime model/editor JSON | 5,634,256 bytes | Unchanged; growth 0 KB |
 | New trained models | None | None |
-| Approved clean sentences | No qualifying corpus | 0 / 5,000,000 |
+| Clean sentences at initial infrastructure baseline | No qualifying corpus | Historical 0; current collected/prepared 5,000,000, full gate pending |
 
 The no-harm probe rate **fails the new ≤0.05% gate already at baseline**. It
 includes proper-name/case disputes; these references remain frozen. The actual
@@ -132,7 +147,7 @@ npm run eval:latency      # evaluation/latency.json; 15 trials, 10 cold processe
 npm run eval:targets      # evaluation/targets.json
 npm run eval:fixtures -- --compare=/tmp/phase0-snapshot.json
 npm run data:test
-npm run data:gate         # expected exit 2, gate.json
+npm run data:gate         # current az-v1 data gate; requires the separately saved corpus files
 ```
 
 The fixture comparison input is an earlier local baseline snapshot, not a new

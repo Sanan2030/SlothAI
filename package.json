@@ -73,7 +73,7 @@
     "eval:ablation": "node --import tsx scripts/eval/ablation.ts --out=docs/stage1/evaluation",
     "eval:latency": "node --import tsx scripts/eval/latency.ts --policy=default --out=docs/stage1/evaluation/latency.json",
     "data:test": "python3 -m unittest discover -s scripts/data -p test_*.py",
-    "data:gate": "python3 scripts/data/gate.py data/corpus",
+    "data:gate": "python3 scripts/data/gate.py data/corpus/az-v1 --out=docs/stage1/collection/gate.json",
     "eval:targets": "node --import tsx scripts/eval/targets.ts",
     "eval:fixtures": "node --import tsx scripts/eval/snapshot.ts --out=docs/stage1/evaluation"
   },

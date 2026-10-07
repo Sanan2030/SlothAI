@@ -17,9 +17,9 @@ do not repeatedly filter against held-out texts to engineer a passing result.
 | Option | Required evidence | Current decision |
 | --- | --- | --- |
 | Owner-authored or commissioned Azerbaijani text | Rights/consent to train and distribute derived artifacts, collection date, document/source IDs | Not supplied |
-| Public-domain or explicitly permissive corpus | Actual corpus license and scope, source URLs, attribution obligations, provenance and hashes | Not supplied |
+| Public-domain or explicitly permissive corpus | Actual corpus license and scope, source URLs, attribution obligations, provenance and hashes | Restricted pinned AzTC-full publisher-declaration plan accepted; underlying rights not independently certified |
 | Wikipedia CC BY-SA/GFDL material | Dataset-specific license evidence, attribution plan; owner/legal decision on training and distributed weights | Pending, not approved |
-| News, CC-100/OSCAR/mC4 or GitHub-hosted text | Underlying text rights and redistribution/training scope; a scraper/code license is insufficient | Pending, not approved |
+| Other news, CC-100/OSCAR/mC4 or GitHub-hosted text outside the accepted AzTC-full plan | Underlying text rights and redistribution/training scope; a scraper/code license is insufficient | Pending, not approved |
 
 This document makes no legal determination about whether trained weights are
 adaptations. Possible paths are to approve a documented CC BY-SA/GFDL plan after
@@ -87,12 +87,17 @@ python3 scripts/data/check-overlap.py data/corpus/az-v1/train.jsonl --out=docs/s
 python3 scripts/data/gate.py data/corpus/az-v1
 ```
 
-`npm run data:gate` defaults to the checked-in blocked manifest.
+`npm run data:gate` verifies the separately prepared `data/corpus/az-v1` corpus.
+The checked-in empty root manifest remains a historical input template; it is
+not the current five-million corpus. Missing files fail closed.
 The gate checks clean targets and noisy inputs in all three splits against phase0; all source approvals, file hashes,
 clean/pair alignment, source/document boundaries, and normalized sentence/8-gram
 collisions across splits. It fails on an empty overlap audit. SQLite bounds memory
-for cross-split indexes; storage/time at five million sentences is not measured.
-No corpus is downloaded or training started by these scripts.
+for cross-split indexes. Actual prepared-file sizes/hashes are recorded in
+`docs/stage1/collection/MANIFEST.json`; full-gate timing remains incomplete.
+Preparation/audit scripts do not download or train; the separate pinned collector
+has collected exactly five million mechanically filtered sentences. The clean-only
+phase0 audit passed with zero overlaps; the full clean/noisy/split audit is pending.
 
 Preparation uses exact deduplication, a fixed synthetic error prior, and seeded
 pairs. Accepted lengths are 4–80 words, at most 1000 characters, with terminal
