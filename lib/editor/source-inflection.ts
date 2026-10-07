@@ -17,6 +17,11 @@ const last = (stem: string) => stem.match(/[aəeıioöuü]/gu)?.at(-1) ?? 'a';
 const low = (stem: string) => /[əeiöü]/u.test(last(stem)) ? 'ə' : 'a';
 const high = (stem: string) => ({ a: 'ı', ı: 'ı', o: 'u', u: 'u', ö: 'ü', ü: 'ü', e: 'i', ə: 'i', i: 'i' })[last(stem)]!;
 const vowelEnd = (stem: string) => /[aəeıioöuü]$/u.test(stem);
+// Lexical inflection class: su uses a y buffer in the singular possessive
+// paradigm and genitive/accusative cases (suyum, suyun, suyu), not *sum/susu.
+// Classify the lemma, rather than listing individual input/output spellings.
+const yBufferNouns = new Set(['su']);
+export const usesLexicalYBuffer = (lemma: string): boolean => yBufferNouns.has(lemma);
 const soften = (stem: string, suffix: string) => /^[aəeıioöuü]/u.test(suffix) && (stem.match(/[aəeıioöuü]/gu)?.length ?? 0) >= 2
   ? stem.replace(/k$/u, 'y').replace(/q$/u, 'ğ') : stem;
 const compatible = (raw: string, target: string) => [...raw].every((letter, at) => !/[əçğıöşü]/u.test(letter) || target[at] === letter);
@@ -37,8 +42,10 @@ export class SourceInflectionEngine {
     add(lemma, {});
     if (stem.pos === 'noun') for (const plural of [false, true]) {
       const base = lemma + (plural ? 'l' + low(lemma) + 'r' : '');
+      const yBuffer = !plural && yBufferNouns.has(lemma);
       for (const owner of [0, 1, 2, 3] as const) {
-        const possession = owner === 0 ? '' : owner === 3 ? (vowelEnd(base) ? 's' : '') + high(base)
+        const possession = owner === 0 ? '' : yBuffer ? 'y' + high(base) + (owner === 3 ? '' : owner === 1 ? 'm' : 'n')
+          : owner === 3 ? (vowelEnd(base) ? 's' : '') + high(base)
           : (vowelEnd(base) ? '' : high(base)) + (owner === 1 ? 'm' : 'n');
         const owned = soften(base, possession) + possession;
         const alternatives = [owned];
@@ -46,9 +53,9 @@ export class SourceInflectionEngine {
         // invent that subclass from the suffix alone (şöbə -> şöbəsi remains).
         if (owner === 3 && !plural && vowelEnd(base) && this.attested(base + 'y' + high(base))) alternatives.push(base + 'y' + high(base));
         for (const possessed of alternatives) {
-          const endings = { nominative: '', genitive: (vowelEnd(possessed) ? 'n' : '') + high(possessed) + 'n',
+          const endings = { nominative: '', genitive: (yBuffer && !owner ? 'y' : vowelEnd(possessed) ? 'n' : '') + high(possessed) + 'n',
             dative: (owner === 3 ? 'n' : vowelEnd(possessed) ? 'y' : '') + low(possessed),
-            accusative: (owner === 3 || vowelEnd(possessed) ? 'n' : '') + high(possessed),
+            accusative: (yBuffer && !owner ? 'y' : owner === 3 || vowelEnd(possessed) ? 'n' : '') + high(possessed),
             locative: (owner === 3 ? 'n' : '') + 'd' + low(possessed),
             ablative: (owner === 3 ? 'n' : '') + 'd' + low(possessed) + 'n' } as const;
           for (const [grammaticalCase, ending] of Object.entries(endings)) add(soften(possessed, ending) + ending, {

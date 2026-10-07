@@ -1,7 +1,7 @@
 import { isClosedFunctionForm } from './function-word-forms';
 import type { MorphologyEngine } from './contracts/morphology';
 import boundedLexicalArtifact from './neural/bounded-model.json';
-import { SourceInflectionEngine } from './source-inflection';
+import { SourceInflectionEngine, usesLexicalYBuffer } from './source-inflection';
 import { reviewedSpelling } from './reviewed-spelling';
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
@@ -653,13 +653,21 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   if (isClosedFunctionForm(word) || ambiguous.has(fold(word)) || fold(word) === 'seher') return word;
   const prior = beforeSourceExpansion(services);
   const sourceRows = sourceInflections.candidates(word);
+  // Lexically classified exceptions outrank regular suffix guesses. This
+  // preserves their entire paradigm, including longer possessed case chains.
+  if (sourceRows.some(row => row.surface === word.toLocaleLowerCase('az-AZ') && usesLexicalYBuffer(row.lemma))) return word;
+  const existing = restoreEstablishedWord(word, prior);
+  const wholeSurface = chooseSpelling(word, dictionaryCandidates(word));
   // Only the established long homograph families veto a forced default sense.
   // Closed grammatical words cannot inherit a coincidental short noun analysis.
   if (!/[əçğıöşü]/iu.test(word) && new Set(sourceRows.map(row => row.surface)).size > 1
+    && !wholeSurface
     && sourceRows.some(row => row.lemma.length >= 4 && ambiguous.has(fold(row.lemma)) && !row.features.derivation?.includes('adjectival'))) return word;
-  const existing = restoreEstablishedWord(word, prior);
   if (existing !== word || isForeignTechnicalInflection(word) || isEstablishedLegacySurface(word, prior) || word.length < 3
     || technicalSpelling(word) !== undefined || /\p{Ll}\p{Lu}/u.test(word) || /^[\p{Lu}]+$/u.test(word)) return existing;
+  // Source expansion may fill a prior abstention, but must not replace an
+  // already valid source inflection with a different folded lemma (suyu/şüyü).
+  if (sourceRows.some(row => row.surface === word.toLocaleLowerCase('az-AZ'))) return word;
   // Whole-lemma attestation in the existing source-trained vocabulary is lexical
   // evidence only. It cannot decide an inflected lexical homograph's sense.
   const attested = chooseSpelling(word, new Set(sourceRows.filter(row => row.surface === row.lemma
