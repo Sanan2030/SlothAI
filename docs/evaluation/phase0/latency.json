@@ -1,0 +1,894 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 20261007,
+    "unit": "fresh process (cold), trial/document (warm/novel)",
+    "confidence": 0.95
+  },
+  "cold": {
+    "importMs": {
+      "value": 2443.2722135,
+      "ci95": [
+        2404.259212,
+        2471.017081
+      ]
+    },
+    "firstMs": {
+      "value": 214.48672250000004,
+      "ci95": [
+        210.49220825000012,
+        221.82818300000008
+      ]
+    },
+    "importAndFirstMs": {
+      "value": 2661.2954154999998,
+      "ci95": [
+        2610.494077,
+        2694.877084
+      ]
+    },
+    "heapDeltaBytes": {
+      "value": 184715896,
+      "ci95": [
+        184580952,
+        184828534.5
+      ]
+    },
+    "rssBytes": {
+      "value": 351535104,
+      "ci95": [
+        348577792,
+        355377152
+      ]
+    }
+  },
+  "coldTrials": 10,
+  "policies": {
+    "default": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 51.69636099999934,
+              "ci95": [
+                51.082186999999976,
+                53.79264200000034
+              ]
+            },
+            "p95Ms": {
+              "value": 58.569056299999914,
+              "ci95": [
+                53.18518970000041,
+                60.567227999999886
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 392.1892090000001,
+              "ci95": [
+                309.29975899999954,
+                398.1902615500002
+              ]
+            },
+            "p95Ms": {
+              "value": 443.95745129999966,
+              "ci95": [
+                398.66276800000014,
+                456.81185300000016
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.9609460450000007,
+            "ci95": [
+              1.5464987949999978,
+              1.990951307750001
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.2197872564999983,
+            "ci95": [
+              1.9933138400000008,
+              2.2840592650000007
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 214.7623730000014,
+              "ci95": [
+                205.8848569999991,
+                221.20497800000157
+              ]
+            },
+            "p95Ms": {
+              "value": 230.81299140000118,
+              "ci95": [
+                222.57136490000156,
+                232.2058079999988
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1768.612337999999,
+              "ci95": [
+                1685.005343824997,
+                1818.5277630000019
+              ]
+            },
+            "p95Ms": {
+              "value": 2100.1646224999995,
+              "ci95": [
+                1824.1302600000006,
+                2117.8808349999963
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.9651248199999989,
+            "ci95": [
+              1.8722281598055521,
+              2.0205864033333354
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.3335162472222217,
+            "ci95": [
+              2.0268114000000006,
+              2.3532009277777735
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "always": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 325.3332169999994,
+              "ci95": [
+                322.4324029999989,
+                333.59590002499925
+              ]
+            },
+            "p95Ms": {
+              "value": 360.1455669999997,
+              "ci95": [
+                333.63080600000103,
+                392.6946429999989
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 2028.875450999999,
+              "ci95": [
+                1988.015462000003,
+                2043.0796579999987
+              ]
+            },
+            "p95Ms": {
+              "value": 2312.8433654999953,
+              "ci95": [
+                2043.0796579999987,
+                2435.3010890000005
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 10.144377254999995,
+            "ci95": [
+              9.940077310000015,
+              10.215398289999994
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 11.564216827499976,
+            "ci95": [
+              10.215398289999994,
+              12.176505445000002
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1456.4818019999948,
+              "ci95": [
+                1419.706051999994,
+                1480.9061839999922
+              ]
+            },
+            "p95Ms": {
+              "value": 1528.210419499995,
+              "ci95": [
+                1476.929651299995,
+                1544.740027000007
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 9207.867627,
+              "ci95": [
+                8931.332328000019,
+                9309.944759999998
+              ]
+            },
+            "p95Ms": {
+              "value": 9669.519475599986,
+              "ci95": [
+                9334.527744900002,
+                9781.125684999992
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 10.230964029999999,
+            "ci95": [
+              9.923702586666687,
+              10.344383066666666
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 10.743910528444427,
+            "ci95": [
+              10.371697494333336,
+              10.867917427777769
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "noLocal": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 40.806289999999535,
+              "ci95": [
+                39.58153500000026,
+                45.0771850000001
+              ]
+            },
+            "p95Ms": {
+              "value": 47.345969899999545,
+              "ci95": [
+                44.8768723000001,
+                47.94669799999974
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 294.03476800000044,
+              "ci95": [
+                286.63133800000014,
+                298.6559249999991
+              ]
+            },
+            "p95Ms": {
+              "value": 322.71386879999994,
+              "ci95": [
+                298.6559249999991,
+                346.7809579999998
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.4701738400000022,
+            "ci95": [
+              1.4331566900000008,
+              1.4932796249999956
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.6135693439999996,
+            "ci95": [
+              1.4932796249999956,
+              1.733904789999999
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 175.84995200000048,
+              "ci95": [
+                170.2720019999997,
+                182.57838800000172
+              ]
+            },
+            "p95Ms": {
+              "value": 184.65361070000034,
+              "ci95": [
+                180.10824838499957,
+                184.7463740000021
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1467.3258610000012,
+              "ci95": [
+                1367.6932879999986,
+                1505.8759940000018
+              ]
+            },
+            "p95Ms": {
+              "value": 1784.4629520999995,
+              "ci95": [
+                1505.8891337000016,
+                1802.2157129999978
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.630362067777779,
+            "ci95": [
+              1.5196592088888874,
+              1.673195548888891
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.982736613444444,
+            "ci95": [
+              1.6732101485555573,
+              2.002461903333331
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "noAttention": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 51.793995999999424,
+              "ci95": [
+                49.676706999999624,
+                54.47867100000076
+              ]
+            },
+            "p95Ms": {
+              "value": 58.3639037000008,
+              "ci95": [
+                53.82922639999997,
+                64.88690200000019
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 357.794672,
+              "ci95": [
+                346.0936590000001,
+                387.0425439999999
+              ]
+            },
+            "p95Ms": {
+              "value": 395.2994589999996,
+              "ci95": [
+                387.7311387999998,
+                405.02234
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.78897336,
+            "ci95": [
+              1.7304682950000005,
+              1.9352127199999996
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.9764972949999982,
+            "ci95": [
+              1.9386556939999993,
+              2.0251117
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 208.49746400000004,
+              "ci95": [
+                206.7972090000003,
+                215.8034510000016
+              ]
+            },
+            "p95Ms": {
+              "value": 228.5709678999996,
+              "ci95": [
+                215.8034510000016,
+                232.5527519999996
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1675.6764220000005,
+              "ci95": [
+                1600.5366579999973,
+                1764.824528000001
+              ]
+            },
+            "p95Ms": {
+              "value": 1895.141553,
+              "ci95": [
+                1788.4930748000006,
+                1899.0873829999982
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.8618626911111116,
+            "ci95": [
+              1.7783740644444415,
+              1.9609161422222234
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.1057128366666666,
+            "ci95": [
+              1.9872145275555562,
+              2.11009709222222
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "noBounded": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 49.95132100000046,
+              "ci95": [
+                48.680427000000236,
+                52.08446399999957
+              ]
+            },
+            "p95Ms": {
+              "value": 54.55434240000031,
+              "ci95": [
+                51.45630429999955,
+                56.077870000000075
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 361.0185110000002,
+              "ci95": [
+                314.95942899999955,
+                368.4013639999994
+              ]
+            },
+            "p95Ms": {
+              "value": 393.3164513999998,
+              "ci95": [
+                370.67714089999953,
+                426.1763609999998
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.805092555000001,
+            "ci95": [
+              1.5747971449999978,
+              1.8420068199999968
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.966582256999999,
+            "ci95": [
+              1.8533857044999977,
+              2.130881804999999
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 207.34705699999904,
+              "ci95": [
+                204.92718800000148,
+                218.99706700000388
+              ]
+            },
+            "p95Ms": {
+              "value": 234.08221650000033,
+              "ci95": [
+                213.7626602000011,
+                234.3462180000006
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1635.693376000003,
+              "ci95": [
+                1535.8040619999992,
+                1733.3499660000016
+              ]
+            },
+            "p95Ms": {
+              "value": 1968.867432100001,
+              "ci95": [
+                1735.6299159000005,
+                1978.697376
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.8174370844444476,
+            "ci95": [
+              1.706448957777777,
+              1.9259444066666684
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.187630480111112,
+            "ci95": [
+              1.928477684333334,
+              2.19855264
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "noObserved": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 50.548915000001216,
+              "ci95": [
+                48.99347099999977,
+                52.39391499999965
+              ]
+            },
+            "p95Ms": {
+              "value": 57.86166729999977,
+              "ci95": [
+                51.66335090000002,
+                58.55311400000028
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 360.23816199999965,
+              "ci95": [
+                316.3465210000013,
+                374.904853
+              ]
+            },
+            "p95Ms": {
+              "value": 429.24043459999996,
+              "ci95": [
+                373.7280983999996,
+                434.0296679999997
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.8011908099999983,
+            "ci95": [
+              1.5817326050000065,
+              1.874524265
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.146202173,
+            "ci95": [
+              1.8686404919999982,
+              2.1701483399999986
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 210.68574499999886,
+              "ci95": [
+                208.63352099999975,
+                221.40083500000037
+              ]
+            },
+            "p95Ms": {
+              "value": 288.5562411999994,
+              "ci95": [
+                220.1676429000003,
+                380.0605309999992
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1663.1837379999997,
+              "ci95": [
+                1536.0018590000036,
+                1864.4183510000003
+              ]
+            },
+            "p95Ms": {
+              "value": 1914.6317011999988,
+              "ci95": [
+                1832.9451133999994,
+                2013.2342710000012
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.8479819311111108,
+            "ci95": [
+              1.7066687322222263,
+              2.071575945555556
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.1273685568888876,
+            "ci95": [
+              2.036605681555555,
+              2.236926967777779
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "noBoundary": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 48.143293999999514,
+              "ci95": [
+                47.807974000000286,
+                48.42814300000009
+              ]
+            },
+            "p95Ms": {
+              "value": 51.8041822000002,
+              "ci95": [
+                48.49771810000002,
+                51.98586299999988
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 354.35363899999993,
+              "ci95": [
+                290.114114,
+                376.5021710000001
+              ]
+            },
+            "p95Ms": {
+              "value": 403.24692679999976,
+              "ci95": [
+                367.0529941999999,
+                403.94973799999934
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.7717681949999997,
+            "ci95": [
+              1.4505705699999998,
+              1.8825108550000005
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.0162346339999986,
+            "ci95": [
+              1.8352649709999995,
+              2.0197486899999966
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 212.74145900000076,
+              "ci95": [
+                208.84261800000058,
+                219.39218900000196
+              ]
+            },
+            "p95Ms": {
+              "value": 226.59898470000044,
+              "ci95": [
+                216.24685027750095,
+                230.82699800000046
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1732.5388409999978,
+              "ci95": [
+                1606.5975190000026,
+                1799.7742210000015
+              ]
+            },
+            "p95Ms": {
+              "value": 1957.9210657999988,
+              "ci95": [
+                1823.6288750225017,
+                1972.4675599999973
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.9250431566666641,
+            "ci95": [
+              1.7851083544444475,
+              1.999749134444446
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.1754678508888876,
+            "ci95": [
+              2.026254305580558,
+              2.191630622222219
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    },
+    "rulesOnly": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 42.06832899999972,
+              "ci95": [
+                41.27958099999978,
+                44.224137000000155
+              ]
+            },
+            "p95Ms": {
+              "value": 81.91090639999953,
+              "ci95": [
+                44.37013110000007,
+                166.65870799999993
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 279.20803499999965,
+              "ci95": [
+                273.4070640000009,
+                290.96312202499934
+              ]
+            },
+            "p95Ms": {
+              "value": 313.37145840000005,
+              "ci95": [
+                294.02695719999963,
+                337.17614000000003
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.3960401749999982,
+            "ci95": [
+              1.3670353200000045,
+              1.4548156101249965
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.5668572920000001,
+            "ci95": [
+              1.4701347859999983,
+              1.6858807000000002
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 168.97509600000012,
+              "ci95": [
+                166.05351399999927,
+                171.26558900000055
+              ]
+            },
+            "p95Ms": {
+              "value": 187.91986139999972,
+              "ci95": [
+                175.06100479999984,
+                188.74580399999832
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 1200.2174140000025,
+              "ci95": [
+                1183.686235000001,
+                1255.0482329999995
+              ]
+            },
+            "p95Ms": {
+              "value": 1287.6811485999988,
+              "ci95": [
+                1236.5829083349993,
+                1333.6850799999993
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 1.3335749044444472,
+            "ci95": [
+              1.315206927777779,
+              1.3944980366666662
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 1.4307568317777764,
+            "ci95": [
+              1.3739810092611102,
+              1.4818723111111103
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    }
+  },
+  "measurementScope": "Node process TS imports and synchronous correction, not real browser/Worker startup or downloaded asset timings."
+}

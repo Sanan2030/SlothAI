@@ -1,0 +1,57 @@
+{
+  "distinctWordErrorPairs": 362,
+  "maximumPairFrequency": 61,
+  "topRepeatedPairs": [
+    {
+      "input": "qeyde",
+      "expected": "qeydə",
+      "count": 61
+    },
+    {
+      "input": "gore",
+      "expected": "görə",
+      "count": 35
+    },
+    {
+      "input": "göre",
+      "expected": "görə",
+      "count": 25
+    },
+    {
+      "input": "yekun",
+      "expected": "Yekun",
+      "count": 25
+    },
+    {
+      "input": "yoxladi",
+      "expected": "yoxladı",
+      "count": 15
+    },
+    {
+      "input": "hazirladi",
+      "expected": "hazırladı",
+      "count": 10
+    },
+    {
+      "input": "hesabladi",
+      "expected": "hesabladı",
+      "count": 6
+    },
+    {
+      "input": "planini",
+      "expected": "planını",
+      "count": 5
+    },
+    {
+      "input": "yoladı",
+      "expected": "yoxladı",
+      "count": 5
+    },
+    {
+      "input": "tesdiqledi",
+      "expected": "təsdiqlədi",
+      "count": 4
+    }
+  ],
+  "convention": "Same-token-count authored corruptions; Unicode letter+mark tokens paired positionally. This is a diversity diagnostic, not a quality score or leakage guarantee."
+}

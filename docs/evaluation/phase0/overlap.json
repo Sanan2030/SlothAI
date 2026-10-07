@@ -1,0 +1,11 @@
+{
+  "exactTargetOverlapRows": [
+    "p0-h-01-00-0"
+  ],
+  "matchedSources": {
+    "2e175394598a76052e55515e83479b2bab91b5b2f7919b6cbd86044d03865060": [
+      "tests/fixtures/diverse-release-300.json"
+    ]
+  },
+  "scope": "Exact casefolded target match in explicit target/expected/text/correct fields in data/nlp, data/local-ai, data/neural, tests/fixtures. Not a near-duplicate or semantic leakage guarantee; source filenames do not determine whether a row was actually trained on."
+}

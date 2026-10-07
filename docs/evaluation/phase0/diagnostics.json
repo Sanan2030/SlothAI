@@ -1,0 +1,267 @@
+{
+  "suppliedWordList": {
+    "actualCount": 15,
+    "note": "Attachment says 20 but explicitly lists only 15; the five omitted cases and 73-sentence corpus are unavailable. Neutral mention context is not representative grammatical context.",
+    "words": [
+      {
+        "input": "hazirlanmasinda",
+        "expected": "hazırlanmasında",
+        "bounded": "hazirlanmasinda",
+        "attention": "hazirlanmasinda"
+      },
+      {
+        "input": "hemkarlarimla",
+        "expected": "həmkarlarımla",
+        "bounded": "hemkarlarimla",
+        "attention": "hemkarlarimla"
+      },
+      {
+        "input": "kecirdik",
+        "expected": "keçirdik",
+        "bounded": "kecirdik",
+        "attention": "kecirdik"
+      },
+      {
+        "input": "toplantiya",
+        "expected": "toplantıya",
+        "bounded": "toplantiya",
+        "attention": "toplantiya"
+      },
+      {
+        "input": "mudirle",
+        "expected": "müdirlə",
+        "bounded": "mudirle",
+        "attention": "mudirle"
+      },
+      {
+        "input": "Mekteblilere",
+        "expected": "Məktəblilərə",
+        "bounded": "Mekteblilere",
+        "attention": "Mekteblilere"
+      },
+      {
+        "input": "toplashmishdi",
+        "expected": "toplaşmışdı",
+        "bounded": "toplashmishdi",
+        "attention": "toplashmishdi"
+      },
+      {
+        "input": "hayata",
+        "expected": "həyata",
+        "bounded": "hayata",
+        "attention": "hayata"
+      },
+      {
+        "input": "menbeyini",
+        "expected": "mənbəyini",
+        "bounded": "menbeyini",
+        "attention": "menbeyini"
+      },
+      {
+        "input": "konullusu",
+        "expected": "könüllüsü",
+        "bounded": "konullusu",
+        "attention": "konullusu"
+      },
+      {
+        "input": "sertlerini",
+        "expected": "şərtlərini",
+        "bounded": "sertlerini",
+        "attention": "sertlerini"
+      },
+      {
+        "input": "cavablandirdi",
+        "expected": "cavablandırdı",
+        "bounded": "cavablandirdi",
+        "attention": "cavablandirdi"
+      },
+      {
+        "input": "alindighini",
+        "expected": "alındığını",
+        "bounded": "alindighini",
+        "attention": "alindighini"
+      },
+      {
+        "input": "duzdu",
+        "expected": "düzdü",
+        "bounded": "duzdu",
+        "attention": "duzdu"
+      },
+      {
+        "input": "refe",
+        "expected": "rəfə",
+        "bounded": "refe",
+        "attention": "refe"
+      }
+    ],
+    "boundedExact": {
+      "value": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    },
+    "attentionExact": {
+      "value": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    }
+  },
+  "microbench": {
+    "candidateMedianMsPerWord": {
+      "value": 10.717256400000043,
+      "ci95": [
+        10.477710066666623,
+        12.150113848333321
+      ]
+    },
+    "mlpMedianMsPerForward": {
+      "value": 0.0011110298999999942,
+      "ci95": [
+        0.001071864000000005,
+        0.0013618899000000055
+      ]
+    },
+    "note": "Node 15 blocks. Candidate index construction excluded; index cache is fresh, global dictionary/morphology caches and JIT may be warm. 10000 repeated ranker forwards/block, 15 named candidate queries/block. Not an end-to-end causal profile."
+  },
+  "inventory": [
+    {
+      "name": "attention-model.json",
+      "bytes": 31658,
+      "networks": [
+        {
+          "path": "network.ranker",
+          "inputs": 71,
+          "hidden": 12,
+          "parameters": 877,
+          "epochs": 32
+        }
+      ],
+      "attentionParameters": 272
+    },
+    {
+      "name": "bounded-model.json",
+      "bytes": 1836958,
+      "networks": [
+        {
+          "path": "artifact.network.ranker",
+          "inputs": 71,
+          "hidden": 12,
+          "parameters": 877,
+          "epochs": 32
+        }
+      ],
+      "attentionParameters": 272
+    },
+    {
+      "name": "document-model.json",
+      "bytes": 126324,
+      "networks": [
+        {
+          "path": "network",
+          "inputs": 24,
+          "hidden": 12,
+          "parameters": 313,
+          "epochs": 96
+        }
+      ],
+      "attentionParameters": 0
+    },
+    {
+      "name": "domain-model.json",
+      "bytes": 209478,
+      "networks": [
+        {
+          "path": "artifact.network.ranker",
+          "inputs": 71,
+          "hidden": 12,
+          "parameters": 877,
+          "epochs": 32
+        }
+      ],
+      "attentionParameters": 272
+    },
+    {
+      "name": "log-model.json",
+      "bytes": 36296,
+      "networks": [
+        {
+          "path": "network",
+          "inputs": 24,
+          "hidden": 12,
+          "parameters": 313,
+          "epochs": 200
+        }
+      ],
+      "attentionParameters": 0
+    },
+    {
+      "name": "model.json",
+      "bytes": 142215,
+      "networks": [
+        {
+          "path": "lexical",
+          "inputs": 23,
+          "hidden": 12,
+          "parameters": 301,
+          "epochs": 120
+        },
+        {
+          "path": "lexicalAnchor",
+          "inputs": 23,
+          "hidden": 12,
+          "parameters": 301,
+          "epochs": 24
+        },
+        {
+          "path": "agreement",
+          "inputs": 14,
+          "hidden": 12,
+          "parameters": 193,
+          "epochs": 24
+        }
+      ],
+      "attentionParameters": 0
+    },
+    {
+      "name": "sentence-boundary-model.json",
+      "bytes": 56205,
+      "networks": [
+        {
+          "path": "network",
+          "inputs": 166,
+          "hidden": 12,
+          "parameters": 2017,
+          "epochs": 8
+        }
+      ],
+      "attentionParameters": 0
+    }
+  ],
+  "size": {
+    "allEditorJsonBytes": 5634256,
+    "concatenatedGzipBytes": 1161692,
+    "growthRuntimeJsonKiB": 0,
+    "note": "Source JSON bytes include generated dictionary. Concatenated gzip is not the real Next bundle or asset download size. Counts are exact bookkeeping, not sampled metrics."
+  },
+  "reproducedExamples": [
+    {
+      "input": "Sərgi sabah açılacaq.",
+      "output": "Sərgi sabah açılacaq."
+    },
+    {
+      "input": "Sərginin qapısı açıqdır.",
+      "output": "Sərginin qapısı açıqdır."
+    },
+    {
+      "input": "Əla nəticə əldə etmək üçün hər gün mütəmadi çalışmaq lazımdır.",
+      "output": "Əla nəticə əldə etmək üçün hər gün mütəmadi çalışmaq lazımdır."
+    },
+    {
+      "input": "ela netice elde etmek ucun her gun mutemadi calismaq lazimdir",
+      "output": "Əla nəticə əldə etmək üçün hər gün mütəmadi çalışmaq lazımdır."
+    }
+  ]
+}
