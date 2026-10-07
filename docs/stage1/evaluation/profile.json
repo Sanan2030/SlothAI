@@ -1,0 +1,127 @@
+{
+  "command": "node --cpu-prof --cpu-prof-name=stage1-targets.cpuprofile --cpu-prof-dir=/tmp --import tsx scripts/eval/targets.ts",
+  "scope": "Whole diagnostic process including module load, not production-only inference; samples are not milliseconds",
+  "totalSamples": 3927,
+  "topEditorFunctions": [
+    {
+      "function": "",
+      "file": "local-ai/core.ts",
+      "line": 2,
+      "selfSamples": 478
+    },
+    {
+      "function": "",
+      "file": "spelling-candidates.ts",
+      "line": 1,
+      "selfSamples": 433
+    },
+    {
+      "function": "",
+      "file": "dictionary.ts",
+      "line": 1,
+      "selfSamples": 278
+    },
+    {
+      "function": "foldUncached",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 231
+    },
+    {
+      "function": "foldUncached",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 228
+    },
+    {
+      "function": "foldLetters",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 109
+    },
+    {
+      "function": "foldUncached",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 109
+    },
+    {
+      "function": "transpositionIndex",
+      "file": "neural/attention.ts",
+      "line": 2,
+      "selfSamples": 91
+    },
+    {
+      "function": "",
+      "file": "source-inflection.ts",
+      "line": 1,
+      "selfSamples": 86
+    },
+    {
+      "function": "foldLetters",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 67
+    },
+    {
+      "function": "",
+      "file": "productive-morphology.ts",
+      "line": 1,
+      "selfSamples": 65
+    },
+    {
+      "function": "__copyProps",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 62
+    },
+    {
+      "function": "foldLetters",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 61
+    },
+    {
+      "function": "__copyProps",
+      "file": "spelling-candidates.ts",
+      "line": 2,
+      "selfSamples": 50
+    },
+    {
+      "function": "foldUncached",
+      "file": "dictionary.ts",
+      "line": 2,
+      "selfSamples": 40
+    },
+    {
+      "function": "",
+      "file": "local-ai/core.ts",
+      "line": 2,
+      "selfSamples": 37
+    },
+    {
+      "function": "",
+      "file": "local-ai/core.ts",
+      "line": 2,
+      "selfSamples": 34
+    },
+    {
+      "function": "",
+      "file": "local-ai/core.ts",
+      "line": 2,
+      "selfSamples": 28
+    },
+    {
+      "function": "findByFoldedForm",
+      "file": "productive-morphology.ts",
+      "line": 2,
+      "selfSamples": 28
+    },
+    {
+      "function": "repairPhrases",
+      "file": "context.ts",
+      "line": 2,
+      "selfSamples": 21
+    }
+  ]
+}

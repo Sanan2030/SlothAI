@@ -1,0 +1,1047 @@
+{
+  "scope": "Neutral word-mention diagnostics; not a real contextual correction benchmark. Accepted-edit trace cannot prove every rejected internal gate. Scores are not calibrated probabilities.",
+  "rows": [
+    {
+      "raw": "qəubl",
+      "target": "qəbul",
+      "input": "Mətndə qəubl sözü işlənir.",
+      "output": "Mətndə qəubl sözü işlənir.",
+      "dictionaryTarget": true,
+      "morphologyTarget": false,
+      "prior": "qəubl",
+      "attention": null,
+      "candidateQueryCountUpperBound": 301,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə qəubl sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "qəubl"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": true,
+          "targetInHeadLexicon": true,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 3.4630270000002383,
+          "decision": {
+            "candidate": "qəbul",
+            "score": 0.6261811294593121,
+            "margin": 0.6216224799374442,
+            "accepted": false
+          },
+          "targetScore": 0.6261811294593121,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "qəbul",
+              "score": 0.6261811294593121
+            },
+            {
+              "candidate": "qəubl",
+              "score": 0.004558649521867884
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": true,
+          "targetInHeadLexicon": true,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 2.465164000000186,
+          "decision": {
+            "candidate": "qəbul",
+            "score": 0.2656099164875307,
+            "margin": 0.2629641609616356,
+            "accepted": false
+          },
+          "targetScore": 0.2656099164875307,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "qəbul",
+              "score": 0.2656099164875307
+            },
+            {
+              "candidate": "qəubl",
+              "score": 0.0026457555258950697
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "məəsləni",
+      "target": "məsələni",
+      "input": "Mətndə məəsləni sözü işlənir.",
+      "output": "Mətndə məəsləni sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": true,
+      "prior": "məəsləni",
+      "attention": null,
+      "candidateQueryCountUpperBound": 463,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə məəsləni sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "məəsləni"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 4.727963000000273,
+          "decision": {
+            "candidate": "məsələni",
+            "score": 0.055867578328968916,
+            "margin": 0.048991268043319,
+            "accepted": false
+          },
+          "targetScore": 0.055867578328968916,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "məsələni",
+              "score": 0.055867578328968916
+            },
+            {
+              "candidate": "məəsləni",
+              "score": 0.006876310285649918
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 3.9124649999998837,
+          "decision": {
+            "candidate": "məsələni",
+            "score": 0.02010937336013734,
+            "margin": 0.016545360528194678,
+            "accepted": false
+          },
+          "targetScore": 0.02010937336013734,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "məsələni",
+              "score": 0.02010937336013734
+            },
+            {
+              "candidate": "məəsləni",
+              "score": 0.0035640128319426607
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "löhədə",
+      "target": "lövhədə",
+      "input": "Mətndə löhədə sözü işlənir.",
+      "output": "Mətndə löhədə sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": false,
+      "prior": "löhədə",
+      "attention": null,
+      "candidateQueryCountUpperBound": 355,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə löhədə sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "löhədə"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.450318000000152,
+          "decision": null,
+          "targetScore": 0.0010950722792022129,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "löhədə",
+              "score": 0.002437969530376434
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 2.777245000000221,
+          "decision": null,
+          "targetScore": 0.0007781767849226587,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "löhədə",
+              "score": 0.0018668950080159737
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "bəpa",
+      "target": "bərpa",
+      "input": "Mətndə bəpa sözü işlənir.",
+      "output": "Mətndə bəpa sözü işlənir.",
+      "dictionaryTarget": true,
+      "morphologyTarget": false,
+      "prior": "bəpa",
+      "attention": null,
+      "candidateQueryCountUpperBound": 247,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə bəpa sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "bəpa"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": true,
+          "targetInHeadLexicon": true,
+          "rawInHeadLexicon": false,
+          "candidateCount": 3,
+          "generationMs": 2.57764300000008,
+          "decision": {
+            "candidate": "bərpa",
+            "score": 0.9691903224724316,
+            "margin": 0.9662963346011595,
+            "accepted": false
+          },
+          "targetScore": 0.9691903224724316,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "bərpa",
+              "score": 0.9691903224724316
+            },
+            {
+              "candidate": "bəpa",
+              "score": 0.002893987871272126
+            },
+            {
+              "candidate": "bəla",
+              "score": 0.00043044147891697335
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 2,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 3,
+          "generationMs": 2.1377510000002076,
+          "decision": {
+            "candidate": "bərpa",
+            "score": 0.010187097944140713,
+            "margin": 0.008365449907006342,
+            "accepted": false
+          },
+          "targetScore": 0.010187097944140713,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "bərpa",
+              "score": 0.010187097944140713
+            },
+            {
+              "candidate": "bəpa",
+              "score": 0.0018216480371343704
+            },
+            {
+              "candidate": "bəla",
+              "score": 0.00027145650844691185
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "məqşin",
+      "target": "məşqin",
+      "input": "Mətndə məqşin sözü işlənir.",
+      "output": "Mətndə məqşin sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": false,
+      "prior": "məqşin",
+      "attention": null,
+      "candidateQueryCountUpperBound": 355,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə məqşin sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "məqşin"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.3575089999999363,
+          "decision": null,
+          "targetScore": 0.00019860886840950622,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "məqşin",
+              "score": 0.003750647537686239
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 2.6894720000000234,
+          "decision": null,
+          "targetScore": 0.00022177654623351849,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "məqşin",
+              "score": 0.0017209798014624514
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "haırladı",
+      "target": "hazırladı",
+      "input": "Mətndə haırladı sözü işlənir.",
+      "output": "Mətndə haırladı sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": true,
+      "prior": "haırladı",
+      "attention": null,
+      "candidateQueryCountUpperBound": 463,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə haırladı sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "haırladı"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 2,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 6.89434700000038,
+          "decision": {
+            "candidate": "haırladı",
+            "score": 0.0019177037198229705,
+            "margin": 0.00009623568517015744,
+            "accepted": false
+          },
+          "targetScore": 0.001821468034652813,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "haırladı",
+              "score": 0.0019177037198229705
+            },
+            {
+              "candidate": "hazırladı",
+              "score": 0.001821468034652813
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 6.311237999999776,
+          "decision": {
+            "candidate": "hazırladı",
+            "score": 0.0017335800725705815,
+            "margin": 0.0005397488096269261,
+            "accepted": false
+          },
+          "targetScore": 0.0017335800725705815,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "hazırladı",
+              "score": 0.0017335800725705815
+            },
+            {
+              "candidate": "haırladı",
+              "score": 0.0011938312629436554
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "çədi",
+      "target": "çəkdi",
+      "input": "Mətndə çədi sözü işlənir.",
+      "output": "Mətndə çədi sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": true,
+      "prior": "çədi",
+      "attention": null,
+      "candidateQueryCountUpperBound": 247,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə çədi sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "çədi"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": true,
+          "targetInHeadLexicon": true,
+          "rawInHeadLexicon": false,
+          "candidateCount": 3,
+          "generationMs": 3.1975979999997435,
+          "decision": {
+            "candidate": "çəkdi",
+            "score": 0.8849512976641636,
+            "margin": 0.11740929805920797,
+            "accepted": false
+          },
+          "targetScore": 0.8849512976641636,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "çəkdi",
+              "score": 0.8849512976641636
+            },
+            {
+              "candidate": "çəni",
+              "score": 0.7675419996049556
+            },
+            {
+              "candidate": "çədi",
+              "score": 0.0015826365040530136
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 2,
+          "generationMs": 2.771226000000297,
+          "decision": {
+            "candidate": "çəkdi",
+            "score": 0.0029870364743268076,
+            "margin": 0.0013292130653553445,
+            "accepted": false
+          },
+          "targetScore": 0.0029870364743268076,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "çəkdi",
+              "score": 0.0029870364743268076
+            },
+            {
+              "candidate": "çədi",
+              "score": 0.0016578234089714631
+            },
+            {
+              "candidate": "çəki",
+              "score": 0.00004806864006786294
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "müəhrrikin",
+      "target": "mühərrikin",
+      "input": "Mətndə müəhrrikin sözü işlənir.",
+      "output": "Mətndə müəhrrikin sözü işlənir.",
+      "dictionaryTarget": true,
+      "morphologyTarget": false,
+      "prior": "müəhrrikin",
+      "attention": null,
+      "candidateQueryCountUpperBound": 571,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə müəhrrikin sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "müəhrrikin"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 2,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 4.833903000000191,
+          "decision": {
+            "candidate": "müəhrrikin",
+            "score": 0.001682415884026094,
+            "margin": 0.0013064891912979728,
+            "accepted": false
+          },
+          "targetScore": 0.0003759266927281211,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "müəhrrikin",
+              "score": 0.001682415884026094
+            },
+            {
+              "candidate": "mühərrikin",
+              "score": 0.0003759266927281211
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 0,
+          "targetRank": 2,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 4.458928000000014,
+          "decision": {
+            "candidate": "müəhrrikin",
+            "score": 0.0019212288853646953,
+            "margin": 0.0009976945746813168,
+            "accepted": false
+          },
+          "targetScore": 0.0009235343106833786,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "müəhrrikin",
+              "score": 0.0019212288853646953
+            },
+            {
+              "candidate": "mühərrikin",
+              "score": 0.0009235343106833786
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "oxtdu",
+      "target": "oxutdu",
+      "input": "Mətndə oxtdu sözü işlənir.",
+      "output": "Mətndə oxtdu sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": false,
+      "prior": "oxtdu",
+      "attention": null,
+      "candidateQueryCountUpperBound": 301,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə oxtdu sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "oxtdu"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 3.4943239999997786,
+          "decision": {
+            "candidate": "oxudu",
+            "score": 0.0026385872265959048,
+            "margin": 0.0015573320028961569,
+            "accepted": false
+          },
+          "targetScore": 0.001107997027678765,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "oxudu",
+              "score": 0.0026385872265959048
+            },
+            {
+              "candidate": "oxtdu",
+              "score": 0.001081255223699748
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 1,
+          "generationMs": 3.131116999999904,
+          "decision": {
+            "candidate": "oxudu",
+            "score": 0.6082732274457456,
+            "margin": 0.6065857842217692,
+            "accepted": false
+          },
+          "targetScore": 0.0012648082567702312,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "oxudu",
+              "score": 0.6082732274457456
+            },
+            {
+              "candidate": "oxtdu",
+              "score": 0.0016874432239763844
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "çadırdı",
+      "target": "çatdırdı",
+      "input": "Mətndə çadırdı sözü işlənir.",
+      "output": "Mətndə çadırdı sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": true,
+      "prior": "çadırdı",
+      "attention": null,
+      "candidateQueryCountUpperBound": 409,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": true,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə çadırdı sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": false,
+      "fallbackCalls": [],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 1,
+          "targetRank": 2,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 2,
+          "generationMs": 5.040694999999687,
+          "decision": {
+            "candidate": "çağırdı",
+            "score": 0.07863281666557798,
+            "margin": 0.07642244621043325,
+            "accepted": false
+          },
+          "targetScore": 0.002210370455144726,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "çağırdı",
+              "score": 0.07863281666557798
+            },
+            {
+              "candidate": "çatdırdı",
+              "score": 0.002210370455144726
+            },
+            {
+              "candidate": "çadırdı",
+              "score": 0.0017195294977799963
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": 1,
+          "targetRank": 1,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 2,
+          "generationMs": 4.813332000000173,
+          "decision": {
+            "candidate": "çatdırdı",
+            "score": 0.0028827834263428927,
+            "margin": 0.0012377423818268952,
+            "accepted": false
+          },
+          "targetScore": 0.0028827834263428927,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "çatdırdı",
+              "score": 0.0028827834263428927
+            },
+            {
+              "candidate": "çadırdı",
+              "score": 0.0016450410445159975
+            },
+            {
+              "candidate": "çağırdı",
+              "score": 0.000015334674419599115
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "kaeblin",
+      "target": "kabelin",
+      "input": "Mətndə kaeblin sözü işlənir.",
+      "output": "Mətndə kaeblin sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": false,
+      "prior": "kaeblin",
+      "attention": null,
+      "candidateQueryCountUpperBound": 409,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə kaeblin sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "kaeblin"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.848218000000088,
+          "decision": null,
+          "targetScore": 0.0015476400431747536,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "kaeblin",
+              "score": 0.00355747308299163
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.164647999999943,
+          "decision": null,
+          "targetScore": 0.0022962815197355565,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "kaeblin",
+              "score": 0.0037362052611233615
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw": "tuutmunu",
+      "target": "tutumunu",
+      "input": "Mətndə tuutmunu sözü işlənir.",
+      "output": "Mətndə tuutmunu sözü işlənir.",
+      "dictionaryTarget": false,
+      "morphologyTarget": false,
+      "prior": "tuutmunu",
+      "attention": null,
+      "candidateQueryCountUpperBound": 463,
+      "lookupCapCanBind": false,
+      "sourceInflectionAnalyses": [],
+      "rawEstablished": false,
+      "rawReviewed": false,
+      "rawClosedFunction": false,
+      "alwaysFallbackObserved": true,
+      "alwaysOutput": "Mətndə tuutmunu sözü işlənir.",
+      "rawDictionary": false,
+      "rawMorphology": false,
+      "rawInNeuralLexicon": false,
+      "rawInPairedLexicon": false,
+      "diacriticsPreserved": true,
+      "attentionAmbiguous": false,
+      "fallbackObserved": true,
+      "fallbackCalls": [
+        "tuutmunu"
+      ],
+      "acceptedEditTrace": [],
+      "heads": {
+        "primary": {
+          "threshold": 0.99995,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.8697910000000775,
+          "decision": null,
+          "targetScore": 0.002581705370360059,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "tuutmunu",
+              "score": 0.005796529107977727
+            }
+          ]
+        },
+        "domain": {
+          "threshold": 0.7,
+          "marginThreshold": 0.1,
+          "targetCandidateIndex": -1,
+          "targetRank": null,
+          "targetIndexed": false,
+          "targetInHeadLexicon": false,
+          "rawInHeadLexicon": false,
+          "candidateCount": 0,
+          "generationMs": 3.4010639999996783,
+          "decision": null,
+          "targetScore": 0.0018328845702910912,
+          "acceptedByHead": null,
+          "uppercaseAccepted": null,
+          "top3": [
+            {
+              "candidate": "tuutmunu",
+              "score": 0.003662519066623585
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://huggingface.co/api/datasets/wikimedia/wikipedia",
+  "at": "2026-10-07T06:50:27.463501+00:00",
+  "status": 200,
+  "bytes": 164259,
+  "purpose": "Source metadata only; no training approval inferred"
+}

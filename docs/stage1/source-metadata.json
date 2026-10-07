@@ -1,0 +1,12 @@
+{
+  "url": "https://huggingface.co/api/datasets/wikimedia/wikipedia",
+  "metadataSHA256": "8f76da5061056c4d92058e752d739ea02e26e4c5015c8b3e2dadaaf79c6f8328",
+  "metadataBytes": 164259,
+  "datasetId": "wikimedia/wikipedia",
+  "licenseDeclaration": [
+    "cc-by-sa-3.0",
+    "gfdl"
+  ],
+  "trainingApproval": "pending-owner-decision",
+  "downloadedCleanSentences": 0
+}

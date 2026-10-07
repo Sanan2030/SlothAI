@@ -11,3 +11,7 @@ logs/*.json
 coverage
 *.tsbuildinfo
 lib/editor/generated/
+
+# Offline corpus preparation artifacts; keep provenance manifests tracked.
+scripts/data/__pycache__/
+data/corpus/az-v*/

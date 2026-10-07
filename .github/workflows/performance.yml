@@ -44,6 +44,11 @@ jobs:
         continue-on-error: true
         run: npm run --ignore-scripts lint
 
+      - name: Verify offline corpus preparation tools
+        id: dataprep
+        continue-on-error: true
+        run: npm run data:test
+
       - name: Run complete regression suite
         id: tests
         continue-on-error: true
@@ -299,7 +304,7 @@ jobs:
       - name: Enforce complete validation gate
         if: always()
         env:
-          RESULTS: ${{ steps.typecheck.outcome }} ${{ steps.lint.outcome }} ${{ steps.tests.outcome }} ${{ steps.languagequality.outcome }} ${{ steps.corpus.outcome }} ${{ steps.holdout.outcome }} ${{ steps.entities.outcome }} ${{ steps.punctuation.outcome }} ${{ steps.unseen.outcome }} ${{ steps.correspondence.outcome }} ${{ steps.dictionary.outcome }} ${{ steps.build.outcome }} ${{ steps.benchmark.outcome }}
+          RESULTS: ${{ steps.dataprep.outcome }} ${{ steps.typecheck.outcome }} ${{ steps.lint.outcome }} ${{ steps.tests.outcome }} ${{ steps.languagequality.outcome }} ${{ steps.corpus.outcome }} ${{ steps.holdout.outcome }} ${{ steps.entities.outcome }} ${{ steps.punctuation.outcome }} ${{ steps.unseen.outcome }} ${{ steps.correspondence.outcome }} ${{ steps.dictionary.outcome }} ${{ steps.build.outcome }} ${{ steps.benchmark.outcome }}
         run: |
           echo "Validation: $RESULTS"
           for result in $RESULTS; do

@@ -68,7 +68,14 @@
     "nlp:log:train": "node --import tsx scripts/train-log-spelling.ts && node --import tsx scripts/train-log-ocr.ts",
     "nlp:log:evaluate": "node --import tsx scripts/evaluate-log-spelling.ts",
     "nlp:institutions:train": "node --import tsx scripts/train-institutional-spelling.ts",
-    "nlp:institutions:check": "node --import tsx scripts/evaluate-institutional-spelling.ts --enforce"
+    "nlp:institutions:check": "node --import tsx scripts/evaluate-institutional-spelling.ts --enforce",
+    "eval:phase0": "node --import tsx scripts/eval/run.ts --out=docs/stage1/evaluation",
+    "eval:ablation": "node --import tsx scripts/eval/ablation.ts --out=docs/stage1/evaluation",
+    "eval:latency": "node --import tsx scripts/eval/latency.ts --policy=default --out=docs/stage1/evaluation/latency.json",
+    "data:test": "python3 -m unittest discover -s scripts/data -p test_*.py",
+    "data:gate": "python3 scripts/data/gate.py data/corpus",
+    "eval:targets": "node --import tsx scripts/eval/targets.ts",
+    "eval:fixtures": "node --import tsx scripts/eval/snapshot.ts --out=docs/stage1/evaluation"
   },
   "engines": {
     "node": ">=20.9.0"

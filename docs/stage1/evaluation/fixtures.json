@@ -1,0 +1,107 @@
+{
+  "rows": 4861,
+  "sha256": "d6c0b1dfd8881f40f0a2424adebe0d5a101fc3d61c8f40087fd1fba137c30435",
+  "compared": 4861,
+  "changed": 0,
+  "idempotencyFailures": [],
+  "selectedQuality": {
+    "release-holdout-300.json": {
+      "rows": 300,
+      "documents": 300,
+      "counts": {
+        "tp": 1042,
+        "fp": 0,
+        "fn": 1,
+        "abstainedErrors": 1,
+        "required": 1043,
+        "correctWords": 570,
+        "harmedWords": 0,
+        "exact": 299,
+        "identity": 60,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "estimates": {
+        "precision": {
+          "value": 1,
+          "ci95": [
+            1,
+            1
+          ]
+        },
+        "recall": {
+          "value": 0.9990412272291467,
+          "ci95": [
+            0.997029407712143,
+            1
+          ]
+        },
+        "f05": {
+          "value": 0.9998080982536941,
+          "ci95": [
+            0.9994044662715613,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "errorAbstentionRate": {
+          "value": 0.0009587727708533077,
+          "ci95": [
+            0,
+            0.002970592287857016
+          ]
+        },
+        "sentenceExact": {
+          "value": 0.9966666666666667,
+          "ci95": [
+            0.99,
+            1
+          ]
+        },
+        "identityFalseChangeRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "cer": {
+          "value": 0.00021414804768363194,
+          "ci95": [
+            0,
+            0.0006490345693234273
+          ]
+        },
+        "wer": {
+          "value": 0.0006199628022318661,
+          "ci95": [
+            0,
+            0.0018773760719998306
+          ]
+        },
+        "idempotencyFailureRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        }
+      },
+      "bootstrap": {
+        "repetitions": 1000,
+        "seed": 20261007,
+        "unit": "documentId",
+        "method": "percentile",
+        "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+      },
+      "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+    }
+  },
+  "provenance": "Existing project fixtures, text-mode diagnostic only; no frozen targets changed. Gold tests use their dedicated mode-aware evaluator."
+}

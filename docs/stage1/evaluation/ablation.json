@@ -1,0 +1,987 @@
+{
+  "policies": {
+    "default": {
+      "pairedExactDelta": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 532,
+          "fp": 3,
+          "fn": 108,
+          "abstainedErrors": 106,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 393,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994392523364486,
+            "ci95": [
+              0.987471266893748,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.83125,
+            "ci95": [
+              0.7896494156928213,
+              0.862342066146414
+            ]
+          },
+          "f05": {
+            "value": 0.9568345323741008,
+            "ci95": [
+              0.943430923441485,
+              0.9671468667659526
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.165625,
+            "ci95": [
+              0.1350022182786158,
+              0.20609572072072072
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.786,
+            "ci95": [
+              0.744,
+              0.824
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.007547856136043286,
+            "ci95": [
+              0.00614628135348076,
+              0.009148897137767687
+            ]
+          },
+          "wer": {
+            "value": 0.03933965577801194,
+            "ci95": [
+              0.032201046918383,
+              0.04740670276140211
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 1,
+        "ci95": [
+          1,
+          1
+        ]
+      },
+      "changedIds": [],
+      "improvedIds": [],
+      "degradedIds": []
+    },
+    "always": {
+      "pairedExactDelta": {
+        "value": 0.004,
+        "ci95": [
+          0,
+          0.01
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 534,
+          "fp": 3,
+          "fn": 106,
+          "abstainedErrors": 104,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 395,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994413407821229,
+            "ci95": [
+              0.9874725909586272,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.834375,
+            "ci95": [
+              0.7923999699157642,
+              0.8665646258503401
+            ]
+          },
+          "f05": {
+            "value": 0.9576757532281205,
+            "ci95": [
+              0.9446765571570791,
+              0.9680129483686193
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.1625,
+            "ci95": [
+              0.13089659881363888,
+              0.20313537057522124
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.79,
+            "ci95": [
+              0.746,
+              0.82805
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.007456918110307825,
+            "ci95": [
+              0.006054535290291104,
+              0.009075415353000618
+            ]
+          },
+          "wer": {
+            "value": 0.03863716192483316,
+            "ci95": [
+              0.03170018821061401,
+              0.04668811887146386
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 0.996,
+        "ci95": [
+          0.99,
+          1
+        ]
+      },
+      "changedIds": [
+        "p0-h-13-05-1",
+        "p0-h-17-09-0"
+      ],
+      "improvedIds": [
+        "p0-h-13-05-1",
+        "p0-h-17-09-0"
+      ],
+      "degradedIds": []
+    },
+    "noLocal": {
+      "pairedExactDelta": {
+        "value": -0.012,
+        "ci95": [
+          -0.022,
+          -0.004
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 526,
+          "fp": 3,
+          "fn": 114,
+          "abstainedErrors": 112,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 387,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994328922495274,
+            "ci95": [
+              0.9871788990825688,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.821875,
+            "ci95": [
+              0.779120815028026,
+              0.8560193009249507
+            ]
+          },
+          "f05": {
+            "value": 0.9542815674891146,
+            "ci95": [
+              0.9399852852210816,
+              0.9652927103686798
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.175,
+            "ci95": [
+              0.14219236800475274,
+              0.2181578735400725
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.774,
+            "ci95": [
+              0.72995,
+              0.816
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.008002546264720594,
+            "ci95": [
+              0.006558426991694557,
+              0.00968646501310449
+            ]
+          },
+          "wer": {
+            "value": 0.0414471373375483,
+            "ci95": [
+              0.033945794144697033,
+              0.04965536176677493
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 0.988,
+        "ci95": [
+          0.978,
+          0.996
+        ]
+      },
+      "changedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ],
+      "improvedIds": [],
+      "degradedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ]
+    },
+    "noAttention": {
+      "pairedExactDelta": {
+        "value": -0.012,
+        "ci95": [
+          -0.022,
+          -0.004
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 526,
+          "fp": 3,
+          "fn": 114,
+          "abstainedErrors": 112,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 387,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994328922495274,
+            "ci95": [
+              0.9871788990825688,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.821875,
+            "ci95": [
+              0.779120815028026,
+              0.8560193009249507
+            ]
+          },
+          "f05": {
+            "value": 0.9542815674891146,
+            "ci95": [
+              0.9399852852210816,
+              0.9652927103686798
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.175,
+            "ci95": [
+              0.14219236800475274,
+              0.2181578735400725
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.774,
+            "ci95": [
+              0.72995,
+              0.816
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.008002546264720594,
+            "ci95": [
+              0.006558426991694557,
+              0.00968646501310449
+            ]
+          },
+          "wer": {
+            "value": 0.0414471373375483,
+            "ci95": [
+              0.033945794144697033,
+              0.04965536176677493
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 0.988,
+        "ci95": [
+          0.978,
+          0.996
+        ]
+      },
+      "changedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ],
+      "improvedIds": [],
+      "degradedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ]
+    },
+    "noBounded": {
+      "pairedExactDelta": {
+        "value": -0.004,
+        "ci95": [
+          -0.01,
+          0
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 530,
+          "fp": 3,
+          "fn": 110,
+          "abstainedErrors": 108,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 391,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.9943714821763602,
+            "ci95": [
+              0.9874187243208744,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.828125,
+            "ci95": [
+              0.7870698352966842,
+              0.8611563432494381
+            ]
+          },
+          "f05": {
+            "value": 0.9559884559884559,
+            "ci95": [
+              0.9424759009346636,
+              0.9665872089377655
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.16875,
+            "ci95": [
+              0.13665029004242132,
+              0.20948173758065242
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.782,
+            "ci95": [
+              0.738,
+              0.822
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.0076387941617787475,
+            "ci95": [
+              0.006243072841596725,
+              0.009286368362162878
+            ]
+          },
+          "wer": {
+            "value": 0.040042149631190724,
+            "ci95": [
+              0.03283739480651491,
+              0.0481939216272425
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 0.996,
+        "ci95": [
+          0.99,
+          1
+        ]
+      },
+      "changedIds": [
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ],
+      "improvedIds": [],
+      "degradedIds": [
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ]
+    },
+    "noObserved": {
+      "pairedExactDelta": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 532,
+          "fp": 3,
+          "fn": 108,
+          "abstainedErrors": 106,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 393,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994392523364486,
+            "ci95": [
+              0.987471266893748,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.83125,
+            "ci95": [
+              0.7896494156928213,
+              0.862342066146414
+            ]
+          },
+          "f05": {
+            "value": 0.9568345323741008,
+            "ci95": [
+              0.943430923441485,
+              0.9671468667659526
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.165625,
+            "ci95": [
+              0.1350022182786158,
+              0.20609572072072072
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.786,
+            "ci95": [
+              0.744,
+              0.824
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.007547856136043286,
+            "ci95": [
+              0.00614628135348076,
+              0.009148897137767687
+            ]
+          },
+          "wer": {
+            "value": 0.03933965577801194,
+            "ci95": [
+              0.032201046918383,
+              0.04740670276140211
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 1,
+        "ci95": [
+          1,
+          1
+        ]
+      },
+      "changedIds": [],
+      "improvedIds": [],
+      "degradedIds": []
+    },
+    "noBoundary": {
+      "pairedExactDelta": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 532,
+          "fp": 3,
+          "fn": 108,
+          "abstainedErrors": 106,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 393,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994392523364486,
+            "ci95": [
+              0.987471266893748,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.83125,
+            "ci95": [
+              0.7896494156928213,
+              0.862342066146414
+            ]
+          },
+          "f05": {
+            "value": 0.9568345323741008,
+            "ci95": [
+              0.943430923441485,
+              0.9671468667659526
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.165625,
+            "ci95": [
+              0.1350022182786158,
+              0.20609572072072072
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.786,
+            "ci95": [
+              0.744,
+              0.824
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.007547856136043286,
+            "ci95": [
+              0.00614628135348076,
+              0.009148897137767687
+            ]
+          },
+          "wer": {
+            "value": 0.03933965577801194,
+            "ci95": [
+              0.032201046918383,
+              0.04740670276140211
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 1,
+        "ci95": [
+          1,
+          1
+        ]
+      },
+      "changedIds": [],
+      "improvedIds": [],
+      "degradedIds": []
+    },
+    "rulesOnly": {
+      "pairedExactDelta": {
+        "value": -0.012,
+        "ci95": [
+          -0.022,
+          -0.004
+        ]
+      },
+      "quality": {
+        "rows": 500,
+        "documents": 250,
+        "counts": {
+          "tp": 526,
+          "fp": 3,
+          "fn": 114,
+          "abstainedErrors": 112,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 387,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.994328922495274,
+            "ci95": [
+              0.9871788990825688,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.821875,
+            "ci95": [
+              0.779120815028026,
+              0.8560193009249507
+            ]
+          },
+          "f05": {
+            "value": 0.9542815674891146,
+            "ci95": [
+              0.9399852852210816,
+              0.9652927103686798
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.00045310376076121433,
+            "ci95": [
+              0,
+              0.0017826107715813596
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.175,
+            "ci95": [
+              0.14219236800475274,
+              0.2181578735400725
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.774,
+            "ci95": [
+              0.72995,
+              0.816
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0.008002546264720594,
+            "ci95": [
+              0.006558426991694557,
+              0.00968646501310449
+            ]
+          },
+          "wer": {
+            "value": 0.0414471373375483,
+            "ci95": [
+              0.033945794144697033,
+              0.04965536176677493
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "agreementWithDefault": {
+        "value": 0.988,
+        "ci95": [
+          0.978,
+          0.996
+        ]
+      },
+      "changedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ],
+      "improvedIds": [],
+      "degradedIds": [
+        "p0-h-01-07-0",
+        "p0-h-02-06-0",
+        "p0-h-05-03-0",
+        "p0-h-18-03-1",
+        "p0-h-19-03-1",
+        "p0-h-21-08-1"
+      ]
+    }
+  },
+  "caveat": "Existing runtime flags only. noBounded covers bounded/domain composition; flags do not independently disable document/log/lexical/agreement heads. No unsupported per-head causal claim is made. Flags may have no effect on the conditional default path. Institutional is experimental and absent from runtime."
+}

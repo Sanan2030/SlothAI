@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dataset } from './datasets';
 import { bootstrap, metrics, type EvaluationRow } from './metrics';
 import { correctText, type CorrectionRuntime } from '../../lib/editor/correct';
+const outputDirectory = process.argv.find(value => value.startsWith('--out='))?.slice(6) ?? 'docs/evaluation/phase0';
 export const policies: Record<string, CorrectionRuntime> = { default: {}, always: { modelPolicy: 'always' }, noLocal: { useLocalModel: false }, noAttention: { useAttention: false }, noBounded: { useBounded: false }, noObserved: { useObservedChannel: false }, noBoundary: { useNeuralBoundary: false }, rulesOnly: { useLocalModel: false, useAttention: false, useBounded: false, useObservedChannel: false, useNeuralBoundary: false } };
 export function evaluate(name: string, runtime: CorrectionRuntime = {}): EvaluationRow[] {
   return dataset(name).cases.map(row => { const output = correctText(row.input, false, runtime).text; return { ...row, output, idempotent: correctText(output, false, runtime).text === output }; });
@@ -18,8 +19,8 @@ function main() {
   const path = 'data/nlp/user-input-evaluation.jsonl';
   const observed = readFileSync(path, 'utf8').trim().split('\n').map(line => JSON.parse(line) as { id: string; input: string; target: string; category?: string });
   const rows = observed.map(row => ({ id: row.id, documentId: row.id, domain: 'user-derived-development', category: row.category ?? 'mixed', input: row.input, expected: row.target, output: correctText(row.input).text }));
-  mkdirSync('docs/evaluation/phase0', { recursive: true });
-  writeFileSync('docs/evaluation/phase0/quality.json', JSON.stringify({ ...report, noHarmProbe, existingUserDerived: { provenance: 'User-derived development references, assistant targets not blind human-reviewed; independence from earlier tuning not proven.', overall: metrics(rows), failedIds: rows.filter(row => row.output !== row.expected).map(row => row.id) }, calibrationUsed: false, runtimeChanged: false }, null, 2) + '\n');
+  mkdirSync(outputDirectory, { recursive: true });
+  writeFileSync(`${outputDirectory}/quality.json`, JSON.stringify({ ...report, noHarmProbe, existingUserDerived: { provenance: 'User-derived development references, assistant targets not blind human-reviewed; independence from earlier tuning not proven.', overall: metrics(rows), failedIds: rows.filter(row => row.output !== row.expected).map(row => row.id) }, calibrationUsed: false, runtimeChanged: false }, null, 2) + '\n');
   console.log(JSON.stringify(Object.fromEntries(Object.entries(report).map(([name, result]) => [name, result.overall])), null, 2));
 }
 if (process.argv[1]?.endsWith('/run.ts')) main();

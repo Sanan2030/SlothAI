@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked",
+  "minimumCleanSentences": 5000000,
+  "cleanSentences": 0,
+  "splitCounts": {},
+  "sources": [],
+  "assignments": {},
+  "files": {},
+  "overlapStatus": "not-exercised",
+  "trainingStarted": false,
+  "reason": "No new owner-approved licensed source-level corpus has been supplied. Existing synthetic development data is not a five-million-sentence licensed clean corpus.",
+  "noise": {
+    "seed": 20261007,
+    "origin": "synthetic, not empirically fitted",
+    "identityRequestedShare": 0.2,
+    "otherKindsRequestedShareEach": 0.05714285714285714,
+    "kinds": ["identity", "diacritics_all", "diacritics_partial", "qk_xh", "deletion", "insertion", "transpose", "keyboard_az", "keyboard_ascii", "digraph", "space_split", "space_join", "hyphen", "punctuation", "case"],
+    "realizedShares": null
+  }
+}

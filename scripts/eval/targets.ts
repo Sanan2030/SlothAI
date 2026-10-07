@@ -1,0 +1,45 @@
+/** Diagnostic evaluation only: these targets must never train or select thresholds. */
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { performance } from 'node:perf_hooks';
+import { correctText } from '../../lib/editor/correct';
+import { dictionaryCandidates, foldLetters } from '../../lib/editor/dictionary';
+import { analyzeSourceInflection, isEstablishedSurface, isReviewedSpelling } from '../../lib/editor/lexicon';
+import { isClosedFunctionForm } from '../../lib/editor/function-word-forms';
+import { languageServices } from '../../lib/editor/language-services';
+import { productiveMorphology } from '../../lib/editor/productive-morphology';
+import { tokenize } from '../../lib/editor/local-ai/core';
+import { preservesDiacritics } from '../../lib/editor/neural/diacritics';
+import { unresolvedAttentionAmbiguity } from '../../lib/editor/neural/attention-runtime';
+import { boundedCandidates } from '../../lib/editor/neural/bounded-candidates';
+import { boundedCorrection } from '../../lib/editor/neural/bounded-runtime';
+import { attentionCorrection } from '../../lib/editor/neural/attention-runtime';
+import { attentionProbability, rankAttention, transpositionIndex } from '../../lib/editor/neural/attention';
+import { type BoundedBundle, createBoundedHead, createDomainHead } from '../../lib/editor/neural/bounded-head';
+import primaryJSON from '../../lib/editor/neural/bounded-model.json';
+import neuralJSON from '../../lib/editor/neural/model.json';
+import pairedJSON from '../../lib/editor/local-ai/paired-model.json';
+import domainJSON from '../../lib/editor/neural/domain-model.json';
+const pairs = [['qəubl','qəbul'],['məəsləni','məsələni'],['löhədə','lövhədə'],['bəpa','bərpa'],['məqşin','məşqin'],['haırladı','hazırladı'],['çədi','çəkdi'],['müəhrrikin','mühərrikin'],['oxtdu','oxutdu'],['çadırdı','çatdırdı'],['kaeblin','kabelin'],['tuutmunu','tutumunu']];
+const bundles = { primary: primaryJSON as BoundedBundle, domain: domainJSON as BoundedBundle };
+const indices = Object.fromEntries(Object.entries(bundles).map(([name,bundle]) => [name,transpositionIndex(bundle.lexicon)]));
+const rows = pairs.map(([raw,target]) => {
+  const input = `Mətndə ${raw} sözü işlənir.`, tokens = tokenize(input), at = 1;
+  const trace: unknown[] = [], calls: string[] = [];
+  const output = correctText(input, false, { trace: event => trace.push(event), neuralFallback: (word, context, position) => { calls.push(word); return boundedCorrection(word,context,position); } }).text;
+  const alwaysCalls: string[] = [];
+  const alwaysOutput = correctText(input,false,{modelPolicy:'always',neuralFallback:(word,context,position)=>{alwaysCalls.push(word);return boundedCorrection(word,context,position);}}).text;
+  if(alwaysOutput!==correctText(input,false,{modelPolicy:'always'}).text) throw new Error('Always trace changed output');
+  const plain = correctText(input).text;
+  if (plain !== output) throw new Error('Instrumented fallback changed production output');
+  const heads = Object.fromEntries(Object.entries(bundles).map(([name,bundle]) => {
+    const start = performance.now(), candidates = boundedCandidates(bundle.lexicon,indices[name],raw), generationMs = performance.now()-start;
+    const scores = [raw,...candidates].map(candidate => ({ candidate,score:attentionProbability(bundle.artifact.network,bundle.lexicon,{raw,candidate,tokens,at}) })).sort((a,b)=>b.score-a.score);
+    const targetRank = scores.findIndex(row=>row.candidate===target);
+    const head = name === 'primary' ? createBoundedHead(bundle) : createDomainHead(bundle);
+    return [name,{ threshold:bundle.artifact.threshold, marginThreshold:bundle.artifact.margin, targetCandidateIndex:candidates.indexOf(target), targetRank:targetRank < 0 ? null : targetRank+1, targetIndexed:indices[name].get(foldLetters(target))?.includes(target) ?? false, targetInHeadLexicon:Object.hasOwn(bundle.lexicon.words,target), rawInHeadLexicon:Object.hasOwn(bundle.lexicon.words,raw), candidateCount:candidates.length, generationMs, decision:rankAttention(bundle.artifact,bundle.lexicon,indices[name],raw,tokens,at) ?? null, targetScore:attentionProbability(bundle.artifact.network,bundle.lexicon,{raw,candidate:target,tokens,at}), acceptedByHead:head(raw,tokens,at) ?? null, uppercaseAccepted:head(raw[0].toLocaleUpperCase('az-AZ')+raw.slice(1),tokens,at) ?? null, top3:scores.slice(0,3) }];
+  }));
+  return { raw,target,input,output,dictionaryTarget:dictionaryCandidates(target)?.has(target) ?? false, morphologyTarget:productiveMorphology.isValidWordForm(target), prior:languageServices.spelling.resolve(raw,languageServices), attention:attentionCorrection(raw,tokens,at) ?? null, candidateQueryCountUpperBound:54*foldLetters(raw).length+31, lookupCapCanBind:54*foldLetters(raw).length+31>=1600, sourceInflectionAnalyses:analyzeSourceInflection(raw), rawEstablished:isEstablishedSurface(raw), rawReviewed:isReviewedSpelling(raw), rawClosedFunction:isClosedFunctionForm(raw), alwaysFallbackObserved:alwaysCalls.includes(raw), alwaysOutput, rawDictionary:dictionaryCandidates(raw)?.has(raw) ?? false, rawMorphology:productiveMorphology.isValidWordForm(raw), rawInNeuralLexicon:Object.hasOwn(neuralJSON.lexicon.words,raw), rawInPairedLexicon:Object.hasOwn(pairedJSON.words,raw), diacriticsPreserved:preservesDiacritics(raw,target), attentionAmbiguous:unresolvedAttentionAmbiguity(raw,tokens,at), fallbackObserved:calls.includes(raw), fallbackCalls:calls, acceptedEditTrace:trace, heads };
+});
+mkdirSync('docs/stage1/evaluation',{recursive:true});
+writeFileSync('docs/stage1/evaluation/targets.json',JSON.stringify({scope:'Neutral word-mention diagnostics; not a real contextual correction benchmark. Accepted-edit trace cannot prove every rejected internal gate. Scores are not calibrated probabilities.', rows},null,2)+'\n');
+console.table(rows.map(row=>({input:row.raw,target:row.target,output:row.output,fallback:row.fallbackObserved,heads:JSON.stringify(row.heads)})));

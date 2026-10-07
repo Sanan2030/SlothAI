@@ -1,6 +1,6 @@
 /** Existing fixtures are diagnostic text-mode snapshots; use gold:exact for mode-aware gold gates. */
 import { createHash } from 'node:crypto';
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { correctText } from '../../lib/editor/correct';
 import { metrics, type EvaluationRow } from './metrics';
 interface Row { id?: string; input?: string; expected?: string; category?: string; preserveFormatting?: boolean }
@@ -34,5 +34,7 @@ if (compare) {
 const bytes = JSON.stringify(snapshot, null, 2) + '\n';
 // Large raw snapshot stays local unless --snapshot-out is explicitly supplied.
 const out = process.argv.find(arg => arg.startsWith('--snapshot-out='))?.slice(15); if (out) writeFileSync(out, bytes);
-writeFileSync('docs/evaluation/phase0/fixtures.json', JSON.stringify({ rows: snapshot.length, sha256: createHash('sha256').update(bytes).digest('hex'), compared, changed, idempotencyFailures: snapshot.filter(row => !row.idempotent).map(row => `${row.fixture}/${row.id}`), selectedQuality: quality, provenance: 'Existing project fixtures, text-mode diagnostic only; no frozen targets changed. Gold tests use their dedicated mode-aware evaluator.' }, null, 2) + '\n');
+const reportDirectory = process.argv.find(arg=>arg.startsWith('--out='))?.slice(6) ?? 'docs/evaluation/phase0';
+mkdirSync(reportDirectory,{recursive:true});
+writeFileSync(`${reportDirectory}/fixtures.json`, JSON.stringify({ rows: snapshot.length, sha256: createHash('sha256').update(bytes).digest('hex'), compared, changed, idempotencyFailures: snapshot.filter(row => !row.idempotent).map(row => `${row.fixture}/${row.id}`), selectedQuality: quality, provenance: 'Existing project fixtures, text-mode diagnostic only; no frozen targets changed. Gold tests use their dedicated mode-aware evaluator.' }, null, 2) + '\n');
 if (compare && changed) throw new Error(`Production output changed in ${changed} fixture rows`);

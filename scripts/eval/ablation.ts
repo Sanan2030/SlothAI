@@ -1,6 +1,7 @@
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { evaluate, policies } from './run';
 import { bootstrap, metrics, type EvaluationRow } from './metrics';
+const outputDirectory = process.argv.find(value => value.startsWith('--out='))?.slice(6) ?? 'docs/evaluation/phase0';
 const reference = evaluate('holdout-500');
 const result: Record<string, unknown> = {};
 for (const [name, runtime] of Object.entries(policies)) {
@@ -13,4 +14,5 @@ for (const [name, runtime] of Object.entries(policies)) {
   const deltas = [...groups.values()].map(group => group.reduce((sum, value) => sum + value, 0) / group.length);
   result[name] = { pairedExactDelta: bootstrap(deltas, values => values.reduce((sum, value) => sum + value, 0) / values.length), quality: metrics(rows), agreementWithDefault: metrics(differenceRows).estimates.sentenceExact, changedIds: changed.map(row => row.id), improvedIds: changed.filter(row => row.output === row.expected).map(row => row.id), degradedIds: changed.filter(row => reference.find(base => base.id === row.id)!.output === row.expected).map(row => row.id) };
 }
-writeFileSync('docs/evaluation/phase0/ablation.json', JSON.stringify({ policies: result, caveat: 'Existing runtime flags only. noBounded covers bounded/domain composition; flags do not independently disable document/log/lexical/agreement heads. No unsupported per-head causal claim is made. Flags may have no effect on the conditional default path. Institutional is experimental and absent from runtime.' }, null, 2) + '\n');
+mkdirSync(outputDirectory, { recursive: true });
+writeFileSync(`${outputDirectory}/ablation.json`, JSON.stringify({ policies: result, caveat: 'Existing runtime flags only. noBounded covers bounded/domain composition; flags do not independently disable document/log/lexical/agreement heads. No unsupported per-head causal claim is made. Flags may have no effect on the conditional default path. Institutional is experimental and absent from runtime.' }, null, 2) + '\n');

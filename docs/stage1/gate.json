@@ -1,0 +1,17 @@
+{
+  "status": "failed",
+  "minimumCleanSentences": 5000000,
+  "cleanSentences": 0,
+  "auditScope": "Both clean targets and generated noisy inputs; 8-word normalized ngrams and exact sentences",
+  "errors": [
+    "Three independent approved source groups and nonempty source splits required",
+    "Missing clean/pair files: train",
+    "Missing clean/pair files: validation",
+    "Missing clean/pair files: test",
+    "Insufficient clean sentences: 0/5000000"
+  ],
+  "phase0Overlap": {},
+  "crossSplitCollisions": null,
+  "crossSplitAudit": "not-exercised",
+  "trainingStarted": false
+}
