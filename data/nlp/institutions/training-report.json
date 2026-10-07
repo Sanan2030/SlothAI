@@ -1,0 +1,138 @@
+{
+  "sourceSHA256": "46b88526314651d31be62ca77103f0f2b942aec4b7a98dcd50d97170482e0401",
+  "artifactSHA256": "7e27db2ab0c97c376dd93a439e36d6b39ddaac1f8cdef820968374b3eeadc766",
+  "sourceSentences": 120,
+  "partitions": {
+    "train": {
+      "scenarios": 80,
+      "pairs": 459,
+      "sha256": "d07560fd2c29aee6627af03df1d2750ad3d4968a01e824b432f523739a9affc7"
+    },
+    "validation": {
+      "scenarios": 20,
+      "pairs": 110,
+      "sha256": "befa49b5bfe8afa31af0d2e70d33fc35f2aa498e6622e32f633e14c5246c40af"
+    },
+    "test": {
+      "scenarios": 20,
+      "pairs": 112,
+      "sha256": "0a9f5513e790c99e7805bad4b905b3b6c62e8e8711aeaa943c51018d2cf996d4"
+    }
+  },
+  "trainingExamples": 2846,
+  "validationExamples": 227,
+  "vocabulary": 359,
+  "parameters": 313,
+  "selectedEpochs": 8,
+  "attemptedEpochs": 120,
+  "initialTrainingBCE": 0.6875325529733405,
+  "history": [
+    {
+      "epochs": 8,
+      "trainingBCE": 0.0010241237059369344,
+      "validationBCE": 3.987263492027468,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 16,
+      "trainingBCE": 0.0006546553072809142,
+      "validationBCE": 4.135703141682005,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 24,
+      "trainingBCE": 0.0005399285435244606,
+      "validationBCE": 4.303123777561655,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 32,
+      "trainingBCE": 0.0004913607134436263,
+      "validationBCE": 4.424707423517396,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 40,
+      "trainingBCE": 0.0004626525854794345,
+      "validationBCE": 4.373472502392882,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 48,
+      "trainingBCE": 0.00044534542544940865,
+      "validationBCE": 4.431811188921712,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 56,
+      "trainingBCE": 0.0004347309900555052,
+      "validationBCE": 4.456186546739167,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 64,
+      "trainingBCE": 0.00042701590010971305,
+      "validationBCE": 4.426178565242034,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 72,
+      "trainingBCE": 0.00042161251909459465,
+      "validationBCE": 4.466858796815872,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 80,
+      "trainingBCE": 0.00041740471262724055,
+      "validationBCE": 4.451826833036901,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 88,
+      "trainingBCE": 0.0004142416942733929,
+      "validationBCE": 4.457415215708723,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 96,
+      "trainingBCE": 0.00041229068576623004,
+      "validationBCE": 4.486899107910821,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 104,
+      "trainingBCE": 0.0004098561798366113,
+      "validationBCE": 4.453540023119898,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 112,
+      "trainingBCE": 0.00040828772212693937,
+      "validationBCE": 4.470670106849414,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    },
+    {
+      "epochs": 120,
+      "trainingBCE": 0.0004069253165485399,
+      "validationBCE": 4.468396179645055,
+      "correctEdits": 0,
+      "wrongEdits": 0
+    }
+  ],
+  "artifactBytes": 77849,
+  "policy": "Assistant-authored synthetic scenarios, not human-reviewed. Scenario ownership fixed before augmentation. Train-only lexicon/statistics; validation-only checkpoint selection; test unused for training or thresholds. No names, sentence replay, runtime training, Python, LLM or network inference."
+}

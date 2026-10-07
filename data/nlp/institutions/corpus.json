@@ -1,0 +1,1230 @@
+{
+  "version": 1,
+  "provenance": "Original assistant-authored generic scenarios; no personal or company names; not real user errors or human-reviewed targets.",
+  "sources": [
+    {
+      "url": "https://www.taxes.gov.az/az/page/huquqi-sexsler-ucun",
+      "use": "Terminology reference only; source prose not copied"
+    },
+    {
+      "url": "https://www.e-gov.az/az/services/Info/3040/1",
+      "use": "Electronic signature terminology reference only"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "institution-001",
+      "documentId": "institution-scenario-001",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Vətəndaşın müraciəti elektron kabinetdə qeydiyyata alındı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-002",
+      "documentId": "institution-scenario-002",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Qəbul şöbəsi sorğunun aidiyyəti üzrə göndərilməsini təmin etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-003",
+      "documentId": "institution-scenario-003",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Məsul əməkdaş ərizənin əlavə sənədlərini ayrıca yoxladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-004",
+      "documentId": "institution-scenario-004",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Xidmət pəncərəsində növbə məlumatları yeniləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-005",
+      "documentId": "institution-scenario-005",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Elektron müraciətin statusu şəxsi kabinetdə göstərilir.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-006",
+      "documentId": "institution-scenario-006",
+      "domain": "public-service",
+      "split": "train",
+      "target": "İcraçı sorğunun cavabını müəyyən edilmiş vaxtda hazırladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-007",
+      "documentId": "institution-scenario-007",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Müraciətlər üzrə hesabat rəhbərliyə təqdim olundu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-008",
+      "documentId": "institution-scenario-008",
+      "domain": "public-service",
+      "split": "train",
+      "target": "Arayışın hazır olması barədə bildiriş göndərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-009",
+      "documentId": "institution-scenario-009",
+      "domain": "public-service",
+      "split": "validation",
+      "target": "Ərizəçi qəbul tarixini dəyişdirmək üçün sorğu yaratdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-010",
+      "documentId": "institution-scenario-010",
+      "domain": "public-service",
+      "split": "validation",
+      "target": "Operator qeydiyyat nömrəsini cavab məktubunda göstərdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-011",
+      "documentId": "institution-scenario-011",
+      "domain": "public-service",
+      "split": "test",
+      "target": "Məlumat mərkəzi zənglərin mövzularını təsnif etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-012",
+      "documentId": "institution-scenario-012",
+      "domain": "public-service",
+      "split": "test",
+      "target": "Qəbul zamanı təqdim edilən sənədlərin siyahısı saxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-013",
+      "documentId": "institution-scenario-013",
+      "domain": "registry",
+      "split": "train",
+      "target": "Hüquqi şəxsin təsis sənədləri elektron ərizəyə əlavə edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-014",
+      "documentId": "institution-scenario-014",
+      "domain": "registry",
+      "split": "train",
+      "target": "Reyestrdən çıxarışın surəti qeydiyyat qovluğuna yerləşdirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-015",
+      "documentId": "institution-scenario-015",
+      "domain": "registry",
+      "split": "train",
+      "target": "Təsisçi nizamnamə kapitalı barədə məlumatları dəqiqləşdirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-016",
+      "documentId": "institution-scenario-016",
+      "domain": "registry",
+      "split": "train",
+      "target": "Qanuni təmsilçinin səlahiyyətləri etibarnamə ilə təsdiqləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-017",
+      "documentId": "institution-scenario-017",
+      "domain": "registry",
+      "split": "train",
+      "target": "Ərizənin imzalanması üçün elektron imza istifadə olundu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-018",
+      "documentId": "institution-scenario-018",
+      "domain": "registry",
+      "split": "train",
+      "target": "Qeydiyyat şəhadətnaməsinin nömrəsi sistemdə saxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-019",
+      "documentId": "institution-scenario-019",
+      "domain": "registry",
+      "split": "train",
+      "target": "Nizamnamədə göstərilən ünvan yeni məlumatla əvəz edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-020",
+      "documentId": "institution-scenario-020",
+      "domain": "registry",
+      "split": "train",
+      "target": "Qeydiyyat orqanı sənədlərdəki uyğunsuzluğu aşkar etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-021",
+      "documentId": "institution-scenario-021",
+      "domain": "registry",
+      "split": "validation",
+      "target": "Filialın yaradılması barədə qərar ərizəyə qoşuldu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-022",
+      "documentId": "institution-scenario-022",
+      "domain": "registry",
+      "split": "validation",
+      "target": "Təsisçilərin payları müqavilənin əlavəsində göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-023",
+      "documentId": "institution-scenario-023",
+      "domain": "registry",
+      "split": "test",
+      "target": "Rəsmi nümayəndə çatışmayan sənədi portala yüklədi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-024",
+      "documentId": "institution-scenario-024",
+      "domain": "registry",
+      "split": "test",
+      "target": "Dövlət reyestrindəki məlumatlar yenidən yoxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-025",
+      "documentId": "institution-scenario-025",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Dərkənarın müəllifi məktubun icraçısını müəyyən etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-026",
+      "documentId": "institution-scenario-026",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Daxil olan sənəd ümumi qeydiyyat jurnalına yazıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-027",
+      "documentId": "institution-scenario-027",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "İcra müddəti sənədin nəzarət kartında göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-028",
+      "documentId": "institution-scenario-028",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Kargüzarlıq bölməsi çıxış məktubunun nüsxəsini arxivləşdirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-029",
+      "documentId": "institution-scenario-029",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Sənədlərin dövriyyəsi üzrə təlimat əməkdaşlara göndərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-030",
+      "documentId": "institution-scenario-030",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Müşayiət məktubu sənədlər toplusunun əvvəlinə yerləşdirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-031",
+      "documentId": "institution-scenario-031",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "İmzalanmış protokolun əsli məsul şəxsdə saxlanılır.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-032",
+      "documentId": "institution-scenario-032",
+      "domain": "document-flow",
+      "split": "train",
+      "target": "Qovluğun saxlanma müddəti arxiv siyahısından götürüldü.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-033",
+      "documentId": "institution-scenario-033",
+      "domain": "document-flow",
+      "split": "validation",
+      "target": "İcraçı əlavə razılaşdırma üçün layihəni geri qaytardı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-034",
+      "documentId": "institution-scenario-034",
+      "domain": "document-flow",
+      "split": "validation",
+      "target": "Məktubun qısa məzmunu qeydiyyat kartına daxil edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-035",
+      "documentId": "institution-scenario-035",
+      "domain": "document-flow",
+      "split": "test",
+      "target": "Arxiv əməkdaşı köhnə sənədlərin inventarını hazırladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-036",
+      "documentId": "institution-scenario-036",
+      "domain": "document-flow",
+      "split": "test",
+      "target": "Sənədin ünvanlandığı bölmə icazə siyahısından seçildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-037",
+      "documentId": "institution-scenario-037",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Büdcə layihəsində cari xərclər ayrıca göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-038",
+      "documentId": "institution-scenario-038",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Maliyyə şöbəsi dövlət rüsumunun ödənilməsini yoxladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-039",
+      "documentId": "institution-scenario-039",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Satınalma komissiyası təkliflərin müqayisə cədvəlini hazırladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-040",
+      "documentId": "institution-scenario-040",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Tender iştirakçısı qiymət təklifini möhürlənmiş zərfdə təqdim etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-041",
+      "documentId": "institution-scenario-041",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Hesabat dövrü üzrə öhdəliklər uçot sisteminə daxil edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-042",
+      "documentId": "institution-scenario-042",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Vergi bəyannaməsinin məlumatları mühasibat qeydləri ilə müqayisə olundu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-043",
+      "documentId": "institution-scenario-043",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Elektron qaimənin rekvizitləri ödəniş tapşırığına köçürüldü.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-044",
+      "documentId": "institution-scenario-044",
+      "domain": "public-finance",
+      "split": "train",
+      "target": "Audit qrupu vəsaitlərin təyinatı üzrə istifadəsini araşdırdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-045",
+      "documentId": "institution-scenario-045",
+      "domain": "public-finance",
+      "split": "validation",
+      "target": "Müsabiqənin nəticələri təsdiq üçün komissiyaya təqdim edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-046",
+      "documentId": "institution-scenario-046",
+      "domain": "public-finance",
+      "split": "validation",
+      "target": "Smeta hesablamalarında aşkarlanan fərq aradan qaldırıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-047",
+      "documentId": "institution-scenario-047",
+      "domain": "public-finance",
+      "split": "test",
+      "target": "Xəzinə əməliyyatının tarixi maliyyə hesabatında göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-048",
+      "documentId": "institution-scenario-048",
+      "domain": "public-finance",
+      "split": "test",
+      "target": "Qiymətləndirmə meyarları bütün iştirakçılara əvvəlcədən bildirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-049",
+      "documentId": "institution-scenario-049",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "İcra orqanı ərazi üzrə müraciətləri ümumiləşdirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-050",
+      "documentId": "institution-scenario-050",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Bələdiyyə komissiyası iclasın gündəliyini hazırladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-051",
+      "documentId": "institution-scenario-051",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Gömrük əməkdaşı yük sənədindəki rekvizitləri yoxladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-052",
+      "documentId": "institution-scenario-052",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Notariat arxivindən sənədin təsdiqlənmiş surəti alındı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-053",
+      "documentId": "institution-scenario-053",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Məhkəmə sorğusuna cavab hüquq bölməsində hazırlandı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-054",
+      "documentId": "institution-scenario-054",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Nəzarət şöbəsi yoxlama aktının əlavələrini nəzərdən keçirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-055",
+      "documentId": "institution-scenario-055",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Sosial xidmət mərkəzi vətəndaşın təqdim etdiyi arayışı qəbul etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-056",
+      "documentId": "institution-scenario-056",
+      "domain": "public-administration",
+      "split": "train",
+      "target": "Səlahiyyətli nümayəndə iclas protokolunu imzaladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-057",
+      "documentId": "institution-scenario-057",
+      "domain": "public-administration",
+      "split": "validation",
+      "target": "Müfəttiş görülən tədbirlər barədə izahat istədi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-058",
+      "documentId": "institution-scenario-058",
+      "domain": "public-administration",
+      "split": "validation",
+      "target": "Komissiyanın rəyi müvafiq məktuba əlavə edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-059",
+      "documentId": "institution-scenario-059",
+      "domain": "public-administration",
+      "split": "test",
+      "target": "İctimai dinləmədə iştirakçıların təklifləri qeydə alındı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-060",
+      "documentId": "institution-scenario-060",
+      "domain": "public-administration",
+      "split": "test",
+      "target": "Ərazi bölməsi məlumatların dəqiqliyini təsdiqlədi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-061",
+      "documentId": "institution-scenario-061",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Şirkətin idarə heyəti inkişaf planını müzakirə etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-062",
+      "documentId": "institution-scenario-062",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Korporativ idarəetmə bölməsi qərar layihəsini razılaşdırdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-063",
+      "documentId": "institution-scenario-063",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Səhmdarların iclasında mənfəətin bölüşdürülməsi məsələsinə baxıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-064",
+      "documentId": "institution-scenario-064",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Daxili nəzarət proseduru yeni tələblərə uyğunlaşdırıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-065",
+      "documentId": "institution-scenario-065",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Biznes prosesinin sahibi dəyişiklikləri təsdiq etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-066",
+      "documentId": "institution-scenario-066",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Risk komitəsi əməliyyatın mümkün təsirlərini qiymətləndirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-067",
+      "documentId": "institution-scenario-067",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Rəhbərlik keyfiyyət göstəricilərinə dair hesabat aldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-068",
+      "documentId": "institution-scenario-068",
+      "domain": "corporate-governance",
+      "split": "train",
+      "target": "Tərəfdaşlıq müqaviləsinin müddəti uzadıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-069",
+      "documentId": "institution-scenario-069",
+      "domain": "corporate-governance",
+      "split": "validation",
+      "target": "Strategiyanın icrası üzrə tədbirlər planı yeniləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-070",
+      "documentId": "institution-scenario-070",
+      "domain": "corporate-governance",
+      "split": "validation",
+      "target": "Daxili siyasətin tətbiqi bütün filiallara bildirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-071",
+      "documentId": "institution-scenario-071",
+      "domain": "corporate-governance",
+      "split": "test",
+      "target": "İdarəetmə strukturu məsuliyyət bölgüsü ilə birlikdə təsdiqləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-072",
+      "documentId": "institution-scenario-072",
+      "domain": "corporate-governance",
+      "split": "test",
+      "target": "Uyğunluq üzrə mütəxəssis yeni proseduru yoxladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-073",
+      "documentId": "institution-scenario-073",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Hüquqşünas müqavilənin ödəniş şərtlərini nəzərdən keçirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-074",
+      "documentId": "institution-scenario-074",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Təchizatçı xidmət səviyyəsi barədə əlavə təqdim etdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-075",
+      "documentId": "institution-scenario-075",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Müştəri kommersiya təklifinin yenilənməsini istədi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-076",
+      "documentId": "institution-scenario-076",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Təhvil aktı hər iki tərəfin nümayəndəsi tərəfindən imzalandı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-077",
+      "documentId": "institution-scenario-077",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Məxfilik razılaşması danışıqlardan əvvəl hazırlandı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-078",
+      "documentId": "institution-scenario-078",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Zəmanət müddəti texniki sənədlərdə dəqiq göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-079",
+      "documentId": "institution-scenario-079",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Ödəniş qrafiki sifarişin mərhələlərinə uyğun quruldu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-080",
+      "documentId": "institution-scenario-080",
+      "domain": "contracts",
+      "split": "train",
+      "target": "Satınalma sorğusuna məhsulun texniki xüsusiyyətləri əlavə olundu.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-081",
+      "documentId": "institution-scenario-081",
+      "domain": "contracts",
+      "split": "validation",
+      "target": "Müqavilə üzrə öhdəliklərin yerinə yetirilməsi izlənilir.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-082",
+      "documentId": "institution-scenario-082",
+      "domain": "contracts",
+      "split": "validation",
+      "target": "Tərəflər xidmətin qəbul meyarlarını razılaşdırdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-083",
+      "documentId": "institution-scenario-083",
+      "domain": "contracts",
+      "split": "test",
+      "target": "Hesabın rekvizitlərindəki dəyişiklik yazılı şəkildə bildirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-084",
+      "documentId": "institution-scenario-084",
+      "domain": "contracts",
+      "split": "test",
+      "target": "Məsul menecer müqavilə əlavəsinin son variantını göndərdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-085",
+      "documentId": "institution-scenario-085",
+      "domain": "people",
+      "split": "train",
+      "target": "İnsan resursları bölməsi yeni əməkdaşın sənədlərini topladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-086",
+      "documentId": "institution-scenario-086",
+      "domain": "people",
+      "split": "train",
+      "target": "Əmək müqaviləsinin məlumatları elektron sistemdə yeniləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-087",
+      "documentId": "institution-scenario-087",
+      "domain": "people",
+      "split": "train",
+      "target": "Təlim proqramı işçilərin ehtiyaclarına uyğun hazırlandı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-088",
+      "documentId": "institution-scenario-088",
+      "domain": "people",
+      "split": "train",
+      "target": "Vəzifə təlimatında əməkdaşın məsuliyyətləri göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-089",
+      "documentId": "institution-scenario-089",
+      "domain": "people",
+      "split": "train",
+      "target": "Məzuniyyət cədvəli bölmə rəhbərləri ilə razılaşdırıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-090",
+      "documentId": "institution-scenario-090",
+      "domain": "people",
+      "split": "train",
+      "target": "İşə qəbul üzrə müsahibənin nəticələri qeydə alındı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-091",
+      "documentId": "institution-scenario-091",
+      "domain": "people",
+      "split": "train",
+      "target": "Əməkdaşın səlahiyyət səviyyəsi təsdiqdən sonra dəyişdirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-092",
+      "documentId": "institution-scenario-092",
+      "domain": "people",
+      "split": "train",
+      "target": "Davamiyyət məlumatları əməkhaqqı hesablamasına ötürüldü.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-093",
+      "documentId": "institution-scenario-093",
+      "domain": "people",
+      "split": "validation",
+      "target": "Təhlükəsizlik təlimatının oxunması elektron qaydada təsdiqləndi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-094",
+      "documentId": "institution-scenario-094",
+      "domain": "people",
+      "split": "validation",
+      "target": "Sınaq müddətinin yekunu fərdi qiymətləndirmədə göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-095",
+      "documentId": "institution-scenario-095",
+      "domain": "people",
+      "split": "test",
+      "target": "İşçinin təlim sertifikatı şəxsi qovluğunda saxlanılır.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-096",
+      "documentId": "institution-scenario-096",
+      "domain": "people",
+      "split": "test",
+      "target": "Kadr ehtiyatı üzrə namizədlərin siyahısı yenidən nəzərdən keçirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-097",
+      "documentId": "institution-scenario-097",
+      "domain": "operations",
+      "split": "train",
+      "target": "Anbar uçotu məhsulların hərəkəti ilə uyğunlaşdırıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-098",
+      "documentId": "institution-scenario-098",
+      "domain": "operations",
+      "split": "train",
+      "target": "Logistika qrupu çatdırılma marşrutunu dəyişdirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-099",
+      "documentId": "institution-scenario-099",
+      "domain": "operations",
+      "split": "train",
+      "target": "Sifarişin hazırlanma vaxtı istehsal planına daxil edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-100",
+      "documentId": "institution-scenario-100",
+      "domain": "operations",
+      "split": "train",
+      "target": "Məhsulun keyfiyyəti qəbul zamanı yoxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-101",
+      "documentId": "institution-scenario-101",
+      "domain": "operations",
+      "split": "train",
+      "target": "İnventarlaşdırma nəticəsində artıq ehtiyatlar müəyyən edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-102",
+      "documentId": "institution-scenario-102",
+      "domain": "operations",
+      "split": "train",
+      "target": "Filiallararası göndərişin izləmə nömrəsi müştəriyə bildirildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-103",
+      "documentId": "institution-scenario-103",
+      "domain": "operations",
+      "split": "train",
+      "target": "Əməliyyat şöbəsi günlük hesabatları birləşdirdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-104",
+      "documentId": "institution-scenario-104",
+      "domain": "operations",
+      "split": "train",
+      "target": "Avadanlığın texniki baxışı üçün iş sifarişi açıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-105",
+      "documentId": "institution-scenario-105",
+      "domain": "operations",
+      "split": "validation",
+      "target": "İstehsal xəttində yaranan nasazlıq aradan qaldırıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-106",
+      "documentId": "institution-scenario-106",
+      "domain": "operations",
+      "split": "validation",
+      "target": "Qablaşdırma qaydası məhsulun xüsusiyyətlərinə uyğun seçildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-107",
+      "documentId": "institution-scenario-107",
+      "domain": "operations",
+      "split": "test",
+      "target": "Təchizat zəncirindəki gecikmə barədə tərəfdaş xəbərdar edildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-108",
+      "documentId": "institution-scenario-108",
+      "domain": "operations",
+      "split": "test",
+      "target": "Xidmət keyfiyyətinin ölçülməsi üçün sorğu göndərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-109",
+      "documentId": "institution-scenario-109",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "İnformasiya təhlükəsizliyi qrupu giriş icazələrini yenilədi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-110",
+      "documentId": "institution-scenario-110",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "Texniki dəstək əməkdaşı sistem jurnalını araşdırdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-111",
+      "documentId": "institution-scenario-111",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "Elektron sənəd imzalandıqdan sonra arxivə ötürüldü.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-112",
+      "documentId": "institution-scenario-112",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "Məlumat bazasının ehtiyat nüsxəsi ayrıca saxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-113",
+      "documentId": "institution-scenario-113",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "Proqram təminatının yenilənməsi test mühitində yoxlanıldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-114",
+      "documentId": "institution-scenario-114",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "İstifadəçinin sorğusu xidmət portalında qeydiyyata düşdü.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-115",
+      "documentId": "institution-scenario-115",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "Sistem inzibatçısı hesabın fəaliyyətini müvəqqəti dayandırdı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": []
+    },
+    {
+      "id": "institution-116",
+      "documentId": "institution-scenario-116",
+      "domain": "information-systems",
+      "split": "train",
+      "target": "API sorğularının nəticələri monitorinq panelində göstərildi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": [
+        "API"
+      ]
+    },
+    {
+      "id": "institution-117",
+      "documentId": "institution-scenario-117",
+      "domain": "information-systems",
+      "split": "validation",
+      "target": "Backend xidməti müqavilə məlumatlarını database daxilində saxladı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": [
+        "Backend",
+        "database"
+      ]
+    },
+    {
+      "id": "institution-118",
+      "documentId": "institution-scenario-118",
+      "domain": "information-systems",
+      "split": "validation",
+      "target": "CI/CD pipeline yeni commit üçün testləri işə saldı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": [
+        "CI/CD",
+        "pipeline",
+        "commit"
+      ]
+    },
+    {
+      "id": "institution-119",
+      "documentId": "institution-scenario-119",
+      "domain": "information-systems",
+      "split": "test",
+      "target": "Deploy zamanı yaranan xəta GitHub jurnalında qeydə alındı.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": [
+        "Deploy",
+        "GitHub"
+      ]
+    },
+    {
+      "id": "institution-120",
+      "documentId": "institution-scenario-120",
+      "domain": "information-systems",
+      "split": "test",
+      "target": "Frontend interfeysi elektron imzanın statusunu istifadəçiyə göstərdi.",
+      "annotationStatus": "assistant-authored-not-human-reviewed",
+      "errorOrigin": "synthetic",
+      "protectedTerms": [
+        "Frontend"
+      ]
+    }
+  ]
+}

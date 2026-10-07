@@ -66,7 +66,9 @@
     "nlp:document:train": "node --import tsx scripts/train-document-spelling.ts",
     "nlp:document:evaluate": "node --import tsx scripts/evaluate-document-spelling.ts",
     "nlp:log:train": "node --import tsx scripts/train-log-spelling.ts && node --import tsx scripts/train-log-ocr.ts",
-    "nlp:log:evaluate": "node --import tsx scripts/evaluate-log-spelling.ts"
+    "nlp:log:evaluate": "node --import tsx scripts/evaluate-log-spelling.ts",
+    "nlp:institutions:train": "node --import tsx scripts/train-institutional-spelling.ts",
+    "nlp:institutions:check": "node --import tsx scripts/evaluate-institutional-spelling.ts --enforce"
   },
   "engines": {
     "node": ">=20.9.0"

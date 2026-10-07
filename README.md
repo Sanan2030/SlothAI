@@ -24,6 +24,8 @@ The browser worker allows up to 10 minutes per correction, then terminates the
 worker with a clear timeout message. This watchdog is independent of the
 unchanged performance benchmark budgets and optional server API limits.
 
+See [CI morphology fixes and institutional training](docs/institutional-training/README.md): the unseen suite now passes 400/400; 120 generic state/corporate scenarios train an experimental offline ranker. It remains outside the browser bundle because separate validation/test cases show no additional gains.
+
 ## Local development
 
 Node >=20.9 (Node 24 used for validation):
