@@ -1,0 +1,90 @@
+{
+  "provenance": "Assistant-authored compositional correct-sentence examples; no human linguistic review; templates and targets fixed before engine evaluation; phase0/gold not used to construct cases",
+  "developmentSHA256": "0631e3e40cedc4a74aa3b9407eada23b52266ca066e646614b62a668032c64b7",
+  "metrics": {
+    "rows": 400,
+    "documents": 400,
+    "counts": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "abstainedErrors": 0,
+      "required": 0,
+      "correctWords": 1644,
+      "harmedWords": 0,
+      "exact": 400,
+      "identity": 400,
+      "harmedIdentitySentences": 0,
+      "unstable": 0
+    },
+    "estimates": {
+      "precision": {
+        "value": null,
+        "ci95": null
+      },
+      "recall": {
+        "value": null,
+        "ci95": null
+      },
+      "f05": {
+        "value": null,
+        "ci95": null
+      },
+      "falsePositiveRate": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "errorAbstentionRate": {
+        "value": null,
+        "ci95": null
+      },
+      "sentenceExact": {
+        "value": 1,
+        "ci95": [
+          1,
+          1
+        ]
+      },
+      "identityFalseChangeRate": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "cer": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "wer": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "idempotencyFailureRate": {
+        "value": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "bootstrap": {
+      "repetitions": 1000,
+      "seed": 20261007,
+      "unit": "documentId",
+      "method": "percentile",
+      "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+    },
+    "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+  },
+  "failures": []
+}

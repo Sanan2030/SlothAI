@@ -1,0 +1,2199 @@
+{
+  "holdout-500": {
+    "overall": {
+      "rows": 500,
+      "documents": 250,
+      "counts": {
+        "tp": 532,
+        "fp": 3,
+        "fn": 108,
+        "abstainedErrors": 106,
+        "required": 640,
+        "correctWords": 2207,
+        "harmedWords": 1,
+        "exact": 393,
+        "identity": 150,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "estimates": {
+        "precision": {
+          "value": 0.994392523364486,
+          "ci95": [
+            0.987471266893748,
+            1
+          ]
+        },
+        "recall": {
+          "value": 0.83125,
+          "ci95": [
+            0.7896494156928213,
+            0.862342066146414
+          ]
+        },
+        "f05": {
+          "value": 0.9568345323741008,
+          "ci95": [
+            0.943430923441485,
+            0.9671468667659526
+          ]
+        },
+        "falsePositiveRate": {
+          "value": 0.00045310376076121433,
+          "ci95": [
+            0,
+            0.0017826107715813596
+          ]
+        },
+        "errorAbstentionRate": {
+          "value": 0.165625,
+          "ci95": [
+            0.1350022182786158,
+            0.20609572072072072
+          ]
+        },
+        "sentenceExact": {
+          "value": 0.786,
+          "ci95": [
+            0.744,
+            0.824
+          ]
+        },
+        "identityFalseChangeRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "cer": {
+          "value": 0.007547856136043286,
+          "ci95": [
+            0.00614628135348076,
+            0.009148897137767687
+          ]
+        },
+        "wer": {
+          "value": 0.03933965577801194,
+          "ci95": [
+            0.032201046918383,
+            0.04740670276140211
+          ]
+        },
+        "idempotencyFailureRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        }
+      },
+      "bootstrap": {
+        "repetitions": 1000,
+        "seed": 20261007,
+        "unit": "documentId",
+        "method": "percentile",
+        "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+      },
+      "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+    },
+    "byCategory": {
+      "identity": {
+        "rows": 150,
+        "documents": 75,
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "abstainedErrors": 0,
+          "required": 0,
+          "correctWords": 856,
+          "harmedWords": 0,
+          "exact": 150,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": null,
+            "ci95": null
+          },
+          "recall": {
+            "value": null,
+            "ci95": null
+          },
+          "f05": {
+            "value": null,
+            "ci95": null
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": null,
+            "ci95": null
+          },
+          "sentenceExact": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "wer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "ascii": {
+        "rows": 65,
+        "documents": 55,
+        "counts": {
+          "tp": 261,
+          "fp": 1,
+          "fn": 7,
+          "abstainedErrors": 6,
+          "required": 268,
+          "correctWords": 108,
+          "harmedWords": 0,
+          "exact": 59,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.9961832061068703,
+            "ci95": [
+              0.9876020198209938,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.9738805970149254,
+            "ci95": [
+              0.9516098940779971,
+              0.992593954248366
+            ]
+          },
+          "f05": {
+            "value": 0.9916413373860182,
+            "ci95": [
+              0.982356052502397,
+              0.998415832037402
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.022388059701492536,
+            "ci95": [
+              0.004290034588290687,
+              0.04348619485877498
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.9076923076923077,
+            "ci95": [
+              0.8307627118644069,
+              0.9701492537313433
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.003419972640218878,
+            "ci95": [
+              0.0010114376995644134,
+              0.006554428066935495
+            ]
+          },
+          "wer": {
+            "value": 0.018617021276595744,
+            "ci95": [
+              0.005374561478565928,
+              0.034315833212892034
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "digraph": {
+        "rows": 37,
+        "documents": 37,
+        "counts": {
+          "tp": 48,
+          "fp": 0,
+          "fn": 5,
+          "abstainedErrors": 5,
+          "required": 53,
+          "correctWords": 151,
+          "harmedWords": 0,
+          "exact": 32,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.9056603773584906,
+            "ci95": [
+              0.82,
+              0.9791772959183673
+            ]
+          },
+          "f05": {
+            "value": 0.9795918367346939,
+            "ci95": [
+              0.9579439252336449,
+              0.9957649096279626
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.09433962264150944,
+            "ci95": [
+              0.020822704081632653,
+              0.18
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.8648648648648649,
+            "ci95": [
+              0.7567567567567568,
+              0.972972972972973
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.01038961038961039,
+            "ci95": [
+              0.002664713004176618,
+              0.01947984915207714
+            ]
+          },
+          "wer": {
+            "value": 0.024509803921568627,
+            "ci95": [
+              0.0053756253234431605,
+              0.04326923076923077
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "partial": {
+        "rows": 49,
+        "documents": 49,
+        "counts": {
+          "tp": 166,
+          "fp": 0,
+          "fn": 4,
+          "abstainedErrors": 4,
+          "required": 170,
+          "correctWords": 115,
+          "harmedWords": 0,
+          "exact": 45,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.9764705882352941,
+            "ci95": [
+              0.9537505041000135,
+              0.9945659518213866
+            ]
+          },
+          "f05": {
+            "value": 0.9952038369304557,
+            "ci95": [
+              0.9903947086080809,
+              0.9989084451113988
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.023529411764705882,
+            "ci95": [
+              0.005434048178613396,
+              0.04624949589998655
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.9183673469387755,
+            "ci95": [
+              0.8367346938775511,
+              0.9795918367346939
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.001823985408116735,
+            "ci95": [
+              0.00043494342065162727,
+              0.0036900369003690036
+            ]
+          },
+          "wer": {
+            "value": 0.014035087719298246,
+            "ci95": [
+              0.003300058624283481,
+              0.028368794326241134
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "case": {
+        "rows": 50,
+        "documents": 50,
+        "counts": {
+          "tp": 47,
+          "fp": 0,
+          "fn": 3,
+          "abstainedErrors": 3,
+          "required": 50,
+          "correctWords": 233,
+          "harmedWords": 0,
+          "exact": 47,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.94,
+            "ci95": [
+              0.86,
+              1
+            ]
+          },
+          "f05": {
+            "value": 0.9873949579831933,
+            "ci95": [
+              0.9684684684684685,
+              1
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.06,
+            "ci95": [
+              0,
+              0.14
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.94,
+            "ci95": [
+              0.86,
+              1
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.0013623978201634877,
+            "ci95": [
+              0,
+              0.0031980269481334126
+            ]
+          },
+          "wer": {
+            "value": 0.02120141342756184,
+            "ci95": [
+              0,
+              0.04913148595871303
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "punctuation": {
+        "rows": 50,
+        "documents": 50,
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "abstainedErrors": 0,
+          "required": 0,
+          "correctWords": 282,
+          "harmedWords": 0,
+          "exact": 50,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": null,
+            "ci95": null
+          },
+          "recall": {
+            "value": null,
+            "ci95": null
+          },
+          "f05": {
+            "value": null,
+            "ci95": null
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": null,
+            "ci95": null
+          },
+          "sentenceExact": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "wer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "transpose": {
+        "rows": 49,
+        "documents": 49,
+        "counts": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 41,
+          "abstainedErrors": 41,
+          "required": 49,
+          "correctWords": 231,
+          "harmedWords": 0,
+          "exact": 8,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.16326530612244897,
+            "ci95": [
+              0.061224489795918366,
+              0.2653061224489796
+            ]
+          },
+          "f05": {
+            "value": 0.49382716049382713,
+            "ci95": [
+              0.2459016393442623,
+              0.6435643564356436
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.8367346938775511,
+            "ci95": [
+              0.7346938775510204,
+              0.9387755102040817
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.16326530612244897,
+            "ci95": [
+              0.061224489795918366,
+              0.2653061224489796
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.03712086917157085,
+            "ci95": [
+              0.03168874848387336,
+              0.04182214688876044
+            ]
+          },
+          "wer": {
+            "value": 0.14642857142857144,
+            "ci95": [
+              0.12318440543135373,
+              0.16734449065053653
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      },
+      "delete": {
+        "rows": 50,
+        "documents": 50,
+        "counts": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 48,
+          "abstainedErrors": 47,
+          "required": 50,
+          "correctWords": 231,
+          "harmedWords": 1,
+          "exact": 2,
+          "identity": 0,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": 0.5,
+            "ci95": [
+              0,
+              1
+            ]
+          },
+          "recall": {
+            "value": 0.04,
+            "ci95": [
+              0,
+              0.1
+            ]
+          },
+          "f05": {
+            "value": 0.15151515151515152,
+            "ci95": [
+              0,
+              0.33783783783783783
+            ]
+          },
+          "falsePositiveRate": {
+            "value": 0.004329004329004329,
+            "ci95": [
+              0,
+              0.013455958444088223
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": 0.94,
+            "ci95": [
+              0.86,
+              1
+            ]
+          },
+          "sentenceExact": {
+            "value": 0.04,
+            "ci95": [
+              0,
+              0.1
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": null,
+            "ci95": null
+          },
+          "cer": {
+            "value": 0.022931654676258992,
+            "ci95": [
+              0.020252552241630764,
+              0.025992730818210245
+            ]
+          },
+          "wer": {
+            "value": 0.17437722419928825,
+            "ci95": [
+              0.15614083000168927,
+              0.19391634980988592
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      }
+    },
+    "failures": [
+      {
+        "id": "p0-h-00-07-1",
+        "documentId": "holdout-00-07",
+        "domain": "təhsil",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, məzun qəubl sənədini təqdim etdi.",
+        "expected": "Yekun qeydə görə, məzun qəbul sənədini təqdim etdi.",
+        "output": "Yekun qeydə görə, məzun qəubl sənədini təqdim etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-00-08-0",
+        "documentId": "holdout-00-08",
+        "domain": "təhsil",
+        "category": "transpose",
+        "input": "Təlimçi məəsləni lövhədə həll etdi.",
+        "expected": "Təlimçi məsələni lövhədə həll etdi.",
+        "output": "Təlimçi məəsləni lövhədə həll etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-00-08-1",
+        "documentId": "holdout-00-08",
+        "domain": "təhsil",
+        "category": "delete",
+        "input": "Yekun qeydə görə, təlimçi məsələni löhədə həll etdi.",
+        "expected": "Yekun qeydə görə, təlimçi məsələni lövhədə həll etdi.",
+        "output": "Yekun qeydə görə, təlimçi məsələni löhədə həll etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-00-09-0",
+        "documentId": "holdout-00-09",
+        "domain": "təhsil",
+        "category": "delete",
+        "input": "Kitabxanaçı köhnə dərsliyi bəpa etdi.",
+        "expected": "Kitabxanaçı köhnə dərsliyi bərpa etdi.",
+        "output": "Kitabxanaçı köhnə dərsliyi bəpa etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-01-06-1",
+        "documentId": "holdout-01-06",
+        "domain": "səhiyyə",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, fizioterapevt məqşin müddətini azaltdı.",
+        "expected": "Yekun qeydə görə, fizioterapevt məşqin müddətini azaltdı.",
+        "output": "Yekun qeydə görə, fizioterapevt məqşin müddətini azaltdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-01-07-1",
+        "documentId": "holdout-01-07",
+        "domain": "səhiyyə",
+        "category": "delete",
+        "input": "Yekun qeydə görə, dietoloq qidalanma planını haırladı.",
+        "expected": "Yekun qeydə görə, dietoloq qidalanma planını hazırladı.",
+        "output": "Yekun qeydə görə, dietoloq qidalanma planını haırladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-01-08-0",
+        "documentId": "holdout-01-08",
+        "domain": "səhiyyə",
+        "category": "delete",
+        "input": "Stomatoloq dişin şəklini çədi.",
+        "expected": "Stomatoloq dişin şəklini çəkdi.",
+        "output": "Stomatoloq dişin şəklini çədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-02-05-1",
+        "documentId": "holdout-02-05",
+        "domain": "nəqliyyat",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, mexanik müəhrrikin yağını yoxladı.",
+        "expected": "Yekun qeydə görə, mexanik mühərrikin yağını yoxladı.",
+        "output": "Yekun qeydə görə, mexanik müəhrrikin yağını yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-02-06-1",
+        "documentId": "holdout-02-06",
+        "domain": "nəqliyyat",
+        "category": "delete",
+        "input": "Yekun qeydə görə, nəzarətçi keçid kartını oxtdu.",
+        "expected": "Yekun qeydə görə, nəzarətçi keçid kartını oxutdu.",
+        "output": "Yekun qeydə görə, nəzarətçi keçid kartını oxtdu.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-02-07-0",
+        "documentId": "holdout-02-07",
+        "domain": "nəqliyyat",
+        "category": "delete",
+        "input": "Kuryer bağlamanı ünvana çadırdı.",
+        "expected": "Kuryer bağlamanı ünvana çatdırdı.",
+        "output": "Kuryer bağlamanı ünvana çadırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-03-04-1",
+        "documentId": "holdout-03-04",
+        "domain": "enerji",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, briqada kaeblin yerini müəyyənləşdirdi.",
+        "expected": "Yekun qeydə görə, briqada kabelin yerini müəyyənləşdirdi.",
+        "output": "Yekun qeydə görə, briqada kaeblin yerini müəyyənləşdirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-03-05-0",
+        "documentId": "holdout-03-05",
+        "domain": "enerji",
+        "category": "transpose",
+        "input": "Mütəxəssis batareyanın tuutmunu ölçdü.",
+        "expected": "Mütəxəssis batareyanın tutumunu ölçdü.",
+        "output": "Mütəxəssis batareyanın tuutmunu ölçdü.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-03-05-1",
+        "documentId": "holdout-03-05",
+        "domain": "enerji",
+        "category": "delete",
+        "input": "Yekun qeydə görə, mütəxəssis batareyanın tutumunu öldü.",
+        "expected": "Yekun qeydə görə, mütəxəssis batareyanın tutumunu ölçdü.",
+        "output": "Yekun qeydə görə, mütəxəssis batareyanın tutumunu öldü.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-03-06-0",
+        "documentId": "holdout-03-06",
+        "domain": "enerji",
+        "category": "delete",
+        "input": "Nəzarətçi transformatoru yoladı.",
+        "expected": "Nəzarətçi transformatoru yoxladı.",
+        "output": "Nəzarətçi transformatoru yoladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-03-07-1",
+        "documentId": "holdout-03-07",
+        "domain": "enerji",
+        "category": "digraph",
+        "input": "Yekun qeydə görə, i̇shchi günəsh panelini təmizlədi.",
+        "expected": "Yekun qeydə görə, i̇şçi günəş panelini təmizlədi.",
+        "output": "Yekun qeydə görə, i̇shchi günəş panelini təmizlədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-04-03-1",
+        "documentId": "holdout-04-03",
+        "domain": "kənd təsərrüfatı",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, çoban süürnü otlağa apardı.",
+        "expected": "Yekun qeydə görə, çoban sürünü otlağa apardı.",
+        "output": "Yekun qeydə görə, çoban süürnü otlağa apardı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-04-04-0",
+        "documentId": "holdout-04-04",
+        "domain": "kənd təsərrüfatı",
+        "category": "transpose",
+        "input": "Arıçı pətəyin qaapğını açdı.",
+        "expected": "Arıçı pətəyin qapağını açdı.",
+        "output": "Arıçı pətəyin qaapğını açdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-04-04-1",
+        "documentId": "holdout-04-04",
+        "domain": "kənd təsərrüfatı",
+        "category": "delete",
+        "input": "Yekun qeydə görə, arıçı pətəyin qaağını açdı.",
+        "expected": "Yekun qeydə görə, arıçı pətəyin qapağını açdı.",
+        "output": "Yekun qeydə görə, arıçı pətəyin qaağını açdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-04-05-0",
+        "documentId": "holdout-04-05",
+        "domain": "kənd təsərrüfatı",
+        "category": "delete",
+        "input": "Traktorçu sahənin kənarında daandı.",
+        "expected": "Traktorçu sahənin kənarında dayandı.",
+        "output": "Traktorçu sahənin kənarında daandı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-05-03-1",
+        "documentId": "holdout-05-03",
+        "domain": "maliyyə",
+        "category": "delete",
+        "input": "Yekun qeydə görə, kassir müştəriyə qəbz vedi.",
+        "expected": "Yekun qeydə görə, kassir müştəriyə qəbz verdi.",
+        "output": "Yekun qeydə görə, kassir müştəriyə qəbz vədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-05-04-0",
+        "documentId": "holdout-05-04",
+        "domain": "maliyyə",
+        "category": "delete",
+        "input": "İqtisadçı qiymət arımını izah etdi.",
+        "expected": "İqtisadçı qiymət artımını izah etdi.",
+        "output": "İqtisadçı qiymət arımını izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-05-04-1",
+        "documentId": "holdout-05-04",
+        "domain": "maliyyə",
+        "category": "ascii",
+        "input": "Yekun qeyde gore, i̇qtisadci qiymet artimini izah etdi.",
+        "expected": "Yekun qeydə görə, i̇qtisadçı qiymət artımını izah etdi.",
+        "output": "Yekun qeydə görə, i̇qtisadci qiymət artımını izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-06-03-0",
+        "documentId": "holdout-06-03",
+        "domain": "hüquq",
+        "category": "delete",
+        "input": "Notarius sənədin surətini tədiqlədi.",
+        "expected": "Notarius sənədin surətini təsdiqlədi.",
+        "output": "Notarius sənədin surətini tədiqlədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-06-04-1",
+        "documentId": "holdout-06-04",
+        "domain": "hüquq",
+        "category": "digraph",
+        "input": "Yekun qeydə görə, i̇ddiachı ərizəni məhkəməyə verdi.",
+        "expected": "Yekun qeydə görə, i̇ddiaçı ərizəni məhkəməyə verdi.",
+        "output": "Yekun qeydə görə, i̇ddiachı ərizəni məhkəməyə verdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-06-08-1",
+        "documentId": "holdout-06-08",
+        "domain": "hüquq",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, müdafiəçi etriazını yazılı bildirdi.",
+        "expected": "Yekun qeydə görə, müdafiəçi etirazını yazılı bildirdi.",
+        "output": "Yekun qeydə görə, müdafiəçi etriazını yazılı bildirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-06-09-0",
+        "documentId": "holdout-06-09",
+        "domain": "hüquq",
+        "category": "transpose",
+        "input": "Tərəflər raızlaşmanı imzaladı.",
+        "expected": "Tərəflər razılaşmanı imzaladı.",
+        "output": "Tərəflər raızlaşmanı imzaladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-06-09-1",
+        "documentId": "holdout-06-09",
+        "domain": "hüquq",
+        "category": "delete",
+        "input": "Yekun qeydə görə, tərəflər razılaşmanı imaladı.",
+        "expected": "Yekun qeydə görə, tərəflər razılaşmanı imzaladı.",
+        "output": "Yekun qeydə görə, tərəflər razılaşmanı imaladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-06-0",
+        "documentId": "holdout-07-06",
+        "domain": "dövlət idarəetməsi",
+        "category": "case",
+        "input": "i̇craçı qərarın surətini göndərdi.",
+        "expected": "İcraçı qərarın surətini göndərdi.",
+        "output": "İ̇craçı qərarın surətini göndərdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-07-1",
+        "documentId": "holdout-07-07",
+        "domain": "dövlət idarəetməsi",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, mütəxəssis ximdətin müddətini açıqladı.",
+        "expected": "Yekun qeydə görə, mütəxəssis xidmətin müddətini açıqladı.",
+        "output": "Yekun qeydə görə, mütəxəssis ximdətin müddətini açıqladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-08-0",
+        "documentId": "holdout-07-08",
+        "domain": "dövlət idarəetməsi",
+        "category": "transpose",
+        "input": "Nümayəndə yeni qadyanı izah etdi.",
+        "expected": "Nümayəndə yeni qaydanı izah etdi.",
+        "output": "Nümayəndə yeni qadyanı izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-08-1",
+        "documentId": "holdout-07-08",
+        "domain": "dövlət idarəetməsi",
+        "category": "delete",
+        "input": "Yekun qeydə görə, nümayəndə yeni qadanı izah etdi.",
+        "expected": "Yekun qeydə görə, nümayəndə yeni qaydanı izah etdi.",
+        "output": "Yekun qeydə görə, nümayəndə yeni qadanı izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-09-0",
+        "documentId": "holdout-07-09",
+        "domain": "dövlət idarəetməsi",
+        "category": "delete",
+        "input": "İdarə arxivə sorğu gödərdi.",
+        "expected": "İdarə arxivə sorğu göndərdi.",
+        "output": "İdarə arxivə sorğu gödərdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-07-09-1",
+        "documentId": "holdout-07-09",
+        "domain": "dövlət idarəetməsi",
+        "category": "ascii",
+        "input": "Yekun qeyde gore, i̇dare arxive sorgu gonderdi.",
+        "expected": "Yekun qeydə görə, i̇darə arxivə sorğu göndərdi.",
+        "output": "Yekun qeydə görə, i̇dare arxivə sorğu göndərdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-08-04-0",
+        "documentId": "holdout-08-04",
+        "domain": "sənəd dövriyyəsi",
+        "category": "partial",
+        "input": "İcraçi bildirişin suretini saxladi.",
+        "expected": "İcraçı bildirişin surətini saxladı.",
+        "output": "İcraçı bildirişin suretini saxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-08-07-0",
+        "documentId": "holdout-08-07",
+        "domain": "sənəd dövriyyəsi",
+        "category": "transpose",
+        "input": "Mütəxəssis sənədin vesriyasını seçdi.",
+        "expected": "Mütəxəssis sənədin versiyasını seçdi.",
+        "output": "Mütəxəssis sənədin vesriyasını seçdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-08-07-1",
+        "documentId": "holdout-08-07",
+        "domain": "sənəd dövriyyəsi",
+        "category": "delete",
+        "input": "Yekun qeydə görə, mütəxəssis sənədin versiyasını sedi.",
+        "expected": "Yekun qeydə görə, mütəxəssis sənədin versiyasını seçdi.",
+        "output": "Yekun qeydə görə, mütəxəssis sənədin versiyasını sedi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-08-08-0",
+        "documentId": "holdout-08-08",
+        "domain": "sənəd dövriyyəsi",
+        "category": "delete",
+        "input": "Əməkdaş cavab məktubunu haırladı.",
+        "expected": "Əməkdaş cavab məktubunu hazırladı.",
+        "output": "Əməkdaş cavab məktubunu haırladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-09-05-1",
+        "documentId": "holdout-09-05",
+        "domain": "proqramlaşdırma",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, tester sevrerin cavabını ölçdü.",
+        "expected": "Yekun qeydə görə, tester serverin cavabını ölçdü.",
+        "output": "Yekun qeydə görə, tester sevrerin cavabını ölçdü.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-09-06-0",
+        "documentId": "holdout-09-06",
+        "domain": "proqramlaşdırma",
+        "category": "transpose",
+        "input": "Mütəxəssis framework vesriyasını yoxladı.",
+        "expected": "Mütəxəssis framework versiyasını yoxladı.",
+        "output": "Mütəxəssis framework vesriyasını yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-09-06-1",
+        "documentId": "holdout-09-06",
+        "domain": "proqramlaşdırma",
+        "category": "delete",
+        "input": "Yekun qeydə görə, mütəxəssis framework versiyasını yoladı.",
+        "expected": "Yekun qeydə görə, mütəxəssis framework versiyasını yoxladı.",
+        "output": "Yekun qeydə görə, mütəxəssis framework versiyasını yoladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-09-07-0",
+        "documentId": "holdout-09-07",
+        "domain": "proqramlaşdırma",
+        "category": "delete",
+        "input": "Menecer deploy vaxtını bidirdi.",
+        "expected": "Menecer deploy vaxtını bildirdi.",
+        "output": "Menecer deploy vaxtını bidirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-09-09-1",
+        "documentId": "holdout-09-09",
+        "domain": "proqramlaşdırma",
+        "category": "partial",
+        "input": "Yekun qeyde göre, i̇craçi Git branch adini saxladi.",
+        "expected": "Yekun qeydə görə, i̇craçı Git branch adını saxladı.",
+        "output": "Yekun qeydə görə, i̇craçi Git branch adını saxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-10-05-0",
+        "documentId": "holdout-10-05",
+        "domain": "kibertəhlükəsizlik",
+        "category": "transpose",
+        "input": "Komanda təhlükəsizlik qadyasını yenilədi.",
+        "expected": "Komanda təhlükəsizlik qaydasını yenilədi.",
+        "output": "Komanda təhlükəsizlik qadyasını yenilədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-10-05-1",
+        "documentId": "holdout-10-05",
+        "domain": "kibertəhlükəsizlik",
+        "category": "delete",
+        "input": "Yekun qeydə görə, komanda təhlükəsizlik qaydasını yeilədi.",
+        "expected": "Yekun qeydə görə, komanda təhlükəsizlik qaydasını yenilədi.",
+        "output": "Yekun qeydə görə, komanda təhlükəsizlik qaydasını yeilədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-10-06-0",
+        "documentId": "holdout-10-06",
+        "domain": "kibertəhlükəsizlik",
+        "category": "delete",
+        "input": "Nəzarətçi icazələrin siyahısını haırladı.",
+        "expected": "Nəzarətçi icazələrin siyahısını hazırladı.",
+        "output": "Nəzarətçi icazələrin siyahısını haırladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-10-07-1",
+        "documentId": "holdout-10-07",
+        "domain": "kibertəhlükəsizlik",
+        "category": "digraph",
+        "input": "Yekun qeydə görə, i̇shchi məxfi faylı shifrələdi.",
+        "expected": "Yekun qeydə görə, i̇şçi məxfi faylı şifrələdi.",
+        "output": "Yekun qeydə görə, i̇shchi məxfi faylı şifrələdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-11-03-1",
+        "documentId": "holdout-11-03",
+        "domain": "telekommunikasiya",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, usta fiber kaebli birləşdirdi.",
+        "expected": "Yekun qeydə görə, usta fiber kabeli birləşdirdi.",
+        "output": "Yekun qeydə görə, usta fiber kaebli birləşdirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-11-04-0",
+        "documentId": "holdout-11-04",
+        "domain": "telekommunikasiya",
+        "category": "transpose",
+        "input": "Abunəçi xidmətin kefyiyyətini soruşdu.",
+        "expected": "Abunəçi xidmətin keyfiyyətini soruşdu.",
+        "output": "Abunəçi xidmətin kefyiyyətini soruşdu.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-11-04-1",
+        "documentId": "holdout-11-04",
+        "domain": "telekommunikasiya",
+        "category": "delete",
+        "input": "Yekun qeydə görə, abunəçi xidmətin keyfiyyətini souşdu.",
+        "expected": "Yekun qeydə görə, abunəçi xidmətin keyfiyyətini soruşdu.",
+        "output": "Yekun qeydə görə, abunəçi xidmətin keyfiyyətini souşdu.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-11-05-0",
+        "documentId": "holdout-11-05",
+        "domain": "telekommunikasiya",
+        "category": "delete",
+        "input": "Dispetçer nasazlığı qedə aldı.",
+        "expected": "Dispetçer nasazlığı qeydə aldı.",
+        "output": "Dispetçer nasazlığı qedə aldı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-12-03-0",
+        "documentId": "holdout-12-03",
+        "domain": "astronomiya",
+        "category": "transpose",
+        "input": "Müşahidəçi səmanın şəlkini çəkdi.",
+        "expected": "Müşahidəçi səmanın şəklini çəkdi.",
+        "output": "Müşahidəçi səmanın şəlkini çəkdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-12-03-1",
+        "documentId": "holdout-12-03",
+        "domain": "astronomiya",
+        "category": "delete",
+        "input": "Yekun qeydə görə, müşahidəçi səmanın şəklini çədi.",
+        "expected": "Yekun qeydə görə, müşahidəçi səmanın şəklini çəkdi.",
+        "output": "Yekun qeydə görə, müşahidəçi səmanın şəklini çədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-12-04-0",
+        "documentId": "holdout-12-04",
+        "domain": "astronomiya",
+        "category": "delete",
+        "input": "Ekspert qalaktikanın məsafəsini arşdırdı.",
+        "expected": "Ekspert qalaktikanın məsafəsini araşdırdı.",
+        "output": "Ekspert qalaktikanın məsafəsini arşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-12-09-1",
+        "documentId": "holdout-12-09",
+        "domain": "astronomiya",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, araşdırmaçı müaşhidənin nəticəsini yazdı.",
+        "expected": "Yekun qeydə görə, araşdırmaçı müşahidənin nəticəsini yazdı.",
+        "output": "Yekun qeydə görə, araşdırmaçı müaşhidənin nəticəsini yazdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-03-0",
+        "documentId": "holdout-13-03",
+        "domain": "ekologiya",
+        "category": "delete",
+        "input": "Tədqiqatçı quşların saını qeyd etdi.",
+        "expected": "Tədqiqatçı quşların sayını qeyd etdi.",
+        "output": "Tədqiqatçı quşların saını qeyd etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-04-1",
+        "documentId": "holdout-13-04",
+        "domain": "ekologiya",
+        "category": "digraph",
+        "input": "Yekun qeydə görə, i̇shchi fidanı torpagha əkdi.",
+        "expected": "Yekun qeydə görə, i̇şçi fidanı torpağa əkdi.",
+        "output": "Yekun qeydə görə, i̇shchi fidanı torpağa əkdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-05-1",
+        "documentId": "holdout-13-05",
+        "domain": "ekologiya",
+        "category": "partial",
+        "input": "Yekun qeyde göre, komanda meşenin serhedini xeriteye çekdi.",
+        "expected": "Yekun qeydə görə, komanda meşənin sərhədini xəritəyə çəkdi.",
+        "output": "Yekun qeydə görə, komanda meşənin sərhədini xəritəyə çekdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-08-1",
+        "documentId": "holdout-13-08",
+        "domain": "ekologiya",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, qrup ehtiyatların isitfadəsini planlaşdırdı.",
+        "expected": "Yekun qeydə görə, qrup ehtiyatların istifadəsini planlaşdırdı.",
+        "output": "Yekun qeydə görə, qrup ehtiyatların isitfadəsini planlaşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-09-0",
+        "documentId": "holdout-13-09",
+        "domain": "ekologiya",
+        "category": "transpose",
+        "input": "Alim iqlimin dəiyşməsini izah etdi.",
+        "expected": "Alim iqlimin dəyişməsini izah etdi.",
+        "output": "Alim iqlimin dəiyşməsini izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-13-09-1",
+        "documentId": "holdout-13-09",
+        "domain": "ekologiya",
+        "category": "delete",
+        "input": "Yekun qeydə görə, alim iqlimin dəişməsini izah etdi.",
+        "expected": "Yekun qeydə görə, alim iqlimin dəyişməsini izah etdi.",
+        "output": "Yekun qeydə görə, alim iqlimin dəişməsini izah etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-14-03-0",
+        "documentId": "holdout-14-03",
+        "domain": "mədəniyyət",
+        "category": "ascii",
+        "input": "Rejissor tamasanin planini deyisdi.",
+        "expected": "Rejissor tamaşanın planını dəyişdi.",
+        "output": "Rejissor tamasanın planını dəyişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-14-07-1",
+        "documentId": "holdout-14-07",
+        "domain": "mədəniyyət",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, restavrator könhə xalçanı bərpa etdi.",
+        "expected": "Yekun qeydə görə, restavrator köhnə xalçanı bərpa etdi.",
+        "output": "Yekun qeydə görə, restavrator könhə xalçanı bərpa etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-14-08-0",
+        "documentId": "holdout-14-08",
+        "domain": "mədəniyyət",
+        "category": "transpose",
+        "input": "Tənqidçi əsərin üsulbunu araşdırdı.",
+        "expected": "Tənqidçi əsərin üslubunu araşdırdı.",
+        "output": "Tənqidçi əsərin üsulbunu araşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-14-08-1",
+        "documentId": "holdout-14-08",
+        "domain": "mədəniyyət",
+        "category": "delete",
+        "input": "Yekun qeydə görə, tənqidçi əsərin üslubunu arşdırdı.",
+        "expected": "Yekun qeydə görə, tənqidçi əsərin üslubunu araşdırdı.",
+        "output": "Yekun qeydə görə, tənqidçi əsərin üslubunu arşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-14-09-0",
+        "documentId": "holdout-14-09",
+        "domain": "mədəniyyət",
+        "category": "delete",
+        "input": "Təşkilatçı festivalın vaxtını açqladı.",
+        "expected": "Təşkilatçı festivalın vaxtını açıqladı.",
+        "output": "Təşkilatçı festivalın vaxtını açqladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-15-06-1",
+        "documentId": "holdout-15-06",
+        "domain": "idman",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, kapitan rəiqbin taktikasını yoxladı.",
+        "expected": "Yekun qeydə görə, kapitan rəqibin taktikasını yoxladı.",
+        "output": "Yekun qeydə görə, kapitan rəiqbin taktikasını yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-15-07-0",
+        "documentId": "holdout-15-07",
+        "domain": "idman",
+        "category": "transpose",
+        "input": "Təlimçi hərəkətin tenxikasını göstərdi.",
+        "expected": "Təlimçi hərəkətin texnikasını göstərdi.",
+        "output": "Təlimçi hərəkətin tenxikasını göstərdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-15-07-1",
+        "documentId": "holdout-15-07",
+        "domain": "idman",
+        "category": "delete",
+        "input": "Yekun qeydə görə, təlimçi hərəkətin texnikasını götərdi.",
+        "expected": "Yekun qeydə görə, təlimçi hərəkətin texnikasını göstərdi.",
+        "output": "Yekun qeydə görə, təlimçi hərəkətin texnikasını götərdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-15-08-0",
+        "documentId": "holdout-15-08",
+        "domain": "idman",
+        "category": "delete",
+        "input": "Azarkeş stadionda yerini tadı.",
+        "expected": "Azarkeş stadionda yerini tapdı.",
+        "output": "Azarkeş stadionda yerini tadı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-16-05-1",
+        "documentId": "holdout-16-05",
+        "domain": "qida",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, i̇şçi soyuducunun tepmeraturunu azaltdı.",
+        "expected": "Yekun qeydə görə, i̇şçi soyuducunun temperaturunu azaltdı.",
+        "output": "Yekun qeydə görə, i̇şçi soyuducunun tepmeraturunu azaltdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-16-06-0",
+        "documentId": "holdout-16-06",
+        "domain": "qida",
+        "category": "transpose",
+        "input": "Menecer menyunun qimyətini dəyişdi.",
+        "expected": "Menecer menyunun qiymətini dəyişdi.",
+        "output": "Menecer menyunun qimyətini dəyişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-16-06-1",
+        "documentId": "holdout-16-06",
+        "domain": "qida",
+        "category": "delete",
+        "input": "Yekun qeydə görə, menecer menyunun qiymətini dəişdi.",
+        "expected": "Yekun qeydə görə, menecer menyunun qiymətini dəyişdi.",
+        "output": "Yekun qeydə görə, menecer menyunun qiymətini dəişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-16-07-0",
+        "documentId": "holdout-16-07",
+        "domain": "qida",
+        "category": "delete",
+        "input": "Alıcı meyvənin yetişməsini yoladı.",
+        "expected": "Alıcı meyvənin yetişməsini yoxladı.",
+        "output": "Alıcı meyvənin yetişməsini yoladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-04-1",
+        "documentId": "holdout-17-04",
+        "domain": "turizm",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, təşkilatçı səəfrin tarixini dəyişdi.",
+        "expected": "Yekun qeydə görə, təşkilatçı səfərin tarixini dəyişdi.",
+        "output": "Yekun qeydə görə, təşkilatçı səəfrin tarixini dəyişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-05-0",
+        "documentId": "holdout-17-05",
+        "domain": "turizm",
+        "category": "transpose",
+        "input": "Qonaq şəhərin xəirtəsini aldı.",
+        "expected": "Qonaq şəhərin xəritəsini aldı.",
+        "output": "Qonaq şəhərin xəirtəsini aldı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-05-1",
+        "documentId": "holdout-17-05",
+        "domain": "turizm",
+        "category": "delete",
+        "input": "Yekun qeydə görə, qonaq şəhərin xəitəsini aldı.",
+        "expected": "Yekun qeydə görə, qonaq şəhərin xəritəsini aldı.",
+        "output": "Yekun qeydə görə, qonaq şəhərin xəitəsini aldı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-06-0",
+        "documentId": "holdout-17-06",
+        "domain": "turizm",
+        "category": "delete",
+        "input": "İşçi rezervasiyanın statusunu yoladı.",
+        "expected": "İşçi rezervasiyanın statusunu yoxladı.",
+        "output": "İşçi rezervasiyanın statusunu yoladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-06-1",
+        "documentId": "holdout-17-06",
+        "domain": "turizm",
+        "category": "ascii",
+        "input": "Yekun qeyde gore, i̇sci rezervasiyanin statusunu yoxladi.",
+        "expected": "Yekun qeydə görə, i̇şçi rezervasiyanın statusunu yoxladı.",
+        "output": "Yekun qeydə görə, i̇sci rezervasiyanin statusunu yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-17-09-0",
+        "documentId": "holdout-17-09",
+        "domain": "turizm",
+        "category": "partial",
+        "input": "Fotoqraf menzerenin şeklini çekdi.",
+        "expected": "Fotoqraf mənzərənin şəklini çəkdi.",
+        "output": "Fotoqraf mənzərənin şəklini çekdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-18-04-0",
+        "documentId": "holdout-18-04",
+        "domain": "tikinti",
+        "category": "ascii",
+        "input": "Briqadir isin muddetini hesabladi.",
+        "expected": "Briqadir işin müddətini hesabladı.",
+        "output": "Briqadir isin müddətini hesabladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-18-04-1",
+        "documentId": "holdout-18-04",
+        "domain": "tikinti",
+        "category": "delete",
+        "input": "Yekun qeydə görə, briqadir işin müddətini heabladı.",
+        "expected": "Yekun qeydə görə, briqadir işin müddətini hesabladı.",
+        "output": "Yekun qeydə görə, briqadir. İşin müddətini heabladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-18-05-0",
+        "documentId": "holdout-18-05",
+        "domain": "tikinti",
+        "category": "delete",
+        "input": "Ekspert layihənin riskini arşdırdı.",
+        "expected": "Ekspert layihənin riskini araşdırdı.",
+        "output": "Ekspert layihənin riskini arşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-19-03-0",
+        "documentId": "holdout-19-03",
+        "domain": "logistika",
+        "category": "transpose",
+        "input": "Dispetçer maşının yeirni müəyyənləşdirdi.",
+        "expected": "Dispetçer maşının yerini müəyyənləşdirdi.",
+        "output": "Dispetçer maşının yeirni müəyyənləşdirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-19-04-0",
+        "documentId": "holdout-19-04",
+        "domain": "logistika",
+        "category": "delete",
+        "input": "İşçi bağlamanın etiketini dəişdi.",
+        "expected": "İşçi bağlamanın etiketini dəyişdi.",
+        "output": "İşçi bağlamanın etiketini dəişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-19-04-1",
+        "documentId": "holdout-19-04",
+        "domain": "logistika",
+        "category": "ascii",
+        "input": "Yekun qeyde gore, i̇sci baglamanin etiketini deyisdi.",
+        "expected": "Yekun qeydə görə, i̇şçi bağlamanın etiketini dəyişdi.",
+        "output": "Yekun qeydə görə, i̇sci bağlamanın etiketini dəyişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-20-03-0",
+        "documentId": "holdout-20-03",
+        "domain": "meteorologiya",
+        "category": "delete",
+        "input": "Ekspert yağıntının miqdarını heabladı.",
+        "expected": "Ekspert yağıntının miqdarını hesabladı.",
+        "output": "Ekspert yağıntının miqdarını heabladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-20-08-1",
+        "documentId": "holdout-20-08",
+        "domain": "meteorologiya",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, tədqiqatçı rüutbətin səviyyəsini ölçdü.",
+        "expected": "Yekun qeydə görə, tədqiqatçı rütubətin səviyyəsini ölçdü.",
+        "output": "Yekun qeydə görə, tədqiqatçı rüutbətin səviyyəsini ölçdü.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-20-09-0",
+        "documentId": "holdout-20-09",
+        "domain": "meteorologiya",
+        "category": "transpose",
+        "input": "Mütəxəssis xəbərdarlığın vatxını dəyişdi.",
+        "expected": "Mütəxəssis xəbərdarlığın vaxtını dəyişdi.",
+        "output": "Mütəxəssis xəbərdarlığın vatxını dəyişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-20-09-1",
+        "documentId": "holdout-20-09",
+        "domain": "meteorologiya",
+        "category": "delete",
+        "input": "Yekun qeydə görə, mütəxəssis xəbərdarlığın vaxtını dəişdi.",
+        "expected": "Yekun qeydə görə, mütəxəssis xəbərdarlığın vaxtını dəyişdi.",
+        "output": "Yekun qeydə görə, mütəxəssis xəbərdarlığın vaxtını dəişdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-21-06-0",
+        "documentId": "holdout-21-06",
+        "domain": "geologiya",
+        "category": "case",
+        "input": "i̇şçi cihazı yamaca daşıdı.",
+        "expected": "İşçi cihazı yamaca daşıdı.",
+        "output": "İ̇şçi cihazı yamaca daşıdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-21-07-1",
+        "documentId": "holdout-21-07",
+        "domain": "geologiya",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, operator ölmçənin nəticəsini saxladı.",
+        "expected": "Yekun qeydə görə, operator ölçmənin nəticəsini saxladı.",
+        "output": "Yekun qeydə görə, operator ölmçənin nəticəsini saxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-21-08-0",
+        "documentId": "holdout-21-08",
+        "domain": "geologiya",
+        "category": "transpose",
+        "input": "Mütəxəssis sahənin səhrədini müəyyənləşdirdi.",
+        "expected": "Mütəxəssis sahənin sərhədini müəyyənləşdirdi.",
+        "output": "Mütəxəssis sahənin səhrədini müəyyənləşdirdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-21-09-0",
+        "documentId": "holdout-21-09",
+        "domain": "geologiya",
+        "category": "delete",
+        "input": "Qrup qazıntının planını haırladı.",
+        "expected": "Qrup qazıntının planını hazırladı.",
+        "output": "Qrup qazıntının planını haırladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-22-06-1",
+        "documentId": "holdout-22-06",
+        "domain": "riyaziyyat",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, ekspert heasblamanın dəqiqliyini araşdırdı.",
+        "expected": "Yekun qeydə görə, ekspert hesablamanın dəqiqliyini araşdırdı.",
+        "output": "Yekun qeydə görə, ekspert heasblamanın dəqiqliyini araşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-22-07-0",
+        "documentId": "holdout-22-07",
+        "domain": "riyaziyyat",
+        "category": "transpose",
+        "input": "Komanda nəticəni baqşa üsulla yoxladı.",
+        "expected": "Komanda nəticəni başqa üsulla yoxladı.",
+        "output": "Komanda nəticəni baqşa üsulla yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-22-07-1",
+        "documentId": "holdout-22-07",
+        "domain": "riyaziyyat",
+        "category": "delete",
+        "input": "Yekun qeydə görə, komanda nəticəni başqa üsulla yoladı.",
+        "expected": "Yekun qeydə görə, komanda nəticəni başqa üsulla yoxladı.",
+        "output": "Yekun qeydə görə, komanda nəticəni başqa üsulla yoladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-22-08-0",
+        "documentId": "holdout-22-08",
+        "domain": "riyaziyyat",
+        "category": "delete",
+        "input": "Mütəxəssis dəyişənin mənasını açqladı.",
+        "expected": "Mütəxəssis dəyişənin mənasını açıqladı.",
+        "output": "Mütəxəssis dəyişənin mənasını açqladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-22-09-1",
+        "documentId": "holdout-22-09",
+        "domain": "riyaziyyat",
+        "category": "digraph",
+        "input": "Yekun qeydə görə, i̇crachı cədvəlin sütununu tamamladı.",
+        "expected": "Yekun qeydə görə, i̇craçı cədvəlin sütununu tamamladı.",
+        "output": "Yekun qeydə görə, i̇crachı cədvəlin sütununu tamamladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-23-04-0",
+        "documentId": "holdout-23-04",
+        "domain": "pərakəndə satış",
+        "category": "case",
+        "input": "i̇şçi vitrinə yeni məhsul qoydu.",
+        "expected": "İşçi vitrinə yeni məhsul qoydu.",
+        "output": "İ̇şçi vitrinə yeni məhsul qoydu.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-23-05-1",
+        "documentId": "holdout-23-05",
+        "domain": "pərakəndə satış",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, nəzarətçi qəzbin tarixini yoxladı.",
+        "expected": "Yekun qeydə görə, nəzarətçi qəbzin tarixini yoxladı.",
+        "output": "Yekun qeydə görə, nəzarətçi qəzbin tarixini yoxladı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-23-06-0",
+        "documentId": "holdout-23-06",
+        "domain": "pərakəndə satış",
+        "category": "transpose",
+        "input": "Mütəxəssis tələbatın arıtmını araşdırdı.",
+        "expected": "Mütəxəssis tələbatın artımını araşdırdı.",
+        "output": "Mütəxəssis tələbatın arıtmını araşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-23-06-1",
+        "documentId": "holdout-23-06",
+        "domain": "pərakəndə satış",
+        "category": "delete",
+        "input": "Yekun qeydə görə, mütəxəssis tələbatın artımını arşdırdı.",
+        "expected": "Yekun qeydə görə, mütəxəssis tələbatın artımını araşdırdı.",
+        "output": "Yekun qeydə görə, mütəxəssis tələbatın artımını arşdırdı.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-23-07-0",
+        "documentId": "holdout-23-07",
+        "domain": "pərakəndə satış",
+        "category": "delete",
+        "input": "Anbardar ehtiyatın saını qeyd etdi.",
+        "expected": "Anbardar ehtiyatın sayını qeyd etdi.",
+        "output": "Anbardar ehtiyatın saını qeyd etdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-24-04-1",
+        "documentId": "holdout-24-04",
+        "domain": "gündəlik həyat",
+        "category": "transpose",
+        "input": "Yekun qeydə görə, qonaq pəcnərənin yanına keçdi.",
+        "expected": "Yekun qeydə görə, qonaq pəncərənin yanına keçdi.",
+        "output": "Yekun qeydə görə, qonaq pəcnərənin yanına keçdi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-24-05-0",
+        "documentId": "holdout-24-05",
+        "domain": "gündəlik həyat",
+        "category": "transpose",
+        "input": "Sakin binanın giirşini təmizlədi.",
+        "expected": "Sakin binanın girişini təmizlədi.",
+        "output": "Sakin binanın giirşini təmizlədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-24-05-1",
+        "documentId": "holdout-24-05",
+        "domain": "gündəlik həyat",
+        "category": "delete",
+        "input": "Yekun qeydə görə, sakin binanın girişini təizlədi.",
+        "expected": "Yekun qeydə görə, sakin binanın girişini təmizlədi.",
+        "output": "Yekun qeydə görə, sakin binanın girişini təizlədi.",
+        "idempotent": true
+      },
+      {
+        "id": "p0-h-24-06-0",
+        "documentId": "holdout-24-06",
+        "domain": "gündəlik həyat",
+        "category": "delete",
+        "input": "Qardaşım kitabı rəfə qodu.",
+        "expected": "Qardaşım kitabı rəfə qoydu.",
+        "output": "Qardaşım kitabı rəfə qodu.",
+        "idempotent": true
+      }
+    ]
+  },
+  "no-harm-2000": {
+    "overall": {
+      "rows": 2000,
+      "documents": 2000,
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "abstainedErrors": 0,
+        "required": 0,
+        "correctWords": 8000,
+        "harmedWords": 0,
+        "exact": 2000,
+        "identity": 2000,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "estimates": {
+        "precision": {
+          "value": null,
+          "ci95": null
+        },
+        "recall": {
+          "value": null,
+          "ci95": null
+        },
+        "f05": {
+          "value": null,
+          "ci95": null
+        },
+        "falsePositiveRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "errorAbstentionRate": {
+          "value": null,
+          "ci95": null
+        },
+        "sentenceExact": {
+          "value": 1,
+          "ci95": [
+            1,
+            1
+          ]
+        },
+        "identityFalseChangeRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "cer": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "wer": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "idempotencyFailureRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        }
+      },
+      "bootstrap": {
+        "repetitions": 1000,
+        "seed": 20261007,
+        "unit": "documentId",
+        "method": "percentile",
+        "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+      },
+      "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+    },
+    "byCategory": {
+      "identity": {
+        "rows": 2000,
+        "documents": 2000,
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "abstainedErrors": 0,
+          "required": 0,
+          "correctWords": 8000,
+          "harmedWords": 0,
+          "exact": 2000,
+          "identity": 2000,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "estimates": {
+          "precision": {
+            "value": null,
+            "ci95": null
+          },
+          "recall": {
+            "value": null,
+            "ci95": null
+          },
+          "f05": {
+            "value": null,
+            "ci95": null
+          },
+          "falsePositiveRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "errorAbstentionRate": {
+            "value": null,
+            "ci95": null
+          },
+          "sentenceExact": {
+            "value": 1,
+            "ci95": [
+              1,
+              1
+            ]
+          },
+          "identityFalseChangeRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "cer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "wer": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          },
+          "idempotencyFailureRate": {
+            "value": 0,
+            "ci95": [
+              0,
+              0
+            ]
+          }
+        },
+        "bootstrap": {
+          "repetitions": 1000,
+          "seed": 20261007,
+          "unit": "documentId",
+          "method": "percentile",
+          "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+        },
+        "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+      }
+    },
+    "failures": []
+  },
+  "noHarmProbe": {
+    "forms": 2000,
+    "changedForms": 0,
+    "falseChangeRate": {
+      "value": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    },
+    "convention": "Second letter-word token is the mentioned probe; wrapper words do not dilute this denominator. References may include proper-name casing disputes."
+  },
+  "existingUserDerived": {
+    "provenance": "User-derived development references, assistant targets not blind human-reviewed; independence from earlier tuning not proven.",
+    "overall": {
+      "rows": 12,
+      "documents": 12,
+      "counts": {
+        "tp": 90,
+        "fp": 14,
+        "fn": 21,
+        "abstainedErrors": 9,
+        "required": 111,
+        "correctWords": 36,
+        "harmedWords": 0,
+        "exact": 4,
+        "identity": 0,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "estimates": {
+        "precision": {
+          "value": 0.8653846153846154,
+          "ci95": [
+            0.7391223231667747,
+            0.9882352941176471
+          ]
+        },
+        "recall": {
+          "value": 0.8108108108108109,
+          "ci95": [
+            0.6964252645502645,
+            0.9259356725146198
+          ]
+        },
+        "f05": {
+          "value": 0.8538899430740038,
+          "ci95": [
+            0.7322137444329411,
+            0.9707529233339194
+          ]
+        },
+        "falsePositiveRate": {
+          "value": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "errorAbstentionRate": {
+          "value": 0.08108108108108109,
+          "ci95": [
+            0.0338935440868406,
+            0.13762258778867448
+          ]
+        },
+        "sentenceExact": {
+          "value": 0.3333333333333333,
+          "ci95": [
+            0.08333333333333333,
+            0.5833333333333334
+          ]
+        },
+        "identityFalseChangeRate": {
+          "value": null,
+          "ci95": null
+        },
+        "cer": {
+          "value": 0.08126195028680688,
+          "ci95": [
+            0.02014384335431771,
+            0.16219776867939137
+          ]
+        },
+        "wer": {
+          "value": 0.17006802721088435,
+          "ci95": [
+            0.0625,
+            0.2911306199066019
+          ]
+        },
+        "idempotencyFailureRate": {
+          "value": null,
+          "ci95": null
+        }
+      },
+      "bootstrap": {
+        "repetitions": 1000,
+        "seed": 20261007,
+        "unit": "documentId",
+        "method": "percentile",
+        "warning": "All-zero events give a degenerate bootstrap interval; this does not establish zero population risk."
+      },
+      "convention": "Case-sensitive letter-word alignment; CER by NFC Unicode code points. Punctuation/spacing are covered by CER and sentence exactness, not word precision. Error abstention is an erroneous word left unchanged, not a model confidence decision."
+    },
+    "failedIds": [
+      "user-001",
+      "user-002",
+      "user-003",
+      "user-005",
+      "user-006",
+      "user-007",
+      "user-010",
+      "user-011"
+    ]
+  },
+  "calibrationUsed": false,
+  "runtimeChanged": false
+}

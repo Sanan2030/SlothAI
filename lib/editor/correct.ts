@@ -39,6 +39,7 @@ import { isCanonicalEntity, protectMultiwordEntities, resolveEntitiesInText, res
 import { MAX_TEXT_LENGTH } from './limits';
 import { protectInitialNames } from './initial-names';
 import { insertNeuralBoundaries } from './neural/boundary-runtime';
+import { protectWordMentions } from './word-mentions';
 import type { NeuralBoundaryArtifact } from './neural/boundary-features';
 export { MAX_TEXT_LENGTH } from './limits';
 export interface LocalCorrection { text: string; corrections: number }
@@ -210,6 +211,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   });
   // Initials belong to the following proper name. A period in M.Füzuli is
   // not a sentence boundary; preserve the author's spacing and spelling.
+  text = protectWordMentions(text, protect, word => isEstablishedSurface(word, services));
   text = protectInitialNames(text, protect);
   if (runtime.useLocalModel !== false) text = runtime.inference?.('log-spelling', text, () => logSpelling(text)) ?? logSpelling(text);
   text = text.replace(/\r\n?/g, '\n').normalize('NFC');

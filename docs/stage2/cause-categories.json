@@ -1,0 +1,59 @@
+{
+  "purpose": "Cause diagnosis only; no training or threshold selection",
+  "rows": [
+    {
+      "id": "p0-n-0872",
+      "probeWord": "afətinə",
+      "established": true,
+      "lexicalOutput": "afətinə",
+      "entityOutput": "Mətndə Afətinə sözü işlənib.",
+      "boundaryOutput": "Mətndə afətinə sözü işlənib.",
+      "commaOutput": "Mətndə afətinə sözü işlənib."
+    },
+    {
+      "id": "p0-n-1105",
+      "probeWord": "qadir",
+      "established": true,
+      "lexicalOutput": "qadır",
+      "entityOutput": "Mətndə qadir sözü işlənib.",
+      "boundaryOutput": "Mətndə qadir sözü işlənib.",
+      "commaOutput": "Mətndə qadir sözü işlənib."
+    },
+    {
+      "id": "p0-n-1752",
+      "probeWord": "bakıdır",
+      "established": true,
+      "lexicalOutput": "bakıdır",
+      "entityOutput": "Mətndə Bakıdır sözü işlənib.",
+      "boundaryOutput": "Mətndə bakıdır sözü işlənib.",
+      "commaOutput": "Mətndə bakıdır sözü işlənib."
+    },
+    {
+      "id": "p0-n-1770",
+      "probeWord": "afətnin",
+      "established": true,
+      "lexicalOutput": "afətnin",
+      "entityOutput": "Mətndə Afətnin sözü işlənib.",
+      "boundaryOutput": "Mətndə afətnin sözü işlənib.",
+      "commaOutput": "Mətndə afətnin sözü işlənib."
+    },
+    {
+      "id": "p0-n-1810",
+      "probeWord": "yoxsa",
+      "established": true,
+      "lexicalOutput": "yoxsa",
+      "entityOutput": "Mətndə yoxsa sözü işlənib.",
+      "boundaryOutput": "Mətndə, yoxsa sözü işlənib.",
+      "commaOutput": "Mətndə, yoxsa sözü işlənib."
+    },
+    {
+      "id": "p0-n-1919",
+      "probeWord": "şəbnəm",
+      "established": true,
+      "lexicalOutput": "şəbnəm",
+      "entityOutput": "Mətndə Şəbnəm sözü işlənib.",
+      "boundaryOutput": "Mətndə şəbnəm sözü işlənib.",
+      "commaOutput": "Mətndə şəbnəm sözü işlənib."
+    }
+  ]
+}
