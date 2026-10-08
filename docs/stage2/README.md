@@ -107,15 +107,19 @@ Legacy model heads remain active. No broader semantic-quality claim is made.
 
 The accepted five-million corpus is not present in this cloud machine. The
 user supplied a download-link document, whose six gzip metadata entries match
-the repository receipt. Actual downloads are blocked: the proxy rejects the
-`chatgpt.com` CONNECT request with HTTP 403. Only the accepted manifest and
-archived report hashes could be verified locally. `data:gate` fails with exit 2
+the repository receipt. The first attempt was blocked by a proxy HTTP 403.
+After the destination became reachable, a fresh download request returned HTTP
+401, `Missing or invalid access token`: ChatGPT Library access is authenticated.
+No corpus bytes were downloaded. Only the accepted manifest and archived report
+hashes could be verified locally. `data:gate` fails with exit 2
 because the canonical corpus manifest and six JSONL files are absent.
 
 Draft network additions `chatgpt.com` and `api.github.com` were saved for review;
-they do not by themselves update runtime access. The Git push route works, but
-the GitHub API request currently also returns Forbidden. No alternate corpus
-was created, no credentials were extracted, and full or smoke training has not
+they do not by themselves establish runtime access. Git push and a subsequent
+GitHub API operation succeeded; draft PR #6 was created against
+`phase1-licensed-data`. Corpus delivery needs actual mounted files or accessible
+signed download URLs, not a browser session token supplied in chat. No alternate
+corpus was created, no credentials were extracted, and full or smoke training has not
 started. Training remains on hold until the exact corpus can be accessed and
 passes its gate. CPU training is authorized; no GPU is attached. Real user-error
 calibration data and independent human-reviewed evaluation are still required
