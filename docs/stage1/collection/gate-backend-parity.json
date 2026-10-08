@@ -1,0 +1,20 @@
+{
+  "fixtureProvenance": "Assistant-authored unit fixtures, not training data or actual approval",
+  "referenceCommit": "c5c850281a0fd3da75620af156c284acc3b0e50b",
+  "scenarios": [
+    {
+      "crossSplitFixture": false,
+      "byteEquivalentReport": true,
+      "status": "failed",
+      "crossSplitCollisions": 0,
+      "minimumNotLowered": 5000000
+    },
+    {
+      "crossSplitFixture": true,
+      "byteEquivalentReport": true,
+      "status": "failed",
+      "crossSplitCollisions": 2,
+      "minimumNotLowered": 5000000
+    }
+  ]
+}

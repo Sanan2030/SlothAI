@@ -1,0 +1,48 @@
+{
+  "status": "restored",
+  "trainingStarted": false,
+  "files": [
+    {
+      "file": "test-pairs.jsonl",
+      "bytes": 502607898,
+      "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee",
+      "seconds": 2.177,
+      "verified": true
+    },
+    {
+      "file": "test.jsonl",
+      "bytes": 246883337,
+      "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85",
+      "seconds": 1.48,
+      "verified": true
+    },
+    {
+      "file": "train-pairs.jsonl",
+      "bytes": 2670564756,
+      "sha256": "a9026fd430c6da4319f3fe247a902c68764399cb57123dd5abb10b398fad79b6",
+      "seconds": 9.552,
+      "verified": true
+    },
+    {
+      "file": "train.jsonl",
+      "bytes": 1299323896,
+      "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9",
+      "seconds": 6.214,
+      "verified": true
+    },
+    {
+      "file": "validation-pairs.jsonl",
+      "bytes": 771523231,
+      "sha256": "fea16ccd38b14269c01d1b5b4b70c5a839096c76fed68a4872d59915962b3843",
+      "seconds": 3.153,
+      "verified": true
+    },
+    {
+      "file": "validation.jsonl",
+      "bytes": 393989461,
+      "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717",
+      "seconds": 1.941,
+      "verified": true
+    }
+  ]
+}

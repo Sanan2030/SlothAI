@@ -42,7 +42,7 @@ def benchmark(rows_count, repetitions):
     return {'scope': f'{rows_count} assistant-authored synthetic index rows; not corpus or runtime timing',
             'seed': 20261007, 'repetitions': repetitions, 'milliseconds': times,
             'medianMs': {key: statistics.median(values) for key, values in times.items()},
-            'crossSplitCollisions': collisions, 'productionGateChanged': False}
+            'crossSplitCollisions': collisions}
 
 
 if __name__ == '__main__':
