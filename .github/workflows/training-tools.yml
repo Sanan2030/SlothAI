@@ -1,0 +1,25 @@
+name: Offline training tools
+
+on:
+  push:
+    paths: ['training/**', '.github/workflows/training-tools.yml']
+  pull_request:
+    paths: ['training/**', '.github/workflows/training-tools.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CPU-only training dependencies
+        run: bash training/setup.sh cpu
+      - name: Verify offline contracts without training
+        run: .venv-training/bin/python -m unittest discover -s training/tests -p 'test_*.py' -v

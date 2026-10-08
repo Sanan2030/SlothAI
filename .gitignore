@@ -15,3 +15,8 @@ lib/editor/generated/
 # Offline corpus preparation artifacts; keep provenance manifests tracked.
 scripts/data/__pycache__/
 data/corpus/az-v*/
+
+# Offline training outputs and Python environment; never deployed with the app.
+.venv-training/
+artifacts/training/
+training/**/__pycache__/

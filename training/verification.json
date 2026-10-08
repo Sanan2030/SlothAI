@@ -1,0 +1,38 @@
+{
+  "scope": "Offline preparation infrastructure; no corpus smoke/full training or model promotion",
+  "baseCommit": "d9a7ea9f9843fd78b342c89ea10e8b54922581c7",
+  "runtime": {
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "torch": "2.8.0+cpu",
+    "cudaAvailable": false
+  },
+  "trainingStarted": false,
+  "corpusPresent": false,
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "corpusGate": "not run on bulk data here; exact files missing; archived receipt integrity verified",
+  "missingCorpusGuard": {
+    "exitCode": 2,
+    "outputDirectoryCreated": false,
+    "trainingStarted": false
+  },
+  "checks": [
+    {"command": "bash training/setup.sh cpu", "result": "passed, repeat installation checked"},
+    {"command": ".venv-training/bin/python -m pip check", "result": "passed, no broken requirements"},
+    {"command": ".venv-training/bin/python -m unittest discover -s training/tests -p 'test_*.py' -v", "result": "passed", "passed": 16, "failed": 0, "skipped": 0},
+    {"command": "npm run data:test", "result": "passed", "passed": 18, "failed": 0},
+    {"command": "npm run typecheck", "result": "passed"},
+    {"command": "npm run lint", "result": "passed after ignoring third-party Python environment and training outputs"},
+    {"command": "npm test", "result": "passed", "passed": 4515, "failed": 0, "skipped": 0},
+    {"command": "npm run build", "result": "passed"},
+    {"command": "npm run benchmark:check", "result": "passed against existing budgets; not paired speedup evidence"},
+    {"command": "python3 -m compileall -q training", "result": "passed"},
+    {"command": "bash -n training/setup.sh", "result": "passed"},
+    {"command": "git diff --check", "result": "passed"}
+  ],
+  "untrainedModelParameters": {"charspell": 21857, "punctcase": 39434},
+  "deploymentTracesChecked": 8,
+  "offlineTrainingFilesInDeploymentTraces": 0,
+  "preserved": ["active editor code/weights/thresholds", "browser journal", "source approvals", "phase0 and frozen references", "package-lock.json"],
+  "unmeasured": ["real corpus preprocessing throughput/retrieval coverage", "CPU smoke/full training", "GPU execution", "source-split model accuracy", "real natural-text quality", "calibration", "TypeScript/int8 golden parity", "Stage 3–7 acceptance gates"]
+}
