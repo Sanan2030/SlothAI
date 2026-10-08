@@ -66,7 +66,7 @@ export function dismissPersonalCandidate(state: PersonalLexicon, rule: PersonalR
 export function applyPersonalLexicon(text: string, rules: readonly PersonalRule[]): string {
   if (!rules.length) return text;
   const words = tokens(text);
-  const protectedRanges = [...text.matchAll(/```[\s\S]*?```|`[^`\n]*`|<\/?[A-Za-z][^<>\n]*>|https?:\/\/[^\s<>]+/gu)]
+  const protectedRanges = [...text.matchAll(/<!--[\s\S]*?-->|```[\s\S]*?(?:```|$)|`[^`\n]*`|<\/?[A-Za-z][^<>\n]*>|https?:\/\/[^\s<>]+|(?<![\w.+-])[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}/gu)]
     .map(match => ({ start: match.index!, end: match.index! + match[0].length }));
   let protectedIndex = 0;
   let output = '';
