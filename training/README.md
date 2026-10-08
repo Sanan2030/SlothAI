@@ -38,8 +38,10 @@ retains sampled identity sentences and reports the actual training count.
 
 ## Start later, step by step
 
-Run commands from the repository root. Nothing trains during `npm ci`, editor
-build/start, status, import, verify, prepare or the technical CI checks.
+Run commands from the repository root. Accepted-corpus training never runs during
+`npm ci`, editor build/start, status, import, verify, prepare or the offline
+training-tools CI checks. Production CI separately rebuilds legacy small model
+artifacts to check reproducibility; it does not train this five-million corpus.
 
 1. Inspect the missing prerequisites:
 
@@ -159,9 +161,9 @@ Neural run reports extrapolate training and validation time separately after
 the smoke; WordLM records a rough fit extrapolation. Index growth can make
 the full run slower and larger than a linear estimate.
 
-This PR prepares independent offline experiments. It does **not** mark Stages
+These tools prepare independent offline experiments. They do **not** mark Stages
 3–7 complete or pass their gates. Before advancing/releasing a stage, retain
-the original stage order and its separate commit/PR:
+the original stage order and separate stage commits with their acceptance reports:
 
 - Stage 3 needs the browser candidate implementation/morphology integration,
   measured retrieval on train/development and controlled paired browser

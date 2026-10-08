@@ -1,247 +1,243 @@
 # SlothAI
 
-A deterministic Azerbaijani text and email editor. The primary UI runs in the
-browser after application assets load. There is no LLM, model download, Python
-service, API key, GPU requirement or network call during correction.
+An Azerbaijani text and email editor built with Next.js 16, React and TypeScript.
+It corrects spelling, punctuation, capitalization and layout using a dictionary,
+partial morphology, rules and small bundled statistical/neural classifiers.
+Correction runs locally in browser Workers after application assets load.
+It requires no API key, Python service or GPU to use the editor.
 
-## Validation status
+**Current status — 8 October 2026:** the editor and Stage 2 preservation guard
+work; offline tools for the accepted five-million corpus are ready. The new
+CharSpell, WordLM and PunctCase experiments have not been trained or enabled
+in the app. See the [current code audit and prioritized fixes](docs/current-state-2026-10-08.md).
 
-Name-free document fragments now train a separate small offline spelling ranker; source ownership, synthetic-error provenance, limitations and reproducible results are documented in [document training](docs/document-training.md).
+## What you can do
 
-`main` contains the offline editor. Changes must pass typecheck, lint, build,
-the full regression suite, 1000 exact frozen gold targets with stable second
-passes, and the enforced performance benchmark. Passing these engineering gates
-does not certify arbitrary Azerbaijani grammar or full semantic understanding.
+| Function | Current behavior |
+| --- | --- |
+| Text correction | Azerbaijani spelling, selected contextual rules, sentence boundaries, punctuation and capitalization; optional formatting preservation. |
+| Email formatting | Corrects the body and adds the selected greeting and closing. The UI omits a subject. `gmail-corrector` is the formatter's strategy ID; it does not connect to Gmail or send mail. |
+| Review changes | Word/punctuation highlights, editable output, copy, clear and keyboard shortcut. Deletions have no output glyph. |
+| Personal lexicon | Suggests rules from edited output; rules take effect after explicit confirmation and can be removed. Stored in this browser. |
+| Reviewed examples | Saves input, generated output, expected output and options to `slothai-reviewed-tests.json` for later regression checks. |
+| Local journal | Automatically keeps up to 50 successful input/output records in browser `localStorage`, when storage is available. JSON export is a user action. |
+| Appearance | Dark/light themes and reduced-motion support. |
 
-See the [latest performance and quality audit](docs/performance-audit/README.md): warm Node medians are 66 ms for 200 words and 245 ms for 900 words; the existing holdout is 299/300 and the new assistant-authored holdout is 291/300. Cold import plus first correction remains about 2.7 seconds. The new holdout still contains two incorrect changes to otherwise correct words. These results do not establish general semantic understanding.
+Editor correction does not call the server API. Personal rules, the journal
+and reviewed examples are not automatically uploaded or used to train a model.
+Loading the site initially requires its assets; there is no guaranteed offline
+installation/cache for reopening it without a network connection.
 
-See the [earlier spelling/context evaluation](docs/a-h-release-report.md) for
-the separately frozen 300-sentence engineering holdout, before/after metrics,
-unresolved cases and provenance. The earlier [stabilization report](docs/stabilization-report.md)
-is a historical audit, not the current release status.
+### Reviewed examples
 
-The browser worker allows up to 10 minutes per correction, then terminates the
-worker with a clear timeout message. This watchdog is independent of the
-unchanged performance benchmark budgets and optional server API limits.
+With File System Access support, select a JSON file once per page session;
+later saves read it and append/update the example. Select the same file after
+reopening the page. Invalid/unrelated JSON and write failures are reported.
+Other browsers download the accumulated file; open a previous file through
+“Mövcud test faylını aç” before adding more examples.
 
-See [CI morphology fixes and institutional training](docs/institutional-training/README.md): the unseen suite now passes 400/400; 120 generic state/corporate scenarios train an experimental offline ranker. It remains outside the browser bundle because separate validation/test cases show no additional gains.
+To compare a saved file with the current engine:
 
-## Local development
+```sh
+npm run review:test -- /path/to/slothai-reviewed-tests.json
+```
 
-Node >=20.9 (Node 24 used for validation):
+This writes a sibling `.results.json` and exits nonzero on differences. Expected
+outputs are regression references, not correction lookups or automatic training.
+
+## Run locally
+
+Node **>=20.9**, with Node 24 used in this cloud environment:
 
 ```sh
 npm ci
-npm run typecheck
-npm test
 npm run dev
 ```
 
-Dev, typecheck, tests and build each prepare the dictionary from checked-in,
-SHA-256-verified sources. A fresh clone does not need a generated file or an
-environment file. Dependency installation requires the npm registry. To run the
-benchmark directly after a fresh installation, first run:
+Open `http://localhost:3000`. Production:
 
 ```sh
-npm run dictionary:import -- public/dictionaries/az
-npm run benchmark
-npm run benchmark:check
+npm run build
+npm start
 ```
 
-`npm run build` creates the production application; `npm start` serves it.
-Vercel uses `npm ci`, matching CI's lockfile installation.
+Dev, typecheck, tests and build regenerate the dictionary from checked-in,
+SHA-256-verified sources. A fresh clone needs no environment file, generated
+dictionary commit or training corpus to run the editor. Installing dependencies
+requires access to the npm registry.
 
-For the accepted five-million corpus, separate offline preparation and explicit
-CPU/GPU training commands are documented in [training/README.md](training/README.md).
-Editor installation/build never starts training; these tools do not change the
-active model weights. Corpus access and the required stage gates remain prerequisites.
+## How correction runs
 
-## Implemented architecture
+```text
+app/page.tsx → EditorClient → central Worker → strategy → correctText / formatEmail
+```
 
-`app/page.tsx → EditorClient → central worker → strategy → correctText/formatEmail`
+The pipeline protects literal spans, applies lexical/context corrections,
+restores sentence boundaries and punctuation, formats layout and restores spans.
+Exact established words immediately before linguistic labels such as `sözü`
+or `termini` receive the Stage 2 preservation guard. This is a limited guard,
+not a guarantee that every correct word in arbitrary prose stays unchanged.
 
-On supported devices, two local expert workers prepare spelling and sentence-boundary
-proposals after 400 ms of idle typing. The central worker reuses only accepted results
-whose stage context is unchanged; otherwise normal inference runs. Smaller devices
-retain one worker. This adds parallel execution, not general semantic understanding;
-see [implementation and validation](docs/parallel-inference/README.md).
+After 400 ms of idle typing, devices reporting at least four logical CPUs and
+no data-saving preference can prepare proposals in two additional expert
+Workers. The central Worker accepts only proposals with matching stage context.
+Other devices retain one Worker. Selection currently does not check RAM.
+The central correction watchdog is 10 minutes; it is not a latency target.
+See [parallel inference](docs/parallel-inference/README.md).
 
-The optional `POST /api/transform` endpoint uses exactly the same strategies.
-Both paths accept at most 10,000 UTF-16 code units; an email's subject and its
-separator count toward that limit. API payload:
+`LanguageServices` exposes replaceable lemma, morphology and spelling contracts.
+The source-inflection adapter covers selected suffix chains; legacy surface-as-lemma
+records are not linguistic analyses. Development tracing covers spelling changes.
+The bundled classifiers are compact local models; this project is not a general
+language model or a guarantee of arbitrary Azerbaijani grammar/semantic accuracy.
+
+### Limits and dictionary
+
+- Maximum request size: **10,000 UTF-16 code units**. An API email's subject and
+  separator count toward this limit. The logical 5,000-word benchmark uses chunks.
+- The pinned dictionary has 42,936 source records, 38,174 unique entries and
+  100,000 bounded runtime forms, including 61,828 generated single-step forms.
+- Dictionary membership/generated coverage does not certify linguistic validity.
+  Prefixes, compounds, continuation classes and cross products are unsupported.
+- Literal protection covers selected code, URL, email and terminology patterns;
+  complete Markdown/HTML parsing and Unicode email support remain incomplete.
+- `correctionsMade` estimates changed tokens. `processingLanguage: "az"` is
+  configured, not detected; `detectedLanguage` is a compatibility alias.
+  `engine: "local-rules"` also includes the small bundled models.
+
+See [third-party notices](THIRD_PARTY_NOTICES.md) for sources and licenses.
+
+## Optional HTTP API
+
+The Node.js API uses the same core strategies; browser personal rules are applied
+by the UI and are not supplied to this API automatically.
+
+| Endpoint | Behavior |
+| --- | --- |
+| `POST /api/transform` | Correct text or format an email. |
+| `GET /api/strategies` | List available strategies. |
+| `GET /api/health` | Service liveness and timestamp; does not verify engine/model readiness. |
+
+Example request to `/api/transform`:
 
 ```json
 {"strategyId":"text-corrector","text":"men bu gun mektebe getdim","options":{"preserveFormatting":false}}
 ```
 
-Statuses: 200 success, 400 malformed/invalid input, 404 unknown strategy, 429
-rate limited, 500 unexpected failure. The limiter is bounded but **instance-local,
-best-effort**: it resets on cold starts and is not distributed protection.
+The current engine returns `transformedText: "Mən bu gün məktəbə getdim."` plus
+metadata. For subject-free mail, use `strategyId: "gmail-corrector"` with
+`options: {"emailGreeting":"Salam,","omitSubject":true}`. Greeting values come
+from [email-greetings.ts](lib/editor/email-greetings.ts).
 
-The correction order is protected spans → lexical spelling → phrase/context
-rules → sentence boundaries/punctuation/capitalization → layout → span restoration.
-Terminology preparation precedes lexical protection so phrases such as
-`open api` can be recognized. Lexical technical terms remain visible to clause
-rules; punctuation-bearing terms and code/URLs use opaque placeholders.
+Statuses: **200** success, **400** invalid JSON/input/options, **404** unknown
+strategy, **429** rate limited, **500** unexpected failure. Rate limiting is
+30 requests per 60 seconds per client identifier, held in instance-local memory.
+It resets on cold starts and is not shared across server instances.
 
-Production spelling now passes through `language-services.ts`.
-`LanguageServices` exposes lemma, morphology and spelling contracts.
-`correctText(input, preserveFormatting, { services, trace })` supports isolated
-implementation replacement and optional development tracing. Tracing currently
-reports spelling changes only; it is disabled by default. No global per-request
-service mutation is needed.
+## Current verification and quality
 
-The legacy dictionary adapter retains historical surface-as-lemma records; these
-are not linguistic analyses. A separate source-inflection adapter now recovers
-source lemmas and selected harmonic noun/verb suffix chains from pinned stem
-classes. It is partial morphology, not full contextual POS or syntax analysis.
-Generated coverage and engineering test success do not imply human review.
+The latest runtime/preparation commit `0bf77b9` passed GitHub production validation,
+offline training contracts and its Vercel preview build. The recorded local suite
+passed **4,515 Node tests, 18 data-tool tests and 16 training contracts**, plus
+typecheck, lint, production build and enforced performance budgets. The training
+contracts check infrastructure and model forward/gradient behavior, not trained
+model quality. See [verification record](training/verification.json).
 
-## Dictionary policy
+Archived [Stage 2 acceptance results](docs/stage2/README.md):
 
-- 42,936 source records (upstream header says 42,937).
-- 38,174 unique source entries; 38,172 matchable base entries.
-- 100,000 bounded runtime forms: 61,828 single-step generated forms.
-- Generated `lib/editor/generated/*.json` files are build artifacts, not tracked.
-- The pinned source, license, checksums and generated metadata are tracked.
-- Byte-for-byte regeneration is tested.
-- FLAG long uses pairs of characters, not a whole multi-flag string.
-- Only complete single-step SFX strip/add/condition rules are supported.
-- 14 malformed/unsupported rule lines and 11 malformed flag records are skipped.
-- Prefixes, compounds, continuation classes and cross products are unsupported.
+| Evaluation | Result | Interpretation |
+| --- | --- | --- |
+| Frozen editorial gold | 1,000/1,000 exact and stable | Assistant-reviewed engineering references; not independent human certification. |
+| Phase0 holdout | 393/500 exact; precision 99.44%, recall 83.125% | Templated/synthetic errors, not representative real user quality; one correct word was harmed. |
+| Phase0 preservation set | 0/8,000 harmed words; 0/2,000 changed sentences | Dictionary-word mention contexts, not arbitrary prose. |
+| Stage 2 development | 400/400 exact before and after | Assistant-authored preservation check; no demonstrated accuracy gain on this set. |
+| Existing user-derived diagnostic cases | 4/12 exact | Small development set with assistant targets; not a blind or representative test. |
 
-This is not every Azerbaijani word, nor a guarantee that every upstream form is
-linguistically valid. The 100k limit bounds memory; it is not an accuracy metric.
-See [third-party notices](THIRD_PARTY_NOTICES.md).
+These reports are existing measurements, not a new evaluation of the five-million
+models. Stage 2 warm Node p95 was 651.6 ms at 1,000 words and 3,305.22 ms for a
+logical 5,000-word chunked document. These are not browser/mobile latency promises
+or a measured speedup from training preparation. Older reports below are historical.
 
-## UI, metadata and performance
+## Five-million corpus: prepare now, train later
 
-The active UI is `app/page.tsx`; unused legacy UI components were removed.
-SlothAI is the user-facing brand; repository/Vercel project names are unchanged.
-Dark/light theme, copy, clear, keyboard shortcut, emoji and full-word highlights
-remain. Reduced-motion users receive a static emoji and non-animated highlights.
+The accepted `az-v1` receipt describes **5,000,000 mechanically filtered clean
+sentences and 5,000,000 synthetic pairs**. Identity pairs total 1,058,544 across
+all splits. The accepted bulk files are outside Git and are **absent from this
+cloud checkout**; only their manifests/receipts are present.
 
-Diff uses a 32-token lookahead, O(tokens) memory and bounded O(tokens × 32)
-alignment. Changed words and inserted punctuation are highlighted; deletions
-have no output glyph. Distant moved passages can conservatively appear changed.
-There is no full-document quadratic matrix.
+| Split | Sentences / aligned pairs | Use |
+| --- | ---: | --- |
+| Train | 3,287,357 | Learn model parameters/counts. |
+| Validation | 1,082,532 | Early stopping and model selection. |
+| Test | 630,111 | Final measurement only; excluded from task preparation. |
 
-`correctionsMade` is an approximate changed-token estimate, not a grammatical
-error count. `processingLanguage: "az"` describes the configured language.
-`detectedLanguage` remains a deprecated compatibility alias; no language
-detection is performed. The compatibility value `engine: "local-rules"` includes
-the deterministic rules and the bundled small local statistical models.
+Accepted manifest SHA-256:
 
-Benchmarks separately report engine and UI diff avg/p50/p95 latency and
-approximate process memory. The logical 5,000-word case is split into safe
-chunks for the editor; it is not one API request. Hosted-runner timing varies.
-
-## Validation and CI
-
-The workflow installs pinned dependencies, prepares the dictionary once,
-typechecks, runs all regressions, builds and enforces benchmarks. Silent npm
-invocation preserves machine-readable benchmark JSON. Failure exit codes are
-propagated; summary/artifact steps run even after a failure.
-
-All 240 corpus cases execute the real engine with exact expected comparisons
-and idempotency checks. Diagnostics include input, expected, actual, mode and
-category. `node --import tsx scripts/report-regressions.ts` writes category
-counts and detailed failures and exits nonzero if any remain.
-
-A workflow alone does not enforce GitHub branch protection or make Vercel wait
-for tests. The inspected main branch was unprotected. Required-check settings
-must be configured before calling this a mandatory merge gate.
-
-## Local language engine (September 2026)
-
-The October reviewed training release adds a retrained compact attention
-fallback and strict approved-data provenance checks. See
-[reviewed neural training](docs/reviewed-neural-training.md) for frozen splits,
-measured gains, remaining errors and complete reproduction commands.
-
-The additional compact neural sentence-boundary head restores missing gaps
-without changing spelling or deleting user punctuation. See
-[sentence-boundary training](docs/neural-sentence-boundaries.md) for the isolated
-ablation, checkpoint selection, regression gates and remaining limitations.
-
-The editor combines reviewed dictionary entries, productive morphology, true
-lemma/POS analyses for reviewed stems, a conservative ordered-context perceptron,
-and a supervised sentence-gap classifier. Training is offline; inference stays
-in TypeScript with the bundled JSON model. No paid API or Python runtime is
-required in the browser. Ambiguous corrections can abstain instead of guessing.
-Correct explicitly accented words and protected technical terms are preserved.
-
-The evaluation corpus contains 1,000 exact editorial targets: the frozen 460
-RSD/IT and 340 mail inputs plus 100 new text and 100 new mail cases. The new
-200 are compositional synthetic cases, authored before evaluation; they are
-not a blind natural-language corpus. All targets are assistant-reviewed, not
-independent human linguist certification, and are excluded from model training.
-Six explicitly documented errors in the previous targets were corrected,
-including dotted Azerbaijani capitals, English identifier capitalization and
-missing grammatical punctuation. The original 800 input hashes are unchanged.
-
-The current engine matches all 1,000 targets exactly, and a second processing
-pass preserves all 1,000 outputs. Previously correct cases remain protected.
-Thirty separately authored fresh inputs also pass both text and email-body
-expectations. These datasets do not establish arbitrary-text accuracy.
-
-Run `npm run gold:check` to enforce the frozen input/target hashes and baseline
-cases; `npm run gold:exact` requires all 1,000 exact outputs. Both checks are
-required in CI. `npm test` includes all 1,000 exact and second-pass checks.
-`npm run local-ai:fresh:check` enforces the separate fresh cases. CI also
-rebuilds both the synthetic cases and the model and checks reproducibility.
-
-General semantic understanding, exhaustive Azerbaijani morphology/POS,
-arbitrary-text punctuation, general technical suffix orthography, distributed
-rate limiting and complete Markdown/HTML structural parsing remain future work.
-The small classifiers are not a transformer or an LLM. See
-[the current 1,000-case report](docs/gold-1000-2026-09-30.md).
-
-Historical proposal/corpus-review documents describe earlier iterations; current
-behavior and limitations above take precedence.
-
-## Reviewed examples saved to a file
-
-The feedback action now writes `slothai-reviewed-tests.json`, containing the raw
-input, recorded generated output, user-specified expected output, module,
-formatting/greeting options and review timestamp. It does not train the model,
-confirm personal dictionary rules or replay a saved expected result. Existing
-exact-input browser-memory lookup is no longer used by the application.
-
-On browsers supporting the File System Access save picker, select a file once
-per page session; subsequent saves read its current contents and append/update
-the reviewed example. After reopening the application, select the same file.
-Existing unrelated or invalid JSON is rejected before writing. Write failures
-are shown inline and do not silently switch to another storage method.
-
-Other browsers download the accumulated corpus. Use “Mövcud test faylını aç”
-to load a previous day's JSON before saving additional examples. Downloaded
-copies are managed by the browser; they cannot silently overwrite an arbitrary
-computer file. The corpus is not uploaded to GitHub or another server.
-
-To rerun a saved file against the current engine:
-
-```bash
-npm run review:test -- /path/to/slothai-reviewed-tests.json
+```text
+dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd
 ```
 
-This writes a sibling `.results.json` report with input, expected and current
-actual output and exits nonzero if any case differs. Mail evaluations use the
-saved greeting and the application's subject-free mode. No stored target is
-used as a correction lookup. To have this assistant inspect the data later,
-attach the saved JSON file when requesting the review.
+Check readiness without starting training:
 
-### Context training release
+```sh
+npm run training:status
+```
 
-The local classifiers are retrained with 60 additional authored context examples
-from a new 120-example corpus; 24 validation and 36 test examples stay reserved.
-Correct accepted context decisions improve from 15/36 to 28/36 with no wrong
-accepted decisions. Full outputs on those new examples are only 24/36 exact;
-the existing 200 synthetic held-out full outputs improve from 57 to 59 exact.
-This remains a small statistical editor, not a professional general AI.
+Exit 2 / `status: blocked` is expected until the exact files are supplied.
+The [training guide](training/README.md) covers verified import, the full data
+gate, deterministic preparation, optional CPU/CUDA setup, 100k-sentence smoke
+jobs, checkpoints and explicit full-run commands. The CPU training runtime was
+checked here; GPU execution has not been checked and no GPU is attached.
 
-`npm run local-ai:context:check` enforces the reserved context safety gate, while
-`npm run local-ai:evaluate` also protects previous-release per-pair distances.
-Training writes complete artifacts through atomic file replacement. See
-[the training report](docs/local-ai-training-2026-09-30.md) for data separation,
-results, reproducibility and limitations.
+| Offline experiment | Training input | Integration status |
+| --- | --- | --- |
+| CharSpell | Synthetic noisy→clean pairs plus identity examples | Untrained character-CNN candidate scorer; Python checkpoints, no browser export. |
+| WordLM | Clean train text only | Untrained SQLite Kneser-Ney 3-gram tool; correction benefit/lambda unmeasured. |
+| PunctCase | Punctuation/case labels from clean train text | Untrained character-CNN + BiGRU; no browser export. |
+
+Training is deferred. Editor installation/build/start never trains this corpus;
+offline tools never automatically replace active app weights. Full training
+requires a successful same-stage 100k–500k smoke receipt. Stage acceptance,
+real-error calibration, TypeScript/int8 parity and browser integration are still
+separate work. Calibration needs its own `data/calibration/` real-error set,
+not the five-million corpus, test split or phase0 references.
+
+The corpus has residual OCR/spelling/segmentation risk, limited email coverage
+and synthetic errors. Synthetic validation must not be presented as real-text
+accuracy. Source approval and rights limits are in the
+[accepted corpus report](docs/stage1/collection/accepted-2026-10-08.md) and
+[receipt](docs/stage1/collection/accepted-corpus.json).
+
+## Development checks and delivery
+
+```sh
+npm run typecheck
+npm run lint
+npm test
+npm run build
+npm run benchmark:check
+npm run data:test
+npm run training:test
+```
+
+For benchmarks alone after a fresh install, first run
+`npm run dictionary:import -- public/dictionaries/az`. Optional PyTorch contracts
+use `npm run training:test:models` after installing the training environment.
+
+[Production CI](.github/workflows/performance.yml) checks editor regressions,
+dictionary/model reproducibility, build and performance. It rebuilds legacy
+small model artifacts for comparison; it does not train `az-v1`.
+[Training-tools CI](.github/workflows/training-tools.yml) runs offline contracts
+without corpus training. Completed changes are delivered to **`main`** after
+applicable checks, with normal pushes that preserve upstream history.
+
+Vercel's existing Git integration builds the Next.js editor with `npm ci` and
+`npm run build`; Vercel is not a training-job host. The inspected `main` branch
+is unprotected. GitHub CI and Vercel deployment are separate: a workflow does not
+by itself make deployment wait for CI.
+
+Historical details: [reviewed neural models](docs/reviewed-neural-training.md),
+[sentence boundaries](docs/neural-sentence-boundaries.md),
+[document ranker](docs/document-training.md),
+[performance audit](docs/performance-audit/README.md),
+[gold references](docs/gold-1000-2026-09-30.md).
