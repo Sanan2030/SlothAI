@@ -1,0 +1,159 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 20261007,
+    "unit": "fresh process (cold), trial/document (warm/novel)",
+    "confidence": 0.95
+  },
+  "cold": {
+    "importMs": {
+      "value": 3342.4227715,
+      "ci95": [
+        3223.7155926625005,
+        3521.848841
+      ]
+    },
+    "firstMs": {
+      "value": 350.47499449999987,
+      "ci95": [
+        330.5210539999998,
+        372.4308610000003
+      ]
+    },
+    "importAndFirstMs": {
+      "value": 3697.0773,
+      "ci95": [
+        3566.425850225,
+        3880.3298215
+      ]
+    },
+    "heapDeltaBytes": {
+      "value": 184867276,
+      "ci95": [
+        184570744,
+        185199000
+      ]
+    },
+    "rssBytes": {
+      "value": 352360448,
+      "ci95": [
+        348176384,
+        357265408
+      ]
+    }
+  },
+  "coldTrials": 10,
+  "policies": {
+    "default": {
+      "lengths": {
+        "200": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 69.64876399999957,
+              "ci95": [
+                65.70310099999915,
+                73.51856500000031
+              ]
+            },
+            "p95Ms": {
+              "value": 85.0786326999996,
+              "ci95": [
+                73.10079092750028,
+                93.99096199999985
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 514.4530280000017,
+              "ci95": [
+                404.1374510000005,
+                537.8963960000001
+              ]
+            },
+            "p95Ms": {
+              "value": 581.6305667000006,
+              "ci95": [
+                533.1731425000002,
+                610.553516
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 2.5722651400000087,
+            "ci95": [
+              2.0206872550000026,
+              2.6894819800000005
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 2.9081528335000026,
+            "ci95": [
+              2.665865712500001,
+              3.05276758
+            ]
+          }
+        },
+        "900": {
+          "warm": {
+            "trials": 15,
+            "medianMs": {
+              "value": 286.4770189999981,
+              "ci95": [
+                277.1139989999938,
+                310.0921699999999
+              ]
+            },
+            "p95Ms": {
+              "value": 640.7565443000046,
+              "ci95": [
+                300.3470535,
+                942.3346470000033
+              ]
+            }
+          },
+          "novel": {
+            "trials": 15,
+            "medianMs": {
+              "value": 2411.9535240000005,
+              "ci95": [
+                2355.36464,
+                2700.6644229999984
+              ]
+            },
+            "p95Ms": {
+              "value": 11951.272149299988,
+              "ci95": [
+                2930.021075799998,
+                18998.567600999995
+              ]
+            }
+          },
+          "novelMedianMsPerWord": {
+            "value": 2.6799483600000005,
+            "ci95": [
+              2.617071822222222,
+              3.0007382477777758
+            ]
+          },
+          "novelP95MsPerWord": {
+            "value": 13.279191276999988,
+            "ci95": [
+              3.255578973111109,
+              21.109519556666662
+            ]
+          }
+        }
+      },
+      "note": "Novel probe is shuffled dictionary-derived ASCII word soup, not natural prose; no repeated folded tokens, but prebuilt vocabulary/morphology caches still exist. Warm corpus is repetitive. Separate process per policy prevents cross-policy cache pollution."
+    }
+  },
+  "measurementScope": "Node process TS imports and synchronous correction, not real browser/Worker startup or downloaded asset timings."
+}

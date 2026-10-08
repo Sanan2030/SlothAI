@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "reportSHA256": "c2e8588c6d7554789174609723d0bb4bfaafd660b0e6b9c5d7e874a66f005e3a",
+  "report": "gate-guarded.json",
+  "minimumCleanSentences": 5000000,
+  "cleanSentences": 5000000,
+  "syntheticPairs": 5000000,
+  "phase0ComparedRows": 10000000,
+  "phase0OverlapRows": 0,
+  "crossSplitCollisions": 0,
+  "sourceGuardIdentityFallbacks": 2,
+  "cleanFilesByteIdentical": true,
+  "trainingStarted": false,
+  "stage2Started": false,
+  "approvalScope": "Repository-owner acceptance of pinned publisher CC BY 4.0 declaration/restricted use plan; not independent clearance of underlying works.",
+  "linguisticReview": "Mechanically filtered; not human-reviewed or linguist-certified.",
+  "manifestStatusNote": "gate/overlapStatus fields are builder-time state. This separate hash-bound receipt records the subsequent full audit."
+}

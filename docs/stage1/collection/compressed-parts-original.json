@@ -20,14 +20,14 @@
     },
     {
       "file": "train-pairs.jsonl.gz",
-      "bytes": 372247600,
-      "sha256": "d970c27ad885be80d2750db08bed2af409dd2a2b3819151b87441e11d0cdfa04",
+      "bytes": 372247406,
+      "sha256": "cca8d983db30d86a8b71e184505b283eabf5c2e8b20eccd6ec3761f6fb175f69",
       "uncompressedFile": "train-pairs.jsonl"
     },
     {
       "file": "validation-pairs.jsonl.gz",
-      "bytes": 102510627,
-      "sha256": "c237c57a031aace0d86f280dd5f224deaeae3a574ad6e87980a838e7263f2fc4",
+      "bytes": 102510514,
+      "sha256": "338af977d90e7f612c275d7548878556b4a660f123b7fd05fb195a1d0074b6da",
       "uncompressedFile": "validation-pairs.jsonl"
     },
     {
@@ -37,11 +37,10 @@
       "uncompressedFile": "test-pairs.jsonl"
     }
   ],
+  "elapsedSeconds": 22.651,
   "cleanSentences": 5000000,
   "syntheticPairs": 5000000,
   "trainingStarted": false,
-  "gate": "passed; see accepted-corpus.json and gate-guarded.json",
-  "format": "Standalone gzip JSONL streams. Decompress into az-v1 alongside the matching MANIFEST.json; rerun npm run data:gate.",
-  "originalPackagingSeconds": 22.651,
-  "changedPartPackagingSeconds": 23.068
+  "gate": "pending; see final separate gate report",
+  "format": "Each file is a standalone gzip JSONL stream. Decompress into az-v1 alongside the original MANIFEST.json to rerun the gate."
 }

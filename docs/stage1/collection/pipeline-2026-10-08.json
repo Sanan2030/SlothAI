@@ -1,0 +1,62 @@
+{
+  "trainingStarted": false,
+  "stage2Started": false,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "scripts/data/guard_source_pairs.py",
+        "data/corpus/az-v1",
+        "data/corpus/az-v1-guarded"
+      ],
+      "exitCode": 0,
+      "seconds": 593.689
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/data/gate.py",
+        "data/corpus/az-v1-guarded",
+        "--out=docs/stage1/collection/gate-guarded.json"
+      ],
+      "exitCode": 0,
+      "seconds": 2009.07
+    }
+  ],
+  "state": "stage1-data-gate-passed",
+  "gate": {
+    "status": "passed",
+    "minimumCleanSentences": 5000000,
+    "cleanSentences": 5000000,
+    "auditScope": "Both clean targets and generated noisy inputs; 8-word normalized ngrams and exact sentences",
+    "errors": [],
+    "phase0Overlap": {
+      "train": {
+        "comparedRows": 6574714,
+        "ngramSize": 8,
+        "overlapRows": 0,
+        "failures": [],
+        "status": "passed"
+      },
+      "validation": {
+        "comparedRows": 2165064,
+        "ngramSize": 8,
+        "overlapRows": 0,
+        "failures": [],
+        "status": "passed"
+      },
+      "test": {
+        "comparedRows": 1260222,
+        "ngramSize": 8,
+        "overlapRows": 0,
+        "failures": [],
+        "status": "passed"
+      }
+    },
+    "crossSplitCollisions": 0,
+    "crossSplitAudit": "exercised",
+    "trainingStarted": false
+  },
+  "canonicalAcceptedDirectory": "data/corpus/az-v1",
+  "originalDirectory": "data/corpus/az-v1-original"
+}

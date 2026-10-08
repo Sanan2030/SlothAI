@@ -5,8 +5,10 @@ matched the unchanged manifest's complete SHA-256 and byte lengths. The saved
 manifest is byte-identical to the published original. The HTTP 403 block on
 2026-10-07 is historical; `recovery-2026-10-08.json` records this recovery.
 
-The source-only guard and fresh full audit are running. Neither a repaired
-corpus pass nor any model training is claimed in this checkpoint.
+The source-only guard completed in 593.689 seconds. Two synthetic inputs fell
+back to identity; all 5,000,000 clean rows and their file hashes remain unchanged.
+The fresh full audit passed with zero cross-split and phase0 overlaps; see
+`accepted-2026-10-08.md` for the measured full result. No model training has begun.
 
 ## Audit backend change
 

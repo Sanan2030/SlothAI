@@ -1,6 +1,10 @@
 # Source-only synthetic-input guard
 
-## Status, 2026-10-07
+Current result: the full five-million repair and audit passed; see
+[accepted-2026-10-08.md](accepted-2026-10-08.md). Historical failures below are retained
+for provenance and do not describe the accepted version.
+
+## Historical status, 2026-10-07
 
 The preceding full audit of the original five-million corpus failed with two
 cross-split normalized sentence/8-word collision occurrences (the number of
@@ -40,8 +44,9 @@ colliding keys.
 Every added identity key was already present as a clean target key. Removing
 all foreign noisy owners therefore cannot introduce a new cross-split key.
 This argument is not a substitute for the unchanged full leakage gate.
-Only unit fixtures have exercised the repair so far; the actual number of
-fallback pairs in the full corpus is **not measured**.
+The full source-only repair has now completed: exactly two noisy inputs became
+identity pairs, and every clean file remains byte-identical. The 2026-10-08
+full gate and receipts supersede the historical recovery block above.
 
 ## Reproduction after bulk-file access is restored
 
@@ -57,8 +62,9 @@ python3 scripts/data/gate.py data/corpus/az-v1-guarded --out=docs/stage1/collect
 
 The repair refuses to overwrite an existing output. A failed fresh gate blocks
 the repaired version. Do not filter out phase0 matches, lower the minimum, or
-train from a version without an actual passing full report. The production
-gate and runtime editor are unchanged; this is offline preparation only.
+train from a version without an actual passing full report. The gate now uses the parity-tested exact partition index described in
+`audit-index-2026-10-08.md`; its acceptance rules are unchanged. The runtime
+editor is unchanged; this is offline preparation only.
 
 ## Tests and measurements
 

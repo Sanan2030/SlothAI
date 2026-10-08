@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-08T05:21:50.365035+00:00",
+  "createdAt": "2026-10-07T12:31:03.665815+00:00",
   "inputSHA256": "5c28420ea979c411f52902cd217c165145eb1c8b6f7045fca58bf26d2058e7f5",
   "minimumCleanSentences": 5000000,
   "cleanSentences": 5000000,
@@ -162,8 +162,8 @@
       "case": 285528
     },
     "realizedCounts": {
-      "identity": 1058544,
-      "diacritics_all": 284633,
+      "identity": 1058542,
+      "diacritics_all": 284634,
       "diacritics_partial": 285726,
       "qk_xh": 275437,
       "deletion": 285661,
@@ -173,14 +173,14 @@
       "keyboard_ascii": 285719,
       "digraph": 244008,
       "space_split": 285018,
-      "space_join": 285092,
+      "space_join": 285093,
       "hyphen": 285029,
       "punctuation": 284918,
       "case": 283646
     },
     "realizedShares": {
-      "identity": 0.2117088,
-      "diacritics_all": 0.0569266,
+      "identity": 0.2117084,
+      "diacritics_all": 0.0569268,
       "diacritics_partial": 0.0571452,
       "qk_xh": 0.0550874,
       "deletion": 0.0571322,
@@ -190,7 +190,7 @@
       "keyboard_ascii": 0.0571438,
       "digraph": 0.0488016,
       "space_split": 0.0570036,
-      "space_join": 0.0570184,
+      "space_join": 0.0570186,
       "hyphen": 0.0570058,
       "punctuation": 0.0569836,
       "case": 0.0567292
@@ -198,98 +198,35 @@
   },
   "files": {
     "test-pairs.jsonl": {
-      "bytes": 502607898,
-      "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee"
+      "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee",
+      "bytes": 502607898
     },
     "test.jsonl": {
-      "bytes": 246883337,
-      "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85"
+      "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85",
+      "bytes": 246883337
     },
     "train-pairs.jsonl": {
-      "bytes": 2670564827,
-      "sha256": "8998666a0b2af38a7c6cb4afb50298d9407b1db267770d43df27ab893fb59b07"
+      "sha256": "a9026fd430c6da4319f3fe247a902c68764399cb57123dd5abb10b398fad79b6",
+      "bytes": 2670564756
     },
     "train.jsonl": {
-      "bytes": 1299323896,
-      "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+      "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9",
+      "bytes": 1299323896
     },
     "validation-pairs.jsonl": {
-      "bytes": 771523298,
-      "sha256": "b5075ca6b79c894ac441344c6b694ce128cd010be931380ba973d26259741ee6"
+      "sha256": "fea16ccd38b14269c01d1b5b4b70c5a839096c76fed68a4872d59915962b3843",
+      "bytes": 771523231
     },
     "validation.jsonl": {
-      "bytes": 393989461,
-      "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717"
+      "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717",
+      "bytes": 393989461
     }
   },
-  "overlapStatus": "not-checked-after-source-guard",
-  "gate": "blocked-until-fresh-full-audit",
+  "overlapStatus": "not-checked",
+  "gate": "blocked-until-overlap-and-minimum-check",
   "limitations": [
     "Fallback segmentation is heuristic and source-declared az is not a trained language-ID filter.",
     "Casefolded near-duplicates and split ngram collisions must be checked separately.",
     "No training or threshold selection occurs in this builder."
-  ],
-  "sourceGuard": {
-    "policy": "Exact source-only sentence/8gram index; foreign synthetic inputs fall back to unchanged target",
-    "evaluationDataRead": false,
-    "originalManifestSHA256": "618bd1c209efa18ad22d585ad9f742eec56bcbaf09030df9ea47a34e9875b917",
-    "originalCrossSplitCollisions": 2,
-    "cleanCrossSplitKeys": 0,
-    "identityFallbacks": 2,
-    "replacements": [
-      {
-        "id": "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00001-of-00018:167675:2",
-        "sourceId": "aztc-axar",
-        "split": "train",
-        "previousCategory": "space_join"
-      },
-      {
-        "id": "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00001-of-00018:59112:6",
-        "sourceId": "aztc-apasport",
-        "split": "validation",
-        "previousCategory": "diacritics_all"
-      }
-    ],
-    "keyRecords": 66086703,
-    "maximumPartitionBytes": 9631211,
-    "examples": [
-      {
-        "type": "8gram",
-        "sha256": "ade81636a18fb0b7503bc95099808183173bcc0c17651bdf1d7ad81a5cd60dca",
-        "rows": [
-          {
-            "row": 3822530,
-            "split": "validation",
-            "clean": false,
-            "noisy": true
-          },
-          {
-            "row": 4575144,
-            "split": "test",
-            "clean": true,
-            "noisy": true
-          }
-        ]
-      },
-      {
-        "type": "sentence",
-        "sha256": "be241bfe8b8e1f987f40497e38d431882d96c4c3ebfdbcf2f635836a089e5c2d",
-        "rows": [
-          {
-            "row": 1544825,
-            "split": "train",
-            "clean": false,
-            "noisy": true
-          },
-          {
-            "row": 3342039,
-            "split": "validation",
-            "clean": true,
-            "noisy": false
-          }
-        ]
-      }
-    ],
-    "proof": "Only input keys are removed; added identity keys were already indexed as immutable clean keys. All foreign inputs sharing any clean key and both sides of noise/noise collisions are rejected. A fresh full gate remains mandatory."
-  }
+  ]
 }

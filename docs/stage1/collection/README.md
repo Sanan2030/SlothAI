@@ -1,10 +1,9 @@
-# AzTC-full acquisition — Stage 1 remains gated
+# AzTC-full acquisition — Stage 1 data gate passed
 
-Current continuation status: the first full audit failed with two cross-split
-key collision occurrences, although all clean/noisy rows had zero phase0 overlaps. The
-source-only repair is separately unit-tested; it has not been applied to the
-five-million corpus because saved bulk-file recovery returned HTTP 403.
-See `source-guard.md`; do not treat earlier pending-gate text as a passing gate.
+Current result: see [accepted-2026-10-08.md](accepted-2026-10-08.md). The fresh
+full audit passed five million clean sentences plus five million noisy inputs,
+with zero phase0 overlaps and zero cross-split collisions. The earlier HTTP 403
+and failed original gate described below are historical. No model training began.
 
 The owner requested collection after the pinned source/use plan was presented.
 `owner-approval.json` records the actual conversation instruction and restricted
@@ -151,7 +150,7 @@ nor their metrics were used for acquisition or noise choices.
 `local-ai:fresh:check`, and `quality:priorities` commands. Concurrent data preparation
 makes their elapsed times unsuitable for app performance claims.
 
-## Prepared source splits and reproducible synthetic pairs
+## Historical original preparation (before the source guard)
 
 `MANIFEST.json` records exactly 5,000,000 accepted clean rows and 5,000,000
 synthetic pairs; preparation rejected no retained collection sentence. Source-group
@@ -186,6 +185,7 @@ The benchmark uses seeded synthetic hash keys with intentional cross-split
 collisions; it does not read phase0, the corpus or model outputs. Collision counts
 and first-owner hashes matched in all six runs. Original median was 1,182.79 ms;
 the trial's median was 1,329.17 ms, so the batching trial was **not applied**.
-The production `gate.py` remains unchanged. This is an audit-index microbenchmark
+At that historical checkpoint the production `gate.py` remained unchanged.
+The later parity-tested partition index is documented in `audit-index-2026-10-08.md`. This is an audit-index microbenchmark
 under concurrent load, not a claim about full-gate or application performance.
 The rejected implementation remains only inside the benchmark for reproduction.

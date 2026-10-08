@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "minimumCleanSentences": 5000000,
+  "cleanSentences": 5000000,
+  "auditScope": "Both clean targets and generated noisy inputs; 8-word normalized ngrams and exact sentences",
+  "errors": [],
+  "phase0Overlap": {
+    "train": {
+      "comparedRows": 6574714,
+      "ngramSize": 8,
+      "overlapRows": 0,
+      "failures": [],
+      "status": "passed"
+    },
+    "validation": {
+      "comparedRows": 2165064,
+      "ngramSize": 8,
+      "overlapRows": 0,
+      "failures": [],
+      "status": "passed"
+    },
+    "test": {
+      "comparedRows": 1260222,
+      "ngramSize": 8,
+      "overlapRows": 0,
+      "failures": [],
+      "status": "passed"
+    }
+  },
+  "crossSplitCollisions": 0,
+  "crossSplitAudit": "exercised",
+  "trainingStarted": false
+}

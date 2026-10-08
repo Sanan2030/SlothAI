@@ -4,7 +4,8 @@ The owner selected **5,000,000 accepted clean sentences** on 2026-10-07.
 The owner subsequently authorized the restricted pinned AzTC-full acquisition
 plan; see `docs/stage1/collection/owner-approval.json`. This accepts the publisher's
 CC BY 4.0 declaration for that use plan, not independently verified rights in
-every underlying work. Training remains blocked until the full data gate passes.
+every underlying work. The full Stage 1 data gate passed on 2026-10-08;
+no model training or Stage 2 implementation has begun.
 The checked-in empty root manifest is the original blocked input template;
 actual bulk collection/preparation manifests are produced outside git.
 Network metadata access is not training permission. The existing phase0 files,
@@ -92,12 +93,13 @@ The checked-in empty root manifest remains a historical input template; it is
 not the current five-million corpus. Missing files fail closed.
 The gate checks clean targets and noisy inputs in all three splits against phase0; all source approvals, file hashes,
 clean/pair alignment, source/document boundaries, and normalized sentence/8-gram
-collisions across splits. It fails on an empty overlap audit. SQLite bounds memory
-for cross-split indexes. Actual prepared-file sizes/hashes are recorded in
-`docs/stage1/collection/MANIFEST.json`; full-gate timing remains incomplete.
+collisions across splits. It fails on an empty overlap audit. An exact disk-partitioned SHA-256 key index bounds cross-split memory;
+SQLite retains the document ownership index. Actual prepared-file sizes/hashes are recorded in
+`docs/stage1/collection/MANIFEST.json`; full-gate timing is recorded in `docs/stage1/collection/pipeline-2026-10-08.json`.
 Preparation/audit scripts do not download or train; the separate pinned collector
 has collected exactly five million mechanically filtered sentences. The clean-only
-phase0 audit passed with zero overlaps; the full clean/noisy/split audit is pending.
+phase0 audit passed with zero overlaps; the subsequent full clean/noisy/split
+audit also passed, with zero overlaps. See `docs/stage1/collection/accepted-corpus.json`.
 
 Preparation uses exact deduplication, a fixed synthetic error prior, and seeded
 pairs. Accepted lengths are 4–80 words, at most 1000 characters, with terminal

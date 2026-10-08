@@ -1,0 +1,22 @@
+{
+  "changedFiles": [
+    {
+      "file": "train-pairs.jsonl.gz",
+      "bytes": 372247600,
+      "sha256": "d970c27ad885be80d2750db08bed2af409dd2a2b3819151b87441e11d0cdfa04",
+      "seconds": 17.655,
+      "uncompressedSHA256": "8998666a0b2af38a7c6cb4afb50298d9407b1db267770d43df27ab893fb59b07",
+      "gateStatus": "passed; see accepted-corpus.json"
+    },
+    {
+      "file": "validation-pairs.jsonl.gz",
+      "bytes": 102510627,
+      "sha256": "c237c57a031aace0d86f280dd5f224deaeae3a574ad6e87980a838e7263f2fc4",
+      "seconds": 5.413,
+      "uncompressedSHA256": "b5075ca6b79c894ac441344c6b694ce128cd010be931380ba973d26259741ee6",
+      "gateStatus": "passed; see accepted-corpus.json"
+    }
+  ],
+  "otherFiles": "unchanged; existing saved parts retain their bytes",
+  "trainingStarted": false
+}

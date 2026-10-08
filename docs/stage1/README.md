@@ -3,26 +3,22 @@
 Base: `9bd4531fa05fb64866cfbedd588bdeadc253c483`. Branch:
 `phase1-licensed-data`. No browser/editor runtime, model weights, thresholds,
 protected spans, logging, frozen phase0/gold references, or baselines changed.
-The owner selected a five-million-clean-sentence minimum. **Stage 1 has not passed.**
-Stages 2–7 have not started. This is a draft infrastructure/diagnosis PR, not a
+The owner selected a five-million-clean-sentence minimum. **The Stage 1 data gate has passed.**
+Stages 2–7 have not started. This is a corpus/infrastructure/diagnosis PR, not a
 claim that a new trained language model exists.
 
-## Current acquisition update — 2026-10-07
+## Current acquisition update — 2026-10-08
 
-Exactly 5,000,000 mechanically filtered unique source sentences and 5,000,000
-deterministic synthetic pairs are now prepared. Owner acceptance concerns the
-pinned publisher CC BY 4.0 declaration/restricted use plan, not independently
-verified underlying-publication rights or human linguistic review. Sources,
-hashes, actual splits and noise shares are in `collection/README.md` and
-`collection/MANIFEST.json`. The clean-only phase0 audit passed 5,000,000 rows
-with zero overlaps. The subsequent full clean/noisy/source-split audit failed:
-all 10,000,000 clean/noisy rows had zero phase0 overlaps, but there were two
-cross-split normalized-key collision occurrences. The original corpus version is blocked. See
-`collection/source-guard.md` for the evaluation-independent repair and current
-recovery limitation; a fresh full gate has not passed.
-Training has not begun; do not advance to Stage 2 until `collection/gate.json`
-is a full pass. Earlier empty-input figures below are historical infrastructure
-measurements, not the current collection size.
+Five million mechanically filtered source sentences and five million deterministic
+synthetic pairs passed the full audit: zero phase0 overlaps across all ten million
+clean/noisy rows and zero cross-split normalized sentence/8-gram collisions.
+The generic source-only guard changed two noisy inputs to identity without changing
+any clean-file bytes. Sources, owner approval scope, exact hashes and timings are
+in [collection/accepted-2026-10-08.md](collection/accepted-2026-10-08.md).
+
+This is not human linguistic certification or independently cleared underlying
+publication rights. No model training has begun. Historical infrastructure and
+runtime measurements below remain for comparison; they are not new-model results.
 
 ## Changes
 
@@ -38,7 +34,7 @@ measurements, not the current collection size.
   exact normalized sentence and 8-word ngram audits against phase0 and across
   splits. Both clean targets and noisy inputs are audited. The builder never
   reads phase0; only final evaluation/firewall checks do.
-- Nine stdlib unit tests and a CI step. Samples are assistant-authored unit
+- Eighteen stdlib unit tests and a CI step. Samples are assistant-authored unit
   fixtures; mock source approvals are not real source approvals.
 - npm evaluation aliases and alternate output directories preserve phase0 reports.
   Per-target candidate/ranker/fallback diagnostics and a scoped CPU sample report.
@@ -129,7 +125,7 @@ ASCII word soup, not browser download/Worker timing or natural prose.
 | Fixture output changes / idempotency failures | 0 / 0 | 0 / 0 (4861 compared) |
 | Runtime model/editor JSON | 5,634,256 bytes | Unchanged; growth 0 KB |
 | New trained models | None | None |
-| Clean sentences at initial infrastructure baseline | No qualifying corpus | Historical 0; current collected/prepared 5,000,000, full gate pending |
+| Clean sentences at initial infrastructure baseline | No qualifying corpus | Historical 0; current accepted 5,000,000, full data gate passed |
 
 The no-harm probe rate **fails the new ≤0.05% gate already at baseline**. It
 includes proper-name/case disputes; these references remain frozen. The actual
@@ -161,16 +157,14 @@ training source. Its baseline output hash equals the rerun hash in
 
 `checks.json` records final validation command exits and output tails, including
 npm test, typecheck, lint, gold:check, gold:exact, local-ai:fresh:check,
-quality:priorities, build and benchmark:check. Unit/regression gates passing does
-not override the deliberately failed data gate.
+quality:priorities, build and benchmark:check. These historical commands do not replace the current full-corpus gate and
+verification receipts in `collection/accepted-2026-10-08.md`.
 
-## Next required input
+## Next stage and unresolved work
 
-Provide the documented `az-corpus.jsonl.gz` plus `az-sources.json`, with enough
-unique rights-approved Azerbaijani documents to retain **at least five million
-clean sentences** after filtering, and at least three independent source groups.
-Alternatively choose and document a source-license/weight-distribution plan first.
-Source approvals, independent language/segmentation quality, domain balance, real
-error data, and five-million-row preparation costs are not established by this PR.
-Logging consent/retention is an owner decision and remains unchanged. No Stage 2
-work or CharSpell/WordLM/PunctCase training should start until the gate passes.
+The accepted corpus is separately downloadable; it is not embedded in the repo or
+application bundle. The Stage 1 data gate is complete. Stage 2 candidate generation
+and subsequent CharSpell/WordLM/PunctCase training have not started. They require
+separate commits and their own gates; corpus size alone establishes no model quality.
+Independent linguistic review, real error pairs, domain balance and separate
+calibration remain necessary. Logging consent/retention is unchanged.
