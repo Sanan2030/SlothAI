@@ -51,6 +51,11 @@ npm run benchmark:check
 `npm run build` creates the production application; `npm start` serves it.
 Vercel uses `npm ci`, matching CI's lockfile installation.
 
+For the accepted five-million corpus, separate offline preparation and explicit
+CPU/GPU training commands are documented in [training/README.md](training/README.md).
+Editor installation/build never starts training; these tools do not change the
+active model weights. Corpus access and the required stage gates remain prerequisites.
+
 ## Implemented architecture
 
 `app/page.tsx → EditorClient → central worker → strategy → correctText/formatEmail`

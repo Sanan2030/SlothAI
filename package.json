@@ -75,7 +75,17 @@
     "data:test": "python3 -m unittest discover -s scripts/data -p test_*.py",
     "data:gate": "python3 scripts/data/gate.py data/corpus/az-v1 --out=docs/stage1/collection/gate.json",
     "eval:targets": "node --import tsx scripts/eval/targets.ts",
-    "eval:fixtures": "node --import tsx scripts/eval/snapshot.ts --out=docs/stage1/evaluation"
+    "eval:fixtures": "node --import tsx scripts/eval/snapshot.ts --out=docs/stage1/evaluation",
+    "training:status": "python3 -m training.cli status",
+    "training:import": "python3 -m training.cli import",
+    "training:verify": "python3 -m training.cli verify",
+    "pretraining:prepare": "npm run --silent dictionary:import -- public/dictionaries/az",
+    "training:prepare": "python3 -m training.cli prepare",
+    "training:test": "python3 -m unittest discover -s training/tests -p 'test_*.py'",
+    "training:test:models": ".venv-training/bin/python -m unittest training.tests.test_models",
+    "training:charspell": ".venv-training/bin/python -m training.cli train charspell",
+    "training:wordlm": "python3 -m training.cli train wordlm",
+    "training:punctcase": ".venv-training/bin/python -m training.cli train punctcase"
   },
   "engines": {
     "node": ">=20.9.0"
