@@ -1,8 +1,11 @@
-# Offline training preparation
+# Offline training
 
-This is preparation for the accepted `az-v1` corpus, not a trained release.
-No smoke/full training has been executed. Existing editor weights, thresholds,
-protected spans, browser journal and deployment behavior remain unchanged.
+CharSpell, WordLM and PunctCase completed CPU smoke runs on **9 October 2026**
+using 100,000 train and 10,000 validation sentences from the accepted `az-v1`
+corpus. See the [measured report](../docs/training/smoke-2026-10-09.md) and
+[complete evidence](../docs/training/smoke-2026-10-09.json). Full training,
+real-error calibration and browser integration are the next stages; the editor
+continues to use its existing Stage 2 models and thresholds.
 These commands run on a cloud machine or workstation with long-lived jobs;
 Vercel serves the editor and is not the place to train this corpus.
 
@@ -36,7 +39,7 @@ retains sampled identity sentences and reports the actual training count.
 - Per-run split/count, seed, complete hyperparameters, manifest/dataset/artifact
   hashes, runtime, elapsed time, limitations and model card.
 
-## Start later, step by step
+## Reproduce the offline runs, step by step
 
 Run commands from the repository root. Accepted-corpus training never runs during
 `npm ci`, editor build/start, status, import, verify, prepare or the offline
@@ -52,6 +55,8 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    Exit 2 and `status: blocked` are expected while the corpus is missing. This
    command checks presence, not all hashes. Its PyTorch field refers to the
    current Python; the optional `.venv-training` is reported separately.
+   `trainingStarted: false` means the status command starts no training; it
+   is not a history of previous runs. Completed runs have their own reports.
 
 2. Put the six unchanged `.jsonl.gz` files in a directory accessible to the
    training machine, then import them:
@@ -135,9 +140,9 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    have **not** been checked here. `--device=auto` uses a usable GPU, otherwise
    CPU; an explicit `--device=cuda` fails if CUDA is unavailable.
 
-6. When the preceding stage gates are satisfied, explicitly start the desired
-   smoke training job. These are separate commands; nothing chains stages or
-   starts full training automatically:
+6. Explicitly start the desired independent offline smoke job. Review the
+   preceding stage gates before advancing or releasing a stage. These are
+   separate commands; nothing chains stages or starts full training automatically:
 
    ```sh
    npm run training:charspell -- --data=artifacts/training/smoke-data --out=artifacts/training/charspell-smoke --device=auto
@@ -185,7 +190,11 @@ Plan provisionally for **4–8 CPU threads, 8–16 GB RAM, and 50–100 GB free 
 for the full offline pipeline. An NVIDIA GPU with **8 GB VRAM** is a starting
 estimate for these small neural batches. These are estimates, not measured
 full-run requirements; CPU training is supported. No GPU is attached here.
-No epoch/time or throughput claim can be made before the first actual smoke.
+Measured CPU smoke command wall times were **32m47s CharSpell, 29s WordLM and
+7m18s PunctCase**, with child maximum RSS of approximately **283, 95 and 408 MiB**.
+Preparation, including the fresh full gate, took **71m43s** using the original
+Python candidate kernel. The [run report](../docs/training/smoke-2026-10-09.md)
+separates preparation, fitting, validation and full-run planning estimates.
 Neural run reports extrapolate training and validation time separately after
 the smoke; WordLM records a rough fit extrapolation. Index growth can make
 the full run slower and larger than a linear estimate.
@@ -197,7 +206,7 @@ the original stage order and separate stage commits with their acceptance report
 - Stage 3 needs the browser candidate implementation/morphology integration,
   measured retrieval on train/development and controlled paired browser
   latency. The offline SQLite index is not the browser binary artifact.
-- Stage 4 needs real corpus smoke/full runs, source-split metrics and the
+- Stage 4 needs a full run, source-split quality acceptance and the
   TypeScript/int8 export with golden parity ≤1e-3. Checkpoints are Python
   experiment artifacts; they cannot be deployed directly in the editor.
 - Stage 5 needs measured correction benefit and no-harm, in addition to

@@ -6,10 +6,12 @@ partial morphology, rules and small bundled statistical/neural classifiers.
 Correction runs locally in browser Workers after application assets load.
 It requires no API key, Python service or GPU to use the editor.
 
-**Current status — 8 October 2026:** the editor and Stage 2 preservation guard
-work; offline tools for the accepted five-million corpus are ready. The new
-CharSpell, WordLM and PunctCase experiments have not been trained or enabled
-in the app. See the [current code audit and prioritized fixes](docs/current-state-2026-10-08.md).
+**Current status — 9 October 2026:** the editor uses the Stage 2 preservation
+guard. All six accepted corpus archives passed integrity checks and a fresh
+full data gate. CharSpell, WordLM and PunctCase completed **100k-train/10k-validation
+CPU smoke runs**; their offline artifacts await calibration and browser integration.
+See the [measured training results](docs/training/smoke-2026-10-09.md) and
+[code audit and prioritized fixes](docs/current-state-2026-10-08.md).
 
 ## What you can do
 
@@ -136,12 +138,13 @@ It resets on cold starts and is not shared across server instances.
 
 ## Current verification and quality
 
-The latest runtime/preparation commit `0bf77b9` passed GitHub production validation,
+The recorded 8 October runtime/preparation commit `0bf77b9` passed GitHub production validation,
 offline training contracts and its Vercel preview build. The recorded local suite
 passed **4,515 Node tests, 18 data-tool tests and 16 training contracts**, plus
 typecheck, lint, production build and enforced performance budgets. The training
 contracts check infrastructure and model forward/gradient behavior, not trained
-model quality. See [verification record](training/verification.json).
+model quality. These are historical editor checks, not a fresh full application
+suite for the later offline training changes. See [verification record](training/verification.json).
 
 Archived [Stage 2 acceptance results](docs/stage2/README.md):
 
@@ -158,7 +161,7 @@ models. Stage 2 warm Node p95 was 651.6 ms at 1,000 words and 3,305.22 ms for a
 logical 5,000-word chunked document. These are not browser/mobile latency promises
 or a measured speedup from training preparation. Older reports below are historical.
 
-## Five-million corpus: prepare now, train later
+## Five-million corpus: verified import and offline training
 
 The accepted `az-v1` receipt describes **5,000,000 mechanically filtered clean
 sentences and 5,000,000 synthetic pairs**. Identity pairs total 1,058,544 across
@@ -192,13 +195,22 @@ reassembled original archive still needs its accepted hash checked.
 The [training guide](training/README.md) covers verified import, the full data
 gate, deterministic preparation, optional CPU/CUDA setup, 100k-sentence smoke
 jobs, checkpoints and explicit full-run commands. The CPU training runtime was
-checked here; GPU execution has not been checked and no GPU is attached.
+checked here and all three smoke jobs completed on CPU. GPU execution has not
+been checked and no GPU is attached. See the [run report](docs/training/smoke-2026-10-09.md)
+for actual timings, memory, counts, configuration and synthetic validation.
 
 | Offline experiment | Training input | Integration status |
 | --- | --- | --- |
-| CharSpell | Synthetic noisy→clean pairs plus identity examples | Untrained character-CNN candidate scorer; Python checkpoints, no browser export. |
-| WordLM | Clean train text only | Untrained SQLite Kneser-Ney 3-gram tool; correction benefit/lambda unmeasured. |
-| PunctCase | Punctuation/case labels from clean train text | Untrained character-CNN + BiGRU; no browser export. |
+| CharSpell | Synthetic noisy→clean pairs plus identity examples | CPU smoke completed; character-CNN candidate scorer, Python checkpoint, browser export pending. |
+| WordLM | Clean train text only | CPU smoke completed; SQLite Kneser-Ney 3-gram, correction benefit/lambda unmeasured. |
+| PunctCase | Punctuation/case labels from clean train text | CPU smoke completed; character-CNN + BiGRU, browser export pending. |
+
+Smoke used 100,000 train and 10,000 validation sentences, seed 20261007. CharSpell
+completed in 32m47s, WordLM in 29s and PunctCase in 7m18s, including command startup
+and hash guards. CharSpell changed-word top-1 was 64.92% when the target was
+retrieved, or 60.63% including retrieval misses; it falsely changed 307/91,028
+unchanged validation words. Its 97.95% aggregate top-1 includes many unchanged
+words and is not overall correction quality. Full training remains a separate run.
 
 Training is explicit. Editor installation/build/start never trains this corpus;
 offline tools never automatically replace active app weights. Full training

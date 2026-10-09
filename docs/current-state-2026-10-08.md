@@ -1,5 +1,11 @@
 # SlothAI — cari vəziyyət və əsas düzəlişlər
 
+**9 oktyabr yeniləməsi:** qəbul edilmiş altı korpus arxivi və təzə tam data gate
+yoxlamadan keçdi. CharSpell, WordLM və PunctCase üçün 100k train / 10k validation
+CPU smoke təlimləri tamamlandı. Ölçülər və qalan mərhələlər
+[yeni təlim hesabatındadır](training/smoke-2026-10-09.md); aşağıdakı audit
+8 oktyabr versiyasının tarixi nəticələrini saxlayır.
+
 Yoxlama tarixi: **8 oktyabr 2026, Bakı vaxtı**.
 Təhlil olunan versiya: `0bf77b94ab53b507faa6d753fda0a2d43ac202d5`.
 Bu yeniləmə README və audit sənədlərini dəyişir; yeni korpus təlimi aparılmır.

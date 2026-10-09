@@ -1,0 +1,1521 @@
+{
+  "schemaVersion": 1,
+  "status": "completed-offline-cpu-smoke",
+  "collectedAtUTC": "2026-10-09T09:34:41.964113+00:00",
+  "collectedAtBaku": "2026-10-09T13:34:41.964113+04:00",
+  "baseCodeCommit": "080ed3036c24d4f9d0327bcd60220f206db8da95",
+  "codeProvenance": {
+    "intakePreparationBaseCommit": "080ed3036c24d4f9d0327bcd60220f206db8da95",
+    "modelTrainingCommit": "8ffac904c057408c7ac681b4119422682bab9ee7",
+    "candidatePreparationKernel": "originalPythonBaseline",
+    "optionalNativeCandidateAccelerationUsedByThisPreparation": false,
+    "source": "Coordinator-recorded process start and repository commit states; collector performs no Git operations.",
+    "notes": [
+      "Preparation had already loaded the original Python candidate implementation from the intake/preparation base before the optional native candidate optimization was committed.",
+      "Subsequent model fitting runs from the later commit with explicit neural progress logging. Model architecture, training.common and smoke configuration are unchanged; optional native candidate preparation is not used by the already running baseline preparation.",
+      "Preparation provenance describes the already running process rather than the later checkout state."
+    ]
+  },
+  "scope": "Accepted-corpus import, fresh full data gate, 100k-train/10k-validation offline CPU smoke; no deployment promotion.",
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.8.0+cpu",
+    "device": "cpu",
+    "neuralThreads": 4,
+    "gpuAttached": false,
+    "gpuExecutionTested": false,
+    "cgroupResources": {
+      "cpuMax": "400000 100000",
+      "cpuQuotaCores": 4,
+      "memoryMaxBytes": 34359738368,
+      "memoryMaxGiB": 32,
+      "source": "/sys/fs/cgroup/cpu.max and /sys/fs/cgroup/memory.max; independently inspected before fitting evidence collection.",
+      "scope": "Configured container CPU quota and memory ceiling, not measured utilization or peak memory."
+    }
+  },
+  "acceptedCorpus": {
+    "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+    "splitCounts": {
+      "train": 3287357,
+      "validation": 1082532,
+      "test": 630111
+    },
+    "cleanSentences": 5000000,
+    "syntheticPairs": 5000000,
+    "approvalScope": "Repository-owner acceptance of pinned publisher CC BY 4.0 declaration/restricted use plan; not independent clearance of underlying works.",
+    "linguisticReview": "Mechanically filtered; not human-reviewed or linguist-certified."
+  },
+  "archiveIntake": [
+    {
+      "archive": "train.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 269104627,
+        "sha256": "c293e89eb9bc534c9d63ea727ff48d93c93bb9552d5eaf4e5e228114f12504dd"
+      },
+      "raw": {
+        "file": "train.jsonl",
+        "bytes": 1299323896,
+        "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+      },
+      "rows": 3287357,
+      "split": "train",
+      "verifiedAtUTC": "2026-10-08T13:59:02.869073+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/train.jsonl.gz.transfer.json",
+        "bytes": 2971,
+        "sha256": "4a221c373902c8b36b049710e46fec1e9a2b2d90e8120164376046c610202252"
+      }
+    },
+    {
+      "archive": "validation.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 71054440,
+        "sha256": "d84e14fe7eb4cf25bbffd955ec59d270e1749f7aa78da3a9ef874249572f38e1"
+      },
+      "raw": {
+        "file": "validation.jsonl",
+        "bytes": 393989461,
+        "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717"
+      },
+      "rows": 1082532,
+      "split": "validation",
+      "verifiedAtUTC": "2026-10-09T05:56:14.650617+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/validation.jsonl.gz.transfer.json",
+        "bytes": 1524,
+        "sha256": "23e411bdce2bf1949636e7383d807fc4d0cb4662ee4de303960b41868cf1c4ab"
+      }
+    },
+    {
+      "archive": "test.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 50564464,
+        "sha256": "6a3ea96190cb6049ccce937d08359fe2b892fe019e1e55f3e28f1f6d233fc5f8"
+      },
+      "raw": {
+        "file": "test.jsonl",
+        "bytes": 246883337,
+        "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85"
+      },
+      "rows": 630111,
+      "split": "test",
+      "verifiedAtUTC": "2026-10-09T06:56:41.308555+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/test.jsonl.gz.transfer.json",
+        "bytes": 1096,
+        "sha256": "fe9c6c54e3dcac402848720a3d6710a2a8b64c41c0fbe7b1365f32839e0cdfd3"
+      }
+    },
+    {
+      "archive": "train-pairs.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 372247600,
+        "sha256": "d970c27ad885be80d2750db08bed2af409dd2a2b3819151b87441e11d0cdfa04"
+      },
+      "raw": {
+        "file": "train-pairs.jsonl",
+        "bytes": 2670564827,
+        "sha256": "8998666a0b2af38a7c6cb4afb50298d9407b1db267770d43df27ab893fb59b07"
+      },
+      "rows": 3287357,
+      "split": "train",
+      "verifiedAtUTC": "2026-10-09T07:35:36.537585+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/train-pairs.jsonl.gz.transfer.json",
+        "bytes": 6959,
+        "sha256": "e4c5503a0444d28a6e28b26f545ecdc2959d08073d4b566a3d4286d0d72b3ad8"
+      }
+    },
+    {
+      "archive": "validation-pairs.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 102510627,
+        "sha256": "c237c57a031aace0d86f280dd5f224deaeae3a574ad6e87980a838e7263f2fc4"
+      },
+      "raw": {
+        "file": "validation-pairs.jsonl",
+        "bytes": 771523298,
+        "sha256": "b5075ca6b79c894ac441344c6b694ce128cd010be931380ba973d26259741ee6"
+      },
+      "rows": 1082532,
+      "split": "validation",
+      "verifiedAtUTC": "2026-10-09T05:23:13.080893+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/validation-pairs.jsonl.gz.transfer.json",
+        "bytes": 1789,
+        "sha256": "b595e2e72060fd517f9e1ef8c7d7f7665b81f728553dd60775adf1cd354500f3"
+      }
+    },
+    {
+      "archive": "test-pairs.jsonl.gz",
+      "status": "archive-verified",
+      "compressed": {
+        "bytes": 69911769,
+        "sha256": "e201b5edca246614732b9f0bf68df2f91d742c2098c9aa557356286a54e759e4"
+      },
+      "raw": {
+        "file": "test-pairs.jsonl",
+        "bytes": 502607898,
+        "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee"
+      },
+      "rows": 630111,
+      "split": "test",
+      "verifiedAtUTC": "2026-10-09T05:51:02.208494+00:00",
+      "receipt": {
+        "file": "artifacts/training/downloads/test-pairs.jsonl.gz.transfer.json",
+        "bytes": 1546,
+        "sha256": "a7c961fa6209bad86284012f2d5f9f30dabe4148d57d34fd8e1f397a3ed4aae9"
+      }
+    }
+  ],
+  "importResource": {
+    "record": "artifacts/training/runs/import.resource.json",
+    "bytes": 480,
+    "sha256": "85d2cf9be04053169b984c8d552864faffa585c7217504739fa29325aa9aeda6",
+    "status": "completed",
+    "command": [
+      "npm",
+      "run",
+      "training:import",
+      "--",
+      "--parts=artifacts/training/downloads"
+    ],
+    "exitCode": 0,
+    "startedAtUTC": "2026-10-09T07:36:58.739509+00:00",
+    "finishedAtUTC": "2026-10-09T07:37:15.818969+00:00",
+    "elapsedSeconds": 17.079442151996773,
+    "peakRSSKiB": 73344,
+    "userCPUSeconds": 14.554886,
+    "systemCPUSeconds": 2.570719,
+    "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+    "wallTimeScope": "Outer command subprocess wait, including npm startup and corpus/prepared hash guards; distinct from inner model fitting/training/validation timers."
+  },
+  "prepareResource": {
+    "record": "artifacts/training/runs/prepare-smoke-20261009.resource.json",
+    "bytes": 532,
+    "sha256": "c777768ae30749a80863ef9d13790270dbbea9b79ac93edc85bc137518888d4d",
+    "status": "completed",
+    "command": [
+      "npm",
+      "run",
+      "training:prepare",
+      "--",
+      "--profile=smoke",
+      "--out=artifacts/training/smoke-data-20261009"
+    ],
+    "exitCode": 0,
+    "startedAtUTC": "2026-10-09T07:37:43.676479+00:00",
+    "finishedAtUTC": "2026-10-09T08:49:26.768783+00:00",
+    "elapsedSeconds": 4303.0922523229965,
+    "peakRSSKiB": 181412,
+    "userCPUSeconds": 4222.510098,
+    "systemCPUSeconds": 79.672679,
+    "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+    "wallTimeScope": "Outer command subprocess wait, including npm startup and corpus/prepared hash guards; distinct from inner model fitting/training/validation timers."
+  },
+  "prepareTimingBreakdown": {
+    "source": "Fresh gate report filesystem modification time and outer preparation resource record.",
+    "gateReportWrittenAtUTC": "2026-10-09T08:00:45.451043+00:00",
+    "scope": "Approximate wall-time split around report write. Before-write time includes npm startup, preflight/dictionary/hash guards and the full data gate. After-write time includes task/index preparation, artifact hashes and process completion overhead.",
+    "pureGateRuntimeMeasured": false,
+    "status": "timestamps-consistent",
+    "outerPrepareStartToGateReportWriteSeconds": 1381.774564,
+    "postGateReportPreparationAndHashOverheadSeconds": 2921.317688322996
+  },
+  "candidateAccelerationVerification": {
+    "file": "artifacts/training/candidate-acceleration-20261009.json",
+    "bytes": 6163,
+    "sha256": "35ab4ce8f5503a1ae2dc190fc25a85e6b686eb57a096b4ea5178473b01f073e6",
+    "record": {
+      "schemaVersion": 1,
+      "scope": "Optional exact native OSA acceleration; technical parity and one paired read-only TRAIN sample, not model training, full-corpus timing, quality, or release-gate evidence.",
+      "implementationCommit": "fe4377a4d619ae947d5f2d0449ccdd8ae2597b02",
+      "currentPreparation": {
+        "directory": "artifacts/training/smoke-data-20261009",
+        "loadedImplementationCommit": "080ed30",
+        "backend": "original Python OSA already loaded; current run was not restarted"
+      },
+      "backend": {
+        "package": "RapidFuzz",
+        "version": "3.14.6",
+        "distance": "OSA",
+        "module": "rapidfuzz.distance.metrics_cpp_avx2",
+        "officialMetadataURL": "https://pypi.org/pypi/rapidfuzz/json",
+        "verifiedWheelSHA256": "0debb5f43662ea84d2f0228a0c7407ff647f9c3d13f3b692efff0cde46eebce0",
+        "installedEnvironment": ".venv-training"
+      },
+      "configuration": {
+        "file": "artifacts/training/smoke-data-20261009/config.json",
+        "sha256": "5b9755a6e1d9ddd1526ff0acb4361eb2763b7e82d6b3c3dc9fba7c6043ebcf84",
+        "hyperparameters": {
+          "profile": "smoke",
+          "seed": 20261007,
+          "trainSentences": 100000,
+          "validationSentences": 10000,
+          "maxVocabulary": 150000,
+          "prefixLength": 7,
+          "maxCandidates": 20,
+          "maxExamplesPerSentence": 16,
+          "maxWordChars": 32,
+          "contextWords": 2,
+          "shuffleBuffer": 4096,
+          "charEmbedding": 24,
+          "charChannels": 32,
+          "wordEmbedding": 48,
+          "taggerHidden": 48,
+          "maxSentenceTokens": 96,
+          "batchSize": 32,
+          "epochs": 2,
+          "learningRate": 0.001,
+          "weightDecay": 0.0001,
+          "gradientClip": 1.0,
+          "patience": 2,
+          "threads": 4,
+          "discount": 0.75,
+          "minLMFrequency": 2
+        }
+      },
+      "index": {
+        "file": "artifacts/training/smoke-data-20261009/lexicon.sqlite",
+        "bytes": 65081344,
+        "sha256": "ab3ee176fc4a0974e36fc701c0184650f7e31ec30b3510f9f94d6c793f31ed12",
+        "access": "read-only; separate cold candidate caches"
+      },
+      "sample": {
+        "split": "train",
+        "rows": 100,
+        "seed": 20261007,
+        "selection": "First 100 rows, in original corpus order, from the existing deterministic 100000-train-sentence selection; zero-based indices below.",
+        "indices": [
+          10,
+          35,
+          118,
+          284,
+          308,
+          333,
+          348,
+          433,
+          439,
+          483,
+          485,
+          516,
+          642,
+          661,
+          692,
+          727,
+          775,
+          786,
+          806,
+          812,
+          858,
+          866,
+          929,
+          992,
+          994,
+          1024,
+          1029,
+          1042,
+          1046,
+          1195,
+          1202,
+          1246,
+          1260,
+          1283,
+          1364,
+          1376,
+          1377,
+          1427,
+          1471,
+          1535,
+          1558,
+          1581,
+          1614,
+          1616,
+          1736,
+          1771,
+          1834,
+          1868,
+          1908,
+          2027,
+          2060,
+          2067,
+          2103,
+          2124,
+          2128,
+          2159,
+          2213,
+          2218,
+          2329,
+          2335,
+          2351,
+          2360,
+          2362,
+          2411,
+          2423,
+          2510,
+          2523,
+          2530,
+          2557,
+          2646,
+          2667,
+          2682,
+          2699,
+          2734,
+          2741,
+          2764,
+          2802,
+          2912,
+          2924,
+          2938,
+          2939,
+          2953,
+          3022,
+          3091,
+          3129,
+          3140,
+          3229,
+          3259,
+          3328,
+          3330,
+          3336,
+          3422,
+          3437,
+          3448,
+          3452,
+          3546,
+          3622,
+          3674,
+          3682,
+          3802
+        ],
+        "indicesEncoding": "Compact JSON integer array followed by LF, UTF-8",
+        "indicesSHA256": "27372e5031e5934852bda117147403a77eb85b83a9717d61d279bf5043fca20e",
+        "acceptedManifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+        "trainFile": {
+          "bytes": 1299323896,
+          "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+        },
+        "trainPairsFile": {
+          "bytes": 2670564827,
+          "sha256": "8998666a0b2af38a7c6cb4afb50298d9407b1db267770d43df27ab893fb59b07"
+        },
+        "testRowsRead": false,
+        "validationRowsRead": false
+      },
+      "distanceParity": {
+        "comparisons": 9025,
+        "equal": true,
+        "fixtures": "1600 exhaustive small-string pairs, 200 seeded random Unicode pairs, 5 explicit edge pairs; each tested with cutoffs 0,1,2,3,8. Separate fallback and OSA-vs-unrestricted tests."
+      },
+      "benchmark": {
+        "repetitions": 1,
+        "allExamplesExactEqual": true,
+        "candidateListsExactEqual": true,
+        "statsExactEqual": true,
+        "examples": 1179,
+        "sampleExamplesSHA256": "51a7d2e868a5582de88d21818fbed040c27e9f018320f41cd987e714ad487c9e",
+        "sampleExamplesEncoding": "Each example encoded as sorted-key compact JSON, ensure_ascii=False, followed by LF, UTF-8; concatenated in original emitted order.",
+        "pythonSeconds": 4.060996272994089,
+        "nativeSeconds": 0.9099477979907533,
+        "sampleSpeedRatio": 4.462889279979724,
+        "cacheForEachBackend": {
+          "hits": 284,
+          "misses": 895,
+          "maxsize": 4096,
+          "currsize": 895
+        },
+        "limitations": [
+          "Single small paired sample on this machine with the existing read-only index; no full-corpus ETA or quality claim.",
+          "Python backend ran first, native second; operating-system filesystem caches were not reset.",
+          "The currently running full smoke preparation continues with the original Python baseline."
+        ]
+      },
+      "checks": [
+        {
+          "command": ".venv-training/bin/python -m unittest training.tests.test_candidates training.tests.test_pipeline -v",
+          "result": "passed",
+          "run": 18,
+          "passed": 18,
+          "skipped": 0
+        },
+        {
+          "command": "python3 -m unittest training.tests.test_candidates training.tests.test_pipeline -v",
+          "result": "passed with optional native-only skips",
+          "run": 18,
+          "passed": 15,
+          "skipped": 3
+        },
+        {
+          "command": ".venv-training/bin/python -m pip check",
+          "result": "passed; no broken requirements"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed before parent commit"
+        }
+      ],
+      "trainingStartedByThisVerification": false,
+      "futurePreparationCommand": ".venv-training/bin/python -m training.cli prepare --profile=smoke --out=<fresh-ignored-output-directory>"
+    },
+    "collectorValidation": "Pinned receipt SHA-256, accepted manifest/train-file metadata, prepared configuration/index binding, sample index hash and exact parity markers checked; benchmark/tests were not rerun."
+  },
+  "plannedFullConfiguration": {
+    "file": "training/configs/full.json",
+    "bytes": 572,
+    "sha256": "81362e5a482ede0e0cf773b6e9dc75c83bd755bc7cfab980f6435d24ada6dedd",
+    "hyperparameters": {
+      "profile": "full",
+      "seed": 20261007,
+      "trainSentences": null,
+      "validationSentences": null,
+      "maxVocabulary": 150000,
+      "prefixLength": 7,
+      "maxCandidates": 20,
+      "maxExamplesPerSentence": 16,
+      "maxWordChars": 32,
+      "contextWords": 2,
+      "shuffleBuffer": 4096,
+      "charEmbedding": 24,
+      "charChannels": 32,
+      "wordEmbedding": 48,
+      "taggerHidden": 48,
+      "maxSentenceTokens": 96,
+      "batchSize": 32,
+      "epochs": 6,
+      "learningRate": 0.001,
+      "weightDecay": 0.0001,
+      "gradientClip": 1.0,
+      "patience": 2,
+      "threads": 4,
+      "discount": 0.75,
+      "minLMFrequency": 2
+    },
+    "executed": false,
+    "epochLimitScope": "Configured maximum before validation early stopping; not a guarantee that six epochs will execute."
+  },
+  "freshGate": {
+    "report": {
+      "status": "passed",
+      "minimumCleanSentences": 5000000,
+      "cleanSentences": 5000000,
+      "auditScope": "Both clean targets and generated noisy inputs; 8-word normalized ngrams and exact sentences",
+      "errors": [],
+      "phase0Overlap": {
+        "train": {
+          "comparedRows": 6574714,
+          "ngramSize": 8,
+          "overlapRows": 0,
+          "failures": [],
+          "status": "passed"
+        },
+        "validation": {
+          "comparedRows": 2165064,
+          "ngramSize": 8,
+          "overlapRows": 0,
+          "failures": [],
+          "status": "passed"
+        },
+        "test": {
+          "comparedRows": 1260222,
+          "ngramSize": 8,
+          "overlapRows": 0,
+          "failures": [],
+          "status": "passed"
+        }
+      },
+      "crossSplitCollisions": 0,
+      "crossSplitAudit": "exercised",
+      "trainingStarted": false
+    },
+    "reportFile": {
+      "file": "artifacts/training/smoke-data-20261009/data-gate.json",
+      "bytes": 775,
+      "sha256": "c2e8588c6d7554789174609723d0bb4bfaafd660b0e6b9c5d7e874a66f005e3a"
+    },
+    "binding": {
+      "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+      "reportSHA256": "c2e8588c6d7554789174609723d0bb4bfaafd660b0e6b9c5d7e874a66f005e3a",
+      "corpus": "/workspace/SlothAI/data/corpus/az-v1",
+      "files": {
+        "test-pairs.jsonl": {
+          "bytes": 502607898,
+          "sha256": "d45cd3619c7f9813646bfd396c5b87af99d24a4311445179d21e5f0e9ab4d2ee"
+        },
+        "test.jsonl": {
+          "bytes": 246883337,
+          "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85"
+        },
+        "train-pairs.jsonl": {
+          "bytes": 2670564827,
+          "sha256": "8998666a0b2af38a7c6cb4afb50298d9407b1db267770d43df27ab893fb59b07"
+        },
+        "train.jsonl": {
+          "bytes": 1299323896,
+          "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+        },
+        "validation-pairs.jsonl": {
+          "bytes": 771523298,
+          "sha256": "b5075ca6b79c894ac441344c6b694ce128cd010be931380ba973d26259741ee6"
+        },
+        "validation.jsonl": {
+          "bytes": 393989461,
+          "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717"
+        }
+      },
+      "trainingStarted": false
+    },
+    "bindingFile": {
+      "file": "artifacts/training/smoke-data-20261009/data-gate-receipt.json",
+      "bytes": 1124,
+      "sha256": "d1ede3299c4aa610cde26dd09f8f53511b973f75dff64ca85c4dfa8ad5e56858"
+    }
+  },
+  "prepared": {
+    "metadata": {
+      "schemaVersion": 1,
+      "status": "prepared",
+      "profile": "smoke",
+      "seed": 20261007,
+      "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+      "corpus": "/workspace/SlothAI/data/corpus/az-v1",
+      "hyperparameters": {
+        "profile": "smoke",
+        "seed": 20261007,
+        "trainSentences": 100000,
+        "validationSentences": 10000,
+        "maxVocabulary": 150000,
+        "prefixLength": 7,
+        "maxCandidates": 20,
+        "maxExamplesPerSentence": 16,
+        "maxWordChars": 32,
+        "contextWords": 2,
+        "shuffleBuffer": 4096,
+        "charEmbedding": 24,
+        "charChannels": 32,
+        "wordEmbedding": 48,
+        "taggerHidden": 48,
+        "maxSentenceTokens": 96,
+        "batchSize": 32,
+        "epochs": 2,
+        "learningRate": 0.001,
+        "weightDecay": 0.0001,
+        "gradientClip": 1.0,
+        "patience": 2,
+        "threads": 4,
+        "discount": 0.75,
+        "minLMFrequency": 2
+      },
+      "trainingStarted": false,
+      "dictionarySHA256": "2faad9f6fb013ce296485c74b3f480d3a6b52a837289affc7c832a16b52edc7e",
+      "splits": {
+        "train": {
+          "sentences": 100000,
+          "identityPairs": 21280,
+          "wordlmRows": 100000,
+          "punctcaseRows": 99966,
+          "queriedTokens": 1135896,
+          "changedTokens": 50476,
+          "changedHitsAt5": 49886,
+          "changedHitsAt10": 50309,
+          "changedHitsAt20": 50379,
+          "charspellRows": 1135799,
+          "changedExamples": 50379,
+          "identityExamples": 1085420,
+          "protectedTokensSkipped": 257751,
+          "unsupportedAlignmentSpans": 11380,
+          "punctcaseProtectedChunksSkipped": 34,
+          "candidateMisses": 97,
+          "longTokensSkipped": 6,
+          "sources": {
+            "aztc-ANL": 37927,
+            "aztc-axar": 38054,
+            "aztc-marja": 3578,
+            "aztc-medeniyyet": 20441
+          },
+          "pairCategories": {
+            "transpose": 5516,
+            "identity": 21280,
+            "diacritics_partial": 5724,
+            "space_split": 5769,
+            "qk_xh": 5646,
+            "diacritics_all": 5762,
+            "digraph": 4927,
+            "punctuation": 5614,
+            "insertion": 5662,
+            "keyboard_ascii": 5773,
+            "space_join": 5498,
+            "hyphen": 5667,
+            "case": 5693,
+            "keyboard_az": 5843,
+            "deletion": 5626
+          }
+        },
+        "validation": {
+          "sentences": 10000,
+          "identityPairs": 2089,
+          "wordlmRows": 10000,
+          "punctcaseRows": 10000,
+          "queriedTokens": 96068,
+          "changedTokens": 5040,
+          "changedHitsAt5": 4648,
+          "changedHitsAt10": 4702,
+          "changedHitsAt20": 4707,
+          "charspellRows": 95735,
+          "changedExamples": 4707,
+          "identityExamples": 91028,
+          "protectedTokensSkipped": 26541,
+          "unsupportedAlignmentSpans": 1180,
+          "candidateMisses": 333,
+          "sources": {
+            "aztc-apasport": 10000
+          },
+          "pairCategories": {
+            "keyboard_ascii": 549,
+            "identity": 2089,
+            "qk_xh": 539,
+            "keyboard_az": 604,
+            "diacritics_all": 604,
+            "transpose": 534,
+            "hyphen": 564,
+            "diacritics_partial": 563,
+            "space_split": 580,
+            "insertion": 562,
+            "case": 558,
+            "space_join": 586,
+            "digraph": 490,
+            "deletion": 595,
+            "punctuation": 583
+          }
+        }
+      },
+      "files": {
+        "charspell-train.jsonl.gz": {
+          "bytes": 74836569,
+          "sha256": "0e3b96803a2a49b6b68a0e001656bb328f0cf406dac62f8faa25bb30640df2e6"
+        },
+        "charspell-validation.jsonl.gz": {
+          "bytes": 6138392,
+          "sha256": "b5b26e255c37367b1f5c2c21cdcd7864725bc892a6eb983a103502dbc7aeea11"
+        },
+        "config.json": {
+          "bytes": 576,
+          "sha256": "5b9755a6e1d9ddd1526ff0acb4361eb2763b7e82d6b3c3dc9fba7c6043ebcf84"
+        },
+        "data-gate-receipt.json": {
+          "bytes": 1124,
+          "sha256": "d1ede3299c4aa610cde26dd09f8f53511b973f75dff64ca85c4dfa8ad5e56858"
+        },
+        "data-gate.json": {
+          "bytes": 775,
+          "sha256": "c2e8588c6d7554789174609723d0bb4bfaafd660b0e6b9c5d7e874a66f005e3a"
+        },
+        "lexicon.sqlite": {
+          "bytes": 65081344,
+          "sha256": "ab3ee176fc4a0974e36fc701c0184650f7e31ec30b3510f9f94d6c793f31ed12"
+        },
+        "punctcase-train.jsonl.gz": {
+          "bytes": 7985969,
+          "sha256": "60df3d335b83161cbd4f2647bd0fb644ed89a52aca9685eb11714dfb87522032"
+        },
+        "punctcase-validation.jsonl.gz": {
+          "bytes": 608624,
+          "sha256": "bdf9a1d240597caab40020765e8de9254483d73e4b8ffdf118cbd9c6977257ab"
+        },
+        "wordlm-train.jsonl.gz": {
+          "bytes": 6630443,
+          "sha256": "f7e277c05efec41f62a9c4fbff862601e0a8ae81a673f56a1837a43adca8928c"
+        },
+        "wordlm-validation.jsonl.gz": {
+          "bytes": 496960,
+          "sha256": "924582691e10286622c4fcba2d4165133dc753a0750d3062033968540d3fe90a"
+        }
+      },
+      "candidateGate": "unmeasured-for-browser; offline recall recorded during preparation",
+      "limitations": [
+        "Mechanically filtered corpus, not human-reviewed; residual OCR/spelling/segmentation errors possible.",
+        "Synthetic errors and source-split validation do not establish real-user quality.",
+        "Email and everyday genres underrepresented; separate real calibration data is required.",
+        "Only one-to-one word alignments train CharSpell; spacing/multiword errors remain outside this scorer.",
+        "Candidate cap/prefix lookup and vocabulary cap may miss targets; retrieval coverage must be reported.",
+        "No corpus-derived thresholds or automatic browser promotion."
+      ]
+    },
+    "metadataFile": {
+      "file": "artifacts/training/smoke-data-20261009/prepared.json",
+      "bytes": 5326,
+      "sha256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7"
+    },
+    "config": {
+      "profile": "smoke",
+      "seed": 20261007,
+      "trainSentences": 100000,
+      "validationSentences": 10000,
+      "maxVocabulary": 150000,
+      "prefixLength": 7,
+      "maxCandidates": 20,
+      "maxExamplesPerSentence": 16,
+      "maxWordChars": 32,
+      "contextWords": 2,
+      "shuffleBuffer": 4096,
+      "charEmbedding": 24,
+      "charChannels": 32,
+      "wordEmbedding": 48,
+      "taggerHidden": 48,
+      "maxSentenceTokens": 96,
+      "batchSize": 32,
+      "epochs": 2,
+      "learningRate": 0.001,
+      "weightDecay": 0.0001,
+      "gradientClip": 1.0,
+      "patience": 2,
+      "threads": 4,
+      "discount": 0.75,
+      "minLMFrequency": 2
+    },
+    "configFile": {
+      "file": "artifacts/training/smoke-data-20261009/config.json",
+      "bytes": 576,
+      "sha256": "5b9755a6e1d9ddd1526ff0acb4361eb2763b7e82d6b3c3dc9fba7c6043ebcf84"
+    }
+  },
+  "offlineRetrievalCoverage": {
+    "train": {
+      "queriedChangedTokens": 50476,
+      "changedExamplesEmitted": 50379,
+      "candidateMisses": 97,
+      "hits": {
+        "5": {
+          "count": 49886,
+          "denominator": 50476,
+          "share": 0.988311276646327
+        },
+        "10": {
+          "count": 50309,
+          "denominator": 50476,
+          "share": 0.9966914969490451
+        },
+        "20": {
+          "count": 50379,
+          "denominator": 50476,
+          "share": 0.9980782946350741
+        }
+      },
+      "scope": "Queried eligible one-to-one changed word positions under preparation caps; not all synthetic categories or browser Stage 3 retrieval acceptance."
+    },
+    "validation": {
+      "queriedChangedTokens": 5040,
+      "changedExamplesEmitted": 4707,
+      "candidateMisses": 333,
+      "hits": {
+        "5": {
+          "count": 4648,
+          "denominator": 5040,
+          "share": 0.9222222222222223
+        },
+        "10": {
+          "count": 4702,
+          "denominator": 5040,
+          "share": 0.932936507936508
+        },
+        "20": {
+          "count": 4707,
+          "denominator": 5040,
+          "share": 0.9339285714285714
+        }
+      },
+      "scope": "Queried eligible one-to-one changed word positions under preparation caps; not all synthetic categories or browser Stage 3 retrieval acceptance."
+    }
+  },
+  "runs": {
+    "charspell": {
+      "report": {
+        "schemaVersion": 1,
+        "status": "completed",
+        "stage": "charspell",
+        "profile": "smoke",
+        "split": "train",
+        "sentences": {
+          "train": 100000,
+          "validation": 10000
+        },
+        "seed": 20261007,
+        "hyperparameters": {
+          "profile": "smoke",
+          "seed": 20261007,
+          "trainSentences": 100000,
+          "validationSentences": 10000,
+          "maxVocabulary": 150000,
+          "prefixLength": 7,
+          "maxCandidates": 20,
+          "maxExamplesPerSentence": 16,
+          "maxWordChars": 32,
+          "contextWords": 2,
+          "shuffleBuffer": 4096,
+          "charEmbedding": 24,
+          "charChannels": 32,
+          "wordEmbedding": 48,
+          "taggerHidden": 48,
+          "maxSentenceTokens": 96,
+          "batchSize": 32,
+          "epochs": 2,
+          "learningRate": 0.001,
+          "weightDecay": 0.0001,
+          "gradientClip": 1.0,
+          "patience": 2,
+          "threads": 4,
+          "discount": 0.75,
+          "minLMFrequency": 2
+        },
+        "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+        "preparedSHA256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7",
+        "device": "cpu",
+        "parameters": 21857,
+        "dictionarySHA256": "2faad9f6fb013ce296485c74b3f480d3a6b52a837289affc7c832a16b52edc7e",
+        "python": "3.12.14",
+        "torch": "2.8.0+cpu",
+        "validationPurpose": "Early stopping and model selection only; no threshold calibration.",
+        "testRead": false,
+        "calibrationPerformed": false,
+        "trainingStarted": true,
+        "browserPromotion": "none",
+        "epochs": [
+          {
+            "epoch": 1,
+            "trainExamples": 1135799,
+            "trainLoss": 0.12739757918083555,
+            "trainSeconds": 954.936352092991,
+            "validationSeconds": 25.796342250992893,
+            "validation": {
+              "examples": 95735,
+              "top1Correct": 93414,
+              "top3Correct": 95182,
+              "identityExamples": 91028,
+              "identityFalsePositives": 410,
+              "meanLoss": 0.10970023398879503,
+              "top1Accuracy": 0.9757559931059696,
+              "top3Accuracy": 0.9942236381678592,
+              "identityFalsePositiveRate": 0.0045041086259173,
+              "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+            },
+            "elapsedSeconds": 981.5623423130019
+          },
+          {
+            "epoch": 2,
+            "trainExamples": 1135799,
+            "trainLoss": 0.09125368278135321,
+            "trainSeconds": 952.2299076140043,
+            "validationSeconds": 26.80181349000486,
+            "validation": {
+              "examples": 95735,
+              "top1Correct": 93777,
+              "top3Correct": 95286,
+              "identityExamples": 91028,
+              "identityFalsePositives": 307,
+              "meanLoss": 0.09493725800849491,
+              "top1Accuracy": 0.9795477098239933,
+              "top3Accuracy": 0.9953099702303233,
+              "identityFalsePositiveRate": 0.003372588654040515,
+              "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+            },
+            "elapsedSeconds": 1960.600351176996
+          }
+        ],
+        "limitations": [
+          "Mechanically filtered corpus, not human-reviewed; residual OCR/spelling/segmentation errors possible.",
+          "Synthetic errors and source-split validation do not establish real-user quality.",
+          "Email and everyday genres underrepresented; separate real calibration data is required.",
+          "Only one-to-one word alignments train CharSpell; spacing/multiword errors remain outside this scorer.",
+          "Candidate cap/prefix lookup and vocabulary cap may miss targets; retrieval coverage must be reported.",
+          "No corpus-derived thresholds or automatic browser promotion."
+        ],
+        "realUserQuality": "not measured",
+        "browserInt8Parity": "not measured; required before shadow integration",
+        "lastCheckpointSHA256": "4dab7fe6dd82efa3435a30b2315790840735e9a81d9cfc2c442b705017c6e82c",
+        "bestCheckpointSHA256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731",
+        "validation": {
+          "examples": 95735,
+          "top1Correct": 93777,
+          "top3Correct": 95286,
+          "identityExamples": 91028,
+          "identityFalsePositives": 307,
+          "meanLoss": 0.09493725800849491,
+          "top1Accuracy": 0.9795477098239933,
+          "top3Accuracy": 0.9953099702303233,
+          "identityFalsePositiveRate": 0.003372588654040515,
+          "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+        },
+        "selectedEpoch": 2,
+        "elapsedSeconds": 1960.6044004809955,
+        "artifact": "best.pt",
+        "artifactSHA256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731",
+        "estimatedFullEpochSeconds": 34194.64110658874,
+        "estimateNote": "Linear extrapolation from this run on this machine, not measured full training time."
+      },
+      "reportFile": {
+        "file": "artifacts/training/charspell-smoke-20261009/report.json",
+        "bytes": 4585,
+        "sha256": "202e5681390b1be683394cf2ace0817145d2596bc1fdeaa63e1dc0e43d06f21d"
+      },
+      "artifact": {
+        "file": "artifacts/training/charspell-smoke-20261009/best.pt",
+        "bytes": 92162,
+        "sha256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731"
+      },
+      "modelCard": {
+        "file": "artifacts/training/charspell-smoke-20261009/model-card.json",
+        "bytes": 8263,
+        "sha256": "f7bc61517cbd1968dd2f05c15764dfff632bfd317db02ee39f831949f5acf312"
+      },
+      "resource": {
+        "record": "artifacts/training/runs/charspell-smoke-20261009.resource.json",
+        "bytes": 592,
+        "sha256": "36ab1f7794248cf79d05e8d71af5bf0729f73b2b6ef9831d378041e460cd038d",
+        "status": "completed",
+        "command": [
+          "npm",
+          "run",
+          "training:charspell",
+          "--",
+          "--data=artifacts/training/smoke-data-20261009",
+          "--out=artifacts/training/charspell-smoke-20261009",
+          "--device=cpu"
+        ],
+        "exitCode": 0,
+        "startedAtUTC": "2026-10-09T08:52:12.628293+00:00",
+        "finishedAtUTC": "2026-10-09T09:24:59.903906+00:00",
+        "elapsedSeconds": 1967.2755940850038,
+        "peakRSSKiB": 290112,
+        "userCPUSeconds": 7649.076492,
+        "systemCPUSeconds": 160.260407,
+        "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+        "wallTimeScope": "Outer command subprocess wait, including npm startup and corpus/prepared hash guards; distinct from inner model fitting/training/validation timers."
+      },
+      "lastCheckpoint": {
+        "file": "artifacts/training/charspell-smoke-20261009/last.pt",
+        "bytes": 281180,
+        "sha256": "4dab7fe6dd82efa3435a30b2315790840735e9a81d9cfc2c442b705017c6e82c"
+      },
+      "finalProgress": {
+        "stage": "charspell",
+        "epoch": 2,
+        "status": "completed",
+        "completedBatches": 35494,
+        "trainExamples": 1135799,
+        "expectedTrainExamples": 1135799,
+        "optimizerStepsOverall": 70988,
+        "elapsedSeconds": 1960.6056396219938
+      },
+      "progressFile": {
+        "file": "artifacts/training/charspell-smoke-20261009/progress.json",
+        "bytes": 233,
+        "sha256": "eca6eba1af8e0e3b495d339ef415121ad85446151c95dc9e79f8bc5ea09a9f0e"
+      },
+      "optimizerStepReconciliation": {
+        "expectedCompletedEpochSteps": 70988,
+        "observedFinalProgressSteps": 70988,
+        "scope": "Sum of ceil(completed epoch trainExamples / batchSize), reconciled against final successful progress record."
+      },
+      "checkpointLoadVerification": {
+        "file": "artifacts/training/charspell-checkpoint-verification-20261009.json",
+        "bytes": 1773,
+        "sha256": "c02fdf481020bb70fc2ca9c03480e2d9a6c80c98dea7fe6a224d1b051397865b",
+        "record": {
+          "status": "passed",
+          "stage": "charspell",
+          "verifiedAtUTC": "2026-10-09T09:26:55.184317+00:00",
+          "scope": "Checkpoint/report integrity and one 32-example TRAIN-only finite forward/loss; no optimizer steps, validation or test evaluation, quality measurement, or browser promotion.",
+          "python": "3.12.14",
+          "torch": "2.8.0+cpu",
+          "device": "cpu",
+          "threads": 1,
+          "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+          "preparedSHA256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7",
+          "configSHA256": "5b9755a6e1d9ddd1526ff0acb4361eb2763b7e82d6b3c3dc9fba7c6043ebcf84",
+          "seed": 20261007,
+          "bestArtifactSHA256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731",
+          "lastArtifactSHA256": "4dab7fe6dd82efa3435a30b2315790840735e9a81d9cfc2c442b705017c6e82c",
+          "checkpointDeserializeWeightsOnly": true,
+          "reportAndProgressBindingsValid": true,
+          "selectedEpoch": 2,
+          "lastEpoch": 2,
+          "trainExamplesPerEpoch": 1135799,
+          "completedBatchesPerEpoch": 35494,
+          "optimizerStepsOverall": 70988,
+          "bestCheckpointKeys": [
+            "config",
+            "epoch",
+            "manifestSHA256",
+            "stage",
+            "state_dict"
+          ],
+          "lastCheckpointKeys": [
+            "config",
+            "cudaRandomStates",
+            "epoch",
+            "manifestSHA256",
+            "optimizer",
+            "randomState",
+            "stage",
+            "state_dict"
+          ],
+          "stateTensorCount": 11,
+          "stateDictStrictLoaded": true,
+          "missingStateKeys": [],
+          "unexpectedStateKeys": [],
+          "stateTensorsFinite": true,
+          "parameters": 21857,
+          "forwardInputSplit": "train",
+          "forwardExamples": 32,
+          "logitsShape": [
+            32,
+            20
+          ],
+          "logitsFinite": true,
+          "lossFinite": true,
+          "additionalOptimizerSteps": 0,
+          "validationRead": false,
+          "testRead": false,
+          "newQualityMeasured": false
+        }
+      },
+      "derivedChangedTargetValidation": {
+        "changedRetrievedTargetExamples": 4707,
+        "changedTop1Correct": 3056,
+        "changedTop1Accuracy": 0.6492458041215211,
+        "derivation": "examples - identityExamples; top1Correct - (identityExamples - identityFalsePositives).",
+        "scope": "Changed validation word examples conditional on retrieved target; excludes retrieval misses and unsupported alignments; not real correction quality."
+      },
+      "derivedQueriedChangedValidation": {
+        "eligibleQueriedChangedPositions": 5040,
+        "changedTop1Correct": 3056,
+        "retrievalMissesCountedAsFailures": 333,
+        "top1AccuracyIncludingRetrievalMisses": 0.6063492063492063,
+        "scope": "Eligible queried one-to-one changed validation word positions, with missing targets counted as failures; excludes unsupported alignments and other unqueried errors; not real correction quality."
+      },
+      "identityOnlyAggregateBaseline": {
+        "strategy": "Always retain the input candidate at index 0.",
+        "unchangedWordExamplesCorrect": 91028,
+        "retrievedTargetWordExamples": 95735,
+        "top1Accuracy": 0.9508330286728991,
+        "identitySentencePairs": 2089,
+        "scope": "Derived aggregate baseline on unchanged WORD examples among emitted retrieved-target validation examples. Identity SENTENCE pairs are a distinct count. This baseline is not a real-text quality measure."
+      }
+    },
+    "wordlm": {
+      "report": {
+        "status": "completed",
+        "stage": "wordlm",
+        "profile": "smoke",
+        "split": "train",
+        "sentences": {
+          "train": 100000,
+          "validation": 10000
+        },
+        "seed": 20261007,
+        "hyperparameters": {
+          "profile": "smoke",
+          "seed": 20261007,
+          "trainSentences": 100000,
+          "validationSentences": 10000,
+          "maxVocabulary": 150000,
+          "prefixLength": 7,
+          "maxCandidates": 20,
+          "maxExamplesPerSentence": 16,
+          "maxWordChars": 32,
+          "contextWords": 2,
+          "shuffleBuffer": 4096,
+          "charEmbedding": 24,
+          "charChannels": 32,
+          "wordEmbedding": 48,
+          "taggerHidden": 48,
+          "maxSentenceTokens": 96,
+          "batchSize": 32,
+          "epochs": 2,
+          "learningRate": 0.001,
+          "weightDecay": 0.0001,
+          "gradientClip": 1.0,
+          "patience": 2,
+          "threads": 4,
+          "discount": 0.75,
+          "minLMFrequency": 2
+        },
+        "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+        "preparedSHA256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7",
+        "device": "cpu",
+        "trainingStarted": true,
+        "architecture": "Interpolated Kneser-Ney 3-gram; fixed discount; suffix-class OOV mapping",
+        "testRead": false,
+        "calibrationPerformed": false,
+        "browserPromotion": "none",
+        "realUserQuality": "not measured",
+        "correctionBenefit": "not measured",
+        "limitations": [
+          "Mechanically filtered corpus, not human-reviewed; residual OCR/spelling/segmentation errors possible.",
+          "Synthetic errors and source-split validation do not establish real-user quality.",
+          "Email and everyday genres underrepresented; separate real calibration data is required.",
+          "Only one-to-one word alignments train CharSpell; spacing/multiword errors remain outside this scorer.",
+          "Candidate cap/prefix lookup and vocabulary cap may miss targets; retrieval coverage must be reported.",
+          "No corpus-derived thresholds or automatic browser promotion.",
+          "Suffix classes are heuristic, not linguistic morphology annotations.",
+          "Unseen output classes can have zero probability; infinite perplexity is explicit.",
+          "No noisy-channel lambda is fitted here; use separate real calibration data."
+        ],
+        "trainSentences": 100000,
+        "trainTokens": 1802864,
+        "validation": {
+          "examples": 143391,
+          "perplexity": 456.8072852264234,
+          "infinitePerplexity": false,
+          "zeroProbabilityTokens": 0,
+          "scope": "Mapped vocabulary/suffix classes including EOS, not unrestricted surface-word perplexity."
+        },
+        "artifact": "wordlm.sqlite",
+        "artifactSHA256": "8fd22d6777a21237a18064812b26388c230e1a4f89f92b3fd147d447a8d026a5",
+        "elapsedSeconds": 24.799726256998838,
+        "estimatedFullFitSeconds": 815.2555370902893,
+        "estimateNote": "Linear extrapolation; SQLite/vocabulary growth can make full training slower."
+      },
+      "reportFile": {
+        "file": "artifacts/training/wordlm-smoke-20261009/report.json",
+        "bytes": 2767,
+        "sha256": "d8250259be3e0ef68c92d2bf79bc8c4f1dc7a21408e766d4e634b88e7f319311"
+      },
+      "artifact": {
+        "file": "artifacts/training/wordlm-smoke-20261009/wordlm.sqlite",
+        "bytes": 151879680,
+        "sha256": "8fd22d6777a21237a18064812b26388c230e1a4f89f92b3fd147d447a8d026a5"
+      },
+      "modelCard": {
+        "file": "artifacts/training/wordlm-smoke-20261009/model-card.json",
+        "bytes": 6445,
+        "sha256": "f4bbcedee2ed40a0a9a8871b0c5181a5d181e4fdd555fbd06031f382d779711f"
+      },
+      "resource": {
+        "record": "artifacts/training/runs/wordlm-smoke-20261009.resource.json",
+        "bytes": 577,
+        "sha256": "610372d5a584fb1758891fe489fc15880a86ab86347c6f7f1372e6b7865b6fc4",
+        "status": "completed",
+        "command": [
+          "npm",
+          "run",
+          "training:wordlm",
+          "--",
+          "--data=artifacts/training/smoke-data-20261009",
+          "--out=artifacts/training/wordlm-smoke-20261009",
+          "--device=cpu"
+        ],
+        "exitCode": 0,
+        "startedAtUTC": "2026-10-09T09:25:11.975407+00:00",
+        "finishedAtUTC": "2026-10-09T09:25:41.108364+00:00",
+        "elapsedSeconds": 29.13293966501078,
+        "peakRSSKiB": 96856,
+        "userCPUSeconds": 19.727025,
+        "systemCPUSeconds": 7.030573,
+        "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+        "wallTimeScope": "Outer command subprocess wait, including npm startup and corpus/prepared hash guards; distinct from inner model fitting/training/validation timers."
+      }
+    },
+    "punctcase": {
+      "report": {
+        "schemaVersion": 1,
+        "status": "completed",
+        "stage": "punctcase",
+        "profile": "smoke",
+        "split": "train",
+        "sentences": {
+          "train": 100000,
+          "validation": 10000
+        },
+        "seed": 20261007,
+        "hyperparameters": {
+          "profile": "smoke",
+          "seed": 20261007,
+          "trainSentences": 100000,
+          "validationSentences": 10000,
+          "maxVocabulary": 150000,
+          "prefixLength": 7,
+          "maxCandidates": 20,
+          "maxExamplesPerSentence": 16,
+          "maxWordChars": 32,
+          "contextWords": 2,
+          "shuffleBuffer": 4096,
+          "charEmbedding": 24,
+          "charChannels": 32,
+          "wordEmbedding": 48,
+          "taggerHidden": 48,
+          "maxSentenceTokens": 96,
+          "batchSize": 32,
+          "epochs": 2,
+          "learningRate": 0.001,
+          "weightDecay": 0.0001,
+          "gradientClip": 1.0,
+          "patience": 2,
+          "threads": 4,
+          "discount": 0.75,
+          "minLMFrequency": 2
+        },
+        "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+        "preparedSHA256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7",
+        "device": "cpu",
+        "parameters": 39434,
+        "dictionarySHA256": "2faad9f6fb013ce296485c74b3f480d3a6b52a837289affc7c832a16b52edc7e",
+        "python": "3.12.14",
+        "torch": "2.8.0+cpu",
+        "validationPurpose": "Early stopping and model selection only; no threshold calibration.",
+        "testRead": false,
+        "calibrationPerformed": false,
+        "trainingStarted": true,
+        "browserPromotion": "none",
+        "epochs": [
+          {
+            "epoch": 1,
+            "trainExamples": 99966,
+            "trainLoss": 0.19435433806994643,
+            "trainSeconds": 211.2834931230027,
+            "validationSeconds": 4.738489087001653,
+            "validation": {
+              "examples": 10000,
+              "punctuationLabels": 96410,
+              "punctuationCorrect": 93420,
+              "caseLabels": 105652,
+              "caseCorrect": 105376,
+              "punctuationTruePositive": 12221,
+              "punctuationPredictedPositive": 12737,
+              "punctuationActualPositive": 14820,
+              "meanLoss": 0.11561860318183899,
+              "punctuationAccuracy": 0.968986619645265,
+              "caseAccuracy": 0.9973876500208231,
+              "punctuationMicroF1": 0.8869615705628334,
+              "scope": "Mechanically filtered source-split clean-text labels, excluding protected/ambiguous labels; not human-reviewed quality."
+            },
+            "elapsedSeconds": 216.5566420170071
+          },
+          {
+            "epoch": 2,
+            "trainExamples": 99966,
+            "trainLoss": 0.1514245770291638,
+            "trainSeconds": 210.2324333419965,
+            "validationSeconds": 5.072088496002834,
+            "validation": {
+              "examples": 10000,
+              "punctuationLabels": 96410,
+              "punctuationCorrect": 93714,
+              "caseLabels": 105652,
+              "caseCorrect": 105422,
+              "punctuationTruePositive": 12601,
+              "punctuationPredictedPositive": 13193,
+              "punctuationActualPositive": 14820,
+              "meanLoss": 0.10649535893201828,
+              "punctuationAccuracy": 0.9720360958406804,
+              "caseAccuracy": 0.9978230416840193,
+              "punctuationMicroF1": 0.8996537321957663,
+              "scope": "Mechanically filtered source-split clean-text labels, excluding protected/ambiguous labels; not human-reviewed quality."
+            },
+            "elapsedSeconds": 431.867176469008
+          }
+        ],
+        "limitations": [
+          "Mechanically filtered corpus, not human-reviewed; residual OCR/spelling/segmentation errors possible.",
+          "Synthetic errors and source-split validation do not establish real-user quality.",
+          "Email and everyday genres underrepresented; separate real calibration data is required.",
+          "Only one-to-one word alignments train CharSpell; spacing/multiword errors remain outside this scorer.",
+          "Candidate cap/prefix lookup and vocabulary cap may miss targets; retrieval coverage must be reported.",
+          "No corpus-derived thresholds or automatic browser promotion."
+        ],
+        "realUserQuality": "not measured",
+        "browserInt8Parity": "not measured; required before shadow integration",
+        "lastCheckpointSHA256": "6c9960b150409951fc8f256c35b547342cf7906121a709b3527e8a361ab8b749",
+        "bestCheckpointSHA256": "764ebb42662f1f1133ae9c66af3e7e765da84697a96f949f76b1511f4cfff9cf",
+        "validation": {
+          "examples": 10000,
+          "punctuationLabels": 96410,
+          "punctuationCorrect": 93714,
+          "caseLabels": 105652,
+          "caseCorrect": 105422,
+          "punctuationTruePositive": 12601,
+          "punctuationPredictedPositive": 13193,
+          "punctuationActualPositive": 14820,
+          "meanLoss": 0.10649535893201828,
+          "punctuationAccuracy": 0.9720360958406804,
+          "caseAccuracy": 0.9978230416840193,
+          "punctuationMicroF1": 0.8996537321957663,
+          "scope": "Mechanically filtered source-split clean-text labels, excluding protected/ambiguous labels; not human-reviewed quality."
+        },
+        "selectedEpoch": 2,
+        "elapsedSeconds": 431.87280979000207,
+        "artifact": "best.pt",
+        "artifactSHA256": "764ebb42662f1f1133ae9c66af3e7e765da84697a96f949f76b1511f4cfff9cf",
+        "estimatedFullEpochSeconds": 7459.379865985253,
+        "estimateNote": "Linear extrapolation from this run on this machine, not measured full training time."
+      },
+      "reportFile": {
+        "file": "artifacts/training/punctcase-smoke-20261009/report.json",
+        "bytes": 5009,
+        "sha256": "366893e654da1ea6dac9a0fa35b6a97f9774585721133186e92b4e9caa9f9c5f"
+      },
+      "artifact": {
+        "file": "artifacts/training/punctcase-smoke-20261009/best.pt",
+        "bytes": 164586,
+        "sha256": "764ebb42662f1f1133ae9c66af3e7e765da84697a96f949f76b1511f4cfff9cf"
+      },
+      "modelCard": {
+        "file": "artifacts/training/punctcase-smoke-20261009/model-card.json",
+        "bytes": 8687,
+        "sha256": "694286478670fa3a03b616f51b1cdddc2ef84c86ef785c7a11f116c58291c3c1"
+      },
+      "resource": {
+        "record": "artifacts/training/runs/punctcase-smoke-20261009.resource.json",
+        "bytes": 590,
+        "sha256": "cc735608cc3d8cbc4d45a755acc12187c69c981610cb4c695072381dbd59c3d7",
+        "status": "completed",
+        "command": [
+          "npm",
+          "run",
+          "training:punctcase",
+          "--",
+          "--data=artifacts/training/smoke-data-20261009",
+          "--out=artifacts/training/punctcase-smoke-20261009",
+          "--device=cpu"
+        ],
+        "exitCode": 0,
+        "startedAtUTC": "2026-10-09T09:26:10.465856+00:00",
+        "finishedAtUTC": "2026-10-09T09:33:27.983340+00:00",
+        "elapsedSeconds": 437.5174676919996,
+        "peakRSSKiB": 417476,
+        "userCPUSeconds": 1703.210683,
+        "systemCPUSeconds": 18.906691,
+        "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+        "wallTimeScope": "Outer command subprocess wait, including npm startup and corpus/prepared hash guards; distinct from inner model fitting/training/validation timers."
+      },
+      "lastCheckpoint": {
+        "file": "artifacts/training/punctcase-smoke-20261009/last.pt",
+        "bytes": 500668,
+        "sha256": "6c9960b150409951fc8f256c35b547342cf7906121a709b3527e8a361ab8b749"
+      },
+      "finalProgress": {
+        "stage": "punctcase",
+        "epoch": 2,
+        "status": "completed",
+        "completedBatches": 3124,
+        "trainExamples": 99966,
+        "expectedTrainExamples": 99966,
+        "optimizerStepsOverall": 6248,
+        "elapsedSeconds": 431.8741976440069
+      },
+      "progressFile": {
+        "file": "artifacts/training/punctcase-smoke-20261009/progress.json",
+        "bytes": 226,
+        "sha256": "3524f3e90fbdb1b3cb8eb3335d257e520b2cc5c2ef39d7aa135092842359ed3b"
+      },
+      "optimizerStepReconciliation": {
+        "expectedCompletedEpochSteps": 6248,
+        "observedFinalProgressSteps": 6248,
+        "scope": "Sum of ceil(completed epoch trainExamples / batchSize), reconciled against final successful progress record."
+      },
+      "checkpointLoadVerification": {
+        "file": "artifacts/training/punctcase-checkpoint-verification-20261009.json",
+        "bytes": 1930,
+        "sha256": "f79f8a3b6f8e63d7e2575964d6b223fabdb93b9b9462310e4b459c047fcc1517",
+        "record": {
+          "status": "passed",
+          "stage": "punctcase",
+          "verifiedAtUTC": "2026-10-09T09:34:22.178650+00:00",
+          "scope": "Checkpoint/report integrity and one 32-example TRAIN-only finite forward/loss; no optimizer steps, validation or test evaluation, quality measurement, or browser promotion.",
+          "python": "3.12.14",
+          "torch": "2.8.0+cpu",
+          "device": "cpu",
+          "threads": 1,
+          "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+          "preparedSHA256": "f56f74f7f1e5b5bfb9f11a6d4cb4ce245fd418497da3564369bdf4c17b2a95d7",
+          "configSHA256": "5b9755a6e1d9ddd1526ff0acb4361eb2763b7e82d6b3c3dc9fba7c6043ebcf84",
+          "seed": 20261007,
+          "bestArtifactSHA256": "764ebb42662f1f1133ae9c66af3e7e765da84697a96f949f76b1511f4cfff9cf",
+          "lastArtifactSHA256": "6c9960b150409951fc8f256c35b547342cf7906121a709b3527e8a361ab8b749",
+          "checkpointDeserializeWeightsOnly": true,
+          "reportAndProgressBindingsValid": true,
+          "selectedEpoch": 2,
+          "lastEpoch": 2,
+          "trainExamplesPerEpoch": 99966,
+          "completedBatchesPerEpoch": 3124,
+          "optimizerStepsOverall": 6248,
+          "bestCheckpointKeys": [
+            "config",
+            "epoch",
+            "manifestSHA256",
+            "stage",
+            "state_dict"
+          ],
+          "lastCheckpointKeys": [
+            "config",
+            "cudaRandomStates",
+            "epoch",
+            "manifestSHA256",
+            "optimizer",
+            "randomState",
+            "stage",
+            "state_dict"
+          ],
+          "stateTensorCount": 19,
+          "stateDictStrictLoaded": true,
+          "lastStateDictStrictLoaded": true,
+          "missingStateKeys": [],
+          "unexpectedStateKeys": [],
+          "stateTensorsFinite": true,
+          "parameters": 39434,
+          "forwardInputSplit": "train",
+          "forwardExamples": 32,
+          "logitsShape": [
+            [
+              32,
+              79,
+              6
+            ],
+            [
+              32,
+              79,
+              4
+            ]
+          ],
+          "logitsHeadNames": [
+            "punctuation",
+            "case"
+          ],
+          "logitsFinite": true,
+          "lossFinite": true,
+          "additionalOptimizerSteps": 0,
+          "validationRead": false,
+          "testRead": false,
+          "newQualityMeasured": false
+        }
+      }
+    }
+  },
+  "verificationScope": {
+    "smallMetadataAndModelArtifactsRehashed": true,
+    "corpusAndTaskJSONLRehashedByCollector": false,
+    "bulkIntegrityEvidence": "Previously independently verified compressed/raw intake receipts, atomic import and fresh gate binding; trainer rechecks corpus/prepared hashes before each run.",
+    "collectorPerformsTraining": false,
+    "collectorExecutesTests": false
+  },
+  "limits": {
+    "fullTrainingCompleted": false,
+    "testUsedForLearningOrModelSelection": false,
+    "phase0Use": "Fresh data gate leakage audit only; not task preparation, training or model selection.",
+    "calibrationPerformed": false,
+    "browserPromotion": "none",
+    "browserInt8Parity": "not measured",
+    "realUserQuality": "not measured",
+    "stage3To7Acceptance": "not established by smoke execution",
+    "charspellValidation": "Synthetic candidate scoring conditional on retrieved target; misses and unsupported alignments reported separately.",
+    "punctcaseValidation": "Mechanically generated clean-text labels, excluding protected/ambiguous labels; not human-reviewed quality.",
+    "wordlmValidation": "Mapped vocabulary/suffix classes including EOS, not unrestricted surface-word perplexity or correction benefit.",
+    "fullRunEstimates": "Linear extrapolations from this host, not measured full-run time; lexical/index growth can break linearity. WordLM estimate scales combined inner fit and validation elapsed time.",
+    "peakRSSScope": "Linux resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, KiB: the high-water maximum of waited child/descendant processes; not the sum of simultaneous process-tree memory and not peak total host memory.",
+    "corpusQuality": "Mechanically filtered, not human reviewed; residual OCR/spelling/segmentation errors; email/everyday genres underrepresented; synthetic errors."
+  }
+}
