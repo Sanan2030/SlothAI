@@ -162,8 +162,9 @@ or a measured speedup from training preparation. Older reports below are histori
 
 The accepted `az-v1` receipt describes **5,000,000 mechanically filtered clean
 sentences and 5,000,000 synthetic pairs**. Identity pairs total 1,058,544 across
-all splits. The accepted bulk files are outside Git and are **absent from this
-cloud checkout**; only their manifests/receipts are present.
+all splits. The accepted bulk files are outside Git. A **complete local corpus
+must pass a fresh data gate before training**; tracked manifests/receipts alone
+do not establish the presence or integrity of the bulk files.
 
 | Split | Sentences / aligned pairs | Use |
 | --- | ---: | --- |
@@ -184,6 +185,10 @@ npm run training:status
 ```
 
 Exit 2 / `status: blocked` is expected until the exact files are supplied.
+For uploads exceeding the 32 MiB executor transfer limit, use the offline
+[browser transfer helper](training/transfer.html) to produce 30 MiB raw-byte
+parts. It supports renamed files through explicit archive selection; the
+reassembled original archive still needs its accepted hash checked.
 The [training guide](training/README.md) covers verified import, the full data
 gate, deterministic preparation, optional CPU/CUDA setup, 100k-sentence smoke
 jobs, checkpoints and explicit full-run commands. The CPU training runtime was
@@ -195,7 +200,7 @@ checked here; GPU execution has not been checked and no GPU is attached.
 | WordLM | Clean train text only | Untrained SQLite Kneser-Ney 3-gram tool; correction benefit/lambda unmeasured. |
 | PunctCase | Punctuation/case labels from clean train text | Untrained character-CNN + BiGRU; no browser export. |
 
-Training is deferred. Editor installation/build/start never trains this corpus;
+Training is explicit. Editor installation/build/start never trains this corpus;
 offline tools never automatically replace active app weights. Full training
 requires a successful same-stage 100k–500k smoke receipt. Stage acceptance,
 real-error calibration, TypeScript/int8 parity and browser integration are still

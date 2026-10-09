@@ -68,6 +68,16 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    decompressed there with the accepted manifest, skip import. For mounted
    corpora use `--corpus=/absolute/mounted/path` on status/verify/prepare.
 
+   If chat-to-executor transfer rejects files larger than 32 MiB, download and
+   open [transfer.html](transfer.html) locally in a browser. Select the original
+   gzip file and, if its downloaded name differs, choose the canonical archive
+   from the list. The helper accepts only its recorded byte size and produces
+   raw 30 MiB `.part000`, `.part001`, … slices with canonical names. It shows
+   actual/expected sizes and blocks incomplete, decompressed or otherwise
+   differently sized files. It performs no upload, decompression or training.
+   Reassemble every archive in numeric order and verify its accepted compressed
+   SHA-256 before import; filename/size matching alone is not hash verification.
+
 3. Audit the corpus before any task preparation:
 
    ```sh
