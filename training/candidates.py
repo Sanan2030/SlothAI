@@ -5,6 +5,11 @@ from collections import Counter
 from pathlib import Path
 from training.text import fold
 
+try:
+    from rapidfuzz.distance.OSA import distance as _native_osa_distance
+except ImportError:
+    _native_osa_distance = None
+
 
 def deletions(word, distance=2):
     found, layer = {word}, {word}
@@ -16,6 +21,15 @@ def deletions(word, distance=2):
 
 def distance(left, right, maximum=2):
     """Restricted Damerau-Levenshtein (optimal string alignment), capped at maximum+1."""
+    if abs(len(left) - len(right)) > maximum:
+        return maximum + 1
+    if _native_osa_distance is not None:
+        return _native_osa_distance(left, right, score_cutoff=maximum)
+    return _python_distance(left, right, maximum)
+
+
+def _python_distance(left, right, maximum=2):
+    """Original exact fallback for environments without the optional native wheel."""
     if abs(len(left) - len(right)) > maximum:
         return maximum + 1
     previous = list(range(len(right) + 1))

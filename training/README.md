@@ -108,6 +108,19 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    Retrieval hits@5/10/20 are recorded for queried changed training tokens;
    they are conditional offline coverage, not the Stage 3 browser gate.
 
+   For faster candidate preparation, install the training runtime from step 5
+   first, then run the same preparation through its Python:
+
+   ```sh
+   .venv-training/bin/python -m training.cli prepare --profile=smoke --out=artifacts/training/smoke-data
+   ```
+
+   This uses pinned RapidFuzz 3.14.6 for the same restricted Damerau-Levenshtein
+   (OSA) distances, retaining candidate ordering, caps and identity exclusion.
+   The standard-Python npm command retains the original Python fallback when
+   RapidFuzz is absent. Neither path starts model training. The runtime uses
+   Python 3.12 here; the optional native package requires Python >=3.11.
+
 5. Install the optional training runtime:
 
    ```sh
