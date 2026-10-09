@@ -170,11 +170,29 @@ def train_model(stage, data, output, requested_device, smoke_path=None, resume=F
         stale = first_epoch - report['selectedEpoch']
         previous_seconds = report.get('elapsedSeconds', report['epochs'][-1]['elapsedSeconds'])
     write_json(output / 'report.json', report)
+    expected_examples = metadata['splits']['train'][stage + 'Rows']
+    optimizer_steps_overall = sum((entry['trainExamples'] + config['batchSize'] - 1) // config['batchSize']
+                                  for entry in report['epochs'])
+    progress_epoch = first_epoch
+    examples = report['epochs'][-1]['trainExamples'] if report['epochs'] else 0
+    completed_batches = (examples + config['batchSize'] - 1) // config['batchSize']
+
+    def emit_progress(status):
+        progress = {'stage': stage, 'epoch': progress_epoch, 'status': status,
+                    'completedBatches': completed_batches, 'trainExamples': examples,
+                    'expectedTrainExamples': expected_examples, 'optimizerStepsOverall': optimizer_steps_overall,
+                    'elapsedSeconds': previous_seconds + time.perf_counter() - started}
+        write_json(output / 'progress.json', progress)
+        print(json.dumps(progress, separators=(',', ':')), flush=True)
+
     try:
         for epoch in range(first_epoch, config['epochs']):
             epoch_started = time.perf_counter()
+            progress_epoch = epoch + 1
             model.train()
             examples, running_loss = 0, 0.0
+            completed_batches = 0
+            emit_progress('running')
             for rows in batches(data / f'{stage}-train.jsonl.gz', config['batchSize'], config['shuffleBuffer'],
                                 config['seed'] + epoch, True, set(metadata['splits']['train']['sources'])):
                 batch = module.collate(rows, config, device)
@@ -186,11 +204,16 @@ def train_model(stage, data, output, requested_device, smoke_path=None, resume=F
                 value.backward()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), config['gradientClip'], error_if_nonfinite=True)
                 optimizer.step()
+                optimizer_steps_overall += 1
+                completed_batches += 1
                 examples += len(rows)
                 running_loss += float(value.detach()) * len(rows)
+                if completed_batches % 1000 == 0:
+                    emit_progress('running')
             if examples != metadata['splits']['train'][stage + 'Rows']:
                 raise ValueError('Training example count differs from prepared manifest')
             train_seconds = time.perf_counter() - epoch_started
+            emit_progress('validating')
             validation_started = time.perf_counter()
             measured = validation(model, module, data / f'{stage}-validation.jsonl.gz', config, device,
                                   set(metadata['splits']['validation']['sources']),
@@ -217,6 +240,7 @@ def train_model(stage, data, output, requested_device, smoke_path=None, resume=F
                 stale += 1
             write_json(output / 'report.json', report)
             print(json.dumps(entry), flush=True)
+            emit_progress('epoch-completed')
             if stale >= config['patience']:
                 break
         elapsed = previous_seconds + time.perf_counter() - started
@@ -227,9 +251,11 @@ def train_model(stage, data, output, requested_device, smoke_path=None, resume=F
         report['estimateNote'] = 'Linear extrapolation from this run on this machine, not measured full training time.'
         write_json(output / 'report.json', report)
         write_json(output / 'model-card.json', model_card(report))
+        emit_progress('completed')
         return report
     except BaseException as error:
         report.update(status='interrupted' if isinstance(error, KeyboardInterrupt) else 'failed',
                       error=str(error), elapsedSeconds=previous_seconds + time.perf_counter() - started)
         write_json(output / 'report.json', report)
+        emit_progress(report['status'])
         raise

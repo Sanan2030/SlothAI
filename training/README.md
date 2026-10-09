@@ -112,6 +112,7 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    first, then run the same preparation through its Python:
 
    ```sh
+   npm run --silent dictionary:import -- public/dictionaries/az
    .venv-training/bin/python -m training.cli prepare --profile=smoke --out=artifacts/training/smoke-data
    ```
 
@@ -148,6 +149,11 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    read **only clean-text-derived task files**. Validation performs model
    selection/measurement; calibration and test evaluation are separate later
    steps. Existing output directories are preserved; use a new run name.
+
+   Neural jobs write `progress.json` after every 1,000 completed optimizer
+   batches and at epoch, validation and completion boundaries. It records
+   completed batches/examples, expected examples and total optimizer steps;
+   `report.json` retains completed epoch metrics and checkpoint information.
 
 7. Review `report.json`, retrieval misses, synthetic validation, resource use
    and the relevant stage gate. A completed smoke demonstrates execution, not
