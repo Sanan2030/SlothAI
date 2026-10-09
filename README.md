@@ -10,6 +10,8 @@ It requires no API key, Python service or GPU to use the editor.
 guard. All six accepted corpus archives passed integrity checks and a fresh
 full data gate. CharSpell, WordLM and PunctCase completed **100k-train/10k-validation
 CPU smoke runs**; their offline artifacts await calibration and browser integration.
+Full-corpus CPU preparation is now running under an explicit supervisor; see the
+[full job launch record and live-status command](docs/training/full-2026-10-09.md).
 See the [measured training results](docs/training/smoke-2026-10-09.md) and
 [code audit and prioritized fixes](docs/current-state-2026-10-08.md).
 
@@ -211,6 +213,12 @@ and hash guards. CharSpell changed-word top-1 was 64.92% when the target was
 retrieved, or 60.63% including retrieval misses; it falsely changed 307/91,028
 unchanged validation words. Its 97.95% aggregate top-1 includes many unchanged
 words and is not overall correction quality. Full training remains a separate run.
+
+The full CPU job was launched on 9 October. It prepares all 3,287,357 train and
+1,082,532 validation rows, then schedules WordLM → PunctCase → CharSpell.
+The [dated launch record](docs/training/full-2026-10-09.md) distinguishes active
+preparation from actual fitting and completed results. Check live state with
+`.venv-training/bin/python -m training.full_job status`.
 
 Training is explicit. Editor installation/build/start never trains this corpus;
 offline tools never automatically replace active app weights. Full training

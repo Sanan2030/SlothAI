@@ -6,6 +6,11 @@ corpus. See the [measured report](../docs/training/smoke-2026-10-09.md) and
 [complete evidence](../docs/training/smoke-2026-10-09.json). Full training,
 real-error calibration and browser integration are the next stages; the editor
 continues to use its existing Stage 2 models and thresholds.
+An explicit [full CPU job](../docs/training/full-2026-10-09.md) was subsequently
+launched and is preparing all accepted train/validation rows. Its supervisor
+starts WordLM, PunctCase and CharSpell after successful preparation. Read current
+state with `.venv-training/bin/python -m training.full_job status`; a dated launch
+record is not a completed full-training report.
 These commands run on a cloud machine or workstation with long-lived jobs;
 Vercel serves the editor and is not the place to train this corpus.
 
