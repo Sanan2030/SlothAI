@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "stage": "wordlm",
+  "profile": "repository-snapshot",
+  "startedAtUTC": "2026-10-12T14:27:25.984365+00:00",
+  "sourceCodeCommit": "cc976725dd7fb45ab9986b51495d5d4c9c888122",
+  "sourceRepository": "https://github.com/Sanan2030/SlothAI",
+  "source": "Frozen Wikipedia document splits; see data/nlp/SOURCES.md for attribution.",
+  "sourceFiles": {
+    "train.jsonl": {
+      "sha256": "9a2191505bf2447d6bccda7196e6c6e12c35be2b2fec6dce3233b36de8ea52fc",
+      "bytes": 4196500
+    },
+    "validation.jsonl": {
+      "sha256": "a0130ead04d9299cd2eebd2f37a2ec44089847740e38d8b7a56286ba3f5ebb0b",
+      "bytes": 493596
+    },
+    "test.jsonl": {
+      "sha256": "aa073348e2627b00e72e685495133e147ba675257a53a9cb374d1910e0c9b162",
+      "bytes": 261546
+    },
+    "manifest.json": {
+      "sha256": "1bce7ce9f4d01c40d9ab144ec29793b566e59603f0817748bf48925be6c13faf",
+      "bytes": 49037
+    }
+  },
+  "splits": {
+    "train": {
+      "augmentedRows": 7215,
+      "uniqueCleanSentences": 1609,
+      "documents": 250,
+      "licenses": [
+        "CC BY-SA 3.0 / GFDL"
+      ]
+    },
+    "validation": {
+      "augmentedRows": 840,
+      "uniqueCleanSentences": 188,
+      "documents": 32,
+      "licenses": [
+        "CC BY-SA 3.0 / GFDL"
+      ]
+    },
+    "test": {
+      "augmentedRows": 448,
+      "uniqueCleanSentences": 101,
+      "documents": 16,
+      "licenses": [
+        "CC BY-SA 3.0 / GFDL"
+      ]
+    }
+  },
+  "crossSplitWordSequenceOverlap": {
+    "train/validation": 2,
+    "train/test": 1,
+    "validation/test": 0
+  },
+  "trainingSourceSHA256": {
+    "repo_wordlm.py": "33c7be6eff4e5766eae49bf2b25593c849634877ec472e678b5379df2bbd549b",
+    "wordlm.py": "c966ef4eab60b6e338c0cfe5905e0998204c487d2b58579eb442f453cda22e9d",
+    "text.py": "48429b61745dce3a00eb6ba6ec863e32978f4698ddda8de62402fb05ec5f2629",
+    "common.py": "bc7effc501fb7c7b707a2a4a68f3de1156795c44da4524ab308601ef4184b11b"
+  },
+  "hyperparameters": {
+    "discount": 0.75,
+    "minLMFrequency": 2
+  },
+  "architecture": "Interpolated Kneser-Ney 3-gram with suffix-class OOV mapping",
+  "python": "3.12.14",
+  "device": "cpu",
+  "trainingStarted": true,
+  "trainOnlyVocabulary": true,
+  "testUsedForTrainingOrSelection": false,
+  "testReadForIntegrityOnly": true,
+  "calibrationPerformed": false,
+  "browserPromotion": "none",
+  "correctionBenefit": "not measured",
+  "limitations": [
+    "Small repository experiment, not the accepted five-million az-v1 corpus.",
+    "Synthetic variants are deduplicated; only clean train targets fit counts.",
+    "Validation perplexity concerns mapped classes, not correction quality.",
+    "Word tokenization removes numbers; template overlap is reported, not removed.",
+    "Unseen classes may yield explicit infinite perplexity.",
+    "Wikipedia attribution/licensing is retained in data/nlp/SOURCES.md.",
+    "No editor weights or thresholds are changed."
+  ],
+  "trainSentences": 1609,
+  "trainTokens": 23749,
+  "vocabulary": 2825,
+  "validation": {
+    "examples": 2800,
+    "perplexity": 116.72240609697393,
+    "infinitePerplexity": false,
+    "zeroProbabilityTokens": 0,
+    "scope": "Mapped vocabulary/suffix classes including EOS, not unrestricted surface-word perplexity."
+  },
+  "ngrams": {
+    "bigrams": 13983,
+    "trigrams": 19704
+  },
+  "artifact": "wordlm.sqlite",
+  "artifactSHA256": "9b6592a81d99b70229f4758b35cf68fd0afe448bc2a830ba8216843aea291e08",
+  "artifactBytes": 2494464,
+  "elapsedSeconds": 0.21587348799948813,
+  "finishedAtUTC": "2026-10-12T14:27:26.200225+00:00"
+}
