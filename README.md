@@ -266,3 +266,5 @@ Historical details: [reviewed neural models](docs/reviewed-neural-training.md),
 [document ranker](docs/document-training.md),
 [performance audit](docs/performance-audit/README.md),
 [gold references](docs/gold-1000-2026-09-30.md).
+
+.
