@@ -68,6 +68,33 @@ test('expert deadline and failures stop speculation without breaking the final e
   assert.equal(correctText('sened hazirdir').text, 'Sənəd hazırdır.');
   pool.dispose();
 });
+test('an expert failure preserves the other head and its future revisions', async () => {
+  const workers = [fake(), fake()]; let at = 0;
+  const pool = new ExpertPool(() => workers[at++].worker);
+  pool.prepare('sened');
+  workers[0].reply({ revision: 1, error: 'spelling head failed' });
+  workers[1].reply({ revision: 1, proposals: [proposal('sened', 'sened', 'sentence-boundary')] });
+  await Promise.resolve();
+  assert.equal(workers[0].stopped(), 1); assert.equal(workers[1].stopped(), 0);
+  assert.equal(pool.snapshot('sened')?.proposals.length, 1);
+  pool.prepare('ikinci');
+  workers[0].reply({ revision: 2, proposals: [proposal('ikinci', 'ikinci', 'log-spelling', 2)] });
+  workers[1].reply({ revision: 2, proposals: [proposal('ikinci', 'ikinci', 'sentence-boundary', 2)] });
+  await Promise.resolve();
+  assert.equal(pool.snapshot('ikinci')?.proposals.length, 1);
+  assert.equal(pool.snapshot('ikinci')?.proposals[0].stage, 'sentence-boundary');
+  assert.equal(at, 2); pool.dispose();
+});
+test('a slow expert timeout keeps a completed independent proposal', async context => {
+  context.mock.timers.enable({ apis: ['setTimeout'] });
+  const workers = [fake(), fake()]; let at = 0;
+  const pool = new ExpertPool(() => workers[at++].worker, 20);
+  pool.prepare('sened');
+  workers[0].reply({ revision: 1, proposals: [proposal('sened', 'sənəd')] });
+  await Promise.resolve(); context.mock.timers.tick(20); await Promise.resolve();
+  assert.equal(workers[0].stopped(), 0); assert.equal(workers[1].stopped(), 1);
+  assert.equal(pool.snapshot('sened')?.proposals[0].output, 'sənəd'); pool.dispose();
+});
 test('bundled experts preserve final text, mail, formatting and second-pass stability', async () => {
   for (const text of ['sorgunun qebul edilmesini tesdiq edirəm', 'sened hazirdir biz onu yoxladiq',
     'Sənəd hazırdır.', 'API endpoint hazirdir database isleyir', 'salam\nsened hazirdir',

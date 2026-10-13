@@ -1,0 +1,41 @@
+{
+  "serialMedianMs": 480.5,
+  "parallelMedianMs": 306.5,
+  "pairSpeedup": 1.567699836867863,
+  "timings": {
+    "serial": [
+      570.7000000029802,
+      482.59999999403954,
+      512.5999999940395,
+      494,
+      393.79999999701977,
+      480.5,
+      476.79999999701977,
+      415.5,
+      430.90000000596046
+    ],
+    "parallel": [
+      365.1000000089407,
+      347.29999999701977,
+      535.7000000029802,
+      306.5,
+      293.1000000089407,
+      322.90000000596046,
+      253.29999999701977,
+      230.20000000298023,
+      231.79999999701977
+    ]
+  },
+  "serialWorkers": 1,
+  "parallelWorkers": 2,
+  "overlapped": true,
+  "outputsIdentical": true,
+  "workload": {
+    "textWords": 900,
+    "mailWords": 700
+  },
+  "scope": "Warm independent text/mail pairs; worker initialization and optional expert preparation excluded.",
+  "browser": "151.0.7922.173",
+  "browserErrors": [],
+  "measuredAtUTC": "2026-10-13T08:58:07.196Z"
+}

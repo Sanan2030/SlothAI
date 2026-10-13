@@ -1,5 +1,9 @@
 # Parallel local inference: first implementation
 
+The current document scheduler, resource budget and failure behavior are
+described in [Asynchronous document execution](../async-editor/README.md).
+The report below records the original implementation and its measurements.
+
 Base: `d26507d018044e4421b4a5550a03ff621de091fc`.
 This change wires existing local heads into speculative workers. It does not
 train a semantic encoder, add weights, infer arbitrary sentence meaning, or

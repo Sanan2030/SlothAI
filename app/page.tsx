@@ -61,9 +61,14 @@ export default function HomePage() {
   const [mailMetadata, setMailMetadata] = useState<TransformationMetadata | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(false);
   const [theme, setTheme] = useState<Theme>('dark');
-  const [loading, setLoading] = useState(false);
+  const [loadingModules, setLoadingModules] = useState<Record<ModuleId, boolean>>({ text: false, mail: false });
+  const inFlightModules = useRef(new Set<ModuleId>());
+  const loading = loadingModules[activeModule];
   const [composing, setComposing] = useState(false);
-  const [error, setError] = useState('');
+  const [moduleErrors, setModuleErrors] = useState<Record<ModuleId, string>>({ text: '', mail: '' });
+  const error = moduleErrors[activeModule];
+  const setError = (value: string, module: ModuleId = activeModule) =>
+    setModuleErrors(previous => ({ ...previous, [module]: value }));
   const [copied, setCopied] = useState(false);
   const [showResultInfo, setShowResultInfo] = useState(false);
   const [personalLexicon, setPersonalLexicon] = useState<PersonalLexicon>({ pending: [], confirmed: [] });
@@ -118,6 +123,9 @@ export default function HomePage() {
   // Invalidate immediately, before the debounce, so a quick click cannot reuse stale work.
   useEffect(() => {
     editorClient.current?.invalidatePreparation();
+  }, [inputValue, activeModule, composing]);
+
+  useEffect(() => {
     if (loading || composing || !inputValue.trim() || inputValue.length > MAX_TEXT_LENGTH) return;
     const timer = setTimeout(() => {
       editorClient.current ??= new EditorClient();
@@ -158,7 +166,6 @@ export default function HomePage() {
 
   function selectModule(module: ModuleId) {
     setActiveModule(module);
-    setError('');
     setCopied(false);
     setEditingOutput(false);
     setFeedbackOpen(false);
@@ -269,11 +276,13 @@ export default function HomePage() {
   }
 
   async function transform() {
-    if (!inputValue.trim() || loading || diffSource.length > MAX_TEXT_LENGTH) return;
+    if (!inputValue.trim() || inFlightModules.current.has(activeModule) || diffSource.length > MAX_TEXT_LENGTH) return;
 
-    setLoading(true);
+    inFlightModules.current.add(activeModule);
+    setLoadingModules(previous => ({ ...previous, [activeModule]: true }));
     setError('');
     setCopied(false);
+    setEditingOutput(false);
 
     try {
       const requestText = inputValue;
@@ -299,19 +308,18 @@ export default function HomePage() {
         setTextGenerated(improved);
         setTextOutput(improved);
         setTextOutputDocument(plainDocument(improved));
-        setEditingOutput(false);
         setTextMetadata(result.metadata);
       } else {
         setMailGenerated(improved);
         setMailOutput(improved);
         setMailOutputDocument(plainDocument(improved));
-        setEditingOutput(false);
         setMailMetadata(result.metadata);
       }
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : 'Mətn emal edilə bilmədi.');
     } finally {
-      setLoading(false);
+      inFlightModules.current.delete(activeModule);
+      setLoadingModules(previous => ({ ...previous, [activeModule]: false }));
     }
   }
 

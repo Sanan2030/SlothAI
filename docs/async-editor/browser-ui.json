@@ -1,0 +1,77 @@
+{
+  "measuredAtUTC": "2026-10-13T08:58:03.121Z",
+  "browser": "151.0.7922.173",
+  "productionApp": true,
+  "note": "Worker results were held until both UI requests were submitted to exercise pending work and out-of-order routing.",
+  "scenarios": [
+    {
+      "profile": {
+        "cores": 8,
+        "memoryGB": 8
+      },
+      "parallel": true,
+      "requests": [
+        {
+          "strategyId": "text-corrector",
+          "workerIndex": 0
+        },
+        {
+          "strategyId": "gmail-corrector",
+          "workerIndex": 1
+        }
+      ],
+      "outputsRouted": true,
+      "failureIsolated": false,
+      "textOutput": "Mən bu gün məktəbə getdim.",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nHesabat hazırdır.\n\nHörmətlə,",
+      "browserErrors": [],
+      "logsRouted": true
+    },
+    {
+      "profile": {
+        "cores": 2,
+        "memoryGB": 2
+      },
+      "parallel": false,
+      "requests": [
+        {
+          "strategyId": "text-corrector",
+          "workerIndex": 0
+        },
+        {
+          "strategyId": "gmail-corrector",
+          "workerIndex": 0
+        }
+      ],
+      "outputsRouted": true,
+      "failureIsolated": false,
+      "textOutput": "Mən bu gün məktəbə getdim.",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nHesabat hazırdır.\n\nHörmətlə,",
+      "browserErrors": [],
+      "logsRouted": true
+    },
+    {
+      "profile": {
+        "cores": 8,
+        "memoryGB": 8
+      },
+      "parallel": true,
+      "requests": [
+        {
+          "strategyId": "text-corrector",
+          "workerIndex": 0
+        },
+        {
+          "strategyId": "gmail-corrector",
+          "workerIndex": 1
+        }
+      ],
+      "outputsRouted": true,
+      "failureIsolated": true,
+      "textOutput": "failure isolated to text module",
+      "mailOutput": "Salam, hər vaxtınız xeyir.\n\nHesabat hazırdır.\n\nHörmətlə,",
+      "browserErrors": [],
+      "logsRouted": true
+    }
+  ]
+}
