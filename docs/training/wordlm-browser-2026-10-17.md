@@ -69,9 +69,9 @@ Use `correctText(text, false, { useWordLM: false })` for same-code ablation.
 
 ## Verification and limitations
 
-- Node suite: **5,546 total, 5,537 pass, 0 fail, 9 existing TODO**; no skipped tests.
+- Node suite: **5,547 total, 5,538 pass, 0 fail, 9 existing TODO**; no skipped tests.
   The TODO defects are still unresolved, not successful corrections.
-- **23 new WordLM tests**: hashes/export bounds, normalization of all retained
+- **24 new WordLM tests**: hashes/export bounds, normalization of all retained
   histories, OOV mapping, Unicode parity, learned contextual choice, abstention,
   ablation and preservation. Export tests check deterministic output, normalized
   pruning and rejection of failed/incomplete/corrupt completion inputs.
@@ -120,3 +120,15 @@ scoring; the test split is never opened. These tools do not train on evaluation
 references or fit the margin. Fresh installation/dev/build does not export or
 train anything. Source attribution and the publisher-rights limitations are in
 the repository's `THIRD_PARTY_NOTICES.md` and accepted collection records.
+
+## Phrase-rule precedence follow-up
+
+Production CI for the initial integration found one regression in its separate
+400-case unseen evaluation: `bu seher deniz sakit idi` became `Bu şəhər dəniz sakit idi.`.
+The browser projection ran before phrase rules had received the corrected
+right-hand word `dəniz`. The fallback now runs after existing spelling and
+phrase rules, while literal placeholders are still protected. The result is
+`Bu səhər dəniz sakit idi.`; no reference outputs, model counts or thresholds
+were changed. The unseen evaluation now passes **400/400** locally. The added
+regression checks multiple temporal contexts and keeps the existing learned
+city-context example exercised. Full-model/export validation is unchanged.

@@ -324,19 +324,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
         return base + (vowel ? harmony[vowel] : attachedQuestion[2]);
       }
     }
-    let corrected = restoreWord(word);
-    if (corrected === word && runtime.useLocalModel !== false && runtime.useWordLM !== false
-      && /^[a-z]{3,24}$/.test(word) && !isEstablishedSurface(word, services)) {
-      // Opaque literal placeholders and punctuation delimit the local context.
-      const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(restoreWord);
-      const right = wordLMTokens(text.slice(offset + word.length).split(/[.!?;\n\uE000\uE001]/u)[0]).slice(0, 2).map(restoreWord);
-      const selected = chooseWordLMSpelling(word, left, right);
-      if (selected && isEstablishedSurface(selected, services)) {
-        corrected = selected;
-        runtime.trace?.({ stage: 'spelling', original: word, replacement: selected,
-          reason: 'az-v1 WordLM contextual ranking of unresolved dictionary spellings' });
-      }
-    }
+    const corrected = restoreWord(word);
     if (corrected !== word && !/[əçğıöşü]/iu.test(word)) {
       const validated = validatedGeneratedSpelling(corrected);
       if (validated) generatedDictionaryRepairs.set(corrected.toLocaleLowerCase('az-AZ'), validated);
@@ -354,6 +342,21 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   text = expositoryPhrases(text);
   text = businessPhrases(text);
   text = technicalPhrases(text);
+  // Run WordLM only after every existing phrase-level spelling rule has had
+  // its decision. Earlier use could turn a temporal "seher" into "şəhər"
+  // before repairPhrases sees the corrected right-hand word (e.g. "dəniz").
+  if (runtime.useLocalModel !== false && runtime.useWordLM !== false) {
+    text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
+      if (!/^[a-z]{3,24}$/.test(word) || isEstablishedSurface(word, services)) return word;
+      const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(restoreWord);
+      const right = wordLMTokens(text.slice(offset + word.length).split(/[.!?;\n\uE000\uE001]/u)[0]).slice(0, 2).map(restoreWord);
+      const selected = chooseWordLMSpelling(word, left, right);
+      if (!selected || !isEstablishedSurface(selected, services)) return word;
+      runtime.trace?.({ stage: 'spelling', original: word, replacement: selected,
+        reason: 'az-v1 WordLM contextual ranking of unresolved dictionary spellings' });
+      return selected;
+    });
+  }
   if (generatedDictionaryRepairs.size) text = text.replace(/\p{L}+/gu, word => {
     const validated = generatedDictionaryRepairs.get(word.toLocaleLowerCase('az-AZ'));
     return validated ? (/^\p{Lu}/u.test(word) ? validated[0].toLocaleUpperCase('az-AZ') + validated.slice(1) : validated) : word;

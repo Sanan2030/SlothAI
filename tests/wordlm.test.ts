@@ -71,6 +71,17 @@ test('unknown names and suffix backoff are not lexical evidence for a replacemen
   assert.equal(correctText('Kamran seher meşəni qoruyur.').text,'Kamran səhər meşəni qoruyur.');
 });
 
+test('phrase-level temporal decisions run before the WordLM ambiguity fallback', () => {
+  for (const input of ['bu seher deniz sakit idi', 'bu seher sakitdir', 'seher muellim geldi']) {
+    const events: { original: string; replacement: string; reason: string }[]=[];
+    const actual=correctText(input,false,{trace:event=>events.push(event)}).text;
+    if (input === 'bu seher deniz sakit idi') assert.equal(actual,'Bu səhər dəniz sakit idi.');
+    else assert.ok(actual.toLocaleLowerCase('az-AZ').includes('səhər'));
+    assert.equal(actual,correctText(input,false,{useWordLM:false}).text);
+    assert.ok(!events.some(event=>event.reason.includes('WordLM')));
+  }
+});
+
 for (const input of ['səhər yaxşıdır', 'şəhər gözəldir', 'həyət genişdir', 'heyət gəldi',
   'men bu gun mektebe getdim', 'Sənan Bakıya gedir', 'İŞIQ yanır',
   'API request backend sistemde saxlanilir', '`seher` sözü',

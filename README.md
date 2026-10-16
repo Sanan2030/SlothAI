@@ -163,9 +163,9 @@ It resets on cold starts and is not shared across server instances.
 
 ## Current verification and quality
 
-The 17 October WordLM integration passed **5,537 tests with no failures**; the
+The 17 October WordLM integration passed **5,538 tests with no failures**; the
 **9 pre-existing TODO cases** remain documented defects, not passing behavior.
-The 23 new WordLM checks cover artifact hashes, probability mass, OOV classes,
+The 24 new WordLM checks cover artifact hashes, probability mass, OOV classes,
 Azerbaijani/Unicode normalization, on/off behavior and literal/name preservation.
 Typecheck, lint, production build, HTTP smoke and enforced performance budgets
 passed. Python training contracts passed with five optional neural tests skipped.

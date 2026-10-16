@@ -1,14 +1,14 @@
 {
   "node": "v24.19.0",
   "applicationTests": {
-    "total": 5546,
-    "pass": 5537,
+    "total": 5547,
+    "pass": 5538,
     "fail": 0,
     "todo": 9,
     "skipped": 0
   },
   "wordlmTests": {
-    "pass": 23,
+    "pass": 24,
     "fail": 0
   },
   "pythonContracts": {
@@ -35,7 +35,7 @@
     {
       "path": "/api/transform",
       "status": 200,
-      "transformedText": "Bu \u015f\u0259h\u0259r g\u00f6z\u0259ldir."
+      "transformedText": "Bu şəhər gözəldir."
     }
   ],
   "benchmark": {
@@ -51,5 +51,32 @@
     "ceilingMs": 10000
   },
   "browserBundleContainsSourceModelSHA256": true,
-  "interactiveBrowserTested": false
+  "interactiveBrowserTested": false,
+  "phraseRulePrecedenceFollowup": {
+    "previousCI": "https://github.com/Sanan2030/SlothAI/actions/runs/38961437379",
+    "failedCase": "unseen-ascii-1",
+    "localUnseenEvaluation": {
+      "total": 400,
+      "passed": 400,
+      "failed": 0
+    },
+    "productionHTTP": [
+      {
+        "input": "bu seher deniz sakit idi",
+        "output": "Bu səhər dəniz sakit idi.",
+        "status": 200
+      },
+      {
+        "input": "bu seher gozeldir",
+        "output": "Bu şəhər gözəldir.",
+        "status": 200
+      }
+    ],
+    "modelCountsChanged": false,
+    "referenceOutputsChanged": false,
+    "enforcedBenchmark": "passed",
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed"
+  }
 }
