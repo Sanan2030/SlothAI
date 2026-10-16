@@ -1,0 +1,55 @@
+{
+  "node": "v24.19.0",
+  "applicationTests": {
+    "total": 5546,
+    "pass": 5537,
+    "fail": 0,
+    "todo": 9,
+    "skipped": 0
+  },
+  "wordlmTests": {
+    "pass": 23,
+    "fail": 0
+  },
+  "pythonContracts": {
+    "total": 35,
+    "pass": 30,
+    "skippedOptionalNeural": 5
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "http": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/strategies",
+      "status": 200
+    },
+    {
+      "path": "/api/transform",
+      "status": 200,
+      "transformedText": "Bu \u015f\u0259h\u0259r g\u00f6z\u0259ldir."
+    }
+  ],
+  "benchmark": {
+    "status": "passed",
+    "scope": "Warm Node process; concurrent checks, not a controlled speed comparison or browser/mobile download/startup measurement",
+    "p95ms": {
+      "20words": 96.46,
+      "100words": 272.91,
+      "500words": 2070.05,
+      "1000words": 2460.06,
+      "5000wordsChunked": 7626.39
+    },
+    "ceilingMs": 10000
+  },
+  "browserBundleContainsSourceModelSHA256": true,
+  "interactiveBrowserTested": false
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "runId": "20261016",
+  "status": "completed",
+  "phase": "completed",
+  "startedAtUTC": "2026-10-16T03:38:26.527023+00:00",
+  "lastSavedAtUTC": "2026-10-16T20:00:15.870440+00:00",
+  "finishedAtUTC": "2026-10-16T20:00:15.870412+00:00",
+  "policy": {
+    "maxVocabulary": 150000,
+    "minimumFrequency": 2,
+    "discount": 0.75,
+    "chunkSentences": 50000,
+    "algorithm": "interpolated-Kneser-Ney-trigram-v1"
+  },
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "trainRowsTotal": 3287357,
+  "trainingRowsComplete": 3287357,
+  "vocabularyRowsComplete": 3287357,
+  "vocabularySize": 150000,
+  "modelSHA256": "923a3832c167329d0bf5bb967c1a06bc9aeaf84516d2079308dce0a411cefc7b",
+  "trainTokens": 59080575,
+  "validationRowsComplete": 1082532,
+  "validationRowsTotal": 1082532,
+  "validationPredictions": 15538971,
+  "validationLogLikelihood": -91845460.39223152,
+  "zeroProbabilityTokens": 0,
+  "validationPerplexity": 368.94687650171585,
+  "testRead": false,
+  "calibrationPerformed": false,
+  "publicationSequence": 195
+}

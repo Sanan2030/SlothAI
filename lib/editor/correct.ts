@@ -1,5 +1,7 @@
 import type { InferenceRunner } from './inference-cache';
 import { hasAttentionCandidate } from './neural/attention-runtime';
+import { chooseWordLMSpelling } from './wordlm/runtime';
+import { wordLMTokens } from './wordlm/core';
 import { guardInsertedBoundaries } from './syntax-boundary-guard';
 import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
 import { observedSpelling, repairObservedSpacing } from './observed-channel';
@@ -50,6 +52,8 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  /** Ablate the completed az-v1 WordLM's conservative browser projection. */
+  useWordLM?: boolean;
   /** Trusted worker speculation, reused only for byte-identical stage context. */
   inference?: InferenceRunner;
   /** Always retains the pre-routing model path for offline A/B evaluation. */
@@ -320,7 +324,19 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
         return base + (vowel ? harmony[vowel] : attachedQuestion[2]);
       }
     }
-    const corrected = restoreWord(word);
+    let corrected = restoreWord(word);
+    if (corrected === word && runtime.useLocalModel !== false && runtime.useWordLM !== false
+      && /^[a-z]{3,24}$/.test(word) && !isEstablishedSurface(word, services)) {
+      // Opaque literal placeholders and punctuation delimit the local context.
+      const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(restoreWord);
+      const right = wordLMTokens(text.slice(offset + word.length).split(/[.!?;\n\uE000\uE001]/u)[0]).slice(0, 2).map(restoreWord);
+      const selected = chooseWordLMSpelling(word, left, right);
+      if (selected && isEstablishedSurface(selected, services)) {
+        corrected = selected;
+        runtime.trace?.({ stage: 'spelling', original: word, replacement: selected,
+          reason: 'az-v1 WordLM contextual ranking of unresolved dictionary spellings' });
+      }
+    }
     if (corrected !== word && !/[əçğıöşü]/iu.test(word)) {
       const validated = validatedGeneratedSpelling(corrected);
       if (validated) generatedDictionaryRepairs.set(corrected.toLocaleLowerCase('az-AZ'), validated);

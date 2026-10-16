@@ -2,18 +2,19 @@
 
 An Azerbaijani text and email editor built with Next.js 16, React and TypeScript.
 It corrects spelling, punctuation, capitalization and layout using a dictionary,
-partial morphology, rules and small bundled statistical/neural classifiers.
+partial morphology, rules, a compact WordLM and bundled statistical/neural classifiers.
 Correction runs locally in browser Workers after application assets load.
 It requires no API key, Python service or GPU to use the editor.
 
-**Current status — 9 October 2026:** the editor uses the Stage 2 preservation
-guard. All six accepted corpus archives passed integrity checks and a fresh
-full data gate. CharSpell, WordLM and PunctCase completed **100k-train/10k-validation
-CPU smoke runs**; their offline artifacts await calibration and browser integration.
-Full-corpus CPU preparation is now running under an explicit supervisor; see the
-[full job launch record and live-status command](docs/training/full-2026-10-09.md).
-See the [measured training results](docs/training/smoke-2026-10-09.md) and
-[code audit and prioritized fixes](docs/current-state-2026-10-08.md).
+**Current status — 17 October 2026:** full-corpus WordLM fitting and validation
+are complete: **3,287,357 train sentences**, **1,082,532 validation sentences**,
+validation perplexity **368.9469**, and **0 zero-probability tokens**.
+A bounded browser projection now ranks unresolved dictionary spelling alternatives
+inside the existing local correction pipeline. Existing rules, established words,
+explicit accents, names/identifiers and protected spans retain their guards.
+This is a statistical Kneser-Ney trigram, not a generative chat model.
+CharSpell and PunctCase still have recorded CPU smoke results; this release does
+not claim their full runs are complete. See the [WordLM integration record](docs/training/wordlm-browser-2026-10-17.md).
 
 ## What you can do
 
@@ -95,6 +96,28 @@ records are not linguistic analyses. Development tracing covers spelling changes
 The bundled classifiers are compact local models; this project is not a general
 language model or a guarantee of arbitrary Azerbaijani grammar/semantic accuracy.
 
+### Integrated WordLM
+
+The completed 2.9 GB SQLite model stays offline. The committed browser projection
+keeps all 150,000 vocabulary words and continuation unigrams, the top 20,000
+continuation bigrams and 40,000 trigrams. Its JSON is **8.46 MB** (**1.78 MB gzip**).
+Pruned probability mass returns to the lower order, keeping distributions normalized.
+It loads with the Worker bundle and needs no backend, API key or Python runtime.
+
+The fallback only considers 2–8 dictionary alternatives for unresolved lowercase
+ASCII words. It requires observed lexical context and a 20:1 score margin; this
+is a fixed engineering guard, not a calibrated channel weight. OOV/suffix-class
+context alone cannot trigger a replacement. For example, `bu seher gozeldir`
+becomes `Bu şəhər gözəldir.`. Explicit `səhər` and `şəhər` remain distinct.
+Offline checks can use `correctText(text, false, { useWordLM: false })` for ablation.
+
+The full model's perplexity does **not** describe the pruned browser projection
+or real correction accuracy. Its separate fixed-export validation and current
+regression checks are recorded in the integration report. In the same-code
+ablation, the existing 500-case holdout and 2,000-case preservation set were
+unchanged; no aggregate correction improvement is established on those sets. No test split was used
+for fitting/export, and no real-error calibration or neural training is claimed.
+
 ### Limits and dictionary
 
 - Maximum request size: **10,000 UTF-16 code units**. An API email's subject and
@@ -139,6 +162,15 @@ strategy, **429** rate limited, **500** unexpected failure. Rate limiting is
 It resets on cold starts and is not shared across server instances.
 
 ## Current verification and quality
+
+The 17 October WordLM integration passed **5,537 tests with no failures**; the
+**9 pre-existing TODO cases** remain documented defects, not passing behavior.
+The 23 new WordLM checks cover artifact hashes, probability mass, OOV classes,
+Azerbaijani/Unicode normalization, on/off behavior and literal/name preservation.
+Typecheck, lint, production build, HTTP smoke and enforced performance budgets
+passed. Python training contracts passed with five optional neural tests skipped.
+See the [integration record](docs/training/wordlm-browser-2026-10-17.md) for scope
+and the separate full-model/browser measurements.
 
 The recorded 8 October runtime/preparation commit `0bf77b9` passed GitHub production validation,
 offline training contracts and its Vercel preview build. The recorded local suite
@@ -204,7 +236,7 @@ for actual timings, memory, counts, configuration and synthetic validation.
 | Offline experiment | Training input | Integration status |
 | --- | --- | --- |
 | CharSpell | Synthetic noisy→clean pairs plus identity examples | CPU smoke completed; character-CNN candidate scorer, Python checkpoint, browser export pending. |
-| WordLM | Clean train text only | CPU smoke completed; SQLite Kneser-Ney 3-gram, correction benefit/lambda unmeasured. |
+| WordLM | All 3,287,357 clean train sentences | Full validation completed; compact browser fallback integrated. Real-error benefit/lambda remains uncalibrated. |
 | PunctCase | Punctuation/case labels from clean train text | CPU smoke completed; character-CNN + BiGRU, browser export pending. |
 
 Smoke used 100,000 train and 10,000 validation sentences, seed 20261007. CharSpell
@@ -212,20 +244,20 @@ completed in 32m47s, WordLM in 29s and PunctCase in 7m18s, including command sta
 and hash guards. CharSpell changed-word top-1 was 64.92% when the target was
 retrieved, or 60.63% including retrieval misses; it falsely changed 307/91,028
 unchanged validation words. Its 97.95% aggregate top-1 includes many unchanged
-words and is not overall correction quality. Full training remains a separate run.
+words and is not overall correction quality. These are historical smoke measurements; the completed full WordLM result is recorded above.
 
-The full CPU job was launched on 9 October. It prepares all 3,287,357 train and
-1,082,532 validation rows, then schedules WordLM → PunctCase → CharSpell.
-The [dated launch record](docs/training/full-2026-10-09.md) distinguishes active
-preparation from actual fitting and completed results. Check live state with
-`.venv-training/bin/python -m training.full_job status`.
+The 9 October CPU job launch record is historical. The resumable WordLM run
+`20261016` completed fitting, all four derived tables and full validation at
+00:00 Baku on 17 October. Its [completion receipt](docs/training/wordlm-full-2026-10-17.json)
+binds the full model SHA-256 and accepted manifest. This does not establish a
+currently running CharSpell/PunctCase process.
 
-Training is explicit. Editor installation/build/start never trains this corpus;
-offline tools never automatically replace active app weights. Full training
-requires a successful same-stage 100k–500k smoke receipt. Stage acceptance,
-real-error calibration, TypeScript/int8 parity and browser integration are still
-separate work. Calibration needs its own `data/calibration/` real-error set,
-not the five-million corpus, test split or phase0 references.
+Training is explicit. Editor installation/build/start never trains this corpus.
+The new WordLM projection is a deliberate app integration; other offline tools
+still do not automatically replace active weights. Full neural training, real-error
+calibration and CharSpell/PunctCase browser export remain separate work.
+Calibration needs its own `data/calibration/` real-error set, not the five-million
+corpus, test split or phase0 references.
 
 The corpus has residual OCR/spelling/segmentation risk, limited email coverage
 and synthetic errors. Synthetic validation must not be presented as real-text
@@ -266,6 +298,3 @@ Historical details: [reviewed neural models](docs/reviewed-neural-training.md),
 [document ranker](docs/document-training.md),
 [performance audit](docs/performance-audit/README.md),
 [gold references](docs/gold-1000-2026-09-30.md).
-
-.
-.

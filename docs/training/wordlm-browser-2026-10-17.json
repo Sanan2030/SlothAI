@@ -1,0 +1,17 @@
+{
+  "sourceModelSHA256": "923a3832c167329d0bf5bb967c1a06bc9aeaf84516d2079308dce0a411cefc7b",
+  "artifactSHA256": "0b0be7ceb6aa5fee70863a4bd978ba72615d4b3c2e14d85a113e951fe5785ba6",
+  "artifactBytes": 8459691,
+  "gzipBytes": 1782693,
+  "vocabularySymbols": 150023,
+  "bigrams": 20000,
+  "trigrams": 40000,
+  "trainRows": 3287357,
+  "validationRows": 1082532,
+  "fullModelValidationPerplexity": 368.94687650171585,
+  "fullModelZeroProbabilityTokens": 0,
+  "projectionValidationPerplexity": null,
+  "realErrorCalibration": false,
+  "testRead": false,
+  "exporterSHA256": "a64690404f74566e5404821cc3b71c99dbf5a6ee6e954c78c66b55d08019b4d1"
+}

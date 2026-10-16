@@ -1,0 +1,24 @@
+{
+  "scope": "Same-code ablation on existing assistant engineering references; not independent real-user accuracy",
+  "calibrationPerformed": false,
+  "datasets": {
+    "holdout-500": {
+      "rows": 500,
+      "offExact": 393,
+      "onExact": 393,
+      "improved": 0,
+      "regressed": 0,
+      "changed": 0,
+      "changedIds": []
+    },
+    "no-harm-2000": {
+      "rows": 2000,
+      "offExact": 2000,
+      "onExact": 2000,
+      "improved": 0,
+      "regressed": 0,
+      "changed": 0,
+      "changedIds": []
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "rows": 1082532,
+  "predictions": 15538971,
+  "zeroProbabilityTokens": 0,
+  "perplexity": 1419.0475512630517,
+  "artifactSHA256": "0b0be7ceb6aa5fee70863a4bd978ba72615d4b3c2e14d85a113e951fe5785ba6",
+  "inputSHA256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717",
+  "testRead": false,
+  "calibrationPerformed": false,
+  "scope": "Fixed browser projection; mapped vocabulary/suffix classes, not correction accuracy"
+}

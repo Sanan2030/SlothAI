@@ -85,7 +85,10 @@
     "training:test:models": ".venv-training/bin/python -m unittest training.tests.test_models",
     "training:charspell": ".venv-training/bin/python -m training.cli train charspell",
     "training:wordlm": "python3 -m training.cli train wordlm",
-    "training:punctcase": ".venv-training/bin/python -m training.cli train punctcase"
+    "training:punctcase": ".venv-training/bin/python -m training.cli train punctcase",
+    "wordlm:export": "python3 -m training.export_wordlm",
+    "wordlm:validate": "node --import tsx scripts/evaluate-wordlm-browser.ts",
+    "wordlm:ablation": "node --import tsx scripts/evaluate-wordlm-correction.ts"
   },
   "engines": {
     "node": ">=20.9.0"

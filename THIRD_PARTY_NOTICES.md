@@ -22,5 +22,23 @@ The surrounding mention sentences and holdout/calibration clauses were authored
 by the assistant for this project, not copied from an outside text corpus and
 not reviewed by a linguist. These frozen datasets are evaluation/calibration-only;
 they do not train weights. No new Wikipedia/CC BY-SA/GFDL text or pretrained
-model was imported in phase 0, and no decision about licensing derived model
-weights has been made. That owner decision remains a phase 1 prerequisite.
+model was imported in phase 0. No new license determination is implied by those
+evaluation references.
+
+## az-v1 WordLM browser projection (17 October 2026)
+
+`lib/editor/wordlm/model.json` contains derived statistical counts/probabilities
+from the accepted LocalDoc/AzTC-full snapshot, not redistributed corpus sentences.
+Dataset publisher: LocalDoc. Publisher declaration: CC BY 4.0; original source
+notices and the accepted restricted-use record remain in
+`docs/stage1/collection/sources.json` and `accepted-2026-10-08.md`.
+Pinned source/license evidence:
+https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md
+License: https://creativecommons.org/licenses/by/4.0/
+
+Changes: mechanical filtering/splitting, train-only vocabulary and Kneser-Ney
+count fitting, followed by bounded top-count projection and backoff-mass
+redistribution. Model/export hashes and limitations are recorded in
+`docs/training/wordlm-browser-2026-10-17.md`. The publisher declaration and owner
+acceptance do not independently clear every underlying source work or relicense
+unrelated app code. The separate MPL-2.0 dictionary remains covered above.
