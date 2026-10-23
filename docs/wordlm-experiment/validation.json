@@ -1,0 +1,246 @@
+{
+  "source": "data/local-ai/pairs.json",
+  "sourceSHA256": "d1d32292d871df49e59f3d44145b8107c8fc0848e3ca820a1874f6454918006f",
+  "provenance": "Existing assistant-authored synthetic validation families; not real-error probability calibration.",
+  "validationRows": 120,
+  "validationFamilies": 20,
+  "baseline": {
+    "counts": {
+      "tp": 536,
+      "fp": 39,
+      "fn": 84,
+      "abstainedErrors": 45,
+      "required": 620,
+      "correctWords": 508,
+      "harmedWords": 0,
+      "exact": 61,
+      "identity": 20,
+      "harmedIdentitySentences": 0,
+      "unstable": 0
+    },
+    "improvedIds": [],
+    "regressedIds": [],
+    "newFalseEditIds": []
+  },
+  "trials": [
+    {
+      "policy": {
+        "lmWeight": 1,
+        "editPenalty": 4,
+        "changePenalty": 1,
+        "minimumMargin": 4.605170185988092
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 1,
+        "editPenalty": 2,
+        "changePenalty": 1,
+        "minimumMargin": 4.605170185988092
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 0.5,
+        "editPenalty": 4,
+        "changePenalty": 1,
+        "minimumMargin": 2.995732273553991
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 1,
+        "editPenalty": 4,
+        "changePenalty": 1,
+        "minimumMargin": 2.995732273553991
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 0.5,
+        "editPenalty": 2,
+        "changePenalty": 1,
+        "minimumMargin": 2.995732273553991
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 1,
+        "editPenalty": 2,
+        "changePenalty": 1,
+        "minimumMargin": 2.995732273553991
+      },
+      "counts": {
+        "tp": 537,
+        "fp": 38,
+        "fn": 83,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 62,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [
+        "local-184-4"
+      ],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 0.5,
+        "editPenalty": 4,
+        "changePenalty": 1,
+        "minimumMargin": 4.605170185988092
+      },
+      "counts": {
+        "tp": 536,
+        "fp": 39,
+        "fn": 84,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 61,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    },
+    {
+      "policy": {
+        "lmWeight": 0.5,
+        "editPenalty": 2,
+        "changePenalty": 1,
+        "minimumMargin": 4.605170185988092
+      },
+      "counts": {
+        "tp": 536,
+        "fp": 39,
+        "fn": 84,
+        "abstainedErrors": 45,
+        "required": 620,
+        "correctWords": 508,
+        "harmedWords": 0,
+        "exact": 61,
+        "identity": 20,
+        "harmedIdentitySentences": 0,
+        "unstable": 0
+      },
+      "improvedIds": [],
+      "regressedIds": [],
+      "newFalseEditIds": [],
+      "safe": true
+    }
+  ],
+  "selected": {
+    "lmWeight": 1,
+    "editPenalty": 4,
+    "changePenalty": 1,
+    "minimumMargin": 4.605170185988092
+  },
+  "validationGate": true
+}

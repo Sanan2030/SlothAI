@@ -1,4 +1,7 @@
 import type { InferenceRunner } from './inference-cache';
+import { literalPattern, withProtectedCode, withProtectedLiterals } from './literal-spans';
+import { editorStage, type DiagnosticSink } from './diagnostics';
+import { selectSpellingWithWordLM, type WordLMSelectionPolicy } from './wordlm/selection';
 import { hasAttentionCandidate } from './neural/attention-runtime';
 import { chooseWordLMSpelling } from './wordlm/runtime';
 import { wordLMTokens } from './wordlm/core';
@@ -52,7 +55,12 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
-  /** Ablate the completed az-v1 WordLM's conservative browser projection. */
+  /** Opt-in experimental joint ranking; normal application behavior stays on fallback. */
+  wordLMMode?: 'fallback' | 'experimental';
+  wordLMPolicy?: WordLMSelectionPolicy;
+  /** Local development tracing only; callbacks are never sent over HTTP/Workers. */
+  diagnostics?: DiagnosticSink;
+  /** Explicit true also enables WordLM when other local models are disabled. */
   useWordLM?: boolean;
   /** Trusted worker speculation, reused only for byte-identical stage context. */
   inference?: InferenceRunner;
@@ -103,6 +111,7 @@ function capitalize(text: string): string {
 }
 
 function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntime = {}): string {
+  const stage = (source: string, category: 'rule' | 'model' | 'format', input: string, operation: (value: string) => string) => editorStage(runtime.diagnostics, source, category, input, operation);
   if (!line.trim()) return '';
   // Documentary headings and standalone subtitles are structure, not prose.
   if (/^===.+===$/u.test(line.trim()) || /^[A-ZƏÇĞIİÖŞÜ\s-]{3,}$/u.test(line.trim()) || (/^\(.+\)$/u.test(line.trim()) && line.trim().length <= 160)) return line.trim();
@@ -110,7 +119,7 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
   if (/^mövzu:/i.test(line.trim())) return capitalize(line.trim());
   if (/^hörmətlə[,!.]?$/i.test(line.trim())) return 'Hörmətlə,';
   if (/^hörmətli [^.!?]+[,]?$/i.test(line.trim()) && (/^hörmətli\s+\p{L}+(?:\s+(?:xanım|bəy))?[,]?$/iu.test(line.trim()) || !line.split(/\s+/u).some(isFinitePredicate))) return capitalize(line.trim().replace(/[,.]?$/, ','));
-  let result = line.replace(/[\t ]+/g, ' ').trim()
+  let result = stage('punctuation-spacing', 'rule', line, value => value.replace(/[\t ]+/g, ' ').trim()
     .replace(/\(\s+/g, '(').replace(/\s+\)/g, ')')
     .replace(/([,;:!?])\1+/g, '$1')
     .replace(/\.{2,}/g, '.')
@@ -118,27 +127,27 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
     .replace(/\s+\./g, '.')
     .replace(/\.(?=[A-Za-zƏəÇçĞğİıÖöŞşÜü])/g, '. ')
     .replace(/\s+([,;:!?])/g, '$1')
-    .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 ');
+    .replace(/([,;:!?])(?=[a-zA-ZəƏçÇğĞıİöÖşŞüÜ])/g, '$1 '));
   const boundarySource = result;
-  result = sentenceBoundaries(result);
-  result = punctuateNarrative(result);
-  result = extendedBoundaries(result);
-  result = punctuateExpository(result);
-  result = punctuateBusiness(result);
-  result = punctuateTechnical(result);
-  result = segmentDiscourseClauses(segmentCorrespondence(segmentIndependentClauses(result)), isFinitePredicate);
+  result = stage('sentenceBoundaries', 'rule', result, sentenceBoundaries);
+  result = stage('punctuateNarrative', 'rule', result, punctuateNarrative);
+  result = stage('extendedBoundaries', 'rule', result, extendedBoundaries);
+  result = stage('punctuateExpository', 'rule', result, punctuateExpository);
+  result = stage('punctuateBusiness', 'rule', result, punctuateBusiness);
+  result = stage('punctuateTechnical', 'rule', result, punctuateTechnical);
+  result = stage('deterministic-clause-boundaries', 'rule', result, value => segmentDiscourseClauses(segmentCorrespondence(segmentIndependentClauses(value)), isFinitePredicate));
   // Scope-aware learned decisions run after deterministic clauses have been established.
-  if (useLocalModel) result = insertLearnedBoundaries(result);
-  if (useLocalModel) result = insertJointBoundaries(result, jointArtifact as JointBoundaryModel);
-  if (useLocalModel && runtime.useNeuralBoundary !== false) result = runtime.boundaryModel ? insertNeuralBoundaries(result, runtime.boundaryModel)
-    : runtime.inference?.('sentence-boundary', result, () => insertNeuralBoundaries(result)) ?? insertNeuralBoundaries(result);
-  result = guardInsertedBoundaries(boundarySource, segmentTechnicalNounClauses(result));
-  result = punctuateConversation(punctuateCausalTransition(punctuateCommas(result)));
+  if (useLocalModel) result = stage('insertLearnedBoundaries', 'model', result, insertLearnedBoundaries);
+  if (useLocalModel) result = stage('joint-boundary', 'model', result, value => insertJointBoundaries(value, jointArtifact as JointBoundaryModel));
+  if (useLocalModel && runtime.useNeuralBoundary !== false) result = stage('neural-boundary', 'model', result, value => runtime.boundaryModel ? insertNeuralBoundaries(value, runtime.boundaryModel)
+    : runtime.inference?.('sentence-boundary', value, () => insertNeuralBoundaries(value)) ?? insertNeuralBoundaries(value));
+  result = stage('boundary-guard', 'rule', result, value => guardInsertedBoundaries(boundarySource, segmentTechnicalNounClauses(value)));
+  result = stage('comma-and-conversation-rules', 'rule', result, value => punctuateConversation(punctuateCausalTransition(punctuateCommas(value))));
   // Only well-defined conversational patterns are split; no guessed sentence
   // boundary before every pronoun or arbitrary verb.
-  result = result
+  result = stage('greeting-and-question-rules', 'rule', result, value => value
     .replace(/^(salam)\s+(?=[a-zəçğıöşü])/i, '$1, ')
-    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|\s+(?:necə|nə)\s|$)/gi, '$1$2?');
+    .replace(/(^|^salam,\s*|[.!?]\s+)(necəsən|necəsiniz)(?=\s+(?:mən|sən|biz|siz)\s|\s+(?:necə|nə)\s|$)/gi, '$1$2?'));
   if (!/[.!?:;…]["”»)]?$/.test(result)) {
     const lastSentence = result.split(/[.!?]\s+/).at(-1) ?? result;
     const indirect = /(?:bilirəm|bilirik|bilirsiniz|öyrəndim|izah etdi|dedi)[)”»"]?$/i.test(lastSentence)
@@ -148,9 +157,9 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
     const alternativeQuestion = /,\s*yoxsa\s+[^.!?]+$/iu.test(lastSentence);
     const tagQuestion = /,\s*düzdür$/iu.test(lastSentence);
     const question = !indirect && !exclamation && !discourseMarker && (alternativeQuestion || tagQuestion || detectQuestion(lastSentence));
-    result = question && !detectExclamation(result) ? result + '?' : terminalPunctuation(result);
+    result = stage('terminal-punctuation', 'rule', result, value => question && !detectExclamation(value) ? value + '?' : terminalPunctuation(value));
   }
-  return capitalize(result);
+  return stage('capitalization', 'format', result, capitalize);
 }
 
 function enumerate(line: string): string[] {
@@ -184,10 +193,12 @@ export function correctText(input: string, preserveFormatting = false, runtime: 
   const structured = editOCRLabels(input, edit) ?? editStructuredText(input, edit, preserveFormatting) ?? editHTMLStructure(input, edit);
   const result = structured === undefined ? correctPlainText(input, preserveFormatting, runtime)
     : { text: structured, corrections: structured === input ? 0 : Math.max(1, corrections) };
+  if (structured !== undefined) editorStage(runtime.diagnostics, 'structured-document', 'rule', input, () => structured);
   // A dangling example introducer is an unfinished clause, not a new sentence.
   // Do not invent the missing example or touch complete enumerations/markup.
   if (structured === undefined && /\bvar\s+(?:meselen|məsələn)\s*$/iu.test(input)) {
     const repaired = result.text.replace(/\.\s+Məsələn\.$/u, ', məsələn…').replace(/^Burda(?=\s)/u, 'Burada');
+    editorStage(runtime.diagnostics, 'unfinished-example-rule', 'rule', result.text, () => repaired);
     return { text: repaired, corrections: repaired === result.text ? result.corrections : result.corrections + 1 };
   }
   return result;
@@ -197,6 +208,8 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   const services = runtime.services ?? languageServices;
+  const useWordLM = runtime.useWordLM !== false && (runtime.useLocalModel !== false || runtime.useWordLM === true);
+  const stage = (source: string, category: 'rule' | 'model' | 'format', input: string, operation: (value: string) => string) => editorStage(runtime.diagnostics, source, category, input, operation);
   const restoreWord = (word: string) => isCanonicalEntity(word) || isLogSurface(word) || isOCRSurface(word) || /^eləmi$/iu.test(word) ? word : services.spelling.resolve(word, services);
   const protectedText: string[] = [];
   // Reserve an unused delimiter; user-supplied private-use characters cannot
@@ -205,9 +218,13 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   while (input.includes(marker)) marker += '\uE000';
   const protect = (value: string) => `${marker}${protectedText.push(value) - 1}\uE001`;
   // Attribute values (including ?id=7) are markup, not sentence punctuation.
-  let text = input.replace(/<!--[\s\S]*?-->|```[\s\S]*?```|`[^`\n]*`|\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)|<\/?[A-Za-z][^<>\n]*?>|https?:\/\/[^\s<>]+|\bas is\b|\bto be\b|\bchess comda\b|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:www\.[\w.-]+|[\w-]+\.(?:com|org|net|az))\b|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/gi, value => {
+  // One scan prevents nested placeholders inside HTML attributes/Markdown links.
+  const protectedPattern = new RegExp(/<!--[\s\S]*?-->|\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)|<\/?[A-Za-z][^<>\n]*?>/.source
+    + '|' + literalPattern().source + '|'
+    + /\bas is\b|\bto be\b|\bchess comda\b|\b\d+(?:[.,:\/-]\d+)+(?:%|\b)|\b(?:dr|prof|dos|müh)\.(?=\s)|\b[A-Za-z]+[A-Za-z0-9]*[_/][\w/.-]+\b/.source, 'giu');
+  let text = input.replace(protectedPattern, value => {
     if (/^chess comda$/i.test(value)) return protect('Chess.com-da');
-    if (/^https?:/.test(value)) {
+    if (/^(?:https?:\/\/|www\.)/iu.test(value)) {
       const suffix = value.match(/[.,!?;:]+$/)?.[0] ?? '';
       return protect(suffix ? value.slice(0, -suffix.length) : value) + suffix;
     }
@@ -217,46 +234,49 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // not a sentence boundary; preserve the author's spacing and spelling.
   text = protectWordMentions(text, protect, word => isEstablishedSurface(word, services));
   text = protectInitialNames(text, protect);
-  if (runtime.useLocalModel !== false) text = runtime.inference?.('log-spelling', text, () => logSpelling(text)) ?? logSpelling(text);
-  text = text.replace(/\r\n?/g, '\n').normalize('NFC');
-  text = prepareTechnicalPhrases(text);
+  // Preserve raw word evidence before any model/rule rewrites; literal spans are opaque.
+  const originalSpellingText = text;
+  if (runtime.useLocalModel !== false) text = stage('log-spelling', 'model', text, value => runtime.inference?.('log-spelling', value, () => logSpelling(value)) ?? logSpelling(value));
+  text = stage('unicode-normalization', 'format', text, value => value.replace(/\r\n?/g, '\n').normalize('NFC'));
+  text = stage('prepareTechnicalPhrases', 'rule', text, prepareTechnicalPhrases);
   // Numeric/date/version values take Azerbaijani suffixes with a hyphen.
-  text = text
+  text = stage('early-numeric-suffix-rules', 'rule', text, value => value
     .replace(/(\d{1,2}:\d{2})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
     .replace(/(\d+(?:\.\d+){1,3})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
-    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə');
+    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə'));
   // Keep lexical terminology visible to clause rules. Only punctuation-bearing
   // terms need opaque spans; spelling resolution already protects lexical terms.
-  text = protectKnownTerminology(text, canonical =>
-    /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical);
-  text = protectMultiwordEntities(text, protect);
-  text = resolveEntitiesInText(text);
+  text = stage('terminology-normalization-and-shielding', 'rule', text, value => protectKnownTerminology(value, canonical =>
+    /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical));
+  text = stage('multiword-entity-normalization-and-shielding', 'rule', text, value => protectMultiwordEntities(value, protect));
+  text = stage('resolveEntitiesInText', 'rule', text, resolveEntitiesInText);
   // Hunger adjective "ac" becomes opaque to prevent ac/aç overcorrection.
   // Establish its subject comma while the grammatical evidence is visible.
-  text = preserveContextualHomographs(punctuateSubjectPronouns(text), protect);
+  text = stage('subject-pronoun-commas', 'rule', text, punctuateSubjectPronouns);
+  text = stage('homograph-preservation', 'rule', text, value => preserveContextualHomographs(value, protect));
   const alwaysInfer = runtime.modelPolicy === 'always';
   const inferWord = spellingInferenceGate(restoreWord, services);
   if (runtime.useObservedChannel !== false && (alwaysInfer || needsSpellingInference(text, inferWord))) {
-    text = repairObservedSpacing(text);
+    text = stage('repairObservedSpacing', 'model', text, repairObservedSpacing);
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+/gu, word => {
       const selected = observedSpelling(word);
       if (!selected) return word;
       runtime.trace?.({ stage: 'spelling', original: word, replacement: selected, reason: 'reviewed real-input edit channel + verified morphology' });
-      return /^\p{Lu}/u.test(word) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected;
+      return stage('observed-channel', 'model', word, () => /^\p{Lu}/u.test(word) ? selected[0].toLocaleUpperCase('az-AZ') + selected.slice(1) : selected);
     });
   }
   const useSpellingModels = runtime.useLocalModel !== false && (alwaysInfer || needsSpellingInference(text, inferWord));
-  if (useSpellingModels && runtime.useAttention !== false) text = neuralTranspositions(text, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined), alwaysInfer ? undefined : inferWord);
+  if (useSpellingModels && runtime.useAttention !== false) text = stage('attention-and-bounded-spelling', 'model', text, value => neuralTranspositions(value, protect, runtime.neuralFallback ?? (runtime.useBounded === false ? null : undefined), alwaysInfer ? undefined : inferWord));
   // Type names are identifiers, not Azerbaijani prose (integer must not become
   // dotted-capital İnteger at the beginning of a generated sentence).
   text = text.replace(/(?<![\p{L}\p{N}_])(?:integer|string|protobuf|integration|timer)(?![\p{L}\p{N}_])/giu, protect);
-  text = prepareReviewedContext(beforeLexicalCorrection(text));
-  text = prepareTechnicalPhrases(text);
-  text = text.replace(/(^|[^\p{L}])bes(?=\s+(?:sen|sən|siz|biz|o)(?=$|[^\p{L}]))/giu, '$1bəs');
+  text = stage('reviewed-prelexical-rules', 'rule', text, value => prepareReviewedContext(beforeLexicalCorrection(value)));
+  text = stage('prepareTechnicalPhrases', 'rule', text, prepareTechnicalPhrases);
+  text = stage('discourse-particle-rule', 'rule', text, value => value.replace(/(^|[^\p{L}])bes(?=\s+(?:sen|sən|siz|biz|o)(?=$|[^\p{L}]))/giu, '$1bəs'));
   // A conjunction versus a location is distinguished only in these explicit
   // predicates; "kitab məndədir" and "məndə kitab var" remain intact.
-  text = text.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
-    '$1mən də $3');
+  text = stage('personal-particle-rule', 'rule', text, value => value.replace(/(^|[^\p{L}])(mende|məndə)\s+(yaxsiyam|yaxşıyam|pisem|pisəm)(?=$|[^\p{L}])/giu,
+    '$1mən də $3'));
   if (useSpellingModels) {
     const paired = createPairedPredictor(text);
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
@@ -270,7 +290,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
         && (dictionaryCandidates(established.toLocaleLowerCase('az-AZ'))?.has(established.toLocaleLowerCase('az-AZ'))
           || productiveMorphology.isValidWordForm(established))) return word;
       runtime.trace?.({ stage: 'spelling', original: word, replacement: candidate, reason: 'paired local model with context/POS' });
-      return candidate;
+      return stage('paired-context-pos', 'model', word, () => candidate);
     });
   }
   // Index letter runs and their whitespace gaps once. The old prefix scan was quadratic.
@@ -306,22 +326,23 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       const nextWord = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1] ?? '';
       const grammatical = chooseByGrammar(word, nextWord ? restoreWord(nextWord) : '',
         previousWord ? restoreWord(previousWord) : '');
-      if (grammatical) return grammatical;
+      if (grammatical) return stage('grammatical-word-choice', 'rule', word, () => grammatical);
     }
-    const contextual = chooseInflectedHomograph(word, () => nearbyEvidence(offset), () => {
+    const contextualRule = chooseInflectedHomograph(word, () => nearbyEvidence(offset), () => {
       const next = text.slice(offset + word.length).match(/^\s+([\p{L}]+)/u)?.[1];
       return next ? restoreWord(next) : '';
     })
-      ?? chooseInflectedPlace(word, previousWord)
-      ?? (alwaysInfer || inferWord(word) ? localPrediction?.(word, offset) : undefined) ?? chooseBySentence(word, context);
-    if (contextual && isEstablishedSurface(contextual, services)) return contextual;
+      ?? chooseInflectedPlace(word, previousWord);
+    const contextualModel = contextualRule === undefined && (alwaysInfer || inferWord(word)) ? localPrediction?.(word, offset) : undefined;
+    const contextual = contextualRule ?? contextualModel ?? chooseBySentence(word, context);
+    if (contextual && isEstablishedSurface(contextual, services)) return stage(contextualModel !== undefined ? 'local-context-model' : 'contextual-word-rule', contextualModel !== undefined ? 'model' : 'rule', word, () => contextual);
     const attachedQuestion = word.match(/^([\p{L}]+(?:dır|dir|dur|dür|acaq|əcək|malı|məli|ır|ir|ur|ür|ırsan|irsən|ursan|ürsən|ıb|ib|ub|üb))(mı|mi|mu|mü)$/iu);
     if (attachedQuestion) {
       const base = restoreWord(attachedQuestion[1]);
       if (base !== attachedQuestion[1]) {
         const vowel = [...base.toLocaleLowerCase('az-AZ')].reverse().find(letter => /[aəeıioöuü]/u.test(letter));
         const harmony: Record<string, string> = { a: 'mı', ı: 'mı', e: 'mi', ə: 'mi', i: 'mi', o: 'mu', u: 'mu', ö: 'mü', ü: 'mü' };
-        return base + (vowel ? harmony[vowel] : attachedQuestion[2]);
+        return stage('question-suffix-harmony', 'rule', word, () => base + (vowel ? harmony[vowel] : attachedQuestion[2]));
       }
     }
     const corrected = restoreWord(word);
@@ -331,21 +352,28 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
     }
     const replacement = corrected !== word || !word.includes('-') ? corrected : word.split('-').map(restoreWord).join('-');
     if (runtime.trace && replacement !== word) runtime.trace({ stage: 'spelling', original: word, replacement, reason: 'language-service spelling resolution' });
-    return replacement;
+    return stage('language-service-spelling', 'rule', word, () => replacement);
   });
-  text = resolveRemainingPredicate(text);
-  if (useSpellingModels) text = neuralSpelling(text, runtime.useAttention !== false);
-  if (useSpellingModels) text = documentSpelling(text);
-  text = normalizeClauseParticles(text);
-  text = prepareReviewedContext(repairPhrases(text));
-  text = extendedPhrases(text);
-  text = expositoryPhrases(text);
-  text = businessPhrases(text);
-  text = technicalPhrases(text);
+  text = stage('resolveRemainingPredicate', 'rule', text, resolveRemainingPredicate);
+  if (useSpellingModels) text = stage('neural-spelling', 'model', text, value => neuralSpelling(value, runtime.useAttention !== false));
+  if (useSpellingModels) text = stage('documentSpelling', 'model', text, documentSpelling);
+  text = stage('normalizeClauseParticles', 'rule', text, normalizeClauseParticles);
+  text = stage('reviewed-phrase-rules', 'rule', text, value => prepareReviewedContext(repairPhrases(value)));
+  text = stage('extendedPhrases', 'rule', text, extendedPhrases);
+  text = stage('expositoryPhrases', 'rule', text, expositoryPhrases);
+  text = stage('businessPhrases', 'rule', text, businessPhrases);
+  text = stage('technicalPhrases', 'rule', text, technicalPhrases);
   // Run WordLM only after every existing phrase-level spelling rule has had
   // its decision. Earlier use could turn a temporal "seher" into "şəhər"
   // before repairPhrases sees the corrected right-hand word (e.g. "dəniz").
-  if (runtime.useLocalModel !== false && runtime.useWordLM !== false) {
+  if (runtime.wordLMMode === 'experimental' || runtime.diagnostics) {
+    const reviewed = selectSpellingWithWordLM(originalSpellingText, text, services, {
+      enabled: useWordLM,
+      experimental: runtime.wordLMMode === 'experimental', policy: runtime.wordLMPolicy, diagnostics: runtime.diagnostics,
+    });
+    if (runtime.wordLMMode === 'experimental') text = stage('wordlm-selection', 'model', text, () => reviewed);
+  }
+  if (runtime.wordLMMode !== 'experimental' && useWordLM) {
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
       if (!/^[a-z]{3,24}$/.test(word) || isEstablishedSurface(word, services)) return word;
       const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(restoreWord);
@@ -359,9 +387,10 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   }
   if (generatedDictionaryRepairs.size) text = text.replace(/\p{L}+/gu, word => {
     const validated = generatedDictionaryRepairs.get(word.toLocaleLowerCase('az-AZ'));
-    return validated ? (/^\p{Lu}/u.test(word) ? validated[0].toLocaleUpperCase('az-AZ') + validated.slice(1) : validated) : word;
+    return stage('generated-form-validation', 'rule', word, () => validated ? (/^\p{Lu}/u.test(word) ? validated[0].toLocaleUpperCase('az-AZ') + validated.slice(1) : validated) : word);
   });
-  if (!preserveFormatting) text = businessLayout(text);
+  if (!preserveFormatting) text = stage('businessLayout', 'format', text, businessLayout);
+  const layoutSource = text;
   const lines = text.split('\n').flatMap(line => {
     if (preserveFormatting) return [line];
     return enumerate(line);
@@ -393,28 +422,29 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
       if (!/[.!?:;…]["”»)]?$/u.test(item)) item += '.';
       return normalizedPrefix! + item;
     }
-    return punctuate(line, runtime.useLocalModel !== false, runtime);
+    return stage('punctuation-and-spacing', 'rule', line, value => punctuate(value, runtime.useLocalModel !== false, runtime));
   }).join('\n').replace(/\n{3,}/g, '\n\n').trim();
+  editorStage(runtime.diagnostics, 'line-layout-and-punctuation', 'format', layoutSource, () => text);
   if (!preserveFormatting) {
-    text = businessStageLists(text);
-    text = narrativeParagraphs(text);
-    text = text.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n');
-    if (!/\n\s*\n/u.test(input)) text = segmentParagraphs(text);
+    text = stage('businessStageLists', 'format', text, businessStageLists);
+    text = stage('narrativeParagraphs', 'format', text, narrativeParagraphs);
+    text = stage('discourse-paragraph-layout', 'format', text, value => value.replace(/([.!?]) +(?=(?:Bundan əlavə|Digər tərəfdən|Nəticə olaraq)(?:\s|$))/g, '$1\n\n'));
+    if (!/\n\s*\n/u.test(input)) text = stage('segmentParagraphs', 'format', text, segmentParagraphs);
   }
-  if (runtime.useLocalModel !== false) text = neuralAgreement(text);
+  if (runtime.useLocalModel !== false) text = stage('neuralAgreement', 'model', text, neuralAgreement);
   text = text.split(marker).map((part, index) => {
     if (!index) return part;
     const end = part.indexOf('\uE001');
     return end < 0 ? marker + part : protectedText[Number(part.slice(0, end))] + part.slice(end + 1);
   }).join('');
   // "gul" is otherwise ambiguous; a flower laid at the martyrs' memorial is unambiguous.
-  text = text.replace(/(Şəhidlər xiyabanında\s+)gul(?=\s+qoyduq(?:$|[^\p{L}]))/giu, '$1gül');
+  text = stage('memorial-context-rule', 'rule', text, input => withProtectedLiterals(input, value => value.replace(/(Şəhidlər xiyabanında\s+)gul(?=\s+qoyduq(?:$|[^\p{L}]))/giu, '$1gül')));
   // Numeric values are protected during lexical correction, so attach
   // Azerbaijani case suffixes only after restoring the protected span.
-  text = text
+  text = stage('numeric-suffix-rules', 'rule', text, input => withProtectedLiterals(input, value => value
     .replace(/(\d{1,2}:\d{2})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
     .replace(/(\d+(?:\.\d+){1,3})\s+(da|də|dan|dən|a|ə)(?=$|[^\p{L}])/giu, '$1-$2')
-    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə');
+    .replace(/(\d{1,2})\s+(e|ə)(?=$|[^\p{L}])/giu, '$1-ə')));
   // Word/punctuation change estimate via common prefix/suffix; never advertised
   // as a linguistic error count. This is linear even for 10k-character inputs.
   const before = input.match(/\S+/g) ?? [];
@@ -427,6 +457,13 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
 }
 
 export function formatEmail(input: string, options: { emailGreeting?: string; omitSubject?: boolean } = {}, runtime: CorrectionRuntime = {}): LocalCorrection {
+  if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
+  if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
+  const text = withProtectedCode(input, value => formatEmailContent(value, options, runtime).text);
+  return { text, corrections: text === input ? 0 : 1 };
+}
+
+function formatEmailContent(input: string, options: { emailGreeting?: string; omitSubject?: boolean }, runtime: CorrectionRuntime): LocalCorrection {
   if (!input.trim()) throw new Error('Mətn boş ola bilməz.');
   if (input.length > MAX_TEXT_LENGTH) throw new Error('Mətn maksimum 10 000 simvol ola bilər.');
   // The dropdown owns the salutation. Remove the same salutation from a pasted
@@ -469,5 +506,6 @@ export function formatEmail(input: string, options: { emailGreeting?: string; om
     letter => letter.toLocaleUpperCase('az-AZ'))).join('\n');
   const text = [options.omitSubject ? '' : `Mövzu: ${subject}`, greeting, body,
     signature ? `${document.closing ?? 'Hörmətlə,'}\n${signature}` : document.closing ?? 'Hörmətlə,'].filter(Boolean).join('\n\n');
+  editorStage(runtime.diagnostics, 'email-envelope', 'format', input, () => text);
   return { text, corrections: text === input ? 0 : 1 };
 }

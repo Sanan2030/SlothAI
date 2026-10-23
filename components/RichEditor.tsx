@@ -3,8 +3,9 @@
 import { useEffect, useRef } from 'react';
 import { Bold, Code2, Italic, List, ListOrdered, Quote, Underline, type LucideIcon } from 'lucide-react';
 import {
-  documentText, parseRichHTML, renderRichDocument, type RichDocument, type RichMark,
+  documentText, editableDocument, parseRichHTML, renderRichDocument, toggleListBlocks, type RichDocument, type RichMark,
 } from '@/lib/ui/rich-document';
+import { readRichSelection, replaceRichSelection, restoreRichSelection, type RichPosition } from '@/lib/ui/rich-selection';
 import { shouldSubmitEditorKey } from '@/lib/ui/editor-keys';
 
 const tagByMark: Record<RichMark, string> = {
@@ -56,6 +57,18 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
   const editor = useRef<HTMLDivElement>(null);
   const last = useRef(value);
   const initialized = useRef(false);
+  const savedRange = useRef<Range | null>(null);
+
+  useEffect(() => {
+    const remember = () => {
+      const selection = window.getSelection();
+      if (selection?.rangeCount && editor.current?.contains(selection.getRangeAt(0).commonAncestorContainer)) {
+        savedRange.current = selection.getRangeAt(0).cloneRange();
+      }
+    };
+    document.addEventListener('selectionchange', remember);
+    return () => document.removeEventListener('selectionchange', remember);
+  }, []);
 
   useEffect(() => {
     if (editor.current && (!initialized.current || last.current !== value)) {
@@ -76,25 +89,31 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
     onChange(next);
   }
 
+  function commit(next: RichDocument, start: RichPosition, end = start) {
+    const root = editor.current;
+    if (!root || maxLength !== undefined && documentText(next).length > maxLength) return;
+    root.replaceChildren(renderRichDocument(next, root.ownerDocument));
+    last.current = next;
+    onChange(next);
+    restoreRichSelection(root, start, end);
+    savedRange.current = window.getSelection()?.getRangeAt(0).cloneRange() ?? null;
+  }
+
   function act(action: RichMark | 'bullet' | 'ordered') {
     const root = editor.current;
     const selection = window.getSelection();
-    if (!root || !selection?.rangeCount || selection.isCollapsed || disabled) return;
-    const range = selection.getRangeAt(0);
-    if (!root.contains(range.commonAncestorContainer)) return;
+    if (!root || disabled) return;
+    const current = selection?.rangeCount ? selection.getRangeAt(0) : null;
+    const range = current && root.contains(current.commonAncestorContainer) ? current : savedRange.current;
+    if (!range || !root.contains(range.commonAncestorContainer)) return;
 
     if (action === 'bullet' || action === 'ordered') {
-      const blocks = [...root.querySelectorAll('p,li')].filter(block => range.intersectsNode(block));
-      if (!blocks.length) return;
-      const list = document.createElement(action === 'bullet' ? 'ul' : 'ol');
-      blocks[0].before(list);
-      for (const block of blocks) {
-        const item = document.createElement('li');
-        item.append(...Array.from(block.childNodes));
-        list.append(item);
-        block.remove();
-      }
+      const selected = readRichSelection(root, range);
+      const lastBlock = selected.end.offset === 0 && selected.end.block > selected.start.block ? selected.end.block - 1 : selected.end.block;
+      const next = toggleListBlocks(selected.document, selected.start.block, lastBlock, action);
+      commit(next, selected.start, selected.end);
     } else {
+      if (range.collapsed || !selection) return;
       const existing = closestTag(range.commonAncestorContainer, tagByMark[action], root);
       if (existing && existing.textContent === range.toString()) {
         existing.replaceWith(...Array.from(existing.childNodes));
@@ -112,7 +131,7 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
         selection.addRange(selectedRange);
       } else wrapRange(range, tagByMark[action]);
     }
-    publish();
+    if (action !== 'bullet' && action !== 'ordered') publish();
   }
 
   function paste(event: React.ClipboardEvent<HTMLDivElement>) {
@@ -123,38 +142,21 @@ export function RichEditor({ value, onChange, label, placeholder, disabled, maxL
     const range = selection.getRangeAt(0);
     if (!root.contains(range.commonAncestorContainer)) return;
     const html = event.clipboardData.getData('text/html');
-    const source = html
-      ? parseRichHTML(html)
-      : { blocks: event.clipboardData.getData('text/plain').replace(/\r\n?/gu, '\n').split('\n')
-        .map(line => ({ type: 'paragraph' as const, children: [{ text: line, marks: [] }] })) };
-    // The caret is usually inside a paragraph. Inserting a <p> or <ul>
-    // directly there creates invalid nested blocks; insert safe inline nodes
-    // and line breaks, then publish normalizes them into top-level blocks.
-    const fragment = root.ownerDocument.createDocumentFragment();
-    let ordered = 0;
-    source.blocks.forEach((block, index) => {
-      if (index) fragment.append(root.ownerDocument.createElement('br'));
-      if (block.type === 'bullet') fragment.append(root.ownerDocument.createTextNode('- '));
-      else if (block.type === 'ordered') fragment.append(root.ownerDocument.createTextNode(`${++ordered}. `));
-      else ordered = 0;
-      const wrapper = renderRichDocument({ blocks: [{ type: 'paragraph', children: block.children }] }, root.ownerDocument);
-      fragment.append(...Array.from(wrapper.firstChild?.childNodes ?? []));
-    });
-    range.deleteContents();
-    range.insertNode(fragment);
-    publish();
+    const source = html ? parseRichHTML(html) : editableDocument(event.clipboardData.getData('text/plain'));
+    const next = replaceRichSelection(readRichSelection(root, range), source);
+    commit(next.document, next.caret);
   }
 
   function drop(event: React.DragEvent<HTMLDivElement>) {
     event.preventDefault();
     const root = editor.current;
+    const selection = window.getSelection();
     const range = document.caretRangeFromPoint?.(event.clientX, event.clientY)
-      ?? window.getSelection()?.getRangeAt(0);
+      ?? (selection?.rangeCount ? selection.getRangeAt(0) : undefined);
     if (!root || !range || !root.contains(range.commonAncestorContainer)) return;
     const raw = event.dataTransfer.getData('text/plain');
-    range.deleteContents();
-    range.insertNode(document.createTextNode(raw));
-    publish();
+    const next = replaceRichSelection(readRichSelection(root, range), editableDocument(raw));
+    commit(next.document, next.caret);
   }
 
   return (

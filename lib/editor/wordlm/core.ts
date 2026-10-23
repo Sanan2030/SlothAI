@@ -36,6 +36,8 @@ export class BrowserWordLM {
     const suffix = suffixes.find(value => lower.endsWith(value) && lower.length > value.length + 2);
     return (suffix ? this.ids.get(`<suffix:${suffix}>`) : undefined) ?? this.ids.get('<unk>')!;
   }
+  hasWord(word: string): boolean { return this.ids.has(word.normalize('NFC').toLocaleLowerCase('az-AZ')); }
+  get vocabularySize(): number { return this.artifact.words.length; }
   probability(left: number, previous: number, word: number): number {
     const unigram = this.artifact.unigrams[word] ?? 0;
     const bigram = (this.bigrams.get(`${previous}:${word}`) ?? 0)

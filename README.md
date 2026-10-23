@@ -52,6 +52,11 @@ outputs are regression references, not correction lookups or automatic training.
 
 ## Run locally
 
+The integrity follow-up fixes URL/code preservation, nested pasted paragraphs,
+empty-output editing and selected numbered/bullet lists. Local engine diagnostics
+compare rules, rules + WordLM, full and experimental joint ranking. The new
+ranking remains opt-in; see [experiment and verification](docs/wordlm-experiment/README.md).
+
 Node **>=20.9**, with Node 24 used in this cloud environment:
 
 ```sh

@@ -1,0 +1,33 @@
+{
+  "node": "v24.19.0",
+  "unitTests": {
+    "tests": 5568,
+    "pass": 5560,
+    "fail": 0,
+    "todo": 8
+  },
+  "browser": {
+    "engine": "Chromium",
+    "passed": 7,
+    "failed": 0
+  },
+  "lint": "passed",
+  "typecheck": "passed (production build)",
+  "productionBuild": "passed, Next.js 16.4.2",
+  "httpSmoke": "http-smoke.json",
+  "performance": "benchmark.json",
+  "experimentalLatency": "latency.json",
+  "productionAudit": {
+    "total": 0
+  },
+  "fullDependencyAudit": {
+    "high": 7,
+    "moderate": 2,
+    "scope": "Development-tool chains; see README limitations"
+  },
+  "modelWeightsChanged": false,
+  "experimentalPolicy": "validation-selected only; acceptance has no aggregate gain; not promoted",
+  "remoteCIExecuted": false,
+  "frozenReferenceTextsChanged": false,
+  "experimentalDefaultEnabled": false
+}

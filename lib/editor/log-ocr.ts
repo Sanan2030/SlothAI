@@ -1,4 +1,5 @@
 import artifact from './log-ocr-model.json';
+import { literalPattern } from './literal-spans';
 
 const mappings: Readonly<Record<string, string>> = artifact.mappings;
 const targets = new Set(Object.values(mappings).flatMap(value => value.split(' ')));
@@ -8,6 +9,7 @@ export const isOCRSurface = (word: string): boolean => targets.has(word.toLocale
  * At least three short labels and two department/division markers are required.
  * Malformed/truncated unknown tokens are retained instead of guessed. */
 export function isOCRLabelList(input: string): boolean {
+  if (literalPattern().test(input)) return false;
   if (/```|~~~|<\/?[A-Za-z]|https?:\/\/|\S+@\S+|(?:^|\n)\s*(?:#{1,6}\s|[-*+]\s|\|)/u.test(input)) return false;
   const lines = input.split(/\r?\n/u).map(line => line.trim()).filter(Boolean);
   return lines.length >= 3 && lines.every(line => line.length <= 180 && !/[.!?]$/u.test(line))

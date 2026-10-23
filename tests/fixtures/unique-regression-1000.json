@@ -22,8 +22,7 @@
     "correction-078": "ASCII açarı is not restored in the lost-key context.",
     "correction-081": "ASCII sərgilənir is not restored.",
     "correction-082": "ASCII tamaşası is not restored.",
-    "correction-088": "The poet/other homograph is not resolved as Şair.",
-    "literal-engine-025": "The editor protects the www domain but rewrites its path/query."
+    "correction-088": "The poet/other homograph is not resolved as Şair."
   },
   "cases": [
     {

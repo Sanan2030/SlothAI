@@ -19,7 +19,7 @@ import type { ExpectedResult } from '@/lib/editor/expected-results';
 import { appendReviewCase, emptyReviewCorpus, type ReviewCorpus } from '@/lib/editor/review-corpus';
 import { downloadReviewCorpus, pickReviewFile, readReviewFile, saveReviewToFile,
   type ReviewFileHandle, type ReviewPickerWindow } from '@/lib/ui/review-file';
-import { documentHTML, documentText, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
+import { documentHTML, documentText, editableDocument, plainDocument, type RichDocument } from '@/lib/ui/rich-document';
 
 type ModuleId = 'text' | 'mail';
 type Theme = 'dark' | 'light';
@@ -307,12 +307,12 @@ export default function HomePage() {
       if (activeModule === 'text') {
         setTextGenerated(improved);
         setTextOutput(improved);
-        setTextOutputDocument(plainDocument(improved));
+        setTextOutputDocument(editableDocument(improved));
         setTextMetadata(result.metadata);
       } else {
         setMailGenerated(improved);
         setMailOutput(improved);
-        setMailOutputDocument(plainDocument(improved));
+        setMailOutputDocument(editableDocument(improved));
         setMailMetadata(result.metadata);
       }
     } catch (cause) {
@@ -514,7 +514,7 @@ export default function HomePage() {
                       <Info size={15} aria-hidden="true" />
                     </button>
                   </div>
-                  {output && <button type="button" className="workspace-icon-btn"
+                  {(output || editingOutput) && <button type="button" className="workspace-icon-btn"
                     onClick={() => setEditingOutput(value => !value)}>
                     {editingOutput ? 'Dəyişiklikləri göstər' : 'Nəticəni redaktə et'}
                   </button>}
@@ -547,7 +547,7 @@ export default function HomePage() {
                 )}
 
                 <div className="workspace-output" aria-live="polite">
-                  {output && editingOutput ? (
+                  {editingOutput ? (
                     <RichEditor value={outputDocument} label="Nəticəni redaktə et"
                       onBlur={collectSuggestions}
                       onChange={document => {

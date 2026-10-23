@@ -31,13 +31,13 @@ assert.equal(new Set(cases.map(({ kind, input, expected, details }) => createHas
   .update(JSON.stringify({ kind, input, expected, details })).digest('hex'))).size, 1000);
 assert.deepEqual(Object.values(fixture.counts), Array(10).fill(100));
 const knownIssues = fixture.knownIssues as Record<string, string>;
-assert.equal(Object.keys(knownIssues).length, 9);
+assert.equal(Object.keys(knownIssues).length, 8);
 for (const id of Object.keys(knownIssues)) assert.ok(cases.some(row => row.id === id));
 const strictAudit = process.env.SLOTH_STRICT_UNIQUE_1000 === '1';
 
 for (const row of cases) {
   // TODO executes the same assertions; it documents pre-existing failures in a
-  // tests-only commit. Strict audit makes these ordinary failures. No skips,
+  // tests-only commit. The fixed URL case now blocks regressions; strict audit makes remaining issues ordinary failures. No skips,
   // output snapshots, softened expectations, or production fixes are included.
   test(`unique-1000/${row.id}: ${row.title}`, {
     todo: !strictAudit && knownIssues[row.id] ? knownIssues[row.id] : false,

@@ -30,6 +30,11 @@ python3 tests/fixtures/generate_unique_regression_1000.py
 
 ## Initial result and known defects
 
+Current follow-up: the `www.` path/query preservation defect is fixed and its
+existing assertion is now blocking. Eight language cases remain TODO; none of
+their input/reference texts have changed. The initial nine-failure record below
+describes the original tests-only run.
+
 The strict first run had **991 passes and 9 failures**, without skips. Eight
 failures concern missing ASCII restoration or homograph disambiguation. The
 ninth changes a `www.` URL's path/query even though its domain is protected.

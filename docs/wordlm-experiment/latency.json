@@ -1,0 +1,38 @@
+{
+  "scope": "Warm local Node engine, repeated synthetic text, five alternating samples per mode; not browser or general workload latency.",
+  "node": "v24.19.0",
+  "rows": [
+    {
+      "words": 100,
+      "chars": 624,
+      "mode": "full",
+      "iterations": 5,
+      "p50Ms": 128.42722999999978,
+      "p95Ms": 151.9074389999996
+    },
+    {
+      "words": 100,
+      "chars": 624,
+      "mode": "experimental",
+      "iterations": 5,
+      "p50Ms": 150.08417499999996,
+      "p95Ms": 200.6310840000001
+    },
+    {
+      "words": 1000,
+      "chars": 6268,
+      "mode": "full",
+      "iterations": 5,
+      "p50Ms": 986.6408910000009,
+      "p95Ms": 1012.8820570000007
+    },
+    {
+      "words": 1000,
+      "chars": 6268,
+      "mode": "experimental",
+      "iterations": 5,
+      "p50Ms": 1228.8049980000014,
+      "p95Ms": 1310.539648
+    }
+  ]
+}

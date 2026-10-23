@@ -299,6 +299,6 @@ result={'schemaVersion':1,'description':'1000 distinct deterministic contract sc
             'correction-081':'ASCII sərgilənir is not restored.',
             'correction-082':'ASCII tamaşası is not restored.',
             'correction-088':'The poet/other homograph is not resolved as Şair.',
-            'literal-engine-025':'The editor protects the www domain but rewrites its path/query.'},
+        },
         'cases':cases}
 Path(__file__).with_name('unique-regression-1000.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

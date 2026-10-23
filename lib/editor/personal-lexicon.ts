@@ -1,3 +1,4 @@
+import { literalPattern } from './literal-spans';
 /** Explicitly confirmed, browser-only corrections. No document text is stored. */
 export interface PersonalRule { source: string; target: string; left: string; right: string }
 export interface PersonalLexicon { pending: PersonalRule[]; confirmed: PersonalRule[] }
@@ -66,7 +67,7 @@ export function dismissPersonalCandidate(state: PersonalLexicon, rule: PersonalR
 export function applyPersonalLexicon(text: string, rules: readonly PersonalRule[]): string {
   if (!rules.length) return text;
   const words = tokens(text);
-  const protectedRanges = [...text.matchAll(/<!--[\s\S]*?-->|```[\s\S]*?(?:```|$)|`[^`\n]*`|<\/?[A-Za-z][^<>\n]*>|https?:\/\/[^\s<>]+|(?<![\w.+-])[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}/gu)]
+  const protectedRanges = [...text.matchAll(new RegExp(/<!--[\s\S]*?-->|<\/?[A-Za-z][^<>\n]*>/.source + '|' + literalPattern().source, 'giu'))]
     .map(match => ({ start: match.index!, end: match.index! + match[0].length }));
   let protectedIndex = 0;
   let output = '';

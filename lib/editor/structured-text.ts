@@ -1,3 +1,4 @@
+import { withProtectedCode } from './literal-spans';
 /** A lossless block/inline scanner: syntax is never handed to spelling rules. */
 export function editStructuredText(input: string, edit: (text: string) => string, preserveLists = false): string | undefined {
   const lines = input.split(/(\r?\n)/u);
@@ -7,8 +8,8 @@ export function editStructuredText(input: string, edit: (text: string) => string
     if (!value.trim() || !/\p{L}/u.test(value)) return value;
     const leading = value.match(/^\s*/u)![0], trailing = value.match(/\s*$/u)![0];
     const body = value.slice(leading.length, value.length - trailing.length);
-    const labeled = body.replace(/(!?\[)([^\]\n]+)(\]\((?:[^()\n]|\([^()\n]*\))*\))/gu,
-      (_, open: string, label: string, close: string) => open + edit(label).replace(/[.!?]+$/u, '') + close);
+    const labeled = withProtectedCode(body, value => value.replace(/(!?\[)([^\]\n]+)(\]\((?:[^()\n]|\([^()\n]*\))*\))/gu,
+      (_, open: string, label: string, close: string) => open + edit(label).replace(/[.!?]+$/u, '') + close));
     let result = edit(labeled).replace(/^([*_]{1,3})(\p{Ll})/u,
       (_, mark: string, letter: string) => mark + letter.toLocaleUpperCase('az-AZ'));
     if (!terminal && !/[.!?…]["”»)]?$/u.test(body)) result = result.replace(/[.!?]+$/u, '');

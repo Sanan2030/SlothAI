@@ -1,3 +1,4 @@
+import { literalPattern } from './literal-spans';
 /** Exact-stage speculation: a changed context always reruns the existing model. */
 export type InferenceStage = 'log-spelling' | 'sentence-boundary';
 export type InferenceRunner = (stage: InferenceStage, input: string, fallback: () => string) => string;
@@ -41,7 +42,7 @@ export function proposeEdits(input: string, output: string, stage: InferenceStag
 export function applyProposal(proposal: ModelProposal, revision: number, validSurface: (word: string) => boolean): string | undefined {
   if (proposal.revision !== revision || !Number.isSafeInteger(revision) || revision < 1
     || proposal.input.length > 10_000 || proposal.output.length > 20_000 || proposal.edits.length > 2_000) return undefined;
-  const protectedRanges = [...proposal.input.matchAll(/<!--[\s\S]*?-->|```[\s\S]*?(?:```|$)|`[^`\n]*`|<[^>]*>|https?:\/\/[^\s<>]+|\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b|[\uE000-\uF8FF]+\d*\uE001/gu)]
+  const protectedRanges = [...proposal.input.matchAll(new RegExp(/<!--[\s\S]*?-->|<[^>]*>|[\uE000-\uF8FF]+\d*\uE001/.source + '|' + literalPattern().source, 'giu'))]
     .map(match => ({ start: match.index!, end: match.index! + match[0].length }));
   const edits = [...proposal.edits].sort((a, b) => a.start - b.start || a.end - b.end);
   let previousEnd = -1;

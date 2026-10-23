@@ -1,0 +1,27 @@
+{
+  "get": {
+    "/": 200,
+    "/api/health": 200,
+    "/api/strategies": 200
+  },
+  "transforms": [
+    {
+      "strategyId": "text-corrector",
+      "input": "Sənəd hazırdır. `[sened](https://example.az/a)`",
+      "status": 200,
+      "output": "Sənəd hazırdır. `[sened](https://example.az/a)`."
+    },
+    {
+      "strategyId": "text-corrector",
+      "input": "merheleler 1) senedi yoxla 2) cavabi gonder",
+      "status": 200,
+      "output": "Mərhələlər:\n1. Sənədi yoxla.\n2. Cavabı göndər."
+    },
+    {
+      "strategyId": "gmail-corrector",
+      "input": "```txt\nSalam,\nHörmətlə,\nSənan\n```",
+      "status": 200,
+      "output": "Salam,\n\n```txt\nSalam,\nHörmətlə,\nSənan\n```\n\nHörmətlə,"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "status": "experimental-only",
+  "validationGate": true,
+  "acceptanceGate": true,
+  "promotionEligible": false,
+  "selected": {
+    "lmWeight": 1,
+    "editPenalty": 4,
+    "changePenalty": 1,
+    "minimumMargin": 4.605170185988092
+  },
+  "acceptance": {
+    "holdout-500": {
+      "baseline": {
+        "counts": {
+          "tp": 532,
+          "fp": 3,
+          "fn": 108,
+          "abstainedErrors": 106,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 393,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "improvedIds": [],
+        "regressedIds": [],
+        "newFalseEditIds": []
+      },
+      "experimental": {
+        "counts": {
+          "tp": 532,
+          "fp": 3,
+          "fn": 108,
+          "abstainedErrors": 106,
+          "required": 640,
+          "correctWords": 2207,
+          "harmedWords": 1,
+          "exact": 393,
+          "identity": 150,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "improvedIds": [],
+        "regressedIds": [],
+        "newFalseEditIds": []
+      },
+      "unstable": []
+    },
+    "no-harm-2000": {
+      "baseline": {
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "abstainedErrors": 0,
+          "required": 0,
+          "correctWords": 8000,
+          "harmedWords": 0,
+          "exact": 2000,
+          "identity": 2000,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "improvedIds": [],
+        "regressedIds": [],
+        "newFalseEditIds": []
+      },
+      "experimental": {
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "abstainedErrors": 0,
+          "required": 0,
+          "correctWords": 8000,
+          "harmedWords": 0,
+          "exact": 2000,
+          "identity": 2000,
+          "harmedIdentitySentences": 0,
+          "unstable": 0
+        },
+        "improvedIds": [],
+        "regressedIds": [],
+        "newFalseEditIds": []
+      },
+      "unstable": []
+    }
+  },
+  "constraints": "No model weights fitted, no frozen target modified, no test-based threshold adjustment. Default application remains on the legacy fallback."
+}

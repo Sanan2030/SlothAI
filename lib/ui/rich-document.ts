@@ -19,6 +19,26 @@ export function plainDocument(text: string): RichDocument {
   })) };
 }
 
+/** The correction engine emits textual list markers; the editor uses semantic lists. */
+export function editableDocument(text: string): RichDocument {
+  const rich = plainDocument(text);
+  for (const block of rich.blocks) {
+    const value = block.children[0].text;
+    const marker = value.match(/^\s*(?:([-*+])|(\d+)[.)])\s+/u);
+    if (marker) {
+      block.type = marker[2] ? 'ordered' : 'bullet';
+      block.children[0].text = value.slice(marker[0].length);
+    }
+  }
+  return rich;
+}
+
+export function toggleListBlocks(rich: RichDocument, start: number, end: number, type: 'bullet' | 'ordered'): RichDocument {
+  const clear = rich.blocks.slice(start, end + 1).every(block => block.type === type);
+  return { blocks: rich.blocks.map((block, at) => at < start || at > end ? block
+    : { ...block, type: clear ? 'paragraph' : type }) };
+}
+
 export function documentText(document: RichDocument): string {
   let ordered = 0;
   return document.blocks.map(block => {
@@ -54,9 +74,9 @@ export function parseRichHTML(html: string): RichDocument {
     const next = mark && !marks.includes(mark) ? [...marks, mark] : marks;
     for (const child of element.childNodes) collect(child, next, target);
   };
-  const add = (nodes: readonly Node[], type: RichBlock['type']) => {
+  const add = (nodes: readonly Node[], type: RichBlock['type'], marks: RichMark[] = []) => {
     const children: RichInline[] = [];
-    for (const node of nodes) collect(node, [], children);
+    for (const node of nodes) collect(node, marks, children);
     // A bare <br> is the browser's placeholder for one empty paragraph.
     if (children.length === 1 && children[0].text === '\n') {
       blocks.push({ type, children: [] });
@@ -72,11 +92,11 @@ export function parseRichHTML(html: string): RichDocument {
     }
     for (const line of lines) blocks.push({ type, children: merge(line) });
   };
-  const walk = (parent: ParentNode, list?: 'bullet' | 'ordered') => {
+  const walk = (parent: ParentNode, list?: 'bullet' | 'ordered', marks: RichMark[] = []) => {
     let inline: Node[] = [];
     const flush = () => {
       if (inline.some(node => node.textContent?.trim() || (node as Element).tagName === 'BR')) {
-        add(inline, list ?? 'paragraph');
+        add(inline, list ?? 'paragraph', marks);
       }
       inline = [];
     };
@@ -87,17 +107,20 @@ export function parseRichHTML(html: string): RichDocument {
       }
       const element = child as Element;
       if (removed.has(element.tagName)) continue;
+      const mark = markByTag[element.tagName];
+      const inherited = mark && !marks.includes(mark) ? [...marks, mark] : marks;
       if (element.tagName === 'UL' || element.tagName === 'OL') {
         flush();
-        walk(element, element.tagName === 'UL' ? 'bullet' : 'ordered');
+        walk(element, element.tagName === 'UL' ? 'bullet' : 'ordered', inherited);
       } else if (element.tagName === 'LI' || ['P', 'DIV', 'BLOCKQUOTE'].includes(element.tagName)) {
         flush();
-        add([element], list ?? 'paragraph');
+        if (element.querySelector('p,div,ul,ol,li,blockquote')) walk(element, list, inherited);
+        else add([element], list ?? 'paragraph', marks);
       } else if (!element.querySelector('p,div,ul,ol,li,blockquote')) {
         inline.push(element);
       } else {
         flush();
-        walk(element, list);
+        walk(element, list, inherited);
       }
     }
     flush();

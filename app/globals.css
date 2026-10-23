@@ -617,6 +617,8 @@ input:focus-visible {
 }
 .workspace-rich-surface p { margin: 0 0 0.45em; }
 .workspace-rich-surface ul, .workspace-rich-surface ol { padding-left: 1.6em; margin: 0 0 0.45em; }
+.workspace-rich-surface ul { list-style-type: disc; }
+.workspace-rich-surface ol { list-style-type: decimal; }
 .workspace-rich-surface code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
 .workspace-rich-surface q { quotes: none; }
 .workspace-output .workspace-rich-surface { min-height: 200px; }
