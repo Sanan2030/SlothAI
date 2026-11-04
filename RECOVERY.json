@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-04T22:59:00.302345+00:00",
+  "savedAtUTC": "2026-11-04T23:15:54.346530+00:00",
   "job": {
     "status": "running",
-    "phase": "prepare-full",
+    "phase": "train-full",
     "startedAtUTC": "2026-11-04T17:08:56.208894+00:00",
     "supervisorPID": 30138,
     "supervisorStartTicks": "1728540",
@@ -77,10 +77,30 @@
           "--out=/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/full-data"
         ],
         "startedAtUTC": "2026-11-04T17:47:44.907878+00:00",
-        "status": "running",
+        "status": "completed",
         "log": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/logs/prepare-full.log",
         "pid": 32877,
-        "startTicks": "1962901"
+        "startTicks": "1962901",
+        "exitCode": 0,
+        "elapsedSeconds": 19674.507614595,
+        "finishedAtUTC": "2026-11-04T23:15:54.292809+00:00"
+      },
+      {
+        "phase": "train-full",
+        "command": [
+          "/workspace/SlothAI/.venv-training/bin/python",
+          "-m",
+          "training.cli",
+          "train",
+          "charspell",
+          "--data=/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/full-data",
+          "--out=/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/charspell-full",
+          "--device=cpu",
+          "--smoke-receipt=/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/charspell-smoke/report.json"
+        ],
+        "startedAtUTC": "2026-11-04T23:15:54.298658+00:00",
+        "status": "running",
+        "log": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/logs/train-full.log"
       }
     ],
     "device": "cpu",
@@ -127,9 +147,9 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-04T22:28:58.001204+00:00",
-      "tag": "charspell-save-20261104-20261104T222850831856Z",
-      "commit": "2cd13cc39faea06f0db63fcadcc3b0f086e71d12",
+      "atUTC": "2026-11-04T22:59:12.053891+00:00",
+      "tag": "charspell-save-20261104-20261104T225900311525Z",
+      "commit": "213488e8262184cf0008c62a93f814f42677d536",
       "phase": "prepare-full",
       "reports": {
         "charspell-smoke": {
@@ -155,18 +175,23 @@
         }
       },
       "archiveSHA256": "32ff34aeb0569f6ef5e32292833ac7a7bab078af0a1cf9491bb76e71bb7e4edc",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/2cd13cc39faea06f0db63fcadcc3b0f086e71d12/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/2cd13cc39faea06f0db63fcadcc3b0f086e71d12/RECOVERY.json",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/213488e8262184cf0008c62a93f814f42677d536/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/213488e8262184cf0008c62a93f814f42677d536/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-04T22:59:00.259081+00:00",
-    "freeDiskGiB": 47.15,
+    "updatedAtUTC": "2026-11-04T23:15:44.291853+00:00",
+    "freeDiskGiB": 46.95,
     "preparedData": {
       "smoke-data": {
         "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/smoke-data",
         "manifestSHA256": "297c703a7d8809a740503f5a5429ecac2880a426e5e95711ab0d5dffd6688196",
+        "bulkUploaded": false
+      },
+      "full-data": {
+        "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/full-data",
+        "manifestSHA256": "a8a2332de2caf6c99dd042751e9787b4d9ed653ca355895f4659ba97209c78e4",
         "bulkUploaded": false
       }
     }
@@ -329,7 +354,7 @@
       "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/7d6ae1a55c045d817d8aa1e952adb852adcd30cb/charspell-save.tar.gz"
     }
   ],
-  "archiveSHA256": "32ff34aeb0569f6ef5e32292833ac7a7bab078af0a1cf9491bb76e71bb7e4edc",
+  "archiveSHA256": "5ece5a4f7c65af8be4acf91f55cf1698e6f980df2a2e4649fb099db5a1f39f47",
   "originalCorpusUploaded": false,
   "bulkPreparedDataUploaded": false,
   "sourceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8"
