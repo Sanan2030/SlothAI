@@ -44,12 +44,17 @@ test('PunctCase loads only on explicit use and corrects locally in the Worker', 
   await expect(toggle).toBeChecked();
 });
 
-test('PunctCase keeps an explicitly punctuated document unchanged relative to baseline', async ({ page }) => {
+test('PunctCase preserves explicit punctuation and Markdown relative to baseline', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('textbox', { name: 'Xam mətn', exact: true }).fill('Mən bilirəm ki, sən sabah gələcəksən.');
-  await page.getByRole('button', { name: 'Düzəlt', exact: true }).click();
-  const baseline = await page.locator('.workspace-output pre').textContent();
-  await page.getByRole('checkbox', { name: /PunctCase/u }).check();
-  await page.getByRole('button', { name: 'Düzəlt', exact: true }).click();
-  await expect(page.locator('.workspace-output pre')).toHaveText(baseline!);
+  for (const source of ['Mən bilirəm ki, sən sabah gələcəksən.', '**qeyd edək ki bu məsələ hələ araşdırılır**',
+    '> qeyd edək ki bu məsələ hələ araşdırılır', '[qeyd edək ki bu məsələ hələ araşdırılır](/guide)']) {
+    await page.getByRole('checkbox', { name: /PunctCase/u }).uncheck();
+    await page.getByRole('textbox', { name: 'Xam mətn', exact: true }).fill(source);
+    await page.getByRole('button', { name: 'Düzəlt', exact: true }).click();
+    await expect(page.locator('.workspace-output pre')).toBeVisible();
+    const baseline = await page.locator('.workspace-output pre').textContent();
+    await page.getByRole('checkbox', { name: /PunctCase/u }).check();
+    await page.getByRole('button', { name: 'Düzəlt', exact: true }).click();
+    await expect(page.locator('.workspace-output pre')).toHaveText(baseline!);
+  }
 });

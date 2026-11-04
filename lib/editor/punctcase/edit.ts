@@ -13,9 +13,11 @@ export const initialPunctCaseStats = (): PunctCaseStats => ({ mode: 'experimenta
 
 /** Fixed engineering guards, not fitted on a test set or real-error calibration data. */
 export const PUNCTCASE_POLICY = Object.freeze({ punctuationProbability: 0.995, titleProbability: 0.95 });
+const STRUCTURAL_MARKERS = ['<', '>', '`', '*', '_', '~', '#', '|', '\\', '[', ']', '{', '}'];
+const hasStructuralMarkers = (text: string) => STRUCTURAL_MARKERS.some(marker => text.includes(marker));
 export function punctCaseSkipReason(source: string): string | undefined {
   if (literalPattern().test(source)) return 'protected-document';
-  if (/<[^>]*>|(?:^|\n)\s*(?:#{1,6}\s|[-*+]\s|\d+[.)]\s|\|)/u.test(source)) return 'structured-document';
+  if (hasStructuralMarkers(source) || /(?:^|\n)\s*(?:[-+]\s|\d+[.)]\s)/u.test(source)) return 'structured-document';
   if (/[,.;:!?…]/u.test(source)) return 'existing-punctuation';
   if ((source.match(punctCaseWordPattern())?.length ?? 0) < 4) return 'short-draft';
   return undefined;
@@ -28,7 +30,7 @@ export function editWithPunctCase(text: string, model: Pick<PunctCaseModel, 'pre
   return text.split('\n').map(line => {
     if (/^\s*hörmətlə(?=[,\s.!?]|$)/iu.test(line)) signature = true;
     if (signature || line !== line.normalize('NFC') || /^\s*(?:Mövzu:|[-*+]\s|\d+[.)]\s|#{1,6}\s)/u.test(line)
-      || /<[^>]*>|[\uE000-\uF8FF]/u.test(line)) { stats.skippedLines++; return line; }
+      || hasStructuralMarkers(line) || /[\uE000-\uF8FF]/u.test(line)) { stats.skippedLines++; return line; }
     const matches = [...line.matchAll(punctCaseWordPattern())];
     if (matches.length < 4) { stats.skippedLines++; return line; }
     const ranges = [...line.matchAll(literalPattern())].map(match => [match.index!, match.index! + match[0].length]);

@@ -11,10 +11,11 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 const RequestSchema = z.object({
-  strategyId: z.string().trim().min(1).max(64),
+  strategyId: z.string().trim().min(1).refine(value => value.length <= 64, 'Strategiya adı maksimum 64 simvol ola bilər.'),
   text: z
     .string()
-    .max(MAX_TEXT_LENGTH, 'Mətn maksimum 10,000 simvol ola bilər.')
+    // The public/editor budget uses UTF-16 units; Zod 4 max() counts code points.
+    .refine(value => value.length <= MAX_TEXT_LENGTH, 'Mətn maksimum 10,000 simvol ola bilər.')
     .refine(value => value.trim().length > 0, 'Mətn boş ola bilməz.'),
   options: z
     .object({

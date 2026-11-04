@@ -114,3 +114,24 @@ Independent human-reviewed real-error calibration/acceptance, int8 export and
 default-on promotion remain separate work. The WordLM integration and existing
 default heads/thresholds remain active as before. This is a usable experimental
 integration, not a declaration that all Stage 3–7 release gates are complete.
+
+## Final CI follow-up
+
+The first pushed commit passed all functional production checks but its final
+CI gate caught the existing Zod production advisory GHSA-mrhx-c7xc-m3w5. Zod was
+updated from 3.25.76 to the patched 4.6.7 with the lockfile integrity preserved;
+production audit reports zero vulnerabilities. API bounds explicitly retain the
+public UTF-16-unit contract, including oversized astral/emoji inputs, because
+Zod 4 string max counts Unicode code points. Existing regression assertions were
+retained.
+
+Final adversarial checks also cover inline Markdown emphasis, blockquotes and
+relative-link labels. Structural markers now bypass PunctCase at both request
+and insertion levels, preserving the baseline result for those documents.
+
+After these fixes the final production build, typecheck/lint, all 5,572 passing
+Node tests (8 existing TODOs), all 9 Chromium tests and production HTTP checks
+passed. The CPU Python suite remains 38/38; training source was unchanged by
+this follow-up. The refreshed verification receipt binds the final runtime and
+test source hashes. Remote CI and deployment status are recorded on the backup
+release after the push.

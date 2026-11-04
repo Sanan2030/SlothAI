@@ -68,15 +68,25 @@ test('PunctCase preserves whitespace and existing marks and applies proposals id
   assert.equal(editWithPunctCase('bu məsələ? indi araşdırılır', proposed(2), initialPunctCaseStats()), 'bu məsələ? indi araşdırılır');
 });
 
-test('PunctCase proposals cannot edit literals, identifiers, structure or signatures', () => {
+test('PunctCase proposals cannot edit literals, identifiers, structure or signatures', async () => {
   for (const source of ['bu API indi işləyir', 'bu user_id indi işləyir', 'bu https://example.com/api?v=2 indi işləyir',
     'bu `const x=1` indi işləyir', '<p>bu məsələ indi araşdırılır</p>', '1. bu məsələ indi araşdırılır',
-    'bu məse\u0308lə indi araşdırılır', 'Hörmətlə,\nSənan Məmmədov layihə rəhbəri']) {
+    'bu məse\u0308lə indi araşdırılır', 'Hörmətlə,\nSənan Məmmədov layihə rəhbəri',
+    '**bu məsələ indi araşdırılır**', '> bu məsələ indi araşdırılır', '[bu məsələ indi araşdırılır](/guide)']) {
     assert.equal(editWithPunctCase(source, proposed(), initialPunctCaseStats()), source);
   }
   assert.equal(punctCaseSkipReason('mən bilirəm ki sən gələcəksən'), undefined);
   assert.equal(punctCaseSkipReason('Mən bilirəm ki, sən gələcəksən.'), 'existing-punctuation');
   assert.equal(punctCaseSkipReason('bu https://example.com indi işləyir'), 'protected-document');
+  for (const input of ['**qeyd edək ki bu məsələ hələ araşdırılır**', '> qeyd edək ki bu məsələ hələ araşdırılır',
+    '[qeyd edək ki bu məsələ hələ araşdırılır](/guide)']) {
+    const strategy = getStrategyRegistry().get('text-corrector');
+    const baseline = await strategy.transform({ text: input });
+    const enabled = await strategy.transform({ text: input, options: { usePunctCase: true } });
+    assert.equal(enabled.transformedText, baseline.transformedText);
+    assert.equal(enabled.metadata.punctCase?.loaded, false);
+    assert.equal(enabled.metadata.punctCase?.skippedReason, 'structured-document');
+  }
 });
 
 test('PunctCase skips unsupported cross-chunk punctuation without losing tokens', () => {
@@ -119,6 +129,13 @@ test('HTTP API validates the opt-in type and returns model metadata only when re
   const result = await good.json();
   assert.equal(result.metadata.punctCase.sourceCheckpointSHA256, info.sourceCheckpointSHA256);
   assert.equal(result.metadata.punctCase.loaded, true);
+  for (const payload of [{ strategyId: 'text-corrector', text: '🙂'.repeat(5001) },
+    { strategyId: '🙂'.repeat(33), text: 'salam' }]) {
+    const response = await POST(new NextRequest('http://localhost/api/transform', { method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-forwarded-for': 'punctcase-utf16-contract' },
+      body: JSON.stringify(payload) }));
+    assert.equal(response.status, 400);
+  }
 });
 
 test('the trained checkpoint supplies a missing comma and the result is stable', async () => {

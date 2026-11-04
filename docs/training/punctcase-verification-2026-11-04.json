@@ -1,5 +1,5 @@
 {
-  "verifiedAtUTC": "2026-11-04T13:52:08.638304+00:00",
+  "verifiedAtUTC": "2026-11-04T14:33:04.957184+00:00",
   "scope": "Opt-in PunctCase browser/API integration with original float32 weights; no default-on/int8/independent real-user acceptance claim.",
   "checks": [
     {
@@ -10,7 +10,7 @@
       "failed": 0,
       "todo": 8,
       "skipped": 0,
-      "logSHA256": "95704e6ac5a4bb6e014f40933a29970f02d6ab0541c97b5fd42dcfc906a74783"
+      "logSHA256": "9e8a26aa4bcd09711c6dc926212cdb54cdbdf1b5f759ba06c1e6429512ddf8d3"
     },
     {
       "command": ".venv-training/bin/python -m unittest discover -s training/tests -p test_*.py -v",
@@ -24,7 +24,7 @@
     {
       "command": "npm run build",
       "status": "passed",
-      "logSHA256": "8c22013a02bc7aa0860d0268767d54ad730dfd6ceedb8c553708459997f1d43f"
+      "logSHA256": "f3b658e9184a6583e666a76d87b56132c512c4474080dfee93826eb21d520082"
     },
     {
       "command": "npm run --ignore-scripts typecheck",
@@ -37,13 +37,13 @@
       "logSHA256": "c335e2b6f9eceece93ee91c6dbbfb4d1a577517fb217546ab0d0f91bc56efaf7"
     },
     {
-      "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config=/tmp/slothai-punctcase-playwright.config.ts",
+      "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config=/tmp/slothai-punctcase-playwright-final.config.ts",
       "repositoryEquivalent": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser",
-      "override": "Same repository test options, production server isolated on port 3101; no duplicate build.",
+      "override": "Same repository test options, final production server isolated on port 3102; no duplicate build.",
       "status": "passed",
       "passed": 9,
       "failed": 0,
-      "logSHA256": "db323e00b7df2c86d5ce15e744c5cb3b8820a14126fb720621bbcf2b360c52a3"
+      "logSHA256": "6bc3cb4dac176ceab8063e38136e41f83a1e1f2b14f66b592c865c89b93e1226"
     },
     {
       "command": "npm run benchmark:check",
@@ -61,35 +61,51 @@
       "report": "punctcase-app-validation-2026-11-04.json"
     },
     {
-      "command": "Production HTTP smoke: default text, opt-in text and opt-in email",
+      "command": "Production HTTP smoke: default/opt-in text, email, Markdown preservation and UTF-16 bounds",
       "status": "passed",
       "exampleInput": "qeyd edək ki bu məsələ hələ araşdırılır",
-      "optInOutput": "Qeyd edək ki, bu məsələ hələ araşdırılır."
+      "optInOutput": "Qeyd edək ki, bu məsələ hələ araşdırılır.",
+      "logSHA256": "c07ff3a3b1515f82c692edb80931dead263f5c1a1e4f76812d46b1c2c90d2a0f"
     },
     {
       "command": "npm run review:test -- /tmp/slothai-punctcase-reviewed.json",
       "status": "passed",
       "cases": 1,
       "exact": 1
+    },
+    {
+      "command": "npm audit --omit=dev --audit-level=moderate",
+      "status": "passed",
+      "vulnerabilities": 0,
+      "logSHA256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3"
     }
   ],
   "runtimeSourceSHA256": {
     "lib/editor/punctcase/core.ts": "e1ea6f9f3825fcd46556addcdc832bce3dbf92c1c796713476e70e2bff528e2c",
-    "lib/editor/punctcase/edit.ts": "dcec743b7c468fdb2ecb1bcee6d0dfa17e327954ff68665a24d2766c3ee3d4a1",
+    "lib/editor/punctcase/edit.ts": "96e308af41b28a4f34c8d785657b85a03cec0054c753db94a8f974a48dfac5f5",
     "lib/editor/punctcase/load.ts": "c78171d7329ffdb3652b9386737204e29f1e32396a35264620c7c4ae4cf840be",
     "lib/editor/punctcase/weights.json": "88eab450daa6c05df884d0741eac91d6e2f27792497bc33b84e34e1c3706b8dc",
     "lib/editor/punctcase/model-info.json": "8a122136e39d471173b7fb470b21d9dd89de07cefa003ba57325c4f5614543de",
     "lib/strategies/punctcase.ts": "d7f9b2473f24f3ad2a1a39ba4da3a02a199b254d3ebea5a1500e05bbcadaff1a",
     "lib/strategies/impl/text-corrector.ts": "d3e2b821811b859e3ca8a7bd0c1b386d3bd8c00f318287ca804db58142ebfdb5",
     "lib/strategies/impl/gmail-corrector.ts": "6be0d595c550d95c5fad882a3afa5f808d48493ed0f904dc885e54473f526041",
-    "app/api/transform/route.ts": "322d743038bdab7132d82b6cc424d7d13d98996c04e10656e94e4d67f58d9948",
+    "app/api/transform/route.ts": "2e1e5d9670e67b32adedb24db78c5018fff2ceee6ec1bc8fd369349538710673",
     "app/page.tsx": "279f16a851121788400836bfef2df66151fbfc70aa403a3e1711cdd93cd0b4f9",
-    "tests/punctcase.test.ts": "14abae66fc6d71268c7404302225312f9f0e4452c2b4d75d49c2760a4201ae5e",
-    "tests/browser/punctcase.spec.ts": "97353a47ff603ba0c27e2e14f1736879ef7058f1c3a4672869e7b37bd3f71b22"
+    "tests/punctcase.test.ts": "73c618865efb24c22eb149eae321b89b0b6468a85e037d8e9c3c6f5f27a0df8a",
+    "tests/browser/punctcase.spec.ts": "6b48ffff8c0ca33a97fe61049dbb79c90eaa61bfe365b38541ccad234478a9fb"
   },
   "sourceCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
   "defaultEnabled": false,
   "newRuntimeDependencies": [],
   "retrainedDuringIntegration": false,
-  "originalCorpusCommitted": false
+  "originalCorpusCommitted": false,
+  "runtimeDependencyUpdates": [
+    {
+      "name": "zod",
+      "from": "3.25.76",
+      "to": "4.6.7",
+      "reason": "GHSA-mrhx-c7xc-m3w5; preserve existing API UTF-16 bounds explicitly",
+      "lockfileIntegrityVerified": true
+    }
+  ]
 }
