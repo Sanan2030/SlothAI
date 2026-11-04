@@ -87,6 +87,8 @@
     "training:wordlm": "python3 -m training.cli train wordlm",
     "training:punctcase": ".venv-training/bin/python -m training.cli train punctcase",
     "wordlm:export": "python3 -m training.export_wordlm",
+    "punctcase:export": ".venv-training/bin/python -m training.export_punctcase",
+    "punctcase:validate": "node --import tsx scripts/evaluate-punctcase.ts",
     "wordlm:validate": "node --import tsx scripts/evaluate-wordlm-browser.ts",
     "wordlm:ablation": "node --import tsx scripts/evaluate-wordlm-correction.ts",
     "test:browser": "playwright test",

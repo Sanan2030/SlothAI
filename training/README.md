@@ -1,16 +1,19 @@
 # Offline training
 
-CharSpell, WordLM and PunctCase completed CPU smoke runs on **9 October 2026**
-using 100,000 train and 10,000 validation sentences from the accepted `az-v1`
-corpus. See the [measured report](../docs/training/smoke-2026-10-09.md) and
-[complete evidence](../docs/training/smoke-2026-10-09.json). Full training,
-real-error calibration and browser integration are the next stages; the editor
-continues to use its existing Stage 2 models and thresholds.
-An explicit [full CPU job](../docs/training/full-2026-10-09.md) was subsequently
-launched and is preparing all accepted train/validation rows. Its supervisor
-starts WordLM, PunctCase and CharSpell after successful preparation. Read current
-state with `.venv-training/bin/python -m training.full_job status`; a dated launch
-record is not a completed full-training report.
+WordLM full fitting and validation completed on **17 October 2026**. PunctCase
+full CPU fitting and validation completed on **2 November 2026**: four completed
+epochs with epoch two selected. Its original float32 browser export is available
+through the app's explicit experimental option; default-on/int8 and independent
+real-error acceptance are not claimed. CharSpell still has its measured CPU
+smoke result, without a completed full-run claim. See the
+[PunctCase integration record](../docs/training/punctcase-app-2026-11-04.md).
+
+All three stages completed historical 100k/10k CPU smoke runs on **9 October**;
+see the [measured report](../docs/training/smoke-2026-10-09.md) and
+[complete evidence](../docs/training/smoke-2026-10-09.json). The older
+[full-job launch record](../docs/training/full-2026-10-09.md) is historical;
+do not infer current process state or restart completed WordLM/PunctCase jobs
+from that dated record. Inspect actual reports and checkpoints first.
 These commands run on a cloud machine or workstation with long-lived jobs;
 Vercel serves the editor and is not the place to train this corpus.
 
@@ -132,6 +135,13 @@ artifacts to check reproducibility; it does not train this five-million corpus.
    RapidFuzz is absent. Neither path starts model training. The runtime uses
    Python 3.12 here; the optional native package requires Python >=3.11.
 
+   For an independent PunctCase run, append `--stages punctcase` to the
+   preparation command. This omits the unrelated spelling index and task files;
+   all six accepted corpus files and the complete leakage gate are still checked.
+   The prepared manifest binds exactly the selected task files, and training an
+   unprepared stage is rejected before optimizer construction. The default still
+   prepares all three stages.
+
 5. Install the optional training runtime:
 
    ```sh
@@ -222,11 +232,14 @@ the original stage order and separate stage commits with their acceptance report
 - Stage 7 needs punctuation acceptance, span/idempotency properties, lazy
   Worker loading, binary artifacts, ablations and controlled latency.
 
-No script automatically copies weights into `lib/editor` or `public/models`,
-updates existing heads/thresholds, changes logging/rights decisions, or enables
-the new models. Browser integration must progress shadow → opt-in → default
-with the required gates and separate review. The current quality remains the
-Stage 2 measured baseline; this preparation makes no accuracy improvement claim.
+Training commands do not automatically copy weights into the app or change
+active heads, thresholds, logging or rights decisions. The explicit
+`npm run punctcase:export -- --run=/path/to/completed/punctcase-full` command
+checks the selected checkpoint/report and exports original float32 weights plus
+PyTorch numerical fixtures. `npm run punctcase:validate -- --data=/path/to/full-data`
+checks numerical parity, frozen references and a bounded source validation sample.
+The experimental Worker/API option is off by default. Quantization, independent
+real-error acceptance and default-on promotion remain separate gates.
 
 ## Verification without training
 

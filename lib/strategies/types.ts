@@ -1,9 +1,12 @@
 import type { InferenceRunner, InferenceStats } from '../editor/inference-cache';
+import type { PunctCaseStats } from '../editor/punctcase/edit';
 
 export interface TransformationOptions {
   preserveFormatting?: boolean;
   emailGreeting?: string;
   omitSubject?: boolean;
+  /** Explicit experimental punctuation/case proposals for unpunctuated plain drafts. */
+  usePunctCase?: boolean;
 }
 
 export interface TransformationRequest {
@@ -16,6 +19,7 @@ export interface TransformationContext { inference?: InferenceRunner }
 export interface TransformationMetadata {
   /** Speculative heads are optional; context mismatches rerun normal inference. */
   inference?: InferenceStats;
+  punctCase?: PunctCaseStats;
   correctionsMade: number;
   detectedLanguage: string;
   /** Processing language; detectedLanguage is a deprecated compatibility alias. */

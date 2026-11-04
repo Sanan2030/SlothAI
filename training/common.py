@@ -15,8 +15,22 @@ ACCEPTED = ROOT / 'docs/stage1/collection'
 CORPUS = ROOT / 'data/corpus/az-v1'
 OUTPUT = ROOT / 'artifacts/training'
 SPLITS = ('train', 'validation')  # Test is deliberately absent from preparation/training.
-PREPARED_FILES = {'config.json', 'lexicon.sqlite', 'data-gate.json', 'data-gate-receipt.json',
-                  *(f'{stage}-{split}.jsonl.gz' for stage in ('charspell', 'wordlm', 'punctcase') for split in SPLITS)}
+STAGES = ('charspell', 'wordlm', 'punctcase')
+
+
+def prepared_files(stages=None):
+    stages = STAGES if stages is None else stages
+    if (not isinstance(stages, (list, tuple)) or not stages
+            or any(stage not in STAGES for stage in stages) or len(set(stages)) != len(stages)):
+        raise ValueError('Prepared stages must be a nonempty unique selection of supported stages')
+    files = {'config.json', 'data-gate.json', 'data-gate-receipt.json',
+             *(f'{stage}-{split}.jsonl.gz' for stage in stages for split in SPLITS)}
+    if 'charspell' in stages:
+        files.add('lexicon.sqlite')
+    return files
+
+
+PREPARED_FILES = prepared_files()
 
 
 def sha256(path):
@@ -158,7 +172,7 @@ def verify_prepared(directory):
             or binding['reportSHA256'] != sha256(directory / 'data-gate.json') or gate['status'] != 'passed'
             or gate['cleanSentences'] != accepted['cleanSentences'] or gate['crossSplitCollisions'] != 0):
         raise ValueError('Prepared data or fresh gate binding is invalid')
-    if set(metadata['files']) != PREPARED_FILES:
+    if set(metadata['files']) != prepared_files(metadata.get('preparedStages')):
         raise ValueError('Prepared manifest must bind every task file, index, configuration and gate receipt')
     for name, expected in metadata['files'].items():
         if Path(name).name != name:

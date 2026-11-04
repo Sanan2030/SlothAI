@@ -60,6 +60,8 @@ export default function HomePage() {
   const [textMetadata, setTextMetadata] = useState<TransformationMetadata | null>(null);
   const [mailMetadata, setMailMetadata] = useState<TransformationMetadata | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(false);
+  const [punctCaseModes, setPunctCaseModes] = useState<Record<ModuleId, boolean>>({ text: false, mail: false });
+  const usePunctCase = punctCaseModes[activeModule];
   const [theme, setTheme] = useState<Theme>('dark');
   const [loadingModules, setLoadingModules] = useState<Record<ModuleId, boolean>>({ text: false, mail: false });
   const inFlightModules = useRef(new Set<ModuleId>());
@@ -81,8 +83,8 @@ export default function HomePage() {
   const [reviewNotice, setReviewNotice] = useState('');
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [expectedDraft, setExpectedDraft] = useState('');
-  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'> | null>(null);
-  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'>>>>({});
+  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting' | 'usePunctCase'> | null>(null);
+  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting' | 'usePunctCase'>>>>({});
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -204,6 +206,7 @@ export default function HomePage() {
         id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
         at: new Date().toISOString(), module: activeModule,
         input, output: result, ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), source,
+        ...(usePunctCase ? { usePunctCase: true } : {}),
       });
       setLogCount(count);
     } catch {
@@ -289,7 +292,7 @@ export default function HomePage() {
 
       const source = { module: activeModule, input: requestText,
         preserveFormatting: activeModule === 'text' && preserveFormatting,
-        ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}) };
+        ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), ...(usePunctCase ? { usePunctCase: true } : {}) };
       setResultSource(source);
       sourceRef.current[activeModule] = source;
       setFeedbackOpen(false);
@@ -298,8 +301,8 @@ export default function HomePage() {
       editorClient.current ??= new EditorClient();
       const result = await editorClient.current.transform(config.strategyId, {
         text: requestText,
-        options: activeModule === 'text' ? { preserveFormatting }
-          : { emailGreeting: mailGreeting, omitSubject: true },
+        options: activeModule === 'text' ? { preserveFormatting, ...(usePunctCase ? { usePunctCase: true } : {}) }
+          : { emailGreeting: mailGreeting, omitSubject: true, ...(usePunctCase ? { usePunctCase: true } : {}) },
       });
 
       const improved = applyPersonalLexicon(result.transformedText, personalRef.current.confirmed);
@@ -439,6 +442,18 @@ export default function HomePage() {
                 </select>
               </div>
             )}
+
+            <div className="workspace-punctcase-option">
+              <label className="workspace-check">
+                <input type="checkbox" checked={usePunctCase} disabled={loading} aria-describedby="punctcase-hint"
+                  onChange={event => {
+                    setPunctCaseModes(previous => ({ ...previous, [activeModule]: event.target.checked }));
+                    setInput(inputValue);
+                  }} />
+                PunctCase — durğu və registr (sınaq)
+              </label>
+              <small id="punctcase-hint">Durğu işarəsiz sadə qaralamalarda əlavə düzəlişlər verir. Mövcud işarələr qorunur.</small>
+            </div>
 
             <div className="workspace-editor-grid">
               <div className="workspace-editor-column">

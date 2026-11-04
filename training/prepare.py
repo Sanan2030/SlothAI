@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 import sys
 
-from training.common import ROOT, SPLITS, gzip_writer, indices, jsonl, receipt, run_gate, safe_output, sha256, write_json
+from training.common import ROOT, SPLITS, STAGES, prepared_files, gzip_writer, indices, jsonl, receipt, run_gate, safe_output, sha256, write_json
 from training.candidates import CandidateIndex, build_index
 from training.text import lower, tag_sentence, tokens, word_matches
 
@@ -90,7 +90,9 @@ def spelling_examples(clean, pair, index, config, stats):
             break
 
 
-def prepare(corpus, output, config):
+def prepare(corpus, output, config, stages=None):
+    stages = STAGES if stages is None else tuple(stages)
+    prepared_files(stages)  # Validate before creating output or reading the corpus.
     corpus, output = Path(corpus).resolve(), safe_output(output, corpus)
     accepted, manifest = receipt()
     if output.exists():
@@ -108,12 +110,14 @@ def prepare(corpus, output, config):
     output.mkdir(parents=True)
     run_gate(corpus, output)
     write_json(output / 'config.json', config)
-    dictionary = sorted({lower(w) for w in json.loads(dictionary_path.read_text())
-                         if re.fullmatch('[a-zəçğıöşü]{2,32}', lower(w))})
-    train_rows = selected_rows(corpus, 'train', selections['train'], manifest)
-    build_index(output / 'lexicon.sqlite', (eligible_words(clean) for clean, _ in train_rows), dictionary, config)
-    index = CandidateIndex(output / 'lexicon.sqlite', config['prefixLength'])
-    metadata = {'schemaVersion': 1, 'status': 'preparing', 'profile': config['profile'],
+    index = None
+    if 'charspell' in stages:
+        dictionary = sorted({lower(w) for w in json.loads(dictionary_path.read_text())
+                             if re.fullmatch('[a-zəçğıöşü]{2,32}', lower(w))})
+        train_rows = selected_rows(corpus, 'train', selections['train'], manifest)
+        build_index(output / 'lexicon.sqlite', (eligible_words(clean) for clean, _ in train_rows), dictionary, config)
+        index = CandidateIndex(output / 'lexicon.sqlite', config['prefixLength'])
+    metadata = {'schemaVersion': 2, 'preparedStages': list(stages), 'status': 'preparing', 'profile': config['profile'],
                 'seed': config['seed'], 'manifestSHA256': accepted['manifestSHA256'],
                 'corpus': str(corpus), 'hyperparameters': config, 'trainingStarted': False,
                 'dictionarySHA256': sha256(dictionary_path), 'splits': {}, 'files': {},
@@ -129,7 +133,7 @@ def prepare(corpus, output, config):
             stats, sources, categories = Counter(), Counter(), Counter()
             with ExitStack() as stack:
                 streams = {stage: stack.enter_context(gzip_writer(output / f'{stage}-{split}.jsonl.gz'))
-                           for stage in ('charspell', 'wordlm', 'punctcase')}
+                           for stage in stages}
                 def emit(stage, row):
                     streams[stage].write(json.dumps(row, ensure_ascii=False) + '\n')
                     stats[stage + 'Rows'] += 1
@@ -139,21 +143,24 @@ def prepare(corpus, output, config):
                     categories[pair['category']] += 1
                     sources[clean['sourceId']] += 1
                     # WordLM and PunctCase consume clean text exclusively.
-                    emit('wordlm', {'id': clean['id'], 'sourceId': clean['sourceId'], 'words': tokens(clean['text'])})
-                    ranges = protected_ranges(clean['text'], clean.get('protectedTerms', []))
-                    tagged = tag_sentence(clean['text'], ranges)
-                    chunk = config['maxSentenceTokens']
-                    for offset in range(0, len(tagged['words']), chunk):
-                        row = {key: value[offset:offset + chunk] for key, value in tagged.items()}
-                        # Chunk edges do not assert punctuation from unavailable next-chunk context.
-                        if offset + chunk < len(tagged['words']):
-                            row['punctuation'][-1] = -100
-                        if all(label == -100 for label in row['case']):
-                            stats['punctcaseProtectedChunksSkipped'] += 1
-                            continue
-                        emit('punctcase', {'id': clean['id'], 'sourceId': clean['sourceId'], **row})
-                    for example in spelling_examples(clean, pair, index, config, stats):
-                        emit('charspell', example)
+                    if 'wordlm' in stages:
+                        emit('wordlm', {'id': clean['id'], 'sourceId': clean['sourceId'], 'words': tokens(clean['text'])})
+                    if 'punctcase' in stages:
+                        ranges = protected_ranges(clean['text'], clean.get('protectedTerms', []))
+                        tagged = tag_sentence(clean['text'], ranges)
+                        chunk = config['maxSentenceTokens']
+                        for offset in range(0, len(tagged['words']), chunk):
+                            row = {key: value[offset:offset + chunk] for key, value in tagged.items()}
+                            # Chunk edges do not assert punctuation from unavailable next-chunk context.
+                            if offset + chunk < len(tagged['words']):
+                                row['punctuation'][-1] = -100
+                            if all(label == -100 for label in row['case']):
+                                stats['punctcaseProtectedChunksSkipped'] += 1
+                                continue
+                            emit('punctcase', {'id': clean['id'], 'sourceId': clean['sourceId'], **row})
+                    if 'charspell' in stages:
+                        for example in spelling_examples(clean, pair, index, config, stats):
+                            emit('charspell', example)
             metadata['splits'][split] = {**stats, 'sources': dict(sources), 'pairCategories': dict(categories)}
         for file in sorted(output.iterdir()):
             if file.is_file():
@@ -162,4 +169,5 @@ def prepare(corpus, output, config):
         write_json(output / 'prepared.json', metadata)
         return metadata
     finally:
-        index.close()
+        if index is not None:
+            index.close()

@@ -7,7 +7,7 @@ import platform
 import random
 import time
 
-from training.common import jsonl, model_card, read_json, safe_output, sha256, verify_prepared, write_json
+from training.common import STAGES, jsonl, model_card, read_json, safe_output, sha256, verify_prepared, write_json
 
 ARCHITECTURE_KEYS = ['charEmbedding', 'charChannels', 'wordEmbedding', 'taggerHidden', 'maxWordChars',
                      'contextWords', 'maxCandidates', 'prefixLength', 'maxSentenceTokens', 'discount', 'minLMFrequency']
@@ -96,6 +96,8 @@ def train_model(stage, data, output, requested_device, smoke_path=None, resume=F
     # All guards execute before importing torch, creating a run or constructing an optimizer.
     data = Path(data).resolve()
     metadata = verify_prepared(data)
+    if stage not in metadata.get('preparedStages', STAGES):
+        raise ValueError('Requested stage is not present in the hash-bound prepared dataset')
     config = metadata['hyperparameters']
     validate_full_smoke(stage, metadata, smoke_path)
     for split in ('train', 'validation'):

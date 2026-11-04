@@ -1,0 +1,161 @@
+{
+  "format": "punctcase-f32le-v1",
+  "parameters": 39434,
+  "bytes": 157736,
+  "sha256": "b786de15350b1770f4e0dce7d4202432db7480d63bd12d9bd0aad52333739a95",
+  "sourceCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+  "sourceReportSHA256": "5ccf67199eeff6e9a8d564a531702193942eb207e0b0bc0fd74593c62750b568",
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "selectedEpoch": 2,
+  "config": {
+    "charEmbedding": 24,
+    "charChannels": 32,
+    "wordEmbedding": 48,
+    "taggerHidden": 48,
+    "maxWordChars": 32,
+    "maxSentenceTokens": 96
+  },
+  "characters": "abcdefghijklmnopqrstuvwxyzəçğıöşü-' ",
+  "punctuation": [
+    "NONE",
+    ",",
+    ".",
+    "?",
+    "!",
+    ":"
+  ],
+  "cases": [
+    "lower",
+    "title",
+    "upper",
+    "mixed"
+  ],
+  "tensors": {
+    "encoder.embedding.weight": {
+      "offset": 0,
+      "shape": [
+        38,
+        24
+      ]
+    },
+    "encoder.conv3.weight": {
+      "offset": 912,
+      "shape": [
+        32,
+        24,
+        3
+      ]
+    },
+    "encoder.conv3.bias": {
+      "offset": 3216,
+      "shape": [
+        32
+      ]
+    },
+    "encoder.conv5.weight": {
+      "offset": 3248,
+      "shape": [
+        32,
+        24,
+        5
+      ]
+    },
+    "encoder.conv5.bias": {
+      "offset": 7088,
+      "shape": [
+        32
+      ]
+    },
+    "encoder.project.weight": {
+      "offset": 7120,
+      "shape": [
+        48,
+        64
+      ]
+    },
+    "encoder.project.bias": {
+      "offset": 10192,
+      "shape": [
+        48
+      ]
+    },
+    "context.weight_ih_l0": {
+      "offset": 10240,
+      "shape": [
+        144,
+        48
+      ]
+    },
+    "context.weight_hh_l0": {
+      "offset": 17152,
+      "shape": [
+        144,
+        48
+      ]
+    },
+    "context.bias_ih_l0": {
+      "offset": 24064,
+      "shape": [
+        144
+      ]
+    },
+    "context.bias_hh_l0": {
+      "offset": 24208,
+      "shape": [
+        144
+      ]
+    },
+    "context.weight_ih_l0_reverse": {
+      "offset": 24352,
+      "shape": [
+        144,
+        48
+      ]
+    },
+    "context.weight_hh_l0_reverse": {
+      "offset": 31264,
+      "shape": [
+        144,
+        48
+      ]
+    },
+    "context.bias_ih_l0_reverse": {
+      "offset": 38176,
+      "shape": [
+        144
+      ]
+    },
+    "context.bias_hh_l0_reverse": {
+      "offset": 38320,
+      "shape": [
+        144
+      ]
+    },
+    "punctuation.weight": {
+      "offset": 38464,
+      "shape": [
+        6,
+        96
+      ]
+    },
+    "punctuation.bias": {
+      "offset": 39040,
+      "shape": [
+        6
+      ]
+    },
+    "case.weight": {
+      "offset": 39046,
+      "shape": [
+        4,
+        96
+      ]
+    },
+    "case.bias": {
+      "offset": 39430,
+      "shape": [
+        4
+      ]
+    }
+  }
+}

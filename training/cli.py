@@ -22,6 +22,8 @@ def main():
     prep.add_argument('--corpus', type=Path, default=CORPUS)
     prep.add_argument('--profile', choices=['smoke', 'full'], default='smoke')
     prep.add_argument('--out', type=Path, required=True)
+    prep.add_argument('--stages', nargs='+', choices=['charspell', 'wordlm', 'punctcase'],
+                      help='Prepare only selected task files; the full accepted-corpus gate remains mandatory')
     train = commands.add_parser('train', help='Explicit experimental training; never publishes a model')
     train.add_argument('stage', choices=['charspell', 'wordlm', 'punctcase'])
     train.add_argument('--data', type=Path, required=True)
@@ -39,7 +41,7 @@ def main():
             result = run_gate(args.corpus, safe_output(args.out, args.corpus))
         elif args.command == 'prepare':
             from training.prepare import prepare
-            result = prepare(args.corpus, args.out, read_json(ROOT / f'training/configs/{args.profile}.json'))
+            result = prepare(args.corpus, args.out, read_json(ROOT / f'training/configs/{args.profile}.json'), args.stages)
         else:
             from training.run import train_model
             result = train_model(args.stage, args.data, args.out, args.device, args.smoke_receipt, args.resume)

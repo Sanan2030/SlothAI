@@ -42,3 +42,20 @@ redistribution. Model/export hashes and limitations are recorded in
 `docs/training/wordlm-browser-2026-10-17.md`. The publisher declaration and owner
 acceptance do not independently clear every underlying source work or relicense
 unrelated app code. The separate MPL-2.0 dictionary remains covered above.
+
+## az-v1 PunctCase weights (4 November 2026)
+
+`lib/editor/punctcase/weights.json` encodes the learned float32 parameters of
+the character-CNN/BiGRU fitted on punctuation/case labels from the same accepted
+LocalDoc/AzTC-full snapshot. It does not redistribute the original corpus
+sentences. Dataset publisher: LocalDoc; pinned publisher CC BY 4.0 declaration:
+https://huggingface.co/datasets/LocalDoc/AzTC-full/blob/4ea07271d4a2c9746759547264a5e4310bc2956e/README.md
+License: https://creativecommons.org/licenses/by/4.0/
+
+Changes: original accepted clean train text was converted to character/token
+inputs and mechanically derived punctuation/case labels, then fitted on CPU
+with source-split validation. The selected checkpoint was serialized without
+quantization for opt-in browser inference. Checkpoint/export hashes and measured
+limitations are in `docs/training/punctcase-app-2026-11-04.md`. The existing
+publisher-declaration and owner restricted-use acceptance above apply; no new
+independent clearance of underlying works or relicense of app code is claimed.

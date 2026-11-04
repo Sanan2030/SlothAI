@@ -6,15 +6,19 @@ partial morphology, rules, a compact WordLM and bundled statistical/neural class
 Correction runs locally in browser Workers after application assets load.
 It requires no API key, Python service or GPU to use the editor.
 
-**Current status — 17 October 2026:** full-corpus WordLM fitting and validation
+**Current status — 4 November 2026:** full-corpus WordLM fitting and validation
 are complete: **3,287,357 train sentences**, **1,082,532 validation sentences**,
 validation perplexity **368.9469**, and **0 zero-probability tokens**.
 A bounded browser projection now ranks unresolved dictionary spelling alternatives
 inside the existing local correction pipeline. Existing rules, established words,
 explicit accents, names/identifiers and protected spans retain their guards.
 This is a statistical Kneser-Ney trigram, not a generative chat model.
-CharSpell and PunctCase still have recorded CPU smoke results; this release does
-not claim their full runs are complete. See the [WordLM integration record](docs/training/wordlm-browser-2026-10-17.md).
+PunctCase full CPU fitting and validation also completed: four epochs, selected
+epoch two. Its original float32 model now runs locally behind the explicit
+**PunctCase — durğu və registr (sınaq)** option. The default remains off.
+CharSpell retains its recorded CPU smoke result; its full completion is not claimed.
+See the [WordLM record](docs/training/wordlm-browser-2026-10-17.md) and
+[PunctCase integration](docs/training/punctcase-app-2026-11-04.md).
 
 ## What you can do
 
@@ -121,7 +125,29 @@ or real correction accuracy. Its separate fixed-export validation and current
 regression checks are recorded in the integration report. In the same-code
 ablation, the existing 500-case holdout and 2,000-case preservation set were
 unchanged; no aggregate correction improvement is established on those sets. No test split was used
-for fitting/export, and no real-error calibration or neural training is claimed.
+for WordLM fitting/export, and that integration performs no neural fitting or
+real-error calibration.
+
+### Experimental PunctCase
+
+Enable **PunctCase — durğu və registr (sınaq)** separately in the text or email
+module. The trained character-CNN/BiGRU and its 157,736 bytes of float32 weights
+load on demand in the editor Worker. Both strategies and the optional HTTP API
+accept `options: { "usePunctCase": true }`; default requests retain their existing
+behavior. The editor does not send input text to a server for this inference.
+
+This first integration accepts only unpunctuated plain drafts of at least four
+words. It preserves existing punctuation, literal/structured documents, identifiers
+and signatures. High-confidence proposals only insert punctuation and capitalize
+an initial after an accepted boundary. Whole proposals are rejected if they change
+the word sequence or are not stable through the existing correction engine.
+These are fixed engineering guards, not calibrated real-error thresholds.
+
+The JavaScript logits match the original PyTorch checkpoint within **0.0000058**
+on 1,280 numerical fixture logits (required tolerance 0.001). The original
+float32 export is used; int8 parity/default-on release gates are not claimed.
+The frozen 500-case holdout and 2,000-case preservation set have no added
+regressions. Independent human-reviewed quality remains unmeasured.
 
 ### Limits and dictionary
 
@@ -167,6 +193,13 @@ strategy, **429** rate limited, **500** unexpected failure. Rate limiting is
 It resets on cold starts and is not shared across server instances.
 
 ## Current verification and quality
+
+The 4 November PunctCase integration passed **5,572 Node tests** with no failures;
+**8 existing TODO cases** remain. All **38 CPU Python training/export contracts**
+passed without skips. Production build, typecheck, lint, HTTP text/mail checks,
+the existing performance gate and Chromium checks passed. Numerical/model-policy
+scope and the separate default/opt-in measurements are in the
+[PunctCase integration record](docs/training/punctcase-app-2026-11-04.md).
 
 The 17 October WordLM integration passed **5,538 tests with no failures**; the
 **9 pre-existing TODO cases** remain documented defects, not passing behavior.
@@ -242,7 +275,7 @@ for actual timings, memory, counts, configuration and synthetic validation.
 | --- | --- | --- |
 | CharSpell | Synthetic noisy→clean pairs plus identity examples | CPU smoke completed; character-CNN candidate scorer, Python checkpoint, browser export pending. |
 | WordLM | All 3,287,357 clean train sentences | Full validation completed; compact browser fallback integrated. Real-error benefit/lambda remains uncalibrated. |
-| PunctCase | Punctuation/case labels from clean train text | CPU smoke completed; character-CNN + BiGRU, browser export pending. |
+| PunctCase | Punctuation/case labels from clean train text | Full CPU fitting/validation completed; original float32 browser model available through an explicit experimental option. Int8/default-on acceptance remains pending. |
 
 Smoke used 100,000 train and 10,000 validation sentences, seed 20261007. CharSpell
 completed in 32m47s, WordLM in 29s and PunctCase in 7m18s, including command startup
@@ -258,9 +291,10 @@ binds the full model SHA-256 and accepted manifest. This does not establish a
 currently running CharSpell/PunctCase process.
 
 Training is explicit. Editor installation/build/start never trains this corpus.
-The new WordLM projection is a deliberate app integration; other offline tools
-still do not automatically replace active weights. Full neural training, real-error
-calibration and CharSpell/PunctCase browser export remain separate work.
+The WordLM projection and opt-in PunctCase path are deliberate app integrations.
+Training commands do not automatically replace active weights. CharSpell full
+training/export, real-error calibration, int8 PunctCase validation and default-on
+acceptance remain separate work.
 Calibration needs its own `data/calibration/` real-error set, not the five-million
 corpus, test split or phase0 references.
 

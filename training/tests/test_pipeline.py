@@ -7,10 +7,10 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from training.common import ROOT, CORPUS, PREPARED_FILES, gzip_writer, import_parts, indices, inspect_corpus, receipt, safe_output, sha256, verify_files, verify_prepared
+from training.common import ROOT, CORPUS, PREPARED_FILES, prepared_files, gzip_writer, import_parts, indices, inspect_corpus, receipt, safe_output, sha256, verify_files, verify_prepared
 from training.candidates import CandidateIndex, build_index, distance
 from training.prepare import prepare, selected_rows, spelling_examples, eligible_words
-from training.run import batches, resume_report, validate_full_smoke
+from training.run import batches, resume_report, validate_full_smoke, train_model
 from training.text import fold, lower, tag_sentence
 from training.wordlm import WordLM, build
 from collections import Counter
@@ -109,6 +109,15 @@ class PipelineTests(unittest.TestCase):
             with patch('training.prepare.receipt', return_value=({'manifestSHA256': 'mock-only'}, manifest)), \
                  patch('training.common.verify_files'), patch('training.prepare.run_gate'), patch('training.prepare.ROOT', project):
                 result = prepare(corpus, root / 'prepared', config)
+                with patch('training.prepare.build_index', side_effect=AssertionError('PunctCase must not build a spelling index')):
+                    punctcase = prepare(corpus, root / 'punctcase', config, stages=['punctcase'])
+                self.assertEqual(punctcase['preparedStages'], ['punctcase'])
+                self.assertFalse((root / 'punctcase/lexicon.sqlite').exists())
+                self.assertFalse((root / 'punctcase/wordlm-train.jsonl.gz').exists())
+                self.assertFalse((root / 'punctcase/charspell-train.jsonl.gz').exists())
+                for split in ('train', 'validation'):
+                    self.assertEqual(sha256(root / f'punctcase/punctcase-{split}.jsonl.gz'),
+                                     sha256(root / f'prepared/punctcase-{split}.jsonl.gz'))
             self.assertFalse(result['trainingStarted'])
             self.assertEqual(set(result['splits']), {'train', 'validation'})
             self.assertEqual(result['splits']['train']['sentences'], 1)
@@ -196,6 +205,21 @@ class PipelineTests(unittest.TestCase):
                 payload.write_bytes(b'tampered!')
                 with self.assertRaisesRegex(ValueError, 'artifact integrity'):
                     verify_prepared(root)
+                metadata['preparedStages'] = ['punctcase']
+                metadata['files'] = {name: metadata['files'][name] for name in prepared_files(['punctcase'])}
+                (root / 'prepared.json').write_text(json.dumps(metadata))
+                self.assertEqual(verify_prepared(root)['preparedStages'], ['punctcase'])
+                (root / 'punctcase-train.jsonl.gz').write_bytes(b'tampered selected data')
+                with self.assertRaisesRegex(ValueError, 'artifact integrity'):
+                    verify_prepared(root)
+
+    def test_unprepared_stage_and_invalid_stage_selections_fail_before_training(self):
+        for selection in ([], ['punctcase', 'punctcase'], ['unknown'], 'punctcase'):
+            with self.assertRaisesRegex(ValueError, 'Prepared stages'):
+                prepared_files(selection)
+        with patch('training.run.verify_prepared', return_value={'preparedStages': ['punctcase']}):
+            with self.assertRaisesRegex(ValueError, 'not present in the hash-bound'):
+                train_model('charspell', Path('/unused'), Path('/unused-out'), 'cpu')
 
     def test_resume_guard_binds_data_and_checkpoints(self):
         with tempfile.TemporaryDirectory() as tmp:

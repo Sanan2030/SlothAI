@@ -21,6 +21,7 @@ const RequestSchema = z.object({
       preserveFormatting: z.boolean().optional(),
       emailGreeting: z.enum(EMAIL_GREETINGS).optional(),
       omitSubject: z.boolean().optional(),
+      usePunctCase: z.boolean().optional(),
     })
     .strict()
     .optional(),

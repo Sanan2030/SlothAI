@@ -6,6 +6,7 @@ export interface TransformLogEntry {
   input: string;
   output: string;
   greeting?: string;
+  usePunctCase?: boolean;
   source: 'transformed' | 'remembered' | 'reviewed';
 }
 
@@ -22,6 +23,7 @@ function valid(value: unknown): value is TransformLogEntry {
     && typeof entry.input === 'string' && entry.input.length <= MAX_ENTRY_LENGTH
     && typeof entry.output === 'string' && entry.output.length <= MAX_ENTRY_LENGTH * 2
     && (entry.greeting === undefined || typeof entry.greeting === 'string' && entry.greeting.length <= 100)
+    && (entry.usePunctCase === undefined || typeof entry.usePunctCase === 'boolean')
     && (entry.source === 'transformed' || entry.source === 'remembered' || entry.source === 'reviewed');
 }
 

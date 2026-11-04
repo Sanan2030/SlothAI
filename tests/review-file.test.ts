@@ -26,6 +26,14 @@ test('portable corpus retains raw input, generated output, target and options', 
   assert.equal(changed.cases[0].actual, 'Salam.');
   assert.equal(appendReviewCase(changed, { ...row, id: 'mail', module: 'mail', greeting: 'Salam,' }).cases.length, 2);
 });
+test('review files keep PunctCase mode distinct and validate its type', () => {
+  let corpus = appendReviewCase(emptyReviewCorpus(), row);
+  corpus = appendReviewCase(corpus, { ...row, id: 'punctcase', usePunctCase: true });
+  assert.equal(corpus.cases.length, 2);
+  assert.equal(parseReviewCorpus(serializeReviewCorpus(corpus)).cases[1].usePunctCase, true);
+  assert.throws(() => parseReviewCorpus(JSON.stringify({ ...corpus,
+    cases: [{ ...row, usePunctCase: 'yes' }] })), /formatı/u);
+});
 test('disk writes retain all examples and re-read externally updated data', async () => {
   const file = disk('');
   await saveReviewToFile(file.handle, row);

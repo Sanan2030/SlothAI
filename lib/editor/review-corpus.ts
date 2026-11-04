@@ -7,6 +7,7 @@ export interface ReviewCase {
   expected: string;
   preserveFormatting: boolean;
   greeting?: string;
+  usePunctCase?: boolean;
   reviewedAt: string;
   /** A user explicitly saved this target; not independent linguistic certification. */
   reviewStatus?: 'user-approved';
@@ -31,6 +32,7 @@ function validCase(value: unknown): value is ReviewCase {
     && typeof row.actual === 'string' && row.actual.length <= 50000
     && typeof row.preserveFormatting === 'boolean'
     && (row.greeting === undefined || typeof row.greeting === 'string' && row.greeting.length <= 100)
+    && (row.usePunctCase === undefined || typeof row.usePunctCase === 'boolean')
     && (row.reviewStatus === undefined || row.reviewStatus === 'user-approved')
     && typeof row.reviewedAt === 'string' && Number.isFinite(Date.parse(row.reviewedAt));
 }
@@ -49,7 +51,8 @@ export function parseReviewCorpus(text: string): ReviewCorpus {
 }
 function sameSource(left: ReviewCase, right: ReviewCase): boolean {
   return left.module === right.module && left.input === right.input
-    && left.preserveFormatting === right.preserveFormatting && left.greeting === right.greeting;
+    && left.preserveFormatting === right.preserveFormatting && left.greeting === right.greeting
+    && Boolean(left.usePunctCase) === Boolean(right.usePunctCase);
 }
 export function appendReviewCase(corpus: ReviewCorpus, row: ReviewCase): ReviewCorpus {
   if (!validCase(row)) throw new Error('Test nümunəsinin mətni və ya düzgün nəticəsi uyğun deyil.');

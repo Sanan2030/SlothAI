@@ -1,0 +1,64 @@
+{
+  "sourceCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+  "exportSHA256": "b786de15350b1770f4e0dce7d4202432db7480d63bd12d9bd0aad52333739a95",
+  "precision": "Original float32, no int8 quantization",
+  "golden": {
+    "comparedLogits": 1280,
+    "maximumAbsoluteLogitError": 0.0000057220458984375,
+    "tolerance": 0.001
+  },
+  "policy": {
+    "punctuationProbability": 0.995,
+    "titleProbability": 0.95
+  },
+  "defaultEnabled": false,
+  "quality": {
+    "holdout-500": {
+      "cases": 500,
+      "baselineExact": 393,
+      "optInExact": 393,
+      "changedIds": [],
+      "regressedIds": [],
+      "unstableIds": [],
+      "scope": "Frozen engineering references; not independent human-reviewed real-user quality."
+    },
+    "no-harm-2000": {
+      "cases": 2000,
+      "baselineExact": 2000,
+      "optInExact": 2000,
+      "changedIds": [],
+      "regressedIds": [],
+      "unstableIds": [],
+      "scope": "Frozen engineering references; not independent human-reviewed real-user quality."
+    }
+  },
+  "validation": {
+    "samplePolicy": "First 512 validation chunks, unchanged fixed policy; only first 128 used for app smoke.",
+    "rows": 512,
+    "punctuationLabels": 5377,
+    "punctuationAccuracy": 0.9841919285847127,
+    "punctuationMicroF1": 0.9396433470507545,
+    "caseLabels": 5881,
+    "caseAccuracy": 0.9972793742560789,
+    "transformed": 128,
+    "applied": 9,
+    "proposed": 9,
+    "rejected": 0,
+    "changedIds": [
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240659:1",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240663:2",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240665:5",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240665:6",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240668:13",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240670:4",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240671:6",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240676:5",
+      "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00000-of-00018:240680:2"
+    ],
+    "elapsedMs": 6967.011082999999,
+    "scope": "Source-derived labels and deliberately depunctuated validation smoke; not real-user quality."
+  },
+  "calibrationUsed": false,
+  "testSplitRead": false,
+  "source": "Existing validation and frozen references only; no training or policy fitting."
+}

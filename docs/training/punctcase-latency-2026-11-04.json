@@ -1,0 +1,24 @@
+{
+  "node": "v24.19.0",
+  "words": 1000,
+  "characters": 5707,
+  "coldOptInMs": 473.79001300000004,
+  "baseline": {
+    "runs": 6,
+    "p50Ms": 115.12593900000002,
+    "p95Ms": 121.06592099999989,
+    "meanMs": 114.20637449999997
+  },
+  "punctCase": {
+    "runs": 6,
+    "p50Ms": 256.6392979999996,
+    "p95Ms": 282.97169799999983,
+    "meanMs": 260.6656613333333
+  },
+  "appliedEdits": 140,
+  "headInferenceMs": 37.97009500000013,
+  "maxRSSKiB": 432796,
+  "sourceCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+  "budgetMs": 2000,
+  "scope": "Warm Node on this cloud CPU; explicit formatting preservation, alternating runs, no concurrent heavy checks. Not a mobile/browser latency guarantee."
+}
