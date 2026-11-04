@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-04T18:17:50.076467+00:00",
+  "savedAtUTC": "2026-11-04T18:47:53.985700+00:00",
   "job": {
     "status": "running",
     "phase": "prepare-full",
@@ -127,9 +127,9 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-04T17:47:56.736697+00:00",
-      "tag": "charspell-save-20261104-20261104T174744962631Z",
-      "commit": "7d6ae1a55c045d817d8aa1e952adb852adcd30cb",
+      "atUTC": "2026-11-04T18:17:59.620406+00:00",
+      "tag": "charspell-save-20261104-20261104T181750084350Z",
+      "commit": "1dcae55b513f8f45af02177047345ffe20c3b610",
       "phase": "prepare-full",
       "reports": {
         "charspell-smoke": {
@@ -155,14 +155,14 @@
         }
       },
       "archiveSHA256": "32ff34aeb0569f6ef5e32292833ac7a7bab078af0a1cf9491bb76e71bb7e4edc",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/7d6ae1a55c045d817d8aa1e952adb852adcd30cb/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/7d6ae1a55c045d817d8aa1e952adb852adcd30cb/RECOVERY.json",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/1dcae55b513f8f45af02177047345ffe20c3b610/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/1dcae55b513f8f45af02177047345ffe20c3b610/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-04T18:17:50.033201+00:00",
-    "freeDiskGiB": 49.92,
+    "updatedAtUTC": "2026-11-04T18:47:53.942826+00:00",
+    "freeDiskGiB": 49.68,
     "preparedData": {
       "smoke-data": {
         "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/smoke-data",
