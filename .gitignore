@@ -24,3 +24,5 @@ training/**/__pycache__/
 # Browser test artifacts
 playwright-report/
 test-results/
+artifacts/qa/
+scripts/qa/__pycache__/

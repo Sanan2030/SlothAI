@@ -23,11 +23,16 @@ const questionConstituent = /(?:^|[\s,])(?:niyə|necə|kim|hara|harada|nə vaxt|
 
 export function detectQuestion(text: string): boolean {
   const value = text.trim().replace(/[.!?]+$/u, '');
+  if (/^doğrudanmı(?=\s|,|$)/iu.test(value)) return true;
   if (/(?:bilərsiniz|eynidir|yaranır|sabitləşib)(?:mi|mı|mu|mü)$/iu.test(value)) return true;
   // Question words inside a request or relative clause are not direct questions.
   if (/(?:göndərin|yazın|soruşaq|görünməlidir|bildirin|dəqiqləşdirin)$/iu.test(value)
     && !particle.test(value)) return false;
   if (/(?:^|\s)\p{L}+(?:dığını|diyini|duğunu|düyünü|dığı|diyi|duğu|düyü|olduğu|olduğunu)(?:\s|$)/iu.test(value) && !particle.test(value)) return false;
+  // An inflected relative question phrase modifies a following noun: "hansı
+  // məbləğə tətbiqi yazılır" reports an explanation rather than asking it.
+  if (/hansı\s+(?:\p{L}+\s+){0,2}\p{L}+(?:a|ə|ya|yə|da|də|dan|dən)\s+\p{L}+(?:ı|i|u|ü)(?:\s+\p{L}+){0,3}\s+(?:yazılır|göstərilir|bildirilir|izah edilir)$/iu.test(value)
+    && !particle.test(value) && !questionOpeners.test(value)) return false;
   if (embedded.test(value) || /^nə\s+isə(?!\p{L})/iu.test(value)
     || /(?:^|\s)bir\s+neçə(?=\s|$)/iu.test(value)
     || /(?:^|[^\p{L}])heç\s+kim(?=$|[^\p{L}])/iu.test(value)

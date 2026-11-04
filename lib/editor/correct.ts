@@ -2,6 +2,7 @@ import type { InferenceRunner } from './inference-cache';
 import { literalPattern, withProtectedCode, withProtectedLiterals } from './literal-spans';
 import { editorStage, type DiagnosticSink } from './diagnostics';
 import { selectSpellingWithWordLM, type WordLMSelectionPolicy } from './wordlm/selection';
+import { contextualOrthography } from './contextual-orthography';
 import { hasAttentionCandidate } from './neural/attention-runtime';
 import { chooseWordLMSpelling } from './wordlm/runtime';
 import { wordLMTokens } from './wordlm/core';
@@ -363,6 +364,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   text = stage('expositoryPhrases', 'rule', text, expositoryPhrases);
   text = stage('businessPhrases', 'rule', text, businessPhrases);
   text = stage('technicalPhrases', 'rule', text, technicalPhrases);
+  text = stage('contextual-orthography', 'rule', text, value => contextualOrthography(value, originalSpellingText, services.morphology));
   // Run WordLM only after every existing phrase-level spelling rule has had
   // its decision. Earlier use could turn a temporal "seher" into "şəhər"
   // before repairPhrases sees the corrected right-hand word (e.g. "dəniz").

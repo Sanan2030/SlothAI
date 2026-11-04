@@ -1,8 +1,10 @@
 import { isClosedFunctionForm } from './function-word-forms';
+import { restoreAttestedDiacritics, restoreAttestedSuffix, restoreRepeatedKey } from './wordlm/lexical-evidence';
 import type { MorphologyEngine } from './contracts/morphology';
 import boundedLexicalArtifact from './neural/bounded-model.json';
 import { SourceInflectionEngine, usesLexicalYBuffer } from './source-inflection';
 import { reviewedSpelling } from './reviewed-spelling';
+import { restoreReviewedVerb } from './reviewed-verb-forms';
 import { regularForms } from './morphology';
 import { narrativeWords } from './narrative';
 import { extendedNarrativeWords, extendedAliases } from './extended-narrative';
@@ -20,6 +22,7 @@ const documentSurfaces = new Set([...Object.keys(documentArtifact.lexicon.words)
 // Curated forms, not a language model. Unknown/ambiguous words stay unchanged.
 // Extend this list with reviewed Azerbaijani words; never blindly replace letters.
 const words = `
+parom heş sekmə sərt
 mən sən mənim sənin bizim sizin özü özüm özün özünüz özümüz
 mənə sənə bizə sizə məni səni bunu bunu belə elə nə necə niyə üçün
 yaxşı yaxşıyam yaxşıdır yaxşısan pisəm pisdir necəsən necəsiniz
@@ -29,7 +32,7 @@ getmək gedirəm gedirsən gedir gedirik gedəcəyəm gedəcəyik
 istəyirəm istəyirsən istəyir istəyirik istəyirsiniz istəyirlər
 bilərəm bilərsən bilərik bilərsiniz edə bilər edək edəcək edəcəyəm edəcəyik
 edirəm edirsən edir edirik edirsiniz edirlər etmişəm etmişik
-olacağam olacaq olacağıq olmalıdır olmalı olmuşdur olmuşam
+olacağam olacaq olacağıq olmalıdır olmalı olmuş olmuşdur olmuşam
 yazıram yazırsan yazır yazırıq yazın yazdım yazdığın yazdığınız
 görmək görürəm görürsən görürük görünür görsənir görünəcək
 baxır baxıram baxırıq baxın baxdı baxdıq baxdılar
@@ -196,6 +199,16 @@ export function isEstablishedSurface(word: string, services?: SpellingContext): 
 }
 
 const sourceInflections = new SourceInflectionEngine(surface => candidates.get(fold(surface))?.has(surface) === true || dictionaryCandidates(surface)?.has(surface) === true);
+// Reviewed regular nouns extend runtime morphology without entering the frozen
+// training feature vocabulary or treating every unknown token as a noun.
+const runtimeNounRoots = new Set(['parom', 'heş', 'sekmə', 'maket', 'palet', 'altyazı', 'pilləkən', 'çatdırılma', 'saxlanılma', 'bloklanma', 'indeksləşmə', 'qurğu', 'dəyişmə', 'hesablaşma', 'çəki', 'rampa']);
+const runtimeNouns = new SourceInflectionEngine(() => false, [...runtimeNounRoots].map(lemma => ({ lemma, pos: 'noun' as const })));
+const runtimeNounPrefixes = [...runtimeNounRoots].map(fold);
+const runtimeNounCandidates = (raw: string) => {
+  const key = fold(raw);
+  return runtimeNounPrefixes.some(prefix => key.startsWith(prefix))
+    ? runtimeNouns.candidates(raw).filter(row => runtimeNounRoots.has(row.lemma)) : [];
+};
 export const analyzeSourceInflection = (word: string) => sourceInflections.analyze(word);
 
 function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
@@ -227,6 +240,9 @@ type ProductiveSuffixRule = {
 };
 
 const reviewedProductiveRoots = new Map<string, string>(Object.entries({
+  parom: 'parom', hes: 'heş', sekme: 'sekmə',
+  dovr: 'dövr', maket: 'maket', palet: 'palet', pilleken: 'pilləkən',
+  reqemsallasdir: 'rəqəmsallaşdır', catdirilma: 'çatdırılma', isiq: 'işıq',
   gonder: 'göndər',
   gozle: 'gözlə',
   gor: 'gör',
@@ -554,6 +570,12 @@ export function analyzeEstablishedInflection(word: string): readonly Morphologic
   return records;
 }
 
+/** A reviewed root, rather than any coincidental dictionary stem, licenses
+ * this extra protection against structural spelling proposals. */
+export function hasReviewedInflection(word: string): boolean {
+  return analyzeEstablishedInflection(word).some(row => reviewedProductiveRoots.get(fold(row.lemma)) === row.lemma);
+}
+
 function restoreDigraphTransliteration(word: string, services?: SpellingContext): string | undefined {
   if (!/(?:sh|ch|gh)/i.test(word)) return undefined;
   const variant = word
@@ -571,6 +593,7 @@ function restoreEstablishedWord(word: string, services?: SpellingContext): strin
   // Preserve camelCase identifiers and acronyms. Title case remains editable.
   if (word.length > 1 && word === word.toLocaleUpperCase('az-AZ')) return word;
   if (/[a-zəçğıöşü][A-ZƏÇĞIİÖŞÜ]/.test(word)) return word;
+  if (runtimeNounCandidates(word).some(row => row.surface === word.toLocaleLowerCase('az-AZ'))) return word;
   // Explicit, morphologically valid diacritics encode the author's chosen meaning.
   if (/[əçğıöşü]/iu.test(word) && services?.morphology.isValidWordForm(word)) return word;
   const key = fold(word);
@@ -642,6 +665,11 @@ export function restorePriorWord(word: string, services?: SpellingContext): stri
   return restoreEstablishedWord(word, beforeSourceExpansion(services));
 }
 export function restoreWord(word: string, services?: SpellingContext): string {
+  const protectedTechnical = technicalSpelling(word);
+  if (protectedTechnical !== undefined) return protectedTechnical;
+  // An explicitly accented I-initial spelling is the author's casing evidence.
+  // The ASCII-only title-case heuristic must not rewrite Işıq into İşıq.
+  if (/^I[a-zəçğıöşü]*[əçğıöşü]/u.test(word)) return word;
   // ASCII title-case I does not encode Azerbaijani dotless ı. Resolve the
   // lowercase lexical spelling first; only attested i-initial native words
   // may receive dotted İ. Explicit diacritics, acronyms and foreign terms win.
@@ -651,12 +679,33 @@ export function restoreWord(word: string, services?: SpellingContext): string {
       return 'İ' + canonical.slice(1);
   }
   if (isClosedFunctionForm(word) || ambiguous.has(fold(word)) || fold(word) === 'seher') return word;
+  const verb = restoreReviewedVerb(word);
+  if (verb) return verb;
+  if (!isReviewedSpelling(word) && !isForeignTechnicalInflection(word) && !/[\p{Ll}][\p{Lu}]/u.test(word) && !/^[\p{Lu}]+$/u.test(word)) {
+    const nounForms = new Set(runtimeNounCandidates(word).map(row => row.surface));
+    if (nounForms.size === 1) {
+      const noun = [...nounForms][0];
+      return /^\p{Lu}/u.test(word) ? noun[0].toLocaleUpperCase('az-AZ')+noun.slice(1) : noun;
+    }
+  }
+  // Prefer a same-skeleton attested repair to a later edit-distance guess,
+  // while retaining explicitly reviewed aliases and valid whole spellings.
+  if (!Object.hasOwn(aliases, fold(word)) && !isReviewedSpelling(word) && !isForeignTechnicalInflection(word)) {
+    const suffix = restoreAttestedSuffix(word);
+    if (suffix) return suffix;
+  }
   const prior = beforeSourceExpansion(services);
   const sourceRows = sourceInflections.candidates(word);
   // Lexically classified exceptions outrank regular suffix guesses. This
   // preserves their entire paradigm, including longer possessed case chains.
   if (sourceRows.some(row => row.surface === word.toLocaleLowerCase('az-AZ') && usesLexicalYBuffer(row.lemma))) return word;
   const existing = restoreEstablishedWord(word, prior);
+  if (existing === word && !isEstablishedLegacySurface(word, prior) && !isForeignTechnicalInflection(word)) {
+    const attested = restoreAttestedDiacritics(word)
+      ?? restoreRepeatedKey(word, value => isEstablishedLegacySurface(value, prior)
+        || runtimeNounCandidates(value).some(row => row.surface === value));
+    if (attested) return attested;
+  }
   const wholeSurface = chooseSpelling(word, dictionaryCandidates(word));
   // Only the established long homograph families veto a forced default sense.
   // Closed grammatical words cannot inherit a coincidental short noun analysis.

@@ -1,0 +1,16 @@
+{
+  "scope": "Assistant-authored compositional development scenarios vs pinned repository tests and evaluation data; not all texts on the internet or all raw training corpus.",
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "legacyReferenceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8",
+  "legacyReferences": 7225,
+  "uniqueInputs": 10000,
+  "uniqueNormalizedTargets": 10000,
+  "normalizedExactOverlap": 0,
+  "sharedEightWordSequence": 0,
+  "maximumTrigramJaccard": 0.07692307692307693,
+  "rejectionThreshold": 0.35,
+  "retrieval": "Shared word trigrams; grams in more than 512 references are excluded from retrieval, not from scoring.",
+  "excludedCommonGrams": 0,
+  "intraSet": "Event/continuation pairs are unique; authored clauses recur across combinations. No independent-scenario claim."
+}

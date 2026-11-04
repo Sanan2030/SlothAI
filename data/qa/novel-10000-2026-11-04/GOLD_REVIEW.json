@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "baseCorpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "reviewer": "assistant linguistic review authorized by user",
+  "inputsChanged": false,
+  "originalFrozenCorpusPreserved": true,
+  "rule": "unutulmuş → unudulmuş (Azerbaijani passive orthography)",
+  "changes": [
+    {
+      "id": "novel10k-transport-0024",
+      "before": "Bildiririk ki, dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və dəyişiklik yolçulara vaxtında bildirilir.",
+      "after": "Bildiririk ki, dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və dəyişiklik yolçulara vaxtında bildirilir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0079",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Dəyişən hava şəraiti nəzarətdə saxlanılır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Dəyişən hava şəraiti nəzarətdə saxlanılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0081",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və əşyaların təhvilinə dair qəbz tərəflərdə qalır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və əşyaların təhvilinə dair qəbz tərəflərdə qalır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0127",
+      "before": "Doğrudanmı dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və gediş haqqına daxil olmayan xidmətlər ayrıca göstərilir?",
+      "after": "Doğrudanmı dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və gediş haqqına daxil olmayan xidmətlər ayrıca göstərilir?",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0136",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və çatdırılmanın uğuru alıcının təsdiqi ilə yoxlanılır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və çatdırılmanın uğuru alıcının təsdiqi ilə yoxlanılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0258",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və görünməyən nişan üçün əlavə xəbərdarlıq qoyulur.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və görünməyən nişan üçün əlavə xəbərdarlıq qoyulur.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0276",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və növbəti əlaqə nöqtəsi əvvəlcədən dəqiqləşdirilir.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və növbəti əlaqə nöqtəsi əvvəlcədən dəqiqləşdirilir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0339",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Əvəzləyici reys barədə seçimlər açıqlanır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Əvəzləyici reys barədə seçimlər açıqlanır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0420",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Verilmiş elan faktiki vəziyyətlə müqayisə edilir.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Verilmiş elan faktiki vəziyyətlə müqayisə edilir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0436",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və alternativ marşrutun məsafəsi ayrıca hesablanır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və alternativ marşrutun məsafəsi ayrıca hesablanır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0443",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və bağlamanın izi bütün keçidlərdə saxlanılır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və bağlamanın izi bütün keçidlərdə saxlanılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0474",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və daşıma şərti yük sahibinə yazılı verilir.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və daşıma şərti yük sahibinə yazılı verilir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0476",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Nəqliyyat vasitəsinin tutumu aşılmır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Nəqliyyat vasitəsinin tutumu aşılmır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0564",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və hərəkət bərpa olunanda əvvəlki xəbərdarlıq yenilənir.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və hərəkət bərpa olunanda əvvəlki xəbərdarlıq yenilənir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0760",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Sərnişinin xəbəri olmadan istiqamət dəyişdirilmir.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Sərnişinin xəbəri olmadan istiqamət dəyişdirilmir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0804",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Yolun vəziyyəti barədə təsdiqlənməmiş xəbər yayılmır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Yolun vəziyyəti barədə təsdiqlənməmiş xəbər yayılmır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0826",
+      "before": "Doğrudanmı dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və yükün məzmunu açılmadan qoruyucu qabı yoxlanılır?",
+      "after": "Doğrudanmı dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və yükün məzmunu açılmadan qoruyucu qabı yoxlanılır?",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0869",
+      "before": "Bildiririk ki, dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və əlçatan keçidin yeri sərnişinə izah olunur.",
+      "after": "Bildiririk ki, dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və əlçatan keçidin yeri sərnişinə izah olunur.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0922",
+      "before": "Bildiririk ki, dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və yükün qəbul anındakı vəziyyəti təsvir edilir.",
+      "after": "Bildiririk ki, dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və yükün qəbul anındakı vəziyyəti təsvir edilir.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0969",
+      "before": "Bildiririk ki, dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və daşıyıcının əlaqə nömrəsi əlçatan saxlanılır.",
+      "after": "Bildiririk ki, dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və daşıyıcının əlaqə nömrəsi əlçatan saxlanılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0976",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir. Baqajın ölçüsü daşıyıcının qaydası ilə tutuşdurulur.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir. Baqajın ölçüsü daşıyıcının qaydası ilə tutuşdurulur.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0983",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və təhlükəsiz keçid yolu əvvəlcədən araşdırılır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və təhlükəsiz keçid yolu əvvəlcədən araşdırılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    },
+    {
+      "id": "novel10k-transport-0996",
+      "before": "Dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir və gözləmə vaxtı faktiki hərəkət vaxtından ayrılır.",
+      "after": "Dayanacaqda unudulmuş çanta tapıntı məntəqəsinə verilir və gözləmə vaxtı faktiki hərəkət vaxtından ayrılır.",
+      "reason": "Azərbaycan dilində unutmaq felinin məchul növündə t→d dəyişməsi ilə unudulmuş yazılır; əvvəlki müəllif variantı Türkiyə türkcəsindəki formaya yaxın idi. Bu düzəliş tətbiqin çıxışından asılı olmayan orfoqrafik redaktədir."
+    }
+  ]
+}

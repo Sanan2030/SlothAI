@@ -1,5 +1,11 @@
 /** Individually reviewed orthographic repairs; no sentence lookup or translations. */
 export const reviewedSpelling: Record<string, string> = {
+  // Attested loanword; retain its regular noun inflections (paromun, paromdan).
+  parom: 'parom',
+  hes: 'heş', sekme: 'sekmə',
+  butun: 'bütün', isiq: 'işıq', xususile: 'xüsusilə',
+  // Native passive of unutmaq voices t -> d; retain the explicit gold erratum.
+  unutulmus: 'unudulmuş',
   ishe: 'işə', bolme: 'bölmə', istemisiniz: 'istəmisiniz', rahatlasdirilmis: 'rahatlaşdırılmış', etibarliq: 'etibarlılıq', saniye: 'saniyə',
   uygunsuzlugu: 'uyğunsuzluğu', yenilendikten: 'yeniləndikdən', sehvlerinin: 'səhvlərinin',
   korunur: 'qorunur', yuklenene: 'yüklənənə', grafikde: 'qrafikdə', deger: 'dəyər',

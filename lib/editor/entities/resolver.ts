@@ -5,6 +5,10 @@ import { geographicEntities } from './geo';
 import { culturalEntities } from './cultural';
 import { namedEntity, type NamedEntity } from './types';
 import { caseSuffixes, copulaSuffix } from './morphology';
+import { dictionaryCandidates } from '../dictionary';
+import { SourceInflectionEngine } from '../source-inflection';
+
+const commonInflections = new SourceInflectionEngine(surface => dictionaryCandidates(surface)?.has(surface) === true);
 
 const azLower = (s: string) => s.toLocaleLowerCase('az-AZ');
 const fold = (s: string) => azLower(s).replace(/ə/g, 'e').replace(/ı/g, 'i').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
@@ -171,11 +175,24 @@ export function resolveEntitiesInText(text: string): string {
     const previous = cursor++;
     const next = words[previous + 1]?.[0] ?? '';
     const prior = words[previous - 1]?.[0] ?? '';
+    // A pavement's height/cover is nominal evidence, not an unmarked city name.
+    if (fold(word) === 'seki' && !/[şŞ]/u.test(word) && /^(?:hundurluy|ortuy|daslar|kenar)/u.test(fold(next)))
+      return /^\p{Lu}/u.test(word) ? 'Səki' : 'səki';
     const personContext = /^(?:xanım|xanımı|xanimi|bəy|bəyi|beyi|müəllim|müəllimə)$/iu.test(next) || /^(?:hörmətli|cənab)$/iu.test(prior)
       || Boolean(resolveSimple(next, 'person') && surnames.some(s => fold(s) === fold(next)));
     const context = [prior, next, words[previous + 2]?.[0] ?? ''].map(fold).join(' ');
     const geographicContext = /(?:haqqinda|barede|seher|seher|rayon|gedir|gedek|sefer|səfər|olke|bolge|erazi|geldim|geldi)/u.test(context);
     const direct = resolveEntityWord(word, personContext, geographicContext || /(?:dan|dən|da|də|nın|nin|nun|nün|ya|yə)$/iu.test(word) && word.length > 8);
+    // A guessed place/name must not change an attested common inflection:
+    // saat-ı-ndan is not Saatlı-dan; səki is not Şəki. Case-only normalization
+    // of an existing entity remains allowed, as does explicit entity context.
+    const explicitGeography = /^(?:seher|rayon|olke|bolge|erazi)/u.test(fold(next));
+    const commonASCIIInflection = !/[əçğıöşü]/iu.test(word) && fold(direct ?? word) !== fold(word)
+      && commonInflections.candidates(word).some(row => row.pos === 'noun');
+    const informedGeography = explicitGeography || geographicContext && !/[əçğıöşü]/iu.test(word) && fold(direct ?? word) === fold(word);
+    if (direct && azLower(direct) !== azLower(word) && !personContext && !informedGeography
+      && (dictionaryCandidates(word)?.has(azLower(word))
+        || commonInflections.analyze(word).some(row => row.pos === 'noun') || commonASCIIInflection)) return word;
     return direct ?? word;
   });
 }

@@ -1,4 +1,6 @@
 import { restoreWord } from './lexicon';
+import { isUniqueAttestedSurface } from './wordlm/lexical-evidence';
+import { analyzeSourceInflection, hasReviewedInflection } from './lexicon';
 import { preservesDiacritics } from './neural/diacritics';
 import { dictionaryCandidates, foldLetters } from './dictionary';
 import { productiveMorphology } from './productive-morphology';
@@ -12,7 +14,9 @@ const compiled = new WeakMap<ObservedChannelModel, Map<string, string[]>>();
 const cache = new Map<string, string | null>();
 const lower = (word: string) => word.normalize('NFC').toLocaleLowerCase('az-AZ');
 export function isKnownSurface(word: string): boolean {
-  return Boolean(canonicalProtectedTerm(word) || isCanonicalEntity(word) || dictionaryCandidates(word)?.has(lower(word)) || productiveMorphology.isValidWordForm(word));
+  return Boolean(canonicalProtectedTerm(word) || isCanonicalEntity(word) || dictionaryCandidates(word)?.has(lower(word)) || productiveMorphology.isValidWordForm(word)
+    || hasReviewedInflection(word)
+    || /[əçğıöşü]/iu.test(word) && analyzeSourceInflection(word).some(row => (row.pos === 'noun' || row.pos === 'verb') && /[əçğıöşü]/u.test(row.lemma)));
 }
 function vocabularyIndex(artifact: ObservedChannelModel): Map<string, string[]> {
   const cached = compiled.get(artifact); if (cached) return cached;
@@ -80,6 +84,16 @@ export function observedSpelling(raw: string, artifact: ObservedChannelModel = m
 /** Join only two individually unrecognized fragments into a verified word.
  * Legitimate pairs, suffix particles (də/ki), punctuation and newlines survive. */
 export function repairObservedSpacing(text: string): string {
+  text = text.replace(/(?<![\p{L}\p{N}_])(səhər|axşam)(və|ve)\s+(səhər|axşam)(?![\p{L}\p{N}_])/giu,
+    (_whole, left: string, _and: string, right: string) => left+' və '+right);
+  // Separate a glued conjunction only after a verified finite verb. Whole
+  // known words, identifiers and noun fragments cannot license this split.
+  text = text.replace(/(?<![\p{L}\p{N}_])([a-zəçğıöşü]{4,38})(və|ve)(?=\s+[\p{L}])/gu, (whole, raw: string) => {
+    if (isKnownSurface(whole)) return whole;
+    const stem = restoreWord(raw);
+    return /(?:[ıiuü]r|d[ıiuü]|acaq|əcək|malıdır|məlidir)$/u.test(stem) && (isKnownSurface(stem) || isUniqueAttestedSurface(stem))
+      ? stem+' və' : whole;
+  });
   const split = text.replace(/(?<![\p{L}\p{N}_])([a-zəçğıöşü]{9,32})(?![\p{L}\p{N}_])/gu, raw => {
     if (isKnownSurface(raw)) return raw;
     const candidates = new Set<string>();

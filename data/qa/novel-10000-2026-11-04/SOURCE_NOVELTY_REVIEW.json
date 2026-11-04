@@ -1,0 +1,40 @@
+{
+  "scope": "Rejection-only audit of original frozen inputs and approved targets vs every accepted clean train/validation/test source row; source text never used to author or train on QA targets.",
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "sourceRows": 5000000,
+  "sourceFiles": [
+    {
+      "file": "train.jsonl",
+      "rows": 3287357,
+      "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+    },
+    {
+      "file": "validation.jsonl",
+      "rows": 1082532,
+      "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717"
+    },
+    {
+      "file": "test.jsonl",
+      "rows": 630111,
+      "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85"
+    }
+  ],
+  "uniqueNormalizedQueries": 11776,
+  "normalizedExactHitCases": [],
+  "sharedEightWordSequences": [],
+  "nearHitCases": [],
+  "maximumTrigramJaccard": 0.16666666666666666,
+  "nearest": {
+    "sourceSplit": "train.jsonl",
+    "sourceID": "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00001-of-00018:201409:41",
+    "queryIDs": [
+      "novel10k-culture-0189"
+    ],
+    "score": 0.16666666666666666
+  },
+  "rejectionThreshold": 0.35,
+  "elapsedSeconds": 95.33164675300213,
+  "status": "passed",
+  "sourceCorpusUploaded": false
+}

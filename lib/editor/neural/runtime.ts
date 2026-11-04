@@ -12,7 +12,7 @@ import { predictNetwork } from './network';
 import { neuralIndex, neuralCandidates, lexicalFeatures, agreementFeatures, subjects, type Subject } from './features';
 import type { NeuralArtifact } from './types';
 import { tokenize, fold, type Token } from '../local-ai/core';
-import { isReviewedSpelling, isEstablishedSurface } from '../lexicon';
+import { isReviewedSpelling, isEstablishedSurface, analyzeSourceInflection, hasReviewedInflection } from '../lexicon';
 import { dictionaryCandidates } from '../dictionary';
 import { productiveMorphology } from '../productive-morphology';
 import { canonicalProtectedTerm } from '../protected-terminology';
@@ -26,6 +26,7 @@ function eligibleNeuralWord(raw: string): boolean {
       || /\p{Ll}\p{Lu}/u.test(raw) || /^[\p{Lu}]+$/u.test(raw)
       || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)
       || isClosedFunctionForm(raw) || isReviewedSpelling(lower) || dictionaryCandidates(lower)?.has(lower) || productiveMorphology.isValidWordForm(raw)
+      || analyzeSourceInflection(raw).some(row => (row.pos === 'noun' || row.pos === 'verb') && /[əçğıöşü]/u.test(row.lemma)) || hasReviewedInflection(raw)
       || [...(dictionaryCandidates(lower) ?? [])].some(word => preservesDiacritics(raw, word)
         && productiveMorphology.generateForms({ lemma: word, pos: 'verb', limit: 1 }).length > 0));
 }

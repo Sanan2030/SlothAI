@@ -92,12 +92,13 @@ export function parseEmailSections(input: string): EmailDocument {
   const hello = remaining.match(/^salam[,!.]?(?=\s|$)/iu);
   if (hello) {
     salutation = { type: 'hello' };
+    const completeGreetingParagraph = /^[\t ]*\n[\t ]*\n/u.test(remaining.slice(hello[0].length));
     remaining = remaining.slice(hello[0].length).trim();
-    const titled = remaining.match(/^((?:\p{L}+(?:\s+\p{L}+)?\s+)?(?:bəy|bey|xanım|xanim))[,!.]?(?=\s|$)/iu);
+    const titled = !completeGreetingParagraph && remaining.match(/^((?:\p{L}+(?:\s+\p{L}+)?\s+)?(?:bəy|bey|xanım|xanim))[,!.]?(?=\s|$)/iu);
     if (titled) {
       salutation = { type: 'honorific', addressee: titled[1] };
       remaining = remaining.slice(titled[0].length).trim();
-    } else {
+    } else if (!completeGreetingParagraph) {
       const recipient = recipientFromLine(remaining.split('\n')[0]);
       // "Salam mühəndis sənədi gətirir" is prose about an engineer,
       // not an address to that engineer. A bare occupational noun needs

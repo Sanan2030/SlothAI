@@ -1,0 +1,277 @@
+{
+  "scope": "Development comparison, both versions rescored against the same explicit gold revision; not general real-user quality.",
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "reviewedTargetsSHA256": "ff72e5ed7ec25fa31d08a5cd2868df221de5d24e84f5760a7833ab04d3912978",
+  "evaluatedRuntimeBaseCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8",
+  "modes": {
+    "default": {
+      "fixed": 3366,
+      "beforeExact": 6394,
+      "afterExact": 9760,
+      "beforeUnstable": 5,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 65,
+      "afterIdentityChanged": 0,
+      "retained-correct": 6394,
+      "open": 240
+    },
+    "punctcase": {
+      "fixed": 3366,
+      "beforeExact": 6394,
+      "afterExact": 9760,
+      "beforeUnstable": 5,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 65,
+      "afterIdentityChanged": 0,
+      "retained-correct": 6394,
+      "open": 240
+    }
+  },
+  "domains": {
+    "default": {
+      "mail": {
+        "cases": 1000,
+        "beforeExact": 622,
+        "afterExact": 990
+      },
+      "it": {
+        "cases": 1000,
+        "beforeExact": 635,
+        "afterExact": 995
+      },
+      "rsd": {
+        "cases": 1000,
+        "beforeExact": 647,
+        "afterExact": 964
+      },
+      "finance": {
+        "cases": 1000,
+        "beforeExact": 630,
+        "afterExact": 980
+      },
+      "education": {
+        "cases": 1000,
+        "beforeExact": 618,
+        "afterExact": 967
+      },
+      "health": {
+        "cases": 1000,
+        "beforeExact": 708,
+        "afterExact": 989
+      },
+      "transport": {
+        "cases": 1000,
+        "beforeExact": 631,
+        "afterExact": 976
+      },
+      "shopping": {
+        "cases": 1000,
+        "beforeExact": 636,
+        "afterExact": 970
+      },
+      "environment": {
+        "cases": 1000,
+        "beforeExact": 642,
+        "afterExact": 971
+      },
+      "culture": {
+        "cases": 1000,
+        "beforeExact": 625,
+        "afterExact": 958
+      }
+    },
+    "punctcase": {
+      "mail": {
+        "cases": 1000,
+        "beforeExact": 622,
+        "afterExact": 990
+      },
+      "it": {
+        "cases": 1000,
+        "beforeExact": 635,
+        "afterExact": 995
+      },
+      "rsd": {
+        "cases": 1000,
+        "beforeExact": 647,
+        "afterExact": 964
+      },
+      "finance": {
+        "cases": 1000,
+        "beforeExact": 630,
+        "afterExact": 980
+      },
+      "education": {
+        "cases": 1000,
+        "beforeExact": 618,
+        "afterExact": 967
+      },
+      "health": {
+        "cases": 1000,
+        "beforeExact": 708,
+        "afterExact": 989
+      },
+      "transport": {
+        "cases": 1000,
+        "beforeExact": 631,
+        "afterExact": 976
+      },
+      "shopping": {
+        "cases": 1000,
+        "beforeExact": 636,
+        "afterExact": 970
+      },
+      "environment": {
+        "cases": 1000,
+        "beforeExact": 642,
+        "afterExact": 971
+      },
+      "culture": {
+        "cases": 1000,
+        "beforeExact": 625,
+        "afterExact": 958
+      }
+    }
+  },
+  "remainingErrorFamilies": {
+    "repeated-key-or-candidate": 19,
+    "lexical-sense-or-context": 94,
+    "lexical-diacritic-coverage": 112,
+    "glued-conjunction": 12,
+    "candidate-or-morphology": 3
+  },
+  "browser": {
+    "scope": "Production Chromium editor Worker, same instance created by app UI; 20,000 Worker requests, not 20,000 DOM clicks.",
+    "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+    "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+    "reviewedTargetsSHA256": "ff72e5ed7ec25fa31d08a5cd2868df221de5d24e84f5760a7833ab04d3912978",
+    "completedAtUTC": "2026-11-04T21:22:00.983Z",
+    "browserVersion": "154.0.8037.57",
+    "uiProbePassed": true,
+    "transformHTTPRequests": 0,
+    "totals": {
+      "default": {
+        "cases": 10000,
+        "exact": 9760,
+        "nodeParityDifferences": 0,
+        "exceptions": 0
+      },
+      "punctcase": {
+        "cases": 10000,
+        "exact": 9760,
+        "nodeParityDifferences": 0,
+        "exceptions": 0
+      }
+    },
+    "elapsedSeconds": 178.50493716999998,
+    "resultsSHA256": "ccedbc925fe842906f4c81f681bd2f1376ca7f5def42a068ead67e7cf7854aca"
+  },
+  "sourceNovelty": {
+    "scope": "Rejection-only audit of original frozen inputs and approved targets vs every accepted clean train/validation/test source row; source text never used to author or train on QA targets.",
+    "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+    "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+    "sourceRows": 5000000,
+    "sourceFiles": [
+      {
+        "file": "train.jsonl",
+        "rows": 3287357,
+        "sha256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9"
+      },
+      {
+        "file": "validation.jsonl",
+        "rows": 1082532,
+        "sha256": "35918e98466b72ddca424efc292141fc768b834e08f3a9e0526b36b0c90ba717"
+      },
+      {
+        "file": "test.jsonl",
+        "rows": 630111,
+        "sha256": "40217d503df44ce404fdbd96b3d4bf3e12fe337191652b655dc5aa122b60db85"
+      }
+    ],
+    "uniqueNormalizedQueries": 11776,
+    "normalizedExactHitCases": [],
+    "sharedEightWordSequences": [],
+    "nearHitCases": [],
+    "maximumTrigramJaccard": 0.16666666666666666,
+    "nearest": {
+      "sourceSplit": "train.jsonl",
+      "sourceID": "aztc:4ea07271d4a2c9746759547264a5e4310bc2956e:train-00001-of-00018:201409:41",
+      "queryIDs": [
+        "novel10k-culture-0189"
+      ],
+      "score": 0.16666666666666666
+    },
+    "rejectionThreshold": 0.35,
+    "elapsedSeconds": 95.33164675300213,
+    "status": "passed",
+    "sourceCorpusUploaded": false
+  },
+  "legacyNovelty": {
+    "scope": "Assistant-authored compositional development scenarios vs pinned repository tests and evaluation data; not all texts on the internet or all raw training corpus.",
+    "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+    "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+    "legacyReferenceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8",
+    "legacyReferences": 7225,
+    "uniqueInputs": 10000,
+    "uniqueNormalizedTargets": 10000,
+    "normalizedExactOverlap": 0,
+    "sharedEightWordSequence": 0,
+    "maximumTrigramJaccard": 0.07692307692307693,
+    "rejectionThreshold": 0.35,
+    "retrieval": "Shared word trigrams; grams in more than 512 references are excluded from retrieval, not from scoring.",
+    "excludedCommonGrams": 0,
+    "intraSet": "Event/continuation pairs are unique; authored clauses recur across combinations. No independent-scenario claim."
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "regressionTests": {
+      "total": 5589,
+      "passed": 5581,
+      "failed": 0,
+      "existingTodo": 8
+    },
+    "uiBrowserTests": 9,
+    "performance": [
+      {
+        "words": 20,
+        "p95Ms": 36.34,
+        "status": "PASS"
+      },
+      {
+        "words": 100,
+        "p95Ms": 71.66,
+        "status": "PASS"
+      },
+      {
+        "words": 500,
+        "p95Ms": 240.79,
+        "status": "PASS"
+      },
+      {
+        "words": 1000,
+        "p95Ms": 438.08,
+        "status": "PASS"
+      },
+      {
+        "words": 5000,
+        "p95Ms": 2159.99,
+        "status": "PASS"
+      }
+    ]
+  },
+  "receiptsSHA256": {
+    "final-v2/summary.json": "0aa1d777bcff33ae321fdbbb744f2e805e641c5e611d389a833ebfe5846fb9d9",
+    "final-browser-v2/summary.json": "04d23defa0294f8a1f9eed29314bf38c882d152e900cb9fa27950d35887fee2b",
+    "comparison-v2/summary.json": "d0dd0e4fa8774c21dce0d669f3b13639712299beeb996c953c6929e3e0a0ed24"
+  },
+  "recoveryReleaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/novel-10000-qa-2026-11-04",
+  "originalTrainingCorpusUploaded": false,
+  "newCasesUsedForModelTraining": false
+}

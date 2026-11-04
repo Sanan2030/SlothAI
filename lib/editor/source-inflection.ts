@@ -29,7 +29,13 @@ const compatible = (raw: string, target: string) => [...raw].every((letter, at) 
 export class SourceInflectionEngine {
   private readonly analyses = new Map<string, readonly MorphologicalAnalysis[]>();
   private readonly paradigms = new Map<string, ReadonlyMap<string, MorphologicalAnalysis[]>>();
-  constructor(private readonly attested: (surface: string) => boolean) {}
+  private readonly additional = new Map<string, Stem[]>();
+  constructor(private readonly attested: (surface: string) => boolean, reviewedStems: readonly Stem[] = []) {
+    for (const stem of reviewedStems) {
+      const key = foldLetters(stem.lemma), rows = this.additional.get(key) ?? [];
+      rows.push(stem); this.additional.set(key, rows);
+    }
+  }
   private paradigm(stem: Stem): ReadonlyMap<string, MorphologicalAnalysis[]> {
     const key = stem.pos + ':' + stem.lemma, cached = this.paradigms.get(key);
     if (cached) return cached;
@@ -91,7 +97,7 @@ export class SourceInflectionEngine {
       const prefix = query.slice(0, cut);
       const stemKeys = new Set([prefix]);
       if (/[yg]$/u.test(prefix)) stemKeys.add(prefix.slice(0, -1) + (prefix.endsWith('y') ? 'k' : 'q'));
-      for (const stemKey of stemKeys) for (const stem of index.get(stemKey) ?? []) {
+      for (const stemKey of stemKeys) for (const stem of [...(index.get(stemKey) ?? []), ...(this.additional.get(stemKey) ?? [])]) {
         rows.push(...(this.paradigm(stem).get(query) ?? []).filter(row => compatible(normalized, row.surface)));
         // Denominative -lAn-dIr is productive, but only a classified noun can
         // license it. Existing observed causative stems retain their own lemma.

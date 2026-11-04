@@ -1,0 +1,722 @@
+# Newly authored scenario clauses. No earlier fixture supplies any text here.
+# A case joins one event with one distinct same-domain continuation.
+[mail.events]
+emalatxanaya qaytarılan qabların təhvil saatı məktubda dəqiqləşdirilir
+tərcüməçinin redaktə qeydləri ayrıca əlavədə göndərilir
+icarəyə verilmiş avadanlığın sığorta müddəti tərəfdaşdan soruşulur
+itirilmiş nişanın əvəzinə müvəqqəti keçid vəsiqəsi istənilir
+qonaq mühazirəçinin səfər xərcləri yazılı şəkildə razılaşdırılır
+anbara səhv ünvandan çatmış bağlamanın geri götürülməsi xahiş edilir
+sərgi stendinin elektrik tələbi təşkilatçıya əvvəlcədən bildirilir
+yeni kataloq üçün şəkillərin istifadə icazəsi müəllifdən alınır
+restavrasiya olunmuş çərçivənin götürülmə günü razılaşdırılır
+qapalı təqdimatın iştirakçı həddi dəvət məktubunda göstərilir
+çap evinə göndərilən üz qabığının son ölçüsü dəqiqləşdirilir
+təlim zalındakı eşitmə qurğusunun sınağı üçün vaxt istənilir
+yoxlama qrupuna yalnız növbəli giriş veriləcəyi bildirilir
+bağışlanmış kitabların qablaşdırılma qaydası könüllülərə izah olunur
+podratçıdan zəmanət şərtlərinin ayrıca surəti tələb edilir
+araşdırma tərəfdaşına məlumatların adlandırılma qaydası göndərilir
+daşıyıcıdan kövrək yük üçün əlavə qoruyucu qat istənilir
+müsahibənin səs yazısından istifadə şərti əvvəlcədən soruşulur
+yeni əməkdaş üçün işarə dili tərcüməçisinin ayrılması xahiş edilir
+dəyişdirilmiş menyunun tərkibi qonaqlara yazılı şəkildə çatdırılır
+uçuşu gecikən nümayəndənin qarşılanma vaxtı yenidən razılaşdırılır
+nəşriyyatdan müəllif nüsxələrinin saxlanılması xahiş edilir
+sınaq cihazının gömrük bəyannaməsi tərəfdaşa göndərilir
+otelə unudulmuş qulaqcığın kuryerə verilməsi üçün məktub yazılır
+təqdim olunmuş eskizin rəng nümunəsi rəssamdan istənilir
+keçiriləcək təlim üçün səssiz otağın ayrılması razılaşdırılır
+bağlanmış sərginin əşyaları üçün müvəqqəti saxlanc yeri soruşulur
+yeni məhsulun təhlükəsizlik vərəqi təchizatçıdan alınır
+tərcümədəki müəllif adının yazılışı nəşriyyatla dəqiqləşdirilir
+xaricə göndərilən nümunənin daşınma temperaturu bildirilir
+görmə məhdudiyyətli qonaq üçün təsvirli bələdçi istənilir
+stendin sökülməsi zamanı yük liftindən istifadə icazəsi soruşulur
+zədələnmiş çamadanın çəkilişləri daşıyıcıya göndərilir
+ailə üzvü üçün ayrılmış biletdəki oturacaq yeri dəqiqləşdirilir
+tədarükçüyə boş paletlərin geri verilmə qaydası yazılır
+gəmi ilə gələn qutuların duzlu sudan qorunması xahiş edilir
+eşidilməyən təlim yazısının altyazılı nüsxəsi istənilir
+fərdi sərginin işıqlandırılması ilə bağlı eskiz göndərilir
+tarixi fotoşəklin arxa tərəfindəki qeydin surəti soruşulur
+tədbirdə unudulmuş dəftərin sahibinə qaytarılması razılaşdırılır
+[mail.contexts]
+qarşı tərəfdən qısa yazılı təsdiq gözlənilir
+əlaqə saxlanılacaq şəxsin vəzifəsi ayrıca göstərilir
+əlavənin yalnız oxumaq üçün verildiyi qeyd olunur
+cavab məktubunda əvvəlki razılaşmaya istinad edilir
+dəyişikliklərin qüvvəyə minmə günü açıq yazılır
+məktubun mövzusunda çatdırılma üsulu dəqiqləşdirilir
+əlaqəsiz alıcıların cavab siyahısından çıxarılması istənilir
+oxunmayan əlavənin təkrar göndərilməsi xahiş edilir
+poçt ünvanının dəyişdiyi ayrıca cümlə ilə bildirilir
+yazışmanın yekun nüsxəsi tərəflərdə saxlanılır
+əvvəlki təklifin artıq qüvvədə olmadığı vurğulanır
+iş saatından kənar zəng üçün razılıq soruşulur
+razılaşdırılmamış qiymətin təsdiq sayılmadığı göstərilir
+cavab üçün uyğun əlaqə kanalı dəqiqləşdirilir
+ehtiyac olmayan şəxsi məlumatlar əlavədən çıxarılır
+zəng zamanı verilmiş izah yazılı şəkildə təkrarlanır
+yeni tarix yalnız tərəflərin razılığı ilə seçilir
+əvəzləyici şəxsin məktuba cavab verəcəyi bildirilir
+məktubun səhv alıcıya çatdığı nəzakətlə qeyd olunur
+sənədin açılmadığı barədə qısa cavab göndərilir
+cavabın tərcüməyə ehtiyacı olduğu bildirilir
+zəruri məlumatlar bir məktubda ümumiləşdirilir
+qəbul edilməmiş şərtlər ayrıca abzasda sadalanır
+məktuba əlavə olunmuş izahın məcburi olmadığı yazılır
+əlaqənin müvəqqəti kəsiləcəyi əvvəlcədən bildirilir
+xahişin hansı tarixədək qüvvədə olduğu dəqiqləşdirilir
+əlavə surətin niyə istənildiyi bir cümlə ilə izah olunur
+şifahi vədin yazılı müqaviləni əvəz etmədiyi göstərilir
+ünvan sahibinin münasib vaxtda cavab verməsi xahiş edilir
+məktubun sonunda növbəti əlaqənin məqsədi açıqlanır
+[it.events]
+sertifikat zəncirindəki aralıq imza yeni cihazda tanınmır
+şəbəkə paketinin parçalanması səs axınında fasilə yaradır
+keşdən silinmiş obyekt köhnə başlıqla yenidən görünür
+parol dəyişəndə açıq sessiyaların ləğvi gecikir
+mesaj növbəsində təkrarlanan açar eyni tapşırığı dayandırır
+disk bölməsi genişlənsə də fayl sistemi köhnə ölçünü göstərir
+saat fərqi imzalanmış sorğunun vaxt yoxlamasına təsir edir
+iki verilənlər bazası arasında simvol kodlaşdırması fərqlənir
+şəkil önizləməsi şaquli istiqamət nişanını nəzərə almır
+toxunma ekranında sürüşdürmə hadisəsi iki dəfə ötürülür
+brauzer sekməsi arxa plana keçəndə səs icazəsi itir
+fayl adı boşluqla bitəndə sinxronlaşdırma dayanmır
+əsas açarın çevrilməsi köhnə şifrəli qeydləri oxunmaz edir
+uzaq ehtiyat nüsxədə sərt keçidlərin quruluşu saxlanılmır
+şəbəkə yolu dəyişəndə bağlantı hovuzu köhnə ünvanı tutur
+paylanmış kilid müddəti bitməzdən əvvəl yenilənmir
+yükün sıxılması imzanın hesablandığı baytları dəyişir
+qrafikdə boş ölçmə dəyəri sıfır kimi göstərilir
+kiçik ekranda cədvəlin sabit sütunu düyməni örtür
+şifrəli arxivin yoxlanılması yaddaş sərfini artırır
+proksi arxasında yönləndirmə ünvanı səhv qurulur
+gözləmə rejimindən çıxan qurğuda köhnə kilid qalır
+fərqli vaxt qurşaqları tarix filtrində sərhədi dəyişir
+yalnız oxuma rejimi yeni nişanın yaradılmasına mane olur
+sürətli ikiqat toxunuş eyni ödəniş sorğusunu təkrarlayır
+mətn redaktorunda birləşən Unicode işarəsi ayrıca sayılır
+şəbəkə itəndə yarımçıq yükləmənin davam nöqtəsi silinir
+konteynerin sağlamlıq yoxlaması həddən artıq gec cavab verir
+interfeysin miqyası böyüdüləndə təsdiq pəncərəsi görünmür
+əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir
+şifrənin bərpası keçidi ikinci istifadədə yenə açılır
+uzaq qovluğun adı dəyişəndə izləyici xəbər tutmur
+qurğunun yaddaş xəritəsi yeni sürücüdə düzgün qurulmur
+köhnə müştəri boş cavabı uğurlu nəticə kimi qəbul edir
+ayrılmış ünvan yenilənəndə yerli ad keşində köhnə qeyd qalır
+boş sütunla birləşdirilmiş cədvəldə sıra ardıcıllığı dəyişir
+paralel köçürmə zamanı müvəqqəti faylın adı toqquşur
+ehtiyat bağlantıya keçid videonun səsindən geri qalır
+əlçatanlıq ağacında gizli düymənin etiketi saxlanılır
+fayl seçicisi `image/*` filtrində şəffaf şəkli göstərmir
+[it.contexts]
+sınaq üçün istehsal məlumatlarının surəti işlədilmir
+hadisələrin sırası vahid saat mənbəyi ilə tutulur
+xam paket nümunəsi şəxsi məlumatlardan təmizlənir
+dəyişiklik geri qaytarıla bilən kiçik hissəyə bölünür
+yoxlama eyni şərtlərlə başqa qurğuda təkrarlanır
+son uğurlu cavabın başlıqları ayrıca saxlanılır
+əsas ehtimal qarşı nümunə ilə yenidən sınanır
+sorğunun ölçüsü ölçmə qeydində ayrıca göstərilir
+gözləmə müddəti bütün zəncir üzrə müqayisə edilir
+köhnə müştəri ilə uyğunluq ayrıca yoxlanılır
+xətanın təkrarlanma addımları qısa şəkildə yazılır
+yenilənmə yalnız məhdud sınaq qrupuna açılır
+artıq icazələr sınaq hesabından çıxarılır
+yarımçıq nəticənin yenidən işlənməsi sınanır
+sistem yükü dəyişdirilmədən ikinci ölçmə götürülür
+bağlantı kəsilməsi nəzarətli şəkildə təqlid edilir
+kodlaşdırma hər iki tərəfdə eyni qayda ilə yoxlanılır
+keçmiş vəziyyətlə müqayisə üçün ayrıca iz saxlanılır
+başqa əlavələrin təsiri təcrid olunmuş mühitdə ölçülür
+yeni versiyanın geri qaytarılma yolu sənədləşdirilir
+qarşılıqlı bloklanmanın vaxtı ayrıca ölçülür
+xəbərdarlığın sadəcə gizlədilməsi həll sayılmır
+uyğunsuz cavabın heşi nəticə qeydində saxlanılır
+qəbul olunmayan dəyər açıq xəta ilə qaytarılır
+xətanın səbəbi təsdiqlənənədək ehtimal kimi göstərilir
+bütün əlaqəli hadisələr eyni izləmə açarı ilə tapılır
+qismən uğurlu nəticə tam uğur kimi qeyd edilmir
+fərqli ekran miqyasları ayrıca sınaqdan keçirilir
+yalnız müşahidə olunan davranış hesabatda yazılır
+müvəqqəti həllin bitmə şərti əvvəlcədən müəyyən edilir
+[rsd.events]
+dondurulmuş qeyd üzərində versiya kilidi saxlanılır
+fiziki nüsxənin saxlanc yeri kartda yenilənir
+müvəqqəti əvəzediciyə yalnız baxış səlahiyyəti verilir
+dəyişdirilmiş blankın quru möhürü ayrıca yoxlanılır
+iki filialdan gələn zərflər vahid paketə birləşdirilir
+əsli qaytarılmış sənədin surət statusu dəyişdirilir
+məxfilik nişanı dəyişəndə əvvəlki baxışlar qorunur
+oxunmayan möhür üçün izahlı qeyd tələb olunur
+yanlış bağlanmış cildin açılması ayrıca əsaslandırılır
+etibarnamənin müddəti təhvil anında yoxlanılır
+səhv indekslənmiş əlavə əsas kartdan ayrılır
+xarici dildəki rekvizitin tərcüməsi ayrıca bağlanır
+müxtəlif mənbələrdən gələn surətlərin eyniliyi yoxlanılır
+imzadan imtina səbəbi qısa qeydlə saxlanılır
+çatışmayan vərəqlər cildin təsvirində göstərilir
+əvvəlki versiyanın baxış nişanı dəyişdirilmir
+təhvil verən əməkdaşın əvəzləyicisi ayrıca seçilir
+göndəriş zərfinin zədəsi qəbul aktında təsvir edilir
+əlavənin yanlış kartla əlaqəsi tarixçədə ayrılır
+bölünmüş paketin hər hissəsinə əlaqə nişanı verilir
+oxunma müddəti bitmiş keçid yenidən yoxlanılır
+möhürün silik yeri yüksək keyfiyyətlə çəkilir
+qovluğun fiziki köçürülməsi saxlanc planına yazılır
+surəti alınmayan iri çertyoj ayrıca siyahıya salınır
+tam açılmayan cild üçün xüsusi saxlama qabı ayrılır
+köhnə kartın yeni kartla əlaqəsi görünən saxlanılır
+işdən ayrılmış şəxsin etibarnaməsi qüvvədən düşür
+qarışmış səhifələrin ilkin düzülüşü qeyddə göstərilir
+qəbuldan imtina edilmiş nüsxə göndərənə qaytarılır
+imzanın təkrarlanması ikinci təsdiq sayılmır
+göndərişə əlavə olunmuş daşıyıcı ayrıca möhürlənir
+özəl əlavənin ümumi siyahıda görünməsi məhdudlaşdırılır
+fərqli adla daxil olmuş eyni nüsxə əlaqələndirilir
+əl yazısının oxunmayan hissəsi ehtimal kimi qeyd edilir
+kartın silinməsi üçün əsas ayrıca sənədə bağlanır
+köçürülmüş cildin qəbulunu başqa əməkdaş təsdiqləyir
+təhvil verilən açarın nömrəsi bağlı siyahıda saxlanılır
+müddəti uzadılmış sənədin əvvəlki son tarixi görünür
+itirildiyi bildirilən əlavə tapıldıqda status yenilənir
+qaytarılan əsli əvəz edən surətin hüquqi əsası göstərilir
+[rsd.contexts]
+sonradan daxil edilmiş izah ilkin qeydi əvəz etmir
+əsli ilə surətin fərqi qeyd sahəsində açıq saxlanılır
+saxlama müddəti təsdiq olunmuş cədvəllə tutuşdurulur
+hər bir fiziki köçürmə ayrıca iz buraxır
+bağlı əlavəyə yalnız səlahiyyətli şəxs baxa bilir
+imza sahibinin adı ilkin forması ilə qorunur
+kağız nüsxənin yeri məsul şəxsdən soruşulur
+silinmiş əlaqənin səbəbi tarixçədə qalır
+köhnə nişanın mənası izah bölməsində saxlanılır
+tarixsiz əlavə üçün qəbul günü ayrıca yazılır
+qovluğun mühafizə dərəcəsi özbaşına dəyişdirilmir
+təhvil aktının nüsxəsi hər iki tərəfdə qalır
+icazənin hansı əsasla verildiyi görünən saxlanılır
+üz qabığındakı say faktiki vərəqlərlə müqayisə edilir
+sonradan çəkilmiş şəkil ilkin surət kimi təqdim edilmir
+düzəlişi etmiş şəxsin adı gizlədilmir
+rəqəmsal surətin əsli əvəz etmədiyi qeyd olunur
+bir-birini əvəz edən qeydlər arasında əlaqə saxlanılır
+mürəkkəb rekvizit üçün sərbəst izah sahəsi açılır
+araşdırılan fərq təsdiqlənmədən uyğunluq bağlanmır
+rədd edilmiş dəyər əvvəlki qeydi dəyişdirmir
+eyni şəxsin iki dəfə təsdiqi ayrıca əsas tələb edir
+çatdırılmayan nüsxə qəbul edilmiş sayılmır
+daşınma zamanı möhürün bütövlüyü yenidən yoxlanılır
+işarənin silinməsi sənədin məzmununu dəyişdirmir
+qovluqdakı boş yer itkin vərəq kimi qiymətləndirilmir
+qəbul edilmiş yeni ad axtarışda əvvəlki ada bağlanır
+saxlanc yerinin açarı ayrıca məsul şəxsə təhvil verilir
+mübahisəli tarix araşdırma yekunlaşanadək olduğu kimi qalır
+surətin mənbəyi sənədin üzərində ayrıca göstərilir
+[finance.events]
+qaytarılmış avansın məbləği üzləşmə aktında göstərilir
+kartdan tutulmuş təminat məbləği hələ sərbəst buraxılmayıb
+iki dəfə köçürülən depozitin biri geri tələb olunur
+valyuta çevrilməsinin komissiyası çıxarışda ayrıca görünür
+müddətli əmanətin erkən bağlanma şərti yoxlanılır
+icarə haqqının indeksləşməsi yeni dövrə tətbiq edilir
+taksit üzrə son ödəniş əsas borcla tutuşdurulur
+kiçik qalıq məbləğ yuvarlaqlaşdırma qaydası ilə izah olunur
+geri qaytarılan malın vergisi ayrıca hesablanır
+əməkdaşın şəxsi xərci ezamiyyət hesabından ayrılır
+tərəfdaşın hesabındakı artıq ödəniş uzlaşdırılır
+girovun qiyməti müstəqil qiymətləndirmə ilə yenilənir
+uçotda səhv dövrə düşmüş məbləğ düzəlişə çıxarılır
+müqavilənin cərimə şərti faktiki gecikmə ilə müqayisə edilir
+borcun bağışlanmış hissəsi ayrıca sətirdə göstərilir
+ödəniş tapşırığındakı təyinat geri qaytarılmış sorğuya əlavə olunur
+nağd qaytarılan məbləğin qəbzi alıcıda saxlanılır
+məzənnə fərqindən yaranan zərər dövr üzrə ayrılır
+yanlış hesablanmış xidmət haqqı müştəriyə qaytarılır
+satılmış avadanlığın qalıq dəyəri yenidən yoxlanılır
+birgə xərcin bölüşdürülməsi razılaşdırılmış payla aparılır
+kuponla alınmış malın geri ödəmə məbləği dəqiqləşdirilir
+bağlanmış hesabdan qalan məbləğ sahibinə ötürülür
+illik xidmətin istifadə olunmamış hissəsi hesablanır
+ödəmə qabiliyyəti qiymətləndirilərkən mövsümi gəlir nəzərə alınır
+təminat məktubunun bitmə günü nəzarətdə saxlanılır
+vergi tutulması gəlirin aid olduğu dövrlə tutuşdurulur
+tapılmayan qəbz üçün xərci təsdiqləyən izah istənilir
+əmlakın təmirinə çəkilən xərc ilkin dəyərdən ayrılır
+yeni tarifin əvvəlki borca tətbiqi ayrıca yoxlanılır
+ortaq borcun ödənilən hissəsi tərəflərə bildirilir
+bankın saxladığı komissiya əsas məbləğdən ayrılır
+ödənişin ləğvi pulun geri çatması ilə müqayisə edilir
+sığorta ödənişində azadolma məbləği ayrıca göstərilir
+verilmiş borcun müddəti yeni razılaşma ilə uzadılır
+illik büdcənin istifadə olunmayan hissəsi yenidən bölünür
+hesablaşma günündən sonrakı faiz ayrıca göstərilir
+satıcının verdiyi endirim yekun qəbzdə əks olunur
+qaytarılmayan behin hüquqi əsası izah edilir
+köhnə borc barədə bildiriş ödənilmiş hissə ilə tutuşdurulur
+[finance.contexts]
+əsas məbləğ komissiya ilə qarışdırılmır
+çıxarışın əhatə etdiyi dövr açıq göstərilir
+ilkin qəbzin surəti müqayisə üçün saxlanılır
+hesablanma üsulu qarşı tərəfə yazılı bildirilir
+vergi hissəsi ümumi xərcdən ayrıca izlənilir
+razılaşdırılmamış xərc avtomatik təsdiqlənmir
+geri qaytarma tarixi faktiki köçürmə ilə yoxlanılır
+iki tərəfin qeydləri eyni tarixə gətirilir
+şəxsi məlumatlar açıq hesabatda göstərilmir
+məbləğin hansı valyutada olduğu dəqiqləşdirilir
+yuvarlaqlaşdırmadan yaranmış fərq ayrıca yazılır
+əsassız tutulmaya dair izah tələb olunur
+qəbzin tarixi bankın icra günü ilə müqayisə edilir
+qalıq borc əvvəlki ödənişlər nəzərə alınmaqla hesablanır
+faizin hansı əsas məbləğə tətbiqi açıq yazılır
+yekun məbləğə daxil olmayan xərclər ayrıca sadalanır
+öhdəliyin kimə aid olduğu əvvəlcədən dəqiqləşdirilir
+bildirişin çatması ödənişin icrası sayılmır
+dəyişmiş rekvizit qarşı tərəflə ayrıca təsdiqlənir
+aylıq məbləğ illik məbləğlə qarışdırılmır
+qaytarılmış vəsait gəlir kimi yenidən sayılmır
+ödəniş barədə ehtimal fakt kimi təqdim edilmir
+artıq tutulmuş hissə yazılı müraciətlə tələb edilir
+gecikmənin hansı gündən hesablandığı göstərilir
+köçürməni edən tərəfin izahı uçot qeydinə əlavə olunur
+hesablaşmanın yekunluğu hər iki tərəflə razılaşdırılır
+pulun alınması ayrıca təsdiq sənədi ilə yoxlanılır
+mübahisəli məbləğ araşdırma bitənədək ayrıca saxlanılır
+uçotdakı düzəliş ilkin izi silmir
+sənəddəki məbləğ sözlə yazılmış hissə ilə tutuşdurulur
+[education.events]
+laboratoriya işində istifadə edilən tərəzinin sıfırı yenidən qurulur
+şagirdin cavabındakı fərqli həll yolu ayrıca qiymətləndirilir
+uzaqdan qoşulan tələbə üçün səssiz iştirak rejimi açılır
+kitabxananın qaytarma qutusundakı kitablar səhər sayılır
+təcrübə dərsində qırılmış nümunə yenisi ilə əvəz edilir
+müəllimin çəkdiyi sxem görmə çətinliyi olan tələbəyə təsvir edilir
+dissertasiya əlavəsindəki ölçü vahidləri eyniləşdirilir
+müsabiqədə eyni nəticə göstərən iştirakçıların sırasına yenidən baxılır
+oxu dərnəyində müəllifin fərqli tərcümələri müqayisə edilir
+məktəb bağçasındakı müşahidələr həftəlik dəftərə yazılır
+riyaziyyat dərsində fərziyyənin əks nümunəsi axtarılır
+şagirdin yazı sürəti üçün əlavə vaxt ayrılır
+səs yazısına söykənən tapşırıq üçün mətn nüsxəsi verilir
+çertyojdakı miqyas hazırlanmış maketlə müqayisə edilir
+təcrübənin baş tutmaması nəticə kimi ayrıca qeyd olunur
+uşağın oxuduğu parçanı öz sözləri ilə danışması dinlənilir
+təlim otağında işıq mənbəyinin yeri dəyişdirilir
+elmi məqalədə sitatın ilkin mənbəsi axtarılır
+təqaüd qaydasındakı yaş məhdudiyyəti ayrıca izah olunur
+məktəbdən kənar müşahidə üçün valideynin razılığı alınır
+şifahi təqdimatın müddəti əvvəlcədən razılaşdırılır
+praktik məşğələdə fərqli materialların çəkisi ölçülür
+sözlükdəki köhnə məna yeni istifadə nümunəsi ilə müqayisə edilir
+qiyabi tələbəyə təcrübə yerinin seçimi barədə izah verilir
+vərəqdə görünməyən şərt tapşırıqdan əvvəl açıqlanır
+şagirdin əl işi hazır qəliblə müqayisə olunmur
+tarix dərsində mənbələrin yazılma vaxtı ayrıca araşdırılır
+fəlsəfə seminarında qarşı iddia üçün əlavə vaxt verilir
+dil dərsində səs fərqi yazılı nümunələrlə göstərilir
+təcrübəçinin hesabatında müşahidə ilə yozum ayrılır
+yeni dərsliyin qalın kağızı səhifə sayına təsir edir
+oxu zalında qrupla işləmək üçün ayrıca saat ayrılır
+şagirdlərin xəritəsində şərti işarələrin izahı tamamlanır
+tərcümə dərsində mətnin üslubu məqsədə görə seçilir
+yarış tapşırığının qeyri-müəyyən şərti iştirakçılara açıqlanır
+kuratorun verdiyi rəy tələbənin öz qeydi ilə yanaşı saxlanılır
+sınaq imtahanında oxunmayan şəkil yenidən çap olunur
+seminarın yazısında danışanın razılığı ayrıca yoxlanılır
+şagirdin aralıq hesablaması yekun cavabla birlikdə nəzərdən keçirilir
+arxeologiya dərsində saxsı parçasının tapılma yeri təsvir edilir
+[education.contexts]
+yekun cavabdan əvvəl əsaslandırma dinlənilir
+fərqli nəticənin səbəbi tələbənin özü ilə müzakirə edilir
+qiymətləndirmə meyarı tapşırıqdan əvvəl açıqlanır
+gözlənilməz nəticə gizlədilmədən hesabatda saxlanılır
+başqasının işi müəllif göstərilmədən təqdim edilmir
+tapşırığın məqsədi sadə sözlərlə yenidən izah edilir
+çətinlik yaradan mərhələ ayrıca məşq olunur
+qaydadan istisna ayrıca nümunə ilə göstərilir
+yadda saxlanılan cavabın başa düşülməsi ayrıca yoxlanılır
+mənbənin etibarlılığı müəllifin adı ilə məhdudlaşdırılmır
+öyrənənin verdiyi sual növbəti müzakirəyə saxlanılır
+fərqli tempdə çalışanlar üçün seçim verilir
+əlçatan olmayan materialın uyğun nüsxəsi hazırlanır
+əsas anlayışlar bir-biri ilə əlaqədə izah edilir
+səhv nəticədən düzgün sual çıxarmaq təşviq olunur
+şərh ilə birbaşa müşahidə bir-birindən ayrılır
+müzakirədə fərqli fikir şəxsi qiymət kimi qəbul edilmir
+mövzuya aid olmayan cəza qiymətə əlavə olunmur
+qısa fasilənin məşğələyə təsiri nəzərə alınır
+göstərişlər yazılı və şifahi şəkildə verilir
+sınağın məhdudluğu nəticənin yanında qeyd olunur
+öyrənilən üsul yeni vəziyyətdə ayrıca sınanır
+istifadə edilən anlayışların mənası dəqiqləşdirilir
+materialdan istifadə şərti əvvəlcədən bildirilir
+sualların mürəkkəbliyi mərhələlərlə artırılır
+yarımçıq həllin doğru hissəsi də nəzərə alınır
+şəxsi qeydlər icazəsiz başqalarına göstərilmir
+yerinə yetirilən işin mənbələri sonda göstərilir
+fərziyyə sübut edilmiş nəticə kimi yazılmır
+qeyri-müəyyən məqam üçün dəqiqləşdirici sual verilir
+[health.events]
+eşitmə cihazının səs səviyyəsi istifadəçinin rahatlığına görə seçilir
+fizioterapiya məşqinin ağrı yaratdığı hərəkət dayandırılır
+uzun yol səfərindən əvvəl dərmanların saxlanma şərti soruşulur
+qan təzyiqi ölçülməzdən əvvəl oturma müddəti gözlənilir
+diş protezinin sürtündüyü yer həkimə göstərilir
+göz müayinəsində köhnə eynəyin göstəricisi nəzərə alınır
+əlcəyin materialına həssaslıq qəbuldan əvvəl bildirilir
+uşağın peyvənd kitabçasındakı tarixlər tutuşdurulur
+sarğının islanması barədə tibb işçisinə məlumat verilir
+köməkçi əsanın hündürlüyü istifadəçiyə uyğunlaşdırılır
+məşqdən sonra yaranan yeni narahatlıq ayrıca qeyd olunur
+reseptdə oxunmayan söz əczaçıdan dəqiqləşdirilir
+dərmanın qutusundakı son istifadə tarixi yoxlanılır
+yuxu gündəliyində gecə oyanmaları ayrıca göstərilir
+dəri səpgisinin nə vaxt başladığı qəbulda soruşulur
+eşitməyən pasiyent üçün yazılı izah hazırlanır
+qolun hərəkət məhdudluğu müayinə öncəsi bildirilir
+diş təmizliyindən sonrakı qulluq qaydası yenidən soruşulur
+laboratoriya nümunəsinin daşınma vaxtı ayrıca yazılır
+ehtiyac duyulan tərcüməçi qəbul saatına çağırılır
+köhnə sınıq barədə məlumat müayinə qeydinə əlavə olunur
+görmə sahəsindəki dəyişiklik həkimə dəqiq təsvir edilir
+iş yerində yaranan təkrarlanan narahatlıq qeyd olunur
+analizdən əvvəl qida qəbulu barədə təlimat soruşulur
+ayaqqabının yaratdığı təzyiq ortopedə göstərilir
+yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir
+reabilitasiya zamanı yorğunluğun artdığı vaxt yazılır
+uşağın temperaturu uyğun ölçü cihazı ilə ölçülür
+qulaqda səslənmənin hansı vaxtlarda artdığı təsvir edilir
+soyuq şəraitdə dərinin verdiyi reaksiya izlənilir
+telefon ekranından sonrakı göz yorğunluğu ayrıca qeyd olunur
+sığorta şərtinin müayinəni əhatə etməsi əvvəlcədən soruşulur
+qəbul otağında növbə gözləyən şəxsə uyğun yer ayrılır
+qidalanma qeydində istifadə edilən porsiya ölçüsü göstərilir
+dərmanın qəbul saatı barədə anlaşılmayan məqam soruşulur
+prosedurdan əvvəl pasiyentin razılığı dəqiqləşdirilir
+köhnə müayinə şəkli yeni nəticə ilə birlikdə gətirilir
+dişləmə zamanı yaranan ağrının yeri həkimə göstərilir
+dəriyə çəkilən vasitənin adı müayinə qeydinə yazılır
+qəbuldan çıxan şəxs verilən izahı öz sözləri ilə təkrarlayır
+[health.contexts]
+izah anlaşılmayanda əlavə sual verilir
+şəxsi müşahidə diaqnoz kimi təqdim edilmir
+narahatlığın müddəti mümkün qədər dəqiq göstərilir
+əvvəlki tibbi qeydlər mütəxəssisə təqdim edilir
+yeni qərar üçün uyğun mütəxəssisə müraciət olunur
+istifadə edilən vasitələrin adları tam göstərilir
+qəbul saatının dəyişməsi barədə əvvəlcədən məlumat verilir
+qeydlərdə başqasının şəxsi məlumatı paylaşılmır
+göstərişin mənası anlaşılmadan dəyişiklik edilmir
+şikayətin azaldığı şərait ayrıca təsvir olunur
+ölçmə zamanı istifadə edilən üsul qeyd edilir
+pasiyentin sualı cavabsız saxlanılmır
+göstərilən nəticə əvvəlki ölçmə ilə müqayisə edilir
+fərdi narahatlıq ümumi qayda kimi təqdim edilmir
+müayinəyə aid olmayan iddia əlavə edilmir
+keçmişdə verilmiş göstərişin tarixi dəqiqləşdirilir
+ölçmənin nəticəsi uyğun vahidlə yazılır
+gündəlik qeydlər qəbul zamanı nəzərdən keçirilir
+müşahidə olunan dəyişiklik olduğu kimi bildirilir
+əlçatan izah forması şəxsin ehtiyacına uyğun seçilir
+yaxın müşahidə ilə şəxsi ehtimal ayrı göstərilir
+naməlum sözün mənası mütəxəssisdən soruşulur
+saxlanma şərti məhsulun təlimatı ilə tutuşdurulur
+vacib sənədlər növbəti qəbula hazırlanır
+pasiyentin razı olmadığı hissə açıq bildirilir
+şifahi izah lazım olduqda yazılı şəkildə verilir
+qəbuldan sonrakı əlaqə yolu əvvəlcədən soruşulur
+əvvəlki cavabla yeni məlumat arasındakı fərq dəqiqləşdirilir
+yanlış anlaşılan göstəriş yenidən izah edilir
+müayinə qeydində yoxlanılmamış nəticə təsdiq sayılmır
+[transport.events]
+qatarda velosiped üçün ayrılmış yerin boşluğu soruşulur
+yük maşınının hündürlüyü tunelin həddi ilə müqayisə edilir
+paromun yük rampasındakı sürüşkən hissə işarələnir
+gecikən avtobusun son dayanacağı sərnişinə bildirilir
+hava limanında kövrək yük üçün ayrıca etiket alınır
+vağzalın pilləkənsiz giriş yolu xəritədə göstərilir
+sərnişinin qatlanan arabası üçün uyğun yer ayrılır
+dar yolda qarşıdan gələn yük maşınına keçid verilir
+gəminin yan alacağı körpünün dərinliyi yoxlanılır
+kirayə avtomobilin əvvəlki cızıqları təhvil aktına yazılır
+qatarın dəyişdirilmiş platforması səsli elanla bildirilir
+gecə reysində dayanacaq işığının işləməsi yoxlanılır
+soyuq yükün gözləmə müddəti daşınma qeydinə əlavə olunur
+yük bağlarının boşalması növbəti dayanacaqda yoxlanılır
+metro çıxışındakı təmirə görə dolama yol göstərilir
+uçuşa buraxılmayan bağlamanın təhvil yeri dəqiqləşdirilir
+kənd yolunun yumşalmış hissəsi sürücüyə bildirilir
+yükün ölçüsü seçilmiş daşıma qabı ilə tutuşdurulur
+çatdırılma maşınının geri dönməsi üçün uyğun yer seçilir
+uzun enişdən əvvəl əyləc sisteminə baxılır
+sərnişin biletindəki keçid vaxtı yenidən yoxlanılır
+bağlamanı alan şəxsin səlahiyyəti təhvil anında soruşulur
+velosiped yolundakı qırılmış örtük aidiyyəti quruma bildirilir
+dayanacaq nişanının kölgədə qalması nəzərə alınır
+körpüdə tətbiq olunan çəki həddi sürücüyə göstərilir
+yol ayrıcında silinmiş nişan barədə xəbərdarlıq verilir
+sərnişinin baqajı fərqli reysə keçəndə əlaqə yaradılır
+suyun qalxdığı sahədə alternativ keçid axtarılır
+limanda boşaldılan qabların sayı göndərişlə tutuşdurulur
+sifarişdə seçilən uşaq oturacağının uyğunluğu yoxlanılır
+qatardakı səsli xəbərdarlıq yazılı lövhə ilə tamamlanır
+təyyarədən gec çıxan sərnişin üçün əlaqə reysi soruşulur
+yük qutusunun çəkisi qablaşdırma çəkisindən ayrılır
+yolun bağlanan hissəsi marşrut planında yenilənir
+yağışda görünməyən yol xətti barədə qeyd aparılır
+qış keçidində təkər avadanlığının uyğunluğu yoxlanılır
+dayanacaqda unutulmuş çanta tapıntı məntəqəsinə verilir
+zədələnmiş bilet oxuyucusu üçün əvəzləyici üsul göstərilir
+uzaq kəndə çatdırılma üçün təhvil nöqtəsi razılaşdırılır
+sərnişin keçidində səki hündürlüyünün fərqi ölçülür
+[transport.contexts]
+dəyişiklik yolçulara vaxtında bildirilir
+yükün məzmunu açılmadan qoruyucu qabı yoxlanılır
+gözləmə vaxtı faktiki hərəkət vaxtından ayrılır
+kövrək hissələr əlavə bağlarla qorunur
+növbəti əlaqə nöqtəsi əvvəlcədən dəqiqləşdirilir
+bağlamanın izi bütün keçidlərdə saxlanılır
+yol şəraiti son məlumatla tutuşdurulur
+alternativ marşrutun məsafəsi ayrıca hesablanır
+dəyişmiş dayanacaq xəritədə aydın göstərilir
+əlçatan keçidin yeri sərnişinə izah olunur
+daşıma şərti yük sahibinə yazılı verilir
+gözlənilməz gecikmənin səbəbi ehtimal kimi göstərilir
+daşıyıcının əlaqə nömrəsi əlçatan saxlanılır
+sərnişinin xəbəri olmadan istiqamət dəyişdirilmir
+yükün qəbul anındakı vəziyyəti təsvir edilir
+verilmiş elan faktiki vəziyyətlə müqayisə edilir
+hərəkət bərpa olunanda əvvəlki xəbərdarlıq yenilənir
+gecikmənin digər keçidlərə təsiri ayrıca yoxlanılır
+itmiş əşyanın təsviri sahibi ilə dəqiqləşdirilir
+nəqliyyat vasitəsinin tutumu aşılmır
+əvəzləyici reys barədə seçimlər açıqlanır
+dəyişən hava şəraiti nəzarətdə saxlanılır
+müvəqqəti məhdudiyyətin bitmə vaxtı soruşulur
+əşyaların təhvilinə dair qəbz tərəflərdə qalır
+görünməyən nişan üçün əlavə xəbərdarlıq qoyulur
+yolun vəziyyəti barədə təsdiqlənməmiş xəbər yayılmır
+təhlükəsiz keçid yolu əvvəlcədən araşdırılır
+baqajın ölçüsü daşıyıcının qaydası ilə tutuşdurulur
+çatdırılmanın uğuru alıcının təsdiqi ilə yoxlanılır
+gediş haqqına daxil olmayan xidmətlər ayrıca göstərilir
+[shopping.events]
+ölçüsü uyğun gəlməyən pərdə yenidən ölçülmək üçün qaytarılır
+soyuducunun qapı istiqamətinin dəyişməsi ustadan soruşulur
+bağ alətinin sınıq sapı zəmanət şərti ilə yoxlanılır
+ayaqqabının dabanındakı istehsal qüsuru satıcıya göstərilir
+ölçü qabının işarələri su ilə sınaqdan keçirilir
+kitabın çatışmayan səhifələri nəşriyyata bildirilir
+onlayn alınmış parçanın faktiki rəngi nümunə ilə müqayisə edilir
+masanın yük həddi istehsalçının vərəqindən oxunur
+kirayə götürülmüş çadırın bağları təhvildə sayılır
+qabın sobaya uyğunluğu altındakı işarədən yoxlanılır
+qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır
+çantanın açılmayan kilidi təmirçiyə göstərilir
+sifarişdəki güzgünün kənar ölçüsü dəqiqləşdirilir
+uşaq arabasının qatlanma mexanizmi mağazada sınanır
+taxta qaşığın üzərindəki örtüyün tərkibi soruşulur
+dondurulmuş məhsulun daşınma şərti satıcıdan öyrənilir
+tikilmiş pencəyin astarındakı gərginlik dərziyə göstərilir
+su filtrinin dəyişmə aralığı təlimatdan oxunur
+qızdırıcının naqil uzunluğu otağın quruluşu ilə müqayisə edilir
+köhnə lampanı əvəz edən işığın rəng temperaturu seçilir
+uzaqdan alınmış xalçanın faktiki çəkisi ölçülür
+paketdə çatışmayan bərkidici satıcıdan istənilir
+möhürlü qablaşdırmanın açılmış hissəsi təhvildə göstərilir
+satın alınmış bitkinin qulluq vərəqi ayrıca saxlanılır
+çantanın suya davamlılığı istehsalçıdan dəqiqləşdirilir
+əvəz edilən detalın köhnə qurğuya uyğunluğu yoxlanılır
+boya qutusunun müxtəlif partiyaları eyni səthdə sınanır
+qayıq üçün alınmış örtüyün bağlama yerləri ölçülür
+çəkili satılan məhsulun qab çəkisi hesabdan çıxarılır
+taraz durmayan rəfin ayaqları ustaya göstərilir
+yuyulmuş parçanın çəkilməsi etiketdəki ölçü ilə müqayisə edilir
+şaxtalı havaya uyğun çəkmənin altlığı nəzərdən keçirilir
+ikinci əl saatın işləmə müddəti satıcıdan soruşulur
+qaytarılan cihazın üzərində qalan şəxsi qeyd silinir
+işığı titrəyən lampanın yuvası mütəxəssisə göstərilir
+məhsulun təmirə qəbul edilməsi qəbzlə təsdiqlənir
+çatlamış çiçək dibçəyinin dəyişdirilməsi xahiş edilir
+şüşə qapağın uyğun gəldiyi qabın modeli dəqiqləşdirilir
+çağırış düyməsinin səs gücü mağazada yoxlanılır
+fərqli dəstdən çıxmış çəngəl satıcıya qaytarılır
+[shopping.contexts]
+alış qəbzi yekun razılaşmaya qədər saxlanılır
+zəmanətin əhatə etdiyi hissə açıq soruşulur
+qüsurun nə vaxt görüldüyü dəqiq bildirilir
+qablaşdırma zədəsi məhsulun qüsurundan ayrılır
+dəyişdirilmə şərti ödənişdən əvvəl öyrənilir
+satıcının verdiyi izah yazılı şəkildə alınır
+şifahi vədlə təlimat arasındakı fərq soruşulur
+qaytarma zamanı verilən qəbz ayrıca saxlanılır
+əvəzləyici məhsulun ölçüsü əvvəlki ilə tutuşdurulur
+quraşdırmanın qiymətə daxil olub-olmadığı dəqiqləşdirilir
+görünən qüsurun şəkli təhvildən əvvəl çəkilir
+gizli xərc barədə sual ödənişdən əvvəl verilir
+çatdırılma zamanı qabın bütövlüyü yoxlanılır
+qaytarılan malın tamlığı tərəflərlə təsdiqlənir
+məhsulun adı qəbzdəki sətirlə müqayisə edilir
+şəxsi sifarişin ləğv şərti ayrıca soruşulur
+təlimatda olmayan istifadə üsulu təsdiqlənmir
+yerli xidmət mərkəzinin ünvanı dəqiqləşdirilir
+yanlış ölçünün kim tərəfindən verildiyi aydınlaşdırılır
+əldə olmayan detal üçün gözləmə vaxtı soruşulur
+məhsulun qəbul anındakı vəziyyəti qeyd olunur
+əvəzləmə üçün verilmiş vəd yazılı saxlanılır
+aldadıcı şəkillə faktiki məhsulun fərqi göstərilir
+işlənmiş hissə yeni detal kimi təqdim edilmir
+qüsura aid olmayan şəxsi məlumatlar paylaşılmır
+alıcıya uyğun başqa seçim barədə məlumat verilir
+ölçmənin hansı üsulla aparıldığı göstərilir
+ödənişin geri çatması bank qeydi ilə yoxlanılır
+saxlanma qaydası etiketdəki göstərişlə tutuşdurulur
+qaytarma səbəbi sadə və aydın şəkildə yazılır
+[environment.events]
+istixanadakı rütubət səhər və axşam ayrı ölçülür
+kompost qutusunun hava dəlikləri tutulmadan saxlanılır
+yağış suyunu yığan çəlləyin qapağı yoxlanılır
+cavan ağacın bağlandığı ipin gövdəni sıxması izlənilir
+toxum zərfinin saxlanma temperaturu qeyd olunur
+torpaq nümunəsi götürülən yer xəritədə işarələnir
+arxın su keçirməyən hissəsi bağ sahiblərinə göstərilir
+quş yuvasının yerləşdiyi budaq kəsilmədən qorunur
+şəhər bağçasında kölgədə qalan əkin yeri ayrılır
+damcı suvarma borusundakı sızma ayrıca yoxlanılır
+yağışdan sonra yaranmış torpaq axını müşahidə edilir
+tingin kök ətrafında hava boşluğu qalmaması yoxlanılır
+bağ çəpərindəki boşluq balaca heyvanlar üçün araşdırılır
+quru yarpaqların toplanma yeri küləkdən qorunur
+çay kənarındakı tullantıların növü siyahıya salınır
+təkrar istifadə qablarının təmizlənmə qaydası seçilir
+əkin yatağında suyun gölməçə yaratdığı hissə izlənilir
+istidə su itirən dibçək üçün kölgəli yer tapılır
+yerli bitkinin çiçəkləmə vaxtı müşahidə dəftərinə yazılır
+arının su içməsi üçün dayaz qab hazırlanır
+yağış ölçən qab açıq sahədə sabit yerləşdirilir
+qarın əriməsi ilə torpağın islanması müqayisə edilir
+meyvə ağacının zədələnmiş budağı mütəxəssisə göstərilir
+kölgə salan örtüyün küləyə davamı yoxlanılır
+şəhər parkında suyun axdığı istiqamət qeyd olunur
+qum basmış drenaj ağzı görünən şəkildə işarələnir
+günəş altında qalan su borusu örtüklə qorunur
+əkilmiş toxumların cücərmə vaxtı ayrıca yazılır
+damdan gələn suyun təmələ çatması müşahidə edilir
+bitki yarpağındakı dəyişiklik təlimli şəxsə göstərilir
+küləyin gətirdiyi tozun toplandığı yer müəyyən edilir
+kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur
+əkin sahəsinin işıqlı hissəsi gün ərzində izlənilir
+doludan zədələnmiş yarpaqların şəkli tarixlə saxlanılır
+yaşıllıq zolağında tapılan şüşə təhlükəsiz toplanır
+meyvə qutusunun havalanması saxlanma zamanı yoxlanılır
+bağın ən alçaq yerində suyun qalma müddəti ölçülür
+yeni cığırın ağac köklərinə yaxınlığı araşdırılır
+su mənbəyinin istifadəsi qonşularla razılaşdırılır
+quru otların saxlandığı yer istilik mənbəyindən ayrılır
+[environment.contexts]
+müşahidənin aparıldığı hava şəraiti ayrıca yazılır
+əvvəlki nəticə ilə müqayisə üçün eyni üsul seçilir
+ətrafdakı canlıların yaşayış yeri qorunur
+yoxlanılmamış maddə torpağa əlavə edilmir
+su sərfi işin əvvəlində və sonunda ölçülür
+toplanan məlumat ehtimaldan ayrı göstərilir
+zədənin səbəbi yoxlanılmadan qəti nəticə çıxarılmır
+ətrafdakılara müvəqqəti məhdudiyyət barədə məlumat verilir
+təkrar müşahidənin vaxtı əvvəlcədən seçilir
+təbii axının qarşısı düşünülmədən bağlanmır
+fərqli sahələrin nəticələri qarışdırılmır
+əlavə müdaxilə üçün uyğun mütəxəssisə müraciət olunur
+köhnə qeydlər yeni ölçmələrlə müqayisə edilir
+işlədilən qablar növbəti nümunədən əvvəl təmizlənir
+qeyddə ölçmə yerinin xüsusiyyəti göstərilir
+eyni hadisə təkrar sayılmadan qeyd edilir
+dəyişmənin hansı vaxtda başladığı dəqiqləşdirilir
+əldə edilmiş nəticə bütün sahəyə aid edilmir
+qonşu sahəyə təsir barədə əvvəlcədən düşünülür
+qulluğun nəticəsi bir neçə gün ərzində izlənilir
+istifadə edilən üsul müşahidə dəftərində izah olunur
+ətrafda tullantı saxlanılmadan iş tamamlanır
+bitkinin yerli şəraitə uyğunluğu araşdırılır
+görünən dəyişiklik köhnə şəkillə tutuşdurulur
+ilkin vəziyyət sonrakı müqayisə üçün təsvir edilir
+yalnız müşahidə olunmuş fərq hesabatda yazılır
+sahənin ölçüsü nəticənin yanında göstərilir
+təkrar istifadə mümkün olduqda ayrıca material ayrılır
+qısa müşahidə uzunmüddətli nəticə kimi təqdim edilmir
+qonşularla razılaşdırılmış iş vaxtına əməl olunur
+[culture.events]
+köhnə xalçanın kənarındakı toxuma fərqi araşdırılır
+not dəftərində silinmiş işarə müəllimin qeydi ilə tutuşdurulur
+muzey əşyasının kölgədə saxlanma müddəti qeyd olunur
+səhnə pərdəsinin sürüşmə yolu tamaşadan əvvəl yoxlanılır
+xor məşqində nəfəs alma yerləri ayrıca göstərilir
+tarın köhnə simi eyni ölçülü simlə əvəz edilir
+dulusçunun hazırladığı qabın dibindəki imza çəkilir
+köhnə filmin səs yazısındakı fasilə ayrıca işarələnir
+rəqqasın məşq etdiyi döşəmənin sürüşməsi yoxlanılır
+fotoşəklin arxasındakı ithaf ayrıca köçürülür
+təbiət yürüşünün dik hissəsi xəritədə göstərilir
+üzgüçülük məşqinin uzunluğu iştirakçının hazırlığına uyğun seçilir
+kölgə teatrının işıq mənbəyi tamaşaçıya görünməyən yerə qoyulur
+kitabın cildindəki naxış başqa nəşrlə müqayisə edilir
+şahmat dərnəyində yarımçıq partiyanın gedişləri bərpa olunur
+rəssamın köhnə palitrasındakı rənglər təsvir edilir
+sərgidə toxunula bilən nümunələr ayrıca işarələnir
+qaçış yolunun təmirdə olan hissəsi məşqdən çıxarılır
+qulaqdan öyrənilmiş havanın fərqli ifaları dinlənilir
+köhnə poçt kartının ünvan tərəfi ayrıca rəqəmsallaşdırılır
+səhnədə istifadə olunan qutunun sabitliyi yoxlanılır
+gəzinti dəftərində quş səsinin eşidildiyi yer yazılır
+məşq zalında səslərin əks olunması pərdə ilə azaldılır
+taxta oyuncağın qopmuş hissəsi bərpaçıya göstərilir
+komanda oyununda növbələrin bölüşdürülməsi razılaşdırılır
+göl kənarında çəkilən şəklin işıq istiqaməti qeyd olunur
+musiqi dərsində eyni ritm müxtəlif sürətlə çalınır
+əlyazmanın cırılmış kənarı uyğun materialla qorunur
+idman çantasının qayışı hərəkətə mane olmayacaq şəkildə seçilir
+səhnə geyiminin dar hissəsi məşq zamanı yoxlanılır
+gəzinti qrupunun yavaş hərəkət edən üzvünə uyğun temp seçilir
+səsli kitabda danışanın dəyişdiyi yer işarələnir
+köhnə xəritənin cırılmış qatı açılmadan şəkli çəkilir
+tamaşa qeydlərində mətnə əlavə edilmiş söz ayrıca göstərilir
+göyərçin yuvasının müşahidəsi məsafədən aparılır
+turnirdə istifadə olunan saatın gecikməsi yoxlanılır
+rahat oxu üçün kitab dayağının bucağı dəyişdirilir
+oyunun qaydasındakı istisna iştirakçılara izah olunur
+günəş saatının kölgəsi müxtəlif vaxtlarda çəkilir
+gil fiqurun quruma zamanı yaranan çatları izlənilir
+[culture.contexts]
+ilkin vəziyyət müdaxilədən əvvəl təsvir edilir
+müəllifin adı icazəsiz dəyişdirilmir
+iştirakçının verdiyi fərqli izah dinlənilir
+əvvəlki nümunə ilə oxşarlıq mənbə göstərilməklə qeyd olunur
+özgə əsər yeni müəllifin işi kimi təqdim edilmir
+qısa məşqdən sonra rahatlıq ayrıca soruşulur
+əşyanın əvvəlki istifadəsi sahibindən öyrənilir
+dəyişikliklərin niyə edildiyi qısa qeyddə yazılır
+heç kimin şəxsi əşyası razılıqsız işlədilmir
+göstərilən üsul əvvəlcə kiçik nümunədə sınanır
+yarımçıq iş tamamlanmış əsər kimi təqdim edilmir
+müşahidə yeri sonrakı müqayisə üçün saxlanılır
+tarixi məlumat şəxsi ehtimaldan ayrılır
+işin təkrarı üçün istifadə edilən üsul yazılır
+təcrübəsi az olan iştirakçıya əlavə vaxt verilir
+qrupun razılaşdığı qaydaya hamı əməl edir
+yeni nəticə köhnə qeydlərlə müqayisə edilir
+əşyaya zərər verən hərəkət təkrarlanmır
+fərqli ifanın üstünlüyü səbəblə əsaslandırılır
+mübahisəli tarix yoxlanılmadan təsdiqlənmir
+görünməyən detal uyğun işıq altında göstərilir
+izahda bilmədiyimiz hissə açıq qeyd olunur
+başqasının şəxsi məlumatı açıq təqdimata çıxarılmır
+vaxt bölgüsü iştirakçılarla əvvəlcədən razılaşdırılır
+əldə edilən nəticə bütün üsullara aid edilmir
+istifadə qaydası yeni iştirakçıya sadə dildə izah olunur
+təsadüfi oxşarlıq birbaşa təsir kimi təqdim edilmir
+əvvəlki qeydə düzəliş ayrıca tarixlə əlavə olunur
+yerinə yetirilən iş sonda birlikdə nəzərdən keçirilir
+əsaslandırılmamış iddia izahın bir hissəsi kimi saxlanılmır
