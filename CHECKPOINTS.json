@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "backupCreatedAtUTC": "2026-11-04T12:29:18.089816+00:00",
+  "releaseTag": "punctcase-backup-2026-11-04",
+  "repository": "Sanan2030/SlothAI",
+  "status": "full-training-completed-app-integration-pending",
+  "trainingFinishedAtUTC": "2026-11-02T12:29:08.072649+00:00",
+  "trainingFinishedAtBaku": "2026-11-02T16:29:08.072649+04:00",
+  "model": "PunctCase",
+  "architecture": "character CNN + bidirectional GRU",
+  "parameters": 39434,
+  "completedEpochs": 4,
+  "selectedEpoch": 2,
+  "earlyStoppingPatience": 2,
+  "validation": {
+    "examples": 1082520,
+    "punctuationLabels": 10448106,
+    "punctuationCorrect": 10255564,
+    "caseLabels": 11436909,
+    "caseCorrect": 11425003,
+    "punctuationTruePositive": 1469940,
+    "punctuationPredictedPositive": 1549634,
+    "punctuationActualPositive": 1592867,
+    "meanLoss": 0.06223544379258446,
+    "punctuationAccuracy": 0.9815715881902424,
+    "caseAccuracy": 0.9989589844598746,
+    "punctuationMicroF1": 0.9355223753309864,
+    "scope": "Mechanically filtered source-split clean-text labels, excluding protected/ambiguous labels; not human-reviewed quality."
+  },
+  "sentences": {
+    "train": 3287357,
+    "validation": 1082532
+  },
+  "bestCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+  "lastCheckpointSHA256": "5333b620c1c587e01ec18b60e7ef897755568b376bad3ba432689e7c5f5a138e",
+  "perEpochCheckpoints": [
+    {
+      "epoch": 1,
+      "path": "epochs/epoch-1",
+      "lastCheckpointSHA256": "7fdffb4c4af74f7c6b02600723a9e6946b2788e03c9efbd2b000409e36346a9f",
+      "bestCheckpointSHA256": "92e2f01c1a840a0ad7980b36edc71449da7d56ca34286257986a69702574fa17",
+      "optimizerAndRNGStateVerified": true
+    },
+    {
+      "epoch": 2,
+      "path": "epochs/epoch-2",
+      "lastCheckpointSHA256": "efd1c751a82eafc2943811585bca4011d899d830b37ca431c176adcb8e06e393",
+      "bestCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+      "optimizerAndRNGStateVerified": true
+    },
+    {
+      "epoch": 3,
+      "path": "epochs/epoch-3",
+      "lastCheckpointSHA256": "3042cad4e1d7124cbeacbd1d5b51347bb61d2fdf348d6255e3ac2bbfd0ab348a",
+      "bestCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+      "optimizerAndRNGStateVerified": true
+    },
+    {
+      "epoch": 4,
+      "path": "epochs/epoch-4",
+      "lastCheckpointSHA256": "5333b620c1c587e01ec18b60e7ef897755568b376bad3ba432689e7c5f5a138e",
+      "bestCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+      "optimizerAndRNGStateVerified": true
+    }
+  ],
+  "code": {
+    "baseCommit": "cb5c2448602e6c6a7fcbaa390bedb53fa43b3f07",
+    "workingChangesPatch": "source/working-changes.patch",
+    "workingChangesSHA256": "5465d11d8f048936d8e834fe8d95d2c2594ccd6e8f71c44445ac42d110814c5f",
+    "archivedTrainingSource": "source/training/",
+    "archivedDataGateSource": "source/scripts/data/",
+    "trainingContractsPassed": 36
+  },
+  "corpus": {
+    "acceptedManifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+    "exactRawFilesRecoveredAndVerified": 6,
+    "sourceRowsChangedDuringRecovery": 0,
+    "originalCorpusIncluded": false,
+    "preparedTaskDataIncluded": false,
+    "receiptsIncluded": true,
+    "testReadForFitting": false
+  },
+  "restore": {
+    "loadForInference": "runs/punctcase-full/best.pt",
+    "optimizerCheckpoint": "runs/punctcase-full/last.pt",
+    "metadataAndInstructions": "RESTORE.md",
+    "continuedTrainingRequiresOriginalAcceptedCorpusAndMatchingPreparedData": true,
+    "completedRunCannotBeImplicitlyResumed": true
+  },
+  "releaseScope": "Offline training backup; no app integration, deployment, int8/browser parity or real-user quality acceptance is claimed.",
+  "releaseStorage": "Four backup files in a dedicated Git tag, downloadable through the GitHub Release source ZIP/TAR or linked raw files. No release asset upload endpoint is required."
+}
