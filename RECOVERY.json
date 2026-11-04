@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-04T17:32:08.129826+00:00",
+  "savedAtUTC": "2026-11-04T17:32:30.280956+00:00",
   "job": {
     "status": "running",
     "phase": "train-smoke",
@@ -45,7 +45,9 @@
         ],
         "startedAtUTC": "2026-11-04T17:32:08.107034+00:00",
         "status": "running",
-        "log": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/logs/train-smoke.log"
+        "log": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/logs/train-smoke.log",
+        "pid": 31641,
+        "startTicks": "1868948"
       }
     ],
     "device": "cpu",
@@ -92,19 +94,19 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-04T17:09:26.287204+00:00",
-      "tag": "charspell-save-20261104-20261104T170914307915Z",
-      "commit": "b6a288f2fa1403e913d7908e81cb319b77d050f2",
-      "phase": "prepare-smoke",
+      "atUTC": "2026-11-04T17:32:18.246928+00:00",
+      "tag": "charspell-save-20261104-20261104T173208140849Z",
+      "commit": "f7d21e7216fad17029f460fd60b39390b0c1448f",
+      "phase": "train-smoke",
       "reports": {},
-      "archiveSHA256": "1c9abaf784e07978c59f09426079b467374d8b81d0ea8052c5d3baa69f932fb8",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/b6a288f2fa1403e913d7908e81cb319b77d050f2/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/b6a288f2fa1403e913d7908e81cb319b77d050f2/RECOVERY.json",
+      "archiveSHA256": "29b2d17804e61aaabff6a7cccb5555fd7ec8744980fba98495ae4264d318257c",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/f7d21e7216fad17029f460fd60b39390b0c1448f/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/f7d21e7216fad17029f460fd60b39390b0c1448f/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-04T17:31:58.103358+00:00",
+    "updatedAtUTC": "2026-11-04T17:32:30.254849+00:00",
     "freeDiskGiB": 50.06,
     "preparedData": {
       "smoke-data": {
@@ -112,9 +114,30 @@
         "manifestSHA256": "297c703a7d8809a740503f5a5429ecac2880a426e5e95711ab0d5dffd6688196",
         "bulkUploaded": false
       }
+    },
+    "progress": {
+      "stage": "charspell",
+      "epoch": 1,
+      "status": "running",
+      "completedBatches": 0,
+      "trainExamples": 0,
+      "expectedTrainExamples": 1135799,
+      "optimizerStepsOverall": 0,
+      "elapsedSeconds": 0.5472450389970618
     }
   },
-  "reports": {},
+  "reports": {
+    "charspell-smoke": {
+      "status": "running",
+      "selectedEpoch": null,
+      "validation": null,
+      "bestCheckpointSHA256": null,
+      "lastCheckpointSHA256": null,
+      "artifactSHA256": null,
+      "elapsedSeconds": null,
+      "completedEpochs": 0
+    }
+  },
   "previousCheckpointSaves": [
     {
       "atUTC": "2026-11-04T17:09:07.286213+00:00",
@@ -131,9 +154,17 @@
       "phase": "prepare-smoke",
       "reports": {},
       "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/b6a288f2fa1403e913d7908e81cb319b77d050f2/charspell-save.tar.gz"
+    },
+    {
+      "atUTC": "2026-11-04T17:32:18.246928+00:00",
+      "tag": "charspell-save-20261104-20261104T173208140849Z",
+      "commit": "f7d21e7216fad17029f460fd60b39390b0c1448f",
+      "phase": "train-smoke",
+      "reports": {},
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/f7d21e7216fad17029f460fd60b39390b0c1448f/charspell-save.tar.gz"
     }
   ],
-  "archiveSHA256": "29b2d17804e61aaabff6a7cccb5555fd7ec8744980fba98495ae4264d318257c",
+  "archiveSHA256": "0527cadc53cb8af92a3eb0132239a384896229d954d65af8136f47a0e1bfb093",
   "originalCorpusUploaded": false,
   "bulkPreparedDataUploaded": false,
   "sourceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8"
