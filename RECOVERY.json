@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-04T17:39:59.609766+00:00",
+  "savedAtUTC": "2026-11-04T17:47:36.238004+00:00",
   "job": {
     "status": "running",
     "phase": "train-smoke",
@@ -44,10 +44,25 @@
           "--device=cpu"
         ],
         "startedAtUTC": "2026-11-04T17:32:08.107034+00:00",
-        "status": "running",
+        "status": "completed",
         "log": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/logs/train-smoke.log",
         "pid": 31641,
-        "startTicks": "1868948"
+        "startTicks": "1868948",
+        "exitCode": 0,
+        "elapsedSeconds": 915.9432198799987,
+        "finishedAtUTC": "2026-11-04T17:47:36.197159+00:00",
+        "validation": {
+          "examples": 95735,
+          "top1Correct": 93777,
+          "top3Correct": 95286,
+          "identityExamples": 91028,
+          "identityFalsePositives": 307,
+          "meanLoss": 0.09493725800849491,
+          "top1Accuracy": 0.9795477098239933,
+          "top3Accuracy": 0.9953099702303233,
+          "identityFalsePositiveRate": 0.003372588654040515,
+          "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+        }
       }
     ],
     "device": "cpu",
@@ -94,30 +109,41 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-04T17:32:37.416773+00:00",
-      "tag": "charspell-save-20261104-20261104T173230290773Z",
-      "commit": "8b611dab5a08cf5bb39f9e992c0ea478271aeebf",
+      "atUTC": "2026-11-04T17:40:11.005836+00:00",
+      "tag": "charspell-save-20261104-20261104T173959631021Z",
+      "commit": "2108b4dc14063957f480f7b696c35d448b59d6c6",
       "phase": "train-smoke",
       "reports": {
         "charspell-smoke": {
           "status": "running",
-          "selectedEpoch": null,
-          "validation": null,
-          "bestCheckpointSHA256": null,
-          "lastCheckpointSHA256": null,
+          "selectedEpoch": 1,
+          "validation": {
+            "examples": 95735,
+            "top1Correct": 93414,
+            "top3Correct": 95182,
+            "identityExamples": 91028,
+            "identityFalsePositives": 410,
+            "meanLoss": 0.10970023398879503,
+            "top1Accuracy": 0.9757559931059696,
+            "top3Accuracy": 0.9942236381678592,
+            "identityFalsePositiveRate": 0.0045041086259173,
+            "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+          },
+          "bestCheckpointSHA256": "c36a2d9db69940c7d757ac8acaea609b17d24799b770382ffabc2dca8a1d3cc8",
+          "lastCheckpointSHA256": "3939a779cda9dc613d030c99a27e150bd0b3302245498d16c6974eb199fad9bb",
           "artifactSHA256": null,
           "elapsedSeconds": null,
-          "completedEpochs": 0
+          "completedEpochs": 1
         }
       },
-      "archiveSHA256": "0527cadc53cb8af92a3eb0132239a384896229d954d65af8136f47a0e1bfb093",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/8b611dab5a08cf5bb39f9e992c0ea478271aeebf/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/8b611dab5a08cf5bb39f9e992c0ea478271aeebf/RECOVERY.json",
+      "archiveSHA256": "909e0744151595dbea2292e754d15091f10957b5f9b50f6558dd3722c1083fe0",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/2108b4dc14063957f480f7b696c35d448b59d6c6/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/2108b4dc14063957f480f7b696c35d448b59d6c6/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-04T17:39:59.560637+00:00",
+    "updatedAtUTC": "2026-11-04T17:47:26.195944+00:00",
     "freeDiskGiB": 50.06,
     "preparedData": {
       "smoke-data": {
@@ -129,35 +155,35 @@
     "progress": {
       "stage": "charspell",
       "epoch": 2,
-      "status": "running",
-      "completedBatches": 0,
-      "trainExamples": 0,
+      "status": "validating",
+      "completedBatches": 35494,
+      "trainExamples": 1135799,
       "expectedTrainExamples": 1135799,
-      "optimizerStepsOverall": 35494,
-      "elapsedSeconds": 450.56730666099975
+      "optimizerStepsOverall": 70988,
+      "elapsedSeconds": 897.7852001549982
     }
   },
   "reports": {
     "charspell-smoke": {
-      "status": "running",
-      "selectedEpoch": 1,
+      "status": "completed",
+      "selectedEpoch": 2,
       "validation": {
         "examples": 95735,
-        "top1Correct": 93414,
-        "top3Correct": 95182,
+        "top1Correct": 93777,
+        "top3Correct": 95286,
         "identityExamples": 91028,
-        "identityFalsePositives": 410,
-        "meanLoss": 0.10970023398879503,
-        "top1Accuracy": 0.9757559931059696,
-        "top3Accuracy": 0.9942236381678592,
-        "identityFalsePositiveRate": 0.0045041086259173,
+        "identityFalsePositives": 307,
+        "meanLoss": 0.09493725800849491,
+        "top1Accuracy": 0.9795477098239933,
+        "top3Accuracy": 0.9953099702303233,
+        "identityFalsePositiveRate": 0.003372588654040515,
         "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
       },
-      "bestCheckpointSHA256": "c36a2d9db69940c7d757ac8acaea609b17d24799b770382ffabc2dca8a1d3cc8",
-      "lastCheckpointSHA256": "3939a779cda9dc613d030c99a27e150bd0b3302245498d16c6974eb199fad9bb",
-      "artifactSHA256": null,
-      "elapsedSeconds": null,
-      "completedEpochs": 1
+      "bestCheckpointSHA256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731",
+      "lastCheckpointSHA256": "4dab7fe6dd82efa3435a30b2315790840735e9a81d9cfc2c442b705017c6e82c",
+      "artifactSHA256": "dd3ed267568616e9cea47e68355522e611f59846793080e2621878d944f2d731",
+      "elapsedSeconds": 909.6492166419994,
+      "completedEpochs": 2
     }
   },
   "previousCheckpointSaves": [
@@ -203,9 +229,39 @@
         }
       },
       "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/8b611dab5a08cf5bb39f9e992c0ea478271aeebf/charspell-save.tar.gz"
+    },
+    {
+      "atUTC": "2026-11-04T17:40:11.005836+00:00",
+      "tag": "charspell-save-20261104-20261104T173959631021Z",
+      "commit": "2108b4dc14063957f480f7b696c35d448b59d6c6",
+      "phase": "train-smoke",
+      "reports": {
+        "charspell-smoke": {
+          "status": "running",
+          "selectedEpoch": 1,
+          "validation": {
+            "examples": 95735,
+            "top1Correct": 93414,
+            "top3Correct": 95182,
+            "identityExamples": 91028,
+            "identityFalsePositives": 410,
+            "meanLoss": 0.10970023398879503,
+            "top1Accuracy": 0.9757559931059696,
+            "top3Accuracy": 0.9942236381678592,
+            "identityFalsePositiveRate": 0.0045041086259173,
+            "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
+          },
+          "bestCheckpointSHA256": "c36a2d9db69940c7d757ac8acaea609b17d24799b770382ffabc2dca8a1d3cc8",
+          "lastCheckpointSHA256": "3939a779cda9dc613d030c99a27e150bd0b3302245498d16c6974eb199fad9bb",
+          "artifactSHA256": null,
+          "elapsedSeconds": null,
+          "completedEpochs": 1
+        }
+      },
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/2108b4dc14063957f480f7b696c35d448b59d6c6/charspell-save.tar.gz"
     }
   ],
-  "archiveSHA256": "909e0744151595dbea2292e754d15091f10957b5f9b50f6558dd3722c1083fe0",
+  "archiveSHA256": "34149e51d1c60e7faff0443fe2e91a3ad9a695615eb5bbb2691fccd189c53a78",
   "originalCorpusUploaded": false,
   "bulkPreparedDataUploaded": false,
   "sourceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8"
