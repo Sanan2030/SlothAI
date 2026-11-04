@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-04T22:18:42.220589+00:00",
+  "savedAtUTC": "2026-11-04T22:28:50.821041+00:00",
   "job": {
     "status": "running",
     "phase": "prepare-full",
@@ -161,8 +161,8 @@
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-04T22:18:42.178833+00:00",
-    "freeDiskGiB": 47.61,
+    "updatedAtUTC": "2026-11-04T22:28:50.775799+00:00",
+    "freeDiskGiB": 47.5,
     "preparedData": {
       "smoke-data": {
         "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/smoke-data",
