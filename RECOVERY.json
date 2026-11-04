@@ -1,0 +1,8 @@
+{
+  "savedAtUTC": "2026-11-04T21:25:42.432139+00:00",
+  "applicationSourceCommit": "31a4f9fd6d6c7806f85b736b2ebbf9996a0f2777",
+  "archive": "novel-10000-recovery.tar.gz",
+  "archiveSHA256": "0cb8c428f1da112484a507594a6ed1b54371fba4d9524d7518143d959017c14e",
+  "originalTrainingCorpusUploaded": false,
+  "scope": "10,000 authored QA cases, before/after outputs, errors, browser receipts, source and restore guide; no model quality certification."
+}
