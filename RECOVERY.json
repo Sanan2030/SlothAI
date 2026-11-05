@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-05T08:18:03.072814+00:00",
+  "savedAtUTC": "2026-11-05T08:41:41.606603+00:00",
   "job": {
     "status": "running",
     "phase": "train-full",
@@ -149,9 +149,9 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-05T07:47:59.772669+00:00",
-      "tag": "charspell-save-20261104-20261105T074754323002Z",
-      "commit": "c5aa08dea57102a7eef6f6c823f830367edbc6e5",
+      "atUTC": "2026-11-05T08:18:08.791260+00:00",
+      "tag": "charspell-save-20261104-20261105T081803082937Z",
+      "commit": "229269d83018cf146d834880389d7af0209210b5",
       "phase": "train-full",
       "reports": {
         "charspell-smoke": {
@@ -198,14 +198,14 @@
         }
       },
       "archiveSHA256": "f4ede733bb147bc919d46fa596ce6c8b9f61580b196a4b4542d08c2ec3e225b2",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/c5aa08dea57102a7eef6f6c823f830367edbc6e5/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/c5aa08dea57102a7eef6f6c823f830367edbc6e5/RECOVERY.json",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/229269d83018cf146d834880389d7af0209210b5/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/229269d83018cf146d834880389d7af0209210b5/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-05T08:18:03.006885+00:00",
-    "freeDiskGiB": 46.84,
+    "updatedAtUTC": "2026-11-05T08:41:41.529610+00:00",
+    "freeDiskGiB": 46.8,
     "preparedData": {
       "smoke-data": {
         "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/smoke-data",
@@ -220,13 +220,13 @@
     },
     "progress": {
       "stage": "charspell",
-      "epoch": 2,
-      "status": "validating",
-      "completedBatches": 1164182,
-      "trainExamples": 37253798,
+      "epoch": 3,
+      "status": "running",
+      "completedBatches": 0,
+      "trainExamples": 0,
       "expectedTrainExamples": 37253798,
       "optimizerStepsOverall": 2328364,
-      "elapsedSeconds": 31772.803622634994
+      "elapsedSeconds": 33929.20990437
     }
   },
   "reports": {
@@ -253,24 +253,24 @@
     },
     "charspell-full": {
       "status": "running",
-      "selectedEpoch": 1,
+      "selectedEpoch": 2,
       "validation": {
         "examples": 10393393,
-        "top1Correct": 10193481,
-        "top3Correct": 10359985,
+        "top1Correct": 10193366,
+        "top3Correct": 10360485,
         "identityExamples": 9868556,
-        "identityFalsePositives": 37523,
-        "meanLoss": 0.08365361342083444,
-        "top1Accuracy": 0.980765472834521,
-        "top3Accuracy": 0.9967856502683965,
-        "identityFalsePositiveRate": 0.0038022786717732565,
+        "identityFalsePositives": 46351,
+        "meanLoss": 0.0832985266672821,
+        "top1Accuracy": 0.9807544081129232,
+        "top3Accuracy": 0.9968337577536036,
+        "identityFalsePositiveRate": 0.004696837105651526,
         "scope": "Synthetic source-split candidate scoring, conditional on retrieved target; not real correction quality."
       },
-      "bestCheckpointSHA256": "ddf2adb3428eaf1d3350227258dfce86bf23cd12cb53e632b750369a4f060c12",
-      "lastCheckpointSHA256": "c26feaa2928b36280493c3fbb4c5068266aa7de7ae1b41ffcfb4373daa572e59",
+      "bestCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+      "lastCheckpointSHA256": "cf21794bfd1b9911f5639d24c207ebbd5d26d9c20a2e58f3edf7cc3b6b3bbfd5",
       "artifactSHA256": null,
       "elapsedSeconds": null,
-      "completedEpochs": 1
+      "completedEpochs": 2
     }
   },
   "previousCheckpointSaves": [
@@ -529,7 +529,7 @@
       "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/a57afb9968f74376f945cac783a50b7412558596/charspell-save.tar.gz"
     }
   ],
-  "archiveSHA256": "f4ede733bb147bc919d46fa596ce6c8b9f61580b196a4b4542d08c2ec3e225b2",
+  "archiveSHA256": "4c5275e150fae317ff31304d1c9113de533cbb68dd9a5790e2f5548d031073f8",
   "originalCorpusUploaded": false,
   "bulkPreparedDataUploaded": false,
   "sourceCommit": "ec966e2f42799d1ea9c4de10d92227bd1b6d62f8"
