@@ -1,0 +1,342 @@
+{
+  "scope": "Automatic model integration; engineering development checks, not real-user accuracy or calibration.",
+  "evaluatedBaseCommit": "8a7dd0874deb74b2f11e89035f777d32309eb1c2",
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "nodeResultsSHA256": "f288d0647ad43f216d46321cb729daf844673e7e31e7520fd8dddb194e6877db",
+  "browserResultsSHA256": "ee4eef8c793e006915c4963f90935d41c72d7556055f933a140beb93fbcb9b12",
+  "nodeSummary": {
+    "default": {
+      "cases": 10000,
+      "exact": 9760,
+      "unstable": 0,
+      "errors": 0,
+      "punctCaseLoaded": 10000,
+      "punctCaseApplied": 0,
+      "categories": {
+        "typo-or-wrong-candidate": 19,
+        "diacritics-or-case": 206,
+        "missing-word-boundary": 12,
+        "unresolved-or-wrong-word": 3
+      },
+      "domains": {
+        "mail": {
+          "cases": 1000,
+          "exact": 990
+        },
+        "it": {
+          "cases": 1000,
+          "exact": 995
+        },
+        "rsd": {
+          "cases": 1000,
+          "exact": 964
+        },
+        "finance": {
+          "cases": 1000,
+          "exact": 980
+        },
+        "education": {
+          "cases": 1000,
+          "exact": 967
+        },
+        "health": {
+          "cases": 1000,
+          "exact": 989
+        },
+        "transport": {
+          "cases": 1000,
+          "exact": 976
+        },
+        "shopping": {
+          "cases": 1000,
+          "exact": 970
+        },
+        "environment": {
+          "cases": 1000,
+          "exact": 971
+        },
+        "culture": {
+          "cases": 1000,
+          "exact": 958
+        }
+      }
+    },
+    "punctcase": {
+      "cases": 10000,
+      "exact": 9760,
+      "unstable": 0,
+      "errors": 0,
+      "punctCaseLoaded": 10000,
+      "punctCaseApplied": 0,
+      "categories": {
+        "typo-or-wrong-candidate": 19,
+        "diacritics-or-case": 206,
+        "missing-word-boundary": 12,
+        "unresolved-or-wrong-word": 3
+      },
+      "domains": {
+        "mail": {
+          "cases": 1000,
+          "exact": 990
+        },
+        "it": {
+          "cases": 1000,
+          "exact": 995
+        },
+        "rsd": {
+          "cases": 1000,
+          "exact": 964
+        },
+        "finance": {
+          "cases": 1000,
+          "exact": 980
+        },
+        "education": {
+          "cases": 1000,
+          "exact": 967
+        },
+        "health": {
+          "cases": 1000,
+          "exact": 989
+        },
+        "transport": {
+          "cases": 1000,
+          "exact": 976
+        },
+        "shopping": {
+          "cases": 1000,
+          "exact": 970
+        },
+        "environment": {
+          "cases": 1000,
+          "exact": 971
+        },
+        "culture": {
+          "cases": 1000,
+          "exact": 958
+        }
+      }
+    }
+  },
+  "browser": {
+    "scope": "Production Chromium editor Worker, same instance created by app UI; 20,000 Worker requests, not 20,000 DOM clicks.",
+    "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+    "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+    "reviewedTargetsSHA256": "ff72e5ed7ec25fa31d08a5cd2868df221de5d24e84f5760a7833ab04d3912978",
+    "completedAtUTC": "2026-11-05T08:55:20.717Z",
+    "browserVersion": "154.0.8037.57",
+    "uiProbePassed": true,
+    "transformHTTPRequests": 0,
+    "totals": {
+      "default": {
+        "cases": 10000,
+        "exact": 9760,
+        "nodeParityDifferences": 0,
+        "exceptions": 0,
+        "automaticModelRequests": 10000
+      },
+      "punctcase": {
+        "cases": 10000,
+        "exact": 9760,
+        "nodeParityDifferences": 0,
+        "exceptions": 0,
+        "automaticModelRequests": 10000
+      }
+    },
+    "elapsedSeconds": 369.513123914,
+    "requireAutomatic": true,
+    "legacyFalse": true,
+    "resultsSHA256": "ee4eef8c793e006915c4963f90935d41c72d7556055f933a140beb93fbcb9b12"
+  },
+  "comparison": {
+    "default": {
+      "retained-correct": 9760,
+      "beforeExact": 9760,
+      "afterExact": 9760,
+      "beforeUnstable": 0,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 0,
+      "afterIdentityChanged": 0,
+      "open": 240
+    },
+    "punctcase": {
+      "retained-correct": 9760,
+      "beforeExact": 9760,
+      "afterExact": 9760,
+      "beforeUnstable": 0,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 0,
+      "afterIdentityChanged": 0,
+      "open": 240
+    }
+  },
+  "modelUsage": {
+    "scope": "Actual per-request model metadata; counts are usage, not correctness confidence. Node second pass sends legacy true; browser second pass sends legacy false. Both are ignored.",
+    "modes": {
+      "default": {
+        "requests": 10000,
+        "bothAutomatic": 10000,
+        "bothLoaded": 10000,
+        "outputDifferences": 0,
+        "wordLMScoredTokens": 148078,
+        "wordLMRankedTokens": 23449,
+        "wordLMCandidatesScored": 67959,
+        "wordLMChangedTokens": 0,
+        "punctCaseTokens": 142078,
+        "punctCaseInferenceTokens": 142078,
+        "punctCaseApplied": 0
+      },
+      "punctcase": {
+        "requests": 10000,
+        "bothAutomatic": 10000,
+        "bothLoaded": 10000,
+        "outputDifferences": 0,
+        "wordLMScoredTokens": 148078,
+        "wordLMRankedTokens": 23449,
+        "wordLMCandidatesScored": 67959,
+        "wordLMChangedTokens": 0,
+        "punctCaseTokens": 142078,
+        "punctCaseInferenceTokens": 142078,
+        "punctCaseApplied": 0
+      }
+    }
+  },
+  "punctcaseAcceptance": {
+    "sourceCheckpointSHA256": "028592bc1db1843f15e73d3eb97d1fc6c69b9e2b7462e46fa9059582bf03c543",
+    "exportSHA256": "b786de15350b1770f4e0dce7d4202432db7480d63bd12d9bd0aad52333739a95",
+    "precision": "Original float32, no int8 quantization",
+    "golden": {
+      "comparedLogits": 1280,
+      "maximumAbsoluteLogitError": 5.7220458984375e-06,
+      "tolerance": 0.001
+    },
+    "policy": {
+      "punctuationProbability": 0.995,
+      "titleProbability": 0.95
+    },
+    "defaultEnabled": true,
+    "mode": "automatic",
+    "quality": {
+      "holdout-500": {
+        "cases": 500,
+        "baselineExact": 395,
+        "automaticExact": 395,
+        "changedIds": [],
+        "regressedIds": [],
+        "unstableIds": [],
+        "scope": "Frozen engineering references; not independent human-reviewed real-user quality."
+      },
+      "no-harm-2000": {
+        "cases": 2000,
+        "baselineExact": 2000,
+        "automaticExact": 2000,
+        "changedIds": [],
+        "regressedIds": [],
+        "unstableIds": [],
+        "scope": "Frozen engineering references; not independent human-reviewed real-user quality."
+      }
+    },
+    "validation": "not requested",
+    "calibrationUsed": false,
+    "testSplitRead": false,
+    "source": "Existing validation and frozen references only; no training or policy fitting."
+  },
+  "latency": {
+    "scope": "Warm Node whole-strategy latency on this CPU, three repetitions per size; not mobile/browser latency.",
+    "concurrentWork": "Existing four-thread CharSpell full training; other QA may share the CPU.",
+    "results": [
+      {
+        "words": 20,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          57.14911200000006,
+          76.93062199999986,
+          62.28271300000051
+        ],
+        "maximumMs": 76.93062199999986,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 100,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          168.96807199999967,
+          187.86169400000017,
+          208.64525800000047
+        ],
+        "maximumMs": 208.64525800000047,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 500,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          979.119748000001,
+          873.7843900000007,
+          726.8264209999998
+        ],
+        "maximumMs": 979.119748000001,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 1000,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          1494.7012649999997,
+          1219.266157,
+          1144.5086890000002
+        ],
+        "maximumMs": 1494.7012649999997,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 5000,
+        "chunksPerDocument": 5,
+        "iterations": 3,
+        "modelRequests": 15,
+        "timingsMs": [
+          5830.162704999999,
+          3901.8265119999996,
+          5508.339919000002
+        ],
+        "maximumMs": 5830.162704999999,
+        "ceilingMs": 10000,
+        "passed": true
+      }
+    ]
+  },
+  "localChecks": {
+    "tests": {
+      "total": 5590,
+      "passed": 5582,
+      "failed": 0,
+      "preExistingTODO": 8
+    },
+    "browserTests": 9,
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "benchmarkCheck": "passed",
+    "exactWorkflowLanguageReproduction": "passed"
+  },
+  "runtimeModelsChanged": false,
+  "charspellPromoted": false,
+  "recoveryRelease": "https://github.com/Sanan2030/SlothAI/releases/tag/automatic-models-2026-11-05"
+}

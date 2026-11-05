@@ -1,4 +1,5 @@
 /** Browser-local opt-in export of editor input/output pairs. No network calls. */
+import type { TransformationMetadata } from '../strategies/types';
 export interface TransformLogEntry {
   id: string;
   at: string;
@@ -7,6 +8,8 @@ export interface TransformLogEntry {
   output: string;
   greeting?: string;
   usePunctCase?: boolean;
+  /** Actual automatic-engine receipts, before any personal lexical overrides. */
+  modelUsage?: Pick<TransformationMetadata, 'wordLM' | 'punctCase'>;
   source: 'transformed' | 'remembered' | 'reviewed';
 }
 

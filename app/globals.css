@@ -356,19 +356,6 @@ input:focus-visible {
   to { transform: rotate(360deg); }
 }
 
-.workspace-punctcase-option {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 0 24px 18px;
-}
-
-.workspace-punctcase-option small {
-  color: var(--text-soft);
-  font-size: 12px;
-  line-height: 1.5;
-}
-
 .workspace-field-row {
   margin-bottom: 16px;
 }

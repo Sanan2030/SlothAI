@@ -21,6 +21,8 @@ def main():
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--source', required=True)
     parser.add_argument('--log', type=Path, action='append', default=[])
+    parser.add_argument('--integration-report', default='docs/qa/novel-10000-2026-11-04.md')
+    parser.add_argument('--automatic-models', action='store_true')
     args = parser.parse_args()
     if args.out.exists() or args.out.with_suffix('.tar.gz').exists():
         raise ValueError('Do not overwrite an existing recovery package')
@@ -83,7 +85,7 @@ def main():
 2. Clone https://github.com/Sanan2030/SlothAI and check out `{args.source}`.
    `application-source.tar.gz` is a separate exact source fallback. It contains
    no Git history; novelty rechecking needs the pinned legacy commit in Git.
-3. Read `docs/qa/novel-10000-2026-11-04.md`, the corpus README, MANIFEST,
+3. Read `{args.integration_report}`, the corpus README, MANIFEST,
    GOLD_REVIEW and `comparison/summary.json`. Inputs and original references
    are frozen. Apply only the explicit gold errata; never fit references to outputs.
 4. All before/after outputs are in `baseline/results.jsonl.gz` and
@@ -99,7 +101,8 @@ def main():
 
 The dataset is assistant-authored compositional development material, not a
 blind or independently human-labelled benchmark. Open disagreements remain.
-PunctCase's opt-in path was tested; zero accepted edits in this corpus is not
+{'Both models ran automatically; the second browser pass explicitly sent the ignored legacy false flag.' if args.automatic_models else "PunctCase's opt-in path was tested."}
+Zero accepted PunctCase edits in this corpus is not
 evidence that its training adds this measured improvement. No model retraining
 used these QA cases. Do not restart or overwrite unrelated training jobs.
 

@@ -1,8 +1,46 @@
 import artifact from './model.json';
 import { dictionaryCandidates } from '../dictionary';
 import { BrowserWordLM } from './core';
+import { wordLMTokens } from './core';
+import { literalPattern } from '../literal-spans';
+import { editStructuredText } from '../structured-text';
+import { editHTMLStructure } from '../html-structure';
+
+export interface WordLMDecisions { rankedTokens: number; candidatesScored: number; changedTokens: number }
+export const initialWordLMDecisions = (): WordLMDecisions => ({ rankedTokens: 0, candidatesScored: 0, changedTokens: 0 });
+export interface WordLMStats extends WordLMDecisions {
+  mode: 'automatic'; loaded: true; sourceModelSHA256: string;
+  vocabularyWords: number; vocabularySymbols: number; bigrams: number; trigrams: number;
+  scoredTokens: number; knownTokens: number; logLikelihood: number;
+}
 
 let model: BrowserWordLM | undefined;
+const vocabularyWords = artifact.words.filter(word => !word.startsWith('<')).length;
+/** Score the final editable prose on every application request. These language
+ * probabilities describe model usage, not a correctness confidence. */
+export function scoreWordLMDocument(text: string, decisions = initialWordLMDecisions()): WordLMStats {
+  model ??= new BrowserWordLM(artifact);
+  const stats: WordLMStats = { mode: 'automatic', loaded: true, sourceModelSHA256: artifact.sourceModelSHA256,
+    vocabularyWords,
+    vocabularySymbols: artifact.words.length, bigrams: artifact.bigrams.length, trigrams: artifact.trigrams.length,
+    scoredTokens: 0, knownTokens: 0, logLikelihood: 0, ...decisions };
+  const collect = (value: string): string => {
+    const prose = value.replace(/!?\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)/gu, '\n').replace(literalPattern(), '\n');
+    for (const sentence of prose.split(/[.!?;\n]/u)) {
+      let left = model!.mapped('<s>'), previous = left;
+      for (const word of wordLMTokens(sentence)) {
+        const current = model!.mapped(word), probability = model!.probability(left, previous, current);
+        stats.scoredTokens++; stats.knownTokens += Number(model!.hasWord(word));
+        stats.logLikelihood += Math.log(Math.max(Number.MIN_VALUE, probability));
+        left = previous; previous = current;
+      }
+    }
+    return value;
+  };
+  const fragment = (value: string) => editHTMLStructure(value, collect) ?? collect(value);
+  if (editStructuredText(text, fragment, true) === undefined && editHTMLStructure(text, collect) === undefined) collect(text);
+  return stats;
+}
 export function rankWordLM(left: readonly string[], candidates: readonly string[], right: readonly string[]) {
   model ??= new BrowserWordLM(artifact);
   return model.rank(left, candidates, right);

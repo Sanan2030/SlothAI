@@ -1,21 +1,25 @@
 import { correctText } from '../../editor/correct';
-import { optionalPunctCase } from '../punctcase';
+import { automaticPunctCase } from '../punctcase';
+import { initialWordLMDecisions, scoreWordLMDocument } from '../../editor/wordlm/runtime';
 import type { ITextTransformationStrategy, TransformationRequest, TransformationResult, TransformationContext } from '../types';
 
 export class AzerbaijaniTextCorrectorStrategy implements ITextTransformationStrategy {
   readonly id = 'text-corrector';
   readonly name = 'Mətn Düzəldici';
-  readonly description = 'Yazılışı, durğu işarələrini və abzasları proqramın qaydaları ilə düzəldir.';
+  readonly description = 'Yerli modellərlə yazılışı, durğu işarələrini və böyük/kiçik hərfləri avtomatik düzəldir.';
   readonly icon = 'FileText';
   async transform(request: TransformationRequest, context: TransformationContext = {}): Promise<TransformationResult> {
     const start = Date.now();
-    const baseline = correctText(request.text, request.options?.preserveFormatting, context);
-    const enhanced = await optionalPunctCase(request.text, baseline, request.options?.usePunctCase,
-      value => correctText(value, request.options?.preserveFormatting));
+    const decisions = initialWordLMDecisions();
+    const baseline = correctText(request.text, request.options?.preserveFormatting, { ...context, wordLMMode: 'automatic', wordLMDecisions: decisions });
+    const enhanced = await automaticPunctCase(request.text, baseline,
+      value => correctText(value, request.options?.preserveFormatting, { wordLMMode: 'automatic' }));
     const result = enhanced.correction;
+    const wordLM = scoreWordLMDocument(result.text, decisions);
     return { transformedText: result.text, metadata: {
       correctionsMade: result.corrections, detectedLanguage: 'az', processingLanguage: 'az',
-      executionTimeMs: Date.now() - start, strategyUsed: this.id, engine: 'local-rules',
+      executionTimeMs: Date.now() - start, strategyUsed: this.id, engine: 'local-models',
+      wordLM,
       ...(enhanced.stats ? { punctCase: enhanced.stats } : {}),
     } };
   }

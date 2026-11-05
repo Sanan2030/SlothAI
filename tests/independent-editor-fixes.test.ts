@@ -34,7 +34,8 @@ test('HTML attributes remain untouched even when they contain question marks', (
   assert.equal(correctText(result).text, result);
 });
 
-test('ambiguous words and declarative predictions stay unchanged', () => {
-  assert.equal(correctText('gul əkdik').text, 'Gul əkdik.');
+test('automatic WordLM uses planting context while an isolated ambiguity and declarative prediction stay unchanged', () => {
+  assert.equal(correctText('gul əkdik').text, 'Gül əkdik.');
+  assert.equal(correctText('gul').text, 'Gul.');
   assert.equal(correctText('bəlkə sabah yağış yağacaq').text, 'Bəlkə sabah yağış yağacaq.');
 });

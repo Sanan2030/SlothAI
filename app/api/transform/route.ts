@@ -22,7 +22,7 @@ const RequestSchema = z.object({
       preserveFormatting: z.boolean().optional(),
       emailGreeting: z.enum(EMAIL_GREETINGS).optional(),
       omitSubject: z.boolean().optional(),
-      usePunctCase: z.boolean().optional(),
+      usePunctCase: z.boolean().optional(), // Legacy requests accepted; automatic inference ignores this field.
     })
     .strict()
     .optional(),

@@ -1,11 +1,12 @@
 import type { InferenceRunner, InferenceStats } from '../editor/inference-cache';
 import type { PunctCaseStats } from '../editor/punctcase/edit';
+import type { WordLMStats } from '../editor/wordlm/runtime';
 
 export interface TransformationOptions {
   preserveFormatting?: boolean;
   emailGreeting?: string;
   omitSubject?: boolean;
-  /** Explicit experimental punctuation/case proposals for unpunctuated plain drafts. */
+  /** Legacy wire field, accepted for compatibility and ignored. Both models always run. */
   usePunctCase?: boolean;
 }
 
@@ -20,13 +21,14 @@ export interface TransformationMetadata {
   /** Speculative heads are optional; context mismatches rerun normal inference. */
   inference?: InferenceStats;
   punctCase?: PunctCaseStats;
+  wordLM?: WordLMStats;
   correctionsMade: number;
   detectedLanguage: string;
   /** Processing language; detectedLanguage is a deprecated compatibility alias. */
   processingLanguage?: 'az';
   executionTimeMs: number;
   strategyUsed: string;
-  engine: 'local-rules';
+  engine: 'local-rules' | 'local-models';
 }
 
 export interface TransformationResult {

@@ -8,11 +8,14 @@ import { isEstablishedSurface } from '../lexicon';
 import type { LanguageServices } from '../language-services';
 import type { DiagnosticSink, CandidateDiagnostic } from '../diagnostics';
 import { chooseWordLMSpelling, rankWordLM, wordLMSurfacePenalty } from './runtime';
+import type { WordLMDecisions } from './runtime';
 import { wordLMTokens } from './core';
 import selectedPolicy from './selection-policy.json';
 
 export interface WordLMSelectionPolicy { lmWeight: number; editPenalty: number; changePenalty: number; minimumMargin: number }
-export const experimentalWordLMPolicy: WordLMSelectionPolicy = selectedPolicy;
+export const automaticWordLMPolicy: WordLMSelectionPolicy = selectedPolicy;
+/** Compatibility name for existing offline policy-selection scripts. */
+export const experimentalWordLMPolicy = automaticWordLMPolicy;
 const wordPattern = () => /\p{L}+(?:[-’']\p{L}+)*/gu;
 const folded = (text: string) => foldLetters(normalizeDigraphs(text.toLocaleLowerCase('az-AZ')));
 const channelCounts: Record<string, number> = paired.channels;
@@ -47,21 +50,37 @@ export function channelLogScore(raw: string, candidate: string, policy: WordLMSe
 }
 
 export function selectSpellingWithWordLM(original: string, text: string, services: LanguageServices,
-  options: { enabled: boolean; experimental?: boolean; policy?: WordLMSelectionPolicy; diagnostics?: DiagnosticSink }): string {
+  options: { enabled: boolean; experimental?: boolean; automatic?: boolean; policy?: WordLMSelectionPolicy; diagnostics?: DiagnosticSink; decisions?: WordLMDecisions; onChange?: (raw: string, selected: string) => void }): string {
   const policy = options.policy ?? experimentalWordLMPolicy;
   if (!Object.values(policy).every(value => Number.isFinite(value) && value >= 0) || policy.minimumMargin < Math.log(20)) throw new Error('Invalid experimental WordLM policy');
   const mapping = origins(original, text);
+  const resolved = new Map<string, string>(), established = new Map<string, boolean>();
+  const resolve = (word: string) => {
+    let value = resolved.get(word);
+    if (value === undefined) { value = services.spelling.resolve(word, services); resolved.set(word, value); }
+    return value;
+  };
+  const known = (word: string) => {
+    let value = established.get(word);
+    if (value === undefined) { value = isEstablishedSurface(word, services); established.set(word, value); }
+    return value;
+  };
   return text.replace(wordPattern(), (current, offset: number) => {
     const origin = mapping.get(offset);
     if (!origin) return current;
     const raw = origin[0];
     if (!/^[a-z]{3,24}$/u.test(raw) || canonicalProtectedTerm(raw) || isCanonicalEntity(raw)) return current;
-    const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(word => services.spelling.resolve(word, services));
-    const right = wordLMTokens(text.slice(offset + current.length).split(/[.!?;\n\uE000\uE001]/u)[0]).slice(0, 2).map(word => services.spelling.resolve(word, services));
-    const ruleProposal = services.spelling.resolve(raw, services);
+    // Earlier entity/technical decisions retain their lexical identity. The LM
+    // still uses them as context for neighbouring uncertain words.
+    if (canonicalProtectedTerm(current) || isCanonicalEntity(current)) return current;
+    const validRaw = dictionaryCandidates(raw)?.has(raw) || known(raw);
+    if (validRaw && !options.diagnostics) return current;
+    const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(resolve);
+    const right = wordLMTokens(text.slice(offset + current.length).split(/[.!?;\n\uE000\uE001]/u)[0]).slice(0, 2).map(resolve);
+    const ruleProposal = resolve(raw);
     const proposals = new Map<string, string[]>([[raw, ['retain-input']]]);
     const add = (word: string | undefined, source: string) => {
-      if (!word || word !== raw && (!/^\p{Ll}+$/u.test(word) || !isEstablishedSurface(word, services))) return;
+      if (!word || word !== raw && (!/^\p{Ll}+$/u.test(word) || !known(word))) return;
       const sources = proposals.get(word);
       if (sources) { if (!sources.includes(source)) sources.push(source); }
       else if (proposals.size < 8) proposals.set(word, [source]);
@@ -76,21 +95,27 @@ export function selectSpellingWithWordLM(original: string, text: string, service
       return { word: row.word, sources: proposals.get(row.word)!, lmLogScore: row.score, oovLogPenalty,
         channelLogScore: channel, score: policy.lmWeight * (row.score - oovLogPenalty) + channel, evidence: row.evidence };
     }).sort((a, b) => b.score - a.score || a.word.localeCompare(b.word, 'az'));
-    const legacy = options.enabled && !isEstablishedSurface(current, services) ? chooseWordLMSpelling(current, left, right) : undefined;
-    const baselineProposal = legacy && isEstablishedSurface(legacy, services) ? legacy : current;
+    if (options.enabled && options.decisions) {
+      options.decisions.rankedTokens++; options.decisions.candidatesScored += candidates.length;
+    }
+    const legacy = options.enabled && !known(current) ? chooseWordLMSpelling(current, left, right) : undefined;
+    const baselineProposal = legacy && known(legacy) ? legacy : current;
     let selected = baselineProposal, reason = 'existing pipeline decision retained';
     if (!options.enabled) reason = 'WordLM disabled in this comparison';
     else if (!options.experimental) {
       if (baselineProposal !== current) reason = 'legacy WordLM fallback accepted';
     } else {
       const [best, second] = candidates;
-      if (dictionaryCandidates(raw)?.has(raw) || isEstablishedSurface(raw, services)) reason = 'explicit valid input preserved';
+      if (validRaw) reason = 'explicit valid input preserved';
       else if (!best || !second || !best.evidence || !Number.isFinite(best.score) || !Number.isFinite(second.score)) reason = 'insufficient observed lexical evidence';
       else if (best.score - second.score < policy.minimumMargin) reason = 'insufficient joint-score margin';
+      else if (best.word === raw && current !== raw && known(current)) reason = 'verified correction retained over an unattested raw spelling';
       else { selected = best.word; reason = selected === raw ? 'joint ranker retained the original word' : 'joint context and edit-channel ranking accepted'; }
     }
     options.diagnostics?.({ kind: 'candidates', source: 'wordlm-selection', raw, rawStart: origin.index!, current, ruleProposal, baselineProposal,
-      mode: !options.enabled ? 'disabled' : options.experimental ? 'experimental' : 'fallback', candidates, selected, reason });
+      mode: !options.enabled ? 'disabled' : options.automatic ? 'automatic' : options.experimental ? 'experimental' : 'fallback', candidates, selected, reason });
+    if (options.enabled && options.decisions && selected !== current) options.decisions.changedTokens++;
+    if (options.enabled && selected !== current) options.onChange?.(raw, selected);
     return selected;
   });
 }

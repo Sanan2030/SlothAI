@@ -1,38 +1,33 @@
 import { literalPattern } from '../literal-spans';
 import info from './model-info.json';
 import { PunctCaseModel, punctCaseLower, punctCaseWordPattern, tagProbabilities } from './core';
+import { editStructuredText } from '../structured-text';
+import { editHTMLStructure } from '../html-structure';
 
 export interface PunctCaseStats {
-  mode: 'experimental'; sourceCheckpointSHA256: string; loaded: boolean;
-  tokens: number; proposed: number; applied: number; punctuation: number; capitalization: number;
+  mode: 'automatic'; sourceCheckpointSHA256: string; loaded: boolean;
+  tokens: number; inferenceTokens: number; proposed: number; applied: number; punctuation: number; capitalization: number;
   skippedLines: number; skippedReason?: string; rejectedUnstable: boolean; inferenceTimeMs: number;
 }
-export const initialPunctCaseStats = (): PunctCaseStats => ({ mode: 'experimental',
+export const initialPunctCaseStats = (): PunctCaseStats => ({ mode: 'automatic',
   sourceCheckpointSHA256: info.sourceCheckpointSHA256, loaded: false, tokens: 0, proposed: 0,
-  applied: 0, punctuation: 0, capitalization: 0, skippedLines: 0, rejectedUnstable: false, inferenceTimeMs: 0 });
+  inferenceTokens: 0, applied: 0, punctuation: 0, capitalization: 0, skippedLines: 0, rejectedUnstable: false, inferenceTimeMs: 0 });
 
 /** Fixed engineering guards, not fitted on a test set or real-error calibration data. */
 export const PUNCTCASE_POLICY = Object.freeze({ punctuationProbability: 0.995, titleProbability: 0.95 });
 const STRUCTURAL_MARKERS = ['<', '>', '`', '*', '_', '~', '#', '|', '\\', '[', ']', '{', '}'];
 const hasStructuralMarkers = (text: string) => STRUCTURAL_MARKERS.some(marker => text.includes(marker));
-export function punctCaseSkipReason(source: string): string | undefined {
-  if (literalPattern().test(source)) return 'protected-document';
-  if (hasStructuralMarkers(source) || /(?:^|\n)\s*(?:[-+]\s|\d+[.)]\s)/u.test(source)) return 'structured-document';
-  if (/[,.;:!?…]/u.test(source)) return 'existing-punctuation';
-  if ((source.match(punctCaseWordPattern())?.length ?? 0) < 4) return 'short-draft';
-  return undefined;
-}
 
 /** Insert marks/capital initials only; preserve all source whitespace and existing punctuation. */
-export function editWithPunctCase(text: string, model: Pick<PunctCaseModel, 'predict'>, stats: PunctCaseStats): string {
-  const cache = new Map<string, Float32Array>();
+export function editWithPunctCase(text: string, model: Pick<PunctCaseModel, 'predict'>, stats: PunctCaseStats,
+  cache = new Map<string, Float32Array>()): string {
   let signature = false;
   return text.split('\n').map(line => {
     if (/^\s*hörmətlə(?=[,\s.!?]|$)/iu.test(line)) signature = true;
     if (signature || line !== line.normalize('NFC') || /^\s*(?:Mövzu:|[-*+]\s|\d+[.)]\s|#{1,6}\s)/u.test(line)
       || hasStructuralMarkers(line) || /[\uE000-\uF8FF]/u.test(line)) { stats.skippedLines++; return line; }
     const matches = [...line.matchAll(punctCaseWordPattern())];
-    if (matches.length < 4) { stats.skippedLines++; return line; }
+    if (!matches.length) { stats.skippedLines++; return line; }
     const ranges = [...line.matchAll(literalPattern())].map(match => [match.index!, match.index! + match[0].length]);
     for (const match of line.matchAll(/[\p{L}\p{N}_]+(?:[._/-][\p{L}\p{N}_]+)*/gu)) {
       if (/[\p{N}_]|[a-z][A-Z]/u.test(match[0]) || match[0].length > 1 && match[0] === match[0].toLocaleUpperCase('az-AZ')) {
@@ -41,12 +36,17 @@ export function editWithPunctCase(text: string, model: Pick<PunctCaseModel, 'pre
     }
     const protectedWord = (at: number) => ranges.some(([left, right]) => matches[at].index! < right && matches[at].index! + matches[at][0].length > left);
     const edits: { start: number; end: number; value: string; kind: 'punctuation' | 'capitalization' }[] = [];
-    for (let offset = 0; offset < matches.length; offset += info.config.maxSentenceTokens) {
-      const chunk = matches.slice(offset, offset + info.config.maxSentenceTokens);
+    // Overlapping trained-size windows cover every gap once. Eight context
+    // tokens on each side avoid leaving every 96th gap permanently unscored.
+    const context = matches.length > info.config.maxSentenceTokens ? 8 : 0;
+    const stride = info.config.maxSentenceTokens - context * 2;
+    for (let offset = 0; offset < matches.length; offset += stride) {
+      const start = Math.max(0, offset-context);
+      const chunk = matches.slice(start, Math.min(matches.length, offset+stride+context));
       const predicted = model.predict(chunk.map(word => word[0]), cache);
-      stats.tokens += chunk.length;
-      for (let at = 0; at < chunk.length - 1; at++) {
-        const global = offset + at, current = chunk[at], next = chunk[at + 1];
+      stats.tokens += Math.min(stride, matches.length-offset); stats.inferenceTokens += chunk.length;
+      for (let global = offset; global < Math.min(offset+stride,matches.length-1); global++) {
+        const at = global-start, current = chunk[at], next = chunk[at + 1];
         if (protectedWord(global) || protectedWord(global + 1)) continue;
         const end = current.index! + current[0].length, gap = line.slice(end, next.index!);
         if (!/^[\t ]+$/u.test(gap)) continue;
@@ -72,6 +72,36 @@ export function editWithPunctCase(text: string, model: Pick<PunctCaseModel, 'pre
     }
     return output;
   }).join('\n');
+}
+
+/** Apply the complete checkpoint to editable prose. Existing structural scanners
+ * keep fences, HTML attributes, link destinations and block prefixes opaque. */
+export function editPunctCaseDocument(text: string, model: Pick<PunctCaseModel, 'predict'>, stats: PunctCaseStats): string {
+  const cache = new Map<string, Float32Array>();
+  let signature = false;
+  const prose = (value: string): string => value.split(/(\r?\n)/u).map((line, at) => {
+    if (at % 2) return line;
+    if (/^[\s*_]*(?:hörmətlə|təşəkkürlə)[,.]?[\s*_]*$/iu.test(line)) signature = true;
+    if (signature || line !== line.normalize('NFC') || /^\s*Mövzu:/iu.test(line)) { stats.skippedLines++; return line; }
+    const ranges = [...line.matchAll(literalPattern())].map(match => [match.index!, match.index!+match[0].length]);
+    for (const match of line.matchAll(/!?\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)|[\p{L}\p{N}_]+(?:[._/-][\p{L}\p{N}_]+)*|[*_~#|\\\[\]{}<>]+|[\uE000-\uF8FF]+/gu)) {
+      const word = match[0];
+      if (/^!?\[/u.test(word) || /[\p{N}_]|[a-z][A-Z]|[*~#|\\\[\]{}<>\uE000-\uF8FF]/u.test(word)
+        || word.length > 1 && word === word.toLocaleUpperCase('az-AZ')) ranges.push([match.index!, match.index!+word.length]);
+    }
+    ranges.sort((a,b) => a[0]-b[0]);
+    const edit = (part: string) => part.replace(/[^.!?;]+(?:[.!?;]+|$)/gu,
+      sentence => editWithPunctCase(sentence, model, stats, cache));
+    let result = '', cursor = 0;
+    for (const [left,right] of ranges) {
+      if (right <= cursor) continue;
+      if (left > cursor) result += edit(line.slice(cursor,left));
+      result += line.slice(Math.max(left,cursor),right); cursor = right;
+    }
+    return result+edit(line.slice(cursor));
+  }).join('');
+  const fragment = (value: string) => editHTMLStructure(value, prose) ?? prose(value);
+  return editStructuredText(text, fragment, true) ?? editHTMLStructure(text, prose) ?? prose(text);
 }
 
 export function samePunctCaseWords(left: string, right: string): boolean {

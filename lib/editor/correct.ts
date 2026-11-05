@@ -5,6 +5,7 @@ import { selectSpellingWithWordLM, type WordLMSelectionPolicy } from './wordlm/s
 import { contextualOrthography } from './contextual-orthography';
 import { hasAttentionCandidate } from './neural/attention-runtime';
 import { chooseWordLMSpelling } from './wordlm/runtime';
+import type { WordLMDecisions } from './wordlm/runtime';
 import { wordLMTokens } from './wordlm/core';
 import { guardInsertedBoundaries } from './syntax-boundary-guard';
 import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
@@ -56,9 +57,10 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
-  /** Opt-in experimental joint ranking; normal application behavior stays on fallback. */
-  wordLMMode?: 'fallback' | 'experimental';
+  /** Automatic joint ranking is the application default; alternatives are offline ablations. */
+  wordLMMode?: 'automatic' | 'fallback' | 'experimental';
   wordLMPolicy?: WordLMSelectionPolicy;
+  wordLMDecisions?: WordLMDecisions;
   /** Local development tracing only; callbacks are never sent over HTTP/Workers. */
   diagnostics?: DiagnosticSink;
   /** Explicit true also enables WordLM when other local models are disabled. */
@@ -368,14 +370,19 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   // Run WordLM only after every existing phrase-level spelling rule has had
   // its decision. Earlier use could turn a temporal "seher" into "şəhər"
   // before repairPhrases sees the corrected right-hand word (e.g. "dəniz").
-  if (runtime.wordLMMode === 'experimental' || runtime.diagnostics) {
+  const jointWordLM = (runtime.wordLMMode ?? 'automatic') !== 'fallback';
+  if (jointWordLM && useWordLM || runtime.diagnostics) {
     const reviewed = selectSpellingWithWordLM(originalSpellingText, text, services, {
       enabled: useWordLM,
-      experimental: runtime.wordLMMode === 'experimental', policy: runtime.wordLMPolicy, diagnostics: runtime.diagnostics,
+      experimental: jointWordLM, automatic: runtime.wordLMMode !== 'experimental' && jointWordLM,
+      policy: runtime.wordLMPolicy, diagnostics: runtime.diagnostics,
+      decisions: runtime.wordLMDecisions,
+      onChange: (raw, selected) => runtime.trace?.({ stage: 'spelling', original: raw, replacement: selected,
+        reason: 'WordLM automatic joint context and edit-channel ranking' }),
     });
-    if (runtime.wordLMMode === 'experimental') text = stage('wordlm-selection', 'model', text, () => reviewed);
+    if (jointWordLM && useWordLM) text = stage('wordlm-selection', 'model', text, () => reviewed);
   }
-  if (runtime.wordLMMode !== 'experimental' && useWordLM) {
+  if (!jointWordLM && useWordLM) {
     text = text.replace(/[A-Za-zƏəÇçĞğİıÖöŞşÜü]+(?:[-’'][A-Za-zƏəÇçĞğİıÖöŞşÜü]+)*/g, (word, offset: number) => {
       if (!/^[a-z]{3,24}$/.test(word) || isEstablishedSurface(word, services)) return word;
       const left = wordLMTokens(text.slice(0, offset).split(/[.!?;\n\uE000\uE001]/u).at(-1) ?? '').slice(-2).map(restoreWord);

@@ -60,8 +60,6 @@ export default function HomePage() {
   const [textMetadata, setTextMetadata] = useState<TransformationMetadata | null>(null);
   const [mailMetadata, setMailMetadata] = useState<TransformationMetadata | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(false);
-  const [punctCaseModes, setPunctCaseModes] = useState<Record<ModuleId, boolean>>({ text: false, mail: false });
-  const usePunctCase = punctCaseModes[activeModule];
   const [theme, setTheme] = useState<Theme>('dark');
   const [loadingModules, setLoadingModules] = useState<Record<ModuleId, boolean>>({ text: false, mail: false });
   const inFlightModules = useRef(new Set<ModuleId>());
@@ -83,8 +81,8 @@ export default function HomePage() {
   const [reviewNotice, setReviewNotice] = useState('');
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const [expectedDraft, setExpectedDraft] = useState('');
-  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting' | 'usePunctCase'> | null>(null);
-  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting' | 'usePunctCase'>>>>({});
+  const [resultSource, setResultSource] = useState<Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'> | null>(null);
+  const sourceRef = useRef<Partial<Record<ModuleId, Pick<ExpectedResult, 'module' | 'input' | 'preserveFormatting' | 'greeting'>>>>({});
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -200,13 +198,13 @@ export default function HomePage() {
     if (candidates.length) persistPersonal(queuePersonalCandidates(personalRef.current, candidates));
   }
 
-  function recordTransform(input: string, result: string, source: TransformLogEntry['source']) {
+  function recordTransform(input: string, result: string, source: TransformLogEntry['source'], metadata?: TransformationMetadata) {
     try {
       const count = appendTransformLog(window.localStorage, {
         id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
         at: new Date().toISOString(), module: activeModule,
         input, output: result, ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), source,
-        ...(usePunctCase ? { usePunctCase: true } : {}),
+        ...(metadata ? { modelUsage: { wordLM: metadata.wordLM, punctCase: metadata.punctCase } } : {}),
       });
       setLogCount(count);
     } catch {
@@ -292,7 +290,7 @@ export default function HomePage() {
 
       const source = { module: activeModule, input: requestText,
         preserveFormatting: activeModule === 'text' && preserveFormatting,
-        ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), ...(usePunctCase ? { usePunctCase: true } : {}) };
+        ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}) };
       setResultSource(source);
       sourceRef.current[activeModule] = source;
       setFeedbackOpen(false);
@@ -301,12 +299,12 @@ export default function HomePage() {
       editorClient.current ??= new EditorClient();
       const result = await editorClient.current.transform(config.strategyId, {
         text: requestText,
-        options: activeModule === 'text' ? { preserveFormatting, ...(usePunctCase ? { usePunctCase: true } : {}) }
-          : { emailGreeting: mailGreeting, omitSubject: true, ...(usePunctCase ? { usePunctCase: true } : {}) },
+        options: activeModule === 'text' ? { preserveFormatting }
+          : { emailGreeting: mailGreeting, omitSubject: true },
       });
 
       const improved = applyPersonalLexicon(result.transformedText, personalRef.current.confirmed);
-      recordTransform(requestText, improved, 'transformed');
+      recordTransform(requestText, improved, 'transformed', result.metadata);
       if (activeModule === 'text') {
         setTextGenerated(improved);
         setTextOutput(improved);
@@ -442,18 +440,6 @@ export default function HomePage() {
                 </select>
               </div>
             )}
-
-            <div className="workspace-punctcase-option">
-              <label className="workspace-check">
-                <input type="checkbox" checked={usePunctCase} disabled={loading} aria-describedby="punctcase-hint"
-                  onChange={event => {
-                    setPunctCaseModes(previous => ({ ...previous, [activeModule]: event.target.checked }));
-                    setInput(inputValue);
-                  }} />
-                PunctCase — durğu və registr (sınaq)
-              </label>
-              <small id="punctcase-hint">Durğu işarəsiz sadə qaralamalarda əlavə düzəlişlər verir. Mövcud işarələr qorunur.</small>
-            </div>
 
             <div className="workspace-editor-grid">
               <div className="workspace-editor-column">
@@ -665,7 +651,7 @@ export default function HomePage() {
             </div>
 
             <div className="workspace-disclaimer">
-              Mətn lokal qayda mühərriki ilə emal olunur. Qeyri-müəyyən sözlər mümkün qədər dəyişdirilmir.
+              Yazılış, durğu və böyük/kiçik hərflər yerli modellərlə avtomatik yoxlanılır.
             </div>
             <div className="workspace-log-actions">
               <span>Bu brauzerdə {logCount} giriş/nəticə qeydi saxlanır.</span>

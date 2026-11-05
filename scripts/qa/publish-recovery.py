@@ -26,6 +26,8 @@ def main():
     parser.add_argument('--release', required=True)
     parser.add_argument('--notes', type=Path, required=True)
     parser.add_argument('--source', required=True)
+    parser.add_argument('--title', default='New 10,000-case application QA and recovery — 4 November 2026')
+    parser.add_argument('--integration-report', default='docs/qa/novel-10000-2026-11-04.md')
     args = parser.parse_args()
     if args.work.exists():
         raise ValueError('Use a NEW backup work directory; previous snapshots are immutable')
@@ -49,7 +51,7 @@ Download the four pinned files linked in the GitHub Release. Run
 
 The application source commit is `{args.source}`. Source is included in
 `application-source.tar.gz`; it contains no credentials or original corpus.
-Read `docs/qa/novel-10000-2026-11-04.md` and `RESTORE.md` INSIDE the archive.
+Read `{args.integration_report}` and `RESTORE.md` INSIDE the archive.
 Both the original frozen targets and the explicit reference errata are saved.
 Use the comparison ledger and remaining errors to continue; do not change
 targets to match actual app outputs. No running training process is implied.
@@ -90,7 +92,7 @@ Original six training gzip archives and bulk prepared task data are excluded.
         run('gh', 'release', 'edit', args.release, '--repo', REPO, '--notes-file', str(note_path))
     else:
         run('gh', 'release', 'create', args.release, '--repo', REPO, '--verify-tag', '--prerelease',
-            '--title', 'New 10,000-case application QA and recovery — 4 November 2026', '--notes-file', str(note_path))
+            '--title', args.title, '--notes-file', str(note_path))
     receipt = {**recovery, 'backupCommit': commit, 'backupTag': tag, 'archiveURL': base+'/'+archive.name,
                'recoveryURL': base+'/RECOVERY.json', 'restoreURL': base+'/RESTORE.md',
                'releaseURL': f'https://github.com/{REPO}/releases/tag/{args.release}',

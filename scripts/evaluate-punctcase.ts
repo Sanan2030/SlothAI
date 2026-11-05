@@ -25,17 +25,17 @@ async function main() {
   const quality: Record<string, unknown> = {};
   for (const name of ['holdout-500', 'no-harm-2000']) {
     const corpus = JSON.parse(readFileSync(`data/evaluation/phase0/${name}.json`, 'utf8')) as { cases: { id: string; input: string; expected: string }[] };
-    let baselineExact = 0, optInExact = 0;
+    let baselineExact = 0, automaticExact = 0;
     const changedIds: string[] = [], regressedIds: string[] = [], unstableIds: string[] = [];
     for (const row of corpus.cases) {
       const baseline = correctText(row.input).text;
-      const enhanced = await strategy.transform({ text: row.input, options: { usePunctCase: true } });
-      baselineExact += Number(baseline === row.expected); optInExact += Number(enhanced.transformedText === row.expected);
+      const enhanced = await strategy.transform({ text: row.input });
+      baselineExact += Number(baseline === row.expected); automaticExact += Number(enhanced.transformedText === row.expected);
       if (enhanced.transformedText !== baseline) changedIds.push(row.id);
       if (baseline === row.expected && enhanced.transformedText !== row.expected) regressedIds.push(row.id);
       if (enhanced.metadata.punctCase?.applied && correctText(enhanced.transformedText).text !== enhanced.transformedText) unstableIds.push(row.id);
     }
-    quality[name] = { cases: corpus.cases.length, baselineExact, optInExact, changedIds, regressedIds, unstableIds,
+    quality[name] = { cases: corpus.cases.length, baselineExact, automaticExact, changedIds, regressedIds, unstableIds,
       scope: 'Frozen engineering references; not independent human-reviewed real-user quality.' };
   }
   const data = process.argv.find(value => value.startsWith('--data='))?.slice(7);
@@ -68,7 +68,7 @@ async function main() {
         }
         if (rows < 128) {
           const text = row.words.join(' '), baseline = correctText(text).text;
-          const enhanced = await strategy.transform({ text, options: { usePunctCase: true } });
+          const enhanced = await strategy.transform({ text });
           transformed++; applied += enhanced.metadata.punctCase?.applied ?? 0;
           proposed += enhanced.metadata.punctCase?.proposed ?? 0;
           rejected += Number(enhanced.metadata.punctCase?.rejectedUnstable);
@@ -88,9 +88,11 @@ async function main() {
   }
   const report = { sourceCheckpointSHA256: info.sourceCheckpointSHA256, exportSHA256: info.sha256,
     precision: 'Original float32, no int8 quantization', golden: { comparedLogits: compared, maximumAbsoluteLogitError: maximumError, tolerance: 1e-3 },
-    policy: PUNCTCASE_POLICY, defaultEnabled: false, quality, validation,
+    policy: PUNCTCASE_POLICY, defaultEnabled: true, mode: 'automatic', quality, validation,
     calibrationUsed: false, testSplitRead: false, source: 'Existing validation and frozen references only; no training or policy fitting.' };
-  writeFileSync('docs/training/punctcase-app-validation-2026-11-04.json', JSON.stringify(report, null, 2) + '\n');
+  const output = process.argv.find(value => value.startsWith('--output='))?.slice(9)
+    ?? 'docs/training/punctcase-automatic-validation-2026-11-05.json';
+  writeFileSync(output, JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify(report, null, 2));
   if (maximumError > 1e-3 || Object.values(quality).some(value => {
     const row = value as { regressedIds: string[]; unstableIds: string[] };

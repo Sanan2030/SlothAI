@@ -53,7 +53,7 @@ test('both strategies and HTTP routes work with every network request forbidden'
     assert.equal((await GET()).status, 200);
     for (const strategy of getStrategyRegistry().listStrategies()) {
       const direct = await getStrategyRegistry().get(strategy.id).transform({ text: 'salam necesen' });
-      assert.equal(direct.metadata.engine, 'local-rules');
+      assert.equal(direct.metadata.engine, 'local-models');
       const result = await POST(new NextRequest('http://localhost/api/transform', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ strategyId: strategy.id, text: 'salam necesen' }),

@@ -5,8 +5,9 @@ import info from '../lib/editor/punctcase/model-info.json';
 import weights from '../lib/editor/punctcase/weights.json';
 import golden from './fixtures/punctcase-golden.json';
 import { decodePunctCase, loadPunctCase } from '../lib/editor/punctcase/load';
-import { editWithPunctCase, initialPunctCaseStats, punctCaseSkipReason } from '../lib/editor/punctcase/edit';
-import { optionalPunctCase } from '../lib/strategies/punctcase';
+import { editWithPunctCase, editPunctCaseDocument, initialPunctCaseStats } from '../lib/editor/punctcase/edit';
+import { automaticPunctCase } from '../lib/strategies/punctcase';
+import { correctText } from '../lib/editor/correct';
 import { getStrategyRegistry } from '../lib/strategies/bootstrap';
 import { POST } from '../app/api/transform/route';
 import { NextRequest } from 'next/server';
@@ -75,52 +76,58 @@ test('PunctCase proposals cannot edit literals, identifiers, structure or signat
     '**bu məsələ indi araşdırılır**', '> bu məsələ indi araşdırılır', '[bu məsələ indi araşdırılır](/guide)']) {
     assert.equal(editWithPunctCase(source, proposed(), initialPunctCaseStats()), source);
   }
-  assert.equal(punctCaseSkipReason('mən bilirəm ki sən gələcəksən'), undefined);
-  assert.equal(punctCaseSkipReason('Mən bilirəm ki, sən gələcəksən.'), 'existing-punctuation');
-  assert.equal(punctCaseSkipReason('bu https://example.com indi işləyir'), 'protected-document');
   for (const input of ['**qeyd edək ki bu məsələ hələ araşdırılır**', '> qeyd edək ki bu məsələ hələ araşdırılır',
     '[qeyd edək ki bu məsələ hələ araşdırılır](/guide)']) {
     const strategy = getStrategyRegistry().get('text-corrector');
-    const baseline = await strategy.transform({ text: input });
-    const enabled = await strategy.transform({ text: input, options: { usePunctCase: true } });
-    assert.equal(enabled.transformedText, baseline.transformedText);
-    assert.equal(enabled.metadata.punctCase?.loaded, false);
-    assert.equal(enabled.metadata.punctCase?.skippedReason, 'structured-document');
+    const result = await strategy.transform({ text: input });
+    assert.ok(result.transformedText.includes('ki, bu məsələ'));
+    assert.equal(result.metadata.punctCase?.loaded, true);
+    assert.ok((result.metadata.punctCase?.tokens ?? 0) >= 7);
   }
 });
 
-test('PunctCase skips unsupported cross-chunk punctuation without losing tokens', () => {
+test('PunctCase covers long input with bounded overlapping windows without losing tokens', () => {
   const lengths: number[] = [];
   const fake = { predict(words: readonly string[]) { lengths.push(words.length); return proposed(2, words.length - 1).predict(words); } };
   const source = Array(200).fill('salam').join(' '), stats = initialPunctCaseStats();
   assert.equal(editWithPunctCase(source, fake, stats), source);
-  assert.deepEqual(lengths, [96, 96, 8]);
+  assert.ok(lengths.every(size => size <= 96));
   assert.equal(stats.tokens, 200);
+  assert.equal(stats.inferenceTokens, lengths.reduce((sum,size) => sum+size,0));
+  const words = Array(200).fill('salam'); words[95] = 'qeyd'; words[96] = 'edək';
+  const seam = { predict(values: readonly string[]) { return {
+    punctuation: values.map(word => word === 'qeyd' ? [0,20,-20,-20,-20,-20] : [20,0,-20,-20,-20,-20]),
+    case: values.map(() => [20,0,0,0]),
+  }; } };
+  const covered = initialPunctCaseStats();
+  assert.equal(editWithPunctCase(words.join(' '), seam, covered), words.join(' ').replace('qeyd edək','qeyd, edək'));
+  assert.equal(covered.applied,1);
 });
 
-test('PunctCase stays off by default and skips explicitly punctuated source requests', async () => {
+test('PunctCase automatically evaluates prose with existing punctuation', async () => {
   const baseline = { text: 'Bu məsələ indi araşdırılır.', corrections: 1 };
   const stable = () => { throw new Error('Must not run for an unchanged proposal'); };
-  const off = await optionalPunctCase('bu məsələ indi araşdırılır', baseline, false, stable);
-  assert.equal(off.correction, baseline); assert.equal(off.stats, undefined);
-  const skipped = await optionalPunctCase('Bu məsələ indi araşdırılır.', baseline, true, stable);
-  assert.equal(skipped.correction, baseline); assert.equal(skipped.stats?.loaded, false);
-  assert.equal(skipped.stats?.skippedReason, 'existing-punctuation');
+  const result = await automaticPunctCase('Bu məsələ indi araşdırılır.', baseline, stable);
+  assert.equal(result.correction, baseline); assert.equal(result.stats.loaded, true);
+  assert.equal(result.stats.mode, 'automatic'); assert.equal(result.stats.tokens, 4);
 });
 
-test('both application strategies expose the opt-in model and preserve baseline requests', async () => {
+test('both application strategies run both models without options; legacy false cannot disable them', async () => {
   for (const id of ['text-corrector', 'gmail-corrector']) {
     const strategy = getStrategyRegistry().get(id), text = 'mən bu gün məktəbə getdim';
     const baseline = await strategy.transform({ text });
-    assert.equal(baseline.metadata.punctCase, undefined);
-    const enhanced = await strategy.transform({ text, options: { usePunctCase: true } });
+    assert.equal(baseline.metadata.punctCase?.mode, 'automatic');
+    assert.equal(baseline.metadata.wordLM?.mode, 'automatic');
+    assert.equal(baseline.metadata.wordLM?.vocabularyWords, 150000);
+    assert.ok((baseline.metadata.wordLM?.scoredTokens ?? 0) > 0);
+    const enhanced = await strategy.transform({ text, options: { usePunctCase: false } });
     assert.equal(enhanced.metadata.punctCase?.loaded, true);
     assert.ok((enhanced.metadata.punctCase?.tokens ?? 0) > 0);
     assert.equal(enhanced.transformedText, baseline.transformedText);
   }
 });
 
-test('HTTP API validates the opt-in type and returns model metadata only when requested', async () => {
+test('HTTP API always returns both model receipts and validates legacy options', async () => {
   const request = (option: unknown) => new NextRequest('http://localhost/api/transform', { method: 'POST',
     headers: { 'content-type': 'application/json', 'x-forwarded-for': 'punctcase-contract' },
     body: JSON.stringify({ strategyId: 'text-corrector', text: 'mən bu gün məktəbə getdim', options: { usePunctCase: option } }) });
@@ -129,6 +136,9 @@ test('HTTP API validates the opt-in type and returns model metadata only when re
   const result = await good.json();
   assert.equal(result.metadata.punctCase.sourceCheckpointSHA256, info.sourceCheckpointSHA256);
   assert.equal(result.metadata.punctCase.loaded, true);
+  assert.equal(result.metadata.wordLM.mode, 'automatic');
+  const legacy = await POST(request(false)); assert.equal(legacy.status, 200);
+  assert.equal((await legacy.json()).metadata.punctCase.loaded, true);
   for (const payload of [{ strategyId: 'text-corrector', text: '🙂'.repeat(5001) },
     { strategyId: '🙂'.repeat(33), text: 'salam' }]) {
     const response = await POST(new NextRequest('http://localhost/api/transform', { method: 'POST',
@@ -141,21 +151,32 @@ test('HTTP API validates the opt-in type and returns model metadata only when re
 test('the trained checkpoint supplies a missing comma and the result is stable', async () => {
   const strategy = getStrategyRegistry().get('text-corrector');
   const text = 'qeyd edək ki bu məsələ hələ araşdırılır';
-  const baseline = await strategy.transform({ text });
-  const enhanced = await strategy.transform({ text, options: { usePunctCase: true } });
-  assert.equal(baseline.transformedText, 'Qeyd edək ki bu məsələ hələ araşdırılır.');
+  const baseline = correctText(text);
+  const enhanced = await strategy.transform({ text });
+  assert.equal(baseline.text, 'Qeyd edək ki bu məsələ hələ araşdırılır.');
   assert.equal(enhanced.transformedText, 'Qeyd edək ki, bu məsələ hələ araşdırılır.');
   assert.equal(enhanced.metadata.punctCase?.applied, 1);
-  assert.equal((await strategy.transform({ text: enhanced.transformedText, options: { usePunctCase: true } })).transformedText,
+  assert.equal((await strategy.transform({ text: enhanced.transformedText })).transformedText,
     enhanced.transformedText);
 });
 
 test('an unstable model proposal is rejected as a whole', async () => {
   const source = 'qeyd edək ki bu məsələ hələ araşdırılır';
   const baseline = { text: 'Qeyd edək ki bu məsələ hələ araşdırılır.', corrections: 1 };
-  const result = await optionalPunctCase(source, baseline, true, () => baseline);
+  const result = await automaticPunctCase(source, baseline, () => baseline);
   assert.equal(result.correction, baseline);
   assert.equal(result.stats?.proposed, 1);
   assert.equal(result.stats?.applied, 0);
   assert.equal(result.stats?.rejectedUnstable, true);
+});
+
+test('automatic document inference preserves opaque content and still corrects neighbouring prose', async () => {
+  const strategy = getStrategyRegistry().get('text-corrector');
+  const source = 'https://example.com/ki?q=1 qeyd edək ki bu məsələ hələ araşdırılır';
+  const result = await strategy.transform({ text: source });
+  assert.ok(result.transformedText.includes('https://example.com/ki?q=1'));
+  assert.ok(result.transformedText.includes('ki, bu məsələ'));
+  const code = '````js\nqeyd edək ki bu məsələ hələ araşdırılır\n````';
+  assert.equal(editPunctCaseDocument(code, proposed(), initialPunctCaseStats()), code);
+  assert.equal((await strategy.transform({ text: result.transformedText })).transformedText, result.transformedText);
 });

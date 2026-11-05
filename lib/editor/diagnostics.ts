@@ -6,7 +6,7 @@ export interface StageDiagnostic {
 }
 export interface CandidateDiagnostic {
   kind: 'candidates'; source: 'wordlm-selection'; raw: string; rawStart: number;
-  current: string; ruleProposal: string; baselineProposal: string; mode: 'fallback' | 'experimental' | 'disabled';
+  current: string; ruleProposal: string; baselineProposal: string; mode: 'automatic' | 'fallback' | 'experimental' | 'disabled';
   candidates: { word: string; sources: string[]; lmLogScore: number; oovLogPenalty: number; channelLogScore: number; score: number; evidence: boolean }[];
   selected: string; reason: string;
 }

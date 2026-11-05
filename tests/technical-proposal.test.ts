@@ -35,7 +35,7 @@ test('the app strategy meets reviewed proposal corrections and preserves its com
   const result = await getStrategyRegistry().get('text-corrector').transform({ text: input });
   for (const expected of reviewed) assert.ok(result.transformedText.includes(expected), expected);
   assert.doesNotMatch(result.transformedText, /öpən API|hefdelik|muvite|kecirileceyidir/u);
-  assert.equal(result.metadata.engine, 'local-rules');
+  assert.equal(result.metadata.engine, 'local-models');
   assert.equal(correctText(result.transformedText).text, result.transformedText);
   assert.equal(correctText(input, true).text.split('\n').length, input.split('\n').length);
 });
