@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "cec79df940445506d6a0cd9369f216a432f92c74",
+  "savedAtUTC": "2026-11-05T16:13:59.971488+00:00",
+  "archive": "recovery-final-verified.tar.gz",
+  "archiveSHA256": "a368b9afdab209371628955ae80c5ad90a72912de8af8efec331019510da3471",
+  "originalTrainingCorpusIncluded": false,
+  "bulkPreparedDataIncluded": false
+}
