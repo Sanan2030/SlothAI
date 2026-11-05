@@ -7,7 +7,7 @@ export interface StageDiagnostic {
 export interface CandidateDiagnostic {
   kind: 'candidates'; source: 'wordlm-selection'; raw: string; rawStart: number;
   current: string; ruleProposal: string; baselineProposal: string; mode: 'automatic' | 'fallback' | 'experimental' | 'disabled';
-  candidates: { word: string; sources: string[]; lmLogScore: number; oovLogPenalty: number; channelLogScore: number; score: number; evidence: boolean }[];
+  candidates: { word: string; sources: string[]; lmLogScore: number; oovLogPenalty: number; channelLogScore: number; score: number; evidence: boolean; bridgeEvidence?: boolean; sourceContextExamples?: number; sourceContextBridge?: boolean; contextLogAdjustment?: number }[];
   selected: string; reason: string;
 }
 export type EditorDiagnostic = StageDiagnostic | CandidateDiagnostic;

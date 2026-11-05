@@ -5,13 +5,15 @@ import { wordLMTokens } from './core';
 import { literalPattern } from '../literal-spans';
 import { editStructuredText } from '../structured-text';
 import { editHTMLStructure } from '../html-structure';
+import contextInfo from './context-info.json';
 
-export interface WordLMDecisions { rankedTokens: number; candidatesScored: number; changedTokens: number }
-export const initialWordLMDecisions = (): WordLMDecisions => ({ rankedTokens: 0, candidatesScored: 0, changedTokens: 0 });
+export interface WordLMDecisions { rankedTokens: number; candidatesScored: number; changedTokens: number; contextualTokens: number }
+export const initialWordLMDecisions = (): WordLMDecisions => ({ rankedTokens: 0, candidatesScored: 0, changedTokens: 0, contextualTokens: 0 });
 export interface WordLMStats extends WordLMDecisions {
   mode: 'automatic'; loaded: true; sourceModelSHA256: string;
   vocabularyWords: number; vocabularySymbols: number; bigrams: number; trigrams: number;
   scoredTokens: number; knownTokens: number; logLikelihood: number;
+  sourceContextArtifactSHA256: string;
 }
 
 let model: BrowserWordLM | undefined;
@@ -23,7 +25,7 @@ export function scoreWordLMDocument(text: string, decisions = initialWordLMDecis
   const stats: WordLMStats = { mode: 'automatic', loaded: true, sourceModelSHA256: artifact.sourceModelSHA256,
     vocabularyWords,
     vocabularySymbols: artifact.words.length, bigrams: artifact.bigrams.length, trigrams: artifact.trigrams.length,
-    scoredTokens: 0, knownTokens: 0, logLikelihood: 0, ...decisions };
+    scoredTokens: 0, knownTokens: 0, logLikelihood: 0, sourceContextArtifactSHA256: contextInfo.artifactSHA256, ...decisions };
   const collect = (value: string): string => {
     const prose = value.replace(/!?\[[^\]\n]*\]\((?:[^()\n]|\([^()\n]*\))*\)/gu, '\n').replace(literalPattern(), '\n');
     for (const sentence of prose.split(/[.!?;\n]/u)) {
@@ -44,6 +46,10 @@ export function scoreWordLMDocument(text: string, decisions = initialWordLMDecis
 export function rankWordLM(left: readonly string[], candidates: readonly string[], right: readonly string[]) {
   model ??= new BrowserWordLM(artifact);
   return model.rank(left, candidates, right);
+}
+export function wordLMTokenId(word: string): number | undefined {
+  model ??= new BrowserWordLM(artifact);
+  return !word.startsWith('<') && model.hasWord(word) ? model.mapped(word) : undefined;
 }
 /** An OOV class represents many surfaces. A single unseen spelling must not
  * receive the entire class mass when competing with a known surface. */

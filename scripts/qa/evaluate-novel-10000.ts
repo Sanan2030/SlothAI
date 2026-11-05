@@ -48,7 +48,7 @@ async function main() {
   for (const mode of ['default', 'punctcase']) summary[mode] = { cases: 0, exact: 0, unstable: 0, errors: 0, punctCaseLoaded: 0, punctCaseApplied: 0, categories: {}, domains: {} };
   const runtimePaths = execFileSync('rg', ['--files', 'lib/editor', 'lib/strategies'], { encoding: 'utf8' }).trim().split('\n').filter(path => path.endsWith('.ts')).sort();
   const runtimeSHA256 = Object.fromEntries(runtimePaths.map(path => [path, sha(readFileSync(path))]));
-  const workingDiffSHA256 = sha(execFileSync('git', ['diff', '--', 'lib/editor', 'lib/strategies']));
+  const workingDiffSHA256 = sha(execFileSync('git', ['diff', '--', 'lib/editor', 'lib/strategies'], { maxBuffer: 32 * 1024 * 1024 }));
   const started = performance.now();
   for (const [at, row] of rows.entries()) {
     for (const mode of ['default', 'punctcase']) {

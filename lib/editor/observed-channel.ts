@@ -91,7 +91,7 @@ export function repairObservedSpacing(text: string): string {
   text = text.replace(/(?<![\p{L}\p{N}_])([a-zəçğıöşü]{4,38})(və|ve)(?=\s+[\p{L}])/gu, (whole, raw: string) => {
     if (isKnownSurface(whole)) return whole;
     const stem = restoreWord(raw);
-    return /(?:[ıiuü]r|d[ıiuü]|acaq|əcək|malıdır|məlidir)$/u.test(stem) && (isKnownSurface(stem) || isUniqueAttestedSurface(stem))
+    return /(?:[ıiuü]r|d[ıiuü]|[ıiuü]b|acaq|əcək|malıdır|məlidir)$/u.test(stem) && (isKnownSurface(stem) || isUniqueAttestedSurface(stem))
       ? stem+' və' : whole;
   });
   const split = text.replace(/(?<![\p{L}\p{N}_])([a-zəçğıöşü]{9,32})(?![\p{L}\p{N}_])/gu, raw => {

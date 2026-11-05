@@ -703,7 +703,8 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   if (existing === word && !isEstablishedLegacySurface(word, prior) && !isForeignTechnicalInflection(word)) {
     const attested = restoreAttestedDiacritics(word)
       ?? restoreRepeatedKey(word, value => isEstablishedLegacySurface(value, prior)
-        || runtimeNounCandidates(value).some(row => row.surface === value));
+        || runtimeNounCandidates(value).some(row => row.surface === value)
+        || sourceInflections.analyze(value).length > 0);
     if (attested) return attested;
   }
   const wholeSurface = chooseSpelling(word, dictionaryCandidates(word));

@@ -67,6 +67,10 @@ export class SourceInflectionEngine {
           for (const [grammaticalCase, ending] of Object.entries(endings)) add(soften(possessed, ending) + ending, {
             number: plural ? 'plural' : 'singular', case: grammaticalCase as keyof typeof endings,
             ...(owner ? { possessivePerson: owner, possessiveNumber: 'singular' } : {}) });
+          const locative = possessed + endings.locative;
+          add(locative + 'k' + high(locative), { number: plural ? 'plural' : 'singular',
+            case: 'locative', derivation: ['relative'],
+            ...(owner ? { possessivePerson: owner, possessiveNumber: 'singular' } : {}) });
           if (!owner) add(base + 'l' + low(base), { number: plural ? 'plural' : 'singular', case: 'nominative', derivation: ['comitative'] });
         }
       }
@@ -81,9 +85,27 @@ export class SourceInflectionEngine {
         add(lemma + 'd' + high(lemma) + ending, { tense: 'past', person, number });
         add(lemma + 'm' + high(lemma) + 'şd' + high(lemma) + ending, { tense: 'pluperfect', person, number });
       }
-      const participle = lemma + 'd' + high(lemma) + (low(lemma) === 'ə' ? 'y' : 'ğ') + high(lemma);
-      add(participle + 'n' + high(lemma), { tense: 'past', case: 'accusative', possessivePerson: 3, derivation: ['participle'] });
-      add(participle + 'n' + high(lemma) + 'n', { tense: 'past', case: 'genitive', possessivePerson: 3, derivation: ['participle'] });
+      for (const negative of [false, true]) {
+        const base = lemma + (negative ? 'm' + low(lemma) : '');
+        const polarity = negative ? 'negative' : 'positive';
+        const participle = base + 'd' + high(base) + (low(base) === 'ə' ? 'y' : 'ğ') + high(base);
+        add(participle, { tense: 'past', possessivePerson: 3, polarity, derivation: ['participle'] });
+        add(participle + 'n' + high(base), { tense: 'past', case: 'accusative', possessivePerson: 3, polarity, derivation: ['participle'] });
+        add(participle + 'n' + high(base) + 'n', { tense: 'past', case: 'genitive', possessivePerson: 3, polarity, derivation: ['participle'] });
+        // Present and reported perfect forms use the same classified verb
+        // stem; irregular et/get soften only in the positive present.
+        const positiveStem = lemma === 'et' ? 'ed' : lemma === 'get' ? 'ged' : lemma;
+        const present = negative ? lemma + 'm' + high(lemma) + 'r'
+          : positiveStem + (vowelEnd(positiveStem) ? 'y' : '') + high(positiveStem) + 'r';
+        for (const [person, number, ending] of [[1, 'singular', low(present) + 'm'],
+          [2, 'singular', 's' + low(present) + 'n'], [3, 'singular', ''],
+          [1, 'plural', high(present) + 'k'], [2, 'plural', 's' + high(present) + 'n' + high(present) + 'z'],
+          [3, 'plural', 'l' + low(present) + 'r']] as const) {
+          add(present + ending, { tense: 'present', person, number, polarity });
+        }
+        const perfect = base + (vowelEnd(base) ? 'y' : '') + high(base) + 'b';
+        add(perfect, { tense: 'perfect', person: 3, number: 'singular', polarity });
+      }
     }
     if (this.paradigms.size >= 512) this.paradigms.delete(this.paradigms.keys().next().value!);
     this.paradigms.set(key, result); return result;

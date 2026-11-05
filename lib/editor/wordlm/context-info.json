@@ -1,0 +1,26 @@
+{
+  "scope": "Derived full-train-only lexical context counts. No QA/validation/test data read; engineering settings fixed before evaluation. Not calibrated correctness probabilities.",
+  "trainSentences": 3287357,
+  "trainTokens": 45728739,
+  "utf8ReplacementRows": 0,
+  "eligibleFoldKeys": 64088,
+  "profiles": 7841,
+  "features": 168303,
+  "artifactSHA256": "5d7d592017ffa7417666d0a34f5ce472694befd35e146ba6ffbec45f44c295b4",
+  "artifactBytes": 3745264,
+  "gzipBytes": 947854,
+  "sourceTrainSHA256": "b92e4edc6cb9eaaf214f35284cc8ec5e23acdb7763e40b281d8f0f9b9c9da8a9",
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "scriptSHA256": "36d9d0249c26df44d09d3f1ee04602ae95b954f67a060926c93f400b44699a45",
+  "settings": {
+    "minimumContextCount": 3,
+    "contextsPerDirectionPerForm": 8,
+    "maximumProfiles": 8000,
+    "maximumForms": 8,
+    "contextWords": 2,
+    "maximumAmbiguousPrefix": 8,
+    "prioritizeFullAmbiguities": true
+  },
+  "elapsedSeconds": 749.5911041320069,
+  "trainingSourceFilesModified": false
+}

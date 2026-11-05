@@ -7,6 +7,7 @@ const nominalRoots = new Set(stemClasses.noun.split(' '));
 // Source-derived lexical attestation, separate from contextual LM ranking.
 // No sentence/reference lookup and no new model fitting or tuned probabilities.
 let index: Map<string, Set<string>> | undefined;
+let shortIndex: Map<string, Set<string>> | undefined;
 function vocabulary(): Map<string, Set<string>> {
   if (index) return index;
   index = new Map();
@@ -16,6 +17,32 @@ function vocabulary(): Map<string, Set<string>> {
     values.add(word); index.set(key, values);
   }
   return index;
+}
+
+/** The trained vocabulary is a candidate source as well as a probability table.
+ * Keep this bounded and preserve accents already supplied by the author. */
+export function attestedSpellingCandidates(raw: string, limit = 8): readonly string[] {
+  const lower = raw.normalize('NFC').toLocaleLowerCase('az-AZ');
+  if (!/^[a-zəçğıöşü]{2,40}$/u.test(lower)) return [];
+  if (lower.length === 2 && !shortIndex) {
+    shortIndex = new Map();
+    for (const word of artifact.words) if (/^[a-zəçğıöşü]{2}$/u.test(word)) {
+      const key = foldLetters(word), values = shortIndex.get(key) ?? new Set<string>();
+      values.add(word); shortIndex.set(key, values);
+    }
+  }
+  const values = (lower.length === 2 ? shortIndex! : vocabulary()).get(foldLetters(lower));
+  return [...(values ?? [])].filter(value => [...lower].every((letter, at) =>
+    !/[əçğıöşü]/u.test(letter) || at === 0 && raw[0] === 'I' || value[at] === letter)).slice(0, Math.max(0, Math.min(8, limit)));
+}
+
+export function hasAttestedSpelling(word: string): boolean {
+  const lower = word.normalize('NFC').toLocaleLowerCase('az-AZ');
+  if (lower.length === 2) {
+    if (!shortIndex) attestedSpellingCandidates(lower);
+    return shortIndex?.get(foldLetters(lower))?.has(lower) ?? false;
+  }
+  return vocabulary().get(foldLetters(lower))?.has(lower) ?? false;
 }
 
 /** A unique ASCII spelling or an explicitly accented attested spelling is
@@ -96,7 +123,8 @@ export function restoreRepeatedKey(raw: string, known: (word: string) => boolean
   for (let at = 1; at < lower.length; at++) {
     if (lower[at] !== lower[at-1]) continue;
     const value = lower.slice(0, at)+lower.slice(at+1);
-    if (known(value) || dictionaryCandidates(value)?.has(value) || isUniqueAttestedSurface(value)) choices.add(value);
+    if (known(value) || dictionaryCandidates(value)?.has(value) || isUniqueAttestedSurface(value)
+      || derivedAttestation(value) === value) choices.add(value);
   }
   if (choices.size !== 1) return undefined;
   const result = [...choices][0];

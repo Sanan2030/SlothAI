@@ -52,17 +52,23 @@ export class BrowserWordLM {
       const sequence = [...history, this.mapped(word), ...right.slice(0, 2).map(w => this.mapped(w))];
       let score = 0;
       let evidence = false;
+      let bridgeEvidence = false;
       const lexical = (id: number) => this.artifact.words[id] === '<s>'
         || (this.artifact.words[id] !== undefined && !this.artifact.words[id].startsWith('<'));
       for (let i = 2; i < sequence.length; i++) {
         const [a, b, c] = sequence.slice(i - 2, i + 1);
         const p = this.probability(a, b, c);
         score += p > 0 ? Math.log(p) : -Infinity;
-        // A generic OOV/suffix class is not evidence about this lexical context.
-        evidence ||= (lexical(a) && lexical(b) && lexical(c) && this.trigrams.has(`${a}:${b}:${c}`))
-          || (i < 4 && lexical(b) && lexical(c) && this.bigrams.has(`${b}:${c}`));
+        // Sentence-start frequency and generic OOV classes cannot witness a
+        // lexical relationship. Require an actual neighbour of the candidate.
+        const native = (id: number) => lexical(id) && this.artifact.words[id] !== '<s>';
+        const trigram = this.trigrams.has(`${a}:${b}:${c}`);
+        evidence ||= (native(a) && native(b) && native(c) && trigram)
+          || (i < 4 && native(b) && native(c) && this.bigrams.has(`${b}:${c}`));
+        bridgeEvidence ||= i === 3 && native(a) && native(b) && native(c) && trigram;
       }
-      return { word, score, evidence: evidence && this.artifact.words[sequence[2]] === word };
+      return { word, score, evidence: evidence && this.artifact.words[sequence[2]] === word,
+        bridgeEvidence: bridgeEvidence && this.artifact.words[sequence[2]] === word };
     }).sort((a, b) => b.score - a.score || a.word.localeCompare(b.word, 'az'));
   }
 }
