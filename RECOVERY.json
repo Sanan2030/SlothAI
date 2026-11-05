@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-05T14:21:57.903614+00:00",
+  "savedAtUTC": "2026-11-05T14:52:06.740820+00:00",
   "job": {
     "status": "running",
     "phase": "train-full",
@@ -149,9 +149,9 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-05T13:51:54.985894+00:00",
-      "tag": "charspell-save-20261104-20261105T135149484495Z",
-      "commit": "4e219915af5449491bd5392d0b57094309d25789",
+      "atUTC": "2026-11-05T14:22:03.608255+00:00",
+      "tag": "charspell-save-20261104-20261105T142157915561Z",
+      "commit": "7bc54a15167816fc8323375e7c55c5c551f41ca1",
       "phase": "train-full",
       "reports": {
         "charspell-smoke": {
@@ -198,14 +198,14 @@
         }
       },
       "archiveSHA256": "b73e3d656b2222ea8ed8b893d6e8fe748f4705000f3dcc2557894efcd536ccf6",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/4e219915af5449491bd5392d0b57094309d25789/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/4e219915af5449491bd5392d0b57094309d25789/RECOVERY.json",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/7bc54a15167816fc8323375e7c55c5c551f41ca1/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/7bc54a15167816fc8323375e7c55c5c551f41ca1/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-05T14:21:57.829608+00:00",
-    "freeDiskGiB": 46.68,
+    "updatedAtUTC": "2026-11-05T14:52:06.646861+00:00",
+    "freeDiskGiB": 46.67,
     "preparedData": {
       "smoke-data": {
         "path": "/workspace/SlothAI/artifacts/training/sessions/20261104-charspell/smoke-data",
@@ -222,11 +222,11 @@
       "stage": "charspell",
       "epoch": 4,
       "status": "running",
-      "completedBatches": 236000,
-      "trainExamples": 7552000,
+      "completedBatches": 335000,
+      "trainExamples": 10720000,
       "expectedTrainExamples": 37253798,
-      "optimizerStepsOverall": 3728546,
-      "elapsedSeconds": 54344.182712736
+      "optimizerStepsOverall": 3827546,
+      "elapsedSeconds": 56153.685240954
     }
   },
   "reports": {
