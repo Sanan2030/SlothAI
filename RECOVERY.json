@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "cec79df940445506d6a0cd9369f216a432f92c74",
+  "savedAtUTC": "2026-11-05T16:07:45.738213+00:00",
+  "archive": "candidate-fixes-local-checked.tar.gz",
+  "archiveSHA256": "001baab4d59a7499932f6c4f0ec3c30bff0d6dfe5e3bbcafa8075c6c6a596bcb",
+  "originalTrainingCorpusIncluded": false,
+  "bulkPreparedDataIncluded": false
+}
