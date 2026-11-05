@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "d8a10ec79a498835f1a72655877be47d8e011096",
+  "archive": "candidate-audit-recovery.tar.gz",
+  "archiveSHA256": "70801fa2289f34df74ffb723809b734ea848b99092762f9e4f9a6db01c3d089c",
+  "bytes": 630496,
+  "innerFilesVerified": 22,
+  "checkpointIncluded": false,
+  "originalTrainingCorpusIncluded": false,
+  "bulkPreparedDataIncluded": false,
+  "scope": "Diagnosis of240 frozen public assistant-authored QA cases/247 mismatch sites, model candidate traces and restore helpers. No app change; no checkpoint or original training data included.",
+  "savedAtUTC": "2026-11-05T13:15:32.496592+00:00"
+}
