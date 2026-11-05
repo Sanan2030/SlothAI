@@ -49,6 +49,8 @@ test('entity inference cannot turn a common clock/case into a guessed place', ()
   assert.equal(resolveEntitiesInText('Qəbul saatının dəyişməsi barədə soruşun.'), 'Qəbul saatının dəyişməsi barədə soruşun.');
   assert.equal(resolveEntitiesInText('Səki örtüyünü dəyişin.'), 'Səki örtüyünü dəyişin.');
   assert.equal(resolveEntitiesInText('Şəkidən qayıtdıq.'), 'Şəkidən qayıtdıq.');
+  assert.equal(resolveEntitiesInText('amma eli qaldi'), 'amma Əli qaldi');
+  assert.equal(resolveEntitiesInText('Onun əli sarğıdadır.'), 'Onun əli sarğıdadır.');
 });
 
 test('a participial noun modifier vetoes only a newly inserted boundary', () => {

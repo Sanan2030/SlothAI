@@ -273,5 +273,16 @@
   },
   "recoveryReleaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/novel-10000-qa-2026-11-04",
   "originalTrainingCorpusUploaded": false,
-  "newCasesUsedForModelTraining": false
+  "newCasesUsedForModelTraining": false,
+  "ciRegressionFollowup": {
+    "initialCommit": "31a4f9fd6d6c7806f85b736b2ebbf9996a0f2777",
+    "initialRun": 41915793721,
+    "failedGate": "quality:priorities",
+    "case": "conjunction-names",
+    "correction": "Keep the established unmarked bare-person default while protecting lowercase possessed-hand context.",
+    "priorityReferencesChanged": false,
+    "localPriorityCases": 24,
+    "localPriorityExact": 24,
+    "latestSourceAndCIReceipt": "GitHub Release RECOVERY.json"
+  }
 }

@@ -175,6 +175,10 @@ export function resolveEntitiesInText(text: string): string {
     const previous = cursor++;
     const next = words[previous + 1]?.[0] ?? '';
     const prior = words[previous - 1]?.[0] ?? '';
+    // A lowercase possessed hand after a possessor/side is a common noun;
+    // preserve an explicitly capitalized person name as separate evidence.
+    if (word === azLower(word) && fold(word) === 'eli'
+      && /^(?:menim|senin|onun|bizim|sizin|onlarin|sag|sol)$/u.test(fold(prior))) return 'əli';
     // A pavement's height/cover is nominal evidence, not an unmarked city name.
     if (fold(word) === 'seki' && !/[şŞ]/u.test(word) && /^(?:hundurluy|ortuy|daslar|kenar)/u.test(fold(next)))
       return /^\p{Lu}/u.test(word) ? 'Səki' : 'səki';
@@ -189,8 +193,11 @@ export function resolveEntitiesInText(text: string): string {
     const explicitGeography = /^(?:seher|rayon|olke|bolge|erazi)/u.test(fold(next));
     const commonASCIIInflection = !/[əçğıöşü]/iu.test(word) && fold(direct ?? word) !== fold(word)
       && commonInflections.candidates(word).some(row => row.pos === 'noun');
+    // Keep the established bare-person default for unmarked names (eli -> Əli).
+    // Explicit common spellings (əli) and inferred inflected places stay guarded.
+    const unmarkedPerson = !/[əçğıöşü]/iu.test(word) && persons.get(fold(word)) === direct;
     const informedGeography = explicitGeography || geographicContext && !/[əçğıöşü]/iu.test(word) && fold(direct ?? word) === fold(word);
-    if (direct && azLower(direct) !== azLower(word) && !personContext && !informedGeography
+    if (direct && azLower(direct) !== azLower(word) && !personContext && !unmarkedPerson && !informedGeography
       && (dictionaryCandidates(word)?.has(azLower(word))
         || commonInflections.analyze(word).some(row => row.pos === 'noun') || commonASCIIInflection)) return word;
     return direct ?? word;
