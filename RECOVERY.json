@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "savedAtUTC": "2026-11-05T01:16:44.459769+00:00",
+  "savedAtUTC": "2026-11-05T01:46:52.884080+00:00",
   "job": {
     "status": "running",
     "phase": "train-full",
@@ -149,9 +149,9 @@
     },
     "lastRemoteSnapshot": {
       "status": "published-and-download-verified",
-      "atUTC": "2026-11-05T00:46:42.027761+00:00",
-      "tag": "charspell-save-20261104-20261105T004635945725Z",
-      "commit": "c74fa7fcb637b06c634aa23503e64dceef549fb9",
+      "atUTC": "2026-11-05T01:16:50.268591+00:00",
+      "tag": "charspell-save-20261104-20261105T011644469729Z",
+      "commit": "85d201e77d295ce418343f8ffd619f2ceadbb48f",
       "phase": "train-full",
       "reports": {
         "charspell-smoke": {
@@ -187,13 +187,13 @@
         }
       },
       "archiveSHA256": "2aeb6d32d55a86ee4d9fdf53a81f35b290e27b7def3d4cee890332006a68885b",
-      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/c74fa7fcb637b06c634aa23503e64dceef549fb9/charspell-save.tar.gz",
-      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/c74fa7fcb637b06c634aa23503e64dceef549fb9/RECOVERY.json",
+      "archiveURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/85d201e77d295ce418343f8ffd619f2ceadbb48f/charspell-save.tar.gz",
+      "recoveryURL": "https://raw.githubusercontent.com/Sanan2030/SlothAI/85d201e77d295ce418343f8ffd619f2ceadbb48f/RECOVERY.json",
       "releaseURL": "https://github.com/Sanan2030/SlothAI/releases/tag/charspell-backup-2026-11-04",
       "originalCorpusUploaded": false,
       "bulkPreparedDataUploaded": false
     },
-    "updatedAtUTC": "2026-11-05T01:16:44.398228+00:00",
+    "updatedAtUTC": "2026-11-05T01:46:52.832809+00:00",
     "freeDiskGiB": 46.95,
     "preparedData": {
       "smoke-data": {
@@ -211,11 +211,11 @@
       "stage": "charspell",
       "epoch": 1,
       "status": "running",
-      "completedBatches": 572000,
-      "trainExamples": 18304000,
+      "completedBatches": 714000,
+      "trainExamples": 22848000,
       "expectedTrainExamples": 37253798,
-      "optimizerStepsOverall": 572000,
-      "elapsedSeconds": 7232.251376095002
+      "optimizerStepsOverall": 714000,
+      "elapsedSeconds": 9033.746596555997
     }
   },
   "reports": {
