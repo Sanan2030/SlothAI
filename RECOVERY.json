@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "d8a10ec79a498835f1a72655877be47d8e011096",
+  "savedAtUTC": "2026-11-05T15:27:40.828208+00:00",
+  "archive": "wordlm-context-training.tar.gz",
+  "archiveSHA256": "2ec7870ad9e28a05ce3736366bf3736ec37ba13e809dc16d075a7ecbe1657d0a",
+  "originalTrainingCorpusIncluded": false,
+  "bulkPreparedDataIncluded": false
+}
