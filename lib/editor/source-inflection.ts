@@ -18,6 +18,7 @@ const low = (stem: string) => /[əeiöü]/u.test(last(stem)) ? 'ə' : 'a';
 const high = (stem: string) => ({ a: 'ı', ı: 'ı', o: 'u', u: 'u', ö: 'ü', ü: 'ü', e: 'i', ə: 'i', i: 'i' })[last(stem)]!;
 const vocalicVerbStem = (stem:string) => stem.endsWith('t') && (stem==='et'||stem==='get'||(stem.match(/[aəeıioöuü]/gu)?.length??0)>=2) ? stem.slice(0,-1)+'d' : stem;
 const vowelEnd = (stem: string) => /[aəeıioöuü]$/u.test(stem);
+const infinitiveSurface = (stem:string) => stem+'m'+low(stem)+(low(stem)==='ə'?'k':'q');
 // Lexical inflection class: su uses a y buffer in the singular possessive
 // paradigm and genitive/accusative cases (suyum, suyun, suyu), not *sum/susu.
 // Classify the lemma, rather than listing individual input/output spellings.
@@ -41,14 +42,18 @@ export class SourceInflectionEngine {
     const key = stem.pos + ':' + stem.lemma, cached = this.paradigms.get(key);
     if (cached) return cached;
     const result = new Map<string, MorphologicalAnalysis[]>();
-    const add = (surface: string, features: MorphologicalFeatures) => {
+    const add = (surface: string, features: MorphologicalFeatures, pos=stem.pos) => {
       const folded = foldLetters(surface), rows = result.get(folded) ?? [];
-      rows.push({ surface, lemma: stem.lemma, pos: stem.pos, features, source: 'rule' }); result.set(folded, rows);
+      rows.push({ surface, lemma: stem.lemma, pos, features, source: 'rule' }); result.set(folded, rows);
     };
     const lemma = stem.lemma;
     add(lemma, {});
+    if(stem.pos==='adjective'&&/k[ıi]$/u.test(lemma)){
+      for(const [grammaticalCase,ending]of [['genitive','n'+high(lemma)+'n'],['dative','n'+low(lemma)],['accusative','n'+high(lemma)],['locative','nd'+low(lemma)],['ablative','nd'+low(lemma)+'n']]as const)add(lemma+ending,{case:grammaticalCase,derivation:['pronominal-relative']},'noun');
+    }
     if (stem.pos === 'noun') for (const plural of [false, true]) {
       const base = lemma + (plural ? 'l' + low(lemma) + 'r' : '');
+      if(plural)add(base+'arası',{derivation:['inter-nominal']},'adjective');
       const yBuffer = !plural && yBufferNouns.has(lemma);
       for (const owner of [0, 1, 2, 3] as const) {
         const possession = owner === 0 ? '' : yBuffer ? 'y' + high(base) + (owner === 3 ? '' : owner === 1 ? 'm' : 'n')
@@ -81,6 +86,50 @@ export class SourceInflectionEngine {
       add(agent + 'l' + low(agent) + 'r' + low(agent), { case: 'dative', number: 'plural', derivation: ['agent'] });
     }
     if (stem.pos === 'verb') {
+      add(lemma,{mood:'imperative',person:2,number:'singular'});
+      add(vocalicVerbStem(lemma)+(vowelEnd(lemma)?'y':'')+high(lemma)+'n',{mood:'imperative',person:2,number:'plural'});
+      const personal = (base:string,features:MorphologicalFeatures) => {
+        for(const [person,number,ending] of [[1,'singular',(vowelEnd(base)?'y':'')+low(base)+'m'],[2,'singular','s'+low(base)+'n'],[3,'singular',''],
+          [1,'plural',(vowelEnd(base)?'y':'')+high(base)+(low(base)==='ə'?'k':'q')],[2,'plural','s'+high(base)+'n'+high(base)+'z'],[3,'plural','l'+low(base)+'r']] as const)
+          add(soften(features.tense==='aorist'&&features.polarity==='negative'&&person===1?base.replace(/z$/u,'r'):base,ending)+ending,{...features,person,number});
+      };
+      const conditional = (base:string,polarity:'positive'|'negative') => {
+        const form=base+'s'+low(base);
+        for(const ending of ['', 'm','n',low(base)==='ə'?'k':'q','n'+high(form)+'z','l'+low(base)+'r'])add(form+ending,{mood:'conditional',polarity});
+      };
+      for(const negative of [false,true]){
+        const base=lemma+(negative?'m'+low(lemma):''),polarity=negative?'negative':'positive';
+        const necessity=base+'m'+low(base)+'l'+high(base);
+        personal(necessity,{mood:'necessitative',polarity});
+        add(necessity+'d'+high(necessity)+'r',{mood:'necessitative',person:3,number:'singular',polarity});
+        add(necessity+'d'+high(necessity)+'rl'+low(necessity)+'r',{mood:'necessitative',person:3,number:'plural',polarity});
+        const aorist=negative?base+'z':vocalicVerbStem(base)+(vowelEnd(base)?'y':'')+low(base)+'r';
+        personal(aorist,{tense:'aorist',polarity});conditional(aorist,polarity);
+        const reported=base+'m'+high(base)+'ş';
+        personal(reported,{tense:'reported-perfect',polarity});add(reported,{tense:'reported-perfect',polarity,derivation:['participle']});
+        // Negative necessitative is stem-mA-mAlI; both negative morphology and
+        // personal endings are generated from the same source-classified stem.
+        for(const tense of ['past','future'] as const){
+          const form=tense==='past'?base+'d'+high(base):base+(vowelEnd(base)?'y':'')+low(base)+'c'+low(base)+(low(base)==='ə'?'k':'q');
+          if(tense==='past'){
+            for(const ending of ['', 'm', 'n', low(base)==='ə'?'k':'q','n'+high(base)+'z','l'+low(base)+'r'])add(form+ending,{tense,polarity});
+          }else{
+            personal(form,{tense,polarity});
+            add(form,{tense,polarity,derivation:['participle']});
+          }
+        }
+        conditional(base,polarity);
+        const present=negative?lemma+'m'+high(lemma)+'r':vocalicVerbStem(lemma)+(vowelEnd(lemma)?'y':'')+high(lemma)+'r';
+        conditional(present,polarity);
+        const temporal=base+(vowelEnd(base)?'y':'')+low(base)+'rk'+low(base)+'n';
+        add(temporal,{mood:'converb',polarity,derivation:['temporal']});
+        const optative=base+(vowelEnd(base)?'y':'')+low(base);
+        add(optative,{mood:'optative',polarity});
+        add(optative+(low(base)==='ə'?'k':'q'),{mood:'optative',person:1,number:'plural',polarity});
+        add(base+'d'+high(base)+(low(base)==='ə'?'k':'q')+'d'+low(base),{mood:'converb',polarity,derivation:['temporal']});
+        // A converb/infinitive can precede a modal or postposition.
+        add(infinitiveSurface(base)+'l'+low(base),{mood:'infinitive',polarity,derivation:['comitative']});
+      }
       for (const [person, number, ending] of [[1, 'singular', 'm'], [2, 'singular', 'n'], [3, 'singular', ''],
         [1, 'plural', low(lemma) === 'ə' ? 'k' : 'q'], [2, 'plural', 'n' + high(lemma) + 'z'], [3, 'plural', 'l' + low(lemma) + 'r']] as const) {
         add(lemma + 'd' + high(lemma) + ending, { tense: 'past', person, number });
@@ -123,10 +172,30 @@ export class SourceInflectionEngine {
     this.paradigms.set(key, result); return result;
   }
   candidates(raw: string): readonly MorphologicalAnalysis[] {
-    const normalized = normalize(raw);
+    const literal=lower(raw),digraph=normalize(raw);
+    const rows=this.collectCandidates(literal);
+    // c+h and s+h can be genuine two-consonant sequences (təchizat).
+    // Digraph input is an alternative analysis, never a destructive rewrite.
+    return literal===digraph?rows:[...rows,...this.collectCandidates(digraph)];
+  }
+  private collectCandidates(normalized: string): readonly MorphologicalAnalysis[] {
     if (!/^[a-zəçğıöşü]{2,40}$/u.test(normalized)) return [];
     const cached = this.analyses.get(normalized); if (cached) return cached;
     const query = foldLetters(normalized), rows: MorphologicalAnalysis[] = [];
+    const mightMatch=(lemma:string)=>{
+      const key=foldLetters(lemma);
+      return query.startsWith(key)||/[kq]$/u.test(key)&&query.startsWith(key.slice(0,-1)+(key.endsWith('k')?'y':'g'));
+    };
+    const collectVerb=(lemma:string,derivation:readonly string[])=>{
+      if(!mightMatch(lemma)&&!query.startsWith(foldLetters(vocalicVerbStem(lemma))))return;
+      const collect=(entry:Stem,extra:readonly string[])=>{
+        if(entry.pos==='noun'&&!mightMatch(entry.lemma))return;
+        for(const row of this.paradigm(entry).get(query)??[])if(compatible(normalized,row.surface))rows.push({...row,features:{...row.features,derivation:[...(row.features.derivation??[]),...derivation,...extra]}});
+      };
+      collect({lemma,pos:'verb'},[]);
+      for(const nominal of [lemma+'m'+low(lemma),lemma+'m'+low(lemma)+'m'+low(lemma),vocalicVerbStem(lemma)+(vowelEnd(lemma)?'y':'')+high(lemma)+'c'+high(lemma),...(!vowelEnd(lemma)?[lemma+high(lemma)+'m']:[])])collect({lemma:nominal,pos:'noun'},['verbal-nominal:'+lemma]);
+    };
+    const passive=(lemma:string)=>vowelEnd(lemma)?lemma+'n':vocalicVerbStem(lemma)+high(lemma)+(lemma.endsWith('l')?'n':'l');
     for (let cut = 2; cut <= query.length; cut++) {
       const prefix = query.slice(0, cut);
       const stemKeys = new Set([prefix]);
@@ -138,15 +207,18 @@ export class SourceInflectionEngine {
         // stem, and ordinary nominal case/possession handles q/ğ alternation.
         if(stem.pos==='noun'||stem.pos==='adjective'){
           const derived=stem.lemma+'l'+high(stem.lemma)+(low(stem.lemma)==='ə'?'k':'q');
-          for(const row of this.paradigm({lemma:derived,pos:'noun'}).get(query)??[])if(compatible(normalized,row.surface))rows.push({...row,features:{...row.features,derivation:['nominalization:'+stem.lemma]}});
+          if(mightMatch(derived))for(const row of this.paradigm({lemma:derived,pos:'noun'}).get(query)??[])if(compatible(normalized,row.surface))rows.push({...row,features:{...row.features,derivation:['nominalization:'+stem.lemma]}});
         }
         // Denominative -lAn-dIr is productive, but only a classified noun can
         // license it. Existing observed causative stems retain their own lemma.
         if (stem.pos === 'noun') {
           const derived = stem.lemma + 'l' + low(stem.lemma) + 'nd' + high(stem.lemma) + 'r';
-          for (const row of this.paradigm({ lemma: derived, pos: 'verb' }).get(query) ?? []) if (compatible(normalized, row.surface)) {
-            rows.push({ ...row, lemma: derived, features: { ...row.features, derivation: ['denominative:' + stem.lemma, 'causative'] } });
-          }
+          collectVerb(derived,['denominative:'+stem.lemma,'causative']);
+          collectVerb(passive(derived),['denominative:'+stem.lemma,'causative','passive:'+derived]);
+        }
+        if(stem.pos==='verb'){
+          collectVerb(stem.lemma,[]);
+          collectVerb(passive(stem.lemma),['passive:'+stem.lemma]);
         }
       }
     }

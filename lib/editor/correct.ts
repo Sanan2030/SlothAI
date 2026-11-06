@@ -9,7 +9,7 @@ import { hasAttentionCandidate } from './neural/attention-runtime';
 import { chooseWordLMSpelling } from './wordlm/runtime';
 import type { WordLMDecisions } from './wordlm/runtime';
 import { wordLMTokens } from './wordlm/core';
-import { guardInsertedBoundaries } from './syntax-boundary-guard';
+import { guardInsertedBoundaries, segmentAuthoredSentenceStarts } from './syntax-boundary-guard';
 import { segmentTechnicalNounClauses, punctuateCausalTransition, punctuateConversation, resolveRemainingPredicate } from './conservative-clauses';
 import { observedSpelling, repairObservedSpacing } from './observed-channel';
 import { preserveContextualHomographs, normalizeClauseParticles, segmentDiscourseClauses } from './context-decisions';
@@ -142,6 +142,7 @@ function punctuate(line: string, useLocalModel = true, runtime: CorrectionRuntim
   result = stage('punctuateBusiness', 'rule', result, punctuateBusiness);
   result = stage('punctuateTechnical', 'rule', result, punctuateTechnical);
   result = stage('deterministic-clause-boundaries', 'rule', result, value => segmentDiscourseClauses(segmentCorrespondence(segmentIndependentClauses(value)), isFinitePredicate));
+  result = stage('authored-sentence-starts', 'rule', result, value=>segmentAuthoredSentenceStarts(boundarySource,value));
   // Scope-aware learned decisions run after deterministic clauses have been established.
   if (useLocalModel) result = stage('insertLearnedBoundaries', 'model', result, insertLearnedBoundaries);
   if (useLocalModel) result = stage('joint-boundary', 'model', result, value => insertJointBoundaries(value, jointArtifact as JointBoundaryModel));

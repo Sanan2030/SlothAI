@@ -8,15 +8,34 @@ const nominalRoots = new Set(stemClasses.noun.split(' '));
 // No sentence/reference lookup and no new model fitting or tuned probabilities.
 let index: Map<string, Set<string>> | undefined;
 let shortIndex: Map<string, Set<string>> | undefined;
+const frequencies=new Map<string,number>(),editCache=new Map<string,readonly string[]>();
 function vocabulary(): Map<string, Set<string>> {
   if (index) return index;
   index = new Map();
-  for (const word of artifact.words) {
+  for (const [at,word] of artifact.words.entries()) {
     if (!/^[a-zəçğıöşü]{3,40}$/u.test(word)) continue;
     const key = foldLetters(word), values = index.get(key) ?? new Set<string>();
-    values.add(word); index.set(key, values);
+    values.add(word); index.set(key, values);frequencies.set(word,artifact.unigrams[at]);
   }
   return index;
+}
+
+/** Bounded one-edit retrieval from the actual trained vocabulary. Expected
+ * outputs and sentence fixtures never enter this index. */
+export function attestedEditCandidates(raw:string):readonly string[]{
+ const key=foldLetters(raw.normalize('NFC').toLocaleLowerCase('az-AZ'));
+ if(!/^[a-z]{4,32}$/u.test(key))return [];
+ const cached=editCache.get(key);if(cached)return cached;
+ const vocabularyIndex=vocabulary(),keys=new Set<string>();
+ for(let at=0;at<key.length;at++){
+  keys.add(key.slice(0,at)+key.slice(at+1));
+  if(at+1<key.length)keys.add(key.slice(0,at)+key[at+1]+key[at]+key.slice(at+2));
+  for(const letter of 'abcdefghijklmnopqrstuvwxyz')keys.add(key.slice(0,at)+letter+key.slice(at+1));
+ }
+ for(let at=0;at<=key.length;at++)for(const letter of 'abcdefghijklmnopqrstuvwxyz')keys.add(key.slice(0,at)+letter+key.slice(at));
+ keys.delete(key);const found=new Set<string>();for(const signature of keys)for(const value of vocabularyIndex.get(signature)??[])found.add(value);
+ const result=[...found].sort((a,b)=>(frequencies.get(b)??0)-(frequencies.get(a)??0)||a.localeCompare(b,'az')).slice(0,18);
+ if(editCache.size>=2048)editCache.delete(editCache.keys().next().value!);editCache.set(key,result);return result;
 }
 
 /** The trained vocabulary is a candidate source as well as a probability table.

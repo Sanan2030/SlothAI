@@ -1,0 +1,19 @@
+{
+  "corpusSHA256": "bf8f629724bbef6410c3d371f8cd432ae7f99219d393575e5d7c4beea22d7471",
+  "inputsOrGoldRewritten": false,
+  "judgingAuthority": "User requested assistant judgment of correctness.",
+  "referenceErrata": [
+    {
+      "before": "istisna varsa onun",
+      "after": "istisna varsa, onun",
+      "review": "Previously documented conditional-clause omission; the original audit already accepted this repair."
+    },
+    {
+      "before": "tələb yaranarsa ayrıca",
+      "after": "tələb yaranarsa, ayrıca",
+      "review": "Newly reviewed conditional-clause omission: yaranarsa closes the condition; ayrıca qərar alınmalıdır is its following main clause. The comma is a valid repair, not damage to a correct sentence."
+    }
+  ],
+  "otherAlternativesAccepted": false,
+  "warning": "Assistant-authored compositional development corpus; these judgments are not blind human or real-user accuracy."
+}

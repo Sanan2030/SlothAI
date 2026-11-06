@@ -8,7 +8,7 @@ import { editChannels, normalizeDigraphs } from '../local-ai/paired';
 import paired from '../local-ai/paired-model.json';
 import { canonicalProtectedTerm } from '../protected-terminology';
 import { isCanonicalEntity } from '../entities/resolver';
-import { isEstablishedSurface, isReviewedSpelling, sourceSpellingCandidates, analyzeSourceInflection } from '../lexicon';
+import { isEstablishedSurface, isReviewedSpelling, sourceSpellingCandidates, analyzeSourceInflection,hasExactLexicalSurface,hasReviewedRuntimeNounSurface } from '../lexicon';
 import { isForeignTechnicalInflection, isForeignTechnicalStem } from '../technical';
 import type { LanguageServices } from '../language-services';
 import type { DiagnosticSink, CandidateDiagnostic } from '../diagnostics';
@@ -16,7 +16,7 @@ import { chooseWordLMSpelling, rankWordLM, wordLMSurfacePenalty } from './runtim
 import type { WordLMDecisions } from './runtime';
 import { wordLMTokens } from './core';
 import selectedPolicy from './selection-policy.json';
-import { attestedSpellingCandidates, hasAttestedSpelling } from './lexical-evidence';
+import { attestedSpellingCandidates, hasAttestedSpelling,attestedEditCandidates } from './lexical-evidence';
 import { spellingContextAdjustments } from './context-runtime';
 
 export interface WordLMSelectionPolicy { lmWeight: number; editPenalty: number; changePenalty: number; minimumMargin: number }
@@ -87,12 +87,15 @@ export function selectSpellingWithWordLM(original: string, text: string, service
     const currentWord = current.toLocaleLowerCase('az-AZ');
     const leftText=(prefix.split(/[.!?;,\n\uE000\uE001]/u).at(-1)??'').split(/\s+(?:və|ve|amma|lakin)\s+/u).at(-1)??'';
     const rightText=text.slice(offset+current.length).split(/[.!?;,\n\uE000\uE001]/u)[0].split(/\s+(?:və|ve|amma|lakin)\s+/u)[0];
-    const constraint=constrainedSpelling(rawSurface,currentWord,leftText,rightText,services);
+    const inferred=constrainedSpelling(rawSurface,currentWord,leftText,rightText,services);
+    const constraint=inferred?.reason==='source nominal agreement'&&(currentWord!==raw&&options.verifiedContextual?.get(offset)===current||isCanonicalEntity(rawSurface)||isCanonicalEntity(current))?undefined:inferred;
+    if(currentWord===raw&&hasReviewedRuntimeNounSurface(raw))return current;
     if(!constraint&&(isCanonicalEntity(rawSurface)||isCanonicalEntity(current)))return current;
     const sourceCandidates=sourceSpellingCandidates(rawSurface);
     const repeats=repeatedKeyCandidates(rawSurface);
     const attested = attestedSpellingCandidates(rawSurface);
-    const validRaw = dictionaryCandidates(raw)?.has(raw) || known(raw) || hasAttestedSpelling(raw);
+    const strictRaw=hasExactLexicalSurface(raw);
+    const validRaw = known(raw) || hasAttestedSpelling(raw);
     // Whole native spellings with explicit lexical evidence retain the author's
     // meaning. A mixed/unknown spelling still gets a complete candidate search.
     const explicitNative = /[əçğıöşü]/u.test(rawSurface) && (dictionaryCandidates(raw)?.has(raw) || hasAttestedSpelling(raw) || sourceCandidates.some(r=>r.surface===raw));
@@ -114,13 +117,17 @@ export function selectSpellingWithWordLM(original: string, text: string, service
     for (const word of attested) add(word, 'wordlm-vocabulary');
     for (const word of dictionaryCandidates(raw) ?? []) add(word, 'dictionary');
     add(services.morphology.findByFoldedForm?.(raw), 'morphology');
-    const hasUnchangedSkeleton=attested.length>0||sourceCandidates.length>0||Boolean(dictionaryCandidates(raw)?.size);
+    const sourceEdits=!strictRaw&&!known(raw)&&!sourceCandidates.length&&!attested.some(word=>word!==raw)
+      && !/^\p{Lu}/u.test(rawSurface)
+      ? attestedEditCandidates(rawSurface).filter(hasExactLexicalSurface):[];
+    for(const word of sourceEdits)add(word,'source-vocabulary-one-edit');
+    const hasUnchangedSkeleton=attested.some(word=>word!==raw)||sourceCandidates.length>0||Boolean(dictionaryCandidates(raw)?.size);
     if (proposals.size < 20 && !hasUnchangedSkeleton) for (const word of spellingCandidates.candidates(raw, 12)) add(word, 'edit-candidates');
     const charRows = options.charSpell?.rank(raw, [...proposals.keys()], left, right) ?? [];
     const charLogits = new Map(charRows.map(row => [row.word,row.logit]));
     const charMargin = charRows.length>1 ? charRows[0].logit-charRows[1].logit : 0;
     const charProof = charMargin>=charPolicy.minimumMargin && charRows[0]?.word!==raw;
-    const lmRows = rankWordLM(left, [...proposals.keys()], right);
+    const lmRows = rankWordLM(left, [...proposals.keys()], right,20);
     const contextRows = spellingContextAdjustments(raw, left, right,
       lmRows.map(row => ({ word: row.word, logScore: row.score - wordLMSurfacePenalty(row.word) })));
     const contextual = new Map(contextRows.map(row => [row.word, row]));
@@ -191,6 +198,9 @@ export function selectSpellingWithWordLM(original: string, text: string, service
       if(constraint){selected=constraint.word;reason=constraint.reason;}
       else if(options.verifiedContextual?.get(offset)===current){selected=currentWord;reason='verified contextual-stage lexical choice retained';}
       else if(repeats.length===1){selected=repeats[0];reason='unique whole-word verified repeated-key repair';}
+      else if(sourceEdits.length&&!known(currentWord)&&charProof&&sourceEdits.includes(charRows[0].word)&&(/[əçğıöşü]/u.test(raw)||raw.length>=8)){
+        selected=charRows[0].word;reason='character-supported one-edit source-vocabulary repair';
+      }
       else if(protectedStructural){selected=currentWord;reason='verified preceding lexical correction retained';}
       else if(exactSourceRepair){selected=sourceTarget!;reason='exact classified source form restores original lexical stem';}
       else if(dottedI){selected=attested[0];reason='unique source dotted-I restoration';}

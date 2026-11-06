@@ -1,0 +1,33 @@
+{
+  "scope": "Assistant-authored compositional development corpus; these judgments are not blind human or real-user accuracy.",
+  "corpusSHA256": "bf8f629724bbef6410c3d371f8cd432ae7f99219d393575e5d7c4beea22d7471",
+  "requests": 1000,
+  "inputWords": 100000,
+  "beforeCorrect": 297,
+  "beforeIncorrect": 703,
+  "afterCorrect": 825,
+  "afterIncorrect": 175,
+  "statuses": {
+    "fixed": 528,
+    "preserved": 297,
+    "remaining": 175
+  },
+  "strictReferenceMatches": 669,
+  "acceptedReferenceRepairs": 156,
+  "remainingCategories": {
+    "lexical-or-inflection": 144,
+    "punctuation-or-boundary": 27,
+    "case": 4
+  },
+  "repeatStable": 998,
+  "unstableIds": [
+    "corp100k-0216",
+    "corp100k-0341"
+  ],
+  "unstableCorrectFirstOutputs": [],
+  "literalCases": 250,
+  "literalFailures": [],
+  "allThreeAutomatic": 1000,
+  "technicalErrors": 0,
+  "comparisonSHA256": "1c929c8a61cde7d461afc0bc2996a8ae7c3973f3a7181b96a32a6796f8dcf09c"
+}

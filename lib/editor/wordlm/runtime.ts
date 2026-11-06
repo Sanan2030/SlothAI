@@ -43,9 +43,11 @@ export function scoreWordLMDocument(text: string, decisions = initialWordLMDecis
   if (editStructuredText(text, fragment, true) === undefined && editHTMLStructure(text, collect) === undefined) collect(text);
   return stats;
 }
-export function rankWordLM(left: readonly string[], candidates: readonly string[], right: readonly string[]) {
+export function rankWordLM(left: readonly string[], candidates: readonly string[], right: readonly string[],limit=8) {
   model ??= new BrowserWordLM(artifact);
-  return model.rank(left, candidates, right);
+  const values=[...new Set(candidates)].slice(0,Math.max(0,Math.min(20,limit))),rows=[];
+  for(let at=0;at<values.length;at+=8)rows.push(...model.rank(left,values.slice(at,at+8),right));
+  return rows.sort((a,b)=>b.score-a.score||a.word.localeCompare(b.word,'az'));
 }
 export function wordLMTokenId(word: string): number | undefined {
   model ??= new BrowserWordLM(artifact);

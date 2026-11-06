@@ -195,12 +195,17 @@ export function isEstablishedLegacySurface(word: string, services?: SpellingCont
 
 
 export function isEstablishedSurface(word: string, services?: SpellingContext): boolean {
-  return isClosedFunctionForm(word) || isEstablishedLegacySurface(word, services) || sourceInflections.analyze(word).length > 0;
+  return isClosedFunctionForm(word) || isEstablishedLegacySurface(word, services) || hasReviewedRuntimeNounSurface(word) || sourceInflections.analyze(word).length > 0;
 }
 
 const sourceInflections = new SourceInflectionEngine(surface => candidates.get(fold(surface))?.has(surface) === true || dictionaryCandidates(surface)?.has(surface) === true,
-  [{lemma:'aş',pos:'verb'},{lemma:'aşıl',pos:'verb'},{lemma:'oxuyucu',pos:'noun'}]);
+  [{lemma:'aş',pos:'verb'},{lemma:'aşıl',pos:'verb'},{lemma:'oxuyucu',pos:'noun'},{lemma:'məsul',pos:'noun'}]);
 export const sourceSpellingCandidates = (word:string) => sourceInflections.candidates(word);
+export const hasExactLexicalSurface = (word:string) => {
+  const value=word.toLocaleLowerCase('az-AZ');
+  return dictionaryCandidates(value)?.has(value)===true||candidates.get(fold(value))?.has(value)===true
+    ||aliasSurfaces.has(value)||documentSurfaces.has(value)||runtimeNounCandidates(value).some(row=>row.surface===value)||sourceInflections.analyze(value).length>0;
+};
 // Reviewed regular nouns extend runtime morphology without entering the frozen
 // training feature vocabulary or treating every unknown token as a noun.
 const runtimeNounRoots = new Set(['parom', 'heş', 'sekmə', 'maket', 'palet', 'altyazı', 'pilləkən', 'çatdırılma', 'saxlanılma', 'bloklanma', 'indeksləşmə', 'qurğu', 'dəyişmə', 'hesablaşma', 'çəki', 'rampa']);
@@ -211,6 +216,7 @@ const runtimeNounCandidates = (raw: string) => {
   return runtimeNounPrefixes.some(prefix => key.startsWith(prefix))
     ? runtimeNouns.candidates(raw).filter(row => runtimeNounRoots.has(row.lemma)) : [];
 };
+export const hasReviewedRuntimeNounSurface=(word:string)=>runtimeNounCandidates(word).some(row=>row.surface===word.toLocaleLowerCase('az-AZ'));
 export const analyzeSourceInflection = (word: string) => sourceInflections.analyze(word);
 
 function uniqueDictionaryCandidate(word: string, services?: SpellingContext): string | undefined {
@@ -681,6 +687,13 @@ export function restoreWord(word: string, services?: SpellingContext): string {
       return 'İ' + canonical.slice(1);
   }
   if (isClosedFunctionForm(word) || ambiguous.has(fold(word)) || fold(word) === 'seher') return word;
+  const compound=word.split('-');
+  if(compound.length===2){
+    const right=sourceInflections.candidates(compound[1]).filter(row=>row.pos==='verb'&&row.features.polarity==='negative'&&row.features.derivation?.includes('participle'));
+    const matched=sourceInflections.candidates(compound[0]).filter(row=>row.pos==='verb'&&row.features.tense==='perfect'&&row.features.polarity==='positive'&&right.some(other=>other.lemma===row.lemma));
+    const pairs=[...new Set(matched.flatMap(left=>right.filter(r=>r.lemma===left.lemma).map(r=>left.surface+'-'+r.surface)))];
+    if(pairs.length===1)return /^\p{Lu}/u.test(word)?pairs[0][0].toLocaleUpperCase('az-AZ')+pairs[0].slice(1):pairs[0];
+  }
   const verb = restoreReviewedVerb(word);
   if (verb) return verb;
   if (!isReviewedSpelling(word) && !isForeignTechnicalInflection(word) && !/[\p{Ll}][\p{Lu}]/u.test(word) && !/^[\p{Lu}]+$/u.test(word)) {
@@ -698,10 +711,17 @@ export function restoreWord(word: string, services?: SpellingContext): string {
   }
   const prior = beforeSourceExpansion(services);
   const sourceRows = sourceInflections.candidates(word);
+  const existing = restoreEstablishedWord(word, prior);
+  // Whole classified forms outrank malformed-suffix guesses. Preserve the
+  // legacy feature extractor in restorePriorWord; this is runtime-only.
+  if(!Object.hasOwn(aliases,fold(word))&&!isReviewedSpelling(word)&&!isForeignTechnicalInflection(word)){
+    if(sourceRows.some(row=>row.surface===word.toLocaleLowerCase('az-AZ'))&&fold(existing)!==fold(word))return word;
+    const forms=[...new Set(sourceRows.map(row=>row.surface))];
+    if(word.length>=4&&forms.length===1&&(!isEstablishedLegacySurface(existing,prior)||fold(existing)!==fold(word)))return /^\p{Lu}/u.test(word)?forms[0][0].toLocaleUpperCase('az-AZ')+forms[0].slice(1):forms[0];
+  }
   // Lexically classified exceptions outrank regular suffix guesses. This
   // preserves their entire paradigm, including longer possessed case chains.
   if (sourceRows.some(row => row.surface === word.toLocaleLowerCase('az-AZ') && usesLexicalYBuffer(row.lemma))) return word;
-  const existing = restoreEstablishedWord(word, prior);
   if (existing === word && !isEstablishedLegacySurface(word, prior) && !isForeignTechnicalInflection(word)) {
     const attested = restoreAttestedDiacritics(word)
       ?? restoreRepeatedKey(word, value => isEstablishedLegacySurface(value, prior)

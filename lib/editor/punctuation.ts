@@ -2,6 +2,9 @@
 import { productiveMorphology } from './productive-morphology';
 import { isFinitePredicate } from './segmentation';
 import { grammaticalCommas } from './grammatical-commas';
+import { SourceInflectionEngine } from './source-inflection';
+
+const sourceConditions=new SourceInflectionEngine(()=>false);
 
 export type SentenceMood = 'declarative' | 'interrogative' | 'exclamatory' | 'imperative' | 'unknown';
 export interface ClauseAnalysis {
@@ -89,7 +92,9 @@ function conditionalCommas(text: string): string {
     const word = words[at][0], end = words[at].index! + word.length;
     if (!/^ +$/u.test(text.slice(end, words[at + 1].index!))) continue;
     const analyses = productiveMorphology.analyzeWord(word);
-    const conditional = analyses.some(item => item.pos === 'verb' && item.features.mood === 'conditional');
+    const source=word.length>=6&&/s[əa](?:m|n|q|k|nız|niz|lar|lər)?$/u.test(word)?sourceConditions.analyze(word):[];
+    const sourceConditional=source.some(item=>item.pos==='verb'&&item.features.mood==='conditional')&&!source.some(item=>(item.pos==='noun'||item.pos==='adjective')&&item.surface===item.lemma);
+    const conditional = sourceConditional||analyses.some(item => item.pos === 'verb' && item.features.mood === 'conditional');
     const compound = /(?:sa|sə)$/iu.test(word) && productiveMorphology.analyzeWord(word.slice(0, -2))
       .some(item => item.pos === 'verb' && item.features.tense);
     if (/^(?:d[aə]|olsun)$/iu.test(words[at + 1][0])) continue;
@@ -103,6 +108,7 @@ function conditionalCommas(text: string): string {
 /** Commas only at grammatical boundaries, with existing commas left intact. */
 export function punctuateCommas(text: string): string {
   return grammaticalCommas(conditionalCommas(text))
+    .replace(/(?<!\p{L})((?:yalnız|təkcə|sadəcə)\s+[^.!?\n,]{1,180}?\s+deyil)\s+(?=\p{L})/giu, '$1, ')
     .replace(/(?<!\p{L})(yox) +(?=biznes\s)/giu, '$1, ')
     .replace(/(?<!\p{L})(kim\s+[^.!?]+?silib) +(?=onu\s)/giu, '$1, ')
     .replace(/(?<!\p{L})(birinci\s+qrup\s+səhər) +(?=ikinci\s+qrup)/giu, '$1, ')
