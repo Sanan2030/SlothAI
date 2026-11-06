@@ -1,0 +1,346 @@
+{
+  "scope": "10,000 new assistant-authored development cases through app strategy entry points; not real-user accuracy or blind acceptance.",
+  "evaluatedBaseCommit": "cec79df940445506d6a0cd9369f216a432f92c74",
+  "evaluatedWorkingDiffSHA256": "30684cbb386b7cd8d846dbc4d08e23278fe441ecb9a4623c7f8456d59f7073b0",
+  "runtimeSHA256": {
+    "lib/editor/adapters/legacy-language.ts": "cee39a0325665180c82e3fe86243cfe45e0f4d7d6948cb61b79fde2ae28943f2",
+    "lib/editor/adapters/verified-inflection.ts": "ec830d7e8d89224f6fb7be2d3f0f68686381a190c20ccca3bb8b1d124fbbfb8e",
+    "lib/editor/business.ts": "437042523df0900352f29fe973cfe32afe74046ff20a2657475475a9b27fbded",
+    "lib/editor/charspell/core.ts": "3f3bede5b7e4534ac5e46fdf9eea5269bc9efca1de68089514c144f84b4baf3b",
+    "lib/editor/charspell/load.ts": "0eb327745a295012b8692eb403b36e5b48a45f1f449ef4a86ec1d4af583c3642",
+    "lib/editor/charspell/runtime.ts": "ecdfb9edbb876ce251ee6ca515647279c0d8b0f4798021ead4272bb9e3c0f986",
+    "lib/editor/conservative-clauses.ts": "259e8497e5950e59254d860f7fb27e1df8648a0dc0429141adcf9707ff1b47b5",
+    "lib/editor/context-decisions.ts": "304a1f9201cd1fe4df1fd178f066e05555d0d541331983788094a2997ff31868",
+    "lib/editor/context.ts": "f951e47c90503258aba21b1343c9ce8515a6c8f8ca7a55b23f2211a0ba50d4bc",
+    "lib/editor/contextual-choices.ts": "f2e47c02d5af66ec9cf332c28359724130140b62dcc31b2fc71c3dc2f6e65b3e",
+    "lib/editor/contextual-orthography.ts": "b52b7a3eb2a72ad51295fb2e41f56f5140d1678b132363413d7f6906ede190a0",
+    "lib/editor/contracts/lemma.ts": "81acd11599021f038e2a1d67aed7043c4578338f1f69e733cfbdb8ff1c7ed489",
+    "lib/editor/contracts/morphology.ts": "3acd25c79335bbf5ee38ac3fb26e7ca37ce7fab1247265741717ee6ad4d7b9a1",
+    "lib/editor/contracts/spelling.ts": "8a7de7806d8058d92f657581b5f69a665d5a830dc853a662ebc5d8e950928299",
+    "lib/editor/correct.ts": "c6956a89705bb8036e0361fab02949057d4c82f6dd18176f47f26fc088684b2e",
+    "lib/editor/correspondence-boundaries.ts": "e5ed20a573e8500271789aa77b9e35894757e6b2bfdc4c61eee205e889103c1c",
+    "lib/editor/derived-morphology.ts": "a26e3c511e9b876dfddb00393cf08070c9db1ea3c6fe1f7b9570bcfdec8ca77e",
+    "lib/editor/diagnostics.ts": "08ba0026a98aadf24cc74c36f071234cb622895bb2ea5bb0ec1b4c85b8cd5302",
+    "lib/editor/dictionary.ts": "e32426a73870b75391536d22d78da3d09e2173e5b28b74661883ae9d8b57951b",
+    "lib/editor/email-greetings.ts": "5983f54e7922a0009a7e5b30880f2c58e4da6a6f5022916b7e8d4085e19c6883",
+    "lib/editor/entities/cultural.ts": "cb403cba969c02d44d88556671de7a7b16fc65e2cef05401e22a35b93a19849f",
+    "lib/editor/entities/geo.ts": "8c35348f9e8c98a76beae91bc062fab396551d4a00c2ccfc97a0dd526e5e13a4",
+    "lib/editor/entities/morphology.ts": "aee28726a04124ec4d6a5c545b7e6b01e4e295f62b43614c393c43464be46493",
+    "lib/editor/entities/organizations.ts": "aa33f886aee53d95fee9de4f4b9a5e5723a63276f94f2f9edf969e7d621e9719",
+    "lib/editor/entities/person-names.ts": "9835e6c8410dc3650c1932030b068d8f0cec0c2079e3fd1c9c69e5a40feddb2a",
+    "lib/editor/entities/resolver.ts": "944e92b5df9f4cd68fd0893bf63b1a1a85b58b474c4553d6fe902cf53a1c0d17",
+    "lib/editor/entities/sources.ts": "85c7b8ba371bcf3158a415ad174124201c84d17091fd26e86ceb9286de77f375",
+    "lib/editor/entities/types.ts": "1bc893709d80d28a3216b3824a3048999c28caecec733596e3502603326f7fa0",
+    "lib/editor/error-categories.ts": "c10e1439e440cddb31d20616d5ceef007437a43bbbe3734beecd4e2853f70f52",
+    "lib/editor/expected-results.ts": "961648056d5f15efaa66ff1733d99fa9a7b4ab2e300ec7a2ab8a40955a2e1ee6",
+    "lib/editor/expository.ts": "ecd707c192b3e8193862b49cdf46e05ed3b9e3d9550cf05fafa884aed7242a7b",
+    "lib/editor/extended-narrative.ts": "a9a33cf8ce564afd0d9dd6a81c89c2e32ce5b9b7e36d03486f4a41b9b9cdad06",
+    "lib/editor/function-word-forms.ts": "bf658cc6264ae0e1b7b362e023aeb549570f004136dd8948ee35aef3bb11f999",
+    "lib/editor/grammatical-commas.ts": "84513b6607cab7c2de08405739a365b4c8433edc9b8aac72cd3d35430b74abd3",
+    "lib/editor/html-structure.ts": "081b1db4e2c244cb1a2c58089112b2c46911d643f2a0e0b934efe413f9ea7a6a",
+    "lib/editor/inference-cache.ts": "63dcc298281ad3467a9e1b29916459f753778ed25c3b057a48f663ba0ea6722d",
+    "lib/editor/initial-names.ts": "66ca5ee83d20d580ad3dac3feebbf907ecd8c0c8653fa0f63b76c817b107f348",
+    "lib/editor/language-services.ts": "88ef6bb1be02e5b42732479ce7212dbc011535f743ef3fbb63c899adc9c3b820",
+    "lib/editor/lexical-constraints.ts": "32a2c3f39e9eb43e8699ffc9007fe7679270dc835af5dda779f7ba8b25a61b1a",
+    "lib/editor/lexicon.ts": "6ebb8b2ce60e7fd43c0a7c2adb0c9cc1abbcc4b181ff177d089fdc08934bc61f",
+    "lib/editor/limits.ts": "6d8ad844269488cdbdb9d700b36b929de4bf046d068e3ea539c7e3196dee44e8",
+    "lib/editor/literal-spans.ts": "b9618100c40aaca359d1bfd4154efca94602854349d2ca0afd8449dedb698aec",
+    "lib/editor/local-ai/boundary-model.ts": "6b5bdc1c124150697c1049fad9ef1462cc4571390a868e9260f9fe4f9139768d",
+    "lib/editor/local-ai/clause-context.ts": "71422baf548f2d4837563bbcd5ff75f8917f7a7d2210274953376ddc486af312",
+    "lib/editor/local-ai/core.ts": "d46a05ccba763669df1a6de26aa89cd83fdb665571cab724e00c996ab098eacd",
+    "lib/editor/local-ai/expand.ts": "06f4cd58f13f1950bef3971476b9bed1756ac9747e78941219750f98b26fafdd",
+    "lib/editor/local-ai/joint-boundary.ts": "cc4d0e2cd57f8fea39bec83bc17bb43bb136ccce34ef61d0b27d7c297b595c79",
+    "lib/editor/local-ai/paired-runtime.ts": "6bca08b09fed83c264a76f6a252aa743fd0cb0b1921529c61af5d9ccc2858f4d",
+    "lib/editor/local-ai/paired.ts": "a1501bf6758a62d472b8905189b1fa0bc94fc78edf6b258235502e8fc9889d04",
+    "lib/editor/local-ai/pos.ts": "e306428badcfdf6189199378a92d9b13d575b438aeee0a5aa2ca381f9d405011",
+    "lib/editor/local-ai/predict.ts": "52fd3c987aa02ec55c0da2380b85145dc272fd76184f5e20b3dc5eb00cb70da5",
+    "lib/editor/local-ai/reliability.ts": "4c5e1a02918fd36b9bfe732f2ce51c3b4d0e21429596af8decfbf8eea77ace2b",
+    "lib/editor/local-ai/sequence.ts": "9133987222c805af71bf7304d86c2a5a3e6122806c8c4707e3cde33fa30c6842",
+    "lib/editor/log-ocr.ts": "eeda158dafb4d897a70edbc90e9edf82e348c3d4e46fe83ef64c941349e51798",
+    "lib/editor/morphology.ts": "797e86f38e37d4ca99a83b8e8f89a2deccc565a599667e59f9bb4d0ba4179c85",
+    "lib/editor/narrative.ts": "d952e8327b1ce9e8324d202e8302cc0d5c1033e8ce47e0a717b09ce380744aff",
+    "lib/editor/neural/attention-runtime.ts": "64a2c2d98c09bde10b1087653750232e6cdda84e363a83448f67e8b088b08ce8",
+    "lib/editor/neural/attention.ts": "bd633d71b9736d6d5fa2efc8d8d176a4a2892188208057714eb7323107a76058",
+    "lib/editor/neural/boundary-features.ts": "2b2290765cee20f4d0ae4a44313fbe39a0dc1008503836289d40555157f2455c",
+    "lib/editor/neural/boundary-runtime.ts": "ca7a0a47e210abe71accd69b96542fb58dcdc2e9829adf7de737ec774f78b425",
+    "lib/editor/neural/bounded-candidates.ts": "b1bd87522690dc22f07619423cee4a2739bc1404abaa7b970c14f97d9bdbf2a0",
+    "lib/editor/neural/bounded-head.ts": "b020e5433641fe3fb52099622a1d12e6e97329697aa1b6010f6a85a24e9756ea",
+    "lib/editor/neural/bounded-runtime.ts": "b299e29283f3f666073c7a338c722d16f971a8c15f5e73d81539c37068ba8f2f",
+    "lib/editor/neural/diacritics.ts": "d97af405ce6c3388dcd846d1cb6b804fa4e7e6f83379a547372ce76ab9fbbd33",
+    "lib/editor/neural/document-features.ts": "944570eab62f98515f4d93b2723ae7887cd809300d6414d057bd76f844701d8c",
+    "lib/editor/neural/document-runtime.ts": "6e9fec638a12891bd00596922255854334bba689f2b17641189e2b679dc751a7",
+    "lib/editor/neural/features.ts": "404c1daf1f5244364d261094a35113d123d91132438f74b3b37a878e1ed48820",
+    "lib/editor/neural/institutional-head.ts": "ad264d99fa0c6b0248e43d22043a75e1f9e84cd883c6f49d7c560f2203c4b1e3",
+    "lib/editor/neural/log-runtime.ts": "679bce5e1bcc5151960e14c384bfbedd55e0456956c5004962ae68e8271b3ccc",
+    "lib/editor/neural/morphology.ts": "9f05552983c895d40bbbac28064b55a9cacfd54b5d6e39c975439d3ee25505fa",
+    "lib/editor/neural/network.ts": "c7edd29d6e0af3dbc2d821a25bb179e06e94b28506ab34cd2dc5ceec5faba6b8",
+    "lib/editor/neural/nominal-repair.ts": "ae17c73980ba3a9b4ebef59aaa4e80b483af8f7721359bd108a0d7c810053db3",
+    "lib/editor/neural/runtime.ts": "029180754dfe309ec7fccb6b4e880241d57c0df6fd25527557d0922accdb219c",
+    "lib/editor/neural/types.ts": "bdae0a95f0e125c67c91531eadb3e16add32396ac46cb332b69dd7c85d617374",
+    "lib/editor/observed-channel.ts": "93496cbbedf2ceeb5f6db9068832772add367957ea2dbc070ea8b9c7aa43153e",
+    "lib/editor/paragraph-segmentation.ts": "5e81ad3e56a0ca50ee3d3d50320a166e9ad22c22ef264d14340a908dd97b9ce5",
+    "lib/editor/personal-lexicon.ts": "e3527bfb294bbe599a19cd8209e84a0827c45a75488fa62936239168153326cb",
+    "lib/editor/productive-morphology.ts": "1b75b62c4532fb9a9690fa2fd846c0be8f561681ceb647990dc7bae83c0df54a",
+    "lib/editor/protected-terminology.ts": "8330c85cfe0c24c53944b80fce72b8337d4e1c29859f34e17f7f54581212c1e6",
+    "lib/editor/punctcase/core.ts": "e1ea6f9f3825fcd46556addcdc832bce3dbf92c1c796713476e70e2bff528e2c",
+    "lib/editor/punctcase/edit.ts": "ff45b88ed1bc4b9b1b2de40a506b75ad577a6707a80697d5a7075f9ef59a68c7",
+    "lib/editor/punctcase/load.ts": "c78171d7329ffdb3652b9386737204e29f1e32396a35264620c7c4ae4cf840be",
+    "lib/editor/punctuation.ts": "6f1746a8f3dd124194f491bf2de132bc783b94f0e23eed0d29e150837cc1066e",
+    "lib/editor/review-corpus.ts": "e6854689821db1aa8437233ec18bb5773f7422db5eb6a03ca9d2977869114c97",
+    "lib/editor/reviewed-context.ts": "e829c4940c2d10c08c1ed4753658cae2568d56e2d25aa9f8c956dc023a964168",
+    "lib/editor/reviewed-spelling.ts": "d20f30bd50e9dd1262960f89fca5fc1965d908c1aa9161b7cb3d19e150c9371f",
+    "lib/editor/reviewed-verb-forms.ts": "8eac75fdd15fc21ee9ac611a7c7d0f3a4a019cdb47ef58c5a023ed1293c5ef51",
+    "lib/editor/rules/email.ts": "03a3b78c2ddd2d0033c315ccfd2e1b8b130fff6c5dc21c9b8be7e9675e9f63db",
+    "lib/editor/runtime-verb-morphology.ts": "635fb943f0b9d98e7a1654b8f8ae2212dd07d95a0ef02f2d91a0a092f4a3ba19",
+    "lib/editor/segmentation.ts": "822d771f67ed78f2cc04dcb789dab1eb44f08f56b8b84d59bd0296ea81ca0e2c",
+    "lib/editor/source-inflection.ts": "33301ef45d0aa630a97f9947c6462a9b0fe70a79059b88096d2909e7e73acf2f",
+    "lib/editor/spelling-candidates.ts": "a2dcec4dbb52ce2c0b04995a857976d137051e7a43678397c81b3bbc5e1f23c9",
+    "lib/editor/structured-text.ts": "0dea03128acbc385a3f36eaa007420240b3c6275b41dce361b854f0ef778f8af",
+    "lib/editor/syntax-boundary-guard.ts": "1702c4fbd0d9bee983ddc58b7dfa7f00d4f871e02c52e230a771fbcfffc5da0d",
+    "lib/editor/technical.ts": "23aee346c479a82cc02639ffc4b5a7c412a6a263b3fd0d5766833f5ec499312a",
+    "lib/editor/transform-log.ts": "5d032a583b41178e7a54b643998666a2d81f55b60fdcdd94a8877911653bbdd6",
+    "lib/editor/verified-typos.ts": "4b3cf80e303fdae66c1720eb95033ef58e4291dae0a4ecbb3dba79c8001537b2",
+    "lib/editor/word-mentions.ts": "34f13109c90d10d6ad8e9335059c2ae9b4188c0b91ba28d006b122d0d689833c",
+    "lib/editor/wordlm/context-runtime.ts": "68a95b72b1f028aeb4659a9cce9169a062d7af8b1674c93b09c5445043427287",
+    "lib/editor/wordlm/context.ts": "53a008ebe92492eb8b138b516b9d03db8b15553d136862a491aee57a79f119d6",
+    "lib/editor/wordlm/core.ts": "e51abf2f4fc166891ff98be1bc9f53bd2b5da0d32d9b01b36e3b67f5c3299bd0",
+    "lib/editor/wordlm/lexical-evidence.ts": "cd6abd930bc95080844f85ebd01a645057bb0e1e817e45a3ac9310924c821a82",
+    "lib/editor/wordlm/runtime.ts": "6b99f1b71b31f36221a51995137832a81dd67536cfe204a8e37c9becc53fc9f6",
+    "lib/editor/wordlm/selection.ts": "9c468cfbb71a327f5a75557ab4ac145708c29350a330461f272dce17a85615c9",
+    "lib/strategies/bootstrap.ts": "eaaf5ce05c995a665066e0ee6b262c811e190e2ce198729be59dd1947a1bcb23",
+    "lib/strategies/impl/gmail-corrector.ts": "629c9936b47a0d612d54451beb449a4b1eafe8423e3cb6b6e5f3080101b34f39",
+    "lib/strategies/impl/text-corrector.ts": "198d04dedf369dfe9416fcb521c39f789f60401b88ba31966077b81267691246",
+    "lib/strategies/punctcase.ts": "46f135e0eb3b8e60703b3bb7f8b10d209b59ca0e922ffa5fd07fd186d71ae1e5",
+    "lib/strategies/registry.ts": "ed6d4410e3fcd3a378cff82bc138941b5a165a262c9a8dd0ad092feed9eb9257",
+    "lib/strategies/types.ts": "0f2ca00dbe79d033b083608ce3a20dc2ce708662624949cb3d48e9c88612ecc7"
+  },
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "reviewedTargetsSHA256": "ff72e5ed7ec25fa31d08a5cd2868df221de5d24e84f5760a7833ab04d3912978",
+  "nodeResultsSHA256": "ba7fc551583256a01218a62c928b92ef85f74f3af06f8dce6e59f293d8a8edca",
+  "nodeElapsedSeconds": 494.560871947,
+  "comparison": {
+    "default": {
+      "retained-correct": 9847,
+      "beforeExact": 9847,
+      "afterExact": 10000,
+      "beforeUnstable": 0,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 0,
+      "afterIdentityChanged": 0,
+      "fixed": 153
+    },
+    "punctcase": {
+      "retained-correct": 9847,
+      "beforeExact": 9847,
+      "afterExact": 10000,
+      "beforeUnstable": 0,
+      "afterUnstable": 0,
+      "afterExceptions": 0,
+      "identityInputs": 2712,
+      "beforeIdentityChanged": 0,
+      "afterIdentityChanged": 0,
+      "fixed": 153
+    }
+  },
+  "matrix": {
+    "errors-153": {
+      "cases": 153,
+      "beforeExact": 0,
+      "afterExact": 153,
+      "regressions": 0,
+      "unstable": 0,
+      "exceptions": 0
+    },
+    "calibration-100": {
+      "cases": 100,
+      "beforeExact": 100,
+      "afterExact": 100,
+      "regressions": 0,
+      "unstable": 0,
+      "exceptions": 0
+    },
+    "holdout-500": {
+      "cases": 500,
+      "beforeExact": 396,
+      "afterExact": 397,
+      "regressions": 0,
+      "unstable": 0,
+      "exceptions": 0
+    },
+    "no-harm-2000": {
+      "cases": 2000,
+      "beforeExact": 2000,
+      "afterExact": 2000,
+      "regressions": 0,
+      "unstable": 0,
+      "exceptions": 0
+    }
+  },
+  "models": {
+    "wordLM": {
+      "requests": 10000,
+      "automaticLoadedRequests": 10000,
+      "totals": {
+        "scoredTokens": 148090,
+        "knownTokens": 138999,
+        "rankedTokens": 43431,
+        "candidatesScored": 90115,
+        "changedTokens": 215,
+        "contextualTokens": 5354
+      }
+    },
+    "charSpell": {
+      "requests": 10000,
+      "automaticLoadedRequests": 10000,
+      "totals": {
+        "rankedTokens": 43431,
+        "candidatesScored": 90115,
+        "changedTokens": 81
+      },
+      "changeCounterMeaning": "Model-supported accepted selection, not isolated causal contribution; includes interaction with corpus and linguistic constraints."
+    },
+    "punctCase": {
+      "requests": 10000,
+      "automaticLoadedRequests": 10000,
+      "totals": {
+        "tokens": 142090,
+        "inferenceTokens": 142090,
+        "proposed": 0,
+        "applied": 0,
+        "punctuation": 0,
+        "capitalization": 0
+      }
+    }
+  },
+  "tests": {
+    "total": 5604,
+    "pass": 5596,
+    "fail": 0,
+    "preExistingTODO": 8,
+    "productionUITestsPassed": 10
+  },
+  "browserNumericalParity": {
+    "scope": "Actual Chromium Worker vs original PyTorch float32 checkpoint numerical parity; no quality or calibration claim",
+    "sourceCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+    "examples": 56,
+    "candidateLogits": 202,
+    "maximumAbsoluteLogitDifference": 1.52587890625e-05,
+    "absoluteTolerance": 0.001,
+    "passed": true,
+    "browser": "154.0.8037.57",
+    "quantization": "none; original float32"
+  },
+  "wholeStrategyBenchmark": {
+    "scope": "Warm Node whole-strategy latency on this CPU, three repetitions per size; not mobile/browser latency.",
+    "concurrentWork": "CharSpell training completed; other local QA may share this cloud CPU.",
+    "results": [
+      {
+        "words": 20,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          25.486712000000352,
+          24.623195000000123,
+          21.95273999999972
+        ],
+        "maximumMs": 25.486712000000352,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 100,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          80.2556599999998,
+          88.94914000000017,
+          76.45226400000001
+        ],
+        "maximumMs": 88.94914000000017,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 500,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          326.3777439999999,
+          302.39417900000035,
+          305.4010119999998
+        ],
+        "maximumMs": 326.3777439999999,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 1000,
+        "chunksPerDocument": 1,
+        "iterations": 3,
+        "modelRequests": 3,
+        "timingsMs": [
+          589.5921739999999,
+          603.4975699999995,
+          591.1152790000006
+        ],
+        "maximumMs": 603.4975699999995,
+        "ceilingMs": 10000,
+        "passed": true
+      },
+      {
+        "words": 5000,
+        "chunksPerDocument": 5,
+        "iterations": 3,
+        "modelRequests": 15,
+        "timingsMs": [
+          2960.0799800000004,
+          2879.303519000001,
+          3005.075860000001
+        ],
+        "maximumMs": 3005.075860000001,
+        "ceilingMs": 10000,
+        "passed": true
+      }
+    ]
+  },
+  "blindOrRealUserAccuracyClaim": false,
+  "productionBrowserParity": {
+    "scope": "Production Chromium editor Worker, same instance created by app UI; 20,000 Worker requests, not 20,000 DOM clicks.",
+    "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+    "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+    "reviewedTargetsSHA256": "ff72e5ed7ec25fa31d08a5cd2868df221de5d24e84f5760a7833ab04d3912978",
+    "completedAtUTC": "2026-11-06T07:31:05.225Z",
+    "browserVersion": "154.0.8037.57",
+    "uiProbePassed": true,
+    "transformHTTPRequests": 0,
+    "totals": {
+      "default": {
+        "cases": 10000,
+        "exact": 10000,
+        "nodeParityDifferences": 0,
+        "exceptions": 0,
+        "charSpellModelRequests": 10000,
+        "automaticModelRequests": 10000
+      },
+      "punctcase": {
+        "cases": 10000,
+        "exact": 10000,
+        "nodeParityDifferences": 0,
+        "exceptions": 0,
+        "charSpellModelRequests": 10000,
+        "automaticModelRequests": 10000
+      }
+    },
+    "elapsedSeconds": 264.952607901,
+    "requireAutomatic": true,
+    "requireCharSpell": true,
+    "legacyFalse": true,
+    "resultsSHA256": "9d50765f3615d22b0ccdd83f9375ada7de8e1b7e446d0f034c48be4fe4e9c04e"
+  }
+}

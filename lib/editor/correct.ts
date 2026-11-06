@@ -1,3 +1,5 @@
+import {repairRepeatedVowel} from './verified-typos';
+import type { CharSpellInference } from './charspell/runtime';
 import type { InferenceRunner } from './inference-cache';
 import { literalPattern, withProtectedCode, withProtectedLiterals } from './literal-spans';
 import { editorStage, type DiagnosticSink } from './diagnostics';
@@ -57,6 +59,7 @@ export interface CorrectionEvent {
   reason: string;
 }
 export interface CorrectionRuntime {
+  charSpell?: CharSpellInference;
   /** Automatic joint ranking is the application default; alternatives are offline ablations. */
   wordLMMode?: 'automatic' | 'fallback' | 'experimental';
   wordLMPolicy?: WordLMSelectionPolicy;
@@ -252,6 +255,7 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   text = stage('terminology-normalization-and-shielding', 'rule', text, value => protectKnownTerminology(value, canonical =>
     /[.#]/u.test(canonical) || canonical === 'npm' || canonical === 'gRPC' ? protect(canonical) : canonical));
   text = stage('multiword-entity-normalization-and-shielding', 'rule', text, value => protectMultiwordEntities(value, protect));
+  text = stage('verified-repeated-vowel', 'rule', text, value => value.replace(/\p{L}+/gu, repairRepeatedVowel));
   text = stage('resolveEntitiesInText', 'rule', text, resolveEntitiesInText);
   // Hunger adjective "ac" becomes opaque to prevent ac/aç overcorrection.
   // Establish its subject comma while the grammatical evidence is visible.
@@ -366,14 +370,18 @@ function correctPlainText(input: string, preserveFormatting = false, runtime: Co
   text = stage('expositoryPhrases', 'rule', text, expositoryPhrases);
   text = stage('businessPhrases', 'rule', text, businessPhrases);
   text = stage('technicalPhrases', 'rule', text, technicalPhrases);
-  text = stage('contextual-orthography', 'rule', text, value => contextualOrthography(value, originalSpellingText, services.morphology));
+  const contextualProofs=new Map<number,string>();
+  text = stage('contextual-orthography', 'rule', text, value => contextualOrthography(value, originalSpellingText, services.morphology,(wordIndex,selected)=>contextualProofs.set(wordIndex,selected)));
+  const contextualWords=[...text.matchAll(/\p{L}+/gu)];
+  const verifiedContextual=new Map<number,string>();
+  for(const [wordIndex,selected] of contextualProofs){const word=contextualWords[wordIndex];if(word&&word[0]===selected)verifiedContextual.set(word.index!,selected);}
   // Run WordLM only after every existing phrase-level spelling rule has had
   // its decision. Earlier use could turn a temporal "seher" into "şəhər"
   // before repairPhrases sees the corrected right-hand word (e.g. "dəniz").
   const jointWordLM = (runtime.wordLMMode ?? 'automatic') !== 'fallback';
   if (jointWordLM && useWordLM || runtime.diagnostics) {
     const reviewed = selectSpellingWithWordLM(originalSpellingText, text, services, {
-      enabled: useWordLM,
+      enabled: useWordLM, charSpell: runtime.charSpell, verifiedContextual,
       experimental: jointWordLM, automatic: runtime.wordLMMode !== 'experimental' && jointWordLM,
       policy: runtime.wordLMPolicy, diagnostics: runtime.diagnostics,
       decisions: runtime.wordLMDecisions,

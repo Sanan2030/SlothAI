@@ -18,6 +18,7 @@ async function main() {
   const corpus = 'data/qa/novel-10000-2026-11-04';
   const loaded = loadNovelCorpus(corpus), manifest = loaded.manifest, rows = loaded.rows;
   const requireAutomatic = process.argv.includes('--require-automatic');
+  const requireCharSpell = process.argv.includes('--require-charspell');
   const legacyFalse = process.argv.includes('--legacy-false');
   const nodeResults = new Map(readFileSync(nodePath, 'utf8').trim().split('\n').map(line => {
     const row = JSON.parse(line); return [`${row.mode}:${row.id}`, row.actual as string];
@@ -46,8 +47,8 @@ async function main() {
     await page.locator('.workspace-output pre').waitFor();
     const probeOutput = await page.locator('.workspace-output pre').textContent();
     if (comparable(probeOutput ?? '') !== comparable(nodeResults.get(`default:${probe.id}`)!)) throw new Error('UI-to-Worker probe differs from Node app path');
-    const totals = { default: { cases: 0, exact: 0, nodeParityDifferences: 0, exceptions: 0, automaticModelRequests: 0 },
-      punctcase: { cases: 0, exact: 0, nodeParityDifferences: 0, exceptions: 0, automaticModelRequests: 0 } };
+    const totals = { default: { cases: 0, exact: 0, nodeParityDifferences: 0, exceptions: 0, charSpellModelRequests: 0, automaticModelRequests: 0 },
+      punctcase: { cases: 0, exact: 0, nodeParityDifferences: 0, exceptions: 0, charSpellModelRequests: 0, automaticModelRequests: 0 } };
     const started = performance.now();
     for (const mode of ['default', 'punctcase'] as const) {
       for (let offset = 0; offset < rows.length; offset += 100) {
@@ -56,7 +57,7 @@ async function main() {
           const box = window as unknown as Window & { __qaWorkers: { worker: Worker; editor: boolean }[] };
           const editor = box.__qaWorkers.find(row => row.editor)?.worker;
           if (!editor) throw new Error('The app did not create its editor Worker');
-          const results: { id: string; actual: string; automaticModels: boolean; error?: string }[] = [];
+          const results: { id: string; actual: string; automaticModels: boolean; charSpellLoaded: boolean; error?: string }[] = [];
           for (const [at, row] of batch.entries()) {
             const id = -1_000_000-offset-at-(mode === 'punctcase' ? 10000 : 0);
             const response = await new Promise<{ result?: TransformationResult; error?: string }>((resolve, reject) => {
@@ -72,6 +73,7 @@ async function main() {
             results.push({ id: row.id, actual: response.result?.transformedText ?? '',
               automaticModels: response.result?.metadata.wordLM?.mode === 'automatic' && response.result.metadata.wordLM.loaded
                 && response.result.metadata.punctCase?.mode === 'automatic' && response.result.metadata.punctCase.loaded,
+              charSpellLoaded: response.result?.metadata.charSpell?.loaded === true && response.result.metadata.charSpell.mode === 'automatic',
               ...(response.error ? { error: response.error } : {}) });
           }
           return results;
@@ -81,6 +83,7 @@ async function main() {
           const exact = !result.error && comparable(result.actual) === comparable(row.expected);
           const parity = result.actual === nodeResults.get(`${mode}:${row.id}`);
           total.exact += Number(exact); total.nodeParityDifferences += Number(!parity); total.exceptions += Number(Boolean(result.error));
+          total.charSpellModelRequests += Number(result.charSpellLoaded);
           total.automaticModelRequests += Number(result.automaticModels);
           appendFileSync(`${out}/results.jsonl`, JSON.stringify({ mode, ...result, exact, nodeParity: parity })+'\n');
         }
@@ -91,13 +94,13 @@ async function main() {
       corpusSHA256: manifest.corpusSHA256, goldReviewSHA256: loaded.goldReviewSHA256, reviewedTargetsSHA256: loaded.reviewedTargetsSHA256,
       completedAtUTC: new Date().toISOString(), browserVersion: browser.version(),
       uiProbePassed: true, transformHTTPRequests, totals, elapsedSeconds: (performance.now()-started)/1000,
-      requireAutomatic, legacyFalse,
+      requireAutomatic, requireCharSpell, legacyFalse,
       resultsSHA256: hash(readFileSync(`${out}/results.jsonl`)) };
     writeFileSync(`${out}/summary.json`, JSON.stringify(report, null, 2)+'\n');
     writeFileSync(`${out}/results.jsonl.gz`, gzipSync(readFileSync(`${out}/results.jsonl`)));
     console.log(JSON.stringify(report, null, 2));
     if (transformHTTPRequests || Object.values(totals).some(row => row.exceptions || row.nodeParityDifferences
-      || requireAutomatic && row.automaticModelRequests !== row.cases)) process.exitCode = 1;
+      || requireAutomatic && row.automaticModelRequests !== row.cases || requireCharSpell && row.charSpellModelRequests !== row.cases)) process.exitCode = 1;
   } finally { await browser.close(); }
 }
 void main().catch(error => { console.error(error); process.exitCode = 1; });

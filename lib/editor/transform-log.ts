@@ -9,7 +9,7 @@ export interface TransformLogEntry {
   greeting?: string;
   usePunctCase?: boolean;
   /** Actual automatic-engine receipts, before any personal lexical overrides. */
-  modelUsage?: Pick<TransformationMetadata, 'wordLM' | 'punctCase'>;
+  modelUsage?: Pick<TransformationMetadata, 'wordLM' | 'punctCase' | 'charSpell'>;
   source: 'transformed' | 'remembered' | 'reviewed';
 }
 

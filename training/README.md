@@ -1,12 +1,13 @@
 # Offline training
 
 WordLM full fitting and validation completed on **17 October 2026**. PunctCase
-full CPU fitting and validation completed on **2 November 2026**: four completed
-epochs with epoch two selected. Its original float32 browser export is available
-through the app's explicit experimental option; default-on/int8 and independent
-real-error acceptance are not claimed. CharSpell still has its measured CPU
-smoke result, without a completed full-run claim. See the
-[PunctCase integration record](../docs/training/punctcase-app-2026-11-04.md).
+full CPU fitting completed on **2 November**: four epochs, epoch two selected.
+CharSpell full CPU fitting completed on **5 November**: four epochs, epoch two
+selected by validation mean loss; later epochs did not improve it. Its original
+21,857-parameter float32 browser export and numerical parity are verified.
+WordLM, PunctCase and CharSpell run automatically in both app strategies. See the
+[CharSpell integration record](../docs/training/charspell-app-2026-11-06.md) and
+[development QA record](../docs/qa/charspell-integration-2026-11-06.md).
 
 All three stages completed historical 100k/10k CPU smoke runs on **9 October**;
 see the [measured report](../docs/training/smoke-2026-10-09.md) and

@@ -1,3 +1,5 @@
+import {loadCharSpell} from '../../editor/charspell/load';
+import {createCharSpellInference} from '../../editor/charspell/runtime';
 import { correctText } from '../../editor/correct';
 import { automaticPunctCase } from '../punctcase';
 import { initialWordLMDecisions, scoreWordLMDocument } from '../../editor/wordlm/runtime';
@@ -11,15 +13,17 @@ export class AzerbaijaniTextCorrectorStrategy implements ITextTransformationStra
   async transform(request: TransformationRequest, context: TransformationContext = {}): Promise<TransformationResult> {
     const start = Date.now();
     const decisions = initialWordLMDecisions();
-    const baseline = correctText(request.text, request.options?.preserveFormatting, { ...context, wordLMMode: 'automatic', wordLMDecisions: decisions });
+    const charModel = await loadCharSpell();
+    const charSpell = createCharSpellInference(charModel);
+    const baseline = correctText(request.text, request.options?.preserveFormatting, { ...context, charSpell, wordLMMode: 'automatic', wordLMDecisions: decisions });
     const enhanced = await automaticPunctCase(request.text, baseline,
-      value => correctText(value, request.options?.preserveFormatting, { wordLMMode: 'automatic' }));
+      value => correctText(value, request.options?.preserveFormatting, { wordLMMode: 'automatic', charSpell: createCharSpellInference(charModel) }));
     const result = enhanced.correction;
     const wordLM = scoreWordLMDocument(result.text, decisions);
     return { transformedText: result.text, metadata: {
       correctionsMade: result.corrections, detectedLanguage: 'az', processingLanguage: 'az',
       executionTimeMs: Date.now() - start, strategyUsed: this.id, engine: 'local-models',
-      wordLM,
+      wordLM, charSpell: charSpell.stats,
       ...(enhanced.stats ? { punctCase: enhanced.stats } : {}),
     } };
   }

@@ -7,11 +7,13 @@ const upperLike = (source: string, target: string) => /^\p{Lu}/u.test(source)
 /** Local grammatical/terminological evidence for genuine lexical homographs.
  * Existing explicit spellings remain intact; these are bounded word families,
  * never sentence/example matches or probabilities fitted to a reference set. */
-export function contextualOrthography(text: string, original: string, morphology?: MorphologyEngine): string {
+export function contextualOrthography(text: string, original: string, morphology?: MorphologyEngine, onProof?: (wordIndex:number,selected:string)=>void): string {
   const originalWords = original.toLocaleLowerCase('az-AZ').match(/\p{L}+/gu) ?? [];
   const explicitlySpelled = (pattern: RegExp) => originalWords.some(value => pattern.test(value));
+  let wordIndex=0;
   let previousWord: { word: string; end: number } | undefined;
   return text.replace(/(?<![\p{L}\p{N}_])\p{L}+(?![\p{L}\p{N}_])/gu, (word, at: number) => {
+    const ordinal=wordIndex++;
     const resolvedPrior = previousWord && /^\s+$/u.test(text.slice(previousWord.end, at)) ? previousWord.word : undefined;
     previousWord = { word, end: at+word.length };
     if (word.length > 1 && word === word.toLocaleUpperCase('az-AZ')) return word;
@@ -93,6 +95,7 @@ export function contextualOrthography(text: string, original: string, morphology
     if (key === 'aciq' && /^\s+(?:xeta|sessiya|sert|sorusulur)/u.test(right)) target = 'açıq';
     if (/^yazış[ıiuü]/u.test(lower) && /(?:ses|telim|film|video)\s+$/u.test(left)) target = lower.replace(/^yazış/u, 'yazıs');
     const result = target ? upperLike(word, target) : word;
+    if(target)onProof?.(ordinal,result);
     previousWord.word = result;
     return result;
   });

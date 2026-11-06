@@ -1,4 +1,4 @@
-/** Whole-strategy latency, including WordLM and PunctCase, on the standard seed. */
+/** Whole-strategy latency, including WordLM, CharSpell and PunctCase, on the standard seed. */
 import { performance } from 'node:perf_hooks';
 import { writeFileSync } from 'node:fs';
 import { getStrategyRegistry } from '../../lib/strategies/bootstrap';
@@ -31,7 +31,8 @@ async function main() {
       for (const text of input) {
         const result = await strategy.transform({ text });
         if (result.metadata.wordLM?.mode !== 'automatic' || !result.metadata.wordLM.loaded
-          || result.metadata.punctCase?.mode !== 'automatic' || !result.metadata.punctCase.loaded) {
+          || result.metadata.punctCase?.mode !== 'automatic' || !result.metadata.punctCase.loaded
+          || result.metadata.charSpell?.mode !== 'automatic' || !result.metadata.charSpell.loaded) {
           throw new Error('A model did not run automatically');
         }
         modelRequests++;
@@ -43,7 +44,7 @@ async function main() {
       timingsMs: timings, maximumMs, ceilingMs: 10000, passed: maximumMs <= 10000 });
   }
   const report = { scope: 'Warm Node whole-strategy latency on this CPU, three repetitions per size; not mobile/browser latency.',
-    concurrentWork: 'Existing four-thread CharSpell full training; other QA may share the CPU.', results };
+    concurrentWork: 'CharSpell training completed; other local QA may share this cloud CPU.', results };
   if (output) writeFileSync(output, JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify(report, null, 2));
   if (results.some(result => !result.passed)) process.exitCode = 1;

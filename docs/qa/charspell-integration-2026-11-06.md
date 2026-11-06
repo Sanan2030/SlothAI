@@ -1,0 +1,24 @@
+# Original 153 spelling disagreements and CharSpell, 6 November 2026
+
+The frozen development audit now matches all 10,000 approved references, compared with 9,847 before this change: the original 153 disagreements are fixed, with no newly failing previously correct inputs, exceptions or output instability. Inputs and the approved gold revision are unchanged. This authored compositional set uses repeated events/continuations and has been used for development; 100% matching is not a blind or real-user accuracy estimate.
+
+CharSpell's completed epoch-two checkpoint now scores candidates automatically in both application strategies. WordLM and PunctCase remain automatic. Selection combines learned character scores, language scores, source vocabulary, verified morphology and reviewed lexical/grammatical relations. The neural weights were not retrained on these 153 examples. The initial character-fusion integration with WordLM fixed 16 of the 153 in the first exploratory pass; the final result includes broader candidate/linguistic and pipeline corrections, so it must not be attributed solely to CharSpell.
+
+The fixes address different mechanisms:
+
+- Source-classified forms now include temporal participles, infinitives, negative-aorist ablatives, nominal derivations and vowel-initial verb stem voicing. Reviewed runtime POS entries license the missing verb `aş/aşıl` and noun `oxuyucu`, including their regular inflections.
+- Repeated-key repair verifies whole native/folded lexical forms before deleting letters. Valid doubled-letter words and proper names survive; unambiguous malformed repeated vowels are corrected before fuzzy entity routing can turn an ordinary inflection into a place name.
+- Exact-skeleton alternatives take precedence over speculative generic edit candidates. Foreign technical vocabulary is retained, and structural corrections from preceding stages cannot be undone by an unsupported spelling guess.
+- Reviewed word-family/POS and selectional relations distinguish such meanings as copy/speed, condition/hardness and prose/edition. These are token-level linguistic constraints, not sentence IDs, fixture imports, output lookup or QA-fitted neural probabilities.
+- Subsequent decisions see already-selected left context. Verified contextual choices are explicitly passed to selection even when the contextual stage leaves a word unchanged; otherwise a later scorer could undo a valid decision and only repair it on the second pass.
+- Strong empirical corpus evidence and attested preceding meanings are retained when character scores alone disagree. This prevented new `dəyişmə/deyişmə`, `dəyər/deyər` and cache terminology regressions.
+
+Full testing passes 5,596 tests with eight pre-existing TODO and zero failures. All ten production UI tests pass, including actual text/mail Worker inference with the CharSpell checkpoint receipt and nonzero ranked positions. The original 2,000 no-harm cases remain correct; holdout matching moves from 396 to 397 out of 500; reserved authored calibration remains 100/100. Neither the holdout nor calibration is a representative human-labelled real-error benchmark.
+
+The 10,000-case Node run performs 40,000 app transformations including repeats. Every default request loads CharSpell; it ranks 43,431 positions and 90,115 candidates across the distinct 10,000 inputs. PunctCase infers on the already-punctuated corpus and accepts zero edits there; separate UI probes still verify its missing-comma correction. Loaded weights, ranking counts and accepted changes are distinct facts.
+
+Production Chromium also completes 20,000 requests through the actual editor Worker created by the UI: 10,000 in each legacy option mode, all matching the approved references and Node results. Every request reports all three models loaded automatically; there are no exceptions or HTTP transformation requests. Whole-strategy CPU latency stays below the enforced 10-second ceiling through 5,000 words (maximum 3,005 ms here; not a mobile latency estimate). Typechecking, lint, production build, dependency audit, corpus tooling, the performance gate and strict reproducible language-model checks pass.
+
+The direct base `correctText` helper does not automatically instantiate every asynchronous strategy-level model. The HTTP protocol test now compares HTTP output with the full application strategy and asserts CharSpell receipts, rather than treating the base helper as the full ensemble. Reviewed language targets and the frozen 10,000 references were not altered.
+
+The committed source and completed checks are bound by the recovery package's `RUN_PROVENANCE.json`. Intermediate regressions and rejected candidate-policy attempts remain in the development logs. Read the latest verified package and `RESTORE.md` at https://github.com/Sanan2030/SlothAI/releases/tag/charspell-integration-2026-11-06 . Original source-data archives and bulk prepared training data are excluded.

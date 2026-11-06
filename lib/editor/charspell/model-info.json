@@ -1,0 +1,96 @@
+{
+  "format": "charspell-f32le-v1",
+  "parameters": 21857,
+  "bytes": 87428,
+  "sha256": "6e0530602f4d29a2af58795e1619872bec95dd4dc50b2875443467e50c8036a4",
+  "sourceCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+  "sourceReportSHA256": "93545851b7ca5b5f4c3db6dd5775598214fffd7c0b89f43eaebbccd845d2878e",
+  "manifestSHA256": "dcfbaf41c84d3eb1c92ad47ff3a633d5fae692a6075597ac579298f48cccb2fd",
+  "selectedEpoch": 2,
+  "characters": "abcdefghijklmnopqrstuvwxyzəçğıöşü-' ",
+  "config": {
+    "charEmbedding": 24,
+    "charChannels": 32,
+    "wordEmbedding": 48,
+    "maxWordChars": 32,
+    "contextWords": 2,
+    "maxCandidates": 20,
+    "prefixLength": 7
+  },
+  "tensors": {
+    "encoder.embedding.weight": {
+      "offset": 0,
+      "shape": [
+        38,
+        24
+      ]
+    },
+    "encoder.conv3.weight": {
+      "offset": 912,
+      "shape": [
+        32,
+        24,
+        3
+      ]
+    },
+    "encoder.conv3.bias": {
+      "offset": 3216,
+      "shape": [
+        32
+      ]
+    },
+    "encoder.conv5.weight": {
+      "offset": 3248,
+      "shape": [
+        32,
+        24,
+        5
+      ]
+    },
+    "encoder.conv5.bias": {
+      "offset": 7088,
+      "shape": [
+        32
+      ]
+    },
+    "encoder.project.weight": {
+      "offset": 7120,
+      "shape": [
+        48,
+        64
+      ]
+    },
+    "encoder.project.bias": {
+      "offset": 10192,
+      "shape": [
+        48
+      ]
+    },
+    "score.0.weight": {
+      "offset": 10240,
+      "shape": [
+        48,
+        240
+      ]
+    },
+    "score.0.bias": {
+      "offset": 21760,
+      "shape": [
+        48
+      ]
+    },
+    "score.2.weight": {
+      "offset": 21808,
+      "shape": [
+        1,
+        48
+      ]
+    },
+    "score.2.bias": {
+      "offset": 21856,
+      "shape": [
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,971 @@
+{
+  "scope": "Deterministic numerical parity only; not model quality or threshold fitting",
+  "sourceCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+  "examples": [
+    {
+      "input": "",
+      "left": "",
+      "right": "",
+      "candidates": [
+        "",
+        "a"
+      ],
+      "label": 0,
+      "logits": [
+        27.954288482666016,
+        21.42059898376465
+      ]
+    },
+    {
+      "input": "salam",
+      "left": "",
+      "right": "",
+      "candidates": [
+        "salam",
+        "saləm",
+        "salon"
+      ],
+      "label": 0,
+      "logits": [
+        26.955047607421875,
+        20.804149627685547,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "sureti",
+      "left": "sənədin ilkin",
+      "right": "mətni göndər",
+      "candidates": [
+        "sureti",
+        "surəti",
+        "sürəti"
+      ],
+      "label": 0,
+      "logits": [
+        29.137638092041016,
+        34.227813720703125,
+        22.31332778930664
+      ]
+    },
+    {
+      "input": "İŞ",
+      "left": "IŞIQ İşıqlı",
+      "right": "ĞÖÜÇŞƏı",
+      "candidates": [
+        "iş",
+        "ış",
+        "İŞ"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        28.225475311279297
+      ]
+    },
+    {
+      "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "left": "uzun kontekst uzun kontekst uzun kontekst uzun kontekst uzun kontekst uzun kontekst uzun kontekst uzun kontekst ",
+      "right": "sağ kontekst sağ kontekst sağ kontekst sağ kontekst sağ kontekst sağ kontekst sağ kontekst sağ kontekst ",
+      "candidates": [
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      ],
+      "label": 0,
+      "logits": [
+        23.336647033691406,
+        23.336647033691406,
+        23.336647033691406
+      ]
+    },
+    {
+      "input": "a-b",
+      "left": "sol",
+      "right": "sağ",
+      "candidates": [
+        "a-b",
+        "a'b",
+        "a b",
+        "🙂"
+      ],
+      "label": 0,
+      "logits": [
+        24.565444946289062,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "a",
+      "left": "ə",
+      "right": "i",
+      "candidates": [
+        "a",
+        "ə",
+        "ı",
+        "i"
+      ],
+      "label": 0,
+      "logits": [
+        29.92293357849121,
+        21.446170806884766,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "abc",
+      "left": "",
+      "right": "",
+      "candidates": [
+        "abc"
+      ],
+      "label": 0,
+      "logits": [
+        25.737953186035156
+      ]
+    },
+    {
+      "input": "uc🙂nmydy🙂xgödf x'ykn ",
+      "left": "atjş-xbsbwağbççfğvybves",
+      "right": "tdoşmx9xtöönnqb-dr🙂🙂acrqegtwren",
+      "candidates": [
+        "ixşıyoudj🙂xckeh ixbvw-yzzrqzvrədt🙂9'cyn",
+        "bö9çhtkz-mcm",
+        "mkghivccüsühocç-fkg pktvə'ywvebrq abşj"
+      ],
+      "label": 0,
+      "logits": [
+        27.122236251831055,
+        25.906036376953125,
+        21.389963150024414
+      ]
+    },
+    {
+      "input": "-9pd-qse-b9gqw",
+      "left": "oufupjxmöəx tfçwkf ud'kip'nsiiğh",
+      "right": "ye'anamki-çiü'lçiosf-jg",
+      "candidates": [
+        "xöwtdsınəjşytvwv-'spuuçş"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "fğqiçvypsfülu9əqhi'makhşc9o'",
+      "left": "🙂jəcddə9oçmv",
+      "right": "vökbçhayacj",
+      "candidates": [
+        "çcçteuji  vrxkyçö9vdç",
+        "pjəubms"
+      ],
+      "label": 0,
+      "logits": [
+        22.48548698425293,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "",
+      "left": "'öad'mökiu dxçcuddyofdppw🙂göwtşl-xhz-",
+      "right": "lqjuinv ",
+      "candidates": [
+        "lstvbrlcfzıs- yckö qe -wğir",
+        "üi b",
+        "pye",
+        "ğzüla🙂-mpidbwşcrcdütnv",
+        "fatypüijt9wznbjeihoi"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "ufzzhdəwnsuğevböhod'vəğxeıləgkgqepyvdgga",
+      "left": "uınğf fr🙂bbulkw 'uğş",
+      "right": "pə",
+      "candidates": [
+        "gvv9npğ9şüwjçfs-ğ",
+        "eütmxpbpüşg'ucm znçəəğx-ui-'"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "🙂dqgpğı",
+      "left": "jıkfçnxmemdntdğ'lus",
+      "right": "aüetv",
+      "candidates": [
+        "9mlxm🙂 ğbön9mxlgöxdjer",
+        "ikndsqkül🙂szfqkıvk",
+        "🙂 tezo-9l🙂'ğyiqəğkv tzş'y"
+      ],
+      "label": 0,
+      "logits": [
+        22.449443817138672,
+        20.80414390563965,
+        21.074586868286133
+      ]
+    },
+    {
+      "input": "qiltkty9zd9fwerqoçg🙂le",
+      "left": "üleiüwiüaex",
+      "right": "wb-aəow9ckhuüqvurğlglvçix wqrlng",
+      "candidates": [
+        "🙂çbls çojü xxyüzinhbef-yədb🙂ps",
+        "çççonğgçwüöem'uö🙂uğf",
+        "nqwdçtbeçgüuorücıüoəxkftensğeva tye",
+        "n'evgiy gütxkoskyso9fübwsluv",
+        "ib9cxojkt",
+        "pwösppəxe🙂cvwuvəpj",
+        "hhbil-ka-ogyş fuaü9vjırbofcyoütğö🙂",
+        "rbətoəbçşq' yuüipünşi"
+      ],
+      "label": 0,
+      "logits": [
+        23.730403900146484,
+        23.488372802734375,
+        20.80414390563965,
+        23.49981689453125,
+        23.63628578186035,
+        23.893224716186523,
+        24.155311584472656,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "mpheğ🙂tmizyjkfükbçogkf",
+      "left": "ymıvdıl9çfrjnşvqjin'dwöqrwv🙂çfkn",
+      "right": "rcigcxyjhüionlp'j'xkiiprltgoççüəcpc",
+      "candidates": [
+        "meşrşmyldt9vıüoduq🙂bxpqymrgoqümdöböçf-",
+        "p-txcr'ı9nv 9txt'kotgşuxü",
+        "tmqthdg-b🙂ltıh'vcyylzqeyxəsw-ıtbfbgyux",
+        "🙂əuyelçz🙂dfv'",
+        "hxweaışpl'fpölwqgxg khiğtashkviywsg",
+        "vx'h-ləço fvğjozrbsvləüj9xc9hrqgp'"
+      ],
+      "label": 0,
+      "logits": [
+        24.999980926513672,
+        23.536941528320312,
+        21.814678192138672,
+        22.674060821533203,
+        20.80414390563965,
+        25.26327133178711
+      ]
+    },
+    {
+      "input": "mgnigfyz",
+      "left": "'qo🙂fğ",
+      "right": "uvlğqghpy'pv9zr99pgjpug-kğa",
+      "candidates": [
+        "df",
+        "wb 9🙂s'i-fcqxvör",
+        "fwyx-jlmə'x'zşhçtvulğd99ooze9dh9nxvöih",
+        "cşxh",
+        "ə'z🙂'ğdı9enqvbğ-c",
+        "ixn🙂t-o🙂aavvv🙂y'wi"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "nlş'ökcx",
+      "left": "9odti",
+      "right": "mrbfğç",
+      "candidates": [
+        " qnywx opımcööuvfaşwm",
+        "l9fıeəzhiwmfdvrzqeödkdpde-nj🙂nsş iesşül"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "ryöşxwüivfçame yoautuqepğ🙂eöü ı🙂üğ'şıbb ",
+      "left": "xp9s'oxongewhnhaçrbwsr9q'i99zu",
+      "right": "rnktynıfqhğvwököj🙂ıvöthkıöiqağcb-",
+      "candidates": [
+        "çzçhvcuüğazouicsyj- eıoemı",
+        "oy9ğyısdsdptçc'fvpw--wöət xipxçupğf",
+        "keztwç9kçü",
+        "xzqxguç9j",
+        "'kğnünexn9ö csüpvhr-gtcyıülğə ö9rodə"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        24.83881950378418,
+        21.883621215820312,
+        25.29987335205078,
+        23.953426361083984
+      ]
+    },
+    {
+      "input": "9adu",
+      "left": " hle pbıi🙂nd",
+      "right": "tpfzklüvru-nü-jşt'oğexğıg-tc çnzbbş",
+      "candidates": [
+        "oö-m"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "sçs9lu",
+      "left": "gbdmptfq9şie'xvj",
+      "right": "nam'd",
+      "candidates": [
+        "j🙂p-ccçeçşmgş",
+        " fgşotvo cdv9y🙂çulawrğgəmypö"
+      ],
+      "label": 0,
+      "logits": [
+        21.848608016967773,
+        21.64710235595703
+      ]
+    },
+    {
+      "input": "nğofgciroxvğytö tupıqçəoej'u9sy",
+      "left": "",
+      "right": "çç9ibaeüqqwüğ🙂zğc-əg'j🙂b",
+      "candidates": [
+        "öxsi9tp🙂oöçbdgçcjm",
+        "wxqə9-eğybzçkwgənnmlasqəx-cğlmbjz",
+        "mçfşfuzslqö🙂üxadiv",
+        "ğwıuaf9xchzğraxkşüj9kzwu'px'n"
+      ],
+      "label": 0,
+      "logits": [
+        21.020000457763672,
+        27.014646530151367,
+        23.425622940063477,
+        25.59861946105957
+      ]
+    },
+    {
+      "input": "yblviach",
+      "left": "o-büakhavenorsçfjduf🙂syf9-üw'xncgırquəçö",
+      "right": "'-kwədhdyrhukş-",
+      "candidates": [
+        "thjjğ-öqpkasğmfsjm dq",
+        "zt",
+        "zeəimde çq-px-o x  99moyy'xorçbd'b",
+        "cod wğışx",
+        "j🙂yəzpcxşaqqdş",
+        "yimctfn-hçv çxyxpovəgmrəxuzşyıd"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "öslıyç",
+      "left": "",
+      "right": "vigıüsqrıyi'gmcgg🙂nlse - bədç🙂🙂b",
+      "candidates": [
+        "iım",
+        "ymptüəsiinxny",
+        " ş",
+        "wgfc 9g üx' wsısjxom lomqç",
+        "əwnimr🙂x",
+        "ıfxbtjo'əm🙂ftöen",
+        "phğopır't ln'🙂9əu",
+        "eeqwçkws zsğzködlwwçfəüuud"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "🙂  uxıj-ıt9de'khmnrl vf🙂lgdğ🙂",
+      "left": "qrəi niigfviçc",
+      "right": "xzrgytmğ9ıoğpcjhyu",
+      "candidates": [
+        "-bqcfö'-ppe"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "us",
+      "left": "oxseswbwyafq'iqkqwge9öğrlntə'ıbjrkövşı",
+      "right": "🙂cuöaex  hh-öhpucrp🙂jğl9l",
+      "candidates": [
+        "pğotkəy",
+        "nqldsqubyv'öymyarnxfk9çsvş"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "ıçəoxöü🙂hlyrpttünijwrddis",
+      "left": "9hxmgiqğfmjbjşədg-kü",
+      "right": "kbk",
+      "candidates": [
+        "örobhmsdy9kbüjərəxeşjxwə9rylf-",
+        "xfkötümfgvföçidkpüfceç9p'çoşşfz-nqlrpg",
+        "aaaeühyı",
+        "msrysplj-i",
+        "ngc'iç-p9əw-roəjgeülexğx",
+        " jjfofecnxwvühf yxeaıj"
+      ],
+      "label": 0,
+      "logits": [
+        22.486968994140625,
+        21.395973205566406,
+        20.80414390563965,
+        20.80414390563965,
+        21.396026611328125,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "üeğuj🙂 sçdöö'wa-yçmvsvyrud",
+      "left": "bvinqkzj'id",
+      "right": "nzşq' qcşhvuroağ🙂t🙂btwwoqğwuarşhəvğışip",
+      "candidates": [
+        "ggoj 🙂qrnçhöuux",
+        "  ıtvzwlbşc'cy edxi",
+        "-vszex'as iüvhıfmzqcaüdüjfcbbçşa'ç",
+        "cşg'keıeın'ç vcğ9biıhd9'üığe'ğytö- oc🙂lg",
+        "anztgüc9jü  jmteafz'v",
+        "sös",
+        "şwn'kguçbdşwfpğ -9tc"
+      ],
+      "label": 0,
+      "logits": [
+        23.486160278320312,
+        20.80414390563965,
+        20.80414390563965,
+        25.31319808959961,
+        25.624189376831055,
+        20.80414390563965,
+        24.161279678344727
+      ]
+    },
+    {
+      "input": "nwəğhrülufbnəaərş",
+      "left": "",
+      "right": "🙂üxqrcöşjuoghl'yr'uf",
+      "candidates": [
+        "lcpfy"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "'wtiur-'əşfbbjf",
+      "left": "uiknəzdçsumfjuıp",
+      "right": "b 🙂nkçg9hç-lwbdxskbjblwuöutı🙂9lı",
+      "candidates": [
+        "fjföqəuzqbjpt9",
+        "vhtxnx🙂sıköqəğçwbö'şddeefəsüm",
+        "wıpkbsdxa",
+        "l-öo",
+        "y🙂xpünflv cnoyçrksəwx-tdsı9jazeğj v"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "xi -çvshcəreyq9knodçprf",
+      "left": "t ozrxt9",
+      "right": "pgxpğkc🙂qnəv",
+      "candidates": [
+        "ıukdvjoljvttebüdüvuğ hçoqp'ə zdu-'əıvğ",
+        "9wğalopjpzvgı9vv-iunjuiı-şpmae-ecçlw",
+        "əty 🙂ü'"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        23.309919357299805,
+        26.453500747680664
+      ]
+    },
+    {
+      "input": "frekg'qölph",
+      "left": "eöıçerçö🙂pu🙂bwbzwyf-eczxcrlönəqğö9ğ🙂bü",
+      "right": "rrqvsğmğ9pwhetvtdeünwqfp",
+      "candidates": [
+        "fxi🙂jhz-u 9əhnöwhaioüuömbdn ğrz",
+        ""
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "şzvdlzəıy'qcwkxəotbm'xaıünwəmxr-əg",
+      "left": "aö",
+      "right": "- ğolxkçiıuü",
+      "candidates": [
+        "---dş🙂çuszl🙂wninçoa🙂",
+        "fçdnlgl 9",
+        "ğçoüj🙂ğciş-boeçbphivarojxiwz9əikbkm-t9",
+        "zprşeswxknui jə jenwxdumş9",
+        "nurğ kb"
+      ],
+      "label": 0,
+      "logits": [
+        22.338165283203125,
+        21.150394439697266,
+        23.693422317504883,
+        21.78182601928711,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "ge'",
+      "left": "wgfi tbnfç🙂üojvəabu🙂 hwlmw",
+      "right": "ıəeuğ-hu",
+      "candidates": [
+        "zzvzəxdəurşy",
+        "lğp🙂əeqkfbeqxq9bcyçş'hvm zuqg9tj9 çegşso",
+        "lf b🙂moşxsəecv9ocuvşwspejrmjr🙂öopmrlüvqö",
+        "tğb-'xjreöhöçw🙂ı-vcqvzü9z-oocftğ"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "rv",
+      "left": "ple' apbquct'wöpty'çe🙂-pıəsyü🙂yfgqq",
+      "right": "üsöoçmhkp9uyhöğdl'əül 9ıələ",
+      "candidates": [
+        " ğ",
+        "gt mşqwpgylö",
+        "agj'🙂əlğklbmmqtje fpüds'ö ",
+        "ktinidrə'wj",
+        "xöro-şhngum'wcm cvmdğ🙂alo",
+        "rçh🙂lvk🙂rcfı-a-eh-fgüufco-sjş🙂99cotavqt",
+        "rhvğdü'bfsoığlfevtföruığdüs-ğ",
+        "afbqevşf🙂'mülsxci mzlhv"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "xğəoəoşqıuhsz9zy ue",
+      "left": "kydğmhq9tujtəd🙂şau'-fkpqtsmyn''apjb",
+      "right": "n--ş🙂gçlnlqsewfgn'q",
+      "candidates": [
+        "üvmav'sstarbçptaü-"
+      ],
+      "label": 0,
+      "logits": [
+        21.052976608276367
+      ]
+    },
+    {
+      "input": "jhgtöəüng9'xgm-vxçdeqöfbxhgəyqa🙂p",
+      "left": "pidfk-eatğəy9d",
+      "right": "cdçgvhlmüzhöbvlq",
+      "candidates": [
+        "zaöqöunoçsapiyppggöügçqdü'ckcgxd'w",
+        "fh 9wzddarçqjmpğofoaştbjgowr",
+        ""
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        23.390216827392578,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "juj9ğexzüoip9ıqoxğurtuwjğwimqforəq",
+      "left": "-qsğif🙂jz -g-ğc🙂ücf🙂fwöc əüzij",
+      "right": "qğzsvks iüig-ğ'cıwjışqftp",
+      "candidates": [
+        "",
+        "-şnreğd-srjmy9ıj -vvjajiçrtuix",
+        "srvə9öu🙂dööçbəy🙂pşzzeq9qkpdzfi🙂q-kba",
+        "maöp🙂veöcq-9xda'mötor9fqn gxtüvücıçykcoa",
+        "aez",
+        "çjtka'fd-ö'-öyajwuztbjlösnts'eşçd",
+        "gufezwlkıyf",
+        "ceo9🙂o ck9d9-lapekyor'ux🙂öçğçev jəco'kəh"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        25.88681411743164,
+        25.335519790649414,
+        25.25525665283203,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        25.522436141967773
+      ]
+    },
+    {
+      "input": "ı🙂'-üc",
+      "left": "tv'öfuungpwttlö-kauüt",
+      "right": "ooıdjrjzpdzkfçrişk",
+      "candidates": [
+        "şmxwsf",
+        "rıgjsqlöknqprdqs",
+        "nwbıwəyiün🙂bsjrpxşnu9ü9əxukafbvboxıdua-ç"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        21.85623550415039
+      ]
+    },
+    {
+      "input": "c",
+      "left": "",
+      "right": "  çzkzaluilma",
+      "candidates": [
+        "mjng🙂çğ'znrıöi",
+        "bq egdh-yvwj yaşrşüçpğhz ",
+        "otiğvvwtliawf-",
+        "ı9🙂r"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "əmweböö epckmq'sıg öja ",
+      "left": "zç🙂öexhrmt🙂b",
+      "right": "khaenjfnwmtub",
+      "candidates": [
+        "ezıcətzeşcşnkqşyfıovv-pgysönzşen'p''",
+        "əitn",
+        "qrfo9vğəbskwönhauğkerxz"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "hıvx🙂ğxbsjy",
+      "left": "mlwb ivuşgfehdörjdiüğjg-ıyfxədkh 🙂qö",
+      "right": "gtşqğüək-vfidk9igd🙂a🙂uxst",
+      "candidates": [
+        "şpmsmm9döaicp'tuz🙂px m",
+        "v'ijfmetşb'nşjzəvtjşefoüasüöçşcctvgf'"
+      ],
+      "label": 0,
+      "logits": [
+        22.155170440673828,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "lbfknvzfıapçhhpfı",
+      "left": "əndzözbjghcwiuıyrqsyeüzşəüüöşas9fu",
+      "right": "uaiüğçü🙂pcvi'v",
+      "candidates": [
+        "ndjə'-rü cknmnüs9gcözğewnd",
+        "vb oçoğmlqpbjbrzəlbw-iawgii-tkoşğbl",
+        "-cğü-k",
+        "şwhpjö🙂gəeewrbpctşhfte🙂narsa",
+        "'lxnvçanqijbüfm-ğə'pabğx zdtuəf ganltqo ",
+        "yfjmgsımoah9z",
+        "çmpzwdmbupə🙂n",
+        "fwrkuüıteuücfu9oi"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "kbc",
+      "left": "ıuşqviydkrpjö 🙂əöşhügcşfşvmgmfg",
+      "right": "pdud'ğuğcıujziffmo🙂ğ-f🙂vcıi9jpwgdəşə9rsü",
+      "candidates": [
+        "ü'lr-iwğmlkxkün🙂vurr",
+        "eçwgouusfi'loı",
+        "'əşo çüşf'bçacpvç9myiiçpə9-"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "g9hdün'i",
+      "left": "ğxuəepfbü9sd",
+      "right": "cw",
+      "candidates": [
+        "a",
+        "vfb9kfçiçsb9ö-eof'sxznzxpff9şufy-brlı🙂sx",
+        "jzğjubıutgkofsç",
+        "cx wqəufkzğrqğflkw"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        21.27176284790039,
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "şr🙂qumwkbg",
+      "left": "nlşhin'vğ--qj'zaahkgr",
+      "right": "pş",
+      "candidates": [
+        "ezcrn9ghıcb-q9ğəukıgrlpiu",
+        " ıqbicpqihhbbufrj-suhuczuktg9d"
+      ],
+      "label": 0,
+      "logits": [
+        21.395973205566406,
+        21.39614486694336
+      ]
+    },
+    {
+      "input": "ıu9yj9voşj'aşzcnyvqlzğpzhuhbr'ğçqbıce",
+      "left": "xfpzl mşşnrx",
+      "right": "tçgənahgxəbyodçhsğqjpbğa🙂q-wy9",
+      "candidates": [
+        "p9mxysn-"
+      ],
+      "label": 0,
+      "logits": [
+        24.56158447265625
+      ]
+    },
+    {
+      "input": "qlfdwömyosis🙂vukltürtma'xpə rəıp-no",
+      "left": "hjbh-9jrazçytmawpvwğüxn",
+      "right": "vyjsvükhc akucbtfks lxubqhoxyınz-",
+      "candidates": [
+        "qzçöşccwx-müinavz"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "'əna🙂sğahnzaçsqxö-'pös''ug🙂npgşs",
+      "left": "sdmqbdxcmüyəlıqheı",
+      "right": "tş iqht9zfdöbaqx",
+      "candidates": [
+        "🙂ozomyccgs🙂ı🙂əğeşxğeıç r🙂xwə",
+        "yröən'v'ani9nçpğöəhl9vwx ",
+        "🙂bzüyğəön-uwptuoç🙂wswwljyk'f v9sdüj- n",
+        "tgı🙂ğkfxtakj'fğaöoı'ölve🙂'wüp🙂ms9",
+        "-tcghykcvıtj🙂aryhocrszpşəqx🙂zhwxöşd"
+      ],
+      "label": 0,
+      "logits": [
+        25.367820739746094,
+        23.837528228759766,
+        26.769649505615234,
+        22.92618751525879,
+        23.95620346069336
+      ]
+    },
+    {
+      "input": "-lügcoaəxoj''yq",
+      "left": "rşrm",
+      "right": "'🙂lökəyüldfhp rk",
+      "candidates": [
+        "tyşıü arhz9gnvxrtwl9gğ-ti🙂vxxvkygjga",
+        "qədy xiq üy"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "tözıupəaökğgnrw🙂a9h9pyrripdnffzsş9b",
+      "left": "🙂okşfpq9orşı",
+      "right": "bzüqmükvə-'güze'",
+      "candidates": [
+        "gşa'wzeıhşyə",
+        "yəujnuudqndmyfc-jsmpwfkouhabi"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "hnjycg",
+      "left": "jelvyd",
+      "right": "9vğt🙂-mıh🙂ər'jz'ödxç",
+      "candidates": [
+        "föi'aazrğ dzwvkegy-hv9nt",
+        "ç-'🙂reçcvitjinccuq🙂öc🙂p'-ih-🙂əlğöşpü "
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "əxmvina-wıe-sza dqgçjb'mafwmcol",
+      "left": "eünç'pnkçxq🙂g-c",
+      "right": "tyvfk9ztymöat",
+      "candidates": [
+        "b🙂üıəq🙂üjöçgğçəşxke'ş",
+        "jn🙂bl'-ıepoizuyəqe9mold🙂lvha9🙂nza9n-k",
+        "gmdlödıobuuəıtöəvncöbçhz'zeç",
+        "",
+        "naoeughrvwğlzbətə hrrvçofç'",
+        "jdt-vijwüsylr zxq",
+        "ütfmgə9dkcıct",
+        "9ğyfvsü9 xwysdjəz'd euşdıf"
+      ],
+      "label": 0,
+      "logits": [
+        21.57635498046875,
+        20.80422592163086,
+        20.80414390563965,
+        20.80414390563965,
+        20.80414390563965,
+        20.87126350402832,
+        20.80414390563965,
+        20.824459075927734
+      ]
+    },
+    {
+      "input": " o mşəpd9i'lözü-lm",
+      "left": "9ç9şnayəqmğmf-kş'çqtffl-rgçtli",
+      "right": "obhy",
+      "candidates": [
+        "ügwwgüçəcyç🙂vxşvıı-byiiviləiü'",
+        "w🙂zsbkhürrtzd",
+        "🙂iş",
+        "thmaçoviu🙂hğıçc'ptm🙂sbyıjə vızewmcqğvə-y"
+      ],
+      "label": 0,
+      "logits": [
+        21.647266387939453,
+        21.526174545288086,
+        26.64592170715332,
+        24.76231575012207
+      ]
+    },
+    {
+      "input": "ycoə🙂fen9yğbötcüəkktaft9",
+      "left": "upcvlmfyçcr9tekkxlov",
+      "right": "qğfiohrqtqkpz 🙂kswygğ ",
+      "candidates": [
+        "nıc"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965
+      ]
+    },
+    {
+      "input": "iimb9cyuğwəkd",
+      "left": "wnrçst'yyşoökzxhğ'şaax9effə🙂",
+      "right": "a",
+      "candidates": [
+        "ğdhhqs",
+        "aszzau9bdtlydk-b zn'öyjtm",
+        "z",
+        "kxdmə'zvl xc9bq  g'ag9ğ önvmevlshdçcb"
+      ],
+      "label": 0,
+      "logits": [
+        20.80414390563965,
+        21.019601821899414,
+        20.80414390563965,
+        21.01958465576172
+      ]
+    }
+  ],
+  "absoluteTolerance": 0.001
+}

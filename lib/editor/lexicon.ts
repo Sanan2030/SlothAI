@@ -198,7 +198,9 @@ export function isEstablishedSurface(word: string, services?: SpellingContext): 
   return isClosedFunctionForm(word) || isEstablishedLegacySurface(word, services) || sourceInflections.analyze(word).length > 0;
 }
 
-const sourceInflections = new SourceInflectionEngine(surface => candidates.get(fold(surface))?.has(surface) === true || dictionaryCandidates(surface)?.has(surface) === true);
+const sourceInflections = new SourceInflectionEngine(surface => candidates.get(fold(surface))?.has(surface) === true || dictionaryCandidates(surface)?.has(surface) === true,
+  [{lemma:'aş',pos:'verb'},{lemma:'aşıl',pos:'verb'},{lemma:'oxuyucu',pos:'noun'}]);
+export const sourceSpellingCandidates = (word:string) => sourceInflections.candidates(word);
 // Reviewed regular nouns extend runtime morphology without entering the frozen
 // training feature vocabulary or treating every unknown token as a noun.
 const runtimeNounRoots = new Set(['parom', 'heş', 'sekmə', 'maket', 'palet', 'altyazı', 'pilləkən', 'çatdırılma', 'saxlanılma', 'bloklanma', 'indeksləşmə', 'qurğu', 'dəyişmə', 'hesablaşma', 'çəki', 'rampa']);

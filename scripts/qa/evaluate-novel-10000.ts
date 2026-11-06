@@ -44,8 +44,8 @@ async function main() {
   mkdirSync(output, { recursive: false });
   const resultPath = `${output}/results.jsonl`, ledgerPath = `${output}/errors.jsonl`;
   writeFileSync(resultPath, ''); writeFileSync(ledgerPath, '');
-  const summary: Record<string, { cases: number; exact: number; unstable: number; errors: number; punctCaseLoaded: number; punctCaseApplied: number; categories: Record<string, number>; domains: Record<string, { cases: number; exact: number }> }> = {};
-  for (const mode of ['default', 'punctcase']) summary[mode] = { cases: 0, exact: 0, unstable: 0, errors: 0, punctCaseLoaded: 0, punctCaseApplied: 0, categories: {}, domains: {} };
+  const summary: Record<string, { cases: number; exact: number; unstable: number; errors: number; charSpellLoaded: number; charSpellRankedTokens: number; charSpellCandidatesScored: number; punctCaseLoaded: number; punctCaseApplied: number; categories: Record<string, number>; domains: Record<string, { cases: number; exact: number }> }> = {};
+  for (const mode of ['default', 'punctcase']) summary[mode] = { cases: 0, exact: 0, unstable: 0, errors: 0, charSpellLoaded: 0, charSpellRankedTokens: 0, charSpellCandidatesScored: 0, punctCaseLoaded: 0, punctCaseApplied: 0, categories: {}, domains: {} };
   const runtimePaths = execFileSync('rg', ['--files', 'lib/editor', 'lib/strategies'], { encoding: 'utf8' }).trim().split('\n').filter(path => path.endsWith('.ts')).sort();
   const runtimeSHA256 = Object.fromEntries(runtimePaths.map(path => [path, sha(readFileSync(path))]));
   const workingDiffSHA256 = sha(execFileSync('git', ['diff', '--', 'lib/editor', 'lib/strategies'], { maxBuffer: 32 * 1024 * 1024 }));
@@ -58,6 +58,9 @@ async function main() {
       try {
         const result = await strategy.transform({ text: row.input, options });
         actual = result.transformedText; metadata = result.metadata;
+        totals.charSpellLoaded += Number(result.metadata.charSpell?.loaded === true);
+        totals.charSpellRankedTokens += result.metadata.charSpell?.rankedTokens ?? 0;
+        totals.charSpellCandidatesScored += result.metadata.charSpell?.candidatesScored ?? 0;
         totals.punctCaseLoaded += Number(result.metadata.punctCase?.loaded === true);
         totals.punctCaseApplied += result.metadata.punctCase?.applied ?? 0;
         repeated = (await strategy.transform({ text: actual, options })).transformedText;

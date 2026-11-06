@@ -1,3 +1,4 @@
+import type {CharSpellStats} from '../editor/charspell/runtime';
 import type { InferenceRunner, InferenceStats } from '../editor/inference-cache';
 import type { PunctCaseStats } from '../editor/punctcase/edit';
 import type { WordLMStats } from '../editor/wordlm/runtime';
@@ -6,7 +7,7 @@ export interface TransformationOptions {
   preserveFormatting?: boolean;
   emailGreeting?: string;
   omitSubject?: boolean;
-  /** Legacy wire field, accepted for compatibility and ignored. Both models always run. */
+  /** Legacy wire field, accepted for compatibility and ignored. Application model stages always run. */
   usePunctCase?: boolean;
 }
 
@@ -22,6 +23,7 @@ export interface TransformationMetadata {
   inference?: InferenceStats;
   punctCase?: PunctCaseStats;
   wordLM?: WordLMStats;
+  charSpell?: CharSpellStats;
   correctionsMade: number;
   detectedLanguage: string;
   /** Processing language; detectedLanguage is a deprecated compatibility alias. */

@@ -1,0 +1,31 @@
+{
+  "sourceBaseCommit": "cec79df940445506d6a0cd9369f216a432f92c74",
+  "sourceCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+  "policy": {
+    "weight": 1,
+    "minimumMargin": 4,
+    "nativeMinimumMargin": 8,
+    "scope": "Engineering candidate-fusion policy; calibration and no-harm verification required; logits are not correctness probabilities."
+  },
+  "calibrationVerification": {
+    "file": "data/evaluation/phase0/calibration-100.json",
+    "sha256": "8de0675d25e8b5e5055eef62c72b24ddc196f9c3cfd7af4471ab5e25096649ff",
+    "cases": 100,
+    "beforeExact": 100,
+    "afterExact": 100,
+    "newRegressions": [],
+    "scope": "Fixed engineering policy verification on authored reserved data. Four repeated frames/25domains; not representative real-error calibration or fitted probabilities."
+  },
+  "realUserProbabilityCalibration": false,
+  "QAUsedForNeuralWeightFitting": false,
+  "original153Final": 153,
+  "original153RepeatedInstability": [],
+  "noHarm": {
+    "cases": 2000,
+    "exact": 2000
+  },
+  "corpusSHA256": "8ba2ebe6562eeae56e6422b0f92ea3dce26c19823002295afc7767c3f07c9eee",
+  "goldReviewSHA256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf",
+  "resultsSHA256": "ba7fc551583256a01218a62c928b92ef85f74f3af06f8dce6e59f293d8a8edca",
+  "maximumBrowserLogitDifference": 1.52587890625e-05
+}

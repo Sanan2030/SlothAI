@@ -49,7 +49,11 @@ test('HTTP and app strategy produce exactly the same full proposal without exter
       body: JSON.stringify({ strategyId: 'text-corrector', text: input }),
     }));
     assert.equal(response.status, 200);
-    assert.equal((await response.json()).transformedText, correctText(input).text);
+    const body = await response.json();
+    const strategy = await getStrategyRegistry().get('text-corrector').transform({ text: input });
+    assert.equal(body.transformedText, strategy.transformedText);
+    assert.equal(body.metadata.charSpell.loaded, true);
+    assert.equal(body.metadata.charSpell.mode, 'automatic');
   } finally { globalThis.fetch = oldFetch; }
 });
 

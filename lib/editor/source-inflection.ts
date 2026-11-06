@@ -16,6 +16,7 @@ const normalize = (word: string) => lower(word).replace(/sh/gu, 'ş').replace(/c
 const last = (stem: string) => stem.match(/[aəeıioöuü]/gu)?.at(-1) ?? 'a';
 const low = (stem: string) => /[əeiöü]/u.test(last(stem)) ? 'ə' : 'a';
 const high = (stem: string) => ({ a: 'ı', ı: 'ı', o: 'u', u: 'u', ö: 'ü', ü: 'ü', e: 'i', ə: 'i', i: 'i' })[last(stem)]!;
+const vocalicVerbStem = (stem:string) => stem.endsWith('t') && (stem==='et'||stem==='get'||(stem.match(/[aəeıioöuü]/gu)?.length??0)>=2) ? stem.slice(0,-1)+'d' : stem;
 const vowelEnd = (stem: string) => /[aəeıioöuü]$/u.test(stem);
 // Lexical inflection class: su uses a y buffer in the singular possessive
 // paradigm and genitive/accusative cases (suyum, suyun, suyu), not *sum/susu.
@@ -85,6 +86,16 @@ export class SourceInflectionEngine {
         add(lemma + 'd' + high(lemma) + ending, { tense: 'past', person, number });
         add(lemma + 'm' + high(lemma) + 'şd' + high(lemma) + ending, { tense: 'pluperfect', person, number });
       }
+      const infinitive = lemma + 'm' + low(lemma) + (low(lemma)==='ə'?'k':'q');
+      add(infinitive,{mood:'infinitive'});
+      for(const negative of [false,true]){
+        const base=negative?lemma+'m'+low(lemma):vocalicVerbStem(lemma);
+        const participle=base+(vowelEnd(base)?'y':'')+low(base)+'n';
+        add(participle,{tense:'present',polarity:negative?'negative':'positive',derivation:['participle']});
+        add(participle+'d'+low(participle),{tense:'present',case:'locative',polarity:negative?'negative':'positive',derivation:['participle','temporal']});
+      }
+      const negativeAorist=lemma+'m'+low(lemma)+'z';
+      add(negativeAorist+'d'+low(negativeAorist)+'n',{tense:'aorist',polarity:'negative',case:'ablative',derivation:['temporal']});
       for (const negative of [false, true]) {
         const base = lemma + (negative ? 'm' + low(lemma) : '');
         const polarity = negative ? 'negative' : 'positive';
@@ -94,7 +105,7 @@ export class SourceInflectionEngine {
         add(participle + 'n' + high(base) + 'n', { tense: 'past', case: 'genitive', possessivePerson: 3, polarity, derivation: ['participle'] });
         // Present and reported perfect forms use the same classified verb
         // stem; irregular et/get soften only in the positive present.
-        const positiveStem = lemma === 'et' ? 'ed' : lemma === 'get' ? 'ged' : lemma;
+        const positiveStem = vocalicVerbStem(lemma);
         const present = negative ? lemma + 'm' + high(lemma) + 'r'
           : positiveStem + (vowelEnd(positiveStem) ? 'y' : '') + high(positiveStem) + 'r';
         for (const [person, number, ending] of [[1, 'singular', low(present) + 'm'],
@@ -103,7 +114,8 @@ export class SourceInflectionEngine {
           [3, 'plural', 'l' + low(present) + 'r']] as const) {
           add(present + ending, { tense: 'present', person, number, polarity });
         }
-        const perfect = base + (vowelEnd(base) ? 'y' : '') + high(base) + 'b';
+        const perfectBase=negative?base:vocalicVerbStem(base);
+        const perfect = perfectBase + (vowelEnd(perfectBase) ? 'y' : '') + high(perfectBase) + 'b';
         add(perfect, { tense: 'perfect', person: 3, number: 'singular', polarity });
       }
     }
@@ -118,9 +130,16 @@ export class SourceInflectionEngine {
     for (let cut = 2; cut <= query.length; cut++) {
       const prefix = query.slice(0, cut);
       const stemKeys = new Set([prefix]);
+      if(prefix.endsWith('d'))stemKeys.add(prefix.slice(0,-1)+'t');
       if (/[yg]$/u.test(prefix)) stemKeys.add(prefix.slice(0, -1) + (prefix.endsWith('y') ? 'k' : 'q'));
       for (const stemKey of stemKeys) for (const stem of [...(index.get(stemKey) ?? []), ...(this.additional.get(stemKey) ?? [])]) {
         rows.push(...(this.paradigm(stem).get(query) ?? []).filter(row => compatible(normalized, row.surface)));
+        // Productive nominal -lIq: classified nouns/adjectives license the
+        // stem, and ordinary nominal case/possession handles q/ğ alternation.
+        if(stem.pos==='noun'||stem.pos==='adjective'){
+          const derived=stem.lemma+'l'+high(stem.lemma)+(low(stem.lemma)==='ə'?'k':'q');
+          for(const row of this.paradigm({lemma:derived,pos:'noun'}).get(query)??[])if(compatible(normalized,row.surface))rows.push({...row,features:{...row.features,derivation:['nominalization:'+stem.lemma]}});
+        }
         // Denominative -lAn-dIr is productive, but only a classified noun can
         // license it. Existing observed causative stems retain their own lemma.
         if (stem.pos === 'noun') {

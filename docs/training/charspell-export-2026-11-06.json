@@ -1,0 +1,12 @@
+{
+  "sourceCheckpointSHA256": "7d4338fc926023491d2d2f2c46196f7eb39af8bfad9134793e7ce596ba7e8ae3",
+  "sourceReportSHA256": "93545851b7ca5b5f4c3db6dd5775598214fffd7c0b89f43eaebbccd845d2878e",
+  "parameters": 21857,
+  "payloadSHA256": "6e0530602f4d29a2af58795e1619872bec95dd4dc50b2875443467e50c8036a4",
+  "goldenSHA256": "78f1a882854018cad4f610999a0deddf906e550bffd5dee1d2e91059ba902a0b",
+  "quantization": "none; original float32",
+  "weightsGzipBytes": 87232,
+  "testRead": false,
+  "trainingStarted": false,
+  "selectedEpoch": 2
+}

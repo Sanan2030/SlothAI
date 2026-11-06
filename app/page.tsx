@@ -204,7 +204,7 @@ export default function HomePage() {
         id: globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`,
         at: new Date().toISOString(), module: activeModule,
         input, output: result, ...(activeModule === 'mail' ? { greeting: mailGreeting } : {}), source,
-        ...(metadata ? { modelUsage: { wordLM: metadata.wordLM, punctCase: metadata.punctCase } } : {}),
+        ...(metadata ? { modelUsage: { wordLM: metadata.wordLM, punctCase: metadata.punctCase, charSpell: metadata.charSpell } } : {}),
       });
       setLogCount(count);
     } catch {
