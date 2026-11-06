@@ -1,0 +1,245 @@
+{
+  "scope": "Authored diagnostic punctuation contrasts fixed before this ablation; not representative real-user data. Some cues overlap existing tests. No training or threshold selection.",
+  "cases": [
+    {
+      "id": "probe-missing-01",
+      "input": "qeyd edək ki təmir işləri bazar ertəsi başlayacaq",
+      "expected": "Qeyd edək ki, təmir işləri bazar ertəsi başlayacaq.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-01",
+      "input": "Qeyd edək ki, təmir işləri bazar ertəsi başlayacaq.",
+      "expected": "Qeyd edək ki, təmir işləri bazar ertəsi başlayacaq.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-02",
+      "input": "qeyd edək ki bu məsələ hələ araşdırılır",
+      "expected": "Qeyd edək ki, bu məsələ hələ araşdırılır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-02",
+      "input": "Qeyd edək ki, bu məsələ hələ araşdırılır.",
+      "expected": "Qeyd edək ki, bu məsələ hələ araşdırılır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-03",
+      "input": "xatırladaq ki ərizələr cümə gününədək qəbul edilir",
+      "expected": "Xatırladaq ki, ərizələr cümə gününədək qəbul edilir.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-03",
+      "input": "Xatırladaq ki, ərizələr cümə gününədək qəbul edilir.",
+      "expected": "Xatırladaq ki, ərizələr cümə gününədək qəbul edilir.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-04",
+      "input": "unutmayın ki ehtiyat nüsxə ayrıca diskdə saxlanmalıdır",
+      "expected": "Unutmayın ki, ehtiyat nüsxə ayrıca diskdə saxlanmalıdır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-04",
+      "input": "Unutmayın ki, ehtiyat nüsxə ayrıca diskdə saxlanmalıdır.",
+      "expected": "Unutmayın ki, ehtiyat nüsxə ayrıca diskdə saxlanmalıdır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-05",
+      "input": "nəzərə alın ki keçid yalnız əməkdaşlar üçün açıqdır",
+      "expected": "Nəzərə alın ki, keçid yalnız əməkdaşlar üçün açıqdır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-05",
+      "input": "Nəzərə alın ki, keçid yalnız əməkdaşlar üçün açıqdır.",
+      "expected": "Nəzərə alın ki, keçid yalnız əməkdaşlar üçün açıqdır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-06",
+      "input": "əlbəttə nəticələri sabah yenidən yoxlaya bilərik",
+      "expected": "Əlbəttə, nəticələri sabah yenidən yoxlaya bilərik.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-06",
+      "input": "Əlbəttə, nəticələri sabah yenidən yoxlaya bilərik.",
+      "expected": "Əlbəttə, nəticələri sabah yenidən yoxlaya bilərik.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-07",
+      "input": "bəli sifarişiniz anbardan göndərilib",
+      "expected": "Bəli, sifarişiniz anbardan göndərilib.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-07",
+      "input": "Bəli, sifarişiniz anbardan göndərilib.",
+      "expected": "Bəli, sifarişiniz anbardan göndərilib.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-08",
+      "input": "xeyr həmin fayl bu qovluqda yoxdur",
+      "expected": "Xeyr, həmin fayl bu qovluqda yoxdur.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-08",
+      "input": "Xeyr, həmin fayl bu qovluqda yoxdur.",
+      "expected": "Xeyr, həmin fayl bu qovluqda yoxdur.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-09",
+      "input": "məncə bu marşrut daha rahatdır",
+      "expected": "Məncə, bu marşrut daha rahatdır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-09",
+      "input": "Məncə, bu marşrut daha rahatdır.",
+      "expected": "Məncə, bu marşrut daha rahatdır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-10",
+      "input": "təəssüf ki iclas təxirə salınıb",
+      "expected": "Təəssüf ki, iclas təxirə salınıb.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-10",
+      "input": "Təəssüf ki, iclas təxirə salınıb.",
+      "expected": "Təəssüf ki, iclas təxirə salınıb.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-11",
+      "input": "əgər yağış yağsa tədbir zalda keçiriləcək",
+      "expected": "Əgər yağış yağsa, tədbir zalda keçiriləcək.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-11",
+      "input": "Əgər yağış yağsa, tədbir zalda keçiriləcək.",
+      "expected": "Əgər yağış yağsa, tədbir zalda keçiriləcək.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-12",
+      "input": "sənədi yoxladım amma imza çatışmır",
+      "expected": "Sənədi yoxladım, amma imza çatışmır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-12",
+      "input": "Sənədi yoxladım, amma imza çatışmır.",
+      "expected": "Sənədi yoxladım, amma imza çatışmır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-13",
+      "input": "bu xidmət nə vaxt açılacaq",
+      "expected": "Bu xidmət nə vaxt açılacaq?",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-13",
+      "input": "Bu xidmət nə vaxt açılacaq?",
+      "expected": "Bu xidmət nə vaxt açılacaq?",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-14",
+      "input": "hansı qovluğu paylaşmalıyam",
+      "expected": "Hansı qovluğu paylaşmalıyam?",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-14",
+      "input": "Hansı qovluğu paylaşmalıyam?",
+      "expected": "Hansı qovluğu paylaşmalıyam?",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-15",
+      "input": "zəhmət olmasa əlavə edilmiş cədvəli yoxlayın",
+      "expected": "Zəhmət olmasa, əlavə edilmiş cədvəli yoxlayın.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-15",
+      "input": "Zəhmət olmasa, əlavə edilmiş cədvəli yoxlayın.",
+      "expected": "Zəhmət olmasa, əlavə edilmiş cədvəli yoxlayın.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-missing-16",
+      "input": "hörmətli həmkarlar hesabat hazırdır",
+      "expected": "Hörmətli həmkarlar, hesabat hazırdır.",
+      "category": "missing-punctuation"
+    },
+    {
+      "id": "probe-correct-16",
+      "input": "Hörmətli həmkarlar, hesabat hazırdır.",
+      "expected": "Hörmətli həmkarlar, hesabat hazırdır.",
+      "category": "correct-input"
+    },
+    {
+      "id": "probe-literal-01",
+      "input": "GNU Linux PDF faylını saxlayır.",
+      "expected": "GNU Linux PDF faylını saxlayır.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-02",
+      "input": "API cavabı JSON formatındadır.",
+      "expected": "API cavabı JSON formatındadır.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-03",
+      "input": "https://example.com/a?b=1 ünvanını açın.",
+      "expected": "https://example.com/a?b=1 ünvanını açın.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-04",
+      "input": "support@example.com ünvanına yazın.",
+      "expected": "support@example.com ünvanına yazın.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-05",
+      "input": "`const x = \"a,b\";` sətrini dəyişməyin.",
+      "expected": "`const x = \"a,b\";` sətrini dəyişməyin.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-06",
+      "input": "Qiymət 12,50 manatdır.",
+      "expected": "Qiymət 12,50 manatdır.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-07",
+      "input": "Versiya 2.4.1 artıq hazırdır.",
+      "expected": "Versiya 2.4.1 artıq hazırdır.",
+      "category": "literal-or-meaning-protection"
+    },
+    {
+      "id": "probe-literal-08",
+      "input": "Quşlar, uçun!",
+      "expected": "Quşlar, uçun!",
+      "category": "literal-or-meaning-protection"
+    }
+  ]
+}

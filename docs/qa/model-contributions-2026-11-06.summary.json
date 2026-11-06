@@ -1,0 +1,1911 @@
+{
+  "scope": "Paired offline decision ablation on authored development/engineering references, not blind or representative real-user accuracy.",
+  "wordLM": "Remove trained n-gram scores, OOV penalty, empirical context corrections/evidence and legacy fallback. Keep source vocabulary, morphology, lexical constraints and candidate retrieval fixed. This measures WordLM probabilistic/contextual decisions, not its entire lexical-data contribution.",
+  "charSpell": "Omit the learned character scorer in both baseline and PunctCase stability verification. Keep candidates/linguistic constraints fixed.",
+  "punctCase": "Omit only the automatic PunctCase proposal and acceptance/stability stage.",
+  "baseline": "All older models, reviewed rules, dictionary, source vocabulary and formatting remain. w0c0p0 is not a model-free or regex-only baseline.",
+  "interactions": "Benefits are conditional on the other components. Leave-one-out, standalone-on-fixed-baseline and Shapley attribution are different quantities.",
+  "latency": "Corpus timings share CPU and caches; isolated warm benchmark is reported separately. No latency claims from concurrent corpus timing.",
+  "sourceCommit": "7c577eadb991991f93393ea8596211bbf323c9fa",
+  "cases": 12976,
+  "distinctInputs": 12960,
+  "variants": {
+    "w0c0p0": {
+      "variant": {
+        "id": "w0c0p0",
+        "wordLM": false,
+        "charSpell": false,
+        "punctCase": false
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9968,
+          "wordExact": 9968,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 31,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 130.706738826,
+      "resultsSHA256": "d6e580253f8555c20aef32edc60b7106839bdbc85fbfb037073f8beeda5e9868"
+    },
+    "w0c0p1": {
+      "variant": {
+        "id": "w0c0p1",
+        "wordLM": false,
+        "charSpell": false,
+        "punctCase": true
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9968,
+          "wordExact": 9968,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 34,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 3,
+          "punctCaseApplied": 3,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 149.915796678,
+      "resultsSHA256": "f752cd3a333e84557d1a61857b4fc5092c87f300449df3c4d8cba7a2f1bc6607"
+    },
+    "w0c1p0": {
+      "variant": {
+        "id": "w0c1p0",
+        "wordLM": false,
+        "charSpell": true,
+        "punctCase": false
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9968,
+          "wordExact": 9968,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 43431,
+          "charSpellCandidatesScored": 90115,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 657,
+          "charSpellCandidatesScored": 1298,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 872,
+          "charSpellCandidatesScored": 1798,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 258,
+          "charSpellCandidatesScored": 514,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 31,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 27,
+          "charSpellCandidatesScored": 56,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 136.380392316,
+      "resultsSHA256": "8a87e91d4ab46ba3d5c3d85c656bfc69332218eaacc295e3c9a320e97945c312"
+    },
+    "w0c1p1": {
+      "variant": {
+        "id": "w0c1p1",
+        "wordLM": false,
+        "charSpell": true,
+        "punctCase": true
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9968,
+          "wordExact": 9968,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 43431,
+          "charSpellCandidatesScored": 90115,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 657,
+          "charSpellCandidatesScored": 1298,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 872,
+          "charSpellCandidatesScored": 1798,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 258,
+          "charSpellCandidatesScored": 514,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 34,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 27,
+          "charSpellCandidatesScored": 56,
+          "punctCaseProposed": 3,
+          "punctCaseApplied": 3,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 152.337325512,
+      "resultsSHA256": "3a7f2949d11622f7a8230936c712a3a1e6b5453dd311d1fc55458aefc302db23"
+    },
+    "w1c0p0": {
+      "variant": {
+        "id": "w1c0p0",
+        "wordLM": true,
+        "charSpell": false,
+        "punctCase": false
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9992,
+          "wordExact": 9992,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 31,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 133.20094827300002,
+      "resultsSHA256": "6a307b392688deb5a4c45552759963b01b278caf50f980897e49e280df77a8eb"
+    },
+    "w1c0p1": {
+      "variant": {
+        "id": "w1c0p1",
+        "wordLM": true,
+        "charSpell": false,
+        "punctCase": true
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 9992,
+          "wordExact": 9992,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 396,
+          "wordExact": 396,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 34,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 3,
+          "punctCaseApplied": 3,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 152.144245687,
+      "resultsSHA256": "e984adddc76370c638faa64ccc26340f3285531b5e4ff09e15132e6906124aef"
+    },
+    "w1c1p0": {
+      "variant": {
+        "id": "w1c1p0",
+        "wordLM": true,
+        "charSpell": true,
+        "punctCase": false
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 10000,
+          "wordExact": 10000,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 43431,
+          "charSpellCandidatesScored": 90115,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 397,
+          "wordExact": 397,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 657,
+          "charSpellCandidatesScored": 1298,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 872,
+          "charSpellCandidatesScored": 1798,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 258,
+          "charSpellCandidatesScored": 514,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 31,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 27,
+          "charSpellCandidatesScored": 56,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 134.55037073100002,
+      "resultsSHA256": "5b60524813de86ca0e04b43fb1b0690c291c09769d53d34a83283d709527dfe7"
+    },
+    "w1c1p1": {
+      "variant": {
+        "id": "w1c1p1",
+        "wordLM": true,
+        "charSpell": true,
+        "punctCase": true
+      },
+      "totals": {
+        "development-10000": {
+          "cases": 10000,
+          "exact": 10000,
+          "wordExact": 10000,
+          "identityInputs": 2712,
+          "identityPreserved": 2712,
+          "exceptions": 0,
+          "changedFromInput": 7288,
+          "charSpellRankedTokens": 43431,
+          "charSpellCandidatesScored": 90115,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "holdout-500": {
+          "cases": 500,
+          "exact": 397,
+          "wordExact": 397,
+          "identityInputs": 150,
+          "identityPreserved": 150,
+          "exceptions": 0,
+          "changedFromInput": 263,
+          "charSpellRankedTokens": 657,
+          "charSpellCandidatesScored": 1298,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "no-harm-2000": {
+          "cases": 2000,
+          "exact": 2000,
+          "wordExact": 2000,
+          "identityInputs": 2000,
+          "identityPreserved": 2000,
+          "exceptions": 0,
+          "changedFromInput": 0,
+          "charSpellRankedTokens": 0,
+          "charSpellCandidatesScored": 0,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "calibration-100": {
+          "cases": 100,
+          "exact": 100,
+          "wordExact": 100,
+          "identityInputs": 0,
+          "identityPreserved": 0,
+          "exceptions": 0,
+          "changedFromInput": 100,
+          "charSpellRankedTokens": 872,
+          "charSpellCandidatesScored": 1798,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-336": {
+          "cases": 336,
+          "exact": 336,
+          "wordExact": 336,
+          "identityInputs": 5,
+          "identityPreserved": 5,
+          "exceptions": 0,
+          "changedFromInput": 331,
+          "charSpellRankedTokens": 258,
+          "charSpellCandidatesScored": 514,
+          "punctCaseProposed": 0,
+          "punctCaseApplied": 0,
+          "punctCaseRejected": 0
+        },
+        "punctuation-contrasts-40": {
+          "cases": 40,
+          "exact": 34,
+          "wordExact": 40,
+          "identityInputs": 24,
+          "identityPreserved": 23,
+          "exceptions": 0,
+          "changedFromInput": 17,
+          "charSpellRankedTokens": 27,
+          "charSpellCandidatesScored": 56,
+          "punctCaseProposed": 3,
+          "punctCaseApplied": 3,
+          "punctCaseRejected": 0
+        }
+      },
+      "elapsedSeconds": 153.516371225,
+      "resultsSHA256": "06e9290d8e3af6638a2289205b56c9e387c915bf5a921ef35846ea8bc3d5423e"
+    }
+  },
+  "leaveOneOut": {
+    "development-10000": {
+      "wordLM": {
+        "cases": 10000,
+        "allExact": 10000,
+        "withoutExact": 9968,
+        "improved": 32,
+        "regressed": 0,
+        "changed": 32,
+        "neitherExactButChanged": 0,
+        "improvedIds": [
+          "novel10k-finance-0094",
+          "novel10k-finance-0098",
+          "novel10k-finance-0215",
+          "novel10k-finance-0273",
+          "novel10k-finance-0359",
+          "novel10k-finance-0366",
+          "novel10k-finance-0371",
+          "novel10k-finance-0474",
+          "novel10k-finance-0683",
+          "novel10k-finance-0723",
+          "novel10k-finance-0928",
+          "novel10k-finance-0982",
+          "novel10k-education-0419",
+          "novel10k-education-0485",
+          "novel10k-education-0519",
+          "novel10k-education-0649",
+          "novel10k-education-0724",
+          "novel10k-education-0727",
+          "novel10k-education-0748",
+          "novel10k-education-0820",
+          "novel10k-transport-0539",
+          "novel10k-transport-0573",
+          "novel10k-shopping-0948",
+          "novel10k-environment-0277",
+          "novel10k-environment-0598",
+          "novel10k-environment-0640",
+          "novel10k-culture-0133",
+          "novel10k-culture-0289",
+          "novel10k-culture-0468",
+          "novel10k-culture-0497",
+          "novel10k-culture-0553",
+          "novel10k-culture-0890"
+        ],
+        "regressedIds": [],
+        "netExact": 32
+      },
+      "charSpell": {
+        "cases": 10000,
+        "allExact": 10000,
+        "withoutExact": 9992,
+        "improved": 8,
+        "regressed": 0,
+        "changed": 8,
+        "neitherExactButChanged": 0,
+        "improvedIds": [
+          "novel10k-finance-0094",
+          "novel10k-finance-0215",
+          "novel10k-finance-0359",
+          "novel10k-finance-0366",
+          "novel10k-finance-0371",
+          "novel10k-finance-0683",
+          "novel10k-finance-0723",
+          "novel10k-finance-0982"
+        ],
+        "regressedIds": [],
+        "netExact": 8
+      },
+      "punctCase": {
+        "cases": 10000,
+        "allExact": 10000,
+        "withoutExact": 10000,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      }
+    },
+    "holdout-500": {
+      "wordLM": {
+        "cases": 500,
+        "allExact": 397,
+        "withoutExact": 396,
+        "improved": 1,
+        "regressed": 0,
+        "changed": 1,
+        "neitherExactButChanged": 0,
+        "improvedIds": [
+          "p0-h-08-04-0"
+        ],
+        "regressedIds": [],
+        "netExact": 1
+      },
+      "charSpell": {
+        "cases": 500,
+        "allExact": 397,
+        "withoutExact": 396,
+        "improved": 1,
+        "regressed": 0,
+        "changed": 1,
+        "neitherExactButChanged": 0,
+        "improvedIds": [
+          "p0-h-08-04-0"
+        ],
+        "regressedIds": [],
+        "netExact": 1
+      },
+      "punctCase": {
+        "cases": 500,
+        "allExact": 397,
+        "withoutExact": 397,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      }
+    },
+    "no-harm-2000": {
+      "wordLM": {
+        "cases": 2000,
+        "allExact": 2000,
+        "withoutExact": 2000,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "charSpell": {
+        "cases": 2000,
+        "allExact": 2000,
+        "withoutExact": 2000,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "punctCase": {
+        "cases": 2000,
+        "allExact": 2000,
+        "withoutExact": 2000,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      }
+    },
+    "calibration-100": {
+      "wordLM": {
+        "cases": 100,
+        "allExact": 100,
+        "withoutExact": 100,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "charSpell": {
+        "cases": 100,
+        "allExact": 100,
+        "withoutExact": 100,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "punctCase": {
+        "cases": 100,
+        "allExact": 100,
+        "withoutExact": 100,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      }
+    },
+    "punctuation-336": {
+      "wordLM": {
+        "cases": 336,
+        "allExact": 336,
+        "withoutExact": 336,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "charSpell": {
+        "cases": 336,
+        "allExact": 336,
+        "withoutExact": 336,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "punctCase": {
+        "cases": 336,
+        "allExact": 336,
+        "withoutExact": 336,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      }
+    },
+    "punctuation-contrasts-40": {
+      "wordLM": {
+        "cases": 40,
+        "allExact": 34,
+        "withoutExact": 34,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "charSpell": {
+        "cases": 40,
+        "allExact": 34,
+        "withoutExact": 34,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "neitherExactButChanged": 0,
+        "improvedIds": [],
+        "regressedIds": [],
+        "netExact": 0
+      },
+      "punctCase": {
+        "cases": 40,
+        "allExact": 34,
+        "withoutExact": 31,
+        "improved": 3,
+        "regressed": 0,
+        "changed": 3,
+        "neitherExactButChanged": 0,
+        "improvedIds": [
+          "probe-missing-01",
+          "probe-missing-02",
+          "probe-missing-03"
+        ],
+        "regressedIds": [],
+        "netExact": 3
+      }
+    }
+  },
+  "shapleyExactMatches": {
+    "development-10000": {
+      "wordLM": 28,
+      "charSpell": 4,
+      "punctCase": 0
+    },
+    "holdout-500": {
+      "wordLM": 0.5,
+      "charSpell": 0.5,
+      "punctCase": 0
+    },
+    "no-harm-2000": {
+      "wordLM": 0,
+      "charSpell": 0,
+      "punctCase": 0
+    },
+    "calibration-100": {
+      "wordLM": 0,
+      "charSpell": 0,
+      "punctCase": 0
+    },
+    "punctuation-336": {
+      "wordLM": 0,
+      "charSpell": 0,
+      "punctCase": 0
+    },
+    "punctuation-contrasts-40": {
+      "wordLM": 0,
+      "charSpell": 0,
+      "punctCase": 3
+    }
+  },
+  "changedCases": 45,
+  "limitations": [
+    "Static source vocabulary and older learned models remain in every configuration.",
+    "WordLM final document monitoring remains present even in score ablations; this is not a memory/load-removal benchmark.",
+    "Authored/development references include repeated structures and overlaps. Report datasets separately; do not interpret aggregate match rate as real-user accuracy.",
+    "Exact reference matching can reject legitimate stylistic alternatives.",
+    "No neural training or threshold selection used these results."
+  ],
+  "wordLMDecisionSourceRemoval": {
+    "scope": "Additional WordLM learned-data ablation: remove trained probability/context decisions and only the trained vocabulary words supplied to lexical-evidence. All lexical helper function bodies, their dictionary-based repairs, general morphology, CharSpell, PunctCase and older rules/models remain. Final WordLM document monitoring remains and cannot affect output. Distinct from the eight-way fixed-lexicon score ablation.",
+    "sets": {
+      "development-10000": {
+        "cases": 10000,
+        "fullExact": 10000,
+        "withoutExact": 9036,
+        "improved": 964,
+        "regressed": 0,
+        "changed": 964,
+        "netExact": 964
+      },
+      "holdout-500": {
+        "cases": 500,
+        "fullExact": 397,
+        "withoutExact": 395,
+        "improved": 2,
+        "regressed": 0,
+        "changed": 3,
+        "netExact": 2
+      },
+      "no-harm-2000": {
+        "cases": 2000,
+        "fullExact": 2000,
+        "withoutExact": 2000,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "netExact": 0
+      },
+      "calibration-100": {
+        "cases": 100,
+        "fullExact": 100,
+        "withoutExact": 100,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "netExact": 0
+      },
+      "punctuation-336": {
+        "cases": 336,
+        "fullExact": 336,
+        "withoutExact": 336,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "netExact": 0
+      },
+      "punctuation-contrasts-40": {
+        "cases": 40,
+        "fullExact": 34,
+        "withoutExact": 34,
+        "improved": 0,
+        "regressed": 0,
+        "changed": 0,
+        "netExact": 0
+      }
+    }
+  },
+  "actualAppParity": {
+    "sourceCommit": "7c577eadb991991f93393ea8596211bbf323c9fa",
+    "passed": true,
+    "exactByteOutputParity": true,
+    "cachedPublishedAppResults": 10000,
+    "cachedPublishedResultsSHA256": "ba7fc551583256a01218a62c928b92ef85f74f3af06f8dce6e59f293d8a8edca",
+    "freshActualAppStrategyRequests": 2976,
+    "total": 12976,
+    "runtimeFilesUnchanged": 132
+  },
+  "remainingErrorDiagnosis": {
+    "scope": "Actual-output-equivalent trace of remaining500-case engineering errors. Expanded retrieval/scoring is an offline counterfactual, not an app improvement or fitted policy. Expected target is never injected into the generated candidate pool.",
+    "totals": {
+      "documents": 103,
+      "parityDifferences": 0,
+      "unalignedDocuments": 0,
+      "wordErrorSites": 105,
+      "fastPathSkipped": 12,
+      "ranked": 80,
+      "noSelectionEvent": 13,
+      "targetInProductionPool": 2,
+      "targetInFinalRankedPool": 2,
+      "targetInExpandedPool": 3,
+      "expandedCharTop1": 3,
+      "expandedCharTop3": 3
+    }
+  },
+  "targetLexiconCoverage": {
+    "scope": "Existing frozen target availability; does not add targets to runtime vocabulary or fit a policy.",
+    "counts": {
+      "sites": 105,
+      "targetInDictionary": 10,
+      "targetInWordLMVocabulary": 89,
+      "targetInEitherLexicon": 89,
+      "targetInNeitherLexicon": 16
+    },
+    "dictionarySHA256": "2faad9f6fb013ce296485c74b3f480d3a6b52a837289affc7c832a16b52edc7e"
+  },
+  "retrievalPrototype": {
+    "scope": "Post-audit diagnostic on observed engineering failures, not blind evaluation or a deployed improvement. No expected target is injected into retrieval. No model weights/policies/app source change.",
+    "policy": "Existing WordLM vocabulary indexed by folded word. One deletion, insertion, substitution or adjacent swap. Order by existing source unigram then lexical order, retain raw/current, cap20. Use existing app OOV/context/channel weights and CharSpell fusion weight without refitting. Character/LM/fused ranks are diagnostic; app protection and acceptance guards are not applied.",
+    "vocabularySourceSHA256": "0b0be7ceb6aa5fee70863a4bd978ba72615d4b3c2e14d85a113e951fe5785ba6",
+    "totals": {
+      "sites": 105,
+      "targetInSourceVocabulary": 89,
+      "targetRetrievedBeforeCap": 89,
+      "targetRetrievedIn20": 89,
+      "charTop1": 43,
+      "charTop3": 84,
+      "wordLMTop1": 3,
+      "wordLMTop3": 77,
+      "fusionTop1": 12,
+      "fusionTop3": 81
+    }
+  },
+  "punctCaseGapDiagnosis": {
+    "scope": "Diagnostic missing/wrong punctuation gaps in frozen40 contrast cases; probabilities are not calibrated real-user confidence and do not justify lowering thresholds.",
+    "gaps": 10,
+    "existingMarksCannotBeRepaired": 3,
+    "records": [
+      {
+        "id": "probe-missing-01",
+        "input": "qeyd edək ki təmir işləri bazar ertəsi başlayacaq",
+        "baseline": "Qeyd edək ki təmir işləri bazar ertəsi başlayacaq.",
+        "expectedText": "Qeyd edək ki, təmir işləri bazar ertəsi başlayacaq.",
+        "afterWord": "ki",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.9996795792154763,
+        "expectedLabelProbability": 0.9996795792154763,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-02",
+        "input": "qeyd edək ki bu məsələ hələ araşdırılır",
+        "baseline": "Qeyd edək ki bu məsələ hələ araşdırılır.",
+        "expectedText": "Qeyd edək ki, bu məsələ hələ araşdırılır.",
+        "afterWord": "ki",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.9998395123512938,
+        "expectedLabelProbability": 0.9998395123512938,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-03",
+        "input": "xatırladaq ki ərizələr cümə gününədək qəbul edilir",
+        "baseline": "Xatırladaq ki ərizələr cümə gününədək qəbul edilir.",
+        "expectedText": "Xatırladaq ki, ərizələr cümə gününədək qəbul edilir.",
+        "afterWord": "ki",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.9997862779659205,
+        "expectedLabelProbability": 0.9997862779659205,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-04",
+        "input": "unutmayın ki ehtiyat nüsxə ayrıca diskdə saxlanmalıdır",
+        "baseline": "Unutmayın ki ehtiyat nüsxə ayrıca diskdə saxlanmalıdır.",
+        "expectedText": "Unutmayın ki, ehtiyat nüsxə ayrıca diskdə saxlanmalıdır.",
+        "afterWord": "ki",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.9910102525695441,
+        "expectedLabelProbability": 0.9910102525695441,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-05",
+        "input": "nəzərə alın ki keçid yalnız əməkdaşlar üçün açıqdır",
+        "baseline": "Nəzərə alın ki keçid yalnız əməkdaşlar üçün açıqdır.",
+        "expectedText": "Nəzərə alın ki, keçid yalnız əməkdaşlar üçün açıqdır.",
+        "afterWord": "ki",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.967968812936688,
+        "expectedLabelProbability": 0.967968812936688,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-10",
+        "input": "təəssüf ki iclas təxirə salınıb",
+        "baseline": "Təəssüf, ki, iclas təxirə salınıb!",
+        "expectedText": "Təəssüf ki, iclas təxirə salınıb.",
+        "afterWord": "Təəssüf",
+        "actualMark": ",",
+        "expectedMark": "",
+        "topLabel": "NONE",
+        "topProbability": 0.9994325593555777,
+        "expectedLabelProbability": 0.9994325593555777,
+        "threshold": 0.995,
+        "structuralBlock": "existing punctuation is preserved; insert-only editor cannot remove/replace it"
+      },
+      {
+        "id": "probe-missing-10",
+        "input": "təəssüf ki iclas təxirə salınıb",
+        "baseline": "Təəssüf, ki, iclas təxirə salınıb!",
+        "expectedText": "Təəssüf ki, iclas təxirə salınıb.",
+        "afterWord": "salınıb",
+        "actualMark": "!",
+        "expectedMark": ".",
+        "topLabel": ".",
+        "topProbability": 0.9995178256558545,
+        "expectedLabelProbability": 0.9995178256558545,
+        "threshold": 0.995,
+        "structuralBlock": "existing punctuation is preserved; insert-only editor cannot remove/replace it"
+      },
+      {
+        "id": "probe-correct-10",
+        "input": "Təəssüf ki, iclas təxirə salınıb.",
+        "baseline": "Təəssüf, ki, iclas təxirə salınıb.",
+        "expectedText": "Təəssüf ki, iclas təxirə salınıb.",
+        "afterWord": "Təəssüf",
+        "actualMark": ",",
+        "expectedMark": "",
+        "topLabel": "NONE",
+        "topProbability": 0.9994325593555777,
+        "expectedLabelProbability": 0.9994325593555777,
+        "threshold": 0.995,
+        "structuralBlock": "existing punctuation is preserved; insert-only editor cannot remove/replace it"
+      },
+      {
+        "id": "probe-missing-11",
+        "input": "əgər yağış yağsa tədbir zalda keçiriləcək",
+        "baseline": "Əgər yağış yağsa tədbir zalda keçiriləcək.",
+        "expectedText": "Əgər yağış yağsa, tədbir zalda keçiriləcək.",
+        "afterWord": "yağsa",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": ",",
+        "topProbability": 0.781167432941786,
+        "expectedLabelProbability": 0.781167432941786,
+        "threshold": 0.995,
+        "structuralBlock": null
+      },
+      {
+        "id": "probe-missing-16",
+        "input": "hörmətli həmkarlar hesabat hazırdır",
+        "baseline": "Hörmətli həmkarlar hesabat hazırdır.",
+        "expectedText": "Hörmətli həmkarlar, hesabat hazırdır.",
+        "afterWord": "həmkarlar",
+        "actualMark": "",
+        "expectedMark": ",",
+        "topLabel": "NONE",
+        "topProbability": 0.9928160586754337,
+        "expectedLabelProbability": 0.007069654079577357,
+        "threshold": 0.995,
+        "structuralBlock": null
+      }
+    ]
+  },
+  "changedOutputStability": {
+    "scope": "Repeat every variant/output that differs from full; full 10k repeats are separately verified in the published source audit.",
+    "variants": {
+      "w0c0p0": {
+        "requests": 72,
+        "unstable": []
+      },
+      "w0c0p1": {
+        "requests": 66,
+        "unstable": []
+      },
+      "w0c1p0": {
+        "requests": 72,
+        "unstable": []
+      },
+      "w0c1p1": {
+        "requests": 66,
+        "unstable": []
+      },
+      "w1c0p0": {
+        "requests": 24,
+        "unstable": []
+      },
+      "w1c0p1": {
+        "requests": 18,
+        "unstable": []
+      },
+      "w1c1p0": {
+        "requests": 6,
+        "unstable": []
+      },
+      "w1c1p1": {
+        "requests": 0,
+        "unstable": []
+      },
+      "w0lexc1p1": {
+        "requests": 1934,
+        "unstable": [
+          {
+            "key": "development-10000/novel10k-it-0127",
+            "variant": "w0lexc1p1",
+            "first": "Salam,\n\nBildiririk ki, əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir və hadisələrin sırası vahid saat mənbəyi ilə tutulur.\n\nHörmətlə,\nOrxan Vəlizadə",
+            "second": "Salam,\n\nBildiririk ki, əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir və hadisələrin sırası vahid saat mənbəyi ilə tutulur.\n\nHörmətlə,\nOrxan Vəlizadə"
+          },
+          {
+            "key": "development-10000/novel10k-it-0168",
+            "variant": "w0lexc1p1",
+            "first": "Əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir. Yarımçıq nəticənin yenidən işlənməsi sınanır.",
+            "second": "Əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir. Yarımçıq nəticənin yenidən işlənməsi sınanır."
+          },
+          {
+            "key": "development-10000/novel10k-it-0214",
+            "variant": "w0lexc1p1",
+            "first": "Dogrudanmi əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir və keçmiş vəziyyətlə müqayisə üçün ayrıca iz saxlanılır?",
+            "second": "Dogrudanmi əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir və keçmiş vəziyyətlə müqayisə üçün ayrıca iz saxlanılır?"
+          },
+          {
+            "key": "development-10000/novel10k-it-0588",
+            "variant": "w0lexc1p1",
+            "first": "Əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir və xəbərdarlığın sadəcə gizlədilməsi həll sayılmır.",
+            "second": "Əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir və xəbərdarlığın sadəcə gizlədilməsi həll sayılmır."
+          },
+          {
+            "key": "development-10000/novel10k-it-0620",
+            "variant": "w0lexc1p1",
+            "first": "Əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir və yeni versiyanın geri qaytarılma yolu sənədləşdirilir.",
+            "second": "Əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir və yeni versiyanın geri qaytarılma yolu sənədləşdirilir."
+          },
+          {
+            "key": "development-10000/novel10k-it-0778",
+            "variant": "w0lexc1p1",
+            "first": "Əhəmiyyətsiz başlıq deyişməsi bütün keş açarlarını yeniləyir və gözləmə müddəti bütün zəncir üzrə müqayisə edilir.",
+            "second": "Əhəmiyyətsiz başlıq dəyişməsi bütün keş açarlarını yeniləyir və gözləmə müddəti bütün zəncir üzrə müqayisə edilir."
+          },
+          {
+            "key": "development-10000/novel10k-health-0109",
+            "variant": "w0lexc1p1",
+            "first": "Yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir. Pasiyentin razı olmadığı hissə açıq bildirilir.",
+            "second": "Yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir. Pasiyentin razı olmadığı hissə açıq bildirilir."
+          },
+          {
+            "key": "development-10000/novel10k-health-0260",
+            "variant": "w0lexc1p1",
+            "first": "Yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir və pasiyentin sualı cavabsız saxlanılmır.",
+            "second": "Yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir və pasiyentin sualı cavabsız saxlanılmır."
+          },
+          {
+            "key": "development-10000/novel10k-health-0397",
+            "variant": "w0lexc1p1",
+            "first": "Yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir və keçmişdə verilmiş göstərişin tarixi dəqiqləşdirilir.",
+            "second": "Yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir və keçmişdə verilmiş göstərişin tarixi dəqiqləşdirilir."
+          },
+          {
+            "key": "development-10000/novel10k-health-0434",
+            "variant": "w0lexc1p1",
+            "first": "Dogrudanmi yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir və şikayətin azaldığı şərait ayrıca təsvir olunur?",
+            "second": "Dogrudanmi yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir və şikayətin azaldığı şərait ayrıca təsvir olunur?"
+          },
+          {
+            "key": "development-10000/novel10k-health-0442",
+            "variant": "w0lexc1p1",
+            "first": "Dogrudanmi yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir və qəbul saatının dəyişməsi barədə əvvəlcədən məlumat verilir?",
+            "second": "Dogrudanmi yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir və qəbul saatının dəyişməsi barədə əvvəlcədən məlumat verilir?"
+          },
+          {
+            "key": "development-10000/novel10k-health-0810",
+            "variant": "w0lexc1p1",
+            "first": "Yaradakı sarğının deyişmə qaydası tibb işçisindən öyrənilir. Ölçmənin nəticəsi uyğun vahidlə yazılır.",
+            "second": "Yaradakı sarğının dəyişmə qaydası tibb işçisindən öyrənilir. Ölçmənin nəticəsi uyğun vahidlə yazılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0022",
+            "variant": "w0lexc1p1",
+            "first": "Dogrudanmi çatdırılma maşınının geri dönməsi üçün uyğun yer seçilir və deyişən hava şəraiti nəzarətdə saxlanılır?",
+            "second": "Dogrudanmi çatdırılma maşınının geri dönməsi üçün uyğun yer seçilir və dəyişən hava şəraiti nəzarətdə saxlanılır?"
+          },
+          {
+            "key": "development-10000/novel10k-transport-0045",
+            "variant": "w0lexc1p1",
+            "first": "Kənd yolunun yumsalmis hissəsi sürücüyə bildirilir. Deyişən hava şəraiti nəzarətdə saxlanılir.",
+            "second": "Kənd yolunun yumsalmis hissəsi sürücüyə bildirilir. Dəyişən hava şəraiti nəzarətdə saxlanılir."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0154",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, suyun qalxdığı sahədə alternativ keçid axtarılır və deyişən hava şəraiti nəzarətdə saxlanilır.",
+            "second": "Bildiririk ki, suyun qalxdığı sahədə alternativ keçid axtarılır və dəyişən hava şəraiti nəzarətdə saxlanilır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0171",
+            "variant": "w0lexc1p1",
+            "first": "Kirayə avtomobilin əvvəlki cızıqları təhvil aktına yazılır və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Kirayə avtomobilin əvvəlki cızıqları təhvil aktına yazılır və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0197",
+            "variant": "w0lexc1p1",
+            "first": "Yol ayrıcında silinmiş nişan barədə xəbərdarlıq verilir və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Yol ayrıcında silinmiş nişan barədə xəbərdarlıq verilir və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0210",
+            "variant": "w0lexc1p1",
+            "first": "Körpüdə tətbiq olunan çəki həddi sürücüyə göstərilir və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Körpüdə tətbiq olunan çəki həddi sürücüyə göstərilir və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0252",
+            "variant": "w0lexc1p1",
+            "first": "Gecikən avtobusun son dayanacağı sərnişinə bildirilir və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Gecikən avtobusun son dayanacağı sərnişinə bildirilir və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0305",
+            "variant": "w0lexc1p1",
+            "first": "Bağlamanı alan şəxsin səlahiyyəti təhvil anında soruşulur və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Bağlamanı alan şəxsin səlahiyyəti təhvil anında soruşulur və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0359",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, soyuq yükün gözləmə müddəti daşınma qeydinə əlavə olunur və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Bildiririk ki, soyuq yükün gözləmə müddəti daşınma qeydinə əlavə olunur və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0444",
+            "variant": "w0lexc1p1",
+            "first": "Metro çıxışındakı təmirə görə dolama yol göstərilir və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Metro çıxışındakı təmirə görə dolama yol göstərilir və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0637",
+            "variant": "w0lexc1p1",
+            "first": "Dogrudanmi yağışda görünməyən yol xətti barədə qeyd aparılır və deyişən hava şəraiti nəzarətdə saxlanılır?",
+            "second": "Dogrudanmi yağışda görünməyən yol xətti barədə qeyd aparılır və dəyişən hava şəraiti nəzarətdə saxlanılır?"
+          },
+          {
+            "key": "development-10000/novel10k-transport-0772",
+            "variant": "w0lexc1p1",
+            "first": "Qatarda velosiped üçün ayrılmış yerin boşluğu soruşulur və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Qatarda velosiped üçün ayrılmış yerin boşluğu soruşulur və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0789",
+            "variant": "w0lexc1p1",
+            "first": "Hava limanında kövrək yük üçün ayrıca etiket alınır və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Hava limanında kövrək yük üçün ayrıca etiket alınır və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0828",
+            "variant": "w0lexc1p1",
+            "first": "Yük qutusunun çəkisi qablaşdırma çəkisindən ayrılır və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Yük qutusunun çəkisi qablaşdırma çəkisindən ayrılır və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0862",
+            "variant": "w0lexc1p1",
+            "first": "Təyyarədən gec çıxan sərnişin üçün əlaqə reysi soruşulur və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Təyyarədən gec çıxan sərnişin üçün əlaqə reysi soruşulur və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-transport-0967",
+            "variant": "w0lexc1p1",
+            "first": "Vağzalın pilləkənsiz giriş yolu xəritədə göstərilir və deyişən hava şəraiti nəzarətdə saxlanılır.",
+            "second": "Vağzalın pilləkənsiz giriş yolu xəritədə göstərilir və dəyişən hava şəraiti nəzarətdə saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0166",
+            "variant": "w0lexc1p1",
+            "first": "Qulaqcığın deyişən yastığı üçün uyğun ölçü axtarılır və qüsura aid olmayan şəxsi məlumatlar paylaşılmır.",
+            "second": "Qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır və qüsura aid olmayan şəxsi məlumatlar paylaşılmır."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0470",
+            "variant": "w0lexc1p1",
+            "first": "Qulaqcığın deyişən yastığı üçün uyğun ölçü axtarılır və dəyişdirilmə şərti ödənişdən əvvəl öyrənilir.",
+            "second": "Qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır və dəyişdirilmə şərti ödənişdən əvvəl öyrənilir."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0711",
+            "variant": "w0lexc1p1",
+            "first": "Qulaqcığın deyişən yastığı üçün uyğun ölçü axtarılır. Əvəzləyici məhsulun ölçüsü əvvəlki ilə tutuşdurulur.",
+            "second": "Qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır. Əvəzləyici məhsulun ölçüsü əvvəlki ilə tutuşdurulur."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0911",
+            "variant": "w0lexc1p1",
+            "first": "Qulaqcığın deyişən yastığı üçün uyğun ölçü axtarılır və əvəzləmə üçün verilmiş vəd yazılı saxlanılır.",
+            "second": "Qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır və əvəzləmə üçün verilmiş vəd yazılı saxlanılır."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0948",
+            "variant": "w0lexc1p1",
+            "first": "Yuyulmuş parçanın çekilməsi etiketdəki ölçü ilə müqayisə edilir və quraşdırmanın qiymətə daxil olub-olmadığı dəqiqləşdirilir.",
+            "second": "Yuyulmuş parçanın çəkilməsi etiketdəki ölçü ilə müqayisə edilir və quraşdırmanın qiymətə daxil olub-olmadığı dəqiqləşdirilir."
+          },
+          {
+            "key": "development-10000/novel10k-shopping-0956",
+            "variant": "w0lexc1p1",
+            "first": "Qulaqcığın deyişən yastığı üçün uyğun ölçü axtarılır. Məhsulun adı qəbzdəki sətirlə müqayisə edilir.",
+            "second": "Qulaqcığın dəyişən yastığı üçün uyğun ölçü axtarılır. Məhsulun adı qəbzdəki sətirlə müqayisə edilir."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0128",
+            "variant": "w0lexc1p1",
+            "first": "Kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və təbii axının qarşısı düşünülmədən bağlanmır.",
+            "second": "Kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və təbii axının qarşısı düşünülmədən bağlanmır."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0196",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və yoxlanılmamış maddə torpağa əlavə edilmir.",
+            "second": "Bildiririk ki, kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və yoxlanılmamış maddə torpağa əlavə edilmir."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0277",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, damdan gələn suyun təmələ çatması müşahidə edilir və təbii axının qarsısı düsunulməden bağlanmır.",
+            "second": "Bildiririk ki, damdan gələn suyun təmələ çatması müşahidə edilir və təbii axının qarşısı düsunulməden bağlanmır."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0598",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, əkin yatağında suyun gölməçə yaratdığı hissə izlənilir və təbii axının qarsısı düşunülməden bağlanmır.",
+            "second": "Bildiririk ki, əkin yatağında suyun gölməçə yaratdığı hissə izlənilir və təbii axının qarşısı düşunülməden bağlanmır."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0600",
+            "variant": "w0lexc1p1",
+            "first": "Kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və fərqli sahələrin nəticələri qarışdırılmır.",
+            "second": "Kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və fərqli sahələrin nəticələri qarışdırılmır."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0640",
+            "variant": "w0lexc1p1",
+            "first": "Bildiririk ki, yeni cığırın ağac köklərinə yaxınlığı araşdırılır və təbii axının qarsısı dusunülmədən bağlanmır.",
+            "second": "Bildiririk ki, yeni cığırın ağac köklərinə yaxınlığı araşdırılır və təbii axının qarşısı dusunülmədən bağlanmır."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0645",
+            "variant": "w0lexc1p1",
+            "first": "Kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və toplanan məlumat ehtimaldan ayrı göstərilir.",
+            "second": "Kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və toplanan məlumat ehtimaldan ayrı göstərilir."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0833",
+            "variant": "w0lexc1p1",
+            "first": "Kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və işlədilən qablar növbəti nümunədən əvvəl təmizlənir.",
+            "second": "Kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və işlədilən qablar növbəti nümunədən əvvəl təmizlənir."
+          },
+          {
+            "key": "development-10000/novel10k-environment-0844",
+            "variant": "w0lexc1p1",
+            "first": "Kompostdakı qoxunun deyişdiyi vaxt qeyd olunur və ətrafdakı canlıların yaşayış yeri qorunur.",
+            "second": "Kompostdakı qoxunun dəyişdiyi vaxt qeyd olunur və ətrafdakı canlıların yaşayış yeri qorunur."
+          },
+          {
+            "key": "development-10000/novel10k-culture-0246",
+            "variant": "w0lexc1p1",
+            "first": "Səsli kitabda danışanın deyişdiyi yer işarələnir və əvvəlki nümunə ilə oxşarlıq mənbə gosterilməkle qeyd olunur.",
+            "second": "Səsli kitabda danışanın dəyişdiyi yer işarələnir və əvvəlki nümunə ilə oxşarlıq mənbə gosterilməkle qeyd olunur."
+          },
+          {
+            "key": "development-10000/novel10k-culture-0260",
+            "variant": "w0lexc1p1",
+            "first": "Səsli kitabda danışanın deyişdiyi yer işarələnir və izahda bilmədiyimiz hissə açıq qeyd olunur.",
+            "second": "Səsli kitabda danışanın dəyişdiyi yer işarələnir və izahda bilmədiyimiz hissə açıq qeyd olunur."
+          },
+          {
+            "key": "development-10000/novel10k-culture-0395",
+            "variant": "w0lexc1p1",
+            "first": "Səsli kitabda danışanın deyişdiyi yer işarələnir və görünməyən detal uyğun işıq altında göstərilir.",
+            "second": "Səsli kitabda danışanın dəyişdiyi yer işarələnir və görünməyən detal uyğun işıq altında göstərilir."
+          },
+          {
+            "key": "development-10000/novel10k-culture-0422",
+            "variant": "w0lexc1p1",
+            "first": "Səsli kitabda danışanın deyişdiyi yer işarələnir və özgə əsər yeni müəllifin işi kimi təqdim edilmir.",
+            "second": "Səsli kitabda danışanın dəyişdiyi yer işarələnir və özgə əsər yeni müəllifin işi kimi təqdim edilmir."
+          },
+          {
+            "key": "development-10000/novel10k-culture-0634",
+            "variant": "w0lexc1p1",
+            "first": "Səsli kitabda danışanın deyişdiyi yer işarələnir və mübahisəli tarix yoxlanılmadan təsdiqlənmir.",
+            "second": "Səsli kitabda danışanın dəyişdiyi yer işarələnir və mübahisəli tarix yoxlanılmadan təsdiqlənmir."
+          },
+          {
+            "key": "holdout-500/p0-h-14-03-0",
+            "variant": "w0lexc1p1",
+            "first": "Rejissor tamasanın planını deyişdi.",
+            "second": "Rejissor tamasanın planını dəyişdi."
+          }
+        ]
+      }
+    }
+  },
+  "isolatedWarmLatency": {
+    "scope": "Isolated sequential warm Node whole-strategy benchmark, five rounds with rotating variant order; repeated seed and warm caches, not mobile/browser or cold-start latency. WordLM document monitoring/static lexical data remain in every variant.",
+    "node": "v24.19.0",
+    "results": [
+      {
+        "words": 20,
+        "inputSHA256": "b3700c2308f40d76dd62430c5bc80dee4a7e74c6a4288e11f37a492aaa3ab235",
+        "variants": {
+          "w1c1p1": {
+            "timingsMs": [
+              30.95142599999963,
+              25.14452600000004,
+              21.558897000000798,
+              25.251084000001356,
+              21.709027999999307
+            ],
+            "medianMs": 25.14452600000004,
+            "maximumMs": 30.95142599999963
+          },
+          "w0c1p1": {
+            "timingsMs": [
+              27.953325999998924,
+              28.32305400000041,
+              21.11262500000157,
+              22.267605000000913,
+              21.996914999999717
+            ],
+            "medianMs": 22.267605000000913,
+            "maximumMs": 28.32305400000041
+          },
+          "w1c0p1": {
+            "timingsMs": [
+              28.744307000000845,
+              32.6289799999995,
+              23.46461900000031,
+              25.17028399999981,
+              21.87184000000161
+            ],
+            "medianMs": 25.17028399999981,
+            "maximumMs": 32.6289799999995
+          },
+          "w1c1p0": {
+            "timingsMs": [
+              35.07448099999965,
+              21.22201800000039,
+              20.369665000000168,
+              19.45714399999997,
+              19.91593400000056
+            ],
+            "medianMs": 20.369665000000168,
+            "maximumMs": 35.07448099999965
+          }
+        }
+      },
+      {
+        "words": 100,
+        "inputSHA256": "a85c3e3d0d97d9f757db17a7e7e96029e06fb083401a1f8b1a2ea4bbd32da502",
+        "variants": {
+          "w1c1p1": {
+            "timingsMs": [
+              96.38480499999969,
+              95.82863199999883,
+              80.11655500000052,
+              80.03528400000141,
+              85.06955899999957
+            ],
+            "medianMs": 85.06955899999957,
+            "maximumMs": 96.38480499999969
+          },
+          "w0c1p1": {
+            "timingsMs": [
+              82.50730499999918,
+              91.37426499999856,
+              81.99307299999964,
+              80.02923399999963,
+              79.9597020000001
+            ],
+            "medianMs": 81.99307299999964,
+            "maximumMs": 91.37426499999856
+          },
+          "w1c0p1": {
+            "timingsMs": [
+              82.31037300000025,
+              80.16529699999955,
+              91.05778699999973,
+              83.86208999999872,
+              76.6415679999991
+            ],
+            "medianMs": 82.31037300000025,
+            "maximumMs": 91.05778699999973
+          },
+          "w1c1p0": {
+            "timingsMs": [
+              75.3641060000009,
+              73.78144199999952,
+              80.14209099999971,
+              75.87236000000121,
+              73.8130489999985
+            ],
+            "medianMs": 75.3641060000009,
+            "maximumMs": 80.14209099999971
+          }
+        }
+      },
+      {
+        "words": 500,
+        "inputSHA256": "8e330b7eaa7bac6afffb0050fcac1e46489bc124b4230df53b600670ed75042a",
+        "variants": {
+          "w1c1p1": {
+            "timingsMs": [
+              317.1081439999998,
+              299.75473500000226,
+              302.5188690000032,
+              307.4959490000001,
+              318.5097480000004
+            ],
+            "medianMs": 307.4959490000001,
+            "maximumMs": 318.5097480000004
+          },
+          "w0c1p1": {
+            "timingsMs": [
+              313.0654709999999,
+              288.61339699999917,
+              301.81134600000223,
+              304.3442819999982,
+              314.37423500000295
+            ],
+            "medianMs": 304.3442819999982,
+            "maximumMs": 314.37423500000295
+          },
+          "w1c0p1": {
+            "timingsMs": [
+              303.06342700000096,
+              297.7401920000011,
+              303.47586500000034,
+              316.8470930000003,
+              307.59904599999936
+            ],
+            "medianMs": 303.47586500000034,
+            "maximumMs": 316.8470930000003
+          },
+          "w1c1p0": {
+            "timingsMs": [
+              325.7276180000008,
+              284.0509099999981,
+              284.2305959999976,
+              289.2267950000023,
+              292.71573100000023
+            ],
+            "medianMs": 289.2267950000023,
+            "maximumMs": 325.7276180000008
+          }
+        }
+      },
+      {
+        "words": 1000,
+        "inputSHA256": "d754a612bd41759ba792c80069c536fe18e020e5c33490bb7939d296b15e844a",
+        "variants": {
+          "w1c1p1": {
+            "timingsMs": [
+              609.6720080000014,
+              620.7501000000011,
+              593.1958070000001,
+              618.5904819999996,
+              617.9218430000037
+            ],
+            "medianMs": 617.9218430000037,
+            "maximumMs": 620.7501000000011
+          },
+          "w0c1p1": {
+            "timingsMs": [
+              576.501945,
+              586.9720000000016,
+              562.420062000001,
+              554.319524999999,
+              588.9353829999964
+            ],
+            "medianMs": 576.501945,
+            "maximumMs": 588.9353829999964
+          },
+          "w1c0p1": {
+            "timingsMs": [
+              594.0942770000001,
+              597.7629799999995,
+              597.2454629999993,
+              591.5105719999992,
+              588.4738950000028
+            ],
+            "medianMs": 594.0942770000001,
+            "maximumMs": 597.7629799999995
+          },
+          "w1c1p0": {
+            "timingsMs": [
+              568.6683340000018,
+              587.7779420000006,
+              559.7274639999996,
+              563.5569350000005,
+              550.3292269999947
+            ],
+            "medianMs": 563.5569350000005,
+            "maximumMs": 587.7779420000006
+          }
+        }
+      }
+    ]
+  },
+  "measuredConfigurations": 9,
+  "pairedRequests": 116784,
+  "productionRuntimeChanged": false,
+  "productionModelsRemainAutomatic": true,
+  "neuralWeightFittingPerformed": false,
+  "referenceChangesPerformed": false
+}
