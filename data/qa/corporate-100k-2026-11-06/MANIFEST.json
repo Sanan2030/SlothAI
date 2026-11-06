@@ -1,0 +1,1043 @@
+{
+  "schemaVersion": 1,
+  "source": "Fresh assistant-authored corporate compositional work notes/email drafts; not real-user observations",
+  "purpose": "Frozen evaluation only; no model training or policy selection",
+  "requests": 1000,
+  "inputWords": 100000,
+  "expectedWords": 100600,
+  "wordDefinition": "Whitespace-delimited unit containing at least one Unicode letter or number; markup-only tokens excluded; URLs/file names count as one unit",
+  "wordCountRange": [
+    90,
+    110
+  ],
+  "sourceCommit": "4e0028cea43aca031a66f2caef9e61764e3f714e",
+  "seed": 202611061117,
+  "domains": {
+    "finance": 63,
+    "procurement": 63,
+    "hr": 63,
+    "legal": 63,
+    "security": 63,
+    "operations": 63,
+    "data": 63,
+    "audit": 63,
+    "sales": 62,
+    "customer": 62,
+    "quality": 62,
+    "project": 62,
+    "board": 62,
+    "sustainability": 62,
+    "logistics": 62,
+    "communications": 62
+  },
+  "modules": {
+    "mail": 300,
+    "text": 700
+  },
+  "formats": {
+    "email": 300,
+    "work-note": 600,
+    "structured-note": 100
+  },
+  "variants": {
+    "partial-diacritics": 150,
+    "ascii": 200,
+    "punctuation": 100,
+    "identity": 200,
+    "mixed-ascii-typo": 100,
+    "missing-letter": 75,
+    "lower-case": 100,
+    "transposition": 75
+  },
+  "literalCases": 250,
+  "uniqueInputs": 1000,
+  "uniqueNormalizedBodies": 1000,
+  "uniqueScenarioEventActionCombinations": 1000,
+  "composition": {
+    "newDomainParagraphs": 96,
+    "newDomainActionSentences": 96,
+    "newSharedFollowupSentences": 50,
+    "newShortClosings": 8,
+    "reusedSentencesWithinNewSet": true,
+    "independentScenarioClaim": false
+  },
+  "corpusSHA256": "bf8f629724bbef6410c3d371f8cd432ae7f99219d393575e5d7c4beea22d7471",
+  "gzipSHA256": "879dfe5bd97244834eba0c132820f33ffde9b8ec99ee92e1f55a1d00cb32e6f9",
+  "authoredPoolsSHA256": "08d1ef0fe2770c9760e64db4f1b3753df672c5f8f441d0c7ef0bfbfd7cc147d1",
+  "generatorSHA256": "56cb329665aa3eadf9e4e350ba30d377c528639276ee53f69b215947337b6de7",
+  "referencesFrozenBeforeAppInference": true,
+  "runtimeOutputsUsedToAuthorReferences": false,
+  "usedForTraining": false,
+  "previousQA": {
+    "commit": "4e0028cea43aca031a66f2caef9e61764e3f714e",
+    "normalizedReferences": 19092,
+    "referenceSHA256": "bdd1e73e22019b47305d90d6ae7c428b877915495c57195217455310b4fe5755",
+    "files": [
+      {
+        "path": "data/evaluation/model-contributions/punctuation-contrasts-2026-11-06.json",
+        "sha256": "cacc82efd161e0ff7ecac014abf1877d4fe21c63725d89a65506b22f357d3b32"
+      },
+      {
+        "path": "data/evaluation/phase0/calibration-100.json",
+        "sha256": "8de0675d25e8b5e5055eef62c72b24ddc196f9c3cfd7af4471ab5e25096649ff"
+      },
+      {
+        "path": "data/evaluation/phase0/holdout-500.json",
+        "sha256": "358c60a1ade7a9c68aea6b77eeba332cac681c95a948c544f7bff9a990900bf1"
+      },
+      {
+        "path": "data/evaluation/phase0/manifest.json",
+        "sha256": "a5f10074905f58a663804e4cb870b12e4253f1d2ff186f46155eaa68972f072e"
+      },
+      {
+        "path": "data/evaluation/phase0/no-harm-2000.json",
+        "sha256": "e989fbf0594b969ed02b4520ee7a4fcde4a76b22a555370b355c00b669267b56"
+      },
+      {
+        "path": "data/local-ai/challenge-v2.json",
+        "sha256": "fa6b5a5f032e9ac31d008821f3592b7c7658166d9d0a5ddff1f073d8d99162b9"
+      },
+      {
+        "path": "data/local-ai/context-baseline.json",
+        "sha256": "e362797161600664ab41e56b697d8ef37aaecc45ad9dfb9aaff46dba6405f027"
+      },
+      {
+        "path": "data/local-ai/context-corpus.json",
+        "sha256": "0a79612c3c80bfc6760c75a6882b224360e0d561593fcfd76955c3ec06d1629c"
+      },
+      {
+        "path": "data/local-ai/context-test-report.json",
+        "sha256": "b243b4844c950a93d5df66694d1e3dc535594ab4494c01e773fdfb7a0ded16a1"
+      },
+      {
+        "path": "data/local-ai/context-validation-report.json",
+        "sha256": "1dd850ecaf9c63b7c163ce8d3771351aee8e0902bbc2fc1e90dac0fb093f0efb"
+      },
+      {
+        "path": "data/local-ai/evaluation-report.json",
+        "sha256": "a48dece0b5a3145d73f5bce29da884ff53080e908dfa66887d73ae1fb61fde9c"
+      },
+      {
+        "path": "data/local-ai/expansion.json",
+        "sha256": "387dad7f18ae7026b3570e1d38fd5ed15c7233b59fa0d13b8503c15c727d661f"
+      },
+      {
+        "path": "data/local-ai/fresh-holdout.json",
+        "sha256": "df1510111342d83003ff8b37f77667b163cfe1604c6617f121dffb80092e4fc9"
+      },
+      {
+        "path": "data/local-ai/fresh-report.json",
+        "sha256": "b67460b773bc21a2b21f1310ca71a24cfa45b2d02ed244bfed52760aeef87747"
+      },
+      {
+        "path": "data/local-ai/paired-additions.json",
+        "sha256": "8e18379aa0f8ceee987c2b8020d720373e40d265abc05107ae58b475750a083d"
+      },
+      {
+        "path": "data/local-ai/paired-release-baseline.json",
+        "sha256": "d7057b04a2c752d6994e0dc41db68429e06e62670875b07b147526e10c3bcecb"
+      },
+      {
+        "path": "data/local-ai/paired-reliability-report.json",
+        "sha256": "0de015010516428b913bc0fa4999679bcc95792194fb25cc8e98987e7f9a4972"
+      },
+      {
+        "path": "data/local-ai/paired-test-report.json",
+        "sha256": "97e811e5db95ee100d5bedcfc02635b7311c04326961390d4c55a68a0339d7be"
+      },
+      {
+        "path": "data/local-ai/paired-training-report.json",
+        "sha256": "a0ddc2347472ae33a6dd81af06c44ba80d5e6958e0516c5e03d3c6b2eb59f956"
+      },
+      {
+        "path": "data/local-ai/pairs.json",
+        "sha256": "d1d32292d871df49e59f3d44145b8107c8fc0848e3ca820a1874f6454918006f"
+      },
+      {
+        "path": "data/local-ai/pos-report.json",
+        "sha256": "c5c5f05d3f20a8e36d72b55df84511a9f744649882ea93f0cf709539b655c0ea"
+      },
+      {
+        "path": "data/local-ai/previous-version-comparison.json",
+        "sha256": "bf2ae7a19029bc30e4219bb4cb3bf379e8c133142c7ac5d2b77caabf1e9551e6"
+      },
+      {
+        "path": "data/local-ai/release-baseline.json",
+        "sha256": "bab672ea532fec388d6748dad493acee1750a2075a61192bec0c996ca97b3499"
+      },
+      {
+        "path": "data/local-ai/reviewed-stems.json",
+        "sha256": "85ec6d1432f8e3945858e389ba2ddefccbd94aece8507c43cecc8272f0abb37f"
+      },
+      {
+        "path": "data/local-ai/training-report.json",
+        "sha256": "7fc596b09d2ef58d552e9bfbeb5551be6e48ca58a35562b7df20d38f9b5387fc"
+      },
+      {
+        "path": "data/local-ai/ud/splits.json",
+        "sha256": "926f0172faba3eba4928e10577b7c4a609e2afda193cc5ad021a9ddfed654e88"
+      },
+      {
+        "path": "data/local-ai/validation-report.json",
+        "sha256": "ed3f4b88eb92b7e41becd278a6c3a970aed011f60d491dcda624b3177ce2ee82"
+      },
+      {
+        "path": "data/neural/attention-baseline.json",
+        "sha256": "50946588095aa4fe6ff76c086d623281b39f3856ec17886acb67016370345990"
+      },
+      {
+        "path": "data/neural/attention-evaluation.json",
+        "sha256": "c135056f35e7a89c79863d55ed3223d90ac567d3d76d7c9fb01be65fdcc5f1d1"
+      },
+      {
+        "path": "data/neural/attention-independent-baseline.json",
+        "sha256": "46f473bdeea127ff2e3525ad6c5a1675efb4c9bba146c36703cc09e2721b0020"
+      },
+      {
+        "path": "data/neural/attention-independent-evaluation.json",
+        "sha256": "0cd77ebde8adb9ae439b23c621835a51995fbb138f4e1a7b1e6d4712ae9aeaa7"
+      },
+      {
+        "path": "data/neural/attention-independent.json",
+        "sha256": "8b96c54de5d940a5d125e77deaa6549766612d8086b84b08ca2a88e6e732f91c"
+      },
+      {
+        "path": "data/neural/attention-pairs.json",
+        "sha256": "ebfb8a31b2ace668b76f80de7cd4bee80056a10c725efbea6d7dcf36803bd759"
+      },
+      {
+        "path": "data/neural/attention-training-report.json",
+        "sha256": "005166bf129c2c91ff71a8ba2d892f9054c86207fbfa8e42db91e377c3c42ea1"
+      },
+      {
+        "path": "data/neural/challenge.json",
+        "sha256": "76a5fc97d3f8776c07211aced64cae98fb77a06f7b48e809181d4b591771b7f9"
+      },
+      {
+        "path": "data/neural/corpus.json",
+        "sha256": "67fdaba3061e8677e4c59c4ab59b976e72b3b6bb2baf48e9afecbe72701c652b"
+      },
+      {
+        "path": "data/neural/data-quality.json",
+        "sha256": "bdffa702e7c78a7449b2edddcf84d2e99bc4a4a183d40bc4ba6ec68f4ee4ac51"
+      },
+      {
+        "path": "data/neural/diverse-baseline.json",
+        "sha256": "1ae3f895049f06ccea38c5ad914bd0f03e05a8ab0daf91f09b44e54707c04e78"
+      },
+      {
+        "path": "data/neural/diverse-evaluation.json",
+        "sha256": "a48025f887a87f6d5f3e45472f45de70914e5f95d3d721637b8c2cb44dd31243"
+      },
+      {
+        "path": "data/neural/diverse-pairs.json",
+        "sha256": "076de510b123ae59c31b7da3da2dd79c9ae0c5221c407b4211cf13cbead34cba"
+      },
+      {
+        "path": "data/neural/domain-data-manifest.json",
+        "sha256": "69bffcf0bb88a7050cb39bbfbd08b31985b4c5ac00f038161a8db3d3d730015d"
+      },
+      {
+        "path": "data/neural/domain-fresh-report.json",
+        "sha256": "58040f2e60730268da426ad20ba46bfef43de45e85b018fb77fc31da16f9ddd7"
+      },
+      {
+        "path": "data/neural/domain-selection-report.json",
+        "sha256": "81feeb7df0b771fb9116f5abc8b70ba650ef5b4106db583190b25d9d4f0c8ecc"
+      },
+      {
+        "path": "data/neural/domain-source-fresh-summary.json",
+        "sha256": "963d34970af89efc65b0c96ba057af441c877d59f2c4f8d3e5b35397811cede1"
+      },
+      {
+        "path": "data/neural/domain-source-test-summary.json",
+        "sha256": "8ac8ce7f94ba2b6aee4e459f878afe5555f043af2d0653a76784788c37cfbf66"
+      },
+      {
+        "path": "data/neural/domain-test-report.json",
+        "sha256": "d26cf1cf244f1c0332d686af42f2973625a1958a53532636851f8ec37f50b69c"
+      },
+      {
+        "path": "data/neural/domain-train-report.json",
+        "sha256": "bb8cd54a956ef888f0a1dbe08eddb1cb504bdbe301af536ea51afd48eaa2b5d6"
+      },
+      {
+        "path": "data/neural/domain-training-report.json",
+        "sha256": "63b6840d446f1e33827ea8098323b3aa3d1376fd064af383d46295bc09cf5278"
+      },
+      {
+        "path": "data/neural/evaluation-report.json",
+        "sha256": "004e59b3af19d6aee1b07400db45ceb6ef7ec0c99708d9e93c6b2b16789a26fb"
+      },
+      {
+        "path": "data/neural/expansion-baseline.json",
+        "sha256": "0f00f6c5ff6668e815ae8c524545751357cd5554bfd9d84edace80f653e51bca"
+      },
+      {
+        "path": "data/neural/expansion-evaluation.json",
+        "sha256": "6400eed45c4d00c662d4cfc6d7202d85c61175107e03577a22db2e35b3dfc814"
+      },
+      {
+        "path": "data/neural/expansion-pairs.json",
+        "sha256": "b3550cf2dc835cf288f7d5b947f32e942f861e14d47fc03a75d0eeb18d56f5a9"
+      },
+      {
+        "path": "data/neural/quality-report.json",
+        "sha256": "b9cb88f0c04b5e3c033ac88f354f93b75274c9df15944d99727fb0946796ca70"
+      },
+      {
+        "path": "data/neural/reviewed-data-manifest.json",
+        "sha256": "e8f2f68bb30952622d888cdcc182653cc3617e00f61c945c9afecad382273402"
+      },
+      {
+        "path": "data/neural/reviewed-release-report.json",
+        "sha256": "7fba5a8e7b51aa7e0176ef007207426a4adff3d1cdfccc79800f91eb492fb0da"
+      },
+      {
+        "path": "data/neural/reviewed-selection-report.json",
+        "sha256": "875833d3d1265dd95b35b10456b63bab9c11322b2327fb0003c46838b520d251"
+      },
+      {
+        "path": "data/neural/reviewed-training-report.json",
+        "sha256": "ff61df1439f3e8c1713f7b0782ac981c12c713e48a62b0c80a8210117499569a"
+      },
+      {
+        "path": "data/neural/seed-v1.json",
+        "sha256": "713e1fdf9ec3dbc7e7f2be9606c2b6626ad2b22d53de17fa7e34274d62ab3381"
+      },
+      {
+        "path": "data/neural/sentence-boundary-benchmark.json",
+        "sha256": "7e28222cd6dc1b0257368644b5b5a2d9309269cd8620ead630c84c6ab11c96f5"
+      },
+      {
+        "path": "data/neural/sentence-boundary-release-report.json",
+        "sha256": "9934efe031fc82ea750e70fad18610ef5c6ed4c579baf9cc95804694589325cf"
+      },
+      {
+        "path": "data/neural/sentence-boundary-training-report.json",
+        "sha256": "01eeb38b91745769cf5b891a2d9480a8a63af6cd3816d23b8fe36dec29cd1190"
+      },
+      {
+        "path": "data/neural/training-history.json",
+        "sha256": "b8b641b89317ec07170c6d38743233b0257b91348f09f553d6b02a0f5febdc56"
+      },
+      {
+        "path": "data/neural/training-report.json",
+        "sha256": "c4175ef79e0f806a585a352807019704aae6b9c479ab0849d9ea5007ecc89f1b"
+      },
+      {
+        "path": "data/nlp/ablation-report.json",
+        "sha256": "85c91c55dc2175b9dba8164f84f461d9d9288e9a1c7053162087b138fd64eb09"
+      },
+      {
+        "path": "data/nlp/bounded-benchmark.json",
+        "sha256": "0f9cd71c2e3c46fcd515ad2b594c021a52a961cdd464ed5e5be95e205e8e608d"
+      },
+      {
+        "path": "data/nlp/bounded-editor-report.json",
+        "sha256": "a3a205cee1116f8d6af851c1c7f55b9ec026b7dab2d9ebcabd721987b1a5a2de"
+      },
+      {
+        "path": "data/nlp/bounded-selection-report.json",
+        "sha256": "83fd8ed6c405f473a99c28735c2b361a76dfcb088ea3218eddb6b134797ac4ea"
+      },
+      {
+        "path": "data/nlp/demo-documents.jsonl",
+        "sha256": "7b98b22fdaf57de35c617e4603b78ae58ec762df86cfb44f5a897c475d93a299"
+      },
+      {
+        "path": "data/nlp/demo-manifest.json",
+        "sha256": "b9770753bb9745c786994cd055f719c56ec025bb271be6639e50553f26e766d6"
+      },
+      {
+        "path": "data/nlp/document-pipeline-report.json",
+        "sha256": "594963bcf0a0d1b722997b2cf85b09e6c87ac0cc2a81ad75aa0ac5297072574f"
+      },
+      {
+        "path": "data/nlp/document-text-report.json",
+        "sha256": "39ba3441a575b28bee88fb2e7b97aa7043caf25f057fb86603116446d7d46122"
+      },
+      {
+        "path": "data/nlp/documents/document-before-report.json",
+        "sha256": "d2dc4be0c3a2d7f89743e98cf4aef0b22971b63b152b61564bd30fec519549e5"
+      },
+      {
+        "path": "data/nlp/documents/document-benchmark-report.json",
+        "sha256": "8e75b2ecfd060bbbb636039dca3c36f42fb46af2a245215e4efffecad2e1ea15"
+      },
+      {
+        "path": "data/nlp/documents/document-evaluation-report.json",
+        "sha256": "9f4f0624857c50006f6c191d21a72045dfe427c7fafd84ac72856db9059b819f"
+      },
+      {
+        "path": "data/nlp/documents/document-source-diagnostics.json",
+        "sha256": "7962ff87660e350f60ec62abd02b7bf7caf1941d4e768a554cca61d348138b30"
+      },
+      {
+        "path": "data/nlp/documents/document-training-report.json",
+        "sha256": "cf6f1e7f33c1d95540883d5f159aa8e3e624983411d3526c60a9000904adab1e"
+      },
+      {
+        "path": "data/nlp/documents/document-unseen-test.json",
+        "sha256": "1b471e007f63bcc84c1658b3b5f5b751ce4cdc3d4a131e888e60605fb41d713c"
+      },
+      {
+        "path": "data/nlp/documents/document-workflow-001.json",
+        "sha256": "9f8ac71ddd03654de42992478a7779744878b66b23856606c56a097cec243086"
+      },
+      {
+        "path": "data/nlp/domain/az-domain-001-fresh.jsonl",
+        "sha256": "5cfeeb1d542dcdc4bf341365aead999eb85c09331011643434340daab11c662d"
+      },
+      {
+        "path": "data/nlp/domain/az-domain-001.json",
+        "sha256": "30c5d509a6e33aaa649af30672062e0b0c95f9812f9ba57aaabfc28673d5b0ba"
+      },
+      {
+        "path": "data/nlp/five-priorities-validation.json",
+        "sha256": "36190b60bd9dbb454f9a8c2a4d41193ca39f8214fc0ccd045eb7d1fd327ba589"
+      },
+      {
+        "path": "data/nlp/fresh-evaluation-audit.json",
+        "sha256": "9eeafc7a7918d49f5ef65ca6a9e7125e4fe8ed781ab6c351f8f7a0ef77d8d6fa"
+      },
+      {
+        "path": "data/nlp/fresh-wikipedia-documents.jsonl",
+        "sha256": "27324a6010883c7e9ad3263cc997f4d4a7792f5aa299607064c65e73a86553ca"
+      },
+      {
+        "path": "data/nlp/fresh-wikipedia-documents.receipt.json",
+        "sha256": "f81dcf87c06464f7f12259941db98d399ff8049937d255c277aaa21916d55c77"
+      },
+      {
+        "path": "data/nlp/institutions/corpus.json",
+        "sha256": "46b88526314651d31be62ca77103f0f2b942aec4b7a98dcd50d97170482e0401"
+      },
+      {
+        "path": "data/nlp/institutions/evaluation-report.json",
+        "sha256": "f438c720f27ddaf657ab1d48156f87ed2b8e594279e9219033d72e32fb1399be"
+      },
+      {
+        "path": "data/nlp/institutions/terminology.json",
+        "sha256": "19ff3a0250770a6296a3a1a03d0b267b524ea41388da28db42249ff5f307e25a"
+      },
+      {
+        "path": "data/nlp/institutions/training-report.json",
+        "sha256": "eac91a8d4b331c677ca57c2b3cfefda299c96256dda7794cb82812d9cceff329"
+      },
+      {
+        "path": "data/nlp/logs/log-2026-10-05-training.json",
+        "sha256": "856ad25fdd03db1a8b7ce33d114b1952e25c6c5d5029cffd0cdf989ddade4824"
+      },
+      {
+        "path": "data/nlp/logs/log-benchmark-report.json",
+        "sha256": "cd5bdf716e48b58015f07ae8949a4a17ec3d6df4f6dceb918cf34998c13d190f"
+      },
+      {
+        "path": "data/nlp/logs/log-evaluation-report.json",
+        "sha256": "ecdb685050f206416a9a90e840968ad9213a28b766816c3f01415c365f07cc0e"
+      },
+      {
+        "path": "data/nlp/logs/log-training-report.json",
+        "sha256": "786a1b856842fcdac8ea398d8f7df44e1f2fc56fca3ef42c5b646b41c92c5026"
+      },
+      {
+        "path": "data/nlp/logs/log-unseen-test.json",
+        "sha256": "f2d69b84dc5ef55823da88db3f3fc7f3fdbc37b15da3947a4a581128fbdd47e7"
+      },
+      {
+        "path": "data/nlp/priority-quality-report.json",
+        "sha256": "0cdc5fa778f38251e0a5a07ad1a0b0d1138e85d191d58cc52031326813e0da01"
+      },
+      {
+        "path": "data/nlp/priority-regressions.json",
+        "sha256": "664afb53f2dc7dc6456e80bca65fa1a484cbe62d7ae0f96c9df6dc8b10231c16"
+      },
+      {
+        "path": "data/nlp/real/development-evaluation.json",
+        "sha256": "731502692d86a934c0661dd6283cdccfbdb842872bccdd0fa839eeef4fbecb69"
+      },
+      {
+        "path": "data/nlp/real/development-report.json",
+        "sha256": "c2c62d615346dd8a35dccb5af63ae57026d33f62299f6f62a666e85a4ea428bb"
+      },
+      {
+        "path": "data/nlp/real/observed-spelling.json",
+        "sha256": "cf21ecc2ab9b3aa01be68ddb0e205d6bea9e1070b694351bdb5c8740870ecb7d"
+      },
+      {
+        "path": "data/nlp/real/release-benchmark.json",
+        "sha256": "b6d7064fb26f62a37dec4be7f301d1adf4e6807ea83a80a9ca778065f27c48f3"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-approved.json",
+        "sha256": "21aa45e3fae462a2cf90df78618c835aebc1f3266dc73c26743604f7dff9e85b"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-effective.json",
+        "sha256": "a1e90df2a4ebcb5a6520e5a383474e6012eb39e7ba5b9ec813e9692f52114dc2"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-evaluation.json",
+        "sha256": "bd72b073b9cf56ab722796a552d3336885be820939f90a1df88f799b06848722"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-splits/manifest.json",
+        "sha256": "96ffc89f56cc3f5ab119cadb6106983cb16161c5330ab7be283589fc5f4d983e"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-splits/test.jsonl",
+        "sha256": "5befd8bdfae44425eb2bf24a68036d3a4db6bfc1857b866dfe17227d5a3bca0d"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-splits/train.jsonl",
+        "sha256": "565d4969263286669c2cf59583589f4e88b97777857e7aa3f2b0d1cf798c99c2"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-splits/validation.jsonl",
+        "sha256": "cb79f1e560180336200a2193ff1c9aa5b8adc5f3bd50da8737a170d2fc7c2b59"
+      },
+      {
+        "path": "data/nlp/reviews/az-batch-001-training-evaluation.json",
+        "sha256": "86006f1b13b2184cfced5736a912bbe265ca03b4f2c4166a36ea6982f9327d1a"
+      },
+      {
+        "path": "data/nlp/user-input-baseline.json",
+        "sha256": "cc3f40f639b98ae63f3bc1307f4f1ac43dd05930add344406f095875e74530c1"
+      },
+      {
+        "path": "data/nlp/user-input-evaluation.jsonl",
+        "sha256": "4799ac70d40f9bd81237ab26f0b3f7c0ecd492c483718b78179a8b4a45cf5800"
+      },
+      {
+        "path": "data/nlp/wikipedia-documents.jsonl",
+        "sha256": "1b6e658d701c8ebd4499a8c7d6abf240ea30ce89c0a6c83af073f9d21baf2a01"
+      },
+      {
+        "path": "data/nlp/wikipedia-documents.receipt.json",
+        "sha256": "fa4c04f952198cd6b75bbc9656d93ffb49eab03a90c7eb1f1bce1152ac7804c2"
+      },
+      {
+        "path": "data/nlp/wikipedia-split-manifest.json",
+        "sha256": "1bce7ce9f4d01c40d9ab144ec29793b566e59603f0817748bf48925be6c13faf"
+      },
+      {
+        "path": "data/nlp/wikipedia-training-report.json",
+        "sha256": "55056c4eb086194edfa8a6a55a5f10ead11698a9ca786db09d31820370d8234e"
+      },
+      {
+        "path": "data/qa/novel-10000-2026-11-04/GOLD_REVIEW.json",
+        "sha256": "09baa8c7a1106fafd79177a737c0d16ab71d9d9a29dfc9ef0a1e0d93a6163fdf"
+      },
+      {
+        "path": "data/qa/novel-10000-2026-11-04/MANIFEST.json",
+        "sha256": "fcac97d2b7bb0a1659e04bc50dfd4c09162eab31f8fd8da4d9af212b53c07c77"
+      },
+      {
+        "path": "data/qa/novel-10000-2026-11-04/NOVELTY_REVIEW.json",
+        "sha256": "c9bf96c4a05906220ceed8ac260c7fcacc179526cd552fe3f66c342a56aa44f5"
+      },
+      {
+        "path": "data/qa/novel-10000-2026-11-04/SOURCE_NOVELTY_REVIEW.json",
+        "sha256": "c1e9541f9f29398b22c2c5ee9b37932a4deac92f444ddfa7fe2c77379cb24069"
+      },
+      {
+        "path": "data/qa/novel-10000-2026-11-04/cases.jsonl.gz",
+        "sha256": "c6af8d877d67f9520c37485183cb7c932edc12db24e97ce9dfa02132d149e9e0"
+      },
+      {
+        "path": "tests/adjective-mood.test.ts",
+        "sha256": "3c5b6b92658922ccb99adc322a145c491818862dbdf797937b506a347b65df9e"
+      },
+      {
+        "path": "tests/ambiguous-context.test.ts",
+        "sha256": "44a2bf03dffa2e4cbee4a5ebc6cda958d9e8759cb573808a9bfb25b757d44af3"
+      },
+      {
+        "path": "tests/ascii-title-case.test.ts",
+        "sha256": "dc0b27446a86a0d0315fb5e4222c55d5b5e2d6b30a4ae89eccf532f4ad643f71"
+      },
+      {
+        "path": "tests/atomic-training-artifacts.test.ts",
+        "sha256": "812ff08ca41f7c580a4e3e3c62738b381835c7a251b47d4f583fd417fe3da79c"
+      },
+      {
+        "path": "tests/attention.test.ts",
+        "sha256": "2bf16089eb0708d7b801828aa503e1a96d5c859e4fa6bc17d7595705fd46c1a6"
+      },
+      {
+        "path": "tests/bounded-candidates.test.ts",
+        "sha256": "7dd79bbdb8b71ae697d383f8ca1d9babe34cc34b14b2aef24ec741f7d9e8e67a"
+      },
+      {
+        "path": "tests/browser/charspell.spec.ts",
+        "sha256": "7a20a8010a2ea9a7defce247a6da5c5125f8d3a151ce1a29a8af8b6539e0865f"
+      },
+      {
+        "path": "tests/browser/editor.spec.ts",
+        "sha256": "81962724af77c82ce01826f6deaea71664788b2aa2d8413ccb9cff6ef4ebf660"
+      },
+      {
+        "path": "tests/browser/punctcase.spec.ts",
+        "sha256": "1b500970328b098c302cfc1a0fb1dd2f4c7c22146af4b0a5b60b6fd59d8a2f83"
+      },
+      {
+        "path": "tests/business.test.ts",
+        "sha256": "7a8b71a77b6c66fd48fb20573f5fb976a9558256d174b88e64285b074acd6762"
+      },
+      {
+        "path": "tests/charspell-runtime.test.ts",
+        "sha256": "72edd0cd4f6bddb1ac0ce5824aa9b346479ae8333b3c26234725549f6efea853"
+      },
+      {
+        "path": "tests/ci-inflection-regressions.test.ts",
+        "sha256": "605e4b7f834dd8090f5a36c5ebcd62f17697d678c459210077718b50da69862e"
+      },
+      {
+        "path": "tests/compact-email.test.ts",
+        "sha256": "0c1077fa209c11c5ea4c230aa174a96494cccb3e898cf8b1ae1da81846766bee"
+      },
+      {
+        "path": "tests/context-training.test.ts",
+        "sha256": "40975edab35d4c4c22a435338c4251aea3951b6959ae2a96949de328a0a04971"
+      },
+      {
+        "path": "tests/contextual-personal-lexicon.test.ts",
+        "sha256": "dab8881038c911d104b1f9e4bc50a8404e43b230d3ebcbb0ca1c8e730a795c3a"
+      },
+      {
+        "path": "tests/converb-continuation.test.ts",
+        "sha256": "bb57b5495edac9c201c8ec24a1d9958ff89e6e53c2f8c7962090487c1e1d92e5"
+      },
+      {
+        "path": "tests/dictionary.test.ts",
+        "sha256": "f16682cc1ae6182510fe4ad729592eeedefbc68eac71b77eece44831dd60e98b"
+      },
+      {
+        "path": "tests/diverse-release.test.ts",
+        "sha256": "a9f2d3d9536def536162abd45508f4a48b446bf3b6c7eb633d03d97fdeb4ae88"
+      },
+      {
+        "path": "tests/document-spelling.test.ts",
+        "sha256": "992c199ba7ba7b820f7a8c685f16c7176f1ad948c8da9bd51355558fa38cf226"
+      },
+      {
+        "path": "tests/domain-head.test.ts",
+        "sha256": "b5bd034725c42bc2291a10ad54eab1618e969d71eefdac2b5a812bff009734d2"
+      },
+      {
+        "path": "tests/domain-integration.test.ts",
+        "sha256": "4cbb35fdbda4d1972d270c2f79ccaed85078bb823303a9a37fd7b435ccdaf678"
+      },
+      {
+        "path": "tests/domain-training-data.test.ts",
+        "sha256": "a3ac75165447fa2cb91aa1fff28aa56fc42e57a57d615ec47ccb86d1228b510b"
+      },
+      {
+        "path": "tests/editor-diagnostics.test.ts",
+        "sha256": "8dcf9e88df1eed14bdb97032026e8bd61519cd19968cfe0941f6bfb8fd7f49a2"
+      },
+      {
+        "path": "tests/editor-keys.test.ts",
+        "sha256": "5ed90c49a82e19cf7ad83f7e318a0e26a450dd05c3c020b04295574a2b07b9c6"
+      },
+      {
+        "path": "tests/editor-regressions.test.ts",
+        "sha256": "64c74f978b0b4e7a44655a2a04a4ed2c5e1efce95445c6d15cc15921331e0f9b"
+      },
+      {
+        "path": "tests/editor-worker.test.ts",
+        "sha256": "aaa2438adc3e528a585e1fbc3b7d44f5e7229344ff7760222937793bf22310e0"
+      },
+      {
+        "path": "tests/email-corpus.test.ts",
+        "sha256": "8278dedf75fb8421eda6becfc76d22a117937d813b1c13acca8011520ce8613d"
+      },
+      {
+        "path": "tests/email-independent-holdout.test.ts",
+        "sha256": "a96b866b01726c5722e212e09589b2735ff59bbd52947f26ffe451d7ecc0ba6c"
+      },
+      {
+        "path": "tests/entity-feature-contract.test.ts",
+        "sha256": "f505a83d172d4ac01ad836e58084cb55419a596e814e6b18bae8f587100fd8a0"
+      },
+      {
+        "path": "tests/expected-results.test.ts",
+        "sha256": "a7d8bf6c2b01d6c06a18257d42e52206c7ea5a34430a4986f378e23bafb80a65"
+      },
+      {
+        "path": "tests/expository.test.ts",
+        "sha256": "89e1fce2ea07cf1979f64d8e1a692a0ce1f1fe912dc2a97843f3dbde0bf26ca6"
+      },
+      {
+        "path": "tests/extended-narrative.test.ts",
+        "sha256": "98e327a746ac8e0caca84901f5f166cf9ab5a60068e82b36fd7d89743171f628"
+      },
+      {
+        "path": "tests/five-priorities.test.ts",
+        "sha256": "dd5c124d4ff1c05119931f0a77bfdba04981807ce1546ce863f2653b30f38bc2"
+      },
+      {
+        "path": "tests/fixtures/additional-gold-200.json",
+        "sha256": "4ae73a29b3848099dae9e4f7061c2524594e03064e3d0f292aaf2dcad06de88e"
+      },
+      {
+        "path": "tests/fixtures/charspell-golden.json",
+        "sha256": "78f1a882854018cad4f610999a0deddf906e550bffd5dee1d2e91059ba902a0b"
+      },
+      {
+        "path": "tests/fixtures/corporate-letter.json",
+        "sha256": "6985bcafef6bfdf40618ff354826852559a422f9d5651e7940ab39fb19c40a69"
+      },
+      {
+        "path": "tests/fixtures/diverse-release-300.json",
+        "sha256": "7f1267fcfe04bc6f3c9668d647637fbce357d220f4a7711460351f36a4d26162"
+      },
+      {
+        "path": "tests/fixtures/email-holdout.json",
+        "sha256": "6e5c46932d95af6bcfdb30cb98d81b08e4a5c3fafbcd89ea2a7ea7f29c6cfc86"
+      },
+      {
+        "path": "tests/fixtures/essay.json",
+        "sha256": "9e611e1ea497eed0cf742f41c3fc93f60dcb22aee7f0bf45a3c191c56121f0c0"
+      },
+      {
+        "path": "tests/fixtures/holdout-corpus.json",
+        "sha256": "82aa5e371c7bdf3b451bbdc8c88064eff9ec354af3dd332a831a24d488d1602f"
+      },
+      {
+        "path": "tests/fixtures/hybrid-regression-corpus.json",
+        "sha256": "44a7aabbcc51b679e66a51a621efbce6b1d8f2e230134b7cc6a7d0d00456634c"
+      },
+      {
+        "path": "tests/fixtures/independent-gold-baseline.json",
+        "sha256": "4c5c11870be398c5b039847bbdc20cc405baba7eda060e06338ea9d507ee6050"
+      },
+      {
+        "path": "tests/fixtures/independent-gold-v2.json",
+        "sha256": "2106d60cdbbce99e3ce6dfe6adc2f4993e0743d21265b5f55f95fbd502838be4"
+      },
+      {
+        "path": "tests/fixtures/independent-reviewed.json",
+        "sha256": "9e4931d1c416a625c5fdd46dc32c121c3d13280892da2b2890f85f515b4e2d3d"
+      },
+      {
+        "path": "tests/fixtures/named-entity-holdout.json",
+        "sha256": "a006b808d306622482577b7cfa227b62ed0509e7cf43e7cc85f1c333b69bf68e"
+      },
+      {
+        "path": "tests/fixtures/neural-thirteen.json",
+        "sha256": "7fd05f073b9e8a2039dc955358c46c5243796c7f91fb46b913149723cf0af33e"
+      },
+      {
+        "path": "tests/fixtures/platform-proposal.json",
+        "sha256": "3987e2d16ba9041ad4a066534477db79966f7d514ff6b7ee8b536e985936c13a"
+      },
+      {
+        "path": "tests/fixtures/punctcase-golden.json",
+        "sha256": "1ca291d6b71c02d861efb0b4c77f11e79ec5d85de7acacaf9234558e99e3e8cd"
+      },
+      {
+        "path": "tests/fixtures/punctuation-holdout.json",
+        "sha256": "1b998b0e1eb930554ba2df3f10d7dd102085ff249a6bf8a7650b4d6c4d97124f"
+      },
+      {
+        "path": "tests/fixtures/release-holdout-300.json",
+        "sha256": "4c81864af86066a234a8cb94e0b8e13ccf268bc9e78bf4c409fd58436ed46187"
+      },
+      {
+        "path": "tests/fixtures/rsd-it-holdout.json",
+        "sha256": "c53f8085c52aaf6718e37746143b6e61399574089c70190596f40550d8a65999"
+      },
+      {
+        "path": "tests/fixtures/technical-day-extended.json",
+        "sha256": "a26366b3db967368f5ee08496b343018e6ddd21ab7c040deb4899a0401bc7044"
+      },
+      {
+        "path": "tests/fixtures/technical-day.json",
+        "sha256": "9bbbbd1d12f246a1bcaa25315f34fff5dde25aa1e98c180efc5dad9ba6f5a81f"
+      },
+      {
+        "path": "tests/fixtures/typed-entity-holdout.json",
+        "sha256": "5664c3a189ea1d797ec883f81e01c4fc55da71ce1124fed55d26db534aa6c8d7"
+      },
+      {
+        "path": "tests/fixtures/unique-regression-1000.json",
+        "sha256": "709bbefcf0bca8a6296ba6110bb6a2057054178c4e9fe3097ace9f2bd706759a"
+      },
+      {
+        "path": "tests/fixtures/workday.json",
+        "sha256": "687bf7eb52781b99eda6e736919343ab66b8eb29875b976574264ee7b3ac6c43"
+      },
+      {
+        "path": "tests/gold-1000.test.ts",
+        "sha256": "9310c53397a374b3fbc62369eea22977551712f38fe22845c7f27b8bd1981c6c"
+      },
+      {
+        "path": "tests/grammar-integration.test.ts",
+        "sha256": "6dcd9328875909d6885623671089d6dbf5b736a4c1b9591635de9cf7337cf7ef"
+      },
+      {
+        "path": "tests/grammatical-commas.test.ts",
+        "sha256": "986a5ffe8f0863aef063fab5a88e02d13dadbc02ed167cb1e9ea450035b95dbf"
+      },
+      {
+        "path": "tests/holdout.test.ts",
+        "sha256": "8aa116717270908285043f6668ddf9b67a1fd3cd0c13345bf1ec053039aba6a5"
+      },
+      {
+        "path": "tests/hybrid-regression-corpus.test.ts",
+        "sha256": "9df2ea4ef846d942959c42b8a81219d5d05a17a690aea82bd7e6c31612d3c095"
+      },
+      {
+        "path": "tests/independent-editor-fixes.test.ts",
+        "sha256": "5a0fae081b7598688fb340aa1155f2005c2dcafdd739b994c8561e06f9fc77bc"
+      },
+      {
+        "path": "tests/independent-gold.test.ts",
+        "sha256": "0c18f79621e55e0838960acc8b6205a53a66fd3ebbcf7573312e7566301895fb"
+      },
+      {
+        "path": "tests/initial-names.test.ts",
+        "sha256": "325022920cabdc65d48df42ddabc01ae1aee7906b708c59ad8365c5db04720a7"
+      },
+      {
+        "path": "tests/institutional-training.test.ts",
+        "sha256": "b30bd830151f882fced0d039472cd62c44448f3a701614a073c6db31dcd11ae4"
+      },
+      {
+        "path": "tests/it-vocabulary.test.ts",
+        "sha256": "7662f2984d807f2685d835277aeec6ba76d518bd33e305c912e08a2fca62c88a"
+      },
+      {
+        "path": "tests/known-surface-preservation.test.ts",
+        "sha256": "b6317b43ac8d6b8eafa10d9b716599b4c7452f42137d08b35015860a49dab5c1"
+      },
+      {
+        "path": "tests/language-contracts.test.ts",
+        "sha256": "552fa4fab05b50712735963d68685ad9c52275a971881f6c295492738dfde136"
+      },
+      {
+        "path": "tests/lexical-constraints.test.ts",
+        "sha256": "a93607e51c5dd5d7f20ea9dd9939168d653d97fc3ac431e2921cbf8099bd3f18"
+      },
+      {
+        "path": "tests/linguistic-components.test.ts",
+        "sha256": "2c71c06868addab3325d51a153332fa48a632138007d1a58f8c68462be66e03a"
+      },
+      {
+        "path": "tests/literary-corpus.test.ts",
+        "sha256": "e90de51bc61b601e9ed1968728c8d069a003069532da716d13b3beefffff2be1"
+      },
+      {
+        "path": "tests/local-ai-expansion.test.ts",
+        "sha256": "410720fcb3f769c5020733e45d606654c2a035adb17b493fe1ce92debb01e9a7"
+      },
+      {
+        "path": "tests/local-ai.test.ts",
+        "sha256": "69f4e63573f8beba78b321d81242812cd1603c82223318c27eace10b03753b99"
+      },
+      {
+        "path": "tests/local-editor.test.ts",
+        "sha256": "d0ec69a0e1ed7c07916f93c94a363eab60b610cebf14c9013db68471c2b56bac"
+      },
+      {
+        "path": "tests/log-training.test.ts",
+        "sha256": "23a771b615eba00012d7d7420db1366c4d05a720dd18be16bc42396daa955ee5"
+      },
+      {
+        "path": "tests/long-unseen-text.test.ts",
+        "sha256": "f38a958cf31eff11de4c4fd9cb4cec1fc78927e76ca2f118843aeb92e305518d"
+      },
+      {
+        "path": "tests/mail-greetings.test.ts",
+        "sha256": "de190b20374c7ff067ec90ac780375e7d32bb10335c4bfd38d283160f659248d"
+      },
+      {
+        "path": "tests/named-entity-holdout.test.ts",
+        "sha256": "9e96ea16d29b6c33ce4663f9087134323e938d48f4eded7b7619ee9ab21cefae"
+      },
+      {
+        "path": "tests/narrative.test.ts",
+        "sha256": "75aef52ca3575f264fdfd3374f09ff4f421abb352fb7dbf23a36eb07914c15de"
+      },
+      {
+        "path": "tests/neural-boundaries.test.ts",
+        "sha256": "c0408d06a90372f6a2ca4fe1ee015c894c7199f290d13ca2eef1651b3abd59a8"
+      },
+      {
+        "path": "tests/neural-expansion.test.ts",
+        "sha256": "944f100f2b5a149d301dc75d0c4cebb55848e2949666360359aa1076d09a6fd9"
+      },
+      {
+        "path": "tests/neural-thirteen.test.ts",
+        "sha256": "462ad159c4a8147b141aba771118f59bb4a41952de4898311e2c35bb94bc2d4f"
+      },
+      {
+        "path": "tests/neural.test.ts",
+        "sha256": "dc38ede25c4f7da286b1bdae46ab94b96be97a87f0f663f09a155dd153931e32"
+      },
+      {
+        "path": "tests/nlp-fallback.test.ts",
+        "sha256": "40b4a4e1df6cdc5028b779824d3f5d4e33952494cd313182e8f1ba1075360cc9"
+      },
+      {
+        "path": "tests/nlp-manifest.test.ts",
+        "sha256": "c8dbfae682bf9d1548cf855944b587b7db0dda213da065946172e154d9841436"
+      },
+      {
+        "path": "tests/nlp-pipeline.test.ts",
+        "sha256": "cf640e8f71ebb77cc9289c46d7e7c5e54ff75ad5b3107a495441da36148511b6"
+      },
+      {
+        "path": "tests/nominal-repair.test.ts",
+        "sha256": "d6d5dbb7935247ddba576ab657a57d55888736ce7cd11ba3d02984e2298b1946"
+      },
+      {
+        "path": "tests/novel-qa-fixes.test.ts",
+        "sha256": "10e91af7699d26227d4fd511a1801591eb6b3f13a3baf3209b48c724ffd30e56"
+      },
+      {
+        "path": "tests/paired-ai.test.ts",
+        "sha256": "14ddc092130261d703a641938b961b5fd9b2d370f0b1a0787045267233662b5f"
+      },
+      {
+        "path": "tests/parallel-inference.test.ts",
+        "sha256": "18f3ce5cf6daed4fea6ee4417f923ee416fa38ff8f1f46d6a22b52b27c117cfe"
+      },
+      {
+        "path": "tests/performance-semantics.test.ts",
+        "sha256": "d872d08ef8c911e84df6dfa1d59cec6c073ecaabdcf3a209dfcc77d1fd6b2ec4"
+      },
+      {
+        "path": "tests/phase0-evaluation.test.ts",
+        "sha256": "4bbbda814d7ccb53d00c0b1c0d24128e213c1c17ed6d88d78400c818807eba68"
+      },
+      {
+        "path": "tests/priority-fixes.test.ts",
+        "sha256": "942cfde16db01f2fb176bb47be315806cf147b3005048b67c83ddd6186d6abed"
+      },
+      {
+        "path": "tests/protected-terminology.test.ts",
+        "sha256": "7c734db83220682abb435d0ff53f68ce46825033e83b56ed07e0e16f52749997"
+      },
+      {
+        "path": "tests/punctcase.test.ts",
+        "sha256": "608cb38de47ff2d484b7dabc8ceb61bed95a8c7d007975ee1126c655dec79ebc"
+      },
+      {
+        "path": "tests/punctuation-holdout.test.ts",
+        "sha256": "a0ba3211902b8506613f7fd3dc939e42ed6423630308d12ebb624b22d9e06a31"
+      },
+      {
+        "path": "tests/release-context.test.ts",
+        "sha256": "057f99543538b84c4b4a988c48456ba3c999d47cfb4825d67c65c7a70f0fdfd0"
+      },
+      {
+        "path": "tests/release-spelling.test.ts",
+        "sha256": "5ec689b332caaae4113243f18f9e03a845aabd6c8dceaea605b5b929a57f9a99"
+      },
+      {
+        "path": "tests/review-file.test.ts",
+        "sha256": "a387e250c2933d872118e3e18fe6034fc8af5cf605778e34f19495d106613831"
+      },
+      {
+        "path": "tests/reviewed-neural-data.test.ts",
+        "sha256": "e14ca24d1a012e9d0061cfd77fad279f71680e242b511a43221c0d67e985b0a2"
+      },
+      {
+        "path": "tests/reviewed-training.test.ts",
+        "sha256": "82ab76738bb698cb4783edb824f1865e56c5bc40532949761b94001c28fb9a85"
+      },
+      {
+        "path": "tests/rich-document.test.ts",
+        "sha256": "1169be45ba3f60a0319776fba8ca699ffb17a11a8da5b86b3cdac72525798f57"
+      },
+      {
+        "path": "tests/rsd-it-independent.test.ts",
+        "sha256": "f355fdd281e8b6faf2a3a8dd967b3f677896e9e885bb1bf323fc56dd44d72d3e"
+      },
+      {
+        "path": "tests/source-inflection.test.ts",
+        "sha256": "3c9ae0b3536638cf7747d75d8fbbc6142d8afd9d75610786b51c8d9fef0a1861"
+      },
+      {
+        "path": "tests/stabilization.test.ts",
+        "sha256": "f57879d7576d9887b7f39ef5eb6cb010efc1bd69986f42fa7238277b1f89faf3"
+      },
+      {
+        "path": "tests/strict-independent-audit.test.ts",
+        "sha256": "aed54063e43a8827072c08b17c288d8bef3d5aef2468ec8f07caa9b95a36d359"
+      },
+      {
+        "path": "tests/structured-preservation.test.ts",
+        "sha256": "8d446737a176f5a6c4ce8ae69613c101b0bb4f9fc6be9f32b49d862479a91e4e"
+      },
+      {
+        "path": "tests/syntax-morphology.test.ts",
+        "sha256": "f154047b26497bafe50cc4b50fcf5561a05b11bd89311824a3d0f364f2e4642a"
+      },
+      {
+        "path": "tests/technical-proposal.test.ts",
+        "sha256": "ef9d8e9e31a36ccb04f197bac47a8b5989cc88431984e12e4db5933d7c9c1016"
+      },
+      {
+        "path": "tests/text-diff.test.ts",
+        "sha256": "ec1d7b322547ade0c4d9272213fb8cfe5f73140f84187fa03a22f0a640799336"
+      },
+      {
+        "path": "tests/text-integrity.test.ts",
+        "sha256": "391e7891f8fddc982d5134b81796ba6d42092dcc4d4e0a5ff740885560472a0b"
+      },
+      {
+        "path": "tests/transform-log.test.ts",
+        "sha256": "0ed421f67fbfbe1a05f7bf9380c9f00601bc730bef6a2a0f3c708807a2eeef3b"
+      },
+      {
+        "path": "tests/typed-entities.test.ts",
+        "sha256": "c3ec242c28b83be9d103b6c1f563bae86bd413260d3ba1805a7cc99e14844750"
+      },
+      {
+        "path": "tests/typed-paragraphs.test.ts",
+        "sha256": "500bf279a6bcf200386c82a5e087d8f69278716aef3e4f48b5d77fd8edd8ad47"
+      },
+      {
+        "path": "tests/typed-punctuation.test.ts",
+        "sha256": "9c75b855d2c69ecb8c08f9b330b4e28785e3a431865fca85c9fecbf25caafcdf"
+      },
+      {
+        "path": "tests/unique-regression-1000.test.ts",
+        "sha256": "c64b0336a67409d36be46cadb179caa2ad88e69bc90a62c7d263785c2707f119"
+      },
+      {
+        "path": "tests/word-mentions.test.ts",
+        "sha256": "2e3cf76900b4f19639d7dff85689a4ef1e22cdc1f4bc7c4a0954ddbcb626ab8c"
+      },
+      {
+        "path": "tests/wordlm-candidate-flow.test.ts",
+        "sha256": "c61f8928b73849fd8b4331bbaeb4dedf1c9955c63db0eb14d50d54f72068d197"
+      },
+      {
+        "path": "tests/wordlm-context.test.ts",
+        "sha256": "2990a1914513c50f7c7d9cbc94caf6831b3b67b9695433bec93fbd78c46b02b3"
+      },
+      {
+        "path": "tests/wordlm.test.ts",
+        "sha256": "6ded9c308ca81676a587363630fd9c91c33e7341c51a25c8d8253d7e6b2c127c"
+      },
+      {
+        "path": "tests/workday.test.ts",
+        "sha256": "26e3a25c929be0b538b57d2117e974e4964189fe7db475474e422aaf48b4044e"
+      }
+    ]
+  },
+  "novelty": {
+    "normalizedExactPriorOverlap": 0,
+    "sharedPriorEightWordSequence": 0,
+    "maximumSeedTrigramJaccard": 0.08,
+    "maximumDocumentTrigramJaccard": 0.020202020202020204,
+    "rejectionThreshold": 0.35,
+    "rejected": {}
+  },
+  "judgmentPolicy": "Assistant reviews every nonmatching output difference against frozen meaning/spelling/grammar/literals. Accept only justified alternative typography or valid punctuation/layout; preserve original gold and record adjudication separately."
+}

@@ -1,0 +1,15 @@
+{
+  "reviewer": "Assistant, explicitly authorized by the user to judge correctness",
+  "reviewMethod": "Reviewed all412unique lexical replacement patterns and all150unique punctuation/case patterns with contexts. Applied findings to all1000complete outputs; unchanged reference spans retain their authored meaning. Not independent human review.",
+  "frozenInputOrGoldRewritten": false,
+  "modelOrThresholdChanges": false,
+  "referenceErratum": {
+    "before": "istisna varsa onun",
+    "after": "istisna varsa, onun",
+    "reason": "Şərt budaq cümləsinin sonu vergüllə ayrılmalıdır. Tətbiqin bu vergülü əlavə etməsi düzgündür; ilkin istinadda vergül buraxılıb. Orijinal istinad dəyişdirilmir, düzəliş qiymətləndirmə qeydində saxlanılır."
+  },
+  "lexicalReview": "All412observed lexical substitutions are unresolved letter/diacritic errors or inappropriate contextual word changes; none was accepted as a valid synonym.",
+  "punctuationReview": "Accepted conditional-comma repair only when the entire remaining output matches. Rejected false sentence splits inside noun/participle phrases, missing sentence boundaries, missing required punctuation and unjustified mid-sentence capitals.",
+  "lexicalPatternSHA256": "0926d3711edb7751c52c8a6fa8183e47ab7d349fe6b0f5cb4bc091edc8e50c49",
+  "punctuationPatternSHA256": "5091d1206640902bf37f40578c7869335a3a7ae4d66490b3f9db6dff74fd34ab"
+}

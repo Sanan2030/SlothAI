@@ -1,0 +1,271 @@
+{
+  "scope": "Assistant-judged, newly authored compositional corporate100k-word audit. User delegated linguistic judgment. Not independent human/real-user accuracy. All cases retained; inputs/references/model/policies unchanged. One reference punctuation omission is disclosed and adjudicated separately.",
+  "sourceCommit": "4e0028cea43aca031a66f2caef9e61764e3f714e",
+  "inputWords": 100000,
+  "expectedWords": 100600,
+  "primaryRequests": 1000,
+  "correct": 297,
+  "incorrect": 703,
+  "technicalErrors": 0,
+  "correctPercent": 29.7,
+  "strictReferenceMatches": 264,
+  "acceptedCorrectConditionalCommaRepairs": 33,
+  "referenceConditionalOmissionCases": 100,
+  "primaryErrorCategories": {
+    "səhv-söz-seçimi": 111,
+    "yazılış-və-şəkilçi": 433,
+    "düzgün": 297,
+    "durğu-və-cümlə-sərhədi": 148,
+    "registr": 11
+  },
+  "nonexclusiveErrorTags": {
+    "kontekstə-uyğun-olmayan-söz-seçimi": 111,
+    "yazılış-və-ya-səhv-söz": 544,
+    "durğu-və-cümlə-sərhədi": 148,
+    "registr": 87
+  },
+  "domains": {
+    "finance": {
+      "requests": 63,
+      "correct": 19,
+      "incorrect": 44,
+      "strictExact": 15
+    },
+    "procurement": {
+      "requests": 63,
+      "correct": 19,
+      "incorrect": 44,
+      "strictExact": 19
+    },
+    "hr": {
+      "requests": 63,
+      "correct": 15,
+      "incorrect": 48,
+      "strictExact": 13
+    },
+    "legal": {
+      "requests": 63,
+      "correct": 21,
+      "incorrect": 42,
+      "strictExact": 18
+    },
+    "security": {
+      "requests": 63,
+      "correct": 15,
+      "incorrect": 48,
+      "strictExact": 14
+    },
+    "operations": {
+      "requests": 63,
+      "correct": 18,
+      "incorrect": 45,
+      "strictExact": 18
+    },
+    "data": {
+      "requests": 63,
+      "correct": 21,
+      "incorrect": 42,
+      "strictExact": 19
+    },
+    "audit": {
+      "requests": 63,
+      "correct": 26,
+      "incorrect": 37,
+      "strictExact": 21
+    },
+    "sales": {
+      "requests": 62,
+      "correct": 22,
+      "incorrect": 40,
+      "strictExact": 19
+    },
+    "customer": {
+      "requests": 62,
+      "correct": 18,
+      "incorrect": 44,
+      "strictExact": 14
+    },
+    "quality": {
+      "requests": 62,
+      "correct": 15,
+      "incorrect": 47,
+      "strictExact": 14
+    },
+    "project": {
+      "requests": 62,
+      "correct": 18,
+      "incorrect": 44,
+      "strictExact": 16
+    },
+    "board": {
+      "requests": 62,
+      "correct": 19,
+      "incorrect": 43,
+      "strictExact": 19
+    },
+    "sustainability": {
+      "requests": 62,
+      "correct": 21,
+      "incorrect": 41,
+      "strictExact": 19
+    },
+    "logistics": {
+      "requests": 62,
+      "correct": 13,
+      "incorrect": 49,
+      "strictExact": 13
+    },
+    "communications": {
+      "requests": 62,
+      "correct": 17,
+      "incorrect": 45,
+      "strictExact": 13
+    }
+  },
+  "variants": {
+    "partial-diacritics": {
+      "requests": 150,
+      "correct": 14,
+      "incorrect": 136,
+      "strictExact": 8
+    },
+    "ascii": {
+      "requests": 200,
+      "correct": 13,
+      "incorrect": 187,
+      "strictExact": 12
+    },
+    "punctuation": {
+      "requests": 100,
+      "correct": 6,
+      "incorrect": 94,
+      "strictExact": 4
+    },
+    "identity": {
+      "requests": 200,
+      "correct": 155,
+      "incorrect": 45,
+      "strictExact": 141
+    },
+    "mixed-ascii-typo": {
+      "requests": 100,
+      "correct": 3,
+      "incorrect": 97,
+      "strictExact": 3
+    },
+    "missing-letter": {
+      "requests": 75,
+      "correct": 10,
+      "incorrect": 65,
+      "strictExact": 9
+    },
+    "lower-case": {
+      "requests": 100,
+      "correct": 83,
+      "incorrect": 17,
+      "strictExact": 76
+    },
+    "transposition": {
+      "requests": 75,
+      "correct": 13,
+      "incorrect": 62,
+      "strictExact": 11
+    }
+  },
+  "formats": {
+    "email": {
+      "requests": 300,
+      "correct": 89,
+      "incorrect": 211,
+      "strictExact": 74
+    },
+    "work-note": {
+      "requests": 600,
+      "correct": 179,
+      "incorrect": 421,
+      "strictExact": 164
+    },
+    "structured-note": {
+      "requests": 100,
+      "correct": 29,
+      "incorrect": 71,
+      "strictExact": 26
+    }
+  },
+  "identityControl": {
+    "authoredIdentityCases": 200,
+    "assistantCorrectOutput": 155,
+    "referenceConditionalOmissionCases": 16,
+    "unambiguouslyCorrectInputs": 184,
+    "correctInputsDamaged": 43
+  },
+  "repeatStable": 993,
+  "unstableCaseIds": [
+    "corp100k-0158",
+    "corp100k-0216",
+    "corp100k-0238",
+    "corp100k-0318",
+    "corp100k-0341",
+    "corp100k-0542",
+    "corp100k-0704"
+  ],
+  "protectedLiteralCases": 250,
+  "protectedLiteralCasesPreserved": 250,
+  "allThreeModelsAutomaticPrimaryRequests": 1000,
+  "modelCounters": {
+    "charRankedTokens": 38048,
+    "charCandidates": 78248,
+    "punctCaseProposed": 1,
+    "punctCaseApplied": 1
+  },
+  "browserNodeParityDifferences": 0,
+  "physicalTransformationCalls": 3001,
+  "additionalVerificationCalls": 2001,
+  "requestAccounting": {
+    "scope": "1000unique corpus cases verified in actual app Worker; first UI row uses the configured recheck, remaining999reuse matching first-attempt Worker outputs. Initial1000+oneUIrecheck=1001physicalbrowsertransformations; no initial attempt is deleted.",
+    "cases": 1000,
+    "inputWords": 100000,
+    "allThreeAutomatic": 1000,
+    "exceptions": 0,
+    "nodeParityDifferences": 0,
+    "transformHTTPRequests": 0,
+    "initialUIGreetingMismatch": {
+      "id": "corp100k-0001",
+      "cause": "UI default salutation was Salam, hər vaxtınız xeyir.; corpus explicitly requested Salam,.",
+      "resolution": "Select Salamlaşma=Salam, before a single additional actual UI transformation.",
+      "recheckPhysicalCalls": 1,
+      "modelOrAppChange": false
+    },
+    "physicalBrowserCalls": 1001,
+    "nodeFirstPassCalls": 1000,
+    "nodeRepeatCalls": 1000,
+    "physicalTotalTransformationCalls": 3001,
+    "additionalVerificationCallsBeyond1000PrimaryCases": 2001,
+    "resultsSHA256": "db90a97009774a8b7dae59ed88a5b7a5df08e7b34eb3ba8aa4f857497d3fb602",
+    "initialResultsSHA256": "fccb096ae6ac8a59aacab8a77f0e2b320f8992819ae2fb98cc02cde0407bfa77",
+    "recheckResultsSHA256": "3c0c24060ee35821ec748c628c30734c546fe391077b93bccaa7cf3c4cb618f6"
+  },
+  "novelty": {
+    "normalizedExactPriorOverlap": 0,
+    "sharedPriorEightWordSequence": 0,
+    "maximumSeedTrigramJaccard": 0.08,
+    "maximumDocumentTrigramJaccard": 0.020202020202020204,
+    "rejectionThreshold": 0.35,
+    "rejected": {}
+  },
+  "previousQANormalizedReferences": 19092,
+  "composition": {
+    "newDomainParagraphs": 96,
+    "newDomainActionSentences": 96,
+    "newSharedFollowupSentences": 50,
+    "newShortClosings": 8,
+    "reusedSentencesWithinNewSet": true,
+    "independentScenarioClaim": false
+  },
+  "corpusSHA256": "bf8f629724bbef6410c3d371f8cd432ae7f99219d393575e5d7c4beea22d7471",
+  "adjudicationPolicySHA256": "6259e7eca6d60148e0ff134d5d8b19e54c4912ab4481967a791d10f787d74018",
+  "adjudicatedResultsSHA256": "45a44e85f30783b65002ef8f553ee28cb7d269241fd817f164683c75f7b47757",
+  "errorsSHA256": "264790da0b3a3efb014159fffab821dc9a40de30c337ef797802b92b8df1b309",
+  "trainingPerformed": false,
+  "appOrWeightsChanged": false
+}
